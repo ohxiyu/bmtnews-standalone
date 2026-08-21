@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+{% assign interface_language = page.interface_language | default: page.lang | default: "zh" %}
+{% assign zh_language_url = "/" | relative_url %}
+{% assign en_language_url = "/en/" | relative_url %}
+{% assign interface_home_url = zh_language_url %}
+{% if interface_language == "en" %}
+  {% assign interface_home_url = en_language_url %}
+{% endif %}
+{% if page.lang == "zh" %}
+  {% assign zh_language_url = page.url | relative_url %}
+  {% assign en_language_url = page.url | replace: "-zh.html", "-en.html" | relative_url %}
+{% elsif page.lang == "en" %}
+  {% assign en_language_url = page.url | relative_url %}
+  {% assign zh_language_url = page.url | replace: "-en.html", "-zh.html" | relative_url %}
+{% endif %}
+<html lang="{% if interface_language == 'en' %}en{% else %}zh-CN{% endif %}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111214">
+    {% if page.noindex %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    {% capture document_title %}{% if page.page_type == "home" %}{{ site.title }}{% elsif page.lang %}BMTNews · {{ page.date | date: "%Y.%m.%d" }}{% elsif page.title and page.title != "Home" %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+    <title>{{ document_title | strip }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:title" content="{{ document_title | strip | escape }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:type" content="{% if page.lang %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body
+    class="{% if page.page_type == 'home' %}home-page{% elsif page.lang %}digest-page{% elsif page.page_type == 'source_console' %}source-console-page{% else %}docs-page{% endif %}"
+    {% if page.lang %}data-language="{{ page.lang }}" data-date="{{ page.date | date: '%Y-%m-%d' }}"{% endif %}
+  >
+    <a
+      class="skip-link"
+      href="#content"
+      data-i18n-zh="跳到正文"
+      data-i18n-en="Skip to content"
+    >{% if interface_language == "en" %}Skip to content{% else %}跳到正文{% endif %}</a>
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a
+          class="site-brand"
+          href="{{ interface_home_url }}"
+          aria-label="{% if interface_language == 'en' %}BMTNews Home{% else %}BMTNews 首页{% endif %}"
+          data-i18n-aria-zh="BMTNews 首页"
+          data-i18n-aria-en="BMTNews Home"
+        >
+          <span class="site-brand-copy">
+            <strong>BMTNews</strong>
+          </span>
+          <span class="site-brand-domain" aria-hidden="true">bmt.news</span>
+        </a>
+
+        <nav
+          class="site-nav"
+          aria-label="{% if interface_language == 'en' %}Main navigation{% else %}主导航{% endif %}"
+          data-i18n-aria-zh="主导航"
+          data-i18n-aria-en="Main navigation"
+        >
+          <a
+            href="{{ interface_home_url }}"
+            data-i18n-zh="信息流"
+            data-i18n-en="Feed"
+          >{% if interface_language == "en" %}Feed{% else %}信息流{% endif %}</a>
+          <a
+            href="{% if interface_language == 'en' %}{{ '/en/threads/' | relative_url }}{% else %}{{ '/threads/' | relative_url }}{% endif %}"
+            data-i18n-zh="事件线"
+            data-i18n-en="Threads"
+            data-i18n-href-zh="{{ '/threads/' | relative_url }}"
+            data-i18n-href-en="{{ '/en/threads/' | relative_url }}"
+          >{% if interface_language == "en" %}Threads{% else %}事件线{% endif %}</a>
+          <a
+            href="{% if interface_language == 'en' %}{{ '/en/entity/' | relative_url }}{% else %}{{ '/entity/' | relative_url }}{% endif %}"
+            data-i18n-zh="实体"
+            data-i18n-en="Entities"
+            data-i18n-href-zh="{{ '/entity/' | relative_url }}"
+            data-i18n-href-en="{{ '/en/entity/' | relative_url }}"
+          >{% if interface_language == "en" %}Entities{% else %}实体{% endif %}</a>
+          <a
+            href="{% if interface_language == 'en' %}{{ '/en/weekly/' | relative_url }}{% else %}{{ '/weekly/' | relative_url }}{% endif %}"
+            data-i18n-zh="周报"
+            data-i18n-en="Weekly"
+            data-i18n-href-zh="{{ '/weekly/' | relative_url }}"
+            data-i18n-href-en="{{ '/en/weekly/' | relative_url }}"
+          >{% if interface_language == "en" %}Weekly{% else %}周报{% endif %}</a>
+          <a
+            href="{% if interface_language == 'en' %}{{ '/feed-en.xml' | relative_url }}{% else %}{{ '/feed-zh.xml' | relative_url }}{% endif %}"
+            data-i18n-zh="RSS"
+            data-i18n-en="RSS"
+            data-i18n-href-zh="{{ '/feed-zh.xml' | relative_url }}"
+            data-i18n-href-en="{{ '/feed-en.xml' | relative_url }}"
+          >RSS</a>
+        </nav>
+
+        <div class="site-actions">
+          {% unless page.page_type == "source_console" %}
+            <nav
+              class="lang-toggle"
+              aria-label="语言切换"
+              data-i18n-aria-zh="语言切换"
+              data-i18n-aria-en="Language switcher"
+            >
+              <a
+                href="{{ zh_language_url }}"
+                {% if interface_language != "en" %}class="active" aria-current="page"{% endif %}
+              >中文</a>
+              <a
+                href="{{ en_language_url }}"
+                {% if interface_language == "en" %}class="active" aria-current="page"{% endif %}
+              >EN</a>
+            </nav>
+          {% endunless %}
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="{% if interface_language == 'en' %}Switch to dark mode{% else %}切换深色模式{% endif %}"
+            title="{% if interface_language == 'en' %}Switch to dark mode{% else %}切换深色模式{% endif %}"
+          >◐</button>
+        </div>
+      </div>
+    </header>
+
+    {% if page.lang %}
+      {% assign edition_key = page.date | date: "%Y-%m-%d" %}
+      <section class="continuous-feed edition-archive-chrome" data-language="{{ page.lang }}">
+        {% include edition-header.html language=page.lang current=edition_key %}
+        <header class="day-divider">
+          <div class="day-divider-title">
+            <span class="day-state">{% if page.lang == "zh" %}存档{% else %}Archive{% endif %}</span>
+            <time datetime="{{ edition_key }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+            {% if page.window_start and page.window_end %}
+              <span class="day-window">
+                {{ page.window_start | date: "%m.%d %H:%M" }}–{{ page.window_end | date: "%m.%d %H:%M" }}
+              </span>
+            {% endif %}
+          </div>
+          <div class="day-divider-stats" aria-label="{{ edition_key }} {% if page.lang == "zh" %}日报统计{% else %}edition statistics{% endif %}">
+            {% if page.lang == "zh" %}
+              <span data-short="采"><strong data-stat="fetched">{{ page.fetched_count | default: "—" }}</strong> 条采集</span>
+              <span data-short="析"><strong data-stat="analyzed">{{ page.analyzed_count | default: "—" }}</strong> 条分析</span>
+              <span data-short="展"><strong data-stat="selected">{{ page.selected_count | default: "—" }}</strong> 条展示</span>
+              <span data-short="高"><strong data-stat="critical">{{ page.critical_count | default: "—" }}</strong> 条高优先级</span>
+            {% else %}
+              <span data-short="F"><strong data-stat="fetched">{{ page.fetched_count | default: "—" }}</strong> fetched</span>
+              <span data-short="A"><strong data-stat="analyzed">{{ page.analyzed_count | default: "—" }}</strong> analyzed</span>
+              <span data-short="D"><strong data-stat="selected">{{ page.selected_count | default: "—" }}</strong> displayed</span>
+              <span data-short="H"><strong data-stat="critical">{{ page.critical_count | default: "—" }}</strong> high priority</span>
+            {% endif %}
+          </div>
+        </header>
+      </section>
+    {% elsif page.page_type == "source_console" %}
+      <section class="page-intro page-intro-docs">
+        <div class="page-intro-inner">
+          <div>
+            <p class="eyebrow">SOURCE OPERATIONS</p>
+            <h1>{{ page.title }}</h1>
+          </div>
+          <div class="page-intro-meta">
+            <span>LIVE · MAIN</span>
+            <span>查看 · 筛选 · 申请变更</span>
+          </div>
+        </div>
+      </section>
+    {% elsif page.page_type == "archive" %}
+      <section class="page-intro page-intro-docs">
+        <div class="page-intro-inner">
+          <div>
+            <p class="eyebrow">{% if interface_language == "en" %}BMTNEWS ARCHIVE{% else %}BMTNEWS 存档{% endif %}</p>
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </section>
+    {% elsif page.page_type != "home" %}
+      <section class="page-intro page-intro-docs">
+        <div class="page-intro-inner">
+          <div>
+            <p class="eyebrow">BMTNEWS NOTES</p>
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    <main
+      id="content"
+      class="main-content{% if page.lang %} daily-feed-content{% endif %}"
+      role="main"
+      {% if page.lang %}data-language="{{ page.lang }}" data-date="{{ page.date | date: '%Y-%m-%d' }}"{% endif %}
+    >
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>BMTNews</strong>
+        <span
+          data-i18n-zh="面向加密、AI 与宏观市场的每日情报雷达。"
+          data-i18n-en="A daily intelligence radar for crypto, AI, and macro markets."
+        >{% if interface_language == "en" %}A daily intelligence radar for crypto, AI, and macro markets.{% else %}面向加密、AI 与宏观市场的每日情报雷达。{% endif %}</span>
+      </div>
+      <span>
+        © {{ site.time | date: "%Y" }} BMTNews ·
+        <a
+          href="{{ '/legal/' | relative_url }}"
+          data-i18n-zh="法律与内容权利"
+          data-i18n-en="Legal &amp; content rights"
+        >{% if interface_language == "en" %}Legal &amp; content rights{% else %}法律与内容权利{% endif %}</a>
+      </span>
+    </footer>
+  </body>
+</html>

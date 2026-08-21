@@ -1,0 +1,123 @@
+name: BMTNews X Distribution
+
+# Drip-posts the day's top stories one at a time across peak Asian reading
+# hours. Only runs when x_delivery.mode is "drip" and the credentials are
+# configured; otherwise every slot exits without posting.
+#
+# Crons are UTC (GitHub does not honour a timezone key on schedules), with
+# the Asia/Shanghai equivalent noted. Each run posts the lowest-ranked
+# story not yet posted for today's edition, so a delayed or skipped slot
+# shifts a story later instead of dropping or duplicating it.
+
+on:
+  # Minutes are deliberately off the hour and off the half hour: GitHub
+  # delays scheduled runs under load and the top of the hour is the worst
+  # slot — a 0 1 * * * trigger was dropped outright rather than delayed.
+  # The last entry is a catch-up: because slots post the lowest rank not
+  # yet sent, it finishes the day's quota if an earlier slot is dropped.
+  schedule:
+    - cron: '7 1 * * *'    # 09:07 Asia/Shanghai — start of day
+    - cron: '37 4 * * *'   # 12:37 Asia/Shanghai — lunch break
+    - cron: '37 10 * * *'  # 18:37 Asia/Shanghai — evening commute
+    - cron: '37 13 * * *'  # 21:37 Asia/Shanghai — evening peak
+    - cron: '17 15 * * *'  # 23:17 Asia/Shanghai — catch-up for dropped slots
+  workflow_dispatch:
+    inputs:
+      edition_date:
+        description: Edition date to post from (YYYY-MM-DD)
+        type: string
+        required: false
+        default: ''
+
+concurrency:
+  group: bmtnews-x-distribution
+  cancel-in-progress: false
+
+permissions:
+  contents: write  # Persists the drip queue on the x-queue branch
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Restore published edition state
+        shell: bash
+        run: |
+          git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
+          if git cat-file -e "origin/gh-pages:_data/bmtnews_state.json" 2>/dev/null; then
+            mkdir -p docs/_data
+            git show "origin/gh-pages:_data/bmtnews_state.json" > docs/_data/bmtnews_state.json
+          fi
+
+      - name: Restore drip queue
+        shell: bash
+        run: |
+          mkdir -p data
+          if git fetch --depth=1 origin x-queue 2>/dev/null; then
+            git show FETCH_HEAD:data/x-queue.json > data/x-queue.json 2>/dev/null || true
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Prepare GitHub Actions config
+        run: cp data/config.github.json data/config.json
+
+      - name: Post the next story
+        env:
+          # Needed when x_delivery.compose is "ai"; without them the step
+          # falls back to the template post rather than failing.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
+          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        shell: bash
+        run: |
+          args=(--mode x-post)
+          if [ -n "${{ inputs.edition_date }}" ]; then
+            args+=(--edition-date "${{ inputs.edition_date }}")
+          fi
+          uv run bmtnews "${args[@]}"
+
+      - name: Publish run report
+        if: ${{ always() }}
+        run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Persist drip queue
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          if [ ! -f data/x-queue.json ]; then
+            echo "No queue state to persist"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B x-queue
+          git add -f data/x-queue.json
+          if git commit -m "chore: update X drip queue"; then
+            git push -f origin x-queue
+          else
+            echo "Queue unchanged"
+          fi

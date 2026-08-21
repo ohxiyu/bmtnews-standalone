@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bmtnews-daily-dispatcher",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    "GITHUB_REPOSITORY": "ohxiyu/bmtnews-standalone",
+    "GITHUB_WORKFLOW": "daily-summary.yml",
+    "GITHUB_REF": "main",
+    "EDITION_TIMEZONE": "Asia/Shanghai",
+    "EDITION_CUTOFF_HOUR": "8",
+    "PUBLIC_SITE_URL": "https://bmt.news"
+  },
+  "secrets": {
+    "required": ["GITHUB_DISPATCH_TOKEN"]
+  },
+  "triggers": {
+    "crons": [
+      "30 0 * * *",
+      "40 0 * * *",
+      "55 0 * * *",
+      "10 1 * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    }
+  }
+}

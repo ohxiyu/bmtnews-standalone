@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+          enable-cache: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen --extra dev
+      - run: uv run pytest
+      - run: uv export --all-extras --no-dev --no-hashes --no-emit-project --output-file "${RUNNER_TEMP}/requirements.txt"
+      - run: uvx --from pip-audit==2.10.1 pip-audit --requirement "${RUNNER_TEMP}/requirements.txt" --no-deps --disable-pip --progress-spinner off
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: ops/daily-dispatcher/package-lock.json
+      - run: npm ci
+        working-directory: ops/daily-dispatcher
+      - run: npm run check
+        working-directory: ops/daily-dispatcher

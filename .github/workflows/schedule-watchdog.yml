@@ -1,0 +1,36 @@
+name: BMTNews Schedule Watchdog
+
+on:
+  schedule:
+    # Independent GitHub fallback after the Cloudflare 08:30 primary trigger.
+    - cron: '47 8 * * *'
+      timezone: 'Asia/Shanghai'
+  workflow_dispatch:
+
+concurrency:
+  group: bmtnews-schedule-watchdog
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Check daily edition heartbeat
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python -m src.schedule_watchdog
+          --repository "${GITHUB_REPOSITORY}"
+          --workflow daily-summary.yml
+          --ref main
+          --timezone Asia/Shanghai
+          --cutoff-hour 8
+          --grace-minutes 47
