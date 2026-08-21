@@ -1,0 +1,162 @@
+---
+layout: default
+title: 来源目录
+description: 查看 BMTNews 当前使用的信息源
+page_type: source_console
+permalink: /s/
+noindex: true
+---
+
+<div
+  id="source-console"
+  class="source-console"
+  data-config-url="https://raw.githubusercontent.com/ohxiyu/bmtnews-standalone/main/data/config.github.json"
+  data-workflow-url="https://github.com/ohxiyu/bmtnews-standalone/actions/workflows/source-change.yml"
+>
+  <section class="source-console-overview" aria-labelledby="source-console-heading">
+    <div class="source-console-heading">
+      <div>
+        <p class="eyebrow">LIVE SOURCE REGISTRY</p>
+        <h2 id="source-console-heading">生产信息源，一页掌握</h2>
+        <p>
+          这里直接读取 <code>main</code> 上的生产配置，仅用于公开查看和筛选。
+          来源变更由仓库维护者在 GitHub Actions 中发起，并经过独立 PR 审核。
+        </p>
+      </div>
+      <a
+        class="source-primary-action"
+        href="https://github.com/ohxiyu/bmtnews-standalone/actions/workflows/source-change.yml"
+        target="_blank"
+        rel="noopener noreferrer"
+      >维护者操作</a>
+    </div>
+
+    <div class="source-metrics" aria-live="polite">
+      <article>
+        <span>全部来源</span>
+        <strong id="source-total-count">—</strong>
+      </article>
+      <article>
+        <span>正在启用</span>
+        <strong id="source-active-count">—</strong>
+      </article>
+      <article>
+        <span>已暂停</span>
+        <strong id="source-paused-count">—</strong>
+      </article>
+      <article data-track="crypto">
+        <span>Crypto</span>
+        <strong id="source-crypto-count">—</strong>
+      </article>
+      <article data-track="technology">
+        <span>AI / 科技</span>
+        <strong id="source-technology-count">—</strong>
+      </article>
+      <article data-track="policy">
+        <span>政策</span>
+        <strong id="source-policy-count">—</strong>
+      </article>
+    </div>
+    <p class="source-metrics-note">
+      这里统计的是信息源数量，不是每日文章条数；日报选稿仍遵守 Crypto 至少 9 条、
+      AI / 科技最多 3 条、政策最多 2 条。
+    </p>
+  </section>
+
+  <section class="source-console-panel" aria-labelledby="source-list-heading">
+    <div class="source-toolbar">
+      <div class="source-search">
+        <label for="source-search-input">搜索来源</label>
+        <input
+          id="source-search-input"
+          type="search"
+          autocomplete="off"
+          placeholder="搜索名称、地址或分类"
+        >
+      </div>
+
+      <div class="source-filter">
+        <label for="source-type-filter">类型</label>
+        <select id="source-type-filter">
+          <option value="all">全部类型</option>
+        </select>
+      </div>
+
+      <div class="source-filter">
+        <label for="source-track-filter">方向</label>
+        <select id="source-track-filter">
+          <option value="all">全部方向</option>
+          <option value="crypto">Crypto</option>
+          <option value="technology">AI / 科技</option>
+          <option value="policy">政策</option>
+          <option value="other">其他</option>
+        </select>
+      </div>
+
+      <div class="source-filter">
+        <label for="source-status-filter">状态</label>
+        <select id="source-status-filter">
+          <option value="all">全部状态</option>
+          <option value="active">启用</option>
+          <option value="paused">暂停</option>
+          <option value="parent-paused">采集器停用</option>
+        </select>
+      </div>
+
+      <button class="source-filter-reset" id="source-filter-reset" type="button">
+        重置
+      </button>
+    </div>
+
+    <div class="source-list-heading">
+      <div>
+        <h2 id="source-list-heading">现有信息源</h2>
+        <p id="source-result-count">正在读取生产配置…</p>
+      </div>
+      <a
+        href="https://github.com/ohxiyu/bmtnews-standalone/blob/main/data/config.github.json"
+        target="_blank"
+        rel="noopener noreferrer"
+      >查看原始配置</a>
+    </div>
+
+    <div class="source-table-shell">
+      <table class="source-table">
+        <thead>
+          <tr>
+            <th scope="col">来源</th>
+            <th scope="col">类型</th>
+            <th scope="col">方向</th>
+            <th scope="col">分类</th>
+            <th scope="col">状态</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody id="source-table-body"></tbody>
+      </table>
+
+      <div class="source-loading-state" id="source-loading-state">
+        <span class="source-loading-dot" aria-hidden="true"></span>
+        正在读取最新生产配置
+      </div>
+
+      <div class="source-empty-state" id="source-empty-state" hidden>
+        没有符合当前条件的信息源。
+      </div>
+    </div>
+  </section>
+
+  <aside class="source-console-note">
+    <strong>公开可读，维护受控</strong>
+    <span>
+      任何人都可以查看来源目录，但只有拥有仓库写权限的维护者可以运行来源管理
+      Action。每次变更都会创建独立分支和 Draft PR，不能从本页直接写入生产配置。
+    </span>
+  </aside>
+
+  <noscript>
+    <div class="source-empty-state">
+      来源目录需要 JavaScript 才能读取和筛选生产信息源。
+    </div>
+  </noscript>
+</div>
