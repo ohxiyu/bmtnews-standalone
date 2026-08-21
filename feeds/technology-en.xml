@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BMTNews · AI &amp; Tech</title>
+  <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
+  <link href="https://bmt.news/"/>
+  <id>https://bmt.news/feeds/technology-en.xml</id>
+  <updated>2026-08-21T00:00:00Z</updated>
+  <entry>
+    <title>Malicious Rust crate arrayref runs build-time payload</title>
+    <link href="https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/"/>
+    <id>https://bmt.news/editions/2026-08-21/#hackernews:story:49374269</id>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary>A malicious release of the popular Rust crate arrayref (version 0.3.10) added a first-ever dependency on a typosquatted crate, proc-macro1, whose build script downloads and executes a remote binary at compile time. The Rust team and RustSec advisory database issued official warnings on August 20, 2026, and the malicious version was removed from crates.io. Because arrayref is widely used and the malware executes during the build process, any developer or CI/CD system that builds the compromised version may be infected without running the project&#x27;s own code. This highlights the systemic risk of supply-chain attacks on the Rust/crates.io ecosystem. The malicious arrayref 0.3.10 was published on 2026-08-20 by the legitimate maintainer account &#x27;droundy&#x27;, and it depends on proc-macro1 1.0.107, which was published minutes earlier by account &#x27;dtolney&#x27;. The build.rs of proc-macro1 downloads and executes a remote payload; security researchers describe it as a multi-stage info-stealer with stage-2 backdoor capabilities.</summary>
+  </entry>
+  <entry>
+    <title>GitHub&#x27;s August 17 Outage Postmortem: Capacity Failures and Scaling Challenges</title>
+    <link href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/"/>
+    <id>https://bmt.news/editions/2026-08-21/#hackernews:story:49378957</id>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary>GitHub published a postmortem for the August 17 outage, attributing it to capacity failures and scaling issues that disrupted services including GitHub Actions. Monthly commits reportedly doubled from 1.4 billion in April to 2.9 billion. The outage affected millions of developers and enterprise users who rely on GitHub for code hosting and CI/CD. It highlights the operational pressures of hyper-growth and raises questions about resource allocation, free-tier impacts, and infrastructure resilience in widely used developer platforms. The postmortem describes two capacity-related incidents and acknowledges that critical components were not scaled before demand exceeded capacity. Community commenters noted that the growth in commits, from 1.4 billion to 2.9 billion monthly since April, coincided with industry-wide &#x27;productivity panic&#x27; around AI tooling.</summary>
+  </entry>
+  <entry>
+    <title>An Essay on Why Biology Should Be Taught Through Discovery</title>
+    <link href="https://jsomers.net/i-should-have-loved-biology/"/>
+    <id>https://bmt.news/editions/2026-08-21/#hackernews:story:49377853</id>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary>In the 2020 essay &#x27;I Should Have Loved Biology,&#x27; published on jsomers.net, James Somers argues that biology was made unlovable by rote memorization and should instead be taught through meaning and discovery. The piece earned 311 points and 118 comments on Hacker News, sparking substantive discussion about pedagogy. The essay resonates with a technology audience because it speaks to how intrinsic motivation and curiosity drive deep learning, values at the core of engineering culture. It also contributes to ongoing debates about STEM education by arguing that meaning-making is essential for genuine understanding, not just test performance. The Hacker News thread reached 311 points and 118 comments, with commenters weighing in on the &#x27;meaning before mechanics&#x27; principle, connecting the argument to Seymour Papert and Jean Piaget. One life-science researcher offered a counterpoint, describing the essay as &#x27;a very romantic view of life sciences&#x27; and emphasizing the unglamorous reality of research work.</summary>
+  </entry>
+</feed>

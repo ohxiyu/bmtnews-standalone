@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BMTNews · AI 科技</title>
+  <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
+  <link href="https://bmt.news/"/>
+  <id>https://bmt.news/feeds/technology-zh.xml</id>
+  <updated>2026-08-21T00:00:00Z</updated>
+  <entry>
+    <title>恶意 Rust crate arrayref 构建时执行恶意负载</title>
+    <link href="https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/"/>
+    <id>https://bmt.news/editions/2026-08-21/#hackernews:story:49374269</id>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary>流行的 Rust crate arrayref 的恶意版本 0.3.10 首次添加了对拼写错误仿冒 crate proc-macro1 的依赖，其 build 脚本会在编译时下载并执行远程二进制文件。Rust 官方团队和 RustSec 公告数据库已于 2026 年 8 月 20 日发出官方警告，该恶意版本也已从 crates.io 移除。 由于 arrayref 使用广泛，且恶意代码在构建过程中执行，任何编译了该恶意版本的开发者或 CI/CD 系统都可能被感染，而无需运行项目自身代码。这突显了针对 Rust/crates.io 生态系统的供应链攻击的系统性风险。 恶意版本的 arrayref 0.3.10 由合法维护者账号 &#x27;droundy&#x27; 于 2026-08-20 发布，其依赖的 proc-macro1 1.0.107 在几分钟前由账号 &#x27;dtolney&#x27; 发布。proc-macro1 的 build.rs 会下载并执行远程载荷；安全研究人员称这是一个多阶段信息窃取程序，并具备第二阶段后门能力。</summary>
+  </entry>
+  <entry>
+    <title>GitHub 8月17日宕机事件复盘：容量故障与扩展挑战</title>
+    <link href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/"/>
+    <id>https://bmt.news/editions/2026-08-21/#hackernews:story:49378957</id>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary>GitHub 发布了 8 月 17 日宕机事件的复盘报告，将其归因于容量故障和扩展问题，事件影响了包括 GitHub Actions 在内的服务。据报道，月度提交量从 4 月的 14 亿次翻倍增长至 29 亿次。 这次宕机影响了数百万依赖 GitHub 进行代码托管和 CI/CD 的开发者及企业用户。它凸显了超高速增长带来的运营压力，并引发了对资源分配、免费套餐影响以及广泛使用的开发者平台基础设施韧性的思考。 复盘报告描述了两次与容量相关的事件，并承认在需求超出容量之前未能扩展关键组件。社区评论者指出，自 4 月以来月度提交量从 14 亿增长到 29 亿，恰好与全行业围绕 AI 工具的“生产力焦虑”相吻合。</summary>
+  </entry>
+  <entry>
+    <title>为何我本应爱上生物学：一篇关于教育的反思</title>
+    <link href="https://jsomers.net/i-should-have-loved-biology/"/>
+    <id>https://bmt.news/editions/2026-08-21/#hackernews:story:49377853</id>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary>詹姆斯·索默斯（James Somers）在 2020 年发表于 jsomers.net 的随笔《我本应爱上生物学》中提出，生物学因死记硬背而丧失了魅力，教学应当转向意义与探索。该文在 Hacker News 上获得 311 个赞与 118 条评论，引发了关于教学法的深入讨论。 这篇文章能引起科技界共鸣，因为它触及了内在动力与好奇心如何驱动深度学习——这正是工程师文化所看重的价值。它也回应了 STEM 教育的长期争论：意义建构是真正理解的关键，而不仅仅是为了应付考试。 Hacker News 讨论串获得了 311 个赞和 118 条评论，评论者围绕“意义先于技巧”这一原则展开讨论，并将其与西摩·帕尔特（Seymour Papert）和让·皮亚杰（Jean Piaget）的思想联系起来。一位生命科学研究者则提出不同意见，称这是“对生命科学非常浪漫的看法”，并强调科研工作并不光鲜的现实。</summary>
+  </entry>
+</feed>
