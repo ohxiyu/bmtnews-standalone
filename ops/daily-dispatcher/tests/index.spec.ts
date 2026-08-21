@@ -9,7 +9,7 @@ const ENV = {
   GITHUB_REF: "main",
   EDITION_TIMEZONE: "Asia/Shanghai",
   EDITION_CUTOFF_HOUR: "8",
-  PUBLIC_SITE_URL: "https://ohxiyu.github.io/bmtnews",
+  PUBLIC_SITE_URL: "https://bmt.news",
   GITHUB_DISPATCH_TOKEN: "test-token",
 } satisfies Env;
 
@@ -39,8 +39,8 @@ describe("edition scheduling", () => {
         "https://raw.githubusercontent.com/ohxiyu/bmtnews-standalone/gh-pages/_posts/2026-07-31-summary-en.md",
       ],
       rendered: [
-        "https://ohxiyu.github.io/bmtnews/2026/07/31/summary-zh.html",
-        "https://ohxiyu.github.io/bmtnews/2026/07/31/summary-en.html",
+        "https://bmt.news/2026/07/31/summary-zh.html",
+        "https://bmt.news/2026/07/31/summary-en.html",
       ],
     });
   });
