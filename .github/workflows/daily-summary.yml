@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Restore published daily state and archive
         shell: bash
@@ -54,7 +54,7 @@ jobs:
           done
 
       - name: Restore staged source items
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: data/staging-items.json
           key: ${{ runner.os }}-bmtnews-staging-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -73,7 +73,7 @@ jobs:
           fi
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
