@@ -4,6 +4,24 @@ on:
   push:
     branches: [main]
     paths: ['docs/**']
+  workflow_dispatch:
+    inputs:
+      history_repository:
+        description: Public owner/repository containing the published snapshot
+        type: string
+        required: true
+      history_sha:
+        description: Exact 40-character commit SHA to import
+        type: string
+        required: true
+      confirmation:
+        description: Type IMPORT to confirm the immutable-history import
+        type: string
+        required: true
+
+concurrency:
+  group: bmtnews-feed-update
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -18,6 +36,65 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      - name: Validate history import request
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        env:
+          HISTORY_REPOSITORY: ${{ inputs.history_repository }}
+          HISTORY_SHA: ${{ inputs.history_sha }}
+          CONFIRMATION: ${{ inputs.confirmation }}
+        shell: bash
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "History imports must run from main" >&2
+            exit 1
+          fi
+          if ! [[ "$HISTORY_REPOSITORY" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]]; then
+            echo "history_repository must use owner/repository format" >&2
+            exit 1
+          fi
+          if ! [[ "$HISTORY_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "history_sha must be an exact lowercase commit SHA" >&2
+            exit 1
+          fi
+          if [ "$CONFIRMATION" != "IMPORT" ]; then
+            echo "confirmation must be IMPORT" >&2
+            exit 1
+          fi
+
+      - name: Checkout current published site
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: current-site
+          persist-credentials: false
+
+      - name: Checkout pinned history snapshot
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ inputs.history_repository }}
+          ref: ${{ inputs.history_sha }}
+          path: history-site
+          persist-credentials: false
+
+      - name: Import immutable published history
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          python -m src.history_import \
+            --current current-site \
+            --history history-site \
+            --output docs \
+            --report history-import-report.json
+
+      - name: Upload history import report
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: history-import-report
+          path: history-import-report.json
+          if-no-files-found: error
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -26,3 +103,7 @@ jobs:
           keep_files: true
           publish_branch: gh-pages
           enable_jekyll: true
+          commit_message: >-
+            ${{ github.event_name == 'workflow_dispatch'
+                && format('chore: import published history from {0}@{1}', inputs.history_repository, inputs.history_sha)
+                || github.event.head_commit.message }}
