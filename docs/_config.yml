@@ -1,0 +1,21 @@
+title: BMTNews
+description: Crypto market intelligence covering exchanges, markets, security, regulation, and protocols
+baseurl: ""
+url: "https://bmt.news"
+asset_version: "20260811.1"
+
+# Build settings
+markdown: kramdown
+future: true # Allow future posts to be published
+include:
+  - "_headers"
+exclude:
+  - ".github"
+  - "node_modules"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"

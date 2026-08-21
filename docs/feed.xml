@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BMTNews</title>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self"/>
+  <link href="{{ '/' | absolute_url }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ '/' | absolute_url }}</id>
+  {% for post in site.posts limit:14 %}
+  <entry>
+    <title>BMTNews · {{ post.date | date: "%Y.%m.%d" }} · {{ post.lang | upcase }}</title>
+    <link href="{{ post.url | absolute_url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ post.url | absolute_url }}</id>
+    <content type="html"><![CDATA[ {{ post.content }} ]]></content>
+  </entry>
+  {% endfor %}
+</feed>

@@ -1,0 +1,33 @@
+{
+  "_readme": "人工编辑层。改这个文件并推送到 main，editorial-rebuild workflow 会自动重刊今天的日报。类型: editorial=编辑精选(插入日报并置顶), sponsored=广告位(仅网页、带广告标签、每期最多1条), suppress=按 URL 压掉某条新闻。日期字段: date=只在某一天生效, starts/expires=区间生效(广告自动下架)。enabled=false 的条目被忽略。详见 project-docs/editorial.md。",
+  "items": [
+    {
+      "type": "editorial",
+      "enabled": false,
+      "url": "https://example.com/my-own-story",
+      "title_zh": "示例：手动加入的新闻标题",
+      "title_en": "Example: a manually added story",
+      "summary_zh": "一两句中文摘要。",
+      "summary_en": "One or two sentences in English.",
+      "date": "2026-01-01"
+    },
+    {
+      "type": "sponsored",
+      "enabled": false,
+      "url": "https://example.com/promo",
+      "title_zh": "示例：广告标题",
+      "title_en": "Example: sponsored title",
+      "summary_zh": "广告描述，一句话。",
+      "summary_en": "One-line ad description.",
+      "position": 4,
+      "starts": "2026-01-01",
+      "expires": "2026-01-07"
+    },
+    {
+      "type": "suppress",
+      "enabled": false,
+      "url": "https://example.com/article-to-hide",
+      "date": "2026-01-01"
+    }
+  ]
+}

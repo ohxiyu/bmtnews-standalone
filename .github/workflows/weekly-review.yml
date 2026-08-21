@@ -1,0 +1,93 @@
+name: BMTNews Weekly Review
+
+# Builds the reader-facing weekly digest and the maintainer-facing scoring
+# calibration review from the published archive. Reads no live sources, so
+# it cannot disturb the daily edition.
+
+on:
+  # Written in UTC, like every other schedule here: a `timezone` key on a
+  # cron entry is not part of the documented workflow syntax, so relying on
+  # it makes the fire time depend on undocumented behaviour. 01:13 UTC is
+  # 09:13 Asia/Shanghai. The minute is off the hour and off the half hour
+  # because those slots are the most likely to be delayed or dropped, and a
+  # weekly job that gets dropped loses the whole week.
+  schedule:
+    - cron: '13 1 * * 1'
+  workflow_dispatch:
+    inputs:
+      end_date:
+        description: Last day of the week to review (YYYY-MM-DD)
+        type: string
+        required: false
+        default: ''
+
+concurrency:
+  group: bmtnews-feed-update
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: Asia/Shanghai
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Restore published archive and weekly pages
+        shell: bash
+        run: |
+          git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
+          mkdir -p docs/_data/archive docs/weekly
+          for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive weekly 2>/dev/null); do
+            mkdir -p "docs/$(dirname "${path}")"
+            git show "origin/gh-pages:${path}" > "docs/${path}"
+          done
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Prepare GitHub Actions config
+        run: cp data/config.github.json data/config.json
+
+      - name: Build the weekly review
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        shell: bash
+        run: |
+          args=(--mode weekly)
+          if [ -n "${{ inputs.end_date }}" ]; then
+            args+=(--edition-date "${{ inputs.end_date }}")
+          fi
+          uv run bmtnews "${args[@]}"
+
+      - name: Publish run report
+        if: ${{ always() }}
+        run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          keep_files: true
+          commit_message: "🗓️ Weekly review"
+          publish_branch: gh-pages
+          enable_jekyll: true

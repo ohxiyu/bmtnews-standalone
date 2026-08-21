@@ -1,0 +1,53 @@
+{% comment %}
+Masthead + recent-editions nav, shared by the home feed and every archived
+edition page so both read as the same publication.
+
+An archived edition would otherwise render as a bare date with no way back
+to today and no way to reach a neighbouring day, which is the one place a
+reader is most likely to want both.
+
+Parameters:
+  language — "zh" | "en"
+  current  — YYYY-MM-DD of the edition being viewed; omit on the home feed
+{% endcomment %}
+
+{% assign nav_posts = site.posts | where: "lang", include.language %}
+{% assign is_archive = false %}
+{% if include.current and include.current != "" %}{% assign is_archive = true %}{% endif %}
+{% assign home_url = "/" %}
+{% if include.language == "en" %}{% assign home_url = "/en/" %}{% endif %}
+
+<header class="daily-feed-header">
+  <div class="daily-feed-heading">
+    <div class="daily-title-row">
+      {% if is_archive %}
+        <h1><a href="{{ home_url | relative_url }}">{% if include.language == "en" %}Daily Briefing{% else %}每日情报{% endif %}</a></h1>
+      {% else %}
+        <h1>{% if include.language == "en" %}Daily Briefing{% else %}每日情报{% endif %}</h1>
+      {% endif %}
+    </div>
+    {% if include.language == "en" %}
+      <p>One crypto intelligence edition a day, with selected AI, technology, and policy coverage.</p>
+    {% else %}
+      <p>每日一期加密市场情报，兼顾 AI 科技与政策变化。</p>
+    {% endif %}
+  </div>
+  {% if nav_posts.size > 0 %}
+    <nav class="day-nav" aria-label="{% if include.language == "en" %}Recent editions{% else %}近期日报{% endif %}">
+      <span class="day-nav-label">{% if include.language == "en" %}Recent{% else %}近期{% endif %}</span>
+      {% if is_archive %}
+        <a class="day-nav-today" href="{{ home_url | relative_url }}">{% if include.language == "en" %}Today{% else %}今日{% endif %}</a>
+      {% endif %}
+      {% for post in nav_posts limit:7 %}
+        {% assign nav_key = post.date | date: "%Y-%m-%d" %}
+        {% assign is_current = false %}
+        {% if is_archive %}
+          {% if nav_key == include.current %}{% assign is_current = true %}{% endif %}
+        {% elsif forloop.first %}
+          {% assign is_current = true %}
+        {% endif %}
+        <a href="{{ post.url | relative_url }}"{% if is_current %} aria-current="true"{% endif %}>{{ post.date | date: "%m.%d" }}</a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+</header>

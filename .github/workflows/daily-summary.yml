@@ -1,0 +1,139 @@
+name: BMTNews Daily Edition
+run-name: >-
+  Daily ${{ inputs.edition_date || 'auto' }}
+  via ${{ inputs.trigger_source || 'manual' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition_date:
+        description: Local edition date ending at 08:00 Asia/Shanghai (YYYY-MM-DD)
+        type: string
+        required: false
+        default: ''
+      trigger_source:
+        description: Dispatcher identity for run observability
+        type: string
+        required: false
+        default: manual
+      force_publish:
+        description: Rebuild an already published fixed window
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: bmtnews-feed-update
+  cancel-in-progress: false
+
+jobs:
+  daily-summary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Shanghai
+    permissions:
+      contents: write  # Needed to commit changes
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Restore published daily state and archive
+        shell: bash
+        run: |
+          git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
+          if git cat-file -e "origin/gh-pages:_data/bmtnews_state.json" 2>/dev/null; then
+            mkdir -p docs/_data
+            git show "origin/gh-pages:_data/bmtnews_state.json" > docs/_data/bmtnews_state.json
+          fi
+          # The cross-day archive powers threads, entity pages, and the API.
+          mkdir -p docs/_data/archive
+          for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive 2>/dev/null); do
+            git show "origin/gh-pages:${path}" > "docs/${path}"
+          done
+
+      - name: Restore staged source items
+        uses: actions/cache@v5
+        with:
+          path: data/staging-items.json
+          key: ${{ runner.os }}-bmtnews-staging-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-bmtnews-staging-v1-
+
+      - name: Restore staging from persistent branch on cache miss
+        shell: bash
+        run: |
+          if [ -f data/staging-items.json ]; then
+            exit 0
+          fi
+          if git fetch --depth=1 origin staging-cache 2>/dev/null; then
+            mkdir -p data
+            git show FETCH_HEAD:data/staging-items.json > data/staging-items.json 2>/dev/null || rm -f data/staging-items.json
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+
+      - name: Install dependencies
+        run: uv sync --frozen --extra trafilatura
+
+      - name: Prepare GitHub Actions config
+        run: cp data/config.github.json data/config.json
+
+      - name: Run BMTNews
+        env:
+          # Map secrets to environment variables expected by config.json
+          # Modify these based on your data/config.github.json provider settings
+          GITHUB_TOKEN: ${{ github.token }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          LWN_KEY: ${{ secrets.LWN_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          BMTNEWS_WEBHOOK_URL: ${{ secrets.BMTNEWS_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          # Only used when x_delivery.enabled is true in the config.
+          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
+          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        shell: bash
+        run: |
+          args=(--mode publish --hours 24 --cutoff-hour 8)
+          if [ -n "${{ inputs.edition_date }}" ]; then
+            args+=(--edition-date "${{ inputs.edition_date }}")
+          fi
+          if [ "${{ inputs.force_publish }}" = "true" ]; then
+            args+=(--force-publish)
+          fi
+          uv run bmtnews "${args[@]}"
+
+      - name: Publish run report
+        if: ${{ always() }}
+        run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Read published edition date
+        id: edition
+        shell: bash
+        run: |
+          edition_date="$(python -c 'import json; print(json.load(open("data/run-report.json", encoding="utf-8"))["date"])')"
+          echo "date=${edition_date}" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          keep_files: true  # Keep existing summaries on gh-pages branch
+          commit_message: "📝 Daily Summary: ${{ steps.edition.outputs.date }}"
+          publish_branch: gh-pages
+          enable_jekyll: true

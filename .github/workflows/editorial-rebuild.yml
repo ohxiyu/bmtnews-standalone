@@ -1,0 +1,27 @@
+name: Editorial Rebuild
+
+# Editing data/editorial.json on main republishes today's edition so
+# manual picks, ad slots, and suppressions take effect within minutes.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/editorial.json
+
+permissions:
+  actions: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Dispatch daily edition rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run daily-summary.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            -f force_publish=true \
+            -f trigger_source=editorial-update

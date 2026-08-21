@@ -1,0 +1,71 @@
+# Cache policy, split by how often each kind of URL actually changes.
+#
+# Only a host that reads this file applies it — Cloudflare Pages and Netlify
+# do; GitHub Pages has no custom-header support and serves its own default
+# instead.
+#
+# Everything here is static, so read traffic never reaches an application:
+# the only thing that decides how a burst of readers is served is how much of
+# it the CDN can answer from cache. A URL with no rule falls back to the
+# host default, which is why the archive, threads, entities and feeds are
+# listed rather than left to inherit.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/admin/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com blob:; worker-src blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https://*.githubusercontent.com; connect-src 'self' https://api.github.com https://github.com https://raw.githubusercontent.com https://unpkg.com https://*.workers.dev; frame-ancestors 'none'; base-uri 'none'; form-action 'none'
+  Referrer-Policy: no-referrer
+
+# Today's edition: republished during the morning window, so it is checked
+# often but still served from cache while revalidating.
+/
+  Cache-Control: public, max-age=300, stale-while-revalidate=60
+  CDN-Cache-Control: public, max-age=300, stale-while-revalidate=60
+
+/en/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=60
+  CDN-Cache-Control: public, max-age=300, stale-while-revalidate=60
+
+/editions/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=60
+  CDN-Cache-Control: public, max-age=300, stale-while-revalidate=60
+
+# Past editions never change once published. These are the pages an X post
+# or a search result lands on, so they are also the ones most likely to take
+# a burst.
+/20*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  CDN-Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Threads, entities and weekly reviews are rewritten once per publish.
+/threads/*
+  Cache-Control: public, max-age=1800, stale-while-revalidate=86400
+  CDN-Cache-Control: public, max-age=3600, stale-while-revalidate=604800
+
+/entity/*
+  Cache-Control: public, max-age=1800, stale-while-revalidate=86400
+  CDN-Cache-Control: public, max-age=3600, stale-while-revalidate=604800
+
+/weekly/*
+  Cache-Control: public, max-age=1800, stale-while-revalidate=86400
+  CDN-Cache-Control: public, max-age=3600, stale-while-revalidate=604800
+
+# Feed readers poll on their own schedule whether or not anything changed,
+# and the feeds carry full edition content, so they are the largest
+# repeat-traffic payload on the site. Serve them from the edge.
+/feed*.xml
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+  CDN-Cache-Control: public, max-age=1800, stale-while-revalidate=86400
+
+/feeds/*
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+  CDN-Cache-Control: public, max-age=1800, stale-while-revalidate=86400
+
+# The JSON API is the endpoint a third party would poll in a loop.
+/api/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  CDN-Cache-Control: public, max-age=600, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *

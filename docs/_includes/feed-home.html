@@ -1,0 +1,121 @@
+{% assign feed_posts = site.posts | where: "lang", include.language %}
+{% assign latest_post = feed_posts | first %}
+{% assign today_key = site.time | date: "%Y-%m-%d" %}
+
+<section class="continuous-feed" data-language="{{ include.language }}">
+  {% include edition-header.html language=include.language %}
+
+  {% if latest_post %}
+    <section
+      class="today-edition-status"
+      data-today-edition-status
+      data-latest-edition-date="{{ latest_post.date | date: '%Y-%m-%d' }}"
+      hidden
+    >
+      <div class="today-edition-status__date">
+        <span class="day-state">{% if include.language == "zh" %}今日{% else %}Today{% endif %}</span>
+        <time data-today-edition-date></time>
+      </div>
+      {% if include.language == "zh" %}
+        <h2 data-today-edition-title>今日版准备中</h2>
+        <p data-before-cutoff="今日版预计 08:30 发布。上一期仍保留在下方，避免将昨天的排行误认为今日内容。" data-after-cutoff="今日版已超过预计发布时间，系统正在补采、去重并恢复发布；上一期仍保留在下方供参考。">今日版预计 08:30 发布。上一期仍保留在下方，避免将昨天的排行误认为今日内容。</p>
+      {% else %}
+        <h2 data-today-edition-title>Today's edition is being prepared</h2>
+        <p data-before-cutoff="Today's edition is expected at 08:30 Asia/Shanghai. The previous edition remains below for reference." data-after-cutoff="Today's edition is later than expected. Collection, deduplication, and publishing recovery are in progress; the previous edition remains below for reference.">Today's edition is expected at 08:30 Asia/Shanghai. The previous edition remains below for reference.</p>
+      {% endif %}
+    </section>
+    <script>
+      (function (script) {
+        var status = script.previousElementSibling;
+        if (!status || !status.hasAttribute('data-today-edition-status')) return;
+        var parts = new Intl.DateTimeFormat('en-CA', {
+          timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit',
+          day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+        }).formatToParts(new Date()).reduce(function (result, part) {
+          result[part.type] = part.value; return result;
+        }, {});
+        var today = parts.year + '-' + parts.month + '-' + parts.day;
+        if (status.getAttribute('data-latest-edition-date') >= today) return;
+        var afterCutoff = Number(parts.hour) > 8 ||
+          (Number(parts.hour) === 8 && Number(parts.minute) >= 30);
+        var copy = status.querySelector('p');
+        var title = status.querySelector('[data-today-edition-title]');
+        var language = status.closest('[data-language]').getAttribute('data-language');
+        status.querySelector('[data-today-edition-date]').textContent =
+          parts.year + '.' + parts.month + '.' + parts.day;
+        if (afterCutoff) {
+          title.textContent = language === 'zh' ? '今日版延迟，正在恢复' :
+            "Today's edition is delayed; recovery is in progress";
+          copy.textContent = copy.getAttribute('data-after-cutoff');
+        } else {
+          copy.textContent = copy.getAttribute('data-before-cutoff');
+        }
+        status.hidden = false;
+      }(document.currentScript));
+    </script>
+    <div class="day-stream">
+      {% for post in feed_posts limit:2 %}
+        {% assign post_key = post.date | date: "%Y-%m-%d" %}
+        <section class="daily-day" data-language="{{ include.language }}" data-date="{{ post_key }}">
+          <header class="day-divider">
+            <div class="day-divider-title">
+              {% if forloop.first %}
+                <span class="day-state">
+                  {% if include.language == "zh" %}
+                    {% if post_key == today_key %}今日{% else %}最新{% endif %}
+                  {% else %}
+                    {% if post_key == today_key %}Today{% else %}Latest{% endif %}
+                  {% endif %}
+                </span>
+              {% endif %}
+              <time datetime="{{ post_key }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+              {% if post.window_start and post.window_end %}
+                <span class="day-window">
+                  {{ post.window_start | date: "%m.%d %H:%M" }}–{{ post.window_end | date: "%m.%d %H:%M" }}
+                </span>
+              {% endif %}
+            </div>
+            <div class="day-divider-stats" aria-label="{{ post_key }} {% if include.language == "zh" %}日报统计{% else %}edition statistics{% endif %}">
+              {% if include.language == "zh" %}
+                <span data-short="采"><strong data-stat="fetched">{{ post.fetched_count | default: "—" }}</strong> 条采集</span>
+                <span data-short="析"><strong data-stat="analyzed">{{ post.analyzed_count | default: "—" }}</strong> 条分析</span>
+                <span data-short="展"><strong data-stat="selected">{{ post.selected_count | default: "—" }}</strong> 条展示</span>
+                <span data-short="高"><strong data-stat="critical">{{ post.critical_count | default: "—" }}</strong> 条高优先级</span>
+              {% else %}
+                <span data-short="F"><strong data-stat="fetched">{{ post.fetched_count | default: "—" }}</strong> fetched</span>
+                <span data-short="A"><strong data-stat="analyzed">{{ post.analyzed_count | default: "—" }}</strong> analyzed</span>
+                <span data-short="D"><strong data-stat="selected">{{ post.selected_count | default: "—" }}</strong> displayed</span>
+                <span data-short="H"><strong data-stat="critical">{{ post.critical_count | default: "—" }}</strong> high priority</span>
+              {% endif %}
+            </div>
+          </header>
+          <div class="daily-feed-content" data-language="{{ include.language }}" data-date="{{ post_key }}">
+            {{ post.content }}
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+
+    <div class="feed-history-manifest" hidden aria-hidden="true">
+      {% for post in feed_posts offset:2 %}
+        {% assign history_url = post.fragment_url | default: post.url %}
+        <span data-url="{{ history_url | relative_url }}" data-date="{{ post.date | date: '%Y-%m-%d' }}"></span>
+      {% endfor %}
+    </div>
+    {% if feed_posts.size > 2 %}
+      <div class="load-earlier-wrap">
+        <button class="load-earlier" type="button">
+          {% if include.language == "zh" %}加载更早{% else %}Load earlier{% endif %}
+        </button>
+      </div>
+    {% endif %}
+  {% else %}
+    <div class="empty-state">
+      {% if include.language == "zh" %}
+        首期日报生成后，完整信息流会直接显示在首页。
+      {% else %}
+        The complete feed will appear here after the first daily edition.
+      {% endif %}
+    </div>
+  {% endif %}
+</section>

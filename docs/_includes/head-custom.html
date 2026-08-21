@@ -1,0 +1,29 @@
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%22100%22 y2=%22100%22><stop stop-color=%22%237c5cff%22/><stop offset=%221%22 stop-color=%22%230ea5b7%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2226%22 fill=%22url(%23g)%22/><text x=%2250%22 y=%2269%22 text-anchor=%22middle%22 font-size=%2256%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22white%22>B</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%22100%22 y2=%22100%22><stop stop-color=%22%237c5cff%22/><stop offset=%221%22 stop-color=%22%230ea5b7%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2226%22 fill=%22url(%23g)%22/><text x=%2250%22 y=%2269%22 text-anchor=%22middle%22 font-size=%2256%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22white%22>B</text></svg>">
+<link rel="alternate" type="application/rss+xml" title="BMTNews RSS" href="{{ '/feed.xml' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" title="BMTNews 中文加密资讯" href="{{ '/feed-zh.xml' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" title="BMTNews English Crypto News" href="{{ '/feed-en.xml' | relative_url }}">
+<script>
+  (function () {
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('bmtnews-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (error) {
+      // The system preference remains the fallback.
+    }
+    window.setTimeout(function () {
+      document.documentElement.classList.add('feed-ready');
+    }, 3000);
+  })();
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/bmtnews.css' | relative_url }}?v={{ site.asset_version }}">
+{% if page.page_type == "source_console" %}
+<link rel="stylesheet" href="{{ '/assets/css/source-console.css' | relative_url }}?v={{ site.asset_version }}">
+{% endif %}
+<script src="{{ '/assets/js/bmtnews.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
+{% if page.page_type == "source_console" %}
+<script src="{{ '/assets/js/source-console.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
+{% endif %}
