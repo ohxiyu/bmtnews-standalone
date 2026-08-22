@@ -4,7 +4,70 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-08-21T00:00:00Z</updated>
+  <updated>2026-08-22T00:00:00Z</updated>
+  <entry>
+    <title>Coldcard Firmware Update Mitigates $130M Bitcoin Seed-Entropy Exploit</title>
+    <link href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:decrypt.co_feed:6b6e45deb878ca81</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Coinkite released firmware 5.6.1 for Coldcard Mk4/Mk5 and 1.5.1Q for Coldcard Q after a three-week security review, fixing a seed-generation entropy flaw. Users now must add at least 65 key presses, 50 dice rolls, or 128 coin flips when generating a new seed, and affected users are told to migrate to a fresh seed. This exploit directly contradicts the core promise of hardware wallets—that private keys remain safe even when the device is offline—by allowing attackers to guess keys generated with insufficient randomness. The incident highlights that a hardware wallet&#x27;s security is only as strong as its random number generation, and it may push vendors and users to demand verifiable entropy sources. The flaw reduced effective entropy from 128 bits to roughly 40 bits on some devices and dates back to 2021, according to Coinkite. The update also replaces the Yasmarang backup pseudo-random number generator with SHA-256 Hash_DRBG, adds hardware RNG failure checks, verifies PSBTs immediately before signing, and tightens USB and Delta Mode handling.</summary>
+  </entry>
+  <entry>
+    <title>MANTRA halts network over Cosmos EVM module incident</title>
+    <link href="https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:www.theblock.co_rss.xml:22d9e7ab9bedff7e</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>On August 21, 2026, MANTRA Chain halted all transactions, transfers, and staking after an attacker exploited a vulnerability in an upstream dependency linked to its Cosmos EVM module. The patched release v8.4.0 is being tested on the DuKong testnet before a coordinated mainnet restart can occur. This is a high-impact security event for MANTRA users and the broader Cosmos ecosystem, as the network-wide freeze silences all onchain activity and raises questions about the security of third-party dependencies. The incident could affect trust in Cosmos-based EVM chains and in the safety of upstream open-source components. The MANTRA team says the halt itself did not affect user funds, but the full asset impact of the attacker&#x27;s activity remains unconfirmed and fund movements are being traced. Validators are instructed to keep mainnet nodes offline until a coordinated restart is announced, with DuKong testnet testing serving as the gate for the patched release.</summary>
+  </entry>
+  <entry>
+    <title>Solana Activates 350ms Slots on Mainnet, First Cut Since Genesis</title>
+    <link href="https://thedefiant.io/news/blockchains/solana-activates-350-millisecond-slots-on-mainnet"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:thedefiant.io_api_feed:1d516c873d5182e2</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Solana reduced its mainnet slot time from 400ms to 350ms, marking the first such reduction since the network&#x27;s inception. The change begins an epoch-by-epoch path toward a 200ms target, with 300ms as the next milestone. Shorter slots reduce network latency and speed up transaction confirmation, improving the experience for users and applications built on Solana. It strengthens Solana&#x27;s competitive position as a high-performance blockchain and signals continued protocol-level optimization. The reduction was enabled by SIMD-0525, which was approved and merged on May 14, and average slot times already stood at 360ms at press time. The remaining 50ms reductions toward 200ms are targeted for mainnet activation in Agave v4.2, the validator client developed by Anza, though the schedule is tentative.</summary>
+  </entry>
+  <entry>
+    <title>Maya Protocol Exploit Leaves $11M Pool Damage Unresolved; Attacker Still Holds 20.83 BTC</title>
+    <link href="https://cryptoslate.com/maya-protocol-exploit-wallet-still-holds-20-83-btc-as-11-million-pool-impact-remains-unresolved/"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:cryptoslate.com_feed_:8ebed66f2210edb3</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>On Aug. 18, Maya Protocol suffered an exploit in which an attacker chained six accounting flaws to drain roughly 48.87 million CACAO and extract about $1.65–$1.7 million in assets. As of Aug. 21, the suspected attacker&#x27;s Bitcoin address still holds 20.8273 BTC with no outgoing transactions, and Maya has not published a recovery plan for the wider ~$10.9 million pool impact. This exploit underscores persistent security risks in cross-chain liquidity protocols, where a single crafted transaction can trigger cascading pool losses. With ~$11 million in impact still unresolved and CACAO&#x27;s price down 88.7%, user confidence in Maya Protocol and similar THORChain-based networks may be shaken. SigIntZero&#x27;s technical reconstruction attributes the exploit to six accounting and state-handling flaws chained inside one 23-message transaction, which produced a false missing-transfer signal and credited ~49.45 million CACAO to a thin ARB.LINK pool. CryptoSlate analysis attributes ~$6.4 million of pool impact to CACAO repricing (from ~$0.115 to $0.013, an 88.7% decline) and ~$2.9 million to arbitrage.</summary>
+  </entry>
+  <entry>
+    <title>Major P2P Platform NoOnes Shuts Down After Sanctions Disrupt Operations</title>
+    <link href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXbmhJX2tRdWMwN0hKM0QycU9tOXFjNURNOFJWTGNTcURoZVlzXzVBYWtFWVUwUU1PTUNsdWJfZXY2NW1rUTBlcG81Sm5FWHdZYVNsdHdDYXlUZzg?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:b3e6cc6e3007bae9</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>NoOnes, a peer-to-peer crypto platform with over 2.5 million users, is winding down operations after government sanctions and resulting regulatory restrictions made continued operations unsustainable. This shutdown demonstrates how government sanctions can force significant crypto platforms out of business, directly affecting users&#x27; ability to trade. It underscores the regulatory and geopolitical risks facing crypto exchanges that depend on traditional financial services. NoOnes surpassed 2.5 million users earlier in 2026 and had served customers for three years. An emergency exit window was opened for users to withdraw funds after sanctions and restrictions from financial and crypto-service providers made operations impossible.</summary>
+  </entry>
+  <entry>
+    <title>Binance Thwarts Attack, Saves $1.2 Million in 48 Hours</title>
+    <link href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPb3I5ZmdNNjA5dDZqZXhVRklQVVJ4YjBIYXJ4SDJlY2E3WENndFpocDNicWhnZzBWNU1jenBWS09QT0RJckFiZ3pQZkMxTExYWVZCZ2o4RllrblhNejlWNDEtSXVIN3dOZVotakJTRGplQmRPbk85a25aQ1d6OWxjTlljMmNjQ1hEeFNIS1lhc0RXN05SODBDWDlmLUNyRExBUXZ4clFrUWVhRGpoVXc?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:527f417106944d09</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Binance detected and neutralized an attack within 48 hours, preventing approximately $1.2 million in potential losses. No customer funds were reported lost in the incident. This incident highlights the ongoing threat landscape for cryptocurrency exchanges and the importance of robust security monitoring. Successfully preventing such attacks helps maintain user trust and exchange stability. Binance&#x27;s security systems detected and halted the attack before any funds were compromised, with the $1.2 million figure representing the potential loss averted. The response occurred within a 48-hour window, according to the announcement.</summary>
+  </entry>
+  <entry>
+    <title>Wall Street Faces Urgent Perpetual Futures Existential Crisis</title>
+    <link href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxQM3diVm50cUw1WVExRzBlUmNCM2k5TjkzNWlCZEFFWTVBQzljRDhLdTY4ZWp5b1FFc3Z6WTVWM29PcVlXeHpEOGZkMXZyZ0Mwall0NGprT29LOFJvYnVtaHAzVXpDLXZtaWdmQThYdzVWVEdhaU5STTJHRlVDUWpGVC15TlBCMUdKS2lDblB6TVVJa193X0k1UG5LU1l6N3p5V3cxOElQbEtqdzlsanBiOGdsUWFib1ZvNnpabDV5c0xMUnFzOXNTZnRjRDVhU1h5TFQ00gHYAUFVX3lxTFBFSFFRaVdwaVJTYzNKYnNJY3lFcl80UUluRERRelpSTjV3TWtRUEVpUkhfcV9sWXA3cnltRGRCRW8ydjlCRFVsS2RJQk14UmJKbkllY040NS12U0U3VVJPc3NPRC00VDNCVGl4U181SFFsTWNZQTRXN2M2dVhZM2tYWjRNMTZjZnFTQWR2ZWpVblNUZG1TdjBmSlZlZ2RmUExkbXVDb0pxMW5yNEJVOHkwaGthdGxWajJKdkoyVlB0VnpFWXZrUzk4Z0hRdHFINFRhRmMtRkpLRQ?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:b2b84f6aeb367902</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>CNBC reports that the rise of 24/7 perpetual futures trading has made Wall Street&#x27;s adjustment to crypto derivatives &#x27;urgent,&#x27; framing perpetuals as a &#x27;24/7 security on steroids.&#x27; The article signals growing institutional recognition that traditional trading models must adapt to round-the-clock digital asset markets. Perpetual futures are the most actively traded crypto derivatives, so any structural shift in Wall Street&#x27;s stance can influence liquidity, price discovery, and volatility across digital assets. The urgency reflects competitive pressure on traditional exchanges and the growing mainstream relevance of crypto-native market infrastructure. Perpetual futures have no expiration date and rely on a funding rate mechanism to keep contract prices anchored to spot markets, enabling leveraged positions that can be held indefinitely. The CNBC headline emphasizes that this product class now represents a structural challenge to conventional market hours, clearing, and risk frameworks.</summary>
+  </entry>
+  <entry>
+    <title>Bitcoin Nears $80K, Erases $4B in Short Bets</title>
+    <link href="https://cryptoslate.com/bitcoins-road-to-80000-has-already-destroyed-4-billion-in-short-bets/"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:cryptoslate.com_feed_:8290705ed2e91b3e</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Bitcoin jumped to a three-month high of $78,449, erasing more than $4 billion in short positions over a three-day rally. The move was fueled by Treasury buyback announcements and over $1 billion in spot Bitcoin ETF inflows, with CryptoQuant&#x27;s Bull Score Index returning to bullish territory at 60. The rally shows how macro policy shifts and institutional demand can combine to trigger sharp derivatives repricing in crypto. The Bull Score&#x27;s return to bullish after failing at May&#x27;s highs signals stronger underlying market conditions, though the sustainability of the move now depends on sustained spot buying rather than short covering. CryptoQuant&#x27;s Bull Score Index climbed to 60, its first bullish reading since October 2025, with six of its ten components turning positive, including demand growth, stablecoin liquidity, and trader realized price. Analysts are divided: Nansen&#x27;s Nicolai Søndergaard noted ETF inflows helped reclaim key moving averages, while Alphractal CEO Joao Wedson called the move &#x27;a relief rally&#x27; and said nothing has fundamentally changed.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Launches AI Agent Platform for Crypto Payments, COIN Rises 3%</title>
+    <link href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQT09KdTcxbHhTNU14dW11NmxWQ1ppOGV5Y0g5UTJBQzVwdl9jOGFxU1kwQXZUblU3MC1obnNYaXVsU2NRem44M2p4OWVpWUU4VlV2a1JEMTlTSng5dFU1aXd5VnAzb0V2VWN4dS15MUlFMF82TDFQaUtEYldEUll2OGFpUE84LVVRQXJpeXhQSXpldlZ6dXl4Tk50RjVMNnh0aWxuLWlVam0xTVE5RkJRZzlJRnlRZWJzeUdIUEdFTjhQNUNFb3FRb2oyV2pnNGVuZlpDQ0k4SlNIQnBhZFdVSHFR?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:485aef94fa976362</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Coinbase introduced a payments platform that lets AI agents autonomously buy, sell, and pay using cryptocurrency, and COIN stock gained over 3% on the news. This marks a concrete step toward &#x27;agentic finance,&#x27; where autonomous AI systems use crypto as their financial backend. It also positions Coinbase at the intersection of AI and crypto, potentially opening new revenue streams from machine-to-machine payments. According to Decrypt, Coinbase&#x27;s new tool is an MCP (Model Context Protocol) server that allows AI agents to hold wallets and send stablecoin payments, and it builds on Coinbase&#x27;s x402 protocol for machine-to-machine transfers.</summary>
+  </entry>
   <entry>
     <title>Kraken parent Payward explores becoming full bank outside US</title>
     <link href="https://www.theblock.co/news/business/2026-08-20-kraken-parent-payward-explores-becoming-a-full-bank-outside-us-412390"/>

@@ -4,7 +4,70 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-08-21T00:00:00Z</updated>
+  <updated>2026-08-22T00:00:00Z</updated>
+  <entry>
+    <title>Coldcard发布固件更新修复致1.3亿美元比特币被盗的种子熵漏洞</title>
+    <link href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:decrypt.co_feed:6b6e45deb878ca81</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Coinkite公司在为期三周的安全审查后，为Coldcard Mk4/Mk5发布了5.6.1固件、为Coldcard Q发布了1.5.1Q固件，修复了种子生成过程中的熵缺陷。现在用户生成新种子时必须至少加入65次按键、50次掷骰子或128次抛硬币的随机输入，受影响用户被要求迁移到全新的种子。 这一漏洞直接违背了硬件钱包的核心承诺——即使设备离线，私钥也是安全的——因为攻击者可以猜出因随机性不足而生成的密钥。该事件凸显出硬件钱包的安全性完全取决于其随机数生成强度，可能促使厂商和用户要求可验证的熵来源。 据Coinkite称，该漏洞使部分设备的有效熵从128比特降至约40比特，且可追溯到2021年。此次更新还以SHA-256 Hash_DRBG替换了Yasmarang备用伪随机数生成器，增加了硬件随机数生成器故障检查，在签名前立即验证PSBT，并加强了USB和Delta Mode的处理。</summary>
+  </entry>
+  <entry>
+    <title>MANTRA因Cosmos EVM模块事件暂停全网</title>
+    <link href="https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:www.theblock.co_rss.xml:22d9e7ab9bedff7e</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>2026年8月21日，MANTRA Chain在发现攻击者利用与其Cosmos EVM模块相关的上游依赖漏洞后，暂停了所有交易、转账和质押。修复版本v8.4.0正在DuKong测试网上测试，之后才能进行协调的主网重启。 此次事件对MANTRA用户和整个Cosmos生态系统影响重大，因为全网暂停使所有链上活动停止，并引发了对第三方依赖安全性的质疑。这一事件可能影响市场对基于Cosmos的EVM链及上游开源组件安全的信任。 MANTRA团队表示，暂停本身并未影响用户资金，但攻击者活动的完整资产影响尚未确认，资金流向正在追踪中。验证者被要求在官方宣布协调重启前保持主网节点离线，DuKong测试网的测试是补丁版本上线的门槛。</summary>
+  </entry>
+  <entry>
+    <title>Solana主网激活350毫秒时隙，创世以来首次缩减</title>
+    <link href="https://thedefiant.io/news/blockchains/solana-activates-350-millisecond-slots-on-mainnet"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:thedefiant.io_api_feed:1d516c873d5182e2</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Solana将主网时隙时间从400毫秒缩短至350毫秒，这是自网络创世以来的首次缩减。这一变化开启了逐epoch向200毫秒目标迈进的进程，下一里程碑为300毫秒。 更短的时隙降低了网络延迟，加快了交易确认速度，改善了Solana用户和应用的体验。这增强了Solana作为高性能区块链的竞争力，也表明协议层面的优化仍在持续推进。 此次缩减由SIMD-0525提案推动，该提案已于5月14日获批并合并，截至发稿时平均时隙时间已降至360毫秒。后续向200毫秒目标迈进的各次50毫秒缩减计划在Anza开发的验证器客户端Agave v4.2中激活主网，但时间表仍为暂定。</summary>
+  </entry>
+  <entry>
+    <title>Maya Protocol 遭攻击约1100万美元缺口未解，攻击者仍持20.83 BTC</title>
+    <link href="https://cryptoslate.com/maya-protocol-exploit-wallet-still-holds-20-83-btc-as-11-million-pool-impact-remains-unresolved/"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:cryptoslate.com_feed_:8ebed66f2210edb3</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>8月18日，Maya Protocol 遭到攻击，攻击者串联六个会计漏洞，盗走约4887万枚CACAO，并提取约165万至170万美元的资产。截至8月21日，疑似攻击者的比特币地址仍持有20.8273 BTC且无任何转出交易，Maya也未公布针对约1090万美元更大范围池损失的恢复计划。 此次攻击凸显了跨链流动性协议中持续存在的安全风险——单笔精心构造的交易就能引发连锁性的池损失。由于约1100万美元的影响仍未解决，且CACAO价格已下跌88.7%，用户对Maya Protocol及类似基于THORChain的网络的信心可能受到动摇。 SigIntZero的技术重建将攻击归因于一笔23条消息交易中串联的六个会计与状态处理缺陷——错误的重置状态触发了虚假的“转账缺失”信号，向一个薄弱的ARB.LINK池注入了约4945万枚CACAO。CryptoSlate分析认为，约640万美元的池损失来自CACAO重定价（从约0.115美元跌至0.013美元，跌幅88.7%），约290万美元来自套利。</summary>
+  </entry>
+  <entry>
+    <title>主要P2P加密平台NoOnes因制裁关停</title>
+    <link href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXbmhJX2tRdWMwN0hKM0QycU9tOXFjNURNOFJWTGNTcURoZVlzXzVBYWtFWVUwUU1PTUNsdWJfZXY2NW1rUTBlcG81Sm5FWHdZYVNsdHdDYXlUZzg?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:b3e6cc6e3007bae9</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>拥有超过250万用户的点对点（P2P）加密货币平台NoOnes，在政府制裁及由此产生的监管限制导致运营难以为继后，正在逐步停止运营。 此次关停表明，政府制裁可能迫使重要的加密货币平台退出市场，直接影响用户的交易能力。这也凸显了依赖传统金融服务的加密交易所面临的监管和地缘政治风险。 NoOnes在2026年初用户数突破250万，并已为用户服务了三年。在制裁以及金融和加密服务提供商的限制导致运营无法继续后，平台为用户开放了紧急退出窗口以提取资金。</summary>
+  </entry>
+  <entry>
+    <title>币安在48小时内挫败攻击，挽回120万美元</title>
+    <link href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPb3I5ZmdNNjA5dDZqZXhVRklQVVJ4YjBIYXJ4SDJlY2E3WENndFpocDNicWhnZzBWNU1jenBWS09QT0RJckFiZ3pQZkMxTExYWVZCZ2o4RllrblhNejlWNDEtSXVIN3dOZVotakJTRGplQmRPbk85a25aQ1d6OWxjTlljMmNjQ1hEeFNIS1lhc0RXN05SODBDWDlmLUNyRExBUXZ4clFrUWVhRGpoVXc?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:527f417106944d09</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>币安在48小时内侦测并化解了一次攻击，避免了约120万美元的潜在损失。据报此次事件中没有任何客户资金损失。 这一事件凸显了加密货币交易所面临的安全威胁形势，以及强健安全监控的重要性。成功阻止此类攻击有助于维持用户信任和交易所稳定。 币安的安全系统在资金受损之前就侦测并阻止了这次攻击，120万美元的数字代表被避免的潜在损失。据公告称，整个响应过程发生在48小时内。</summary>
+  </entry>
+  <entry>
+    <title>华尔街面临永续合约的紧迫生存危机</title>
+    <link href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxQM3diVm50cUw1WVExRzBlUmNCM2k5TjkzNWlCZEFFWTVBQzljRDhLdTY4ZWp5b1FFc3Z6WTVWM29PcVlXeHpEOGZkMXZyZ0Mwall0NGprT29LOFJvYnVtaHAzVXpDLXZtaWdmQThYdzVWVEdhaU5STTJHRlVDUWpGVC15TlBCMUdKS2lDblB6TVVJa193X0k1UG5LU1l6N3p5V3cxOElQbEtqdzlsanBiOGdsUWFib1ZvNnpabDV5c0xMUnFzOXNTZnRjRDVhU1h5TFQ00gHYAUFVX3lxTFBFSFFRaVdwaVJTYzNKYnNJY3lFcl80UUluRERRelpSTjV3TWtRUEVpUkhfcV9sWXA3cnltRGRCRW8ydjlCRFVsS2RJQk14UmJKbkllY040NS12U0U3VVJPc3NPRC00VDNCVGl4U181SFFsTWNZQTRXN2M2dVhZM2tYWjRNMTZjZnFTQWR2ZWpVblNUZG1TdjBmSlZlZ2RmUExkbXVDb0pxMW5yNEJVOHkwaGthdGxWajJKdkoyVlB0VnpFWXZrUzk4Z0hRdHFINFRhRmMtRkpLRQ?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:b2b84f6aeb367902</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>CNBC报道称，全天候永续合约交易的兴起使华尔街对加密衍生品的适应变得“紧迫”，并将永续合约形容为“24/7交易的强化版证券”。文章表明，传统交易模式必须适应全天候数字资产市场这一认识正在机构中增强。 永续合约是交易最活跃的加密衍生品，因此华尔街立场的任何结构性转变都可能影响数字资产的流动性、价格发现和波动性。这种紧迫感反映出传统交易所面临的竞争压力，以及加密原生市场基础设施日益增长的主流相关性。 永续合约没有到期日，依靠资金费率机制使合约价格锚定现货市场，允许交易者无限期持有杠杆头寸。CNBC的标题强调，这类产品如今对传统交易时间、清算和风险框架构成结构性挑战。</summary>
+  </entry>
+  <entry>
+    <title>比特币逼近8万美元，空头爆仓40亿美元</title>
+    <link href="https://cryptoslate.com/bitcoins-road-to-80000-has-already-destroyed-4-billion-in-short-bets/"/>
+    <id>https://bmt.news/editions/2026-08-22/#rss:cryptoslate.com_feed_:8290705ed2e91b3e</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>比特币在三天涨势中升至三个月高点78,449美元，抹去超过40亿美元的空头头寸。美国财政部回购公告和超过10亿美元的现货比特币ETF流入推动了这波行情，CryptoQuant的牛市评分指数也重新回到60的看涨区域。 这轮涨势表明宏观政策变化与机构需求相结合，可能引发加密货币衍生品市场的剧烈重新定价。牛市评分在5月高点时未能突破后重回看涨区域，表明市场基本面有所改善，不过行情的可持续性现在依赖于持续的现货买盘而非空头回补。 CryptoQuant的牛市评分指数升至60，为2025年10月以来首次进入看涨区域，十个指标中有六个转为正面，包括需求增长、稳定币流动性和交易者实现价格。分析师观点存在分歧：Nansen的Nicolai Søndergaard指出ETF流入帮助收复关键均线，而Alphractal首席执行官Joao Wedson称这不过是&#x27;救济性反弹&#x27;，基本面并未改变。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase推出AI代理交易平台，COIN股价上涨3%</title>
+    <link href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQT09KdTcxbHhTNU14dW11NmxWQ1ppOGV5Y0g5UTJBQzVwdl9jOGFxU1kwQXZUblU3MC1obnNYaXVsU2NRem44M2p4OWVpWUU4VlV2a1JEMTlTSng5dFU1aXd5VnAzb0V2VWN4dS15MUlFMF82TDFQaUtEYldEUll2OGFpUE84LVVRQXJpeXhQSXpldlZ6dXl4Tk50RjVMNnh0aWxuLWlVam0xTVE5RkJRZzlJRnlRZWJzeUdIUEdFTjhQNUNFb3FRb2oyV2pnNGVuZlpDQ0k4SlNIQnBhZFdVSHFR?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-22/#google_news:article:485aef94fa976362</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <summary>Coinbase推出了一个允许AI代理自主买卖和支付加密货币的平台，消息公布后COIN股价上涨超过3%。 这标志着向‘代理金融’（agentic finance）迈出了切实一步，自主AI系统将加密货币作为其金融后端。同时，这也让Coinbase占据了AI与加密的交汇点，可能从机器对机器支付中开辟新的收入来源。 据Decrypt报道，Coinbase的新工具是一个MCP（模型上下文协议）服务器，允许AI代理持有钱包并发送稳定币支付，它建立在Coinbase用于机器对机器转账的x402协议之上。</summary>
+  </entry>
   <entry>
     <title>Kraken母公司Payward探索海外设立全能银行</title>
     <link href="https://www.theblock.co/news/business/2026-08-20-kraken-parent-payward-explores-becoming-a-full-bank-outside-us-412390"/>
