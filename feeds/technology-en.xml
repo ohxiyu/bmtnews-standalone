@@ -4,7 +4,28 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-08-22T00:00:00Z</updated>
+  <updated>2026-08-23T00:00:00Z</updated>
+  <entry>
+    <title>Microsoft Patches &#x27;Perfect 10&#x27; Remote Code Execution Flaw in Entra ID</title>
+    <link href="https://decrypt.co/376287/microsoft-perfect-10-exploit-hackers-run-code"/>
+    <id>https://bmt.news/editions/2026-08-23/#rss:decrypt.co_feed:f4fd406c51e82de0</id>
+    <updated>2026-08-23T00:00:00Z</updated>
+    <summary>Microsoft disclosed and patched CVE-2026-69836, a critical CVSS 10.0 remote code execution vulnerability in Microsoft Entra ID. The flaw requires no privileges or user interaction and is caused by insecure deserialization of untrusted data; Microsoft confirmed it was not exploited in the wild. Entra ID is the core cloud identity and access management service behind Microsoft 365, Azure, and thousands of third-party applications, so a privilege-free RCE in that platform is exceptionally dangerous even if already patched. The disclosure also shows the growing role of AI in discovering vulnerabilities that human reviewers may miss. The vulnerability stems from deserialization of untrusted data, allowing an unauthorized attacker to execute code over the network with low attack complexity. CVE-2026-69836 was published on August 20, 2026, and Microsoft later revised its exploitation status from &#x27;Yes&#x27; to &#x27;No,&#x27; calling the change informational only. No customer action is required.</summary>
+  </entry>
+  <entry>
+    <title>Why Your Local LLM Feels Dumber Than It Is</title>
+    <link href="https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917"/>
+    <id>https://bmt.news/editions/2026-08-23/#hackernews:story:49402232</id>
+    <updated>2026-08-23T00:00:00Z</updated>
+    <summary>The article breaks down why local LLMs often underperform expectations, focusing on quantization, context window management, and inference configurations. It includes community benchmarks and practical deployment tips. Understanding these performance factors is crucial for anyone deploying local LLMs, as poor setup can make capable models appear weak. It highlights the growing maturity of local inference as a practical alternative to cloud APIs. The discussion covers quantization formats such as NVFP4 and AWQ W4A16, noting that low-quality quants can lead to tool-call failures. Community members report that using Q8 quantization and avoiding KV cache compression help preserve accuracy, while llama.cpp&#x27;s grammar enforcement can prevent malformed tool calls.</summary>
+  </entry>
+  <entry>
+    <title>Munder Difflin: Run an Office of Your Own AI Coding Agent Clones</title>
+    <link href="https://munderdiffl.in/"/>
+    <id>https://bmt.news/editions/2026-08-23/#hackernews:story:49398152</id>
+    <updated>2026-08-23T00:00:00Z</updated>
+    <summary>Munder Difflin is a free, open-source local desktop app that wraps existing terminal coding agents like Claude Code, Codex, and Copilot into a &#x27;hive mind,&#x27; letting a single manager agent (Michael) coordinate an office of cloned agents. The project claims deterministic simulations that consume no tokens and has reportedly attracted 20K+ users within a week of launch. This tool addresses a pain point in multi-agent AI coding: coordinating multiple agents without wastefully burning tokens. It shows how existing coding-agent subscriptions can be repurposed into deterministic, reusable agent teams, potentially changing how developers think about agent orchestration and cost efficiency. The harness wraps the user&#x27;s existing CLI coding agents and uses their hourly subscription limits, rather than charging separately. It claims deterministic simulations (same inputs produce same outcomes), token-free operation, and support for &#x27;almost all&#x27; coding-agent harnesses, with the site listing Claude Code, Codex, Copilot, and nine more.</summary>
+  </entry>
   <entry>
     <title>U.S. Citizen Faces Felony Charges for Deleting Phone Data at Border</title>
     <link href="https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html"/>

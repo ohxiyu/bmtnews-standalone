@@ -4,7 +4,28 @@
   <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-zh.xml</id>
-  <updated>2026-08-22T00:00:00Z</updated>
+  <updated>2026-08-23T00:00:00Z</updated>
+  <entry>
+    <title>微软修复Entra ID中“满分10分”的远程代码执行漏洞</title>
+    <link href="https://decrypt.co/376287/microsoft-perfect-10-exploit-hackers-run-code"/>
+    <id>https://bmt.news/editions/2026-08-23/#rss:decrypt.co_feed:f4fd406c51e82de0</id>
+    <updated>2026-08-23T00:00:00Z</updated>
+    <summary>微软披露并修复了Microsoft Entra ID中的一个严重漏洞CVE-2026-69836，其CVSS评分为10.0，属于远程代码执行漏洞。该漏洞无需任何权限或用户交互即可利用，根源是对不可信数据的反序列化处理不安全；微软确认该漏洞未被野外利用。 Entra ID是Microsoft 365、Azure及众多第三方应用背后的核心云身份与访问管理服务，因此该平台中出现无需权限的远程代码执行漏洞，即使已被修复也极其危险。此次披露也显示出AI在发现人工审查可能遗漏的漏洞方面发挥越来越重要的作用。 该漏洞源于对不可信数据的反序列化处理，攻击者可在低攻击复杂度下通过网络在未授权的情况下执行代码。CVE-2026-69836于2026年8月20日发布，微软随后将其利用状态从“是”改为“否”，仅称这是信息性修订。客户无需采取任何行动。</summary>
+  </entry>
+  <entry>
+    <title>为什么你的本地大模型感觉比实际更笨</title>
+    <link href="https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917"/>
+    <id>https://bmt.news/editions/2026-08-23/#hackernews:story:49402232</id>
+    <updated>2026-08-23T00:00:00Z</updated>
+    <summary>这篇文章剖析了本地大模型为什么常常表现不如预期，重点讨论了量化、上下文窗口管理和推理配置。文中还包含了社区基准测试和实用的部署建议。 理解这些影响性能的因素，对任何部署本地大模型的人都很重要，因为不合理的配置会让能力很强的模型显得很弱。这也反映了本地推理正逐渐成熟，成为云端 API 之外的实用替代方案。 讨论中提到了 NVFP4 和 AWQ W4A16 等量化格式，并指出低质量量化可能导致工具调用失败。社区成员报告称，使用 Q8 量化并避免对 KV 缓存进行压缩有助于保持准确性，而 llama.cpp 的语法约束机制可以防止格式错误的工具调用。</summary>
+  </entry>
+  <entry>
+    <title>Munder Difflin：用AI克隆体组建“办公室”的多智能体编排工具</title>
+    <link href="https://munderdiffl.in/"/>
+    <id>https://bmt.news/editions/2026-08-23/#hackernews:story:49398152</id>
+    <updated>2026-08-23T00:00:00Z</updated>
+    <summary>Munder Difflin 是一款免费开源本地桌面应用，将 Claude Code、Codex、Copilot 等现有终端编码代理封装成“蜂巢思维”，让一个管理者代理（Michael）协调一群克隆代理。该项目宣称支持确定性模拟、不消耗 token，并且上线一周内已吸引超过 2 万名用户。 该工具解决了多智能体 AI 编程中的一个痛点：在协调多个代理时不浪费 token。它展示了如何将已有的编码代理订阅重新用于确定性的、可复用的代理团队，可能改变开发者对代理编排和成本效率的思考方式。 该工具包装用户现有的 CLI 编码代理，并使用其每小时订阅限制，而非单独收费。它宣称具备确定性模拟（相同输入产生相同结果）、无 token 消耗，并支持“几乎所有”编码代理；官网列出了 Claude Code、Codex、Copilot 等九种以上代理。</summary>
+  </entry>
   <entry>
     <title>美国公民因在边境删除手机数据面临重罪指控</title>
     <link href="https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html"/>
