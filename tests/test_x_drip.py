@@ -44,15 +44,19 @@ def make_item(title: str, *, summary: str = "", impact: str = "") -> ContentItem
 def test_story_post_prefers_market_impact_and_fits() -> None:
     item = make_item(
         "Bybit 起诉朝鲜与 Lazarus Group",
-        summary="这是摘要。第二句不应出现。",
+        summary=(
+            "8月9日，新加坡，Bybit起诉朝鲜与Lazarus Group，指控其参与盗币。"
+            "第二句不应出现。"
+        ),
         impact="影响集中在托管与合规成本。第二句不应出现。",
     )
     text = build_story_post(
         item, language="zh", site_url="https://bmt.news/", link_target="site"
     )
-    assert "Bybit 起诉朝鲜与 Lazarus Group" in text
+    assert "Bybit" in text and "Lazarus Group" in text
     assert "影响集中在托管与合规成本。" in text
     assert "第二句不应出现" not in text
+    assert text.split("\n\n", 1)[0].startswith("8月9日，新加坡")
     assert text.rstrip().endswith("https://bmt.news/")
     assert _weighted_length(text) <= TWEET_LIMIT
 
@@ -259,44 +263,50 @@ def test_weighted_length_collapses_urls_to_a_tco_token() -> None:
 # A post at the length the compact brief asks for: the event remains complete,
 # but only the essential timeline, mechanism and current status are retained.
 GOOD = (
-    "比特币这次分叉，争的是还能不能往链上写图片。\n\n"
-    "BIP-110 想把铭文等非金融数据挤出交易。提案去年底进入激活，区块 961,632 "
-    "触发自动执行时，矿工信号仅 2.6%，远低于 55% 门槛，按规则本应失效；"
-    "支持者仍在同一高度拉出少数链，主网继续运行。\n\n"
-    "新链没有重放保护。两边起初共用签名规则，主网已签交易可能被搬到新链再执行一次。"
-    "开发者 Kevin Loaec 已提醒大额地址先别动币。目前两条链仍需彻底分离，"
-    "普通用户面对资产被重复花掉的风险。"
+    "8月22日，美国华盛顿，CFTC主席Michael Selig表示正推动Hyperliquid在合规框架下进入美国市场。\n\n"
+    "消息公布后HYPE上涨23%，平台仍需完成衍生品规则要求的注册与客户保护安排，目前尚无正式上线日期。"
 )
 
 
 def test_sanitize_keeps_a_clean_post() -> None:
     from src.services.x_delivery import sanitize_composed_post
 
-    assert sanitize_composed_post(GOOD, limit=800) == GOOD
+    assert sanitize_composed_post(GOOD, limit=400) == GOOD
 
 
 def test_sanitize_strips_links_tags_and_markdown() -> None:
     from src.services.x_delivery import sanitize_composed_post
 
     raw = f'"**{GOOD}** #比特币 #BTC https://example.com/x"'
-    cleaned = sanitize_composed_post(raw, limit=800)
+    cleaned = sanitize_composed_post(raw, limit=400)
     assert cleaned is not None
     assert "#" not in cleaned
     assert "http" not in cleaned
     assert "**" not in cleaned
     assert not cleaned.startswith('"')
-    assert "比特币这次分叉" in cleaned
+    assert "8月22日，美国华盛顿" in cleaned
 
 
 def test_sanitize_rejects_unusable_output() -> None:
     from src.services.x_delivery import sanitize_composed_post
 
-    assert sanitize_composed_post("", limit=800) is None
-    assert sanitize_composed_post("   ", limit=800) is None
+    assert sanitize_composed_post("", limit=400) is None
+    assert sanitize_composed_post("   ", limit=400) is None
     # Too short to be a real post.
-    assert sanitize_composed_post("分叉了。", limit=800) is None
+    assert sanitize_composed_post("分叉了。", limit=400) is None
     # Over the configured limit.
-    assert sanitize_composed_post("超长" * 300, limit=800) is None
+    assert sanitize_composed_post("超长" * 300, limit=400) is None
+
+
+def test_sanitize_requires_a_one_sentence_lede_and_body_paragraph() -> None:
+    from src.services.x_delivery import sanitize_composed_post
+
+    no_body_break = GOOD.replace("\n\n", " ")
+    two_sentence_lede = GOOD.replace(
+        "表示正推动", "宣布调整监管路径。该机构正推动", 1
+    )
+    assert sanitize_composed_post(no_body_break, limit=400) is None
+    assert sanitize_composed_post(two_sentence_lede, limit=400) is None
 
 
 class ComposingClient:
@@ -327,7 +337,7 @@ async def _test_compose_uses_enriched_fields() -> None:
         }
     )
     client = ComposingClient(GOOD)
-    text = await compose_story_post(client, item, language="zh", limit=800)
+    text = await compose_story_post(client, item, language="zh", limit=400)
     assert text == GOOD
     sent = client.calls[0]["user"]
     assert "摘要内容" in sent and "背景内容" in sent and "影响内容" in sent
@@ -403,10 +413,12 @@ async def _test_compose_shows_the_article_body() -> None:
     item.content = "区块 961,632 触发自动执行条款，矿工信号率 2.6%。" * 40
     item.metadata["detailed_summary_zh"] = "摘要内容"
     client = ComposingClient(GOOD)
-    await compose_story_post(client, item, language="zh", limit=800)
+    await compose_story_post(client, item, language="zh", limit=400)
     sent = client.calls[0]["user"]
     assert "区块 961,632" in sent
-    assert "180-300" in client.calls[0]["system"]
+    assert "90-150" in client.calls[0]["system"]
+    assert "第一段只能有一句话" in client.calls[0]["system"]
+    assert "时间、地点或场合、人物或机构" in client.calls[0]["system"]
 
 
 def test_compose_shows_the_article_body() -> None:
@@ -419,7 +431,7 @@ async def _test_compose_survives_a_missing_article_body() -> None:
     item = make_item("标题")
     item.content = None
     client = ComposingClient(GOOD)
-    assert await compose_story_post(client, item, language="zh", limit=800) == GOOD
+    assert await compose_story_post(client, item, language="zh", limit=400) == GOOD
 
 
 def test_compose_survives_a_missing_article_body() -> None:
@@ -433,7 +445,7 @@ def test_compose_caps_the_article_excerpt() -> None:
     item = make_item("标题")
     item.content = "囧" * (ARTICLE_EXCERPT_CHARS * 3)
     client = ComposingClient(GOOD)
-    asyncio.run(compose_story_post(client, item, language="zh", limit=800))
+    asyncio.run(compose_story_post(client, item, language="zh", limit=400))
     assert client.calls[0]["user"].count("囧") == ARTICLE_EXCERPT_CHARS
 
 
@@ -442,5 +454,9 @@ def test_sanitize_rejects_a_headline_only_post() -> None:
     from src.services.x_delivery import sanitize_composed_post
 
     short = "比特币发生分叉。矿工信号只有 2.6%，远不到 55% 的门槛。"
-    assert sanitize_composed_post(short, limit=800) is None
-    assert sanitize_composed_post(GOOD, limit=800) == GOOD
+    assert sanitize_composed_post(short, limit=400) is None
+    assert sanitize_composed_post(GOOD, limit=400) == GOOD
+
+
+def test_x_delivery_defaults_to_the_compact_limit() -> None:
+    assert XDeliveryConfig().max_post_chars == 400

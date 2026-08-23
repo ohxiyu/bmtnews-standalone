@@ -42,9 +42,9 @@ TCO_LENGTH = 23
 # a timeline and the concrete numbers, short enough to stay cheap per post.
 ARTICLE_EXCERPT_CHARS = 6000
 # Below this the model plainly did not explain the event. The compact brief
-# targets 180-300 Chinese characters; this floor leaves some tolerance for
+# targets 90-150 Chinese characters; this floor leaves some tolerance for
 # concise posts while still rejecting headline-only generations.
-MINIMUM_COMPOSED_WEIGHT = 300
+MINIMUM_COMPOSED_WEIGHT = 150
 
 # twitter-text v3 weighting: code points in these ranges count as one
 # character, everything else — including CJK — counts as two. Counting CJK
@@ -232,7 +232,7 @@ def _safe_http_url(value: object) -> str | None:
 
 # Full-width terminators are unambiguous; the ASCII period is not, so it
 # needs the guards in _is_sentence_end below.
-_HARD_SENTENCE_END = "。！？\n"
+_HARD_SENTENCE_END = "。！？…\n"
 _ABBREVIATION_TAIL = re.compile(r"(?:^|[\s.])[A-Za-z]$")
 
 
@@ -258,8 +258,36 @@ def _first_sentence(text: str, limit: int = 110) -> str:
         return ""
     for index in range(len(cleaned)):
         if index >= 12 and _is_sentence_end(cleaned, index):
-            return cleaned[: index + 1].strip()
+            sentence = cleaned[: index + 1].strip()
+            return (
+                sentence
+                if len(sentence) <= limit
+                else sentence[: limit - 1].rstrip() + _ELLIPSIS
+            )
     return cleaned[:limit].rstrip() + ("…" if len(cleaned) > limit else "")
+
+
+def _ensure_sentence_end(text: str) -> str:
+    """Give a compact fallback fragment an explicit sentence ending."""
+    cleaned = str(text or "").strip()
+    if not cleaned:
+        return ""
+    if cleaned.rstrip('”’"）)]').endswith(tuple("。！？….!?")):
+        return cleaned
+    return cleaned + ("。" if re.search(r"[\u3400-\u9fff]", cleaned) else ".")
+
+
+def _is_single_sentence(paragraph: str) -> bool:
+    """Require one complete summary sentence in the opening paragraph."""
+    endings = [
+        index
+        for index in range(len(paragraph))
+        if _is_sentence_end(paragraph, index)
+    ]
+    if len(endings) != 1:
+        return False
+    trailing = paragraph[endings[0] + 1 :].strip().strip('”’"）)]')
+    return not trailing
 
 
 def build_story_post(
@@ -282,12 +310,11 @@ def build_story_post(
         or item.metadata.get("title_zh")
         or item.title
     ).strip()
-    takeaway = _first_sentence(
-        item.metadata.get(f"market_impact_{language}")
-        or item.metadata.get(f"detailed_summary_{language}")
+    summary = str(
+        item.metadata.get(f"detailed_summary_{language}")
         or item.ai_summary
-        or ""
-    )
+        or title
+    ).strip()
     link = ""
     if link_target == "source":
         link = _safe_http_url(item.url) or ""
@@ -296,13 +323,24 @@ def build_story_post(
 
     # Reserve the t.co token and the blank lines around it.
     budget = limit - (TCO_LENGTH + 2 if link else 0)
-    headline = truncate_weighted(title, budget)
-    remaining = budget - _weighted_length(headline) - 2
-    body = headline
-    if takeaway and remaining > 24:
-        takeaway = truncate_weighted(takeaway, remaining)
-        if takeaway:
-            body = f"{headline}\n\n{takeaway}"
+    lede_source = _ensure_sentence_end(_first_sentence(summary, limit=90))
+    lede_budget = max(40, min(180, budget // 2))
+    lede = truncate_weighted(lede_source, min(lede_budget, budget))
+
+    body_source = ""
+    for candidate in (
+        item.metadata.get(f"market_impact_{language}"),
+        item.metadata.get(f"background_{language}"),
+        title,
+    ):
+        fragment = _ensure_sentence_end(_first_sentence(str(candidate or ""), limit=90))
+        if fragment and fragment != lede_source:
+            body_source = fragment
+            break
+
+    remaining = budget - _weighted_length(lede) - 2
+    body_detail = truncate_weighted(body_source, remaining) if remaining > 24 else ""
+    body = f"{lede}\n\n{body_detail}" if body_detail else lede
     return f"{body}\n\n{link}".rstrip() if link else body
 
 
@@ -339,6 +377,10 @@ def sanitize_composed_post(text: str, *, limit: int) -> Optional[str]:
     cleaned = "\n".join(paragraphs).strip()
     if not cleaned:
         return None
+    sections = [part.strip() for part in re.split(r"\n\s*\n", cleaned) if part.strip()]
+    if len(sections) != 2 or not _is_single_sentence(sections[0]):
+        return None
+    cleaned = f"{sections[0]}\n\n{sections[1]}"
     if _weighted_length(cleaned) > limit:
         return None
     # A post this short is a failed generation, not a terse one.
@@ -352,7 +394,7 @@ async def compose_story_post(
     item: ContentItem,
     *,
     language: str,
-    limit: int = 800,
+    limit: int = 400,
 ) -> Optional[str]:
     """Write one post for a story in the account's voice.
 
