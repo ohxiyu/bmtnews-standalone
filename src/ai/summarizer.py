@@ -9,10 +9,76 @@ from urllib.parse import quote, urlsplit
 from zoneinfo import ZoneInfo
 
 from ..models import ContentItem
+from ..overview import EditionOverview, OverviewSignal
 
 logger = logging.getLogger(__name__)
 
-_OVERVIEW_MAX_CHARS = 1200
+_LEGACY_OVERVIEW_MAX_CHARS = 500
+_HEADLINE_LIMITS = {"zh": 80, "en": 180}
+_SIGNAL_LIMITS = {"zh": 70, "en": 180}
+
+
+def _compact_text(value: object) -> str:
+    return " ".join(str(value or "").split()).strip().strip('"“”')
+
+
+def _parse_structured_overview(
+    response: object,
+    *,
+    language: str,
+    item_count: int,
+) -> Optional[EditionOverview]:
+    """Validate the structured response while retaining a prose fallback."""
+    from .utils import parse_json_response, unwrap_prose_response
+
+    normalized_language = "en" if language.lower().startswith("en") else "zh"
+    headline_limit = _HEADLINE_LIMITS[normalized_language]
+    signal_limit = _SIGNAL_LIMITS[normalized_language]
+    payload = parse_json_response(str(response or ""))
+
+    if isinstance(payload, dict):
+        headline = _compact_text(payload.get("headline"))
+        if headline and len(headline) <= headline_limit:
+            signals: list[OverviewSignal] = []
+            seen_ranks: set[int] = set()
+            raw_signals = payload.get("signals")
+            if isinstance(raw_signals, list):
+                for raw_signal in raw_signals[:3]:
+                    if not isinstance(raw_signal, dict):
+                        continue
+                    label = _compact_text(raw_signal.get("label"))
+                    text = _compact_text(raw_signal.get("text"))
+                    rank = raw_signal.get("item_rank")
+                    if (
+                        not label
+                        or len(label) > 24
+                        or not text
+                        or len(text) > signal_limit
+                        or isinstance(rank, bool)
+                        or not isinstance(rank, int)
+                        or rank < 1
+                        or rank > item_count
+                        or rank in seen_ranks
+                    ):
+                        continue
+                    signals.append(
+                        OverviewSignal(label=label, text=text, item_rank=rank)
+                    )
+                    seen_ranks.add(rank)
+            return EditionOverview(headline=headline, signals=tuple(signals))
+        if headline:
+            return None
+
+    legacy = _compact_text(
+        unwrap_prose_response(
+            response, keys=("lede", "overview", "paragraph", "text", "summary")
+        )
+    )
+    if isinstance(payload, dict) and legacy.startswith("{"):
+        return None
+    if not legacy or len(legacy) > _LEGACY_OVERVIEW_MAX_CHARS:
+        return None
+    return EditionOverview(headline=legacy)
 
 
 async def generate_edition_overview(
@@ -21,11 +87,12 @@ async def generate_edition_overview(
     *,
     date: str,
     language: str,
-) -> Optional[str]:
-    """Generate the one-paragraph lede shown above the daily edition.
+) -> Optional[EditionOverview]:
+    """Generate the structured orientation shown above the daily edition.
 
     Best-effort: returns None on any failure or implausible output so the
-    page simply omits the lede.
+    page simply omits the overview. Legacy prose remains a headline-only
+    fallback so a provider formatting miss does not block publication.
     """
     if not items:
         return None
@@ -51,21 +118,17 @@ async def generate_edition_overview(
                 language_name=language_name,
                 items="\n".join(lines),
             ),
-            response_format="text",
+            response_format="json",
         )
     except Exception as exc:
         logger.warning("Edition overview generation failed: %s", exc)
         return None
 
-    from .utils import unwrap_prose_response
-
-    unwrapped = unwrap_prose_response(
-        response, keys=("lede", "overview", "paragraph", "text", "summary")
+    return _parse_structured_overview(
+        response,
+        language=language,
+        item_count=len(items),
     )
-    text = " ".join(unwrapped.split()).strip().strip('"')
-    if not text or len(text) > _OVERVIEW_MAX_CHARS:
-        return None
-    return text
 
 
 _CJK = r"[\u4e00-\u9fff\u3400-\u4dbf]"

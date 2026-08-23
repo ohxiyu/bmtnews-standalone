@@ -1580,7 +1580,7 @@ class BMTNewsOrchestrator:
     ) -> Dict[str, object]:
         """Render configured languages and publish static-site artifacts.
 
-        Returns the shared context (market snapshot, per-language ledes) so
+        Returns the shared context (market snapshot, per-language overviews) so
         the caller can reuse it for the archive and JSON API without
         recomputing or re-prompting.
         """
@@ -1679,10 +1679,10 @@ class BMTNewsOrchestrator:
                         run_report.add_alert(
                             "info",
                             f"edition_overview_missing_{lang}",
-                            f"{lang.upper()} 版导语生成失败，页面省略导语。",
+                            f"{lang.upper()} 版今日脉络生成失败，页面省略该模块。",
                         )
                     else:
-                        overviews[lang] = overview
+                        overviews[lang] = overview.as_text()
                 web_content = render_web_feed(
                     items,
                     date=date,

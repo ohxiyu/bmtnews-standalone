@@ -331,14 +331,13 @@ def test_x_delivery_skips_languages_already_posted() -> None:
     asyncio.run(_test_x_delivery_skips_languages_already_posted())
 
 
-def test_prose_prompts_never_request_json_mode() -> None:
-    """The defect that broke the weekly review, the lede, and X composition.
+def test_ai_response_modes_match_prompt_shapes() -> None:
+    """Prose uses text mode while the structured overview uses JSON mode.
 
     A provider JSON mode fails two ways on a prose prompt: it is rejected
-    outright when the prompt never says "json" (weekly review, calibration,
-    X posts), and when the prompt happens to contain the word it succeeds and
-    wraps the prose in JSON that then reaches the page (the edition lede).
-    Neither is visible from the prompt text, so it is asserted here.
+    outright when the prompt never says "json", or it wraps prose in JSON.
+    The homepage overview now deliberately has a schema and should request
+    JSON; the remaining prose calls must continue to request text.
     """
     import inspect
     import re
@@ -349,7 +348,6 @@ def test_prose_prompts_never_request_json_mode() -> None:
         "WEEKLY_DIGEST",
         "SCORE_CALIBRATION",
         "X_POST",
-        "EDITION_OVERVIEW",
     )
     sources = {
         "WEEKLY_DIGEST": inspect.getsource(generate_weekly_digest),
@@ -359,9 +357,6 @@ def test_prose_prompts_never_request_json_mode() -> None:
         "X_POST": inspect.getsource(
             __import__("src.services.x_delivery", fromlist=["x"]).compose_story_post
         ),
-        "EDITION_OVERVIEW": inspect.getsource(
-            __import__("src.ai.summarizer", fromlist=["x"]).generate_edition_overview
-        ),
     }
     for name in prose_prompts:
         # The prompt exists and is prose, not a JSON schema request.
@@ -369,6 +364,12 @@ def test_prose_prompts_never_request_json_mode() -> None:
         assert 'response_format="text"' in sources[name], (
             f"{name} composes prose but does not ask for text mode"
         )
+
+    overview_source = inspect.getsource(
+        __import__("src.ai.summarizer", fromlist=["x"]).generate_edition_overview
+    )
+    assert 'response_format="json"' in overview_source
+    assert re.search(r"valid JSON", prompt_module.EDITION_OVERVIEW_SYSTEM, re.I)
 
     # And the JSON callers still get JSON mode by default.
     analyzer_source = inspect.getsource(

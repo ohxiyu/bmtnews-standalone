@@ -102,22 +102,36 @@ Respond with valid JSON only:
   "category": "<configured-category-or-null>"
 }}"""
 
-EDITION_OVERVIEW_SYSTEM = """You write the lede paragraph for a daily crypto-market intelligence briefing.
+EDITION_OVERVIEW_SYSTEM = """You structure the "Today at a glance" section for a daily crypto-market intelligence briefing.
 
-Given today's ranked stories, write ONE compact paragraph (2-3 sentences, no more than 80 words / 150 Chinese characters) that tells a busy reader what mattered today and why. Lead with the single most consequential development, then weave in one or two other notable threads.
+Given today's ranked stories, identify the day's throughline and the 1-3 strongest supporting signals. This is an orientation layer above the ranking, not a rewrite of the top three headlines.
 
 Rules:
-- Plain text only: no markdown, no lists, no headings, no emoji
-- Be concrete (names, amounts, outcomes); never vague filler like "several developments occurred"
-- No meta commentary about the briefing itself or the source material
-- Write in the requested language only"""
+- `headline` is exactly one sentence: 35-60 Chinese characters / 12-24 English words. State the common direction or tension connecting the most important developments.
+- Each signal has a short category-like `label`, one factual `text` sentence, and the `item_rank` of the story supporting it.
+- Include only 1-3 genuinely important signals. Do not force Crypto, AI, or Policy representation and do not pad a quiet edition.
+- Each signal is 25-50 Chinese characters / 8-20 English words and adds information not already repeated verbatim in the headline.
+- Prefer concrete entities, amounts, decisions, outcomes, and current status.
+- Do not repeat the edition date; it is already visible directly above this section.
+- Do not repeat BTC, ETH, or sentiment readings unless a ranked event has a clearly supported causal relationship to the move.
+- Avoid hype or unsupported synthesis such as "fully embraced", "historic breakthrough", or "risks remain". State only what the supplied stories support.
+- No links, hashtags, markdown, emoji, investment advice, price predictions, or meta commentary.
+- Write entirely in the requested language.
 
-EDITION_OVERVIEW_USER = """Today is {date}. Write the lede paragraph in {language_name} for this edition.
+Return valid JSON only:
+{
+  "headline": "<one-sentence throughline>",
+  "signals": [
+    {"label": "<short label>", "text": "<one factual sentence>", "item_rank": <rank>}
+  ]
+}"""
+
+EDITION_OVERVIEW_USER = """Today is {date}. Build the overview in {language_name} for this edition.
 
 Ranked stories:
 {items}
 
-Respond with the paragraph only — no JSON, no quotes, no markdown."""
+Use only ranks that appear above. Respond with the JSON object only, without a code fence."""
 
 WEEKLY_DIGEST_SYSTEM = """You write the weekly review for a crypto-market intelligence briefing.
 

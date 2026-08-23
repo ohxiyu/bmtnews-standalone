@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 from .editorial import EditorialEntry
 from .market_snapshot import MarketSnapshot
 from .models import ContentItem
+from .overview import EditionOverview
 
 
 _URL_SAFE_CHARS = ":/?#[]@!$&'*,;=~%+"
@@ -36,6 +37,8 @@ _LABELS = {
         "sources_confirmed": "{count} 源确认",
         "single_source": "单一来源",
         "market_impact": "市场影响",
+        "overview": "今日脉络",
+        "overview_rank": "查看第 {rank} 条",
     },
     "en": {
         "all": "All",
@@ -57,6 +60,8 @@ _LABELS = {
         "sources_confirmed": "{count} sources",
         "single_source": "Single source",
         "market_impact": "Market impact",
+        "overview": "Today at a glance",
+        "overview_rank": "View story {rank}",
     },
 }
 
@@ -77,6 +82,55 @@ def _safe_url(value: object) -> str | None:
     except (TypeError, ValueError):
         return None
     return html.escape(quote(raw, safe=_URL_SAFE_CHARS), quote=True)
+
+
+def _overview_html(
+    overview: EditionOverview | str | None,
+    *,
+    language: str,
+    date: str,
+    item_count: int,
+) -> str:
+    """Render a static orientation section with optional story anchors."""
+    if overview is None:
+        return ""
+    if isinstance(overview, str):
+        headline = overview.strip()
+        signals = ()
+    else:
+        headline = overview.headline.strip()
+        signals = overview.signals
+    if not headline:
+        return ""
+
+    labels = _LABELS[language]
+    signal_items: list[str] = []
+    for signal in signals:
+        if signal.item_rank < 1 or signal.item_rank > item_count:
+            continue
+        target = f"{language}-{date}-item-{signal.item_rank}"
+        rank = f"#{signal.item_rank:02d}"
+        signal_items.append(
+            '<li class="edition-overview-signal">'
+            f'<span class="edition-overview-signal-label">{_escape(signal.label)}</span>'
+            f'<span class="edition-overview-signal-text">{_escape(signal.text)}</span>'
+            f'<a class="edition-overview-rank" href="#{_escape(target)}" '
+            f'aria-label="{_escape(labels["overview_rank"].format(rank=rank))}">'
+            f"{rank}</a></li>"
+        )
+    signals_html = (
+        '<ul class="edition-overview-signals">'
+        f'{"".join(signal_items)}</ul>'
+        if signal_items
+        else ""
+    )
+    return (
+        '<section class="edition-overview" aria-label="'
+        f'{_escape(labels["overview"])}">'
+        f'<h2 class="edition-overview-title">{_escape(labels["overview"])}</h2>'
+        f'<p class="edition-overview-headline">{_escape(headline)}</p>'
+        f"{signals_html}</section>"
+    )
 
 
 def _top_level_category(item: ContentItem) -> str:
@@ -427,7 +481,7 @@ def render_web_feed(
     total_fetched: int,
     language: str,
     display_timezone: str,
-    overview: str | None = None,
+    overview: EditionOverview | str | None = None,
     market: MarketSnapshot | None = None,
     sponsored: Iterable[EditorialEntry] | None = None,
 ) -> str:
@@ -493,8 +547,11 @@ def render_web_feed(
             f"{total_fetched} candidates."
         )
     display_date = date.replace("-", ".")
-    overview_html = (
-        f'<p class="feed-overview">{_escape(overview)}</p>' if overview else ""
+    overview_html = _overview_html(
+        overview,
+        language=normalized_language,
+        date=date,
+        item_count=len(feed_items),
     )
     return (
         '<div class="feed-toolbar feed-rendered-static" '
