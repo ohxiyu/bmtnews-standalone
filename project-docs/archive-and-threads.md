@@ -86,7 +86,8 @@
 | `/feeds/crypto-zh.xml` 等 | 分类 Atom 订阅（crypto / technology / policy × zh / en） |
 
 `edition.json` 含每条新闻的双语标题摘要、评分、分类、来源、标签、
-多源确认数、事件线链接，以及当期行情快照和导语。
+多源确认数、事件线链接，以及当期行情快照和纯文本版「今日脉络」。网页还会把
+今日脉络渲染为一句主线和 1-3 条可跳转到对应排行的关键信号。
 
 ## 周报与评分校准
 
@@ -100,20 +101,22 @@
 
 校准复盘是**建议性**的：它不会自动改评分规则，改不改由你决定。
 
-### 散文类调用必须显式要求 text
+### AI 输出模式必须和提示结构一致
 
-周报、评分校准、日报导语、X 文案这四处产出的是散文，不是 JSON。
-它们调用 `ai_client.complete(...)` 时**必须传 `response_format="text"`**：
+周报、评分校准和 X 文案产出的是散文，调用
+`ai_client.complete(...)` 时**必须传 `response_format="text"`**。
+首页「今日脉络」则返回 `headline + signals + item_rank` 的结构化对象，必须使用
+`response_format="json"`；页面只接受存在的新闻序号，并在异常时回退为纯文本主线。
 
 供应商的 JSON 模式在散文 prompt 上有两种失败方式，而且都不明显——
 
 - prompt 里没有 "json" 这个词 → 直接 **400 拒绝**
   （`Prompt must contain the word 'json' in some form to use 'response_format'`）
-- prompt 里碰巧有这个词（比如导语 prompt 写了「不要返回 JSON」）→ 请求通过，
-  但模型被**强制**包成 JSON，`{"lede": "..."}` 就这样上了页面
+- 散文 prompt 里碰巧有这个词 → 请求通过，但模型被**强制**包成 JSON，
+  包装对象可能直接进入页面
 
 这两种症状看起来毫无关系，根因是同一个。`tests/test_weekly_and_x.py` 里有一条
-断言直接盯住这四个调用点，新增散文类调用时会被它拦住。
+断言同时盯住散文和结构化调用，避免两种模式再次混用。
 
 ## 多源确认
 

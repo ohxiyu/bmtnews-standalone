@@ -536,7 +536,7 @@ time,
   text-underline-offset: 0.25em;
 }
 
-/* toolbar: market strip, lede, note, filters */
+/* toolbar: market strip, daily orientation, note, filters */
 .feed-toolbar {
   margin: 0 0 4px;
   display: flex;
@@ -585,6 +585,73 @@ time,
   line-height: 1.7;
   color: var(--text);
   max-width: 74ch;
+}
+
+/* New editions use a structured orientation layer. Keep .feed-overview above
+   for already-published historical fragments. */
+.edition-overview {
+  flex: 1 1 100%;
+  padding: 7px 0 11px;
+  border-bottom: 1px solid var(--border);
+}
+
+.edition-overview-title {
+  margin: 0 0 5px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.edition-overview-headline {
+  max-width: 74ch;
+  margin: 0;
+  color: var(--text);
+  font-size: var(--fs-l);
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+.edition-overview-signals {
+  max-width: 86ch;
+  margin: 7px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  list-style: none;
+}
+
+.edition-overview-signal {
+  display: grid;
+  grid-template-columns: minmax(3.5em, max-content) minmax(0, 1fr) max-content;
+  align-items: baseline;
+  gap: 8px 12px;
+  color: var(--text-soft);
+  font-size: var(--fs-s);
+  line-height: 1.65;
+}
+
+.edition-overview-signal-label {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.edition-overview-rank {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-decoration: none;
+}
+
+.edition-overview-rank:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .feed-selection-note {
@@ -1486,6 +1553,15 @@ time,
 
   .feed-overview {
     font-size: var(--fs-m);
+  }
+
+  .edition-overview-headline {
+    font-size: var(--fs-m);
+  }
+
+  .edition-overview-signal {
+    grid-template-columns: minmax(3.5em, max-content) minmax(0, 1fr) max-content;
+    gap: 5px 8px;
   }
 
   .site-footer {
