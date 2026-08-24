@@ -76,11 +76,11 @@ def test_render_web_feed_outputs_final_cards_and_top_level_filters() -> None:
     ] == ["card"]
     assert (
         controls.select_one('[data-story-share="card"]')["aria-label"]
-        == "生成分享卡片"
+        == "生成并分享图片卡片"
     )
     assert controls.select_one('[data-story-share="card"]').get_text(
         strip=True
-    ).endswith("卡片")
+    ).endswith("分享")
 
 
 def test_render_web_feed_escapes_text_and_rejects_unsafe_references() -> None:
@@ -128,11 +128,11 @@ def test_story_share_controls_are_localized_in_english() -> None:
 
     assert (
         page.select_one('[data-story-share="card"]')["aria-label"]
-        == "Generate share card"
+        == "Generate and share image card"
     )
     assert page.select_one('[data-story-share="card"]').get_text(
         strip=True
-    ).endswith("Card")
+    ).endswith("Share")
     assert not page.select('[data-story-share="x"]')
     assert not page.select('[data-story-share="image"]')
 
@@ -188,11 +188,14 @@ def test_story_share_uses_one_card_action_and_migrates_old_controls() -> None:
     assert "button.dataset.storyShare !== 'card'" in main_script
     assert '[data-story-share="x"], [data-story-share="image"]' in main_script
     assert "https://x.com/intent/post" not in main_script
-    assert "await navigator.share(imageShareData(file));" in card_script
-    assert "return {files: [file]};" in card_script
-    assert "title: '分享卡片'" in card_script
-    assert "download: '下载图片'" in card_script
-    assert "xShare: '分享到 X'" in card_script
+    assert "navigator.share" not in card_script
+    assert "navigator.clipboard.write" in card_script
+    assert "new ItemType({'image/png': blob})" in card_script
+    assert "window.open('about:blank', '_blank')" in card_script
+    assert "composerWindow.location.replace(X_COMPOSE_URL)" in card_script
+    assert "title: '分享'" in card_script
+    assert "download: '保存图片'" in card_script
+    assert "xShare: '复制图片并打开 X'" in card_script
     assert "xShare.dataset.cardAction = 'x-share'" in card_script
     assert card_script.index("actions.appendChild(download)") < card_script.index(
         "actions.appendChild(xShare)"

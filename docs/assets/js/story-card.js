@@ -1,6 +1,7 @@
 const CARD_CSS_WIDTH = 1005;
 const CARD_SCALE = 2;
 const CARD_MAX_HEIGHT = 8192;
+const X_COMPOSE_URL = 'https://x.com/compose/post';
 const SANS_FONT = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif';
 const MONO_FONT = 'ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Menlo, Consolas, monospace';
 
@@ -17,16 +18,20 @@ const METRICS = {
 
 const LABELS = {
   zh: {
-    title: '分享卡片', close: '关闭', generating: '正在生成完整长卡…', download: '下载图片',
-    xShare: '分享到 X', ready: '完整长卡已生成', failed: '卡片生成失败，请重试',
-    shareFailed: '无法分享到 X，请下载图片后分享', details: '背景、讨论与参考资料',
+    title: '分享', close: '关闭', generating: '正在生成完整长卡…', download: '保存图片',
+    xShare: '复制图片并打开 X', ready: '完整长卡已生成', failed: '卡片生成失败，请重试',
+    copyReady: '图片已复制，请在 X 编辑器中粘贴后发布',
+    copyFailed: '无法复制图片，请保存后手动上传到 X',
+    clipboardUnavailable: '当前浏览器不支持复制图片，请保存后上传到 X', details: '背景、讨论与参考资料',
     references: '参考链接', tags: '标签'
   },
   en: {
-    title: 'Share card', close: 'Close', generating: 'Generating the full story card…', download: 'Download image',
-    xShare: 'Share to X', ready: 'Full story card ready',
+    title: 'Share', close: 'Close', generating: 'Generating the full story card…', download: 'Save image',
+    xShare: 'Copy image and open X', ready: 'Full story card ready',
     failed: 'Could not generate the card. Please try again.',
-    shareFailed: 'Could not share to X. Please download the image instead.',
+    copyReady: 'Image copied. Paste it into the X composer to post.',
+    copyFailed: 'Could not copy the image. Save it and upload it to X instead.',
+    clipboardUnavailable: 'This browser cannot copy images. Save it and upload it to X instead.',
     details: 'Background, discussion, and references', references: 'References', tags: 'Tags'
   }
 };
@@ -40,8 +45,34 @@ function cardFilename(story) {
   return `bmtnews-${story.date || 'daily'}-${rank}.png`;
 }
 
-export function imageShareData(file) {
-  return {files: [file]};
+export function supportsImageClipboard() {
+  return Boolean(window.isSecureContext && navigator.clipboard &&
+    typeof navigator.clipboard.write === 'function' && typeof window.ClipboardItem === 'function');
+}
+
+export async function copyImageToClipboard(blob, clipboard, ClipboardItemType) {
+  const targetClipboard = clipboard || navigator.clipboard;
+  const ItemType = ClipboardItemType || window.ClipboardItem;
+  const item = new ItemType({'image/png': blob});
+  await targetClipboard.write([item]);
+}
+
+function actionIcon(kind) {
+  const icon = document.createElement('span');
+  icon.className = 'share-card-action-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  if (kind === 'x') {
+    icon.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.966 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"></path></svg>';
+  } else {
+    icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"></path><path d="M5 18v2h14v-2"></path></svg>';
+  }
+  return icon;
+}
+
+function setActionLabel(button, icon, text) {
+  const label = document.createElement('span');
+  label.textContent = text;
+  button.replaceChildren(actionIcon(icon), label);
 }
 
 function closeCardDialog(dialog) {
@@ -90,7 +121,7 @@ function ensureCardDialog(language) {
     xShare.type = 'button';
     xShare.className = 'share-card-primary';
     xShare.dataset.cardAction = 'x-share';
-    xShare.hidden = true;
+    xShare.disabled = true;
     actions.appendChild(download);
     actions.appendChild(xShare);
 
@@ -122,11 +153,20 @@ function ensureCardDialog(language) {
     xShare.addEventListener('click', async () => {
       if (!activeCardBlob || !activeCardStory) return;
       const labels = LABELS[activeCardStory.language];
-      const file = new File([activeCardBlob], cardFilename(activeCardStory), {type: 'image/png'});
+      const copyPromise = copyImageToClipboard(activeCardBlob);
+      const composerWindow = window.open('about:blank', '_blank');
       try {
-        await navigator.share(imageShareData(file));
+        await copyPromise;
+        status.textContent = labels.copyReady;
+        if (composerWindow) {
+          composerWindow.opener = null;
+          composerWindow.location.replace(X_COMPOSE_URL);
+        } else {
+          window.location.assign(X_COMPOSE_URL);
+        }
       } catch (error) {
-        if (error && error.name !== 'AbortError') status.textContent = labels.shareFailed;
+        if (composerWindow && !composerWindow.closed) composerWindow.close();
+        status.textContent = labels.copyFailed;
       }
     });
   }
@@ -136,8 +176,8 @@ function ensureCardDialog(language) {
   const closeButton = dialog.querySelector('[data-card-action="close"]');
   closeButton.setAttribute('aria-label', labels.close);
   closeButton.title = labels.close;
-  dialog.querySelector('[data-card-action="download"]').textContent = labels.download;
-  dialog.querySelector('[data-card-action="x-share"]').textContent = labels.xShare;
+  setActionLabel(dialog.querySelector('[data-card-action="download"]'), 'download', labels.download);
+  setActionLabel(dialog.querySelector('[data-card-action="x-share"]'), 'x', labels.xShare);
   return dialog;
 }
 
@@ -466,9 +506,9 @@ export async function openStoryCard(story) {
   preview.classList.add('is-loading');
   status.textContent = labels.generating;
   download.disabled = true;
+  xShare.disabled = true;
   download.classList.add('share-card-primary');
   xShare.classList.remove('share-card-primary');
-  xShare.hidden = true;
 
   if (!dialog.open) {
     if (typeof dialog.showModal === 'function') dialog.showModal();
@@ -485,19 +525,14 @@ export async function openStoryCard(story) {
     activeCardStory = story;
     download.disabled = false;
     status.textContent = `${labels.ready} · ${canvas.width} × ${canvas.height} px`;
-    const supportsFileShare = typeof navigator.share === 'function' &&
-      typeof navigator.canShare === 'function' && typeof File === 'function';
-    if (supportsFileShare) {
-      try {
-        const file = new File([blob], cardFilename(story), {type: 'image/png'});
-        if (navigator.canShare(imageShareData(file))) {
-          xShare.hidden = false;
-          xShare.classList.add('share-card-primary');
-          download.classList.remove('share-card-primary');
-        }
-      } catch {
-        // Download remains the primary fallback when file sharing is unavailable.
-      }
+    if (supportsImageClipboard()) {
+      xShare.disabled = false;
+      xShare.classList.add('share-card-primary');
+      download.classList.remove('share-card-primary');
+      xShare.removeAttribute('title');
+    } else {
+      xShare.title = labels.clipboardUnavailable;
+      status.textContent += ` · ${labels.clipboardUnavailable}`;
     }
   } catch (error) {
     if (generation !== cardGeneration) return;
