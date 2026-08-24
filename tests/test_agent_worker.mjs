@@ -16,17 +16,20 @@ const edition = {
   }]
 };
 
-function environment() {
+function environment({includeLatest = true} = {}) {
   return {
     ASSETS: {
       async fetch(request) {
         const path = new URL(request.url).pathname;
-        if (path === '/api/latest.json') {
+        if (path === '/api/latest.json' && includeLatest) {
           const body = JSON.stringify(edition);
           return new Response(body, {headers: {'Content-Type': 'application/json', 'Content-Length': String(body.length)}});
         }
         if (path === '/api/editions.json') {
           return Response.json({version: 1, editions: []});
+        }
+        if (path === '/index.html.md') {
+          return new Response('# BMTNews — static agent overview\n', {headers: {'Content-Type': 'text/markdown'}});
         }
         if (path === '/') return new Response('<h1>BMTNews</h1>', {headers: {'Content-Type': 'text/html'}});
         return new Response('<h1>Not found</h1>', {status: 404, headers: {'Content-Type': 'text/html'}});
@@ -55,6 +58,16 @@ test('homepage returns markdown with discovery and cache variation headers', asy
   assert.match(body, /^# BMTNews/);
   assert.match(body, /一条重要新闻/);
   assert.match(body, /openapi\.json/);
+});
+
+test('homepage falls back to stable markdown before edition data is deployed', async () => {
+  const response = await worker.handleRequest(
+    new Request('https://bmt.news/', {headers: {'Accept': 'text/markdown'}}),
+    environment({includeLatest: false})
+  );
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get('Content-Type'), /^text\/markdown/);
+  assert.match(await response.text(), /static agent overview/);
 });
 
 test('browser homepage remains HTML and declares its markdown alternative', async () => {

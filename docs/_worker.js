@@ -166,11 +166,19 @@ async function markdownHome(request, env, language) {
   const latestUrl = new URL('/api/latest.json', request.url);
   const latest = await env.ASSETS.fetch(new Request(latestUrl, {headers: {'Accept': 'application/json'}}));
   const contentLength = Number(latest.headers.get('Content-Length') || 0);
-  if (!latest.ok || !String(latest.headers.get('Content-Type')).includes('application/json') || contentLength > 524288) {
-    return jsonError(503, 'edition_unavailable', 'The latest edition is temporarily unavailable.', 'Retry /api/latest.json later or use /api/editions.json.');
+  let body;
+  if (latest.ok && String(latest.headers.get('Content-Type')).includes('application/json') && contentLength <= 524288) {
+    const payload = await latest.json();
+    body = renderEditionMarkdown(payload, language);
+  } else {
+    const fallbackPath = language === 'en' ? '/en/index.html.md' : '/index.html.md';
+    const fallbackUrl = new URL(fallbackPath, request.url);
+    const fallback = await env.ASSETS.fetch(new Request(fallbackUrl, {headers: {'Accept': 'text/markdown'}}));
+    if (!fallback.ok) {
+      return jsonError(503, 'edition_unavailable', 'The latest edition is temporarily unavailable.', 'Retry /api/latest.json later or use /api/editions.json.');
+    }
+    body = await fallback.text();
   }
-  const payload = await latest.json();
-  const body = renderEditionMarkdown(payload, language);
   return new Response(request.method === 'HEAD' ? null : body, {
     headers: {
       'Cache-Control': 'public, max-age=300, stale-while-revalidate=60',
