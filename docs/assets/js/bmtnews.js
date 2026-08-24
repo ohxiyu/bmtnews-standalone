@@ -36,12 +36,12 @@
 
   var STORY_SHARE_LABELS = {
     zh: {
-      card: '卡片',
-      cardLabel: '生成分享卡片'
+      card: '分享',
+      cardLabel: '生成并分享图片卡片'
     },
     en: {
-      card: 'Card',
-      cardLabel: 'Generate share card'
+      card: 'Share',
+      cardLabel: 'Generate and share image card'
     }
   };
 
@@ -89,10 +89,19 @@
     button.setAttribute('aria-label', labels.cardLabel);
     button.title = labels.cardLabel;
 
-    var icon = document.createElement('span');
+    var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     icon.className = 'story-share-icon';
     icon.setAttribute('aria-hidden', 'true');
-    icon.textContent = '▦';
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('fill', 'none');
+    icon.setAttribute('stroke', 'currentColor');
+    icon.setAttribute('stroke-width', '1.8');
+    icon.setAttribute('stroke-linecap', 'round');
+    icon.setAttribute('stroke-linejoin', 'round');
+    icon.innerHTML = '<circle cx="18" cy="5" r="2.5"></circle>' +
+      '<circle cx="6" cy="12" r="2.5"></circle>' +
+      '<circle cx="18" cy="19" r="2.5"></circle>' +
+      '<path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"></path>';
     button.appendChild(icon);
     button.appendChild(document.createTextNode(labels.card));
     return button;

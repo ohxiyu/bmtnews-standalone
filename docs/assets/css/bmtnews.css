@@ -829,13 +829,10 @@ time,
 }
 
 .story-share-icon {
-  min-width: 1em;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
   color: currentColor;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
 }
 
 .digest-item h2 {
@@ -1021,6 +1018,25 @@ time,
   font-size: var(--fs-s);
   font-weight: 650;
   cursor: pointer;
+}
+
+.share-card-action-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-flex;
+  flex: 0 0 15px;
+}
+
+.share-card-action-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.share-card-actions button {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+  justify-content: center;
 }
 
 .share-card-actions button:hover:not(:disabled),

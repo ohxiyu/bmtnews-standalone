@@ -39,8 +39,8 @@ _LABELS = {
         "market_impact": "市场影响",
         "overview": "今日脉络",
         "overview_rank": "查看第 {rank} 条",
-        "share_card": "卡片",
-        "share_card_label": "生成分享卡片",
+        "share_card": "分享",
+        "share_card_label": "生成并分享图片卡片",
     },
     "en": {
         "all": "All",
@@ -64,8 +64,8 @@ _LABELS = {
         "market_impact": "Market impact",
         "overview": "Today at a glance",
         "overview_rank": "View story {rank}",
-        "share_card": "Card",
-        "share_card_label": "Generate share card",
+        "share_card": "Share",
+        "share_card_label": "Generate and share image card",
     },
 }
 
@@ -387,7 +387,13 @@ def _render_article(
         f'<button class="story-share-button" type="button" data-story-share="card" '
         f'aria-label="{_escape(labels["share_card_label"])}" '
         f'title="{_escape(labels["share_card_label"])}">'
-        '<span class="story-share-icon" aria-hidden="true">&#9638;</span>'
+        '<svg class="story-share-icon" aria-hidden="true" viewBox="0 0 24 24" '
+        'fill="none" stroke="currentColor" stroke-width="1.8" '
+        'stroke-linecap="round" stroke-linejoin="round">'
+        '<circle cx="18" cy="5" r="2.5"></circle>'
+        '<circle cx="6" cy="12" r="2.5"></circle>'
+        '<circle cx="18" cy="19" r="2.5"></circle>'
+        '<path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"></path></svg>'
         f'<span>{_escape(labels["share_card"])}</span></button>'
         '</div>'
     )
