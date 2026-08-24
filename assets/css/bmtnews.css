@@ -840,6 +840,7 @@ time,
   font-size: var(--fs-l);
   line-height: 1.45;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .digest-item h2 a {
@@ -851,12 +852,38 @@ time,
   text-decoration: none;
 }
 
-.story-summary-body,
+.story-summary-body {
+  margin: 0 0 9px;
+}
+
+.story-summary-body:is(p),
+.story-summary-body > p,
 .digest-item-content > p:not(.source-line):not(.tag-line) {
-  margin: 0 0 8px;
   color: var(--text-soft);
   font-size: var(--fs-m);
   line-height: 1.7;
+}
+
+.story-summary-body:is(p) {
+  margin: 0 0 9px;
+}
+
+.story-summary-body > p {
+  margin: 0;
+}
+
+.digest-item-content > p:not(.source-line):not(.tag-line) {
+  margin: 0 0 8px;
+}
+
+.story-summary-body > p + p {
+  margin-top: 0.58em;
+}
+
+@media (min-width: 761px) {
+  .story-summary-body {
+    max-width: min(72ch, 760px);
+  }
 }
 
 .source-line {
