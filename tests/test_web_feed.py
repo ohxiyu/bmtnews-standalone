@@ -179,6 +179,8 @@ def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
     assert "sourceParts:" in main_script
     assert "dateLabel:" in main_script
     assert "CARD_SCALE = 2" in card_script
+    assert "context.fillText('bmt.news'" in card_script
+    assert "context.fillText(story.rank" not in card_script
     assert "story.references" in card_script
     assert "story.tags" in card_script
     assert "story.url" not in card_script
