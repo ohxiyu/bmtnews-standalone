@@ -17,14 +17,14 @@ const METRICS = {
 
 const LABELS = {
   zh: {
-    title: '分享卡片', close: '关闭', generating: '正在生成完整长卡…', download: '下载 PNG',
-    systemShare: '系统分享', ready: '完整长卡已生成', failed: '卡片生成失败，请重试',
+    title: '分享图片', close: '关闭', generating: '正在生成完整长卡…', download: '下载 PNG',
+    systemShare: '分享图片', ready: '完整长卡已生成', failed: '卡片生成失败，请重试',
     shareFailed: '系统分享失败，请下载图片后分享', details: '背景、讨论与参考资料',
     references: '参考链接', tags: '标签'
   },
   en: {
-    title: 'Share card', close: 'Close', generating: 'Generating the full story card…', download: 'Download PNG',
-    systemShare: 'System share', ready: 'Full story card ready',
+    title: 'Share image', close: 'Close', generating: 'Generating the full story card…', download: 'Download PNG',
+    systemShare: 'Share image', ready: 'Full story card ready',
     failed: 'Could not generate the card. Please try again.',
     shareFailed: 'System sharing failed. Please download the image instead.',
     details: 'Background, discussion, and references', references: 'References', tags: 'Tags'
@@ -38,6 +38,10 @@ let activeCardStory = null;
 function cardFilename(story) {
   const rank = String(story.rank || '').replace(/\D+/g, '') || 'story';
   return `bmtnews-${story.date || 'daily'}-${rank}.png`;
+}
+
+export function imageShareData(file) {
+  return {files: [file]};
 }
 
 function closeCardDialog(dialog) {
@@ -78,17 +82,17 @@ function ensureCardDialog(language) {
 
     const actions = document.createElement('footer');
     actions.className = 'share-card-actions';
-    const download = document.createElement('button');
-    download.type = 'button';
-    download.className = 'share-card-primary';
-    download.dataset.cardAction = 'download';
-    download.disabled = true;
     const systemShare = document.createElement('button');
     systemShare.type = 'button';
+    systemShare.className = 'share-card-primary';
     systemShare.dataset.cardAction = 'system-share';
     systemShare.hidden = true;
-    actions.appendChild(download);
+    const download = document.createElement('button');
+    download.type = 'button';
+    download.dataset.cardAction = 'download';
+    download.disabled = true;
     actions.appendChild(systemShare);
+    actions.appendChild(download);
 
     panel.appendChild(header);
     panel.appendChild(preview);
@@ -120,7 +124,7 @@ function ensureCardDialog(language) {
       const labels = LABELS[activeCardStory.language];
       const file = new File([activeCardBlob], cardFilename(activeCardStory), {type: 'image/png'});
       try {
-        await navigator.share({files: [file], title: activeCardStory.title});
+        await navigator.share(imageShareData(file));
       } catch (error) {
         if (error && error.name !== 'AbortError') status.textContent = labels.shareFailed;
       }
@@ -462,6 +466,8 @@ export async function openStoryCard(story) {
   preview.classList.add('is-loading');
   status.textContent = labels.generating;
   download.disabled = true;
+  download.classList.add('share-card-primary');
+  systemShare.classList.remove('share-card-primary');
   systemShare.hidden = true;
 
   if (!dialog.open) {
@@ -479,9 +485,19 @@ export async function openStoryCard(story) {
     activeCardStory = story;
     download.disabled = false;
     status.textContent = `${labels.ready} · ${canvas.width} × ${canvas.height} px`;
-    if (navigator.canShare && typeof File === 'function') {
-      const file = new File([blob], cardFilename(story), {type: 'image/png'});
-      systemShare.hidden = !navigator.canShare({files: [file]});
+    const supportsFileShare = typeof navigator.share === 'function' &&
+      typeof navigator.canShare === 'function' && typeof File === 'function';
+    if (supportsFileShare) {
+      try {
+        const file = new File([blob], cardFilename(story), {type: 'image/png'});
+        if (navigator.canShare(imageShareData(file))) {
+          systemShare.hidden = false;
+          systemShare.classList.add('share-card-primary');
+          download.classList.remove('share-card-primary');
+        }
+      } catch {
+        // Download remains the primary fallback when file sharing is unavailable.
+      }
     }
   } catch (error) {
     if (generation !== cardGeneration) return;

@@ -65,16 +65,19 @@ def test_render_web_feed_outputs_final_cards_and_top_level_filters() -> None:
     assert page.select_one("#zh-2026-07-31-item-1")
     assert "7月31日 00:30" in page.select_one(".source-line").get_text(" ", strip=True)
     assert "本期从 42 条候选中展示 4 条" in markup
-    assert len(page.select('.story-share-button[data-story-share="x"]')) == 4
-    assert len(page.select('.story-share-button[data-story-share="card"]')) == 4
+    assert len(page.select('.story-share-button[data-story-share="image"]')) == 4
+    assert not page.select('[data-story-share="x"]')
+    assert not page.select('[data-story-share="card"]')
     controls = page.select_one(".digest-item-controls")
     assert controls.select_one(".score-badge")
     assert [
         button["data-story-share"]
         for button in controls.select(".story-share-button")
-    ] == ["x", "card"]
-    assert controls.select_one('[data-story-share="x"]')["aria-label"] == "分享到 X"
-    assert controls.select_one('[data-story-share="card"]')["aria-label"] == "生成分享卡片"
+    ] == ["image"]
+    assert (
+        controls.select_one('[data-story-share="image"]')["aria-label"]
+        == "分享图片"
+    )
 
 
 def test_render_web_feed_escapes_text_and_rejects_unsafe_references() -> None:
@@ -120,11 +123,12 @@ def test_story_share_controls_are_localized_in_english() -> None:
     )
     page = BeautifulSoup(markup, "html.parser")
 
-    assert page.select_one('[data-story-share="x"]')["aria-label"] == "Share to X"
     assert (
-        page.select_one('[data-story-share="card"]')["aria-label"]
-        == "Generate share card"
+        page.select_one('[data-story-share="image"]')["aria-label"]
+        == "Share image"
     )
+    assert not page.select('[data-story-share="x"]')
+    assert not page.select('[data-story-share="card"]')
 
 
 def test_render_web_feed_empty_state_is_static() -> None:
@@ -150,7 +154,7 @@ def test_story_summaries_are_not_visually_truncated() -> None:
     assert ".story-summary-body:not(.expanded)" not in stylesheet
 
 
-def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
+def test_story_card_renderer_is_loaded_only_after_an_image_share_click() -> None:
     root = Path(__file__).parents[1]
     main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
         encoding="utf-8"
@@ -165,6 +169,26 @@ def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
     assert "story-card.js" not in head
 
 
+def test_story_share_uses_one_image_action_and_migrates_old_controls() -> None:
+    root = Path(__file__).parents[1]
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+        encoding="utf-8"
+    )
+    card_script = (
+        root / "docs" / "assets" / "js" / "story-card.js"
+    ).read_text(encoding="utf-8")
+
+    assert "button.dataset.storyShare = 'image'" in main_script
+    assert "button.dataset.storyShare !== 'image'" in main_script
+    assert '[data-story-share="x"], [data-story-share="card"]' in main_script
+    assert "https://x.com/intent/post" not in main_script
+    assert "await navigator.share(imageShareData(file));" in card_script
+    assert "return {files: [file]};" in card_script
+    assert card_script.index("actions.appendChild(systemShare)") < card_script.index(
+        "actions.appendChild(download)"
+    )
+
+
 def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
     root = Path(__file__).parents[1]
     main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
@@ -174,7 +198,7 @@ def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
         root / "docs" / "assets" / "js" / "story-card.js"
     ).read_text(encoding="utf-8")
 
-    assert "PUBLIC_SITE_ORIGIN = 'https://bmt.news'" in main_script
+    assert "PUBLIC_SITE_ORIGIN" not in main_script
     assert "references: references" in main_script
     assert "sourceParts:" in main_script
     assert "dateLabel:" in main_script

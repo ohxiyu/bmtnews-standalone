@@ -39,10 +39,8 @@ _LABELS = {
         "market_impact": "市场影响",
         "overview": "今日脉络",
         "overview_rank": "查看第 {rank} 条",
-        "share_x": "分享",
-        "share_x_label": "分享到 X",
-        "share_card": "卡片",
-        "share_card_label": "生成分享卡片",
+        "share_image": "分享图片",
+        "share_image_label": "分享图片",
     },
     "en": {
         "all": "All",
@@ -66,10 +64,8 @@ _LABELS = {
         "market_impact": "Market impact",
         "overview": "Today at a glance",
         "overview_rank": "View story {rank}",
-        "share_x": "Share",
-        "share_x_label": "Share to X",
-        "share_card": "Card",
-        "share_card_label": "Generate share card",
+        "share_image": "Share image",
+        "share_image_label": "Share image",
     },
 }
 
@@ -388,17 +384,11 @@ def _render_article(
         '<div class="digest-item-controls">'
         f'<span class="score-badge" data-tier="{_score_tier(score)}" '
         f'aria-label="Score {score_label} out of 10">{score_label}</span>'
-        f'<a class="story-share-button" href="#{article_id}" data-story-share="x" '
-        f'target="_blank" rel="noopener noreferrer" '
-        f'aria-label="{_escape(labels["share_x_label"])}" '
-        f'title="{_escape(labels["share_x_label"])}">'
-        '<span class="story-share-icon" aria-hidden="true">&#120143;</span>'
-        f'<span>{_escape(labels["share_x"])}</span></a>'
-        f'<button class="story-share-button" type="button" data-story-share="card" '
-        f'aria-label="{_escape(labels["share_card_label"])}" '
-        f'title="{_escape(labels["share_card_label"])}">'
+        f'<button class="story-share-button" type="button" data-story-share="image" '
+        f'aria-label="{_escape(labels["share_image_label"])}" '
+        f'title="{_escape(labels["share_image_label"])}">'
         '<span class="story-share-icon" aria-hidden="true">&#9638;</span>'
-        f'<span>{_escape(labels["share_card"])}</span></button>'
+        f'<span>{_escape(labels["share_image"])}</span></button>'
         '</div>'
     )
 

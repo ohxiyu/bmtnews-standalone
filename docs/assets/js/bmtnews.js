@@ -3,7 +3,6 @@
 
   var mainScriptSource = document.currentScript ? document.currentScript.src : '';
   var storyCardModulePromise = null;
-  var PUBLIC_SITE_ORIGIN = 'https://bmt.news';
 
   var CATEGORY_ORDER = [
     'all', 'crypto', 'technology', 'policy',
@@ -37,16 +36,12 @@
 
   var STORY_SHARE_LABELS = {
     zh: {
-      x: '分享',
-      xLabel: '分享到 X',
-      card: '卡片',
-      cardLabel: '生成分享卡片'
+      image: '分享图片',
+      imageLabel: '分享图片'
     },
     en: {
-      x: 'Share',
-      xLabel: 'Share to X',
-      card: 'Card',
-      cardLabel: 'Generate share card'
+      image: 'Share image',
+      imageLabel: 'Share image'
     }
   };
 
@@ -85,27 +80,21 @@
     return element ? (element.textContent || '').replace(/\s+/g, ' ').trim() : '';
   }
 
-  function createStoryShareButton(kind, language) {
+  function createStoryShareButton(language) {
     var labels = STORY_SHARE_LABELS[language];
-    var button = document.createElement(kind === 'x' ? 'a' : 'button');
-    if (kind === 'x') {
-      button.href = '#';
-      button.target = '_blank';
-      button.rel = 'noopener noreferrer';
-    } else {
-      button.type = 'button';
-    }
+    var button = document.createElement('button');
+    button.type = 'button';
     button.className = 'story-share-button';
-    button.dataset.storyShare = kind;
-    button.setAttribute('aria-label', kind === 'x' ? labels.xLabel : labels.cardLabel);
-    button.title = kind === 'x' ? labels.xLabel : labels.cardLabel;
+    button.dataset.storyShare = 'image';
+    button.setAttribute('aria-label', labels.imageLabel);
+    button.title = labels.imageLabel;
 
     var icon = document.createElement('span');
     icon.className = 'story-share-icon';
     icon.setAttribute('aria-hidden', 'true');
-    icon.textContent = kind === 'x' ? '𝕏' : '▦';
+    icon.textContent = '▦';
     button.appendChild(icon);
-    button.appendChild(document.createTextNode(kind === 'x' ? labels.x : labels.card));
+    button.appendChild(document.createTextNode(labels.image));
     return button;
   }
 
@@ -122,33 +111,14 @@
       if (directScore) controls.appendChild(directScore);
       meta.appendChild(controls);
     }
-    if (!controls.querySelector('[data-story-share="x"]')) {
-      controls.appendChild(createStoryShareButton('x', language));
+    controls
+      .querySelectorAll('[data-story-share="x"], [data-story-share="card"]')
+      .forEach(function (button) {
+        button.remove();
+      });
+    if (!controls.querySelector('[data-story-share="image"]')) {
+      controls.appendChild(createStoryShareButton(language));
     }
-    if (!controls.querySelector('[data-story-share="card"]')) {
-      controls.appendChild(createStoryShareButton('card', language));
-    }
-    configureStoryXLink(article);
-  }
-
-  function storyPermalink(article) {
-    var current = new URL(window.location.href);
-    var url = new URL(current.pathname + current.search, PUBLIC_SITE_ORIGIN);
-    url.hash = article.id;
-    return url.href;
-  }
-
-  function truncateText(value, limit) {
-    var characters = Array.from(String(value || '').trim());
-    return characters.length > limit
-      ? characters.slice(0, Math.max(1, limit - 1)).join('').trimEnd() + '…'
-      : characters.join('');
-  }
-
-  function firstSentence(value) {
-    var text = String(value || '').replace(/\s+/g, ' ').trim();
-    var match = text.match(/^.*?[。！？.!?](?:[”’"']?)(?=\s|$|[^A-Za-z0-9])/);
-    return truncateText(match ? match[0] : text, 120);
   }
 
   function readStory(article) {
@@ -230,21 +200,8 @@
       scoreTier: article.querySelector('.score-badge')?.dataset?.tier || 'mid',
       rank: textOf(article.querySelector('.digest-item-rail strong')),
       date: date,
-      dateLabel: textOf(dateElement),
-      url: storyPermalink(article)
+      dateLabel: textOf(dateElement)
     };
-  }
-
-  function xShareUrl(story) {
-    var intent = new URL('https://x.com/intent/post');
-    intent.searchParams.set('text', truncateText(story.title, 110) + '\n\n' + firstSentence(story.summary));
-    intent.searchParams.set('url', story.url);
-    return intent.href;
-  }
-
-  function configureStoryXLink(article) {
-    var link = article.querySelector('a[data-story-share="x"]');
-    if (link) link.href = xShareUrl(readStory(article));
   }
 
   function storyCardModuleUrl() {
@@ -272,7 +229,7 @@
   function setupStorySharing() {
     document.addEventListener('click', function (event) {
       var button = event.target.closest('[data-story-share]');
-      if (!button || button.dataset.storyShare !== 'card') return;
+      if (!button || button.dataset.storyShare !== 'image') return;
       var article = button.closest('.digest-item');
       if (!article) return;
       var story = readStory(article);
