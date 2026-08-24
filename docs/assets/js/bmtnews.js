@@ -36,12 +36,12 @@
 
   var STORY_SHARE_LABELS = {
     zh: {
-      image: '分享图片',
-      imageLabel: '分享图片'
+      card: '卡片',
+      cardLabel: '生成分享卡片'
     },
     en: {
-      image: 'Share image',
-      imageLabel: 'Share image'
+      card: 'Card',
+      cardLabel: 'Generate share card'
     }
   };
 
@@ -85,16 +85,16 @@
     var button = document.createElement('button');
     button.type = 'button';
     button.className = 'story-share-button';
-    button.dataset.storyShare = 'image';
-    button.setAttribute('aria-label', labels.imageLabel);
-    button.title = labels.imageLabel;
+    button.dataset.storyShare = 'card';
+    button.setAttribute('aria-label', labels.cardLabel);
+    button.title = labels.cardLabel;
 
     var icon = document.createElement('span');
     icon.className = 'story-share-icon';
     icon.setAttribute('aria-hidden', 'true');
     icon.textContent = '▦';
     button.appendChild(icon);
-    button.appendChild(document.createTextNode(labels.image));
+    button.appendChild(document.createTextNode(labels.card));
     return button;
   }
 
@@ -112,11 +112,11 @@
       meta.appendChild(controls);
     }
     controls
-      .querySelectorAll('[data-story-share="x"], [data-story-share="card"]')
+      .querySelectorAll('[data-story-share="x"], [data-story-share="image"]')
       .forEach(function (button) {
         button.remove();
       });
-    if (!controls.querySelector('[data-story-share="image"]')) {
+    if (!controls.querySelector('[data-story-share="card"]')) {
       controls.appendChild(createStoryShareButton(language));
     }
   }
@@ -229,7 +229,7 @@
   function setupStorySharing() {
     document.addEventListener('click', function (event) {
       var button = event.target.closest('[data-story-share]');
-      if (!button || button.dataset.storyShare !== 'image') return;
+      if (!button || button.dataset.storyShare !== 'card') return;
       var article = button.closest('.digest-item');
       if (!article) return;
       var story = readStory(article);

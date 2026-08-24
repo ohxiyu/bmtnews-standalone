@@ -17,16 +17,16 @@ const METRICS = {
 
 const LABELS = {
   zh: {
-    title: '分享图片', close: '关闭', generating: '正在生成完整长卡…', download: '下载 PNG',
-    systemShare: '分享图片', ready: '完整长卡已生成', failed: '卡片生成失败，请重试',
-    shareFailed: '系统分享失败，请下载图片后分享', details: '背景、讨论与参考资料',
+    title: '分享卡片', close: '关闭', generating: '正在生成完整长卡…', download: '下载图片',
+    xShare: '分享到 X', ready: '完整长卡已生成', failed: '卡片生成失败，请重试',
+    shareFailed: '无法分享到 X，请下载图片后分享', details: '背景、讨论与参考资料',
     references: '参考链接', tags: '标签'
   },
   en: {
-    title: 'Share image', close: 'Close', generating: 'Generating the full story card…', download: 'Download PNG',
-    systemShare: 'Share image', ready: 'Full story card ready',
+    title: 'Share card', close: 'Close', generating: 'Generating the full story card…', download: 'Download image',
+    xShare: 'Share to X', ready: 'Full story card ready',
     failed: 'Could not generate the card. Please try again.',
-    shareFailed: 'System sharing failed. Please download the image instead.',
+    shareFailed: 'Could not share to X. Please download the image instead.',
     details: 'Background, discussion, and references', references: 'References', tags: 'Tags'
   }
 };
@@ -82,17 +82,17 @@ function ensureCardDialog(language) {
 
     const actions = document.createElement('footer');
     actions.className = 'share-card-actions';
-    const systemShare = document.createElement('button');
-    systemShare.type = 'button';
-    systemShare.className = 'share-card-primary';
-    systemShare.dataset.cardAction = 'system-share';
-    systemShare.hidden = true;
     const download = document.createElement('button');
     download.type = 'button';
     download.dataset.cardAction = 'download';
     download.disabled = true;
-    actions.appendChild(systemShare);
+    const xShare = document.createElement('button');
+    xShare.type = 'button';
+    xShare.className = 'share-card-primary';
+    xShare.dataset.cardAction = 'x-share';
+    xShare.hidden = true;
     actions.appendChild(download);
+    actions.appendChild(xShare);
 
     panel.appendChild(header);
     panel.appendChild(preview);
@@ -119,7 +119,7 @@ function ensureCardDialog(language) {
       anchor.click();
       window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
     });
-    systemShare.addEventListener('click', async () => {
+    xShare.addEventListener('click', async () => {
       if (!activeCardBlob || !activeCardStory) return;
       const labels = LABELS[activeCardStory.language];
       const file = new File([activeCardBlob], cardFilename(activeCardStory), {type: 'image/png'});
@@ -137,7 +137,7 @@ function ensureCardDialog(language) {
   closeButton.setAttribute('aria-label', labels.close);
   closeButton.title = labels.close;
   dialog.querySelector('[data-card-action="download"]').textContent = labels.download;
-  dialog.querySelector('[data-card-action="system-share"]').textContent = labels.systemShare;
+  dialog.querySelector('[data-card-action="x-share"]').textContent = labels.xShare;
   return dialog;
 }
 
@@ -458,7 +458,7 @@ export async function openStoryCard(story) {
   const preview = dialog.querySelector('.share-card-preview');
   const status = dialog.querySelector('.share-card-status');
   const download = dialog.querySelector('[data-card-action="download"]');
-  const systemShare = dialog.querySelector('[data-card-action="system-share"]');
+  const xShare = dialog.querySelector('[data-card-action="x-share"]');
   const generation = ++cardGeneration;
   activeCardBlob = null;
   activeCardStory = null;
@@ -467,8 +467,8 @@ export async function openStoryCard(story) {
   status.textContent = labels.generating;
   download.disabled = true;
   download.classList.add('share-card-primary');
-  systemShare.classList.remove('share-card-primary');
-  systemShare.hidden = true;
+  xShare.classList.remove('share-card-primary');
+  xShare.hidden = true;
 
   if (!dialog.open) {
     if (typeof dialog.showModal === 'function') dialog.showModal();
@@ -491,8 +491,8 @@ export async function openStoryCard(story) {
       try {
         const file = new File([blob], cardFilename(story), {type: 'image/png'});
         if (navigator.canShare(imageShareData(file))) {
-          systemShare.hidden = false;
-          systemShare.classList.add('share-card-primary');
+          xShare.hidden = false;
+          xShare.classList.add('share-card-primary');
           download.classList.remove('share-card-primary');
         }
       } catch {
