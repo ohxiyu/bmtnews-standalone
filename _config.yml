@@ -1,12 +1,17 @@
+# Cloudflare's Git integration runs `bundle exec jekyll build` at the
+# repository root for pull-request previews. Production publishing still
+# copies docs/ to gh-pages, where docs/_config.yml becomes the root config.
+source: docs
+destination: _site
+
 title: BMTNews
 description: Crypto market intelligence covering exchanges, markets, security, regulation, and protocols
 baseurl: ""
 url: "https://bmt.news"
 asset_version: "20260824.3"
 
-# Build settings
 markdown: kramdown
-future: true # Allow future posts to be published
+future: true
 include:
   - "_headers"
   - "_worker.js"

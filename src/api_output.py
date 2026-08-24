@@ -24,6 +24,7 @@ logger = logging.getLogger(__name__)
 API_ROOT = Path("docs/api")
 FEEDS_ROOT = Path("docs/feeds")
 EDITIONS_ROOT = Path("docs/editions")
+SITEMAP_PATH = Path("docs/sitemap.xml")
 
 DEFAULT_SITE_URL = "https://bmt.news"
 FEED_CATEGORIES = ("crypto", "technology", "policy")
@@ -35,6 +36,21 @@ _FEED_TITLES = {
     ("policy", "zh"): "BMTNews · 政策",
     ("policy", "en"): "BMTNews · Policy",
 }
+
+_SITEMAP_STATIC_PATHS = (
+    "/",
+    "/en/",
+    "/threads/",
+    "/en/threads/",
+    "/entity/",
+    "/en/entity/",
+    "/weekly/",
+    "/en/weekly/",
+    "/developers/",
+    "/about/",
+    "/contact/",
+    "/legal/",
+)
 
 
 def _iso(moment: datetime | None) -> str | None:
@@ -158,6 +174,90 @@ def write_editions_index(
     api_root.mkdir(parents=True, exist_ok=True)
     path = api_root / "editions.json"
     _atomic_write_text(path, json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    return path
+
+
+def render_sitemap(
+    records: Sequence[ArchiveRecord],
+    *,
+    threads: Iterable[tuple[str, Sequence[ArchiveRecord]]] = (),
+    entities: Iterable[object] = (),
+    site_url: str = DEFAULT_SITE_URL,
+    generated_date: str | None = None,
+) -> str:
+    """Render indexable site pages as a deterministic XML sitemap."""
+    base = site_url.rstrip("/")
+    valid_records = [record for record in records if record.date_value is not None]
+    latest = max((record.date for record in valid_records), default=generated_date)
+    if latest is None:
+        latest = datetime.now(timezone.utc).date().isoformat()
+
+    urls: dict[str, str] = {
+        f"{base}{path}": latest for path in _SITEMAP_STATIC_PATHS
+    }
+    for edition_date in sorted({record.date for record in valid_records}):
+        urls[f"{base}/editions/{edition_date}/zh.html"] = edition_date
+        urls[f"{base}/editions/{edition_date}/en.html"] = edition_date
+
+    for thread_id, thread_records in threads:
+        dates = [
+            record.date
+            for record in thread_records
+            if record.date_value is not None
+        ]
+        if not thread_id or not dates:
+            continue
+        lastmod = max(dates)
+        urls[f"{base}/threads/{thread_id}/"] = lastmod
+        urls[f"{base}/en/threads/{thread_id}/"] = lastmod
+
+    for entity in entities:
+        slug = str(getattr(entity, "slug", "")).strip()
+        entity_records = getattr(entity, "records", ())
+        dates = [
+            record.date
+            for record in entity_records
+            if isinstance(record, ArchiveRecord) and record.date_value is not None
+        ]
+        if not slug or not dates:
+            continue
+        lastmod = max(dates)
+        urls[f"{base}/entity/{slug}/"] = lastmod
+        urls[f"{base}/en/entity/{slug}/"] = lastmod
+
+    entries = "\n".join(
+        "  <url>"
+        f"<loc>{html.escape(url, quote=True)}</loc>"
+        f"<lastmod>{html.escape(lastmod)}</lastmod>"
+        "</url>"
+        for url, lastmod in sorted(urls.items())
+    )
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{entries}\n"
+        "</urlset>\n"
+    )
+
+
+def write_sitemap(
+    records: Sequence[ArchiveRecord],
+    *,
+    threads: Iterable[tuple[str, Sequence[ArchiveRecord]]] = (),
+    entities: Iterable[object] = (),
+    path: Path = SITEMAP_PATH,
+    site_url: str = DEFAULT_SITE_URL,
+) -> Path:
+    """Write the sitemap refreshed by every published daily edition."""
+    _atomic_write_text(
+        path,
+        render_sitemap(
+            records,
+            threads=threads,
+            entities=entities,
+            site_url=site_url,
+        ),
+    )
     return path
 
 
