@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import timezone
 import html
+import re
 from typing import Iterable
 from urllib.parse import quote, urlsplit
 from zoneinfo import ZoneInfo
@@ -72,6 +73,84 @@ _LABELS = {
 
 def _escape(value: object) -> str:
     return html.escape(str(value), quote=True)
+
+
+def _summary_sentence_units(value: str, language: str) -> list[str]:
+    """Split a legacy one-line summary without breaking abbreviations."""
+    text = re.sub(r"\s+", " ", value).strip()
+    if not text:
+        return []
+    if language == "zh":
+        matches = re.findall(r".*?(?:[。！？!?]+[”’」』】）]?|$)", text)
+        return [part.strip() for part in matches if part.strip()]
+
+    units: list[str] = []
+    start = 0
+    for match in re.finditer(r'[.!?]+["”’\)\]]*(?=\s+|$)', text):
+        candidate = text[start : match.end()].strip()
+        if re.search(r"(?:\b[A-Z]\.){2,}$", candidate):
+            continue
+        if re.search(r"\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|vs)\.$", candidate):
+            continue
+        if candidate:
+            units.append(candidate)
+        start = match.end()
+    tail = text[start:].strip()
+    if tail:
+        units.append(tail)
+    return units or [text]
+
+
+def _summary_paragraphs(value: str, language: str) -> list[str]:
+    """Return compact semantic paragraphs for current and legacy summaries."""
+    text = str(value or "").strip()
+    if not text:
+        return []
+
+    explicit = [
+        re.sub(r"\s+", " ", block).strip()
+        for block in re.split(r"(?:\r?\n\s*)+", text)
+        if block.strip()
+    ]
+    if len(explicit) > 1:
+        return explicit
+
+    sentences = _summary_sentence_units(explicit[0], language)
+    joiner = "" if language == "zh" else " "
+    if len(sentences) < 3:
+        return [joiner.join(sentences)] if sentences else []
+
+    target = 130 if language == "zh" else 240
+    lead_minimum = 28 if language == "zh" else 70
+    paragraphs: list[str] = []
+    remaining = sentences
+    if len(sentences[0]) >= lead_minimum:
+        paragraphs.append(sentences[0])
+        remaining = sentences[1:]
+
+    current: list[str] = []
+    current_length = 0
+    for sentence in remaining:
+        separator_length = len(joiner) if current else 0
+        projected = current_length + separator_length + len(sentence)
+        if current and (projected > target or len(current) >= 3):
+            paragraphs.append(joiner.join(current))
+            current = []
+            current_length = 0
+        current.append(sentence)
+        current_length += (len(joiner) if current_length else 0) + len(sentence)
+    if current:
+        paragraphs.append(joiner.join(current))
+    return paragraphs
+
+
+def _summary_html(value: str, language: str) -> str:
+    paragraphs = _summary_paragraphs(value, language)
+    return (
+        '<div class="story-summary-body">'
+        + "".join(f"<p>{_escape(paragraph)}</p>" for paragraph in paragraphs)
+        + "</div>"
+    )
 
 
 def _safe_url(value: object) -> str | None:
@@ -413,7 +492,7 @@ def _render_article(
         f"{share_actions}"
         "</div>"
         f"<h2>{title_html}</h2>"
-        f'<p class="story-summary-body">{_escape(summary)}</p>'
+        f"{_summary_html(summary, language)}"
         f'<p class="source-line">'
         f"{_source_html(item, language=language, display_timezone=display_timezone)}"
         f" · {_provenance_html(item, language)}</p>"

@@ -158,6 +158,61 @@ def test_story_summaries_are_not_visually_truncated() -> None:
     )
 
     assert ".story-summary-body:not(.expanded)" not in stylesheet
+    assert ".story-summary-body:is(p)" in stylesheet
+    assert "text-wrap: balance" in stylesheet
+    assert "max-width: min(72ch, 760px)" in stylesheet
+
+
+def test_story_summary_preserves_semantic_paragraphs() -> None:
+    item = make_item("paragraphs", "crypto-markets")
+    item.metadata["detailed_summary_zh"] = (
+        "第一段说明发生了什么。\n\n"
+        "第二段解释为什么重要。\n\n"
+        "第三段补充限制和关键细节。"
+    )
+
+    markup = render_web_feed(
+        [item],
+        date="2026-07-31",
+        total_fetched=1,
+        language="zh",
+        display_timezone="Asia/Shanghai",
+    )
+    page = BeautifulSoup(markup, "html.parser")
+
+    assert [
+        paragraph.get_text(strip=True)
+        for paragraph in page.select(".story-summary-body > p")
+    ] == [
+        "第一段说明发生了什么。",
+        "第二段解释为什么重要。",
+        "第三段补充限制和关键细节。",
+    ]
+
+
+def test_story_summary_splits_legacy_one_line_content() -> None:
+    item = make_item("legacy", "crypto-markets")
+    item.metadata["detailed_summary_zh"] = (
+        "监管机构在周一公布了覆盖主要交易平台的新规草案，并给出三个月反馈期。"
+        "该草案提高了托管和信息披露要求。"
+        "市场参与者需要重新评估合规成本和产品安排。"
+        "规则目前仍处于征求意见阶段，尚未正式生效。"
+    )
+
+    markup = render_web_feed(
+        [item],
+        date="2026-07-31",
+        total_fetched=1,
+        language="zh",
+        display_timezone="Asia/Shanghai",
+    )
+    page = BeautifulSoup(markup, "html.parser")
+    paragraphs = page.select(".story-summary-body > p")
+
+    assert len(paragraphs) >= 2
+    assert "".join(p.get_text(strip=True) for p in paragraphs) == item.metadata[
+        "detailed_summary_zh"
+    ]
 
 
 def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
@@ -217,9 +272,20 @@ def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
     assert "references: references" in main_script
     assert "sourceParts:" in main_script
     assert "dateLabel:" in main_script
-    assert "CARD_SCALE = 2" in card_script
+    assert "CARD_CSS_WIDTH = 440" in card_script
+    assert "CARD_SCALE = 3" in card_script
+    assert "context.fillText('BMTNews'" in card_script
     assert "context.fillText('bmt.news'" in card_script
-    assert "context.fillText(story.rank" not in card_script
+    assert "context.fillText(story.rank || ''" in card_script
+    assert "summaryParagraphs: summaryParagraphs" in main_script
+    assert "normalizeStorySummary(article, language)" in main_script
+    assert "layout.summaryParagraphs.forEach" in card_script
+    assert "wrapBalancedText(context, story.title" in card_script
+    assert "CHROME_LABELS" not in card_script
+    assert "toggleX" not in card_script
+    assert "themeX" not in card_script
+    assert "drawShareIcon" not in card_script
+    assert "drawFooter" not in card_script
     assert "story.references" in card_script
     assert "story.tags" in card_script
     assert "story.url" not in card_script

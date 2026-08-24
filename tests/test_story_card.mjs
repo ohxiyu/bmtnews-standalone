@@ -26,3 +26,22 @@ test('image clipboard writes only the generated PNG blob', async () => {
   assert.deepEqual(Object.keys(writes[0][0].data), ['image/png']);
   assert.equal(writes[0][0].data['image/png'], blob);
 });
+
+test('Chinese closing punctuation is not orphaned on a new line', () => {
+  const context = {
+    measureText: (value) => ({width: Array.from(value).length * 10}),
+  };
+
+  assert.deepEqual(card.wrapText(context, '甲乙。', 20, 'zh'), ['甲乙。']);
+});
+
+test('card titles balance the final line without adding a line', () => {
+  const context = {
+    measureText: (value) => ({width: Array.from(value).length * 10}),
+  };
+
+  assert.deepEqual(
+    card.wrapBalancedText(context, 'ABCDEFGHIJ', 60, 'en'),
+    ['ABCDE', 'FGHIJ'],
+  );
+});

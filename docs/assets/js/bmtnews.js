@@ -80,6 +80,89 @@
     return element ? (element.textContent || '').replace(/\s+/g, ' ').trim() : '';
   }
 
+  function summarySentenceUnits(value, language) {
+    var text = String(value || '').replace(/\s+/g, ' ').trim();
+    if (!text) return [];
+    if (language === 'zh') {
+      return (text.match(/.*?(?:[。！？!?]+[”’」』】）]?|$)/g) || [])
+        .map(function (part) { return part.trim(); })
+        .filter(Boolean);
+    }
+
+    var units = [];
+    var start = 0;
+    var endings = /[.!?]+["”’\)\]]*(?=\s+|$)/g;
+    var match;
+    while ((match = endings.exec(text)) !== null) {
+      var candidate = text.slice(start, endings.lastIndex).trim();
+      if (/(?:\b[A-Z]\.){2,}$/.test(candidate) ||
+          /\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|vs)\.$/.test(candidate)) {
+        continue;
+      }
+      if (candidate) units.push(candidate);
+      start = endings.lastIndex;
+    }
+    var tail = text.slice(start).trim();
+    if (tail) units.push(tail);
+    return units.length ? units : [text];
+  }
+
+  function splitSummaryParagraphs(value, language) {
+    var sentences = summarySentenceUnits(value, language);
+    if (sentences.length < 3) return sentences.length ? [sentences.join(language === 'zh' ? '' : ' ')] : [];
+
+    var target = language === 'zh' ? 130 : 240;
+    var leadMinimum = language === 'zh' ? 28 : 70;
+    var joiner = language === 'zh' ? '' : ' ';
+    var paragraphs = [];
+    var remaining = sentences;
+    if (sentences[0].length >= leadMinimum) {
+      paragraphs.push(sentences[0]);
+      remaining = sentences.slice(1);
+    }
+
+    var current = [];
+    var currentLength = 0;
+    remaining.forEach(function (sentence) {
+      var projected = currentLength + (current.length ? joiner.length : 0) + sentence.length;
+      if (current.length && (projected > target || current.length >= 3)) {
+        paragraphs.push(current.join(joiner));
+        current = [];
+        currentLength = 0;
+      }
+      current.push(sentence);
+      currentLength += (currentLength ? joiner.length : 0) + sentence.length;
+    });
+    if (current.length) paragraphs.push(current.join(joiner));
+    return paragraphs;
+  }
+
+  function normalizeStorySummary(article, language) {
+    var summary = article.querySelector('.story-summary-body');
+    if (summary && summary.querySelector('p')) return summary;
+    if (!summary) {
+      summary = Array.prototype.find.call(
+        article.querySelectorAll('.digest-item-content > p'),
+        function (paragraph) {
+          return !paragraph.classList.contains('source-line') &&
+            !paragraph.classList.contains('tag-line');
+        }
+      );
+    }
+    if (!summary) return null;
+
+    var paragraphs = splitSummaryParagraphs(textOf(summary), language);
+    var wrapper = document.createElement('div');
+    wrapper.className = 'story-summary-body';
+    paragraphs.forEach(function (text) {
+      var paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      wrapper.appendChild(paragraph);
+    });
+    summary.replaceWith(wrapper);
+    return wrapper;
+  }
+
   function createStoryShareButton(language) {
     var labels = STORY_SHARE_LABELS[language];
     var button = document.createElement('button');
@@ -135,7 +218,7 @@
       (article.closest('[data-language]') || {}).dataset?.language ||
       document.documentElement.lang
     );
-    var summaryElement = article.querySelector('.story-summary-body');
+    var summaryElement = normalizeStorySummary(article, language);
     if (!summaryElement) {
       summaryElement = Array.prototype.find.call(
         article.querySelectorAll('.digest-item-content > p'),
@@ -144,6 +227,15 @@
             !paragraph.classList.contains('tag-line');
         }
       );
+    }
+    var summaryParagraphs = summaryElement
+      ? Array.prototype.map.call(
+        summaryElement.querySelectorAll('p'),
+        textOf
+      ).filter(Boolean)
+      : [];
+    if (!summaryParagraphs.length && summaryElement) {
+      summaryParagraphs = [textOf(summaryElement)].filter(Boolean);
     }
 
     var sections = [];
@@ -188,7 +280,8 @@
     return {
       language: language,
       title: title,
-      summary: textOf(summaryElement),
+      summary: summaryParagraphs.join('\n\n'),
+      summaryParagraphs: summaryParagraphs,
       sections: sections,
       references: references,
       tags: tags,
@@ -667,6 +760,7 @@
       var staticStatsScope = root.closest('.daily-day') || root;
 
       staticArticles.forEach(function (article) {
+        normalizeStorySummary(article, language);
         ensureStoryActions(article, language);
       });
 
@@ -699,6 +793,7 @@
       return createDigestArticle(root, heading, index, language, date);
     });
     articles.forEach(function (article) {
+      normalizeStorySummary(article, language);
       ensureStoryActions(article, language);
     });
     var tocItems = Array.prototype.slice.call(toc.querySelectorAll(':scope > li'));

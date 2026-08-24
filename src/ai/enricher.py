@@ -211,7 +211,10 @@ class ContentEnricher:
                 if text:
                     parts.append(text)
             if parts:
-                item.metadata[f"detailed_summary_{lang}"] = " ".join(parts)
+                # Preserve the model's semantic sections as paragraphs.  The
+                # web feed and share-card renderer use these boundaries while
+                # older one-line summaries receive a deterministic fallback.
+                item.metadata[f"detailed_summary_{lang}"] = "\n\n".join(parts)
 
             if result.get(f"background_{lang}"):
                 val = result[f"background_{lang}"]
