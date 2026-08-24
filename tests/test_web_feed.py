@@ -65,6 +65,16 @@ def test_render_web_feed_outputs_final_cards_and_top_level_filters() -> None:
     assert page.select_one("#zh-2026-07-31-item-1")
     assert "7月31日 00:30" in page.select_one(".source-line").get_text(" ", strip=True)
     assert "本期从 42 条候选中展示 4 条" in markup
+    assert len(page.select('.story-share-button[data-story-share="x"]')) == 4
+    assert len(page.select('.story-share-button[data-story-share="card"]')) == 4
+    controls = page.select_one(".digest-item-controls")
+    assert controls.select_one(".score-badge")
+    assert [
+        button["data-story-share"]
+        for button in controls.select(".story-share-button")
+    ] == ["x", "card"]
+    assert controls.select_one('[data-story-share="x"]')["aria-label"] == "分享到 X"
+    assert controls.select_one('[data-story-share="card"]')["aria-label"] == "生成分享卡片"
 
 
 def test_render_web_feed_escapes_text_and_rejects_unsafe_references() -> None:
@@ -100,6 +110,23 @@ def test_render_web_feed_escapes_text_and_rejects_unsafe_references() -> None:
     assert "&lt;img src=x onerror=&quot;alert(1)&quot;&gt;" in markup
 
 
+def test_story_share_controls_are_localized_in_english() -> None:
+    markup = render_web_feed(
+        [make_item("english", "ai-labs")],
+        date="2026-07-31",
+        total_fetched=1,
+        language="en",
+        display_timezone="UTC",
+    )
+    page = BeautifulSoup(markup, "html.parser")
+
+    assert page.select_one('[data-story-share="x"]')["aria-label"] == "Share to X"
+    assert (
+        page.select_one('[data-story-share="card"]')["aria-label"]
+        == "Generate share card"
+    )
+
+
 def test_render_web_feed_empty_state_is_static() -> None:
     markup = render_web_feed(
         [],
@@ -121,6 +148,40 @@ def test_story_summaries_are_not_visually_truncated() -> None:
     )
 
     assert ".story-summary-body:not(.expanded)" not in stylesheet
+
+
+def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
+    root = Path(__file__).parents[1]
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+        encoding="utf-8"
+    )
+    card_script = root / "docs" / "assets" / "js" / "story-card.js"
+    head = (root / "docs" / "_includes" / "head-custom.html").read_text(
+        encoding="utf-8"
+    )
+
+    assert card_script.is_file()
+    assert "import(storyCardModuleUrl())" in main_script
+    assert "story-card.js" not in head
+
+
+def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
+    root = Path(__file__).parents[1]
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+        encoding="utf-8"
+    )
+    card_script = (
+        root / "docs" / "assets" / "js" / "story-card.js"
+    ).read_text(encoding="utf-8")
+
+    assert "PUBLIC_SITE_ORIGIN = 'https://bmt.news'" in main_script
+    assert "references: references" in main_script
+    assert "sourceParts:" in main_script
+    assert "dateLabel:" in main_script
+    assert "CARD_SCALE = 2" in card_script
+    assert "story.references" in card_script
+    assert "story.tags" in card_script
+    assert "story.url" not in card_script
 
 
 def test_home_templates_keep_two_editions_and_split_languages() -> None:

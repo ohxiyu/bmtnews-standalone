@@ -39,6 +39,10 @@ _LABELS = {
         "market_impact": "市场影响",
         "overview": "今日脉络",
         "overview_rank": "查看第 {rank} 条",
+        "share_x": "分享",
+        "share_x_label": "分享到 X",
+        "share_card": "卡片",
+        "share_card_label": "生成分享卡片",
     },
     "en": {
         "all": "All",
@@ -62,6 +66,10 @@ _LABELS = {
         "market_impact": "Market impact",
         "overview": "Today at a glance",
         "overview_rank": "View story {rank}",
+        "share_x": "Share",
+        "share_x_label": "Share to X",
+        "share_card": "Card",
+        "share_card_label": "Generate share card",
     },
 }
 
@@ -376,6 +384,24 @@ def _render_article(
         priority = f'<span class="priority-pill">{labels["priority"]}</span>'
         priority_class = " is-priority"
 
+    share_actions = (
+        '<div class="digest-item-controls">'
+        f'<span class="score-badge" data-tier="{_score_tier(score)}" '
+        f'aria-label="Score {score_label} out of 10">{score_label}</span>'
+        f'<a class="story-share-button" href="#{article_id}" data-story-share="x" '
+        f'target="_blank" rel="noopener noreferrer" '
+        f'aria-label="{_escape(labels["share_x_label"])}" '
+        f'title="{_escape(labels["share_x_label"])}">'
+        '<span class="story-share-icon" aria-hidden="true">&#120143;</span>'
+        f'<span>{_escape(labels["share_x"])}</span></a>'
+        f'<button class="story-share-button" type="button" data-story-share="card" '
+        f'aria-label="{_escape(labels["share_card_label"])}" '
+        f'title="{_escape(labels["share_card_label"])}">'
+        '<span class="story-share-icon" aria-hidden="true">&#9638;</span>'
+        f'<span>{_escape(labels["share_card"])}</span></button>'
+        '</div>'
+    )
+
     article = (
         f'<article class="digest-item{priority_class}" id="{article_id}" '
         f'data-category="{category}" data-score="{score:.1f}">'
@@ -388,8 +414,7 @@ def _render_article(
         f'<span class="category-pill" data-category="{category}">'
         f"{labels[category]}</span>{priority}"
         f"{_thread_html(item, language)}</div>"
-        f'<span class="score-badge" data-tier="{_score_tier(score)}" '
-        f'aria-label="Score {score_label} out of 10">{score_label}</span>'
+        f"{share_actions}"
         "</div>"
         f"<h2>{title_html}</h2>"
         f'<p class="story-summary-body">{_escape(summary)}</p>'
