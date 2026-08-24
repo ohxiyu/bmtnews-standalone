@@ -90,7 +90,7 @@
     button.title = labels.cardLabel;
 
     var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    icon.className = 'story-share-icon';
+    icon.setAttribute('class', 'story-share-icon');
     icon.setAttribute('aria-hidden', 'true');
     icon.setAttribute('viewBox', '0 0 24 24');
     icon.setAttribute('fill', 'none');

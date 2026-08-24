@@ -187,6 +187,8 @@ def test_story_share_uses_one_card_action_and_migrates_old_controls() -> None:
     assert "button.dataset.storyShare = 'card'" in main_script
     assert "button.dataset.storyShare !== 'card'" in main_script
     assert '[data-story-share="x"], [data-story-share="image"]' in main_script
+    assert "icon.setAttribute('class', 'story-share-icon')" in main_script
+    assert "icon.className = 'story-share-icon'" not in main_script
     assert "https://x.com/intent/post" not in main_script
     assert "navigator.share" not in card_script
     assert "navigator.clipboard.write" in card_script
