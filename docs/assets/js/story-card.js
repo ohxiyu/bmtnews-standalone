@@ -10,7 +10,7 @@ const COLORS = {
 };
 
 const METRICS = {
-  left: 64, right: 48, railWidth: 42, gap: 14, top: 36,
+  left: 64, right: 48, railWidth: 62, gap: 14, top: 36,
   xs: 11.5, small: 12.8, body: 15, title: 17,
   xsLine: 17.25, smallLine: 21.76, bodyLine: 25.5, titleLine: 24.65
 };
@@ -339,9 +339,9 @@ function drawCard(context, story, layout) {
   context.fillRect(0, 0, CARD_CSS_WIDTH, layout.height);
   context.textBaseline = 'top';
 
-  setFont(context, METRICS.title, 750, false, 0.34);
-  context.fillStyle = story.priority ? COLORS.text : COLORS.muted;
-  context.fillText(story.rank || '#01', METRICS.left, METRICS.top + 2);
+  setFont(context, METRICS.small, 700, true);
+  context.fillStyle = COLORS.accent;
+  context.fillText('bmt.news', METRICS.left, METRICS.top + 3);
   setFont(context, METRICS.xs, 450, false);
   context.fillStyle = COLORS.muted;
   context.fillText(story.dateLabel || story.date || '', METRICS.left, METRICS.top + 29);
