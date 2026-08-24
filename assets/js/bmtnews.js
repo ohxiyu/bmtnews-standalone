@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  var mainScriptSource = document.currentScript ? document.currentScript.src : '';
+  var storyCardModulePromise = null;
+  var PUBLIC_SITE_ORIGIN = 'https://bmt.news';
+
   var CATEGORY_ORDER = [
     'all', 'crypto', 'technology', 'policy',
     'exchange', 'security', 'market', 'regulation', 'protocol'
@@ -28,6 +32,21 @@
       regulation: 'Regulation',
       protocol: 'Protocols',
       technology: 'AI & Tech'
+    }
+  };
+
+  var STORY_SHARE_LABELS = {
+    zh: {
+      x: '分享',
+      xLabel: '分享到 X',
+      card: '卡片',
+      cardLabel: '生成分享卡片'
+    },
+    en: {
+      x: 'Share',
+      xLabel: 'Share to X',
+      card: 'Card',
+      cardLabel: 'Generate share card'
     }
   };
 
@@ -64,6 +83,203 @@
 
   function textOf(element) {
     return element ? (element.textContent || '').replace(/\s+/g, ' ').trim() : '';
+  }
+
+  function createStoryShareButton(kind, language) {
+    var labels = STORY_SHARE_LABELS[language];
+    var button = document.createElement(kind === 'x' ? 'a' : 'button');
+    if (kind === 'x') {
+      button.href = '#';
+      button.target = '_blank';
+      button.rel = 'noopener noreferrer';
+    } else {
+      button.type = 'button';
+    }
+    button.className = 'story-share-button';
+    button.dataset.storyShare = kind;
+    button.setAttribute('aria-label', kind === 'x' ? labels.xLabel : labels.cardLabel);
+    button.title = kind === 'x' ? labels.xLabel : labels.cardLabel;
+
+    var icon = document.createElement('span');
+    icon.className = 'story-share-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = kind === 'x' ? '𝕏' : '▦';
+    button.appendChild(icon);
+    button.appendChild(document.createTextNode(kind === 'x' ? labels.x : labels.card));
+    return button;
+  }
+
+  function ensureStoryActions(article, language) {
+    var meta = article.querySelector('.digest-item-meta');
+    if (!meta) return;
+    var controls = meta.querySelector('.digest-item-controls');
+    if (!controls) {
+      controls = document.createElement('div');
+      controls.className = 'digest-item-controls';
+      var directScore = Array.prototype.find.call(meta.children, function (child) {
+        return child.classList.contains('score-badge');
+      });
+      if (directScore) controls.appendChild(directScore);
+      meta.appendChild(controls);
+    }
+    if (!controls.querySelector('[data-story-share="x"]')) {
+      controls.appendChild(createStoryShareButton('x', language));
+    }
+    if (!controls.querySelector('[data-story-share="card"]')) {
+      controls.appendChild(createStoryShareButton('card', language));
+    }
+    configureStoryXLink(article);
+  }
+
+  function storyPermalink(article) {
+    var current = new URL(window.location.href);
+    var url = new URL(current.pathname + current.search, PUBLIC_SITE_ORIGIN);
+    url.hash = article.id;
+    return url.href;
+  }
+
+  function truncateText(value, limit) {
+    var characters = Array.from(String(value || '').trim());
+    return characters.length > limit
+      ? characters.slice(0, Math.max(1, limit - 1)).join('').trimEnd() + '…'
+      : characters.join('');
+  }
+
+  function firstSentence(value) {
+    var text = String(value || '').replace(/\s+/g, ' ').trim();
+    var match = text.match(/^.*?[。！？.!?](?:[”’"']?)(?=\s|$|[^A-Za-z0-9])/);
+    return truncateText(match ? match[0] : text, 120);
+  }
+
+  function readStory(article) {
+    var language = normalizeLanguage(
+      (article.closest('[data-language]') || {}).dataset?.language ||
+      document.documentElement.lang
+    );
+    var summaryElement = article.querySelector('.story-summary-body');
+    if (!summaryElement) {
+      summaryElement = Array.prototype.find.call(
+        article.querySelectorAll('.digest-item-content > p'),
+        function (paragraph) {
+          return !paragraph.classList.contains('source-line') &&
+            !paragraph.classList.contains('tag-line');
+        }
+      );
+    }
+
+    var sections = [];
+    var references = [];
+    var tags = [];
+    article.querySelectorAll('.story-more-content > section').forEach(function (section) {
+      var title = textOf(section.querySelector('h3'));
+      if (section.classList.contains('tag-line')) {
+        tags = Array.prototype.map.call(section.querySelectorAll('code'), textOf).filter(Boolean);
+        return;
+      }
+      var entries = Array.prototype.map.call(section.querySelectorAll('li'), textOf).filter(Boolean);
+      if (entries.length) {
+        references = entries;
+        return;
+      }
+      var content = textOf(section.querySelector('p'));
+      if (title && content) sections.push({title: title, text: content});
+    });
+
+    var dateHost = article.closest('.daily-day') || article.closest('[data-date]');
+    var dateElement = article.querySelector('.digest-item-rail time');
+    var date = dateHost?.dataset?.date || dateElement?.getAttribute('datetime') || '';
+    var title = textOf(article.querySelector('h2'));
+    var sourceLine = article.querySelector('.source-line');
+    var sourceLink = sourceLine && sourceLine.querySelector('.source-link');
+    var sourceTime = sourceLine && sourceLine.querySelector('time');
+    var provenance = sourceLine && sourceLine.querySelector('.provenance');
+    var sourceSegments = textOf(sourceLine).split('·').map(function (part) {
+      return part.trim();
+    }).filter(Boolean);
+    var outlet = textOf(sourceLink) || sourceSegments[1] || '';
+    var sourceType = sourceSegments[0] || '';
+    var published = textOf(sourceTime);
+    var provenanceText = textOf(provenance);
+    var reservedSourceParts = [sourceType, outlet, published, provenanceText];
+    var sourceExtras = sourceSegments.filter(function (part) {
+      return reservedSourceParts.indexOf(part) === -1;
+    });
+    var details = article.querySelector('.story-more > summary');
+    var priority = article.querySelector('.priority-pill, .editorial-pill');
+    return {
+      language: language,
+      title: title,
+      summary: textOf(summaryElement),
+      sections: sections,
+      references: references,
+      tags: tags,
+      source: textOf(article.querySelector('.source-line')),
+      sourceParts: {
+        type: sourceType,
+        outlet: outlet,
+        published: published,
+        extras: sourceExtras,
+        provenance: provenanceText,
+        confirmed: Boolean(provenance && provenance.classList.contains('is-confirmed'))
+      },
+      category: textOf(article.querySelector('.category-pill')),
+      categoryKey: article.dataset.category || '',
+      priority: textOf(priority),
+      detailsTitle: textOf(details),
+      score: textOf(article.querySelector('.score-badge')),
+      scoreTier: article.querySelector('.score-badge')?.dataset?.tier || 'mid',
+      rank: textOf(article.querySelector('.digest-item-rail strong')),
+      date: date,
+      dateLabel: textOf(dateElement),
+      url: storyPermalink(article)
+    };
+  }
+
+  function xShareUrl(story) {
+    var intent = new URL('https://x.com/intent/post');
+    intent.searchParams.set('text', truncateText(story.title, 110) + '\n\n' + firstSentence(story.summary));
+    intent.searchParams.set('url', story.url);
+    return intent.href;
+  }
+
+  function configureStoryXLink(article) {
+    var link = article.querySelector('a[data-story-share="x"]');
+    if (link) link.href = xShareUrl(readStory(article));
+  }
+
+  function storyCardModuleUrl() {
+    var source = mainScriptSource;
+    if (!source) {
+      var script = document.querySelector('script[src*="/assets/js/bmtnews.js"]');
+      source = script ? script.src : new URL('/assets/js/bmtnews.js', window.location.href).href;
+    }
+    var base = new URL(source, window.location.href);
+    var moduleUrl = new URL('story-card.js', base);
+    moduleUrl.search = base.search;
+    return moduleUrl.href;
+  }
+
+  function loadStoryCardModule() {
+    if (!storyCardModulePromise) {
+      storyCardModulePromise = import(storyCardModuleUrl()).catch(function (error) {
+        storyCardModulePromise = null;
+        throw error;
+      });
+    }
+    return storyCardModulePromise;
+  }
+
+  function setupStorySharing() {
+    document.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-story-share]');
+      if (!button || button.dataset.storyShare !== 'card') return;
+      var article = button.closest('.digest-item');
+      if (!article) return;
+      var story = readStory(article);
+      loadStoryCardModule().then(function (module) {
+        module.openStoryCard(story);
+      });
+    });
   }
 
   function inferCategory(element) {
@@ -484,6 +700,10 @@
       var staticStats = readRunStats(root);
       var staticStatsScope = root.closest('.daily-day') || root;
 
+      staticArticles.forEach(function (article) {
+        ensureStoryActions(article, language);
+      });
+
       updateFeedStats(
         staticStatsScope,
         staticArticles,
@@ -511,6 +731,9 @@
 
     var articles = headings.map(function (heading, index) {
       return createDigestArticle(root, heading, index, language, date);
+    });
+    articles.forEach(function (article) {
+      ensureStoryActions(article, language);
     });
     var tocItems = Array.prototype.slice.call(toc.querySelectorAll(':scope > li'));
     tocItems.forEach(function (item, index) {
@@ -827,6 +1050,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     setupThemeToggle();
     setupInterfaceLanguage();
+    setupStorySharing();
     enhanceDailyFeeds();
     setupScrollspy();
     setupKeyboardNav();
