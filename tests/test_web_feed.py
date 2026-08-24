@@ -165,6 +165,25 @@ def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
     assert "story-card.js" not in head
 
 
+def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
+    root = Path(__file__).parents[1]
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+        encoding="utf-8"
+    )
+    card_script = (
+        root / "docs" / "assets" / "js" / "story-card.js"
+    ).read_text(encoding="utf-8")
+
+    assert "PUBLIC_SITE_ORIGIN = 'https://bmt.news'" in main_script
+    assert "references: references" in main_script
+    assert "sourceParts:" in main_script
+    assert "dateLabel:" in main_script
+    assert "CARD_SCALE = 2" in card_script
+    assert "story.references" in card_script
+    assert "story.tags" in card_script
+    assert "story.url" not in card_script
+
+
 def test_home_templates_keep_two_editions_and_split_languages() -> None:
     root = Path(__file__).parents[1]
     include = (root / "docs" / "_includes" / "feed-home.html").read_text(

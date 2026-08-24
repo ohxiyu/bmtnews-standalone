@@ -3,6 +3,7 @@
 
   var mainScriptSource = document.currentScript ? document.currentScript.src : '';
   var storyCardModulePromise = null;
+  var PUBLIC_SITE_ORIGIN = 'https://bmt.news';
 
   var CATEGORY_ORDER = [
     'all', 'crypto', 'technology', 'policy',
@@ -131,7 +132,8 @@
   }
 
   function storyPermalink(article) {
-    var url = new URL(window.location.href);
+    var current = new URL(window.location.href);
+    var url = new URL(current.pathname + current.search, PUBLIC_SITE_ORIGIN);
     url.hash = article.id;
     return url.href;
   }
@@ -166,15 +168,20 @@
     }
 
     var sections = [];
-    var tags = '';
+    var references = [];
+    var tags = [];
     article.querySelectorAll('.story-more-content > section').forEach(function (section) {
       var title = textOf(section.querySelector('h3'));
       if (section.classList.contains('tag-line')) {
-        tags = Array.prototype.map.call(section.querySelectorAll('code'), textOf).join('  ');
+        tags = Array.prototype.map.call(section.querySelectorAll('code'), textOf).filter(Boolean);
         return;
       }
       var entries = Array.prototype.map.call(section.querySelectorAll('li'), textOf).filter(Boolean);
-      var content = entries.length ? entries.join(' · ') : textOf(section.querySelector('p'));
+      if (entries.length) {
+        references = entries;
+        return;
+      }
+      var content = textOf(section.querySelector('p'));
       if (title && content) sections.push({title: title, text: content});
     });
 
@@ -182,17 +189,48 @@
     var dateElement = article.querySelector('.digest-item-rail time');
     var date = dateHost?.dataset?.date || dateElement?.getAttribute('datetime') || '';
     var title = textOf(article.querySelector('h2'));
+    var sourceLine = article.querySelector('.source-line');
+    var sourceLink = sourceLine && sourceLine.querySelector('.source-link');
+    var sourceTime = sourceLine && sourceLine.querySelector('time');
+    var provenance = sourceLine && sourceLine.querySelector('.provenance');
+    var sourceSegments = textOf(sourceLine).split('·').map(function (part) {
+      return part.trim();
+    }).filter(Boolean);
+    var outlet = textOf(sourceLink) || sourceSegments[1] || '';
+    var sourceType = sourceSegments[0] || '';
+    var published = textOf(sourceTime);
+    var provenanceText = textOf(provenance);
+    var reservedSourceParts = [sourceType, outlet, published, provenanceText];
+    var sourceExtras = sourceSegments.filter(function (part) {
+      return reservedSourceParts.indexOf(part) === -1;
+    });
+    var details = article.querySelector('.story-more > summary');
+    var priority = article.querySelector('.priority-pill, .editorial-pill');
     return {
       language: language,
       title: title,
       summary: textOf(summaryElement),
       sections: sections,
+      references: references,
       tags: tags,
       source: textOf(article.querySelector('.source-line')),
+      sourceParts: {
+        type: sourceType,
+        outlet: outlet,
+        published: published,
+        extras: sourceExtras,
+        provenance: provenanceText,
+        confirmed: Boolean(provenance && provenance.classList.contains('is-confirmed'))
+      },
       category: textOf(article.querySelector('.category-pill')),
+      categoryKey: article.dataset.category || '',
+      priority: textOf(priority),
+      detailsTitle: textOf(details),
       score: textOf(article.querySelector('.score-badge')),
+      scoreTier: article.querySelector('.score-badge')?.dataset?.tier || 'mid',
       rank: textOf(article.querySelector('.digest-item-rail strong')),
       date: date,
+      dateLabel: textOf(dateElement),
       url: storyPermalink(article)
     };
   }
