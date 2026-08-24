@@ -6,13 +6,23 @@ const source = await readFile(new URL('../docs/assets/js/story-card.js', import.
 const moduleUrl = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
 const card = await import(moduleUrl);
 
-test('image sharing sends only the generated PNG file', () => {
-  const file = {name: 'bmtnews-story.png', type: 'image/png'};
-  const payload = card.imageShareData(file);
+test('image clipboard writes only the generated PNG blob', async () => {
+  const blob = {type: 'image/png'};
+  const writes = [];
+  class MockClipboardItem {
+    constructor(data) {
+      this.data = data;
+    }
+  }
 
-  assert.deepEqual(Object.keys(payload), ['files']);
-  assert.deepEqual(payload.files, [file]);
-  assert.equal('title' in payload, false);
-  assert.equal('text' in payload, false);
-  assert.equal('url' in payload, false);
+  await card.copyImageToClipboard(
+    blob,
+    {write: async (items) => writes.push(items)},
+    MockClipboardItem,
+  );
+
+  assert.equal(writes.length, 1);
+  assert.equal(writes[0].length, 1);
+  assert.deepEqual(Object.keys(writes[0][0].data), ['image/png']);
+  assert.equal(writes[0][0].data['image/png'], blob);
 });
