@@ -3,6 +3,47 @@
 <link rel="alternate" type="application/rss+xml" title="BMTNews RSS" href="{{ '/feed.xml' | relative_url }}">
 <link rel="alternate" type="application/atom+xml" title="BMTNews 中文加密资讯" href="{{ '/feed-zh.xml' | relative_url }}">
 <link rel="alternate" type="application/atom+xml" title="BMTNews English Crypto News" href="{{ '/feed-en.xml' | relative_url }}">
+<link rel="describedby" href="{{ '/llms.txt' | relative_url }}" type="text/markdown">
+{% if page.page_type == "home" %}
+<link rel="alternate" type="text/markdown" href="{% if page.interface_language == 'en' %}{{ '/en/index.html.md' | relative_url }}{% else %}{{ '/index.html.md' | relative_url }}{% endif %}">
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bmt.news/#organization",
+      "name": "BMTNews",
+      "url": "https://bmt.news/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bmt.news/assets/images/og-default.svg"
+      },
+      "sameAs": [
+        "https://github.com/ohxiyu/bmtnews-standalone"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "editorial, corrections, and rights requests",
+          "url": "https://bmt.news/contact/",
+          "availableLanguage": ["zh-CN", "en"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bmt.news/#website",
+      "name": "BMTNews",
+      "url": "https://bmt.news/",
+      "description": "Crypto market intelligence covering exchanges, markets, security, regulation, protocols, AI, and policy.",
+      "publisher": {"@id": "https://bmt.news/#organization"},
+      "inLanguage": ["zh-CN", "en"]
+    }
+  ]
+}
+</script>
 <script>
   (function () {
     document.documentElement.classList.add('js');

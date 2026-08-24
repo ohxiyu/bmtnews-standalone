@@ -6,9 +6,11 @@ from pathlib import Path
 from src.api_output import (
     build_edition_payload,
     render_category_feed,
+    render_sitemap,
     write_category_feeds,
     write_edition_api,
     write_editions_index,
+    write_sitemap,
 )
 from src.archive import ArchiveRecord
 from src.market_snapshot import MarketSnapshot
@@ -107,6 +109,34 @@ def test_write_editions_index_lists_dates_desc(tmp_path: Path) -> None:
         "2026-08-08",
     ]
     assert payload["editions"][0]["items"] == 2
+
+
+def test_sitemap_lists_static_editions_threads_and_entities(tmp_path: Path) -> None:
+    records = [
+        make_record("2026-08-23", thread_id="tabc"),
+        make_record("2026-08-24", rank=2, thread_id="tabc"),
+    ]
+    entity = EntitySummary(slug="cftc", label="CFTC", count=2, records=records)
+    sitemap = render_sitemap(
+        records,
+        threads=[("tabc", records)],
+        entities=[entity],
+        generated_date="2026-08-24",
+    )
+    assert sitemap.startswith('<?xml version="1.0" encoding="UTF-8"?>')
+    assert "https://bmt.news/developers/" in sitemap
+    assert "https://bmt.news/editions/2026-08-24/zh.html" in sitemap
+    assert "https://bmt.news/en/threads/tabc/" in sitemap
+    assert "https://bmt.news/entity/cftc/" in sitemap
+    assert "<lastmod>2026-08-24</lastmod>" in sitemap
+
+    path = write_sitemap(
+        records,
+        threads=[("tabc", records)],
+        entities=[entity],
+        path=tmp_path / "sitemap.xml",
+    )
+    assert path.read_text(encoding="utf-8") == sitemap
 
 
 def test_category_feed_filters_and_escapes() -> None:

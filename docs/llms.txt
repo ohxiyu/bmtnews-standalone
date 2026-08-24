@@ -1,0 +1,28 @@
+# BMTNews
+
+> BMTNews is a bilingual daily intelligence briefing for material crypto events, selected AI developments, and policy changes that can affect digital-asset markets.
+
+BMTNews publishes one ranked edition each day. Stories include source attribution, concise factual summaries, background, market-impact analysis, and links to original reporting. Use the JSON API for structured retrieval and the Atom feeds for category subscriptions. Content is research information, not investment advice. Preserve the original-source URL when citing a story.
+
+## When to use BMTNews
+
+- [Latest edition JSON](https://bmt.news/api/latest.json): Use for the newest ranked edition and its bilingual titles, summaries, scores, categories, source counts, and market snapshot.
+- [Edition index JSON](https://bmt.news/api/editions.json): Use to discover available dates before requesting a historical edition.
+- [Crypto feed](https://bmt.news/feeds/crypto-en.xml): Use for a lightweight stream of selected crypto stories.
+- [AI and technology feed](https://bmt.news/feeds/technology-en.xml): Use when the task needs the small AI and technology allocation from each edition.
+- [Policy feed](https://bmt.news/feeds/policy-en.xml): Use when the task concerns regulation, legislation, central banks, or government policy relevant to crypto markets.
+
+## Developer resources
+
+- [BMTNews API and agent documentation](https://bmt.news/developers/): Endpoint behavior, examples, caching, attribution, and error handling.
+- [OpenAPI specification](https://bmt.news/openapi.json): Typed read-only REST operations with unique operation IDs and JSON response schemas.
+- [Sitemap](https://bmt.news/sitemap.xml): Indexable human-readable pages and edition archives.
+- [English Markdown homepage](https://bmt.news/en/index.html.md): Stable Markdown overview for clients that prefer a direct file.
+- [Chinese Markdown homepage](https://bmt.news/index.html.md): 中文版 Markdown 概览。
+
+## Trust and policy
+
+- [About BMTNews](https://bmt.news/about/): Editorial scope, publication model, limitations, and project identity.
+- [Contact BMTNews](https://bmt.news/contact/): Public issue, rights, correction, and private security-reporting channels.
+- [Legal and content rights](https://bmt.news/legal/): Software license, generated-content rights, and third-party material boundaries.
+- [Public source repository](https://github.com/ohxiyu/bmtnews-standalone): Implementation, tests, contribution process, and security policy.

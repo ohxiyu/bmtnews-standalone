@@ -11,7 +11,7 @@
 
 📡 One edition a day, in English and Chinese · [**Read it live →**](https://bmt.news/)
 
-[📖 Live Site](https://bmt.news/) · [📋 Configuration](project-docs/configuration.md) · [🧵 Archive & Threads](project-docs/archive-and-threads.md) · [✍️ Editorial Layer](project-docs/editorial.md) · [简体中文](README_zh.md) · [日本語](README_ja.md)
+[📖 Live Site](https://bmt.news/) · [🤖 Public API & Agents](https://bmt.news/developers/) · [📋 Configuration](project-docs/configuration.md) · [🧵 Archive & Threads](project-docs/archive-and-threads.md) · [✍️ Editorial Layer](project-docs/editorial.md) · [简体中文](README_zh.md) · [日本語](README_ja.md)
 
 </div>
 
@@ -109,6 +109,7 @@ Full configuration reference: [project-docs/configuration.md](project-docs/confi
 
 ## Documentation
 
+- [Public API and agent resources](https://bmt.news/developers/) · [OpenAPI](https://bmt.news/openapi.json) · [llms.txt](https://bmt.news/llms.txt)
 - [Configuration reference](project-docs/configuration.md)
 - [Archive, threads, entities, and the JSON API](project-docs/archive-and-threads.md)
 - [Editorial layer and web admin](project-docs/editorial.md)

@@ -61,6 +61,7 @@ from .api_output import (
     write_category_feeds,
     write_edition_api,
     write_editions_index,
+    write_sitemap,
 )
 from .archive import (
     ArchiveRecord,
@@ -2134,6 +2135,7 @@ class BMTNewsOrchestrator:
 
             threads = collect_threads(history, minimum_days=2, limit=40)
             entities = collect_entities(history, minimum_mentions=3, limit=40)
+            write_sitemap(history, threads=threads, entities=entities)
             written = publish_archive_pages(threads, entities, languages)
             run_report.set_metric("archive_records", len(records))
             run_report.set_metric("archive_threads", len(threads))

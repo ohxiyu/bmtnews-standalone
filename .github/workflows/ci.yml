@@ -38,3 +38,5 @@ jobs:
         working-directory: ops/daily-dispatcher
       - run: npm run check
         working-directory: ops/daily-dispatcher
+      - run: node --check docs/_worker.js
+      - run: node --test tests/test_agent_worker.mjs
