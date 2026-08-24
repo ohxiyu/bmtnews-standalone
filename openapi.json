@@ -1,0 +1,303 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "BMTNews Public API",
+    "version": "1.0.0",
+    "description": "Read-only access to the latest BMTNews daily edition, the edition index, and dated edition documents. No authentication is required.",
+    "termsOfService": "https://bmt.news/legal/",
+    "contact": {
+      "name": "BMTNews contact and corrections",
+      "url": "https://bmt.news/contact/"
+    },
+    "license": {
+      "name": "Content and data rights",
+      "url": "https://bmt.news/legal/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bmt.news",
+      "description": "Production"
+    }
+  ],
+  "security": [],
+  "externalDocs": {
+    "description": "BMTNews API and agent developer documentation",
+    "url": "https://bmt.news/developers/"
+  },
+  "tags": [
+    {
+      "name": "Editions",
+      "description": "Published daily intelligence editions. All operations are public and read-only."
+    }
+  ],
+  "paths": {
+    "/api/latest.json": {
+      "get": {
+        "tags": ["Editions"],
+        "summary": "Get the latest edition",
+        "description": "Returns the newest complete bilingual BMTNews edition, including ranked stories, publication-window metadata, run statistics, overview text, and an optional market snapshot.",
+        "operationId": "getLatestEdition",
+        "responses": {
+          "200": {
+            "description": "The latest published edition.",
+            "headers": {
+              "Cache-Control": {
+                "description": "Client and edge caching policy for the generated edition.",
+                "schema": {"type": "string"}
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/Edition"}
+              }
+            }
+          },
+          "503": {
+            "description": "The current edition is temporarily unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ErrorResponse"}
+              }
+            }
+          },
+          "405": {
+            "description": "The endpoint only supports GET and HEAD requests.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ErrorResponse"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/editions.json": {
+      "get": {
+        "tags": ["Editions"],
+        "summary": "List available editions",
+        "description": "Lists discoverable edition dates in reverse chronological order. Use each entry's json URL instead of guessing historical dates.",
+        "operationId": "listEditions",
+        "responses": {
+          "200": {
+            "description": "An index of available editions.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/EditionIndex"}
+              }
+            }
+          },
+          "405": {
+            "description": "The endpoint only supports GET and HEAD requests.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ErrorResponse"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/editions/{date}/edition.json": {
+      "get": {
+        "tags": ["Editions"],
+        "summary": "Get an edition by date",
+        "description": "Returns the complete bilingual edition for one published Asia/Shanghai edition date.",
+        "operationId": "getEditionByDate",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "description": "Published edition date in YYYY-MM-DD format.",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "example": "2026-08-24"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested published edition.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/Edition"}
+              }
+            }
+          },
+          "404": {
+            "description": "No edition exists for the requested date.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ErrorResponse"}
+              }
+            }
+          },
+          "405": {
+            "description": "The endpoint only supports GET and HEAD requests.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ErrorResponse"}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "EditionIndex": {
+        "type": "object",
+        "description": "Reverse-chronological pointers to available edition documents.",
+        "required": ["version", "generated_at", "editions"],
+        "properties": {
+          "version": {"type": "integer", "description": "Payload schema version.", "const": 1},
+          "generated_at": {"type": "string", "format": "date-time", "description": "UTC generation timestamp."},
+          "editions": {
+            "type": "array",
+            "description": "Available editions, newest first.",
+            "items": {"$ref": "#/components/schemas/EditionPointer"}
+          }
+        }
+      },
+      "EditionPointer": {
+        "type": "object",
+        "description": "One discoverable edition and its JSON document URL.",
+        "required": ["date", "items", "json"],
+        "properties": {
+          "date": {"type": "string", "format": "date", "description": "Asia/Shanghai edition date."},
+          "items": {"type": "integer", "minimum": 0, "description": "Number of published stories."},
+          "json": {"type": "string", "format": "uri", "description": "Absolute URL of the complete edition JSON."}
+        }
+      },
+      "Edition": {
+        "type": "object",
+        "description": "One generated BMTNews daily edition.",
+        "required": ["version", "date", "generated_at", "site", "window", "stats", "overview", "market", "items"],
+        "properties": {
+          "version": {"type": "integer", "description": "Payload schema version.", "const": 1},
+          "date": {"type": "string", "format": "date", "description": "Asia/Shanghai edition date."},
+          "generated_at": {"type": "string", "format": "date-time", "description": "UTC generation timestamp."},
+          "site": {"type": "string", "format": "uri", "description": "Canonical BMTNews site origin."},
+          "window": {"$ref": "#/components/schemas/PublicationWindow"},
+          "stats": {
+            "type": "object",
+            "description": "Pipeline counts for the edition.",
+            "additionalProperties": {"type": "integer", "minimum": 0}
+          },
+          "overview": {
+            "type": "object",
+            "description": "Daily overview text keyed by language code.",
+            "additionalProperties": {"type": "string"}
+          },
+          "market": {
+            "description": "Optional market snapshot captured with the edition.",
+            "oneOf": [
+              {"$ref": "#/components/schemas/MarketSnapshot"},
+              {"type": "null"}
+            ]
+          },
+          "items": {
+            "type": "array",
+            "description": "Ranked stories selected for publication.",
+            "items": {"$ref": "#/components/schemas/Story"}
+          }
+        }
+      },
+      "PublicationWindow": {
+        "type": "object",
+        "description": "Fixed collection window used to build the edition.",
+        "required": ["start", "end"],
+        "properties": {
+          "start": {"type": ["string", "null"], "format": "date-time", "description": "UTC window start."},
+          "end": {"type": ["string", "null"], "format": "date-time", "description": "UTC window end."}
+        }
+      },
+      "MarketSnapshot": {
+        "type": "object",
+        "description": "Headline crypto-market conditions near publication time.",
+        "required": ["btc_usd", "btc_change_24h", "eth_usd", "eth_change_24h", "fear_greed", "fear_greed_label"],
+        "properties": {
+          "btc_usd": {"type": "number", "description": "Bitcoin price in US dollars."},
+          "btc_change_24h": {"type": ["number", "null"], "description": "Bitcoin 24-hour percentage change."},
+          "eth_usd": {"type": "number", "description": "Ether price in US dollars."},
+          "eth_change_24h": {"type": ["number", "null"], "description": "Ether 24-hour percentage change."},
+          "fear_greed": {"type": ["integer", "null"], "minimum": 0, "maximum": 100, "description": "Fear and Greed index value."},
+          "fear_greed_label": {"type": ["string", "null"], "description": "Human-readable Fear and Greed label."}
+        }
+      },
+      "LocalizedText": {
+        "type": "object",
+        "description": "Chinese and English text generated from the same story.",
+        "required": ["zh", "en"],
+        "properties": {
+          "zh": {"type": "string", "description": "Simplified Chinese text."},
+          "en": {"type": "string", "description": "English text."}
+        }
+      },
+      "Story": {
+        "type": "object",
+        "description": "One ranked story with source attribution and bilingual analysis.",
+        "required": ["rank", "url", "title", "summary", "score", "category", "top_category", "source", "tags", "sources_count", "editorial", "thread"],
+        "properties": {
+          "rank": {"type": "integer", "minimum": 1, "description": "Editorial rank within the edition."},
+          "url": {"type": "string", "format": "uri", "description": "Original publisher or primary-source URL."},
+          "title": {"$ref": "#/components/schemas/LocalizedText"},
+          "summary": {"$ref": "#/components/schemas/LocalizedText"},
+          "score": {"type": ["number", "null"], "minimum": 0, "maximum": 10, "description": "Calibrated importance score when available."},
+          "category": {"type": ["string", "null"], "description": "Detailed source or editorial category."},
+          "top_category": {"type": "string", "enum": ["crypto", "technology", "policy"], "description": "Top-level edition quota category."},
+          "source": {"$ref": "#/components/schemas/SourceAttribution"},
+          "tags": {"type": "array", "items": {"type": "string"}, "description": "Entities and topics assigned to the story."},
+          "sources_count": {"type": "integer", "minimum": 1, "description": "Number of merged independent coverage sources."},
+          "editorial": {"type": "boolean", "description": "Whether the item was inserted through the editorial layer."},
+          "thread": {
+            "description": "Continuing-story thread reference when the event spans multiple editions.",
+            "oneOf": [
+              {"$ref": "#/components/schemas/ThreadReference"},
+              {"type": "null"}
+            ]
+          }
+        }
+      },
+      "SourceAttribution": {
+        "type": "object",
+        "description": "Primary collection source for the story.",
+        "required": ["type", "label"],
+        "properties": {
+          "type": {"type": "string", "description": "Collector source type, such as rss, telegram, github, or google_news."},
+          "label": {"type": "string", "description": "Human-readable source name."}
+        }
+      },
+      "ThreadReference": {
+        "type": "object",
+        "description": "Link from a story to its continuing event timeline.",
+        "required": ["id", "day", "url"],
+        "properties": {
+          "id": {"type": "string", "description": "Stable thread identifier."},
+          "day": {"type": "integer", "minimum": 1, "description": "Edition day within the continuing thread."},
+          "url": {"type": "string", "format": "uri", "description": "Public thread-page URL."}
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "description": "Machine-readable API failure with a stable code and recovery hint.",
+        "required": ["error"],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": ["code", "message", "resolution"],
+            "properties": {
+              "code": {"type": "string", "description": "Stable machine-readable error code."},
+              "message": {"type": "string", "description": "Human-readable failure description."},
+              "resolution": {"type": "string", "description": "Specific next step for the caller."}
+            }
+          }
+        }
+      }
+    }
+  }
+}

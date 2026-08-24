@@ -24,10 +24,13 @@
     {% capture document_title %}{% if page.page_type == "home" %}{{ site.title }}{% elsif page.lang %}BMTNews · {{ page.date | date: "%Y.%m.%d" }}{% elsif page.title and page.title != "Home" %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
     <title>{{ document_title | strip }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{{ document_title | strip | escape }}">
     <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:type" content="{% if page.lang %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/og-default.svg' | absolute_url }}">
+    <meta property="og:image:alt" content="BMTNews — Crypto, AI, and policy intelligence">
     {% include head-custom.html %}
   </head>
   <body
@@ -206,6 +209,9 @@
       </div>
       <span>
         © {{ site.time | date: "%Y" }} BMTNews ·
+        <a href="{{ '/about/' | relative_url }}">{% if interface_language == "en" %}About{% else %}关于{% endif %}</a> ·
+        <a href="{{ '/developers/' | relative_url }}">API</a> ·
+        <a href="{{ '/contact/' | relative_url }}">{% if interface_language == "en" %}Contact{% else %}联系{% endif %}</a> ·
         <a
           href="{{ '/legal/' | relative_url }}"
           data-i18n-zh="法律与内容权利"
