@@ -82,11 +82,16 @@ def test_render_web_feed_includes_overview_and_market_snapshot() -> None:
         market=market,
     )
     assert 'class="edition-overview"' in markup
+    assert 'class="edition-overview-disclosure" open' in markup
+    assert "1 条线索" in markup
     assert "今日脉络" in markup
     assert "&lt;监管&gt;" in markup  # escaped
     assert 'href="#zh-2026-08-08-item-1"' in markup
     assert "#01" in markup
     assert 'class="market-snapshot"' in markup
+    assert markup.index('class="feed-market-bar"') < markup.index(
+        'class="daily-feed-layout is-editorial-grid'
+    )
     assert "$116,235" in markup
     assert 'data-direction="down"' in markup
     assert "贪婪" in markup

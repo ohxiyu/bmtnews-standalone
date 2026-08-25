@@ -281,7 +281,10 @@ def test_daily_edition_combines_staging_and_final_fetch(
     assert "fetched_count: 2" in post
     assert "selected_count: 2" in post
     assert 'fragment_url: "/editions/2026-07-29/zh.html"' in post
-    assert 'class="feed-toolbar feed-rendered-static"' in post
+    assert (
+        'class="daily-feed-layout is-editorial-grid feed-rendered-static"'
+        in post
+    )
     fragment = (
         tmp_path / "docs" / "editions" / "2026-07-29" / "zh.html"
     ).read_text(encoding="utf-8")

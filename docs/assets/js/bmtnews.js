@@ -679,7 +679,21 @@
       details.open = true;
       return;
     }
-    var wide = window.matchMedia('(min-width: 901px)');
+    var wide = window.matchMedia('(min-width: 1101px)');
+    var sync = function () {
+      details.open = wide.matches;
+    };
+    sync();
+    if (wide.addEventListener) wide.addEventListener('change', sync);
+    else if (wide.addListener) wide.addListener(sync);
+  }
+
+  function configureOverviewDisclosure(details) {
+    if (!window.matchMedia) {
+      details.open = true;
+      return;
+    }
+    var wide = window.matchMedia('(min-width: 761px)');
     var sync = function () {
       details.open = wide.matches;
     };
@@ -756,6 +770,7 @@
       var staticTocItems = Array.prototype.slice.call(root.querySelectorAll('.headline-list > li'));
       var staticStream = root.querySelector('.daily-story-stream') || root;
       var staticDetails = root.querySelector('.headline-index');
+      var overviewDetails = root.querySelector('.edition-overview-disclosure');
       var staticStats = readRunStats(root);
       var staticStatsScope = root.closest('.daily-day') || root;
 
@@ -772,6 +787,7 @@
       );
       bindStaticFilters(root, staticArticles, staticTocItems);
       if (staticDetails) configureHeadlineDisclosure(staticDetails);
+      if (overviewDetails) configureOverviewDisclosure(overviewDetails);
       setupActiveHeadline(staticArticles, staticTocItems);
       configureExternalLinks(root);
       return;
@@ -804,8 +820,8 @@
       if (link) link.setAttribute('href', '#' + articles[index].id);
     });
 
-    var toolbar = document.createElement('div');
-    toolbar.className = 'feed-toolbar';
+    var orientation = document.createElement('div');
+    orientation.className = 'feed-orientation';
     var note = document.createElement('p');
     note.className = 'feed-selection-note';
     note.textContent = selectionText || (language === 'zh'
@@ -813,21 +829,22 @@
       : 'Today’s important stories, ranked by impact.');
     var filterHost = document.createElement('div');
     filterHost.className = 'digest-filter-host';
-    toolbar.appendChild(note);
-    toolbar.appendChild(filterHost);
+    orientation.appendChild(note);
+    orientation.appendChild(filterHost);
 
     var layout = document.createElement('div');
-    layout.className = 'daily-feed-layout';
+    layout.className = 'daily-feed-layout is-editorial-grid';
     var stream = document.createElement('div');
     stream.className = 'daily-story-stream';
     articles.forEach(function (article) {
       stream.appendChild(article);
     });
     var aside = createHeadlineRail(toc, articles, language, date);
+    layout.appendChild(orientation);
     layout.appendChild(stream);
     layout.appendChild(aside);
 
-    root.replaceChildren(toolbar, layout);
+    root.replaceChildren(layout);
     var statsScope = root.closest('.daily-day') || root;
     updateFeedStats(statsScope, articles, stream, runStats);
     setupFilters(filterHost, articles, language, function (category) {
