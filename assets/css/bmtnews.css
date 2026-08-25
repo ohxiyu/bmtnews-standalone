@@ -559,6 +559,23 @@ time,
   padding: 10px 0 8px;
 }
 
+/* New editions keep the market strip full-width, then start the editorial
+   rail beside the orientation copy instead of leaving that space unused. */
+.feed-market-bar {
+  padding: 10px 0 0;
+}
+
+.feed-orientation {
+  grid-area: orientation;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 18px;
+  padding: 4px 0;
+}
+
 .market-snapshot {
   flex: 1 1 100%;
   display: flex;
@@ -633,6 +650,10 @@ time,
   display: grid;
   gap: 4px;
   list-style: none;
+}
+
+.edition-overview-disclosure > summary {
+  display: none;
 }
 
 .edition-overview-signal {
@@ -722,6 +743,22 @@ time,
   grid-template-columns: minmax(0, 1fr) 236px;
   gap: 0 36px;
   align-items: start;
+}
+
+.daily-feed-layout.is-editorial-grid {
+  grid-template-columns: minmax(0, 1fr) 264px;
+  grid-template-areas:
+    "orientation rail"
+    "stream rail";
+  gap: 0 32px;
+}
+
+.is-editorial-grid > .daily-story-stream {
+  grid-area: stream;
+}
+
+.is-editorial-grid > .headline-rail {
+  grid-area: rail;
 }
 
 .daily-story-stream {
@@ -1687,9 +1724,17 @@ time,
 
 /* 8. responsive ---------------------------------------------------------------- */
 
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
   .daily-feed-layout {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .daily-feed-layout.is-editorial-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "orientation"
+      "rail"
+      "stream";
   }
 
   .headline-rail {
@@ -1700,6 +1745,9 @@ time,
     border-top: 1px solid var(--border);
     margin-top: 6px;
     padding-top: 10px;
+  }
+
+  .daily-feed-layout:not(.is-editorial-grid) > .headline-rail {
     order: -1;
   }
 
@@ -1745,6 +1793,23 @@ time,
 
   .site-nav::-webkit-scrollbar {
     display: none;
+  }
+
+  .day-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 3px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .day-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .day-nav-label,
+  .day-nav a {
+    flex: 0 0 auto;
   }
 
   .main-content {
@@ -1834,6 +1899,35 @@ time,
 
   .edition-overview-headline {
     font-size: var(--fs-m);
+  }
+
+  .edition-overview-disclosure {
+    margin-top: 7px;
+  }
+
+  .edition-overview-disclosure > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+    color: var(--accent);
+    font-size: var(--fs-s);
+    font-weight: 650;
+  }
+
+  .edition-overview-disclosure > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .edition-overview-disclosure > summary::after {
+    content: "+";
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .edition-overview-disclosure[open] > summary::after {
+    content: "−";
   }
 
   .edition-overview-signal {
