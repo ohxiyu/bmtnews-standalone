@@ -4,7 +4,128 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-08-24T00:00:00Z</updated>
+  <updated>2026-08-25T00:00:00Z</updated>
+  <entry>
+    <title>Zilliqa: Ledger Bug Exposed 6,772 Keys, Enabled 683M ZIL Theft</title>
+    <link href="https://cryptoslate.com/zilliqa-points-to-hardware-wallet-flaw-discarding-entropy-to-expose-crypto-keys-enabling-683m-zil-theft/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cryptoslate.com_feed_:ea5f00ad82f8e0cd</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Zilliqa&#x27;s post-mortem reveals a bug in the legacy Ledger application for Zilliqa discarded eight bytes of entropy when generating nonces, exposing the private keys of at least 6,772 accounts and enabling the theft of 683,130,969.66 ZIL across 66 transactions. Legacy transactions remain paused while migration to Zilliqa EVM awaits an external security audit.
+
+This confirmed hardware-wallet security failure directly compromises user funds, and since already-published signatures cannot be withdrawn, exposed keys remain at risk permanently. It highlights how a subtle randomness bug in a signing implementation can undermine the security guarantees hardware wallets are trusted to provide, affecting ZIL holders using the legacy Ledger app and broader confidence in such devices.
+
+The application generated 40 random bytes per nonce but copied the wrong 32 bytes into the signing buffer, keeping eight zero bytes and discarding eight entropy bytes, forcing the high 64 bits of each affected nonce to zero. Four or more such biased signatures for the same account allow private-key recovery in seconds from public blockchain data; the bulk scan required five signatures, so accounts with exactly four were not counted in the 6,772 figure.</summary>
+  </entry>
+  <entry>
+    <title>BounceBit Retires Layer 1, Reissues BB on BNB Chain After Authorization Flaw</title>
+    <link href="https://cryptoslate.com/bouncebit-abandons-layer-1-after-286-million-token-exploit-leaving-token-holders-in-limbo/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cryptoslate.com_feed_:f73cab3957e33449</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>BounceBit is retiring its standalone Layer 1 and will reissue BB tokens 1:1 on BNB Chain based on an Aug. 19 snapshot, after an authorization flaw enabled the movement of about 286.5 million BB from nine accounts. The new token&#x27;s gas, staking, rewards, and governance roles have not yet been defined.
+
+This incident shows how protocol-level flaws can force a chain to shut down, leaving token holders exposed to undefined token utility during migration. It also highlights the risks of inherited code from stacks like Evmos and the difficulty of preserving token value across network transitions.
+
+The cutoff is block 20,697,260 at 21:02:35 UTC on Aug. 19; balances below 10 BB will be handled via a later claim portal. The new BEP-20 contract is deployed but its address is withheld until exchange due diligence completes, and the old chain will not be restarted.</summary>
+  </entry>
+  <entry>
+    <title>Ethereum DeFi Protocol Term Finance Hit by Governance Exploit Draining Millions</title>
+    <link href="https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/"/>
+    <id>https://bmt.news/editions/2026-08-25/#gdelt:article:20260824T154500Z::https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Term Finance, an Ethereum-based fixed-rate DeFi lending protocol, suffered a governance exploit that drained millions of dollars from its vaults. The incident is a major security setback that directly affects user funds.
+
+The exploit directly exposes the risks of decentralized governance and smart-contract security in DeFi lending. It could shake user confidence in noncustodial fixed-rate lending protocols and underscore the importance of robust governance safeguards across the ecosystem.
+
+Term Finance is a noncustodial fixed-rate liquidity protocol modeled on tri-party repo arrangements, using vault contracts to manage deposited funds. The attack exploited the protocol&#x27;s governance layer and drained millions from these vaults.</summary>
+  </entry>
+  <entry>
+    <title>BitMart weighs restructuring amid unresolved withdrawals and shutdown</title>
+    <link href="https://cryptoslate.com/bitmart-is-talking-about-reopening-before-it-has-answered-the-withdrawal-question/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cryptoslate.com_feed_:c1f6d470fda7bdc5</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>On Aug. 21, BitMart announced it is exploring a restructuring with White &amp; Case that could allow phased service resumption alongside creditor distributions, while maintaining its prior Aug. 26 trading shutdown and recommended withdrawal deadline.
+
+This matters because it attempts to offer an alternative to a full wind-down, yet customers still lack a concrete repayment framework, recovery estimate, or timetable. The uncertainty could erode trust in centralized exchanges and intensify regulatory and user pressure on BitMart.
+
+The proposal does not change the 01:00 UTC Aug. 26 halt of spot, futures, and other trading, nor the recommended 05:00 UTC withdrawal submission time. BitMart says late withdrawal requests will move to a separate processing procedure, and the exchange expects to provide another update by Sept. 9.</summary>
+  </entry>
+  <entry>
+    <title>BitMart suggests restructuring weeks after closure announcement</title>
+    <link href="https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:protos.com_feed_:9485a5a9b7ced683</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>BitMart has announced it is exploring a potential restructuring plan, which may include the phased resumption of certain operations alongside distributions to creditors. This comes just weeks after the exchange announced it would cease all operations by January 31, 2027.
+
+The shift from total shutdown to restructuring indicates ongoing financial distress at BitMart and raises questions about the safety of user funds. It also underscores broader instability in the crypto exchange sector, affecting user trust and market confidence.
+
+Restructuring counsel White &amp; Case has been hired to assess options, and a roadmap is expected no later than September 9, 2026. BitMart&#x27;s Chief Product Officer Terence Lee resigned, while CEO Nathan Chow was terminated before the closure announcement and was not informed of it.</summary>
+  </entry>
+  <entry>
+    <title>Standard Chartered First Bank to Distribute HKD Stablecoin</title>
+    <link href="https://www.coindesk.com/business/2026/08/24/standard-chartered-first-bank-to-distribute-anchorpoint-s-hong-kong-dollar-stablecoin"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:0c61f873a15ad4bc</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Standard Chartered, through its venture Anchorpoint, has become the first bank to distribute a Hong Kong dollar (HKD) stablecoin, beginning an institutional rollout in August 2026.
+
+This marks a major milestone in institutional stablecoin adoption, showing that global banks are willing to enter the stablecoin distribution business under regulatory frameworks. It could accelerate the mainstream use of HKD-backed stablecoins in Hong Kong and beyond.
+
+The stablecoin, known as HKDAP, is pegged 1:1 to the Hong Kong dollar under the Linked Exchange Rate System. The rollout begins with institutional clients rather than retail, reflecting a cautious, compliance-first approach.</summary>
+  </entry>
+  <entry>
+    <title>Bybit Security Blocks Attempt, Averting $700M User Losses</title>
+    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOT0MyQlpIU0k4Q2hmV2xyU3dmZW4tTWhFOWJFQjgxR3dMNjFVYnZXQ090YkE5TlpJeWtBQ3U5cUhfejQ5UkJWYmZDZEdfbjFaUDl3V2hUTEw4NFNDeVpkdHlONmY0dGE5OHJFQ1ZFOGpQZDhtWU9jM1N0SFBEcmdJaGkyQXZUeGc?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-25/#google_news:article:e6b18ff55ec63e1e</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Bybit&#x27;s security systems reportedly blocked an attempt that could have cost users approximately $700 million. No specific attack details have been disclosed, and the report comes from a secondary source.
+
+Averted losses of this magnitude highlight exchange security as a critical trust factor in crypto markets. If confirmed, the successful defence could strengthen user confidence in Bybit&#x27;s safeguards, especially given the industry&#x27;s history of major exchange breaches.
+
+The $700 million figure refers to potential losses prevented, not actual losses sustained. The original report comes from Kryptomagazin, and no independent confirmation or technical description of the blocked attempt has been published.</summary>
+  </entry>
+  <entry>
+    <title>Ethereum Lending App Term Finance Loses $8.5M in Governance Exploit</title>
+    <link href="https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:1b1f3dddd1f53072</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Term Finance, an Ethereum lending protocol developed by Term Labs, lost about $8.5 million after an attacker acquired voting power and executed a governance exploit against its vaults. Security firms PeckShield and CertiK confirmed the estimated loss on August 23, 2026.
+
+This incident highlights a novel attack vector in DeFi where governance token voting power, rather than a smart contract code bug, is used to drain funds. It underscores growing risks for lending protocols that rely on off-chain or governance-controlled parameters.
+
+The attacker specifically acquired sufficient voting power to pass a malicious governance proposal affecting Term Finance vaults. The loss was estimated at roughly $8.5 million by blockchain security firms PeckShield and CertiK, with Term Labs confirming the event.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Launches Tokenized Stocks for Nvidia, Apple, Meta, Alphabet on Base</title>
+    <link href="https://thedefiant.io/news/defi/coinbase-launches-tokenized-stocks-on-base"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:thedefiant.io_api_feed:0b68bfec21201660</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Coinbase launched tokenized stocks for Nvidia, Apple, Meta, and Alphabet on its Base layer-2 network, available to non-US users. Approximately $4.5 million was minted and $3 million of DEX liquidity appeared on day one.
+
+A major US exchange bringing tokenized equities of well-known tech companies onto a public layer-2 network marks a significant step for on-chain securities. This development could broaden access for non-US investors and test regulatory and market-structure boundaries in the crypto ecosystem.
+
+Chainlink price feeds run 24/5 while the tokenized stocks trade 24/7, creating a potential gap in reference pricing. Base is an Ethereum rollup incubated by Coinbase, processing transactions on its own execution layer while settling through Ethereum.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase launches tokenized US stocks on Base with Chainlink price feeds</title>
+    <link href="https://cointelegraph.com/news/coinbase-taps-chainlink-for-tokenized-stock-data-on-base?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cointelegraph.com_rss:c96f3d45a864227e</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Coinbase has launched tokenized US stocks as B20 tokens natively on its Base layer-2 blockchain, with Chainlink Data Feeds providing continuous pricing for equities including Nvidia, Apple, Meta and Alphabet.
+
+The official launch from a major US exchange brings US equities into DeFi on Base, expanding 24/7 trading access for eligible non-US users and bridging traditional finance with blockchain liquidity.
+
+Each B20 token represents a direct claim on an underlying share held by regulated broker and custodian Alpaca under an Abu Dhabi Global Market-supervised structure. Chainlink&#x27;s feeds value each token using the underlying stock price plus a Coinbase-supplied multiplier that accounts for dividends and corporate actions, and Base says more tokenized stocks are planned in the coming weeks.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Launches Tokenized Stocks on Base Network</title>
+    <link href="https://www.coindesk.com/business/2026/08/24/coinbase-debuts-tokenized-stocks-on-base-network-joining-race-to-bring-equities-on-blockchain"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:dc86201227a08962</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Coinbase has debuted tokenized stocks on its Base network, joining the race to bring equities on-chain. The move makes traditional stock exposure available as blockchain-based tokens on Base.
+
+As a leading US exchange, Coinbase&#x27;s entry validates tokenized equities as a mainstream market structure and could accelerate institutional adoption. It also strengthens Base&#x27;s position as a hub for real-world asset (RWA) tokenization.
+
+Tokenized stocks are blockchain-based digital assets designed to represent economic exposure to traditional shares, and on Base they are traded as tokens. Base is an Ethereum Layer 2 network built on the OP Stack and incubated by Coinbase, offering low-cost, developer-friendly on-chain access.</summary>
+  </entry>
   <entry>
     <title>Term Finance loses $8.5M in governance exploit despite safeguards</title>
     <link href="https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543"/>
@@ -207,26 +328,5 @@
     <id>https://bmt.news/editions/2026-08-21/#rss:thedefiant.io_api_feed:78a8eb90c7417b6a</id>
     <updated>2026-08-21T00:00:00Z</updated>
     <summary>The Arbitrum platform activated the ArbOS 61 Elara upgrade, bringing optional compliance filtering, customizable priority fees, and an alternative data API to dedicated Arbitrum chains, while delivering a more efficient base fee mechanism on Arbitrum One. Chain owners—not the ArbitrumDAO—control compliance screening on dedicated networks, and priority fees remain disabled on Arbitrum One pending a further governance vote. This upgrade introduces protocol-level compliance tooling for Layer 2/3 chains without imposing screening on Arbitrum One, preserving DAO control and user neutrality. It could make the Arbitrum stack more attractive to institutions and regulated entities that need on-chain transaction filtering for dedicated chains. ArbOS 61 Elara also quadruples Stylus contract size limits, expanding smart-contract capacity on Arbitrum chains. Compliance filtering operates across two layers—the Sequencer and the State Transition Function (STF)—ensuring restricted activity is blocked regardless of how a transaction enters the system, and it remains off by default on Arbitrum One and Nova.</summary>
-  </entry>
-  <entry>
-    <title>Binance to Delist ICX, SCRT, and STORJ in September 2026</title>
-    <link href="https://news.google.com/rss/articles/CBMidkFVX3lxTE5uZzFUdzlfblBvb3NibGxyNTd6b29QZDAyYzhBWVNqWW1hV2dtYlRtTzI4dm5rZTNXN1VSdEFuT1h0OUEtLVQwVkUtVXJacUM1dllIZTYzdW14eXgwSmlNYV9MM1E0c0xtUEV3czFaSG4zS1UwcGc?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-21/#google_news:article:ed6571beb4903263</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>Binance announced it will delist and cease trading for all spot trading pairs of ICON (ICX), Secret (SCRT), and Storj (STORJ) on September 3, 2026 at 03:00 UTC. The exchange cited its latest reviews for the decision. Binance is the world&#x27;s largest cryptocurrency exchange, so delisting removes a major source of liquidity and trading access for these tokens. This could heighten selling pressure and make it harder for holders to trade or exit positions, and it may also signal compliance or project-health concerns. The delisting applies to all spot trading pairs for the three tokens and takes effect on 2026-09-03. Each token has been under pressure: ICX is trading around $0.016–0.017, SCRT around €0.18, and STORJ around $0.04 with relatively thin volumes.</summary>
-  </entry>
-  <entry>
-    <title>Tether Uses NYSE Shell Company to Buy and Stake Rival USDS</title>
-    <link href="https://protos.com/tether-has-publicly-listed-a-company-that-partially-controls-usds/"/>
-    <id>https://bmt.news/editions/2026-08-21/#rss:protos.com_feed_:4d647dacd060a503</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>Tether invested $134 million in the failing biopharmaceutical firm NovaBay in March and reverse-merged it into a NYSE-listed entity renamed Stablecoin Development Corporat. The vehicle has been used to purchase and stake a large amount of USDS, the decentralized stablecoin from the Sky Protocol (formerly MakerDAO). This is a notable market-structure shift because the world&#x27;s largest centralized stablecoin issuer is using a public shell company to accumulate a rival decentralized stablecoin. It could reshape stablecoin competition, raise governance and transparency questions, and give USDS public-market exposure. Stablecoin Development Corporat&#x27;s share price has collapsed from roughly $2.00 to $1.00, and unusual buy support has repeatedly pushed it back above $1.00, apparently to avoid NYSE delisting under the 30-day sub-$1 rule. The company says it has taken a &#x27;greater than a 9% stake&#x27; in USDS, and its CEO, Michael Kazley, describes the position as &#x27;wildly bullish&#x27; on the SKY Protocol.</summary>
-  </entry>
-  <entry>
-    <title>Musk&#x27;s X Explores Stablecoin Payments for Content Creators</title>
-    <link href="https://www.coindesk.com/business/2026/08/20/elon-musk-s-x-is-exploring-stablecoins-to-pay-influencers-and-content-providers"/>
-    <id>https://bmt.news/editions/2026-08-21/#rss:www.coindesk.com_arc_outboundfeeds_rss_:002dc8ec0342f27c</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>According to a CoinDesk report dated August 20, 2026, Elon Musk&#x27;s X platform is exploring the use of stablecoins to pay influencers and content providers. The effort is still in an exploratory phase and no specific stablecoin or rollout timeline has been confirmed. If realized, this could give stablecoins a massively visible real-world payments use case on one of the world&#x27;s largest social platforms. It also signals that mainstream internet companies are increasingly treating crypto-based payments as a viable infrastructure for creator monetization. The report emphasizes that the exploration is preliminary and that X has not publicly announced any partnership with a stablecoin issuer. The move would build on Musk&#x27;s long-standing interest in integrating payments into X, which has already obtained money-transmitter licenses in several U.S. states.</summary>
   </entry>
 </feed>

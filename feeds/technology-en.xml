@@ -4,7 +4,18 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-08-24T00:00:00Z</updated>
+  <updated>2026-08-25T00:00:00Z</updated>
+  <entry>
+    <title>seL4 Security Proofs Complete on AArch64</title>
+    <link href="https://proofcraft.systems/news-2026/#2026-08-21"/>
+    <id>https://bmt.news/editions/2026-08-25/#hackernews:story:49418255</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>The seL4 microkernel&#x27;s formal security proofs have been completed on the AArch64 (64-bit ARM) architecture, extending its verified correctness and security guarantees to this widely used platform. This marks a significant formal verification milestone for the microkernel.
+
+AArch64 is the dominant architecture for mobile, embedded, and increasingly server systems, so proving seL4&#x27;s security properties on this platform can enable high-assurance deployments in safety-critical industries such as automotive, avionics, and defense. It also demonstrates that large-scale formal verification is becoming practical for real-world production kernels.
+
+The completed proofs cover seL4&#x27;s security properties on AArch64, but community comments note that they currently exclude MCS (mixed criticality system) extensions and are limited to unicore (single-core) configurations. The verification is a machine-code-level proof, yet side-channel timing attacks are not covered by the result.</summary>
+  </entry>
   <entry>
     <title>Slovakia uncovers Russian backdoor in traffic speed cameras</title>
     <link href="https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/"/>

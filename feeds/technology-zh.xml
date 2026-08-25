@@ -4,7 +4,18 @@
   <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-zh.xml</id>
-  <updated>2026-08-24T00:00:00Z</updated>
+  <updated>2026-08-25T00:00:00Z</updated>
+  <entry>
+    <title>seL4安全证明在AArch64上完成</title>
+    <link href="https://proofcraft.systems/news-2026/#2026-08-21"/>
+    <id>https://bmt.news/editions/2026-08-25/#hackernews:story:49418255</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>seL4微内核的正式安全证明已在AArch64（64位ARM）架构上完成，将其经验证的正确性和安全保证扩展到这一广泛使用的平台。这标志着该微内核在形式化验证方面的一个重要里程碑。
+
+AArch64是移动、嵌入式以及日益增长的服务器系统的主导架构，因此在该平台上证明seL4的安全属性，可推动汽车、航空电子和国防等安全关键行业的高保障部署。这也表明大规模形式化验证对实际生产级内核正变得切实可行。
+
+已完成的证明涵盖了seL4在AArch64上的安全属性，但社区评论指出，目前这些证明不包括MCS（混合关键性系统）扩展，且仅限于单核配置。该验证是机器码级别的证明，但旁道时序攻击并不在此结果的覆盖范围内。</summary>
+  </entry>
   <entry>
     <title>斯洛伐克在交通测速摄像头中发现俄罗斯后门</title>
     <link href="https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/"/>

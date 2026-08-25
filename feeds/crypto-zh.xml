@@ -4,7 +4,128 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-08-24T00:00:00Z</updated>
+  <updated>2026-08-25T00:00:00Z</updated>
+  <entry>
+    <title>Zilliqa 指 Ledger 漏洞泄露密钥，致 6.83 亿 ZIL 被盗</title>
+    <link href="https://cryptoslate.com/zilliqa-points-to-hardware-wallet-flaw-discarding-entropy-to-expose-crypto-keys-enabling-683m-zil-theft/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cryptoslate.com_feed_:ea5f00ad82f8e0cd</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Zilliqa 的事后调查报告显示，旧版 Ledger 应用程序在生成 nonce 时丢弃了 8 字节熵，导致至少 6,772 个账户的私钥暴露，并使 66 笔交易中被盗 683,130,969.66 ZIL。旧版交易仍处于暂停状态，迁移到 Zilliqa EVM 需要等待外部安全审计。
+
+这次已确认的硬件钱包安全故障直接危及用户资金，而已发布的签名无法撤销，因此已暴露的密钥将永久面临风险。它凸显了签名实现中一个微小的随机性漏洞，足以破坏硬件钱包被广泛信赖的安全保障，影响使用旧版 Ledger 应用的 ZIL 持有者，并可能削弱对这类设备的整体信心。
+
+该应用为每个 nonce 生成 40 个随机字节，但将错误的 32 字节复制到签名缓冲区，保留了 8 个零字节并丢弃 8 个熵字节，导致受影响 nonce 的高 64 位被强制设为零。同一账户产生四个或更多此类有偏签名后，攻击者可在数秒内从公开链上数据恢复私钥；批量扫描要求至少五个签名，因此恰好四个签名的账户未被计入 6,772 这个数字。</summary>
+  </entry>
+  <entry>
+    <title>BounceBit因授权漏洞关闭L1，在BNB链上1:1重发BB代币</title>
+    <link href="https://cryptoslate.com/bouncebit-abandons-layer-1-after-286-million-token-exploit-leaving-token-holders-in-limbo/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cryptoslate.com_feed_:f73cab3957e33449</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>BounceBit 将退役其独立 Layer 1，并基于 8 月 19 日的快照在 BNB Chain 上按 1:1 比例重新发行 BB 代币。此前一个授权漏洞导致约 2.865 亿枚 BB 从九个账户被转走。新代币的 gas、质押、奖励和治理功能尚未定义。
+
+这一事件表明，协议级漏洞可能迫使链关闭，使代币持有人在迁移期间面临代币用途不明的情况。它也凸显了从 Evmos 等堆栈继承代码的风险，以及跨网络迁移时保留代币价值的难度。
+
+快照截止点为 8 月 19 日 21:02:35 UTC 的区块 20,697,260；低于 10 BB 的余额将通过后续领取门户处理。新的 BEP-20 合约已部署，但为配合交易所尽职调查暂不公布地址，旧链不会重启。</summary>
+  </entry>
+  <entry>
+    <title>以太坊DeFi协议Term Finance遭治理漏洞攻击，金库数百万资金被抽走</title>
+    <link href="https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/"/>
+    <id>https://bmt.news/editions/2026-08-25/#gdelt:article:20260824T154500Z::https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>基于以太坊的固定利率DeFi借贷协议Term Finance遭遇治理漏洞攻击，其金库中数百万美元资金被抽走。这一事件是一次直接影响用户资金的重大安全挫折。
+
+此次攻击直接暴露了DeFi借贷中去中心化治理与智能合约安全的风险。它可能动摇用户对非托管固定利率借贷协议的信任，并凸显整个生态中健全治理保障的重要性。
+
+Term Finance是一个参考三方回购安排的非托管固定利率流动性协议，通过金库合约管理存入的资金。攻击者利用协议的治理层漏洞，从这些金库中抽走了数百万美元资金。</summary>
+  </entry>
+  <entry>
+    <title>BitMart考虑重组，用户提现问题仍未解决</title>
+    <link href="https://cryptoslate.com/bitmart-is-talking-about-reopening-before-it-has-answered-the-withdrawal-question/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cryptoslate.com_feed_:c1f6d470fda7bdc5</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>8月21日，BitMart宣布正与White &amp; Case探讨重组方案，可能在向债权人分配的同时分阶段恢复部分服务；但先前宣布的8月26日交易关闭和提现建议时限保持不变。
+
+此事之所以重要，是因为BitMart试图提供全面清盘之外的替代方案，但用户仍缺乏具体的偿还框架、回收率预估或时间表。这种不确定性可能削弱用户对中心化交易所的信任，并加大监管与用户对BitMart的压力。
+
+该方案并未改变8月26日01:00 UTC现货、合约及其他交易停运的安排，也未改变建议用户在05:00 UTC前提交提现的时间。BitMart表示，逾期提交的提现请求将转入单独处理流程，并预计在9月9日前提供进一步更新。</summary>
+  </entry>
+  <entry>
+    <title>BitMart在宣布关闭数周后提出重组</title>
+    <link href="https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:protos.com_feed_:9485a5a9b7ced683</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>BitMart宣布正在探讨一项潜在的重组计划，可能包括分阶段恢复部分业务并向债权人进行分配。这距离该交易所宣布将于2027年1月31日前停止所有运营仅数周。
+
+从完全关闭转向重组表明BitMart深陷财务困境，并引发对用户资金安全的质疑。这也凸显了加密货币交易所行业的不稳定性，影响用户信任和市场信心。
+
+重组法律顾问White &amp; Case已受聘评估各种选项，路线图预计最迟于2026年9月9日发布。BitMart首席产品官Terence Lee辞职，而首席执行官Nathan Chow在关闭公告前已被解雇，且未被告知该公告。</summary>
+  </entry>
+  <entry>
+    <title>渣打银行成为首家分销港元稳定币的银行</title>
+    <link href="https://www.coindesk.com/business/2026/08/24/standard-chartered-first-bank-to-distribute-anchorpoint-s-hong-kong-dollar-stablecoin"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:0c61f873a15ad4bc</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>渣打银行通过其旗下企业 Anchorpoint，成为首家分销港元（HKD）稳定币的银行，并于2026年8月启动面向机构的发行。
+
+这标志着机构级稳定币采用的重要里程碑，表明全球银行愿意在监管框架下进入稳定币分销业务。这可能加速港元稳定币在香港及其他地区的普及。
+
+该稳定币（名为 HKDAP）与港元1:1锚定，基于联系汇率制度。发行首先面向机构客户而非零售用户，体现了审慎、合规优先的策略。</summary>
+  </entry>
+  <entry>
+    <title>Bybit安全系统拦截攻击，避免7亿美元用户损失</title>
+    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOT0MyQlpIU0k4Q2hmV2xyU3dmZW4tTWhFOWJFQjgxR3dMNjFVYnZXQ090YkE5TlpJeWtBQ3U5cUhfejQ5UkJWYmZDZEdfbjFaUDl3V2hUTEw4NFNDeVpkdHlONmY0dGE5OHJFQ1ZFOGpQZDhtWU9jM1N0SFBEcmdJaGkyQXZUeGc?oc=5"/>
+    <id>https://bmt.news/editions/2026-08-25/#google_news:article:e6b18ff55ec63e1e</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>据报道，Bybit的安全系统拦截了一次可能造成用户约7亿美元损失的攻击尝试。目前尚未披露具体的攻击细节，且该报道来自二手来源。
+
+如此规模的潜在损失被避免，凸显出交易所安全是加密市场中关键的信任因素。若消息得到证实，这次成功防御可能增强用户对Bybit安全防护能力的信心，尤其是在行业内曾发生多起重大交易所被盗事件的背景下。
+
+这7亿美元指的是被避免的潜在损失，而非实际发生的损失。原始报道来自Kryptomagazin，目前尚无独立确认或关于此次被拦截攻击的技术描述。</summary>
+  </entry>
+  <entry>
+    <title>以太坊借贷应用Term Finance遭治理攻击损失850万美元</title>
+    <link href="https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:1b1f3dddd1f53072</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Term Labs开发的以太坊借贷协议Term Finance遭到治理攻击，攻击者通过购买投票权操纵协议，导致其金库损失约850万美元。安全公司PeckShield和CertiK于2026年8月23日确认了此次损失估算。
+
+此次事件突显了DeFi中一种新颖的攻击方式：攻击者利用治理代币投票权而非智能合约代码漏洞来盗取资金。这凸显了依赖链下参数或治理控制的借贷协议正面临日益增长的风险。
+
+攻击者专门购买了足够的投票权，以通过一项影响Term Finance金库的恶意治理提案。区块链安全公司PeckShield和CertiK估计损失约为850万美元，Term Labs已确认该事件。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase在Base上推出英伟达、苹果、Meta和Alphabet代币化股票</title>
+    <link href="https://thedefiant.io/news/defi/coinbase-launches-tokenized-stocks-on-base"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:thedefiant.io_api_feed:0b68bfec21201660</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Coinbase在其Base二层网络上为英伟达、苹果、Meta和Alphabet推出了代币化股票，面向非美国用户开放。上线首日铸造了约450万美元的资产，并出现了约300万美元的DEX流动性。
+
+美国主要交易所将知名科技公司的代币化股票引入公共二层网络，标志着链上证券领域迈出了重要一步。这一进展可能为非美国投资者拓宽准入渠道，并考验加密生态中的监管与市场结构边界。
+
+Chainlink价格源每周运行5天、每天24小时，而代币化股票则每周7天、每天24小时交易，这可能在参考定价上产生间隙。Base是Coinbase孵化的以太坊rollup网络，在自身执行层处理交易，并通过以太坊完成结算。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase在Base上线代币化美股，采用Chainlink价格数据</title>
+    <link href="https://cointelegraph.com/news/coinbase-taps-chainlink-for-tokenized-stock-data-on-base?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:cointelegraph.com_rss:c96f3d45a864227e</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Coinbase已在其Base Layer-2区块链上原生推出代币化美股（B20代币），Chainlink Data Feeds为英伟达、苹果、Meta和Alphabet等股票提供持续定价。
+
+此次由美国主流交易所正式推出，将美股带入Base生态的DeFi领域，为符合条件的非美国用户提供全天候交易渠道，并打通传统金融与链上流动性。
+
+每个B20代币代表对由受监管经纪商与托管商Alpaca持有的标的股票的直接索取权，该结构受阿布扎比全球市场（ADGM）监管。Chainlink的喂价采用标的价格加上Coinbase提供的乘数（考虑股息和公司行动）来估值；Base表示未来几周还将上线更多代币化股票。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase在Base网络上推出代币化股票</title>
+    <link href="https://www.coindesk.com/business/2026/08/24/coinbase-debuts-tokenized-stocks-on-base-network-joining-race-to-bring-equities-on-blockchain"/>
+    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:dc86201227a08962</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>Coinbase已在其Base网络上推出代币化股票，加入了将股票带至链上的竞争行列。此举使传统股票敞口以基于区块链的代币形式在Base上可用。
+
+作为美国头部交易所，Coinbase的入场验证了代币化股票作为主流市场结构的可行性，并可能加速机构采用。这也巩固了Base作为现实世界资产（RWA）代币化中心的地位。
+
+代币化股票是基于区块链的数字资产，旨在代表对传统股票的经济敞口，在Base上以代币形式交易。Base是Coinbase孵化的以太坊Layer 2网络，基于OP Stack构建，提供低成本、对开发者友好的链上接入。</summary>
+  </entry>
   <entry>
     <title>Term Finance 遭治理攻击损失约 850 万美元，既有防护失效</title>
     <link href="https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543"/>
@@ -207,26 +328,5 @@
     <id>https://bmt.news/editions/2026-08-21/#rss:thedefiant.io_api_feed:78a8eb90c7417b6a</id>
     <updated>2026-08-21T00:00:00Z</updated>
     <summary>Arbitrum 平台已激活 ArbOS 61 Elara 升级，为专属 Arbitrum 链带来可选的合规过滤、可自定义优先费以及替代数据 API，同时为 Arbitrum One 提供了更高效的基准费用机制。合规筛查由链所有者而非 ArbitrumDAO 控制，而在 Arbitrum One 上，优先费仍处于禁用状态，等待进一步的治理投票。 此次升级在 L2/L3 链上引入了协议级合规工具，同时不将筛查强加于 Arbitrum One，从而保留了 DAO 的控制权和用户中立性。这可能使 Arbitrum 技术栈对需要专属链上交易过滤的机构和受监管实体更具吸引力。 ArbOS 61 Elara 还将 Stylus 合约大小上限提高了四倍，扩大了 Arbitrum 链上的智能合约容量。合规过滤在两层运作——定序器（Sequencer）和状态转换函数（STF）——确保无论交易如何进入系统，受限活动都会被阻止，并且该功能在 Arbitrum One 和 Nova 上默认保持关闭。</summary>
-  </entry>
-  <entry>
-    <title>币安将于2026年9月下架ICX、SCRT和STORJ</title>
-    <link href="https://news.google.com/rss/articles/CBMidkFVX3lxTE5uZzFUdzlfblBvb3NibGxyNTd6b29QZDAyYzhBWVNqWW1hV2dtYlRtTzI4dm5rZTNXN1VSdEFuT1h0OUEtLVQwVkUtVXJacUM1dllIZTYzdW14eXgwSmlNYV9MM1E0c0xtUEV3czFaSG4zS1UwcGc?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-21/#google_news:article:ed6571beb4903263</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>币安宣布将于2026年9月3日03:00（UTC）下架ICON（ICX）、Secret（SCRT）和Storj（STORJ）的所有现货交易对，并停止相关交易。币安表示这是基于最新审查结果的决定。 币安是全球最大的加密货币交易所，下架意味着这些代币失去一个主要的流动性和交易渠道。这可能会加大抛售压力，使持有者更难交易或退出头寸，也可能反映出合规或项目健康方面的隐忧。 下架适用于这三种代币的所有现货交易对，生效时间为2026年9月3日。这三者近期承压：ICX价格约0.016–0.017美元，SCRT约0.18欧元，STORJ约0.04美元，交易量相对有限。</summary>
-  </entry>
-  <entry>
-    <title>Tether借NYSE壳公司买入并质押竞品USDS</title>
-    <link href="https://protos.com/tether-has-publicly-listed-a-company-that-partially-controls-usds/"/>
-    <id>https://bmt.news/editions/2026-08-21/#rss:protos.com_feed_:4d647dacd060a503</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>Tether于3月向濒临破产的生物制药公司NovaBay投资1.34亿美元，并通过反向合并将其改造为在纽交所上市、更名为Stablecoin Development Corporat的实体。该实体已被用于购买并质押大量USDS——即来自Sky Protocol（原MakerDAO）的去中心化稳定币。 这是值得关注的市场结构变化，因为全球最大的中心化稳定币发行方正在利用上市壳公司来积累竞争对手的去中心化稳定币。此举可能重塑稳定币竞争格局，引发治理与透明度方面的疑问，并让USDS获得公开市场的敞口。 Stablecoin Development Corporat的股价已从约2.00美元跌至1.00美元，且多次出现异常买盘将其推回1.00美元上方，显然是为了避免触发纽交所“连续30日低于1美元”的退市规则。该公司表示已持有USDS“超过9%的份额”，其CEO Michael Kazley称对SKY Protocol“极度看多”。</summary>
-  </entry>
-  <entry>
-    <title>马斯克旗下X探索以稳定币支付内容创作者</title>
-    <link href="https://www.coindesk.com/business/2026/08/20/elon-musk-s-x-is-exploring-stablecoins-to-pay-influencers-and-content-providers"/>
-    <id>https://bmt.news/editions/2026-08-21/#rss:www.coindesk.com_arc_outboundfeeds_rss_:002dc8ec0342f27c</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>据CoinDesk 2026年8月20日报道，埃隆·马斯克旗下的X平台正在探索使用稳定币向网红和内容提供者付款。该计划仍处于探索阶段，尚未确认具体使用哪种稳定币或推出时间表。 如果实现，这可能在世界上最大的社交平台之一上为稳定币提供一个极具可见度的现实支付应用场景。这也表明，主流互联网公司正越来越多地将基于加密的支付视为创作者变现的可行基础设施。 报道强调，这一探索仍处于初步阶段，X尚未公开宣布与任何稳定币发行方合作。此举将建立在马斯克长期以来对将支付功能整合进X的兴趣之上，X已在美国多个州获得货币转账牌照。</summary>
   </entry>
 </feed>
