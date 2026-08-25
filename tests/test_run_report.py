@@ -274,7 +274,10 @@ def test_native_pipeline_writes_funnel_and_frontend_stats(
     assert 'data-analyzed="2"' in post
     assert 'data-selected="1"' in post
     assert 'data-critical="1"' in post
-    assert 'class="feed-toolbar feed-rendered-static"' in post
+    assert (
+        'class="daily-feed-layout is-editorial-grid feed-rendered-static"'
+        in post
+    )
     assert (
         tmp_path / "docs" / "editions" / date / "zh.html"
     ).exists()

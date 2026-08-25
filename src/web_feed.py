@@ -40,6 +40,7 @@ _LABELS = {
         "market_impact": "市场影响",
         "overview": "今日脉络",
         "overview_rank": "查看第 {rank} 条",
+        "overview_signals": "{count} 条线索",
         "share_card": "分享",
         "share_card_label": "生成并分享图片卡片",
     },
@@ -65,6 +66,7 @@ _LABELS = {
         "market_impact": "Market impact",
         "overview": "Today at a glance",
         "overview_rank": "View story {rank}",
+        "overview_signals": "{count} signals",
         "share_card": "Share",
         "share_card_label": "Generate and share image card",
     },
@@ -201,12 +203,17 @@ def _overview_html(
             f'aria-label="{_escape(labels["overview_rank"].format(rank=rank))}">'
             f"{rank}</a></li>"
         )
-    signals_html = (
-        '<ul class="edition-overview-signals">'
-        f'{"".join(signal_items)}</ul>'
-        if signal_items
-        else ""
-    )
+    signals_html = ""
+    if signal_items:
+        disclosure_label = labels["overview_signals"].format(
+            count=len(signal_items)
+        )
+        signals_html = (
+            '<details class="edition-overview-disclosure" open>'
+            f'<summary>{_escape(disclosure_label)}</summary>'
+            '<ul class="edition-overview-signals">'
+            f'{"".join(signal_items)}</ul></details>'
+        )
     return (
         '<section class="edition-overview" aria-label="'
         f'{_escape(labels["overview"])}">'
@@ -653,17 +660,24 @@ def render_web_feed(
         date=date,
         item_count=len(feed_items),
     )
+    market_html = _market_snapshot_html(market, normalized_language)
+    market_bar_html = (
+        '<div class="feed-market-bar">'
+        f"{market_html}</div>"
+        if market_html
+        else ""
+    )
     return (
-        '<div class="feed-toolbar feed-rendered-static" '
-        'data-feed-render-version="2">'
-        f"{_market_snapshot_html(market, normalized_language)}"
+        f"{market_bar_html}"
+        '<div class="daily-feed-layout is-editorial-grid feed-rendered-static" '
+        'data-feed-render-version="3">'
+        '<div class="feed-orientation">'
         f"{overview_html}"
         f'<p class="feed-selection-note">{_escape(selection_note)}</p>'
         '<div class="digest-filter-host">'
         '<div class="category-filters" data-static-filters>'
         f'{"".join(filter_buttons)}'
         "</div></div></div>"
-        '<div class="daily-feed-layout">'
         f'<div class="daily-story-stream">{"".join(articles)}</div>'
         f'<aside class="headline-rail" aria-label="{labels["ranking"]}">'
         '<details class="headline-index" open>'

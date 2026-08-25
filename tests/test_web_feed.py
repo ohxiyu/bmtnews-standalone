@@ -51,7 +51,16 @@ def test_render_web_feed_outputs_final_cards_and_top_level_filters() -> None:
     )
     page = BeautifulSoup(markup, "html.parser")
 
-    assert page.select_one(".feed-rendered-static[data-feed-render-version='2']")
+    layout = page.select_one(
+        ".daily-feed-layout.is-editorial-grid"
+        ".feed-rendered-static[data-feed-render-version='3']"
+    )
+    assert layout
+    assert [child.get("class", []) for child in layout.find_all(recursive=False)] == [
+        ["feed-orientation"],
+        ["daily-story-stream"],
+        ["headline-rail"],
+    ]
     assert len(page.select(".digest-item")) == 4
     assert len(page.select(".digest-item.is-priority")) == 3
     assert [
@@ -161,6 +170,24 @@ def test_story_summaries_are_not_visually_truncated() -> None:
     assert ".story-summary-body:is(p)" in stylesheet
     assert "text-wrap: balance" in stylesheet
     assert "max-width: min(72ch, 760px)" in stylesheet
+
+
+def test_editorial_grid_uses_matching_responsive_disclosures() -> None:
+    root = Path(__file__).parents[1]
+    stylesheet = (root / "docs" / "assets" / "css" / "bmtnews.css").read_text(
+        encoding="utf-8"
+    )
+    script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+        encoding="utf-8"
+    )
+
+    assert "@media (max-width: 1100px)" in stylesheet
+    assert '"orientation rail"' in stylesheet
+    assert '"stream rail"' in stylesheet
+    assert "flex-wrap: nowrap" in stylesheet
+    assert "(min-width: 1101px)" in script
+    assert "(min-width: 901px)" not in script
+    assert "(min-width: 761px)" in script
 
 
 def test_story_summary_preserves_semantic_paragraphs() -> None:
