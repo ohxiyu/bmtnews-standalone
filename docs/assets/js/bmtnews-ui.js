@@ -309,8 +309,8 @@
   function storyCardModuleUrl() {
     var source = mainScriptSource;
     if (!source) {
-      var script = document.querySelector('script[src*="/assets/js/bmtnews.js"]');
-      source = script ? script.src : new URL('/assets/js/bmtnews.js', window.location.href).href;
+      var script = document.querySelector('script[src*="/assets/js/bmtnews-ui.js"]');
+      source = script ? script.src : new URL('/assets/js/bmtnews-ui.js', window.location.href).href;
     }
     var base = new URL(source, window.location.href);
     var moduleUrl = new URL('story-card.js', base);

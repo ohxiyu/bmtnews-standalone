@@ -13,13 +13,26 @@ ROOT = Path(__file__).parents[1]
 DOCS = ROOT / "docs"
 
 
-def test_immutable_public_assets_use_content_fingerprint() -> None:
-    """Fail when long-lived assets change without a new cache key."""
+def test_public_assets_use_fingerprint_and_revalidate() -> None:
+    """Prevent stale UI assets from outliving their matching markup."""
     head = (DOCS / "_includes" / "head-custom.html").read_text(encoding="utf-8")
     headers = (DOCS / "_headers").read_text(encoding="utf-8")
-    asset_cache_rule = headers.split("/assets/*", 1)[1].split("\n\n", 1)[0]
+    css_cache_rule = headers.split("/assets/css/*", 1)[1].split("\n\n", 1)[0]
+    js_cache_rule = headers.split("/assets/js/*", 1)[1].split("\n\n", 1)[0]
+    image_cache_rule = headers.split("/assets/images/*", 1)[1].split("\n\n", 1)[0]
+    home_cache_rule = headers.split("\n/\n", 1)[1].split("\n\n", 1)[0]
     assert "?v={{ site.asset_version }}" in head
-    assert "immutable" in asset_cache_rule
+    assert "/assets/css/bmtnews-ui.css" in head
+    assert "/assets/js/bmtnews-ui.js" in head
+    assert "max-age=300" in css_cache_rule
+    assert "must-revalidate" in css_cache_rule
+    assert "immutable" not in css_cache_rule
+    assert "max-age=300" in js_cache_rule
+    assert "must-revalidate" in js_cache_rule
+    assert "immutable" not in js_cache_rule
+    assert "immutable" in image_cache_rule
+    assert "max-age=0" in home_cache_rule
+    assert "must-revalidate" in home_cache_rule
 
     asset_root = DOCS / "assets"
     asset_paths = sorted(asset_root.glob("css/*.css")) + sorted(
@@ -40,7 +53,7 @@ def test_immutable_public_assets_use_content_fingerprint() -> None:
 
     assert match is not None
     assert match.group(1) == expected, (
-        "Public CSS/JS files are cached as immutable. Update asset_version "
+        "Public CSS/JS changed without a matching cache key. Update asset_version "
         f'to "{expected}" whenever one of them changes.'
     )
 

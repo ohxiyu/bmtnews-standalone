@@ -162,7 +162,7 @@ def test_render_web_feed_empty_state_is_static() -> None:
 
 def test_story_summaries_are_not_visually_truncated() -> None:
     root = Path(__file__).parents[1]
-    stylesheet = (root / "docs" / "assets" / "css" / "bmtnews.css").read_text(
+    stylesheet = (root / "docs" / "assets" / "css" / "bmtnews-ui.css").read_text(
         encoding="utf-8"
     )
 
@@ -174,10 +174,10 @@ def test_story_summaries_are_not_visually_truncated() -> None:
 
 def test_editorial_grid_uses_matching_responsive_disclosures() -> None:
     root = Path(__file__).parents[1]
-    stylesheet = (root / "docs" / "assets" / "css" / "bmtnews.css").read_text(
+    stylesheet = (root / "docs" / "assets" / "css" / "bmtnews-ui.css").read_text(
         encoding="utf-8"
     )
-    script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+    script = (root / "docs" / "assets" / "js" / "bmtnews-ui.js").read_text(
         encoding="utf-8"
     )
 
@@ -244,7 +244,7 @@ def test_story_summary_splits_legacy_one_line_content() -> None:
 
 def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
     root = Path(__file__).parents[1]
-    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews-ui.js").read_text(
         encoding="utf-8"
     )
     card_script = root / "docs" / "assets" / "js" / "story-card.js"
@@ -259,7 +259,7 @@ def test_story_card_renderer_is_loaded_only_after_a_card_click() -> None:
 
 def test_story_share_uses_one_card_action_and_migrates_old_controls() -> None:
     root = Path(__file__).parents[1]
-    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews-ui.js").read_text(
         encoding="utf-8"
     )
     card_script = (
@@ -288,7 +288,7 @@ def test_story_share_uses_one_card_action_and_migrates_old_controls() -> None:
 
 def test_story_card_matches_the_full_story_layout_without_a_page_url() -> None:
     root = Path(__file__).parents[1]
-    main_script = (root / "docs" / "assets" / "js" / "bmtnews.js").read_text(
+    main_script = (root / "docs" / "assets" / "js" / "bmtnews-ui.js").read_text(
         encoding="utf-8"
     )
     card_script = (
