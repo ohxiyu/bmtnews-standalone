@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Ledger 修复以太坊应用漏洞，可致签名交易被替换"
+permalink: /threads/t72b4e44581/
+interface_language: zh
+description: "Ledger 发布了以太坊应用 1.22.2 版本，阻止签名会话替换和不匹配的批准回调，这些漏洞可能让恶意 dApp 获得与屏幕显示内容不同的数据的签名。该修复于 8 月 13 日在 GitHub 打上标签，变更日志日期为 8 月 12 日。  硬件钱包的核心安全承诺是向用户准确展示所签署的内容，因此交易替换漏洞威胁到 Ledger 等设备的核心信任。由于 "
+page_type: archive
+---
+
+<div class="archive-stats"><div class="archive-stat"><strong>2</strong><span>天</span></div><div class="archive-stat"><strong>2</strong><span>条</span></div><div class="archive-stat"><strong>2026-08-26</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-08-26">2026-08-26</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/ledger-patched-an-ethereum-app-bug-that-could-show-one-transaction-and-sign-another/" target="_blank" rel="noopener noreferrer">Ledger 修复以太坊应用漏洞，可致签名交易被替换</a></h3><p class="archive-row-summary">Ledger 发布了以太坊应用 1.22.2 版本，阻止签名会话替换和不匹配的批准回调，这些漏洞可能让恶意 dApp 获得与屏幕显示内容不同的数据的签名。该修复于 8 月 13 日在 GitHub 打上标签，变更日志日期为 8 月 12 日。
+
+硬件钱包的核心安全承诺是向用户准确展示所签署的内容，因此交易替换漏洞威胁到 Ledger 等设备的核心信任。由于 Ledger 是最广泛使用的硬件钱包产品线之一，这次修复对众多以太坊用户很重要，他们需要更新到 1.22.2 版本。
+
+报告该问题的安全公司 TestMachine 表示，攻击需要具有 WebHID 访问权限的 dApp，并已在 Ledger Flex 上验证；该公司称共享代码使该漏洞影响 Nano X、Nano S Plus、Stax 和 Apex。Ledger 首席技术官 Charles Guillemet 表示，Ledger Donjon 在公开披露前约两周发现了该漏洞，目前尚未确认有野外利用或资金损失。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.0</span></li><li class="archive-row"><time datetime="2026-08-25">2026-08-25</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/zilliqa-points-to-hardware-wallet-flaw-discarding-entropy-to-expose-crypto-keys-enabling-683m-zil-theft/" target="_blank" rel="noopener noreferrer">Zilliqa 指 Ledger 漏洞泄露密钥，致 6.83 亿 ZIL 被盗</a></h3><p class="archive-row-summary">Zilliqa 的事后调查报告显示，旧版 Ledger 应用程序在生成 nonce 时丢弃了 8 字节熵，导致至少 6,772 个账户的私钥暴露，并使 66 笔交易中被盗 683,130,969.66 ZIL。旧版交易仍处于暂停状态，迁移到 Zilliqa EVM 需要等待外部安全审计。
+
+这次已确认的硬件钱包安全故障直接危及用户资金，而已发布的签名无法撤销，因此已暴露的密钥将永久面临风险。它凸显了签名实现中一个微小的随机性漏洞，足以破坏硬件钱包被广泛信赖的安全保障，影响使用旧版 Ledger 应用的 ZIL 持有者，并可能削弱对这类设备的整体信心。
+
+该应用为每个 nonce 生成 40 个随机字节，但将错误的 32 字节复制到签名缓冲区，保留了 8 个零字节并丢弃 8 个熵字节，导致受影响 nonce 的高 64 位被强制设为零。同一账户产生四个或更多此类有偏签名后，攻击者可在数秒内从公开链上数据恢复私钥；批量扫描要求至少五个签名，因此恰好四个签名的账户未被计入 6,772 这个数字。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.5</span></li></ul><p class="archive-back"><a href="/threads/">全部事件线</a> · <a href="/">返回首页</a></p>

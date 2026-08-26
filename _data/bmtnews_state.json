@@ -2,7 +2,7 @@
   "version": 1,
   "date": "2026-08-26",
   "timezone": "Asia/Shanghai",
-  "updated_at": "2026-08-26T02:14:53.935541Z",
+  "updated_at": "2026-08-26T04:17:43.967136Z",
   "analyzed_keys": [
     "0056ba634e3c701a69ebbbc940ace1e9dfd2d7003df1d58ee6c15023789501d6",
     "00a68f05041d50de3860f8aa044771c8b674913d0847f85b87051baefcf2e676",
@@ -40,6 +40,7 @@
     "1ab1e708073dc71157289b0abc06d9c0b7bbd55c61078eda50993c751bafcadc",
     "1abaed2eaf06622f7ec6dc6a70202977d7a571a44f294c94dce3ada3d7d7a3fc",
     "1af3e1f3e8e47a5a24ad0437c97bfc7eb219d590ef973a3f344a64f010abbc11",
+    "1d636da3cdad18f5a6d5f68d9766ecf5e5a35543254f26f08ed6a7187ea28c34",
     "1e5fb2023713db2a56319d54c6e2baa85c2506d9f70cd240719c0485e27c994a",
     "1ea451a3ed2cd029254791598e50f445243340159ba1dbb363c2f00676a20e84",
     "1f851b2185f9bf1ea338185f02fdff83f79a04160e6b75515184d3b117f5b958",
@@ -172,7 +173,6 @@
     "91a0f8a804053bf15cfb94bfc6fc13210cdad493e48f6a0928316ac1f3e219c9",
     "9245a1e65536abf2e0b24b7dc52805fdce62d6d316885b4b2ba0eba39c56b13e",
     "93bb79be5907edac3d82b1634947573ba9434a3378eb110b37dc6d82e4a05555",
-    "93e14f3eb4d5cb1b3f0e01f1efb9791132f74eed7f3992a36e7c090de8dd8e1a",
     "95bc10c20e38dc69b39a4e6676ec9152b07ade6f4d12b665fb13534f77c55ec8",
     "95e473e0b03a497bcbfe386527bef04b1d393acebc0d92b9b83f7f6ad6137eb6",
     "95f2e22edc79337802fc0249ec3c70bc3ce94e376de3f61573d2b5ed89789f23",
@@ -290,6 +290,7 @@
     "ef31e5b51dfd2ba6f06e5d59e27aa6e1a171b6065abe83202f7816f6baa54218",
     "f247f2db4f6a71731cff11366188e6d4f5acd7fa87044932be02bdffa17a3fde",
     "f2bf8476fdbadafde3d583dec2d51b38ddb17491bc8562887c2f0f47b11745cf",
+    "f3c9a6a9fd53cdf3fd3bc693e3c4478dd76b6ac76a51b8699492f88492932178",
     "f40cf5448244a404e1d09908327ed163e9bed4abdec4c7f0a5f361debcd02054",
     "f4508cb3ceeb5b14b6f0adcc54909e23139e756f4131daab3d974892b89229ab",
     "f5e16845c996396ea9fd670e31b4a3f88b8885684976f3ff9b0be8104ccd128b",
@@ -313,44 +314,38 @@
       "content": null,
       "author": "The Defiant Team",
       "published_at": "2026-08-25T22:28:06Z",
-      "fetched_at": "2026-08-26T02:14:59.028955Z",
+      "fetched_at": "2026-08-26T04:17:48.135783Z",
       "metadata": {
         "feed_name": "The Defiant",
         "category": "crypto-protocols",
-        "merged_sources": [
-          "The Defiant",
-          "Protos"
-        ],
-        "title_en": "Cosmos Labs Urges Halt on EVM Chains After Shared Bug Drains Three Networks",
-        "detailed_summary_en": "Cosmos Labs has urged validators of affected networks to halt their chains after a shared vulnerability in its Cosmos EVM module drained funds on three blockchains. The bug was quietly patched last week without a security advisory, drawing criticism from the security community.\n\nThis incident exposes the systemic risk of shared infrastructure: a single bug in a widely used module can drain multiple chains simultaneously. It also highlights the dangers of silent patching, which can leave downstream networks vulnerable before they can upgrade.\n\nKiiChain lost nearly 150 million KII tokens (worth about $9 million at the time, later dumped for only $1.6 million BUSD), while TAC lost 3 billion TAC tokens (about $7.5 million) from its staking contract. KiiChain's post-mortem says two of the three underlying defects remain unfixed upstream.",
-        "background_en": "Cosmos EVM is an open-source Cosmos SDK module that embeds a full Ethereum Virtual Machine into CometBFT-based chains, allowing developers to deploy Solidity contracts and use standard EVM tooling. A 'silent patch model' means security fixes are released publicly without coordinated disclosure, so chains that don't upgrade immediately may be exposed. Four networks using the module — MANTRA, TAC, KiiChain, and Nesa — were affected, with MANTRA and Nesa halting chains without user fund losses.",
-        "community_discussion_en": "The original disclosure was branded 'negligent AF' by critics, in line with Cosmos' silent patch policy. KiiChain's post-mortem openly blamed Cosmos Labs' disclosure process, stating that publishing a security fix in the open before privately notifying affected chains 'hands the vulnerability to anyone reading the commit.'",
-        "market_impact_en": "The exploit directly affected KII and TAC token markets — KiiChain's drained tokens were dumped for $1.6 million in BUSD, briefly crashing the token's price. The event may increase scrutiny on Cosmos-based chains and their reliance on shared modules, potentially affecting sentiment and liquidity for affected ecosystems, though no directional outcome is implied.",
-        "title_zh": "Cosmos Labs 敦促 EVM 链暂停，共享漏洞致三条网络被盗",
-        "detailed_summary_zh": "Cosmos Labs 敦促受影响网络的验证者暂停其链，因为其 Cosmos EVM 模块中的共享漏洞导致三个区块链上的资金被抽走。该漏洞上周在没有安全公告的情况下被悄然修补，引起了安全界的批评。\n\n这起事件暴露了共享基础设施的系统性风险：一个在广泛使用的模块中的漏洞可能同时导致多条链被抽走资金。它也凸显了静默修补的危险，这种修补方式可能使下游网络在升级前仍然暴露在漏洞中。\n\nKiiChain 损失了近 1.5 亿个 KII 代币（当时价值约 900 万美元，随后仅被抛售为 160 万美元 BUSD），而 TAC 的质押合约中被盗走 30 亿个 TAC 代币（约 750 万美元）。KiiChain 的事后分析报告称，三个根本缺陷中有两个仍在上游未修复。",
-        "background_zh": "Cosmos EVM 是一个开源 Cosmos SDK 模块，它将完整的以太坊虚拟机嵌入基于 CometBFT 的链中，允许开发者部署 Solidity 合约并使用标准 EVM 工具。\"静默修补模式\"意味着安全修复会公开发布而不进行协调披露，因此未立即升级的链可能会受到威胁。使用该模块的四个网络——MANTRA、TAC、KiiChain 和 Nesa——均受到影响，其中 MANTRA 和 Nesa 停止了链但用户资金未受损失。",
-        "community_discussion_zh": "批评者将最初的披露形容为\"极其疏忽\"，这与 Cosmos 的静默修补政策一致。KiiChain 的事后分析公开指责 Cosmos Labs 的披露流程，称在私下通知受影响的链之前公开发布安全修复，\"等于把漏洞交给任何阅读提交的人\"。",
-        "market_impact_zh": "该漏洞直接影响了 KII 和 TAC 代币市场——KiiChain 被盗的代币被抛售为 160 万美元的 BUSD，短暂导致代币价格暴跌。该事件可能提高人们对基于 Cosmos 的链及其对共享模块依赖的关注，并可能影响受影响生态系统的情绪和流动性，但这不构成任何方向性结论。",
+        "title_en": "Cosmos Labs Urges EVM Chains to Halt as Shared Bug Drains Three Networks",
+        "detailed_summary_en": "Cosmos Labs recommended that EVM chains built on its shared stack halt operations after a vulnerability drained three networks. KiiChain, one of the affected chains, reported losing 148 million tokens, and the halt advisory came six days after a patch shipped without a public security advisory.\n\nA shared vulnerability in the Cosmos EVM stack means many chains may be exposed at once, not just a single network. This incident can undermine trust in the ecosystem and highlights the critical need for coordinated security disclosure across interconnected chains.\n\nKiiChain stated that two of the three underlying defects remain unfixed upstream. The delay between the patch release and the public advisory may have left other chains unaware of the critical risk.",
+        "background_en": "Cosmos is an ecosystem of interoperable blockchains built with the Cosmos SDK, using CometBFT consensus and IBC for communication. EVM-compatible chains in this ecosystem, such as KiiChain, often rely on shared modules like the Cosmos EVM/Ethermint library, so a bug in that shared code can affect multiple networks simultaneously.",
+        "market_impact_en": "As a security exploit in shared Cosmos EVM infrastructure, the incident can strain liquidity on affected chains and may heighten caution toward Cosmos-based EVM chains. With tokens already drained, operations halted, and defects not fully fixed, trading and liquidity conditions for listed assets on these chains could be disrupted until the situation is resolved.",
+        "title_zh": "Cosmos Labs 紧急呼吁 EVM 链暂停：共享漏洞导致三条网络被盗",
+        "detailed_summary_zh": "Cosmos Labs 呼吁基于其共享堆栈构建的 EVM 链暂停运营，因为一个漏洞导致三条网络被盗。受影响链之一 KiiChain 报告损失了 1.48 亿枚代币，而暂停建议是在补丁发布六天后才发出，且当时未发布公开安全公告。\n\nCosmos EVM 堆栈的共享漏洞意味着许多链可能同时暴露在风险中，而不仅仅是单个网络。此类事件可能削弱用户对生态系统的信任，并凸显跨链协调安全披露的迫切必要性。\n\nKiiChain 表示，三个底层缺陷中有两个在上游仍未修复。补丁发布与公开安全公告之间的延迟，可能让其他链未能及时意识到这一严重风险。",
+        "background_zh": "Cosmos 是一个由使用 Cosmos SDK 构建的互操作区块链组成的生态系统，采用 CometBFT 共识，并通过 IBC 进行通信。该生态中的 EVM 兼容链（如 KiiChain）通常依赖 Cosmos EVM/Ethermint 等共享模块，因此共享代码中的漏洞可能同时影响多个网络。",
+        "market_impact_zh": "作为 Cosmos EVM 共享基础设施的安全漏洞事件，该事件可能影响受影响链上的流动性，并促使市场对基于 Cosmos 的 EVM 链保持更高警惕。由于代币已被盗取、运营暂停且缺陷尚未完全修复，相关链上资产的交易和流动性条件可能被打乱，直到情况得到解决。",
         "sources": [
           {
-            "url": "https://docs.cosmos.network/evm/latest/documentation/overview",
-            "title": "Overview - Cosmos Docs"
+            "url": "https://docs.cosmos.network/",
+            "title": "Cosmos Developer Documentation - Cosmos Docs"
           },
           {
-            "url": "https://github.com/cosmos/evm",
-            "title": "GitHub - cosmos/evm: An EVM compatible framework for blockchain development with the Cosmos SDK · GitHub"
+            "url": "https://github.com/evmos/ethermint",
+            "title": "GitHub - evmos/ethermint: Ethermint is a Cosmos SDK library for running scalable and interoperable EVM chains · GitHub"
           },
           {
-            "url": "https://www.rapid7.com/blog/post/2022/06/06/the-hidden-harm-of-silent-patches/",
-            "title": "The Hidden Harm of Silent Patches | Rapid7 Blog"
+            "url": "https://github.com/KiiChain/kiichain",
+            "title": "GitHub - KiiChain/kiichain: On-chain FX layer for stablecoins and RWA."
           }
         ],
         "thread_id": "t66352c3090",
         "thread_day": 2
       },
-      "ai_score": 8.5,
+      "ai_score": 9.0,
       "ai_reason": null,
-      "ai_summary": "Cosmos Labs urges EVM chains to halt operations after a shared bug drained three networks, including a 148-million-token loss on KiiChain, with two of three underlying defects still unfixed upstream.",
+      "ai_summary": "Cosmos Labs urges EVM chains to halt operations after a shared bug drained three networks, with patches shipped late and two of three defects still unfixed.",
       "ai_tags": []
     },
     {
@@ -361,170 +356,18 @@
       "content": null,
       "author": "Liam 'Akiba' Wright",
       "published_at": "2026-08-25T20:45:14Z",
-      "fetched_at": "2026-08-26T02:15:00.328497Z",
+      "fetched_at": "2026-08-26T04:17:49.478928Z",
       "metadata": {
         "feed_name": "CryptoSlate",
-        "category": "exchange-announcements",
-        "title_en": "BitMEX Begins Staged Shutdown, Halting New Positions After Aug. 26",
-        "detailed_summary_en": "BitMEX will enter reduce-only mode at 04:00 UTC on Aug. 26, preventing traders from opening new positions, with exchange trading ending Sept. 23 and withdrawal APIs disabled Sept. 28. The staged closure follows a strategic review by owner HDR Global Trading Limited.\n\nBitMEX is one of the longest-standing crypto derivatives exchanges, so its closure removes a major venue for leveraged trading and forces users to close or migrate positions. The orderly wind-down also highlights consolidation and regulatory pressure across crypto derivatives markets.\n\nAfter Aug. 26, traders may still reduce existing exposure but BitMEX can force-close positions before the mandatory close on Sept. 23. Remaining balances after Sept. 23 incur an annual fee of 1% or $50, whichever is greater, and API withdrawals end Sept. 28, leaving only manual withdrawals of USDT, USDC, and ETH on Ethereum.",
-        "background_en": "BitMEX helped popularize perpetual swaps and crypto derivatives but has faced regulatory scrutiny in recent years. Reduce-only mode is a risk-control feature that lets an order close or reduce an existing position without opening a new one, while API withdrawals are programmatic ways for traders and institutions to move funds off an exchange.",
-        "market_impact_en": "The closure removes a long-standing derivatives venue and could lead to forced position unwinds and manual stablecoin withdrawals, mainly affecting BTC, ETH, and Ethereum-based USDT/USDC flows. Since the wind-down is orderly rather than insolvency-driven, the market impact is more operational and sentiment-based than systemic.",
-        "title_zh": "BitMEX 启动分阶段关闭，8月26日后停止新建仓位",
-        "detailed_summary_zh": "BitMEX 将于 8 月 26 日 04:00 UTC 进入 reduce-only（只减仓）模式，交易者无法再开新仓位；交易所交易将于 9 月 23 日结束，9 月 28 日 API 提现功能关闭。此次分阶段关闭是所有者 HDR Global Trading Limited 战略评估后的决定。\n\nBitMEX 是历史最悠久的加密货币衍生品交易所之一，其关闭意味着杠杆交易的一个重要场所消失，用户被迫平仓或迁移仓位。这种有序清盘也反映了加密衍生品行业正在整合并承受监管压力。\n\n8 月 26 日之后，交易者仍可减少现有仓位，但 BitMEX 可能在 9 月 23 日强制平仓之前干预平仓。9 月 23 日后剩余余额将按年收取 1% 或 50 美元中较高者的费用；9 月 28 日 API 提现功能关闭后，用户只能手动提现，且仅支持以太坊上的 USDT、USDC 和 ETH。",
-        "background_zh": "BitMEX 曾推动了永续合约和加密衍生品的普及，但近年来一直面临监管审查。Reduce-only（只减仓）模式是一种风险控制功能，允许订单只平仓或减少既有仓位，而不会开立新仓；API 提现则是交易者和机构以程序化方式将资金转出交易所的工具。",
-        "market_impact_zh": "该交易所的关闭移除了一家老牌衍生品平台，可能导致仓位被迫平仓以及手动提取稳定币，主要影响 BTC、ETH 以及基于以太坊的 USDT/USDC 资金流动。由于此次清盘是有序进行而非破产驱动，市场影响更多来自运营层面和情绪面，而非系统性冲击。",
-        "sources": [
-          {
-            "url": "https://insights.deribit.com/exchange-updates/introduction-to-reduce-only-on-deribit/",
-            "title": "Introduction to Reduce-only on Deribit - Deribit Insights"
-          },
-          {
-            "url": "https://help.coinbase.com/en/coinbase/derivatives/intx-derivatives-reduce-only",
-            "title": "Reduce only (International Derivatives) | Coinbase Help"
-          },
-          {
-            "url": "https://support.bitfinex.com/hc/en-us/articles/360006390533-What-is-a-Reduce-only-option-on-Bitfinex",
-            "title": "What is a Reduce-only option on Bitfinex – Bitfinex Help Center"
-          }
-        ],
+        "category": "exchange-operations",
+        "title_zh": "随着BitMEX开始分阶段关闭，交易员开始失去对未平仓头寸的控制",
+        "detailed_summary_zh": "BitMEX于8月26日开始分阶段关闭，进入仅减仓模式，强制在9月23日前平仓所有未平仓头寸。届时交易结束，余额将转入钱包。",
         "thread_id": "t8d0a4e7011",
         "thread_day": 1
       },
       "ai_score": 8.5,
       "ai_reason": null,
-      "ai_summary": "BitMEX begins its staged shutdown, entering reduce-only mode on Aug. 26 and ending all trading by Sept. 23, with remaining balances subject to fees after Sept. 28.",
-      "ai_tags": []
-    },
-    {
-      "id": "rss:cointelegraph.com_rss:5b4dca2b5cf2ecc2",
-      "source_type": "rss",
-      "title": "Galaxy puts Coldcard hack losses at 1,789 BTC, with 87% unmoved",
-      "url": "https://cointelegraph.com/news/coldcard-hack-galaxy-btc-lost-87-unmoved?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "content": null,
-      "author": "Cointelegraph by Helen Partz",
-      "published_at": "2026-08-25T08:46:47Z",
-      "fetched_at": "2026-08-26T02:15:21.065391Z",
-      "metadata": {
-        "feed_name": "Cointelegraph",
-        "category": "crypto-protocols",
-        "title_en": "Galaxy attributes 1,789 BTC losses to Coldcard hack, 87% unmoved",
-        "detailed_summary_en": "Galaxy Research has attributed the theft of 1,789.28 Bitcoin from 8,865 addresses to the Coldcard hack, worth $114.7 million at the time of theft. Attackers have not spent 1,561 Bitcoin, or 87.3% of the attributed losses, which remain in attacker-controlled addresses.\n\nThis is one of the largest hardware wallet exploits ever documented, and the high percentage of unmoved funds provides a rare opportunity for forensic tracking and potential recovery. The incident may undermine user confidence in hardware wallets and intensify collaboration between exchanges, compliance firms, and law enforcement on blockchain tracing.\n\nThe tally partly relies on 221 victim reports covering 790.72 Bitcoin, or 44.2% of the total attributed losses; the median reported loss was 1.04272 Bitcoin, with more than half of reports exceeding 1 Bitcoin. Bitcoin stolen in later attack waves has moved through CoinJoin transactions, peel chains, and other obfuscation methods, while all funds from the first three waves remain unmoved.",
-        "background_en": "Coldcard is a Bitcoin-only hardware wallet made by Coinkite since 2017; it protects private keys with secure elements and supports air-gapped signing, which is designed to keep keys offline and safe from remote attacks. CoinJoin is a collaborative Bitcoin transaction method that mixes coins from multiple users into one transaction, making it harder to trace funds; a peel chain is a laundry technique that splits a large amount of cryptocurrency into many small transactions to obscure the trail.",
-        "market_impact_en": "The theft involves a large Bitcoin supply that could eventually be liquidated if attackers move the funds, potentially affecting exchange liquidity and market sentiment; however, with 87% of the stolen coins still unmoved, immediate market pressure is limited. Galaxy's sharing of attacker addresses with exchanges and law enforcement could lead to funds being frozen, reducing the likely selling volume.",
-        "title_zh": "Galaxy将Coldcard攻击损失归于1789枚比特币，87%未转移",
-        "detailed_summary_zh": "Galaxy Research将8,865个地址中被盗的1,789.28枚比特币（案发时价值1.147亿美元）归因于Coldcard攻击事件。攻击者尚未动用其中1,561枚比特币（占已认定损失的87.3%），这些资金仍留在攻击者控制的地址中。\n\n这是有记录以来最大的硬件钱包攻击事件之一，高比例的未转移资金为取证追踪和潜在追回提供了罕见机会。该事件可能削弱用户对硬件钱包的信任，并促使交易所、合规机构和执法部门在区块链追踪方面加强合作。\n\n这一统计部分基于221份受害者报告，涵盖790.72枚比特币，占认定总损失的44.2%；报告损失的中位数为1.04272枚比特币，超过一半的报告损失超过1枚比特币。后期攻击波次中盗取的比特币已通过CoinJoin交易、peel chain（剥皮链）和其他混淆手段转移，而前三波攻击盗取的资金均未移动。",
-        "background_zh": "Coldcard是Coinkite自2017年起生产的仅支持比特币的硬件钱包，它通过安全元件保护私钥并支持气隙签名，旨在使私钥保持离线以抵御远程攻击。CoinJoin是一种协作式比特币交易方式，将多个用户的币混合到一笔交易中，使资金追踪更加困难；peel chain（剥皮链）是一种洗钱手法，将大量加密货币拆分成许多小额交易以掩盖踪迹。",
-        "market_impact_zh": "该盗窃事件涉及大量比特币供应，如果攻击者最终转移这些资金，可能影响交易所流动性和市场情绪；但由于87%的被盗币仍未移动，当前市场压力有限。Galaxy将攻击者地址分享给交易所和执法部门，可能导致资金被冻结，从而减少潜在的抛售量。",
-        "sources": [
-          {
-            "url": "https://coldcard.com/",
-            "title": "COLDCARD - Bitcoin-Only Hardware Wallet"
-          },
-          {
-            "url": "https://www.coinjoins.org/",
-            "title": "Coinjoins - Learn about bitcoin collaborative transactions"
-          },
-          {
-            "url": "https://www.fraudinvestigation.net/cryptocurrency/tracing/peel-chain",
-            "title": "Peel Chain | Cryptocurrency Investigation | Hudson Intelligence"
-          }
-        ],
-        "thread_id": "te60ca966a7",
-        "thread_day": 1
-      },
-      "ai_score": 8.5,
-      "ai_reason": null,
-      "ai_summary": "Galaxy Research attributes 1,789 BTC ($114.7M) in losses to the Coldcard hack, with 87% of the stolen funds still unmoved in attacker-controlled addresses.",
-      "ai_tags": []
-    },
-    {
-      "id": "rss:decrypt.co_feed:97518baca577f8e5",
-      "source_type": "rss",
-      "title": "US Can Now Sanction Anyone Operating in Iran's Crypto Sector",
-      "url": "https://decrypt.co/376424/us-can-now-sanction-anyone-operating-in-irans-crypto-sector",
-      "content": null,
-      "author": "Decrypt Agent",
-      "published_at": "2026-08-25T10:21:41Z",
-      "fetched_at": "2026-08-26T02:15:14.503233Z",
-      "metadata": {
-        "feed_name": "Decrypt",
-        "category": "crypto-regulation",
-        "merged_sources": [
-          "Decrypt",
-          "CoinDesk",
-          "CryptoSlate",
-          "Cointelegraph"
-        ],
-        "title_en": "US Expands Sanctions to Anyone Operating in Iran's Crypto Sector",
-        "detailed_summary_en": "On August 24, 2026, the U.S. Treasury's OFAC issued five sectoral determinations under Executive Order 13902, including one covering digital assets, enabling sanctions on any foreign person worldwide operating in or providing services to Iran's digital asset sector. The action, dubbed Operation Economic Outcast, also designated nearly 60 entities, including individuals tied to over $100 million in crypto payments for the IRGC's Qods Force.\n\nThis significantly expands the extraterritorial reach of U.S. sanctions, meaning any crypto exchange, payment processor, or service provider worldwide with any Iran-related activity could face designation. It underscores that crypto is increasingly targeted by regulators as a sanctions evasion channel, raising compliance stakes for the entire industry.\n\nThe digital asset determination builds on earlier sectoral determinations covering Iran's financial and petroleum sectors, allowing OFAC to designate entities regardless of location. Among the designations, Ivan Obukhov, a UAE-based Ukrainian national, allegedly processed over $100 million in crypto payments facilitating oil sales for the IRGC's Qods Force, and cyber actor Arman Kahzadian was named for seizing a Bitcoin wallet worth over $30,000.",
-        "background_en": "Sectoral sanctions are targeted restrictions on specific industries within a sanctioned economy, such as energy, finance, or technology, rather than comprehensive country-wide embargoes. Executive Order 13902, signed in January 2020, initially imposed sanctions on additional sectors of Iran's economy, including construction, mining, manufacturing, and textiles; the new digital assets determination extends that authority. A shadow fleet refers to vessels using concealment tactics to smuggle sanctioned goods, often oil, in response to international sanctions. The U.S. has been increasingly targeting Iranian crypto activity, previously sanctioning exchange Nobitex and firms accepting Bitcoin for safe passage through the Strait of Hormuz.",
-        "market_impact_en": "This regulatory action increases compliance and legal risk for crypto businesses worldwide, as any person or entity involved in Iran's digital asset sector may now be sanctioned. The transmission to markets could occur through de-risking by exchanges and service providers with potential Iran exposure, potentially reducing liquidity for certain cross-border crypto flows and heightening geopolitical risk sentiment across digital assets.",
-        "title_zh": "美国：全球任何涉伊朗加密业务者均可被制裁",
-        "detailed_summary_zh": "2026年8月24日，美国财政部外国资产控制办公室（OFAC）依据第13902号行政令发布了五项行业认定，其中之一覆盖数字资产，使OFAC可以制裁全球任何在伊朗数字资产领域运营或提供服务的外国人。这项名为“Operation Economic Outcast”的行动还指定了近60个实体，包括涉嫌为伊朗革命卫队“圣城军”处理超过1亿美元加密货币支付的个人。\n\n此举大幅扩大了美国制裁的域外管辖范围，意味着全球任何与伊朗有关联的加密货币交易所、支付处理商或服务提供商都可能面临被指定为制裁对象的风险。这也凸显出加密货币正日益被监管机构视为制裁规避工具，从而使整个行业的合规压力进一步上升。\n\n数字资产行业认定是在此前覆盖伊朗金融和石油行业的认定基础上扩展而来，允许OFAC不分所在地指定相关实体。在被指定对象中，阿联酋乌克兰籍人士Ivan Obukhov涉嫌自2023年起经手超过1亿美元加密货币支付，帮助伊朗革命卫队“圣城军”进行石油销售；网络行为人Arman Kahzadian则因在2023年夏季控制一个价值超3万美元的比特币钱包而被列入指定名单。",
-        "background_zh": "行业制裁是针对受制裁经济体中特定行业（如能源、金融或技术）的定向限制，而非全面的国家禁运。第13902号行政令于2020年1月签署，最初对伊朗经济的建筑、采矿、制造和纺织等额外行业实施制裁，新的数字资产认定进一步扩展了这一权限。“影子船队”指使用隐蔽手段走私受制裁商品（通常是石油）的船只，是对国际制裁的回应。美国此前已加大针对伊朗加密货币活动的打击力度，曾制裁交易所Nobitex，并指定接受比特币以换取安全通过霍尔木兹海峡的公司。",
-        "market_impact_zh": "这项监管行动增加了全球加密业务的合规和法律风险，因为任何涉足伊朗数字资产行业的个人或实体现在都可能受到制裁。对市场的传导可能体现在交易所和服务商对潜在伊朗曝险进行去风险化，从而可能减少某些跨境加密货币流动的流动性，并加剧数字资产市场的地缘政治风险情绪。",
-        "sources": [
-          {
-            "url": "https://www.sardine.ai/learn/sectoral-sanctions",
-            "title": "What is Sectoral sanctions? - sardine.ai"
-          },
-          {
-            "url": "https://en.wikipedia.org/wiki/Executive_Order_13902",
-            "title": "Executive Order 13902 - Wikipedia"
-          },
-          {
-            "url": "https://en.wikipedia.org/wiki/Shadow_fleet",
-            "title": "Shadow fleet - Wikipedia"
-          }
-        ],
-        "thread_id": "t4b08c87f4f",
-        "thread_day": 1
-      },
-      "ai_score": 8.5,
-      "ai_reason": null,
-      "ai_summary": "The U.S. Treasury's OFAC issued sectoral determinations enabling sanctions on anyone worldwide operating in Iran's digital asset sector, part of a broader 'Economic D-Day' campaign that also designated entities involved in crypto payments for the IRGC.",
-      "ai_tags": []
-    },
-    {
-      "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:c9143fd0d0fb6f48",
-      "source_type": "rss",
-      "title": "U.S. state banking associations plan to launch their own nationwide blockchain network",
-      "url": "https://www.coindesk.com/policy/2026/08/25/u-s-state-banking-associations-plan-to-launch-their-own-nationwide-blockchain-network",
-      "content": null,
-      "author": "Jesse Hamilton",
-      "published_at": "2026-08-25T21:56:57Z",
-      "fetched_at": "2026-08-26T02:14:56.388448Z",
-      "metadata": {
-        "feed_name": "CoinDesk",
-        "category": "crypto-markets",
-        "title_en": "U.S. State Banking Associations Plan Nationwide Blockchain Network",
-        "detailed_summary_en": "On August 25, 2026, 39 U.S. state banking associations announced the BankChain Alliance, an industry-owned nationwide blockchain network targeting a 2027 launch. The alliance has not yet selected a technology partner to build the network.\n\nThis marks a major institutional step by the banking industry to build shared blockchain infrastructure, potentially reshaping interbank settlement and payments. If realized, it could accelerate bank adoption of distributed-ledger technology and affect how traditional finance interacts with the broader crypto ecosystem.\n\nThe BankChain Alliance says its network will be interoperable with other networks and will invite ownership from banks across the country. The state banking associations collectively represent thousands of financial institutions serving millions of consumers, businesses, and communities nationwide.",
-        "background_en": "State banking associations are trade groups that represent banks at the state level and lobby on regulatory and legislative issues. Many banks have been exploring blockchain for faster settlement and tokenized deposits; large global lenders such as JPMorgan, Bank of America, HSBC, Citigroup, and Wells Fargo have been working on a shared network for tokenized bank deposits amid the growth of stablecoins. The BankChain Alliance aims to give institutions of all sizes access to similar capabilities in a regulated, industry-owned environment.",
-        "market_impact_en": "If the network reaches launch, it could alter how U.S. banks settle transactions and position the banking industry as a direct participant in blockchain infrastructure, potentially competing with or complementing public-chain settlement and stablecoin ecosystems. The main near-term crypto market channel is sentiment-driven: news of institutional, industry-owned blockchain networks reinforces the adoption narrative for asset tokenization and distributed-ledger technology without creating direct exposure to specific crypto assets.",
-        "title_zh": "美国各州银行协会计划推出全国性区块链网络",
-        "detailed_summary_zh": "2026年8月25日，美国39个州银行协会宣布成立BankChain Alliance，计划打造一个行业自有的全国性区块链网络，目标在2027年上线。该联盟目前尚未确定搭建网络的技术合作伙伴。\n\n这标志着银行业在构建共享区块链基础设施方面迈出重大机构化一步，可能重塑银行间结算与支付格局。若计划落地，将加速传统金融机构采用分布式账本技术，并影响传统金融与更广泛加密生态的互动方式。\n\nBankChain Alliance表示，其网络将与其他网络互通，并邀请全美银行参与共同所有权。这些州银行协会合计代表数千家金融机构，服务全美数百万消费者、企业和社区。",
-        "background_zh": "州银行协会是代表各州银行的行业组织，负责就监管和立法事务进行游说。许多银行一直在探索利用区块链实现更快结算和代币化存款；在稳定币增长的背景下，摩根大通、美国银行、汇丰、花旗和富国银行等大型全球银行正合作构建代币化存款共享网络。BankChain Alliance旨在让各种规模的机构都能在受监管、行业自有的环境中获得类似能力。",
-        "market_impact_zh": "如果该网络如期上线，可能改变美国银行的结算方式，使银行业成为区块链基础设施的直接参与者，并与公链结算和稳定币生态形成竞争或互补。短期内对加密市场的主要传导渠道是情绪驱动：机构自建行业区块链网络的消息强化了资产代币化和分布式账本技术的采用叙事，但并不会直接形成对特定加密资产的敞口。",
-        "sources": [
-          {
-            "url": "https://www.coindesk.com/policy/2026/08/25/u-s-state-banking-associations-plan-to-launch-their-own-nationwide-blockchain-network",
-            "title": "U.S. state banking associations plan to launch their own nationwide..."
-          },
-          {
-            "url": "https://www.wbiw.com/2026/08/25/indiana-bankers-association-part-of-39-state-launch-of-industry-owned-blockchain-network/",
-            "title": "Indiana Bankers Association part of 39-state launch of industry-owned blockchain network | WBIW"
-          },
-          {
-            "url": "https://www.dmcityview.com/just-released/2026/08/25/iowa-bankers-association-supports-launch-of-industry-owned-blockchain-network/",
-            "title": "Iowa Bankers Association Supports Launch of Industry-Owned Blockchain Network | CITYVIEW"
-          }
-        ],
-        "thread_id": "t7622ec15b1",
-        "thread_day": 1
-      },
-      "ai_score": 8.0,
-      "ai_reason": null,
-      "ai_summary": "U.S. state banking associations announce plans to build their own nationwide blockchain network, signaling major institutional adoption efforts in the crypto and banking sectors.",
+      "ai_summary": "BitMEX begins its staged shutdown on Aug. 26 with reduce-only mode, forcing open positions closed by Sept. 23 as trading ends and balances move to wallets.",
       "ai_tags": []
     },
     {
@@ -535,86 +378,400 @@
       "content": null,
       "author": "bmulholland",
       "published_at": "2026-08-25T14:06:02Z",
-      "fetched_at": "2026-08-26T02:14:55.208012Z",
+      "fetched_at": "2026-08-26T04:17:45.376868Z",
       "metadata": {
         "discussion_url": "https://news.ycombinator.com/item?id=49434378",
         "category": "ai-labs",
-        "merged_sources": [
-          "bmulholland",
-          "OpenAI Blog"
-        ],
-        "title_en": "OpenAI's Jalapeño Chip Claims Edge Over Nvidia Blackwell",
-        "detailed_summary_en": "OpenAI's custom inference chip, codenamed Jalapeño and co-designed with Broadcom, reportedly outperforms Nvidia processors in tests, delivering faster and more power-efficient inference for modern large language models. SemiAnalysis published the analysis alongside a Bloomberg report, though the claims are not yet independently verified.\n\nIf proven, this could shift the AI infrastructure landscape by giving OpenAI a competitive edge in inference cost and energy efficiency, reducing its dependence on Nvidia GPUs. It also signals a broader trend among hyperscalers toward custom silicon optimized for AI workloads.\n\nJalapeño is a custom ASIC built specifically for LLM inference, reportedly tied to OpenAI's 10 GW infrastructure commitment through 2029. Community discussion notes that die size appears comparable to Nvidia's Rubin, while NVFP4 PFLOPs are about one-third, and the chip supports low-precision formats like FP4.",
-        "background_en": "AI inference hardware is the physical infrastructure used to run trained models on new data for predictions or generation. Nvidia's Blackwell architecture, announced in 2024 and followed by Blackwell Ultra at GTC 2025, powers products like the GB200 superchip and RTX 50-series GPUs, and is a dominant platform for AI compute. OpenAI's move into custom inference silicon reflects a push for specialized, energy-efficient alternatives to general-purpose GPUs.",
-        "community_discussion_en": "Commenters compared the emerging inference chip market to the early 3dfx, Riva, and PowerVR era, questioning which players will dominate. Some praised the efficiency gains, noting humans are still 22x more efficient than current chips at speech processing, while others scrutinized FP4 precision trade-offs and apparent discrepancies between the article's text and its comparison table.",
-        "market_impact_en": "The story's main crypto market exposure is through AI-themed tokens linked to decentralized GPU and compute networks, which may see sentiment-driven moves as the narrative around custom inference hardware develops. There is no direct regulatory or liquidity channel, and any impact depends on verification and real-world deployment rather than the report alone.",
-        "title_zh": "OpenAI 的 Jalapeño 芯片据称性能超越英伟达处理器",
-        "detailed_summary_zh": "OpenAI 与博通（Broadcom）联合设计的自研推理芯片“Jalapeño”据称在测试中表现优于英伟达处理器，能以更低功耗为现代大语言模型提供更快、更高效的推理。SemiAnalysis 结合彭博社的报道发布分析，但这些说法尚未得到独立验证。\n\n如果这一说法得到证实，将可能改变 AI 基础设施格局，使 OpenAI 在推理成本和能源效率上获得竞争优势，并减少对英伟达 GPU 的依赖。这也反映出大型科技公司越来越倾向于针对 AI 工作负载优化定制芯片的趋势。\n\nJalapeño 是一款专为 LLM 推理打造的定制 ASIC，据报道与 OpenAI 到 2029 年 10 GW 的基础设施承诺相关。社区讨论指出，其裸片尺寸与英伟达 Rubin 相当，NVFP4 PFLOPs 约为后者的三分之一，并支持 FP4 等低精度格式。",
-        "background_zh": "AI 推理硬件是用于在新的数据上运行已训练模型以进行预测或生成的物理基础设施。英伟达 Blackwell 架构于 2024 年发布，并在 GTC 2025 年推出 Blackwell Ultra，支撑着 GB200 超级芯片和 RTX 50 系列 GPU 等产品，是 AI 计算的主导平台之一。OpenAI 进入定制推理芯片领域，反映出业界正在追求比通用 GPU 更专业、更节能的替代方案。",
-        "community_discussion_zh": "评论者将新兴推理芯片市场比作早期的 3dfx、Riva 和 PowerVR 时代，并探讨最终哪家厂商将占据主导。有人称效率提升显著，指出人类处理语音的效率仍比现有芯片高 22 倍；也有人审视 FP4 精度上的取舍，以及文章正文与对比表格之间明显不一致的地方。",
-        "market_impact_zh": "该事件对加密市场的主要影响渠道在于与去中心化 GPU 和算力网络相关的 AI 主题代币，随着定制推理硬件叙事的发展，这类资产可能出现情绪驱动的波动。由于没有直接的监管或流动性传导链路，任何影响都将取决于实际验证和大规模部署情况，而非仅仅依靠这份报道。",
+        "title_en": "OpenAI's Jalapeño Chip Outperforms Nvidia Blackwell in Tests",
+        "detailed_summary_en": "According to a SemiAnalysis report corroborated by Bloomberg, OpenAI's custom-built 'Jalapeño' inference chip has outperformed Nvidia's Blackwell GPU in early benchmark tests. The chip, developed with Broadcom, showed higher throughput and better power efficiency on inference workloads.\n\nThis marks a potential shift in AI hardware economics, suggesting that custom inference chips can rival Nvidia's dominant offerings. If confirmed, it could reduce OpenAI's reliance on Nvidia and pressure other major AI labs to pursue in-house silicon.\n\nThe results come from SemiAnalysis' InferenceX benchmark, with OpenAI hardware head Richard Ho describing the improvement as 'very, very significant.' Comparisons reportedly focus on FP4 precision and inference-specific metrics, with the chip's die size similar to Nvidia's Rubin but at roughly one-third the NVFP4 peak flops.",
+        "background_en": "Nvidia's Blackwell architecture, announced as the successor to Hopper, powers many of the world's largest AI training and inference clusters. OpenAI has been investing in custom silicon to reduce dependence on a single GPU supplier and optimize costs for serving large language models at scale. Jalapeño, co-developed with Broadcom, is reportedly designed specifically for LLM inference rather than general-purpose AI compute.",
+        "community_discussion_en": "Hacker News commenters reacted with a mix of curiosity and technical analysis. One user mused about baking LLM weights directly into custom chips, while another compared the nascent inference-chip race to the early 3dfx and Riva GPU wars. Others noted the efficiency gap to human speech and praised SemiAnalysis' unconventional analysis style.",
+        "title_zh": "OpenAI自研Jalapeño芯片测试表现超越英伟达Blackwell",
+        "detailed_summary_zh": "根据SemiAnalysis的报告及彭博社的印证，OpenAI与博通合作开发的定制推理芯片'Jalapeño'在早期基准测试中的表现超越了英伟达的Blackwell GPU。该芯片在推理任务上展现出更高的吞吐量和更好的能效。\n\n这标志着AI硬件格局可能发生转变，表明定制推理芯片能与英伟达的主导产品抗衡。如果该结果得到确认，将可能降低OpenAI对英伟达的依赖，并促使其他大型AI实验室推进自研芯片。\n\n该结果基于SemiAnalysis的InferenceX基准测试，OpenAI硬件负责人Richard Ho称性能提升'非常非常显著'。对比主要集中于FP4精度和推理专用指标，据报道该芯片裸片尺寸与英伟达Rubin相近，但NVFP4峰值算力约为其三分之一。",
+        "background_zh": "英伟达的Blackwell架构作为Hopper的继任者，为全球许多最大规模的AI训练和推理集群提供算力。OpenAI一直在投资定制芯片，以减少对单一GPU供应商的依赖，并优化大规模服务大语言模型的成本。据报道，与博通联合开发的Jalapeño是专门为LLM推理而非通用AI计算设计的。",
+        "community_discussion_zh": "Hacker News评论区的反应兼具好奇与技术分析。有用户畅想将LLM权重直接烧录进定制芯片，也有人将初生的推理芯片竞赛比作早期3dfx和Riva的GPU大战。还有人指出与人类语音的能效差距，并赞赏SemiAnalysis非传统的分析风格。",
         "sources": [
           {
-            "url": "https://www.stork.ai/blog/jalapeo-openais-nvidia-killer",
-            "title": "OpenAI's Jalapeño Chip: A Custom ASIC to Challenge... | Stork.AI"
+            "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+            "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show | TechCrunch"
           },
           {
-            "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-blackwell-architecture-deep-dive-a-closer-look-at-the-upgrades-coming-with-rtx-50-series-gpus",
-            "title": "Nvidia Blackwell architecture deep dive: A closer... | Tom's Hardware"
+            "url": "https://openai.com/index/jalapeno-first-results/",
+            "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference | OpenAI"
           },
           {
-            "url": "https://www.spheron.network/blog/openai-jalapeno-chip-gpu-cloud-inference-2026/",
-            "title": "OpenAI Jalapeño Chip Explained: What... | Spheron Blog"
+            "url": "https://en.wikipedia.org/wiki/Blackwell_(microarchitecture)",
+            "title": "Blackwell (microarchitecture) - Wikipedia"
           }
         ],
         "thread_id": "t4abbccc42d",
         "thread_day": 1
       },
-      "ai_score": 8.0,
+      "ai_score": 8.5,
       "ai_reason": null,
-      "ai_summary": "OpenAI's new 'Jalapeño' chips reportedly outperform Nvidia processors in tests, sparking debate about the future of inference hardware and energy efficiency.",
+      "ai_summary": "A report claims OpenAI's custom 'Jalapeño' inference chip outperforms Nvidia's Blackwell in tests, signaling a potential shift in AI hardware dynamics.",
       "ai_tags": []
     },
     {
-      "id": "hackernews:story:49433316",
-      "source_type": "hackernews",
-      "title": "New Mac Studio with M5 Max and M5 Ultra",
-      "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+      "id": "rss:decrypt.co_feed:97518baca577f8e5",
+      "source_type": "rss",
+      "title": "US Can Now Sanction Anyone Operating in Iran's Crypto Sector",
+      "url": "https://decrypt.co/376424/us-can-now-sanction-anyone-operating-in-irans-crypto-sector",
       "content": null,
-      "author": "interpol_p",
-      "published_at": "2026-08-25T13:03:17Z",
-      "fetched_at": "2026-08-25T20:55:46.856716Z",
+      "author": "Decrypt Agent",
+      "published_at": "2026-08-25T10:21:41Z",
+      "fetched_at": "2026-08-26T04:17:54.943941Z",
       "metadata": {
-        "discussion_url": "https://news.ycombinator.com/item?id=49433316",
-        "category": "tech-community",
-        "title_en": "Apple Launches Mac Studio with M5 Max and M5 Ultra",
-        "detailed_summary_en": "Apple has introduced the new Mac Studio powered by the M5 Max and M5 Ultra chips, with up to 256GB of unified memory and a strong emphasis on on-device AI performance. The M5 Ultra pairs two M5 Max dies via UltraFusion, delivering over 4.4TB/s of inter-die bandwidth.\n\nThis release marks Apple's continued push into local AI, giving developers and professionals a high-bandwidth, large-memory machine to run large language models directly on-device. It signals intensifying competition in the local AI compute market and could shift some AI workloads away from cloud infrastructure.\n\nThe M5 Ultra is Apple's first quad-die chip, using UltraFusion to interlink two dual-die M5 Max packages, and the Mac Studio offers up to 1.2TB/s of memory bandwidth. It also includes next-generation PCIe Gen 6-based SSDs with up to double the storage performance and Thunderbolt 5 external connectivity at 120Gb/s.",
-        "background_en": "Apple Silicon uses a unified memory architecture in which the CPU and GPU share a single pool of memory, eliminating the need to copy data between separate RAM and VRAM. This makes it easier to run large AI models locally because the GPU can access a huge amount of memory directly. The new M5 Ultra extends this approach with a quad-die design, a first for Apple, enabling higher memory capacity and bandwidth. The Mac Studio is Apple's high-end desktop line aimed at professionals.",
-        "community_discussion_en": "Community reactions are mixed. Some praise Apple for leaning into local AI and hope for optimized versions of frontier open-weight models for the machine, while others criticize the high price of 256GB memory, note the limited future-proofing for models above 1T parameters, and express concerns about thermal performance of PCIe Gen 6 storage.",
-        "title_zh": "苹果发布搭载M5 Max与M5 Ultra的新款Mac Studio",
-        "detailed_summary_zh": "苹果推出了搭载M5 Max和M5 Ultra芯片的新款Mac Studio，最高配备256GB统一内存，并主打本地AI性能。M5 Ultra通过UltraFusion连接两颗M5 Max芯片，芯片间带宽超过4.4TB/s。\n\n此次发布标志着苹果持续加码端侧AI，为开发者和专业人士提供了一台高带宽、大内存的设备，可以直接在本地运行大型语言模型。这表明本地AI计算市场竞争日益激烈，并可能使部分AI工作负载从云端转移至本地。\n\nM5 Ultra是苹果首款四芯片（quad-die）设计，通过UltraFusion连接两颗双芯片M5 Max封装，Mac Studio最高可提供1.2TB/s的内存带宽。它还配备了基于PCIe Gen 6的新一代SSD，存储性能最高可达上一代的两倍，并支持120Gb/s的Thunderbolt 5外部接口。",
-        "background_zh": "Apple Silicon采用统一内存架构，CPU和GPU共享同一内存池，无需在独立的内存和显存之间复制数据。这使得在本地运行大型AI模型更加方便，因为GPU可以直接访问超大容量的内存。新款M5 Ultra采用苹果首次的quad-die四芯片设计，进一步扩展了这一思路，使内存容量和带宽更高。Mac Studio是苹果面向专业人群的高端桌面产品线。",
-        "community_discussion_zh": "社区反应褒贬不一。有人赞赏苹果积极拥抱本地AI，并希望看到针对该机器优化的开源大模型；也有人指出256GB内存价格高昂、对于超过1T参数的模型“未来升级空间”有限，并担心PCIe Gen 6存储的散热问题。",
+        "feed_name": "Decrypt",
+        "category": "crypto-regulation",
+        "title_en": "US Expands Sanctions to Anyone in Iran's Crypto Sector",
+        "detailed_summary_en": "The U.S. Treasury's OFAC issued a first-ever sectoral determination covering digital assets under Executive Order 13902, authorizing sanctions on any foreign person worldwide operating in or providing services to Iran's digital asset sector. The move came on August 24, 2026, as part of Operation Economic Outcast, alongside nearly 60 designations including a shadow fleet broker accused of moving over $100 million in crypto for the IRGC's Qods Force.\n\nThis dramatically expands the extraterritorial reach of U.S. sanctions into crypto, making any global exchange, wallet, miner, or service interacting with Iran's digital asset sector a target regardless of location. It signals that crypto is now a primary focus of U.S. Iran enforcement, raising compliance and legal risk for the entire industry.\n\nThe five sectoral determinations also covered technology, gold, aviation, and shipping, building on earlier determinations for Iran's financial and petroleum sectors. Among the designations, two have direct crypto links: UAE-based broker Ivan Obukhov, accused of processing over $100 million in crypto payments for IRGC oil sales, and Arman Kahzadian, a cyber operative who took control of a Bitcoin wallet holding over $30,000 in 2023.",
+        "background_en": "Executive Order 13902, signed in January 2020, authorizes sanctions on persons operating in identified sectors of Iran's economy, and had previously been applied to Iran's financial and petroleum sectors. A sectoral determination under this order gives OFAC the authority to designate any foreign person operating in that sector, extending U.S. secondary sanctions beyond U.S. jurisdiction. Treasury says Iran increasingly uses cryptocurrency for sanctions evasion, and has already sanctioned Iranian exchange Nobitex and companies accepting Bitcoin for safe passage through the Strait of Hormuz.",
+        "market_impact_en": "The sectoral determination expands sanctions compliance obligations for crypto exchanges, custodians, and DeFi protocols globally, since any exposure to Iran-linked digital asset flows could trigger designation and cut off access to U.S. banking and liquidity. It also adds to existing pressure on Iranian crypto participants and on the rial, which fell to a record low of 2.02 million per dollar on the announcement day.",
+        "title_zh": "美国扩大对伊朗加密货币领域制裁",
+        "detailed_summary_zh": "美国财政部外国资产控制办公室（OFAC）依据第13902号行政令首次发布涵盖数字资产的行业认定，授权对全球任何在伊朗数字资产领域运营或提供服务的外国人实施制裁。此举于2026年8月24日作为“Operation Economic Outcast”（经济驱逐行动）的一部分，同期还有近60个实体被列入制裁名单，其中一名影子船队经纪人被指控为伊斯兰革命卫队圣城军处理逾1亿美元加密货币付款。\n\n此举大幅扩展了美国制裁在加密领域的治外法权范围，使全球任何与伊朗数字资产行业发生互动的交易所、钱包、矿工或服务机构都可能成为制裁对象，无论其位于何处。这标志着加密货币已成为美国对伊执法的重点领域，整个行业面临更高的合规与法律风险。\n\n此次共发布五项行业认定，除数字资产外还覆盖技术、黄金、航空和航运，并在先前对伊朗金融和石油行业的认定基础之上。被制裁名单中有两处与加密货币直接相关：阿联酋经纪人伊万·奥布霍夫被指控为伊斯兰革命卫队石油销售处理逾1亿美元加密支付；网络行动人员阿尔曼·卡赫扎迪安于2023年控制了一个持有逾3万美元比特币的钱包。",
+        "background_zh": "第13902号行政令于2020年1月签署，授权对在伊朗经济特定行业运营的个人实施制裁，此前已被用于伊朗金融和石油行业。根据该行政令作出的行业认定，使OFAC有权制裁在该行业运营的任何外国人，将美国次级制裁扩展到美国司法管辖区之外。财政部表示，伊朗日益利用加密货币规避制裁，并已制裁伊朗交易所Nobitex以及接受比特币换取安全通过霍尔木兹海峡的公司。",
+        "market_impact_zh": "该行业认定扩大了全球加密货币交易所、托管机构和DeFi协议的制裁合规义务，因为任何涉及伊朗关联数字资产流动的交易都可能触发制裁，并切断其与美国银行体系和流动性的联系。这进一步加大了对伊朗加密参与者及里亚尔的压力，后者在消息公布当天跌至1美元兑202万里亚尔的历史低点。",
         "sources": [
           {
-            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-            "title": "Apple introduces M6 and M5 Ultra for a big leap in... - Apple"
+            "url": "https://www.chainalysis.com/blog/ofac-iran-oil-payments-august-2026/",
+            "title": "OFAC Targets Crypto-for-Oil Payments in Latest Iran Sanctions"
           },
           {
-            "url": "https://www.macrumors.com/2026/08/25/apple-debuts-m5-ultra/",
-            "title": "Apple Debuts M5 Ultra as Most Powerful Chip Ever - MacRumors"
+            "url": "https://en.wikipedia.org/wiki/Executive_Order_13902",
+            "title": "Executive Order 13902"
           },
           {
-            "url": "https://www.macobserver.com/tips/round-ups/understanding-apples-unified-memory-architecture/",
-            "title": "What is Unified Memory on Mac, and How Much Do You Need?"
+            "url": "https://ofac.treasury.gov/media/936781/download?inline",
+            "title": "DETERMINATION PURSUANT TO SECTION 1(a)(i) OF EXECUTIVE ORDER ..."
           }
         ],
-        "thread_id": "t540b53bf70",
+        "thread_id": "t4b08c87f4f",
+        "thread_day": 1
+      },
+      "ai_score": 8.5,
+      "ai_reason": null,
+      "ai_summary": "The U.S. Treasury's OFAC issued a sectoral determination enabling sanctions on any person worldwide operating in Iran's digital asset sector, alongside designations including a shadow fleet broker tied to over $100M in IRGC crypto payments.",
+      "ai_tags": []
+    },
+    {
+      "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:fddf082ea12d3093",
+      "source_type": "rss",
+      "title": "U.S. widens Iran crackdown to encompass crypto, gold, shipping and technology",
+      "url": "https://www.coindesk.com/policy/2026/08/25/u-s-widens-iran-crackdown-to-encompass-crypto-gold-shipping-and-technology",
+      "content": null,
+      "author": "AI Boost",
+      "published_at": "2026-08-25T08:47:18Z",
+      "fetched_at": "2026-08-26T04:17:46.820749Z",
+      "metadata": {
+        "feed_name": "CoinDesk",
+        "category": "crypto-regulation",
+        "title_en": "U.S. Expands Iran Sanctions to Crypto, Gold, Shipping, and Tech",
+        "detailed_summary_en": "The United States is widening its Iran sanctions program to explicitly target cryptocurrency, gold, shipping, and technology sectors. This marks a significant expansion of the enforcement scope beyond traditional financial and trade restrictions.\n\nThis move creates direct compliance obligations for crypto exchanges and users who interact with Iranian entities, potentially reshaping market access and liquidity. It also reflects a broader global trend of regulators treating digital assets as a key channel for sanctions evasion.\n\nOFAC has been adding cryptocurrency wallet addresses to the SDN list since 2018, and the expanded Iran program likely extends this practice to a wider range of digital asset-related entities. Compliance now requires blockchain-specific screening tools beyond traditional name-matching systems.",
+        "background_en": "The U.S. Treasury's Office of Foreign Assets Control (OFAC) administers sanctions programs targeting countries such as Iran, Syria, North Korea, and Russia. In the crypto space, sanctions compliance has evolved to include screening of wallet addresses and smart contracts, not just names. Secondary sanctions can also penalize third parties who do business with sanctioned countries, amplifying the reach of the program.",
+        "market_impact_en": "The expanded sanctions expose crypto exchanges, custodians, and market makers to heightened compliance risk when transacting with Iranian-linked addresses, which could reduce liquidity and access in affected markets. The move also reinforces regulatory precedent globally, potentially prompting other jurisdictions to tighten crypto-related sanctions enforcement.",
+        "title_zh": "美国扩大对伊朗制裁，涵盖加密货币、黄金、航运和技术",
+        "detailed_summary_zh": "美国正在扩大对伊朗的制裁计划，明确将加密货币、黄金、航运和技术行业列为目标。这标志着执法范围在传统金融和贸易限制之外的显著扩展。\n\n此举为与伊朗实体互动的加密货币交易所和用户带来了直接合规义务，可能重塑市场准入和流动性。这也反映出监管机构将数字资产视为制裁规避关键渠道的全球趋势。\n\nOFAC自2018年以来一直在将加密货币钱包地址添加到SDN名单中，扩大的伊朗计划很可能将这种做法扩展到更广泛的数字资产相关实体。合规现在需要使用区块链特定的筛查工具，而不仅仅是传统的姓名匹配系统。",
+        "background_zh": "美国财政部外国资产控制办公室（OFAC）管理针对伊朗、叙利亚、朝鲜和俄罗斯等国家的制裁项目。在加密领域，制裁合规已发展到包括对钱包地址和智能合约的筛查，而不仅仅是姓名。次级制裁还可以惩罚与被制裁国家做生意的第三方，从而扩大制裁项目的覆盖面。",
+        "market_impact_zh": "扩大的制裁使加密货币交易所、托管机构和做市商在与伊朗关联地址交易时面临更高的合规风险，这可能会减少受影响市场的流动性和准入。此举还强化了全球监管先例，可能促使其他司法管辖区收紧与加密相关的制裁执法。",
+        "sources": [
+          {
+            "url": "https://www.chainalysis.com/glossary/sanctions/",
+            "title": "What Are Sanctions? OFAC & Crypto Compliance - Chainalysis"
+          },
+          {
+            "url": "https://www.elliptic.co/blog/five-steps-to-effective-cryptocurrency-sanctions-compliance-in-2026",
+            "title": "Five steps to effective cryptocurrency sanctions compliance in 2026"
+          },
+          {
+            "url": "https://amlwatcher.com/blog/what-are-the-ofac-sanctions-lists/",
+            "title": "What Are the OFAC Sanctions Lists?"
+          }
+        ],
+        "thread_id": "t4b08c87f4f",
+        "thread_day": 1
+      },
+      "ai_score": 8.5,
+      "ai_reason": null,
+      "ai_summary": "The U.S. is expanding its Iran sanctions program to cover cryptocurrency, gold, shipping, and technology sectors.",
+      "ai_tags": []
+    },
+    {
+      "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:c9143fd0d0fb6f48",
+      "source_type": "rss",
+      "title": "U.S. state banking associations plan to launch their own nationwide blockchain network",
+      "url": "https://www.coindesk.com/policy/2026/08/25/u-s-state-banking-associations-plan-to-launch-their-own-nationwide-blockchain-network",
+      "content": null,
+      "author": "Jesse Hamilton",
+      "published_at": "2026-08-25T21:56:57Z",
+      "fetched_at": "2026-08-26T04:17:46.341123Z",
+      "metadata": {
+        "feed_name": "CoinDesk",
+        "category": "crypto-markets",
+        "title_en": "U.S. State Banking Associations Plan Nationwide Blockchain Network",
+        "detailed_summary_en": "A coalition of U.S. state banking associations announced plans to launch a nationwide blockchain network, marking a coordinated effort by the traditional banking sector to adopt distributed ledger technology. The initiative is still in the planning phase.\n\nThis signals a significant step toward institutional adoption of blockchain within the U.S. banking system, potentially reshaping how interbank payments and settlement are conducted. If realized, it could bring regulated financial institutions directly onto blockchain infrastructure and influence broader market structure.\n\nThe initiative is a collective, consortium-style effort by state banking associations rather than a single institution. The network remains at the planning stage, with the scope of services and technical framework yet to be finalized.",
+        "background_en": "State banking associations are trade organizations that represent banks chartered at the state level in the U.S., providing advocacy, education, and shared services. A nationwide blockchain network could be used for interbank clearing, settlement, or payment rail purposes, offering banks a permissioned alternative to public blockchains and private bank-specific silos. The announcement reflects ongoing exploration by traditional finance into distributed ledger technology following earlier experiments with stablecoins and tokenized deposits.",
+        "market_impact_en": "The news may reinforce market sentiment around institutional blockchain adoption and benefit assets linked to enterprise-focused blockchain infrastructure, though the plan is early stage and its technical and regulatory details remain unclear. Any market effect is likely to be indirect, driven by sentiment rather than immediate changes in bank operations.",
+        "title_zh": "美国各州银行协会拟推出全国性区块链网络",
+        "detailed_summary_zh": "美国多个州银行协会宣布计划推出一个全国性的区块链网络，标志着传统银行业协调采用分布式账本技术。该计划目前仍处于规划阶段。\n\n这标志着美国银行体系在机构采用区块链方面迈出重要一步，可能重塑银行间支付与结算的方式。若得以实现，可能使受监管的金融机构直接接入区块链基础设施，并影响更广泛的市场结构。\n\n该计划是各州银行协会的联合行动，采用联盟式结构，而非单一机构主导。网络仍处于规划阶段，服务范围与技术框架尚未最终确定。",
+        "background_zh": "州银行协会是美国代表州级特许银行的行业组织，提供倡导、教育和共享服务。全国性区块链网络可用于银行间清算、结算或支付通道，为银行提供一种授权型替代方案，区别于公链和银行内部封闭系统。该声明反映了传统金融在稳定币和代币化存款等早期试验之后，对分布式账本技术的持续探索。",
+        "market_impact_zh": "该消息可能强化市场对机构采用区块链的情绪，并利好与企业级区块链基础设施相关的资产，但该计划仍处于早期阶段，技术与监管细节尚不明确。任何市场影响都可能间接传导，更多是情绪驱动，而非银行运营的即时改变。",
+        "thread_id": "t7622ec15b1",
         "thread_day": 1
       },
       "ai_score": 8.0,
       "ai_reason": null,
-      "ai_summary": "Apple introduces the new Mac Studio powered by M5 Max and M5 Ultra chips, emphasizing leading local AI performance with up to 256GB unified memory.",
+      "ai_summary": "U.S. state banking associations plan to launch their own nationwide blockchain network.",
+      "ai_tags": []
+    },
+    {
+      "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:53e5c7f3f27f018d",
+      "source_type": "rss",
+      "title": "Franklin Templeton and Hashkey roll out U.S. tokenized money fund in Asia",
+      "url": "https://www.coindesk.com/business/2026/08/25/franklin-templeton-and-hashkey-roll-out-u-s-tokenized-money-fund-in-asia",
+      "content": null,
+      "author": "Olivier Acuna",
+      "published_at": "2026-08-25T07:55:18Z",
+      "fetched_at": "2026-08-26T04:17:46.839427Z",
+      "metadata": {
+        "feed_name": "CoinDesk",
+        "category": "crypto-markets",
+        "title_en": "Franklin Templeton and HashKey Launch a Tokenized Money Fund in Asia",
+        "detailed_summary_en": "Franklin Templeton and HashKey have partnered to launch a U.S. tokenized money market fund for distribution across Asia through HashKey's regulated exchange platform. The rollout expands institutional access to tokenized real-world assets in the region.\n\nThis marks a notable step in institutional adoption of tokenized assets, bringing a major U.S. asset manager's money market fund to Asian investors via a licensed crypto exchange. It also highlights the growing trend of cross-border distribution of tokenized money market funds, a segment that has expanded to roughly $9 billion in assets.\n\nThe fund is distributed through HashKey, a Hong Kong-based regulated exchange group that has been developing tokenization services in line with Hong Kong's licensing framework. The tokenized money market fund sector has grown to roughly $9 billion in assets, with recent entrants including Amundi and JPMorgan.",
+        "background_en": "Tokenized money market funds are blockchain-based tokens that represent shares in traditional money market funds, giving investors a cash-like instrument that can be transferred on-chain. They are part of the broader category of real-world assets (RWAs), which tokenize ownership of traditional financial or physical assets such as Treasury securities, stocks, and commodities. Major institutions have been increasingly experimenting with tokenized funds to improve settlement efficiency and distribution reach.",
+        "market_impact_en": "The launch strengthens the distribution channel for tokenized money market funds through regulated crypto infrastructure, linking traditional asset management with on-chain liquidity. By expanding institutional access via a licensed Asian exchange, it could support demand for blockchain networks hosting such funds and reinforce sentiment around institutional adoption of digital assets.",
+        "title_zh": "富兰克林坦伯顿与HashKey在亚洲推出代币化货币基金",
+        "detailed_summary_zh": "富兰克林坦伯顿与HashKey合作，通过HashKey受监管的交易平台在亚洲推出美国代币化货币市场基金。此举扩大了该地区机构投资者对代币化现实世界资产的获取渠道。\n\n这标志着代币化资产在机构采用方面迈出了重要一步，通过持牌加密货币交易所将美国大型资产管理公司的货币基金带给亚洲投资者。同时也凸显了代币化货币市场基金跨境分销的日益增长趋势，该领域的资产规模已扩大至约90亿美元。\n\n该基金通过HashKey分销，这是一家总部位于香港的受监管交易所集团，一直在根据香港的牌照框架发展代币化服务。代币化货币市场基金领域的资产规模已增长至约90亿美元，最近的入局者包括Amundi和摩根大通。",
+        "background_zh": "代币化货币市场基金是基于区块链的代币，代表传统货币市场基金的份额，为投资者提供一种可以在链上转移的类现金工具。它们属于更广泛的现实世界资产（RWA）类别，后者将国债、股票和大宗商品等传统金融或实物资产的所有权代币化。各大机构越来越多地尝试代币化基金，以提高结算效率和扩大分销范围。",
+        "market_impact_zh": "此次发布加强了代币化货币市场基金通过受监管加密基础设施的分销渠道，将传统资产管理链上与链上流动性联系起来。通过持牌亚洲交易所扩大机构准入，可能为托管此类基金的区块链网络带来需求支撑，并强化围绕机构采用数字资产的市场情绪。",
+        "sources": [
+          {
+            "url": "https://news.bitcoin.com/amundi-launches-its-first-tokenized-money-market-fund-on-ethereum/",
+            "title": "Amundi Launches Its First Tokenized Money Market Fund on Ethereum"
+          },
+          {
+            "url": "https://ethereum.org/real-world-assets/",
+            "title": "What are RWAs? | Benefits and Use of Real-world assets | ethereum.org"
+          },
+          {
+            "url": "https://tr.okx.com/en/learn/tokenization-rwa-hashkey-asset-management",
+            "title": "How Tokenization, RWA, and HashKey Are Revolutionizing Asset..."
+          }
+        ],
+        "thread_id": "t25ced437bf",
+        "thread_day": 1
+      },
+      "ai_score": 8.0,
+      "ai_reason": null,
+      "ai_summary": "Franklin Templeton and HashKey have launched a U.S. tokenized money market fund in Asia, expanding institutional access to tokenized real-world assets.",
+      "ai_tags": []
+    },
+    {
+      "id": "rss:cryptoslate.com_feed_:c4965240fb71bb6a",
+      "source_type": "rss",
+      "title": "Term Finance kills Meta Vaults after governance process clears path for $8.5 million drain",
+      "url": "https://cryptoslate.com/term-finance-kills-meta-vaults-after-governance-process-clears-path-for-8-5-million-drain/",
+      "content": null,
+      "author": "Liam 'Akiba' Wright",
+      "published_at": "2026-08-25T07:00:54Z",
+      "fetched_at": "2026-08-25T17:05:16.980390Z",
+      "metadata": {
+        "feed_name": "CryptoSlate",
+        "category": "crypto-protocols",
+        "title_en": "Term Finance shuts Meta Vaults after $8.5M governance exploit",
+        "detailed_summary_en": "Term Finance permanently shut down its Meta Vaults after a governance exploit drained approximately $8.5 million in ETH and stablecoins. The protocol halted deposits but kept withdrawals open, and revoked the vaults' DAO governance roles.\n\nThis incident highlights how governance mechanisms in DeFi can be turned against protocols, allowing attackers with voting power to bypass timelock protections. It directly affects Meta Vault depositors and raises broader concerns about the security of custom governance wrappers on Yearn V3 architecture.\n\nPeckShield estimated the attacker removed about 2,843 ETH ($6.87 million) and 1.68 million USDC (later swapped to DAI). A first transaction executed an ETH Meta Vault proposal that had sat for six days without veto, setting the delay cooldown to zero before routing 2,841.7435 WETH to an attacker-controlled address; a second transaction about 22 minutes later executed five proposals across five USDC vaults, removing 1,679,639.29 USDC.",
+        "background_en": "Term Finance is an Ethereum-based fixed-rate lending protocol built by Term Labs, with a layered architecture that separates its core lending markets from Meta Vaults — a vault product built on Yearn V3. In DeFi, governance mechanisms often let token holders propose and queue parameter changes, with timelocks and veto windows designed as safeguards. In this attack, the perpetrator apparently acquired enough governance voting power to pass a malicious proposal, and the opt-out veto system failed to stop it. The exploit shows that timelocks alone do not guarantee protection if governance parameters can be altered during execution.",
+        "market_impact_en": "The direct market transmission is limited: roughly $8.5 million in ETH and stablecoins moved from Term's Meta Vaults to the attacker, affecting Term Finance's TVL and its depositors rather than broader markets. However, the incident could raise perceived governance risk across DeFi protocols with similar timelock and veto designs, potentially weighing on sentiment for smaller lending and vault platforms.",
+        "title_zh": "Term Finance 遭治理攻击损失 850 万美元，永久关闭 Meta Vaults",
+        "detailed_summary_zh": "Term Finance 在治理漏洞导致约 850 万美元 ETH 和稳定币被盗后，永久关闭了 Meta Vaults。该协议停止了新存款，但保留提款通道，并撤销了金库的 DAO 治理角色。\n\n该事件凸显了 DeFi 中的治理机制如何被利用，攻击者凭借投票权绕过时间锁保护。它直接影响到 Meta Vault 存款人，并引发对基于 Yearn V3 架构的自定义治理包装器安全性的广泛担忧。\n\nPeckShield 估计攻击者窃取了约 2,843 ETH（价值 687 万美元）和 168 万 USDC（后兑换为 DAI）。第一笔交易执行了一个搁置六天无人否决的 ETH Meta Vault 提案，将延迟冷却时间设为零，随后将 2,841.7435 WETH 转移至攻击者控制的地址；约 22 分钟后，第二笔交易跨五个 USDC 金库执行了五个提案，移走了 1,679,639.29 USDC。",
+        "background_zh": "Term Finance 是由 Term Labs 构建的以太坊固定利率借贷协议，采用分层架构，将核心贷款市场与基于 Yearn V3 构建的 Meta Vaults 产品分离。在 DeFi 中，治理机制通常允许代币持有者提出和排队参数变更，时间锁和否决窗口被设计为安全防护。在此次攻击中，攻击者显然获得了足够的治理投票权来通过恶意提案，而选择性退出否决系统未能阻止该提案。该漏洞表明，如果治理参数可以在执行过程中被修改，仅靠时间锁并不能保证安全。",
+        "market_impact_zh": "直接的市场传导有限：约 850 万美元的 ETH 和稳定币从 Term 的 Meta Vaults 转移至攻击者，影响的是 Term Finance 的 TVL 及其存款人，而非更广泛的市场。然而，该事件可能提高市场对采用类似时间锁和否决机制的 DeFi 协议的治理风险认知，从而对小型借贷和金库平台的信心造成压力。",
+        "sources": [
+          {
+            "url": "https://crypto.news/term-finance-closes-meta-vaults-after-estimated-attack/",
+            "title": "Term Finance closes Meta Vaults after estimated $8.5M attack"
+          },
+          {
+            "url": "https://www.techtimes.com/articles/325325/20260824/term-finances-85m-drain-proves-timelock-alone-wont-protect-defi-vault-depositors.htm",
+            "title": "Term Finance's $8.5M Drain Proves Timelock Alone Won't Protect..."
+          },
+          {
+            "url": "https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power",
+            "title": "Ethereum lending app Term Finance loses $8.5 million after attacker..."
+          }
+        ],
+        "thread_id": "t4f9f9b00de",
+        "thread_day": 1
+      },
+      "ai_score": 8.0,
+      "ai_reason": null,
+      "ai_summary": "Term Finance permanently shut down its Meta Vaults after a governance exploit allowed attackers to withdraw about $8.5 million in ETH and stablecoins.",
+      "ai_tags": []
+    },
+    {
+      "id": "rss:cryptoslate.com_feed_:d19ecb360a246676",
+      "source_type": "rss",
+      "title": "Ledger patched an Ethereum app bug that could show one transaction and sign another",
+      "url": "https://cryptoslate.com/ledger-patched-an-ethereum-app-bug-that-could-show-one-transaction-and-sign-another/",
+      "content": null,
+      "author": "Liam 'Akiba' Wright",
+      "published_at": "2026-08-25T05:00:33Z",
+      "fetched_at": "2026-08-25T13:27:45.242492Z",
+      "metadata": {
+        "feed_name": "CryptoSlate",
+        "category": "crypto-protocols",
+        "title_en": "Ledger Patches Ethereum App Bug That Could Swap Signed Transactions",
+        "detailed_summary_en": "Ledger released Ethereum app version 1.22.2 to block signing-session replacement and mismatched approval callbacks that could let a malicious dApp obtain a signature for data different from what is shown on screen. The fix was tagged on GitHub on Aug. 13, with the changelog dated Aug. 12.\n\nHardware wallets are trusted to display exactly what a user signs, so a transaction-substitution flaw threatens the core security promise of devices like the Ledger. Because Ledger is one of the most widely used hardware wallet lines, this patch matters for many Ethereum users who must update to 1.22.2.\n\nTestMachine, the security firm that reported the issue, said the attack requires a dApp with WebHID access and was validated on Ledger Flex; it claims shared code extends the flaw to Nano X, Nano S Plus, Stax, and Apex. Ledger CTO Charles Guillemet said Ledger Donjon found the bug about two weeks before the public disclosure, and no in-the-wild exploit or lost funds have been confirmed.",
+        "background_en": "Hardware wallets are physical devices that store private keys offline and require physical confirmation before signing a transaction. A decentralized application (dApp) connects to the device through APIs such as WebHID, which lets a website communicate with HID-compatible devices in Chromium-based browsers. The vulnerability exploited the signing flow: a second signing command could replace the transaction in memory while the screen still showed the original details, so pressing approve would sign substituted data.",
+        "market_impact_en": "A hardware-wallet signing flaw can undermine user confidence in self-custody, which is a core narrative for the broader crypto market. However, because Ledger has already released a fix and no confirmed exploit or fund loss has been reported, the direct market impact is likely limited to sentiment around hardware-wallet security rather than a specific asset price movement.",
+        "title_zh": "Ledger 修复以太坊应用漏洞，可致签名交易被替换",
+        "detailed_summary_zh": "Ledger 发布了以太坊应用 1.22.2 版本，阻止签名会话替换和不匹配的批准回调，这些漏洞可能让恶意 dApp 获得与屏幕显示内容不同的数据的签名。该修复于 8 月 13 日在 GitHub 打上标签，变更日志日期为 8 月 12 日。\n\n硬件钱包的核心安全承诺是向用户准确展示所签署的内容，因此交易替换漏洞威胁到 Ledger 等设备的核心信任。由于 Ledger 是最广泛使用的硬件钱包产品线之一，这次修复对众多以太坊用户很重要，他们需要更新到 1.22.2 版本。\n\n报告该问题的安全公司 TestMachine 表示，攻击需要具有 WebHID 访问权限的 dApp，并已在 Ledger Flex 上验证；该公司称共享代码使该漏洞影响 Nano X、Nano S Plus、Stax 和 Apex。Ledger 首席技术官 Charles Guillemet 表示，Ledger Donjon 在公开披露前约两周发现了该漏洞，目前尚未确认有野外利用或资金损失。",
+        "background_zh": "硬件钱包是离线存储私钥的物理设备，在签署交易前需要物理确认。去中心化应用（dApp）通过 WebHID 等 API 连接设备，WebHID 允许网站在基于 Chromium 的浏览器中与 HID 兼容设备通信。该漏洞利用了签名流程：第二个签名命令可以替换内存中的交易，而屏幕仍显示原始细节，因此用户按批准时会签署被替换的数据。",
+        "market_impact_zh": "硬件钱包签名漏洞可能削弱用户对自托管的信心，而自托管是更广泛加密货币市场的核心叙事。然而，由于 Ledger 已发布修复且没有确认的利用或资金损失，直接市场影响可能仅限于围绕硬件钱包安全性的情绪，而非特定资产的价格变动。",
+        "sources": [
+          {
+            "url": "https://cryptobriefing.com/ledger-ethereum-app-vulnerability-fix/",
+            "title": "Ledger fixes vulnerability in Ethereum app's signing flows"
+          },
+          {
+            "url": "https://www.crowdfundinsider.com/2026/08/301357-crypto-hardware-wallet-firm-ledger-addresses-ethereum-app-signing-flaw-amid-disclosure-dispute/",
+            "title": "Crypto Hardware Wallet Firm Ledger Addresses Ethereum App Signing Flaw Amid Disclosure Dispute | Crowdfund Insider"
+          },
+          {
+            "url": "https://wicg.github.io/webhid/",
+            "title": "WebHID API - GitHub Pages"
+          }
+        ],
+        "thread_id": "t72b4e44581",
+        "thread_day": 2
+      },
+      "ai_score": 8.0,
+      "ai_reason": null,
+      "ai_summary": "Ledger patched an Ethereum app vulnerability that could let a malicious dApp show one transaction on-screen while obtaining a signature for different data, urging users to update to version 1.22.2.",
+      "ai_tags": []
+    },
+    {
+      "id": "google_news:article:fe5899a55dba851b",
+      "source_type": "google_news",
+      "title": "Coinbase Brings Stocks into DeFi: Shares Can Now Be Used as Collateral - odaily.news",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yaEs2ODRNd2RsMGt2d0k2eVJHb1VtQUtEeC11NVF3NUpJN0hBZFJLQ1NVejVzZFFObktfam1QVWw1RDJnYTRudGt3c1pwV3FY?oc=5",
+      "content": null,
+      "author": "odaily.news",
+      "published_at": "2026-08-25T04:33:46Z",
+      "fetched_at": "2026-08-25T17:05:11.433873Z",
+      "metadata": {
+        "category": "exchange-announcements",
+        "title_en": "Coinbase Enables Stock Shares as DeFi Collateral",
+        "detailed_summary_en": "Coinbase now allows shares of stocks to be used as collateral in DeFi protocols, integrating traditional securities into decentralized finance.\n\nThis move bridges traditional finance and decentralized finance, potentially expanding the collateral base for on-chain lending and attracting new users and liquidity to DeFi.\n\nThe service relies on tokenized stocks, which are digital representations of real-world shares. Specific supported stocks, collateral ratios, or DeFi protocols were not detailed in the announcement.",
+        "background_en": "DeFi lending platforms like Aave and Compound allow users to borrow by locking up crypto collateral in smart contracts, often requiring 1.5 to 3 times overcollateralization. Tokenized stocks are blockchain-based assets that represent ownership in traditional companies, enabling stocks to be traded and used on-chain. Coinbase's move extends this model to equities, connecting the crypto and traditional finance worlds.",
+        "market_impact_en": "This development could affect the tokenized securities and DeFi lending sectors by broadening the types of collateral available for on-chain lending, which may influence liquidity and collateral supply dynamics. No specific price outcomes can be inferred from this announcement.",
+        "title_zh": "Coinbase 支持股票作为 DeFi 抵押品",
+        "detailed_summary_zh": "Coinbase 现在允许股票股份用作 DeFi 协议中的抵押品，将传统证券融入去中心化金融。\n\n此举连接了传统金融与去中心化金融，可能扩大链上借贷的抵押品基础，并吸引新的用户和流动性进入 DeFi。\n\n该服务基于代币化股票，即现实世界股票的数字表示。公告未详细介绍具体支持的股票、抵押比率或 DeFi 协议。",
+        "background_zh": "像 Aave 和 Compound 这样的 DeFi 借贷平台允许用户通过在智能合约中锁定加密货币抵押品来借款，通常需要 1.5 到 3 倍超额抵押。代币化股票是基于区块链的、代表传统公司所有权的资产，使股票可以在链上交易和使用。Coinbase 的这一举措将该模式扩展到股票，连接了加密世界与传统金融。",
+        "market_impact_zh": "该进展可能会影响代币化证券和 DeFi 借贷领域，拓宽链上借贷可用的抵押品种类，从而影响流动性和抵押品供应动态。无法从该公告推断具体价格走势。",
+        "sources": [
+          {
+            "url": "https://www.kraken.com/xstocks",
+            "title": "Tokenized Stocks and ETFs on Kraken"
+          },
+          {
+            "url": "https://xstocks.com/",
+            "title": "xStocks - Tokenized Equities"
+          },
+          {
+            "url": "https://milkroad.com/borrow/collateralized-loan/",
+            "title": "Collateralized Crypto Loans in DeFi: How & Where To Get One"
+          }
+        ],
+        "thread_id": "t378721a91d",
+        "thread_day": 1
+      },
+      "ai_score": 8.0,
+      "ai_reason": null,
+      "ai_summary": "Coinbase now allows shares of stocks to be used as collateral in DeFi, integrating traditional securities into decentralized finance.",
+      "ai_tags": []
+    },
+    {
+      "id": "google_news:article:d3dacc26a8823fbe",
+      "source_type": "google_news",
+      "title": "Coinbase Launches Tokenized US Stocks on Base With Chainlink Price Feeds - bloomingbit",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBtUXdqUks0aE43VjN2UGo2LTZpVEdlV0RyTEo0UThYb0x3U2p2WkFDTkhBMWpyWlhLR1NsbVZPTGRRVUtUNkFRaU5Sc2lHUEVuSW90VA?oc=5",
+      "content": null,
+      "author": "bloomingbit",
+      "published_at": "2026-08-25T02:15:19Z",
+      "fetched_at": "2026-08-25T09:07:40.320175Z",
+      "metadata": {
+        "category": "exchange-announcements",
+        "title_en": "Coinbase Launches Tokenized US Stocks on Base with Chainlink Price Feeds",
+        "detailed_summary_en": "Coinbase has launched tokenized US stocks on its Base layer-2 network, integrating Chainlink Price Feeds to provide accurate and reliable pricing for these on-chain equities. This move connects traditional stock trading with the decentralized finance (DeFi) ecosystem.\n\nThis is a significant market-structure development that bridges traditional finance and DeFi, potentially expanding access to US equities for global users through 24/7 blockchain trading. It also signals growing institutional interest in asset tokenization and increases the utility of Coinbase's Base network and Chainlink's oracle infrastructure.\n\nBase is Coinbase's Ethereum Layer-2 chain designed for low-cost, developer-friendly on-chain applications, and it does not currently plan to issue a native token. Chainlink Price Feeds aggregate data from multiple sources via a decentralized set of independent node operators, helping secure tokenized asset pricing. Tokenized stocks typically represent real-world equities on blockchain, enabling composability with DeFi protocols.",
+        "background_en": "Tokenized stocks are blockchain-based representations of traditional equities, often backed 1:1 by underlying shares, allowing for global access and trading outside regular market hours. Base is an Ethereum Layer-2 network launched by Coinbase to scale Ethereum transactions at lower cost. Chainlink Price Feeds are decentralized oracles that deliver tamper-resistant market data to smart contracts. This launch brings these three elements together, marking a step toward merging conventional capital markets with the crypto ecosystem.",
+        "market_impact_en": "The integration of Chainlink Price Feeds into Coinbase's tokenized stock offering reinforces Chainlink's position as a core oracle infrastructure for real-world assets, potentially increasing demand for LINK as more tokenized products rely on its data. It also brings additional trading volume and on-chain activity to Base, which could boost the broader Base and DeFi ecosystem, though the direct effect on crypto asset prices remains uncertain.",
+        "title_zh": "Coinbase在Base网络上推出代币化美股，集成Chainlink价格预言机",
+        "detailed_summary_zh": "Coinbase已在Base Layer-2网络上推出代币化美股，并集成Chainlink价格预言机，为这些链上股票提供准确可靠的定价。此举将传统股票交易与去中心化金融（DeFi）生态连接起来。\n\n这是一项重要的市场结构发展，将传统金融与DeFi连接起来，可能通过24/7区块链交易扩大全球用户对美国股票的可及性。这也表明机构对资产代币化的兴趣日益增长，并提升了Coinbase Base网络和Chainlink预言机基础设施的实用性。\n\nBase是Coinbase的以太坊Layer-2链，旨在提供低成本和开发者友好的链上应用，目前不计划发行原生代币。Chainlink价格预言机通过一组去中心化的独立节点运营商聚合多个来源的数据，帮助保障代币化资产的定价。代币化股票通常在区块链上代表真实世界的股票，并可与DeFi协议进行组合。",
+        "background_zh": "代币化股票是传统股票在区块链上的数字表示，通常由标的股票1:1支持，可实现全球可访问和非交易时段的交易。Base是Coinbase推出的以太坊Layer-2网络，旨在以更低成本扩展以太坊交易。Chainlink价格预言机是去中心化的预言机，为智能合约提供防篡改的市场数据。本次发布将这三者结合，标志着传统资本市场与加密生态融合迈出一步。",
+        "market_impact_zh": "Chainlink价格预言机被整合进Coinbase的代币化股票产品中，强化了Chainlink作为现实世界资产核心预言机基础设施的地位；随着更多代币化产品依赖其数据，LINK的需求可能会增加。这也为Base带来了额外的交易量和链上活动，可能提振Base和更广泛的DeFi生态，但对加密资产价格的直接影响仍不确定。",
+        "sources": [
+          {
+            "url": "https://www.coingecko.com/learn/what-are-tokenized-stocks",
+            "title": "What Are Tokenized Stocks and Top Platforms to Get Started"
+          },
+          {
+            "url": "https://help.coinbase.com/en/coinbase/other-topics/other/base",
+            "title": "Introducing Base: Coinbase’s L2 Network | Coinbase Help"
+          },
+          {
+            "url": "https://docs.chain.link/data-feeds/price-feeds",
+            "title": "Price Feeds | Chainlink Documentation"
+          }
+        ],
+        "thread_id": "t0b68bfec21",
+        "thread_day": 2
+      },
+      "ai_score": 8.0,
+      "ai_reason": null,
+      "ai_summary": "Coinbase has launched tokenized US stocks on its Base network, integrating Chainlink price feeds for accurate pricing.",
+      "ai_tags": []
+    },
+    {
+      "id": "hackernews:story:49433292",
+      "source_type": "hackernews",
+      "title": "Apple introduces M6 and M5 Ultra",
+      "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "content": null,
+      "author": "interpol_p",
+      "published_at": "2026-08-25T13:01:22Z",
+      "fetched_at": "2026-08-26T04:17:45.376799Z",
+      "metadata": {
+        "discussion_url": "https://news.ycombinator.com/item?id=49433292",
+        "category": "tech-community",
+        "title_en": "Apple Announces M6 and M5 Ultra Chips with Major AI Compute Leap",
+        "detailed_summary_en": "On August 25, 2026, Apple announced the M6 and M5 Ultra chips, its first 2nm chip and its most powerful chip ever, respectively. The M6 features a 12-core CPU, 12-core GPU, and a Dual 16-core Neural Engine, while the M5 Ultra uses a quad-die architecture for doubling performance over the M5 Max.\n\nThe launch marks a major leap in performance and AI compute for Apple's Mac lineup, strengthening its position in high-end computing and AI workloads. Developers and creative professionals will gain significantly faster machines, while Apple continues to push the boundaries of chip design with 2nm process technology.\n\nThe M6 is the first Apple chip built on a 2nm process, featuring a 12-core CPU, 12-core GPU, and Dual 16-core Neural Engine, doubling AI performance. The M5 Ultra, Apple's first quad-die chip, combines two M5 Max dies using UltraFusion and is available in the new Mac Studio with configurations up to 256GB RAM (512GB coming in October) and 16TB storage.",
+        "background_en": "Apple began transitioning its Macs from Intel to its own Apple silicon chips with the M1 in 2020, followed by M2, M3, M4, and M5 generations. The M1 Ultra, introduced in 2022, used an UltraFusion interconnect to combine two M1 Max dies, a design that M5 Ultra extends to four dies. The M6's 2nm process is a significant manufacturing advance, representing Apple's continued investment in cutting-edge semiconductor technology.",
+        "community_discussion_en": "Community comments were largely positive, with users impressed by the performance gains, though some expressed concerns about pricing. One user noted that inflation-adjusted prices are comparable to older Macs, while another referenced rumors that Apple may skip M6 Pro/Max/Ultra to focus on an AI-focused M7, sparking debate about the future roadmap.",
+        "title_zh": "苹果发布M6与M5 Ultra芯片，AI计算能力大幅跃升",
+        "detailed_summary_zh": "2026年8月25日，苹果发布了M6和M5 Ultra芯片，其中M6是苹果首款2纳米芯片，而M5 Ultra是苹果迄今最强大的芯片。M6配备12核CPU、12核GPU和双16核神经引擎，M5 Ultra则采用四芯片（quad-die）架构，性能相比M5 Max翻倍。\n\n此次发布标志着苹果Mac产品线在性能和AI计算方面的重大飞跃，巩固了其在高端计算和AI工作负载领域的地位。开发者和创意专业人士将获得明显更快的设备，苹果也通过2纳米制程技术继续推动芯片设计的边界。\n\nM6是苹果首款采用2纳米制程的芯片，配备12核CPU、12核GPU和双16核神经引擎，AI性能翻倍。M5 Ultra是苹果首款四芯片（quad-die）芯片，通过UltraFusion技术将两个M5 Max芯片组合而成，新款Mac Studio可选配最高256GB内存（512GB版本将于10月推出）和16TB存储。",
+        "background_zh": "苹果从2020年的M1芯片开始，将Mac从Intel处理器过渡到自研的Apple silicon芯片，后续推出了M2、M3、M4和M5系列。2022年推出的M1 Ultra采用UltraFusion互连技术将两个M1 Max芯片组合，而M5 Ultra将这一设计扩展到四个芯片。M6采用2纳米制程是制造工艺的重大进步，体现了苹果在尖端半导体技术上的持续投入。",
+        "community_discussion_zh": "社区评论总体正面，用户对性能提升印象深刻，但也有人对价格表示担忧。一位用户指出，经过通胀调整后，价格与老款Mac相当；另一位用户提到有传言称苹果可能跳过M6 Pro/Max/Ultra，集中精力开发AI导向的M7，引发了关于未来产品路线的讨论。",
+        "sources": [
+          {
+            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+            "title": "Apple introduces M6 and M5 Ultra for a big leap in ..."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Apple_M6",
+            "title": "Apple M6 - Wikipedia"
+          },
+          {
+            "url": "https://www.macworld.com/article/2973459/2026-mac-studio-m5-release-date-specs-price-rumors.html",
+            "title": "New Mac Studio M5 Max and M5 Ultra: Everything you need to ..."
+          }
+        ],
+        "thread_id": "t0c6b106ff3",
+        "thread_day": 1
+      },
+      "ai_score": 8.0,
+      "ai_reason": null,
+      "ai_summary": "Apple introduces M6 and M5 Ultra chips, delivering a major leap in performance and AI compute.",
       "ai_tags": []
     },
     {
@@ -629,18 +786,22 @@
       "metadata": {
         "discussion_url": "https://news.ycombinator.com/item?id=49432317",
         "category": "ai-labs",
-        "title_en": "Qwen Unveils Qwen 3.8-Flash-Next: 125B MoE with 6B Active Parameters",
-        "detailed_summary_en": "Qwen announced the upcoming release of Qwen 3.8-Flash-Next, a mixture-of-experts model with 125B total parameters and only 6B active parameters per token. The model is scheduled to be available on ModelScope tomorrow.\n\nThe model's extremely low active-parameter ratio (6B) makes it feasible to run on high-memory consumer hardware like 128GB Strix Halo or Mac Studio, potentially bringing frontier-level quality to local inference. This release could accelerate the local AI trend by making competitive models accessible without data-center GPUs.\n\nQwen 3.8-Flash-Next uses a mixture-of-experts architecture, where a router selects only a small subset of experts per token, drastically cutting compute cost while retaining the knowledge capacity of 125B parameters. The exact context window, license, and benchmark scores have not been disclosed in the announcement.",
-        "background_en": "Mixture-of-experts (MoE) models split their weights into many specialized 'experts' and activate only a few per token, giving the speed of a small model with the knowledge of a large one. The key distinction is between total parameters (all weights) and active parameters (those actually used for each token), which determines memory and compute requirements respectively. Qwen is a major open-weight AI lab, and its previous models like Qwen 27B have been popular in the local AI community.",
-        "community_discussion_en": "Commenters are eagerly anticipating the model, with several noting it finally justifies owning large-memory consumer devices like Strix Halo or the new Mac Studio. Some express frustration with OpenRouter's handling of Qwen models, while others point to inference engines like FreeToken that may improve CPU/RAM+GPU/VRAM distribution for MoE. A few jest about the increasingly convoluted model naming conventions.",
-        "title_zh": "Qwen发布Qwen 3.8-Flash-Next：125B参数MoE模型，激活参数6B",
-        "detailed_summary_zh": "Qwen宣布即将发布Qwen 3.8-Flash-Next，这是一款混合专家（MoE）模型，总参数为125B，而每次token仅激活6B参数。该模型预计明天在ModelScope上发布。\n\n该模型极低的激活参数比例（6B）使其能够在128GB Strix Halo或Mac Studio等大内存消费硬件上运行，有望将前沿模型质量带入本地推理。此次发布可能加速本地AI趋势，让竞争性模型无需数据中心GPU即可使用。\n\nQwen 3.8-Flash-Next采用混合专家架构，路由网络每个token仅调用一小部分专家，在保留125B参数知识容量的同时大幅降低计算成本。公告中未披露具体的上下文窗口、许可证和基准分数。",
-        "background_zh": "混合专家（MoE）模型将权重拆分为多个专门的“专家”，每个token只激活少数几个，从而以小模型的速度获得大模型的知识。关键区别在于总参数（所有权重）和激活参数（每个token实际使用的参数），前者决定内存需求，后者决定计算需求。Qwen是一个重要的开放权重AI实验室，其之前的Qwen 27B等模型在本地AI社区广受欢迎。",
-        "community_discussion_zh": "评论者对这款模型充满期待，有人表示它终于让Strix Halo或新款Mac Studio等大内存消费设备物有所值。一些评论者对OpenRouter上Qwen模型的处理方式表示不满，还有人提到FreeToken等推理引擎可能改善MoE在CPU/RAM与GPU/VRAM间的分配。另有少数人调侃模型命名越来越晦涩难懂。",
+        "title_en": "Qwen3.8-Flash-Next Launching Tomorrow: 125B MoE, 6B Active Params",
+        "detailed_summary_en": "Qwen has announced the imminent release of Qwen3.8-Flash-Next, a Mixture-of-Experts (MoE) model with 125B total parameters and 6B active parameters per token. The model will be available on ModelScope starting tomorrow.\n\nThis release brings competitive model quality into the range of high-end consumer hardware, since only 6B active parameters dramatically reduce compute per token while the 125B total size still demands substantial memory. It could significantly boost the local-inference ecosystem by making a powerful open-weights model practical on devices like the Strix Halo, GB10, and new Mac Studio.\n\nIn this MoE design, a gating network routes each token to a small subset of experts, so the 125B total weights determine memory footprint while the 6B active parameters determine compute and inference speed. The model listing is already live on ModelScope, and practical deployment will likely rely on quantization and inference engines that can distribute MoE layers across CPU/RAM and GPU/VRAM.",
+        "background_en": "Mixture of Experts (MoE) is a neural network architecture where multiple specialized sub-networks, or 'experts', are selectively activated by a gating network for each input. This architecture allows models to scale up total capacity without proportionally increasing compute per token: active parameters drive inference speed, while total parameters drive memory and storage costs. Local LLM inference has become increasingly practical thanks to tools like llama.cpp and Ollama, which support quantization and hardware acceleration, making large MoE models attractive for privacy-conscious users.",
+        "community_discussion_en": "Hacker News commenters are largely excited, with several calling the model a reason to buy high-memory devices such as the Strix Halo, GB10, or Mac Studio, and noting that MoE should make it run at usable speeds. Some raised practical concerns about Qwen model capacity and reliability on OpenRouter, while others highlighted inference engines like FreeToken that could distribute MoE layers across CPU and GPU memory. A few commenters also joked about the confusing naming conventions of current AI models.",
+        "title_zh": "Qwen3.8-Flash-Next 明日发布：125B MoE 模型，仅 6B 激活参数",
+        "detailed_summary_zh": "Qwen 宣布即将发布 Qwen3.8-Flash-Next，这是一款混合专家（MoE）模型，总参数 125B，每个 token 仅激活 6B 参数。该模型将于明日上线 ModelScope。\n\n该发布将具有竞争力的模型质量带入了高端消费级硬件的可运行范围，因为仅 6B 激活参数大幅降低了每 token 计算量，而 125B 总参数仍需较大内存。它有望显著推动本地推理生态，使强大的开源权重模型能在 Strix Halo、GB10 和新 Mac Studio 等设备上实用化。\n\n该 MoE 设计使用门控网络将每个 token 路由到少数专家，因此 125B 总权重决定内存占用，而 6B 激活参数决定计算量与推理速度。模型页面已上线 ModelScope，实际部署很可能需要依赖量化以及能将 MoE 层分布到 CPU/内存与 GPU/显存上的推理引擎。",
+        "background_zh": "混合专家（MoE）是一种神经网络架构，通过门控网络针对每个输入选择性激活多个专门的子网络（即“专家”）。这种架构允许模型在不按比例增加每 token 计算量的情况下扩展总容量：激活参数决定推理速度，总参数决定内存与存储成本。借助 llama.cpp 和 Ollama 等工具，本地 LLM 推理已变得越来越实用，这些工具支持量化与硬件加速，使大型 MoE 模型对注重隐私的用户充满吸引力。",
+        "community_discussion_zh": "Hacker News 评论区整体十分兴奋，多位用户称该模型是购买 Strix Halo、GB10 或 Mac Studio 等大内存设备的理由，并指出 MoE 架构应能带来可用的运行速度。也有人对 Qwen 模型在 OpenRouter 上的容量与可靠性提出担忧；还有人重点提到 FreeToken 等推理引擎可将 MoE 层分布到 CPU 与 GPU 内存。少数评论者还调侃了当前 AI 模型令人困惑的命名方式。",
         "sources": [
           {
-            "url": "https://localmodel.run/guides/mixture-of-experts",
-            "title": "Mixture of experts (MoE) explained for local LLMs · localmodel.run"
+            "url": "https://en.wikipedia.org/wiki/Mixture_of_experts",
+            "title": "Mixture of experts - Wikipedia"
+          },
+          {
+            "url": "https://huggingface.co/blog/moe",
+            "title": "Mixture of Experts Explained"
           },
           {
             "url": "https://latenteast.com/insights/moe-total-vs-active-parameters",
@@ -652,256 +813,49 @@
       },
       "ai_score": 8.0,
       "ai_reason": null,
-      "ai_summary": "Qwen announces the upcoming release of Qwen 3.8-Flash-Next, a 125B parameter mixture-of-experts model with 6B active parameters, generating significant buzz in the local AI community.",
+      "ai_summary": "Qwen is releasing Qwen3.8-Flash-Next, a 125B-parameter MoE model with 6B active parameters, generating significant community interest for efficient local inference.",
       "ai_tags": []
     },
     {
-      "id": "rss:www.theblock.co_rss.xml:c03d14fd2b3eaf48",
+      "id": "rss:thedefiant.io_api_feed:dcd5bb541c6b961f",
       "source_type": "rss",
-      "title": "ZRO token surges as LayerZero unveils ATLAS exchange infrastructure built on Zero blockchain",
-      "url": "https://www.theblock.co/news/ecosystems/2026-08-25-zro-token-layerzero-atlas-exchange-infrastructure-zero-blockchain-412736",
-      "content": null,
-      "author": "Yogita Khatri",
-      "published_at": "2026-08-25T18:41:50Z",
-      "fetched_at": "2026-08-26T02:14:57.547087Z",
-      "metadata": {
-        "feed_name": "The Block",
-        "category": "crypto-protocols",
-        "merged_sources": [
-          "The Block",
-          "CoinDesk",
-          "The Defiant"
-        ],
-        "title_en": "ZRO surges as LayerZero unveils ATLAS exchange infrastructure on Zero blockchain",
-        "detailed_summary_en": "On August 25, 2026, LayerZero announced ATLAS, a headless exchange infrastructure built on its Zero blockchain for trading platforms and financial institutions. The system routes 75% of post-venue trading fees into ZRO buybacks and burns and pays trading venues rebates of up to 65%.\n\nThis marks LayerZero's expansion from an interoperability protocol into institutional capital markets infrastructure. ATLAS enables trading venues and financial institutions to operate their own exchanges without building one from scratch, potentially accelerating institutional adoption of Zero blockchain and creating structural demand for ZRO through its buyback-and-burn mechanism.\n\nATLAS is described as 'headless'—it has no consumer-facing frontend or trading venue of its own; instead it provides matching, clearing, settlement, and risk management as a single integrated system. The platform runs on Zero, a Layer-1 blockchain designed for institutional use, featuring multi-core execution and native interoperability, and backed by firms including Citadel Securities, Ark Invest, DTCC, ICE, and Google Cloud.",
-        "background_en": "LayerZero is a widely used interoperability protocol that connects blockchains. Zero, launched by LayerZero, is a new Layer-1 network built around multi-core execution and native interoperability, targeting Wall Street and institutional tokenization with a claimed 2 million transactions per second. In this context, 'headless' infrastructure means backend technology that operates without a user-facing interface, similar to the headless commerce trend in e-commerce.",
-        "market_impact_en": "The primary market transmission channel is the ZRO token buyback-and-burn mechanism: trading volume generated on ATLAS-powered venues directly funds ZRO repurchases and burns, while rebates give venues an incentive to use the infrastructure. The announcement also boosts market sentiment around LayerZero's institutional positioning, but no directional price outcome is implied.",
-        "title_zh": "LayerZero推出基于Zero区块链的ATLAS交易所基础设施，ZRO代币上涨",
-        "detailed_summary_zh": "2026年8月25日，LayerZero宣布推出ATLAS，这是一个基于其Zero区块链构建的无前端交易所基础设施，服务于交易平台和金融机构。该系统将交易场所费用中75%的净收入用于ZRO回购和销毁，并向交易场所支付最高65%的回扣。\n\n这标志着LayerZero从互操作协议扩展至机构资本市场基础设施领域。ATLAS使交易场所和金融机构无需从零构建即可运营自己的交易所，可能加速Zero区块链的机构采用，并通过其回购销毁机制为ZRO创造结构性需求。\n\nATLAS被称为“无头”系统——它没有面向消费者的前端或自己的交易场所，而是将撮合、清算、结算和风险管理整合为单一系统。该平台运行在Zero上，Zero是专为机构使用设计的Layer 1区块链，具有多核执行和原生互操作性，并得到了包括Citadel Securities、Ark Invest、DTCC、ICE和Google Cloud在内的公司支持。",
-        "background_zh": "LayerZero是一个广泛使用的区块链互操作协议。Zero是LayerZero推出的新Layer 1网络，围绕多核执行和原生互操作性构建，面向华尔街和机构代币化，号称每秒可处理200万笔交易。在此背景下，“无头”基础设施指的是没有用户界面的后端技术，与电子商务中的“无头商务”趋势类似。",
-        "market_impact_zh": "主要的市场传导渠道是ZRO代币的回购销毁机制：在ATLAS支持的交易场所产生的交易量直接用于ZRO回购和销毁，同时回扣激励交易场所使用该基础设施。这一公告也提振了围绕LayerZero机构定位的市场情绪，但不意味着任何方向性的价格走势。",
-        "sources": [
-          {
-            "url": "https://thedefiant.io/news/blockchains/layerzero-unveils-atlas-exchange-engine",
-            "title": "LayerZero Unveils ATLAS Exchange Engine | The Defiant"
-          },
-          {
-            "url": "https://aijourn.com/layerzero-announces-atlas-a-headless-exchange-for-the-future-of-global-markets/",
-            "title": "LayerZero Announces ATLAS, a Headless Exchange for the Future ..."
-          },
-          {
-            "url": "https://layerzero.network/",
-            "title": "LayerZero"
-          }
-        ],
-        "thread_id": "t4eace9a087",
-        "thread_day": 2
-      },
-      "ai_score": 7.5,
-      "ai_reason": null,
-      "ai_summary": "LayerZero announced ATLAS, new exchange infrastructure built on its Zero blockchain for trading platforms and financial institutions, spurring a ZRO token surge.",
-      "ai_tags": []
-    },
-    {
-      "id": "rss:thedefiant.io_api_feed:9f84fd79aa08ec05",
-      "source_type": "rss",
-      "title": "Pendle Oracle Move Liquidates $36 Million",
-      "url": "https://thedefiant.io/news/defi/pendle-oracle-move-liquidates-usd36-million",
+      "title": "Term Finance Permanently Shuts Meta Vaults After Exploit PeckShield Estimated at $8.5 Million",
+      "url": "https://thedefiant.io/news/hacks/term-finance-permanently-shuts-meta-vaults-after-exploit-peckshield-estimated-at-8-5-million",
       "content": null,
       "author": "The Defiant Team",
-      "published_at": "2026-08-25T16:19:44Z",
-      "fetched_at": "2026-08-26T02:14:59.100234Z",
+      "published_at": "2026-08-25T19:24:38Z",
+      "fetched_at": "2026-08-26T04:17:48.146108Z",
       "metadata": {
         "feed_name": "The Defiant",
         "category": "crypto-protocols",
-        "title_en": "Pendle Oracle Move Liquidates $36 Million on Morpho",
-        "detailed_summary_en": "A wallet's yield-token purchase in a $9 million Pendle pool pushed the principal token price down 2.8%, triggering the liquidation of $36 million in looped positions on a Morpho market with $52 million in borrows. The incident did not result in any bad debt.\n\nThis event illustrates how a relatively small trade in a niche yield-tokenization pool can cascade through interconnected DeFi lending markets, triggering large-scale liquidations. It underscores the systemic risks of oracle-dependent lending and looped positions, affecting participants in Pendle and Morpho ecosystems.\n\nThe affected pool was a $9 million Pendle pool, and the Morpho market carried $52 million in borrows; the $36 million in liquidations were cleared without bad debt. The oracle price move was triggered by a single wallet's purchase of yield tokens, highlighting sensitivity of principal-token pricing to relatively small trades.",
-        "background_en": "Pendle is a DeFi protocol that tokenizes yield-bearing assets into principal tokens (PT) and yield tokens (YT), enabling users to trade or hedge yield risk. Morpho is an open-source decentralized lending protocol on Ethereum and other EVM chains, where users can supply collateral and borrow assets, sometimes through 'looped' positions that repeatedly deposit and borrow to amplify exposure. Oracle price movements can push leveraged positions below collateral thresholds, triggering liquidations.",
-        "market_impact_en": "This liquidation event could affect risk sentiment for DeFi lending and yield-tokenization markets, particularly on Morpho and Pendle. However, since no bad debt resulted, direct protocol losses are absent; the main transmission channel is perceived oracle risk and leveraged-position fragility, which may influence borrowing demand and collateral policies on these platforms.",
-        "title_zh": "Pendle预言机变动导致Morpho上3600万美元清算",
-        "detailed_summary_zh": "一个钱包在900万美元的Pendle池中购买收益代币，导致本金代币价格下跌2.8%，触发了Morpho市场上一笔5200万美元借款中的3600万美元循环仓位被清算。该事件没有造成任何坏账。\n\n这一事件说明，在一个小众收益代币化池中的相对较小交易，如何通过DeFi借贷市场的相互关联引发大规模清算，最终导致巨额仓位被强平。它凸显了依赖预言机的借贷和循环仓位所蕴含的系统性风险，并影响Pendle和Morpho生态系统的参与者。\n\n受影响的Pendle池规模为900万美元，相关Morpho市场借款总额为5200万美元；3600万美元的清算已完成且未产生坏账。预言机价格变动仅由一个钱包购买收益代币引发，凸显本金代币定价对相对较小交易的敏感性。",
-        "background_zh": "Pendle是一种DeFi协议，将产生收益的资产代币化为本金代币（PT）和收益代币（YT），使用户能够交易或对冲收益风险。Morpho是一个在以太坊及其他EVM兼容链上的开源去中心化借贷协议，用户可以提供抵押品并借入资产，有时会通过‘循环’仓位反复存入和借出以放大敞口。预言机价格变动可能将杠杆仓位推至抵押品阈值以下，从而触发清算。",
-        "market_impact_zh": "此次清算事件可能影响DeFi借贷和收益代币化市场的风险情绪，尤其是Morpho和Pendle相关市场。但由于未产生坏账，协议不存在直接损失；主要传导渠道是对预言机风险和杠杆仓位脆弱性的认知，这可能影响这些平台的借贷需求和抵押品政策。",
+        "title_en": "Term Finance Permanently Shuts Meta Vaults After $8.5M Exploit",
+        "detailed_summary_en": "Term Finance has permanently shut down its Meta Vaults product following an exploit estimated at $8.5 million by PeckShield. The protocol says withdrawals remain open, but its Aug. 23 update did not quantify remaining vault assets or the shortfall.\n\nThis is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.\n\nPeckShield tracked roughly 2,843 ETH and 1.68 million USDC drained, with the attacker swapping USDC for DAI. Yearn confirmed that the exploit targeted Term's custom governance wrapper, not standard Yearn V3 vaults, and DeFiPrime noted a six-day open proposal gap that likely enabled the takeover.",
+        "background_en": "Term Finance is a decentralized finance (DeFi) protocol that offers fixed-rate, fixed-term crypto-backed loans using an auction-based model. Meta Vaults is a yield product that appears to rely on Yearn vault infrastructure but adds a custom governance wrapper, which became the attack vector. PeckShield is a blockchain security firm that monitors on-chain activity and tracks fraud. DeFi protocols often use governance tokens to manage upgrades, and vulnerabilities in governance processes can be exploited by attackers.",
+        "market_impact_en": "The exploit may heighten security concerns around DeFi vault products and governance-based protocols, potentially affecting user deposits and total value locked in similar offerings. Any market reaction would depend on broader sentiment and is not certain.",
+        "title_zh": "Term Finance 在 850 万美元攻击后永久关闭 Meta Vaults",
+        "detailed_summary_zh": "Term Finance 在遭遇 PeckShield 估计为 850 万美元的攻击后，永久关闭了其 Meta Vaults 产品。该协议表示提款仍然开放，但其 8 月 23 日的更新并未量化剩余金库资产或缺口。\n\n这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。\n\nPeckShield 追踪到约 2,843 枚 ETH 和 168 万枚 USDC 被抽走，攻击者还将 USDC 换成了 DAI。Yearn 确认该攻击针对的是 Term 的自定义治理包装器，而非标准 Yearn V3 金库；DeFiPrime 指出存在六天的提案开放空窗期，可能促成了此次接管。",
+        "background_zh": "Term Finance 是一个去中心化金融（DeFi）协议，采用基于拍卖的模式提供固定利率、固定期限的加密货币抵押贷款。Meta Vaults 是一个收益产品，似乎依赖 Yearn 的金库基础设施，但增加了一个自定义治理包装器，而这成为了攻击向量。PeckShield 是一家区块链安全公司，负责监控链上活动并追踪欺诈行为。DeFi 协议通常使用治理代币来管理升级，而治理流程中的漏洞可能被攻击者利用。",
+        "market_impact_zh": "该攻击事件可能加剧人们对 DeFi 金库产品和基于治理的协议的安全担忧，进而可能影响类似产品的用户存款和总锁仓量。任何市场反应都将取决于整体情绪，且具有不确定性。",
         "sources": [
           {
-            "url": "https://www.okx.com/en-sg/learn/what-is-pendle-crypto",
-            "title": "What is Pendle Crypto | OKX Singapore"
+            "url": "https://www.kucoin.com/news/flash/term-finance-shuts-meta-vaults-after-8-5m-governance-exploit",
+            "title": "Term Finance Shuts Meta Vaults After $8.5M Governance Exploit"
           },
           {
-            "url": "https://en.wikipedia.org/wiki/Morpho_(DeFi_lending_protocol)",
-            "title": "Morpho (DeFi lending protocol) - Wikipedia"
+            "url": "https://coinmarketcap.com/academy/article/term-finance-8-5m-exploit-governance-meta-vaults",
+            "title": "Term Finance Loses $8.5M After Attacker Seizes Vault Governance"
           },
           {
-            "url": "https://www.coingecko.com/learn/pendle",
-            "title": "Learn about Pendle, a DeFi protocol for tokenizing and trading yield."
+            "url": "https://crypto.news/term-finance-closes-meta-vaults-after-estimated-attack/",
+            "title": "Term Finance closes Meta Vaults after estimated $8.5M attack"
           }
         ],
-        "thread_id": "t9f84fd79aa",
-        "thread_day": 1
+        "thread_id": "te3bc28ddab",
+        "thread_day": 3
       },
       "ai_score": 7.5,
       "ai_reason": null,
-      "ai_summary": "A wallet's yield-token purchase in a Pendle pool shifted an oracle price and liquidated $36 million in looped positions on a Morpho market, with no resulting bad debt.",
-      "ai_tags": []
-    },
-    {
-      "id": "rss:decrypt.co_feed:30c1dbc96013ceec",
-      "source_type": "rss",
-      "title": "Franklin Templeton's Tokenized Treasury Fund Lands on HashKey",
-      "url": "https://decrypt.co/376422/franklin-templetons-tokenized-treasury-fund-lands-on-hashkey",
-      "content": null,
-      "author": "Decrypt Agent",
-      "published_at": "2026-08-25T09:30:27Z",
-      "fetched_at": "2026-08-26T02:15:14.655168Z",
-      "metadata": {
-        "feed_name": "Decrypt",
-        "category": "crypto-markets",
-        "merged_sources": [
-          "Decrypt",
-          "CoinDesk",
-          "The Block"
-        ],
-        "title_en": "Franklin Templeton Tokenized Treasury Fund Lands on HashKey",
-        "detailed_summary_en": "HashKey Exchange has begun distributing Franklin Templeton's Franklin OnChain U.S. Government Liquidity Fund (grBENJI) through its Earn channel, giving professional investors access to a blockchain-wrapped pool of U.S. government debt. The product is available only to professional investors and is not offered to the public in Hong Kong.\n\nThis move is significant because it brings a major traditional asset manager's tokenized real-world asset (RWA) product into a regulated Hong Kong exchange, signaling growing institutional acceptance of on-chain Treasury products. It reflects the broader trend of bridging traditional finance and decentralized finance, and could pave the way for more tokenized funds to launch in Asia.\n\nThe fund primarily invests in U.S. government money market instruments and dollar cash, with returns tracking short-term Treasury yields, currently around 3.6% with a stable $1 net asset value. Franklin Templeton manages $1.8 trillion in assets and has offered the tokenized fund since 2021; it has also partnered with Kraken, Binance, DigiFT, and MoonPay to expand distribution.",
-        "background_en": "Tokenized money market funds are a rapidly growing segment of real-world assets (RWAs), where traditional financial instruments such as U.S. Treasury bills are represented on blockchain networks. Franklin Templeton launched BENJI in 2021, becoming the first U.S.-registered mutual fund to use a public blockchain to record share ownership. HashKey Exchange's Earn channel is a regulated platform that integrates traditional finance with blockchain, previously offering products such as Bosera ETFs. The tokenized money market fund sector has grown to roughly $9 billion in assets, according to recent industry data.",
-        "market_impact_en": "The distribution links a $1.8 trillion asset manager's product to a regulated crypto exchange, potentially boosting the credibility and adoption of tokenized RWAs among institutional investors. This could indirectly support demand for RWA infrastructure tokens and increase traffic to compliant exchanges like HashKey, though the effect on crypto asset prices is indirect and uncertain.",
-        "title_zh": "富兰克林邓普顿代币化国债基金上线HashKey",
-        "detailed_summary_zh": "HashKey交易所已通过其Earn频道开始分销富兰克林邓普顿的代币化美国国债流动性基金（grBENJI），为专业投资者提供区块链化的美国国债敞口。该产品仅面向专业投资者，不向香港公众发售。\n\n这一举措意义重大，因为一家大型传统资产管理公司将代币化现实世界资产（RWA）产品引入香港受监管的交易所，标志着机构对链上国债产品的接纳度不断提高。它反映了传统金融与去中心化金融融合的趋势，并可能为更多代币化基金在亚洲的落地打开大门。\n\n该基金主要投资于美国政府的货币市场工具和美元现金，收益率跟踪短期国债利率，近期约3.6%，净值保持在1美元。富兰克林邓普顿管理着1.8万亿美元资产，自2021年起就提供该代币化基金；它还已与Kraken、币安、DigiFT和MoonPay等达成合作以扩大分销。",
-        "background_zh": "代币化货币市场基金是现实世界资产（RWA）中快速增长的细分领域，即把美国国债等传统金融工具用区块链表示。富兰克林邓普顿于2021年推出BENJI，成为首个使用公有区块链记录份额所有权的美国注册共同基金。HashKey交易所的Earn频道是一个受监管的平台，旨在融合传统金融与区块链，此前已提供Bosera ETF等产品。据统计，代币化货币市场基金的总资产已膨胀至约90亿美元。",
-        "market_impact_zh": "该分销渠道将1.8万亿美元资产管理公司的产品与受监管的加密交易所连接起来，可能提升机构投资者对代币化RWA的信任度并推动采用。这可能间接支持RWA基础设施代币的需求，并增加合规交易所如HashKey的流量，但对加密资产价格的直接影响是间接且不确定的。",
-        "sources": [
-          {
-            "url": "https://app.rwa.xyz/assets/BENJI?ref=ournetwork.ghost.io",
-            "title": "RWA.xyz | Franklin OnChain U.S. Government Money Fund"
-          },
-          {
-            "url": "https://www.hashkey.com/en-US/earn",
-            "title": "HashKey Earn Channel - Grow Your On-Chain Wealth"
-          },
-          {
-            "url": "https://news.bitcoin.com/amundi-launches-its-first-tokenized-money-market-fund-on-ethereum/",
-            "title": "Amundi Launches Its First Tokenized Money Market Fund on Ethereum"
-          }
-        ],
-        "thread_id": "tcda64d8984",
-        "thread_day": 1
-      },
-      "ai_score": 7.5,
-      "ai_reason": null,
-      "ai_summary": "Franklin Templeton's tokenized U.S. government money market fund (grBENJI) is now available to professional investors through HashKey Exchange's Earn channel.",
-      "ai_tags": []
-    },
-    {
-      "id": "google_news:article:fe5899a55dba851b",
-      "source_type": "google_news",
-      "title": "Coinbase Brings Stocks into DeFi: Shares Can Now Be Used as Collateral - odaily.news",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yaEs2ODRNd2RsMGt2d0k2eVJHb1VtQUtEeC11NVF3NUpJN0hBZFJLQ1NVejVzZFFObktfam1QVWw1RDJnYTRudGt3c1pwV3FY?oc=5",
-      "content": null,
-      "author": "odaily.news",
-      "published_at": "2026-08-25T04:33:46Z",
-      "fetched_at": "2026-08-25T17:05:11.433873Z",
-      "metadata": {
-        "category": "exchange-announcements",
-        "title_en": "Coinbase Enables Tokenized Stocks as DeFi Collateral",
-        "detailed_summary_en": "Coinbase now allows users to use tokenized stock shares as collateral in decentralized finance (DeFi) lending protocols. This move connects traditional equities with decentralized lending markets.\n\nBy enabling tokenized equities as collateral, Coinbase bridges traditional finance and DeFi, potentially increasing the utility and liquidity of on-chain stock tokens. This could draw more institutional and retail participants to decentralized lending platforms.\n\nTokenized stocks are blockchain-based representations of traditional shares, often backed 1:1 by real securities held in custody. In DeFi lending, collateral is locked in smart contracts to borrow stablecoins, with over-collateralization and liquidation risks from price volatility.",
-        "background_en": "Tokenized stocks are digital versions of company shares issued on a blockchain, designed to track the price of an underlying stock. Decentralized lending protocols allow users to borrow assets by depositing collateral into smart contracts, typically requiring over-collateralization to protect lenders.",
-        "market_impact_en": "This development could increase demand for tokenized stocks and DeFi lending platforms, potentially affecting liquidity and sentiment in the broader crypto market. However, the exact impact depends on adoption and market conditions, with no guaranteed directional moves.",
-        "title_zh": "Coinbase 将代币化股票引入 DeFi 作为抵押品",
-        "detailed_summary_zh": "Coinbase 现在允许用户将代币化股票用作去中心化金融 (DeFi) 借贷协议中的抵押品。此举将传统股票与去中心化借贷市场连接起来。\n\n通过启用代币化股票作为抵押品，Coinbase 连接了传统金融与 DeFi，可能提升链上股票代币的实用性和流动性。这可能吸引更多机构和散户参与者进入去中心化借贷平台。\n\n代币化股票是基于区块链的传统股票代表，通常由托管机构持有的真实证券按 1:1 比例支持。在 DeFi 借贷中，抵押品被锁定在智能合约中以借入稳定币，并面临因价格波动导致的过度抵押和清算风险。",
-        "background_zh": "代币化股票是在区块链上发行的公司股票数字版本，旨在跟踪标的股票的价格。去中心化借贷协议允许用户通过将抵押品存入智能合约来借入资产，通常需要超额抵押以保护贷方。",
-        "market_impact_zh": "这一进展可能会增加对代币化股票和 DeFi 借贷平台的需求，可能影响更广泛加密市场的流动性和情绪。然而，实际影响取决于采用情况和市场条件，不保证有任何确定性的方向性变动。",
-        "sources": [
-          {
-            "url": "https://www.binance.bh/en/academy/articles/what-are-tokenized-stocks",
-            "title": "What Are Tokenized Stocks? | Binance Academy"
-          },
-          {
-            "url": "https://blog.sei.io/defi/lending/what-is-collateral-in-defi-lending-and-how-does-it-work/",
-            "title": "What Is Collateral in DeFi Lending and How Does It Work?"
-          },
-          {
-            "url": "https://www.bitstamp.net/learn/web3/what-is-decentralized-lending-and-borrowing/",
-            "title": "Decentralized Lending & Borrowing: A Complete Guide"
-          }
-        ],
-        "thread_id": "t0b68bfec21",
-        "thread_day": 2
-      },
-      "ai_score": 7.5,
-      "ai_reason": null,
-      "ai_summary": "Coinbase now enables tokenized stock shares to be used as collateral in DeFi, linking traditional equities to decentralized lending.",
-      "ai_tags": []
-    },
-    {
-      "id": "google_news:article:c95d963a7db791eb",
-      "source_type": "google_news",
-      "title": "Court Allows Coinbase Investor Class Action to Proceed Over Bankruptcy Risk Disclosures - CryptoRank",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdEZIbzloZ1NDWE9fa1BSUWVlZ1hyOElxWE9sa25MVTN3c2tldXJCcTdENWZwVW1KNDRDMUVvMV9mSjBCOE5QN1NyOWs4ZUxCVHVja1htek9zdXFfa1J2WTVSZUs1OVN6aS04QmhVYkJLNUVfdmpBQVg0aV9rek1SS1MzX2lZeWl6?oc=5",
-      "content": null,
-      "author": "CryptoRank",
-      "published_at": "2026-08-25T04:22:04Z",
-      "fetched_at": "2026-08-26T02:14:54.656673Z",
-      "metadata": {
-        "category": "crypto-regulation",
-        "merged_sources": [
-          "CryptoRank"
-        ],
-        "title_en": "Court Lets Coinbase Investor Class Action Over Bankruptcy Disclosures Proceed",
-        "detailed_summary_en": "A U.S. federal judge ruled that a Coinbase investor class action may proceed, rejecting the exchange's attempt to dismiss claims that it inadequately disclosed bankruptcy risks. The ruling is procedural and does not decide the merits of the investors' allegations.\n\nThe decision could pressure crypto exchanges to more clearly disclose how customer assets would be treated in a bankruptcy, a concern that intensified after the collapses of FTX and other crypto platforms. It also underscores the legal exposure of major U.S. exchanges to securities class actions over their disclosures.\n\nThe class action survived the motion-to-dismiss stage, meaning the court found the plaintiffs' claims legally plausible enough to continue toward discovery. As this is an early-stage ruling, the final outcome could still take years to resolve.",
-        "background_en": "In the crypto industry, customer assets held by exchanges have faced legal uncertainty in insolvency proceedings, highlighted by the failures of Celsius, Voyager, and FTX. U.S. securities law requires public companies to disclose material risks, and investor class actions are a common mechanism for challenging allegedly misleading statements. This case tests how those disclosure obligations apply to bankruptcy risks at crypto exchanges, and the ruling allows the litigation to advance beyond the pleading stage.",
-        "market_impact_en": "The ruling transmits to markets mainly through the legal and regulatory channel: it raises the prospect of higher litigation and compliance costs for Coinbase and contributes to the disclosure-risk narrative for U.S. crypto exchanges. Because it is a procedural decision rather than a final judgment, its direct and immediate market transmission is limited, though it may influence sentiment on Coinbase stock and exchange-related tokens over time.",
-        "title_zh": "法院允许Coinbase投资者就破产风险披露提起的集体诉讼继续推进",
-        "detailed_summary_zh": "一名美国联邦法官裁定，针对Coinbase的投资者集体诉讼可以继续推进，驳回了该交易所要求驳回其未充分披露破产风险指控的动议。该裁决属于程序性裁定，并未对投资者的指控作出实体判决。\n\n该裁决可能促使加密货币交易所更清晰地披露客户资产在破产情况下将如何处理，这一问题在FTX等加密平台倒闭后变得更加突出。它也凸显了美国大型交易所因披露问题面临证券集体诉讼的法律风险。\n\n该集体诉讼成功越过了驳回动议阶段，意味着法院认为原告的诉讼请求在法律上具有充分合理性，可以进入证据开示程序。由于这是案件初期的裁决，最终结果可能仍需数年才能尘埃落定。",
-        "background_zh": "在加密行业，交易所持有的客户资产在破产程序中一直面临法律不确定性，Celsius、Voyager和FTX的倒闭凸显了这一问题。美国证券法要求上市公司披露重大风险，投资者集体诉讼是质疑涉嫌误导性陈述的常见机制。本案考验了这些披露义务如何适用于加密货币交易所的破产风险，而该裁决允许诉讼进入审理的下一阶段。",
-        "market_impact_zh": "该裁决主要通过法律与监管渠道传导至市场：它增加了Coinbase诉讼和合规成本上升的可能性，并强化了美国加密货币交易所的披露风险叙事。由于这是一项程序性裁定而非最终判决，其对市场的直接和即时传导有限，但长期可能影响Coinbase股价及交易所相关代币的情绪。",
-        "thread_id": "t7f332bac71",
-        "thread_day": 1
-      },
-      "ai_score": 7.5,
-      "ai_reason": null,
-      "ai_summary": "A court has allowed a Coinbase investor class action to proceed over bankruptcy risk disclosures.",
-      "ai_tags": []
-    },
-    {
-      "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:474c0241ca4d4142",
-      "source_type": "rss",
-      "title": "South Korea trade giant POSCO brings trade receivables to Avalanche in latest tokenization move",
-      "url": "https://www.coindesk.com/business/2026/08/25/south-korea-trade-giant-posco-brings-trade-receivables-to-avalanche-in-latest-tokenization-move",
-      "content": null,
-      "author": "Krisztian Sandor",
-      "published_at": "2026-08-25T19:40:00Z",
-      "fetched_at": "2026-08-26T02:14:56.520528Z",
-      "metadata": {
-        "feed_name": "CoinDesk",
-        "category": "crypto-markets",
-        "title_en": "POSCO tokenizes trade receivables on Avalanche in enterprise RWA push",
-        "detailed_summary_en": "South Korean industrial conglomerate POSCO is tokenizing trade receivables on the Avalanche blockchain. This marks the latest real-world asset tokenization push by a traditional corporate giant entering crypto infrastructure.\n\nThis move signals growing institutional adoption of tokenization by major global conglomerates, beyond crypto-native issuers. It also strengthens Avalanche's positioning as an enterprise-grade blockchain for real-world asset markets.\n\nTrade receivables represent invoices or payments owed to a company, and tokenizing them can improve liquidity and transparency in trade finance. While the exact value and structure of POSCO's tokenized assets were not disclosed, the project is part of a broader trend of corporations exploring on-chain capital markets.",
-        "background_en": "Real-world asset (RWA) tokenization is the process of creating a digital token on a blockchain that represents ownership or legal rights to traditional assets such as invoices, bonds, or real estate. Avalanche is a public smart-contract platform launched in 2020 by Ava Labs, designed for enterprise use with a novel consensus mechanism. The broader RWA tokenization market has grown rapidly, with on-chain RWA volume reportedly surpassing $33 billion.",
-        "market_impact_en": "The announcement could reinforce positive sentiment around Avalanche and the broader RWA tokenization sector; if institutional activity grows, demand for AVAX as a network utility asset may increase. Actual market effects depend on whether the project scales beyond this initial move.",
-        "title_zh": "浦项制铁在Avalanche上代币化贸易应收账款，推动企业级RWA应用",
-        "detailed_summary_zh": "韩国工业巨头浦项制铁（POSCO）正在Avalanche区块链上将贸易应收账款代币化。这是传统企业巨头进入加密基础设施的最新一次现实世界资产代币化举措。\n\n此举表明，除加密原生发行方外，全球大型企业集团对代币化的机构采用正在增长。同时，它也巩固了Avalanche作为面向现实世界资产市场的企业级区块链的定位。\n\n贸易应收账款指企业应收的发票或款项，将其代币化可以提升贸易融资领域的流动性和透明度。虽然浦项制铁代币化资产的具体金额和结构未披露，但该项目是企业探索链上资本市场这一更广泛趋势的一部分。",
-        "background_zh": "现实世界资产（RWA）代币化是指在区块链上创建代表传统资产（如发票、债券或房地产）所有权或法律权利的数字代币。Avalanche是Ava Labs于2020年推出的公共智能合约平台，通过新颖的共识机制面向企业应用。更广泛的RWA代币化市场增长迅速，链上RWA总量据报道已超过330亿美元。",
-        "market_impact_zh": "这一公告可能强化围绕Avalanche和更广泛RWA代币化领域的积极情绪；如果机构活动增加，AVAX作为网络效用资产的需求可能上升。实际市场影响取决于该项目能否在此次初步行动之后进一步扩展。",
-        "sources": [
-          {
-            "url": "https://en.wikipedia.org/wiki/Avalanche_(blockchain_platform)",
-            "title": "Avalanche (blockchain platform)"
-          },
-          {
-            "url": "https://investax.io/blog/what-is-real-world-asset-rwa-tokenization",
-            "title": "What Is Real-World Asset (RWA) Tokenization? A Full Guide for ..."
-          },
-          {
-            "url": "https://www.avax.network/",
-            "title": "Custom Blockchains for Enterprise | Avalanche"
-          }
-        ],
-        "thread_id": "t5474b6ffa7",
-        "thread_day": 1
-      },
-      "ai_score": 7.0,
-      "ai_reason": null,
-      "ai_summary": "South Korean industrial giant POSCO is tokenizing trade receivables on the Avalanche blockchain, marking another major real-world asset tokenization move by a traditional corporation.",
+      "ai_summary": "Term Finance permanently shuts down Meta Vaults after an exploit estimated by PeckShield at $8.5 million, with withdrawals still open but the shortfall unquantified.",
       "ai_tags": []
     }
   ],

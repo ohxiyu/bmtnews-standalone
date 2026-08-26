@@ -6,37 +6,37 @@
   <id>https://bmt.news/feeds/technology-zh.xml</id>
   <updated>2026-08-26T00:00:00Z</updated>
   <entry>
-    <title>OpenAI 的 Jalapeño 芯片据称性能超越英伟达处理器</title>
+    <title>OpenAI自研Jalapeño芯片测试表现超越英伟达Blackwell</title>
     <link href="https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"/>
     <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49434378</id>
     <updated>2026-08-26T00:00:00Z</updated>
-    <summary>OpenAI 与博通（Broadcom）联合设计的自研推理芯片“Jalapeño”据称在测试中表现优于英伟达处理器，能以更低功耗为现代大语言模型提供更快、更高效的推理。SemiAnalysis 结合彭博社的报道发布分析，但这些说法尚未得到独立验证。
+    <summary>根据SemiAnalysis的报告及彭博社的印证，OpenAI与博通合作开发的定制推理芯片&#x27;Jalapeño&#x27;在早期基准测试中的表现超越了英伟达的Blackwell GPU。该芯片在推理任务上展现出更高的吞吐量和更好的能效。
 
-如果这一说法得到证实，将可能改变 AI 基础设施格局，使 OpenAI 在推理成本和能源效率上获得竞争优势，并减少对英伟达 GPU 的依赖。这也反映出大型科技公司越来越倾向于针对 AI 工作负载优化定制芯片的趋势。
+这标志着AI硬件格局可能发生转变，表明定制推理芯片能与英伟达的主导产品抗衡。如果该结果得到确认，将可能降低OpenAI对英伟达的依赖，并促使其他大型AI实验室推进自研芯片。
 
-Jalapeño 是一款专为 LLM 推理打造的定制 ASIC，据报道与 OpenAI 到 2029 年 10 GW 的基础设施承诺相关。社区讨论指出，其裸片尺寸与英伟达 Rubin 相当，NVFP4 PFLOPs 约为后者的三分之一，并支持 FP4 等低精度格式。</summary>
+该结果基于SemiAnalysis的InferenceX基准测试，OpenAI硬件负责人Richard Ho称性能提升&#x27;非常非常显著&#x27;。对比主要集中于FP4精度和推理专用指标，据报道该芯片裸片尺寸与英伟达Rubin相近，但NVFP4峰值算力约为其三分之一。</summary>
   </entry>
   <entry>
-    <title>苹果发布搭载M5 Max与M5 Ultra的新款Mac Studio</title>
-    <link href="https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/"/>
-    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49433316</id>
+    <title>苹果发布M6与M5 Ultra芯片，AI计算能力大幅跃升</title>
+    <link href="https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49433292</id>
     <updated>2026-08-26T00:00:00Z</updated>
-    <summary>苹果推出了搭载M5 Max和M5 Ultra芯片的新款Mac Studio，最高配备256GB统一内存，并主打本地AI性能。M5 Ultra通过UltraFusion连接两颗M5 Max芯片，芯片间带宽超过4.4TB/s。
+    <summary>2026年8月25日，苹果发布了M6和M5 Ultra芯片，其中M6是苹果首款2纳米芯片，而M5 Ultra是苹果迄今最强大的芯片。M6配备12核CPU、12核GPU和双16核神经引擎，M5 Ultra则采用四芯片（quad-die）架构，性能相比M5 Max翻倍。
 
-此次发布标志着苹果持续加码端侧AI，为开发者和专业人士提供了一台高带宽、大内存的设备，可以直接在本地运行大型语言模型。这表明本地AI计算市场竞争日益激烈，并可能使部分AI工作负载从云端转移至本地。
+此次发布标志着苹果Mac产品线在性能和AI计算方面的重大飞跃，巩固了其在高端计算和AI工作负载领域的地位。开发者和创意专业人士将获得明显更快的设备，苹果也通过2纳米制程技术继续推动芯片设计的边界。
 
-M5 Ultra是苹果首款四芯片（quad-die）设计，通过UltraFusion连接两颗双芯片M5 Max封装，Mac Studio最高可提供1.2TB/s的内存带宽。它还配备了基于PCIe Gen 6的新一代SSD，存储性能最高可达上一代的两倍，并支持120Gb/s的Thunderbolt 5外部接口。</summary>
+M6是苹果首款采用2纳米制程的芯片，配备12核CPU、12核GPU和双16核神经引擎，AI性能翻倍。M5 Ultra是苹果首款四芯片（quad-die）芯片，通过UltraFusion技术将两个M5 Max芯片组合而成，新款Mac Studio可选配最高256GB内存（512GB版本将于10月推出）和16TB存储。</summary>
   </entry>
   <entry>
-    <title>Qwen发布Qwen 3.8-Flash-Next：125B参数MoE模型，激活参数6B</title>
+    <title>Qwen3.8-Flash-Next 明日发布：125B MoE 模型，仅 6B 激活参数</title>
     <link href="https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"/>
     <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49432317</id>
     <updated>2026-08-26T00:00:00Z</updated>
-    <summary>Qwen宣布即将发布Qwen 3.8-Flash-Next，这是一款混合专家（MoE）模型，总参数为125B，而每次token仅激活6B参数。该模型预计明天在ModelScope上发布。
+    <summary>Qwen 宣布即将发布 Qwen3.8-Flash-Next，这是一款混合专家（MoE）模型，总参数 125B，每个 token 仅激活 6B 参数。该模型将于明日上线 ModelScope。
 
-该模型极低的激活参数比例（6B）使其能够在128GB Strix Halo或Mac Studio等大内存消费硬件上运行，有望将前沿模型质量带入本地推理。此次发布可能加速本地AI趋势，让竞争性模型无需数据中心GPU即可使用。
+该发布将具有竞争力的模型质量带入了高端消费级硬件的可运行范围，因为仅 6B 激活参数大幅降低了每 token 计算量，而 125B 总参数仍需较大内存。它有望显著推动本地推理生态，使强大的开源权重模型能在 Strix Halo、GB10 和新 Mac Studio 等设备上实用化。
 
-Qwen 3.8-Flash-Next采用混合专家架构，路由网络每个token仅调用一小部分专家，在保留125B参数知识容量的同时大幅降低计算成本。公告中未披露具体的上下文窗口、许可证和基准分数。</summary>
+该 MoE 设计使用门控网络将每个 token 路由到少数专家，因此 125B 总权重决定内存占用，而 6B 激活参数决定计算量与推理速度。模型页面已上线 ModelScope，实际部署很可能需要依赖量化以及能将 MoE 层分布到 CPU/内存与 GPU/显存上的推理引擎。</summary>
   </entry>
   <entry>
     <title>seL4安全证明在AArch64上完成</title>

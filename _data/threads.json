@@ -1,28 +1,40 @@
 {
   "threads": [
     {
-      "thread_id": "t4eace9a087",
-      "latest_date": "2026-08-26",
-      "first_date": "2026-08-21",
-      "days": 2,
-      "entries": 2,
-      "category": "crypto",
-      "title_zh": "LayerZero推出基于Zero区块链的ATLAS交易所基础设施，ZRO代币上涨",
-      "title_en": "ZRO surges as LayerZero unveils ATLAS exchange infrastructure on Zero blockchain",
-      "summary_zh": "2026年8月25日，LayerZero宣布推出ATLAS，这是一个基于其Zero区块链构建的无前端交易所基础设施，服务于交易平台和金融机构。该系统将交易场所费用中75%的净收入用于ZRO回购和销毁，并向交易场所支付最高65%的回扣。\n\n这标志着LayerZero从互操作协议扩展至机构资本市场基础设施领域。ATLAS使交易场所和金融机构无需从零构建即可运营自己的交易所，可能加速Zero区块链的机构采用，并通过其回购销毁机制为ZRO创造结构性需求。\n\nATLAS被称为“无头”系统——它没有面向消费者的前端或自己的交易场所，而是将撮合、清算、结算和风险管理整合为单一系统。该平台运行在Zero上，Zero是专为机构使用设计的Layer 1区块链，具有多核执行和原生互操作性，并得到了包括Citadel Securities、Ark Invest、DTCC、ICE和Google Cloud在内的公司支持。",
-      "summary_en": "On August 25, 2026, LayerZero announced ATLAS, a headless exchange infrastructure built on its Zero blockchain for trading platforms and financial institutions. The system routes 75% of post-venue trading fees into ZRO buybacks and burns and pays trading venues rebates of up to 65%.\n\nThis marks LayerZero's expansion from an interoperability protocol into institutional capital markets infrastructure. ATLAS enables trading venues and financial institutions to operate their own exchanges without building one from scratch, potentially accelerating institutional adoption of Zero blockchain and creating structural demand for ZRO through its buyback-and-burn mechanism.\n\nATLAS is described as 'headless'—it has no consumer-facing frontend or trading venue of its own; instead it provides matching, clearing, settlement, and risk management as a single integrated system. The platform runs on Zero, a Layer-1 blockchain designed for institutional use, featuring multi-core execution and native interoperability, and backed by firms including Citadel Securities, Ark Invest, DTCC, ICE, and Google Cloud."
-    },
-    {
       "thread_id": "t66352c3090",
       "latest_date": "2026-08-26",
       "first_date": "2026-08-22",
       "days": 2,
       "entries": 2,
       "category": "crypto",
-      "title_zh": "Cosmos Labs 敦促 EVM 链暂停，共享漏洞致三条网络被盗",
-      "title_en": "Cosmos Labs Urges Halt on EVM Chains After Shared Bug Drains Three Networks",
-      "summary_zh": "Cosmos Labs 敦促受影响网络的验证者暂停其链，因为其 Cosmos EVM 模块中的共享漏洞导致三个区块链上的资金被抽走。该漏洞上周在没有安全公告的情况下被悄然修补，引起了安全界的批评。\n\n这起事件暴露了共享基础设施的系统性风险：一个在广泛使用的模块中的漏洞可能同时导致多条链被抽走资金。它也凸显了静默修补的危险，这种修补方式可能使下游网络在升级前仍然暴露在漏洞中。\n\nKiiChain 损失了近 1.5 亿个 KII 代币（当时价值约 900 万美元，随后仅被抛售为 160 万美元 BUSD），而 TAC 的质押合约中被盗走 30 亿个 TAC 代币（约 750 万美元）。KiiChain 的事后分析报告称，三个根本缺陷中有两个仍在上游未修复。",
-      "summary_en": "Cosmos Labs has urged validators of affected networks to halt their chains after a shared vulnerability in its Cosmos EVM module drained funds on three blockchains. The bug was quietly patched last week without a security advisory, drawing criticism from the security community.\n\nThis incident exposes the systemic risk of shared infrastructure: a single bug in a widely used module can drain multiple chains simultaneously. It also highlights the dangers of silent patching, which can leave downstream networks vulnerable before they can upgrade.\n\nKiiChain lost nearly 150 million KII tokens (worth about $9 million at the time, later dumped for only $1.6 million BUSD), while TAC lost 3 billion TAC tokens (about $7.5 million) from its staking contract. KiiChain's post-mortem says two of the three underlying defects remain unfixed upstream."
+      "title_zh": "Cosmos Labs 紧急呼吁 EVM 链暂停：共享漏洞导致三条网络被盗",
+      "title_en": "Cosmos Labs Urges EVM Chains to Halt as Shared Bug Drains Three Networks",
+      "summary_zh": "Cosmos Labs 呼吁基于其共享堆栈构建的 EVM 链暂停运营，因为一个漏洞导致三条网络被盗。受影响链之一 KiiChain 报告损失了 1.48 亿枚代币，而暂停建议是在补丁发布六天后才发出，且当时未发布公开安全公告。\n\nCosmos EVM 堆栈的共享漏洞意味着许多链可能同时暴露在风险中，而不仅仅是单个网络。此类事件可能削弱用户对生态系统的信任，并凸显跨链协调安全披露的迫切必要性。\n\nKiiChain 表示，三个底层缺陷中有两个在上游仍未修复。补丁发布与公开安全公告之间的延迟，可能让其他链未能及时意识到这一严重风险。",
+      "summary_en": "Cosmos Labs recommended that EVM chains built on its shared stack halt operations after a vulnerability drained three networks. KiiChain, one of the affected chains, reported losing 148 million tokens, and the halt advisory came six days after a patch shipped without a public security advisory.\n\nA shared vulnerability in the Cosmos EVM stack means many chains may be exposed at once, not just a single network. This incident can undermine trust in the ecosystem and highlights the critical need for coordinated security disclosure across interconnected chains.\n\nKiiChain stated that two of the three underlying defects remain unfixed upstream. The delay between the patch release and the public advisory may have left other chains unaware of the critical risk."
+    },
+    {
+      "thread_id": "te3bc28ddab",
+      "latest_date": "2026-08-26",
+      "first_date": "2026-08-24",
+      "days": 3,
+      "entries": 4,
+      "category": "crypto",
+      "title_zh": "Term Finance 在 850 万美元攻击后永久关闭 Meta Vaults",
+      "title_en": "Term Finance Permanently Shuts Meta Vaults After $8.5M Exploit",
+      "summary_zh": "Term Finance 在遭遇 PeckShield 估计为 850 万美元的攻击后，永久关闭了其 Meta Vaults 产品。该协议表示提款仍然开放，但其 8 月 23 日的更新并未量化剩余金库资产或缺口。\n\n这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。\n\nPeckShield 追踪到约 2,843 枚 ETH 和 168 万枚 USDC 被抽走，攻击者还将 USDC 换成了 DAI。Yearn 确认该攻击针对的是 Term 的自定义治理包装器，而非标准 Yearn V3 金库；DeFiPrime 指出存在六天的提案开放空窗期，可能促成了此次接管。",
+      "summary_en": "Term Finance has permanently shut down its Meta Vaults product following an exploit estimated at $8.5 million by PeckShield. The protocol says withdrawals remain open, but its Aug. 23 update did not quantify remaining vault assets or the shortfall.\n\nThis is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.\n\nPeckShield tracked roughly 2,843 ETH and 1.68 million USDC drained, with the attacker swapping USDC for DAI. Yearn confirmed that the exploit targeted Term's custom governance wrapper, not standard Yearn V3 vaults, and DeFiPrime noted a six-day open proposal gap that likely enabled the takeover."
+    },
+    {
+      "thread_id": "t72b4e44581",
+      "latest_date": "2026-08-26",
+      "first_date": "2026-08-25",
+      "days": 2,
+      "entries": 2,
+      "category": "crypto",
+      "title_zh": "Ledger 修复以太坊应用漏洞，可致签名交易被替换",
+      "title_en": "Ledger Patches Ethereum App Bug That Could Swap Signed Transactions",
+      "summary_zh": "Ledger 发布了以太坊应用 1.22.2 版本，阻止签名会话替换和不匹配的批准回调，这些漏洞可能让恶意 dApp 获得与屏幕显示内容不同的数据的签名。该修复于 8 月 13 日在 GitHub 打上标签，变更日志日期为 8 月 12 日。\n\n硬件钱包的核心安全承诺是向用户准确展示所签署的内容，因此交易替换漏洞威胁到 Ledger 等设备的核心信任。由于 Ledger 是最广泛使用的硬件钱包产品线之一，这次修复对众多以太坊用户很重要，他们需要更新到 1.22.2 版本。\n\n报告该问题的安全公司 TestMachine 表示，攻击需要具有 WebHID 访问权限的 dApp，并已在 Ledger Flex 上验证；该公司称共享代码使该漏洞影响 Nano X、Nano S Plus、Stax 和 Apex。Ledger 首席技术官 Charles Guillemet 表示，Ledger Donjon 在公开披露前约两周发现了该漏洞，目前尚未确认有野外利用或资金损失。",
+      "summary_en": "Ledger released Ethereum app version 1.22.2 to block signing-session replacement and mismatched approval callbacks that could let a malicious dApp obtain a signature for data different from what is shown on screen. The fix was tagged on GitHub on Aug. 13, with the changelog dated Aug. 12.\n\nHardware wallets are trusted to display exactly what a user signs, so a transaction-substitution flaw threatens the core security promise of devices like the Ledger. Because Ledger is one of the most widely used hardware wallet lines, this patch matters for many Ethereum users who must update to 1.22.2.\n\nTestMachine, the security firm that reported the issue, said the attack requires a dApp with WebHID access and was validated on Ledger Flex; it claims shared code extends the flaw to Nano X, Nano S Plus, Stax, and Apex. Ledger CTO Charles Guillemet said Ledger Donjon found the bug about two weeks before the public disclosure, and no in-the-wild exploit or lost funds have been confirmed."
     },
     {
       "thread_id": "t0b68bfec21",
@@ -31,10 +43,10 @@
       "days": 2,
       "entries": 4,
       "category": "crypto",
-      "title_zh": "Coinbase 将代币化股票引入 DeFi 作为抵押品",
-      "title_en": "Coinbase Enables Tokenized Stocks as DeFi Collateral",
-      "summary_zh": "Coinbase 现在允许用户将代币化股票用作去中心化金融 (DeFi) 借贷协议中的抵押品。此举将传统股票与去中心化借贷市场连接起来。\n\n通过启用代币化股票作为抵押品，Coinbase 连接了传统金融与 DeFi，可能提升链上股票代币的实用性和流动性。这可能吸引更多机构和散户参与者进入去中心化借贷平台。\n\n代币化股票是基于区块链的传统股票代表，通常由托管机构持有的真实证券按 1:1 比例支持。在 DeFi 借贷中，抵押品被锁定在智能合约中以借入稳定币，并面临因价格波动导致的过度抵押和清算风险。",
-      "summary_en": "Coinbase now allows users to use tokenized stock shares as collateral in decentralized finance (DeFi) lending protocols. This move connects traditional equities with decentralized lending markets.\n\nBy enabling tokenized equities as collateral, Coinbase bridges traditional finance and DeFi, potentially increasing the utility and liquidity of on-chain stock tokens. This could draw more institutional and retail participants to decentralized lending platforms.\n\nTokenized stocks are blockchain-based representations of traditional shares, often backed 1:1 by real securities held in custody. In DeFi lending, collateral is locked in smart contracts to borrow stablecoins, with over-collateralization and liquidation risks from price volatility."
+      "title_zh": "Coinbase在Base网络上推出代币化美股，集成Chainlink价格预言机",
+      "title_en": "Coinbase Launches Tokenized US Stocks on Base with Chainlink Price Feeds",
+      "summary_zh": "Coinbase已在Base Layer-2网络上推出代币化美股，并集成Chainlink价格预言机，为这些链上股票提供准确可靠的定价。此举将传统股票交易与去中心化金融（DeFi）生态连接起来。\n\n这是一项重要的市场结构发展，将传统金融与DeFi连接起来，可能通过24/7区块链交易扩大全球用户对美国股票的可及性。这也表明机构对资产代币化的兴趣日益增长，并提升了Coinbase Base网络和Chainlink预言机基础设施的实用性。\n\nBase是Coinbase的以太坊Layer-2链，旨在提供低成本和开发者友好的链上应用，目前不计划发行原生代币。Chainlink价格预言机通过一组去中心化的独立节点运营商聚合多个来源的数据，帮助保障代币化资产的定价。代币化股票通常在区块链上代表真实世界的股票，并可与DeFi协议进行组合。",
+      "summary_en": "Coinbase has launched tokenized US stocks on its Base layer-2 network, integrating Chainlink Price Feeds to provide accurate and reliable pricing for these on-chain equities. This move connects traditional stock trading with the decentralized finance (DeFi) ecosystem.\n\nThis is a significant market-structure development that bridges traditional finance and DeFi, potentially expanding access to US equities for global users through 24/7 blockchain trading. It also signals growing institutional interest in asset tokenization and increases the utility of Coinbase's Base network and Chainlink's oracle infrastructure.\n\nBase is Coinbase's Ethereum Layer-2 chain designed for low-cost, developer-friendly on-chain applications, and it does not currently plan to issue a native token. Chainlink Price Feeds aggregate data from multiple sources via a decentralized set of independent node operators, helping secure tokenized asset pricing. Tokenized stocks typically represent real-world equities on blockchain, enabling composability with DeFi protocols."
     },
     {
       "thread_id": "tbdf211e6dd",
@@ -47,18 +59,6 @@
       "title_en": "BitMart suggests restructuring weeks after closure announcement",
       "summary_zh": "BitMart宣布正在探讨一项潜在的重组计划，可能包括分阶段恢复部分业务并向债权人进行分配。这距离该交易所宣布将于2027年1月31日前停止所有运营仅数周。\n\n从完全关闭转向重组表明BitMart深陷财务困境，并引发对用户资金安全的质疑。这也凸显了加密货币交易所行业的不稳定性，影响用户信任和市场信心。\n\n重组法律顾问White & Case已受聘评估各种选项，路线图预计最迟于2026年9月9日发布。BitMart首席产品官Terence Lee辞职，而首席执行官Nathan Chow在关闭公告前已被解雇，且未被告知该公告。",
       "summary_en": "BitMart has announced it is exploring a potential restructuring plan, which may include the phased resumption of certain operations alongside distributions to creditors. This comes just weeks after the exchange announced it would cease all operations by January 31, 2027.\n\nThe shift from total shutdown to restructuring indicates ongoing financial distress at BitMart and raises questions about the safety of user funds. It also underscores broader instability in the crypto exchange sector, affecting user trust and market confidence.\n\nRestructuring counsel White & Case has been hired to assess options, and a roadmap is expected no later than September 9, 2026. BitMart's Chief Product Officer Terence Lee resigned, while CEO Nathan Chow was terminated before the closure announcement and was not informed of it."
-    },
-    {
-      "thread_id": "te3bc28ddab",
-      "latest_date": "2026-08-25",
-      "first_date": "2026-08-24",
-      "days": 2,
-      "entries": 3,
-      "category": "crypto",
-      "title_zh": "以太坊借贷应用Term Finance遭治理攻击损失850万美元",
-      "title_en": "Ethereum Lending App Term Finance Loses $8.5M in Governance Exploit",
-      "summary_zh": "Term Labs开发的以太坊借贷协议Term Finance遭到治理攻击，攻击者通过购买投票权操纵协议，导致其金库损失约850万美元。安全公司PeckShield和CertiK于2026年8月23日确认了此次损失估算。\n\n此次事件突显了DeFi中一种新颖的攻击方式：攻击者利用治理代币投票权而非智能合约代码漏洞来盗取资金。这凸显了依赖链下参数或治理控制的借贷协议正面临日益增长的风险。\n\n攻击者专门购买了足够的投票权，以通过一项影响Term Finance金库的恶意治理提案。区块链安全公司PeckShield和CertiK估计损失约为850万美元，Term Labs已确认该事件。",
-      "summary_en": "Term Finance, an Ethereum lending protocol developed by Term Labs, lost about $8.5 million after an attacker acquired voting power and executed a governance exploit against its vaults. Security firms PeckShield and CertiK confirmed the estimated loss on August 23, 2026.\n\nThis incident highlights a novel attack vector in DeFi where governance token voting power, rather than a smart contract code bug, is used to drain funds. It underscores growing risks for lending protocols that rely on off-chain or governance-controlled parameters.\n\nThe attacker specifically acquired sufficient voting power to pass a malicious governance proposal affecting Term Finance vaults. The loss was estimated at roughly $8.5 million by blockchain security firms PeckShield and CertiK, with Term Labs confirming the event."
     },
     {
       "thread_id": "tbc6034e4ae",
