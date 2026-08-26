@@ -10,7 +10,15 @@
 # host default, which is why the archive, threads, entities and feeds are
 # listed rather than left to inherit.
 
-/assets/*
+# CSS and JavaScript must recover quickly if markup and assets ever deploy out
+# of step. Fingerprinted query strings remain the primary cache-busting layer.
+/assets/css/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/images/*
   Cache-Control: public, max-age=31536000, immutable
 
 /admin/*
@@ -22,11 +30,11 @@
 # Today's edition: republished during the morning window, so it is checked
 # often but still served from cache while revalidating.
 /
-  Cache-Control: public, max-age=300, stale-while-revalidate=60
+  Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=300, stale-while-revalidate=60
 
 /en/*
-  Cache-Control: public, max-age=300, stale-while-revalidate=60
+  Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=300, stale-while-revalidate=60
 
 /editions/*
