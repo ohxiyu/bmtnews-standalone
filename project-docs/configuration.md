@@ -650,7 +650,9 @@ a channel after the daily summary is generated. It is separate from
     "languages": ["zh"],
     "site_url": "https://bmt.news/",
     "required": false,
-    "max_message_chars": 3900
+    "max_message_chars": 3900,
+    "featured_items": 3,
+    "max_items": 10
   }
 }
 ```
@@ -668,6 +670,10 @@ a channel after the daily summary is generated. It is separate from
 - `max_message_chars`: Maximum rendered message size. Keep this at or below
   Telegram's 4096-character `sendMessage` limit. The renderer keeps whole HTML
   blocks and links instead of cutting through markup.
+- `featured_items`: Number of leading stories that include one complete lead
+  sentence. Remaining stories use a compact title-only list.
+- `max_items`: Maximum number of ranked story titles in the channel message;
+  omitted stories remain available through the full-edition link.
 
 Online setup requires no local service:
 
@@ -675,7 +681,9 @@ Online setup requires no local service:
 2. Add the bot to the destination channel as an administrator with permission
    to post messages.
 3. In GitHub, open **Settings → Secrets and variables → Actions** and create
-   `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHANNEL_ID` repository secrets.
+   `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHANNEL_ID` repository secrets. The
+   channel value may be `@channelname`, a plain username, a `t.me` URL, or the
+   channel's `-100…` numeric ID.
 4. Run **BMTNews Daily Edition** manually with `force_publish` enabled to verify
    the first channel message. Normal 08:30 publications send automatically.
 

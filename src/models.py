@@ -483,6 +483,8 @@ class TelegramDeliveryConfig(BaseModel):
     site_url: str = "https://bmt.news/"
     required: bool = False
     max_message_chars: int = Field(default=3900, ge=512, le=4096)
+    featured_items: int = Field(default=3, ge=0, le=10)
+    max_items: int = Field(default=10, ge=1, le=20)
 
     @field_validator("site_url")
     @classmethod
@@ -491,6 +493,14 @@ class TelegramDeliveryConfig(BaseModel):
         if parsed.scheme not in {"http", "https"} or not parsed.netloc:
             raise ValueError("telegram_delivery.site_url must be an HTTP(S) URL")
         return value
+
+    @model_validator(mode="after")
+    def validate_item_limits(self) -> "TelegramDeliveryConfig":
+        if self.featured_items > self.max_items:
+            raise ValueError(
+                "telegram_delivery.featured_items must not exceed max_items"
+            )
+        return self
 
 
 class XDeliveryConfig(BaseModel):
