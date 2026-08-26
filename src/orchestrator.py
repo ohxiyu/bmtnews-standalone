@@ -1,6 +1,7 @@
 """Main orchestrator coordinating the entire workflow."""
 
 import asyncio
+import time
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date as date_type, datetime, timedelta, timezone
@@ -33,9 +34,11 @@ from .scrapers.gdelt import GDELTScraper
 from .scrapers.google_news import GoogleNewsScraper
 from .ai.client import create_ai_client
 from .ai.analyzer import ContentAnalyzer
-from .ai.summarizer import DailySummarizer, generate_edition_overview
+from .ai.summarizer import DailySummarizer, generate_edition_overviews
 from .ai.enricher import ContentEnricher
-from .ai.tokens import get_usage_snapshot
+from .ai.prefilter import ContentPrefilter
+from .ai.result_cache import AnalysisResultCache, split_cached
+from .ai.tokens import get_usage_snapshot, reset_usage
 from .daily_feed import (
     DailyFeedState,
     analyzed_item_key,
@@ -81,6 +84,7 @@ from .threads import (
     collect_entities,
     collect_threads,
     fingerprint,
+    same_thread,
 )
 from .run_report import RunReport, save_run_report
 from .web_feed import _top_level_category, render_web_feed
@@ -256,6 +260,23 @@ class BMTNewsOrchestrator:
         )
         self.last_fetch_report: Optional[FetchReport] = None
         self.last_run_report: Optional[RunReport] = None
+        self._analysis_cache: AnalysisResultCache | None = None
+
+    def _result_cache(self) -> AnalysisResultCache | None:
+        if not self.config.ai.result_cache_enabled:
+            return None
+        if self._analysis_cache is None:
+            self._analysis_cache = AnalysisResultCache(
+                Path(self.config.ai.result_cache_path),
+                model=f"{self.config.ai.provider.value}:{self.config.ai.model}",
+                ttl_days=self.config.ai.result_cache_ttl_days,
+                max_entries=self.config.ai.result_cache_max_entries,
+            )
+        return self._analysis_cache
+
+    def _set_timing(self, name: str, started: float) -> None:
+        if self.last_run_report is not None:
+            self.last_run_report.add_timing(name, time.perf_counter() - started)
 
     async def run(self, force_hours: int = None) -> None:
         """Execute the complete workflow.
@@ -601,6 +622,7 @@ class BMTNewsOrchestrator:
         force_publish: bool = False,
     ) -> None:
         """Build one edition from the latest completed fixed cutoff window."""
+        reset_usage()
         timezone_name = self.config.filtering.daily_timezone
         run_started_at = now or datetime.now(timezone.utc)
         if run_started_at.tzinfo is None:
@@ -733,7 +755,9 @@ class BMTNewsOrchestrator:
                 run_started_at - timedelta(hours=fetch_hours),
                 fallback_start,
             )
+            fetch_started = time.perf_counter()
             fresh_items = await self.fetch_all_sources(since)
+            run_report.set_timing("fetch", time.perf_counter() - fetch_started)
             run_report.set_metric("fetched_raw", len(fresh_items))
             run_report.attach_fetch_report(
                 self.last_fetch_report.to_dict()
@@ -1253,6 +1277,7 @@ class BMTNewsOrchestrator:
                     {*daily_state.x_posted_languages, *newly_posted}
                 )
                 save_daily_feed_state(daily_state)
+            archive_started = time.perf_counter()
             self._publish_archive_artifacts(
                 important_items,
                 date=window.date,
@@ -1261,6 +1286,9 @@ class BMTNewsOrchestrator:
                 window_end=window.end,
                 market=published.get("market"),
                 overviews=published.get("overviews"),
+            )
+            run_report.set_timing(
+                "archive_artifacts", time.perf_counter() - archive_started
             )
             self.console.print(
                 "[bold green]✅ Daily edition completed successfully![/bold green]"
@@ -1275,6 +1303,14 @@ class BMTNewsOrchestrator:
                 )
             raise
         finally:
+            usage = get_usage_snapshot()
+            run_report.set_metric("ai_input_tokens", usage.total_input_tokens)
+            run_report.set_metric("ai_output_tokens", usage.total_output_tokens)
+            run_report.set_metric("ai_total_tokens", usage.total_tokens)
+            cache = self._result_cache()
+            if cache is not None:
+                cache.save()
+                run_report.set_metric("analysis_cache_entries", len(cache.entries))
             run_report.finish()
             save_run_report(run_report)
 
@@ -1586,6 +1622,8 @@ class BMTNewsOrchestrator:
         recomputing or re-prompting.
         """
         overviews: Dict[str, str] = {}
+        overview_objects = {}
+        publish_started = time.perf_counter()
         # Keep every reader-visible statistic on the same basis: the total
         # number of unique candidates considered for this edition.
         fetched_count = total_candidates
@@ -1611,6 +1649,15 @@ class BMTNewsOrchestrator:
                 self.console.print(
                     f"[yellow]⚠️  Overview client unavailable: {exc}[/yellow]"
                 )
+            if overview_client is not None:
+                overview_objects = await generate_edition_overviews(
+                    overview_client,
+                    items,
+                    date=date,
+                    languages=list(self.config.ai.languages),
+                )
+                for language, overview in overview_objects.items():
+                    overviews[language] = overview.as_text()
 
         for lang in self.config.ai.languages:
             summarizer = DailySummarizer(display_timezone=timezone_name)
@@ -1668,22 +1715,14 @@ class BMTNewsOrchestrator:
                     f'data-critical="{run_report.metrics.get("high_priority", 0)}">'
                     "</div>\n\n"
                 )
-                overview = None
-                if overview_client is not None:
-                    overview = await generate_edition_overview(
-                        overview_client,
-                        items,
-                        date=date,
-                        language=lang,
+                normalized_lang = "en" if lang.lower().startswith("en") else "zh"
+                overview = overview_objects.get(normalized_lang)
+                if overview is None and overview_client is not None:
+                    run_report.add_alert(
+                        "info",
+                        f"edition_overview_missing_{lang}",
+                        f"{lang.upper()} 版今日脉络生成失败，页面省略该模块。",
                     )
-                    if overview is None:
-                        run_report.add_alert(
-                            "info",
-                            f"edition_overview_missing_{lang}",
-                            f"{lang.upper()} 版今日脉络生成失败，页面省略该模块。",
-                        )
-                    else:
-                        overviews[lang] = overview.as_text()
                 web_content = render_web_feed(
                     items,
                     date=date,
@@ -1756,6 +1795,7 @@ class BMTNewsOrchestrator:
             already_posted=x_posted_languages,
             on_posted=newly_posted.append,
         )
+        run_report.set_timing("publish_outputs", time.perf_counter() - publish_started)
         return {
             "market": market_snapshot,
             "overviews": overviews,
@@ -2314,6 +2354,50 @@ class BMTNewsOrchestrator:
         if len(items) <= 1:
             return items
 
+        started = time.perf_counter()
+        original_items = items
+        prints = [
+            fingerprint(
+                title_zh=str(item.metadata.get("title_zh") or ""),
+                title_en=str(item.metadata.get("title_en") or item.title),
+                summary_zh=str(item.metadata.get("detailed_summary_zh") or ""),
+                summary_en=str(item.ai_summary or ""),
+                tags=item.ai_tags,
+            )
+            for item in items
+        ]
+        parent = list(range(len(items)))
+
+        def find(index: int) -> int:
+            while parent[index] != index:
+                parent[index] = parent[parent[index]]
+                index = parent[index]
+            return index
+
+        def union(left: int, right: int) -> None:
+            left_root, right_root = find(left), find(right)
+            if left_root != right_root:
+                parent[right_root] = left_root
+
+        for left in range(len(items)):
+            for right in range(left + 1, len(items)):
+                if same_thread(prints[left], prints[right]):
+                    union(left, right)
+        group_sizes: Dict[int, int] = defaultdict(int)
+        for index in range(len(items)):
+            group_sizes[find(index)] += 1
+        candidate_indices = [
+            index for index in range(len(items)) if group_sizes[find(index)] > 1
+        ]
+        if not candidate_indices:
+            self._set_timing("topic_dedup", started)
+            return items
+        items = [items[index] for index in candidate_indices]
+        if self.last_run_report is not None:
+            self.last_run_report.set_metric(
+                "topic_dedup_ai_candidates", len(items)
+            )
+
         from .ai.prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
         from .ai.utils import parse_json_response
 
@@ -2335,16 +2419,19 @@ class BMTNewsOrchestrator:
             if result is None:
                 if log:
                     self.console.print("[yellow]  dedup: could not parse AI response, skipping[/yellow]")
-                return items
+                self._set_timing("topic_dedup", started)
+                return original_items
 
             duplicate_groups = result.get("duplicates", [])
         except Exception as e:
             if log:
                 self.console.print(f"[yellow]  dedup: AI call failed ({e}), skipping[/yellow]")
-            return items
+            self._set_timing("topic_dedup", started)
+            return original_items
 
         if not duplicate_groups:
-            return items
+            self._set_timing("topic_dedup", started)
+            return original_items
 
         # Build a set of indices to drop (all non-primary duplicates)
         drop_indices: set[int] = set()
@@ -2378,7 +2465,9 @@ class BMTNewsOrchestrator:
                     )
                 drop_indices.add(dup_idx)
 
-        return [item for i, item in enumerate(items) if i not in drop_indices]
+        dropped_ids = {id(items[index]) for index in drop_indices}
+        self._set_timing("topic_dedup", started)
+        return [item for item in original_items if id(item) not in dropped_ids]
 
     async def filter_items(
         self,
@@ -2769,11 +2858,38 @@ class BMTNewsOrchestrator:
         if not items:
             return
 
+        started = time.perf_counter()
         self.console.print("📚 Enriching with background knowledge...")
+        cache = self._result_cache()
+        cached: list[ContentItem] = []
+        misses = items
+        if cache is not None:
+            cached, misses = split_cached(cache, items, stage="enrichment")
+            if self.last_run_report is not None:
+                report = self.last_run_report
+                report.set_metric(
+                    "enrichment_cache_hits",
+                    report.metrics.get("enrichment_cache_hits", 0) + len(cached),
+                )
+                report.set_metric(
+                    "enrichment_cache_misses",
+                    report.metrics.get("enrichment_cache_misses", 0) + len(misses),
+                )
+        if not misses:
+            self.console.print(f"   Reused enrichment for {len(cached)} items\n")
+            self._set_timing("enrichment", started)
+            return
         ai_client = create_ai_client(self.config.ai)
         enricher = ContentEnricher(ai_client)
-        await enricher.enrich_batch(items)
-        self.console.print(f"   Enriched {len(items)} items\n")
+        await enricher.enrich_batch(misses)
+        if cache is not None:
+            for item in misses:
+                cache.store_enrichment(item)
+            cache.save()
+        self.console.print(
+            f"   Enriched {len(misses)} items; reused {len(cached)}\n"
+        )
+        self._set_timing("enrichment", started)
 
     async def _analyze_content(self, items: List[ContentItem]) -> List[ContentItem]:
         """Analyze content items with AI.
@@ -2784,15 +2900,74 @@ class BMTNewsOrchestrator:
         Returns:
             List[ContentItem]: Analyzed items
         """
+        started = time.perf_counter()
         self.console.print("🤖 Analyzing content with AI...")
 
         ai_client = create_ai_client(self.config.ai)
+        selected = items
+        if (
+            self.config.ai.prefilter_enabled
+            and len(items) > self.config.ai.prefilter_max_candidates
+        ):
+            prefilter_started = time.perf_counter()
+            result = await ContentPrefilter(
+                ai_client,
+                batch_size=self.config.ai.prefilter_batch_size,
+            ).select(
+                items,
+                maximum=self.config.ai.prefilter_max_candidates,
+            )
+            selected = result.items
+            if self.last_run_report is not None:
+                report = self.last_run_report
+                report.set_metric(
+                    "prefilter_evaluated",
+                    report.metrics.get("prefilter_evaluated", 0) + result.evaluated,
+                )
+                report.set_metric(
+                    "prefilter_removed",
+                    report.metrics.get("prefilter_removed", 0) + result.removed,
+                )
+                report.set_metric(
+                    "prefilter_failed_batches",
+                    report.metrics.get("prefilter_failed_batches", 0)
+                    + result.failed_batches,
+                )
+                report.add_timing(
+                    "prefilter", time.perf_counter() - prefilter_started
+                )
+            self.console.print(
+                f"   Prefilter kept {len(selected)}/{len(items)} candidates"
+                f" ({result.failed_batches} fail-open batches)\n"
+            )
+
+        cache = self._result_cache()
+        cached: list[ContentItem] = []
+        misses = selected
+        if cache is not None:
+            cached, misses = split_cached(cache, selected, stage="analysis")
+            if self.last_run_report is not None:
+                report = self.last_run_report
+                report.set_metric(
+                    "analysis_cache_hits",
+                    report.metrics.get("analysis_cache_hits", 0) + len(cached),
+                )
+                report.set_metric(
+                    "analysis_cache_misses",
+                    report.metrics.get("analysis_cache_misses", 0) + len(misses),
+                )
         analyzer = ContentAnalyzer(
             ai_client,
             allowed_categories=self._analysis_categories(),
         )
-
-        return await analyzer.analyze_batch(items)
+        if misses:
+            await analyzer.analyze_batch(misses)
+            if cache is not None:
+                for item in misses:
+                    cache.store_analysis(item)
+                cache.save()
+        self._set_timing("analysis", started)
+        return selected
 
     def _analysis_categories(self) -> List[str]:
         """Return the configured leaf categories accepted from AI analysis."""

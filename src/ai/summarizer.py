@@ -2,6 +2,7 @@
 
 from datetime import timezone
 import html
+import json
 import logging
 import re
 from typing import Dict, List, Optional
@@ -129,6 +130,61 @@ async def generate_edition_overview(
         language=language,
         item_count=len(items),
     )
+
+
+async def generate_edition_overviews(
+    ai_client,
+    items: List[ContentItem],
+    *,
+    date: str,
+    languages: List[str],
+) -> Dict[str, EditionOverview]:
+    """Generate all requested language variants with one model call."""
+    if not items:
+        return {}
+    from .prompts import EDITION_OVERVIEW_SYSTEM, EDITION_OVERVIEWS_USER
+    from .utils import parse_json_response
+
+    normalized = list(
+        dict.fromkeys("en" if lang.lower().startswith("en") else "zh" for lang in languages)
+    )
+    lines = []
+    for index, item in enumerate(items, start=1):
+        title_zh = item.metadata.get("title_zh") or item.title
+        title_en = item.metadata.get("title_en") or item.title
+        summary_zh = item.metadata.get("whats_new_zh") or item.ai_summary or ""
+        summary_en = item.metadata.get("whats_new_en") or item.ai_summary or ""
+        score = f"{item.ai_score:.1f}" if item.ai_score is not None else "?"
+        lines.append(
+            f"{index}. [{score}/10] ZH: {title_zh} — {summary_zh}\n"
+            f"   EN: {title_en} — {summary_en}"
+        )
+    try:
+        response = await ai_client.complete(
+            system=EDITION_OVERVIEW_SYSTEM,
+            user=EDITION_OVERVIEWS_USER.format(date=date, items="\n".join(lines)),
+            response_format="json",
+        )
+        payload = parse_json_response(response)
+    except Exception as exc:
+        logger.warning("Bilingual edition overview generation failed: %s", exc)
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+
+    result: Dict[str, EditionOverview] = {}
+    for language in normalized:
+        value = payload.get(language)
+        if not isinstance(value, dict):
+            continue
+        overview = _parse_structured_overview(
+            json.dumps(value, ensure_ascii=False),
+            language=language,
+            item_count=len(items),
+        )
+        if overview is not None:
+            result[language] = overview
+    return result
 
 
 _CJK = r"[\u4e00-\u9fff\u3400-\u4dbf]"

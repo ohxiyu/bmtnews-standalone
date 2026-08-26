@@ -8,7 +8,14 @@
     "max_tokens": 4096,
     "throttle_sec": 0,
     "analysis_concurrency": 1,
-    "enrichment_concurrency": 1
+    "enrichment_concurrency": 1,
+    "prefilter_enabled": false,
+    "prefilter_batch_size": 20,
+    "prefilter_max_candidates": 140,
+    "result_cache_enabled": true,
+    "result_cache_path": "data/analysis-cache.json",
+    "result_cache_ttl_days": 30,
+    "result_cache_max_entries": 4000
   },
   "email": {
     "enabled": false,

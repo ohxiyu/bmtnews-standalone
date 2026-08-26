@@ -13,7 +13,14 @@
       "en"
     ],
     "analysis_concurrency": 5,
-    "enrichment_concurrency": 5
+    "enrichment_concurrency": 5,
+    "prefilter_enabled": true,
+    "prefilter_batch_size": 20,
+    "prefilter_max_candidates": 140,
+    "result_cache_enabled": true,
+    "result_cache_path": "data/analysis-cache.json",
+    "result_cache_ttl_days": 30,
+    "result_cache_max_entries": 4000
   },
   "sources": {
     "github": [

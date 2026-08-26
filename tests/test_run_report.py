@@ -118,6 +118,9 @@ def test_daily_report_renders_window_quotas_and_source_contribution() -> None:
     report.set_metric("displayed_today", 7)
     report.set_metric("primary_selected", 4)
     report.set_metric("primary_required", 9)
+    report.set_timing("fetch", 1.2344)
+    report.add_timing("analysis", 2.0)
+    report.add_timing("analysis", 0.3456)
     report.set_breakdown(
         "selected_groups",
         {"Crypto Markets": 4, "Technology": 3},
@@ -166,7 +169,10 @@ def test_daily_report_renders_window_quotas_and_source_contribution() -> None:
 
     assert payload["version"] == 2
     assert payload["kind"] == "daily_publish"
+    assert payload["timings"] == {"fetch": 1.234, "analysis": 2.346}
     assert "## BMTNews 早间日报发布报告" in markdown
+    assert "### 性能分段" in markdown
+    assert "| analysis | 2.346 |" in markdown
     assert "| 固定窗口候选 | 51 |" in markdown
     assert "| Crypto Markets | 12 | 3 | 6 | 4 | 4 |" in markdown
     assert "Crypto 主轨：**4 / 9**" in markdown

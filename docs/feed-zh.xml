@@ -16,7 +16,7 @@ permalink: /feed-zh.xml
     <link href="{{ post.url | absolute_url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ post.url | absolute_url }}</id>
-    <content type="html"><![CDATA[ {{ post.content }} ]]></content>
+    <summary type="html"><![CDATA[ {{ post.content | strip_html | normalize_whitespace | truncate: 1200 }} ]]></summary>
   </entry>
   {% endfor %}
 </feed>

@@ -133,6 +133,15 @@ Ranked stories:
 
 Use only ranks that appear above. Respond with the JSON object only, without a code fence."""
 
+EDITION_OVERVIEWS_USER = """Today is {date}. Build BOTH Simplified Chinese and English overviews for this edition in one response.
+
+Ranked stories:
+{items}
+
+Use only ranks that appear above. Apply the same headline and signal rules to
+each language. Return valid JSON only in this shape:
+{{"zh": {{"headline": "...", "signals": [...]}}, "en": {{"headline": "...", "signals": [...]}}}}"""
+
 WEEKLY_DIGEST_SYSTEM = """You write the weekly review for a crypto-market intelligence briefing.
 
 You are given every story published in the past week, ranked by day and by importance score, plus the multi-day threads that developed. Write a review that a reader who skipped the week could read in two minutes and understand what actually mattered.

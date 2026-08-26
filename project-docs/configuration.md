@@ -205,7 +205,33 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 - Both values are clamped to a minimum of `1`.
 - Preserve the existing retry behavior per item.
 - Result ordering is preserved regardless of concurrency.
-- If you also use `throttle_sec`, each concurrent task sleeps independently after finishing an item.
+- If you also use `throttle_sec`, the wait happens after releasing the concurrency slot.
+
+### AI prefilter and persistent result cache
+
+Large daily windows can use a low-cost batched title prefilter before the
+slower per-story analysis. Each failed batch is kept in full, and a reserve
+is kept for every configured category so scarce policy or AI coverage is not
+silently removed.
+
+```json
+{
+  "ai": {
+    "prefilter_enabled": true,
+    "prefilter_batch_size": 20,
+    "prefilter_max_candidates": 140,
+    "result_cache_enabled": true,
+    "result_cache_path": "data/analysis-cache.json",
+    "result_cache_ttl_days": 30,
+    "result_cache_max_entries": 4000
+  }
+}
+```
+
+The cache key includes the provider model, prompt revision, URL, title and
+source content. Changed content or prompts are analyzed again. GitHub Actions
+stores this file with the staging cache, making force-republish and recovery
+runs incremental without committing it to `main` or `gh-pages`.
 
 **Custom Base URL** (for proxies):
 
