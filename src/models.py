@@ -146,6 +146,13 @@ class AIConfig(BaseModel):
     throttle_sec: float = 0.0
     analysis_concurrency: int = 1
     enrichment_concurrency: int = 1
+    prefilter_enabled: bool = False
+    prefilter_batch_size: int = Field(default=20, ge=5, le=50)
+    prefilter_max_candidates: int = Field(default=140, ge=20, le=1000)
+    result_cache_enabled: bool = True
+    result_cache_path: str = "data/analysis-cache.json"
+    result_cache_ttl_days: int = Field(default=30, ge=1, le=365)
+    result_cache_max_entries: int = Field(default=4000, ge=100, le=50000)
     languages: List[str] = Field(default_factory=lambda: ["en"])
     # Azure OpenAI specific; required when provider == AZURE
     azure_endpoint_env: Optional[str] = None

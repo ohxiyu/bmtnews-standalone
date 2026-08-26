@@ -197,6 +197,37 @@ describe("dispatcher behavior", () => {
     });
     expect(notFound.status).toBe(404);
   });
+
+  it("actively verifies the repository token and workflow on readiness", async () => {
+    const fetchSpy = vi.fn(async () => Response.json({ id: 42 }));
+    vi.stubGlobal("fetch", fetchSpy);
+    const response = await worker.fetch(
+      new Request("https://dispatcher.example/ready"),
+      ENV,
+    );
+    expect(response.status).toBe(200);
+    expect(response.headers.get("Cache-Control")).toBe("no-store");
+    await expect(response.json()).resolves.toMatchObject({
+      status: "ready",
+      repository: "ohxiyu/bmtnews-standalone",
+      workflow: "daily-summary.yml",
+      ref: "main",
+    });
+    expect(fetchSpy).toHaveBeenCalledOnce();
+  });
+
+  it("reports not ready without leaking GitHub API details", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(null, { status: 401 })));
+    const response = await worker.fetch(
+      new Request("https://dispatcher.example/ready"),
+      ENV,
+    );
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({
+      status: "not_ready",
+      resolution: "Verify GITHUB_DISPATCH_TOKEN and redeploy the Worker.",
+    });
+  });
 });
 
 describe("admin OAuth relay", () => {

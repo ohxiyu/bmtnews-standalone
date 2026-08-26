@@ -29,6 +29,7 @@ class ContentEnricher:
 
     def __init__(self, ai_client: AIClient):
         self.client = ai_client
+        self._search_tasks: dict[str, asyncio.Task[list]] = {}
 
     def _get_concurrency(self) -> int:
         """Return the configured enrichment concurrency, clamped to 1 or above."""
@@ -90,6 +91,15 @@ class ContentEnricher:
             {"title": r.get("title", ""), "url": r.get("href", ""), "body": r.get("body", "")}
             for r in (results or [])
         ]
+
+    async def _cached_web_search(self, query: str, max_results: int = 3) -> list:
+        """Share identical searches across stories within the same edition."""
+        key = " ".join(query.lower().split())
+        task = self._search_tasks.get(key)
+        if task is None:
+            task = asyncio.create_task(self._web_search(query, max_results))
+            self._search_tasks[key] = task
+        return await task
 
     @staticmethod
     def _parse_json_response(response: str) -> Optional[dict]:
@@ -161,8 +171,10 @@ class ContentEnricher:
         # Step 2: Search web for each concept
         all_results = []
         web_sections = []
-        for query in queries:
-            results = await self._web_search(query)
+        search_results = await asyncio.gather(
+            *(self._cached_web_search(query) for query in queries)
+        )
+        for query, results in zip(queries, search_results):
             all_results.extend(results)
             if results:
                 lines = [f"- [{r['title']}]({r['url']}): {r['body']}" for r in results]

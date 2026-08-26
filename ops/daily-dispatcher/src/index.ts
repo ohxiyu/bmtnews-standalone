@@ -1,4 +1,4 @@
-import { runSchedule } from "./lib";
+import { checkReadiness, runSchedule } from "./lib";
 import {
   handleOAuthAuth,
   handleOAuthCallback,
@@ -13,6 +13,25 @@ export default {
     }
     if (request.method === "GET" && url.pathname === "/oauth/callback") {
       return handleOAuthCallback(request, env as OAuthEnv);
+    }
+    if (request.method === "GET" && url.pathname === "/ready") {
+      try {
+        return Response.json(await checkReadiness(env), {
+          headers: { "Cache-Control": "no-store" },
+        });
+      } catch (error) {
+        console.error(JSON.stringify({
+          event: "dispatcher_readiness_failed",
+          message: String(error instanceof Error ? error.message : error),
+        }));
+        return Response.json(
+          {
+            status: "not_ready",
+            resolution: "Verify GITHUB_DISPATCH_TOKEN and redeploy the Worker.",
+          },
+          { status: 503, headers: { "Cache-Control": "no-store" } },
+        );
+      }
     }
     if (request.method !== "GET" || url.pathname !== "/health") {
       return Response.json({ error: "Not found" }, { status: 404 });

@@ -30,20 +30,25 @@ jobs:
       - name: Restore staged source items
         uses: actions/cache@v5
         with:
-          path: data/staging-items.json
-          key: ${{ runner.os }}-bmtnews-staging-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            data/staging-items.json
+            data/analysis-cache.json
+          key: ${{ runner.os }}-bmtnews-pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
+            ${{ runner.os }}-bmtnews-pipeline-v2-
             ${{ runner.os }}-bmtnews-staging-v1-
 
       - name: Restore staging from persistent branch on cache miss
         shell: bash
         run: |
-          if [ -f data/staging-items.json ]; then
-            exit 0
-          fi
           if git fetch --depth=1 origin staging-cache 2>/dev/null; then
             mkdir -p data
-            git show FETCH_HEAD:data/staging-items.json > data/staging-items.json 2>/dev/null || rm -f data/staging-items.json
+            if [ ! -f data/staging-items.json ]; then
+              git show FETCH_HEAD:data/staging-items.json > data/staging-items.json 2>/dev/null || rm -f data/staging-items.json
+            fi
+            if [ ! -f data/analysis-cache.json ]; then
+              git show FETCH_HEAD:data/analysis-cache.json > data/analysis-cache.json 2>/dev/null || rm -f data/analysis-cache.json
+            fi
           fi
 
       - name: Set up Python
@@ -88,6 +93,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B staging-cache
           git add -f data/staging-items.json
+          if [ -f data/analysis-cache.json ]; then
+            git add -f data/analysis-cache.json
+          fi
           if git commit -m "chore: update staging cache"; then
             git push -f origin staging-cache
           else

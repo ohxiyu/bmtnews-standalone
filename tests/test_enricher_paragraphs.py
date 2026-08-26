@@ -43,3 +43,26 @@ def test_enrichment_preserves_semantic_summary_sections_as_paragraphs() -> None:
     assert item.metadata["detailed_summary_en"] == (
         "What happened.\n\nWhy it matters.\n\nImportant caveat."
     )
+
+
+def test_identical_web_searches_share_one_in_flight_request(monkeypatch) -> None:
+    enricher = ContentEnricher(_StubAIClient())
+    calls = 0
+
+    async def fake_search(query: str, max_results: int = 3) -> list:
+        nonlocal calls
+        calls += 1
+        await asyncio.sleep(0)
+        return [{"title": query, "url": "https://example.com", "body": "x"}]
+
+    monkeypatch.setattr(enricher, "_web_search", fake_search)
+
+    async def run() -> list:
+        return await asyncio.gather(
+            enricher._cached_web_search("  Bitcoin ETF "),
+            enricher._cached_web_search("bitcoin   etf"),
+        )
+
+    first, second = asyncio.run(run())
+    assert calls == 1
+    assert first == second

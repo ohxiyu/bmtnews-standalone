@@ -80,6 +80,44 @@ test('browser homepage remains HTML and declares its markdown alternative', asyn
   assert.match(await response.text(), /<h1>BMTNews<\/h1>/);
 });
 
+test('edge cache varies homepage markdown and HTML without repeating asset work', async () => {
+  const stored = new Map();
+  const assetEnv = environment();
+  let originCalls = 0;
+  const originalFetch = assetEnv.ASSETS.fetch;
+  assetEnv.ASSETS.fetch = async (request) => {
+    originCalls += 1;
+    return originalFetch(request);
+  };
+  globalThis.caches = {
+    default: {
+      async match(request) {
+        return stored.get(request.url)?.clone();
+      },
+      async put(request, response) {
+        stored.set(request.url, response.clone());
+      }
+    }
+  };
+  try {
+    const markdownRequest = new Request('https://bmt.news/', {
+      headers: {'Accept': 'text/markdown'}
+    });
+    const first = await worker.handleRequest(markdownRequest, assetEnv);
+    const second = await worker.handleRequest(markdownRequest, assetEnv);
+    const html = await worker.handleRequest(
+      new Request('https://bmt.news/', {headers: {'Accept': 'text/html'}}),
+      assetEnv
+    );
+    assert.equal(first.headers.get('X-BMTNews-Cache'), 'MISS');
+    assert.equal(second.headers.get('X-BMTNews-Cache'), 'HIT');
+    assert.equal(html.headers.get('X-BMTNews-Cache'), 'MISS');
+    assert.equal(originCalls, 2);
+  } finally {
+    delete globalThis.caches;
+  }
+});
+
 test('unknown API paths and methods return structured JSON errors', async () => {
   const missing = await worker.handleRequest(
     new Request('https://bmt.news/api/missing.json'), environment()

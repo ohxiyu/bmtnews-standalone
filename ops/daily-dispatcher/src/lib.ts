@@ -218,6 +218,32 @@ async function githubRequest(
   return response;
 }
 
+export async function checkReadiness(env: Env): Promise<{
+  status: "ready";
+  repository: string;
+  workflow: string;
+  ref: string;
+}> {
+  if (!env.GITHUB_DISPATCH_TOKEN) {
+    throw new Error("GITHUB_DISPATCH_TOKEN is not configured");
+  }
+  const repository = encodeURIComponent(env.GITHUB_REPOSITORY).replace(
+    "%2F",
+    "/",
+  );
+  const workflow = encodeURIComponent(env.GITHUB_WORKFLOW);
+  await githubRequest(
+    env,
+    `/repos/${repository}/actions/workflows/${workflow}`,
+  );
+  return {
+    status: "ready",
+    repository: env.GITHUB_REPOSITORY,
+    workflow: env.GITHUB_WORKFLOW,
+    ref: env.GITHUB_REF,
+  };
+}
+
 async function fetchWorkflowRuns(env: Env): Promise<WorkflowRun[]> {
   const repository = encodeURIComponent(env.GITHUB_REPOSITORY).replace(
     "%2F",

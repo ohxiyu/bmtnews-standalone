@@ -61,7 +61,11 @@ _DAILY_METRIC_LABELS = (
     ("edition_candidates", "固定窗口候选"),
     ("fallback_candidates", "36 小时保底候选"),
     ("skipped_published_history", "跳过历史发布"),
+    ("prefilter_evaluated", "批量粗筛评估"),
+    ("prefilter_removed", "批量粗筛移除"),
     ("analyzed_this_run", "本次 AI 分析"),
+    ("analysis_cache_hits", "分析缓存命中"),
+    ("enrichment_cache_hits", "补充缓存命中"),
     ("fallback_analyzed", "保底补充分析"),
     ("above_threshold", "分数达标"),
     ("below_threshold", "低于分数门槛"),
@@ -77,6 +81,7 @@ _DAILY_METRIC_LABELS = (
     ("high_priority", "高优先级"),
     ("telegram_messages_sent", "Telegram 推送"),
     ("telegram_message_chars", "Telegram 消息字符"),
+    ("ai_total_tokens", "AI Token 总量"),
 )
 
 _REPORT_TITLES = {
@@ -183,6 +188,7 @@ class RunReport:
     finished_at: datetime | None = None
     duration_seconds: float | None = None
     metrics: dict[str, int] = field(default_factory=dict)
+    timings: dict[str, float] = field(default_factory=dict)
     fetch_report: dict[str, Any] | None = None
     summaries: list[str] = field(default_factory=list)
     breakdowns: dict[str, dict[str, int]] = field(default_factory=dict)
@@ -216,6 +222,12 @@ class RunReport:
 
     def set_metric(self, name: str, value: int) -> None:
         self.metrics[name] = max(0, int(value))
+
+    def set_timing(self, name: str, seconds: float) -> None:
+        self.timings[name] = round(max(0.0, float(seconds)), 3)
+
+    def add_timing(self, name: str, seconds: float) -> None:
+        self.set_timing(name, self.timings.get(name, 0.0) + seconds)
 
     def set_breakdown(self, name: str, values: dict[str, int]) -> None:
         self.breakdowns[name] = {
@@ -295,6 +307,7 @@ class RunReport:
                 else None
             ),
             "metrics": dict(self.metrics),
+            "timings": dict(self.timings),
             "fetch_report": self.fetch_report,
             "summaries": list(self.summaries),
             "breakdowns": {
@@ -372,6 +385,20 @@ def render_markdown_report(payload: dict[str, Any]) -> str:
         ]
         for key, label in present_metrics:
             lines.append(f"| {label} | {int(metrics[key])} |")
+
+    timings = payload.get("timings") or {}
+    if timings:
+        lines += [
+            "",
+            "### 性能分段",
+            "",
+            "| 阶段 | 耗时（秒） |",
+            "| --- | ---: |",
+        ]
+        for stage, seconds in timings.items():
+            lines.append(
+                f"| {_markdown_cell(stage)} | {float(seconds):.3f} |"
+            )
 
     breakdowns = payload.get("breakdowns") or {}
     candidate_groups = breakdowns.get("candidate_groups") or {}

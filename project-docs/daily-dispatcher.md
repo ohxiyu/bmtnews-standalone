@@ -41,7 +41,7 @@ npx wrangler deploy
 
 ## 验证与排障
 
-1. 访问 Worker 的 `/health`，确认服务返回 `status: ok`；该端点只读，不允许通过 HTTP 触发日报。
+1. 访问 Worker 的 `/health`，确认静态配置返回 `status: ok`；再访问 `/ready`，确认它能使用当前 Secret 读取目标仓库的日报 workflow。两个端点都只读，不允许通过 HTTP 触发日报。
 2. 在 08:30 后检查 Cloudflare Workers Logs，结构化字段包含 `edition_date`、`stage`、`raw_posts_ready`、`rendered_posts_ready`、`active_run_url` 和 `outcome`。
 3. 在 GitHub Actions 中确认日报运行名包含明确期号和来源，例如 `Daily 2026-07-31 via cloudflare-primary`。
 4. 检查 `gh-pages/_posts/YYYY-MM-DD-summary-{zh,en}.md`，再检查站点 `/YYYY/MM/DD/summary-{zh,en}.html`。
