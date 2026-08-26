@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-zh.xml</id>
-  <updated>2026-08-25T00:00:00Z</updated>
+  <updated>2026-08-26T00:00:00Z</updated>
+  <entry>
+    <title>OpenAI 的 Jalapeño 芯片据称性能超越英伟达处理器</title>
+    <link href="https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49434378</id>
+    <updated>2026-08-26T00:00:00Z</updated>
+    <summary>OpenAI 与博通（Broadcom）联合设计的自研推理芯片“Jalapeño”据称在测试中表现优于英伟达处理器，能以更低功耗为现代大语言模型提供更快、更高效的推理。SemiAnalysis 结合彭博社的报道发布分析，但这些说法尚未得到独立验证。
+
+如果这一说法得到证实，将可能改变 AI 基础设施格局，使 OpenAI 在推理成本和能源效率上获得竞争优势，并减少对英伟达 GPU 的依赖。这也反映出大型科技公司越来越倾向于针对 AI 工作负载优化定制芯片的趋势。
+
+Jalapeño 是一款专为 LLM 推理打造的定制 ASIC，据报道与 OpenAI 到 2029 年 10 GW 的基础设施承诺相关。社区讨论指出，其裸片尺寸与英伟达 Rubin 相当，NVFP4 PFLOPs 约为后者的三分之一，并支持 FP4 等低精度格式。</summary>
+  </entry>
+  <entry>
+    <title>苹果发布搭载M5 Max与M5 Ultra的新款Mac Studio</title>
+    <link href="https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49433316</id>
+    <updated>2026-08-26T00:00:00Z</updated>
+    <summary>苹果推出了搭载M5 Max和M5 Ultra芯片的新款Mac Studio，最高配备256GB统一内存，并主打本地AI性能。M5 Ultra通过UltraFusion连接两颗M5 Max芯片，芯片间带宽超过4.4TB/s。
+
+此次发布标志着苹果持续加码端侧AI，为开发者和专业人士提供了一台高带宽、大内存的设备，可以直接在本地运行大型语言模型。这表明本地AI计算市场竞争日益激烈，并可能使部分AI工作负载从云端转移至本地。
+
+M5 Ultra是苹果首款四芯片（quad-die）设计，通过UltraFusion连接两颗双芯片M5 Max封装，Mac Studio最高可提供1.2TB/s的内存带宽。它还配备了基于PCIe Gen 6的新一代SSD，存储性能最高可达上一代的两倍，并支持120Gb/s的Thunderbolt 5外部接口。</summary>
+  </entry>
+  <entry>
+    <title>Qwen发布Qwen 3.8-Flash-Next：125B参数MoE模型，激活参数6B</title>
+    <link href="https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49432317</id>
+    <updated>2026-08-26T00:00:00Z</updated>
+    <summary>Qwen宣布即将发布Qwen 3.8-Flash-Next，这是一款混合专家（MoE）模型，总参数为125B，而每次token仅激活6B参数。该模型预计明天在ModelScope上发布。
+
+该模型极低的激活参数比例（6B）使其能够在128GB Strix Halo或Mac Studio等大内存消费硬件上运行，有望将前沿模型质量带入本地推理。此次发布可能加速本地AI趋势，让竞争性模型无需数据中心GPU即可使用。
+
+Qwen 3.8-Flash-Next采用混合专家架构，路由网络每个token仅调用一小部分专家，在保留125B参数知识容量的同时大幅降低计算成本。公告中未披露具体的上下文窗口、许可证和基准分数。</summary>
+  </entry>
   <entry>
     <title>seL4安全证明在AArch64上完成</title>
     <link href="https://proofcraft.systems/news-2026/#2026-08-21"/>

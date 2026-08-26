@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-08-25T00:00:00Z</updated>
+  <updated>2026-08-26T00:00:00Z</updated>
+  <entry>
+    <title>OpenAI&#x27;s Jalapeño Chip Claims Edge Over Nvidia Blackwell</title>
+    <link href="https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49434378</id>
+    <updated>2026-08-26T00:00:00Z</updated>
+    <summary>OpenAI&#x27;s custom inference chip, codenamed Jalapeño and co-designed with Broadcom, reportedly outperforms Nvidia processors in tests, delivering faster and more power-efficient inference for modern large language models. SemiAnalysis published the analysis alongside a Bloomberg report, though the claims are not yet independently verified.
+
+If proven, this could shift the AI infrastructure landscape by giving OpenAI a competitive edge in inference cost and energy efficiency, reducing its dependence on Nvidia GPUs. It also signals a broader trend among hyperscalers toward custom silicon optimized for AI workloads.
+
+Jalapeño is a custom ASIC built specifically for LLM inference, reportedly tied to OpenAI&#x27;s 10 GW infrastructure commitment through 2029. Community discussion notes that die size appears comparable to Nvidia&#x27;s Rubin, while NVFP4 PFLOPs are about one-third, and the chip supports low-precision formats like FP4.</summary>
+  </entry>
+  <entry>
+    <title>Apple Launches Mac Studio with M5 Max and M5 Ultra</title>
+    <link href="https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49433316</id>
+    <updated>2026-08-26T00:00:00Z</updated>
+    <summary>Apple has introduced the new Mac Studio powered by the M5 Max and M5 Ultra chips, with up to 256GB of unified memory and a strong emphasis on on-device AI performance. The M5 Ultra pairs two M5 Max dies via UltraFusion, delivering over 4.4TB/s of inter-die bandwidth.
+
+This release marks Apple&#x27;s continued push into local AI, giving developers and professionals a high-bandwidth, large-memory machine to run large language models directly on-device. It signals intensifying competition in the local AI compute market and could shift some AI workloads away from cloud infrastructure.
+
+The M5 Ultra is Apple&#x27;s first quad-die chip, using UltraFusion to interlink two dual-die M5 Max packages, and the Mac Studio offers up to 1.2TB/s of memory bandwidth. It also includes next-generation PCIe Gen 6-based SSDs with up to double the storage performance and Thunderbolt 5 external connectivity at 120Gb/s.</summary>
+  </entry>
+  <entry>
+    <title>Qwen Unveils Qwen 3.8-Flash-Next: 125B MoE with 6B Active Parameters</title>
+    <link href="https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"/>
+    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49432317</id>
+    <updated>2026-08-26T00:00:00Z</updated>
+    <summary>Qwen announced the upcoming release of Qwen 3.8-Flash-Next, a mixture-of-experts model with 125B total parameters and only 6B active parameters per token. The model is scheduled to be available on ModelScope tomorrow.
+
+The model&#x27;s extremely low active-parameter ratio (6B) makes it feasible to run on high-memory consumer hardware like 128GB Strix Halo or Mac Studio, potentially bringing frontier-level quality to local inference. This release could accelerate the local AI trend by making competitive models accessible without data-center GPUs.
+
+Qwen 3.8-Flash-Next uses a mixture-of-experts architecture, where a router selects only a small subset of experts per token, drastically cutting compute cost while retaining the knowledge capacity of 125B parameters. The exact context window, license, and benchmark scores have not been disclosed in the announcement.</summary>
+  </entry>
   <entry>
     <title>seL4 Security Proofs Complete on AArch64</title>
     <link href="https://proofcraft.systems/news-2026/#2026-08-21"/>
