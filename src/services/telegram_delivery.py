@@ -36,6 +36,8 @@ class TelegramDeliveryResult:
 _MARKDOWN_LINK = re.compile(r"\[([^]]+)]\([^)]*\)")
 _HTML_TAG = re.compile(r"<[^>]+>")
 _WHITESPACE = re.compile(r"\s+")
+_CHANNEL_USERNAME = re.compile(r"^[A-Za-z][A-Za-z0-9_]{4,63}$")
+_BRIEF_HARD_LIMIT = 420
 
 
 def _plain_text(value: object) -> str:
@@ -50,6 +52,68 @@ def _shorten(value: str, limit: int) -> str:
     if len(value) <= limit:
         return value
     return value[: max(1, limit - 1)].rstrip() + "…"
+
+
+def _first_complete_sentence(value: object, language: str) -> str:
+    """Return one complete lead sentence, with a bounded malformed fallback."""
+    text = _plain_text(value)
+    if not text:
+        return ""
+    if language == "zh":
+        match = re.match(r".*?[。！？!?]+[”’」』】）]?", text)
+        sentence = match.group(0).strip() if match else text
+    else:
+        sentence = text
+        start = 0
+        for match in re.finditer(r'[.!?]+["”’\)\]]*(?=\s+|$)', text):
+            candidate = text[start : match.end()].strip()
+            if re.search(r"(?:\b[A-Z]\.){2,}$", candidate):
+                continue
+            if re.search(
+                r"\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|vs)\.$",
+                candidate,
+            ):
+                continue
+            sentence = candidate
+            break
+
+    if len(sentence) <= _BRIEF_HARD_LIMIT:
+        return sentence
+    prefix = sentence[:_BRIEF_HARD_LIMIT]
+    boundary = max(prefix.rfind(mark) for mark in "，；：,;:")
+    if boundary >= _BRIEF_HARD_LIMIT // 2:
+        return prefix[: boundary + 1].rstrip() + "…"
+    return _shorten(sentence, _BRIEF_HARD_LIMIT)
+
+
+def _normalize_chat_id(value: str) -> str:
+    """Accept Bot API IDs, usernames, and common public-channel URLs."""
+    raw = str(value or "").strip().strip('"\'')
+    if not raw:
+        return ""
+    candidate = raw
+    if not raw.startswith(("http://", "https://")) and raw.lower().startswith(
+        ("t.me/", "telegram.me/")
+    ):
+        candidate = "https://" + raw
+    if candidate.startswith(("http://", "https://")):
+        parsed = urlsplit(candidate)
+        if parsed.netloc.lower() in {
+            "t.me",
+            "www.t.me",
+            "telegram.me",
+            "www.telegram.me",
+        }:
+            parts = [part for part in parsed.path.split("/") if part]
+            if parts and parts[0] == "s":
+                parts = parts[1:]
+            if parts and _CHANNEL_USERNAME.fullmatch(parts[0]):
+                return "@" + parts[0]
+    if raw.startswith("@") and _CHANNEL_USERNAME.fullmatch(raw[1:]):
+        return raw
+    if _CHANNEL_USERNAME.fullmatch(raw):
+        return "@" + raw
+    return raw
 
 
 def _safe_http_url(value: object) -> str | None:
@@ -84,7 +148,9 @@ class TelegramEditionPublisher:
 
     def _credentials(self) -> tuple[str, str]:
         token = os.getenv(self.config.bot_token_env, "").strip()
-        channel_id = os.getenv(self.config.channel_id_env, "").strip()
+        channel_id = _normalize_chat_id(
+            os.getenv(self.config.channel_id_env, "")
+        )
         return token, channel_id
 
     def build_message(
@@ -100,18 +166,18 @@ class TelegramEditionPublisher:
         is_zh = language == "zh"
         title = f"BMTNews 日报 · {date}" if is_zh else f"BMTNews Daily · {date}"
         overview = (
-            f"从 {total_candidates} 条候选中筛选出 {len(selected)} 条重要资讯。"
+            f"今日 {len(selected)} 条重点资讯"
             if is_zh
-            else f"Selected {len(selected)} important items from {total_candidates} candidates."
+            else f"{len(selected)} essential stories today"
         )
         header = f"<b>{html.escape(title)}</b>\n{html.escape(overview)}"
         site_url = self.config.site_url.rstrip("/") + (
             "/" if is_zh else "/en/"
         )
         footer = (
-            f'\n\n<a href="{html.escape(site_url, quote=True)}">阅读完整日报</a>'
+            f'\n\n<a href="{html.escape(site_url, quote=True)}">阅读完整日报 →</a>'
             if is_zh
-            else f'\n\n<a href="{html.escape(site_url, quote=True)}">Read the full edition</a>'
+            else f'\n\n<a href="{html.escape(site_url, quote=True)}">Read the full edition →</a>'
         )
         empty = "\n\n今日暂无达到展示阈值的重要资讯。" if is_zh else (
             "\n\nNo items reached the display threshold today."
@@ -119,9 +185,10 @@ class TelegramEditionPublisher:
         if not selected:
             return header + empty + footer
 
-        blocks: list[str] = []
-        omitted = 0
-        for index, item in enumerate(selected, start=1):
+        entries: list[dict[str, str]] = []
+        visible = selected[: self.config.max_items]
+        omitted = len(selected) - len(visible)
+        for index, item in enumerate(visible, start=1):
             localized_title = item.metadata.get(f"title_{language}") or item.title
             item_title = _shorten(_plain_text(localized_title), 120)
             item_url = _safe_http_url(item.url)
@@ -131,42 +198,64 @@ class TelegramEditionPublisher:
                 if item_url
                 else escaped_title
             )
-            score = f"{item.ai_score:g}" if item.ai_score is not None else "?"
-            headline = f"<b>{index}. {title_markup}</b> · ⭐ {score}/10"
+            score = f"{item.ai_score:g}" if item.ai_score is not None else "—"
+            headline = f"<b>{index:02d}</b> {title_markup} · <code>{score}</code>"
             brief_value = (
                 item.metadata.get(f"detailed_summary_{language}")
                 or item.metadata.get("detailed_summary")
                 or item.ai_summary
                 or ""
             )
-            brief = _shorten(_plain_text(brief_value), 180)
-            block = headline + (f"\n{html.escape(brief)}" if brief else "")
-            candidate = header + "\n\n" + "\n\n".join([*blocks, block]) + footer
-            if len(candidate) > self.config.max_message_chars:
-                title_only = header + "\n\n" + "\n\n".join(
-                    [*blocks, headline]
-                ) + footer
-                if len(title_only) > self.config.max_message_chars:
-                    omitted = len(selected) - index + 1
-                    break
-                block = headline
-            blocks.append(block)
-
-        if omitted:
-            omission = (
-                f"\n\n另有 {omitted} 条，请在网站查看。"
-                if is_zh
-                else f"\n\n{omitted} more item(s) are available on the website."
+            brief = (
+                _first_complete_sentence(brief_value, language)
+                if index <= self.config.featured_items
+                else ""
             )
-            while blocks and len(
-                header + "\n\n" + "\n\n".join(blocks) + omission + footer
-            ) > self.config.max_message_chars:
-                blocks.pop()
-                omitted += 1
-            body = header + "\n\n" + "\n\n".join(blocks) + omission
-        else:
-            body = header + "\n\n" + "\n\n".join(blocks)
-        return body + footer
+            entries.append({"headline": headline, "brief": brief})
+
+        def compose() -> str:
+            featured = [
+                entry["headline"] + "\n" + html.escape(entry["brief"])
+                for entry in entries
+                if entry["brief"]
+            ]
+            compact = [
+                entry["headline"] for entry in entries if not entry["brief"]
+            ]
+            sections = [header]
+            sections.extend(featured)
+            if compact:
+                more_label = "更多" if is_zh else "More"
+                sections.append(
+                    f"<b>{more_label}</b>\n" + "\n".join(compact)
+                )
+            if omitted:
+                omission = (
+                    f"另有 {omitted} 条，请在网站查看。"
+                    if is_zh
+                    else f"{omitted} more item(s) are available on the website."
+                )
+                sections.append(f"<i>{omission}</i>")
+            return "\n\n".join(sections) + footer
+
+        message = compose()
+        while len(message) > self.config.max_message_chars and len(
+            entries
+        ) > self.config.featured_items:
+            entries.pop()
+            omitted += 1
+            message = compose()
+        for entry in reversed(entries):
+            if len(message) <= self.config.max_message_chars:
+                break
+            if entry["brief"]:
+                entry["brief"] = ""
+                message = compose()
+        while len(message) > self.config.max_message_chars and entries:
+            entries.pop()
+            omitted += 1
+            message = compose()
+        return message
 
     async def send_daily_edition(
         self,
@@ -230,6 +319,11 @@ class TelegramEditionPublisher:
                 token,
                 channel_id,
             )
+            if "chat not found" in description.lower():
+                description = (
+                    "chat not found; set TELEGRAM_CHANNEL_ID to @channelname "
+                    "or the -100… numeric ID, and confirm the bot is a channel admin"
+                )
             return TelegramDeliveryResult(
                 TelegramDeliveryStatus.FAILURE,
                 f"Telegram API error {error_code}: {description or 'request rejected'}",

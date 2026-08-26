@@ -18,6 +18,7 @@ from src.models import (
 from src.services.telegram_delivery import (
     TelegramDeliveryStatus,
     TelegramEditionPublisher,
+    _normalize_chat_id,
 )
 
 
@@ -63,6 +64,56 @@ def test_build_message_is_html_safe_and_bounded() -> None:
     assert "BTC &amp; AI &gt; market" in message
     assert "阅读完整日报" in message
     assert "请在网站查看" in message
+
+
+def test_build_message_expands_three_leads_and_compacts_the_rest() -> None:
+    publisher = TelegramEditionPublisher(
+        TelegramDeliveryConfig(featured_items=3, max_items=5)
+    )
+    items = [
+        _item(
+            str(index),
+            title=f"Story {index}",
+            summary=f"第 {index} 条的完整首句。第二句不应进入频道摘要。",
+        )
+        for index in range(1, 8)
+    ]
+
+    message = publisher.build_message(
+        items,
+        date="2026-08-26",
+        total_candidates=50,
+        language="zh",
+    )
+
+    assert "今日 7 条重点资讯" in message
+    assert "50 条候选" not in message
+    assert "⭐" not in message
+    assert "第 1 条的完整首句。" in message
+    assert "第 3 条的完整首句。" in message
+    assert "第 4 条的完整首句。" not in message
+    assert "第二句不应进入频道摘要" not in message
+    assert "<b>更多</b>" in message
+    assert "Story 5" in message
+    assert "Story 6" not in message
+    assert "另有 2 条，请在网站查看。" in message
+
+
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        ("@bmtnews_test", "@bmtnews_test"),
+        ("bmtnews_test", "@bmtnews_test"),
+        ("https://t.me/bmtnews_test", "@bmtnews_test"),
+        ("https://t.me/s/bmtnews_test", "@bmtnews_test"),
+        ("-1001234567890", "-1001234567890"),
+    ],
+)
+def test_normalize_chat_id_accepts_common_channel_formats(
+    value: str,
+    expected: str,
+) -> None:
+    assert _normalize_chat_id(value) == expected
 
 
 def test_missing_credentials_skips_without_network(
@@ -123,6 +174,37 @@ def test_send_daily_edition_posts_expected_bot_api_payload(
     assert "BTC rises" in payload["text"]
 
 
+def test_send_daily_edition_normalizes_channel_url_secret(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "test-token")
+    monkeypatch.setenv(
+        "TELEGRAM_CHANNEL_ID",
+        "https://t.me/bmtnews_test",
+    )
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured.update(json.loads(request.content))
+        return httpx.Response(200, json={"ok": True, "result": {}})
+
+    publisher = TelegramEditionPublisher(
+        TelegramDeliveryConfig(enabled=True),
+        transport=httpx.MockTransport(handler),
+    )
+    result = asyncio.run(
+        publisher.send_daily_edition(
+            [_item("one")],
+            date="2026-08-26",
+            total_candidates=10,
+            language="zh",
+        )
+    )
+
+    assert result.status == TelegramDeliveryStatus.SUCCESS
+    assert captured["chat_id"] == "@bmtnews_test"
+
+
 def test_api_failure_does_not_expose_bot_token(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -160,12 +242,47 @@ def test_api_failure_does_not_expose_bot_token(
     assert channel_id not in result.detail
 
 
+def test_chat_not_found_has_actionable_sanitized_guidance(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "test-token")
+    monkeypatch.setenv("TELEGRAM_CHANNEL_ID", "wrong_channel")
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            400,
+            json={
+                "ok": False,
+                "error_code": 400,
+                "description": "Bad Request: chat not found",
+            },
+        )
+
+    publisher = TelegramEditionPublisher(
+        TelegramDeliveryConfig(enabled=True),
+        transport=httpx.MockTransport(handler),
+    )
+    result = asyncio.run(
+        publisher.send_daily_edition(
+            [_item("one")],
+            date="2026-08-26",
+            total_candidates=10,
+            language="zh",
+        )
+    )
+
+    assert result.status == TelegramDeliveryStatus.FAILURE
+    assert "set TELEGRAM_CHANNEL_ID to @channelname" in result.detail
+    assert "wrong_channel" not in result.detail
+
+
 @pytest.mark.parametrize(
     "kwargs",
     [
         {"site_url": "file:///tmp/report"},
         {"max_message_chars": 500},
         {"max_message_chars": 4097},
+        {"featured_items": 4, "max_items": 3},
     ],
 )
 def test_telegram_delivery_config_rejects_unsafe_values(kwargs: dict) -> None:
