@@ -194,7 +194,7 @@ function isJsonApiPath(pathname) {
   return JSON_API_PATHS.has(pathname) || DATED_EDITION_PATH.test(pathname);
 }
 
-export async function handleRequest(request, env) {
+async function handleOriginRequest(request, env) {
   const url = new URL(request.url);
   const language = MARKDOWN_ROUTES.get(url.pathname);
   const apiPath = isJsonApiPath(url.pathname);
@@ -230,10 +230,69 @@ export async function handleRequest(request, env) {
   return assetResponse;
 }
 
+function cachePolicy(request) {
+  if (request.method !== 'GET') return null;
+  const url = new URL(request.url);
+  if (url.pathname === '/s' || url.pathname.startsWith('/s/')) return null;
+  if (url.pathname.startsWith('/assets/')) {
+    return url.searchParams.has('v')
+      ? {ttl: 31536000, immutable: true}
+      : {ttl: 300};
+  }
+  if (DATED_EDITION_PATH.test(url.pathname)) return {ttl: 86400, immutable: true};
+  if (url.pathname === '/api/editions.json') return {ttl: 1800};
+  if (url.pathname === '/api/latest.json') return {ttl: 600};
+  if (url.pathname === '/feed-zh.xml' || url.pathname === '/feed-en.xml') return {ttl: 1800};
+  if (url.pathname === '/' || url.pathname === '/en' || url.pathname === '/en/') return {ttl: 300};
+  return {ttl: 600};
+}
+
+function cacheKey(request) {
+  const url = new URL(request.url);
+  if (MARKDOWN_ROUTES.has(url.pathname)) {
+    url.searchParams.set(
+      '__bmt_variant',
+      acceptsMarkdown(request.headers.get('Accept')) ? 'markdown' : 'html'
+    );
+  }
+  return new Request(url, {method: 'GET'});
+}
+
+function cachedResponse(response, status) {
+  return responseWithHeaders(response, (headers) => {
+    headers.set('X-BMTNews-Cache', status);
+  });
+}
+
+export async function handleRequest(request, env, ctx) {
+  const policy = cachePolicy(request);
+  const cache = globalThis.caches?.default;
+  if (!policy || !cache) return handleOriginRequest(request, env);
+
+  const key = cacheKey(request);
+  const hit = await cache.match(key);
+  if (hit) return cachedResponse(hit, 'HIT');
+
+  const response = await handleOriginRequest(request, env);
+  if (!response.ok || response.headers.get('Cache-Control') === 'no-store') {
+    return cachedResponse(response, 'BYPASS');
+  }
+  const stored = responseWithHeaders(response.clone(), (headers) => {
+    const suffix = policy.immutable ? ', immutable' : ', stale-while-revalidate=60';
+    headers.set('Cache-Control', `public, max-age=${policy.ttl}${suffix}`);
+    headers.set('CDN-Cache-Control', `public, max-age=${policy.ttl}${suffix}`);
+    headers.delete('Set-Cookie');
+  });
+  const write = cache.put(key, stored);
+  if (ctx?.waitUntil) ctx.waitUntil(write);
+  else await write;
+  return cachedResponse(response, 'MISS');
+}
+
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     try {
-      return await handleRequest(request, env);
+      return await handleRequest(request, env, ctx);
     } catch (error) {
       console.error(JSON.stringify({event: 'agent_gateway_error', message: String(error?.message || error)}));
       if (new URL(request.url).pathname.startsWith('/api/')) {

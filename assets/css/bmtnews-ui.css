@@ -765,6 +765,15 @@ time,
   min-width: 0;
 }
 
+@media (min-width: 761px) {
+  /* The second retained edition is below the fold. Let the browser postpone
+     its layout and paint work without changing the mobile reading flow. */
+  .daily-day + .daily-day {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 1200px;
+  }
+}
+
 .digest-item {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr);
