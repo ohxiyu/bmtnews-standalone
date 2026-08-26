@@ -1,6 +1,8 @@
 """Static and generated contracts that make the public site agent-readable."""
 
+import hashlib
 import json
+import re
 from pathlib import Path
 from xml.etree import ElementTree
 
@@ -9,6 +11,38 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).parents[1]
 DOCS = ROOT / "docs"
+
+
+def test_immutable_public_assets_use_content_fingerprint() -> None:
+    """Fail when long-lived assets change without a new cache key."""
+    head = (DOCS / "_includes" / "head-custom.html").read_text(encoding="utf-8")
+    headers = (DOCS / "_headers").read_text(encoding="utf-8")
+    asset_cache_rule = headers.split("/assets/*", 1)[1].split("\n\n", 1)[0]
+    assert "?v={{ site.asset_version }}" in head
+    assert "immutable" in asset_cache_rule
+
+    asset_root = DOCS / "assets"
+    asset_paths = sorted(asset_root.glob("css/*.css")) + sorted(
+        asset_root.glob("js/*.js")
+    )
+    digest = hashlib.sha256()
+    for path in asset_paths:
+        digest.update(path.relative_to(DOCS).as_posix().encode())
+        digest.update(b"\0")
+        digest.update(path.read_bytes())
+        digest.update(b"\0")
+    expected = f"sha256-{digest.hexdigest()[:12]}"
+
+    config = (DOCS / "_config.yml").read_text(encoding="utf-8")
+    match = re.search(
+        r'^asset_version:\s*["\']([^"\']+)["\']\s*$', config, re.M
+    )
+
+    assert match is not None
+    assert match.group(1) == expected, (
+        "Public CSS/JS files are cached as immutable. Update asset_version "
+        f'to "{expected}" whenever one of them changes.'
+    )
 
 
 def test_openapi_is_typed_described_and_function_calling_friendly() -> None:
