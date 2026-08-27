@@ -2,9 +2,10 @@ name: BMTNews Schedule Watchdog
 
 on:
   schedule:
-    # Independent GitHub fallback after the Cloudflare 08:30 primary trigger.
-    - cron: '47 8 * * *'
-      timezone: 'Asia/Shanghai'
+    # UTC schedules: 08:47, then hourly 09:17-15:17 in Asia/Shanghai.
+    # Repeated checks recover when either scheduler drops or delays one event.
+    - cron: '47 0 * * *'
+    - cron: '17 1-7 * * *'
   workflow_dispatch:
 
 concurrency:

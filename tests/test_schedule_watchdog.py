@@ -54,6 +54,19 @@ def test_previous_edition_success_requests_recovery_dispatch() -> None:
     assert decision.should_dispatch is True
 
 
+def test_late_retry_still_requests_current_edition() -> None:
+    late_retry = datetime(2026, 7, 27, 5, 17, tzinfo=timezone.utc)
+    decision = schedule_watchdog.evaluate_workflow_runs(
+        [_run(started_at=NOW - timedelta(hours=23))],
+        now=late_retry,
+        ref="main",
+    )
+
+    assert decision.state == "missing"
+    assert decision.should_dispatch is True
+    assert decision.edition_cutoff.isoformat() == "2026-07-27T08:00:00+08:00"
+
+
 def test_missing_success_does_not_duplicate_current_active_run() -> None:
     decision = schedule_watchdog.evaluate_workflow_runs(
         [
@@ -188,7 +201,10 @@ def test_watchdog_workflow_has_schedule_aware_arguments() -> None:
         / "schedule-watchdog.yml"
     ).read_text(encoding="utf-8")
 
-    assert "cron: '47 8 * * *'" in workflow
+    assert "cron: '47 0 * * *'" in workflow
+    assert "cron: '17 1-7 * * *'" in workflow
+    assert "timezone:" not in workflow
+    assert "cron: '47 8 * * *'" not in workflow
     assert "43 * * * *" not in workflow
     assert "actions: write" in workflow
     assert "timeout-minutes: 5" in workflow
