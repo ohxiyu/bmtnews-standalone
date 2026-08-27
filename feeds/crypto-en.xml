@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-08-26T00:00:00Z</updated>
+  <updated>2026-08-27T00:00:00Z</updated>
+  <entry>
+    <title>Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability</title>
+    <link href="https://thedefiant.io/news/security/core-lightning-tells-node-operators-to-go-offline-with-no-patch-published"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:thedefiant.io_api_feed:8b1158c0649fa554</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Core Lightning (CLN) developers have told node operators to take their nodes offline because of a critical unpatched vulnerability. The fixed binaries have not yet been released, and details are under a two-week embargo.
+
+This matters because CLN is one of the main implementations of the Lightning Network, which handles Bitcoin payments. An unpatched vulnerability could endanger users&#x27; funds and trust in the Lightning Network if exploited before fixes are widely deployed.
+
+Operators who cannot upgrade are advised to run nodes with the --offline flag. The CLN team has not disclosed vulnerability specifics, citing a two-week embargo, and official patched binaries are not yet available.</summary>
+  </entry>
+  <entry>
+    <title>LND cooperative-close flaw puts old nodes at full channel wipeout risk</title>
+    <link href="https://cryptoslate.com/old-lightning-nodes-may-be-exposed-to-a-full-channel-wipeout-after-lnd-fix-lands-later-than-disclosed/"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cryptoslate.com_feed_:c2549ef50bd2ae9b</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>LND disclosed a cooperative-close vulnerability on Aug. 13 that could let a malicious peer drain a full channel balance using a one-block reorganization and an old revoked commitment. The official fix only ships in LND 0.21.0, so standard releases below 0.21.0 remain exposed unless separately patched.
+
+Because LND underpins the majority of Lightning Network nodes, a reproducible full-balance loss scenario is a serious security risk even with no known exploit. Operators on older releases must treat their nodes as vulnerable and upgrade to 0.21.0 or later to stay protected.
+
+Before the fix, LND forgot a cooperatively closed channel after its closing transaction received one confirmation, leaving the node unable to broadcast penalty transactions if a reorganization removed that confirmation and a peer published a revoked commitment. The maximum loss is the channel&#x27;s full balance, and no affected users or in-the-wild exploits have been confirmed.</summary>
+  </entry>
+  <entry>
+    <title>Zero-Balance Bug Let Empty Wallets Seize 82 Provenance Assets</title>
+    <link href="https://cryptoslate.com/a-zero-balance-bug-let-empty-wallets-seize-control-of-82-provenance-assets/"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cryptoslate.com_feed_:8f11b75ba96f2e7c</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Trail of Bits disclosed a Provenance Blockchain authorization flaw allowing users with a zero token balance to take admin, mint, and withdrawal permissions on 82 live marker accounts. Fixes were released in v1.28.0 and v1.29.0, but no exploitation was confirmed.
+
+The bug created a direct risk of unauthorized token minting and theft of escrowed assets, including roughly $500,000 in HASH, on a blockchain purpose-built for financial services. It underscores how a small authorization error can threaten asset custody and supply integrity across an entire network.
+
+The flaw came from a mismatch between the bank module&#x27;s live circulating supply and the marker&#x27;s stored supply field, which stays zero for non-fixed markers, so a zero-balance account passed an &#x27;holds entire supply&#x27; check. The v1.29.0 fix makes the authorization check read live supply from the bank module rather than the stale marker field.</summary>
+  </entry>
+  <entry>
+    <title>39 State Banking Groups Form BankChain Alliance for 2027 Blockchain Launch</title>
+    <link href="https://thedefiant.io/converge/tradfi-and-fintech/39-state-banking-groups-form-bankchain-alliance-for-2027-blockchain-launch"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:thedefiant.io_api_feed:401494efeacc7b44</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Thirty-nine U.S. state banking associations announced the formation of the BankChain Alliance, a coalition to build an industry-owned blockchain network for community and regional banks. The network targets a 2027 launch and aims to support tokenized deposits, stablecoins, programmable payments, and automated settlement, though no technology partner or architecture has been selected yet.
+
+This marks a rare coordinated effort by thousands of U.S. banks to build shared blockchain infrastructure, potentially accelerating mainstream adoption of tokenized deposits and stablecoins in traditional finance. It signals that banks see blockchain as a competitive necessity, which could reshape settlement, payments, and the broader stablecoin ecosystem.
+
+The alliance has not disclosed its underlying blockchain (e.g., Ethereum, XRP, Solana), governance structure, or regulatory framework, and no individual member banks have been named. It is still selecting a technology partner and has invited banks nationwide to take ownership stakes, with participating associations representing major and smaller markets across the U.S.</summary>
+  </entry>
+  <entry>
+    <title>Revolut Begins Phased Rollout of Euro-Pegged EURR Stablecoin</title>
+    <link href="https://decrypt.co/376575/revolut-launches-euro-pegged-eurr-stablecoin"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:decrypt.co_feed:4164b85b4c11d7dc</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Revolut has begun a phased rollout of EURR, a euro-pegged stablecoin, to selected customers in Denmark, Poland, and Portugal. The token is issued by Bridge Building S.A., a Stripe-owned entity licensed in Luxembourg, and is available through Revolut&#x27;s retail app, with wider EEA availability planned later this year.
+
+This marks a major fintech&#x27;s entry into the euro stablecoin market, potentially expanding on-chain euro use cases and challenging the dollar-dominated stablecoin landscape. With 80 million customers, Revolut could drive significant retail adoption of euro stablecoins.
+
+EURR is designed to hold a value of €1, runs on multiple blockchains, and supports external wallets. It is issued by Bridge Building S.A., which is licensed by Luxembourg&#x27;s CSSF as both a crypto asset service provider and an electronic money institution, while Revolut distributes the token through a Cyprus-regulated MiCA-licensed subsidiary.</summary>
+  </entry>
+  <entry>
+    <title>Taurus links digital asset platforms to Swift&#x27;s blockchain ledger</title>
+    <link href="https://cointelegraph.com/news/taurus-digital-asset-platforms-swift-blockchain-ledger?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cointelegraph.com_rss:0ddc1ddb7b12d6de</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Digital asset infrastructure provider Taurus has integrated its tokenization and custody platforms with Swift&#x27;s blockchain-based ledger. The first institutional client integrations are expected to go live within days, with initial DLT transactions expected within weeks.
+
+This integration connects a core traditional finance network with digital asset infrastructure, enabling bank-issued tokenized deposits for cross-border payments. It signals growing institutional adoption of tokenization and deeper interoperability between legacy financial rails and blockchain technology.
+
+Swift&#x27;s ledger acts as an orchestration layer for 24/7 cross-border payments using tokenized deposits on participating banks&#x27; balance sheets, coordinating transfers before final settlement through existing arrangements such as real-time gross settlement systems. Swift announced the ledger was ready for initial use in July, with 17 banks planning pilots; Standard Chartered and HSBC have since completed the first live cross-border transaction on it.</summary>
+  </entry>
+  <entry>
+    <title>Shinhan Bank to Use Visa Stablecoin Platform for Future Finance</title>
+    <link href="https://www.theblock.co/news/web3/2026-08-26-south-koreas-shinhan-visa-stablecoin-412765"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:www.theblock.co_rss.xml:ac00b92a86250918</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>South Korea&#x27;s Shinhan Bank announced it will use Visa&#x27;s stablecoin platform for future finance initiatives. The collaboration will test stablecoin card payments, AI-based payment models, and B2B and B2C payment businesses.
+
+This marks a major Asian bank adopting stablecoin infrastructure through a global payment network, signaling growing institutional acceptance of stablecoins. It could accelerate integration of stablecoins into mainstream banking and payment rails.
+
+Visa&#x27;s Stablecoin Platform, announced on July 16, 2026, provides a single environment where banks, fintechs and crypto firms can mint, redeem, hold and transfer stablecoins. The Shinhan partnership is initially an announcement of intent, covering testing of card payments and B2B/B2C use cases rather than an immediate product launch.</summary>
+  </entry>
+  <entry>
+    <title>India Launches Pilot for Tokenized Corporate Bonds via REC</title>
+    <link href="https://www.crowdfundinsider.com/2026/08/301317-india-to-launch-tokenized-corporate-bonds-via-rec-pilot/"/>
+    <id>https://bmt.news/editions/2026-08-27/#gdelt:article:20260826T020000Z::https://www.crowdfundinsider.com/2026/08/301317-india-to-launch-tokenized-corporate-bonds-via-rec-pilot/</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>India is launching a pilot program to issue tokenized corporate bonds through REC, an Indian state-owned enterprise focused on power-sector financing. This marks a significant experiment with blockchain-based securities in one of the world&#x27;s largest economies.
+
+This pilot signals institutional adoption of blockchain for real-world assets in a major economy, potentially paving the way for broader regulatory acceptance and market infrastructure development. It also places India among the countries exploring tokenized securities as a means to improve bond market efficiency.
+
+The initiative is a pilot rather than a full market launch, so its scale is limited and specific dates or amounts were not disclosed. It focuses on corporate bonds, not government bonds, and involves REC, an Indian public-sector company.</summary>
+  </entry>
+  <entry>
+    <title>Banks build tokenized deposits to stop stablecoins draining loan funding</title>
+    <link href="https://cryptoslate.com/banks-found-a-way-to-copy-stablecoins-without-losing-the-money-that-funds-their-loans/"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cryptoslate.com_feed_:189d28b705f5e1e0</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Banks are building tokenized deposits as a defensive response to stablecoins, aiming to keep funds on their balance sheets while still offering programmable, 24/7 settlement. Artem Tolkachev of Falcon Finance explains that the real motivation is balance-sheet preservation, not technology.
+
+If stablecoins pull cheap deposits out of banks, banks must replace them with more expensive wholesale funding, raising costs and potentially reducing lending. Tokenized deposits could determine whether banks retain deposit funding as stablecoin adoption grows, shaping the broader crypto-banking relationship.
+
+The article compares three digital dollar formats: tokenized deposits (funds stay on the bank&#x27;s balance sheet, insured), reserve-backed stablecoins (funds move to issuer reserves, no deposit insurance, and GENIUS Act bars yield payments), and synthetic dollars (overcollateralized separate custody). The Dallas Fed notes deposit tokens remain commercial-bank deposits under the same supervisory framework, and the FDIC has proposed insuring stablecoin reserve deposits as corporate deposits without pass-through insurance for holders.</summary>
+  </entry>
   <entry>
     <title>Cosmos Labs Urges EVM Chains to Halt as Shared Bug Drains Three Networks</title>
     <link href="https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks"/>
@@ -297,68 +396,5 @@ Tokenized stocks are blockchain-based digital assets designed to represent econo
     <id>https://bmt.news/editions/2026-08-23/#rss:www.coindesk.com_arc_outboundfeeds_rss_:64a321f0c36355f9</id>
     <updated>2026-08-23T00:00:00Z</updated>
     <summary>BitMart is reportedly considering a partial restart and creditor payouts weeks after it announced it would shut down, according to CoinDesk. This matters because it could determine whether BitMart&#x27;s users recover funds and whether the exchange retains any viability. It also affects confidence in centralized crypto exchanges during a period of consolidation and insolvencies. The report says the exchange is weighing options for a partial restart alongside creditor payouts, weeks after the shutdown announcement. Specific terms, amounts, and timelines have not been disclosed.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase Adds Instant Onchain Token Trading for Base and Solana in App</title>
-    <link href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBnNFVkZFFuN0JOdFBoZ29WZmMzSk1LT0hvenU1Z1FsWHR4OGVOa2Q0RWhqYWpNYVgyQl9TcWhVZ1FENkUtX2d5SHphd1laVDJncl9kc0pHbw?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-23/#google_news:article:886b1b5c91456443</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>Coinbase has introduced instant onchain token trading for tokens on its Base Layer 2 network and on Solana directly within its mobile app, allowing users to trade these assets without leaving the app. The feature broadens access to onchain assets for Coinbase&#x27;s large user base. This expansion positions Coinbase as a bridge between centralized exchange services and onchain ecosystems, giving mainstream users direct access to fast-growing networks like Base and Solana. It signals a broader industry trend of centralized platforms integrating decentralized trading features. The announcement does not disclose specific fees, the full list of supported tokens, or the rollout scope. Base is an Ethereum Layer 2 network built by Coinbase, while Solana is a separate high-throughput blockchain, and both ecosystems host numerous tokens, including meme coins and DeFi assets.</summary>
-  </entry>
-  <entry>
-    <title>HSBC and Standard Chartered Complete First Interbank Transaction on SWIFT Ledger</title>
-    <link href="https://www.pymnts.com/blockchain/2026/standard-chartered-and-hsbc-complete-first-interbank-transaction-on-swifts-blockchain-based-ledger/"/>
-    <id>https://bmt.news/editions/2026-08-23/#gdelt:article:20260822T023000Z::https://www.pymnts.com/blockchain/2026/standard-chartered-and-hsbc-complete-first-interbank-transaction-on-swifts-blockchain-based-ledger/</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>Standard Chartered and HSBC completed the first interbank transaction on SWIFT&#x27;s blockchain-based ledger. This marks a milestone in institutional blockchain adoption following SWIFT&#x27;s plan to embed a DLT-based ledger into its core infrastructure. This is significant because two global systemically important banks are transacting on a blockchain ledger within the existing SWIFT framework, bridging traditional finance and DLT. It could accelerate institutional adoption of tokenised cross-border payments and validate SWIFT&#x27;s role as a trusted neutral infrastructure. SWIFT announced in September 2025 that it would embed a blockchain-based shared ledger into its core. Seventeen banks from six continents are preparing to pilot live tokenised cross-border payment transactions on the ledger, and the Standard Chartered–HSBC transaction is the first interbank transaction on it.</summary>
-  </entry>
-  <entry>
-    <title>Bitcoin and Ether ETFs See $2.6B Week, Highest Inflows Since October</title>
-    <link href="https://www.theblock.co/news/markets/2026-08-22-bitcoin-and-ether-etfs-draw-2-6-billion-in-strongest-inflow-week-since-october-tripling-volume-412531"/>
-    <id>https://bmt.news/editions/2026-08-23/#rss:www.theblock.co_rss.xml:e16b26a41e8292cf</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>Bitcoin and ether exchange-traded funds attracted a combined $2.6 billion in net inflows over the week, their strongest weekly showing since October. Combined trading volume for the two ETF categories more than tripled to $29 billion as bitcoin and ether prices rallied. The surge in ETF inflows and volume signals an uptick in institutional and regulated demand for digital assets. Strong flows into these products can reinforce market confidence and deepen the connection between traditional finance and cryptocurrency markets. Despite the weekly rally, both bitcoin and ether ETFs remain negative on a year-to-date basis. The inflow figure covers combined bitcoin and ether products rather than a single fund.</summary>
-  </entry>
-  <entry>
-    <title>Coldcard Firmware Update Mitigates $130M Bitcoin Seed-Entropy Exploit</title>
-    <link href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:decrypt.co_feed:6b6e45deb878ca81</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>Coinkite released firmware 5.6.1 for Coldcard Mk4/Mk5 and 1.5.1Q for Coldcard Q after a three-week security review, fixing a seed-generation entropy flaw. Users now must add at least 65 key presses, 50 dice rolls, or 128 coin flips when generating a new seed, and affected users are told to migrate to a fresh seed. This exploit directly contradicts the core promise of hardware wallets—that private keys remain safe even when the device is offline—by allowing attackers to guess keys generated with insufficient randomness. The incident highlights that a hardware wallet&#x27;s security is only as strong as its random number generation, and it may push vendors and users to demand verifiable entropy sources. The flaw reduced effective entropy from 128 bits to roughly 40 bits on some devices and dates back to 2021, according to Coinkite. The update also replaces the Yasmarang backup pseudo-random number generator with SHA-256 Hash_DRBG, adds hardware RNG failure checks, verifies PSBTs immediately before signing, and tightens USB and Delta Mode handling.</summary>
-  </entry>
-  <entry>
-    <title>MANTRA halts network over Cosmos EVM module incident</title>
-    <link href="https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:www.theblock.co_rss.xml:22d9e7ab9bedff7e</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>On August 21, 2026, MANTRA Chain halted all transactions, transfers, and staking after an attacker exploited a vulnerability in an upstream dependency linked to its Cosmos EVM module. The patched release v8.4.0 is being tested on the DuKong testnet before a coordinated mainnet restart can occur. This is a high-impact security event for MANTRA users and the broader Cosmos ecosystem, as the network-wide freeze silences all onchain activity and raises questions about the security of third-party dependencies. The incident could affect trust in Cosmos-based EVM chains and in the safety of upstream open-source components. The MANTRA team says the halt itself did not affect user funds, but the full asset impact of the attacker&#x27;s activity remains unconfirmed and fund movements are being traced. Validators are instructed to keep mainnet nodes offline until a coordinated restart is announced, with DuKong testnet testing serving as the gate for the patched release.</summary>
-  </entry>
-  <entry>
-    <title>Solana Activates 350ms Slots on Mainnet, First Cut Since Genesis</title>
-    <link href="https://thedefiant.io/news/blockchains/solana-activates-350-millisecond-slots-on-mainnet"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:thedefiant.io_api_feed:1d516c873d5182e2</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>Solana reduced its mainnet slot time from 400ms to 350ms, marking the first such reduction since the network&#x27;s inception. The change begins an epoch-by-epoch path toward a 200ms target, with 300ms as the next milestone. Shorter slots reduce network latency and speed up transaction confirmation, improving the experience for users and applications built on Solana. It strengthens Solana&#x27;s competitive position as a high-performance blockchain and signals continued protocol-level optimization. The reduction was enabled by SIMD-0525, which was approved and merged on May 14, and average slot times already stood at 360ms at press time. The remaining 50ms reductions toward 200ms are targeted for mainnet activation in Agave v4.2, the validator client developed by Anza, though the schedule is tentative.</summary>
-  </entry>
-  <entry>
-    <title>Maya Protocol Exploit Leaves $11M Pool Damage Unresolved; Attacker Still Holds 20.83 BTC</title>
-    <link href="https://cryptoslate.com/maya-protocol-exploit-wallet-still-holds-20-83-btc-as-11-million-pool-impact-remains-unresolved/"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:cryptoslate.com_feed_:8ebed66f2210edb3</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>On Aug. 18, Maya Protocol suffered an exploit in which an attacker chained six accounting flaws to drain roughly 48.87 million CACAO and extract about $1.65–$1.7 million in assets. As of Aug. 21, the suspected attacker&#x27;s Bitcoin address still holds 20.8273 BTC with no outgoing transactions, and Maya has not published a recovery plan for the wider ~$10.9 million pool impact. This exploit underscores persistent security risks in cross-chain liquidity protocols, where a single crafted transaction can trigger cascading pool losses. With ~$11 million in impact still unresolved and CACAO&#x27;s price down 88.7%, user confidence in Maya Protocol and similar THORChain-based networks may be shaken. SigIntZero&#x27;s technical reconstruction attributes the exploit to six accounting and state-handling flaws chained inside one 23-message transaction, which produced a false missing-transfer signal and credited ~49.45 million CACAO to a thin ARB.LINK pool. CryptoSlate analysis attributes ~$6.4 million of pool impact to CACAO repricing (from ~$0.115 to $0.013, an 88.7% decline) and ~$2.9 million to arbitrage.</summary>
-  </entry>
-  <entry>
-    <title>Major P2P Platform NoOnes Shuts Down After Sanctions Disrupt Operations</title>
-    <link href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXbmhJX2tRdWMwN0hKM0QycU9tOXFjNURNOFJWTGNTcURoZVlzXzVBYWtFWVUwUU1PTUNsdWJfZXY2NW1rUTBlcG81Sm5FWHdZYVNsdHdDYXlUZzg?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-22/#google_news:article:b3e6cc6e3007bae9</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>NoOnes, a peer-to-peer crypto platform with over 2.5 million users, is winding down operations after government sanctions and resulting regulatory restrictions made continued operations unsustainable. This shutdown demonstrates how government sanctions can force significant crypto platforms out of business, directly affecting users&#x27; ability to trade. It underscores the regulatory and geopolitical risks facing crypto exchanges that depend on traditional financial services. NoOnes surpassed 2.5 million users earlier in 2026 and had served customers for three years. An emergency exit window was opened for users to withdraw funds after sanctions and restrictions from financial and crypto-service providers made operations impossible.</summary>
-  </entry>
-  <entry>
-    <title>Binance Thwarts Attack, Saves $1.2 Million in 48 Hours</title>
-    <link href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPb3I5ZmdNNjA5dDZqZXhVRklQVVJ4YjBIYXJ4SDJlY2E3WENndFpocDNicWhnZzBWNU1jenBWS09QT0RJckFiZ3pQZkMxTExYWVZCZ2o4RllrblhNejlWNDEtSXVIN3dOZVotakJTRGplQmRPbk85a25aQ1d6OWxjTlljMmNjQ1hEeFNIS1lhc0RXN05SODBDWDlmLUNyRExBUXZ4clFrUWVhRGpoVXc?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-22/#google_news:article:527f417106944d09</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>Binance detected and neutralized an attack within 48 hours, preventing approximately $1.2 million in potential losses. No customer funds were reported lost in the incident. This incident highlights the ongoing threat landscape for cryptocurrency exchanges and the importance of robust security monitoring. Successfully preventing such attacks helps maintain user trust and exchange stability. Binance&#x27;s security systems detected and halted the attack before any funds were compromised, with the $1.2 million figure representing the potential loss averted. The response occurred within a 48-hour window, according to the announcement.</summary>
   </entry>
 </feed>

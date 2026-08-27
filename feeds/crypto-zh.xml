@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-08-26T00:00:00Z</updated>
+  <updated>2026-08-27T00:00:00Z</updated>
+  <entry>
+    <title>Core Lightning 建议节点运营者因未修补漏洞下线</title>
+    <link href="https://thedefiant.io/news/security/core-lightning-tells-node-operators-to-go-offline-with-no-patch-published"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:thedefiant.io_api_feed:8b1158c0649fa554</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Core Lightning（CLN）开发者已告知节点运营者让其节点下线，因为存在一个严重且尚未修补的漏洞。修复后的二进制文件尚未发布，细节目前处于两周的保密期（embargo）内。
+
+此事很重要，因为CLN是负责处理比特币支付的闪电网络（Lightning Network）的主要实现之一。如果漏洞在修复程序广泛部署前被利用，可能会危及用户资金以及人们对闪电网络的信任。
+
+无法升级的运营者被建议使用 --offline 标志运行节点。CLN 团队尚未披露漏洞细节，理由是两周的保密期，且官方修复版二进制文件尚未发布。</summary>
+  </entry>
+  <entry>
+    <title>LND合作关闭漏洞可致旧版节点通道资金全损</title>
+    <link href="https://cryptoslate.com/old-lightning-nodes-may-be-exposed-to-a-full-channel-wipeout-after-lnd-fix-lands-later-than-disclosed/"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cryptoslate.com_feed_:c2549ef50bd2ae9b</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>8月13日，LND开发者Bastien Teinturier披露了一个合作关闭漏洞，恶意对等节点可利用一个区块重组和旧版已撤销承诺交易耗尽整个通道余额。官方修复仅在LND 0.21.0版本中落地，低于0.21.0的标准版本除非单独打补丁，否则仍存在风险。
+
+由于LND是闪电网络上部署最广泛的节点实现，这一可复现的“全额余额损失”场景即使尚无已知攻击，也构成严重安全风险。运行旧版本的操作者应将自身节点视为未修复，并升级到0.21.0及以上版本以保持安全。
+
+修复前，LND在合作关闭交易获得第一次链上确认后就会遗忘该通道，如果比特币随后发生重组使该交易失效，节点将无法广播惩罚交易来应对对方发布的已撤销承诺。最大损失可达通道全部余额；目前尚无受影响用户或在野利用的确认报告。</summary>
+  </entry>
+  <entry>
+    <title>零余额漏洞让空钱包接管82个Provenance资产</title>
+    <link href="https://cryptoslate.com/a-zero-balance-bug-let-empty-wallets-seize-control-of-82-provenance-assets/"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cryptoslate.com_feed_:8f11b75ba96f2e7c</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Trail of Bits 披露了一个 Provenance 区块链授权漏洞，允许零代币余额的用户对 82 个活跃标记账户获得管理、铸造和提现权限。修复已在 v1.28.0 和 v1.29.0 中发布，但未确认有利用行为。
+
+该漏洞直接造成未经授权铸造代币和窃取托管资产的风险，涉及约 50 万美元的 HASH，而这是一条专为金融服务构建的区块链。它凸显了一个小的授权错误如何威胁整个网络中的资产托管和供应完整性。
+
+该缺陷源于银行模块的实时流通供应量与标记存储的供应量字段（非固定标记保持为零）不一致，导致零余额账户通过了“持有全部供应量”的检查。v1.29.0 的修复让授权检查从银行模块读取实时供应量，而不是读取过时的标记字段。</summary>
+  </entry>
+  <entry>
+    <title>39个州银行组织组建BankChain联盟，计划2027年推出区块链</title>
+    <link href="https://thedefiant.io/converge/tradfi-and-fintech/39-state-banking-groups-form-bankchain-alliance-for-2027-blockchain-launch"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:thedefiant.io_api_feed:401494efeacc7b44</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>美国39个州银行协会宣布成立BankChain联盟，这是一个旨在为社区和地区银行构建行业内自有区块链网络的联盟。该网络目标在2027年上线，计划支持代币化存款、稳定币、可编程支付和自动结算，但尚未选定技术合作伙伴或架构。
+
+这标志着数千家美国银行罕见地协同构建共享区块链基础设施，可能推动代币化存款和稳定币在传统金融中的主流采用。它表明银行将区块链视为竞争必需，这可能会重塑结算、支付以及更广泛的稳定币生态。
+
+该联盟尚未披露其底层区块链（如以太坊、XRP、Solana）、治理结构或监管框架，也未公布具体成员银行。它仍在遴选技术合作伙伴，并邀请全美银行入股，参与的协会涵盖了美国主要和小型市场。</summary>
+  </entry>
+  <entry>
+    <title>Revolut 开始分阶段推出欧元稳定币 EURR</title>
+    <link href="https://decrypt.co/376575/revolut-launches-euro-pegged-eurr-stablecoin"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:decrypt.co_feed:4164b85b4c11d7dc</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>Revolut 已开始向丹麦、波兰和葡萄牙的特定客户分阶段推出与欧元挂钩的稳定币 EURR。该代币由 Stripe 旗下、在卢森堡获得许可的 Bridge Building S.A. 发行，用户可通过 Revolut 零售应用使用，计划今年晚些时候在更广泛的 EEA 地区推出。
+
+这标志着大型金融科技公司进入欧元稳定币市场，可能扩大链上欧元的使用场景，并挑战以美元为主导的稳定币格局。Revolut 拥有 8000 万客户，可能推动欧元稳定币在零售领域的大规模采用。
+
+EURR 的设计目标是保持 1 欧元的价值，可在多条区块链上运行，并支持外部钱包。该代币由 Bridge Building S.A. 发行，该公司已获得卢森堡 CSSF 的加密资产服务提供商和电子货币机构双重许可，而 Revolut 通过其在塞浦路斯受监管的 MiCA 许可子公司进行分发。</summary>
+  </entry>
+  <entry>
+    <title>Taurus将数字资产平台接入Swift区块链账本</title>
+    <link href="https://cointelegraph.com/news/taurus-digital-asset-platforms-swift-blockchain-ledger?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cointelegraph.com_rss:0ddc1ddb7b12d6de</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>数字资产基础设施提供商Taurus已将其代币化和托管平台与Swift基于区块链的账本集成。首批机构客户集成预计在数天内上线，首批分布式账本技术交易预计在数周内通过其平台完成。
+
+此次集成将核心传统金融网络与数字资产基础设施连接起来，使银行发行的代币化存款可用于跨境支付。这标志着机构对代币化的采用日益增多，以及传统金融轨道与区块链技术之间的互操作性进一步加深。
+
+Swift的账本作为协调层，支持使用参与银行资产负债表上的代币化存款进行全天候跨境支付，并在最终结算前通过现有安排（如实时全额结算系统）协调转账。Swift于7月宣布该账本可投入初步使用，17家银行计划试点；渣打银行和汇丰银行此后已在该账本上完成首笔实时跨境交易。</summary>
+  </entry>
+  <entry>
+    <title>韩国新韩银行将利用Visa稳定币平台推进未来金融</title>
+    <link href="https://www.theblock.co/news/web3/2026-08-26-south-koreas-shinhan-visa-stablecoin-412765"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:www.theblock.co_rss.xml:ac00b92a86250918</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>韩国新韩银行宣布将使用Visa的稳定币平台推进未来金融计划。双方将测试稳定币卡支付、基于AI的支付模式以及B2B和B2C支付业务。
+
+这标志着一家大型亚洲银行通过全球支付网络采用稳定币基础设施，显示出机构对稳定币的接受度正在提高。此举可能加速稳定币融入主流银行和支付通道。
+
+Visa稳定币平台于2026年7月16日发布，为银行、金融科技公司和加密企业提供单一环境，可铸造、赎回、持有和转移稳定币。新韩银行合作目前属于意向声明，涵盖卡支付及B2B/B2C场景的测试，并非立即推出的产品。</summary>
+  </entry>
+  <entry>
+    <title>印度通过REC启动代币化公司债券试点</title>
+    <link href="https://www.crowdfundinsider.com/2026/08/301317-india-to-launch-tokenized-corporate-bonds-via-rec-pilot/"/>
+    <id>https://bmt.news/editions/2026-08-27/#gdelt:article:20260826T020000Z::https://www.crowdfundinsider.com/2026/08/301317-india-to-launch-tokenized-corporate-bonds-via-rec-pilot/</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>印度正通过专门从事电力领域融资的国有企业REC启动一项试点计划，发行代币化公司债券。这标志着这个全球主要经济体在基于区块链的证券领域进行了一次重要实验。
+
+这一试点标志着主要经济体在机构层面采用区块链处理现实世界资产，可能为更广泛的监管认可和市场基础设施发展铺平道路。这也使印度成为探索代币化证券以提升债券市场效率的国家之一。
+
+该举措是试点而非全面市场推广，因此规模有限，具体日期和金额未披露。它聚焦于公司债券而非政府债券，并涉及印度公共部门公司REC。</summary>
+  </entry>
+  <entry>
+    <title>银行打造代币化存款，防止稳定币抽走贷款资金</title>
+    <link href="https://cryptoslate.com/banks-found-a-way-to-copy-stablecoins-without-losing-the-money-that-funds-their-loans/"/>
+    <id>https://bmt.news/editions/2026-08-27/#rss:cryptoslate.com_feed_:189d28b705f5e1e0</id>
+    <updated>2026-08-27T00:00:00Z</updated>
+    <summary>银行正在打造代币化存款，作为对稳定币的防御性回应，目的是在提供可编程、全天候结算的同时，将资金保留在资产负债表中。Falcon Finance 的 Artem Tolkachev 解释说，真正的动机是保护资产负债表，而非技术。
+
+如果稳定币将低成本存款从银行抽走，银行就不得不以更昂贵的批发资金替代，从而提高成本并可能压缩贷款。代币化存款可能决定在稳定币采用率上升时银行能否保住存款资金，进而影响加密市场与银行业的关系。
+
+文章比较了三种数字美元形式：代币化存款（资金留在银行资产负债表内，有存款保险）、储备支持的稳定币（资金进入发行方储备，无存款保险，且 GENIUS 法案禁止向持有者支付收益）以及合成美元（超额抵押、独立托管）。达拉斯联储指出，存款代币仍是处于同一监管框架下的商业银行存款；FDIC 则提议将稳定币储备作为公司存款投保，而不向持有者提供穿透式保险。</summary>
+  </entry>
   <entry>
     <title>Cosmos Labs 紧急呼吁 EVM 链暂停：共享漏洞导致三条网络被盗</title>
     <link href="https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks"/>
@@ -297,68 +396,5 @@ Chainlink价格源每周运行5天、每天24小时，而代币化股票则每�
     <id>https://bmt.news/editions/2026-08-23/#rss:www.coindesk.com_arc_outboundfeeds_rss_:64a321f0c36355f9</id>
     <updated>2026-08-23T00:00:00Z</updated>
     <summary>据 CoinDesk 报道，BitMart 在宣布关闭数周后，正考虑部分重启并向债权人进行偿付。 这很关键，因为它可能决定 BitMart 用户能否收回资金，以及该交易所是否仍具备存续能力。在行业整合与破产频发的背景下，这也会影响用户对中心化加密货币交易所的信心。 报道称，这家交易所在宣布关闭数周后，正在权衡部分重启以及债权人偿付等选项。具体条款、金额和时间表尚未公布。</summary>
-  </entry>
-  <entry>
-    <title>Coinbase在应用中为Base和Solana推出即时链上代币交易</title>
-    <link href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBnNFVkZFFuN0JOdFBoZ29WZmMzSk1LT0hvenU1Z1FsWHR4OGVOa2Q0RWhqYWpNYVgyQl9TcWhVZ1FENkUtX2d5SHphd1laVDJncl9kc0pHbw?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-23/#google_news:article:886b1b5c91456443</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>Coinbase已在其移动应用中为Base Layer 2网络和Solana上的代币引入了即时链上交易功能，用户无需离开应用即可直接交易这些资产。该功能拓宽了Coinbase庞大用户群接触链上资产的渠道。 此举使Coinbase成为中心化交易所服务与链上生态系统之间的桥梁，让主流用户能够直接接触Base和Solana等快速发展的网络。这也反映出中心化平台整合去中心化交易功能的行业趋势。 该公告未透露具体费用、完整支持代币列表或上线范围。Base是Coinbase构建的以太坊Layer 2网络，而Solana是独立的高吞吐量区块链，两个生态都拥有众多代币，包括模因币和DeFi资产。</summary>
-  </entry>
-  <entry>
-    <title>汇丰与渣打完成SWIFT区块链账本首笔银行间交易</title>
-    <link href="https://www.pymnts.com/blockchain/2026/standard-chartered-and-hsbc-complete-first-interbank-transaction-on-swifts-blockchain-based-ledger/"/>
-    <id>https://bmt.news/editions/2026-08-23/#gdelt:article:20260822T023000Z::https://www.pymnts.com/blockchain/2026/standard-chartered-and-hsbc-complete-first-interbank-transaction-on-swifts-blockchain-based-ledger/</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>渣打银行与汇丰银行在SWIFT基于区块链的账本上完成了首笔银行间交易。这标志着在SWIFT计划将基于DLT的账本嵌入核心基础设施之后，机构区块链采用迎来一个里程碑。 此事意义重大，因为两家全球系统重要性银行在现有SWIFT框架内通过区块链账本完成交易，将传统金融与DLT连接起来。它可能加速机构采用代币化跨境支付，并巩固SWIFT作为可信中立基础设施的地位。 SWIFT于2025年9月宣布将基于区块链的共享账本嵌入其核心系统。来自六大洲的17家银行正准备在该账本上试点代币化跨境支付的实时交易，而渣打与汇丰的这笔交易是该账本上的首笔银行间交易。</summary>
-  </entry>
-  <entry>
-    <title>比特币与以太坊ETF周流入26亿美元，创10月以来最强</title>
-    <link href="https://www.theblock.co/news/markets/2026-08-22-bitcoin-and-ether-etfs-draw-2-6-billion-in-strongest-inflow-week-since-october-tripling-volume-412531"/>
-    <id>https://bmt.news/editions/2026-08-23/#rss:www.theblock.co_rss.xml:e16b26a41e8292cf</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>比特币和以太坊交易所交易基金（ETF）上周合计吸引26亿美元净流入，创下自10月以来最强单周表现。两类ETF合计交易量扩大至290亿美元，达到原先三倍多，同时比特币和以太坊价格出现上涨。 ETF资金流入和交易量激增，反映出机构及受监管渠道对数字资产的需求升温。这些产品的强劲流入有助于增强市场信心，并加深传统金融与加密货币市场之间的联动。 尽管本周行情反弹，但比特币和以太坊ETF年初至今仍为负回报。上述流入数据是比特币与以太坊产品的合计数字，而非单只基金的表现。</summary>
-  </entry>
-  <entry>
-    <title>Coldcard发布固件更新修复致1.3亿美元比特币被盗的种子熵漏洞</title>
-    <link href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:decrypt.co_feed:6b6e45deb878ca81</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>Coinkite公司在为期三周的安全审查后，为Coldcard Mk4/Mk5发布了5.6.1固件、为Coldcard Q发布了1.5.1Q固件，修复了种子生成过程中的熵缺陷。现在用户生成新种子时必须至少加入65次按键、50次掷骰子或128次抛硬币的随机输入，受影响用户被要求迁移到全新的种子。 这一漏洞直接违背了硬件钱包的核心承诺——即使设备离线，私钥也是安全的——因为攻击者可以猜出因随机性不足而生成的密钥。该事件凸显出硬件钱包的安全性完全取决于其随机数生成强度，可能促使厂商和用户要求可验证的熵来源。 据Coinkite称，该漏洞使部分设备的有效熵从128比特降至约40比特，且可追溯到2021年。此次更新还以SHA-256 Hash_DRBG替换了Yasmarang备用伪随机数生成器，增加了硬件随机数生成器故障检查，在签名前立即验证PSBT，并加强了USB和Delta Mode的处理。</summary>
-  </entry>
-  <entry>
-    <title>MANTRA因Cosmos EVM模块事件暂停全网</title>
-    <link href="https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:www.theblock.co_rss.xml:22d9e7ab9bedff7e</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>2026年8月21日，MANTRA Chain在发现攻击者利用与其Cosmos EVM模块相关的上游依赖漏洞后，暂停了所有交易、转账和质押。修复版本v8.4.0正在DuKong测试网上测试，之后才能进行协调的主网重启。 此次事件对MANTRA用户和整个Cosmos生态系统影响重大，因为全网暂停使所有链上活动停止，并引发了对第三方依赖安全性的质疑。这一事件可能影响市场对基于Cosmos的EVM链及上游开源组件安全的信任。 MANTRA团队表示，暂停本身并未影响用户资金，但攻击者活动的完整资产影响尚未确认，资金流向正在追踪中。验证者被要求在官方宣布协调重启前保持主网节点离线，DuKong测试网的测试是补丁版本上线的门槛。</summary>
-  </entry>
-  <entry>
-    <title>Solana主网激活350毫秒时隙，创世以来首次缩减</title>
-    <link href="https://thedefiant.io/news/blockchains/solana-activates-350-millisecond-slots-on-mainnet"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:thedefiant.io_api_feed:1d516c873d5182e2</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>Solana将主网时隙时间从400毫秒缩短至350毫秒，这是自网络创世以来的首次缩减。这一变化开启了逐epoch向200毫秒目标迈进的进程，下一里程碑为300毫秒。 更短的时隙降低了网络延迟，加快了交易确认速度，改善了Solana用户和应用的体验。这增强了Solana作为高性能区块链的竞争力，也表明协议层面的优化仍在持续推进。 此次缩减由SIMD-0525提案推动，该提案已于5月14日获批并合并，截至发稿时平均时隙时间已降至360毫秒。后续向200毫秒目标迈进的各次50毫秒缩减计划在Anza开发的验证器客户端Agave v4.2中激活主网，但时间表仍为暂定。</summary>
-  </entry>
-  <entry>
-    <title>Maya Protocol 遭攻击约1100万美元缺口未解，攻击者仍持20.83 BTC</title>
-    <link href="https://cryptoslate.com/maya-protocol-exploit-wallet-still-holds-20-83-btc-as-11-million-pool-impact-remains-unresolved/"/>
-    <id>https://bmt.news/editions/2026-08-22/#rss:cryptoslate.com_feed_:8ebed66f2210edb3</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>8月18日，Maya Protocol 遭到攻击，攻击者串联六个会计漏洞，盗走约4887万枚CACAO，并提取约165万至170万美元的资产。截至8月21日，疑似攻击者的比特币地址仍持有20.8273 BTC且无任何转出交易，Maya也未公布针对约1090万美元更大范围池损失的恢复计划。 此次攻击凸显了跨链流动性协议中持续存在的安全风险——单笔精心构造的交易就能引发连锁性的池损失。由于约1100万美元的影响仍未解决，且CACAO价格已下跌88.7%，用户对Maya Protocol及类似基于THORChain的网络的信心可能受到动摇。 SigIntZero的技术重建将攻击归因于一笔23条消息交易中串联的六个会计与状态处理缺陷——错误的重置状态触发了虚假的“转账缺失”信号，向一个薄弱的ARB.LINK池注入了约4945万枚CACAO。CryptoSlate分析认为，约640万美元的池损失来自CACAO重定价（从约0.115美元跌至0.013美元，跌幅88.7%），约290万美元来自套利。</summary>
-  </entry>
-  <entry>
-    <title>主要P2P加密平台NoOnes因制裁关停</title>
-    <link href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXbmhJX2tRdWMwN0hKM0QycU9tOXFjNURNOFJWTGNTcURoZVlzXzVBYWtFWVUwUU1PTUNsdWJfZXY2NW1rUTBlcG81Sm5FWHdZYVNsdHdDYXlUZzg?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-22/#google_news:article:b3e6cc6e3007bae9</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>拥有超过250万用户的点对点（P2P）加密货币平台NoOnes，在政府制裁及由此产生的监管限制导致运营难以为继后，正在逐步停止运营。 此次关停表明，政府制裁可能迫使重要的加密货币平台退出市场，直接影响用户的交易能力。这也凸显了依赖传统金融服务的加密交易所面临的监管和地缘政治风险。 NoOnes在2026年初用户数突破250万，并已为用户服务了三年。在制裁以及金融和加密服务提供商的限制导致运营无法继续后，平台为用户开放了紧急退出窗口以提取资金。</summary>
-  </entry>
-  <entry>
-    <title>币安在48小时内挫败攻击，挽回120万美元</title>
-    <link href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPb3I5ZmdNNjA5dDZqZXhVRklQVVJ4YjBIYXJ4SDJlY2E3WENndFpocDNicWhnZzBWNU1jenBWS09QT0RJckFiZ3pQZkMxTExYWVZCZ2o4RllrblhNejlWNDEtSXVIN3dOZVotakJTRGplQmRPbk85a25aQ1d6OWxjTlljMmNjQ1hEeFNIS1lhc0RXN05SODBDWDlmLUNyRExBUXZ4clFrUWVhRGpoVXc?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-22/#google_news:article:527f417106944d09</id>
-    <updated>2026-08-22T00:00:00Z</updated>
-    <summary>币安在48小时内侦测并化解了一次攻击，避免了约120万美元的潜在损失。据报此次事件中没有任何客户资金损失。 这一事件凸显了加密货币交易所面临的安全威胁形势，以及强健安全监控的重要性。成功阻止此类攻击有助于维持用户信任和交易所稳定。 币安的安全系统在资金受损之前就侦测并阻止了这次攻击，120万美元的数字代表被避免的潜在损失。据公告称，整个响应过程发生在48小时内。</summary>
   </entry>
 </feed>
