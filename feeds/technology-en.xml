@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-08-27T00:00:00Z</updated>
+  <updated>2026-08-28T00:00:00Z</updated>
+  <entry>
+    <title>Nvidia agrees to acquire Hugging Face for $13B</title>
+    <link href="https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8"/>
+    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49458161</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Nvidia has reportedly agreed to acquire Hugging Face, the leading open-source AI model repository, for $12.9 billion, according to The Information and TechCrunch. The deal was reported on August 24, 2026, and represents a major consolidation in the AI developer ecosystem.
+
+This acquisition gives Nvidia control over the primary distribution channel for open-source AI models, potentially reshaping how developers access and deploy AI software. It could intensify antitrust scrutiny and affect millions of developers and companies that rely on Hugging Face.
+
+The $12.9 billion price follows Hugging Face&#x27;s rejection of a $500 million Nvidia investment at a $7 billion valuation in late 2025, and a $235 million round at $4.5 billion in 2023. Nvidia has recently positioned itself as an open-source backer, including via Jensen Huang&#x27;s first-ever tweet in support of open source.</summary>
+  </entry>
+  <entry>
+    <title>Cloudflare Saves 100 TB Memory by Optimizing 1.1.1.1 DNS Cache</title>
+    <link href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/"/>
+    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49468083</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Cloudflare engineers detailed how they reduced memory usage by 100 terabytes across their edge network by reworking the data structures and allocation strategies in the 1.1.1.1 DNS resolver cache. The optimization cuts per-record overhead in one of the world&#x27;s busiest DNS services.
+
+This matters because it shows how careful systems-level optimization can yield massive efficiency gains in critical internet infrastructure, reducing hardware costs and energy consumption. The techniques are applicable to other high-throughput, memory-bound services and demonstrate the continued relevance of low-level programming expertise.
+
+The optimization primarily reduces per-record memory overhead by restructuring how cache keys and entries are laid out in memory. Commenters also pointed to cache-line alignment and slab-style allocation as complementary ways to cut fragmentation and improve CPU cache behavior.</summary>
+  </entry>
+  <entry>
+    <title>OpenAI&#x27;s ChatGPT Work Agent Signs Into Sites Without You</title>
+    <link href="https://decrypt.co/376757/openai-agentic-chatgpt-work-signs-in-without-you"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:decrypt.co_feed:ca96ac88ce991335</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>OpenAI&#x27;s August 25 release notes introduced an agentic browser capability for ChatGPT Work that lets the assistant complete tasks on login-gated websites. Users enter credentials once, and the browser session can persist for future tasks so the agent can work unattended.
+
+The feature turns a signed-in session into a standing credential, raising new security and privacy concerns about what an autonomous agent can do on a user&#x27;s behalf without direct oversight. It matters to everyday ChatGPT users and to developers building on OpenAI&#x27;s agentic tools, because the convenience of persistent logins comes with a meaningful tradeoff in account security.
+
+OpenAI states the model cannot see the user&#x27;s username or password, and that credentials are neither stored nor used for training; the login step also supports password managers. However, the session itself remains active until cleared manually per site under Settings &gt; Cloud browser, and the design assumes the user is not watching.</summary>
+  </entry>
   <entry>
     <title>FDA Approves First Targeted Therapy for Metastatic Pancreatic Cancer</title>
     <link href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer"/>

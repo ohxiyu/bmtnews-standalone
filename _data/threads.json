@@ -1,6 +1,54 @@
 {
   "threads": [
     {
+      "thread_id": "t747ea63a06",
+      "latest_date": "2026-08-28",
+      "first_date": "2026-08-22",
+      "days": 2,
+      "entries": 2,
+      "category": "crypto",
+      "title_zh": "比特币完成首笔量子安全主网交易，约700万枚BTC仍面临风险",
+      "title_en": "Bitcoin Executes First Quantum-Safe Mainnet Transaction; 7M BTC Still Exposed",
+      "summary_zh": "8月26日，比特币主网确认了首笔量子安全交易，该交易使用StarkWare研究员Avihu Levy提出的QSB（Quantum-Safe Bitcoin）方案，并经MARA的Slipstream服务纳入区块964,199。该交易以哈希安全性取代椭圆曲线签名，且无需更改共识规则。\n\n这是首次在实际主网中证明，比特币持有者无需等待协议升级，即可将资金迁移到抗量子的花费条件。但该事件也凸显出约700万枚公钥已暴露的BTC仍处于风险之中，说明更全面的软分叉迁移路径仍有必要。\n\nQSB的原理是反复调整候选交易数据，直到签名哈希符合比特币的验证规则，从而将安全性从椭圆曲线密码学转移到哈希函数逆向难度，据称对Shor算法具有约118比特的抗性。该交易符合共识规则，但不符合节点默认策略，需通过Slipstream直接提交给矿企MARA，成本达数百美元。",
+      "summary_en": "On Aug. 26, Bitcoin confirmed its first quantum-safe mainnet transaction using StarkWare researcher Avihu Levy's Quantum-Safe Bitcoin (QSB) construction, included in block 964,199 via MARA's Slipstream service. The transaction uses hash-based security instead of elliptic-curve signatures and required no consensus change.\n\nThis is the first live demonstration that Bitcoin holders can move funds to quantum-resistant spending conditions today, without waiting for a protocol upgrade. However, it also highlights that roughly 7 million BTC with already-visible public keys remain vulnerable, underscoring the need for a broader soft-fork-based migration path.\n\nQSB works by varying candidate transaction data until the signature hash is valid under Bitcoin's rules, shifting security from elliptic-curve cryptography to hash reversal; the approach offers roughly 118-bit resistance against Shor's algorithm. The transaction is valid under consensus rules but nonstandard under default node policy, so it was submitted directly to miner MARA via Slipstream, with costs in the hundreds of dollars."
+    },
+    {
+      "thread_id": "tec8be6673c",
+      "latest_date": "2026-08-28",
+      "first_date": "2026-08-23",
+      "days": 3,
+      "entries": 3,
+      "category": "crypto",
+      "title_zh": "Virtu与Tradeweb完成首笔使用马绍尔群岛数字债券的链上回购",
+      "title_en": "Virtu, Tradeweb Complete First Onchain Repo Using Marshall Islands Digital Bond",
+      "summary_zh": "8月27日，Virtu Financial、M1X Global 和 Tradeweb 完成了首笔完全在链上的回购交易，使用马绍尔群岛共和国发行的 USDM1 主权数字债券作为抵押品。整个回购与再购回周期在 Canton Network 上于10分钟内原子化结算完成。\n\n这一里程碑表明，代币化主权债券不仅可以用于发行或交易，还可以在机构融资交易中充当抵押品。它标志着受监管对手方之间的链上金融基础设施日益成熟，并可能加速代币化现实世界资产的采用。\n\nUSDM1 债券以美元计价，由短期美国国债1:1支持，并依据纽约法律构建为全额抵押的主权债务。机构托管由 Anchorage Digital、BitGo 和 tZERO 提供，交易在 Tradeweb 平台上执行。",
+      "summary_en": "On August 27, Virtu Financial, M1X Global, and Tradeweb executed the first fully onchain repo transaction using the Republic of the Marshall Islands' USDM1 sovereign digital bond as collateral. The entire repo and repurchase cycle settled atomically on the Canton Network in under 10 minutes.\n\nThis milestone demonstrates that tokenized sovereign debt can be used as collateral in institutional financing transactions, not just for issuance or trading. It signals growing market infrastructure for onchain finance among regulated counterparties and could accelerate adoption of tokenized real-world assets.\n\nThe USDM1 bond is US dollar-denominated, backed 1:1 by short-term US Treasurys, and structured under New York law as a fully collateralized sovereign obligation. Institutional custody is provided by Anchorage Digital, BitGo, and tZERO, and the transaction was executed on the Tradeweb platform."
+    },
+    {
+      "thread_id": "te3bc28ddab",
+      "latest_date": "2026-08-28",
+      "first_date": "2026-08-24",
+      "days": 4,
+      "entries": 5,
+      "category": "crypto",
+      "title_zh": "Moonwell 在 Base 上因 MAMO 价格操纵损失 870 万美元",
+      "title_en": "Moonwell Loses $8.7M to MAMO Price Manipulation on Base",
+      "summary_zh": "在 Base 网络上，攻击者抬高流动性较差的 MAMO 代币价格并以此借入资产，导致 Moonwell 损失约 870 万美元。该协议随后将所有 Base 核心市场的借款上限以及 MAMO 和 WELL 的供应上限降至 1 wei。\n\n这次攻击凸显了 DeFi 借贷协议在面对预言机操纵时的脆弱性，尤其是当使用流动性较差的代币作为抵押品时。这是 Moonwell 在不到一年内第四次发生与定价相关的事故，使人们对该协议的风险控制以及更广泛的借贷市场信心产生质疑。\n\n攻击者花费约 700 万美元拉高 MAMO 的价格，随后借入 cbBTC、USDC、WETH 和 wstETH，并将所得资金兑换为 870 万枚 DAI，存于一个由 Tornado Cash 资助的地址中。安全公司 CertiK 和 PeckShield 估计总损失约为 870 万美元。",
+      "summary_en": "Moonwell suffered an estimated $8.7 million loss after an attacker inflated the price of the illiquid MAMO token and borrowed against it on the Base network. The protocol responded by cutting borrow caps on all Base core markets, as well as MAMO and WELL supply caps, to 1 wei.\n\nThis attack underscores how vulnerable DeFi lending protocols remain to oracle manipulation, particularly when thinly traded tokens are used as collateral. It marks Moonwell's fourth pricing-related incident in less than a year, raising questions about the protocol's risk controls and wider confidence in lending markets.\n\nThe attacker spent roughly $7 million to pump MAMO's price, then borrowed cbBTC, USDC, WETH, and wstETH before swapping the proceeds into 8.7 million DAI held in a Tornado Cash-funded address. Security firms CertiK and PeckShield estimated the total loss at approximately $8.7 million."
+    },
+    {
+      "thread_id": "t3000507936",
+      "latest_date": "2026-08-28",
+      "first_date": "2026-08-25",
+      "days": 2,
+      "entries": 2,
+      "category": "policy",
+      "title_zh": "康涅狄格州起诉Kalshi，预测市场法律战升级",
+      "title_en": "Connecticut Sues Kalshi in Escalating Prediction Market Legal Fight",
+      "summary_zh": "康涅狄格州对Kalshi提起诉讼，成为最新一个对该预测市场平台采取法律行动的州。Kalshi诉讼主管称此举“武断且不一致”，并指出其他平台仍在该州运营。\n\n这起诉讼表明美国州级监管机构正在积极挑战获联邦批准的预测市场，从而加剧该行业的法律与合规风险。它可能影响美国用户获取事件合约的方式，并为传统及加密类预测平台的未来监管规则带来不确定性。\n\nKalshi诉讼主管Jovy Dedaj称康涅狄格州这起诉讼是“武断且不一致的执法”，并指出其他平台仍在该州运营。该案使Kalshi围绕美国预测市场监管的既有法律纠纷进一步增加。",
+      "summary_en": "Connecticut has filed a lawsuit against Kalshi, becoming the latest state to take legal action over the prediction market platform. Kalshi's head of litigation called the move arbitrary and inconsistent, noting that other platforms still operate in the state.\n\nThe lawsuit signals that state regulators are actively challenging federally approved prediction markets, escalating the sector's legal and compliance risks. It could affect how U.S. users access event contracts and shape future rules for both traditional and crypto-based prediction platforms.\n\nKalshi's Head of Litigation, Jovy Dedaj, called the Connecticut lawsuit \"arbitrary and inconsistent enforcement,\" pointing out that other platforms continue to operate in the state. The case adds to Kalshi's ongoing legal disputes over prediction market regulation in the U.S."
+    },
+    {
       "thread_id": "t55e85960c2",
       "latest_date": "2026-08-27",
       "first_date": "2026-08-21",
@@ -13,18 +61,6 @@
       "summary_en": "The SEC is resurrecting its proposed Safeguarding Advisory Client Assets rule, which would require investment advisers to place client digital assets with qualified custodians. The previous administration failed to finalize this rule, and the SEC has reopened the comment period for it.\n\nIf adopted, this rule would redefine institutional custody requirements for crypto assets, imposing stricter safeguards and potentially limiting the use of self-custody or non-qualified custodians. It could significantly affect institutional adoption and the overall market structure of digital assets.\n\nThe rule originates under the Investment Advisers Act of 1940 and would redesignate Rule 206(4)-2. Key requirements include that advisers must place client assets with a 'qualified custodian,' with digital assets posing unique challenges for possession and control definitions."
     },
     {
-      "thread_id": "tec8be6673c",
-      "latest_date": "2026-08-27",
-      "first_date": "2026-08-23",
-      "days": 2,
-      "entries": 2,
-      "category": "crypto",
-      "title_zh": "Taurus将数字资产平台接入Swift区块链账本",
-      "title_en": "Taurus links digital asset platforms to Swift's blockchain ledger",
-      "summary_zh": "数字资产基础设施提供商Taurus已将其代币化和托管平台与Swift基于区块链的账本集成。首批机构客户集成预计在数天内上线，首批分布式账本技术交易预计在数周内通过其平台完成。\n\n此次集成将核心传统金融网络与数字资产基础设施连接起来，使银行发行的代币化存款可用于跨境支付。这标志着机构对代币化的采用日益增多，以及传统金融轨道与区块链技术之间的互操作性进一步加深。\n\nSwift的账本作为协调层，支持使用参与银行资产负债表上的代币化存款进行全天候跨境支付，并在最终结算前通过现有安排（如实时全额结算系统）协调转账。Swift于7月宣布该账本可投入初步使用，17家银行计划试点；渣打银行和汇丰银行此后已在该账本上完成首笔实时跨境交易。",
-      "summary_en": "Digital asset infrastructure provider Taurus has integrated its tokenization and custody platforms with Swift's blockchain-based ledger. The first institutional client integrations are expected to go live within days, with initial DLT transactions expected within weeks.\n\nThis integration connects a core traditional finance network with digital asset infrastructure, enabling bank-issued tokenized deposits for cross-border payments. It signals growing institutional adoption of tokenization and deeper interoperability between legacy financial rails and blockchain technology.\n\nSwift's ledger acts as an orchestration layer for 24/7 cross-border payments using tokenized deposits on participating banks' balance sheets, coordinating transfers before final settlement through existing arrangements such as real-time gross settlement systems. Swift announced the ledger was ready for initial use in July, with 17 banks planning pilots; Standard Chartered and HSBC have since completed the first live cross-border transaction on it."
-    },
-    {
       "thread_id": "t66352c3090",
       "latest_date": "2026-08-26",
       "first_date": "2026-08-22",
@@ -35,18 +71,6 @@
       "title_en": "Cosmos Labs Urges EVM Chains to Halt as Shared Bug Drains Three Networks",
       "summary_zh": "Cosmos Labs 呼吁基于其共享堆栈构建的 EVM 链暂停运营，因为一个漏洞导致三条网络被盗。受影响链之一 KiiChain 报告损失了 1.48 亿枚代币，而暂停建议是在补丁发布六天后才发出，且当时未发布公开安全公告。\n\nCosmos EVM 堆栈的共享漏洞意味着许多链可能同时暴露在风险中，而不仅仅是单个网络。此类事件可能削弱用户对生态系统的信任，并凸显跨链协调安全披露的迫切必要性。\n\nKiiChain 表示，三个底层缺陷中有两个在上游仍未修复。补丁发布与公开安全公告之间的延迟，可能让其他链未能及时意识到这一严重风险。",
       "summary_en": "Cosmos Labs recommended that EVM chains built on its shared stack halt operations after a vulnerability drained three networks. KiiChain, one of the affected chains, reported losing 148 million tokens, and the halt advisory came six days after a patch shipped without a public security advisory.\n\nA shared vulnerability in the Cosmos EVM stack means many chains may be exposed at once, not just a single network. This incident can undermine trust in the ecosystem and highlights the critical need for coordinated security disclosure across interconnected chains.\n\nKiiChain stated that two of the three underlying defects remain unfixed upstream. The delay between the patch release and the public advisory may have left other chains unaware of the critical risk."
-    },
-    {
-      "thread_id": "te3bc28ddab",
-      "latest_date": "2026-08-26",
-      "first_date": "2026-08-24",
-      "days": 3,
-      "entries": 4,
-      "category": "crypto",
-      "title_zh": "Term Finance 在 850 万美元攻击后永久关闭 Meta Vaults",
-      "title_en": "Term Finance Permanently Shuts Meta Vaults After $8.5M Exploit",
-      "summary_zh": "Term Finance 在遭遇 PeckShield 估计为 850 万美元的攻击后，永久关闭了其 Meta Vaults 产品。该协议表示提款仍然开放，但其 8 月 23 日的更新并未量化剩余金库资产或缺口。\n\n这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。\n\nPeckShield 追踪到约 2,843 枚 ETH 和 168 万枚 USDC 被抽走，攻击者还将 USDC 换成了 DAI。Yearn 确认该攻击针对的是 Term 的自定义治理包装器，而非标准 Yearn V3 金库；DeFiPrime 指出存在六天的提案开放空窗期，可能促成了此次接管。",
-      "summary_en": "Term Finance has permanently shut down its Meta Vaults product following an exploit estimated at $8.5 million by PeckShield. The protocol says withdrawals remain open, but its Aug. 23 update did not quantify remaining vault assets or the shortfall.\n\nThis is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.\n\nPeckShield tracked roughly 2,843 ETH and 1.68 million USDC drained, with the attacker swapping USDC for DAI. Yearn confirmed that the exploit targeted Term's custom governance wrapper, not standard Yearn V3 vaults, and DeFiPrime noted a six-day open proposal gap that likely enabled the takeover."
     },
     {
       "thread_id": "t72b4e44581",

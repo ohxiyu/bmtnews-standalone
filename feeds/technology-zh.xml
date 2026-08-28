@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-zh.xml</id>
-  <updated>2026-08-27T00:00:00Z</updated>
+  <updated>2026-08-28T00:00:00Z</updated>
+  <entry>
+    <title>英伟达同意以130亿美元收购Hugging Face</title>
+    <link href="https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8"/>
+    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49458161</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>据The Information和TechCrunch报道，英伟达已同意以129亿美元收购领先的开源AI模型库Hugging Face。这笔交易于2026年8月24日曝光，标志着AI开发者生态系统的重大整合。
+
+此次收购使英伟达掌握了开源AI模型的主要分发渠道，可能重塑开发者访问和部署AI软件的方式。这可能加剧反垄断审查，并影响依赖Hugging Face的数百万开发者与公司。
+
+129亿美元的价格紧随Hugging Face于2025年末拒绝了英伟达在70亿美元估值下的5亿美元投资，以及2023年以45亿美元估值进行的2.35亿美元融资之后。英伟达近期一直公开支持开源AI，包括黄仁勋首次在推特上表态支持开源。</summary>
+  </entry>
+  <entry>
+    <title>Cloudflare 优化 1.1.1.1 DNS 缓存，节省 100 TB 内存</title>
+    <link href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/"/>
+    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49468083</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Cloudflare 工程师在一篇技术博客中详细介绍了如何通过重构 1.1.1.1 DNS 解析器缓存中的数据结构与内存分配策略，在整个边缘网络节省了 100 TB 的内存。这项优化显著降低了每个缓存记录的开销。
+
+该优化的意义在于展示了在关键互联网基础设施中，细致的系统级优化能够带来巨大的效率提升，从而降低硬件成本与能源消耗。这些技术也适用于其他高吞吐、内存受限的服务，并且证明了底层编程专业技能依然至关重要。
+
+该优化主要通过重新组织缓存键与记录在内存中的布局，来减少每条记录的内存开销。评论者还指出，缓存行对齐与 slab 式分配可进一步减少碎片化并提升 CPU 缓存性能。</summary>
+  </entry>
+  <entry>
+    <title>OpenAI 的 ChatGPT Work 代理可在你不知情时登录网站</title>
+    <link href="https://decrypt.co/376757/openai-agentic-chatgpt-work-signs-in-without-you"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:decrypt.co_feed:ca96ac88ce991335</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>OpenAI 在8月25日的发布说明中为 ChatGPT Work 引入了代理浏览器能力，使其能在需要登录的网站上完成任务。用户只需输入一次凭据，浏览器会话即可持续，供代理在无人值守时继续工作。
+
+该功能将会话变成了一个长期有效的凭证，引发了关于自主代理在无人监督情况下可代表用户执行何种操作的新安全与隐私担忧。这对普通 ChatGPT 用户和基于 OpenAI 代理工具构建的开发者都很重要，因为持久登录带来的便利是以账户安全为代价的。
+
+OpenAI 表示，模型无法看到用户的用户名或密码，凭据既不会存储也不会用于训练，登录步骤还支持密码管理器。然而，会话本身会一直保持有效，直到用户在 Settings &gt; Cloud browser 中按站点手动清除，而且该设计假设用户不会一直盯着。</summary>
+  </entry>
   <entry>
     <title>FDA批准首款转移性胰腺癌靶向疗法</title>
     <link href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer"/>

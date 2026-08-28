@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-08-27T00:00:00Z</updated>
+  <updated>2026-08-28T00:00:00Z</updated>
+  <entry>
+    <title>Bitcoin Executes First Quantum-Safe Mainnet Transaction; 7M BTC Still Exposed</title>
+    <link href="https://cryptoslate.com/bitcoin-now-has-a-quantum-computing-escape-route-but-7-million-btc-may-still-be-exposed/"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:cryptoslate.com_feed_:99c98641f6243c8c</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>On Aug. 26, Bitcoin confirmed its first quantum-safe mainnet transaction using StarkWare researcher Avihu Levy&#x27;s Quantum-Safe Bitcoin (QSB) construction, included in block 964,199 via MARA&#x27;s Slipstream service. The transaction uses hash-based security instead of elliptic-curve signatures and required no consensus change.
+
+This is the first live demonstration that Bitcoin holders can move funds to quantum-resistant spending conditions today, without waiting for a protocol upgrade. However, it also highlights that roughly 7 million BTC with already-visible public keys remain vulnerable, underscoring the need for a broader soft-fork-based migration path.
+
+QSB works by varying candidate transaction data until the signature hash is valid under Bitcoin&#x27;s rules, shifting security from elliptic-curve cryptography to hash reversal; the approach offers roughly 118-bit resistance against Shor&#x27;s algorithm. The transaction is valid under consensus rules but nonstandard under default node policy, so it was submitted directly to miner MARA via Slipstream, with costs in the hundreds of dollars.</summary>
+  </entry>
+  <entry>
+    <title>Virtu, Tradeweb Complete First Onchain Repo Using Marshall Islands Digital Bond</title>
+    <link href="https://cointelegraph.com/news/virtu-tradeweb-complete-onchain-repo-using-marshall-islands-digital-bond?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:cointelegraph.com_rss:cb674c5934b76b0e</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>On August 27, Virtu Financial, M1X Global, and Tradeweb executed the first fully onchain repo transaction using the Republic of the Marshall Islands&#x27; USDM1 sovereign digital bond as collateral. The entire repo and repurchase cycle settled atomically on the Canton Network in under 10 minutes.
+
+This milestone demonstrates that tokenized sovereign debt can be used as collateral in institutional financing transactions, not just for issuance or trading. It signals growing market infrastructure for onchain finance among regulated counterparties and could accelerate adoption of tokenized real-world assets.
+
+The USDM1 bond is US dollar-denominated, backed 1:1 by short-term US Treasurys, and structured under New York law as a fully collateralized sovereign obligation. Institutional custody is provided by Anchorage Digital, BitGo, and tZERO, and the transaction was executed on the Tradeweb platform.</summary>
+  </entry>
+  <entry>
+    <title>Mirae Asset details $109B crypto, stablecoin, tokenization strategy for Digital X</title>
+    <link href="https://cointelegraph.com/news/mirae-asset-lays-out-crypto-stablecoin-and-tokenization-plans?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:cointelegraph.com_rss:dadaf0cdd18ba71d</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>South Korean financial group Mirae Asset plans to build a 150 trillion won ($109 billion) digital asset business around Digital X, the crypto exchange formerly known as Korbit. The roadmap includes crypto trading, stablecoins, real-world assets (RWAs), and security token offerings, with plans to tokenize gold, silver, and electricity.
+
+This marks the first time an affiliate of a South Korean financial group has acquired control of a domestic crypto exchange, signaling deeper institutional adoption in a major Asian market. The plan could reshape South Korea&#x27;s crypto landscape and accelerate mainstream integration of stablecoins and tokenized RWAs.
+
+Mirae Asset Consulting acquired a 97.15% stake in Korbit in July for a cumulative 141.4 billion won and rebranded it as Digital X. On Monday, Digital X began waiving trading fees on all won-denominated assets, with the zero-fee policy set to run through Aug. 24, 2027.</summary>
+  </entry>
+  <entry>
+    <title>Moonwell Loses $8.7M to MAMO Price Manipulation on Base</title>
+    <link href="https://thedefiant.io/news/hacks/moonwell-loses-8-7-million-to-mamo-price-manipulation-on-base"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:thedefiant.io_api_feed:0624aecbfc58fb6d</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Moonwell suffered an estimated $8.7 million loss after an attacker inflated the price of the illiquid MAMO token and borrowed against it on the Base network. The protocol responded by cutting borrow caps on all Base core markets, as well as MAMO and WELL supply caps, to 1 wei.
+
+This attack underscores how vulnerable DeFi lending protocols remain to oracle manipulation, particularly when thinly traded tokens are used as collateral. It marks Moonwell&#x27;s fourth pricing-related incident in less than a year, raising questions about the protocol&#x27;s risk controls and wider confidence in lending markets.
+
+The attacker spent roughly $7 million to pump MAMO&#x27;s price, then borrowed cbBTC, USDC, WETH, and wstETH before swapping the proceeds into 8.7 million DAI held in a Tornado Cash-funded address. Security firms CertiK and PeckShield estimated the total loss at approximately $8.7 million.</summary>
+  </entry>
+  <entry>
+    <title>Weak CryptoJS Randomness Linked to $5.69M in Wallet Seed Thefts</title>
+    <link href="https://cryptoslate.com/crypto-users-lost-at-least-5-69-million-because-their-wallet-seeds-were-too-predictable/"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:cryptoslate.com_feed_:f05fdf0dd9a313ac</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Blockchain security firm Coinspect disclosed that at least five crypto wallets—RRWallet, Bexo, NanChat, Bitcoin Libre, and Milo—used a weak random-number generator from the CryptoJS library to create recovery phrases, making funds predictable to attackers. The traced losses since May total at least $5.69 million, with thefts occurring across multiple attack waves.
+
+Recovery phrases act as master keys to a wallet, so a predictable generation process means any attacker can reconstruct them and drain funds. The incident shows how a widely used JavaScript library can expose users across multiple blockchains, and it likely affects more wallets than the five named apps.
+
+The vulnerable CryptoJS.lib.WordArray.random() function reduced the effective search space from 2^128 or 2^256 possibilities to roughly 2^39 and 2^47, making seeds feasible to enumerate. Over 2,000 seeds were active across Bitcoin, Ethereum, Tron, Rootstock, and Polygon, and the $5.69 million figure is only a lower bound; some affected apps have been discontinued or fixed in later versions.</summary>
+  </entry>
+  <entry>
+    <title>Charles Schwab to Add Solana, Avalanche, Chainlink to Crypto Platform</title>
+    <link href="https://www.theblock.co/news/business/2026-08-27-charles-schwab-add-solana-avalanche-chainlink-to-crypto-trading-platform-412923"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:www.theblock.co_rss.xml:74c4682ae986cb3d</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Charles Schwab announced that it will add Solana, Avalanche, and Chainlink to its retail crypto trading platform, expanding the offering beyond Bitcoin and Ether. The new tokens are expected to be available in the coming months.
+
+As one of the largest U.S. brokerages, Schwab providing direct access to these altcoins broadens mainstream retail exposure to digital assets and signals continued institutional adoption. The move could increase demand and access for a user base of roughly 39.9 million active brokerage accounts.
+
+Schwab Crypto initially rolled out in May with direct Bitcoin and Ether trading and charges 75 basis points per transaction. The service is available in all U.S. states except New York and Louisiana, and accounts are offered through Charles Schwab Premier Bank; following the announcement, SOL rose 12.9% to lead the ten largest tokens.</summary>
+  </entry>
+  <entry>
+    <title>Bithumb Wins Court Case Over $43B Bitcoin Fat-Finger Error</title>
+    <link href="https://www.theblock.co/news/regulation/2026-08-27-bithumb-wins-lawsuit-btc-412893"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:www.theblock.co_rss.xml:e49a0e835b09f7cb</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>In February, Bithumb accidentally credited 620,000 BTC (then worth about $43 billion) to hundreds of users internally. A court has now ruled in Bithumb&#x27;s favor over the proceeds from that error, according to a report.
+
+This ruling clarifies legal responsibility for exchange operational errors and sets a precedent for how courts treat accidental credits in digital asset trading. It could affect how exchanges handle error recovery and user claims in South Korea and beyond.
+
+The fat-finger error involved an internal credit of 620,000 BTC, worth roughly $43 billion at the time. The lawsuit concerned the proceeds from that accidental credit, and Bithumb won, allowing it to pursue recovery.</summary>
+  </entry>
+  <entry>
+    <title>KuCoin expands sanctions screening to indirect transfers touching 17 platforms</title>
+    <link href="https://cryptoslate.com/kucoin-can-block-your-crypto-transactions-even-if-you-never-sent-it-to-these-17-sanctioned-platforms/"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:cryptoslate.com_feed_:2d68d1fab1a8556e</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>On August 27, KuCoin announced expanded sanctions compliance screening that covers indirect transfers connected to 17 crypto platforms, including HTX (Huobi Global SA). Users can now face held or rejected transactions even if they never sent funds directly to those platforms.
+
+This shift pushes sanctions enforcement beyond direct counterparties and into transaction provenance, with exchanges tracking whether funds touched listed services along the way. It signals a broader industry trend where major exchanges like Binance and KuCoin isolate designated platforms, constraining how HTX-linked funds can move across the ecosystem.
+
+KuCoin has not disclosed how many transaction hops it traces or what level of on-chain attribution establishes an indirect connection. The list includes Shelbit, Aban Tether, A7 Nigeria, A7 Africa, PilotFinance, Rapira, Aifory Pro, ABCeX, WhiteBird, NoOnecrypto, Tradex, Monease, BitPapa, Exnode, Exnode Pay, EXMO, and HTX.</summary>
+  </entry>
+  <entry>
+    <title>Solana Rallies 44% Ahead of First Binding Governance Vote on Inflation and Burns</title>
+    <link href="https://decrypt.co/376706/solana-best-month-since-2024-historic-governance-vote"/>
+    <id>https://bmt.news/editions/2026-08-28/#rss:decrypt.co_feed:621e0e6debcd08f0</id>
+    <updated>2026-08-28T00:00:00Z</updated>
+    <summary>Solana (SOL) is up more than 8% in the past 24 hours and roughly 44% in August, climbing back above $105, as the network&#x27;s first binding governance vote concludes on August 23, 2026. The vote will decide whether to adopt a Solana Constitution, double the disinflation rate via SIMD-550, and significantly increase SOL burns via SIMD-553.
+
+This is Solana&#x27;s first binding, stake-weighted governance vote, marking a shift from informal coordination to enforceable on-chain decision-making. The outcome could reshape SOL&#x27;s supply trajectory, staking rewards, and validator economics, affecting stakeholders across the ecosystem.
+
+Voting closes at around 15:30 UTC when epoch 1023 ends, and each of the three SGPs is decided independently by a two-thirds supermajority of participating stake. Nasdaq-listed Solana Company (HSDT) supports the constitution but is voting against both SIMD-550 and SIMD-553 on timing grounds; SIMD-553 already passed code review from client teams Anza and Firedancer on July 20.</summary>
+  </entry>
   <entry>
     <title>Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability</title>
     <link href="https://thedefiant.io/news/security/core-lightning-tells-node-operators-to-go-offline-with-no-patch-published"/>
@@ -333,68 +432,5 @@ Tokenized stocks are blockchain-based digital assets designed to represent econo
     <id>https://bmt.news/editions/2026-08-24/#google_news:article:f61a99d78c41d3ca</id>
     <updated>2026-08-24T00:00:00Z</updated>
     <summary>Secret Network executed a 1.079 billion-SCRT mint through its v1.26.0-community-continuance upgrade on Aug. 21 after Proposal 365 passed. The one-time mint expands total SCRT supply to about 1.44 billion, reducing existing holders&#x27; collective share to roughly one quarter. This is a drastic tokenomics event for a Layer 1 network whose main development team, SCRT Labs, ends support on Sept. 1. The mint funds community-led continuity programs, so the long-term survival of Secret Network now depends on whether validators and community backers can sustain development and infrastructure. The mint allocated 299 million SCRT each to foundation and core-development programs, 178 million to an ecosystem fund, and 72 million each to advisors, R&amp;D, and validators; 308.4 million SCRT became liquid on day one, with ongoing inflation set at 5%. Existing holders&#x27; absolute balances did not change, but their proportional ownership fell to about 25% of the new supply.</summary>
-  </entry>
-  <entry>
-    <title>BitMart Blocks Withdrawals for Many Coins, Sparking Security Fears</title>
-    <link href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5tMXEwNmdZV1JiYWtBYklfNldldjRoREVtamxhNEUyZ3c1cEtDa3BWVFhMYjBuTXM1SHI0dm1tVU50WTU0SmdrUVUwNVFyZlRQN3F4Zy1YdUx3T0x1MGJWN3VhUXB4QXhJbUVN?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-24/#google_news:article:468ab309354b77ad</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>CryptoTicker reports that BitMart has blocked withdrawals for many coins, prompting immediate speculation about a possible security incident or liquidity shortage. No official statement had been released at the time of the report. Withdrawal freezes on a major centralized exchange directly affect users&#x27; ability to access their funds and are often viewed as an early warning sign of security breaches or solvency problems. The incident could erode trust in centralized exchanges and push more users toward self-custody. The report from CryptoTicker does not specify which coins are affected or whether the freeze is temporary. BitMart has a history of security problems, including a December 2021 breach in which a large portion of its crypto assets were stolen.</summary>
-  </entry>
-  <entry>
-    <title>SafePal Tracks Phishing Sites After Order System Data Leak</title>
-    <link href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE15dy0zRERKNEFmb0lfall4blZfUko0aEY5ZGxSM015X2tfWjBsS0VoajNwclB5WGY3UVR0cm5IOF9BRXBOZlpZODZQRHBkVlBrYlZkOGJGMzl2SG1Tb1Awd2Y2WWM?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-24/#google_news:article:6393856b1c702ec2</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>SafePal announced it is tracking phishing sites following a data leak in its order system. The company is warning users about potential phishing attempts linked to the incident. Security incidents at crypto wallet providers directly threaten user funds, and phishing is a common attack vector. This matters for SafePal&#x27;s more than 25 million users and highlights the ongoing security challenges facing self-custody wallets. The leak appears limited to order system data and does not involve private keys. SafePal is actively monitoring phishing domains, but specific scope and impact details have not been fully disclosed yet.</summary>
-  </entry>
-  <entry>
-    <title>Crypto Card Spending Tops $1 Billion as Stablecoins Enter Everyday Purchases</title>
-    <link href="https://www.coindesk.com/business/2026/08/23/crypto-card-spending-tops-usd1-billion-as-stablecoins-move-into-everyday-purchases"/>
-    <id>https://bmt.news/editions/2026-08-24/#rss:www.coindesk.com_arc_outboundfeeds_rss_:fb29f1785e0f5c9d</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Crypto card spending has surpassed $1 billion, a milestone indicating that stablecoins are increasingly used for everyday purchases. This growth shows stablecoins moving beyond trading and into real-world payments. Passing $1 billion in card spending signals maturing real-world adoption of stablecoin payments, not just speculative use. It could accelerate merchant acceptance and payment-industry integration, affecting the broader crypto ecosystem. Crypto cards work by converting cryptocurrency into fiat currency in real time at the point of sale, then settling through Visa or Mastercard networks. This mechanism lets stablecoin holders spend directly at ordinary merchants while the underlying tokens maintain a stable value.</summary>
-  </entry>
-  <entry>
-    <title>Iran-Linked Cyberattack Shuts Down Small UK Power Plant</title>
-    <link href="https://www.cnbc.com/2026/08/23/small-uk-power-plant-shut-down-after-iran-linked-cyberattack-report.html"/>
-    <id>https://bmt.news/editions/2026-08-24/#gdelt:article:20260823T120000Z::https://www.cnbc.com/2026/08/23/small-uk-power-plant-shut-down-after-iran-linked-cyberattack-report.html</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>According to a CNBC report, a small UK power plant was shut down following an Iran-linked cyberattack. The incident is described as preliminary and limited to a small facility. This incident underscores the growing threat of state-linked cyberattacks on critical infrastructure, particularly the energy sector. Even a small power plant outage can raise concerns about the resilience and security of national power grids. The report notes that the plant was small and that details are preliminary. Cyberattacks on power utilities often target SCADA systems and industrial control protocols such as DNP3, which are known to have security weaknesses.</summary>
-  </entry>
-  <entry>
-    <title>BNB Chain&#x27;s Pasteur Upgrade Nearly Doubles Throughput</title>
-    <link href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPMzM5Njl3SHV0eUpjblJCUG1hdzJ1WDRqbnFwVVVwSTVpRVBhQUV2YjFPSm82eHBrVThqSktEc3ltSE5CLVdodU1UbG9PRG9BY1ByY1lVVjV5UVhqZE9ka0lHYXBXY2I4ZldDVG5OTlZBRVN2aUpNOWJWUUxlU2NZX0ZaLVdaUnpsVVM0dWs0WUt0LXZSdHA4a2NB?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-24/#google_news:article:1e037bf0f9b2b2ed</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>BNB Chain&#x27;s Pasteur hardfork, scheduled for August 25, is set to boost network throughput from about 1,237 TPS to 2,324 TPS on mainnet, based on testnet benchmarks. The upgrade requires node operators to update to client version 1.7.7. This is a significant technical milestone for one of the largest blockchain ecosystems, as higher throughput can support more transactions and improve user experience. It may also strengthen BNB Chain&#x27;s competitive position against other smart-contract platforms. The Pasteur hardfork activates on mainnet at 02:30 UTC on August 25 after a testnet launch on July 21. Additional changes include stronger bridge checks and higher block capacity, with all node operators required to run client version 1.7.7.</summary>
-  </entry>
-  <entry>
-    <title>Ripple Prime&#x27;s $275M notes rely on parent Ripple support and XRP reserves</title>
-    <link href="https://cryptoslate.com/ripple-relies-on-locked-xrp-reserves-to-back-a-275-million-institutional-credit-line/"/>
-    <id>https://bmt.news/editions/2026-08-24/#rss:cryptoslate.com_feed_:305f6a85fedf60c8</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Ripple Prime closed an upsized $275 million private placement of senior unsecured notes on August 18, with KBRA assigning a BBB rating and Stable Outlook that depends partly on expected support from parent Ripple. This deal tests how far Ripple&#x27;s institutional finance buildout has separated from the XRP-sensitive balance sheet that funded it, and it shows credit rating agencies are willing to factor parent support into crypto-linked prime brokerage debt. It marks a notable step in institutional adoption of crypto, but the credit case still hinges on Ripple&#x27;s constrained XRP reserves and market depth. The legal structure places the rated debt at Ripple Prime CIV US BD HoldCo LLC, an intermediate holding company, while the regulated U.S. broker Hidden Road Partners CIV US LLC sits below it; Ripple Labs is the ultimate parent. Public disclosures do not identify XRP as collateral and do not detail any enforceable parent guarantee, while KBRA&#x27;s rating relies on expected support and notes constraints from Ripple&#x27;s escrow, sale limits, and market depth.</summary>
-  </entry>
-  <entry>
-    <title>Sandbox Halts Base and BNB Chain Bridging After Exploit</title>
-    <link href="https://www.coindesk.com/web3/2026/08/22/web3-gaming-network-sandbox-stops-base-and-bnb-chain-bridging-after-exploit"/>
-    <id>https://bmt.news/editions/2026-08-23/#rss:www.coindesk.com_arc_outboundfeeds_rss_:52d578d35c126ef1</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>The Sandbox, a Web3 gaming network, stopped bridging to Base and BNB Chain after discovering an exploit. South Korean exchanges Upbit and Bithumb froze SAND transfers, with Upbit also halting deposits and withdrawals on Ethereum, which the studio says was not affected. Bridge exploits can directly jeopardize user funds and are among the highest-value targets in crypto, so any halt in a prominent gaming network raises security concerns across the ecosystem. The exchange freeze in South Korea also shows how national user-protection rules can interrupt trading in affected tokens. The Sandbox said the exploit affected bridging to Base and BNB Chain, while Ethereum was reportedly not impacted. Upbit&#x27;s action followed South Korea&#x27;s user-protection law, under which exchanges may block transfers when a hack has occurred or is clearly expected to occur; no loss figure has been published.</summary>
-  </entry>
-  <entry>
-    <title>Zcash Surges to Eight-Year High Near $850 on Grayscale ETF Push</title>
-    <link href="https://www.theblock.co/news/ecosystems/2026-08-22-zcash-hits-eight-year-high-near-850-with-futures-volume-near-10-billion-amid-grayscale-etf-push-412528"/>
-    <id>https://bmt.news/editions/2026-08-23/#rss:www.theblock.co_rss.xml:9ffea86fb5e71db6</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>Zcash&#x27;s price reached an eight-year high near $850, with 24-hour futures volume hitting nearly $10 billion and open interest at $1.76 billion, according to CoinGlass. The surge came as Grayscale pushed forward with a Zcash ETF filing. This surge signals growing mainstream interest in privacy-focused cryptocurrencies and could pave the way for the first privacy-coin ETF in the US. The high futures volume shows derivatives, not spot trading, are driving the rally, which also carries volatility risks. Derivatives accounted for the bulk of activity, with nearly $10 billion in 24-hour futures volume and $1.76 billion in open interest, per CoinGlass. Grayscale&#x27;s ETF filing would be the first for a privacy-focused digital asset, and Zcash&#x27;s previous price around this level dates back to its early trading days in 2018.</summary>
-  </entry>
-  <entry>
-    <title>BitMart weighs partial restart and creditor payouts weeks after shutdown announcement</title>
-    <link href="https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown"/>
-    <id>https://bmt.news/editions/2026-08-23/#rss:www.coindesk.com_arc_outboundfeeds_rss_:64a321f0c36355f9</id>
-    <updated>2026-08-23T00:00:00Z</updated>
-    <summary>BitMart is reportedly considering a partial restart and creditor payouts weeks after it announced it would shut down, according to CoinDesk. This matters because it could determine whether BitMart&#x27;s users recover funds and whether the exchange retains any viability. It also affects confidence in centralized crypto exchanges during a period of consolidation and insolvencies. The report says the exchange is weighing options for a partial restart alongside creditor payouts, weeks after the shutdown announcement. Specific terms, amounts, and timelines have not been disclosed.</summary>
   </entry>
 </feed>
