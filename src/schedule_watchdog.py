@@ -355,6 +355,16 @@ def _build_parser() -> argparse.ArgumentParser:
         type=int,
         default=DEFAULT_GRACE_MINUTES,
     )
+    parser.add_argument(
+        "--trigger-source",
+        default="github-watchdog",
+        help="Identity recorded on a dispatched daily workflow run",
+    )
+    parser.add_argument(
+        "--success-on-recovery",
+        action="store_true",
+        help="Keep a parent job successful when recovery is active or dispatched",
+    )
     return parser
 
 
@@ -392,6 +402,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 workflow=args.workflow,
                 ref=args.ref,
                 edition_date=decision.edition_cutoff.strftime("%Y-%m-%d"),
+                trigger_source=args.trigger_source,
             )
             recovery_dispatched = True
         _append_summary(
@@ -410,6 +421,11 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if decision.state == "healthy":
         print("BMTNews daily edition heartbeat is healthy.")
+        return 0
+    if args.success_on_recovery and (
+        recovery_dispatched or decision.state == "missing_with_active_run"
+    ):
+        print("BMTNews daily edition recovery is active or was dispatched.")
         return 0
     if recovery_dispatched:
         _emit_error("当期日报已到期但没有成功记录，已自动触发补跑")

@@ -7,6 +7,10 @@ on:
     # Telegram channels) overflow their fetch limits with fewer runs.
     - cron: '30 0,4,12,16,20 * * *'
       timezone: 'Asia/Shanghai'
+    # Independent post-cutoff path. Its recovery job dispatches the daily
+    # edition even when Cloudflare and the standalone watchdog miss a trigger.
+    - cron: '37 8 * * *'
+      timezone: 'Asia/Shanghai'
   workflow_dispatch:
 
 concurrency:
@@ -14,6 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  actions: write  # Allows the post-collection recovery check to dispatch daily
   contents: write  # Persists the staging cache to the staging-cache branch
 
 jobs:
@@ -101,3 +106,26 @@ jobs:
           else
             echo "Staging cache unchanged"
           fi
+
+  recover-daily:
+    needs: collect
+    if: ${{ always() && github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Recover a missing daily edition
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python -m src.schedule_watchdog
+          --repository "${GITHUB_REPOSITORY}"
+          --workflow daily-summary.yml
+          --ref main
+          --timezone Asia/Shanghai
+          --cutoff-hour 8
+          --grace-minutes 30
+          --trigger-source feed-collection
+          --success-on-recovery

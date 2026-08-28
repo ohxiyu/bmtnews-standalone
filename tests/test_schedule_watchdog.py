@@ -157,6 +157,7 @@ def test_main_dispatches_recovery_and_fails_for_notification(
             "workflow": "daily-summary.yml",
             "ref": "main",
             "edition_date": "2026-07-27",
+            "trigger_source": "github-watchdog",
         }
     ]
     assert "已触发一次 `workflow_dispatch` 补跑" in summary.read_text(
@@ -164,6 +165,75 @@ def test_main_dispatches_recovery_and_fails_for_notification(
     )
     assert "日报发布心跳" in summary.read_text(encoding="utf-8")
     assert "::error title=BMTNews schedule watchdog::" in capsys.readouterr().out
+
+
+def test_main_can_treat_embedded_recovery_as_success(
+    tmp_path: Path,
+    monkeypatch,
+    capsys,
+) -> None:
+    class FrozenDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):  # type: ignore[no-untyped-def]
+            return NOW if tz is not None else NOW.replace(tzinfo=None)
+
+    dispatches: list[dict[str, str]] = []
+    monkeypatch.setenv("GITHUB_TOKEN", "test-token")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "ohxiyu/bmtnews-standalone")
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(tmp_path / "summary.md"))
+    monkeypatch.setattr(schedule_watchdog, "datetime", FrozenDateTime)
+    monkeypatch.setattr(
+        schedule_watchdog,
+        "fetch_workflow_runs",
+        lambda **kwargs: [],
+    )
+    monkeypatch.setattr(
+        schedule_watchdog,
+        "dispatch_workflow",
+        lambda **kwargs: dispatches.append(kwargs),
+    )
+
+    exit_code = schedule_watchdog.main(
+        [
+            "--trigger-source",
+            "feed-collection",
+            "--success-on-recovery",
+        ]
+    )
+
+    assert exit_code == 0
+    assert dispatches[0]["trigger_source"] == "feed-collection"
+    assert "recovery is active or was dispatched" in capsys.readouterr().out
+
+
+def test_embedded_recovery_succeeds_when_daily_run_is_active(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    class FrozenDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):  # type: ignore[no-untyped-def]
+            return NOW if tz is not None else NOW.replace(tzinfo=None)
+
+    monkeypatch.setenv("GITHUB_TOKEN", "test-token")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "ohxiyu/bmtnews-standalone")
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(tmp_path / "summary.md"))
+    monkeypatch.setattr(schedule_watchdog, "datetime", FrozenDateTime)
+    monkeypatch.setattr(
+        schedule_watchdog,
+        "fetch_workflow_runs",
+        lambda **kwargs: [
+            _run(
+                status="in_progress",
+                conclusion=None,
+                started_at=NOW - timedelta(minutes=2),
+            )
+        ],
+    )
+
+    exit_code = schedule_watchdog.main(["--success-on-recovery"])
+
+    assert exit_code == 0
 
 
 def test_dispatch_includes_explicit_edition_inputs(monkeypatch) -> None:
@@ -213,3 +283,20 @@ def test_watchdog_workflow_has_schedule_aware_arguments() -> None:
     assert "--cutoff-hour 8" in workflow
     assert "--grace-minutes 47" in workflow
     assert "--threshold-hours" not in workflow
+
+
+def test_feed_collection_has_independent_daily_recovery() -> None:
+    workflow = (
+        Path(__file__).parents[1]
+        / ".github"
+        / "workflows"
+        / "feed-collection.yml"
+    ).read_text(encoding="utf-8")
+
+    assert "cron: '37 8 * * *'" in workflow
+    assert "actions: write" in workflow
+    assert "recover-daily:" in workflow
+    assert "needs: collect" in workflow
+    assert "--grace-minutes 30" in workflow
+    assert "--trigger-source feed-collection" in workflow
+    assert "--success-on-recovery" in workflow
