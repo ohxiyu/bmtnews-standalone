@@ -86,7 +86,7 @@ uv run bmtnews --mode publish --hours 24 --cutoff-hour 8
 
 | Workflow | 时间 | 用途 |
 |---|---|---|
-| `feed-collection` | 每约 4 小时 | 采集信息源到暂存缓存 |
+| `feed-collection` | 每约 4 小时及 08:37 | 采集信息源并执行独立日报恢复检查 |
 | `daily-summary` | 08:30（东八区） | 构建并发布日报 |
 | `weekly-review` | 周一 09:30 | 周报与评分校准复盘 |
 | `x-distribution` | 每天 4 次 | 按高峰时段分时投放 X |

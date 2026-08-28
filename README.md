@@ -101,7 +101,7 @@ Full configuration reference: [project-docs/configuration.md](project-docs/confi
 
 | Workflow | Schedule | Purpose |
 |---|---|---|
-| `feed-collection` | every ~4h | Collect sources into the staging cache |
+| `feed-collection` | every ~4h + 08:37 | Collect sources and run an independent daily recovery check |
 | `daily-summary` | 08:30 Asia/Shanghai | Build and publish the edition |
 | `weekly-review` | Mondays 09:30 | Weekly digest and scoring calibration |
 | `x-distribution` | 4× daily | Drip-post top stories at peak hours |

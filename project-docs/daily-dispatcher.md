@@ -6,19 +6,21 @@ BMTNews 每天生成一期早间日报，业务时区固定为 `Asia/Shanghai`�
 
 发布工作流不再依赖 GitHub `schedule` 作为主触发源，而是只接受带明确 `edition_date` 的 `workflow_dispatch`。这样即使补跑发生在数小时之后，任务仍会生成原定期号，不会因“当前时间”变化而错误跨期。
 
-## 双调度与恢复链路
+## 多路调度与恢复链路
 
 | 上海时间 | 调度源 | 行为 |
 | --- | --- | --- |
 | 08:30 | Cloudflare Cron | 主触发；当期未发布且没有运行中任务时，触发日报。 |
+| 08:37 | GitHub Feed Collection | 独立采集并在任务结束后执行日报心跳；缺失时直接补触发。 |
 | 08:40 | Cloudflare Cron | 第一次检查；失败或未创建运行时补触发。 |
 | 08:47 | GitHub Actions | 独立备用 Watchdog；Cloudflare 主链路失效时补触发。 |
 | 08:55 | Cloudflare Cron | 第二次检查；继续按“已发布、运行中、缺失”三态去重。 |
 | 09:10 | Cloudflare Cron | 最终检查；缺失时再补触发一次并将 Cron 事件标记失败。 |
+| 09:17–15:17 | GitHub Actions | Watchdog 每小时复查，恢复被 GitHub 延迟或丢弃的早期事件。 |
 
 Cloudflare Worker 同时检查两层结果：`gh-pages` 分支中的中英文 Markdown 代表“日报已生成并提交”，GitHub Pages 中的中英文 HTML 代表“站点已渲染”。前者成功而后者未就绪时不会重复调用 AI，只记录 Pages 渲染预警；日报缺失但已有运行中任务时也不会重复触发。
 
-日内原始内容仍由 GitHub Actions 在 00:30 和 16:30 暂存，最终日报会再执行一次 24 小时补采。暂存任务是覆盖率增强项，不是日报按时生成的单点依赖。
+GitHub 官方说明 `schedule` 事件在高负载时可能延迟或被丢弃。因此不能把同一个 Watchdog 的多个 cron 当作完全独立的冗余。`feed-collection` 在 08:37 增加了另一条调度事件，并在采集任务完成或失败后都运行心跳检查；其他日内采集任务完成后也会复查。最终日报仍会执行一次 24 小时补采，因此暂存采集失败不会阻止日报生成。
 
 ## 首次切换
 
@@ -38,6 +40,8 @@ npx wrangler deploy
 ```
 
 `wrangler.jsonc` 通过 `secrets.required` 强制校验令牌，缺少 Secret 时生产部署会失败。Cloudflare Cron 使用 UTC，因此 08:30、08:40、08:55、09:10 分别配置为 `00:30`、`00:40`、`00:55`、`01:10` UTC；配置变更后应在 Dashboard 的 Cron Events 中确认四个触发器已生效。
+
+Worker 当前没有仓库内的自动部署流程。修改或合并 `ops/daily-dispatcher/` 后，必须执行上述部署命令并验证 `/ready`；只合并代码不会更新生产 Worker。若 `/ready` 失败，先修复 Cloudflare Secret 中的 GitHub fine-grained token，再等待下一次 Cron。
 
 ## 验证与排障
 
