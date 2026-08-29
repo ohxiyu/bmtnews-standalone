@@ -28,6 +28,11 @@ on:
         type: string
         required: false
         default: ''
+      kickoff_only:
+        description: Post rank 1 only when this edition has not started on X
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: bmtnews-x-distribution
@@ -97,6 +102,9 @@ jobs:
           args=(--mode x-post)
           if [ -n "${{ inputs.edition_date }}" ]; then
             args+=(--edition-date "${{ inputs.edition_date }}")
+          fi
+          if [ "${{ inputs.kickoff_only }}" = "true" ]; then
+            args+=(--x-kickoff-only)
           fi
           uv run bmtnews "${args[@]}"
 

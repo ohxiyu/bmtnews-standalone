@@ -34,6 +34,7 @@ jobs:
       TZ: Asia/Shanghai
     permissions:
       contents: write  # Needed to commit changes
+      actions: write   # Starts the idempotent first X slot after publication
 
     steps:
       - name: Checkout code
@@ -142,3 +143,22 @@ jobs:
           commit_message: "📝 Daily Summary: ${{ steps.edition.outputs.date }}"
           publish_branch: gh-pages
           enable_jekyll: true
+
+      - name: Start X distribution for published edition
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            if gh workflow run x-distribution.yml \
+              --ref "$GITHUB_REF_NAME" \
+              -f edition_date="${{ steps.edition.outputs.date }}" \
+              -f kickoff_only=true; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep $((attempt * 5))
+            fi
+          done
+          echo "::error::Published the daily edition but could not start X distribution"
+          exit 1

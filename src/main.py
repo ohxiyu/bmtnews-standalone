@@ -83,6 +83,14 @@ def main():
         action="store_true",
         help="Rebuild an edition even when that fixed window is already published",
     )
+    parser.add_argument(
+        "--x-kickoff-only",
+        action="store_true",
+        help=(
+            "Post the first X story only when the edition queue has not started; "
+            "requires --mode x-post"
+        ),
+    )
     args = parser.parse_args()
     if args.hours is not None and args.hours <= 0:
         parser.error("--hours must be positive")
@@ -90,6 +98,8 @@ def main():
         parser.error("--cutoff-hour must be between 0 and 23")
     if args.force_publish and args.mode != "publish":
         parser.error("--force-publish requires --mode publish")
+    if args.x_kickoff_only and args.mode != "x-post":
+        parser.error("--x-kickoff-only requires --mode x-post")
     if args.edition_date is not None and args.mode not in {
         "publish",
         "weekly",
@@ -142,7 +152,12 @@ def main():
                 )
             )
         elif args.mode == "x-post":
-            asyncio.run(orchestrator.run_x_slot(edition_date=args.edition_date))
+            asyncio.run(
+                orchestrator.run_x_slot(
+                    edition_date=args.edition_date,
+                    kickoff_only=args.x_kickoff_only,
+                )
+            )
         elif args.mode == "weekly":
             asyncio.run(
                 orchestrator.run_weekly_review(end_date=args.edition_date)

@@ -198,8 +198,11 @@ describe("dispatcher behavior", () => {
     expect(notFound.status).toBe(404);
   });
 
-  it("actively verifies the repository token and workflow on readiness", async () => {
-    const fetchSpy = vi.fn(async () => Response.json({ id: 42 }));
+  it("actively verifies Actions write permission without creating a run", async () => {
+    const fetchSpy = vi.fn(
+      async (_input: RequestInfo | URL, _init?: RequestInit) =>
+        new Response(null, { status: 422 }),
+    );
     vi.stubGlobal("fetch", fetchSpy);
     const response = await worker.fetch(
       new Request("https://dispatcher.example/ready"),
@@ -212,12 +215,19 @@ describe("dispatcher behavior", () => {
       repository: "ohxiyu/bmtnews-standalone",
       workflow: "daily-summary.yml",
       ref: "main",
+      dispatch_permission: "actions:write",
     });
     expect(fetchSpy).toHaveBeenCalledOnce();
+    const [input, init] = fetchSpy.mock.calls[0] ?? [];
+    expect(String(input)).toContain("/daily-summary.yml/dispatches");
+    expect(init?.method).toBe("POST");
+    expect(JSON.parse(String(init?.body))).toEqual({
+      ref: "refs/heads/__bmtnews_permission_probe__/invalid..ref",
+    });
   });
 
-  it("reports not ready without leaking GitHub API details", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => new Response(null, { status: 401 })));
+  it("rejects a read-only token without leaking GitHub API details", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(null, { status: 403 })));
     const response = await worker.fetch(
       new Request("https://dispatcher.example/ready"),
       ENV,

@@ -481,5 +481,8 @@ def test_workflows_stage_twice_and_publish_once() -> None:
     assert "timeout-minutes: 30" in publication
     assert "GITHUB_TOKEN: ${{ github.token }}" in collection
     assert "GITHUB_TOKEN: ${{ github.token }}" in publication
+    assert "actions: write" in publication
+    assert "gh workflow run x-distribution.yml" in publication
+    assert '-f kickoff_only=true' in publication
     assert "TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}" in publication
     assert "TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}" in publication
