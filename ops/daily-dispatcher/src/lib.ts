@@ -1,5 +1,7 @@
 const PRIMARY_CRON = "30 0 * * *";
 const FINAL_CRON = "10 1 * * *";
+const PERMISSION_PROBE_REF =
+  "refs/heads/__bmtnews_permission_probe__/invalid..ref";
 const ACTIVE_STATUSES = new Set([
   "queued",
   "in_progress",
@@ -218,29 +220,47 @@ async function githubRequest(
   return response;
 }
 
-export async function checkReadiness(env: Env): Promise<{
-  status: "ready";
-  repository: string;
-  workflow: string;
-  ref: string;
-}> {
-  if (!env.GITHUB_DISPATCH_TOKEN) {
-    throw new Error("GITHUB_DISPATCH_TOKEN is not configured");
-  }
+async function verifyDispatchPermission(env: Env): Promise<void> {
   const repository = encodeURIComponent(env.GITHUB_REPOSITORY).replace(
     "%2F",
     "/",
   );
   const workflow = encodeURIComponent(env.GITHUB_WORKFLOW);
-  await githubRequest(
-    env,
-    `/repos/${repository}/actions/workflows/${workflow}`,
-  );
+  const path = `/repos/${repository}/actions/workflows/${workflow}/dispatches`;
+  const response = await fetch(`https://api.github.com${path}`, {
+    method: "POST",
+    headers: githubHeaders(env),
+    body: JSON.stringify({ ref: PERMISSION_PROBE_REF }),
+    signal: AbortSignal.timeout(10_000),
+  });
+
+  // GitHub checks Actions: write before resolving the ref. A write-capable
+  // token reaches ref validation and gets 422 for this deliberately invalid
+  // Git ref, while a read-only token gets 403. No workflow run is created.
+  if (response.status !== 422) {
+    throw new Error(
+      `GitHub dispatch permission probe returned HTTP ${response.status}`,
+    );
+  }
+}
+
+export async function checkReadiness(env: Env): Promise<{
+  status: "ready";
+  repository: string;
+  workflow: string;
+  ref: string;
+  dispatch_permission: "actions:write";
+}> {
+  if (!env.GITHUB_DISPATCH_TOKEN) {
+    throw new Error("GITHUB_DISPATCH_TOKEN is not configured");
+  }
+  await verifyDispatchPermission(env);
   return {
     status: "ready",
     repository: env.GITHUB_REPOSITORY,
     workflow: env.GITHUB_WORKFLOW,
     ref: env.GITHUB_REF,
+    dispatch_permission: "actions:write",
   };
 }
 
@@ -440,7 +460,16 @@ export async function runSchedule(
     return;
   }
 
-  await dispatchDailyEdition(env, context.date, stage);
+  try {
+    await dispatchDailyEdition(env, context.date, stage);
+  } catch (error) {
+    log("error", {
+      ...baseLog,
+      outcome: "recovery_dispatch_failed",
+      error: String(error instanceof Error ? error.message : error),
+    });
+    throw error;
+  }
   log(stage === "final" ? "error" : "warning", {
     ...baseLog,
     outcome: "recovery_dispatched",

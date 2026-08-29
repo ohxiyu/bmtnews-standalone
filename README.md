@@ -104,7 +104,7 @@ Full configuration reference: [project-docs/configuration.md](project-docs/confi
 | `feed-collection` | every ~4h + 08:37 | Collect sources and run an independent daily recovery check |
 | `daily-summary` | 08:30 Asia/Shanghai | Build and publish the edition |
 | `weekly-review` | Mondays 09:30 | Weekly digest and scoring calibration |
-| `x-distribution` | 4× daily | Drip-post top stories at peak hours |
+| `x-distribution` | publication + 5× daily | Drip-post top stories immediately, then at peak hours |
 | `editorial-rebuild` | on edit | Republish after an editorial change |
 
 ## Documentation

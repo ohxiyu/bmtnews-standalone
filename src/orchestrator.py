@@ -1318,14 +1318,17 @@ class BMTNewsOrchestrator:
         self,
         *,
         edition_date: date_type | None = None,
+        kickoff_only: bool = False,
         now: datetime | None = None,
         state_path: Path | None = None,
     ) -> None:
         """Post the next pending story of the current edition to X.
 
-        Called once per scheduled slot. Posting is ordered rather than
-        clock-matched, so a delayed or skipped slot shifts a story later
-        instead of dropping or duplicating it.
+        Called once per scheduled slot or immediately after publication.
+        Posting is ordered rather than clock-matched, so a delayed or skipped
+        slot shifts a story later instead of dropping or duplicating it. A
+        kickoff-only call starts an untouched edition but never advances one
+        whose queue has already begun.
         """
         from .services.x_delivery import build_story_post, compose_story_post
         from .x_queue import (
@@ -1388,6 +1391,16 @@ class BMTNewsOrchestrator:
 
             state = state_for_edition(load_queue_state(path), date_str)
             for language in config.languages:
+                if kickoff_only and state.posted_ranks(language):
+                    run_report.add_alert(
+                        "info",
+                        f"x_kickoff_already_started_{language}",
+                        (
+                            f"{date_str} 的 {language.upper()} 分时发布已启动，"
+                            "本次发布后触发不再推进队列。"
+                        ),
+                    )
+                    continue
                 rank = next_pending_rank(
                     state,
                     language=language,

@@ -152,7 +152,15 @@ def make_orchestrator(publisher, items, *, mode="drip"):
     return orchestrator
 
 
-def run_slot(monkeypatch, orchestrator, items, path, date="2026-08-09"):
+def run_slot(
+    monkeypatch,
+    orchestrator,
+    items,
+    path,
+    date="2026-08-09",
+    *,
+    kickoff_only=False,
+):
     import src.orchestrator as module
     from src.daily_feed import DailyFeedState
 
@@ -167,6 +175,7 @@ def run_slot(monkeypatch, orchestrator, items, path, date="2026-08-09"):
     asyncio.run(
         orchestrator.run_x_slot(
             edition_date=datetime.fromisoformat(f"{date}T00:00").date(),
+            kickoff_only=kickoff_only,
             state_path=path,
         )
     )
@@ -207,6 +216,36 @@ def test_failed_post_is_retried_by_the_next_slot(monkeypatch, tmp_path) -> None:
     orchestrator.x_publisher = working
     run_slot(monkeypatch, orchestrator, items, path)
     assert "第1条" in working.posts[0]
+
+
+def test_publication_kickoff_is_idempotent(monkeypatch, tmp_path) -> None:
+    items = [make_item("第1条"), make_item("第2条")]
+    publisher = RecordingPublisher()
+    orchestrator = make_orchestrator(publisher, items)
+    path = tmp_path / "x-queue.json"
+
+    run_slot(
+        monkeypatch,
+        orchestrator,
+        items,
+        path,
+        kickoff_only=True,
+    )
+    run_slot(
+        monkeypatch,
+        orchestrator,
+        items,
+        path,
+        kickoff_only=True,
+    )
+
+    assert len(publisher.posts) == 1
+    assert "第1条" in publisher.posts[0]
+    assert load_queue_state(path).posted_ranks("zh") == [1]
+
+    run_slot(monkeypatch, orchestrator, items, path)
+    assert len(publisher.posts) == 2
+    assert "第2条" in publisher.posts[1]
 
 
 def test_story_post_does_not_break_on_abbreviations() -> None:
