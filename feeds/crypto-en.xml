@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-08-28T00:00:00Z</updated>
+  <updated>2026-08-29T00:00:00Z</updated>
+  <entry>
+    <title>Cosmos misjudged critical EVM bug for 4 months before $6M cross-chain exploit</title>
+    <link href="https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:cryptoslate.com_feed_:21be4de7336ce345</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>On August 28, Cosmos Labs disclosed that a misjudged EVM vulnerability was exploited across six networks, including MANTRA, TAC, and KiiChain, causing nearly $6 million in losses. The flaw was first reported on April 25 but was deemed low-risk due to decimal assumptions; a silent patch was merged on May 15, and the real exploit began on August 20 after the assessment was revised.
+
+This incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.
+
+The exploit combined two accounting failures: an unsigned-integer underflow created an abnormally large balance, which was then used to overflow another account and extract its legitimate balance without increasing total token supply. Cosmos Labs contacted 40 networks, with 13 potentially exposed chains patching, halting, or applying mitigations; MANTRA suffered the largest disclosed hit, with about 720.9 million tokens moved from two unauthorized addresses.</summary>
+  </entry>
+  <entry>
+    <title>Solana Approves Doubled Disinflation, Slashing SOL Issuance by 2029</title>
+    <link href="https://decrypt.co/376825/solana-sol-disinflation-vote-passes"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:decrypt.co_feed:9d7c93d7b1b0584f</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Solana validators passed SGP-0002, doubling the disinflation rate from 15% to 30%, so SOL&#x27;s issuance floor of 1.5% will be reached in 2029 instead of 2032. The vote closed at 67.0% support, barely clearing the 66.67% threshold, with 60.7% quorum participation.
+
+This is the first binding on-chain governance decision in Solana&#x27;s history, setting a precedent for tokenholder-driven protocol changes. The accelerated supply reduction could tighten SOL&#x27;s supply schedule and is widely expected to be a long-term positive for the token, though it also lowers staking yields.
+
+The proposal tracks SIMD-550, authored by engineers at infrastructure firm Helius, and passed with 176.29 million SOL in favor and 66.19 million against across 1,326 votes. Validators also ratified the Solana Constitution (SGP-0001) with 86% support, while rejecting SGP-0003, a Resource and Inclusion Fee that would have burned up to 14 times more SOL daily.</summary>
+  </entry>
+  <entry>
+    <title>Schwab Plans to Add SOL, AVAX, and LINK Trading Across 39.9 Million Accounts</title>
+    <link href="https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html"/>
+    <id>https://bmt.news/editions/2026-08-29/#gdelt:article:20260828T160000Z::https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Charles Schwab plans to offer trading in Solana (SOL), Avalanche (AVAX), and Chainlink (LINK) across its roughly 39.9 million brokerage accounts. The move expands the crypto assets available to the firm&#x27;s retail investor base.
+
+This signals continued mainstream adoption of cryptocurrencies by traditional financial institutions, giving millions of retail investors a convenient, regulated way to access these tokens. It could also boost the legitimacy and liquidity of SOL, AVAX, and LINK within the broader crypto market.
+
+The planned service would make SOL, AVAX, and LINK available to clients across Schwab&#x27;s roughly 39.9 million brokerage accounts. This represents one of the largest retail-facing crypto expansions announced by a traditional US brokerage.</summary>
+  </entry>
+  <entry>
+    <title>Solana validators approve doubling disinflation to 30% in first binding vote</title>
+    <link href="https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:cointelegraph.com_rss:7be6ac4b112b4b8a</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Solana validators passed SGP-0002 (&#x27;Double Disinflation&#x27;), raising the network&#x27;s annual disinflation rate from 15% to 30% with 67% support and 60.7% participation. The change accelerates SOL&#x27;s path to its 1.5% terminal inflation target to roughly 2.8 years, cutting projected issuance by about 18.9 million SOL over six years.
+
+This is Solana&#x27;s first binding governance vote, establishing an on-chain governance precedent while materially altering SOL&#x27;s supply schedule — a key tokenomics event for a top-tier protocol. Lower future issuance reduces dilution for SOL holders, but also cuts staking rewards for validators and delegators.
+
+Support came in at 67% with 25.16% against and 7.84% abstaining, while top voters were split: Figment voted entirely against with 17.1 million SOL staked, Helius and Jupiter overwhelmingly supported, and Kraken reversed from an initial &#x27;no&#x27; to over 90% support. The same vote ratified a Solana Constitution and rejected a separate proposal on resource and inclusion fees.</summary>
+  </entry>
+  <entry>
+    <title>Kraken Tips Solana&#x27;s Razor-Thin Inflation Vote</title>
+    <link href="https://protos.com/kraken-tips-solanas-razor-thin-inflation-vote/"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:protos.com_feed_:e306cc696b4e6ed8</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Solana validators narrowly approved SGP-0002, doubling the disinflation rate from 15% to 30%. The proposal passed with 67% support, just 0.33 percentage points above the required two-thirds threshold, after Kraken&#x27;s validator flipped its vote.
+
+This is the first Solana governance proposal passed under the new binding on-chain voting system and it changes SOL&#x27;s issuance schedule, reducing new SOL creation by roughly 18.9 million tokens over six years. The outcome directly affects SOL holders, stakers, and validators, and highlights the growing influence of large exchanges in network governance.
+
+Solana remains inflationary, with terminal inflation still at 1.5% per year; the change only accelerates the timeline to reach that floor from roughly 2032 to 2029. Developers must still re-anchor the supply curve, test, and activate the feature gate. Two companion proposals, SGP-0001 (the Solana Constitution) and SGP-0003 (a fee-burn mechanism), passed and failed respectively.</summary>
+  </entry>
+  <entry>
+    <title>Charles Schwab Expands Crypto Trading to Solana, Avalanche, Chainlink</title>
+    <link href="https://decrypt.co/376819/charles-schwab-crypto-trading-bitcoin-ethereum-solana"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:decrypt.co_feed:114eb1ed74b72433</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Charles Schwab announced Thursday that it plans to add Solana, Avalanche, and Chainlink trading for clients in the coming months, expanding its crypto platform beyond Bitcoin and Ethereum. The additions follow the rollout of direct Bitcoin and Ether trading that began in May.
+
+This move gives a major U.S. financial services firm&#x27;s retail client base direct access to additional digital assets, potentially boosting adoption and liquidity for SOL, AVAX, and LINK. It also signals continued institutional acceptance of crypto trading despite an evolving regulatory landscape.
+
+Eligible Schwab clients will be able to trade the new assets on the firm&#x27;s website, mobile app, and thinkorswim platform, with a 0.75% fee per trade, which Schwab describes as among the industry&#x27;s lowest. The company said it entered the market after U.S. regulations offered a clearer path, and it is also considering offering a dollar-pegged stablecoin.</summary>
+  </entry>
+  <entry>
+    <title>Schwab Plans to Add SOL, AVAX, LINK Trading Across 39.9M Accounts</title>
+    <link href="https://247wallst.com/investing/cryptocurrency/2026/08/28/schwab-plans-to-add-sol-avax-and-link-trading-across-its-39-9-million-accounts-heres-what-it-means-for-the-crypto-trade/"/>
+    <id>https://bmt.news/editions/2026-08-29/#gdelt:article:20260828T154500Z::https://247wallst.com/investing/cryptocurrency/2026/08/28/schwab-plans-to-add-sol-avax-and-link-trading-across-its-39-9-million-accounts-heres-what-it-means-for-the-crypto-trade/</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Charles Schwab plans to add trading for Solana (SOL), Avalanche (AVAX), and Chainlink (LINK) across its 39.9 million brokerage accounts, according to a report. This marks a major expansion of direct cryptocurrency access through a mainstream U.S. brokerage.
+
+Bringing these tokens to such a large retail investor base could significantly broaden crypto adoption and normalize holdings of altcoins within traditional brokerage portfolios. It also signals growing demand from mainstream investors for diversified digital asset exposure beyond Bitcoin and Ethereum.
+
+The news is described as a plan rather than an immediate launch, so a specific rollout date and trading availability details were not part of the headline. Solana is a high-throughput smart-contract blockchain, Avalanche is a platform designed for DeFi and custom networks, and Chainlink is a decentralized oracle network connecting smart contracts to off-chain data.</summary>
+  </entry>
+  <entry>
+    <title>SBI Holdings Invests $270 Million for 20% Stake in Indonesia&#x27;s Ajaib</title>
+    <link href="https://www.theblock.co/news/deals/2026-08-28-sbi-holdings-invests-270-million-in-ajaib-taking-20-stake-amid-asia-digital-asset-push-413023"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:www.theblock.co_rss.xml:77cb18fa1249c67e</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>SBI Holdings has invested $270 million to acquire a 20% stake in Indonesian digital asset platform Ajaib. The deal expands SBI&#x27;s presence in Asia&#x27;s digital asset market.
+
+The investment signals growing institutional interest in Southeast Asian digital asset infrastructure and could accelerate the development of regulated crypto and stablecoin services in the region. It also strengthens SBI&#x27;s cross-border digital asset strategy in Asia.
+
+Ajaib offers crypto and stablecoins alongside traditional investments, including OTC settlement services for institutional clients. The 20% stake implies a valuation of approximately $1.35 billion for the platform.</summary>
+  </entry>
+  <entry>
+    <title>Bullish Commits $100M to USD.AI for GPU-Backed Loans</title>
+    <link href="https://www.coindesk.com/business/2026/08/28/bullish-backs-usd-ai-with-usd100-million-gpu-stablecoin-financing"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:www.coindesk.com_arc_outboundfeeds_rss_:4ae76c7413de9f34</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Bullish, a major cryptocurrency exchange, announced $100 million in financing to USD.AI to support GPU-backed loans, as reported by CoinDesk on August 28, 2026.
+
+This marks a significant institutional commitment at the intersection of AI and crypto, signaling growing confidence in GPU-backed lending as a new asset class. It could encourage other exchanges and financial institutions to fund AI infrastructure projects through blockchain-based credit systems.
+
+USD.AI is a permissionless lending protocol that lets GPU operators borrow against their hardware, connecting on-chain capital with real-world AI infrastructure. The project issues the CHIP token and operates as a structured credit system rather than a simple stablecoin clone.</summary>
+  </entry>
   <entry>
     <title>Bitcoin Executes First Quantum-Safe Mainnet Transaction; 7M BTC Still Exposed</title>
     <link href="https://cryptoslate.com/bitcoin-now-has-a-quantum-computing-escape-route-but-7-million-btc-may-still-be-exposed/"/>
@@ -341,96 +440,5 @@ Term Finance is a noncustodial fixed-rate liquidity protocol modeled on tri-part
 This matters because it attempts to offer an alternative to a full wind-down, yet customers still lack a concrete repayment framework, recovery estimate, or timetable. The uncertainty could erode trust in centralized exchanges and intensify regulatory and user pressure on BitMart.
 
 The proposal does not change the 01:00 UTC Aug. 26 halt of spot, futures, and other trading, nor the recommended 05:00 UTC withdrawal submission time. BitMart says late withdrawal requests will move to a separate processing procedure, and the exchange expects to provide another update by Sept. 9.</summary>
-  </entry>
-  <entry>
-    <title>BitMart suggests restructuring weeks after closure announcement</title>
-    <link href="https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:protos.com_feed_:9485a5a9b7ced683</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>BitMart has announced it is exploring a potential restructuring plan, which may include the phased resumption of certain operations alongside distributions to creditors. This comes just weeks after the exchange announced it would cease all operations by January 31, 2027.
-
-The shift from total shutdown to restructuring indicates ongoing financial distress at BitMart and raises questions about the safety of user funds. It also underscores broader instability in the crypto exchange sector, affecting user trust and market confidence.
-
-Restructuring counsel White &amp; Case has been hired to assess options, and a roadmap is expected no later than September 9, 2026. BitMart&#x27;s Chief Product Officer Terence Lee resigned, while CEO Nathan Chow was terminated before the closure announcement and was not informed of it.</summary>
-  </entry>
-  <entry>
-    <title>Standard Chartered First Bank to Distribute HKD Stablecoin</title>
-    <link href="https://www.coindesk.com/business/2026/08/24/standard-chartered-first-bank-to-distribute-anchorpoint-s-hong-kong-dollar-stablecoin"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:0c61f873a15ad4bc</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Standard Chartered, through its venture Anchorpoint, has become the first bank to distribute a Hong Kong dollar (HKD) stablecoin, beginning an institutional rollout in August 2026.
-
-This marks a major milestone in institutional stablecoin adoption, showing that global banks are willing to enter the stablecoin distribution business under regulatory frameworks. It could accelerate the mainstream use of HKD-backed stablecoins in Hong Kong and beyond.
-
-The stablecoin, known as HKDAP, is pegged 1:1 to the Hong Kong dollar under the Linked Exchange Rate System. The rollout begins with institutional clients rather than retail, reflecting a cautious, compliance-first approach.</summary>
-  </entry>
-  <entry>
-    <title>Bybit Security Blocks Attempt, Averting $700M User Losses</title>
-    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOT0MyQlpIU0k4Q2hmV2xyU3dmZW4tTWhFOWJFQjgxR3dMNjFVYnZXQ090YkE5TlpJeWtBQ3U5cUhfejQ5UkJWYmZDZEdfbjFaUDl3V2hUTEw4NFNDeVpkdHlONmY0dGE5OHJFQ1ZFOGpQZDhtWU9jM1N0SFBEcmdJaGkyQXZUeGc?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-25/#google_news:article:e6b18ff55ec63e1e</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Bybit&#x27;s security systems reportedly blocked an attempt that could have cost users approximately $700 million. No specific attack details have been disclosed, and the report comes from a secondary source.
-
-Averted losses of this magnitude highlight exchange security as a critical trust factor in crypto markets. If confirmed, the successful defence could strengthen user confidence in Bybit&#x27;s safeguards, especially given the industry&#x27;s history of major exchange breaches.
-
-The $700 million figure refers to potential losses prevented, not actual losses sustained. The original report comes from Kryptomagazin, and no independent confirmation or technical description of the blocked attempt has been published.</summary>
-  </entry>
-  <entry>
-    <title>Ethereum Lending App Term Finance Loses $8.5M in Governance Exploit</title>
-    <link href="https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:1b1f3dddd1f53072</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Term Finance, an Ethereum lending protocol developed by Term Labs, lost about $8.5 million after an attacker acquired voting power and executed a governance exploit against its vaults. Security firms PeckShield and CertiK confirmed the estimated loss on August 23, 2026.
-
-This incident highlights a novel attack vector in DeFi where governance token voting power, rather than a smart contract code bug, is used to drain funds. It underscores growing risks for lending protocols that rely on off-chain or governance-controlled parameters.
-
-The attacker specifically acquired sufficient voting power to pass a malicious governance proposal affecting Term Finance vaults. The loss was estimated at roughly $8.5 million by blockchain security firms PeckShield and CertiK, with Term Labs confirming the event.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase Launches Tokenized Stocks for Nvidia, Apple, Meta, Alphabet on Base</title>
-    <link href="https://thedefiant.io/news/defi/coinbase-launches-tokenized-stocks-on-base"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:thedefiant.io_api_feed:0b68bfec21201660</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Coinbase launched tokenized stocks for Nvidia, Apple, Meta, and Alphabet on its Base layer-2 network, available to non-US users. Approximately $4.5 million was minted and $3 million of DEX liquidity appeared on day one.
-
-A major US exchange bringing tokenized equities of well-known tech companies onto a public layer-2 network marks a significant step for on-chain securities. This development could broaden access for non-US investors and test regulatory and market-structure boundaries in the crypto ecosystem.
-
-Chainlink price feeds run 24/5 while the tokenized stocks trade 24/7, creating a potential gap in reference pricing. Base is an Ethereum rollup incubated by Coinbase, processing transactions on its own execution layer while settling through Ethereum.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase launches tokenized US stocks on Base with Chainlink price feeds</title>
-    <link href="https://cointelegraph.com/news/coinbase-taps-chainlink-for-tokenized-stock-data-on-base?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:cointelegraph.com_rss:c96f3d45a864227e</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Coinbase has launched tokenized US stocks as B20 tokens natively on its Base layer-2 blockchain, with Chainlink Data Feeds providing continuous pricing for equities including Nvidia, Apple, Meta and Alphabet.
-
-The official launch from a major US exchange brings US equities into DeFi on Base, expanding 24/7 trading access for eligible non-US users and bridging traditional finance with blockchain liquidity.
-
-Each B20 token represents a direct claim on an underlying share held by regulated broker and custodian Alpaca under an Abu Dhabi Global Market-supervised structure. Chainlink&#x27;s feeds value each token using the underlying stock price plus a Coinbase-supplied multiplier that accounts for dividends and corporate actions, and Base says more tokenized stocks are planned in the coming weeks.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase Launches Tokenized Stocks on Base Network</title>
-    <link href="https://www.coindesk.com/business/2026/08/24/coinbase-debuts-tokenized-stocks-on-base-network-joining-race-to-bring-equities-on-blockchain"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:dc86201227a08962</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Coinbase has debuted tokenized stocks on its Base network, joining the race to bring equities on-chain. The move makes traditional stock exposure available as blockchain-based tokens on Base.
-
-As a leading US exchange, Coinbase&#x27;s entry validates tokenized equities as a mainstream market structure and could accelerate institutional adoption. It also strengthens Base&#x27;s position as a hub for real-world asset (RWA) tokenization.
-
-Tokenized stocks are blockchain-based digital assets designed to represent economic exposure to traditional shares, and on Base they are traded as tokens. Base is an Ethereum Layer 2 network built on the OP Stack and incubated by Coinbase, offering low-cost, developer-friendly on-chain access.</summary>
-  </entry>
-  <entry>
-    <title>Term Finance loses $8.5M in governance exploit despite safeguards</title>
-    <link href="https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543"/>
-    <id>https://bmt.news/editions/2026-08-24/#rss:www.theblock.co_rss.xml:ba61284223833910</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Term Finance (also known as Term Labs), a noncustodial fixed-rate lending protocol on Ethereum, lost an estimated $8.5 million on August 23, 2026, after an attacker took control of its governance system and drained multiple vaults. The exploit occurred despite the protocol&#x27;s seven-day proposal delay and liquidity provider veto mechanism. This incident highlights that governance controls—not just code vulnerabilities—are a critical attack surface in DeFi. It raises concerns about whether delay and veto safeguards are sufficient to protect user funds when governance systems are compromised. Reports indicate the attack did not break the protocol&#x27;s code; the attacker instead gained governance control and drained vaults holding Ethereum and stablecoins. The protocol&#x27;s safeguards, including a seven-day delay on vault proposals and a liquidity provider veto, failed to stop the exploit.</summary>
-  </entry>
-  <entry>
-    <title>Secret Network mints 1.079B SCRT, diluting holders by 75% after lead developer exits</title>
-    <link href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQdGV2TmZwMjVUV2dHaFB5WUh6cmhTTzR1bkZudEYwMHllUFBKRWswQXRMVzJwbS1nOGlBV0RaS25mMmN2b0hDcFVMZElmX3Q0V0llTGQ1UjJEZUFjM25NcjFxWHVHT1ZfLWtvcWduTmsxakhncGxiVVMwazQ4Mkkyd1NHbnh3WkVoZEhiRHJjcFotMENGb1Q2ZkN2aDVoNkhqTkotcmxRSDVFLWR3dHJva3ZYV2R4S1ppWFgtYjNtUkRENlBWSGRv?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-24/#google_news:article:f61a99d78c41d3ca</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Secret Network executed a 1.079 billion-SCRT mint through its v1.26.0-community-continuance upgrade on Aug. 21 after Proposal 365 passed. The one-time mint expands total SCRT supply to about 1.44 billion, reducing existing holders&#x27; collective share to roughly one quarter. This is a drastic tokenomics event for a Layer 1 network whose main development team, SCRT Labs, ends support on Sept. 1. The mint funds community-led continuity programs, so the long-term survival of Secret Network now depends on whether validators and community backers can sustain development and infrastructure. The mint allocated 299 million SCRT each to foundation and core-development programs, 178 million to an ecosystem fund, and 72 million each to advisors, R&amp;D, and validators; 308.4 million SCRT became liquid on day one, with ongoing inflation set at 5%. Existing holders&#x27; absolute balances did not change, but their proportional ownership fell to about 25% of the new supply.</summary>
   </entry>
 </feed>

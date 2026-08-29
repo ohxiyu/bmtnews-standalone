@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-08-28T00:00:00Z</updated>
+  <updated>2026-08-29T00:00:00Z</updated>
+  <entry>
+    <title>Cosmos 误判关键 EVM 漏洞达 4 个月，导致约 600 万美元跨链被盗</title>
+    <link href="https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:cryptoslate.com_feed_:21be4de7336ce345</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>8 月 28 日，Cosmos Labs 披露一个被误判的 EVM 漏洞在包括 MANTRA、TAC 和 KiiChain 在内的六个网络上被利用，造成近 600 万美元损失。该漏洞于 4 月 25 日首次上报，但因小数位假设被评估为低风险；5 月 15 日合并了静默补丁，而在评估修正后，实际攻击始于 8 月 20 日。
+
+该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。
+
+该漏洞利用结合了两个记账缺陷：无符号整数下溢生成了异常巨大的余额，随后利用该状态使另一个账户溢出，从而在不增加总代币供应量的情况下提取其合法余额。Cosmos Labs 联系了 40 条网络，其中 13 条潜在暴露的链进行了修补、暂停或部署缓解措施；MANTRA 遭受了已披露的最大损失，约有 7.209 亿枚代币从两个未授权地址被转出。</summary>
+  </entry>
+  <entry>
+    <title>Solana 通过加倍通缩提案，提前削减 SOL 发行量</title>
+    <link href="https://decrypt.co/376825/solana-sol-disinflation-vote-passes"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:decrypt.co_feed:9d7c93d7b1b0584f</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Solana 验证者通过了 SGP-0002，将年度通缩率从 15% 提高至 30%，使 SOL 的 1.5% 发行下限提前到 2029 年而非 2032 年到达。投票以 67.0% 的支持率勉强超过 66.67% 的门槛，参与率为 60.7%。
+
+这是 Solana 历史上首个具有约束力的链上治理决定，为代币持有者驱动的协议变更开创了先例。加速的供应缩减可能使 SOL 的供应时间表收紧，市场普遍认为这对 SOL 长期有利，但也降低了质押收益率。
+
+该提案对应由基础设施公司 Helius 工程师提出的 SIMD-550，最终以 1.76 亿 SOL 赞成、6619 万 SOL 反对的结果通过，共 1326 票参与。验证者还以 86% 的支持率通过了 Solana 宪法（SGP-0001），但否决了 SGP-0003 资源与纳入费提案，该提案原本可能每日销毁多达 14 倍的 SOL。</summary>
+  </entry>
+  <entry>
+    <title>嘉信理财计划为3990万账户新增SOL、AVAX和LINK交易</title>
+    <link href="https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html"/>
+    <id>https://bmt.news/editions/2026-08-29/#gdelt:article:20260828T160000Z::https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>嘉信理财（Charles Schwab）计划在其约3990万个经纪账户中提供Solana（SOL）、Avalanche（AVAX）和Chainlink（LINK）交易。此举扩大了该公司零售投资者可用的加密资产范围。
+
+这标志着传统金融机构对加密货币的主流采用持续加深，为数百万零售投资者提供了便捷、受监管的渠道来接触这些代币。同时，这也可能提升SOL、AVAX和LINK在更广泛加密市场中的合法性与流动性。
+
+这项计划中的服务将使Schwab约3990万个经纪账户的客户能够交易SOL、AVAX和LINK。这是美国传统券商面向散户推出的规模最大的加密扩展之一。</summary>
+  </entry>
+  <entry>
+    <title>Solana验证者批准将通胀递减率翻倍至30%的首个约束性投票</title>
+    <link href="https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:cointelegraph.com_rss:7be6ac4b112b4b8a</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Solana验证者通过了SGP-0002（“双倍去通胀”）提案，以67%的支持率和60.7%的参与率将网络年度通胀递减率从15%提高至30%。这一变化将SOL达到1.5%最终通胀目标的时间缩短至约2.8年，未来六年预计减少约1890万枚SOL的发行。
+
+这是Solana首次具有约束力的治理投票，开创了链上治理先例，同时实质性改变了SOL的供应计划，对顶级协议而言是重要的代币经济事件。未来发行量减少降低了SOL持有者的稀释，但也会降低验证者和委托者的质押奖励。
+
+投票支持率为67%，反对25.16%，弃权7.84%；主要投票者立场分歧：质押1710万SOL的Figment全部投反对票，Helius和Jupiter压倒性支持，Kraken从最初反对转为最终超90%支持。同一场投票还批准了Solana章程，并否决了关于资源和包含费用的另一项提案。</summary>
+  </entry>
+  <entry>
+    <title>Kraken 最后一刻投票助 Solana 通胀提案惊险通过</title>
+    <link href="https://protos.com/kraken-tips-solanas-razor-thin-inflation-vote/"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:protos.com_feed_:e306cc696b4e6ed8</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>Solana 验证者以 67% 的支持率惊险通过了 SGP-0002 提案，将通缩率（disinflation rate）从 15% 提高至 30%。该提案仅以高出所需三分之二门槛 0.33 个百分点的优势通过，此前 Kraken 的验证者最后一刻翻转了投票。
+
+这是 Solana 在新的约束性链上投票系统下通过的首个治理提案，它改变了 SOL 的发行时间表，未来六年将减少约 1890 万枚新 SOL 的产出。这一结果直接影响 SOL 持有者、质押者和验证者，也凸显了大型交易所在网络治理中日益增长的影响力。
+
+Solana 仍然是通胀性的，最终通胀率仍为每年 1.5%；该变化只是将到达这一底线的预期时间从约 2032 年提前到 2029 年。开发者仍需重新锚定供应曲线、测试并激活功能开关。另外两项附属提案中，SGP-0001（Solana 宪法）获得通过，SGP-0003（费用销毁机制）未获通过。</summary>
+  </entry>
+  <entry>
+    <title>嘉信理财将加密交易扩展至Solana、Avalanche和Chainlink</title>
+    <link href="https://decrypt.co/376819/charles-schwab-crypto-trading-bitcoin-ethereum-solana"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:decrypt.co_feed:114eb1ed74b72433</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>嘉信理财于周四宣布，计划在未来几个月内为客户新增Solana、Avalanche和Chainlink交易，将其加密平台扩展至比特币和以太坊之外。此前，该公司的直接比特币和以太坊交易已于5月开始推出。
+
+此举使一家美国大型金融服务公司的零售客户群能够直接访问更多数字资产，可能提升SOL、AVAX和LINK的采用率和流动性。这也表明，尽管监管环境不断演变，机构对加密交易的接纳仍在持续。
+
+符合条件的嘉信理财客户可通过该公司的网站、移动应用和thinkorswim平台交易新增资产，每笔交易收取0.75%的费用，嘉信理财称该费率处于行业最低水平。该公司表示，是在美国监管环境更加明朗后进入这一市场的，并且还在考虑推出与美元挂钩的稳定币。</summary>
+  </entry>
+  <entry>
+    <title>嘉信理财计划向3990万账户开放SOL、AVAX、LINK交易</title>
+    <link href="https://247wallst.com/investing/cryptocurrency/2026/08/28/schwab-plans-to-add-sol-avax-and-link-trading-across-its-39-9-million-accounts-heres-what-it-means-for-the-crypto-trade/"/>
+    <id>https://bmt.news/editions/2026-08-29/#gdelt:article:20260828T154500Z::https://247wallst.com/investing/cryptocurrency/2026/08/28/schwab-plans-to-add-sol-avax-and-link-trading-across-its-39-9-million-accounts-heres-what-it-means-for-the-crypto-trade/</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>据报道，嘉信理财（Charles Schwab）计划向其3990万经纪账户开放Solana（SOL）、Avalanche（AVAX）和Chainlink（LINK）的交易。这标志着这家美国主流券商在直接提供加密货币服务方面迈出了重要一步。
+
+将这类代币引入如此庞大的散户投资者群体，可能显著扩大加密货币的普及度，并使另类币种在传统券商投资组合中变得更加常见。这也表明主流投资者对比特币和以太坊之外的多元化数字资产配置需求正在增长。
+
+该消息被描述为一项计划，而非立即上线，因此具体上线日期和交易细则并未在标题中体现。Solana是一条高吞吐量的智能合约区块链，Avalanche是面向DeFi和自定义网络的平台，Chainlink则是连接智能合约与链下数据的去中心化预言机网络。</summary>
+  </entry>
+  <entry>
+    <title>SBI控股以2.7亿美元收购印尼Ajaib 20%股份</title>
+    <link href="https://www.theblock.co/news/deals/2026-08-28-sbi-holdings-invests-270-million-in-ajaib-taking-20-stake-amid-asia-digital-asset-push-413023"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:www.theblock.co_rss.xml:77cb18fa1249c67e</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>SBI控股已投资2.7亿美元，收购印尼数字资产平台Ajaib 20%的股份。该交易扩大了SBI在亚洲数字资产市场的布局。
+
+该投资表明机构对东南亚数字资产基础设施的兴趣日益浓厚，可能加速该地区受监管的加密货币和稳定币服务的发展。同时增强了SBI在亚洲的跨境数字资产战略。
+
+Ajaib在传统投资之外还提供加密货币和稳定币服务，并为机构客户提供场外交易（OTC）结算服务。按2.7亿美元获得20%股份计算，隐含估值约为13.5亿美元。</summary>
+  </entry>
+  <entry>
+    <title>Bullish向USD.AI提供1亿美元融资支持GPU抵押贷款</title>
+    <link href="https://www.coindesk.com/business/2026/08/28/bullish-backs-usd-ai-with-usd100-million-gpu-stablecoin-financing"/>
+    <id>https://bmt.news/editions/2026-08-29/#rss:www.coindesk.com_arc_outboundfeeds_rss_:4ae76c7413de9f34</id>
+    <updated>2026-08-29T00:00:00Z</updated>
+    <summary>据CoinDesk 2026年8月28日报道，主流加密货币交易所Bullish宣布向USD.AI提供1亿美元融资，以支持GPU抵押贷款业务。
+
+此举标志着机构资本在AI与加密交叉领域的重要投入，显示市场对GPU抵押贷款作为新兴资产类别的信心增强。这可能促使更多交易所和金融机构通过基于区块链的信贷系统为AI基础设施提供资金。
+
+USD.AI是一个无需许可的借贷协议，GPU运营商可以抵押其硬件获得贷款，将链上资本与现实AI基础设施连接起来。该协议发行CHIP代币，并被视为结构化信贷系统，而非简单的稳定币克隆。</summary>
+  </entry>
   <entry>
     <title>比特币完成首笔量子安全主网交易，约700万枚BTC仍面临风险</title>
     <link href="https://cryptoslate.com/bitcoin-now-has-a-quantum-computing-escape-route-but-7-million-btc-may-still-be-exposed/"/>
@@ -341,96 +440,5 @@ Term Finance是一个参考三方回购安排的非托管固定利率流动性�
 此事之所以重要，是因为BitMart试图提供全面清盘之外的替代方案，但用户仍缺乏具体的偿还框架、回收率预估或时间表。这种不确定性可能削弱用户对中心化交易所的信任，并加大监管与用户对BitMart的压力。
 
 该方案并未改变8月26日01:00 UTC现货、合约及其他交易停运的安排，也未改变建议用户在05:00 UTC前提交提现的时间。BitMart表示，逾期提交的提现请求将转入单独处理流程，并预计在9月9日前提供进一步更新。</summary>
-  </entry>
-  <entry>
-    <title>BitMart在宣布关闭数周后提出重组</title>
-    <link href="https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:protos.com_feed_:9485a5a9b7ced683</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>BitMart宣布正在探讨一项潜在的重组计划，可能包括分阶段恢复部分业务并向债权人进行分配。这距离该交易所宣布将于2027年1月31日前停止所有运营仅数周。
-
-从完全关闭转向重组表明BitMart深陷财务困境，并引发对用户资金安全的质疑。这也凸显了加密货币交易所行业的不稳定性，影响用户信任和市场信心。
-
-重组法律顾问White &amp; Case已受聘评估各种选项，路线图预计最迟于2026年9月9日发布。BitMart首席产品官Terence Lee辞职，而首席执行官Nathan Chow在关闭公告前已被解雇，且未被告知该公告。</summary>
-  </entry>
-  <entry>
-    <title>渣打银行成为首家分销港元稳定币的银行</title>
-    <link href="https://www.coindesk.com/business/2026/08/24/standard-chartered-first-bank-to-distribute-anchorpoint-s-hong-kong-dollar-stablecoin"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:0c61f873a15ad4bc</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>渣打银行通过其旗下企业 Anchorpoint，成为首家分销港元（HKD）稳定币的银行，并于2026年8月启动面向机构的发行。
-
-这标志着机构级稳定币采用的重要里程碑，表明全球银行愿意在监管框架下进入稳定币分销业务。这可能加速港元稳定币在香港及其他地区的普及。
-
-该稳定币（名为 HKDAP）与港元1:1锚定，基于联系汇率制度。发行首先面向机构客户而非零售用户，体现了审慎、合规优先的策略。</summary>
-  </entry>
-  <entry>
-    <title>Bybit安全系统拦截攻击，避免7亿美元用户损失</title>
-    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOT0MyQlpIU0k4Q2hmV2xyU3dmZW4tTWhFOWJFQjgxR3dMNjFVYnZXQ090YkE5TlpJeWtBQ3U5cUhfejQ5UkJWYmZDZEdfbjFaUDl3V2hUTEw4NFNDeVpkdHlONmY0dGE5OHJFQ1ZFOGpQZDhtWU9jM1N0SFBEcmdJaGkyQXZUeGc?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-25/#google_news:article:e6b18ff55ec63e1e</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>据报道，Bybit的安全系统拦截了一次可能造成用户约7亿美元损失的攻击尝试。目前尚未披露具体的攻击细节，且该报道来自二手来源。
-
-如此规模的潜在损失被避免，凸显出交易所安全是加密市场中关键的信任因素。若消息得到证实，这次成功防御可能增强用户对Bybit安全防护能力的信心，尤其是在行业内曾发生多起重大交易所被盗事件的背景下。
-
-这7亿美元指的是被避免的潜在损失，而非实际发生的损失。原始报道来自Kryptomagazin，目前尚无独立确认或关于此次被拦截攻击的技术描述。</summary>
-  </entry>
-  <entry>
-    <title>以太坊借贷应用Term Finance遭治理攻击损失850万美元</title>
-    <link href="https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:1b1f3dddd1f53072</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Term Labs开发的以太坊借贷协议Term Finance遭到治理攻击，攻击者通过购买投票权操纵协议，导致其金库损失约850万美元。安全公司PeckShield和CertiK于2026年8月23日确认了此次损失估算。
-
-此次事件突显了DeFi中一种新颖的攻击方式：攻击者利用治理代币投票权而非智能合约代码漏洞来盗取资金。这凸显了依赖链下参数或治理控制的借贷协议正面临日益增长的风险。
-
-攻击者专门购买了足够的投票权，以通过一项影响Term Finance金库的恶意治理提案。区块链安全公司PeckShield和CertiK估计损失约为850万美元，Term Labs已确认该事件。</summary>
-  </entry>
-  <entry>
-    <title>Coinbase在Base上推出英伟达、苹果、Meta和Alphabet代币化股票</title>
-    <link href="https://thedefiant.io/news/defi/coinbase-launches-tokenized-stocks-on-base"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:thedefiant.io_api_feed:0b68bfec21201660</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Coinbase在其Base二层网络上为英伟达、苹果、Meta和Alphabet推出了代币化股票，面向非美国用户开放。上线首日铸造了约450万美元的资产，并出现了约300万美元的DEX流动性。
-
-美国主要交易所将知名科技公司的代币化股票引入公共二层网络，标志着链上证券领域迈出了重要一步。这一进展可能为非美国投资者拓宽准入渠道，并考验加密生态中的监管与市场结构边界。
-
-Chainlink价格源每周运行5天、每天24小时，而代币化股票则每周7天、每天24小时交易，这可能在参考定价上产生间隙。Base是Coinbase孵化的以太坊rollup网络，在自身执行层处理交易，并通过以太坊完成结算。</summary>
-  </entry>
-  <entry>
-    <title>Coinbase在Base上线代币化美股，采用Chainlink价格数据</title>
-    <link href="https://cointelegraph.com/news/coinbase-taps-chainlink-for-tokenized-stock-data-on-base?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:cointelegraph.com_rss:c96f3d45a864227e</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Coinbase已在其Base Layer-2区块链上原生推出代币化美股（B20代币），Chainlink Data Feeds为英伟达、苹果、Meta和Alphabet等股票提供持续定价。
-
-此次由美国主流交易所正式推出，将美股带入Base生态的DeFi领域，为符合条件的非美国用户提供全天候交易渠道，并打通传统金融与链上流动性。
-
-每个B20代币代表对由受监管经纪商与托管商Alpaca持有的标的股票的直接索取权，该结构受阿布扎比全球市场（ADGM）监管。Chainlink的喂价采用标的价格加上Coinbase提供的乘数（考虑股息和公司行动）来估值；Base表示未来几周还将上线更多代币化股票。</summary>
-  </entry>
-  <entry>
-    <title>Coinbase在Base网络上推出代币化股票</title>
-    <link href="https://www.coindesk.com/business/2026/08/24/coinbase-debuts-tokenized-stocks-on-base-network-joining-race-to-bring-equities-on-blockchain"/>
-    <id>https://bmt.news/editions/2026-08-25/#rss:www.coindesk.com_arc_outboundfeeds_rss_:dc86201227a08962</id>
-    <updated>2026-08-25T00:00:00Z</updated>
-    <summary>Coinbase已在其Base网络上推出代币化股票，加入了将股票带至链上的竞争行列。此举使传统股票敞口以基于区块链的代币形式在Base上可用。
-
-作为美国头部交易所，Coinbase的入场验证了代币化股票作为主流市场结构的可行性，并可能加速机构采用。这也巩固了Base作为现实世界资产（RWA）代币化中心的地位。
-
-代币化股票是基于区块链的数字资产，旨在代表对传统股票的经济敞口，在Base上以代币形式交易。Base是Coinbase孵化的以太坊Layer 2网络，基于OP Stack构建，提供低成本、对开发者友好的链上接入。</summary>
-  </entry>
-  <entry>
-    <title>Term Finance 遭治理攻击损失约 850 万美元，既有防护失效</title>
-    <link href="https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543"/>
-    <id>https://bmt.news/editions/2026-08-24/#rss:www.theblock.co_rss.xml:ba61284223833910</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Term Finance（又称 Term Labs）是一个基于以太坊的非托管固定利率借贷协议，2026 年 8 月 23 日，攻击者控制其治理系统并盗走多个金库中的资金，估计损失约 850 万美元。尽管协议设有七天的提案延迟和流动性提供者否决机制，攻击仍然得逞。 这一事件表明，在 DeFi 中，治理控制（而不仅仅是代码漏洞）是关键的受攻击面。它还引发人们的担忧：当治理系统被攻破时，延迟和否决等保护措施是否足以保障用户资金安全。 报道称，本次攻击并未破坏协议代码，攻击者是通过获取治理控制权来盗取金库中的以太坊和稳定币。该协议原有的安全机制——包括金库提案的七天延迟和流动性提供者否决权——都未能阻止这次攻击。</summary>
-  </entry>
-  <entry>
-    <title>Secret Network 增发 10.79 亿 SCRT，持有者份额稀释 75%</title>
-    <link href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQdGV2TmZwMjVUV2dHaFB5WUh6cmhTTzR1bkZudEYwMHllUFBKRWswQXRMVzJwbS1nOGlBV0RaS25mMmN2b0hDcFVMZElmX3Q0V0llTGQ1UjJEZUFjM25NcjFxWHVHT1ZfLWtvcWduTmsxakhncGxiVVMwazQ4Mkkyd1NHbnh3WkVoZEhiRHJjcFotMENGb1Q2ZkN2aDVoNkhqTkotcmxRSDVFLWR3dHJva3ZYV2R4S1ppWFgtYjNtUkRENlBWSGRv?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-24/#google_news:article:f61a99d78c41d3ca</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Secret Network 于8月21日在 Proposal 365 通过后，通过 v1.26.0-community-continuance 升级一次性增发了10.79亿枚 SCRT。这次增发将总供应量扩至约14.4亿枚，使原有持有者的合计份额降至约四分之一。 这是一起影响 Layer 1 网络的剧烈代币经济事件，因为主开发团队 SCRT Labs 将于9月1日停止支持。此次增发为社区主导的延续计划提供资金，因此 Secret Network 能否长期存活，取决于验证者和社区支持者能否持续承担开发与基础设施工作。 此次增发中，基金会和核心开发项目各获得2.99亿枚SCRT，生态系统基金获得1.78亿枚，顾问、研发和验证者各获得7200万枚；首日即有3.084亿枚SCRT进入流通，后续持续通胀率设为5%。原有持有者的绝对余额没有变化，但其比例所有权降至新供应量的约25%。</summary>
   </entry>
 </feed>

@@ -1,6 +1,42 @@
 {
   "threads": [
     {
+      "thread_id": "t66352c3090",
+      "latest_date": "2026-08-29",
+      "first_date": "2026-08-22",
+      "days": 3,
+      "entries": 3,
+      "category": "crypto",
+      "title_zh": "Cosmos 误判关键 EVM 漏洞达 4 个月，导致约 600 万美元跨链被盗",
+      "title_en": "Cosmos misjudged critical EVM bug for 4 months before $6M cross-chain exploit",
+      "summary_zh": "8 月 28 日，Cosmos Labs 披露一个被误判的 EVM 漏洞在包括 MANTRA、TAC 和 KiiChain 在内的六个网络上被利用，造成近 600 万美元损失。该漏洞于 4 月 25 日首次上报，但因小数位假设被评估为低风险；5 月 15 日合并了静默补丁，而在评估修正后，实际攻击始于 8 月 20 日。\n\n该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。\n\n该漏洞利用结合了两个记账缺陷：无符号整数下溢生成了异常巨大的余额，随后利用该状态使另一个账户溢出，从而在不增加总代币供应量的情况下提取其合法余额。Cosmos Labs 联系了 40 条网络，其中 13 条潜在暴露的链进行了修补、暂停或部署缓解措施；MANTRA 遭受了已披露的最大损失，约有 7.209 亿枚代币从两个未授权地址被转出。",
+      "summary_en": "On August 28, Cosmos Labs disclosed that a misjudged EVM vulnerability was exploited across six networks, including MANTRA, TAC, and KiiChain, causing nearly $6 million in losses. The flaw was first reported on April 25 but was deemed low-risk due to decimal assumptions; a silent patch was merged on May 15, and the real exploit began on August 20 after the assessment was revised.\n\nThis incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.\n\nThe exploit combined two accounting failures: an unsigned-integer underflow created an abnormally large balance, which was then used to overflow another account and extract its legitimate balance without increasing total token supply. Cosmos Labs contacted 40 networks, with 13 potentially exposed chains patching, halting, or applying mitigations; MANTRA suffered the largest disclosed hit, with about 720.9 million tokens moved from two unauthorized addresses."
+    },
+    {
+      "thread_id": "t99a010e8f3",
+      "latest_date": "2026-08-29",
+      "first_date": "2026-08-28",
+      "days": 2,
+      "entries": 4,
+      "category": "crypto",
+      "title_zh": "嘉信理财计划向3990万账户开放SOL、AVAX、LINK交易",
+      "title_en": "Schwab Plans to Add SOL, AVAX, LINK Trading Across 39.9M Accounts",
+      "summary_zh": "据报道，嘉信理财（Charles Schwab）计划向其3990万经纪账户开放Solana（SOL）、Avalanche（AVAX）和Chainlink（LINK）的交易。这标志着这家美国主流券商在直接提供加密货币服务方面迈出了重要一步。\n\n将这类代币引入如此庞大的散户投资者群体，可能显著扩大加密货币的普及度，并使另类币种在传统券商投资组合中变得更加常见。这也表明主流投资者对比特币和以太坊之外的多元化数字资产配置需求正在增长。\n\n该消息被描述为一项计划，而非立即上线，因此具体上线日期和交易细则并未在标题中体现。Solana是一条高吞吐量的智能合约区块链，Avalanche是面向DeFi和自定义网络的平台，Chainlink则是连接智能合约与链下数据的去中心化预言机网络。",
+      "summary_en": "Charles Schwab plans to add trading for Solana (SOL), Avalanche (AVAX), and Chainlink (LINK) across its 39.9 million brokerage accounts, according to a report. This marks a major expansion of direct cryptocurrency access through a mainstream U.S. brokerage.\n\nBringing these tokens to such a large retail investor base could significantly broaden crypto adoption and normalize holdings of altcoins within traditional brokerage portfolios. It also signals growing demand from mainstream investors for diversified digital asset exposure beyond Bitcoin and Ethereum.\n\nThe news is described as a plan rather than an immediate launch, so a specific rollout date and trading availability details were not part of the headline. Solana is a high-throughput smart-contract blockchain, Avalanche is a platform designed for DeFi and custom networks, and Chainlink is a decentralized oracle network connecting smart contracts to off-chain data."
+    },
+    {
+      "thread_id": "t53fc4330d5",
+      "latest_date": "2026-08-29",
+      "first_date": "2026-08-28",
+      "days": 2,
+      "entries": 4,
+      "category": "crypto",
+      "title_zh": "Kraken 最后一刻投票助 Solana 通胀提案惊险通过",
+      "title_en": "Kraken Tips Solana's Razor-Thin Inflation Vote",
+      "summary_zh": "Solana 验证者以 67% 的支持率惊险通过了 SGP-0002 提案，将通缩率（disinflation rate）从 15% 提高至 30%。该提案仅以高出所需三分之二门槛 0.33 个百分点的优势通过，此前 Kraken 的验证者最后一刻翻转了投票。\n\n这是 Solana 在新的约束性链上投票系统下通过的首个治理提案，它改变了 SOL 的发行时间表，未来六年将减少约 1890 万枚新 SOL 的产出。这一结果直接影响 SOL 持有者、质押者和验证者，也凸显了大型交易所在网络治理中日益增长的影响力。\n\nSolana 仍然是通胀性的，最终通胀率仍为每年 1.5%；该变化只是将到达这一底线的预期时间从约 2032 年提前到 2029 年。开发者仍需重新锚定供应曲线、测试并激活功能开关。另外两项附属提案中，SGP-0001（Solana 宪法）获得通过，SGP-0003（费用销毁机制）未获通过。",
+      "summary_en": "Solana validators narrowly approved SGP-0002, doubling the disinflation rate from 15% to 30%. The proposal passed with 67% support, just 0.33 percentage points above the required two-thirds threshold, after Kraken's validator flipped its vote.\n\nThis is the first Solana governance proposal passed under the new binding on-chain voting system and it changes SOL's issuance schedule, reducing new SOL creation by roughly 18.9 million tokens over six years. The outcome directly affects SOL holders, stakers, and validators, and highlights the growing influence of large exchanges in network governance.\n\nSolana remains inflationary, with terminal inflation still at 1.5% per year; the change only accelerates the timeline to reach that floor from roughly 2032 to 2029. Developers must still re-anchor the supply curve, test, and activate the feature gate. Two companion proposals, SGP-0001 (the Solana Constitution) and SGP-0003 (a fee-burn mechanism), passed and failed respectively."
+    },
+    {
       "thread_id": "t747ea63a06",
       "latest_date": "2026-08-28",
       "first_date": "2026-08-22",
@@ -59,18 +95,6 @@
       "title_en": "SEC revives crypto custody rule that previously failed to pass",
       "summary_zh": "美国证券交易委员会（SEC）正在重启其《保护咨询客户资产规则》提案，该规则将要求投资顾问将客户的数字资产交由合格托管人保管。前一届政府未能最终敲定该规则，SEC现已重新开放意见征询期。\n\n若该规则获得通过，将重新定义加密资产的机构托管要求，实施更严格的安全保障措施，并可能限制自我托管或非合格托管人的使用。这可能会对机构采用率和数字资产的整体市场结构产生重大影响。\n\n该规则源自1940年《投资顾问法》，并將重新指定规则206(4)-2。关键要求包括顾问必须将客户资产交由“合格托管人”保管，而数字资产在占有和控制定义方面带来独特挑战。",
       "summary_en": "The SEC is resurrecting its proposed Safeguarding Advisory Client Assets rule, which would require investment advisers to place client digital assets with qualified custodians. The previous administration failed to finalize this rule, and the SEC has reopened the comment period for it.\n\nIf adopted, this rule would redefine institutional custody requirements for crypto assets, imposing stricter safeguards and potentially limiting the use of self-custody or non-qualified custodians. It could significantly affect institutional adoption and the overall market structure of digital assets.\n\nThe rule originates under the Investment Advisers Act of 1940 and would redesignate Rule 206(4)-2. Key requirements include that advisers must place client assets with a 'qualified custodian,' with digital assets posing unique challenges for possession and control definitions."
-    },
-    {
-      "thread_id": "t66352c3090",
-      "latest_date": "2026-08-26",
-      "first_date": "2026-08-22",
-      "days": 2,
-      "entries": 2,
-      "category": "crypto",
-      "title_zh": "Cosmos Labs 紧急呼吁 EVM 链暂停：共享漏洞导致三条网络被盗",
-      "title_en": "Cosmos Labs Urges EVM Chains to Halt as Shared Bug Drains Three Networks",
-      "summary_zh": "Cosmos Labs 呼吁基于其共享堆栈构建的 EVM 链暂停运营，因为一个漏洞导致三条网络被盗。受影响链之一 KiiChain 报告损失了 1.48 亿枚代币，而暂停建议是在补丁发布六天后才发出，且当时未发布公开安全公告。\n\nCosmos EVM 堆栈的共享漏洞意味着许多链可能同时暴露在风险中，而不仅仅是单个网络。此类事件可能削弱用户对生态系统的信任，并凸显跨链协调安全披露的迫切必要性。\n\nKiiChain 表示，三个底层缺陷中有两个在上游仍未修复。补丁发布与公开安全公告之间的延迟，可能让其他链未能及时意识到这一严重风险。",
-      "summary_en": "Cosmos Labs recommended that EVM chains built on its shared stack halt operations after a vulnerability drained three networks. KiiChain, one of the affected chains, reported losing 148 million tokens, and the halt advisory came six days after a patch shipped without a public security advisory.\n\nA shared vulnerability in the Cosmos EVM stack means many chains may be exposed at once, not just a single network. This incident can undermine trust in the ecosystem and highlights the critical need for coordinated security disclosure across interconnected chains.\n\nKiiChain stated that two of the three underlying defects remain unfixed upstream. The delay between the patch release and the public advisory may have left other chains unaware of the critical risk."
     },
     {
       "thread_id": "t72b4e44581",
