@@ -2,15 +2,15 @@
   "threads": [
     {
       "thread_id": "t66352c3090",
-      "latest_date": "2026-08-29",
+      "latest_date": "2026-08-30",
       "first_date": "2026-08-22",
-      "days": 3,
-      "entries": 3,
+      "days": 4,
+      "entries": 4,
       "category": "crypto",
-      "title_zh": "Cosmos 误判关键 EVM 漏洞达 4 个月，导致约 600 万美元跨链被盗",
-      "title_en": "Cosmos misjudged critical EVM bug for 4 months before $6M cross-chain exploit",
-      "summary_zh": "8 月 28 日，Cosmos Labs 披露一个被误判的 EVM 漏洞在包括 MANTRA、TAC 和 KiiChain 在内的六个网络上被利用，造成近 600 万美元损失。该漏洞于 4 月 25 日首次上报，但因小数位假设被评估为低风险；5 月 15 日合并了静默补丁，而在评估修正后，实际攻击始于 8 月 20 日。\n\n该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。\n\n该漏洞利用结合了两个记账缺陷：无符号整数下溢生成了异常巨大的余额，随后利用该状态使另一个账户溢出，从而在不增加总代币供应量的情况下提取其合法余额。Cosmos Labs 联系了 40 条网络，其中 13 条潜在暴露的链进行了修补、暂停或部署缓解措施；MANTRA 遭受了已披露的最大损失，约有 7.209 亿枚代币从两个未授权地址被转出。",
-      "summary_en": "On August 28, Cosmos Labs disclosed that a misjudged EVM vulnerability was exploited across six networks, including MANTRA, TAC, and KiiChain, causing nearly $6 million in losses. The flaw was first reported on April 25 but was deemed low-risk due to decimal assumptions; a silent patch was merged on May 15, and the real exploit began on August 20 after the assessment was revised.\n\nThis incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.\n\nThe exploit combined two accounting failures: an unsigned-integer underflow created an abnormally large balance, which was then used to overflow another account and extract its legitimate balance without increasing total token supply. Cosmos Labs contacted 40 networks, with 13 potentially exposed chains patching, halting, or applying mitigations; MANTRA suffered the largest disclosed hit, with about 720.9 million tokens moved from two unauthorized addresses."
+      "title_zh": "Cosmos Labs承认误判漏洞，致六链遭570万美元攻击",
+      "title_en": "Cosmos Labs admits fault in clearing bug behind $5.7M six-chain hack",
+      "summary_zh": "Cosmos Labs承认，它错误放行了导致六个区块链遭570万美元攻击的关键漏洞，其中MANTRA Chain损失360万美元。MANTRA Chain称补丁在攻击发生前20小时才发布，且未指明所修复的缺陷。\n\n该事件暴露出Cosmos生态在漏洞审查方面的重大缺陷，并可能削弱人们对跨链基础设施安全性的信任。由于攻击波及多条链上的用户资金，这引发对基于IBC的互操作安全以及核心开发团队责任感的担忧。\n\n该攻击影响了六条链，其中MANTRA Chain损失约360万美元。MANTRA Chain表示，补丁在攻击前20小时才发布，且没有指明其要修复的缺陷。",
+      "summary_en": "Cosmos Labs has admitted it mistakenly cleared the critical vulnerability that enabled a $5.7 million exploit across six blockchains, with MANTRA Chain suffering $3.6 million in losses. The admission comes after MANTRA Chain claimed the patch was released only 20 hours before the attack began.\n\nThis incident exposes a significant flaw in vulnerability review within the Cosmos ecosystem, potentially undermining trust in the security of cross-chain infrastructure. Since the exploit affected user funds across multiple chains, it raises concerns about the safety of IBC-based interoperability and the accountability of core developers.\n\nThe exploit affected six chains, including an estimated $3.6 million loss for MANTRA Chain. MANTRA Chain said the patch did not identify the flaw it was meant to fix, and was released only 20 hours before the attack began."
     },
     {
       "thread_id": "t99a010e8f3",
