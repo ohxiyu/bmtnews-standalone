@@ -9,6 +9,7 @@
     'exchange', 'security', 'market', 'regulation', 'protocol'
   ];
   var interfaceLanguage = 'zh';
+  var deferredInstallPrompt = null;
   var CATEGORY_LABELS = {
     zh: {
       all: '全部',
@@ -1042,6 +1043,93 @@
     updateThemeButtonLabel();
   }
 
+  function runningAsInstalledApp() {
+    return Boolean(
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+      window.navigator.standalone === true
+    );
+  }
+
+  function isAppleMobileBrowser() {
+    var agent = window.navigator.userAgent || '';
+    return /iPad|iPhone|iPod/i.test(agent) ||
+      (/Macintosh/i.test(agent) && window.navigator.maxTouchPoints > 1);
+  }
+
+  function updateInstallButton() {
+    var button = document.querySelector('[data-pwa-install]');
+    if (!button) return;
+    button.hidden = runningAsInstalledApp() ||
+      (!deferredInstallPrompt && !isAppleMobileBrowser());
+  }
+
+  function installInstructions() {
+    if (interfaceLanguage === 'en') {
+      return 'On iPhone or iPad, open the Share menu, choose Add to Home Screen, then turn on Open as Web App and tap Add.';
+    }
+    return '在 iPhone 或 iPad 上打开“分享”菜单，选择“添加到主屏幕”，开启“作为 Web App 打开”，然后点击“添加”。';
+  }
+
+  function showInstallInstructions() {
+    var dialog = document.querySelector('[data-pwa-install-dialog]');
+    var copy = document.querySelector('[data-pwa-install-copy]');
+    if (!dialog || !copy) return;
+    copy.textContent = installInstructions();
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+    }
+  }
+
+  function closeInstallInstructions() {
+    var dialog = document.querySelector('[data-pwa-install-dialog]');
+    if (!dialog) return;
+    if (typeof dialog.close === 'function') {
+      dialog.close();
+    } else {
+      dialog.removeAttribute('open');
+    }
+  }
+
+  function setupPwaInstall() {
+    var button = document.querySelector('[data-pwa-install]');
+    var dialog = document.querySelector('[data-pwa-install-dialog]');
+    var close = document.querySelector('[data-pwa-install-close]');
+    if (!button || !dialog || !close) return;
+
+    button.addEventListener('click', async function () {
+      if (!deferredInstallPrompt) {
+        showInstallInstructions();
+        return;
+      }
+      deferredInstallPrompt.prompt();
+      try {
+        await deferredInstallPrompt.userChoice;
+      } finally {
+        deferredInstallPrompt = null;
+        updateInstallButton();
+      }
+    });
+
+    close.addEventListener('click', closeInstallInstructions);
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) closeInstallInstructions();
+    });
+    updateInstallButton();
+  }
+
+  window.addEventListener('beforeinstallprompt', function (event) {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    updateInstallButton();
+  });
+
+  window.addEventListener('appinstalled', function () {
+    deferredInstallPrompt = null;
+    updateInstallButton();
+  });
+
   /* Scrollspy: highlight the ranking-rail entry for the story being read. */
   var scrollspyObserver = null;
   var observedArticles = typeof WeakSet === 'function' ? new WeakSet() : null;
@@ -1128,6 +1216,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     setupThemeToggle();
     setupInterfaceLanguage();
+    setupPwaInstall();
     setupStorySharing();
     enhanceDailyFeeds();
     setupScrollspy();

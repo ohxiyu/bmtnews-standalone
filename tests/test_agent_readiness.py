@@ -3,6 +3,7 @@
 import hashlib
 import json
 import re
+import struct
 from pathlib import Path
 from xml.etree import ElementTree
 
@@ -107,6 +108,47 @@ def test_home_template_and_metadata_are_present_without_javascript() -> None:
     assert '/developers/' in layout
     assert 'rel="describedby"' in head
     assert 'type="text/markdown"' in head
+
+
+def test_pwa_manifest_icons_and_install_contract_are_complete() -> None:
+    manifest = json.loads((DOCS / "manifest.webmanifest").read_text(encoding="utf-8"))
+    head = (DOCS / "_includes" / "head-custom.html").read_text(encoding="utf-8")
+    layout = (DOCS / "_layouts" / "default.html").read_text(encoding="utf-8")
+    script = (DOCS / "assets" / "js" / "bmtnews-ui.js").read_text(
+        encoding="utf-8"
+    )
+    headers = (DOCS / "_headers").read_text(encoding="utf-8")
+
+    assert manifest["id"] == "/"
+    assert manifest["start_url"].startswith("/")
+    assert manifest["scope"] == "/"
+    assert manifest["display"] == "standalone"
+    assert manifest["prefer_related_applications"] is False
+    assert {icon["sizes"] for icon in manifest["icons"]} >= {"192x192", "512x512"}
+    assert any(icon.get("purpose") == "maskable" for icon in manifest["icons"])
+    for icon in manifest["icons"]:
+        assert (DOCS / icon["src"].lstrip("/")).is_file()
+
+    assert 'rel="manifest"' in head
+    assert 'rel="apple-touch-icon" sizes="180x180"' in head
+    assert 'name="apple-mobile-web-app-capable" content="yes"' in head
+    assert 'content="width=device-width, initial-scale=1, viewport-fit=cover"' in layout
+    assert "data-pwa-install" in layout
+    assert "data-pwa-install-dialog" in layout
+    assert "beforeinstallprompt" in script
+    assert "window.navigator.standalone" in script
+    assert "/manifest.webmanifest" in headers
+    assert "application/manifest+json" in headers
+
+    expected_dimensions = {
+        "apple-touch-icon.png": (180, 180),
+        "app-icon-192.png": (192, 192),
+        "app-icon-512.png": (512, 512),
+    }
+    for filename, expected in expected_dimensions.items():
+        payload = (DOCS / "assets" / "images" / filename).read_bytes()
+        assert payload.startswith(b"\x89PNG\r\n\x1a\n")
+        assert struct.unpack(">II", payload[16:24]) == expected
 
 
 def test_json_ld_describes_the_real_site_identity_and_contact_route() -> None:
