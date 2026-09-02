@@ -187,19 +187,14 @@ def load_migration_plan(path: Path = DEFAULT_PLAN_PATH) -> EventMigrationPlan:
 
 
 def _identity_payload(record: ArchiveRecord) -> dict[str, object]:
-    """Fields that define reviewed input, excluding migration annotations."""
-    return {
-        "date": record.date,
-        "rank": record.rank,
-        "item_id": record.item_id,
-        "url": record.url,
-        "title_zh": record.title_zh,
-        "title_en": record.title_en,
-        "summary_zh": record.summary_zh,
-        "summary_en": record.summary_en,
-        "thread_id": record.thread_id,
-        "thread_day": record.thread_day,
-    }
+    """All reviewed input fields, excluding only migration annotations.
+
+    Deriving this from the model makes newly added archive fields fail the
+    fingerprint automatically instead of being silently omitted from review.
+    """
+    return record.model_dump(
+        mode="json", exclude={"event_id", "event_update_id"}
+    )
 
 
 def archive_digest(

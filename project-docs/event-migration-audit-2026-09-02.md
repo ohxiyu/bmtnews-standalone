@@ -6,7 +6,7 @@
 
 - Source revision: `ebabcd313633767126e49370cb1a47622b9e78d8`
 - Reviewed through: `2026-09-02`
-- Archive fingerprint: `eba3e25eac493dbde7a8df634c645fb5f1ca4d7f4613c6c95dae1305cde28943`
+- Archive fingerprint: `9a7b432021bcb475a0c0c32ab224b399718e32b7668ee5d5953f3409efcf2603`
 - Reviewed archive records: 178
 - Public legacy threads reviewed: 22
 - Plan approval: `pending`

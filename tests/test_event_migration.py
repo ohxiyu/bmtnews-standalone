@@ -169,6 +169,25 @@ def test_archive_drift_is_a_hard_error() -> None:
         build_migration(changed, plan)
 
 
+def test_fingerprint_covers_metadata_but_ignores_migration_annotations() -> None:
+    records = sample_records()
+    original = archive_digest(records, through_date=REVIEW_DATE)
+    annotated = [
+        record.model_copy(
+            update={
+                "event_id": "evt_annotation1",
+                "event_update_id": "upd_annotation1",
+            }
+        )
+        for record in records
+    ]
+    changed_tags = [*records]
+    changed_tags[0] = changed_tags[0].model_copy(update={"tags": ["changed"]})
+
+    assert archive_digest(annotated, through_date=REVIEW_DATE) == original
+    assert archive_digest(changed_tags, through_date=REVIEW_DATE) != original
+
+
 def test_records_after_review_cutoff_default_to_separate_events() -> None:
     records = sample_records()
     plan = sample_plan(records)
