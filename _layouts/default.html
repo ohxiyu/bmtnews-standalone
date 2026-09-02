@@ -16,7 +16,7 @@
 <html lang="{% if interface_language == 'en' %}en{% else %}zh-CN{% endif %}">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#111214">
     {% if page.noindex %}
     <meta name="robots" content="noindex, nofollow">
@@ -119,6 +119,17 @@
             </nav>
           {% endunless %}
           <button
+            class="pwa-install-button"
+            type="button"
+            hidden
+            data-pwa-install
+            data-i18n-zh="安装"
+            data-i18n-en="Install"
+            aria-label="{% if interface_language == 'en' %}Install BMTNews{% else %}安装 BMTNews{% endif %}"
+            data-i18n-aria-zh="安装 BMTNews"
+            data-i18n-aria-en="Install BMTNews"
+          >{% if interface_language == "en" %}Install{% else %}安装{% endif %}</button>
+          <button
             class="theme-toggle"
             type="button"
             aria-label="{% if interface_language == 'en' %}Switch to dark mode{% else %}切换深色模式{% endif %}"
@@ -219,5 +230,38 @@
         >{% if interface_language == "en" %}Legal &amp; content rights{% else %}法律与内容权利{% endif %}</a>
       </span>
     </footer>
+
+    <dialog
+      class="pwa-install-dialog"
+      data-pwa-install-dialog
+      aria-labelledby="pwa-install-title"
+    >
+      <div class="pwa-install-panel">
+        <header>
+          <div>
+            <span class="pwa-install-kicker">BMTNEWS APP</span>
+            <h2
+              id="pwa-install-title"
+              data-i18n-zh="安装到主屏幕"
+              data-i18n-en="Install BMTNews"
+            >{% if interface_language == "en" %}Install BMTNews{% else %}安装到主屏幕{% endif %}</h2>
+          </div>
+          <button
+            class="pwa-install-close"
+            type="button"
+            data-pwa-install-close
+            aria-label="{% if interface_language == 'en' %}Close installation instructions{% else %}关闭安装说明{% endif %}"
+            data-i18n-aria-zh="关闭安装说明"
+            data-i18n-aria-en="Close installation instructions"
+          >×</button>
+        </header>
+        <p class="pwa-install-copy" data-pwa-install-copy></p>
+        <p
+          class="pwa-install-note"
+          data-i18n-zh="安装后将以独立窗口运行；内容仍由 bmt.news 实时更新。"
+          data-i18n-en="After installation, BMTNews opens in its own window and continues to update from bmt.news."
+        >{% if interface_language == "en" %}After installation, BMTNews opens in its own window and continues to update from bmt.news.{% else %}安装后将以独立窗口运行；内容仍由 bmt.news 实时更新。{% endif %}</p>
+      </div>
+    </dialog>
   </body>
 </html>

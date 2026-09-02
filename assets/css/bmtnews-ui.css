@@ -121,6 +121,7 @@ html {
 
 body {
   margin: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -287,6 +288,104 @@ time,
   line-height: 1;
   cursor: pointer;
   padding: 0;
+}
+
+.pwa-install-button {
+  min-height: 26px;
+  padding: 3px 10px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--bg);
+  font-size: var(--fs-xs);
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.pwa-install-button:hover,
+.pwa-install-button:focus-visible {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+}
+
+.pwa-install-button[hidden] {
+  display: none;
+}
+
+.pwa-install-dialog {
+  width: min(430px, calc(100vw - 32px));
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 18px 60px rgb(20 22 27 / 0.24);
+}
+
+.pwa-install-dialog::backdrop {
+  background: rgb(17 18 20 / 0.64);
+}
+
+.pwa-install-panel {
+  padding: 20px;
+}
+
+.pwa-install-panel > header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.pwa-install-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+}
+
+.pwa-install-panel h2 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  line-height: 1.25;
+}
+
+.pwa-install-copy {
+  margin: 20px 0 8px;
+  color: var(--text-soft);
+  font-size: var(--fs-m);
+}
+
+.pwa-install-note {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: var(--fs-s);
+}
+
+.pwa-install-close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pwa-install-close:hover,
+.pwa-install-close:focus-visible {
+  background: var(--surface-soft);
+  color: var(--text);
 }
 
 .theme-toggle:hover {
@@ -1787,6 +1886,7 @@ time,
   .site-actions {
     order: 2;
     margin-left: auto;
+    gap: 8px;
   }
 
   .site-nav {

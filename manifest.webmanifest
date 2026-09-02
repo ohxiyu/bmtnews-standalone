@@ -1,0 +1,49 @@
+{
+  "id": "/",
+  "name": "BMTNews",
+  "short_name": "BMTNews",
+  "description": "面向加密市场的每日情报信息流",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#faf9f7",
+  "theme_color": "#111214",
+  "categories": ["news", "finance"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/images/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "今日信息流",
+      "short_name": "今日",
+      "url": "/?source=pwa-shortcut"
+    },
+    {
+      "name": "English feed",
+      "short_name": "English",
+      "url": "/en/?source=pwa-shortcut"
+    }
+  ]
+}
