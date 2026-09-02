@@ -24,7 +24,12 @@
     {% capture document_title %}{% if page.page_type == "home" %}{{ site.title }}{% elsif page.lang %}BMTNews · {{ page.date | date: "%Y.%m.%d" }}{% elsif page.title and page.title != "Home" %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
     <title>{{ document_title | strip }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    {% if page.redirect_to %}
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+    <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+    {% else %}
     <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% endif %}
     <meta property="og:title" content="{{ document_title | strip | escape }}">
     <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:type" content="{% if page.lang %}article{% else %}website{% endif %}">
