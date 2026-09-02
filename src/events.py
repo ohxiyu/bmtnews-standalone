@@ -48,6 +48,19 @@ class EventUpdateType(str, Enum):
     CORRECTION = "correction"
 
 
+class EventTimePrecision(str, Enum):
+    """How precisely an update timestamp is known.
+
+    Historical archive rows only identify the edition that carried a story.
+    They must not pretend that the edition boundary is the real occurrence or
+    publication time.  Fresh pipeline items can retain exact timestamps.
+    """
+
+    EXACT = "exact"
+    PUBLISHED = "published"
+    EDITION = "edition"
+
+
 class EventRelation(str, Enum):
     SAME_EVENT_UPDATE = "same_event_update"
     DUPLICATE_COVERAGE = "duplicate_coverage"
@@ -83,6 +96,7 @@ class EventUpdate(BaseModel):
     occurred_at: datetime
     published_at: datetime
     first_seen_at: datetime
+    time_precision: EventTimePrecision = EventTimePrecision.EXACT
     update_type: EventUpdateType
     material_change: bool = True
     title_zh: str = ""
