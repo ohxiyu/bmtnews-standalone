@@ -2,8 +2,8 @@
   "openapi": "3.1.1",
   "info": {
     "title": "BMTNews Public API",
-    "version": "1.0.0",
-    "description": "Read-only access to the latest BMTNews daily edition, the edition index, and dated edition documents. No authentication is required.",
+    "version": "1.1.0",
+    "description": "Read-only access to BMTNews daily editions and continuously updated event timelines. No authentication is required.",
     "termsOfService": "https://bmt.news/legal/",
     "contact": {
       "name": "BMTNews contact and corrections",
@@ -29,6 +29,10 @@
     {
       "name": "Editions",
       "description": "Published daily intelligence editions. All operations are public and read-only."
+    },
+    {
+      "name": "Events",
+      "description": "Evidence-backed event timelines refreshed after scheduled collection runs."
     }
   ],
   "paths": {
@@ -145,6 +149,59 @@
           }
         }
       }
+    },
+    "/api/events.json": {
+      "get": {
+        "tags": ["Events"],
+        "summary": "List continuing events",
+        "description": "Lists events with at least two material updates, newest change first.",
+        "operationId": "listEvents",
+        "responses": {
+          "200": {
+            "description": "The current event index.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/EventIndex"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/events/{event_id}.json": {
+      "get": {
+        "tags": ["Events"],
+        "summary": "Get one event timeline",
+        "description": "Returns the stable event identity, current state, and chronological evidence-backed updates.",
+        "operationId": "getEventById",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "description": "Stable BMTNews event identifier returned by the event index.",
+            "schema": {"type": "string", "pattern": "^evt_[a-z0-9_-]{6,80}$"}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested event timeline.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/Event"}
+              }
+            }
+          },
+          "404": {
+            "description": "No event exists for the requested identifier.",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ErrorResponse"}
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -241,7 +298,7 @@
       "Story": {
         "type": "object",
         "description": "One ranked story with source attribution and bilingual analysis.",
-        "required": ["rank", "url", "title", "summary", "score", "category", "top_category", "source", "tags", "sources_count", "editorial", "thread"],
+        "required": ["rank", "url", "title", "summary", "score", "category", "top_category", "source", "tags", "sources_count", "editorial", "thread", "event"],
         "properties": {
           "rank": {"type": "integer", "minimum": 1, "description": "Editorial rank within the edition."},
           "url": {"type": "string", "format": "uri", "description": "Original publisher or primary-source URL."},
@@ -258,6 +315,13 @@
             "description": "Continuing-story thread reference when the event spans multiple editions.",
             "oneOf": [
               {"$ref": "#/components/schemas/ThreadReference"},
+              {"type": "null"}
+            ]
+          },
+          "event": {
+            "description": "Exact event and update reference when event processing has assigned one.",
+            "oneOf": [
+              {"$ref": "#/components/schemas/EventReference"},
               {"type": "null"}
             ]
           }
@@ -281,6 +345,63 @@
           "day": {"type": "integer", "minimum": 1, "description": "Edition day within the continuing thread."},
           "url": {"type": "string", "format": "uri", "description": "Public thread-page URL."}
         }
+      },
+      "EventReference": {
+        "type": "object",
+        "required": ["event_id", "update_id", "url", "json"],
+        "properties": {
+          "event_id": {"type": "string", "description": "Stable event identifier."},
+          "update_id": {"type": "string", "description": "Exact timeline update supported by this story."},
+          "url": {"type": "string", "format": "uri", "description": "Human-readable event page anchored to the update."},
+          "json": {"type": "string", "format": "uri", "description": "Machine-readable event document."}
+        }
+      },
+      "EventIndex": {
+        "type": "object",
+        "required": ["version", "events"],
+        "properties": {
+          "version": {"type": "integer", "const": 1},
+          "events": {
+            "type": "array",
+            "items": {"$ref": "#/components/schemas/EventPointer"}
+          }
+        }
+      },
+      "EventPointer": {
+        "type": "object",
+        "required": ["event_id", "url", "json", "status", "type", "title", "current_state", "first_seen_at", "last_material_change_at", "updates_count", "sources_count"],
+        "properties": {
+          "event_id": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "json": {"type": "string", "format": "uri"},
+          "status": {"type": "string", "enum": ["developing", "monitoring", "resolved", "closed", "disputed"]},
+          "type": {"type": "string"},
+          "title": {"$ref": "#/components/schemas/LocalizedText"},
+          "current_state": {"$ref": "#/components/schemas/LocalizedText"},
+          "first_seen_at": {"type": "string", "format": "date-time"},
+          "last_material_change_at": {"type": "string", "format": "date-time"},
+          "updates_count": {"type": "integer", "minimum": 1},
+          "sources_count": {"type": "integer", "minimum": 1}
+        }
+      },
+      "Event": {
+        "allOf": [
+          {"$ref": "#/components/schemas/EventPointer"},
+          {
+            "type": "object",
+            "required": ["version", "category", "last_updated_at", "confidence", "entities", "identifiers", "topics", "updates"],
+            "properties": {
+              "version": {"type": "integer", "const": 1},
+              "category": {"type": "string"},
+              "last_updated_at": {"type": "string", "format": "date-time"},
+              "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+              "entities": {"type": "array", "items": {"type": "string"}},
+              "identifiers": {"type": "array", "items": {"type": "string"}},
+              "topics": {"type": "array", "items": {"type": "string"}},
+              "updates": {"type": "array", "items": {"type": "object"}}
+            }
+          }
+        ]
       },
       "ErrorResponse": {
         "type": "object",

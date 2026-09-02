@@ -16,33 +16,37 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
 {% if include.kind == "threads" %}
   {% assign rows = site.data.threads.threads %}
   {% if is_en %}
-    <p class="archive-lede">Continuing events tracked across days, most recent first.</p>
+    <p class="archive-lede">Material changes to continuing events, ordered by the latest verified update.</p>
   {% else %}
-    <p class="archive-lede">跨天追踪的持续事件，最新进展在最上面。</p>
+    <p class="archive-lede">只展示发生过实质变化的持续事件，按最近一次确认进展排序。</p>
   {% endif %}
   {% if rows and rows.size > 0 %}
-    <ul class="archive-list">
+    <ol class="event-feed">
       {% for row in rows %}
-        <li class="archive-row">
-          <time datetime="{{ row.latest_date }}">{{ row.latest_date }}</time>
-          <div class="archive-row-body">
-            <h3><a href="{{ prefix }}/{% if row.event_id %}events/{{ row.event_id }}{% else %}threads/{{ row.thread_id }}{% endif %}/">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</a></h3>
+        <li class="event-feed-item">
+          <span class="event-feed-rank" aria-hidden="true">{{ forloop.index }}</span>
+          <div class="event-feed-body">
+            <div class="event-feed-kicker">
+              <span class="event-status" data-status="{{ row.status }}">{% if is_en %}{{ row.status_en }}{% else %}{{ row.status_zh }}{% endif %}</span>
+              <time datetime="{{ row.latest_date }}">{% if is_en %}Updated {{ row.latest_date }}{% else %}更新于 {{ row.latest_date }}{% endif %}</time>
+              {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category }}">{{ row.category }}</span>{% endif %}
+            </div>
+            <h2><a href="{{ prefix }}/{% if row.event_id %}events/{{ row.event_id }}{% else %}threads/{{ row.thread_id }}{% endif %}/">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</a></h2>
             {% assign thread_summary = row.summary_zh %}
             {% if is_en %}{% assign thread_summary = row.summary_en %}{% endif %}
             {% if thread_summary and thread_summary != "" %}
-              <p class="archive-row-summary">{{ thread_summary | truncate: 140 }}</p>
+              <p class="event-feed-summary">{{ thread_summary | truncate: 180 }}</p>
             {% endif %}
-            <p class="archive-row-meta">
-              {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category }}">{{ row.category }}</span>{% endif %}
-              {% if is_en %}{{ row.first_date }} → {{ row.latest_date }} · {{ row.days }} days · {{ row.entries }} entries{% else %}{{ row.first_date }} → {{ row.latest_date }} · 跨 {{ row.days }} 天 · {{ row.entries }} 条{% endif %}
+            <p class="event-feed-meta">
+              {% if is_en %}{{ row.updates_count }} updates · {{ row.sources_count }} sources · tracked since {{ row.first_date }}{% else %}{{ row.updates_count }} 次实质进展 · {{ row.sources_count }} 个来源 · 始于 {{ row.first_date }}{% endif %}
             </p>
           </div>
         </li>
       {% endfor %}
-    </ul>
+    </ol>
   {% else %}
     <p class="empty-state">
-      {% if is_en %}No multi-day threads yet. A thread appears once one event is covered on two separate days.{% else %}暂无跨天事件线。同一事件在两天内都被报道后，这里会自动出现。{% endif %}
+      {% if is_en %}No event has two verified material updates yet.{% else %}暂时没有出现两次已确认实质变化的事件。{% endif %}
     </p>
   {% endif %}
 
