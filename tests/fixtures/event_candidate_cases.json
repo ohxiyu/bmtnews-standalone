@@ -1,0 +1,94 @@
+{
+  "cases": [
+    {
+      "name": "tectonic rollback continues the cronos incident",
+      "event_entities": ["Tectonic", "Cronos"],
+      "event_identifiers": [],
+      "event_topics": ["security", "exploit"],
+      "story_title": "Cronos validators roll back chain to contain Tectonic exploit",
+      "story_tags": ["Cronos", "Tectonic", "security", "exploit"],
+      "story_identifiers": [],
+      "expected_candidate": true
+    },
+    {
+      "name": "solana vote keeps its proposal identity",
+      "event_entities": ["Solana"],
+      "event_identifiers": ["SGP-0002"],
+      "event_topics": ["governance", "tokenomics"],
+      "story_title": "Kraken tips Solana's SGP-0002 inflation vote",
+      "story_tags": ["Solana", "governance"],
+      "story_identifiers": ["SGP-0002"],
+      "expected_candidate": true
+    },
+    {
+      "name": "clarity act update retains the named bill",
+      "event_entities": ["CLARITY"],
+      "event_identifiers": [],
+      "event_topics": ["crypto-regulation"],
+      "story_title": "Coinbase CEO expects 60 Senate votes for the CLARITY Act",
+      "story_tags": ["CLARITY Act", "crypto-regulation"],
+      "story_identifiers": [],
+      "expected_candidate": true
+    },
+    {
+      "name": "bitmart withdrawal halt reaches semantic review",
+      "event_entities": ["BitMart"],
+      "event_identifiers": [],
+      "event_topics": ["restructuring", "exchange-operations"],
+      "story_title": "BitMart suspends withdrawals as restructuring talks continue",
+      "story_tags": ["BitMart", "withdrawals"],
+      "story_identifiers": [],
+      "expected_candidate": true
+    },
+    {
+      "name": "different defi exploits do not pass on generic tags",
+      "event_entities": ["Term Finance"],
+      "event_identifiers": [],
+      "event_topics": ["defi", "security", "exploit", "governance"],
+      "story_title": "Moonwell loses funds in a MAMO price manipulation attack",
+      "story_tags": ["Moonwell", "defi", "security", "exploit", "price-manipulation"],
+      "story_identifiers": [],
+      "expected_candidate": false
+    },
+    {
+      "name": "different bank stablecoins do not pass on sector words",
+      "event_entities": ["Standard Chartered"],
+      "event_identifiers": [],
+      "event_topics": ["stablecoin", "banking", "institutional-adoption"],
+      "story_title": "Twenty-one banks plan a new US dollar stablecoin",
+      "story_tags": ["stablecoin", "banking", "institutional-adoption"],
+      "story_identifiers": [],
+      "expected_candidate": false
+    },
+    {
+      "name": "different exchange agent products remain separate",
+      "event_entities": ["Binance"],
+      "event_identifiers": [],
+      "event_topics": ["ai-agents", "exchange-platform"],
+      "story_title": "Coinbase launches an AI agent payments platform",
+      "story_tags": ["Coinbase", "ai-agents", "exchange-platform"],
+      "story_identifiers": [],
+      "expected_candidate": false
+    },
+    {
+      "name": "shared regulator reaches semantic review",
+      "event_entities": ["SEC"],
+      "event_identifiers": [],
+      "event_topics": ["crypto-regulation"],
+      "story_title": "SEC proposes new blockchain transfer-agent rules",
+      "story_tags": ["SEC", "regulation", "tokenized-securities"],
+      "story_identifiers": [],
+      "expected_candidate": true
+    },
+    {
+      "name": "shared asset identifier reaches semantic review",
+      "event_entities": ["Binance"],
+      "event_identifiers": ["SCRT"],
+      "event_topics": ["delisting"],
+      "story_title": "Secret Network mints 1.079 billion SCRT",
+      "story_tags": ["Secret Network", "tokenomics"],
+      "story_identifiers": ["SCRT"],
+      "expected_candidate": true
+    }
+  ]
+}
