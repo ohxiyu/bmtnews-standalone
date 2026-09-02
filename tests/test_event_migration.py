@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -285,3 +286,27 @@ def test_checked_in_production_plan_is_approved_and_complete() -> None:
     }
     assert "google_news:article:468ab309354b77ad" in bitmart_ids
     assert "rss:cryptoslate.com_feed_:c1f6d470fda7bdc5" in bitmart_ids
+
+
+def test_historical_orphan_legacy_page_is_a_corrected_bilingual_index() -> None:
+    manifest = json.loads(
+        Path("data/historical-legacy-pages.json").read_text(encoding="utf-8")
+    )
+
+    assert manifest["schema_version"] == 1
+    assert len(manifest["pages"]) == 1
+    page = manifest["pages"][0]
+    assert page["legacy_thread_id"] == "t4eace9a087"
+    assert page["handling"] == "retired_index"
+    assert page["canonical_event_ids"] == ["evt_50b9754707140701"]
+    assert len(page["external_sources"]) == 1
+
+    source_url = page["external_sources"][0]["url"]
+    for prefix in ("", "en-"):
+        content = Path(f"docs/threads/{prefix}t4eace9a087.html").read_text(
+            encoding="utf-8"
+        )
+        assert "noindex: true" in content
+        assert "/events/evt_50b9754707140701/" in content
+        assert source_url in content
+        assert "event-timeline" not in content

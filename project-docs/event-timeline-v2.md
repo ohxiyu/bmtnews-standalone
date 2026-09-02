@@ -53,6 +53,10 @@ deployment.
   uncertain relation, and legacy-thread redirect.
 - Manually review the migration report before publishing it.
 - Preserve legacy URLs through redirects or explicit retired-event pages.
+- Preserve the one historical orphan URL recorded in
+  `data/historical-legacy-pages.json` as a bilingual retired index; it is not
+  part of the 178-row reviewed archive because its ATLAS record was removed by
+  a later 2026-08-26 production revision.
 - Make the migration idempotent and verify a second run produces no diff.
 - Replace historical full-summary nodes with material-change updates and
   grouped source evidence wherever the archive supports that distinction.
