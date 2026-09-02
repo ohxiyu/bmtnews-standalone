@@ -51,6 +51,8 @@ class ArchiveRecord(BaseModel):
     editorial: bool = False
     thread_id: Optional[str] = None
     thread_day: Optional[int] = None
+    event_id: Optional[str] = None
+    event_update_id: Optional[str] = None
 
     @property
     def date_value(self) -> Optional[date_type]:
@@ -176,6 +178,8 @@ def build_records(
                 editorial=bool(metadata.get("editorial")),
                 thread_id=metadata.get("thread_id"),
                 thread_day=metadata.get("thread_day"),
+                event_id=metadata.get("event_id"),
+                event_update_id=metadata.get("event_update_id"),
             )
         )
     return records

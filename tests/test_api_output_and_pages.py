@@ -1,6 +1,7 @@
 """Tests for the JSON API, category feeds, and archive-derived pages."""
 
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from src.api_output import (
@@ -14,11 +15,25 @@ from src.api_output import (
 )
 from src.archive import ArchiveRecord
 from src.market_snapshot import MarketSnapshot
+from src.events import (
+    EventSource,
+    EventStatus,
+    EventTimePrecision,
+    EventType,
+    EventUpdate,
+    EventUpdateType,
+    TrackedEvent,
+)
 from src.site_pages import (
+    build_event_index_data,
     build_entity_index_data,
     build_thread_index_data,
     publish_archive_pages,
+    publish_event_compatibility_pages,
     render_entity_page,
+    render_event_page,
+    render_legacy_event_redirect,
+    render_retired_thread_page,
     render_thread_page,
     write_index_data,
 )
@@ -52,6 +67,60 @@ def make_record(
         sources_count=2,
         thread_id=thread_id,
         thread_day=2 if thread_id else None,
+    )
+
+
+def make_event(
+    event_id: str = "evt_example1",
+    *,
+    updates: int = 2,
+    title: str = "Example event",
+) -> TrackedEvent:
+    start = datetime(2026, 8, 8, 8, tzinfo=timezone(timedelta(hours=8)))
+    timeline = []
+    for index in range(updates):
+        stamp = start + timedelta(days=index)
+        timeline.append(
+            EventUpdate(
+                update_id=f"upd_example{index + 1}",
+                event_id=event_id,
+                occurred_at=stamp,
+                published_at=stamp,
+                first_seen_at=stamp,
+                time_precision=EventTimePrecision.EDITION,
+                update_type=(
+                    EventUpdateType.INITIAL
+                    if index == 0
+                    else EventUpdateType.RESOLUTION
+                ),
+                what_changed_zh=f"第 {index + 1} 个变化",
+                what_changed_en=f"Change {index + 1}",
+                current_state_zh=f"状态 {index + 1}",
+                current_state_en=f"State {index + 1}",
+                confidence=1.0,
+                story_ids=[f"story-{event_id}-{index}"],
+                sources=[
+                    EventSource(
+                        url=f"https://example.com/{event_id}/{index}",
+                        label=f"Source {index + 1}",
+                    )
+                ],
+            )
+        )
+    return TrackedEvent(
+        event_id=event_id,
+        event_type=EventType.GOVERNANCE,
+        status=EventStatus.RESOLVED,
+        category="crypto",
+        title_zh=f"{title} 中文",
+        title_en=title,
+        current_state_zh=timeline[-1].current_state_zh,
+        current_state_en=timeline[-1].current_state_en,
+        first_seen_at=timeline[0].first_seen_at,
+        last_updated_at=timeline[-1].first_seen_at,
+        last_material_change_at=timeline[-1].first_seen_at,
+        confidence=1.0,
+        updates=timeline,
     )
 
 
@@ -290,3 +359,75 @@ def test_publish_archive_pages_writes_both_languages(tmp_path: Path) -> None:
     assert (tmp_path / "threads" / "en-tabc.html").exists()
     assert (tmp_path / "entity" / "en-bybit.html").exists()
     assert (tmp_path / "_data" / "threads.json").exists()
+
+
+def test_event_page_renders_material_updates_in_chronological_order() -> None:
+    event = make_event()
+    page = render_event_page(event, "zh")
+
+    assert "permalink: /events/evt_example1/" in page
+    assert "time_precision" not in page
+    assert "历史刊期" in page
+    assert page.index("第 1 个变化") < page.index("第 2 个变化")
+    assert "https://example.com/evt_example1/0" in page
+    assert "当前状态" in page
+
+
+def test_legacy_redirect_has_noindex_canonical_target() -> None:
+    page = render_legacy_event_redirect("taaaaaaaaaa", make_event(), "en")
+
+    assert "permalink: /en/threads/taaaaaaaaaa/" in page
+    assert "redirect_to: /en/events/evt_example1/" in page
+    assert "noindex: true" in page
+    assert 'href="/en/events/evt_example1/"' in page
+
+
+def test_retired_thread_lists_every_corrected_target() -> None:
+    first = make_event("evt_example1", title="First")
+    second = make_event("evt_example2", title="Second")
+    page = render_retired_thread_page(
+        "tbbbbbbbbbb", [first, second], "zh"
+    )
+
+    assert "permalink: /threads/tbbbbbbbbbb/" in page
+    assert "/events/evt_example1/" in page
+    assert "/events/evt_example2/" in page
+    assert "现已拆分" in page
+
+
+def test_event_index_contains_progressions_not_single_updates() -> None:
+    progression = make_event("evt_progress1", updates=2)
+    duplicate_only = make_event("evt_duplicate1", updates=1)
+
+    rows = build_event_index_data([duplicate_only, progression])["threads"]
+
+    assert [row["event_id"] for row in rows] == ["evt_progress1"]
+    assert rows[0]["entries"] == 2
+    assert rows[0]["days"] == 2
+
+
+def test_publish_event_compatibility_pages_writes_real_redirect_targets(
+    tmp_path: Path,
+) -> None:
+    progression = make_event("evt_progress1", updates=2)
+    split_first = make_event("evt_split0001", updates=1, title="Split first")
+    split_second = make_event("evt_split0002", updates=1, title="Split second")
+    counts = publish_event_compatibility_pages(
+        [progression, split_first, split_second],
+        {"taaaaaaaaaa": "evt_progress1"},
+        {"tbbbbbbbbbb": ["evt_split0001", "evt_split0002"]},
+        ["zh", "en"],
+        events_root=tmp_path / "events",
+        threads_root=tmp_path / "threads",
+        thread_index_path=tmp_path / "_data" / "threads.json",
+    )
+
+    assert counts == {"events": 6, "redirects": 2, "retired": 2}
+    assert (tmp_path / "events" / "evt_progress1.html").exists()
+    assert (tmp_path / "events" / "en-evt_progress1.html").exists()
+    redirect = (tmp_path / "threads" / "taaaaaaaaaa.html").read_text()
+    assert "redirect_to: /events/evt_progress1/" in redirect
+    retired = (tmp_path / "threads" / "en-tbbbbbbbbbb.html").read_text()
+    assert "/en/events/evt_split0001/" in retired
+    index = json.loads((tmp_path / "_data" / "threads.json").read_text())
+    assert [row["event_id"] for row in index["threads"]] == ["evt_progress1"]

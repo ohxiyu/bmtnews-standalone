@@ -26,7 +26,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
         <li class="archive-row">
           <time datetime="{{ row.latest_date }}">{{ row.latest_date }}</time>
           <div class="archive-row-body">
-            <h3><a href="{{ prefix }}/threads/{{ row.thread_id }}/">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</a></h3>
+            <h3><a href="{{ prefix }}/{% if row.event_id %}events/{{ row.event_id }}{% else %}threads/{{ row.thread_id }}{% endif %}/">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</a></h3>
             {% assign thread_summary = row.summary_zh %}
             {% if is_en %}{% assign thread_summary = row.summary_en %}{% endif %}
             {% if thread_summary and thread_summary != "" %}

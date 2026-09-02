@@ -17,6 +17,7 @@ from typing import Iterable, List, Optional, Sequence
 
 from ._file_utils import _atomic_write_text
 from .archive import ArchiveRecord
+from .events import EventUpdate, TrackedEvent
 from .threads import EntitySummary
 
 
@@ -33,6 +34,7 @@ def _as_date(value: str) -> Optional[date_type]:
         return None
 
 THREADS_ROOT = Path("docs/threads")
+EVENTS_ROOT = Path("docs/events")
 ENTITY_ROOT = Path("docs/entity")
 WEEKLY_ROOT = Path("docs/weekly")
 DATA_ROOT = Path("docs/_data")
@@ -85,6 +87,8 @@ def _front_matter(
     permalink: str,
     language: str,
     description: str = "",
+    redirect_to: str = "",
+    noindex: bool = False,
 ) -> str:
     # Titles reach the raw <title> element through Liquid, so markup
     # characters are removed here rather than escaped downstream.
@@ -100,6 +104,11 @@ def _front_matter(
 
     safe_title = _plain(title)
     safe_description = _plain(description)[:180]
+    extra = ""
+    if redirect_to:
+        extra += f"redirect_to: {_plain(redirect_to)}\n"
+    if noindex:
+        extra += "noindex: true\n"
     return (
         "---\n"
         "layout: default\n"
@@ -108,6 +117,7 @@ def _front_matter(
         f"interface_language: {language}\n"
         f'description: "{safe_description}"\n'
         "page_type: archive\n"
+        f"{extra}"
         "---\n\n"
     )
 
@@ -181,6 +191,260 @@ def render_thread_page(
         + body
         + "\n"
     )
+
+
+def _event_value(event: TrackedEvent, field: str, language: str) -> str:
+    preferred = getattr(event, f"{field}_{language}")
+    fallback = getattr(event, f"{field}_{'en' if language == 'zh' else 'zh'}")
+    return preferred or fallback
+
+
+def _event_update_value(update: EventUpdate, field: str, language: str) -> str:
+    preferred = getattr(update, f"{field}_{language}")
+    fallback = getattr(update, f"{field}_{'en' if language == 'zh' else 'zh'}")
+    return preferred or fallback
+
+
+def render_event_page(event: TrackedEvent, language: str) -> str:
+    """Render the minimal stable event page used during the PR 2 migration.
+
+    PR 3 replaces this compatibility presentation with the full reader-facing
+    timeline. Keeping a real target in PR 2 means legacy redirects never land
+    on a 404 between the data migration and that redesign.
+    """
+    normalized = "en" if language == "en" else "zh"
+    prefix = "" if normalized == "zh" else "/en"
+    title = _event_value(event, "title", normalized) or event.event_id
+    current_state = _event_value(event, "current_state", normalized)
+    labels = {
+        "zh": {
+            "status": "当前状态",
+            "updates": "进展",
+            "sources": "来源",
+            "timeline": "事件进展",
+            "back": "全部事件线",
+            "home": "返回首页",
+            "precision": "历史刊期",
+        },
+        "en": {
+            "status": "Status",
+            "updates": "updates",
+            "sources": "sources",
+            "timeline": "Event updates",
+            "back": "All events",
+            "home": "Back to the feed",
+            "precision": "edition date",
+        },
+    }[normalized]
+    source_count = sum(len(update.sources) for update in event.updates)
+    stats = (
+        _stat(event.status.value, labels["status"])
+        + _stat(str(len(event.updates)), labels["updates"])
+        + _stat(str(source_count), labels["sources"])
+    )
+    rows = []
+    for update in event.updates:
+        changed = _event_update_value(update, "what_changed", normalized)
+        update_title = _event_update_value(update, "title", normalized) or changed
+        sources = []
+        for source in update.sources:
+            url = safe_url(source.url)
+            label = escape_text(source.label or source.source_type or source.url)
+            sources.append(
+                f'<a href="{url}" target="_blank" rel="noopener noreferrer">{label}</a>'
+                if url
+                else label
+            )
+        source_html = " · ".join(sources)
+        stamp = update.first_seen_at.date().isoformat()
+        rows.append(
+            '<li class="archive-row event-update-row">'
+            f'<time datetime="{stamp}">{stamp}</time>'
+            '<div class="archive-row-body">'
+            f'<p class="archive-row-meta">{escape_text(update.update_type.value)} · '
+            f'{escape_text(labels["precision"])}</p>'
+            f'<h3>{escape_text(update_title)}</h3>'
+            f'<p class="archive-row-summary">{escape_text(changed)}</p>'
+            + (
+                f'<p class="archive-row-meta">{escape_text(labels["sources"])}: '
+                f"{source_html}</p>"
+                if source_html
+                else ""
+            )
+            + "</div></li>"
+        )
+    body = (
+        f'<div class="archive-stats">{stats}</div>'
+        + (
+            f'<p class="archive-lede">{escape_text(current_state)}</p>'
+            if current_state
+            else ""
+        )
+        + f"<h2>{escape_text(labels['timeline'])}</h2>"
+        + f'<ul class="archive-list event-timeline">{"".join(rows)}</ul>'
+        + f'<p class="archive-back"><a href="{prefix}/threads/">'
+        + f'{escape_text(labels["back"])}</a> · '
+        + f'<a href="{prefix}/">{escape_text(labels["home"])}</a></p>'
+    )
+    return (
+        _front_matter(
+            title=title,
+            permalink=f"{prefix}/events/{event.event_id}/",
+            language=normalized,
+            description=current_state,
+        )
+        + body
+        + "\n"
+    )
+
+
+def render_legacy_event_redirect(
+    legacy_thread_id: str,
+    event: TrackedEvent,
+    language: str,
+) -> str:
+    normalized = "en" if language == "en" else "zh"
+    prefix = "" if normalized == "zh" else "/en"
+    destination = f"{prefix}/events/{event.event_id}/"
+    title = _event_value(event, "title", normalized) or event.event_id
+    copy = (
+        "这条旧事件线已经迁移到新的事件页面。"
+        if normalized == "zh"
+        else "This legacy thread has moved to the new event page."
+    )
+    link = "查看事件" if normalized == "zh" else "View event"
+    return (
+        _front_matter(
+            title=title,
+            permalink=f"{prefix}/threads/{legacy_thread_id}/",
+            language=normalized,
+            description=copy,
+            redirect_to=destination,
+            noindex=True,
+        )
+        + f'<p class="archive-lede">{escape_text(copy)}</p>'
+        + f'<p><a href="{destination}">{escape_text(link)}</a></p>\n'
+    )
+
+
+def render_retired_thread_page(
+    legacy_thread_id: str,
+    events: Sequence[TrackedEvent],
+    language: str,
+) -> str:
+    normalized = "en" if language == "en" else "zh"
+    prefix = "" if normalized == "zh" else "/en"
+    title = "旧事件线已拆分" if normalized == "zh" else "Legacy thread retired"
+    copy = (
+        "旧页面曾把多个不同事件放在一起，现已拆分。原始链接保留在此，避免读者进入错误的事件脉络。"
+        if normalized == "zh"
+        else "This page previously combined distinct events. The URL remains as an index to the corrected event pages."
+    )
+    items = []
+    for event in sorted(events, key=lambda item: (item.first_seen_at, item.event_id)):
+        event_title = _event_value(event, "title", normalized) or event.event_id
+        items.append(
+            '<li class="archive-row"><div class="archive-row-body">'
+            f'<h3><a href="{prefix}/events/{event.event_id}/">'
+            f"{escape_text(event_title)}</a></h3>"
+            f'<p class="archive-row-meta">{escape_text(event.status.value)}</p>'
+            "</div></li>"
+        )
+    return (
+        _front_matter(
+            title=title,
+            permalink=f"{prefix}/threads/{legacy_thread_id}/",
+            language=normalized,
+            description=copy,
+            noindex=True,
+        )
+        + f'<p class="archive-lede">{escape_text(copy)}</p>'
+        + f'<ul class="archive-list">{"".join(items)}</ul>\n'
+    )
+
+
+def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
+    """Build a shape compatible with the existing threads index template."""
+    rows = []
+    for event in events:
+        material = [update for update in event.updates if update.material_change]
+        if len(material) < 2:
+            continue
+        first = min(update.first_seen_at for update in material).date().isoformat()
+        latest = max(update.first_seen_at for update in material).date().isoformat()
+        rows.append(
+            {
+                "thread_id": event.event_id,
+                "event_id": event.event_id,
+                "latest_date": latest,
+                "first_date": first,
+                "days": len({update.first_seen_at.date() for update in material}),
+                "entries": len(material),
+                "category": event.category,
+                "status": event.status.value,
+                "title_zh": event.title_zh,
+                "title_en": event.title_en,
+                "summary_zh": event.current_state_zh,
+                "summary_en": event.current_state_en,
+            }
+        )
+    rows.sort(key=lambda row: (row["latest_date"], row["event_id"]), reverse=True)
+    return {"threads": rows}
+
+
+def publish_event_compatibility_pages(
+    events: Sequence[TrackedEvent],
+    redirects: dict[str, str],
+    retired: dict[str, list[str]],
+    languages: Iterable[str],
+    *,
+    events_root: Path = EVENTS_ROOT,
+    threads_root: Path = THREADS_ROOT,
+    thread_index_path: Path = DATA_ROOT / "threads.json",
+) -> dict[str, int]:
+    """Write stable event targets and preserve every reviewed legacy URL."""
+    by_id = {event.event_id: event for event in events}
+    mapped_targets = set(redirects.values())
+    for target_ids in retired.values():
+        mapped_targets.update(target_ids)
+    missing = mapped_targets - by_id.keys()
+    if missing:
+        raise ValueError(
+            "legacy URL map references missing events: "
+            + ", ".join(sorted(missing))
+        )
+    _write(
+        thread_index_path,
+        json.dumps(
+            build_event_index_data(events), ensure_ascii=False, indent=2
+        )
+        + "\n",
+    )
+    written = {"events": 0, "redirects": 0, "retired": 0}
+    for language in languages:
+        normalized = "en" if str(language).lower().startswith("en") else "zh"
+        suffix = "" if normalized == "zh" else "en-"
+        for event in events:
+            _write(
+                events_root / f"{suffix}{event.event_id}.html",
+                render_event_page(event, normalized),
+            )
+            written["events"] += 1
+        for legacy_id, event_id in redirects.items():
+            _write(
+                threads_root / f"{suffix}{legacy_id}.html",
+                render_legacy_event_redirect(legacy_id, by_id[event_id], normalized),
+            )
+            written["redirects"] += 1
+        for legacy_id, target_ids in retired.items():
+            _write(
+                threads_root / f"{suffix}{legacy_id}.html",
+                render_retired_thread_page(
+                    legacy_id, [by_id[target] for target in target_ids], normalized
+                ),
+            )
+            written["retired"] += 1
+    return written
 
 
 def _stat(value: str, label: str) -> str:

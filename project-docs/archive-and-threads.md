@@ -9,7 +9,9 @@
 ```
 每日出刊
    └── docs/_data/archive/YYYY-MM.jsonl   每条展示新闻一行
-          ├── 事件线   docs/threads/<id>.html
+          ├── 事件目录 docs/_data/events.json
+          ├── 事件页面 docs/events/<event_id>.html
+          ├── 旧链接   docs/threads/<legacy_id>.html
           ├── 实体页   docs/entity/<slug>.html
           ├── JSON API docs/editions/<date>/edition.json + docs/api/latest.json
           ├── 分类订阅 docs/feeds/<category>-<lang>.xml
@@ -19,6 +21,21 @@
 发布前 workflow 从 `gh-pages` 恢复 `_data/archive/`，出刊后重新写回，
 和已有的 `bmtnews_state.json` 是同一套「git 即数据库」模式。
 本地运行产生的这些文件都在 `.gitignore` 里，不会误提交到 `main`。
+
+## Event Timeline v2 迁移状态
+
+截至 2026-09-02 的生产归档已经逐条审计。迁移计划以完整归档指纹为写入
+前置条件：标题、摘要、标签、来源、分类、评分或旧事件线关系发生变化时，
+迁移会在写文件前停止。历史记录新增 `event_id` 与 `event_update_id`，同一事实
+的多来源报道折叠进一个更新节点，只有真实的新事实才增加时间线节点。
+
+旧 `/threads/<id>/` 不会直接消失。一对一迁移的旧链接跳转到稳定的
+`/events/<event_id>/`；发生拆分的旧链接保留为说明页，列出所有修正后的事件，
+避免旧收藏、搜索结果或外部引用落入 404。事件时间标记为 `edition` 精度，明确
+表示历史数据只知道刊期日期，不把日报边界伪装成真实发生时刻。
+
+PR 2 的兼容页面只保证迁移后立即可读、旧链接可达。完整的信息密度、状态标签、
+移动端交互和四小时增量更新由 PR 3 实现。
 
 ## 事件线（Story Threads）
 
