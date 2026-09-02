@@ -41,6 +41,9 @@ from .events import (
 DEFAULT_PLAN_PATH = Path("data/event-migration-v1.json")
 DEFAULT_EVENT_CATALOG_PATH = Path("docs/_data/events.json")
 DEFAULT_LEGACY_MAP_PATH = Path("docs/_data/event-legacy-urls.json")
+DEFAULT_EVENT_PAGES_ROOT = Path("docs/events")
+DEFAULT_LEGACY_PAGES_ROOT = Path("docs/threads")
+DEFAULT_THREAD_INDEX_PATH = Path("docs/_data/threads.json")
 EDITION_TZ = timezone(timedelta(hours=8))
 
 
@@ -345,6 +348,8 @@ def _build_reviewed_event(
 
 def _build_singleton_event(
     record: ArchiveRecord,
+    *,
+    legacy_thread_id: str | None = None,
 ) -> tuple[TrackedEvent, dict[str, str]]:
     key = f"singleton-{record.item_id}"
     event_id = stable_event_id(key)
@@ -388,7 +393,7 @@ def _build_singleton_event(
         last_updated_at=stamp,
         last_material_change_at=stamp,
         confidence=0.75,
-        legacy_thread_ids=[],
+        legacy_thread_ids=[legacy_thread_id] if legacy_thread_id else [],
         updates=[update],
     )
     return event, {record.item_id: update_id}
@@ -498,7 +503,9 @@ def build_migration(
             )
         for story_id in sorted(ungrouped):
             record = records_by_id[story_id]
-            event, assignments = _build_singleton_event(record)
+            event, assignments = _build_singleton_event(
+                record, legacy_thread_id=review.legacy_thread_id
+            )
             events.append(event)
             target_ids.append(event.event_id)
             event_for_story[story_id] = event.event_id
@@ -634,16 +641,26 @@ def render_audit_report(
                 )
         lines.append("")
 
-    lines.extend(
-        [
-            "## Approval gate",
-            "",
-            "`apply` must refuse this plan while `approved` is `false`. After review, "
-            "the approval change, production workflow wiring, idempotence proof, and "
-            "legacy-page rendering are completed in this same PR before merge.",
-            "",
-        ]
-    )
+    lines.extend(["", "## Approval gate", ""])
+    if plan.approved:
+        lines.extend(
+            [
+                "The owner approved this reviewed plan. Production writes still occur "
+                "only through the guarded `apply` command in GitHub Actions; the "
+                "archive fingerprint must match before any file is written.",
+                "",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "`apply` must refuse this plan while `approved` is `false`. After "
+                "review, the approval change, production workflow wiring, "
+                "idempotence proof, and legacy-page rendering are completed in this "
+                "same PR before merge.",
+                "",
+            ]
+        )
     return "\n".join(lines)
 
 
@@ -664,6 +681,10 @@ def apply_migration(
     archive_root: Path,
     catalog_path: Path = DEFAULT_EVENT_CATALOG_PATH,
     legacy_map_path: Path = DEFAULT_LEGACY_MAP_PATH,
+    events_root: Path = DEFAULT_EVENT_PAGES_ROOT,
+    legacy_pages_root: Path = DEFAULT_LEGACY_PAGES_ROOT,
+    thread_index_path: Path = DEFAULT_THREAD_INDEX_PATH,
+    languages: Sequence[str] = ("zh", "en"),
 ) -> MigrationResult:
     if not plan.approved:
         raise MigrationError("migration plan is not approved; refusing to write")
@@ -690,6 +711,17 @@ def apply_migration(
         )
         + "\n",
     )
+    from .site_pages import publish_event_compatibility_pages
+
+    publish_event_compatibility_pages(
+        result.events,
+        result.legacy_urls.redirects,
+        result.legacy_urls.retired,
+        languages,
+        events_root=events_root,
+        threads_root=legacy_pages_root,
+        thread_index_path=thread_index_path,
+    )
     return result
 
 
@@ -702,6 +734,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--source-revision", default="")
     parser.add_argument("--catalog", type=Path, default=DEFAULT_EVENT_CATALOG_PATH)
     parser.add_argument("--legacy-map", type=Path, default=DEFAULT_LEGACY_MAP_PATH)
+    parser.add_argument("--events-root", type=Path, default=DEFAULT_EVENT_PAGES_ROOT)
+    parser.add_argument(
+        "--legacy-pages-root", type=Path, default=DEFAULT_LEGACY_PAGES_ROOT
+    )
+    parser.add_argument(
+        "--thread-index", type=Path, default=DEFAULT_THREAD_INDEX_PATH
+    )
     args = parser.parse_args(argv)
 
     plan = load_migration_plan(args.plan)
@@ -720,6 +759,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             archive_root=args.archive_root,
             catalog_path=args.catalog,
             legacy_map_path=args.legacy_map,
+            events_root=args.events_root,
+            legacy_pages_root=args.legacy_pages_root,
+            thread_index_path=args.thread_index,
         )
     return 0
 

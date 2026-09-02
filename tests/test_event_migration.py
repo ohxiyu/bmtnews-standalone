@@ -135,6 +135,11 @@ def test_build_migration_splits_duplicates_and_uses_edition_precision() -> None:
         "taaaaaaaaaa": progression.event_id
     }
     assert len(result.legacy_urls.retired["tbbbbbbbbbb"]) == 2
+    split_targets = set(result.legacy_urls.retired["tbbbbbbbbbb"])
+    split_events = [event for event in result.events if event.event_id in split_targets]
+    assert all(
+        event.legacy_thread_ids == ["tbbbbbbbbbb"] for event in split_events
+    )
 
 
 def test_audit_report_is_review_only_and_covers_every_public_thread() -> None:
@@ -235,6 +240,9 @@ def test_approved_apply_is_byte_idempotent(tmp_path: Path) -> None:
         archive_root=archive_root,
         catalog_path=catalog,
         legacy_map_path=legacy,
+        events_root=tmp_path / "events",
+        legacy_pages_root=tmp_path / "threads",
+        thread_index_path=tmp_path / "threads.json",
     )
     first = {path: path.read_bytes() for path in tmp_path.rglob("*") if path.is_file()}
     migrated = load_archive(root=archive_root, months=120)
@@ -244,6 +252,9 @@ def test_approved_apply_is_byte_idempotent(tmp_path: Path) -> None:
         archive_root=archive_root,
         catalog_path=catalog,
         legacy_map_path=legacy,
+        events_root=tmp_path / "events",
+        legacy_pages_root=tmp_path / "threads",
+        thread_index_path=tmp_path / "threads.json",
     )
     second = {path: path.read_bytes() for path in tmp_path.rglob("*") if path.is_file()}
 
@@ -251,11 +262,11 @@ def test_approved_apply_is_byte_idempotent(tmp_path: Path) -> None:
     assert all(record.event_id and record.event_update_id for record in migrated)
 
 
-def test_checked_in_production_plan_remains_pending_and_complete() -> None:
+def test_checked_in_production_plan_is_approved_and_complete() -> None:
     plan = load_migration_plan(Path("data/event-migration-v1.json"))
     dispositions = Counter(review.disposition for review in plan.reviews)
 
-    assert plan.approved is False
+    assert plan.approved is True
     assert len(plan.reviews) == 22
     assert dispositions == {
         ReviewDisposition.PROGRESSION: 5,

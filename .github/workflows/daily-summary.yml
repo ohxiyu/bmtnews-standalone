@@ -123,6 +123,11 @@ jobs:
           fi
           uv run bmtnews "${args[@]}"
 
+      - name: Apply approved event archive migration
+        run: >-
+          uv run python -m src.event_migration apply
+          --archive-root docs/_data/archive
+
       - name: Publish run report
         if: ${{ always() }}
         run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"

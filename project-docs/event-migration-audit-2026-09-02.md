@@ -9,7 +9,7 @@
 - Archive fingerprint: `9a7b432021bcb475a0c0c32ab224b399718e32b7668ee5d5953f3409efcf2603`
 - Reviewed archive records: 178
 - Public legacy threads reviewed: 22
-- Plan approval: `pending`
+- Plan approval: `approved`
 - Resulting events: 152
 - Records covered by explicit review: 69
 - Conservative singleton defaults: 109
@@ -217,6 +217,7 @@ SWIFT 银行间交易、Taurus 接入和数字债券回购是不同参与方完�
 - Separate event: 2026-08-27 · Taurus links digital asset platforms to Swift's blockchain ledger
 - Separate event: 2026-08-28 · Virtu, Tradeweb Complete First Onchain Repo Using Marshall Islands Digital Bond
 
+
 ## Approval gate
 
-`apply` must refuse this plan while `approved` is `false`. After review, the approval change, production workflow wiring, idempotence proof, and legacy-page rendering are completed in this same PR before merge.
+The owner approved this reviewed plan. Production writes still occur only through the guarded `apply` command in GitHub Actions; the archive fingerprint must match before any file is written.

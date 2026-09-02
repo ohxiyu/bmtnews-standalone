@@ -1,0 +1,118 @@
+name: Apply Event Archive Migration
+run-name: Apply reviewed event archive migration
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: Type MIGRATE to apply the approved archive plan
+        type: string
+        required: true
+
+concurrency:
+  group: bmtnews-feed-update
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout approved code
+        uses: actions/checkout@v6
+
+      - name: Validate explicit migration request
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+        shell: bash
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "Event archive migration must run from main" >&2
+            exit 1
+          fi
+          if [ "$CONFIRMATION" != "MIGRATE" ]; then
+            echo "confirmation must be MIGRATE" >&2
+            exit 1
+          fi
+
+      - name: Restore the published archive
+        shell: bash
+        run: |
+          git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
+          mkdir -p docs/_data/archive
+          for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive 2>/dev/null); do
+            git show "origin/gh-pages:${path}" > "docs/${path}"
+          done
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Apply reviewed migration
+        run: >-
+          uv run python -m src.event_migration apply
+          --archive-root docs/_data/archive
+
+      - name: Verify byte-level idempotence
+        shell: bash
+        run: |
+          find \
+            docs/_data/archive \
+            docs/_data/events.json \
+            docs/_data/event-legacy-urls.json \
+            docs/_data/threads.json \
+            docs/events \
+            docs/threads \
+            -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/event-migration-before.sha256
+          uv run python -m src.event_migration apply --archive-root docs/_data/archive
+          find \
+            docs/_data/archive \
+            docs/_data/events.json \
+            docs/_data/event-legacy-urls.json \
+            docs/_data/threads.json \
+            docs/events \
+            docs/threads \
+            -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/event-migration-after.sha256
+          cmp /tmp/event-migration-before.sha256 /tmp/event-migration-after.sha256
+
+      - name: Verify migration coverage
+        shell: bash
+        run: |
+          uv run python - <<'PY'
+          import json
+          from pathlib import Path
+          from src.archive import load_archive
+
+          records = load_archive(root=Path("docs/_data/archive"), months=120)
+          catalog = json.loads(Path("docs/_data/events.json").read_text())
+          legacy = json.loads(Path("docs/_data/event-legacy-urls.json").read_text())
+          assert records and all(row.event_id and row.event_update_id for row in records)
+          assert len(catalog["events"]) == len({row.event_id for row in records})
+          assert len(legacy["redirects"]) + len(legacy["retired"]) == 22
+          print(
+              f"validated {len(records)} archive records, "
+              f"{len(catalog['events'])} events, and 22 legacy URLs"
+          )
+          PY
+
+      - name: Deploy migrated archive and event pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          keep_files: true
+          publish_branch: gh-pages
+          enable_jekyll: true
+          commit_message: "feat: apply reviewed event archive migration"

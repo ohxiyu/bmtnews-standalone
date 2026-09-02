@@ -37,14 +37,15 @@ publishing.
 
 ## Phase 2 — audited archive migration
 
-Status: review draft prepared from production revision
-`ebabcd313633767126e49370cb1a47622b9e78d8`; publishing remains blocked until
-the owner approves the checked-in
-[`event-migration-audit-2026-09-02.md`](event-migration-audit-2026-09-02.md).
+Status: owner-approved on 2026-09-03 from the review draft built against
+production revision `ebabcd313633767126e49370cb1a47622b9e78d8`. The checked-in
+[`event-migration-audit-2026-09-02.md`](event-migration-audit-2026-09-02.md)
+remains the immutable review record.
 
-The plan is checked in with `approved: false`. Both the CLI and tests enforce
-that state as a write barrier: audit generation is allowed, while archive,
-catalog, and legacy-URL output writes are refused.
+The approved plan is still protected by the archive fingerprint. Production
+application runs only through GitHub Actions, after the exact reviewed archive
+is restored; any change to a reviewed source field stops the workflow before
+deployment.
 
 - Build a deterministic event catalog from the published archive without
   modifying `gh-pages` during the dry run.

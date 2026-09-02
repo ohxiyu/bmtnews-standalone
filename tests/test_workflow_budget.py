@@ -36,6 +36,7 @@ def test_all_hosted_jobs_have_bounded_runtime() -> None:
         "codeql.yml": 15,
         "daily-summary.yml": 30,
         "deploy-docs.yml": 10,
+        "event-archive-migration.yml": 10,
         "feed-collection.yml": 15,
         "schedule-watchdog.yml": 5,
         "source-change.yml": 20,
@@ -45,3 +46,24 @@ def test_all_hosted_jobs_have_bounded_runtime() -> None:
         assert (
             f"timeout-minutes: {limit}" in _workflow(workflow_name)
         ), workflow_name
+
+
+def test_event_migration_has_explicit_gate_and_daily_continuation() -> None:
+    migration = _workflow("event-archive-migration.yml")
+    daily = _workflow("daily-summary.yml")
+
+    assert "workflow_dispatch:" in migration
+    assert "schedule:" not in migration
+    assert 'CONFIRMATION: ${{ inputs.confirmation }}' in migration
+    assert 'if [ "$CONFIRMATION" != "MIGRATE" ]' in migration
+    assert "group: bmtnews-feed-update" in migration
+    assert "Apply reviewed migration" in migration
+    assert "Verify byte-level idempotence" in migration
+    assert "Verify migration coverage" in migration
+    assert "peaceiris/actions-gh-pages@v4" in migration
+    assert "keep_files: true" in migration
+
+    assert "Apply approved event archive migration" in daily
+    assert daily.index("Run BMTNews") < daily.index(
+        "Apply approved event archive migration"
+    ) < daily.index("Deploy to GitHub Pages")
