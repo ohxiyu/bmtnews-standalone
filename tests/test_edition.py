@@ -469,6 +469,9 @@ def test_workflows_stage_twice_and_publish_once() -> None:
     assert "staging-cache" in collection
     assert "staging-cache" in publication
     assert "bmtnews --mode fetch --hours 12" in collection
+    assert "Restore published event state" in collection
+    assert "Collect sources and increment event timelines" in collection
+    assert "Deploy incremental event pages" in collection
     assert "\n  schedule:" not in publication
     assert "args=(--mode publish --hours 24 --cutoff-hour 8)" in publication
     assert "edition_date:" in publication
@@ -477,7 +480,7 @@ def test_workflows_stage_twice_and_publish_once() -> None:
     assert "args+=(--force-publish)" in publication
     assert "bmtnews-staging-v1-" in collection
     assert "bmtnews-staging-v1-" in publication
-    assert "timeout-minutes: 15" in collection
+    assert "timeout-minutes: 30" in collection
     assert "timeout-minutes: 30" in publication
     assert "GITHUB_TOKEN: ${{ github.token }}" in collection
     assert "GITHUB_TOKEN: ${{ github.token }}" in publication

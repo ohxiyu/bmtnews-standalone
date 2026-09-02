@@ -83,6 +83,17 @@ def build_edition_payload(
                 "day": record.thread_day or 1,
                 "url": f"{base}/threads/{record.thread_id}/",
             }
+        event = None
+        if record.event_id and record.event_update_id:
+            event = {
+                "event_id": record.event_id,
+                "update_id": record.event_update_id,
+                "url": (
+                    f"{base}/events/{record.event_id}/"
+                    f"#{record.event_update_id}"
+                ),
+                "json": f"{base}/api/events/{record.event_id}.json",
+            }
         items.append(
             {
                 "rank": record.rank,
@@ -100,6 +111,7 @@ def build_edition_payload(
                 "sources_count": record.sources_count,
                 "editorial": record.editorial,
                 "thread": thread,
+                "event": event,
             }
         )
     payload = {
@@ -182,6 +194,7 @@ def render_sitemap(
     *,
     threads: Iterable[tuple[str, Sequence[ArchiveRecord]]] = (),
     entities: Iterable[object] = (),
+    events: Iterable[object] = (),
     site_url: str = DEFAULT_SITE_URL,
     generated_date: str | None = None,
 ) -> str:
@@ -225,6 +238,15 @@ def render_sitemap(
         urls[f"{base}/entity/{slug}/"] = lastmod
         urls[f"{base}/en/entity/{slug}/"] = lastmod
 
+    for event in events:
+        event_id = str(getattr(event, "event_id", "")).strip()
+        changed = getattr(event, "last_material_change_at", None)
+        if not event_id or not isinstance(changed, datetime):
+            continue
+        lastmod = changed.date().isoformat()
+        urls[f"{base}/events/{event_id}/"] = lastmod
+        urls[f"{base}/en/events/{event_id}/"] = lastmod
+
     entries = "\n".join(
         "  <url>"
         f"<loc>{html.escape(url, quote=True)}</loc>"
@@ -245,6 +267,7 @@ def write_sitemap(
     *,
     threads: Iterable[tuple[str, Sequence[ArchiveRecord]]] = (),
     entities: Iterable[object] = (),
+    events: Iterable[object] = (),
     path: Path = SITEMAP_PATH,
     site_url: str = DEFAULT_SITE_URL,
 ) -> Path:
@@ -255,6 +278,7 @@ def write_sitemap(
             records,
             threads=threads,
             entities=entities,
+            events=events,
             site_url=site_url,
         ),
     )

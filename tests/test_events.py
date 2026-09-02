@@ -191,6 +191,20 @@ def test_relation_contract_never_turns_duplicate_into_update() -> None:
         )
 
 
+def test_relation_contract_rejects_existing_target_for_material_update() -> None:
+    with pytest.raises(ValidationError, match="must create a new update"):
+        EventRelationDecision(
+            candidate_event_id="evt_example1",
+            target_update_id="upd_existing1",
+            relation=EventRelation.SAME_EVENT_UPDATE,
+            confidence=0.99,
+            update_type=EventUpdateType.CONFIRMATION,
+            material_change=True,
+            what_changed_en="The situation changed.",
+            rationale="A material update needs its own timeline node.",
+        )
+
+
 def test_only_high_confidence_same_or_duplicate_relations_attach() -> None:
     accepted = EventRelationDecision(
         candidate_event_id="evt_example1",

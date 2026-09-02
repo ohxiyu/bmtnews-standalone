@@ -48,6 +48,13 @@ jobs:
             mkdir -p docs/_data
             git show "origin/gh-pages:_data/bmtnews_state.json" > docs/_data/bmtnews_state.json
           fi
+          # Four-hour collection runs own the current event catalog. Restore
+          # it before the daily edition assigns exact event/update links.
+          for path in _data/events.json _data/event-legacy-urls.json; do
+            if git cat-file -e "origin/gh-pages:${path}" 2>/dev/null; then
+              git show "origin/gh-pages:${path}" > "docs/${path}"
+            fi
+          done
           # The cross-day archive powers threads, entity pages, and the API.
           mkdir -p docs/_data/archive
           for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive 2>/dev/null); do
@@ -122,11 +129,6 @@ jobs:
             args+=(--force-publish)
           fi
           uv run bmtnews "${args[@]}"
-
-      - name: Apply approved event archive migration
-        run: >-
-          uv run python -m src.event_migration apply
-          --archive-root docs/_data/archive
 
       - name: Publish run report
         if: ${{ always() }}

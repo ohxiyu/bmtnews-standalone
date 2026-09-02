@@ -6,6 +6,13 @@
 {% if interface_language == "en" %}
   {% assign interface_home_url = en_language_url %}
 {% endif %}
+{% if page.alternate_url %}
+  {% if interface_language == "en" %}
+    {% assign zh_language_url = page.alternate_url | relative_url %}
+  {% else %}
+    {% assign en_language_url = page.alternate_url | relative_url %}
+  {% endif %}
+{% endif %}
 {% if page.lang == "zh" %}
   {% assign zh_language_url = page.url | relative_url %}
   {% assign en_language_url = page.url | replace: "-zh.html", "-en.html" | relative_url %}

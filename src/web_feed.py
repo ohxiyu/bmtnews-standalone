@@ -35,6 +35,7 @@ _LABELS = {
         "editorial": "编辑精选",
         "sponsored": "广告",
         "thread_day": "事件线 · 第 {day} 天",
+        "event_update": "事件记录",
         "sources_confirmed": "{count} 源确认",
         "single_source": "单一来源",
         "market_impact": "市场影响",
@@ -61,6 +62,7 @@ _LABELS = {
         "editorial": "Editor's Pick",
         "sponsored": "Sponsored",
         "thread_day": "Thread · day {day}",
+        "event_update": "Event record",
         "sources_confirmed": "{count} sources",
         "single_source": "Single source",
         "market_impact": "Market impact",
@@ -373,13 +375,23 @@ def _provenance_html(item: ContentItem, language: str) -> str:
 
 
 def _thread_html(item: ContentItem, language: str) -> str:
-    """Link a continuing story to its thread page."""
+    """Link a daily story to its exact event and update when available."""
+    event_id = item.metadata.get("event_id")
+    update_id = item.metadata.get("event_update_id")
+    labels = _LABELS[language]
+    prefix = "" if language == "zh" else "/en"
+    if event_id and update_id:
+        return (
+            f'<a class="thread-pill event-pill" '
+            f'data-event-id="{_escape(event_id)}" '
+            f'data-update-id="{_escape(update_id)}" '
+            f'href="{prefix}/events/{_escape(event_id)}/#{_escape(update_id)}">'
+            f'{_escape(labels["event_update"])}</a>'
+        )
     thread_id = item.metadata.get("thread_id")
     day = item.metadata.get("thread_day") or 1
     if not thread_id or not isinstance(day, int) or day < 2:
         return ""
-    labels = _LABELS[language]
-    prefix = "" if language == "zh" else "/en"
     text = labels["thread_day"].format(day=day)
     return (
         f'<a class="thread-pill" href="{prefix}/threads/{_escape(thread_id)}/">'

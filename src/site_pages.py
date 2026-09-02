@@ -35,6 +35,8 @@ def _as_date(value: str) -> Optional[date_type]:
 
 THREADS_ROOT = Path("docs/threads")
 EVENTS_ROOT = Path("docs/events")
+EVENT_API_ROOT = Path("docs/api/events")
+EVENT_API_INDEX = Path("docs/api/events.json")
 ENTITY_ROOT = Path("docs/entity")
 WEEKLY_ROOT = Path("docs/weekly")
 DATA_ROOT = Path("docs/_data")
@@ -88,6 +90,7 @@ def _front_matter(
     language: str,
     description: str = "",
     redirect_to: str = "",
+    alternate_url: str = "",
     noindex: bool = False,
 ) -> str:
     # Titles reach the raw <title> element through Liquid, so markup
@@ -107,6 +110,8 @@ def _front_matter(
     extra = ""
     if redirect_to:
         extra += f"redirect_to: {_plain(redirect_to)}\n"
+    if alternate_url:
+        extra += f"alternate_url: {_plain(alternate_url)}\n"
     if noindex:
         extra += "noindex: true\n"
     return (
@@ -205,47 +210,193 @@ def _event_update_value(update: EventUpdate, field: str, language: str) -> str:
     return preferred or fallback
 
 
-def render_event_page(event: TrackedEvent, language: str) -> str:
-    """Render the minimal stable event page used during the PR 2 migration.
+_EVENT_LABELS = {
+    "zh": {
+        "status": "状态",
+        "updates": "次实质进展",
+        "sources": "个来源",
+        "timeline": "进展时间线",
+        "back": "全部事件线",
+        "home": "返回首页",
+        "first_seen": "首次追踪",
+        "last_changed": "最近变化",
+        "current_state": "当前状态",
+        "json": "JSON 数据",
+        "source_evidence": "来源依据",
+        "state_after": "此后状态",
+        "precision_exact": "事件时间",
+        "precision_published": "报道时间",
+        "precision_edition": "历史刊期",
+    },
+    "en": {
+        "status": "status",
+        "updates": "material updates",
+        "sources": "sources",
+        "timeline": "Progress timeline",
+        "back": "All events",
+        "home": "Back to the feed",
+        "first_seen": "First tracked",
+        "last_changed": "Last changed",
+        "current_state": "Current state",
+        "json": "JSON data",
+        "source_evidence": "Source evidence",
+        "state_after": "State after update",
+        "precision_exact": "event time",
+        "precision_published": "publication time",
+        "precision_edition": "edition date",
+    },
+}
 
-    PR 3 replaces this compatibility presentation with the full reader-facing
-    timeline. Keeping a real target in PR 2 means legacy redirects never land
-    on a 404 between the data migration and that redesign.
-    """
+_STATUS_LABELS = {
+    "developing": {"zh": "进展中", "en": "Developing"},
+    "monitoring": {"zh": "持续观察", "en": "Monitoring"},
+    "resolved": {"zh": "已解决", "en": "Resolved"},
+    "closed": {"zh": "已结束", "en": "Closed"},
+    "disputed": {"zh": "存在争议", "en": "Disputed"},
+}
+
+_UPDATE_LABELS = {
+    "initial": {"zh": "首次出现", "en": "Initial"},
+    "confirmation": {"zh": "确认", "en": "Confirmation"},
+    "escalation": {"zh": "升级", "en": "Escalation"},
+    "response": {"zh": "回应", "en": "Response"},
+    "remediation": {"zh": "修复", "en": "Remediation"},
+    "resolution": {"zh": "解决", "en": "Resolution"},
+    "aftermath": {"zh": "后续影响", "en": "Aftermath"},
+    "correction": {"zh": "更正", "en": "Correction"},
+}
+
+
+def _event_stamp(value, language: str, *, include_time: bool = False) -> str:
+    if include_time:
+        return value.strftime("%Y.%m.%d %H:%M" if language == "zh" else "%Y-%m-%d %H:%M")
+    return value.strftime("%Y.%m.%d" if language == "zh" else "%Y-%m-%d")
+
+
+def event_payload(event: TrackedEvent, *, site_url: str = "https://bmt.news") -> dict:
+    """Return one stable, bilingual public event document."""
+    base = site_url.rstrip("/")
+    return {
+        "version": 1,
+        "event_id": event.event_id,
+        "url": f"{base}/events/{event.event_id}/",
+        "json": f"{base}/api/events/{event.event_id}.json",
+        "type": event.event_type.value,
+        "status": event.status.value,
+        "category": event.category,
+        "title": {"zh": event.title_zh, "en": event.title_en},
+        "current_state": {
+            "zh": event.current_state_zh,
+            "en": event.current_state_en,
+        },
+        "first_seen_at": event.first_seen_at.isoformat(),
+        "last_updated_at": event.last_updated_at.isoformat(),
+        "last_material_change_at": event.last_material_change_at.isoformat(),
+        "confidence": event.confidence,
+        "updates_count": len(
+            [update for update in event.updates if update.material_change]
+        ),
+        "sources_count": len(
+            {
+                source.url
+                for update in event.updates
+                for source in update.sources
+            }
+        ),
+        "entities": event.entities,
+        "identifiers": event.identifiers,
+        "topics": event.topics,
+        "updates": [update.model_dump(mode="json") for update in event.updates],
+    }
+
+
+def write_event_api(
+    events: Sequence[TrackedEvent],
+    *,
+    api_root: Path = EVENT_API_ROOT,
+    index_path: Path = EVENT_API_INDEX,
+) -> list[Path]:
+    """Write an event index and one independently cacheable JSON document each."""
+    visible = [
+        event
+        for event in events
+        if len([update for update in event.updates if update.material_change]) >= 2
+    ]
+    visible.sort(
+        key=lambda event: (event.last_material_change_at, event.event_id),
+        reverse=True,
+    )
+    paths: list[Path] = []
+    api_root.mkdir(parents=True, exist_ok=True)
+    for event in events:
+        path = api_root / f"{event.event_id}.json"
+        _write(
+            path,
+            json.dumps(event_payload(event), ensure_ascii=False, indent=2) + "\n",
+        )
+        paths.append(path)
+    index = {
+        "version": 1,
+        "events": [
+            {
+                "event_id": event.event_id,
+                "url": f"https://bmt.news/events/{event.event_id}/",
+                "json": f"https://bmt.news/api/events/{event.event_id}.json",
+                "status": event.status.value,
+                "type": event.event_type.value,
+                "title": {"zh": event.title_zh, "en": event.title_en},
+                "current_state": {
+                    "zh": event.current_state_zh,
+                    "en": event.current_state_en,
+                },
+                "first_seen_at": event.first_seen_at.isoformat(),
+                "last_material_change_at": event.last_material_change_at.isoformat(),
+                "updates_count": len(
+                    [update for update in event.updates if update.material_change]
+                ),
+                "sources_count": len(
+                    {
+                        source.url
+                        for update in event.updates
+                        for source in update.sources
+                    }
+                ),
+            }
+            for event in visible
+        ],
+    }
+    _write(index_path, json.dumps(index, ensure_ascii=False, indent=2) + "\n")
+    paths.append(index_path)
+    return paths
+
+
+def render_event_page(event: TrackedEvent, language: str) -> str:
+    """Render a compact event header and evidence-backed chronological timeline."""
     normalized = "en" if language == "en" else "zh"
     prefix = "" if normalized == "zh" else "/en"
     title = _event_value(event, "title", normalized) or event.event_id
     current_state = _event_value(event, "current_state", normalized)
-    labels = {
-        "zh": {
-            "status": "当前状态",
-            "updates": "进展",
-            "sources": "来源",
-            "timeline": "事件进展",
-            "back": "全部事件线",
-            "home": "返回首页",
-            "precision": "历史刊期",
-        },
-        "en": {
-            "status": "Status",
-            "updates": "updates",
-            "sources": "sources",
-            "timeline": "Event updates",
-            "back": "All events",
-            "home": "Back to the feed",
-            "precision": "edition date",
-        },
-    }[normalized]
-    source_count = sum(len(update.sources) for update in event.updates)
+    labels = _EVENT_LABELS[normalized]
+    status_label = _STATUS_LABELS[event.status.value][normalized]
+    material_updates = [update for update in event.updates if update.material_change]
+    source_count = len(
+        {source.url for update in event.updates for source in update.sources}
+    )
     stats = (
-        _stat(event.status.value, labels["status"])
-        + _stat(str(len(event.updates)), labels["updates"])
+        _stat(status_label, labels["status"])
+        + _stat(str(len(material_updates)), labels["updates"])
         + _stat(str(source_count), labels["sources"])
+        + _stat(_event_stamp(event.first_seen_at, normalized), labels["first_seen"])
+        + _stat(
+            _event_stamp(event.last_material_change_at, normalized),
+            labels["last_changed"],
+        )
     )
     rows = []
     for update in event.updates:
         changed = _event_update_value(update, "what_changed", normalized)
         update_title = _event_update_value(update, "title", normalized) or changed
+        state_after = _event_update_value(update, "current_state", normalized)
         sources = []
         for source in update.sources:
             url = safe_url(source.url)
@@ -256,17 +407,32 @@ def render_event_page(event: TrackedEvent, language: str) -> str:
                 else label
             )
         source_html = " · ".join(sources)
-        stamp = update.first_seen_at.date().isoformat()
+        stamp = update.occurred_at.isoformat()
+        include_time = update.time_precision.value != "edition"
+        display_stamp = _event_stamp(
+            update.occurred_at, normalized, include_time=include_time
+        )
+        precision = labels[f"precision_{update.time_precision.value}"]
+        update_label = _UPDATE_LABELS[update.update_type.value][normalized]
+        correction = " is-correction" if update.update_type.value == "correction" else ""
         rows.append(
-            '<li class="archive-row event-update-row">'
-            f'<time datetime="{stamp}">{stamp}</time>'
-            '<div class="archive-row-body">'
-            f'<p class="archive-row-meta">{escape_text(update.update_type.value)} · '
-            f'{escape_text(labels["precision"])}</p>'
+            f'<li class="event-update{correction}" id="{escape_text(update.update_id)}">'
+            '<div class="event-update-marker" aria-hidden="true"></div>'
+            '<div class="event-update-content">'
+            '<p class="event-update-kicker">'
+            f'<time datetime="{escape_text(stamp)}">{escape_text(display_stamp)}</time>'
+            f'<span class="event-update-type">{escape_text(update_label)}</span>'
+            f'<span>{escape_text(precision)}</span></p>'
             f'<h3>{escape_text(update_title)}</h3>'
-            f'<p class="archive-row-summary">{escape_text(changed)}</p>'
+            f'<p class="event-update-change">{escape_text(changed)}</p>'
             + (
-                f'<p class="archive-row-meta">{escape_text(labels["sources"])}: '
+                f'<p class="event-update-state"><strong>{escape_text(labels["state_after"])}：</strong>'
+                f'{escape_text(state_after)}</p>'
+                if state_after and state_after != changed
+                else ""
+            )
+            + (
+                f'<p class="event-update-sources"><strong>{escape_text(labels["source_evidence"])}：</strong>'
                 f"{source_html}</p>"
                 if source_html
                 else ""
@@ -274,14 +440,18 @@ def render_event_page(event: TrackedEvent, language: str) -> str:
             + "</div></li>"
         )
     body = (
-        f'<div class="archive-stats">{stats}</div>'
+        f'<div class="event-status-line"><span class="event-status" data-status="{event.status.value}">'
+        f'{escape_text(status_label)}</span><span>{escape_text(event.event_type.value)}</span></div>'
+        f'<div class="archive-stats event-stats">{stats}</div>'
         + (
-            f'<p class="archive-lede">{escape_text(current_state)}</p>'
+            f'<section class="event-current-state"><h2>{escape_text(labels["current_state"])}</h2>'
+            f'<p>{escape_text(current_state)}</p></section>'
             if current_state
             else ""
         )
-        + f"<h2>{escape_text(labels['timeline'])}</h2>"
-        + f'<ul class="archive-list event-timeline">{"".join(rows)}</ul>'
+        + f'<div class="event-timeline-heading"><h2>{escape_text(labels["timeline"])}</h2>'
+        + f'<a href="/api/events/{event.event_id}.json">{escape_text(labels["json"])}</a></div>'
+        + f'<ol class="event-timeline">{"".join(rows)}</ol>'
         + f'<p class="archive-back"><a href="{prefix}/threads/">'
         + f'{escape_text(labels["back"])}</a> · '
         + f'<a href="{prefix}/">{escape_text(labels["home"])}</a></p>'
@@ -292,6 +462,11 @@ def render_event_page(event: TrackedEvent, language: str) -> str:
             permalink=f"{prefix}/events/{event.event_id}/",
             language=normalized,
             description=current_state,
+            alternate_url=(
+                f"/en/events/{event.event_id}/"
+                if normalized == "zh"
+                else f"/events/{event.event_id}/"
+            ),
         )
         + body
         + "\n"
@@ -380,8 +555,19 @@ def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
                 "first_date": first,
                 "days": len({update.first_seen_at.date() for update in material}),
                 "entries": len(material),
+                "updates_count": len(material),
+                "sources_count": len(
+                    {
+                        source.url
+                        for update in event.updates
+                        for source in update.sources
+                    }
+                ),
                 "category": event.category,
                 "status": event.status.value,
+                "status_zh": _STATUS_LABELS[event.status.value]["zh"],
+                "status_en": _STATUS_LABELS[event.status.value]["en"],
+                "event_type": event.event_type.value,
                 "title_zh": event.title_zh,
                 "title_en": event.title_en,
                 "summary_zh": event.current_state_zh,
@@ -401,6 +587,8 @@ def publish_event_compatibility_pages(
     events_root: Path = EVENTS_ROOT,
     threads_root: Path = THREADS_ROOT,
     thread_index_path: Path = DATA_ROOT / "threads.json",
+    event_api_root: Path | None = None,
+    event_api_index: Path | None = None,
 ) -> dict[str, int]:
     """Write stable event targets and preserve every reviewed legacy URL."""
     by_id = {event.event_id: event for event in events}
@@ -419,6 +607,12 @@ def publish_event_compatibility_pages(
             build_event_index_data(events), ensure_ascii=False, indent=2
         )
         + "\n",
+    )
+    site_root = thread_index_path.parent.parent
+    write_event_api(
+        events,
+        api_root=event_api_root or site_root / "api" / "events",
+        index_path=event_api_index or site_root / "api" / "events.json",
     )
     written = {"events": 0, "redirects": 0, "retired": 0}
     for language in languages:

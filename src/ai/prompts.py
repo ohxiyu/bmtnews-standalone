@@ -39,7 +39,7 @@ Hard rules:
 - A repeated amount or asset symbol is not proof of identity.
 - Prefer related_but_distinct or unrelated when the root event is uncertain. False merges are more harmful than missed links.
 - same_event_update must identify what changed and the resulting current state.
-- duplicate_coverage must not create a timeline update.
+- duplicate_coverage must not create a timeline update and must name the exact existing update_id whose facts it repeats.
 
 Return valid JSON only and preserve candidate_event_id exactly."""
 
@@ -53,6 +53,7 @@ New story:
 Return exactly this JSON shape:
 {{
   "candidate_event_id": "<existing event ID>",
+  "target_update_id": "<existing update ID for duplicate_coverage, otherwise null>",
   "relation": "same_event_update | duplicate_coverage | related_but_distinct | unrelated",
   "confidence": <0.0-1.0>,
   "update_type": "initial | confirmation | escalation | response | remediation | resolution | aftermath | correction" or null,

@@ -24,13 +24,22 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     env:
       TZ: Asia/Shanghai
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+
+      - name: Restore published event state
+        shell: bash
+        run: |
+          git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
+          mkdir -p docs/_data
+          for path in _data/events.json _data/event-legacy-urls.json; do
+            git show "origin/gh-pages:${path}" > "docs/${path}"
+          done
 
       - name: Restore staged source items
         uses: actions/cache@v5
@@ -72,7 +81,7 @@ jobs:
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
 
-      - name: Collect source items without AI analysis
+      - name: Collect sources and increment event timelines
         env:
           GITHUB_TOKEN: ${{ github.token }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -85,6 +94,16 @@ jobs:
       - name: Publish run report
         if: ${{ always() }}
         run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy incremental event pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          keep_files: true
+          commit_message: "🧭 Event timeline: ${{ github.run_id }}"
+          publish_branch: gh-pages
+          enable_jekyll: true
 
       - name: Persist staging cache to branch
         if: ${{ always() }}
