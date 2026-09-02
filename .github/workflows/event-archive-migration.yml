@@ -98,12 +98,30 @@ jobs:
           records = load_archive(root=Path("docs/_data/archive"), months=120)
           catalog = json.loads(Path("docs/_data/events.json").read_text())
           legacy = json.loads(Path("docs/_data/event-legacy-urls.json").read_text())
+          historical = json.loads(
+              Path("data/historical-legacy-pages.json").read_text()
+          )
           assert records and all(row.event_id and row.event_update_id for row in records)
           assert len(catalog["events"]) == len({row.event_id for row in records})
           assert len(legacy["redirects"]) + len(legacy["retired"]) == 22
+          catalog_ids = {event["event_id"] for event in catalog["events"]}
+          assert len(historical["pages"]) == 1
+          for page in historical["pages"]:
+              legacy_id = page["legacy_thread_id"]
+              assert set(page["canonical_event_ids"]) <= catalog_ids
+              for language_prefix in ("", "en-"):
+                  content = Path(
+                      f"docs/threads/{language_prefix}{legacy_id}.html"
+                  ).read_text()
+                  assert "noindex: true" in content
+                  for event_id in page["canonical_event_ids"]:
+                      assert f"/events/{event_id}/" in content
+                  for source in page["external_sources"]:
+                      assert source["url"] in content
           print(
               f"validated {len(records)} archive records, "
-              f"{len(catalog['events'])} events, and 22 legacy URLs"
+              f"{len(catalog['events'])} events, 22 active legacy URLs, "
+              "and 1 historical orphan URL"
           )
           PY
 
