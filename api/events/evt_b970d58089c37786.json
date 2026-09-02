@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "event_id": "evt_b970d58089c37786",
+  "url": "https://bmt.news/events/evt_b970d58089c37786/",
+  "json": "https://bmt.news/api/events/evt_b970d58089c37786.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Moonwell MAMO 价格操纵攻击",
+    "en": "Moonwell MAMO price-manipulation exploit"
+  },
+  "current_state": {
+    "zh": "损失和攻击方式得到重复来源确认。",
+    "en": "The loss and attack mechanism were corroborated by duplicate coverage."
+  },
+  "first_seen_at": "2026-08-28T08:00:00+08:00",
+  "last_updated_at": "2026-08-28T08:00:00+08:00",
+  "last_material_change_at": "2026-08-28T08:00:00+08:00",
+  "confidence": 1.0,
+  "updates_count": 1,
+  "sources_count": 2,
+  "entities": [
+    "attack",
+    "base",
+    "loses",
+    "mamo",
+    "manipulation",
+    "moonwell",
+    "price"
+  ],
+  "identifiers": [],
+  "topics": [
+    "base",
+    "lending-protocol",
+    "moonwell"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_e51e0c944b5ca521",
+      "event_id": "evt_b970d58089c37786",
+      "occurred_at": "2026-08-28T08:00:00+08:00",
+      "published_at": "2026-08-28T08:00:00+08:00",
+      "first_seen_at": "2026-08-28T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Moonwell 在 Base 上因 MAMO 价格操纵损失约 870 万美元。",
+      "title_en": "Moonwell lost about $8.7M in a MAMO price-manipulation attack on Base.",
+      "what_changed_zh": "Moonwell 在 Base 上因 MAMO 价格操纵损失约 870 万美元。",
+      "what_changed_en": "Moonwell lost about $8.7M in a MAMO price-manipulation attack on Base.",
+      "current_state_zh": "损失和攻击方式得到重复来源确认。",
+      "current_state_en": "The loss and attack mechanism were corroborated by duplicate coverage.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:0624aecbfc58fb6d",
+        "google_news:article:1e714397b5d1d6c7"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/hacks/moonwell-loses-8-7-million-to-mamo-price-manipulation-on-base",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTVFhaVhJN1ZjdFFKWEg1R3MxbXhqUUhMUU5FWGs0VENrZkxNelVOX1RWZWhqOEtFcWNxODA1ZFlSUUpYazAza0lVSUZ1YnFSdjlLMkc3bGZCU2FBU0dZYmNpdFF3ZlppUzRSU3JGZTJNalR5ckZxdlJoallTNUFfeWI4Y2RDby1EYzZZMExZZzdBV2xFWWNsTDJLeVE?oc=5",
+          "label": "Startup Fortune",
+          "source_type": "google_news",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

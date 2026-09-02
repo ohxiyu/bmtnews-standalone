@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "event_id": "evt_917f3bdc9fc15588",
+  "url": "https://bmt.news/events/evt_917f3bdc9fc15588/",
+  "json": "https://bmt.news/api/events/evt_917f3bdc9fc15588.json",
+  "type": "protocol_change",
+  "status": "resolved",
+  "category": "crypto",
+  "title": {
+    "zh": "比特币首笔抗量子主网交易",
+    "en": "Bitcoin's first quantum-resistant mainnet transaction"
+  },
+  "current_state": {
+    "zh": "交易已在主网上确认，但存量资产风险仍待解决。",
+    "en": "The transaction is confirmed on mainnet, while legacy-asset exposure remains unresolved."
+  },
+  "first_seen_at": "2026-08-28T08:00:00+08:00",
+  "last_updated_at": "2026-08-28T08:00:00+08:00",
+  "last_material_change_at": "2026-08-28T08:00:00+08:00",
+  "confidence": 1.0,
+  "updates_count": 1,
+  "sources_count": 2,
+  "entities": [
+    "executes",
+    "exposed",
+    "first",
+    "mined",
+    "quantum",
+    "quantum-resistant",
+    "resistant",
+    "safe",
+    "still",
+    "transaction"
+  ],
+  "identifiers": [],
+  "topics": [
+    "blockchain-security",
+    "cryptography",
+    "protocol-milestone",
+    "quantum-computing",
+    "quantum-resistant",
+    "starkware"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_a5e13776c91ab26b",
+      "event_id": "evt_917f3bdc9fc15588",
+      "occurred_at": "2026-08-28T08:00:00+08:00",
+      "published_at": "2026-08-28T08:00:00+08:00",
+      "first_seen_at": "2026-08-28T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "比特币主网挖出首笔抗量子交易。",
+      "title_en": "Bitcoin mainnet mined its first quantum-resistant transaction.",
+      "what_changed_zh": "比特币主网挖出首笔抗量子交易。",
+      "what_changed_en": "Bitcoin mainnet mined its first quantum-resistant transaction.",
+      "current_state_zh": "交易已在主网上确认，但存量资产风险仍待解决。",
+      "current_state_en": "The transaction is confirmed on mainnet, while legacy-asset exposure remains unresolved.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:99c98641f6243c8c",
+        "gdelt:article:20260830T160000Z::https://www.aol.com/articles/first-quantum-resistant-bitcoin-transaction-140728000.html"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/bitcoin-now-has-a-quantum-computing-escape-route-but-7-million-btc-may-still-be-exposed/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.aol.com/articles/first-quantum-resistant-bitcoin-transaction-140728000.html",
+          "label": "aol.com",
+          "source_type": "gdelt",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

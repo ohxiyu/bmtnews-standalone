@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "event_id": "evt_7cec54c7d44b7cd5",
+  "url": "https://bmt.news/events/evt_7cec54c7d44b7cd5/",
+  "json": "https://bmt.news/api/events/evt_7cec54c7d44b7cd5.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Tectonic 遭攻击并触发 Cronos 回滚",
+    "en": "Tectonic exploit triggers Cronos rollback"
+  },
+  "current_state": {
+    "zh": "链已通过回滚遏制攻击影响，事件继续观察。",
+    "en": "The rollback contained the incident; monitoring continues."
+  },
+  "first_seen_at": "2026-09-01T08:00:00+08:00",
+  "last_updated_at": "2026-09-01T08:00:00+08:00",
+  "last_material_change_at": "2026-09-01T08:00:00+08:00",
+  "confidence": 1.0,
+  "updates_count": 1,
+  "sources_count": 2,
+  "entities": [
+    "after",
+    "cronos",
+    "exploit",
+    "forces",
+    "halt",
+    "rollback",
+    "tectonic",
+    "theft"
+  ],
+  "identifiers": [],
+  "topics": [
+    "chain-rollback",
+    "cronos",
+    "cryptocom",
+    "tectonic"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_afa9933fe387d33c",
+      "event_id": "evt_7cec54c7d44b7cd5",
+      "occurred_at": "2026-09-01T08:00:00+08:00",
+      "published_at": "2026-09-01T08:00:00+08:00",
+      "first_seen_at": "2026-09-01T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Tectonic 遭窃约 7,500 万美元，Cronos 验证者暂停并回滚链。",
+      "title_en": "Tectonic lost about $75M and Cronos validators halted and rolled back the chain.",
+      "what_changed_zh": "Tectonic 遭窃约 7,500 万美元，Cronos 验证者暂停并回滚链。",
+      "what_changed_en": "Tectonic lost about $75M and Cronos validators halted and rolled back the chain.",
+      "current_state_zh": "链已通过回滚遏制攻击影响，事件继续观察。",
+      "current_state_en": "The rollback contained the incident; monitoring continues.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:protos.com_feed_:3a75cc3f717c0c85",
+        "rss:cryptoslate.com_feed_:8a5e8b5fdb9b8bde"
+      ],
+      "sources": [
+        {
+          "url": "https://protos.com/crypto-com-promoted-tectonic-forces-cronos-to-halt-rewind/",
+          "label": "Protos",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/cronos-restart-after-tectonic-exploit-chain-rollback/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

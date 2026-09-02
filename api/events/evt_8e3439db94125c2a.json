@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "event_id": "evt_8e3439db94125c2a",
+  "url": "https://bmt.news/events/evt_8e3439db94125c2a/",
+  "json": "https://bmt.news/api/events/evt_8e3439db94125c2a.json",
+  "type": "security_incident",
+  "status": "resolved",
+  "category": "crypto",
+  "title": {
+    "zh": "Term Finance 治理攻击与 Meta Vaults 关闭",
+    "en": "Term Finance governance exploit and Meta Vaults shutdown"
+  },
+  "current_state": {
+    "zh": "受影响的 Meta Vaults 已永久关闭。",
+    "en": "The affected Meta Vaults are permanently closed."
+  },
+  "first_seen_at": "2026-08-24T08:00:00+08:00",
+  "last_updated_at": "2026-08-26T08:00:00+08:00",
+  "last_material_change_at": "2026-08-26T08:00:00+08:00",
+  "confidence": 1.0,
+  "updates_count": 2,
+  "sources_count": 4,
+  "entities": [
+    "after",
+    "app",
+    "draining",
+    "exploit",
+    "governance",
+    "hit",
+    "lending",
+    "loses",
+    "meta",
+    "millions",
+    "permanently",
+    "shuts",
+    "term",
+    "term-finance",
+    "vaults"
+  ],
+  "identifiers": [],
+  "topics": [
+    "peckshield",
+    "term-finance",
+    "vaults"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_266f9b9888ba8f99",
+      "event_id": "evt_8e3439db94125c2a",
+      "occurred_at": "2026-08-24T08:00:00+08:00",
+      "published_at": "2026-08-24T08:00:00+08:00",
+      "first_seen_at": "2026-08-24T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Term Finance 遭治理攻击，损失约 850 万美元。",
+      "title_en": "Term Finance suffered a governance exploit with about $8.5M in losses.",
+      "what_changed_zh": "Term Finance 遭治理攻击，损失约 850 万美元。",
+      "what_changed_en": "Term Finance suffered a governance exploit with about $8.5M in losses.",
+      "current_state_zh": "攻击和损失得到多来源确认。",
+      "current_state_en": "The exploit and loss estimate were confirmed by multiple sources.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:www.theblock.co_rss.xml:ba61284223833910",
+        "gdelt:article:20260824T154500Z::https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/",
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:1b1f3dddd1f53072"
+      ],
+      "sources": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543",
+          "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/",
+          "label": "crowdfundinsider.com",
+          "source_type": "gdelt",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power",
+          "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_f49d0e677cbab1ec",
+      "event_id": "evt_8e3439db94125c2a",
+      "occurred_at": "2026-08-26T08:00:00+08:00",
+      "published_at": "2026-08-26T08:00:00+08:00",
+      "first_seen_at": "2026-08-26T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "remediation",
+      "material_change": true,
+      "title_zh": "Term Finance 在攻击后永久关闭 Meta Vaults。",
+      "title_en": "Term Finance permanently shut Meta Vaults after the exploit.",
+      "what_changed_zh": "Term Finance 在攻击后永久关闭 Meta Vaults。",
+      "what_changed_en": "Term Finance permanently shut Meta Vaults after the exploit.",
+      "current_state_zh": "受影响的 Meta Vaults 已永久关闭。",
+      "current_state_en": "The affected Meta Vaults are permanently closed.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:dcd5bb541c6b961f"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/hacks/term-finance-permanently-shuts-meta-vaults-after-exploit-peckshield-estimated-at-8-5-million",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "event_id": "evt_e76fdfcc6ef4904a",
+  "url": "https://bmt.news/events/evt_e76fdfcc6ef4904a/",
+  "json": "https://bmt.news/api/events/evt_e76fdfcc6ef4904a.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Cosmos EVM 共享模块漏洞与多链损失",
+    "en": "Cosmos EVM shared-module flaw and multi-chain losses"
+  },
+  "current_state": {
+    "zh": "影响范围和责任已经进一步确认，修复情况仍需观察。",
+    "en": "Scope and accountability are clearer; remediation remains under observation."
+  },
+  "first_seen_at": "2026-08-22T08:00:00+08:00",
+  "last_updated_at": "2026-08-29T08:00:00+08:00",
+  "last_material_change_at": "2026-08-29T08:00:00+08:00",
+  "confidence": 1.0,
+  "updates_count": 3,
+  "sources_count": 5,
+  "entities": [
+    "bug",
+    "chains",
+    "cosmos",
+    "cross-chain",
+    "drains",
+    "evm",
+    "halt",
+    "labs",
+    "mantra",
+    "networks",
+    "reported",
+    "shared",
+    "six",
+    "three",
+    "urges",
+    "vulnerability"
+  ],
+  "identifiers": [],
+  "topics": [
+    "cosmos",
+    "cross-chain",
+    "evm",
+    "mantra",
+    "multi-chain",
+    "network-halt",
+    "security-exploit",
+    "security-incident",
+    "vulnerability"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_f93d0dfe3e47ef38",
+      "event_id": "evt_e76fdfcc6ef4904a",
+      "occurred_at": "2026-08-22T08:00:00+08:00",
+      "published_at": "2026-08-22T08:00:00+08:00",
+      "first_seen_at": "2026-08-22T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "MANTRA 因 Cosmos EVM 模块事件暂停网络。",
+      "title_en": "MANTRA halted its network over a Cosmos EVM module incident.",
+      "what_changed_zh": "MANTRA 因 Cosmos EVM 模块事件暂停网络。",
+      "what_changed_en": "MANTRA halted its network over a Cosmos EVM module incident.",
+      "current_state_zh": "影响最初被视为单链事件。",
+      "current_state_en": "The impact initially appeared limited to one chain.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:www.theblock.co_rss.xml:22d9e7ab9bedff7e"
+      ],
+      "sources": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416",
+          "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_c551dd8ab5e1cb28",
+      "event_id": "evt_e76fdfcc6ef4904a",
+      "occurred_at": "2026-08-26T08:00:00+08:00",
+      "published_at": "2026-08-26T08:00:00+08:00",
+      "first_seen_at": "2026-08-26T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Cosmos Labs 要求采用该 EVM 模块的链暂停运行，已确认至少三条网络受损。",
+      "title_en": "Cosmos Labs urged affected EVM chains to halt after losses were confirmed across at least three networks.",
+      "what_changed_zh": "Cosmos Labs 要求采用该 EVM 模块的链暂停运行，已确认至少三条网络受损。",
+      "what_changed_en": "Cosmos Labs urged affected EVM chains to halt after losses were confirmed across at least three networks.",
+      "current_state_zh": "事件扩大为共享组件导致的多链安全事故。",
+      "current_state_en": "The incident expanded into a multi-chain shared-component failure.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:dd7c7061b5975449"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_59ea7921f4ecd054",
+      "event_id": "evt_e76fdfcc6ef4904a",
+      "occurred_at": "2026-08-29T08:00:00+08:00",
+      "published_at": "2026-08-29T08:00:00+08:00",
+      "first_seen_at": "2026-08-29T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "后续调查称漏洞曾被低估数月，影响扩大到六条链，Cosmos Labs 承认判断失误。",
+      "title_en": "Later reporting said the flaw was underestimated for months, affected six chains, and prompted Cosmos Labs to acknowledge its error.",
+      "what_changed_zh": "后续调查称漏洞曾被低估数月，影响扩大到六条链，Cosmos Labs 承认判断失误。",
+      "what_changed_en": "Later reporting said the flaw was underestimated for months, affected six chains, and prompted Cosmos Labs to acknowledge its error.",
+      "current_state_zh": "影响范围和责任已经进一步确认，修复情况仍需观察。",
+      "current_state_en": "Scope and accountability are clearer; remediation remains under observation.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:21be4de7336ce345",
+        "rss:www.theblock.co_rss.xml:fe77904255f03fe3",
+        "google_news:article:67f52d46815b6359"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-29-cosmos-labs-says-it-wrongly-cleared-the-bug-behind-a-5-7-million-six-chain-hack-413061",
+          "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TS094NGgzR2NuUUZndHp6RFpxX1RvSEpJTUQwaURhZ0c4bTVIeF9MSkhVdEFkR1h1eGtRRWppRXpJaTF3STN4cEdPWElNLTFLN1dMbEdMNW00STR5aWVvck95UXNlenNIT2lVRm1aU3M?oc=5",
+          "label": "CryptoTicker",
+          "source_type": "google_news",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

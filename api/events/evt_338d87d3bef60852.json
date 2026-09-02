@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "event_id": "evt_338d87d3bef60852",
+  "url": "https://bmt.news/events/evt_338d87d3bef60852/",
+  "json": "https://bmt.news/api/events/evt_338d87d3bef60852.json",
+  "type": "security_incident",
+  "status": "developing",
+  "category": "crypto",
+  "title": {
+    "zh": "Fogo 4 亿代币异常转账与主网停机",
+    "en": "Fogo 400M-token incident and mainnet halt"
+  },
+  "current_state": {
+    "zh": "截至报道时主网仍未恢复。",
+    "en": "Mainnet remained offline at publication."
+  },
+  "first_seen_at": "2026-08-30T08:00:00+08:00",
+  "last_updated_at": "2026-09-01T08:00:00+08:00",
+  "last_material_change_at": "2026-09-01T08:00:00+08:00",
+  "confidence": 1.0,
+  "updates_count": 2,
+  "sources_count": 2,
+  "entities": [
+    "after",
+    "attacker",
+    "fogo",
+    "halted",
+    "hours",
+    "layer",
+    "layer-1",
+    "mainnet-halt",
+    "sent"
+  ],
+  "identifiers": [],
+  "topics": [
+    "chain-halt",
+    "fogo",
+    "layer-1",
+    "mainnet-halt",
+    "security-incident",
+    "token-supply"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_715802557a57056c",
+      "event_id": "evt_338d87d3bef60852",
+      "occurred_at": "2026-08-30T08:00:00+08:00",
+      "published_at": "2026-08-30T08:00:00+08:00",
+      "first_seen_at": "2026-08-30T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "攻击者收到 4 亿 FOGO 后，Fogo 暂停主网。",
+      "title_en": "Fogo halted mainnet after an attacker received 400M FOGO.",
+      "what_changed_zh": "攻击者收到 4 亿 FOGO 后，Fogo 暂停主网。",
+      "what_changed_en": "Fogo halted mainnet after an attacker received 400M FOGO.",
+      "current_state_zh": "主网处于停机状态。",
+      "current_state_en": "Mainnet was halted.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:www.theblock.co_rss.xml:e7c5867aa116a4f4"
+      ],
+      "sources": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064",
+          "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_11d9367ff9a2cac8",
+      "event_id": "evt_338d87d3bef60852",
+      "occurred_at": "2026-09-01T08:00:00+08:00",
+      "published_at": "2026-09-01T08:00:00+08:00",
+      "first_seen_at": "2026-09-01T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Fogo 主网停机已持续 46 小时。",
+      "title_en": "The Fogo mainnet halt had continued for 46 hours.",
+      "what_changed_zh": "Fogo 主网停机已持续 46 小时。",
+      "what_changed_en": "The Fogo mainnet halt had continued for 46 hours.",
+      "current_state_zh": "截至报道时主网仍未恢复。",
+      "current_state_en": "Mainnet remained offline at publication.",
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:14089b679c3cd77c"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/security/fogo-halts-mainnet-after-400-million-fogo-sent-to-bad-actor",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

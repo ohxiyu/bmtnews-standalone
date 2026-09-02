@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "event_id": "evt_a573d2f422335dd2",
+  "url": "https://bmt.news/events/evt_a573d2f422335dd2/",
+  "json": "https://bmt.news/api/events/evt_a573d2f422335dd2.json",
+  "type": "other",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "恶意 Rust crate arrayref 构建时执行恶意负载",
+    "en": "Malicious Rust crate arrayref runs build-time payload"
+  },
+  "current_state": {
+    "zh": "恶意 Rust crate arrayref 构建时执行恶意负载",
+    "en": "Malicious Rust crate arrayref runs build-time payload"
+  },
+  "first_seen_at": "2026-08-21T08:00:00+08:00",
+  "last_updated_at": "2026-08-21T08:00:00+08:00",
+  "last_material_change_at": "2026-08-21T08:00:00+08:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "malicious",
+    "rust"
+  ],
+  "identifiers": [],
+  "topics": [
+    "malware",
+    "open-source",
+    "rust",
+    "supply-chain"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_46691a3d660828bd",
+      "event_id": "evt_a573d2f422335dd2",
+      "occurred_at": "2026-08-21T08:00:00+08:00",
+      "published_at": "2026-08-21T08:00:00+08:00",
+      "first_seen_at": "2026-08-21T08:00:00+08:00",
+      "time_precision": "edition",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "恶意 Rust crate arrayref 构建时执行恶意负载",
+      "title_en": "Malicious Rust crate arrayref runs build-time payload",
+      "what_changed_zh": "恶意 Rust crate arrayref 构建时执行恶意负载",
+      "what_changed_en": "Malicious Rust crate arrayref runs build-time payload",
+      "current_state_zh": "恶意 Rust crate arrayref 构建时执行恶意负载",
+      "current_state_en": "Malicious Rust crate arrayref runs build-time payload",
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49374269"
+      ],
+      "sources": [
+        {
+          "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+          "label": "abhisek",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}
