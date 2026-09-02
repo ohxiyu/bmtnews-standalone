@@ -2,8 +2,8 @@
 
 The legacy ``threads`` module groups stories directly.  This module separates
 the durable event from the evidence updates that describe how it changed.
-It is intentionally not wired into publishing yet: PR 2 migrates the archive
-only after the candidate and relation decisions have been reviewed.
+The reviewed historical catalog and the incremental publishing pipeline share
+these models and the same conservative attachment contract.
 """
 
 from __future__ import annotations
@@ -245,6 +245,9 @@ class EventRelationDecision(BaseModel):
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
 
     candidate_event_id: str = Field(pattern=r"^evt_[a-z0-9_-]{6,80}$")
+    target_update_id: str | None = Field(
+        default=None, pattern=r"^upd_[a-z0-9_-]{6,80}$"
+    )
     relation: EventRelation
     confidence: float = Field(ge=0.0, le=1.0)
     update_type: EventUpdateType | None = None
@@ -263,13 +266,27 @@ class EventRelationDecision(BaseModel):
                 raise ValueError(
                     "same_event_update requires a material change and update type"
                 )
+            if self.target_update_id is not None:
+                raise ValueError(
+                    "same_event_update must create a new update, not target one"
+                )
             if not (self.what_changed_zh or self.what_changed_en):
                 raise ValueError("same_event_update must explain what changed")
         elif self.relation is EventRelation.DUPLICATE_COVERAGE:
             if self.material_change or self.update_type is not None:
                 raise ValueError("duplicate coverage cannot create an update")
-        elif self.material_change or self.update_type is not None:
-            raise ValueError("distinct or unrelated stories cannot update the event")
+            if self.target_update_id is None:
+                raise ValueError(
+                    "duplicate coverage must identify the existing update"
+                )
+        elif (
+            self.material_change
+            or self.update_type is not None
+            or self.target_update_id is not None
+        ):
+            raise ValueError(
+                "distinct or unrelated stories cannot update the event"
+            )
         return self
 
     def should_attach(self, *, threshold: float = 0.90) -> bool:

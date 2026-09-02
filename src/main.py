@@ -51,7 +51,7 @@ def main():
         choices=("full", "fetch", "publish", "weekly", "x-post"),
         default="full",
         help=(
-            "full runs the legacy pipeline; fetch only updates the staging cache; "
+            "full runs the legacy pipeline; fetch updates staging and the event timeline; "
             "publish builds one fixed-window daily edition; "
             "weekly builds the weekly review from the archive; "
             "x-post publishes the next drip story for today's edition"

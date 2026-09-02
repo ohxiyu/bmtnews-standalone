@@ -37,7 +37,7 @@ def test_all_hosted_jobs_have_bounded_runtime() -> None:
         "daily-summary.yml": 30,
         "deploy-docs.yml": 10,
         "event-archive-migration.yml": 10,
-        "feed-collection.yml": 15,
+        "feed-collection.yml": 30,
         "schedule-watchdog.yml": 5,
         "source-change.yml": 20,
     }
@@ -48,7 +48,7 @@ def test_all_hosted_jobs_have_bounded_runtime() -> None:
         ), workflow_name
 
 
-def test_event_migration_has_explicit_gate_and_daily_continuation() -> None:
+def test_event_migration_has_explicit_gate_and_incremental_continuation() -> None:
     migration = _workflow("event-archive-migration.yml")
     daily = _workflow("daily-summary.yml")
 
@@ -63,7 +63,8 @@ def test_event_migration_has_explicit_gate_and_daily_continuation() -> None:
     assert "peaceiris/actions-gh-pages@v4" in migration
     assert "keep_files: true" in migration
 
-    assert "Apply approved event archive migration" in daily
-    assert daily.index("Run BMTNews") < daily.index(
-        "Apply approved event archive migration"
-    ) < daily.index("Deploy to GitHub Pages")
+    collection = _workflow("feed-collection.yml")
+    assert "Restore published event state" in collection
+    assert "Deploy incremental event pages" in collection
+    assert "_data/events.json" in daily
+    assert "Apply approved event archive migration" not in daily

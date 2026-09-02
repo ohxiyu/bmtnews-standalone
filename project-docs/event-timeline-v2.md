@@ -67,7 +67,7 @@ duplicate-coverage nodes presented as progress.
 
 ## Phase 3 — reader experience and four-hour updates
 
-Status: blocked on the reviewed Phase 2 catalog.
+Status: implemented in PR 3 against the reviewed Phase 2 catalog.
 
 - Render a stable event title, current status, first/last change timestamps,
   and chronological update nodes.

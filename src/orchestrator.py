@@ -39,6 +39,14 @@ from .ai.enricher import ContentEnricher
 from .ai.prefilter import ContentPrefilter
 from .ai.result_cache import AnalysisResultCache, split_cached
 from .ai.tokens import get_usage_snapshot, reset_usage
+from .event_pipeline import (
+    EVENT_CATALOG_PATH,
+    known_story_assignments,
+    load_event_catalog,
+    load_legacy_event_urls,
+    save_event_catalog,
+    update_events,
+)
 from .daily_feed import (
     DailyFeedState,
     analyzed_item_key,
@@ -78,7 +86,7 @@ from .editorial import (
     load_editorial_plan,
 )
 from .market_snapshot import MarketSnapshot, fetch_market_snapshot
-from .site_pages import publish_archive_pages
+from .site_pages import publish_archive_pages, publish_event_compatibility_pages
 from .threads import (
     assign_threads,
     collect_entities,
@@ -545,7 +553,12 @@ class BMTNewsOrchestrator:
         staging_path: Path = DEFAULT_STAGING_PATH,
         now: datetime | None = None,
     ) -> None:
-        """Fetch raw source items and persist them without running AI."""
+        """Fetch source items and increment only the published event catalog.
+
+        The daily edition boundary is unchanged.  When a migrated event
+        catalog has been restored by the scheduled workflow, only genuinely
+        new staged items are analyzed and considered for event updates.
+        """
         timezone_name = self.config.filtering.daily_timezone
         run_started_at = now or datetime.now(timezone.utc)
         if run_started_at.tzinfo is None:
@@ -585,20 +598,40 @@ class BMTNewsOrchestrator:
                 merged_items,
                 now=run_started_at,
             )
-            save_staging_state(
-                staged_items,
-                staging_path,
-                updated_at=run_started_at,
-            )
             staged_identities = {
                 item_identity(item) for item in staged_items
             }
-            staged_added = len(staged_identities - existing_identities)
+            added_identities = staged_identities - existing_identities
+            staged_added = len(added_identities)
             run_report.set_metric(
                 "staged_added",
                 staged_added,
             )
             run_report.set_metric("staged_total", len(staged_items))
+            if EVENT_CATALOG_PATH.exists() and added_identities:
+                new_items = [
+                    item
+                    for item in staged_items
+                    if item_identity(item) in added_identities
+                ]
+                analyzed = await self._analyze_content(new_items)
+                qualified = [
+                    item
+                    for item in analyzed
+                    if item.ai_score is not None
+                    and item.ai_score >= self.config.filtering.ai_score_threshold
+                ]
+                run_report.set_metric("event_analyzed", len(analyzed))
+                run_report.set_metric("event_qualified", len(qualified))
+                await self._update_event_timeline(qualified, run_report=run_report)
+            # Commit the incoming staging batch only after event processing
+            # succeeds. A failed classification run is therefore refetched,
+            # not silently marked old and skipped forever.
+            save_staging_state(
+                staged_items,
+                staging_path,
+                updated_at=run_started_at,
+            )
             self.console.print(
                 f"✅ Added {staged_added} new unique items; "
                 f"{len(staged_items)} retained in {staging_path}"
@@ -1223,6 +1256,13 @@ class BMTNewsOrchestrator:
                     min(1, len(editorial_plan.sponsored)),
                 )
 
+            # Event membership is assigned before rendering and archiving so
+            # both the human page and edition JSON point to the exact update.
+            await self._update_event_timeline(
+                important_items,
+                run_report=run_report,
+            )
+
             # Link continuing coverage to its thread before anything renders.
             self._apply_threads(important_items, edition_date=window.date)
             run_report.set_metric(
@@ -1287,6 +1327,10 @@ class BMTNewsOrchestrator:
                 market=published.get("market"),
                 overviews=published.get("overviews"),
             )
+            # Legacy archive generation also writes the old thread index.
+            # Re-render from the authoritative event catalog last so /threads/
+            # always represents real event progression.
+            self._publish_current_event_pages()
             run_report.set_timing(
                 "archive_artifacts", time.perf_counter() - archive_started
             )
@@ -2139,6 +2183,62 @@ class BMTNewsOrchestrator:
                 f"[yellow]⚠️  Thread linking skipped: {exc}[/yellow]"
             )
 
+    async def _update_event_timeline(
+        self,
+        items: List[ContentItem],
+        *,
+        run_report: RunReport,
+    ) -> None:
+        """Update the restored catalog with qualified, previously unseen stories."""
+        if not items or not EVENT_CATALOG_PATH.exists():
+            return
+        metadata, events = load_event_catalog(EVENT_CATALOG_PATH)
+        known = known_story_assignments(events)
+        client = (
+            create_ai_client(self.config.ai)
+            if any(item.id not in known for item in items)
+            else None
+        )
+        updated, result = await update_events(items, events, client=client)
+        save_event_catalog(metadata, updated, EVENT_CATALOG_PATH)
+        self._publish_current_event_pages(events=updated)
+        for key, value in {
+            "event_items_considered": result.considered,
+            "event_items_reused": result.already_known,
+            "event_candidate_calls": result.candidates_classified,
+            "event_material_updates": result.material_updates,
+            "event_duplicate_sources": result.duplicate_sources,
+            "event_new_events": result.new_events,
+            "event_classifier_errors": result.classifier_errors,
+        }.items():
+            run_report.set_metric(
+                key, run_report.metrics.get(key, 0) + value
+            )
+        self.console.print(
+            "🧭 Event timeline: "
+            f"{result.material_updates} material updates, "
+            f"{result.duplicate_sources} duplicate sources, "
+            f"{result.new_events} new events\n"
+        )
+
+    def _publish_current_event_pages(
+        self,
+        *,
+        events=None,
+    ) -> None:
+        """Regenerate bilingual event pages, index data, and JSON endpoints."""
+        if not EVENT_CATALOG_PATH.exists():
+            return
+        if events is None:
+            _, events = load_event_catalog(EVENT_CATALOG_PATH)
+        redirects, retired = load_legacy_event_urls()
+        publish_event_compatibility_pages(
+            events,
+            redirects,
+            retired,
+            list(self.config.ai.languages) or ["zh"],
+        )
+
     def _publish_archive_artifacts(
         self,
         items: List[ContentItem],
@@ -2188,7 +2288,15 @@ class BMTNewsOrchestrator:
 
             threads = collect_threads(history, minimum_days=2, limit=40)
             entities = collect_entities(history, minimum_mentions=3, limit=40)
-            write_sitemap(history, threads=threads, entities=entities)
+            event_rows = []
+            if EVENT_CATALOG_PATH.exists():
+                _, event_rows = load_event_catalog(EVENT_CATALOG_PATH)
+            write_sitemap(
+                history,
+                threads=threads,
+                entities=entities,
+                events=event_rows,
+            )
             written = publish_archive_pages(threads, entities, languages)
             run_report.set_metric("archive_records", len(records))
             run_report.set_metric("archive_threads", len(threads))

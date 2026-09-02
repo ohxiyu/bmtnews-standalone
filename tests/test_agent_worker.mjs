@@ -28,6 +28,12 @@ function environment({includeLatest = true} = {}) {
         if (path === '/api/editions.json') {
           return Response.json({version: 1, editions: []});
         }
+        if (path === '/api/events.json') {
+          return Response.json({version: 1, events: []});
+        }
+        if (path === '/api/events/evt_example1.json') {
+          return Response.json({version: 1, event_id: 'evt_example1', updates: []});
+        }
         if (path === '/index.html.md') {
           return new Response('# BMTNews — static agent overview\n', {headers: {'Content-Type': 'text/markdown'}});
         }
@@ -131,6 +137,20 @@ test('unknown API paths and methods return structured JSON errors', async () => 
   );
   assert.equal(method.status, 405);
   assert.equal((await method.json()).error.code, 'method_not_allowed');
+});
+
+test('event index and detail are public JSON API routes', async () => {
+  const index = await worker.handleRequest(
+    new Request('https://bmt.news/api/events.json'), environment()
+  );
+  const detail = await worker.handleRequest(
+    new Request('https://bmt.news/api/events/evt_example1.json'), environment()
+  );
+
+  assert.equal(index.status, 200);
+  assert.equal(detail.status, 200);
+  assert.equal(index.headers.get('Access-Control-Allow-Origin'), '*');
+  assert.equal((await detail.json()).event_id, 'evt_example1');
 });
 
 test('missing dated editions return JSON and unknown markdown paths stay 404', async () => {

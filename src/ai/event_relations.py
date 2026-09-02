@@ -30,6 +30,7 @@ def _event_context(event: TrackedEvent) -> dict:
         "identifiers": event.identifiers,
         "recent_updates": [
             {
+                "update_id": update.update_id,
                 "occurred_at": update.occurred_at.isoformat(),
                 "update_type": update.update_type.value,
                 "what_changed_zh": update.what_changed_zh,

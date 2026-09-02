@@ -20,6 +20,10 @@ polling, and retain the original publisher URL when presenting a story.
 - [`GET /api/editions.json`](/api/editions.json) lists available edition dates.
 - `GET /editions/{date}/edition.json` returns one dated edition, where `date`
   uses `YYYY-MM-DD`.
+- [`GET /api/events.json`](/api/events.json) lists events with at least two
+  verified material updates, newest change first.
+- `GET /api/events/{event_id}.json` returns one chronological event timeline,
+  including status, current state, update type, story IDs, and source evidence.
 - [`GET /openapi.json`](/openapi.json) is the authoritative OpenAPI 3.1
   description. Every operation has a unique `operationId`, typed parameters,
   response schemas, and an explicit JSON error response.
@@ -35,6 +39,7 @@ run-statistic, overview, and market-snapshot fields when available.
 curl -sS https://bmt.news/api/latest.json
 curl -sS https://bmt.news/api/editions.json
 curl -sS https://bmt.news/editions/2026-08-24/edition.json
+curl -sS https://bmt.news/api/events.json
 ```
 
 ## Errors and compatibility

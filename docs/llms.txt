@@ -2,12 +2,13 @@
 
 > BMTNews is a bilingual daily intelligence briefing for material crypto events, selected AI developments, and policy changes that can affect digital-asset markets.
 
-BMTNews publishes one ranked edition each day. Stories include source attribution, concise factual summaries, background, market-impact analysis, and links to original reporting. Use the JSON API for structured retrieval and the Atom feeds for category subscriptions. Content is research information, not investment advice. Preserve the original-source URL when citing a story.
+BMTNews publishes one ranked edition each day and refreshes event timelines after scheduled four-hour source collection. Stories include source attribution, concise factual summaries, background, market-impact analysis, and links to original reporting. Event timelines separate material changes from duplicate coverage. Use the JSON API for structured retrieval and the Atom feeds for category subscriptions. Content is research information, not investment advice. Preserve the original-source URL when citing a story.
 
 ## When to use BMTNews
 
 - [Latest edition JSON](https://bmt.news/api/latest.json): Use for the newest ranked edition and its bilingual titles, summaries, scores, categories, source counts, and market snapshot.
 - [Edition index JSON](https://bmt.news/api/editions.json): Use to discover available dates before requesting a historical edition.
+- [Event index JSON](https://bmt.news/api/events.json): Use to discover events with multiple verified material updates and follow their current status.
 - [Crypto feed](https://bmt.news/feeds/crypto-en.xml): Use for a lightweight stream of selected crypto stories.
 - [AI and technology feed](https://bmt.news/feeds/technology-en.xml): Use when the task needs the small AI and technology allocation from each edition.
 - [Policy feed](https://bmt.news/feeds/policy-en.xml): Use when the task concerns regulation, legislation, central banks, or government policy relevant to crypto markets.

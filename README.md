@@ -30,11 +30,11 @@ every published artifact is a static file.
 ## What makes an edition
 
 ```
-collect every ~4h ─► fixed 24h window ─► AI scoring ─► dedup ─► quota balance
-                                                                     │
-                          archive ◄── publish ◄── enrichment ◄───────┘
-                             │            │
-        threads · entities · JSON API · category feeds · weekly review
+collect every ~4h ─► cached scoring ─► incremental event timeline
+          │
+          └──────────► fixed 24h edition ─► dedup ─► quota balance ─► publish
+                                                            │
+              events · entities · JSON API · feeds · weekly review
 ```
 
 - **Fixed publication window.** Every edition covers exactly 08:00→08:00 local
@@ -56,8 +56,8 @@ collect every ~4h ─► fixed 24h window ─► AI scoring ─► dedup ─► 
   News, GDELT, and Google News
 - **📄 Full-article reading** — major feeds are fetched in full rather than
   summarized from an RSS snippet
-- **🧵 Story threads** — continuing coverage is linked across days, so an
-  incident and its follow-up read as one timeline
+- **🧵 Event timelines** — material changes become chronological updates;
+  repeated coverage adds source evidence without inventing another update
 - **🏷️ Entity pages** — everything published about a company, protocol, or
   regulator, aggregated and linkable
 - **🔍 Background & market impact** — each story carries researched context and
@@ -65,8 +65,8 @@ collect every ~4h ─► fixed 24h window ─► AI scoring ─► dedup ─► 
 - **✍️ Editorial layer** — insert your own stories, run a labelled ad slot, or
   suppress a story, from a form-based web admin
 - **🌐 Bilingual** — English and Chinese editions from the same source set
-- **🔌 Machine-readable** — `edition.json` per date, `latest.json`, and
-  per-category Atom feeds
+- **🔌 Machine-readable** — edition and event JSON endpoints plus per-category
+  Atom feeds
 - **📬 Multi-channel delivery** — the site, Telegram, email, webhooks, and
   optional X distribution spread across peak reading hours
 
@@ -89,7 +89,7 @@ Other modes:
 
 | Command | What it does |
 |---|---|
-| `uv run bmtnews --mode fetch` | Collect into the staging cache without calling the AI |
+| `uv run bmtnews --mode fetch` | Collect new items, reuse cached scoring, and increment the restored event catalog |
 | `uv run bmtnews --mode publish` | Build and publish one fixed-window edition |
 | `uv run bmtnews --mode weekly` | Build the weekly review from the archive |
 | `uv run bmtnews --mode x-post` | Post the next scheduled story to X |
@@ -101,7 +101,7 @@ Full configuration reference: [project-docs/configuration.md](project-docs/confi
 
 | Workflow | Schedule | Purpose |
 |---|---|---|
-| `feed-collection` | every ~4h + 08:37 | Collect sources and run an independent daily recovery check |
+| `feed-collection` | every ~4h + 08:37 | Collect new sources, update event pages, and run a daily recovery check |
 | `daily-summary` | 08:30 Asia/Shanghai | Build and publish the edition |
 | `weekly-review` | Mondays 09:30 | Weekly digest and scoring calibration |
 | `x-distribution` | publication + 5× daily | Drip-post top stories immediately, then at peak hours |

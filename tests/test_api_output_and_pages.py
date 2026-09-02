@@ -30,6 +30,7 @@ from src.site_pages import (
     build_thread_index_data,
     publish_archive_pages,
     publish_event_compatibility_pages,
+    write_event_api,
     render_entity_page,
     render_event_page,
     render_legacy_event_redirect,
@@ -146,6 +147,24 @@ def test_edition_payload_shape_and_thread_links() -> None:
     assert item["title"]["zh"] == "一条新闻"
     assert item["sources_count"] == 2
     assert item["thread"]["url"].endswith("/threads/tabc/")
+
+
+def test_edition_payload_links_exact_event_update() -> None:
+    record = make_record().model_copy(
+        update={
+            "event_id": "evt_example1",
+            "event_update_id": "upd_example1",
+        }
+    )
+    payload = build_edition_payload(
+        [record], date="2026-08-09", stats={"displayed": 1}
+    )
+
+    event = payload["items"][0]["event"]
+    assert event["event_id"] == "evt_example1"
+    assert event["update_id"] == "upd_example1"
+    assert event["url"].endswith("/events/evt_example1/#upd_example1")
+    assert event["json"].endswith("/api/events/evt_example1.json")
 
 
 def test_write_edition_api_writes_dated_and_latest(tmp_path: Path) -> None:
@@ -371,6 +390,28 @@ def test_event_page_renders_material_updates_in_chronological_order() -> None:
     assert page.index("第 1 个变化") < page.index("第 2 个变化")
     assert "https://example.com/evt_example1/0" in page
     assert "当前状态" in page
+    assert 'id="upd_example1"' in page
+    assert "/api/events/evt_example1.json" in page
+    assert "alternate_url: /en/events/evt_example1/" in page
+
+
+def test_event_api_writes_index_and_full_timeline(tmp_path: Path) -> None:
+    singleton = make_event("evt_single001", updates=1)
+    progression = make_event("evt_progress1", updates=2)
+    paths = write_event_api(
+        [singleton, progression],
+        api_root=tmp_path / "api" / "events",
+        index_path=tmp_path / "api" / "events.json",
+    )
+
+    index = json.loads((tmp_path / "api" / "events.json").read_text())
+    detail = json.loads(
+        (tmp_path / "api" / "events" / "evt_progress1.json").read_text()
+    )
+    assert len(paths) == 3
+    assert [row["event_id"] for row in index["events"]] == ["evt_progress1"]
+    assert detail["event_id"] == "evt_progress1"
+    assert len(detail["updates"]) == 2
 
 
 def test_legacy_redirect_has_noindex_canonical_target() -> None:

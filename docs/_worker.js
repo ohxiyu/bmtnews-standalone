@@ -4,8 +4,9 @@ const MARKDOWN_ROUTES = new Map([
   ['/en', 'en'],
   ['/en/', 'en']
 ]);
-const JSON_API_PATHS = new Set(['/api/latest.json', '/api/editions.json']);
+const JSON_API_PATHS = new Set(['/api/latest.json', '/api/editions.json', '/api/events.json']);
 const DATED_EDITION_PATH = /^\/editions\/\d{4}-\d{2}-\d{2}\/edition\.json$/;
+const EVENT_DETAIL_PATH = /^\/api\/events\/evt_[a-z0-9_-]{6,80}\.json$/;
 
 function parseAccept(header) {
   return String(header || '')
@@ -118,6 +119,7 @@ export function renderEditionMarkdown(payload, language) {
     '',
     `- [${isEnglish ? 'Latest edition JSON' : '最新一期 JSON'}](${SITE_ORIGIN}/api/latest.json)`,
     `- [${isEnglish ? 'Edition index JSON' : '历史期次索引 JSON'}](${SITE_ORIGIN}/api/editions.json)`,
+    `- [${isEnglish ? 'Event timeline JSON' : '事件线 JSON'}](${SITE_ORIGIN}/api/events.json)`,
     `- [OpenAPI](${SITE_ORIGIN}/openapi.json)`,
     `- [llms.txt](${SITE_ORIGIN}/llms.txt)`,
     `- [${isEnglish ? 'Developer documentation' : '开发者文档'}](${SITE_ORIGIN}/developers/)`,
@@ -191,7 +193,7 @@ async function markdownHome(request, env, language) {
 }
 
 function isJsonApiPath(pathname) {
-  return JSON_API_PATHS.has(pathname) || DATED_EDITION_PATH.test(pathname);
+  return JSON_API_PATHS.has(pathname) || DATED_EDITION_PATH.test(pathname) || EVENT_DETAIL_PATH.test(pathname);
 }
 
 async function handleOriginRequest(request, env) {
@@ -212,7 +214,7 @@ async function handleOriginRequest(request, env) {
   const assetResponse = await env.ASSETS.fetch(request);
   if (apiPath) {
     if (!assetResponse.ok || !String(assetResponse.headers.get('Content-Type')).includes('application/json')) {
-      return jsonError(404, 'not_found', 'The requested edition resource does not exist.', 'Use /api/editions.json to discover available edition dates.');
+      return jsonError(404, 'not_found', 'The requested API resource does not exist.', 'Use /api/editions.json or /api/events.json to discover available resources.');
     }
     return responseWithHeaders(assetResponse, (headers) => {
       headers.set('Access-Control-Allow-Origin', '*');
@@ -241,6 +243,7 @@ function cachePolicy(request) {
   }
   if (DATED_EDITION_PATH.test(url.pathname)) return {ttl: 86400, immutable: true};
   if (url.pathname === '/api/editions.json') return {ttl: 1800};
+  if (url.pathname === '/api/events.json' || EVENT_DETAIL_PATH.test(url.pathname)) return {ttl: 300};
   if (url.pathname === '/api/latest.json') return {ttl: 600};
   if (url.pathname === '/feed-zh.xml' || url.pathname === '/feed-en.xml') return {ttl: 1800};
   if (url.pathname === '/' || url.pathname === '/en' || url.pathname === '/en/') return {ttl: 300};
