@@ -12815,7 +12815,7 @@
       "first_seen_at": "2026-09-02T22:45:37.570180Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-02T22:45:37.570180Z",
-      "last_updated_at": "2026-09-03T03:23:43.644457Z",
+      "last_updated_at": "2026-09-03T16:36:26.756390Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -12868,11 +12868,18 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdm1RR09NMXJEYjdTYVI4M181aHVXZDZzb095Rk15SU45ZnZ3aG1FVGVTRDdhNnhJeTl4emZxMHphWjExeHRDX2JkUUpkQXZWemtKRzBnSUdGd1BpdklEN1ZldDZ1RzFkd2dGQjJRcWFUQ0puZThibDlwbzVHbWNWLWVOMA?oc=5"
+            },
+            {
+              "label": "BitKE",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQN1ZNcjVkcHQ1MEJRMHBmemNqZEtXTktsSGlLNEhhS0hBR3E4a0d5WEQtUkpiZjRzbERsTzVhMGUwd1AxWmZmek5GbVpTemRZQ3NhcWZkeUdwNEFmNWtyWlRfS2Jxa0dUVVlrY0YtalZmZVM3b2FpQTNfYXp0YUQ0RVU0S1I3U1NZVGV0dg?oc=5"
             }
           ],
           "story_ids": [
             "rss:cointelegraph.com_rss:4b3658772a406b0c",
-            "google_news:article:9d473fffc58d6f52"
+            "google_news:article:9d473fffc58d6f52",
+            "google_news:article:733e2f0558cb893a"
           ],
           "time_precision": "published",
           "title_en": "Coinbase launches regulated crypto derivatives in Canada",
@@ -14216,18 +14223,20 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "SoFi and Kraken announce a partnership, signaling increasing convergence between traditional banking and cryptocurrency services.",
-      "current_state_zh": "SoFi and Kraken announce a partnership, signaling increasing convergence between traditional banking and cryptocurrency services.",
+      "current_state_en": "SoFi and Kraken announce a partnership where Kraken parent Payward lists SoFiUSD, connects to SoFi's 24/7 settlement network, and provides digital asset liquidity via Kraken Prime, signaling convergence between banking and crypto services.",
+      "current_state_zh": "SoFi与Kraken宣布合作，由Kraken母公司Payward上市SoFiUSD，接入24/7结算网络，并通过Kraken Prime提供数字资产流动性，体现银行与加密服务融合。",
       "entities": [
         "kraken",
+        "payward",
+        "settlement",
         "sofi"
       ],
       "event_id": "evt_06a1dbfafe1334ab",
       "event_type": "other",
       "first_seen_at": "2026-09-03T13:36:18.724067Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-03T13:36:18.724067Z",
-      "last_updated_at": "2026-09-03T13:36:18.724067Z",
+      "last_material_change_at": "2026-09-03T16:36:35.444654Z",
+      "last_updated_at": "2026-09-03T16:36:35.444654Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -14237,6 +14246,7 @@
         "crypto-banking",
         "kraken",
         "partnership",
+        "settlement",
         "sofi"
       ],
       "updates": [
@@ -14277,6 +14287,44 @@
           "update_type": "initial",
           "what_changed_en": "SoFi and Kraken announce a partnership, signaling increasing convergence between traditional banking and cryptocurrency services.",
           "what_changed_zh": "SoFi and Kraken announce a partnership, signaling increasing convergence between traditional banking and cryptocurrency services."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "SoFi and Kraken announce a partnership where Kraken parent Payward lists SoFiUSD, connects to SoFi's 24/7 settlement network, and provides digital asset liquidity via Kraken Prime, signaling convergence between banking and crypto services.",
+          "current_state_zh": "SoFi与Kraken宣布合作，由Kraken母公司Payward上市SoFiUSD，接入24/7结算网络，并通过Kraken Prime提供数字资产流动性，体现银行与加密服务融合。",
+          "detailed_summary_en": "Kraken parent Payward partners with SoFi to list SoFiUSD, connect to SoFi's 24/7 settlement network, and provide digital asset liquidity via Kraken Prime.",
+          "detailed_summary_zh": "Kraken parent Payward partners with SoFi to list SoFiUSD, connect to SoFi's 24/7 settlement network, and provide digital asset liquidity via Kraken Prime.",
+          "event_id": "evt_06a1dbfafe1334ab",
+          "first_seen_at": "2026-09-03T16:36:35.444654Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T16:04:11Z",
+          "published_at": "2026-09-03T16:04:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/kraken-parent-payward-partners-with-sofi-stablecoin-247-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:76c4e6c7cc6d7d31"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken parent Payward partners with SoFi on stablecoin, 24/7 settlement",
+          "title_zh": "Kraken parent Payward partners with SoFi on stablecoin, 24/7 settlement",
+          "update_id": "upd_6b95a0c00a0e054c",
+          "update_type": "confirmation",
+          "what_changed_en": "Kraken parent Payward partners with SoFi to list SoFiUSD, connect to SoFi's 24/7 settlement network, and provide digital asset liquidity via Kraken Prime.",
+          "what_changed_zh": "Kraken母公司Payward与SoFi合作，将上市SoFiUSD，接入SoFi的24/7结算网络，并通过Kraken Prime提供数字资产流动性。"
         }
       ]
     },
@@ -14677,6 +14725,503 @@
           "update_type": "initial",
           "what_changed_en": "Standard Chartered launches spot Bitcoin and Ether trading for institutional clients in the UAE, claiming to be the first major global bank to offer this in the region.",
           "what_changed_zh": "Standard Chartered launches spot Bitcoin and Ether trading for institutional clients in the UAE, claiming to be the first major global bank to offer this in the region."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+      "current_state_zh": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+      "entities": [
+        "acquire",
+        "face",
+        "hugging",
+        "hugging-face",
+        "nvidia"
+      ],
+      "event_id": "evt_da7586e422eb8ab3",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T16:36:26.118075Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:26.118075Z",
+      "last_updated_at": "2026-09-03T16:36:26.118075Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Nvidia to Acquire Hugging Face",
+      "title_zh": "Nvidia to Acquire Hugging Face",
+      "topics": [
+        "acquisition",
+        "hugging-face",
+        "nvidia",
+        "open-source"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+          "current_state_zh": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+          "detailed_summary_en": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+          "detailed_summary_zh": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+          "event_id": "evt_da7586e422eb8ab3",
+          "first_seen_at": "2026-09-03T16:36:26.118075Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T12:10:33Z",
+          "published_at": "2026-09-03T12:10:33Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49548952"
+            }
+          ],
+          "sources": [
+            {
+              "label": "tosh",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49548952"
+          ],
+          "time_precision": "published",
+          "title_en": "Nvidia to Acquire Hugging Face",
+          "title_zh": "Nvidia to Acquire Hugging Face",
+          "update_id": "upd_a78d5e7c5466899e",
+          "update_type": "initial",
+          "what_changed_en": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets.",
+          "what_changed_zh": "NVIDIA announces it is acquiring Hugging Face, the leading platform for open-source AI models and datasets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+      "current_state_zh": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+      "entities": [
+        "kraken",
+        "sofi"
+      ],
+      "event_id": "evt_edbc8549239dfbeb",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T16:36:26.756318Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:26.756318Z",
+      "last_updated_at": "2026-09-03T16:36:26.756318Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SoFi, Kraken tie up as crypto and banking push into each other's turf - cryptonews.net",
+      "title_zh": "SoFi, Kraken tie up as crypto and banking push into each other's turf - cryptonews.net",
+      "topics": [
+        "crypto-banking",
+        "kraken",
+        "partnership",
+        "sofi"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+          "current_state_zh": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+          "detailed_summary_en": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+          "detailed_summary_zh": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+          "event_id": "evt_edbc8549239dfbeb",
+          "first_seen_at": "2026-09-03T16:36:26.756318Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T12:15:44Z",
+          "published_at": "2026-09-03T12:15:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "cryptonews.net",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12UmRGSGVEYXF6RG5aak4xUHc5NUEwM2VjVi1TdXJkZGZ4bDFZa2NUY1hqa1h6aU5yX3BZX1VpSEhHay1JajNlbGJUQk9pMU9RNU52emgxWQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:1c64dcad94bd7062"
+          ],
+          "time_precision": "published",
+          "title_en": "SoFi, Kraken tie up as crypto and banking push into each other's turf - cryptonews.net",
+          "title_zh": "SoFi, Kraken tie up as crypto and banking push into each other's turf - cryptonews.net",
+          "update_id": "upd_d866b03168364877",
+          "update_type": "initial",
+          "what_changed_en": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap.",
+          "what_changed_zh": "SoFi and Kraken are partnering as the crypto and banking industries increasingly overlap."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+      "current_state_zh": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+      "entities": [
+        "chartered",
+        "dubai",
+        "standard",
+        "standard-chartered"
+      ],
+      "event_id": "evt_f4098aee85984d6b",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T16:36:27.066694Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:27.066694Z",
+      "last_updated_at": "2026-09-03T16:36:27.066694Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Standard Chartered brings spot crypto trading to Dubai FX platform",
+      "title_zh": "Standard Chartered brings spot crypto trading to Dubai FX platform",
+      "topics": [
+        "ether",
+        "standard-chartered",
+        "uae"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+          "current_state_zh": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+          "detailed_summary_en": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+          "detailed_summary_zh": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+          "event_id": "evt_f4098aee85984d6b",
+          "first_seen_at": "2026-09-03T16:36:27.066694Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T15:58:02Z",
+          "published_at": "2026-09-03T15:58:02Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/03/standard-chartered-first-top-global-bank-to-offer-bitcoin-and-ether-trading-in-uae"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:4d30dbb3b60e07eb"
+          ],
+          "time_precision": "published",
+          "title_en": "Standard Chartered brings spot crypto trading to Dubai FX platform",
+          "title_zh": "Standard Chartered brings spot crypto trading to Dubai FX platform",
+          "update_id": "upd_0aecb8899ad7d9e0",
+          "update_type": "initial",
+          "what_changed_en": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform.",
+          "what_changed_zh": "Standard Chartered becomes the first top global bank to offer spot Bitcoin and Ether trading in the UAE through its Dubai FX platform."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+      "current_state_zh": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+      "entities": [
+        "chain",
+        "memecoin",
+        "robinhood",
+        "robinhood-chain"
+      ],
+      "event_id": "evt_14ff2d732fb6189c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T16:36:27.100709Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:27.100709Z",
+      "last_updated_at": "2026-09-03T16:36:27.100709Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A memecoin making app becomes crypto’s top fee generators as Robinhood Chain activity explodes",
+      "title_zh": "A memecoin making app becomes crypto’s top fee generators as Robinhood Chain activity explodes",
+      "topics": [
+        "fees",
+        "memecoin",
+        "on-chain-activity",
+        "robinhood-chain"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+          "current_state_zh": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+          "detailed_summary_en": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+          "detailed_summary_zh": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+          "event_id": "evt_14ff2d732fb6189c",
+          "first_seen_at": "2026-09-03T16:36:27.100709Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T14:51:39Z",
+          "published_at": "2026-09-03T14:51:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/03/a-memecoin-making-app-becomes-crypto-s-top-fee-generators-as-robinhood-chain-activity-explodes"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:266f233e9f9be786"
+          ],
+          "time_precision": "published",
+          "title_en": "A memecoin making app becomes crypto’s top fee generators as Robinhood Chain activity explodes",
+          "title_zh": "A memecoin making app becomes crypto’s top fee generators as Robinhood Chain activity explodes",
+          "update_id": "upd_eabb35978e72a425",
+          "update_type": "initial",
+          "what_changed_en": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity.",
+          "what_changed_zh": "CoinDesk reports that a memecoin-making app on Robinhood Chain has become one of crypto's largest fee generators amid surging network activity."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+      "current_state_zh": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+      "entities": [
+        "asia",
+        "asian",
+        "bitget",
+        "blackrock",
+        "street",
+        "wall"
+      ],
+      "event_id": "evt_2b6e554ff719855c",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-03T16:36:27.121953Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:27.121953Z",
+      "last_updated_at": "2026-09-03T16:36:27.121953Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget in talks with Wall Street giants including BlackRock to fuel Asian distribution",
+      "title_zh": "Bitget in talks with Wall Street giants including BlackRock to fuel Asian distribution",
+      "topics": [
+        "asia",
+        "bitget",
+        "blackrock"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+          "current_state_zh": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+          "detailed_summary_en": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+          "detailed_summary_zh": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+          "event_id": "evt_2b6e554ff719855c",
+          "first_seen_at": "2026-09-03T16:36:27.121953Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T14:41:25Z",
+          "published_at": "2026-09-03T14:41:25Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/03/bitget-in-talks-with-wall-street-giants-including-blackrock-for-asian-distribution"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:9d89ff1225ce0d0e"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget in talks with Wall Street giants including BlackRock to fuel Asian distribution",
+          "title_zh": "Bitget in talks with Wall Street giants including BlackRock to fuel Asian distribution",
+          "update_id": "upd_f8872f9ad34c55ab",
+          "update_type": "initial",
+          "what_changed_en": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia.",
+          "what_changed_zh": "Bitget is reportedly in discussions with Wall Street giants including BlackRock to expand its crypto distribution across Asia."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+      "current_state_zh": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+      "entities": [
+        "fbi",
+        "hamas",
+        "how",
+        "law-enforcement"
+      ],
+      "event_id": "evt_fe1cd082062744e1",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-03T16:36:30.465390Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:30.465390Z",
+      "last_updated_at": "2026-09-03T16:36:30.465390Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "How FBI turned Hamas’ crypto fundraising pipeline into a law-enforcement trap",
+      "title_zh": "How FBI turned Hamas’ crypto fundraising pipeline into a law-enforcement trap",
+      "topics": [
+        "crypto-regulation",
+        "fbi",
+        "law-enforcement",
+        "seizure",
+        "terrorism-financing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+          "current_state_zh": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+          "detailed_summary_en": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+          "detailed_summary_zh": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+          "event_id": "evt_fe1cd082062744e1",
+          "first_seen_at": "2026-09-03T16:36:30.465390Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T13:40:45Z",
+          "published_at": "2026-09-03T13:40:45Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/how-fbi-turned-hamas-crypto-fundraising-pipeline-into-a-law-enforcement-trap/"
+            },
+            {
+              "label": "cryptorank.io",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeUhka0dlUnVseVZ1dHhhRm5qN2V5eUJCdjFZRUFjVVBOXzBoUkRWbm4zQ0FRT0RPXzVTWGdSRHVRV3lZMWNtT0RCdk5fd3FrOUdZUTNzdEhIdm1KZXpsei1yX3k3WEk5QlllQXU3V3llZGtVN1VFU3FfaHJpSGR6WXlWbFlJTHBJUUtKa1ZCRTI3SXdPTEdoTDJZRTc5eExqd0U2TE4tNnpNOEk5dFJYc1BzQkc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:a117c44c38a5145d",
+            "google_news:article:1e392cb40267465f"
+          ],
+          "time_precision": "published",
+          "title_en": "How FBI turned Hamas’ crypto fundraising pipeline into a law-enforcement trap",
+          "title_zh": "How FBI turned Hamas’ crypto fundraising pipeline into a law-enforcement trap",
+          "update_id": "upd_d80866dff4137809",
+          "update_type": "initial",
+          "what_changed_en": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group.",
+          "what_changed_zh": "The FBI seized Hamas-linked crypto fundraising infrastructure, recovered over $560,000 in digital assets, and used the seized systems to intercept new donations intended for the group."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+      "current_state_zh": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+      "entities": [
+        "banking",
+        "deal",
+        "kraken",
+        "links",
+        "new",
+        "sofi",
+        "stablecoin"
+      ],
+      "event_id": "evt_696b94cd96326aa1",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T16:36:34.936434Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T16:36:34.936434Z",
+      "last_updated_at": "2026-09-03T16:36:34.936434Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SoFi Links Banking Network and Stablecoin to Kraken in New Deal",
+      "title_zh": "SoFi Links Banking Network and Stablecoin to Kraken in New Deal",
+      "topics": [
+        "kraken",
+        "partnership",
+        "sofi"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+          "current_state_zh": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+          "detailed_summary_en": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+          "detailed_summary_zh": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+          "event_id": "evt_696b94cd96326aa1",
+          "first_seen_at": "2026-09-03T16:36:34.936434Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-03T15:40:08Z",
+          "published_at": "2026-09-03T15:40:08Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377283/sofi-banking-network-stablecoin-kraken"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:d611f8d1afe6d1e5"
+          ],
+          "time_precision": "published",
+          "title_en": "SoFi Links Banking Network and Stablecoin to Kraken in New Deal",
+          "title_zh": "SoFi Links Banking Network and Stablecoin to Kraken in New Deal",
+          "update_id": "upd_340b734209e089ed",
+          "update_type": "initial",
+          "what_changed_en": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers.",
+          "what_changed_zh": "SoFi is partnering with Kraken to link its banking network and stablecoin, expanding crypto access for its customers."
         }
       ]
     }
