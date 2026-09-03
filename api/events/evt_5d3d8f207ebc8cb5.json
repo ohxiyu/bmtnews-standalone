@@ -53,6 +53,16 @@
       "what_changed_en": "Zero-Balance Bug Let Empty Wallets Seize 82 Provenance Assets",
       "current_state_zh": "零余额漏洞让空钱包接管82个Provenance资产",
       "current_state_en": "Zero-Balance Bug Let Empty Wallets Seize 82 Provenance Assets",
+      "detailed_summary_zh": "Trail of Bits 披露了一个 Provenance 区块链授权漏洞，允许零代币余额的用户对 82 个活跃标记账户获得管理、铸造和提现权限。修复已在 v1.28.0 和 v1.29.0 中发布，但未确认有利用行为。\n\n该漏洞直接造成未经授权铸造代币和窃取托管资产的风险，涉及约 50 万美元的 HASH，而这是一条专为金融服务构建的区块链。它凸显了一个小的授权错误如何威胁整个网络中的资产托管和供应完整性。\n\n该缺陷源于银行模块的实时流通供应量与标记存储的供应量字段（非固定标记保持为零）不一致，导致零余额账户通过了“持有全部供应量”的检查。v1.29.0 的修复让授权检查从银行模块读取实时供应量，而不是读取过时的标记字段。",
+      "detailed_summary_en": "Trail of Bits disclosed a Provenance Blockchain authorization flaw allowing users with a zero token balance to take admin, mint, and withdrawal permissions on 82 live marker accounts. Fixes were released in v1.28.0 and v1.29.0, but no exploitation was confirmed.\n\nThe bug created a direct risk of unauthorized token minting and theft of escrowed assets, including roughly $500,000 in HASH, on a blockchain purpose-built for financial services. It underscores how a small authorization error can threaten asset custody and supply integrity across an entire network.\n\nThe flaw came from a mismatch between the bank module's live circulating supply and the marker's stored supply field, which stays zero for non-fixed markers, so a zero-balance account passed an 'holds entire supply' check. The v1.29.0 fix makes the authorization check read live supply from the bank module rather than the stale marker field.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:8f11b75ba96f2e7c"

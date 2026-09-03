@@ -45,6 +45,16 @@
       "what_changed_en": "LND cooperative-close flaw puts old nodes at full channel wipeout risk",
       "current_state_zh": "LND合作关闭漏洞可致旧版节点通道资金全损",
       "current_state_en": "LND cooperative-close flaw puts old nodes at full channel wipeout risk",
+      "detailed_summary_zh": "8月13日，LND开发者Bastien Teinturier披露了一个合作关闭漏洞，恶意对等节点可利用一个区块重组和旧版已撤销承诺交易耗尽整个通道余额。官方修复仅在LND 0.21.0版本中落地，低于0.21.0的标准版本除非单独打补丁，否则仍存在风险。\n\n由于LND是闪电网络上部署最广泛的节点实现，这一可复现的“全额余额损失”场景即使尚无已知攻击，也构成严重安全风险。运行旧版本的操作者应将自身节点视为未修复，并升级到0.21.0及以上版本以保持安全。\n\n修复前，LND在合作关闭交易获得第一次链上确认后就会遗忘该通道，如果比特币随后发生重组使该交易失效，节点将无法广播惩罚交易来应对对方发布的已撤销承诺。最大损失可达通道全部余额；目前尚无受影响用户或在野利用的确认报告。",
+      "detailed_summary_en": "LND disclosed a cooperative-close vulnerability on Aug. 13 that could let a malicious peer drain a full channel balance using a one-block reorganization and an old revoked commitment. The official fix only ships in LND 0.21.0, so standard releases below 0.21.0 remain exposed unless separately patched.\n\nBecause LND underpins the majority of Lightning Network nodes, a reproducible full-balance loss scenario is a serious security risk even with no known exploit. Operators on older releases must treat their nodes as vulnerable and upgrade to 0.21.0 or later to stay protected.\n\nBefore the fix, LND forgot a cooperatively closed channel after its closing transaction received one confirmation, leaving the node unable to broadcast penalty transactions if a reorganization removed that confirmation and a peer published a revoked commitment. The maximum loss is the channel's full balance, and no affected users or in-the-wild exploits have been confirmed.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:c2549ef50bd2ae9b"

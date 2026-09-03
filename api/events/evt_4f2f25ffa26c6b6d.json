@@ -52,6 +52,16 @@
       "what_changed_en": "Cloudflare Saves 100 TB Memory by Optimizing 1.1.1.1 DNS Cache",
       "current_state_zh": "Cloudflare 优化 1.1.1.1 DNS 缓存，节省 100 TB 内存",
       "current_state_en": "Cloudflare Saves 100 TB Memory by Optimizing 1.1.1.1 DNS Cache",
+      "detailed_summary_zh": "Cloudflare 工程师在一篇技术博客中详细介绍了如何通过重构 1.1.1.1 DNS 解析器缓存中的数据结构与内存分配策略，在整个边缘网络节省了 100 TB 的内存。这项优化显著降低了每个缓存记录的开销。\n\n该优化的意义在于展示了在关键互联网基础设施中，细致的系统级优化能够带来巨大的效率提升，从而降低硬件成本与能源消耗。这些技术也适用于其他高吞吐、内存受限的服务，并且证明了底层编程专业技能依然至关重要。\n\n该优化主要通过重新组织缓存键与记录在内存中的布局，来减少每条记录的内存开销。评论者还指出，缓存行对齐与 slab 式分配可进一步减少碎片化并提升 CPU 缓存性能。",
+      "detailed_summary_en": "Cloudflare engineers detailed how they reduced memory usage by 100 terabytes across their edge network by reworking the data structures and allocation strategies in the 1.1.1.1 DNS resolver cache. The optimization cuts per-record overhead in one of the world's busiest DNS services.\n\nThis matters because it shows how careful systems-level optimization can yield massive efficiency gains in critical internet infrastructure, reducing hardware costs and energy consumption. The techniques are applicable to other high-throughput, memory-bound services and demonstrate the continued relevance of low-level programming expertise.\n\nThe optimization primarily reduces per-record memory overhead by restructuring how cache keys and entries are laid out in memory. Commenters also pointed to cache-line alignment and slab-style allocation as complementary ways to cut fragmentation and improve CPU cache behavior.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49468083"

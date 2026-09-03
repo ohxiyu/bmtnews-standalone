@@ -57,6 +57,16 @@
       "what_changed_en": "Polygon Labs Urges Node Upgrades After Austin, Kyoto Hardforks",
       "current_state_zh": "Polygon Labs 敦促节点在 Austin 与 Kyoto 硬分叉后升级",
       "current_state_en": "Polygon Labs Urges Node Upgrades After Austin, Kyoto Hardforks",
+      "detailed_summary_zh": "Polygon Labs 发布紧急通知，要求 Polygon PoS 节点运营者在 Austin 和 Kyoto 硬分叉激活后将 Bor 升级到 v2.10.0 或更高版本，并将 Heimdall 升级到 v0.11.0 或更高版本。仍然运行硬分叉前二进制的节点已经脱离规范共识，必须追赶同步后才能重新加入网络。\n\n这次升级对于所有希望保持共识的 Polygon PoS 节点都是强制性的，因此对验证者和基础设施提供商至关重要。它还带来了安全加固修复，降低了资源耗尽和活性风险，为网络后续的架构转型打下更坚实的基础。\n\nAustin 限制了 Bor 处理状态同步桥接事件时的 gas 消耗，并移除了无大小限制的 TxDependency 附加数据字段；Kyoto 则增加了对 protobuf.Any 消息的嵌套检查、限制了 fee-coin 列表，并修复了多个检查点和签名边界情况。两个硬分叉均为纯二进制升级，无状态迁移，因此未发生分叉的节点无需重新同步。",
+      "detailed_summary_en": "Polygon Labs issued an urgent notice requiring Polygon PoS node operators to upgrade Bor to v2.10.0 or later and Heimdall to v0.11.0 or later after the Austin and Kyoto hardforks activated. Nodes that remained on pre-hardfork binaries have already fallen out of canonical consensus and must catch up to rejoin the network.\n\nThe upgrade is mandatory for all Polygon PoS nodes that want to stay in consensus, making it critical for validators and infrastructure providers. It also ships security hardening fixes that reduce resource-exhaustion and liveness risks, strengthening the network ahead of further architectural transitions.\n\nAustin capped gas consumption during Bor's processing of state-sync bridge events and removed the unbounded TxDependency extra-data field, while Kyoto added nesting checks for protobuf.Any messages, capped fee-coin lists, and fixed several checkpoint and signature edge cases. Both hardforks are plain binary upgrades with no state migration, so non-diverged nodes do not need a resync.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:cc24af99cc5c3546"

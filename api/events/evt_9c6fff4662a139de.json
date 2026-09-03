@@ -46,6 +46,29 @@
       "what_changed_en": "Wyoming has adopted Chainlink Proof of Reserve to publish near-real-time onchain reserve and supply data for its state-issued FRNT stable token.",
       "current_state_zh": "Wyoming has adopted Chainlink Proof of Reserve to publish near-real-time onchain reserve and supply data for its state-issued FRNT stable token.",
       "current_state_en": "Wyoming has adopted Chainlink Proof of Reserve to publish near-real-time onchain reserve and supply data for its state-issued FRNT stable token.",
+      "detailed_summary_zh": "怀俄明州稳定币委员会已于周三采用 Chainlink 的 Proof of Reserve（储备证明），将 FRNT 的储备和代币供应量以近乎实时的链上验证方式发布。该集成补充了现有的每日认证，并先于计划中的 Chainlink Secure Mint 执行功能落地。\n\n这标志着美国州级发行的稳定币对 Chainlink 的一次重要机构级采用，为法币支持的代币化资产带来了近乎实时的透明度。此举巩固了 Chainlink 在受监管代币化金融领域的地位，并可能为其他公共发行人提供可借鉴的链上储备验证模板。\n\nFRNT 于今年 1 月在怀俄明州稳定币委员会框架下推出，由美元和短期美国国债支持，储备产生的利息收入将进入怀俄明州学校基金会计划。该委员会还计划采用 Chainlink 的 Secure Mint 功能，即只有在经核实的储备等于或超过 FRNT 总供应量时，才能铸造新代币。",
+      "detailed_summary_en": "The Wyoming Stable Token Commission on Wednesday adopted Chainlink Proof of Reserve to publish near-real-time onchain verification of FRNT's reserves and token supply. The integration complements daily attestations and comes ahead of a planned Chainlink Secure Mint enforcement feature.\n\nThis marks a notable institutional adoption of Chainlink by a US state-issued stablecoin, bringing near-real-time transparency to a fiat-backed tokenized asset. It strengthens Chainlink's position in regulated tokenized finance and may serve as a template for other public issuers seeking verifiable onchain reserve reporting.\n\nFRNT, which launched in January under the Wyoming Stable Token Commission, is backed by US dollars and short-term US Treasurys, with interest income channeled into Wyoming's School Foundation Program. The commission is also working to adopt Chainlink's Secure Mint, which would require verified reserves to equal or exceed FRNT's total supply before new tokens can be minted.",
+      "background_zh": "Chainlink Proof of Reserve 是一种基于预言机的系统，通过从托管方获取数据、经去中心化预言机网络验证，并在储备余额变化时自动更新智能合约，从而将链下储备数据引入链上。怀俄明州 FRNT 被描述为美国公共实体发行的首个法币支持且全额储备的稳定代币；该州也已将 Chainlink 的跨链互操作协议（CCIP）设为该代币唯一的跨链基础设施。",
+      "background_en": "Chainlink Proof of Reserve is an oracle-based system that brings off-chain reserve data onchain by fetching data from custodians, verifying it through a decentralized oracle network, and automatically updating smart contracts when reserve balances change. Wyoming's FRNT is described as the first fiat-backed and fully-reserved stable token issued by a US public entity, and the state has also made Chainlink's Cross-Chain Interoperability Protocol the token's exclusive cross-chain infrastructure.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "此次集成是 Chainlink Proof of Reserve 及更广泛预言机基础设施在公共部门的又一应用案例，反映出在 GENIUS 法案等监管框架推动下，机构对可验证稳定币透明度的需求不断增长。LINK 的市场敞口主要通过网络使用预期和代币化市场的持续采用而间接传导，而非来自这一单一事件的直接现金流或托管关系。",
+      "market_impact_en": "This integration adds another public-sector use case for Chainlink's Proof of Reserve and broader oracle infrastructure, reflecting growing institutional demand for verifiable stablecoin transparency, partly driven by regulatory frameworks such as the GENIUS Act. LINK's exposure is largely indirect and relates to anticipated network usage and continued adoption across tokenized markets, rather than any direct cash-flow or custody relationship from this single event.",
+      "importance_score": 7.0,
+      "references": [
+        {
+          "url": "https://stabletoken.wyo.gov/",
+          "title": "Wyoming Stable Token Commission"
+        },
+        {
+          "url": "https://chain.link/blog/7-key-principles-for-proof-of-reserves",
+          "title": "7 Key Principles for Proof of Reserves | Chainlink"
+        },
+        {
+          "url": "https://www.franklintempleton.com/press-releases/news-room/2026/state-of-wyoming-debuts-usdfrnt-the-nations-first-state-issued-stable-token-with-franklin-templeton-managed-reserves",
+          "title": "State of Wyoming Debuts $FRNT, the Nation’s First State ..."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:feb86ee19621d6cd"

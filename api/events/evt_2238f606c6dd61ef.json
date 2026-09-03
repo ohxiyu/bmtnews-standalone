@@ -49,6 +49,16 @@
       "what_changed_en": "seL4 Security Proofs Complete on AArch64",
       "current_state_zh": "seL4安全证明在AArch64上完成",
       "current_state_en": "seL4 Security Proofs Complete on AArch64",
+      "detailed_summary_zh": "seL4微内核的正式安全证明已在AArch64（64位ARM）架构上完成，将其经验证的正确性和安全保证扩展到这一广泛使用的平台。这标志着该微内核在形式化验证方面的一个重要里程碑。\n\nAArch64是移动、嵌入式以及日益增长的服务器系统的主导架构，因此在该平台上证明seL4的安全属性，可推动汽车、航空电子和国防等安全关键行业的高保障部署。这也表明大规模形式化验证对实际生产级内核正变得切实可行。\n\n已完成的证明涵盖了seL4在AArch64上的安全属性，但社区评论指出，目前这些证明不包括MCS（混合关键性系统）扩展，且仅限于单核配置。该验证是机器码级别的证明，但旁道时序攻击并不在此结果的覆盖范围内。",
+      "detailed_summary_en": "The seL4 microkernel's formal security proofs have been completed on the AArch64 (64-bit ARM) architecture, extending its verified correctness and security guarantees to this widely used platform. This marks a significant formal verification milestone for the microkernel.\n\nAArch64 is the dominant architecture for mobile, embedded, and increasingly server systems, so proving seL4's security properties on this platform can enable high-assurance deployments in safety-critical industries such as automotive, avionics, and defense. It also demonstrates that large-scale formal verification is becoming practical for real-world production kernels.\n\nThe completed proofs cover seL4's security properties on AArch64, but community comments note that they currently exclude MCS (mixed criticality system) extensions and are limited to unicore (single-core) configurations. The verification is a machine-code-level proof, yet side-channel timing attacks are not covered by the result.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49418255"

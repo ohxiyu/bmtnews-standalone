@@ -55,6 +55,29 @@
       "what_changed_en": "Switchboard Move Oracle Compromise Sparks Liquidations, Frozen Vaults",
       "current_state_zh": "Switchboard Move预言机遭入侵，引发清算与金库冻结",
       "current_state_en": "Switchboard Move Oracle Compromise Sparks Liquidations, Frozen Vaults",
+      "detailed_summary_zh": "预言机提供商Switchboard在疑似Move语言实现被攻破后，暂停了其在Aptos、Sui、IOTA和Movement上的Move链部署。多个DeFi应用报告亏损或冻结：Virtue发生47次清算、影响45名用户，Full Sail确认金库出现损失，Volo则出于谨慎暂停了访问。\n\n这一事件说明，多个独立区块链共享同一套基于Move的预言机代码时，一处被攻破便可能引发连锁反应，直接影响用户资金并削弱对DeFi的信任，并可能推动市场对更具韧性的预言机设计和跨链安全实践的需求。\n\nVirtue披露，攻击者控制了Switchboard在IOTA主网队列中全部14个预言机的签名密钥，将IOTA价格推高至1000万美元，并以存入1个IOTA为抵押铸造了约494万VUSD，随后又将价格压至接近零以触发清算。Switchboard表示Solana实现未收到类似报告，但尚未公布根因或恢复时间表。",
+      "detailed_summary_en": "Switchboard, an oracle provider, halted its Move-based deployments on Aptos, Sui, IOTA, and Movement after a suspected compromise in its Move-language implementations. Multiple DeFi applications reported losses or freezes: Virtue suffered 47 liquidations across 45 users, Full Sail confirmed vault losses, and Volo paused access as a precaution.\n\nThis incident demonstrates how a single oracle compromise can cascade across multiple independent blockchains because they share the same Move-based oracle code, directly impacting user funds and DeFi trust. It may accelerate demand for more resilient oracle designs and cross-chain security practices.\n\nVirtue reported that the attacker gained control of signing keys for all 14 oracles on Switchboard's IOTA mainnet queue, spiking IOTA's price to $10 million to mint about 4.94 million VUSD from a 1 IOTA deposit, then crashing the feed to trigger liquidations. Switchboard said it had no similar reports for its Solana implementation, but has not yet published a root cause or restoration timeline.",
+      "background_zh": "区块链预言机是一种将外部真实世界数据提供给智能合约的服务，因为区块链本身无法直接获取这类数据。Move是一种智能合约编程语言，最初由Meta为Libra项目开发，现在被Aptos、Sui、IOTA和Movement等区块链网络采用。在DeFi借贷中，清算指借款人的抵押品价值跌破所需门槛时，协议自动出售抵押品以偿还贷款。",
+      "background_en": "A blockchain oracle is a service that supplies external, real-world data to smart contracts, which blockchains cannot access on their own. Move is a smart contract programming language originally developed by Meta for the Libra project and now used by blockchain networks like Aptos, Sui, IOTA, and Movement. In DeFi lending, liquidation occurs when a borrower's collateral value falls below a required threshold and the protocol automatically sells the collateral to cover the loan.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "共享预言机层被攻破可能削弱市场对Move生态DeFi协议的信心，进而影响相关链上的代币情绪与总锁仓量（TVL），并让预言机依赖风险受到更多审视。传导渠道主要是信任与安全预期，事件也可能提升对替代或去中心化预言机解决方案的需求，但这并不代表任何确定性的价格方向。",
+      "market_impact_en": "The compromise of a shared oracle layer can undermine confidence in DeFi protocols built on Move-based networks, potentially affecting token sentiment and TVL on the affected chains and raising scrutiny of oracle dependency risks. The transmission channel is primarily trust and security perception, and the incident may also increase demand for alternative or decentralized oracle solutions, but no directional price outcome is implied.",
+      "importance_score": 8.0,
+      "references": [
+        {
+          "url": "https://web3.okx.com/learn/what-is-blockchain-oracle",
+          "title": "What is a blockchain oracle? | OKX Wallet"
+        },
+        {
+          "url": "https://www.halborn.com/blog/post/what-is-the-move-programming-language",
+          "title": "What is the Move Programming Language?"
+        },
+        {
+          "url": "https://www.coingecko.com/learn/defi-liquidation-crypto",
+          "title": "DeFi Liquidations: What They Are and How to Monitor... | CoinGecko"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:4e5eb00709675004"

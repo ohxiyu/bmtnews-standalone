@@ -21,7 +21,29 @@
       "summary_zh": "截至报道时主网仍未恢复。",
       "summary_en": "Mainnet remained offline at publication.",
       "latest_update_zh": "Fogo 主网停机已持续 46 小时。",
-      "latest_update_en": "The Fogo mainnet halt had continued for 46 hours."
+      "latest_update_en": "The Fogo mainnet halt had continued for 46 hours.",
+      "background_zh": "2026 年 8 月 29 日，Fogo 在攻击者获取 4 亿枚 FOGO 代币后暂停了主网。该数量约占流通供应量的 10%，当时价值约 300 万美元。",
+      "background_en": "On August 29, 2026, Fogo halted its mainnet after an attacker obtained 400 million FOGO tokens, about 10% of circulating supply and worth roughly $3 million.",
+      "latest_summary_zh": "Fogo主网在4亿FOGO代币被发送给恶意行为方后已停机46小时，目前尚未公布重启时间表。Fogo基金会的最新更新仍是停机通知，同时一个冒充账户正在传播虚假的补偿投票。\n\n该事件对Fogo及其用户构成严重的安全和治理风险，用户可能在较长时间内无法访问或交易其资产。长时间的停机以及虚假补偿投票加剧了混乱，并可能削弱对网络安全和运营的信任。\n\n自周六以来，该链未产生任何区块，基金会也未提供预计重启时间。据报道，一个冒充账户正在传播虚假补偿投票，进一步扰乱社区。",
+      "latest_summary_en": "Fogo's mainnet has been halted for 46 hours after 400 million FOGO tokens were sent to an unauthorized actor, and no restart timeline has been announced. The Fogo Foundation's halt notice remains its most recent update, while an impersonator account is circulating a fake compensation vote.\n\nThe incident poses a severe security and governance risk for Fogo and its users, who may be unable to access or transact with their assets for an extended period. The prolonged halt and fake compensation vote add confusion and could undermine trust in the network's security and operations.\n\nThe chain has produced no blocks since Saturday, and the Foundation has not provided an estimated restart time. An impersonator account is reportedly circulating a fake compensation vote, adding further disruption to the community.",
+      "discussion_zh": "该事件对Fogo及其用户构成严重的安全和治理风险，用户可能在较长时间内无法访问或交易其资产。长时间的停机以及虚假补偿投票加剧了混乱，并可能削弱对网络安全和运营的信任。",
+      "discussion_en": "The incident poses a severe security and governance risk for Fogo and its users, who may be unable to access or transact with their assets for an extended period. The prolonged halt and fake compensation vote add confusion and could undermine trust in the network's security and operations.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/fogo-halts-mainnet-after-400-million-fogo-sent-to-bad-actor",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
     },
     {
       "thread_id": "evt_e76fdfcc6ef4904a",
@@ -44,7 +66,44 @@
       "summary_zh": "影响范围和责任已经进一步确认，修复情况仍需观察。",
       "summary_en": "Scope and accountability are clearer; remediation remains under observation.",
       "latest_update_zh": "后续调查称漏洞曾被低估数月，影响扩大到六条链，Cosmos Labs 承认判断失误。",
-      "latest_update_en": "Later reporting said the flaw was underestimated for months, affected six chains, and prompted Cosmos Labs to acknowledge its error."
+      "latest_update_en": "Later reporting said the flaw was underestimated for months, affected six chains, and prompted Cosmos Labs to acknowledge its error.",
+      "background_zh": "2026年8月21日，MANTRA Chain在发现攻击者利用与其Cosmos EVM模块相关的上游依赖漏洞后，暂停了所有交易、转账和质押。修复版本v8.4.0正在DuKong测试网上测试，之后才能进行协调的主网重启。 此次事件对MANTRA用户和整个Cosmos生态系统影响重大，因为全网暂停使所有链上活动停止，并引发了对第三方依赖安全性的质疑。这一事件可能影响市场对基于Cosmos的EVM链及上游开源组件安全的信任。 MANTRA团队表示，暂停本身并未影响用户资金，但攻击者活动的完整资产影响尚未确认，资金流向正在追踪中。验证者被要求在官方宣布协调重启前保持主网节点离线，DuKong测试网的测试是补丁版本上线的门槛。",
+      "background_en": "On August 21, 2026, MANTRA Chain halted all transactions, transfers, and staking after an attacker exploited a vulnerability in an upstream dependency linked to its Cosmos EVM module. The patched release v8.4.0 is being tested on the DuKong testnet before a coordinated mainnet restart can occur. This is a high-impact security event for MANTRA users and the broader Cosmos ecosystem, as the network-wide freeze silences all onchain activity and raises questions about the security of third-party dependencies. The incident could affect trust in Cosmos-based EVM chains and in the safety of upstream open-source components. The MANTRA team says the halt itself did not affect user funds, but the full asset impact of the attacker's activity remains unconfirmed and fund movements are being traced. Validators are instructed to keep mainnet nodes offline until a coordinated restart is announced, with DuKong testnet testing serving as the gate for the patched release.",
+      "latest_summary_zh": "8 月 28 日，Cosmos Labs 披露一个被误判的 EVM 漏洞在包括 MANTRA、TAC 和 KiiChain 在内的六个网络上被利用，造成近 600 万美元损失。该漏洞于 4 月 25 日首次上报，但因小数位假设被评估为低风险；5 月 15 日合并了静默补丁，而在评估修正后，实际攻击始于 8 月 20 日。\n\n该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。\n\n该漏洞利用结合了两个记账缺陷：无符号整数下溢生成了异常巨大的余额，随后利用该状态使另一个账户溢出，从而在不增加总代币供应量的情况下提取其合法余额。Cosmos Labs 联系了 40 条网络，其中 13 条潜在暴露的链进行了修补、暂停或部署缓解措施；MANTRA 遭受了已披露的最大损失，约有 7.209 亿枚代币从两个未授权地址被转出。",
+      "latest_summary_en": "On August 28, Cosmos Labs disclosed that a misjudged EVM vulnerability was exploited across six networks, including MANTRA, TAC, and KiiChain, causing nearly $6 million in losses. The flaw was first reported on April 25 but was deemed low-risk due to decimal assumptions; a silent patch was merged on May 15, and the real exploit began on August 20 after the assessment was revised.\n\nThis incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.\n\nThe exploit combined two accounting failures: an unsigned-integer underflow created an abnormally large balance, which was then used to overflow another account and extract its legitimate balance without increasing total token supply. Cosmos Labs contacted 40 networks, with 13 potentially exposed chains patching, halting, or applying mitigations; MANTRA suffered the largest disclosed hit, with about 720.9 million tokens moved from two unauthorized addresses.",
+      "discussion_zh": "该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。",
+      "discussion_en": "This incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 9.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-29-cosmos-labs-says-it-wrongly-cleared-the-bug-behind-a-5-7-million-six-chain-hack-413061",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TS094NGgzR2NuUUZndHp6RFpxX1RvSEpJTUQwaURhZ0c4bTVIeF9MSkhVdEFkR1h1eGtRRWppRXpJaTF3STN4cEdPWElNLTFLN1dMbEdMNW00STR5aWVvck95UXNlenNIT2lVRm1aU3M?oc=5",
+          "title": "CryptoTicker",
+          "official": false
+        }
+      ],
+      "reference_links": []
     },
     {
       "thread_id": "evt_89466240c898fb47",
@@ -67,7 +126,39 @@
       "summary_zh": "投票已经通过，治理阶段结束。",
       "summary_en": "The vote passed and the governance decision is complete.",
       "latest_update_zh": "验证者通过提案，将通胀递减率提高至 30%。",
-      "latest_update_en": "Validators passed the proposal, raising the disinflation rate to 30%."
+      "latest_update_en": "Validators passed the proposal, raising the disinflation rate to 30%.",
+      "background_zh": "Solana（SOL）24 小时上涨超 8%，8 月累计上涨约 44%，重新站上 105 美元，与此同时该网络首次具有约束力的治理投票于 2026 年 8 月 23 日结束。投票将决定是否批准一部 Solana 宪法、通过 SIMD-550 将通缩率翻倍，以及通过 SIMD-553 大幅增加 SOL 销毁量。",
+      "background_en": "Solana (SOL) is up more than 8% in the past 24 hours and roughly 44% in August, climbing back above $105, as the network's first binding governance vote concludes on August 23, 2026. The vote will decide whether to adopt a Solana Constitution, double the disinflation rate via SIMD-550, and significantly increase SOL burns via SIMD-553.",
+      "latest_summary_zh": "Solana 验证者通过了 SGP-0002，将年度通缩率从 15% 提高至 30%，使 SOL 的 1.5% 发行下限提前到 2029 年而非 2032 年到达。投票以 67.0% 的支持率勉强超过 66.67% 的门槛，参与率为 60.7%。\n\n这是 Solana 历史上首个具有约束力的链上治理决定，为代币持有者驱动的协议变更开创了先例。加速的供应缩减可能使 SOL 的供应时间表收紧，市场普遍认为这对 SOL 长期有利，但也降低了质押收益率。\n\n该提案对应由基础设施公司 Helius 工程师提出的 SIMD-550，最终以 1.76 亿 SOL 赞成、6619 万 SOL 反对的结果通过，共 1326 票参与。验证者还以 86% 的支持率通过了 Solana 宪法（SGP-0001），但否决了 SGP-0003 资源与纳入费提案，该提案原本可能每日销毁多达 14 倍的 SOL。",
+      "latest_summary_en": "Solana validators passed SGP-0002, doubling the disinflation rate from 15% to 30%, so SOL's issuance floor of 1.5% will be reached in 2029 instead of 2032. The vote closed at 67.0% support, barely clearing the 66.67% threshold, with 60.7% quorum participation.\n\nThis is the first binding on-chain governance decision in Solana's history, setting a precedent for tokenholder-driven protocol changes. The accelerated supply reduction could tighten SOL's supply schedule and is widely expected to be a long-term positive for the token, though it also lowers staking yields.\n\nThe proposal tracks SIMD-550, authored by engineers at infrastructure firm Helius, and passed with 176.29 million SOL in favor and 66.19 million against across 1,326 votes. Validators also ratified the Solana Constitution (SGP-0001) with 86% support, while rejecting SGP-0003, a Resource and Inclusion Fee that would have burned up to 14 times more SOL daily.",
+      "discussion_zh": "这是 Solana 历史上首个具有约束力的链上治理决定，为代币持有者驱动的协议变更开创了先例。加速的供应缩减可能使 SOL 的供应时间表收紧，市场普遍认为这对 SOL 长期有利，但也降低了质押收益率。",
+      "discussion_en": "This is the first binding on-chain governance decision in Solana's history, setting a precedent for tokenholder-driven protocol changes. The accelerated supply reduction could tighten SOL's supply schedule and is widely expected to be a long-term positive for the token, though it also lowers staking yields.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://decrypt.co/376706/solana-best-month-since-2024-historic-governance-vote",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/376825/solana-sol-disinflation-vote-passes",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/kraken-tips-solanas-razor-thin-inflation-vote/",
+          "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": []
     },
     {
       "thread_id": "evt_8e3439db94125c2a",
@@ -90,7 +181,39 @@
       "summary_zh": "受影响的 Meta Vaults 已永久关闭。",
       "summary_en": "The affected Meta Vaults are permanently closed.",
       "latest_update_zh": "Term Finance 在攻击后永久关闭 Meta Vaults。",
-      "latest_update_en": "Term Finance permanently shut Meta Vaults after the exploit."
+      "latest_update_en": "Term Finance permanently shut Meta Vaults after the exploit.",
+      "background_zh": "Term Finance（又称 Term Labs）是一个基于以太坊的非托管固定利率借贷协议，2026 年 8 月 23 日，攻击者控制其治理系统并盗走多个金库中的资金，估计损失约 850 万美元。尽管协议设有七天的提案延迟和流动性提供者否决机制，攻击仍然得逞。 这一事件表明，在 DeFi 中，治理控制（而不仅仅是代码漏洞）是关键的受攻击面。它还引发人们的担忧：当治理系统被攻破时，延迟和否决等保护措施是否足以保障用户资金安全。 报道称，本次攻击并未破坏协议代码，攻击者是通过获取治理控制权来盗取金库中的以太坊和稳定币。该协议原有的安全机制——包括金库提案的七天延迟和流动性提供者否决权——都未能阻止这次攻击。",
+      "background_en": "Term Finance (also known as Term Labs), a noncustodial fixed-rate lending protocol on Ethereum, lost an estimated $8.5 million on August 23, 2026, after an attacker took control of its governance system and drained multiple vaults. The exploit occurred despite the protocol's seven-day proposal delay and liquidity provider veto mechanism. This incident highlights that governance controls—not just code vulnerabilities—are a critical attack surface in DeFi. It raises concerns about whether delay and veto safeguards are sufficient to protect user funds when governance systems are compromised. Reports indicate the attack did not break the protocol's code; the attacker instead gained governance control and drained vaults holding Ethereum and stablecoins. The protocol's safeguards, including a seven-day delay on vault proposals and a liquidity provider veto, failed to stop the exploit.",
+      "latest_summary_zh": "Term Finance 在遭遇 PeckShield 估计为 850 万美元的攻击后，永久关闭了其 Meta Vaults 产品。该协议表示提款仍然开放，但其 8 月 23 日的更新并未量化剩余金库资产或缺口。\n\n这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。\n\nPeckShield 追踪到约 2,843 枚 ETH 和 168 万枚 USDC 被抽走，攻击者还将 USDC 换成了 DAI。Yearn 确认该攻击针对的是 Term 的自定义治理包装器，而非标准 Yearn V3 金库；DeFiPrime 指出存在六天的提案开放空窗期，可能促成了此次接管。",
+      "latest_summary_en": "Term Finance has permanently shut down its Meta Vaults product following an exploit estimated at $8.5 million by PeckShield. The protocol says withdrawals remain open, but its Aug. 23 update did not quantify remaining vault assets or the shortfall.\n\nThis is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.\n\nPeckShield tracked roughly 2,843 ETH and 1.68 million USDC drained, with the attacker swapping USDC for DAI. Yearn confirmed that the exploit targeted Term's custom governance wrapper, not standard Yearn V3 vaults, and DeFiPrime noted a six-day open proposal gap that likely enabled the takeover.",
+      "discussion_zh": "这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。",
+      "discussion_en": "This is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/",
+          "title": "crowdfundinsider.com",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/hacks/term-finance-permanently-shuts-meta-vaults-after-exploit-peckshield-estimated-at-8-5-million",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
     },
     {
       "thread_id": "evt_09f87331a0893067",
@@ -113,7 +236,39 @@
       "summary_zh": "交易停运安排未变，重组和债权人分配方案等待进一步披露。",
       "summary_en": "The trading shutdown remained; restructuring and creditor-distribution details awaited disclosure.",
       "latest_update_zh": "BitMart 聘请 White & Case 评估重组，并承诺最迟 9 月 9 日给出路线图。",
-      "latest_update_en": "BitMart engaged White & Case to assess restructuring and said a roadmap was due by Sept. 9."
+      "latest_update_en": "BitMart engaged White & Case to assess restructuring and said a roadmap was due by Sept. 9.",
+      "background_zh": "据 CoinDesk 报道，BitMart 在宣布关闭数周后，正考虑部分重启并向债权人进行偿付。 这很关键，因为它可能决定 BitMart 用户能否收回资金，以及该交易所是否仍具备存续能力。在行业整合与破产频发的背景下，这也会影响用户对中心化加密货币交易所的信心。 报道称，这家交易所在宣布关闭数周后，正在权衡部分重启以及债权人偿付等选项。具体条款、金额和时间表尚未公布。",
+      "background_en": "BitMart is reportedly considering a partial restart and creditor payouts weeks after it announced it would shut down, according to CoinDesk. This matters because it could determine whether BitMart's users recover funds and whether the exchange retains any viability. It also affects confidence in centralized crypto exchanges during a period of consolidation and insolvencies. The report says the exchange is weighing options for a partial restart alongside creditor payouts, weeks after the shutdown announcement. Specific terms, amounts, and timelines have not been disclosed.",
+      "latest_summary_zh": "8月21日，BitMart宣布正与White & Case探讨重组方案，可能在向债权人分配的同时分阶段恢复部分服务；但先前宣布的8月26日交易关闭和提现建议时限保持不变。\n\n此事之所以重要，是因为BitMart试图提供全面清盘之外的替代方案，但用户仍缺乏具体的偿还框架、回收率预估或时间表。这种不确定性可能削弱用户对中心化交易所的信任，并加大监管与用户对BitMart的压力。\n\n该方案并未改变8月26日01:00 UTC现货、合约及其他交易停运的安排，也未改变建议用户在05:00 UTC前提交提现的时间。BitMart表示，逾期提交的提现请求将转入单独处理流程，并预计在9月9日前提供进一步更新。",
+      "latest_summary_en": "On Aug. 21, BitMart announced it is exploring a restructuring with White & Case that could allow phased service resumption alongside creditor distributions, while maintaining its prior Aug. 26 trading shutdown and recommended withdrawal deadline.\n\nThis matters because it attempts to offer an alternative to a full wind-down, yet customers still lack a concrete repayment framework, recovery estimate, or timetable. The uncertainty could erode trust in centralized exchanges and intensify regulatory and user pressure on BitMart.\n\nThe proposal does not change the 01:00 UTC Aug. 26 halt of spot, futures, and other trading, nor the recommended 05:00 UTC withdrawal submission time. BitMart says late withdrawal requests will move to a separate processing procedure, and the exchange expects to provide another update by Sept. 9.",
+      "discussion_zh": "此事之所以重要，是因为BitMart试图提供全面清盘之外的替代方案，但用户仍缺乏具体的偿还框架、回收率预估或时间表。这种不确定性可能削弱用户对中心化交易所的信任，并加大监管与用户对BitMart的压力。",
+      "discussion_en": "This matters because it attempts to offer an alternative to a full wind-down, yet customers still lack a concrete repayment framework, recovery estimate, or timetable. The uncertainty could erode trust in centralized exchanges and intensify regulatory and user pressure on BitMart.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5tMXEwNmdZV1JiYWtBYklfNldldjRoREVtamxhNEUyZ3c1cEtDa3BWVFhMYjBuTXM1SHI0dm1tVU50WTU0SmdrUVUwNVFyZlRQN3F4Zy1YdUx3T0x1MGJWN3VhUXB4QXhJbUVN?oc=5",
+          "title": "CryptoTicker",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/bitmart-is-talking-about-reopening-before-it-has-answered-the-withdrawal-question/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/",
+          "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": []
     },
     {
       "thread_id": "evt_42bb993a2d68e300",
@@ -136,7 +291,346 @@
       "summary_zh": "法案仍在推进，票数和日期属于公开预期而非最终结果。",
       "summary_en": "The bill remains in process; the vote count and date are expectations, not a final outcome.",
       "latest_update_zh": "Coinbase CEO 预计法案可获得 60 票以上，并给出 9 月 15 日的推进节点。",
-      "latest_update_en": "Coinbase's CEO projected more than 60 Senate votes and identified Sept. 15 as a milestone."
+      "latest_update_en": "Coinbase's CEO projected more than 60 Senate votes and identified Sept. 15 as a milestone.",
+      "background_zh": "在一次私人椭圆形办公室会议上，特朗普总统对《CLARITY法案》的通过表现出“看涨”态度，并向加密货币和金融业CEO征求反馈。此次会议显示白宫在拟议立法上展开了早期接触。 这是一个高价值的监管信号，因为总统的支持可能会影响《CLARITY法案》的立法进程，该法案旨在为数字资产建立统一的联邦框架。明确的规则可能实质性改善美国加密企业的市场准入和行业结构。 《CLARITY法案》已在众议院通过，目前正在参议院审议。此次会议是私下且早期的接触，因此未披露具体承诺或时间表。",
+      "background_en": "During a private Oval Office meeting, President Trump appeared 'bullish' on passing the Clarity Act and solicited feedback from crypto and finance CEOs. The meeting signals early-stage White House engagement on the proposed legislation. This is a high-value regulatory signal because presidential support can shape the legislative path of the Clarity Act, which aims to provide a unified federal framework for digital assets. Clear rules could materially improve market access and industry structure for US crypto businesses. The Clarity Act has already passed the House and is undergoing review in the Senate. The meeting was private and early-stage, so specific commitments or timelines were not disclosed.",
+      "latest_summary_zh": "Coinbase首席执行官公开表示，CLARITY法案预计将在9月15日获得超过60张参议院票，表明这项加密市场结构法案获得了强有力的两党支持。这一预测凸显了该立法不断增长的势头。 这一进展意义重大，因为这意味着《数字资产市场清晰度法案》可能跨过在参议院克服冗长辩论所需的60票门槛。若该法案颁布，将界定SEC和CFTC对数字资产的监管管辖权，从根本上重塑美国加密市场结构，并降低交易所和项目面临的监管不确定性。 CLARITY法案，正式名称为《2025年数字资产市场清晰度法案》，是由参议院银行委员会主席蒂姆·斯科特和参议员辛西娅·卢米斯共同提出的两党法案。其核心目标是厘清SEC和CFTC在监管数字资产方面的各自角色，并建立更清晰的市场结构框架。",
+      "latest_summary_en": "Coinbase's CEO publicly stated that the CLARITY Act is expected to secure more than 60 Senate votes on September 15, signaling strong bipartisan support for the crypto market structure bill. The projection underscores growing momentum for the legislation. This development is significant because it suggests the Digital Asset Market Clarity Act could clear the 60-vote threshold needed to overcome a Senate filibuster. If enacted, it would define SEC and CFTC jurisdiction over digital assets, materially reshaping US crypto market structure and reducing regulatory uncertainty for exchanges and projects. The CLARITY Act, formally known as the Digital Asset Market Clarity Act of 2025, is a bipartisan bill introduced by Senate Banking Committee Chairman Tim Scott and Senator Cynthia Lummis. Its central aim is to clarify the respective roles of the SEC and the CFTC in overseeing digital assets and to establish a clearer market structure framework.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-08-20-inside-oval-office-meeting-trump-bullish-clarity-act-solicits-feedback-crypto-finance-ceos-412340",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPYlk5UDd2XzUwWWppdDVsU0xvTmltSmNBaHFHbFlncV9EU1k0NlgzcWVyY3NvSm1faHN0TWpvVGFkYy02bFFkeW5FX2dITTRjTFNmNA?oc=5",
+          "title": "bloomingbit",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    }
+  ],
+  "ranking": [
+    {
+      "thread_id": "evt_e76fdfcc6ef4904a",
+      "event_id": "evt_e76fdfcc6ef4904a",
+      "latest_date": "2026-08-29",
+      "first_date": "2026-08-22",
+      "days": 3,
+      "entries": 3,
+      "updates_count": 3,
+      "sources_count": 5,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Cosmos EVM 共享模块漏洞与多链损失",
+      "title_en": "Cosmos EVM shared-module flaw and multi-chain losses",
+      "summary_zh": "影响范围和责任已经进一步确认，修复情况仍需观察。",
+      "summary_en": "Scope and accountability are clearer; remediation remains under observation.",
+      "latest_update_zh": "后续调查称漏洞曾被低估数月，影响扩大到六条链，Cosmos Labs 承认判断失误。",
+      "latest_update_en": "Later reporting said the flaw was underestimated for months, affected six chains, and prompted Cosmos Labs to acknowledge its error.",
+      "background_zh": "2026年8月21日，MANTRA Chain在发现攻击者利用与其Cosmos EVM模块相关的上游依赖漏洞后，暂停了所有交易、转账和质押。修复版本v8.4.0正在DuKong测试网上测试，之后才能进行协调的主网重启。 此次事件对MANTRA用户和整个Cosmos生态系统影响重大，因为全网暂停使所有链上活动停止，并引发了对第三方依赖安全性的质疑。这一事件可能影响市场对基于Cosmos的EVM链及上游开源组件安全的信任。 MANTRA团队表示，暂停本身并未影响用户资金，但攻击者活动的完整资产影响尚未确认，资金流向正在追踪中。验证者被要求在官方宣布协调重启前保持主网节点离线，DuKong测试网的测试是补丁版本上线的门槛。",
+      "background_en": "On August 21, 2026, MANTRA Chain halted all transactions, transfers, and staking after an attacker exploited a vulnerability in an upstream dependency linked to its Cosmos EVM module. The patched release v8.4.0 is being tested on the DuKong testnet before a coordinated mainnet restart can occur. This is a high-impact security event for MANTRA users and the broader Cosmos ecosystem, as the network-wide freeze silences all onchain activity and raises questions about the security of third-party dependencies. The incident could affect trust in Cosmos-based EVM chains and in the safety of upstream open-source components. The MANTRA team says the halt itself did not affect user funds, but the full asset impact of the attacker's activity remains unconfirmed and fund movements are being traced. Validators are instructed to keep mainnet nodes offline until a coordinated restart is announced, with DuKong testnet testing serving as the gate for the patched release.",
+      "latest_summary_zh": "8 月 28 日，Cosmos Labs 披露一个被误判的 EVM 漏洞在包括 MANTRA、TAC 和 KiiChain 在内的六个网络上被利用，造成近 600 万美元损失。该漏洞于 4 月 25 日首次上报，但因小数位假设被评估为低风险；5 月 15 日合并了静默补丁，而在评估修正后，实际攻击始于 8 月 20 日。\n\n该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。\n\n该漏洞利用结合了两个记账缺陷：无符号整数下溢生成了异常巨大的余额，随后利用该状态使另一个账户溢出，从而在不增加总代币供应量的情况下提取其合法余额。Cosmos Labs 联系了 40 条网络，其中 13 条潜在暴露的链进行了修补、暂停或部署缓解措施；MANTRA 遭受了已披露的最大损失，约有 7.209 亿枚代币从两个未授权地址被转出。",
+      "latest_summary_en": "On August 28, Cosmos Labs disclosed that a misjudged EVM vulnerability was exploited across six networks, including MANTRA, TAC, and KiiChain, causing nearly $6 million in losses. The flaw was first reported on April 25 but was deemed low-risk due to decimal assumptions; a silent patch was merged on May 15, and the real exploit began on August 20 after the assessment was revised.\n\nThis incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.\n\nThe exploit combined two accounting failures: an unsigned-integer underflow created an abnormally large balance, which was then used to overflow another account and extract its legitimate balance without increasing total token supply. Cosmos Labs contacted 40 networks, with 13 potentially exposed chains patching, halting, or applying mitigations; MANTRA suffered the largest disclosed hit, with about 720.9 million tokens moved from two unauthorized addresses.",
+      "discussion_zh": "该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。",
+      "discussion_en": "This incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 9.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/blockchains/cosmos-labs-urges-evm-chains-halt-shared-bug-drains-three-networks",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-29-cosmos-labs-says-it-wrongly-cleared-the-bug-behind-a-5-7-million-six-chain-hack-413061",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TS094NGgzR2NuUUZndHp6RFpxX1RvSEpJTUQwaURhZ0c4bTVIeF9MSkhVdEFkR1h1eGtRRWppRXpJaTF3STN4cEdPWElNLTFLN1dMbEdMNW00STR5aWVvck95UXNlenNIT2lVRm1aU3M?oc=5",
+          "title": "CryptoTicker",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_338d87d3bef60852",
+      "event_id": "evt_338d87d3bef60852",
+      "latest_date": "2026-09-01",
+      "first_date": "2026-08-30",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Fogo 4 亿代币异常转账与主网停机",
+      "title_en": "Fogo 400M-token incident and mainnet halt",
+      "summary_zh": "截至报道时主网仍未恢复。",
+      "summary_en": "Mainnet remained offline at publication.",
+      "latest_update_zh": "Fogo 主网停机已持续 46 小时。",
+      "latest_update_en": "The Fogo mainnet halt had continued for 46 hours.",
+      "background_zh": "2026 年 8 月 29 日，Fogo 在攻击者获取 4 亿枚 FOGO 代币后暂停了主网。该数量约占流通供应量的 10%，当时价值约 300 万美元。",
+      "background_en": "On August 29, 2026, Fogo halted its mainnet after an attacker obtained 400 million FOGO tokens, about 10% of circulating supply and worth roughly $3 million.",
+      "latest_summary_zh": "Fogo主网在4亿FOGO代币被发送给恶意行为方后已停机46小时，目前尚未公布重启时间表。Fogo基金会的最新更新仍是停机通知，同时一个冒充账户正在传播虚假的补偿投票。\n\n该事件对Fogo及其用户构成严重的安全和治理风险，用户可能在较长时间内无法访问或交易其资产。长时间的停机以及虚假补偿投票加剧了混乱，并可能削弱对网络安全和运营的信任。\n\n自周六以来，该链未产生任何区块，基金会也未提供预计重启时间。据报道，一个冒充账户正在传播虚假补偿投票，进一步扰乱社区。",
+      "latest_summary_en": "Fogo's mainnet has been halted for 46 hours after 400 million FOGO tokens were sent to an unauthorized actor, and no restart timeline has been announced. The Fogo Foundation's halt notice remains its most recent update, while an impersonator account is circulating a fake compensation vote.\n\nThe incident poses a severe security and governance risk for Fogo and its users, who may be unable to access or transact with their assets for an extended period. The prolonged halt and fake compensation vote add confusion and could undermine trust in the network's security and operations.\n\nThe chain has produced no blocks since Saturday, and the Foundation has not provided an estimated restart time. An impersonator account is reportedly circulating a fake compensation vote, adding further disruption to the community.",
+      "discussion_zh": "该事件对Fogo及其用户构成严重的安全和治理风险，用户可能在较长时间内无法访问或交易其资产。长时间的停机以及虚假补偿投票加剧了混乱，并可能削弱对网络安全和运营的信任。",
+      "discussion_en": "The incident poses a severe security and governance risk for Fogo and its users, who may be unable to access or transact with their assets for an extended period. The prolonged halt and fake compensation vote add confusion and could undermine trust in the network's security and operations.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/fogo-halts-mainnet-after-400-million-fogo-sent-to-bad-actor",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_42bb993a2d68e300",
+      "event_id": "evt_42bb993a2d68e300",
+      "latest_date": "2026-08-22",
+      "first_date": "2026-08-21",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "policy",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "美国 CLARITY Act 参议院推进",
+      "title_en": "US CLARITY Act Senate process",
+      "summary_zh": "法案仍在推进，票数和日期属于公开预期而非最终结果。",
+      "summary_en": "The bill remains in process; the vote count and date are expectations, not a final outcome.",
+      "latest_update_zh": "Coinbase CEO 预计法案可获得 60 票以上，并给出 9 月 15 日的推进节点。",
+      "latest_update_en": "Coinbase's CEO projected more than 60 Senate votes and identified Sept. 15 as a milestone.",
+      "background_zh": "在一次私人椭圆形办公室会议上，特朗普总统对《CLARITY法案》的通过表现出“看涨”态度，并向加密货币和金融业CEO征求反馈。此次会议显示白宫在拟议立法上展开了早期接触。 这是一个高价值的监管信号，因为总统的支持可能会影响《CLARITY法案》的立法进程，该法案旨在为数字资产建立统一的联邦框架。明确的规则可能实质性改善美国加密企业的市场准入和行业结构。 《CLARITY法案》已在众议院通过，目前正在参议院审议。此次会议是私下且早期的接触，因此未披露具体承诺或时间表。",
+      "background_en": "During a private Oval Office meeting, President Trump appeared 'bullish' on passing the Clarity Act and solicited feedback from crypto and finance CEOs. The meeting signals early-stage White House engagement on the proposed legislation. This is a high-value regulatory signal because presidential support can shape the legislative path of the Clarity Act, which aims to provide a unified federal framework for digital assets. Clear rules could materially improve market access and industry structure for US crypto businesses. The Clarity Act has already passed the House and is undergoing review in the Senate. The meeting was private and early-stage, so specific commitments or timelines were not disclosed.",
+      "latest_summary_zh": "Coinbase首席执行官公开表示，CLARITY法案预计将在9月15日获得超过60张参议院票，表明这项加密市场结构法案获得了强有力的两党支持。这一预测凸显了该立法不断增长的势头。 这一进展意义重大，因为这意味着《数字资产市场清晰度法案》可能跨过在参议院克服冗长辩论所需的60票门槛。若该法案颁布，将界定SEC和CFTC对数字资产的监管管辖权，从根本上重塑美国加密市场结构，并降低交易所和项目面临的监管不确定性。 CLARITY法案，正式名称为《2025年数字资产市场清晰度法案》，是由参议院银行委员会主席蒂姆·斯科特和参议员辛西娅·卢米斯共同提出的两党法案。其核心目标是厘清SEC和CFTC在监管数字资产方面的各自角色，并建立更清晰的市场结构框架。",
+      "latest_summary_en": "Coinbase's CEO publicly stated that the CLARITY Act is expected to secure more than 60 Senate votes on September 15, signaling strong bipartisan support for the crypto market structure bill. The projection underscores growing momentum for the legislation. This development is significant because it suggests the Digital Asset Market Clarity Act could clear the 60-vote threshold needed to overcome a Senate filibuster. If enacted, it would define SEC and CFTC jurisdiction over digital assets, materially reshaping US crypto market structure and reducing regulatory uncertainty for exchanges and projects. The CLARITY Act, formally known as the Digital Asset Market Clarity Act of 2025, is a bipartisan bill introduced by Senate Banking Committee Chairman Tim Scott and Senator Cynthia Lummis. Its central aim is to clarify the respective roles of the SEC and the CFTC in overseeing digital assets and to establish a clearer market structure framework.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-08-20-inside-oval-office-meeting-trump-bullish-clarity-act-solicits-feedback-crypto-finance-ceos-412340",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPYlk5UDd2XzUwWWppdDVsU0xvTmltSmNBaHFHbFlncV9EU1k0NlgzcWVyY3NvSm1faHN0TWpvVGFkYy02bFFkeW5FX2dITTRjTFNmNA?oc=5",
+          "title": "bloomingbit",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_89466240c898fb47",
+      "event_id": "evt_89466240c898fb47",
+      "latest_date": "2026-08-29",
+      "first_date": "2026-08-28",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 4,
+      "category": "crypto",
+      "status": "resolved",
+      "status_zh": "已解决",
+      "status_en": "Resolved",
+      "event_type": "governance",
+      "event_type_zh": "治理事件",
+      "event_type_en": "Governance",
+      "title_zh": "Solana 首次约束性通胀递减治理投票",
+      "title_en": "Solana's first binding disinflation governance vote",
+      "summary_zh": "投票已经通过，治理阶段结束。",
+      "summary_en": "The vote passed and the governance decision is complete.",
+      "latest_update_zh": "验证者通过提案，将通胀递减率提高至 30%。",
+      "latest_update_en": "Validators passed the proposal, raising the disinflation rate to 30%.",
+      "background_zh": "Solana（SOL）24 小时上涨超 8%，8 月累计上涨约 44%，重新站上 105 美元，与此同时该网络首次具有约束力的治理投票于 2026 年 8 月 23 日结束。投票将决定是否批准一部 Solana 宪法、通过 SIMD-550 将通缩率翻倍，以及通过 SIMD-553 大幅增加 SOL 销毁量。",
+      "background_en": "Solana (SOL) is up more than 8% in the past 24 hours and roughly 44% in August, climbing back above $105, as the network's first binding governance vote concludes on August 23, 2026. The vote will decide whether to adopt a Solana Constitution, double the disinflation rate via SIMD-550, and significantly increase SOL burns via SIMD-553.",
+      "latest_summary_zh": "Solana 验证者通过了 SGP-0002，将年度通缩率从 15% 提高至 30%，使 SOL 的 1.5% 发行下限提前到 2029 年而非 2032 年到达。投票以 67.0% 的支持率勉强超过 66.67% 的门槛，参与率为 60.7%。\n\n这是 Solana 历史上首个具有约束力的链上治理决定，为代币持有者驱动的协议变更开创了先例。加速的供应缩减可能使 SOL 的供应时间表收紧，市场普遍认为这对 SOL 长期有利，但也降低了质押收益率。\n\n该提案对应由基础设施公司 Helius 工程师提出的 SIMD-550，最终以 1.76 亿 SOL 赞成、6619 万 SOL 反对的结果通过，共 1326 票参与。验证者还以 86% 的支持率通过了 Solana 宪法（SGP-0001），但否决了 SGP-0003 资源与纳入费提案，该提案原本可能每日销毁多达 14 倍的 SOL。",
+      "latest_summary_en": "Solana validators passed SGP-0002, doubling the disinflation rate from 15% to 30%, so SOL's issuance floor of 1.5% will be reached in 2029 instead of 2032. The vote closed at 67.0% support, barely clearing the 66.67% threshold, with 60.7% quorum participation.\n\nThis is the first binding on-chain governance decision in Solana's history, setting a precedent for tokenholder-driven protocol changes. The accelerated supply reduction could tighten SOL's supply schedule and is widely expected to be a long-term positive for the token, though it also lowers staking yields.\n\nThe proposal tracks SIMD-550, authored by engineers at infrastructure firm Helius, and passed with 176.29 million SOL in favor and 66.19 million against across 1,326 votes. Validators also ratified the Solana Constitution (SGP-0001) with 86% support, while rejecting SGP-0003, a Resource and Inclusion Fee that would have burned up to 14 times more SOL daily.",
+      "discussion_zh": "这是 Solana 历史上首个具有约束力的链上治理决定，为代币持有者驱动的协议变更开创了先例。加速的供应缩减可能使 SOL 的供应时间表收紧，市场普遍认为这对 SOL 长期有利，但也降低了质押收益率。",
+      "discussion_en": "This is the first binding on-chain governance decision in Solana's history, setting a precedent for tokenholder-driven protocol changes. The accelerated supply reduction could tighten SOL's supply schedule and is widely expected to be a long-term positive for the token, though it also lowers staking yields.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://decrypt.co/376706/solana-best-month-since-2024-historic-governance-vote",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/376825/solana-sol-disinflation-vote-passes",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/kraken-tips-solanas-razor-thin-inflation-vote/",
+          "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_8e3439db94125c2a",
+      "event_id": "evt_8e3439db94125c2a",
+      "latest_date": "2026-08-26",
+      "first_date": "2026-08-24",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 4,
+      "category": "crypto",
+      "status": "resolved",
+      "status_zh": "已解决",
+      "status_en": "Resolved",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Term Finance 治理攻击与 Meta Vaults 关闭",
+      "title_en": "Term Finance governance exploit and Meta Vaults shutdown",
+      "summary_zh": "受影响的 Meta Vaults 已永久关闭。",
+      "summary_en": "The affected Meta Vaults are permanently closed.",
+      "latest_update_zh": "Term Finance 在攻击后永久关闭 Meta Vaults。",
+      "latest_update_en": "Term Finance permanently shut Meta Vaults after the exploit.",
+      "background_zh": "Term Finance（又称 Term Labs）是一个基于以太坊的非托管固定利率借贷协议，2026 年 8 月 23 日，攻击者控制其治理系统并盗走多个金库中的资金，估计损失约 850 万美元。尽管协议设有七天的提案延迟和流动性提供者否决机制，攻击仍然得逞。 这一事件表明，在 DeFi 中，治理控制（而不仅仅是代码漏洞）是关键的受攻击面。它还引发人们的担忧：当治理系统被攻破时，延迟和否决等保护措施是否足以保障用户资金安全。 报道称，本次攻击并未破坏协议代码，攻击者是通过获取治理控制权来盗取金库中的以太坊和稳定币。该协议原有的安全机制——包括金库提案的七天延迟和流动性提供者否决权——都未能阻止这次攻击。",
+      "background_en": "Term Finance (also known as Term Labs), a noncustodial fixed-rate lending protocol on Ethereum, lost an estimated $8.5 million on August 23, 2026, after an attacker took control of its governance system and drained multiple vaults. The exploit occurred despite the protocol's seven-day proposal delay and liquidity provider veto mechanism. This incident highlights that governance controls—not just code vulnerabilities—are a critical attack surface in DeFi. It raises concerns about whether delay and veto safeguards are sufficient to protect user funds when governance systems are compromised. Reports indicate the attack did not break the protocol's code; the attacker instead gained governance control and drained vaults holding Ethereum and stablecoins. The protocol's safeguards, including a seven-day delay on vault proposals and a liquidity provider veto, failed to stop the exploit.",
+      "latest_summary_zh": "Term Finance 在遭遇 PeckShield 估计为 850 万美元的攻击后，永久关闭了其 Meta Vaults 产品。该协议表示提款仍然开放，但其 8 月 23 日的更新并未量化剩余金库资产或缺口。\n\n这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。\n\nPeckShield 追踪到约 2,843 枚 ETH 和 168 万枚 USDC 被抽走，攻击者还将 USDC 换成了 DAI。Yearn 确认该攻击针对的是 Term 的自定义治理包装器，而非标准 Yearn V3 金库；DeFiPrime 指出存在六天的提案开放空窗期，可能促成了此次接管。",
+      "latest_summary_en": "Term Finance has permanently shut down its Meta Vaults product following an exploit estimated at $8.5 million by PeckShield. The protocol says withdrawals remain open, but its Aug. 23 update did not quantify remaining vault assets or the shortfall.\n\nThis is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.\n\nPeckShield tracked roughly 2,843 ETH and 1.68 million USDC drained, with the attacker swapping USDC for DAI. Yearn confirmed that the exploit targeted Term's custom governance wrapper, not standard Yearn V3 vaults, and DeFiPrime noted a six-day open proposal gap that likely enabled the takeover.",
+      "discussion_zh": "这是一起值得关注的 DeFi 安全事件，因为基于治理的攻击迫使一个产品线永久关闭，使存款人面临尚未量化的资金缺口。它凸显了自定义治理包装器的风险，并可能促使用户重新评估类似的收益金库产品。",
+      "discussion_en": "This is a notable DeFi security incident because a governance-based attack forced a permanent product shutdown, leaving depositors with an unquantified shortfall. It highlights the risks of custom governance wrappers and may prompt users to reassess similar vault products.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.crowdfundinsider.com/2026/08/300909-ethereum-based-defi-lending-protocol-term-finance-suffers-setback-as-governance-exploit-drains-millions-from-vaults/",
+          "title": "crowdfundinsider.com",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/08/24/ethereum-lending-app-term-finance-loses-usd8-5-million-after-attacker-buys-voting-power",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/hacks/term-finance-permanently-shuts-meta-vaults-after-exploit-peckshield-estimated-at-8-5-million",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_09f87331a0893067",
+      "event_id": "evt_09f87331a0893067",
+      "latest_date": "2026-08-25",
+      "first_date": "2026-08-23",
+      "days": 3,
+      "entries": 3,
+      "updates_count": 3,
+      "sources_count": 4,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "exchange_operation",
+      "event_type_zh": "交易所动态",
+      "event_type_en": "Exchange operation",
+      "title_zh": "BitMart 停运、提现限制与重组进展",
+      "title_en": "BitMart shutdown, withdrawal restrictions and restructuring",
+      "summary_zh": "交易停运安排未变，重组和债权人分配方案等待进一步披露。",
+      "summary_en": "The trading shutdown remained; restructuring and creditor-distribution details awaited disclosure.",
+      "latest_update_zh": "BitMart 聘请 White & Case 评估重组，并承诺最迟 9 月 9 日给出路线图。",
+      "latest_update_en": "BitMart engaged White & Case to assess restructuring and said a roadmap was due by Sept. 9.",
+      "background_zh": "据 CoinDesk 报道，BitMart 在宣布关闭数周后，正考虑部分重启并向债权人进行偿付。 这很关键，因为它可能决定 BitMart 用户能否收回资金，以及该交易所是否仍具备存续能力。在行业整合与破产频发的背景下，这也会影响用户对中心化加密货币交易所的信心。 报道称，这家交易所在宣布关闭数周后，正在权衡部分重启以及债权人偿付等选项。具体条款、金额和时间表尚未公布。",
+      "background_en": "BitMart is reportedly considering a partial restart and creditor payouts weeks after it announced it would shut down, according to CoinDesk. This matters because it could determine whether BitMart's users recover funds and whether the exchange retains any viability. It also affects confidence in centralized crypto exchanges during a period of consolidation and insolvencies. The report says the exchange is weighing options for a partial restart alongside creditor payouts, weeks after the shutdown announcement. Specific terms, amounts, and timelines have not been disclosed.",
+      "latest_summary_zh": "8月21日，BitMart宣布正与White & Case探讨重组方案，可能在向债权人分配的同时分阶段恢复部分服务；但先前宣布的8月26日交易关闭和提现建议时限保持不变。\n\n此事之所以重要，是因为BitMart试图提供全面清盘之外的替代方案，但用户仍缺乏具体的偿还框架、回收率预估或时间表。这种不确定性可能削弱用户对中心化交易所的信任，并加大监管与用户对BitMart的压力。\n\n该方案并未改变8月26日01:00 UTC现货、合约及其他交易停运的安排，也未改变建议用户在05:00 UTC前提交提现的时间。BitMart表示，逾期提交的提现请求将转入单独处理流程，并预计在9月9日前提供进一步更新。",
+      "latest_summary_en": "On Aug. 21, BitMart announced it is exploring a restructuring with White & Case that could allow phased service resumption alongside creditor distributions, while maintaining its prior Aug. 26 trading shutdown and recommended withdrawal deadline.\n\nThis matters because it attempts to offer an alternative to a full wind-down, yet customers still lack a concrete repayment framework, recovery estimate, or timetable. The uncertainty could erode trust in centralized exchanges and intensify regulatory and user pressure on BitMart.\n\nThe proposal does not change the 01:00 UTC Aug. 26 halt of spot, futures, and other trading, nor the recommended 05:00 UTC withdrawal submission time. BitMart says late withdrawal requests will move to a separate processing procedure, and the exchange expects to provide another update by Sept. 9.",
+      "discussion_zh": "此事之所以重要，是因为BitMart试图提供全面清盘之外的替代方案，但用户仍缺乏具体的偿还框架、回收率预估或时间表。这种不确定性可能削弱用户对中心化交易所的信任，并加大监管与用户对BitMart的压力。",
+      "discussion_en": "This matters because it attempts to offer an alternative to a full wind-down, yet customers still lack a concrete repayment framework, recovery estimate, or timetable. The uncertainty could erode trust in centralized exchanges and intensify regulatory and user pressure on BitMart.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5tMXEwNmdZV1JiYWtBYklfNldldjRoREVtamxhNEUyZ3c1cEtDa3BWVFhMYjBuTXM1SHI0dm1tVU50WTU0SmdrUVUwNVFyZlRQN3F4Zy1YdUx3T0x1MGJWN3VhUXB4QXhJbUVN?oc=5",
+          "title": "CryptoTicker",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/bitmart-is-talking-about-reopening-before-it-has-answered-the-withdrawal-question/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/",
+          "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": []
     }
   ]
 }

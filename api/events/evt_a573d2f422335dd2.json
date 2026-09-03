@@ -47,6 +47,16 @@
       "what_changed_en": "Malicious Rust crate arrayref runs build-time payload",
       "current_state_zh": "恶意 Rust crate arrayref 构建时执行恶意负载",
       "current_state_en": "Malicious Rust crate arrayref runs build-time payload",
+      "detailed_summary_zh": "流行的 Rust crate arrayref 的恶意版本 0.3.10 首次添加了对拼写错误仿冒 crate proc-macro1 的依赖，其 build 脚本会在编译时下载并执行远程二进制文件。Rust 官方团队和 RustSec 公告数据库已于 2026 年 8 月 20 日发出官方警告，该恶意版本也已从 crates.io 移除。 由于 arrayref 使用广泛，且恶意代码在构建过程中执行，任何编译了该恶意版本的开发者或 CI/CD 系统都可能被感染，而无需运行项目自身代码。这突显了针对 Rust/crates.io 生态系统的供应链攻击的系统性风险。 恶意版本的 arrayref 0.3.10 由合法维护者账号 'droundy' 于 2026-08-20 发布，其依赖的 proc-macro1 1.0.107 在几分钟前由账号 'dtolney' 发布。proc-macro1 的 build.rs 会下载并执行远程载荷；安全研究人员称这是一个多阶段信息窃取程序，并具备第二阶段后门能力。",
+      "detailed_summary_en": "A malicious release of the popular Rust crate arrayref (version 0.3.10) added a first-ever dependency on a typosquatted crate, proc-macro1, whose build script downloads and executes a remote binary at compile time. The Rust team and RustSec advisory database issued official warnings on August 20, 2026, and the malicious version was removed from crates.io. Because arrayref is widely used and the malware executes during the build process, any developer or CI/CD system that builds the compromised version may be infected without running the project's own code. This highlights the systemic risk of supply-chain attacks on the Rust/crates.io ecosystem. The malicious arrayref 0.3.10 was published on 2026-08-20 by the legitimate maintainer account 'droundy', and it depends on proc-macro1 1.0.107, which was published minutes earlier by account 'dtolney'. The build.rs of proc-macro1 downloads and executes a remote payload; security researchers describe it as a multi-stage info-stealer with stage-2 backdoor capabilities.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49374269"

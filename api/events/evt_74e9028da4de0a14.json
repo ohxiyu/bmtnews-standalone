@@ -52,6 +52,16 @@
       "what_changed_en": "Zilliqa: Ledger Bug Exposed 6,772 Keys, Enabled 683M ZIL Theft",
       "current_state_zh": "Zilliqa 指 Ledger 漏洞泄露密钥，致 6.83 亿 ZIL 被盗",
       "current_state_en": "Zilliqa: Ledger Bug Exposed 6,772 Keys, Enabled 683M ZIL Theft",
+      "detailed_summary_zh": "Zilliqa 的事后调查报告显示，旧版 Ledger 应用程序在生成 nonce 时丢弃了 8 字节熵，导致至少 6,772 个账户的私钥暴露，并使 66 笔交易中被盗 683,130,969.66 ZIL。旧版交易仍处于暂停状态，迁移到 Zilliqa EVM 需要等待外部安全审计。\n\n这次已确认的硬件钱包安全故障直接危及用户资金，而已发布的签名无法撤销，因此已暴露的密钥将永久面临风险。它凸显了签名实现中一个微小的随机性漏洞，足以破坏硬件钱包被广泛信赖的安全保障，影响使用旧版 Ledger 应用的 ZIL 持有者，并可能削弱对这类设备的整体信心。\n\n该应用为每个 nonce 生成 40 个随机字节，但将错误的 32 字节复制到签名缓冲区，保留了 8 个零字节并丢弃 8 个熵字节，导致受影响 nonce 的高 64 位被强制设为零。同一账户产生四个或更多此类有偏签名后，攻击者可在数秒内从公开链上数据恢复私钥；批量扫描要求至少五个签名，因此恰好四个签名的账户未被计入 6,772 这个数字。",
+      "detailed_summary_en": "Zilliqa's post-mortem reveals a bug in the legacy Ledger application for Zilliqa discarded eight bytes of entropy when generating nonces, exposing the private keys of at least 6,772 accounts and enabling the theft of 683,130,969.66 ZIL across 66 transactions. Legacy transactions remain paused while migration to Zilliqa EVM awaits an external security audit.\n\nThis confirmed hardware-wallet security failure directly compromises user funds, and since already-published signatures cannot be withdrawn, exposed keys remain at risk permanently. It highlights how a subtle randomness bug in a signing implementation can undermine the security guarantees hardware wallets are trusted to provide, affecting ZIL holders using the legacy Ledger app and broader confidence in such devices.\n\nThe application generated 40 random bytes per nonce but copied the wrong 32 bytes into the signing buffer, keeping eight zero bytes and discarding eight entropy bytes, forcing the high 64 bits of each affected nonce to zero. Four or more such biased signatures for the same account allow private-key recovery in seconds from public blockchain data; the bulk scan required five signatures, so accounts with exactly four were not counted in the 6,772 figure.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:ea5f00ad82f8e0cd"

@@ -54,6 +54,16 @@
       "what_changed_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
       "current_state_zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
       "current_state_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
+      "detailed_summary_zh": "Core Lightning（CLN）开发者已告知节点运营者让其节点下线，因为存在一个严重且尚未修补的漏洞。修复后的二进制文件尚未发布，细节目前处于两周的保密期（embargo）内。\n\n此事很重要，因为CLN是负责处理比特币支付的闪电网络（Lightning Network）的主要实现之一。如果漏洞在修复程序广泛部署前被利用，可能会危及用户资金以及人们对闪电网络的信任。\n\n无法升级的运营者被建议使用 --offline 标志运行节点。CLN 团队尚未披露漏洞细节，理由是两周的保密期，且官方修复版二进制文件尚未发布。",
+      "detailed_summary_en": "Core Lightning (CLN) developers have told node operators to take their nodes offline because of a critical unpatched vulnerability. The fixed binaries have not yet been released, and details are under a two-week embargo.\n\nThis matters because CLN is one of the main implementations of the Lightning Network, which handles Bitcoin payments. An unpatched vulnerability could endanger users' funds and trust in the Lightning Network if exploited before fixes are widely deployed.\n\nOperators who cannot upgrade are advised to run nodes with the --offline flag. The CLN team has not disclosed vulnerability specifics, citing a two-week embargo, and official patched binaries are not yet available.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:thedefiant.io_api_feed:8b1158c0649fa554"

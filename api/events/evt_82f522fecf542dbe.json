@@ -49,6 +49,16 @@
       "what_changed_en": "Term Finance shuts Meta Vaults after $8.5M governance exploit",
       "current_state_zh": "Term Finance 遭治理攻击损失 850 万美元，永久关闭 Meta Vaults",
       "current_state_en": "Term Finance shuts Meta Vaults after $8.5M governance exploit",
+      "detailed_summary_zh": "Term Finance 在治理漏洞导致约 850 万美元 ETH 和稳定币被盗后，永久关闭了 Meta Vaults。该协议停止了新存款，但保留提款通道，并撤销了金库的 DAO 治理角色。\n\n该事件凸显了 DeFi 中的治理机制如何被利用，攻击者凭借投票权绕过时间锁保护。它直接影响到 Meta Vault 存款人，并引发对基于 Yearn V3 架构的自定义治理包装器安全性的广泛担忧。\n\nPeckShield 估计攻击者窃取了约 2,843 ETH（价值 687 万美元）和 168 万 USDC（后兑换为 DAI）。第一笔交易执行了一个搁置六天无人否决的 ETH Meta Vault 提案，将延迟冷却时间设为零，随后将 2,841.7435 WETH 转移至攻击者控制的地址；约 22 分钟后，第二笔交易跨五个 USDC 金库执行了五个提案，移走了 1,679,639.29 USDC。",
+      "detailed_summary_en": "Term Finance permanently shut down its Meta Vaults after a governance exploit drained approximately $8.5 million in ETH and stablecoins. The protocol halted deposits but kept withdrawals open, and revoked the vaults' DAO governance roles.\n\nThis incident highlights how governance mechanisms in DeFi can be turned against protocols, allowing attackers with voting power to bypass timelock protections. It directly affects Meta Vault depositors and raises broader concerns about the security of custom governance wrappers on Yearn V3 architecture.\n\nPeckShield estimated the attacker removed about 2,843 ETH ($6.87 million) and 1.68 million USDC (later swapped to DAI). A first transaction executed an ETH Meta Vault proposal that had sat for six days without veto, setting the delay cooldown to zero before routing 2,841.7435 WETH to an attacker-controlled address; a second transaction about 22 minutes later executed five proposals across five USDC vaults, removing 1,679,639.29 USDC.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:c4965240fb71bb6a"

@@ -56,6 +56,29 @@
       "what_changed_en": "World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.\n\nThis gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users' devices, without trusted setups or server round-trips. It lowers the barrier to building private 'proof of human' systems on the web and in Web3 applications.\n\nThe toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.",
       "current_state_zh": "World 已将客户端零知识身份证明工具包 ProveKit 开源，该工具使用 Rust 编写并提供 WebAssembly 绑定。ProveKit 自 4 月起就已投入 World ID 的生产环境使用。\n\n此举让身份与隐私开发者能够获得经过生产验证的工具包，直接在用户设备上生成和验证零知识证明，无需可信设置或服务器往返。这降低了在 Web 与 Web3 应用中构建私密“人类身份证明”系统的门槛。\n\n该工具包将 prover、verifier 和电路编译器集成到一个轻量级组件中，可把 Noir 电路转换为可验证的 WHIR 证明。开发者可以在本地、Rust 服务、浏览器、iOS/Android，或通过 Groth16 递归验证器在链上完成证明验证。",
       "current_state_en": "World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.\n\nThis gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users' devices, without trusted setups or server round-trips. It lowers the barrier to building private 'proof of human' systems on the web and in Web3 applications.\n\nThe toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.",
+      "detailed_summary_zh": "World 已将客户端零知识身份证明工具包 ProveKit 开源，该工具使用 Rust 编写并提供 WebAssembly 绑定。ProveKit 自 4 月起就已投入 World ID 的生产环境使用。\n\n此举让身份与隐私开发者能够获得经过生产验证的工具包，直接在用户设备上生成和验证零知识证明，无需可信设置或服务器往返。这降低了在 Web 与 Web3 应用中构建私密“人类身份证明”系统的门槛。\n\n该工具包将 prover、verifier 和电路编译器集成到一个轻量级组件中，可把 Noir 电路转换为可验证的 WHIR 证明。开发者可以在本地、Rust 服务、浏览器、iOS/Android，或通过 Groth16 递归验证器在链上完成证明验证。",
+      "detailed_summary_en": "World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.\n\nThis gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users' devices, without trusted setups or server round-trips. It lowers the barrier to building private 'proof of human' systems on the web and in Web3 applications.\n\nThe toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.",
+      "background_zh": "零知识证明允许一方在不透露背后私人数据的情况下证明某项声明，例如“我是独一无二的人”。World ID 是一套匿名的“人类身份证明”系统，当用户访问在线服务时，可以用它来验证自己是真实且唯一的用户。传统零知识证明系统计算量很大，通常需要在服务器或专用硬件上运行，而 ProveKit 的设计目标就是让手机等客户端设备也能直接完成证明生成。",
+      "background_en": "Zero-knowledge proofs allow one party to prove an assertion, such as \"I am a unique human,\" without revealing the private data behind it. World ID is an anonymous proof-of-human system that lets people verify they are real and unique users when accessing online services. Traditional zero-knowledge proof systems are computationally heavy and are usually run on powerful servers or specialized hardware, so ProveKit is designed to make proof generation practical directly on a phone or other client device.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [
+        {
+          "url": "https://provekit.org/",
+          "title": "ProveKit · Client-side zero-knowledge, built for the real world"
+        },
+        {
+          "url": "https://docs.provekit.org/",
+          "title": "ProveKit Documentation | ProveKit Docs"
+        },
+        {
+          "url": "https://world.org/world-id",
+          "title": "World ID by World - Digital proof of human for the internet"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.theblock.co_rss.xml:65ea340a927eed03"

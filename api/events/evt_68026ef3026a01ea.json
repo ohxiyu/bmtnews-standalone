@@ -58,6 +58,33 @@
       "what_changed_en": "Google Removes Manifest V2 Extensions, Including uBlock Origin, from Chrome Web Store",
       "current_state_zh": "谷歌从Chrome网上应用店移除MV2扩展，含uBlock Origin",
       "current_state_en": "Google Removes Manifest V2 Extensions, Including uBlock Origin, from Chrome Web Store",
+      "detailed_summary_zh": "谷歌现已将包括uBlock Origin在内的所有Manifest V2（MV2）扩展从Chrome网上应用店下架。这标志着谷歌向Manifest V3迁移的最后阶段，Chrome用户无法再安装或重新启用MV2扩展。\n\n数百万依赖uBlock Origin拦截广告、防范恶意广告的Chrome用户将直接受到影响。此次移除加剧了人们对谷歌单方面控制浏览器功能的担忧，并可能促使用户转向Firefox和其他Chromium替代品。\n\nManifest V3用Service Workers取代了长期运行的后台页面，并禁止远程托管代码，这极大限制了广告拦截器等扩展拦截网络请求的能力。由于uBlock Origin依赖MV3所限制的技术，它无法在Chrome上以完整形态使用，其开发者推荐使用Firefox来获得完整的扩展体验。",
+      "detailed_summary_en": "Google has now removed all Manifest V2 (MV2) extensions from the Chrome Web Store, including the widely used ad blocker uBlock Origin. This marks the final phase of Google's transition to Manifest V3, and Chrome users can no longer install or re-enable MV2 extensions from the store.\n\nMillions of Chrome users who depend on uBlock Origin for ad blocking and protection against malicious ads are directly affected. The removal intensifies concerns about Google's unilateral control over browser capabilities and may push users toward Firefox and other Chromium alternatives.\n\nManifest V3 replaces long-lived background pages with service workers and bans remotely hosted code, which significantly constrains how extensions like ad blockers can intercept network requests. Because uBlock Origin relies on techniques that MV3 restricts, it cannot be used in its full form on Chrome, and its developer recommends Firefox as the best browser for the full extension.",
+      "background_zh": "Manifest V2是Chrome多年来使用的扩展框架；Manifest V3是谷歌于2020年推出的新框架，强调更高的安全性和性能。谷歌给出了弃用时间表：Chrome网上应用店先停止接受新的MV2扩展，再逐步禁用现有扩展，最终将于2026年7月在Chrome 139中一次性禁用所有MV2扩展。这些变化使得广告拦截器等扩展更难拦截网络请求，也引发了关于隐私以及浏览器厂商与用户之间权力平衡的讨论。",
+      "background_en": "Manifest V2 is the extension framework that Chrome used for years; Manifest V3 is a newer framework that Google introduced in 2020 with stronger security and performance guarantees. Google announced a deprecation timeline: the Chrome Web Store stopped accepting new MV2 extensions, then gradually disabled existing ones, and by July 2026 Chrome 139 is set to disable MV2 for all users at once. These changes make it more difficult for extensions such as ad blockers to intercept network requests, sparking debate about privacy and the balance of power between browser vendors and users.",
+      "community_discussion_zh": "评论者普遍批评谷歌的决定，称广告拦截已成为安全问题，尤其是对不太懂技术、可能点击恶意广告的用户而言。许多人建议改用Firefox，并指出uBlock Origin在Firefox上一直表现最好，也有人表示自己多年前就已弃用Chrome。整体情绪是反谷歌的，人们担忧浏览器单一化以及谷歌对网络的单方面控制。",
+      "community_discussion_en": "Commenters are overwhelmingly critical of Google's decision, describing ad blocking as a safety issue, especially for less tech-savvy users who may fall for malicious ads. Many recommend Firefox as the solution, noting that uBlock Origin always worked best in Firefox, and some say they already switched away from Chrome years ago. Overall sentiment is anti-Google, with concerns about a browser monoculture and Google's unilateral control over the web.",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline",
+          "title": "Manifest V2 support timeline | Chrome for Developers"
+        },
+        {
+          "url": "https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3",
+          "title": "Extensions / Manifest V3 | Chrome for Developers"
+        },
+        {
+          "url": "https://developer.chrome.com/docs/extensions/mv2/",
+          "title": "About Manifest V2 | Chrome for Developers"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49514878",
+          "title": "Community discussion"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49514878"

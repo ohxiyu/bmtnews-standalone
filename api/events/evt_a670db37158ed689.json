@@ -51,6 +51,16 @@
       "what_changed_en": "Coldcard Firmware Update Mitigates $130M Bitcoin Seed-Entropy Exploit",
       "current_state_zh": "Coldcard发布固件更新修复致1.3亿美元比特币被盗的种子熵漏洞",
       "current_state_en": "Coldcard Firmware Update Mitigates $130M Bitcoin Seed-Entropy Exploit",
+      "detailed_summary_zh": "Coinkite公司在为期三周的安全审查后，为Coldcard Mk4/Mk5发布了5.6.1固件、为Coldcard Q发布了1.5.1Q固件，修复了种子生成过程中的熵缺陷。现在用户生成新种子时必须至少加入65次按键、50次掷骰子或128次抛硬币的随机输入，受影响用户被要求迁移到全新的种子。 这一漏洞直接违背了硬件钱包的核心承诺——即使设备离线，私钥也是安全的——因为攻击者可以猜出因随机性不足而生成的密钥。该事件凸显出硬件钱包的安全性完全取决于其随机数生成强度，可能促使厂商和用户要求可验证的熵来源。 据Coinkite称，该漏洞使部分设备的有效熵从128比特降至约40比特，且可追溯到2021年。此次更新还以SHA-256 Hash_DRBG替换了Yasmarang备用伪随机数生成器，增加了硬件随机数生成器故障检查，在签名前立即验证PSBT，并加强了USB和Delta Mode的处理。",
+      "detailed_summary_en": "Coinkite released firmware 5.6.1 for Coldcard Mk4/Mk5 and 1.5.1Q for Coldcard Q after a three-week security review, fixing a seed-generation entropy flaw. Users now must add at least 65 key presses, 50 dice rolls, or 128 coin flips when generating a new seed, and affected users are told to migrate to a fresh seed. This exploit directly contradicts the core promise of hardware wallets—that private keys remain safe even when the device is offline—by allowing attackers to guess keys generated with insufficient randomness. The incident highlights that a hardware wallet's security is only as strong as its random number generation, and it may push vendors and users to demand verifiable entropy sources. The flaw reduced effective entropy from 128 bits to roughly 40 bits on some devices and dates back to 2021, according to Coinkite. The update also replaces the Yasmarang backup pseudo-random number generator with SHA-256 Hash_DRBG, adds hardware RNG failure checks, verifies PSBTs immediately before signing, and tightens USB and Delta Mode handling.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:6b6e45deb878ca81"

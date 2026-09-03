@@ -53,6 +53,41 @@
       "what_changed_en": "Tectonic lost about $75M and Cronos validators halted and rolled back the chain.",
       "current_state_zh": "链已通过回滚遏制攻击影响，事件继续观察。",
       "current_state_en": "The rollback contained the incident; monitoring continues.",
+      "detailed_summary_zh": "Cronos链上的Tectonic借贷协议遭攻击，迫使Crypto.com支持的Cronos区块链暂停出块并回滚至攻击前状态。安全公司PeckShield初步估计被盗资金约7400万美元，其中629万美元已跨链至以太坊，无法通过回滚追回。\n\n这是Cronos DeFi生态中最严重的事件之一，凸显了预言机操控攻击如何能掏空借贷协议，并引发波及全链的回滚、抹除用户交易。这损害了市场对Crypto.com区块链基础设施的信任，也引发了对去中心化与紧急治理之间取舍的质疑。\n\nTectonic的预言机页面仅列出VVS Finance和Crypto.com作为TONIC的价格来源，研究员Weilin Li将此攻击描述为类似Mango Markets的价格操控手法。验证者丢弃了近11000个区块，抹除约两小时的交易；Cronos只有33个仅限受邀验证者，其DeFi总锁仓量（TVL）自2022年以来已下降92%。",
+      "detailed_summary_en": "An exploit in the Tectonic lending protocol on Cronos forced the Crypto.com-backed blockchain to halt block production and rewind history to the pre-exploit state. Security firm PeckShield initially estimated the compromised funds at approximately $74 million, though $6.29 million had already been bridged to Ethereum.\n\nThis is one of the most severe incidents in the Cronos DeFi ecosystem, underscoring how an oracle-manipulation exploit can drain lending protocols and trigger a chain-wide rollback that erases user transactions. It damages trust in Crypto.com's blockchain infrastructure and raises questions about the tradeoff between decentralization and emergency governance.\n\nTectonic's oracle page lists only VVS Finance and Crypto.com as price sources for TONIC, and researcher Weilin Li described the attack as a Mango Markets-style price manipulation scheme. Validators discarded nearly 11,000 blocks, erasing about two hours of transactions; Cronos also has 33 invitation-only validators and its DeFi TVL has fallen 92% since 2022.",
+      "background_zh": "Tectonic是构建在Cronos上的去中心化借贷协议，Cronos是Crypto.com创建的兼容EVM的区块链。Crypto.com通过法币购买、Visa卡奖励和质押产品大力推广TONIC代币，成为该协议最大的散户入口之一。区块链回滚依靠验证者协调删除攻击后的区块，虽然能追回被盗资产，但也会抹除该窗口期内合法用户的交易记录。",
+      "background_en": "Tectonic is a decentralized lending protocol built on Cronos, the EVM-compatible blockchain created by Crypto.com. Crypto.com heavily promoted TONIC, the protocol's token, through fiat purchases, Visa card rewards, and staking products, making it one of the largest retail onramps for the protocol. A blockchain rollback uses validator coordination to erase post-exploit blocks, which can recover stolen assets but also removes legitimate user transactions recorded during that window.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "此次攻击及随后的暂停与回滚可能会拖累CRO及其他Cronos生态资产的市场情绪，用户担忧安全性与不可篡改性。该事件也可能加速Cronos DeFi的资金外流——其TVL自2022年以来已下降92%，并凸显单链生态中的集中度风险。",
+      "market_impact_en": "The exploit and subsequent halt/rollback are likely to weigh on sentiment for CRO and other Cronos-based assets, as users worry about safety and immutability. The incident may also accelerate capital outflow from Cronos DeFi, whose TVL had already dropped 92% since 2022, and it highlights concentration risks in single-chain ecosystems.",
+      "importance_score": 9.0,
+      "references": [
+        {
+          "url": "https://decrypt.co/376913/crypto-coms-cronos-halts-entire-blockchain-after-75m-tectonic-exploit",
+          "title": "Crypto.com's Cronos Halts Entire Blockchain After $75M ..."
+        },
+        {
+          "url": "https://cryptodaily.co.uk/2026/08/cronos-resumes-tectonic-exploit-rollback",
+          "title": "Cronos Resumes After Tectonic Exploit Rollback"
+        },
+        {
+          "url": "https://defillama.com/protocol/tectonic",
+          "title": "Tectonic TVL, Fees & Revenue"
+        },
+        {
+          "url": "https://coinmarketcap.com/currencies/cronos/",
+          "title": "Cronos price today, CRO to USD live price, marketcap and chart | CoinMarketCap"
+        },
+        {
+          "url": "https://tectonic.gitbook.io/docs",
+          "title": "What is Tectonic? | Tectonic - GitBook"
+        },
+        {
+          "url": "https://thebitcoinmanual.com/articles/chain-rollback/",
+          "title": "What Is A Chain Rollback? - The Bitcoin Manual"
+        }
+      ],
       "confidence": 1.0,
       "story_ids": [
         "rss:protos.com_feed_:3a75cc3f717c0c85",

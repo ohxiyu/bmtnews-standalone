@@ -53,6 +53,16 @@
       "what_changed_en": "Ledger Patches Ethereum App Bug That Could Swap Signed Transactions",
       "current_state_zh": "Ledger 修复以太坊应用漏洞，可致签名交易被替换",
       "current_state_en": "Ledger Patches Ethereum App Bug That Could Swap Signed Transactions",
+      "detailed_summary_zh": "Ledger 发布了以太坊应用 1.22.2 版本，阻止签名会话替换和不匹配的批准回调，这些漏洞可能让恶意 dApp 获得与屏幕显示内容不同的数据的签名。该修复于 8 月 13 日在 GitHub 打上标签，变更日志日期为 8 月 12 日。\n\n硬件钱包的核心安全承诺是向用户准确展示所签署的内容，因此交易替换漏洞威胁到 Ledger 等设备的核心信任。由于 Ledger 是最广泛使用的硬件钱包产品线之一，这次修复对众多以太坊用户很重要，他们需要更新到 1.22.2 版本。\n\n报告该问题的安全公司 TestMachine 表示，攻击需要具有 WebHID 访问权限的 dApp，并已在 Ledger Flex 上验证；该公司称共享代码使该漏洞影响 Nano X、Nano S Plus、Stax 和 Apex。Ledger 首席技术官 Charles Guillemet 表示，Ledger Donjon 在公开披露前约两周发现了该漏洞，目前尚未确认有野外利用或资金损失。",
+      "detailed_summary_en": "Ledger released Ethereum app version 1.22.2 to block signing-session replacement and mismatched approval callbacks that could let a malicious dApp obtain a signature for data different from what is shown on screen. The fix was tagged on GitHub on Aug. 13, with the changelog dated Aug. 12.\n\nHardware wallets are trusted to display exactly what a user signs, so a transaction-substitution flaw threatens the core security promise of devices like the Ledger. Because Ledger is one of the most widely used hardware wallet lines, this patch matters for many Ethereum users who must update to 1.22.2.\n\nTestMachine, the security firm that reported the issue, said the attack requires a dApp with WebHID access and was validated on Ledger Flex; it claims shared code extends the flaw to Nano X, Nano S Plus, Stax, and Apex. Ledger CTO Charles Guillemet said Ledger Donjon found the bug about two weeks before the public disclosure, and no in-the-wild exploit or lost funds have been confirmed.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:d19ecb360a246676"

@@ -54,6 +54,16 @@
       "what_changed_en": "Maya Protocol Exploit Leaves $11M Pool Damage Unresolved; Attacker Still Holds 20.83 BTC",
       "current_state_zh": "Maya Protocol 遭攻击约1100万美元缺口未解，攻击者仍持20.83 BTC",
       "current_state_en": "Maya Protocol Exploit Leaves $11M Pool Damage Unresolved; Attacker Still Holds 20.83 BTC",
+      "detailed_summary_zh": "8月18日，Maya Protocol 遭到攻击，攻击者串联六个会计漏洞，盗走约4887万枚CACAO，并提取约165万至170万美元的资产。截至8月21日，疑似攻击者的比特币地址仍持有20.8273 BTC且无任何转出交易，Maya也未公布针对约1090万美元更大范围池损失的恢复计划。 此次攻击凸显了跨链流动性协议中持续存在的安全风险——单笔精心构造的交易就能引发连锁性的池损失。由于约1100万美元的影响仍未解决，且CACAO价格已下跌88.7%，用户对Maya Protocol及类似基于THORChain的网络的信心可能受到动摇。 SigIntZero的技术重建将攻击归因于一笔23条消息交易中串联的六个会计与状态处理缺陷——错误的重置状态触发了虚假的“转账缺失”信号，向一个薄弱的ARB.LINK池注入了约4945万枚CACAO。CryptoSlate分析认为，约640万美元的池损失来自CACAO重定价（从约0.115美元跌至0.013美元，跌幅88.7%），约290万美元来自套利。",
+      "detailed_summary_en": "On Aug. 18, Maya Protocol suffered an exploit in which an attacker chained six accounting flaws to drain roughly 48.87 million CACAO and extract about $1.65–$1.7 million in assets. As of Aug. 21, the suspected attacker's Bitcoin address still holds 20.8273 BTC with no outgoing transactions, and Maya has not published a recovery plan for the wider ~$10.9 million pool impact. This exploit underscores persistent security risks in cross-chain liquidity protocols, where a single crafted transaction can trigger cascading pool losses. With ~$11 million in impact still unresolved and CACAO's price down 88.7%, user confidence in Maya Protocol and similar THORChain-based networks may be shaken. SigIntZero's technical reconstruction attributes the exploit to six accounting and state-handling flaws chained inside one 23-message transaction, which produced a false missing-transfer signal and credited ~49.45 million CACAO to a thin ARB.LINK pool. CryptoSlate analysis attributes ~$6.4 million of pool impact to CACAO repricing (from ~$0.115 to $0.013, an 88.7% decline) and ~$2.9 million to arbitrage.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:8ebed66f2210edb3"

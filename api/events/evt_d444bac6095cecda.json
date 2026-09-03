@@ -49,6 +49,16 @@
       "what_changed_en": "Polygon discloses security flaws fixed in Austin and Kyoto hard forks",
       "current_state_zh": "Polygon披露Austin与Kyoto硬分叉修复的安全漏洞",
       "current_state_en": "Polygon discloses security flaws fixed in Austin and Kyoto hard forks",
+      "detailed_summary_zh": "Polygon Labs披露了此前未公开的、影响Bor和Heimdall客户端的安全漏洞，这些漏洞已在公开披露前通过Austin和Kyoto硬分叉悄悄修复。漏洞包括拒绝服务风险、验证人资源耗尽以及检查点和里程碑处理问题。\n\n此次披露意义重大，因为它揭示了Polygon的权益证明网络曾面临可能破坏共识的严重稳定性威胁。同时，它也凸显了及时打补丁的重要性，因为运行旧版客户端的节点已经无法参与共识。\n\n最严重的问题出在Heimdall，精心构造的交易可迫使验证人执行过多处理工作。现在所有Polygon PoS节点都需要Bor v2.10.0，验证人和全节点需要Heimdall v0.11.0；两项升级均已在主网生效。",
+      "detailed_summary_en": "Polygon Labs disclosed previously private security vulnerabilities in its Bor and Heimdall clients that were silently patched via the Austin and Kyoto hard forks before public disclosure. The flaws included denial-of-service risks, validator resource exhaustion, and checkpoint/milestone processing issues.\n\nThis disclosure matters because it reveals that Polygon's proof-of-stake network faced serious stability threats that could have disrupted consensus. It also underscores the importance of timely patching, since nodes running older client versions have already fallen out of consensus.\n\nThe most severe issue was in Heimdall, where a specially crafted transaction could force validators to do excessive processing work. Bor v2.10.0 is now required for all Polygon PoS nodes, and Heimdall v0.11.0 is required for validators and full nodes; both upgrades are already active on mainnet.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:3180fb2584d7080a"

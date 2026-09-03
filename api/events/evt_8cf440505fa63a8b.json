@@ -50,6 +50,25 @@
       "what_changed_en": "Validator reward over-issuance on Core DAO triggers exchange transfer freezes",
       "current_state_zh": "Core DAO验证者奖励超额发放引发交易所转账冻结",
       "current_state_en": "Validator reward over-issuance on Core DAO triggers exchange transfer freezes",
+      "detailed_summary_zh": "Core DAO披露称，一小部分验证者收到了超出预期水平的CORE奖励，导致Coinbase暂停CORE发送和接收，LBank暂停充币。项目未披露超额数量或技术原因，代币供应影响仍未解决。\n\n该事件引发了人们对CORE固定21亿供应量及其81年节点挖矿计划的质疑，因为验证者奖励包含新铸造代币。交易所转账限制和未解决的发行问题可能影响该代币的流动性和用户信心。\n\nCoinbase于8月31日04:41 UTC发起事件，早于Core在05:24 UTC的公开声明；LBank则在05:00 UTC暂停充币。Core表示用户资产安全，网络安全和托管未受影响，但未披露超发的CORE数量、涉及验证者或奖励轮次。",
+      "detailed_summary_en": "Core DAO disclosed that a small group of validators received excess CORE rewards beyond intended levels, prompting Coinbase to pause CORE sends and receives and LBank to suspend deposits. The project did not disclose the excess amount or technical cause, leaving token supply impact unresolved.\n\nThe incident raises questions about CORE's fixed 2.1 billion supply and its 81-year node-mining schedule, since validator rewards include newly minted tokens. Exchange transfer restrictions and unresolved issuance could affect liquidity and user confidence in the token.\n\nCoinbase opened its incident at 04:41 UTC on Aug. 31 before Core's 05:24 UTC statement, while LBank suspended deposits at 05:00 UTC. Core said user assets are safe and network security and custody were unaffected, but did not disclose the amount of excess CORE, validators involved, or reward rounds.",
+      "background_zh": "Core DAO是一个区块链项目，其CORE代币总供应量固定为21亿枚，其中39.995%分配给长达81年的节点挖矿，并采用线性解锁。验证者奖励通常由新铸造的CORE区块奖励和交易费组成，在每轮结束时计算；其中90%分配给验证者及其委托者，10%进入系统奖励合约。",
+      "background_en": "Core DAO is a blockchain project whose CORE token has a fixed supply of 2.1 billion, with 39.995% allocated to node mining over 81 years using linear vesting. Validator rewards normally combine newly minted CORE block rewards with transaction fees, calculated at the end of each round; 90% goes to validators and delegators while 10% goes to the System Reward Contract.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "如果超发的代币最终被计入或转移，可能会增加CORE的实际流通供应量；发送和接收的临时冻结也降低了CORE在交易所的流动性。主要传导渠道是供应和流动性，而非已确认的漏洞或系统性故障；Coinbase报告称买入、卖出、兑换和法币交易未受影响。",
+      "market_impact_en": "The unresolved excess issuance could add to CORE's effective circulating supply if affected tokens are later credited or transferred, and the temporary freeze on sends and receives reduces on-exchange liquidity for CORE. The primary transmission channel is supply and liquidity, rather than a confirmed exploit or systemic failure; Coinbase reported that buys, sells, conversions and fiat transactions were unaffected.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://coinmarketcap.com/currencies/core-dao/",
+          "title": "Core price today, CORE to USD live price, marketcap... | CoinMarketCap"
+        },
+        {
+          "url": "https://tokenomist.ai/coredaoorg",
+          "title": "Core (CORE) | Tokenomics & Vesting Schedule"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:5ba71bb2cec0909b"

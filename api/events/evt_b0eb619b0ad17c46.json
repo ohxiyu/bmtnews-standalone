@@ -53,6 +53,16 @@
       "what_changed_en": "OpenAI's ChatGPT Work Agent Signs Into Sites Without You",
       "current_state_zh": "OpenAI 的 ChatGPT Work 代理可在你不知情时登录网站",
       "current_state_en": "OpenAI's ChatGPT Work Agent Signs Into Sites Without You",
+      "detailed_summary_zh": "OpenAI 在8月25日的发布说明中为 ChatGPT Work 引入了代理浏览器能力，使其能在需要登录的网站上完成任务。用户只需输入一次凭据，浏览器会话即可持续，供代理在无人值守时继续工作。\n\n该功能将会话变成了一个长期有效的凭证，引发了关于自主代理在无人监督情况下可代表用户执行何种操作的新安全与隐私担忧。这对普通 ChatGPT 用户和基于 OpenAI 代理工具构建的开发者都很重要，因为持久登录带来的便利是以账户安全为代价的。\n\nOpenAI 表示，模型无法看到用户的用户名或密码，凭据既不会存储也不会用于训练，登录步骤还支持密码管理器。然而，会话本身会一直保持有效，直到用户在 Settings > Cloud browser 中按站点手动清除，而且该设计假设用户不会一直盯着。",
+      "detailed_summary_en": "OpenAI's August 25 release notes introduced an agentic browser capability for ChatGPT Work that lets the assistant complete tasks on login-gated websites. Users enter credentials once, and the browser session can persist for future tasks so the agent can work unattended.\n\nThe feature turns a signed-in session into a standing credential, raising new security and privacy concerns about what an autonomous agent can do on a user's behalf without direct oversight. It matters to everyday ChatGPT users and to developers building on OpenAI's agentic tools, because the convenience of persistent logins comes with a meaningful tradeoff in account security.\n\nOpenAI states the model cannot see the user's username or password, and that credentials are neither stored nor used for training; the login step also supports password managers. However, the session itself remains active until cleared manually per site under Settings > Cloud browser, and the design assumes the user is not watching.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:ca96ac88ce991335"

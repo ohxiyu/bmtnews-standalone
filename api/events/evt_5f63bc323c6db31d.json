@@ -54,6 +54,16 @@
       "what_changed_en": "Why Your Local LLM Feels Dumber Than It Is",
       "current_state_zh": "为什么你的本地大模型感觉比实际更笨",
       "current_state_en": "Why Your Local LLM Feels Dumber Than It Is",
+      "detailed_summary_zh": "这篇文章剖析了本地大模型为什么常常表现不如预期，重点讨论了量化、上下文窗口管理和推理配置。文中还包含了社区基准测试和实用的部署建议。 理解这些影响性能的因素，对任何部署本地大模型的人都很重要，因为不合理的配置会让能力很强的模型显得很弱。这也反映了本地推理正逐渐成熟，成为云端 API 之外的实用替代方案。 讨论中提到了 NVFP4 和 AWQ W4A16 等量化格式，并指出低质量量化可能导致工具调用失败。社区成员报告称，使用 Q8 量化并避免对 KV 缓存进行压缩有助于保持准确性，而 llama.cpp 的语法约束机制可以防止格式错误的工具调用。",
+      "detailed_summary_en": "The article breaks down why local LLMs often underperform expectations, focusing on quantization, context window management, and inference configurations. It includes community benchmarks and practical deployment tips. Understanding these performance factors is crucial for anyone deploying local LLMs, as poor setup can make capable models appear weak. It highlights the growing maturity of local inference as a practical alternative to cloud APIs. The discussion covers quantization formats such as NVFP4 and AWQ W4A16, noting that low-quality quants can lead to tool-call failures. Community members report that using Q8 quantization and avoiding KV cache compression help preserve accuracy, while llama.cpp's grammar enforcement can prevent malformed tool calls.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49402232"

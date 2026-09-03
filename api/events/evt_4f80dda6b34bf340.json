@@ -55,6 +55,29 @@
       "what_changed_en": "On September 1, OpenAI announced that its unreleased Astra model meets the \"Critical\" cybersecurity threshold under its Preparedness Framework, the first model to receive that designation. Astra scored a perfect 100% on ExploitBench and autonomously discovered and chained two previously unknown zero-days in Google's V8 JavaScript engine.\n\nThis is a frontier-lab milestone in AI safety and capability, showing that models can autonomously execute full compromise chains against hardened real-world systems. It will likely shape access restrictions, defensive AI programs, and industry-wide discussions about catastrophic cyber risk.\n\nOpenAI says Astra tops GPT-5.6 Sol, which maxed out at the lower \"High\" tier, and Astra refused 91.5% of cyber jailbreak attempts in internal tests versus 59% for GPT-5.6 Sol. Access starts with a small alpha test group and will later expand through the Daybreak Blue defensive security program; a public launch date has not been set.",
       "current_state_zh": "9月1日，OpenAI 宣布其未发布的 Astra 模型达到其 Preparedness Framework 下的“严重”网络安全级别，这是首个获得该级别的模型。Astra 在 ExploitBench 上获得 100% 满分，并自主发现、串联利用了 Google V8 JavaScript 引擎中两个此前未知的零日漏洞。\n\n这是AI安全与能力领域的前沿实验室里程碑，表明模型能够自主对加固后的真实世界系统执行完整入侵链条。它很可能影响访问限制、防御性AI计划，以及业界围绕灾难性网络风险的讨论。\n\nOpenAI 表示 Astra 超过了此前最高为“高级”级别的 GPT-5.6 Sol；在内部测试中，Astra 拒绝了 91.5% 的网络越狱尝试，而 GPT-5.6 Sol 为 59%。早期访问从小型 alpha 测试组开始，后续将通过 Daybreak Blue 防御性安全计划扩大，目前尚未设定公开发布日期。",
       "current_state_en": "On September 1, OpenAI announced that its unreleased Astra model meets the \"Critical\" cybersecurity threshold under its Preparedness Framework, the first model to receive that designation. Astra scored a perfect 100% on ExploitBench and autonomously discovered and chained two previously unknown zero-days in Google's V8 JavaScript engine.\n\nThis is a frontier-lab milestone in AI safety and capability, showing that models can autonomously execute full compromise chains against hardened real-world systems. It will likely shape access restrictions, defensive AI programs, and industry-wide discussions about catastrophic cyber risk.\n\nOpenAI says Astra tops GPT-5.6 Sol, which maxed out at the lower \"High\" tier, and Astra refused 91.5% of cyber jailbreak attempts in internal tests versus 59% for GPT-5.6 Sol. Access starts with a small alpha test group and will later expand through the Daybreak Blue defensive security program; a public launch date has not been set.",
+      "detailed_summary_zh": "9月1日，OpenAI 宣布其未发布的 Astra 模型达到其 Preparedness Framework 下的“严重”网络安全级别，这是首个获得该级别的模型。Astra 在 ExploitBench 上获得 100% 满分，并自主发现、串联利用了 Google V8 JavaScript 引擎中两个此前未知的零日漏洞。\n\n这是AI安全与能力领域的前沿实验室里程碑，表明模型能够自主对加固后的真实世界系统执行完整入侵链条。它很可能影响访问限制、防御性AI计划，以及业界围绕灾难性网络风险的讨论。\n\nOpenAI 表示 Astra 超过了此前最高为“高级”级别的 GPT-5.6 Sol；在内部测试中，Astra 拒绝了 91.5% 的网络越狱尝试，而 GPT-5.6 Sol 为 59%。早期访问从小型 alpha 测试组开始，后续将通过 Daybreak Blue 防御性安全计划扩大，目前尚未设定公开发布日期。",
+      "detailed_summary_en": "On September 1, OpenAI announced that its unreleased Astra model meets the \"Critical\" cybersecurity threshold under its Preparedness Framework, the first model to receive that designation. Astra scored a perfect 100% on ExploitBench and autonomously discovered and chained two previously unknown zero-days in Google's V8 JavaScript engine.\n\nThis is a frontier-lab milestone in AI safety and capability, showing that models can autonomously execute full compromise chains against hardened real-world systems. It will likely shape access restrictions, defensive AI programs, and industry-wide discussions about catastrophic cyber risk.\n\nOpenAI says Astra tops GPT-5.6 Sol, which maxed out at the lower \"High\" tier, and Astra refused 91.5% of cyber jailbreak attempts in internal tests versus 59% for GPT-5.6 Sol. Access starts with a small alpha test group and will later expand through the Daybreak Blue defensive security program; a public launch date has not been set.",
+      "background_zh": "OpenAI 的 Preparedness Framework（预备框架）是该公司的流程，用于跟踪和准备可能带来严重危害风险的先进AI能力。“严重”网络级别保留给能够独立在多个加固的真实世界系统上开发可用零日漏洞，或能够从高层目标规划并执行完整网络攻击的模型。ExploitBench 是一个面向生产的基准测试，按 16 项能力评估 LLM 代理，考察其将 V8 等 JavaScript 引擎中的缺陷转化为任意代码执行的能力。零日漏洞是指供应商尚未修复的漏洞，因此极具价值且危险性极高。",
+      "background_en": "OpenAI's Preparedness Framework is the company's process for tracking and preparing for advanced AI capabilities that could introduce risks of severe harm. The Critical cyber tier is reserved for models that can independently develop functional zero-day exploits across many hardened real-world systems, or plan and execute a full cyberattack from a high-level goal. ExploitBench is a production-focused benchmark that grades LLM agents on 16 capabilities needed to turn a bug in a JavaScript engine like V8 into arbitrary code execution. Zero-days are unpatched vulnerabilities that no vendor has yet fixed, making them highly valuable and dangerous.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://openai.com/index/updating-our-preparedness-framework/",
+          "title": "Our updated Preparedness Framework | OpenAI"
+        },
+        {
+          "url": "https://arxiv.org/abs/2605.14153",
+          "title": "[2605.14153] ExploitBench: A Capability Ladder Benchmark for LLM Cybersecurity Agents"
+        },
+        {
+          "url": "https://exploitbench.ai/",
+          "title": "ExploitBench"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:7e6c657170fd3ded"

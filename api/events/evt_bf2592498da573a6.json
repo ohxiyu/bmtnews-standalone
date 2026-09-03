@@ -47,6 +47,29 @@
       "what_changed_en": "The TAC network remains frozen for over 10 days after a staking-pool exploit drained billions of tokens, prompting a treasury bailout while attacker-held tokens remain unresolved.",
       "current_state_zh": "The TAC network remains frozen for over 10 days after a staking-pool exploit drained billions of tokens, prompting a treasury bailout while attacker-held tokens remain unresolved.",
       "current_state_en": "The TAC network remains frozen for over 10 days after a staking-pool exploit drained billions of tokens, prompting a treasury bailout while attacker-held tokens remain unresolved.",
+      "detailed_summary_zh": "TAC网络在8月22日质押池遭攻击后已停在区块24,671,475超过10天，共被盗走约29.9亿枚TAC，约占总供应量28.6%。提议中的恢复方案拟用财库储备补足约12.58亿枚已售出的TAC，但约16.6亿枚攻击者留在BNB Chain上的TAC如何处理仍悬而未决。\n\n长时间停摆锁定了TAC用户的质押资金，并使其桥接与赎回功能中断；BNB Chain上未处置的约16.6亿枚TAC，也让大部分被盗代币的最终归属悬而未决。由于该漏洞模块被多个Cosmos-EVM链共用这一事实，事件影响并不只限于TAC本身。\n\n攻击者利用的是算术溢出漏洞：EVM StateDB只跟踪可花费余额，而Cosmos SDK账本还允许委托锁定的归属代币，导致未校验的减法回绕至接近2^256，随后第二次溢出使攻击者可清空受害者账户而保留其合法代币。提议的恢复方案是在停止区块上做定向状态编辑而非回滚，可恢复质押池和委托人余额，同时保留来自218个无关地址的7,772笔正常交易。",
+      "detailed_summary_en": "The TAC network has remained halted at block 24,671,475 for over 10 days after an Aug. 22 exploit drained 2.99 billion TAC, roughly 28.6% of supply, from the bonded staking pool. The proposed recovery plan would replace the ~1.26 billion sold TAC from treasury reserves, while the treatment of ~1.66 billion attacker-held TAC on BNB Chain remains unresolved.\n\nThe prolonged halt traps staked funds and disables bridging and redemptions for TAC users, while the unresolved 1.66 billion TAC balance on BNB Chain leaves a large part of the drained supply in limbo. Because the vulnerable module is shared by multiple Cosmos-EVM chains, the incident has implications beyond TAC itself.\n\nThe attacker exploited an arithmetic overflow: the EVM StateDB tracked only spendable balances, while the Cosmos SDK ledger also allowed delegating locked vesting tokens, so an unchecked subtraction wrapped toward roughly 2^256 and a second overflow then let the attacker zero a victim account. The proposed recovery is a targeted state edit at the halt block, not a rollback, restoring the bonded pool and delegator balances while preserving 7,772 legitimate transactions from 218 unrelated addresses.",
+      "background_zh": "TAC是一条基于Cosmos SDK构建、兼容EVM的Layer 1区块链，旨在帮助EVM dApp接入TON与Telegram生态；其跨链消息由一组基于拜占庭容错（BFT）共识的排序器构成的TON Adapter处理。Cosmos EVM是一个开源Cosmos SDK模块，可将完整以太坊虚拟机嵌入基于CometBFT的链中；低于0.6.2以及0.7.0/0.7.1版本均被标记为受这一严重溢出漏洞影响。",
+      "background_en": "TAC is an EVM-compatible Layer 1 blockchain built on the Cosmos SDK, designed to help EVM dApps access the TON and Telegram ecosystem, and its cross-chain messaging is handled by a TON Adapter made of BFT-consensus sequencers. Cosmos EVM is an open-source Cosmos SDK module that embeds a full Ethereum Virtual Machine into CometBFT-based chains, and versions below 0.6.2 plus 0.7.0/0.7.1 were flagged as vulnerable to this critical overflow flaw.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "市场传导主要经TAC原生代币展开：验证者需运行修复后的二进制并执行提议的状态编辑，质押余额才能恢复；BNB Chain上攻击者持有的约16.6亿枚TAC目前仍未处置，构成一个悬置的供给因素，若其状态改变，可能影响流动性与市场情绪。由于底层漏洞涉及多个使用Cosmos EVM的链，该事件也可能影响市场对这类共享架构上代币的风险认知，但并不意味着价格必然朝某一方向变动。",
+      "market_impact_en": "The main exposure channel is the native TAC token: bonded-staking balances cannot be restored until validators run the patched binary and execute the proposed state edit, and the 1.66 billion attacker-held TAC on BNB Chain is an unresolved supply overhang that could affect liquidity and sentiment if its status changes. Because the underlying flaw affects multiple chains using Cosmos EVM, the incident may also shape risk perception for tokens built on that shared framework, but no price direction is implied.",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://github.com/cosmos/evm",
+          "title": "GitHub - cosmos/evm: An EVM compatible framework for blockchain development with the Cosmos SDK · GitHub"
+        },
+        {
+          "url": "https://tac.build/",
+          "title": "TAC"
+        },
+        {
+          "url": "https://docs.cosmos.network/evm/latest/documentation/overview",
+          "title": "Overview - Cosmos Docs"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:39a7694bb715c014"

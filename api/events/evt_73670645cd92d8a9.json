@@ -55,6 +55,16 @@
       "what_changed_en": "Qwen3.8-Flash-Next Launching Tomorrow: 125B MoE, 6B Active Params",
       "current_state_zh": "Qwen3.8-Flash-Next 明日发布：125B MoE 模型，仅 6B 激活参数",
       "current_state_en": "Qwen3.8-Flash-Next Launching Tomorrow: 125B MoE, 6B Active Params",
+      "detailed_summary_zh": "Qwen 宣布即将发布 Qwen3.8-Flash-Next，这是一款混合专家（MoE）模型，总参数 125B，每个 token 仅激活 6B 参数。该模型将于明日上线 ModelScope。\n\n该发布将具有竞争力的模型质量带入了高端消费级硬件的可运行范围，因为仅 6B 激活参数大幅降低了每 token 计算量，而 125B 总参数仍需较大内存。它有望显著推动本地推理生态，使强大的开源权重模型能在 Strix Halo、GB10 和新 Mac Studio 等设备上实用化。\n\n该 MoE 设计使用门控网络将每个 token 路由到少数专家，因此 125B 总权重决定内存占用，而 6B 激活参数决定计算量与推理速度。模型页面已上线 ModelScope，实际部署很可能需要依赖量化以及能将 MoE 层分布到 CPU/内存与 GPU/显存上的推理引擎。",
+      "detailed_summary_en": "Qwen has announced the imminent release of Qwen3.8-Flash-Next, a Mixture-of-Experts (MoE) model with 125B total parameters and 6B active parameters per token. The model will be available on ModelScope starting tomorrow.\n\nThis release brings competitive model quality into the range of high-end consumer hardware, since only 6B active parameters dramatically reduce compute per token while the 125B total size still demands substantial memory. It could significantly boost the local-inference ecosystem by making a powerful open-weights model practical on devices like the Strix Halo, GB10, and new Mac Studio.\n\nIn this MoE design, a gating network routes each token to a small subset of experts, so the 125B total weights determine memory footprint while the 6B active parameters determine compute and inference speed. The model listing is already live on ModelScope, and practical deployment will likely rely on quantization and inference engines that can distribute MoE layers across CPU/RAM and GPU/VRAM.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49432317"

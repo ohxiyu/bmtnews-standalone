@@ -55,6 +55,25 @@
       "what_changed_en": "Anthropic Releases Claude Fable 5.1, Doubling Key Benchmark Score",
       "current_state_zh": "Anthropic 发布 Claude Fable 5.1，关键基准得分翻倍",
       "current_state_en": "Anthropic Releases Claude Fable 5.1, Doubling Key Benchmark Score",
+      "detailed_summary_zh": "Anthropic 于 2026 年 9 月 1 日发布了 Claude Fable 5.1 和 Claude Mythos 5.1。Fable 5.1 在 Terminal-Bench-Science 0.1 上取得 52.6%，而 Fable 5 为 24.7%；在 Terminal-Bench 4.0 上取得 55.8%，同时缓存读取价格降低了 75%。\n\n这次发布巩固了 Anthropic 在编程和知识工作领域的地位，在一个关键智能体基准上性能翻倍以上，同时大幅降低缓存成本。它还重新调整了与自家 Opus 5 的竞争关系，因为 Fable 5.1 现在在已公布的所有基准上都超过了 Opus 5。\n\nFable 5.1 和 Mythos 5.1 共享同一底层模型，仅安全过滤器不同；Mythos 5.1 仍仅限于通过审查的网络安全和生命科学专业人士使用。Fable 5.1 不属于 Pro 套餐和标准 Team 席位，需使用即付即用额度；仅 Max 或高级 Team/Enterprise 席位包含该模型，且最多占每周额度的 50%。",
+      "detailed_summary_en": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 on September 1, 2026. Fable 5.1 scored 52.6% on Terminal-Bench-Science 0.1 versus Fable 5's 24.7%, and 55.8% on Terminal-Bench 4.0, while cache-read prices dropped 75%.\n\nThe release strengthens Anthropic's position in coding and knowledge work, more than doubling performance on a key agentic benchmark while sharply cutting cache costs. It also resets the competitive dynamic with its own Opus 5, since Fable 5.1 now outperforms it on every published benchmark.\n\nFable 5.1 and Mythos 5.1 share the same underlying model, differing only in safety filters; Mythos 5.1 remains restricted to vetted cybersecurity and life-sciences professionals. Fable 5.1 is excluded from Pro plans and standard Team seats, instead drawing on pay-as-you-go usage credits, and is included only in Max or premium Team/Enterprise seats up to 50% of weekly limits.",
+      "background_zh": "Terminal-Bench 是一个用于在真实终端环境中测试 AI 智能体的基准，Terminal-Bench-Science 将其扩展至科学研究任务；两者均以通过率或任务完成率计分。提示缓存（prompt caching）让服务商存储已处理的提示前缀，从而对重复的上下文按更低费率计费，这就是缓存读取降价能显著降低工作负载成本的原因。Anthropic 对 Fable 5.1 的定价仍为每百万 token 10/50 美元，与 Fable 5 持平。",
+      "background_en": "Terminal-Bench is a benchmark for testing AI agents in real terminal environments, and Terminal-Bench-Science extends it to scientific research tasks; both are scored as pass or task-completion rates. Prompt caching lets providers store processed prompt prefixes so repeated context is billed at a lower rate, which is why cache-read price cuts can meaningfully reduce workload costs. Anthropic's pricing remains $10/$50 per million tokens for Fable 5.1, unchanged from Fable 5.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [
+        {
+          "url": "https://www.tbench.ai/",
+          "title": "Terminal-Bench"
+        },
+        {
+          "url": "https://openai.com/index/api-prompt-caching/",
+          "title": "Prompt Caching in the API | OpenAI"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:0523a19928a690bc"

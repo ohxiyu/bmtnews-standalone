@@ -53,6 +53,16 @@
       "what_changed_en": "Weak CryptoJS Randomness Linked to $5.69M in Wallet Seed Thefts",
       "current_state_zh": "CryptoJS 随机性缺陷导致至少 569 万美元钱包种子失窃",
       "current_state_en": "Weak CryptoJS Randomness Linked to $5.69M in Wallet Seed Thefts",
+      "detailed_summary_zh": "区块链安全公司 Coinspect 披露，至少五款加密钱包（RRWallet、Bexo、NanChat、Bitcoin Libre 和 Milo）在生成恢复短语时使用了 CryptoJS 库中一个弱随机数生成器，导致资金可被攻击者预测。自 5 月以来，可追踪的损失至少达到 569 万美元，且偷窃行为发生在多轮攻击波中。\n\n恢复短语相当于钱包的主密钥，因此可预测的生成过程意味着攻击者可以重建短语并盗走资金。该事件表明，一个广泛使用的 JavaScript 库如何使多个区块链上的用户暴露于风险中，而且受影响的钱包可能不止这五款应用。\n\n存在漏洞的 CryptoJS.lib.WordArray.random() 函数将有效搜索空间从 2^128 或 2^256 种可能性降低到约 2^39 和 2^47，使得种子可以被逐一枚举。超过 2000 个种子在比特币、以太坊、波场、Rootstock 和 Polygon 上活跃，而 569 万美元只是一个下限；部分受影响应用已停止运营或在后续版本中修复。",
+      "detailed_summary_en": "Blockchain security firm Coinspect disclosed that at least five crypto wallets—RRWallet, Bexo, NanChat, Bitcoin Libre, and Milo—used a weak random-number generator from the CryptoJS library to create recovery phrases, making funds predictable to attackers. The traced losses since May total at least $5.69 million, with thefts occurring across multiple attack waves.\n\nRecovery phrases act as master keys to a wallet, so a predictable generation process means any attacker can reconstruct them and drain funds. The incident shows how a widely used JavaScript library can expose users across multiple blockchains, and it likely affects more wallets than the five named apps.\n\nThe vulnerable CryptoJS.lib.WordArray.random() function reduced the effective search space from 2^128 or 2^256 possibilities to roughly 2^39 and 2^47, making seeds feasible to enumerate. Over 2,000 seeds were active across Bitcoin, Ethereum, Tron, Rootstock, and Polygon, and the $5.69 million figure is only a lower bound; some affected apps have been discontinued or fixed in later versions.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:f05fdf0dd9a313ac"

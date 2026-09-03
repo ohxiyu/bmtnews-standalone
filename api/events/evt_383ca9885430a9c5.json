@@ -53,6 +53,16 @@
       "what_changed_en": "Qubes OS QSB-118: Arbitrary code execution in copy-to-VM error reporting can compromise Dom0",
       "current_state_zh": "Qubes OS 发布 QSB-118：复制到虚拟机错误报告可致 Dom0 被任意代码执行",
       "current_state_en": "Qubes OS QSB-118: Arbitrary code execution in copy-to-VM error reporting can compromise Dom0",
+      "detailed_summary_zh": "Qubes OS 于 2026 年 8 月 29 日发布安全公告 QSB-118，披露了复制到虚拟机（copy-to-VM）错误报告返回通道中的一个任意代码执行漏洞。该漏洞可让攻击者在控制整个系统的管理域 Dom0 中执行代码。\n\n由于 Dom0 是 Qubes OS 中权限最高的域，一旦 Dom0 被攻破，整个隔离安全模型也随之瓦解。对一个以安全为主要目标的操作系统而言，这尤其重要，表明即使精心设计的错误报告路径也可能成为攻击面。\n\n该漏洞源于错误报告函数使用了 system()，而 qvm-copy-to-vm 在虚拟机一侧的版本使用了不同的错误报告函数，因此不受影响。利用此漏洞需要用户从 Dom0 发起复制到虚拟机的操作，因此不影响「不在 Dom0 中进行日常工作」的推荐用法。",
+      "detailed_summary_en": "Qubes OS published security bulletin QSB-118 on August 29, 2026, disclosing an arbitrary code execution vulnerability in the copy-to-VM error reporting backchannel. The flaw allows an attacker to execute code in Dom0, the administrative domain that controls the entire system.\n\nBecause Dom0 is the most privileged domain in Qubes OS, a compromise there breaks the entire security model of compartmentalization. This is particularly significant for a security-focused operating system, showing that even carefully designed error reporting paths can become attack vectors.\n\nThe vulnerable function uses system() to report errors, while the VM-side variant of qvm-copy-to-vm uses a different error reporting function and is not affected. The attack requires the user to initiate a copy-to-VM operation from Dom0, so it does not affect the recommended workflow of not using Dom0 for regular work.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
       "confidence": 0.75,
       "story_ids": [
         "hackernews:story:49496918"
