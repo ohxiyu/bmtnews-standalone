@@ -16,6 +16,9 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
 {% if include.kind == "threads" %}
   {% assign rows = site.data.threads.threads %}
   {% if rows and rows.size > 0 %}
+    {% assign ranking = site.data.threads.ranking | default: rows %}
+    {% assign today_key = site.time | date: "%Y-%m-%d" %}
+    {% assign today_updates = rows | where: "latest_date", today_key %}
     {% assign crypto_rows = rows | where: "category", "crypto" %}
     {% assign technology_rows = rows | where: "category", "technology" %}
     {% assign policy_rows = rows | where: "category", "policy" %}
@@ -24,6 +27,33 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
     {% assign resolved_rows = rows | where: "status", "resolved" %}
     {% assign closed_rows = rows | where: "status", "closed" %}
     {% assign disputed_rows = rows | where: "status", "disputed" %}
+    <section class="event-context" aria-labelledby="event-context-title">
+      <header class="event-context-heading">
+        <div>
+          <p class="edition-overview-title">{% if is_en %}TODAY'S THROUGHLINE{% else %}今日脉络{% endif %}</p>
+          <h2 id="event-context-title">{% if is_en %}Three major events worth tracking now{% else %}最近值得追踪的三条重大事件{% endif %}</h2>
+        </div>
+        <p>{% if today_updates.size > 0 %}{% if is_en %}{{ today_updates.size }} verified event changes today{% else %}今日 {{ today_updates.size }} 条事件出现确认进展{% endif %}{% else %}{% if is_en %}No new material change today; showing the most important recent events.{% else %}今日暂无新的实质变化，以下为近期重要事件。{% endif %}{% endif %}</p>
+      </header>
+      <ol class="event-context-list">
+        {% for row in ranking limit: 3 %}
+          {% assign context_title = row.title_zh | default: row.title_en %}
+          {% assign context_update = row.latest_update_zh | default: row.latest_update_en %}
+          {% if is_en %}
+            {% assign context_title = row.title_en | default: row.title_zh %}
+            {% assign context_update = row.latest_update_en | default: row.latest_update_zh %}
+          {% endif %}
+          <li>
+            <span class="event-context-rank">0{{ forloop.index }}</span>
+            <div>
+              <h3><a href="{{ prefix }}/events/{{ row.event_id }}/">{{ context_title }}</a></h3>
+              {% if context_update and context_update != "" %}<p>{{ context_update }}</p>{% endif %}
+            </div>
+            <time datetime="{{ row.latest_date }}">{{ row.latest_date | date: "%m.%d" }}</time>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
     <div class="event-index-layout">
       <section class="event-index-stream" aria-label="{% if is_en %}Event feed{% else %}事件信息流{% endif %}">
         <div class="event-index-orientation">
@@ -38,9 +68,15 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
         <ol class="event-feed" data-event-stream>
           {% for row in rows %}
             {% assign latest_update = row.latest_update_zh %}
+            {% assign background = row.background_zh %}
+            {% assign discussion = row.discussion_zh %}
+            {% assign market_impact = row.market_impact_zh %}
             {% assign event_type = row.event_type_zh %}
             {% if is_en %}
               {% assign latest_update = row.latest_update_en %}
+              {% assign background = row.background_en %}
+              {% assign discussion = row.discussion_en %}
+              {% assign market_impact = row.market_impact_en %}
               {% assign event_type = row.event_type_en %}
             {% endif %}
             <li class="digest-item event-feed-item" data-category="{{ row.category }}">
@@ -53,13 +89,43 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
                   {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category }}">{{ row.category }}</span>{% endif %}
                   <span class="event-status" data-status="{{ row.status }}">{% if is_en %}{{ row.status_en }}{% else %}{{ row.status_zh }}{% endif %}</span>
                   {% if event_type and event_type != "" %}<span class="event-feed-type">{{ event_type }}</span>{% endif %}
-                </div></div>
+                </div>{% if row.score %}<span class="score-badge" data-tier="{% if row.score >= 9 %}high{% elsif row.score >= 7 %}good{% else %}mid{% endif %}">{{ row.score }}</span>{% endif %}</div>
                 <h2><a href="{{ prefix }}/{% if row.event_id %}events/{{ row.event_id }}{% else %}threads/{{ row.thread_id }}{% endif %}/">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</a></h2>
-                {% if latest_update and latest_update != "" %}
-                  <p class="event-feed-latest">{{ latest_update | truncate: 180 }}</p>
+                <div class="event-brief-grid">
+                  {% if background and background != "" %}
+                    <section class="event-brief-block event-brief-background">
+                      <h3>{% if is_en %}Background{% else %}事件背景{% endif %}</h3>
+                      <p>{{ background }}</p>
+                    </section>
+                  {% endif %}
+                  {% if latest_update and latest_update != "" %}
+                    <section class="event-brief-block event-brief-latest">
+                      <h3>{% if is_en %}Latest{% else %}最新进展{% endif %}</h3>
+                      <p>{{ latest_update }}</p>
+                    </section>
+                  {% endif %}
+                  {% if discussion and discussion != "" %}
+                    <section class="event-brief-block event-brief-discussion">
+                      <h3>{% if is_en %}Discussion{% else %}讨论焦点{% endif %}</h3>
+                      <p>{{ discussion }}</p>
+                    </section>
+                  {% elsif market_impact and market_impact != "" %}
+                    <section class="event-brief-block event-brief-discussion">
+                      <h3>{% if is_en %}Why it matters{% else %}影响判断{% endif %}</h3>
+                      <p>{{ market_impact }}</p>
+                    </section>
+                  {% endif %}
+                </div>
+                {% if row.source_links.size > 0 or row.reference_links.size > 0 %}
+                  <p class="event-brief-references">
+                    <strong>{% if is_en %}References{% else %}参考资料{% endif %}</strong>
+                    {% for reference in row.source_links limit: 3 %}<a href="{{ reference.url }}" target="_blank" rel="noopener">{{ reference.title }}</a>{% unless forloop.last and row.reference_links.size == 0 %}<span aria-hidden="true">·</span>{% endunless %}{% endfor %}
+                    {% for reference in row.reference_links limit: 3 %}<a href="{{ reference.url }}" target="_blank" rel="noopener">{{ reference.title }}</a>{% unless forloop.last %}<span aria-hidden="true">·</span>{% endunless %}{% endfor %}
+                  </p>
                 {% endif %}
                 <p class="source-line event-feed-meta">
                   {% if is_en %}{{ row.updates_count }} updates · {{ row.sources_count }} sources · tracked since {{ row.first_date }}{% else %}{{ row.updates_count }} 次实质进展 · {{ row.sources_count }} 个来源 · 始于 {{ row.first_date }}{% endif %}
+                  <a class="event-detail-link" href="{{ prefix }}/events/{{ row.event_id }}/">{% if is_en %}Open full timeline{% else %}查看完整时间线{% endif %} →</a>
                 </p>
               </div>
             </li>
@@ -67,6 +133,21 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
         </ol>
       </section>
       <aside class="headline-rail event-overview-rail" aria-label="{% if is_en %}Event overview{% else %}事件概览{% endif %}">
+        <details class="headline-index event-ranking" open>
+          <summary><span>{% if is_en %}Event ranking{% else %}事件排行榜{% endif %}</span><small>TOP {{ ranking.size }}</small></summary>
+          <ol class="event-ranking-list">
+            {% for row in ranking limit: 10 %}
+              <li data-category="{{ row.category }}">
+                <span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+                <div>
+                  <a href="{{ prefix }}/events/{{ row.event_id }}/">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</a>
+                  <small>{{ row.latest_date | date: "%m.%d" }} · {% if is_en %}{{ row.updates_count }} updates{% else %}{{ row.updates_count }} 次进展{% endif %}</small>
+                </div>
+                {% if row.score %}<strong>{{ row.score }}</strong>{% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        </details>
         <details class="headline-index" open>
           <summary><span>{% if is_en %}Event overview{% else %}事件概览{% endif %}</span><small>{{ rows.size }}</small></summary>
           <dl class="event-overview-stats">
