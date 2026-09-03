@@ -86,6 +86,22 @@ class EventSource(BaseModel):
         return value
 
 
+class EventReference(BaseModel):
+    """One background or discussion reference retained from story enrichment."""
+
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+
+    url: str
+    title: str = ""
+
+    @field_validator("url")
+    @classmethod
+    def validate_public_url(cls, value: str) -> str:
+        if not value.startswith(("https://", "http://")):
+            raise ValueError("event reference URL must use http or https")
+        return value
+
+
 class EventUpdate(BaseModel):
     """A material change or confirmation within one durable event."""
 
@@ -105,6 +121,16 @@ class EventUpdate(BaseModel):
     what_changed_en: str = ""
     current_state_zh: str = ""
     current_state_en: str = ""
+    detailed_summary_zh: str = ""
+    detailed_summary_en: str = ""
+    background_zh: str = ""
+    background_en: str = ""
+    community_discussion_zh: str = ""
+    community_discussion_en: str = ""
+    market_impact_zh: str = ""
+    market_impact_en: str = ""
+    importance_score: float | None = Field(default=None, ge=0.0, le=10.0)
+    references: list[EventReference] = Field(default_factory=list)
     confidence: float = Field(ge=0.0, le=1.0)
     story_ids: list[str] = Field(min_length=1)
     sources: list[EventSource] = Field(min_length=1)

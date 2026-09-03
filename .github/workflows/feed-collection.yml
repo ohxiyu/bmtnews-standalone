@@ -40,6 +40,13 @@ jobs:
           for path in _data/events.json _data/event-legacy-urls.json; do
             git show "origin/gh-pages:${path}" > "docs/${path}"
           done
+          if git cat-file -e "origin/gh-pages:_data/bmtnews_state.json" 2>/dev/null; then
+            git show "origin/gh-pages:_data/bmtnews_state.json" > docs/_data/bmtnews_state.json
+          fi
+          mkdir -p docs/_data/archive
+          for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive 2>/dev/null); do
+            git show "origin/gh-pages:${path}" > "docs/${path}"
+          done
 
       - name: Restore staged source items
         uses: actions/cache@v5
@@ -80,6 +87,9 @@ jobs:
 
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
+
+      - name: Backfill event brief data
+        run: uv run python -m src.event_brief_backfill
 
       - name: Collect sources and increment event timelines
         env:

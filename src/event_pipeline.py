@@ -14,12 +14,13 @@ import json
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Awaitable, Callable, Iterable, Sequence
+from typing import Awaitable, Callable, Iterable, Mapping, Sequence
 
 from ._file_utils import _atomic_write_text
 from .ai.client import AIClient
 from .ai.event_relations import classify_event_relation
 from .events import (
+    EventReference,
     EventRelation,
     EventRelationDecision,
     EventSource,
@@ -57,11 +58,15 @@ class IncrementalEventResult:
     duplicate_sources: int = 0
     new_events: int = 0
     classifier_errors: int = 0
+    briefs_enriched: int = 0
 
     @property
     def changed(self) -> bool:
         return bool(
-            self.material_updates or self.duplicate_sources or self.new_events
+            self.material_updates
+            or self.duplicate_sources
+            or self.new_events
+            or self.briefs_enriched
         )
 
 
@@ -198,6 +203,153 @@ def _event_source(item: ContentItem) -> EventSource:
     )
 
 
+_BRIEF_TEXT_FIELDS = (
+    "detailed_summary",
+    "background",
+    "community_discussion",
+    "market_impact",
+)
+
+
+def _event_references(item: ContentItem) -> list[EventReference]:
+    """Retain only public, deduplicated links returned by enrichment."""
+    references: list[EventReference] = []
+    seen: set[str] = set()
+    raw_sources = item.metadata.get("sources")
+    if isinstance(raw_sources, list):
+        for raw in raw_sources:
+            if not isinstance(raw, Mapping):
+                continue
+            url = str(raw.get("url") or "").strip()
+            if not url.startswith(("https://", "http://")) or url in seen:
+                continue
+            references.append(
+                EventReference(url=url, title=str(raw.get("title") or "").strip())
+            )
+            seen.add(url)
+    discussion_url = str(item.metadata.get("discussion_url") or "").strip()
+    if (
+        discussion_url.startswith(("https://", "http://"))
+        and discussion_url not in seen
+    ):
+        references.append(
+            EventReference(url=discussion_url, title="Community discussion")
+        )
+    return references
+
+
+def _brief_context_from_item(item: ContentItem) -> dict[str, object]:
+    context: dict[str, object] = {
+        "importance_score": item.ai_score,
+        "references": _event_references(item),
+    }
+    for field in _BRIEF_TEXT_FIELDS:
+        for language in ("zh", "en"):
+            value = _localized(item, field, language)
+            if field == "detailed_summary" and not value:
+                value = str(item.ai_summary or "").strip()
+            context[f"{field}_{language}"] = value
+    return context
+
+
+def _brief_context_from_archive(record: object) -> dict[str, object]:
+    """Build the subset that historical archive rows can prove."""
+    score = getattr(record, "score", None)
+    return {
+        "detailed_summary_zh": str(getattr(record, "summary_zh", "") or ""),
+        "detailed_summary_en": str(getattr(record, "summary_en", "") or ""),
+        "importance_score": score,
+        "references": [],
+    }
+
+
+def _merge_update_brief(
+    update: EventUpdate,
+    context: Mapping[str, object],
+) -> tuple[EventUpdate, bool]:
+    changes: dict[str, object] = {}
+    for field in _BRIEF_TEXT_FIELDS:
+        for language in ("zh", "en"):
+            key = f"{field}_{language}"
+            incoming = str(context.get(key) or "").strip()
+            if incoming and not getattr(update, key):
+                changes[key] = incoming
+
+    incoming_score = context.get("importance_score")
+    if isinstance(incoming_score, (int, float)) and (
+        update.importance_score is None
+        or float(incoming_score) > update.importance_score
+    ):
+        changes["importance_score"] = float(incoming_score)
+
+    references = [reference.model_copy(deep=True) for reference in update.references]
+    seen = {reference.url for reference in references}
+    incoming_references = context.get("references")
+    if isinstance(incoming_references, list):
+        for reference in incoming_references:
+            if not isinstance(reference, EventReference) or reference.url in seen:
+                continue
+            references.append(reference.model_copy(deep=True))
+            seen.add(reference.url)
+    if len(references) != len(update.references):
+        changes["references"] = references
+
+    if not changes:
+        return update, False
+    return update.model_copy(update=changes, deep=True), True
+
+
+def backfill_event_briefs(
+    events: Sequence[TrackedEvent],
+    *,
+    items: Iterable[ContentItem] = (),
+    archive_records: Iterable[object] = (),
+) -> tuple[list[TrackedEvent], int]:
+    """Hydrate event nodes from existing analyzed items and public archives.
+
+    Text fields are fill-only so a later duplicate source cannot silently
+    rewrite an already-published event narrative. Scores and references may
+    accumulate because they are independently auditable facts.
+    """
+    item_by_id = {item.id: item for item in items}
+    archive_by_id: dict[str, list[object]] = {}
+    for record in archive_records:
+        story_id = str(getattr(record, "item_id", "") or "")
+        if story_id:
+            archive_by_id.setdefault(story_id, []).append(record)
+
+    hydrated: list[TrackedEvent] = []
+    changed_updates = 0
+    for event in events:
+        updates: list[EventUpdate] = []
+        event_changed = False
+        for update in event.updates:
+            current = update.model_copy(deep=True)
+            update_changed = False
+            for story_id in update.story_ids:
+                item = item_by_id.get(story_id)
+                if item is not None:
+                    current, changed = _merge_update_brief(
+                        current, _brief_context_from_item(item)
+                    )
+                    update_changed = update_changed or changed
+                for record in archive_by_id.get(story_id, []):
+                    current, changed = _merge_update_brief(
+                        current, _brief_context_from_archive(record)
+                    )
+                    update_changed = update_changed or changed
+            updates.append(current)
+            if update_changed:
+                changed_updates += 1
+                event_changed = True
+        hydrated.append(
+            event.model_copy(update={"updates": updates}, deep=True)
+            if event_changed
+            else event.model_copy(deep=True)
+        )
+    return hydrated, changed_updates
+
+
 def _stable_event_id(story_id: str) -> str:
     digest = hashlib.sha256(
         f"bmtnews-live-event-v1\0{story_id}".encode()
@@ -279,6 +431,7 @@ def _new_event(item: ContentItem, story: StoryEvidence) -> TrackedEvent:
         story_ids=[story.story_id],
         sources=[_event_source(item)],
     )
+    update, _ = _merge_update_brief(update, _brief_context_from_item(item))
     category = _category(item)
     return TrackedEvent(
         event_id=event_id,
@@ -348,6 +501,7 @@ def _append_material_update(
         story_ids=[story.story_id],
         sources=[_event_source(item)],
     )
+    update, _ = _merge_update_brief(update, _brief_context_from_item(item))
     signature = signature_for_story(story)
     updates = sorted(
         [*event.updates, update],
@@ -382,7 +536,7 @@ def _attach_duplicate(
     item: ContentItem,
     story: StoryEvidence,
     decision: EventRelationDecision,
-) -> tuple[TrackedEvent, str, bool]:
+) -> tuple[TrackedEvent, str, bool, bool]:
     updates = [update.model_copy(deep=True) for update in event.updates]
     target_id = decision.target_update_id
     target = next(
@@ -401,6 +555,10 @@ def _attach_duplicate(
     if source.url not in {existing.url for existing in target.sources}:
         target.sources.append(source)
         changed = True
+    enriched_target, brief_changed = _merge_update_brief(
+        target, _brief_context_from_item(item)
+    )
+    updates[updates.index(target)] = enriched_target
     first_seen = _first_seen(item)
     return (
         event.model_copy(
@@ -413,6 +571,7 @@ def _attach_duplicate(
         ),
         target.update_id,
         changed,
+        brief_changed,
     )
 
 
@@ -433,6 +592,7 @@ async def update_events(
     working = [event.model_copy(deep=True) for event in events]
     assignments = _story_assignment_index(working)
     considered = already_known = classified = material = duplicates = created = errors = 0
+    briefs_enriched = 0
 
     ordered_items = sorted(
         items,
@@ -442,7 +602,24 @@ async def update_events(
         considered += 1
         known = assignments.get(item.id)
         if known is not None:
+            event_id, update_id = known
             item.metadata["event_id"], item.metadata["event_update_id"] = known
+            event_index = next(
+                index for index, event in enumerate(working) if event.event_id == event_id
+            )
+            event = working[event_index]
+            updates = [update.model_copy(deep=True) for update in event.updates]
+            update_index = next(
+                index for index, update in enumerate(updates) if update.update_id == update_id
+            )
+            updates[update_index], changed = _merge_update_brief(
+                updates[update_index], _brief_context_from_item(item)
+            )
+            if changed:
+                working[event_index] = event.model_copy(
+                    update={"updates": updates}, deep=True
+                )
+                briefs_enriched += 1
             already_known += 1
             continue
 
@@ -480,10 +657,11 @@ async def update_events(
             event = working[index]
             if attachment.relation is EventRelation.DUPLICATE_COVERAGE:
                 try:
-                    event, update_id, changed = _attach_duplicate(
+                    event, update_id, changed, brief_changed = _attach_duplicate(
                         event, item, story, attachment
                     )
                     duplicates += int(changed)
+                    briefs_enriched += int(brief_changed)
                 except ValueError:
                     # An invalid update target is not allowed to corrupt or
                     # stop the catalog. Keep the story separate and auditable.
@@ -516,4 +694,5 @@ async def update_events(
         duplicate_sources=duplicates,
         new_events=created,
         classifier_errors=errors,
+        briefs_enriched=briefs_enriched,
     )

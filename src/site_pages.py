@@ -622,7 +622,7 @@ def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
         material = [update for update in event.updates if update.material_change]
         if len(material) < 2:
             continue
-        latest_update = max(
+        ordered_material = sorted(
             material,
             key=lambda update: (
                 update.occurred_at,
@@ -630,6 +630,86 @@ def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
                 update.update_id,
             ),
         )
+        first_update = ordered_material[0]
+        latest_update = ordered_material[-1]
+
+        def localized_brief(field: str, language: str, *, newest: bool) -> str:
+            candidates = reversed(ordered_material) if newest else ordered_material
+            for update in candidates:
+                value = _event_update_value(update, field, language)
+                if value:
+                    return value
+            return ""
+
+        background_zh = localized_brief("background", "zh", newest=False)
+        background_en = localized_brief("background", "en", newest=False)
+        if not background_zh:
+            background_zh = _event_update_value(
+                first_update, "detailed_summary", "zh"
+            ).split("\n\n", 1)[0]
+        if not background_en:
+            background_en = _event_update_value(
+                first_update, "detailed_summary", "en"
+            ).split("\n\n", 1)[0]
+        latest_summary_zh = (
+            _event_update_value(latest_update, "detailed_summary", "zh")
+            or _event_update_value(latest_update, "what_changed", "zh")
+        )
+        latest_summary_en = (
+            _event_update_value(latest_update, "detailed_summary", "en")
+            or _event_update_value(latest_update, "what_changed", "en")
+        )
+        discussion_zh = localized_brief(
+            "community_discussion", "zh", newest=True
+        )
+        discussion_en = localized_brief(
+            "community_discussion", "en", newest=True
+        )
+        market_impact_zh = localized_brief("market_impact", "zh", newest=True)
+        market_impact_en = localized_brief("market_impact", "en", newest=True)
+        if not discussion_zh:
+            latest_paragraphs_zh = latest_summary_zh.split("\n\n")
+            discussion_zh = (
+                latest_paragraphs_zh[1]
+                if len(latest_paragraphs_zh) > 1
+                else market_impact_zh
+            )
+        if not discussion_en:
+            latest_paragraphs_en = latest_summary_en.split("\n\n")
+            discussion_en = (
+                latest_paragraphs_en[1]
+                if len(latest_paragraphs_en) > 1
+                else market_impact_en
+            )
+        score_values = [
+            update.importance_score
+            for update in ordered_material
+            if update.importance_score is not None
+        ]
+        source_links = []
+        source_urls: set[str] = set()
+        reference_links = []
+        reference_urls: set[str] = set()
+        for update in ordered_material:
+            for source in update.sources:
+                if source.url in source_urls:
+                    continue
+                source_urls.add(source.url)
+                source_links.append(
+                    {
+                        "url": source.url,
+                        "title": source.label or source.source_type or source.url,
+                        "official": source.official,
+                    }
+                )
+        for update in ordered_material:
+            for reference in update.references:
+                if reference.url in reference_urls or reference.url in source_urls:
+                    continue
+                reference_urls.add(reference.url)
+                reference_links.append(
+                    {"url": reference.url, "title": reference.title or reference.url}
+                )
         first = min(update.first_seen_at for update in material).date().isoformat()
         latest = max(update.first_seen_at for update in material).date().isoformat()
         rows.append(
@@ -665,10 +745,32 @@ def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
                 "latest_update_en": _event_update_value(
                     latest_update, "what_changed", "en"
                 ),
+                "background_zh": background_zh,
+                "background_en": background_en,
+                "latest_summary_zh": latest_summary_zh,
+                "latest_summary_en": latest_summary_en,
+                "discussion_zh": discussion_zh,
+                "discussion_en": discussion_en,
+                "market_impact_zh": market_impact_zh,
+                "market_impact_en": market_impact_en,
+                "score": max(score_values) if score_values else None,
+                "source_links": source_links,
+                "reference_links": reference_links,
             }
         )
     rows.sort(key=lambda row: (row["latest_date"], row["event_id"]), reverse=True)
-    return {"threads": rows}
+    ranking = sorted(
+        rows,
+        key=lambda row: (
+            row["score"] if row["score"] is not None else -1,
+            int(row["latest_date"].replace("-", "")),
+            row["sources_count"],
+            row["updates_count"],
+            row["event_id"],
+        ),
+        reverse=True,
+    )
+    return {"threads": rows, "ranking": ranking}
 
 
 def publish_event_compatibility_pages(

@@ -16,6 +16,7 @@ from src.api_output import (
 from src.archive import ArchiveRecord
 from src.market_snapshot import MarketSnapshot
 from src.events import (
+    EventReference,
     EventSource,
     EventStatus,
     EventTimePrecision,
@@ -98,6 +99,27 @@ def make_event(
                 what_changed_en=f"Change {index + 1}",
                 current_state_zh=f"状态 {index + 1}",
                 current_state_en=f"State {index + 1}",
+                detailed_summary_zh=f"第 {index + 1} 个变化的详细摘要",
+                detailed_summary_en=f"Detailed summary for change {index + 1}",
+                background_zh="事件的中文背景" if index == 0 else "",
+                background_en="Event background" if index == 0 else "",
+                community_discussion_zh=(
+                    "最新社区讨论" if index == updates - 1 else ""
+                ),
+                community_discussion_en=(
+                    "Latest community discussion" if index == updates - 1 else ""
+                ),
+                market_impact_zh="最新市场影响" if index == updates - 1 else "",
+                market_impact_en=(
+                    "Latest market impact" if index == updates - 1 else ""
+                ),
+                importance_score=8.0 + index / 2,
+                references=[
+                    EventReference(
+                        url=f"https://reference.example.com/{event_id}/{index}",
+                        title=f"Reference {index + 1}",
+                    )
+                ],
                 confidence=1.0,
                 story_ids=[f"story-{event_id}-{index}"],
                 sources=[
@@ -448,7 +470,8 @@ def test_event_index_contains_progressions_not_single_updates() -> None:
     progression = make_event("evt_progress1", updates=2)
     duplicate_only = make_event("evt_duplicate1", updates=1)
 
-    rows = build_event_index_data([duplicate_only, progression])["threads"]
+    payload = build_event_index_data([duplicate_only, progression])
+    rows = payload["threads"]
 
     assert [row["event_id"] for row in rows] == ["evt_progress1"]
     assert rows[0]["entries"] == 2
@@ -456,6 +479,14 @@ def test_event_index_contains_progressions_not_single_updates() -> None:
     assert rows[0]["latest_update_zh"] == "第 2 个变化"
     assert rows[0]["latest_update_en"] == "Change 2"
     assert rows[0]["event_type_zh"] == "治理事件"
+    assert rows[0]["background_zh"] == "事件的中文背景"
+    assert rows[0]["latest_summary_zh"] == "第 2 个变化的详细摘要"
+    assert rows[0]["discussion_zh"] == "最新社区讨论"
+    assert rows[0]["market_impact_zh"] == "最新市场影响"
+    assert rows[0]["score"] == 8.5
+    assert len(rows[0]["source_links"]) == 2
+    assert len(rows[0]["reference_links"]) == 2
+    assert [row["event_id"] for row in payload["ranking"]] == ["evt_progress1"]
 
 
 def test_event_index_template_reuses_feed_layout_and_filters() -> None:
