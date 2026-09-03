@@ -1,0 +1,55 @@
+{% assign is_en = false %}
+{% if include.language == "en" %}{% assign is_en = true %}{% endif %}
+{% assign rows = site.data.weeks.weeks %}
+
+{% if rows and rows.size > 0 %}
+  {% assign latest = rows | first %}
+  {% if latest.date %}
+    {% include weekly-edition.html entry=latest language=include.language %}
+  {% else %}
+    <section class="weekly-empty">
+      <p>{% if is_en %}The latest weekly review still uses the legacy format.{% else %}最新一期周报仍使用旧版格式。{% endif %}</p>
+      <a href="{% if is_en %}/en/weekly/{{ latest }}/{% else %}/weekly/{{ latest }}/{% endif %}">{% if is_en %}Read the latest review{% else %}阅读最新周报{% endif %}</a>
+    </section>
+  {% endif %}
+
+  {% if rows.size > 1 %}
+    <section class="weekly-history" aria-labelledby="weekly-history-title">
+      <header class="weekly-history-heading">
+        <div>
+          <p class="edition-overview-title">{% if is_en %}PREVIOUS WEEKS{% else %}往期周报{% endif %}</p>
+          <h2 id="weekly-history-title">{% if is_en %}Earlier weekly judgments{% else %}此前几周的重要判断{% endif %}</h2>
+        </div>
+        <span>{{ rows.size | minus: 1 }} {% if is_en %}editions{% else %}期{% endif %}</span>
+      </header>
+      <ol class="weekly-history-list">
+        {% for row in rows offset: 1 %}
+          {% assign row_date = row.date | default: row %}
+          {% assign edition = row.zh %}
+          {% if is_en %}{% assign edition = row.en %}{% endif %}
+          <li{% if forloop.index > 6 %} hidden data-weekly-older{% endif %}>
+            <div class="weekly-history-date">
+              <span>#{{ forloop.index | plus: 1 | prepend: '0' | slice: -2, 2 }}</span>
+              <time datetime="{{ row_date }}">{{ row.start | default: row_date | date: "%m.%d" }}—{{ row_date | date: "%m.%d" }}</time>
+            </div>
+            <div class="weekly-history-copy">
+              <h3><a href="{% if is_en %}/en{% endif %}/weekly/{{ row_date }}/">{% if edition.throughline.title %}{{ edition.throughline.title | escape }}{% elsif is_en %}Weekly Review · {{ row_date }}{% else %}本周回顾 · {{ row_date }}{% endif %}</a></h3>
+              {% if edition.throughline.summary %}<p>{{ edition.throughline.summary | escape }}</p>{% endif %}
+              {% if edition.items and edition.items.size > 0 %}
+                <ul>
+                  {% for item in edition.items limit: 3 %}<li>{{ item.title | escape }}</li>{% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+            <a class="weekly-history-open" href="{% if is_en %}/en{% endif %}/weekly/{{ row_date }}/" aria-label="{% if is_en %}Read weekly review for {{ row_date }}{% else %}阅读 {{ row_date }} 周报{% endif %}">→</a>
+          </li>
+        {% endfor %}
+      </ol>
+      {% if rows.size > 7 %}<button class="weekly-load-more" type="button" data-weekly-load-more>{% if is_en %}Load earlier{% else %}加载更早{% endif %}</button>{% endif %}
+    </section>
+  {% endif %}
+{% else %}
+  <section class="weekly-empty">
+    <p>{% if is_en %}No weekly review has been published yet.{% else %}还没有周报。积累足够的日报后，系统会自动生成第一期。{% endif %}</p>
+  </section>
+{% endif %}

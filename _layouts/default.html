@@ -193,6 +193,8 @@
           </div>
         </div>
       </section>
+    {% elsif page.page_type == "weekly" %}
+      {% comment %}Weekly pages render their own dense editorial masthead.{% endcomment %}
     {% elsif page.page_type == "archive" %}
       <section class="page-intro page-intro-docs">
         <div class="page-intro-inner">

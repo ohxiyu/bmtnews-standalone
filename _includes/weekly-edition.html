@@ -1,0 +1,151 @@
+{% assign is_en = false %}
+{% if include.language == "en" %}{% assign is_en = true %}{% endif %}
+{% assign entry = include.entry %}
+{% assign edition = entry.zh %}
+{% if is_en %}{% assign edition = entry.en %}{% endif %}
+{% assign prefix = "" %}
+{% if is_en %}{% assign prefix = "/en" %}{% endif %}
+{% assign older_date = nil %}
+{% assign found_current = false %}
+{% for week_row in site.data.weeks.weeks %}
+  {% assign week_date = week_row.date | default: week_row %}
+  {% if found_current and older_date == nil %}
+    {% assign older_date = week_date %}
+  {% endif %}
+  {% if week_date == entry.date %}{% assign found_current = true %}{% endif %}
+{% endfor %}
+
+{% if edition and edition.throughline %}
+  <article class="weekly-edition" data-week="{{ entry.date }}">
+    <header class="weekly-masthead">
+      <div>
+        <p class="eyebrow">BMTNEWS WEEKLY</p>
+        <h1>{% if is_en %}Weekly Review{% else %}周报{% endif %}</h1>
+      </div>
+      <div class="weekly-range">
+        <span>{% if is_en %}EDITION{% else %}本期{% endif %}</span>
+        <time datetime="{{ entry.date }}">{{ entry.start | date: "%Y.%m.%d" }}—{{ entry.date | date: "%m.%d" }}</time>
+        {% if older_date %}<a href="{{ prefix }}/weekly/{{ older_date }}/">{% if is_en %}Previous edition{% else %}上一期{% endif %} →</a>{% endif %}
+      </div>
+    </header>
+
+    <section class="weekly-judgment" aria-labelledby="weekly-judgment-{{ entry.date }}">
+      <p class="edition-overview-title">{% if is_en %}THIS WEEK'S JUDGMENT{% else %}本周判断{% endif %}</p>
+      <h2 id="weekly-judgment-{{ entry.date }}">{{ edition.throughline.title | escape }}</h2>
+      <p>{{ edition.throughline.summary | escape }}</p>
+    </section>
+
+    {% if edition.items and edition.items.size > 0 %}
+      <section class="event-context weekly-context" aria-labelledby="weekly-context-{{ entry.date }}">
+        <header class="event-context-heading">
+          <div>
+            <p class="edition-overview-title">{% if is_en %}KEY DEVELOPMENTS{% else %}关键脉络{% endif %}</p>
+            <h2 id="weekly-context-{{ entry.date }}">{% if is_en %}Three developments that defined the week{% else %}定义本周的三条重大变化{% endif %}</h2>
+          </div>
+          <p>{% if is_en %}Ranked by consequence, with evidence from the published archive.{% else %}按影响程度排序，依据本周已发布报道。{% endif %}</p>
+        </header>
+        <ol class="event-context-list weekly-context-list">
+          {% for item in edition.items limit: 3 %}
+            <li>
+              <span class="event-context-rank">0{{ forloop.index }}</span>
+              <div>
+                <h3>{% if item.event_url and item.event_url != "" %}<a href="{{ item.event_url }}">{{ item.title | escape }}</a>{% else %}{{ item.title | escape }}{% endif %}</h3>
+                <p>{{ item.change | escape }}</p>
+              </div>
+              <time datetime="{{ item.date_end }}">{{ item.date_end | date: "%m.%d" }}</time>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+
+    <div class="event-index-layout weekly-layout">
+      <section class="event-index-stream weekly-stream" aria-label="{% if is_en %}Weekly developments{% else %}本周进展{% endif %}">
+        <div class="event-index-orientation weekly-orientation">
+          <p class="archive-lede">{% if is_en %}A compact record of what changed and why it matters; daily duplicates are removed.{% else %}只保留本周发生的变化和影响判断，不重复罗列日报。{% endif %}</p>
+        </div>
+        <ol class="event-feed weekly-feed">
+          {% for item in edition.items %}
+            <li class="digest-item event-feed-item weekly-feed-item">
+              <div class="digest-item-rail">
+                <strong>#{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</strong>
+                <time datetime="{{ item.date_end }}">{{ item.date_start | date: "%m.%d" }}—{{ item.date_end | date: "%m.%d" }}</time>
+              </div>
+              <div class="digest-item-content">
+                <div class="digest-item-meta"><div>
+                  <span class="event-update-type">{% if item.section == "remember" %}{% if is_en %}Worth remembering{% else %}值得记住{% endif %}{% else %}{% if is_en %}Continuing{% else %}持续演化{% endif %}{% endif %}</span>
+                  {% for entity in item.entities %}<a class="weekly-entity-link" href="{{ entity.url }}">{{ entity.label | escape }}</a>{% endfor %}
+                </div>{% if item.score %}<span class="score-badge" data-tier="{% if item.score >= 9 %}high{% elsif item.score >= 7 %}good{% else %}mid{% endif %}">{{ item.score }}</span>{% endif %}</div>
+                <h2>{% if item.event_url and item.event_url != "" %}<a href="{{ item.event_url }}">{{ item.title | escape }}</a>{% else %}{{ item.title | escape }}{% endif %}</h2>
+                <div class="event-brief-grid weekly-brief-grid">
+                  <section class="event-brief-block event-brief-latest">
+                    <h3>{% if is_en %}This week{% else %}本周变化{% endif %}</h3>
+                    <p>{{ item.change | escape }}</p>
+                  </section>
+                  {% if item.why_it_matters and item.why_it_matters != "" %}
+                    <section class="event-brief-block event-brief-discussion">
+                      <h3>{% if is_en %}Why it matters{% else %}为什么重要{% endif %}</h3>
+                      <p>{{ item.why_it_matters | escape }}</p>
+                    </section>
+                  {% endif %}
+                </div>
+                {% if item.evidence and item.evidence.size > 0 %}
+                  <p class="event-brief-references weekly-evidence">
+                    <strong>{% if is_en %}Evidence{% else %}参考报道{% endif %}</strong>
+                    {% for evidence in item.evidence %}<a href="{{ evidence.url }}" target="_blank" rel="noopener noreferrer">{{ evidence.source | default: evidence.title | escape }}</a>{% unless forloop.last %}<span aria-hidden="true">·</span>{% endunless %}{% endfor %}
+                  </p>
+                {% endif %}
+                <p class="source-line event-feed-meta weekly-feed-meta">
+                  {% if item.sources_count > 0 %}<span>{{ item.sources_count }} {% if is_en %}sources{% else %}个来源{% endif %}</span>{% endif %}
+                  {% if item.event_url and item.event_url != "" %}<a class="event-detail-link" href="{{ item.event_url }}">{% if is_en %}Open event timeline{% else %}查看事件线{% endif %} →</a>{% endif %}
+                </p>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+        {% if include.show_history_link %}<p class="archive-back"><a href="{{ prefix }}/weekly/">{% if is_en %}All weekly reviews{% else %}全部周报{% endif %}</a> · <a href="{{ prefix }}/">{% if is_en %}Back to the feed{% else %}返回首页{% endif %}</a></p>{% endif %}
+      </section>
+
+      <aside class="headline-rail event-overview-rail weekly-rail">
+        <details class="headline-index" open>
+          <summary><span>{% if is_en %}Week at a glance{% else %}周度概览{% endif %}</span><small>{{ entry.stats.items }}</small></summary>
+          <dl class="event-overview-stats">
+            <div><dt>{% if is_en %}Published reports{% else %}收录报道{% endif %}</dt><dd>{{ entry.stats.items }}</dd></div>
+            <div><dt>{% if is_en %}Publishing days{% else %}发布天数{% endif %}</dt><dd>{{ entry.stats.days }}</dd></div>
+            <div><dt>{% if is_en %}Continuing events{% else %}持续事件{% endif %}</dt><dd>{{ entry.stats.threads }}</dd></div>
+            <div><dt>{% if is_en %}Tracked entities{% else %}活跃实体{% endif %}</dt><dd>{{ entry.stats.entities }}</dd></div>
+          </dl>
+        </details>
+        {% if edition.event_ranking and edition.event_ranking.size > 0 %}
+          <details class="headline-index weekly-ranking" open>
+            <summary><span>{% if is_en %}Event ranking{% else %}事件排行{% endif %}</span><small>{{ edition.event_ranking.size }}</small></summary>
+            <ol class="event-ranking-list">
+              {% for event in edition.event_ranking %}<li><span>0{{ forloop.index }}</span><div><a href="{{ event.url }}">{{ event.title | escape }}</a><small>{{ event.entries }} {% if is_en %}reports{% else %}条报道{% endif %} · {{ event.latest_date | date: "%m.%d" }}</small></div>{% if event.score %}<strong>{{ event.score }}</strong>{% endif %}</li>{% endfor %}
+            </ol>
+          </details>
+        {% endif %}
+        {% if edition.entity_ranking and edition.entity_ranking.size > 0 %}
+          <details class="headline-index weekly-ranking" open>
+            <summary><span>{% if is_en %}Entity ranking{% else %}实体排行{% endif %}</span><small>{{ edition.entity_ranking.size }}</small></summary>
+            <ol class="event-ranking-list">
+              {% for entity in edition.entity_ranking %}<li><span>0{{ forloop.index }}</span><div><a href="{{ entity.url }}">{{ entity.label | escape }}</a><small>{{ entity.mentions }} {% if is_en %}mentions{% else %}条相关报道{% endif %}</small></div></li>{% endfor %}
+            </ol>
+          </details>
+        {% endif %}
+        {% if site.data.weeks.weeks.size > 1 %}
+          <details class="headline-index weekly-ranking weekly-edition-nav" open>
+            <summary><span>{% if is_en %}Edition navigation{% else %}周次导航{% endif %}</span><small>{{ site.data.weeks.weeks.size }}</small></summary>
+            <ol class="event-ranking-list">
+              {% for week_row in site.data.weeks.weeks limit: 6 %}
+                {% assign week_date = week_row.date | default: week_row %}
+                <li{% if week_date == entry.date %} class="is-current"{% endif %}><span>0{{ forloop.index }}</span><div><a href="{{ prefix }}/weekly/{{ week_date }}/">{{ week_row.start | default: week_date | date: "%m.%d" }}—{{ week_date | date: "%m.%d" }}</a><small>{% if week_date == entry.date %}{% if is_en %}Current edition{% else %}当前周报{% endif %}{% else %}{% if is_en %}Weekly review{% else %}历史周报{% endif %}{% endif %}</small></div></li>
+              {% endfor %}
+            </ol>
+          </details>
+        {% endif %}
+      </aside>
+    </div>
+  </article>
+{% else %}
+  <section class="weekly-empty"><p>{% if is_en %}This language edition was not generated.{% else %}这一语言版本尚未生成。{% endif %}</p></section>
+{% endif %}
