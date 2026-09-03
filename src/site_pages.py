@@ -13,10 +13,11 @@ import logging
 from collections import Counter
 from datetime import date as date_type, timedelta
 from pathlib import Path
-from typing import Iterable, List, Optional, Sequence
+from typing import Iterable, List, Mapping, Optional, Sequence
 
 from ._file_utils import _atomic_write_text
 from .archive import ArchiveRecord
+from .entity_profiles import EntityProfile, profile_for_slug
 from .events import EventUpdate, TrackedEvent
 from .threads import EntitySummary
 
@@ -61,6 +62,12 @@ _LABELS = {
         "first_seen": "首次收录",
         "peak_score": "最高评分",
         "entity_overview": "实体概览",
+        "entity_background": "实体背景",
+        "current_focus": "当前关注",
+        "entity_type": "实体类型",
+        "official_site": "官方网站",
+        "official_updates": "官方动态",
+        "background_pending": "背景资料整理中。近期报道仍会正常收录，待档案核验后补充稳定的实体说明。",
         "recent_developments": "近期进展",
         "related_events": "关联事件线",
         "related_events_short": "关联事件",
@@ -87,6 +94,12 @@ _LABELS = {
         "first_seen": "First tracked",
         "peak_score": "Peak score",
         "entity_overview": "Entity overview",
+        "entity_background": "Entity background",
+        "current_focus": "Current focus",
+        "entity_type": "Entity type",
+        "official_site": "Official site",
+        "official_updates": "Official updates",
+        "background_pending": "Background profile in progress. Recent coverage remains available while a stable description is reviewed.",
         "recent_developments": "Recent developments",
         "related_events": "Related events",
         "related_events_short": "Related events",
@@ -857,7 +870,12 @@ def _stat(value: str, label: str) -> str:
     )
 
 
-def render_entity_page(entity: EntitySummary, language: str) -> str:
+def render_entity_page(
+    entity: EntitySummary,
+    language: str,
+    *,
+    profiles: Mapping[str, EntityProfile] | None = None,
+) -> str:
     labels = _LABELS[language]
     prefix = "" if language == "zh" else "/en"
     ordered = sorted(
@@ -871,7 +889,12 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
         default=None,
     )
     latest = ordered[0] if ordered else None
-    description = latest.summary_for(language) if latest else ""
+    profile = profile_for_slug(entity.slug, profiles)
+    entity_label = profile.label_for(language) if profile else entity.label
+    identity = profile.identity_for(language) if profile else labels["background_pending"]
+    background = profile.background_for(language) if profile else labels["background_pending"]
+    entity_type = profile.type_for(language) if profile else ""
+    description = identity or (latest.summary_for(language) if latest else "")
     category = _dominant_category(ordered)
 
     related: dict[str, ArchiveRecord] = {}
@@ -952,7 +975,7 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
 
     overview_text = ""
     if latest and dates:
-        latest_title = latest.title_for(language) or entity.label
+        latest_title = latest.title_for(language) or entity_label
         if language == "zh":
             overview_text = (
                 f"自 {dates[0]} 起共收录 {entity.count} 条相关报道，"
@@ -965,12 +988,40 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
                 f'The latest focus is “{latest_title}”. '
                 f"{len(related)} continuing event timelines connect the coverage over time."
             )
-    overview = (
+    current_focus = (
         f'<section class="event-current-state entity-current-state">'
-        f'<h2>{escape_text(labels["entity_overview"])}</h2>'
+        f'<h2>{escape_text(labels["current_focus"])}</h2>'
         f'<p>{escape_text(overview_text)}</p></section>'
         if overview_text
         else ""
+    )
+    reference_links = []
+    if profile:
+        official_url = safe_url(profile.official_url)
+        updates_url = safe_url(profile.updates_url)
+        if official_url:
+            reference_links.append(
+                f'<a href="{official_url}" target="_blank" rel="noopener noreferrer">'
+                f'{escape_text(labels["official_site"])}</a>'
+            )
+        if updates_url:
+            reference_links.append(
+                f'<a href="{updates_url}" target="_blank" rel="noopener noreferrer">'
+                f'{escape_text(labels["official_updates"])}</a>'
+            )
+    background_section = (
+        '<section class="event-current-state entity-background">'
+        f'<h2>{escape_text(labels["entity_background"])}</h2>'
+        f'<p>{escape_text(background)}</p>'
+        + (
+            '<p class="event-brief-references entity-background-links">'
+            f'<strong>{escape_text(labels["source"])}</strong>'
+            + '<span aria-hidden="true">·</span>'.join(reference_links)
+            + '</p>'
+            if reference_links
+            else ""
+        )
+        + '</section>'
     )
     status_line = '<div class="event-status-line">'
     if category:
@@ -978,6 +1029,8 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
             f'<span class="category-pill" data-category="{escape_text(category)}">'
             f'{escape_text(category)}</span>'
         )
+    if entity_type:
+        status_line += f'<span>{escape_text(entity_type)}</span>'
     if dates:
         status_line += (
             f'<span>{escape_text(labels["first_seen"])} {escape_text(dates[0])}</span>'
@@ -986,7 +1039,13 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
     status_line += '</div>'
 
     facts = (
-        f'<div><dt>{escape_text(labels["mentions"])}</dt>'
+        (
+            f'<div><dt>{escape_text(labels["entity_type"])}</dt>'
+            f'<dd>{escape_text(entity_type)}</dd></div>'
+            if entity_type
+            else ""
+        )
+        + f'<div><dt>{escape_text(labels["mentions"])}</dt>'
         f'<dd>{entity.count}</dd></div>'
         f'<div><dt>{escape_text(labels["days"])}</dt><dd>{len(dates)}</dd></div>'
         f'<div><dt>{escape_text(labels["related_events_short"])}</dt>'
@@ -1017,7 +1076,7 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
     body = (
         '<div class="event-detail-layout entity-detail-layout">'
         '<article class="event-detail-stream entity-detail-stream">'
-        f'<div class="event-detail-orientation">{status_line}{overview}</div>'
+        f'<div class="event-detail-orientation">{status_line}{background_section}{current_focus}</div>'
         '<div class="event-timeline-heading">'
         f'<h2>{escape_text(labels["recent_developments"])}</h2>'
         f'<span>{len(ordered)} {escape_text(labels["entries"])}</span></div>'
@@ -1035,7 +1094,7 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
     )
     return (
         _front_matter(
-            title=entity.label,
+            title=entity_label,
             permalink=f"{prefix}/entity/{entity.slug}/",
             language=language,
             description=description,
@@ -1089,6 +1148,7 @@ def build_entity_index_data(
     entities: Sequence[EntitySummary],
     *,
     recent_days: int = 7,
+    profiles: Mapping[str, EntityProfile] | None = None,
 ) -> dict:
     """Data consumed by the always-present /entity/ index page.
 
@@ -1109,6 +1169,7 @@ def build_entity_index_data(
 
     rows = []
     for entity in entities:
+        profile = profile_for_slug(entity.slug, profiles)
         records = sorted(
             entity.records,
             key=lambda record: (record.date, -record.rank, record.item_id),
@@ -1131,6 +1192,21 @@ def build_entity_index_data(
             {
                 "slug": entity.slug,
                 "label": entity.label,
+                "profile_label_zh": profile.label_zh if profile else entity.label,
+                "profile_label_en": profile.label_en if profile else entity.label,
+                "entity_type_zh": profile.type_zh if profile else "",
+                "entity_type_en": profile.type_en if profile else "",
+                "identity_zh": (
+                    profile.identity_zh
+                    if profile
+                    else _LABELS["zh"]["background_pending"]
+                ),
+                "identity_en": (
+                    profile.identity_en
+                    if profile
+                    else _LABELS["en"]["background_pending"]
+                ),
+                "profile_status": "verified" if profile else "pending",
                 "mentions": entity.count,
                 "days": len({record.date for record in records}),
                 "first_date": records[0].date,

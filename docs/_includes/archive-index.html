@@ -185,11 +185,15 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
       <ol class="event-context-list entity-context-list">
         {% for row in ranking limit: 3 %}
           {% assign context_title = row.title_zh | default: row.title_en %}
-          {% if is_en %}{% assign context_title = row.title_en | default: row.title_zh %}{% endif %}
+          {% assign row_label = row.profile_label_zh | default: row.label %}
+          {% if is_en %}
+            {% assign context_title = row.title_en | default: row.title_zh %}
+            {% assign row_label = row.profile_label_en | default: row.label %}
+          {% endif %}
           <li>
             <span class="event-context-rank">0{{ forloop.index }}</span>
             <div>
-              <h3><a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row.label | escape }}</a></h3>
+              <h3><a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row_label | escape }}</a></h3>
               <p>{{ context_title | escape }}</p>
             </div>
             <time datetime="{{ row.latest_date }}">{{ row.latest_date | date: "%m.%d" }}</time>
@@ -205,7 +209,15 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
         <ol class="event-feed entity-feed">
           {% for row in rows %}
             {% assign latest_summary = row.summary_zh %}
-            {% if is_en %}{% assign latest_summary = row.summary_en %}{% endif %}
+            {% assign row_label = row.profile_label_zh | default: row.label %}
+            {% assign entity_identity = row.identity_zh %}
+            {% assign entity_type = row.entity_type_zh %}
+            {% if is_en %}
+              {% assign latest_summary = row.summary_en %}
+              {% assign row_label = row.profile_label_en | default: row.label %}
+              {% assign entity_identity = row.identity_en %}
+              {% assign entity_type = row.entity_type_en %}
+            {% endif %}
             <li class="digest-item event-feed-item entity-feed-item{% if row.recent > 0 %} is-active{% endif %}">
               <div class="digest-item-rail">
                 <strong>#{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</strong>
@@ -214,9 +226,13 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
               <div class="digest-item-content">
                 <div class="digest-item-meta"><div>
                   {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category }}">{{ row.category }}</span>{% endif %}
+                  {% if entity_type and entity_type != "" %}<span class="entity-type">{{ entity_type | escape }}</span>{% endif %}
                   {% if row.recent > 0 %}<span class="entity-activity">{% if is_en %}{{ row.recent }} in 7d{% else %}近 7 日 {{ row.recent }} 条{% endif %}</span>{% endif %}
                 </div>{% if row.top_score %}<span class="score-badge" data-tier="{% if row.top_score >= 9 %}high{% elsif row.top_score >= 7 %}good{% else %}mid{% endif %}">{{ row.top_score }}</span>{% endif %}</div>
-                <h2><a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row.label | escape }}</a></h2>
+                <h2><a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row_label | escape }}</a></h2>
+                {% if entity_identity and entity_identity != "" %}
+                  <p class="entity-identity">{{ entity_identity | escape }}</p>
+                {% endif %}
                 {% if latest_summary and latest_summary != "" %}
                   <section class="entity-feed-overview">
                     <h3>{% if is_en %}Latest overview{% else %}近期概览{% endif %}</h3>
@@ -249,10 +265,12 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
           <summary><span>{% if is_en %}Entity ranking{% else %}实体排行榜{% endif %}</span><small>TOP {{ ranking.size }}</small></summary>
           <ol class="event-ranking-list entity-ranking-list">
             {% for row in ranking limit: 10 %}
+              {% assign row_label = row.profile_label_zh | default: row.label %}
+              {% if is_en %}{% assign row_label = row.profile_label_en | default: row.label %}{% endif %}
               <li>
                 <span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
                 <div>
-                  <a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row.label | escape }}</a>
+                  <a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row_label | escape }}</a>
                   <small>{% if is_en %}{{ row.recent }} in 7d · {{ row.mentions }} reports{% else %}近 7 日 {{ row.recent }} 条 · 累计 {{ row.mentions }} 条{% endif %}</small>
                 </div>
                 {% if row.top_score %}<strong>{{ row.top_score }}</strong>{% endif %}
