@@ -327,6 +327,40 @@ def test_entity_page_links_reports_to_related_event_timelines() -> None:
     assert page.count('href="/events/evt_bybit/"') == 3
 
 
+def test_entity_page_separates_background_from_current_focus() -> None:
+    entity = EntitySummary(
+        slug="coinbase",
+        label="Coinbase",
+        count=3,
+        records=[make_record(title_zh="Coinbase 发布最新产品")],
+    )
+
+    page = render_entity_page(entity, "zh")
+
+    assert "实体背景" in page
+    assert "当前关注" in page
+    assert "美国加密资产平台" in page
+    assert "提供交易、托管、质押与链上基础设施" in page
+    assert "<dt>实体类型</dt><dd>加密货币交易所</dd>" in page
+    assert 'href="https://www.coinbase.com/about"' in page
+    assert 'href="https://www.coinbase.com/blog"' in page
+
+
+def test_entity_page_marks_unknown_background_as_pending() -> None:
+    entity = EntitySummary(
+        slug="unreviewed-name",
+        label="Unreviewed Name",
+        count=3,
+        records=[make_record()],
+    )
+
+    page = render_entity_page(entity, "zh")
+
+    assert "背景资料整理中" in page
+    assert "官方网站" not in page
+    assert "官方动态" not in page
+
+
 
 def test_index_data_feeds_the_committed_pages(tmp_path) -> None:
     threads = [
@@ -371,6 +405,22 @@ def test_entity_index_carries_what_a_reader_needs_to_choose() -> None:
     assert len(row["recent_items"]) == 2
     assert row["recent_items"][0]["date"] == "2026-08-11"
     assert row["events_count"] == 0
+
+
+def test_entity_index_includes_stable_identity_without_reusing_news_summary() -> None:
+    entity = EntitySummary(
+        slug="coinbase",
+        label="Coinbase",
+        count=3,
+        records=[make_record()],
+    )
+
+    row = build_entity_index_data([entity])["entities"][0]
+
+    assert row["profile_status"] == "verified"
+    assert row["entity_type_zh"] == "加密货币交易所"
+    assert row["identity_zh"] == "提供交易、托管、质押与链上基础设施的美国加密平台。"
+    assert row["identity_zh"] != row["summary_zh"]
 
 
 def test_entity_index_puts_still_active_names_first() -> None:
