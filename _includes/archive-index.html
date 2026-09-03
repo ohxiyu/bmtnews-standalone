@@ -171,32 +171,108 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
 
 {% elsif include.kind == "entities" %}
   {% assign rows = site.data.entities.entities %}
-  {% if is_en %}
-    <p class="archive-lede">Coverage grouped by company, protocol, and regulator.</p>
-  {% else %}
-    <p class="archive-lede">按公司、协议、监管机构聚合的历史报道。</p>
-  {% endif %}
   {% if rows and rows.size > 0 %}
-    <ul class="entity-grid">
-      {% for row in rows %}
-        <li class="entity-card{% if row.recent > 0 %} is-active{% endif %}">
-          <a class="entity-card-link" href="{{ prefix }}/entity/{{ row.slug }}/">
-            <span class="entity-card-name">{{ row.label }}</span>
-            {% if row.recent > 0 %}
-              <span class="entity-card-pulse" title="{% if is_en %}{{ row.recent }} in the last 7 days{% else %}近 7 天 {{ row.recent }} 条{% endif %}">{% if is_en %}{{ row.recent }} this week{% else %}本周 {{ row.recent }} 条{% endif %}</span>
-            {% endif %}
-          </a>
-          <p class="entity-card-latest">{% if is_en %}{{ row.title_en | default: row.title_zh }}{% else %}{{ row.title_zh | default: row.title_en }}{% endif %}</p>
-          <p class="entity-card-meta">
-            {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category }}">{{ row.category }}</span>{% endif %}
-            <span>{% if is_en %}{{ row.mentions }} entries{% else %}{{ row.mentions }} 条{% endif %}</span>
-            <span>{% if is_en %}{{ row.days }} days{% else %}跨 {{ row.days }} 天{% endif %}</span>
-            <span>{% if is_en %}last {{ row.latest_date }}{% else %}最近 {{ row.latest_date }}{% endif %}</span>
-            {% if row.top_score %}<span class="score-badge" data-tier="{% if row.top_score >= 9 %}high{% elsif row.top_score >= 7 %}good{% else %}mid{% endif %}">{{ row.top_score }}</span>{% endif %}
-          </p>
-        </li>
-      {% endfor %}
-    </ul>
+    {% assign ranking = site.data.entities.ranking | default: rows %}
+    {% assign active_rows = rows | where_exp: "row", "row.recent > 0" %}
+    <section class="event-context entity-context" aria-labelledby="entity-context-title">
+      <header class="event-context-heading">
+        <div>
+          <p class="edition-overview-title">{% if is_en %}ACTIVE ENTITIES{% else %}近期焦点{% endif %}</p>
+          <h2 id="entity-context-title">{% if is_en %}Three entities driving recent coverage{% else %}最近最活跃的三个实体{% endif %}</h2>
+        </div>
+        <p>{% if is_en %}Follow the actors behind separate reports and continuing events.{% else %}从不同报道和持续事件中，追踪反复出现的公司、协议与监管机构。{% endif %}</p>
+      </header>
+      <ol class="event-context-list entity-context-list">
+        {% for row in ranking limit: 3 %}
+          {% assign context_title = row.title_zh | default: row.title_en %}
+          {% if is_en %}{% assign context_title = row.title_en | default: row.title_zh %}{% endif %}
+          <li>
+            <span class="event-context-rank">0{{ forloop.index }}</span>
+            <div>
+              <h3><a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row.label | escape }}</a></h3>
+              <p>{{ context_title | escape }}</p>
+            </div>
+            <time datetime="{{ row.latest_date }}">{{ row.latest_date | date: "%m.%d" }}</time>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+    <div class="event-index-layout entity-index-layout">
+      <section class="event-index-stream entity-index-stream" aria-label="{% if is_en %}Entity feed{% else %}实体信息流{% endif %}">
+        <div class="event-index-orientation entity-index-orientation">
+          <p class="archive-lede">{% if is_en %}Companies, protocols, and regulators ordered by recent coverage activity.{% else %}按近期报道活跃度排列公司、协议与监管机构，直接展示最近进展。{% endif %}</p>
+        </div>
+        <ol class="event-feed entity-feed">
+          {% for row in rows %}
+            {% assign latest_summary = row.summary_zh %}
+            {% if is_en %}{% assign latest_summary = row.summary_en %}{% endif %}
+            <li class="digest-item event-feed-item entity-feed-item{% if row.recent > 0 %} is-active{% endif %}">
+              <div class="digest-item-rail">
+                <strong>#{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</strong>
+                <time datetime="{{ row.latest_date }}">{{ row.latest_date | date: "%m.%d" }}</time>
+              </div>
+              <div class="digest-item-content">
+                <div class="digest-item-meta"><div>
+                  {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category }}">{{ row.category }}</span>{% endif %}
+                  {% if row.recent > 0 %}<span class="entity-activity">{% if is_en %}{{ row.recent }} in 7d{% else %}近 7 日 {{ row.recent }} 条{% endif %}</span>{% endif %}
+                </div>{% if row.top_score %}<span class="score-badge" data-tier="{% if row.top_score >= 9 %}high{% elsif row.top_score >= 7 %}good{% else %}mid{% endif %}">{{ row.top_score }}</span>{% endif %}</div>
+                <h2><a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row.label | escape }}</a></h2>
+                {% if latest_summary and latest_summary != "" %}
+                  <section class="entity-feed-overview">
+                    <h3>{% if is_en %}Latest overview{% else %}近期概览{% endif %}</h3>
+                    <p>{{ latest_summary | escape }}</p>
+                  </section>
+                {% endif %}
+                {% if row.recent_items.size > 0 %}
+                  <ol class="entity-update-list">
+                    {% for item in row.recent_items %}
+                      {% assign item_title = item.title_zh | default: item.title_en %}
+                      {% if is_en %}{% assign item_title = item.title_en | default: item.title_zh %}{% endif %}
+                      <li>
+                        <time datetime="{{ item.date }}">{{ item.date | date: "%m.%d" }}</time>
+                        {% if item.url and item.url != "" %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item_title | escape }}</a>{% else %}<span>{{ item_title | escape }}</span>{% endif %}
+                      </li>
+                    {% endfor %}
+                  </ol>
+                {% endif %}
+                <p class="source-line event-feed-meta entity-feed-meta">
+                  {% if is_en %}{{ row.mentions }} reports · {{ row.days }} days · {{ row.events_count }} related events{% else %}{{ row.mentions }} 条报道 · 跨 {{ row.days }} 天 · {{ row.events_count }} 条关联事件线{% endif %}
+                  <a class="event-detail-link" href="{{ prefix }}/entity/{{ row.slug }}/">{% if is_en %}Open entity profile{% else %}查看实体档案{% endif %} →</a>
+                </p>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+      <aside class="headline-rail event-overview-rail entity-overview-rail" aria-label="{% if is_en %}Entity overview{% else %}实体概览{% endif %}">
+        <details class="headline-index event-ranking entity-ranking" open>
+          <summary><span>{% if is_en %}Entity ranking{% else %}实体排行榜{% endif %}</span><small>TOP {{ ranking.size }}</small></summary>
+          <ol class="event-ranking-list entity-ranking-list">
+            {% for row in ranking limit: 10 %}
+              <li>
+                <span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+                <div>
+                  <a href="{{ prefix }}/entity/{{ row.slug }}/">{{ row.label | escape }}</a>
+                  <small>{% if is_en %}{{ row.recent }} in 7d · {{ row.mentions }} reports{% else %}近 7 日 {{ row.recent }} 条 · 累计 {{ row.mentions }} 条{% endif %}</small>
+                </div>
+                {% if row.top_score %}<strong>{{ row.top_score }}</strong>{% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        </details>
+        <details class="headline-index" open>
+          <summary><span>{% if is_en %}Entity overview{% else %}实体概览{% endif %}</span><small>{{ rows.size }}</small></summary>
+          <dl class="event-overview-stats">
+            <div><dt>{% if is_en %}Tracked entities{% else %}收录实体{% endif %}</dt><dd>{{ rows.size }}</dd></div>
+            <div><dt>{% if is_en %}Active in 7d{% else %}近 7 日活跃{% endif %}</dt><dd>{{ active_rows.size }}</dd></div>
+          </dl>
+        </details>
+        <div class="event-index-rule entity-index-rule">
+          <strong>{% if is_en %}Display rule{% else %}展示规则{% endif %}</strong>
+          <p>{% if is_en %}An entity appears after three published reports mention it. Ranking favors recent activity, then total coverage.{% else %}同一实体被三条已发布报道提及后进入列表；排序优先考虑近期活跃度，其次是累计报道量。{% endif %}</p>
+        </div>
+      </aside>
+    </div>
   {% else %}
     <p class="empty-state">
       {% if is_en %}No recurring entities yet. An entity appears once it is mentioned in two published stories.{% else %}暂无实体索引。同一实体被两条已发布新闻提及后，这里会自动出现。{% endif %}
