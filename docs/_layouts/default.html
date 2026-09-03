@@ -46,7 +46,7 @@
     {% include head-custom.html %}
   </head>
   <body
-    class="{% if page.page_type == 'home' %}home-page{% elsif page.lang %}digest-page{% elsif page.page_type == 'source_console' %}source-console-page{% else %}docs-page{% endif %}"
+    class="{% if page.page_type == 'home' %}home-page{% elsif page.lang %}digest-page{% elsif page.page_type == 'source_console' %}source-console-page{% else %}docs-page{% endif %}{% if page.page_class %} {{ page.page_class }}{% endif %}"
     {% if page.lang %}data-language="{{ page.lang }}" data-date="{{ page.date | date: '%Y-%m-%d' }}"{% endif %}
   >
     <a

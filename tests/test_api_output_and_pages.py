@@ -393,6 +393,14 @@ def test_event_page_renders_material_updates_in_chronological_order() -> None:
     assert 'id="upd_example1"' in page
     assert "/api/events/evt_example1.json" in page
     assert "alternate_url: /en/events/evt_example1/" in page
+    assert "page_class: event-detail-page" in page
+    assert 'class="event-detail-layout"' in page
+    assert 'class="headline-rail event-detail-rail"' in page
+    assert "#01" in page and "#02" in page
+    assert "治理事件" in page
+    # When the update title falls back to what_changed, do not print the same
+    # sentence twice in the main timeline body.
+    assert 'class="event-update-change"' not in page
 
 
 def test_event_api_writes_index_and_full_timeline(tmp_path: Path) -> None:
@@ -445,6 +453,22 @@ def test_event_index_contains_progressions_not_single_updates() -> None:
     assert [row["event_id"] for row in rows] == ["evt_progress1"]
     assert rows[0]["entries"] == 2
     assert rows[0]["days"] == 2
+    assert rows[0]["latest_update_zh"] == "第 2 个变化"
+    assert rows[0]["latest_update_en"] == "Change 2"
+    assert rows[0]["event_type_zh"] == "治理事件"
+
+
+def test_event_index_template_reuses_feed_layout_and_filters() -> None:
+    template = (
+        Path("docs/_includes/archive-index.html").read_text(encoding="utf-8")
+    )
+    layout = Path("docs/_layouts/default.html").read_text(encoding="utf-8")
+
+    assert 'class="event-index-layout"' in template
+    assert 'class="digest-item event-feed-item"' in template
+    assert "data-event-filters" in template
+    assert 'class="headline-rail event-overview-rail"' in template
+    assert "page.page_class" in layout
 
 
 def test_publish_event_compatibility_pages_writes_real_redirect_targets(
