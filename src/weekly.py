@@ -190,10 +190,8 @@ _HEADING = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
 def _legacy_digest(text: str, language: str) -> Optional[WeeklyDigest]:
     """Turn pre-structured Markdown into a safe fallback edition.
 
-    The provider is still called in text mode because some configured models
-    reject JSON response-format flags. If a provider ignores the new JSON
-    instruction and returns the old Markdown shape, the weekly job remains
-    publishable instead of silently losing the whole edition.
+    If a provider ignores JSON mode and returns the old Markdown shape, the
+    weekly job remains publishable instead of silently losing the whole edition.
     """
     matches = list(_HEADING.finditer(text))
     if not matches:
@@ -287,7 +285,7 @@ async def generate_weekly_digest(
             items=_format_items(ranked, language),
             threads=_format_threads(context.threads, language),
         ),
-        response_format="text",
+        response_format="json",
     )
     return parse_weekly_digest(response, language)
 
