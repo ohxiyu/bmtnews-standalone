@@ -3,9 +3,6 @@
 {% assign today_key = site.time | date: "%Y-%m-%d" %}
 
 <section class="continuous-feed" data-language="{{ include.language }}">
-  <h1 class="visually-hidden">
-    {% if include.language == "zh" %}BMTNews 加密、AI 与政策每日情报{% else %}BMTNews daily crypto, AI, and policy intelligence{% endif %}
-  </h1>
   {% include edition-header.html language=include.language %}
 
   {% if latest_post %}

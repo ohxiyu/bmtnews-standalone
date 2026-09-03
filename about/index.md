@@ -1,11 +1,11 @@
 ---
 layout: default
-title: About BMTNews
+title: 关于 BMTNews
 description: BMTNews identity, editorial scope, publication model, and limitations.
 permalink: /about/
+eyebrow: BMTNEWS ABOUT
+hide_language_toggle: true
 ---
-
-# 关于 BMTNews / About BMTNews
 
 BMTNews 是一个公开、双语、每日更新的信息整理项目，主要覆盖加密市场、交易所、
 协议、安全事件和监管变化，同时保留有限篇幅给重要 AI 科技进展与可能影响数字资产

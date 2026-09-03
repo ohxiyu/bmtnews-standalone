@@ -27,7 +27,7 @@
   --border-strong: #c8c5bd;
   --text: #1b1b18;
   --text-soft: #4e4c47;
-  --text-muted: #83807a;
+  --text-muted: #6f6c66;
   --accent: #1d4c96;
   --accent-strong: #143a77;
   --accent-soft: #e9eef7;
@@ -141,6 +141,13 @@ a:hover {
   text-underline-offset: 0.2em;
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 input,
 button {
   font: inherit;
@@ -246,6 +253,15 @@ time,
 .site-nav a:hover {
   color: var(--accent);
   text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.48em;
 }
 
 .site-actions {
@@ -1462,7 +1478,7 @@ time,
 .event-index-layout,
 .event-detail-layout {
   display: grid;
-  gap: 0 36px;
+  gap: 0 32px;
   align-items: start;
 }
 
@@ -1473,7 +1489,7 @@ time,
 }
 
 .event-detail-layout {
-  grid-template-columns: minmax(0, 1fr) 236px;
+  grid-template-columns: minmax(0, 1fr) 264px;
 }
 
 .event-index-stream {
@@ -2149,9 +2165,9 @@ time,
 
 .weekly-masthead h1 {
   margin: 0;
-  font-size: clamp(1.85rem, 3vw, 2.65rem);
+  font-size: 1.85rem;
   line-height: 1.1;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
 }
 
 .weekly-range {
@@ -2811,7 +2827,7 @@ time,
   margin-top: 0;
 }
 
-.docs-page:not(.event-index-page):not(.event-detail-page) .main-content h2 {
+.docs-page:not(.event-index-page):not(.event-detail-page):not(.entity-index-page):not(.entity-detail-page):not(.weekly-index-page):not(.weekly-detail-page) .main-content h2 {
   margin-top: 2em;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border);
