@@ -1537,6 +1537,7 @@ class BMTNewsOrchestrator:
         from .weekly import (
             build_weekly_context,
             build_weekly_index_entry,
+            build_fallback_weekly_digest,
             generate_calibration_review,
             generate_weekly_digest,
             known_weeks,
@@ -1602,16 +1603,30 @@ class BMTNewsOrchestrator:
                 else:
                     detail = f"{normalized.upper()} 周报生成失败：模型未返回内容。"
                 if not body:
-                    # Carrying the provider's own message is the whole point:
-                    # a generic "生成失败" is what made a 400 indistinguishable
-                    # from a quiet model for two weeks. Alert text is passed
-                    # through sanitize_diagnostic before it is written out.
-                    run_report.add_alert(
-                        "warning",
-                        f"weekly_digest_failed_{normalized}",
-                        detail,
+                    body = build_fallback_weekly_digest(
+                        context,
+                        language=normalized,
                     )
-                    continue
+                    if body:
+                        run_report.add_alert(
+                            "warning",
+                            f"weekly_digest_fallback_{normalized}",
+                            f"{detail} 已改用已发布归档生成结构化周报。",
+                        )
+                        run_report.set_metric(
+                            "weekly_fallback_pages",
+                            run_report.metrics.get("weekly_fallback_pages", 0) + 1,
+                        )
+                    else:
+                        # Carrying the provider's own message is the whole point:
+                        # a generic "生成失败" is what made a 400
+                        # indistinguishable from a quiet model for two weeks.
+                        run_report.add_alert(
+                            "warning",
+                            f"weekly_digest_failed_{normalized}",
+                            detail,
+                        )
+                        continue
                 path = save_weekly_page(
                     render_weekly_page(body, context, language=normalized),
                     end=end,

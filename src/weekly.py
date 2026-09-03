@@ -126,6 +126,116 @@ def build_weekly_context(
     )
 
 
+def _record_copy(record: ArchiveRecord, language: str) -> tuple[str, str]:
+    summary = record.summary_for(language).strip()
+    paragraphs = [
+        _clean_copy(paragraph, limit=520)
+        for paragraph in re.split(r"\n\s*\n", summary)
+        if paragraph.strip()
+    ]
+    change = paragraphs[0] if paragraphs else record.title_for(language)
+    why = paragraphs[1] if len(paragraphs) > 1 else ""
+    return change, why
+
+
+def build_fallback_weekly_digest(
+    context: WeeklyContext,
+    *,
+    language: str,
+) -> Optional[WeeklyDigest]:
+    """Build an evidence-backed edition when the editorial model is unavailable.
+
+    Every sentence comes from already-published titles and summaries. This is
+    less interpretive than the model-authored edition, but it keeps the weekly
+    page current, linkable, and honest instead of dropping the entire week.
+    """
+    if context.is_empty:
+        return None
+    normalized = "en" if language == "en" else "zh"
+    grouped: dict[str, list[ArchiveRecord]] = {}
+    for record in context.records:
+        key = record.event_id or record.thread_id
+        if key:
+            grouped.setdefault(key, []).append(record)
+    continuing_groups = [
+        records
+        for records in grouped.values()
+        if len({record.date for record in records}) >= 2
+    ]
+    continuing_groups.sort(
+        key=lambda records: (
+            max((record.score or 0) for record in records),
+            len(records),
+            max(record.date for record in records),
+        ),
+        reverse=True,
+    )
+
+    items: list[WeeklyDigestItem] = []
+    used_ids: set[str] = set()
+    used_groups: set[str] = set()
+    for records in continuing_groups[:4]:
+        ordered = sorted(records, key=lambda record: (record.date, -record.rank))
+        latest = ordered[-1]
+        change, why = _record_copy(latest, normalized)
+        evidence = [record.item_id for record in ordered[-5:]]
+        used_ids.update(evidence)
+        used_groups.add(latest.event_id or latest.thread_id or "")
+        items.append(
+            WeeklyDigestItem(
+                section="continuing",
+                title=latest.title_for(normalized),
+                change=change,
+                why_it_matters=why,
+                evidence_ids=evidence,
+            )
+        )
+
+    ranked = sorted(
+        context.records,
+        key=lambda record: (
+            record.score or 0,
+            record.sources_count,
+            record.date,
+            -record.rank,
+        ),
+        reverse=True,
+    )
+    for record in ranked:
+        group = record.event_id or record.thread_id or record.item_id
+        if record.item_id in used_ids or group in used_groups:
+            continue
+        change, why = _record_copy(record, normalized)
+        items.append(
+            WeeklyDigestItem(
+                section="remember",
+                title=record.title_for(normalized),
+                change=change,
+                why_it_matters=why,
+                evidence_ids=[record.item_id],
+            )
+        )
+        used_groups.add(group)
+        if len([item for item in items if item.section == "remember"]) >= 4:
+            break
+
+    if not items:
+        return None
+    lead = items[0]
+    throughline_summary = lead.change
+    if lead.why_it_matters and lead.why_it_matters != lead.change:
+        throughline_summary = f"{throughline_summary} {lead.why_it_matters}"
+    return _normalize_digest(
+        WeeklyDigest(
+            throughline=WeeklyThroughline(
+                title=lead.title,
+                summary=throughline_summary,
+            ),
+            items=items,
+        )
+    )
+
+
 def _format_items(records: Sequence[ArchiveRecord], language: str) -> str:
     lines = []
     for record in records:
