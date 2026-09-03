@@ -1,0 +1,17 @@
+{% assign is_en = false %}
+{% if include.language == "en" %}{% assign is_en = true %}{% endif %}
+{% assign selected = nil %}
+{% assign rows = site.data.weeks.weeks %}
+{% for row in rows %}
+  {% assign row_date = row.date | default: row %}
+  {% if row_date == include.week %}{% assign selected = row %}{% break %}{% endif %}
+{% endfor %}
+
+{% if selected and selected.date %}
+  {% include weekly-edition.html entry=selected language=include.language show_history_link=true %}
+{% else %}
+  <section class="weekly-empty">
+    <p>{% if is_en %}This weekly edition is not available in the structured archive yet.{% else %}这一期周报尚未进入结构化存档。{% endif %}</p>
+    <a href="{% if is_en %}/en/weekly/{% else %}/weekly/{% endif %}">{% if is_en %}Return to Weekly{% else %}返回周报{% endif %}</a>
+  </section>
+{% endif %}

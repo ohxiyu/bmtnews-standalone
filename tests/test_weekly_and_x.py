@@ -1,6 +1,7 @@
 """Tests for the weekly review and the opt-in X distribution."""
 
 import asyncio
+import json
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -19,7 +20,9 @@ from src.services.x_delivery import (
 from src.weekly import (
     build_weeks_index_data,
     build_weekly_context,
+    build_weekly_index_entry,
     generate_weekly_digest,
+    parse_weekly_digest,
     render_weekly_page,
     save_weekly_page,
     save_weeks_index_data,
@@ -42,7 +45,15 @@ def make_record(date_str: str, *, rank: int = 1, score: float = 8.0) -> ArchiveR
 
 
 class StubClient:
-    def __init__(self, response: str = "## 本周主线\n\n内容") -> None:
+    def __init__(
+        self,
+        response: str = (
+            '{"throughline":{"title":"本周判断","summary":"内容"},'
+            '"items":[{"section":"continuing","title":"事件",'
+            '"change":"发生变化","why_it_matters":"影响明确",'
+            '"evidence_ids":["2026-08-09-1"]}]}'
+        ),
+    ) -> None:
         self.response = response
         self.calls: list[dict] = []
 
@@ -76,12 +87,14 @@ async def _test_generate_weekly_digest_returns_body() -> None:
     context = build_weekly_context([make_record("2026-08-09")], end=date(2026, 8, 9))
     client = StubClient()
     body = await generate_weekly_digest(client, context, language="zh")
-    assert body == "## 本周主线\n\n内容"
+    assert body is not None
+    assert body.throughline.summary == "内容"
+    assert body.items[0].evidence_ids == ["2026-08-09-1"]
     assert "Simplified Chinese" in client.calls[0]["user"]
 
 
-async def _test_weekly_digest_asks_for_prose_not_json() -> None:
-    """A JSON-mode request is rejected outright by providers that offer one."""
+async def _test_weekly_digest_uses_provider_compatible_text_transport() -> None:
+    """Some configured providers reject a JSON response-format flag."""
     context = build_weekly_context([make_record("2026-08-09")], end=date(2026, 8, 9))
     client = StubClient()
     await generate_weekly_digest(client, context, language="zh")
@@ -102,15 +115,71 @@ async def _test_generate_weekly_digest_surfaces_provider_errors() -> None:
 
 def test_render_and_save_weekly_page(tmp_path: Path) -> None:
     context = build_weekly_context([make_record("2026-08-09")], end=date(2026, 8, 9))
-    page = render_weekly_page("## 本周主线\n\n内容", context, language="zh")
+    digest = parse_weekly_digest(StubClient().response, "zh")
+    assert digest is not None
+    page = render_weekly_page(digest, context, language="zh")
     assert "permalink: /weekly/2026-08-09/" in page
-    assert "1 条" in page or "发布 1" in page
+    assert "page_type: weekly" in page
+    assert "weekly-detail.html" in page
     path = save_weekly_page(page, end=date(2026, 8, 9), language="zh", root=tmp_path)
     assert path.name == "2026-08-09.md"
 
     data = build_weeks_index_data(["2026-08-02", "2026-08-09", "2026-08-02"])
-    assert data["weeks"] == ["2026-08-09", "2026-08-02"]
+    assert [row["date"] for row in data["weeks"]] == ["2026-08-09", "2026-08-02"]
     assert save_weeks_index_data(["2026-08-09"], data_root=tmp_path).name == "weeks.json"
+
+
+def test_weekly_digest_keeps_legacy_markdown_as_fallback() -> None:
+    digest = parse_weekly_digest(
+        "## 本周主线\n\n安全事件塑造了本周。\n\n"
+        "## 持续追踪\n\n- Cosmos 漏洞：影响扩大。\n\n"
+        "## 值得记住\n\n- 量子签名：首次概念验证。",
+        "zh",
+    )
+    assert digest is not None
+    assert digest.throughline.summary == "安全事件塑造了本周。"
+    assert [item.section for item in digest.items] == ["continuing", "remember"]
+
+
+def test_weekly_index_entry_resolves_only_archived_evidence() -> None:
+    record = make_record("2026-08-09")
+    record.event_id = "event-1"
+    record.source_label = "Official"
+    record.sources_count = 2
+    context = build_weekly_context([record], end=date(2026, 8, 9))
+    digest = parse_weekly_digest(StubClient().response, "zh")
+    assert digest is not None
+    entry = build_weekly_index_entry(context, {"zh": digest})
+    assert entry["date"] == "2026-08-09"
+    assert entry["stats"]["items"] == 1
+    item = entry["zh"]["items"][0]
+    assert item["event_url"] == "/events/event-1/"
+    assert item["sources_count"] == 2
+    assert item["evidence"] == [
+        {
+            "date": "2026-08-09",
+            "title": "标题 2026-08-09",
+            "url": "https://example.com/2026-08-09-1",
+            "source": "Official",
+        }
+    ]
+
+
+def test_weekly_index_update_preserves_other_language(tmp_path: Path) -> None:
+    data_root = tmp_path / "data"
+    data_root.mkdir()
+    (data_root / "weeks.json").write_text(
+        '{"version":2,"weeks":[{"date":"2026-08-09","en":{"items":[]}}]}',
+        encoding="utf-8",
+    )
+    save_weeks_index_data(
+        ["2026-08-09"],
+        entry={"date": "2026-08-09", "zh": {"items": []}},
+        data_root=data_root,
+    )
+    payload = json.loads((data_root / "weeks.json").read_text(encoding="utf-8"))
+    assert payload["weeks"][0]["zh"] == {"items": []}
+    assert payload["weeks"][0]["en"] == {"items": []}
 
 
 def make_item(title: str) -> ContentItem:
@@ -266,8 +335,8 @@ def test_generate_weekly_digest_surfaces_provider_errors() -> None:
     asyncio.run(_test_generate_weekly_digest_surfaces_provider_errors())
 
 
-def test_weekly_digest_asks_for_prose_not_json() -> None:
-    asyncio.run(_test_weekly_digest_asks_for_prose_not_json())
+def test_weekly_digest_uses_provider_compatible_text_transport() -> None:
+    asyncio.run(_test_weekly_digest_uses_provider_compatible_text_transport())
 
 
 def test_x_publisher_skips_without_credentials(monkeypatch) -> None:

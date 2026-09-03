@@ -1536,6 +1536,7 @@ class BMTNewsOrchestrator:
         """Publish the weekly digest and the scoring calibration review."""
         from .weekly import (
             build_weekly_context,
+            build_weekly_index_entry,
             generate_calibration_review,
             generate_weekly_digest,
             known_weeks,
@@ -1583,6 +1584,7 @@ class BMTNewsOrchestrator:
             languages = list(self.config.ai.languages) or ["zh"]
             published_any = False
             first_failure: Exception | None = None
+            weekly_digests = {}
             for language in languages:
                 normalized = (
                     "en" if str(language).lower().startswith("en") else "zh"
@@ -1615,12 +1617,16 @@ class BMTNewsOrchestrator:
                     end=end,
                     language=normalized,
                 )
+                weekly_digests[normalized] = body
                 published_any = True
                 self.console.print(f"📝 Saved {normalized.upper()} weekly review to {path}")
 
             if published_any:
                 weeks = sorted({*known_weeks(), end.isoformat()}, reverse=True)
-                save_weeks_index_data(weeks)
+                save_weeks_index_data(
+                    weeks,
+                    entry=build_weekly_index_entry(context, weekly_digests),
+                )
                 run_report.set_metric("weekly_pages", len(languages))
 
             try:

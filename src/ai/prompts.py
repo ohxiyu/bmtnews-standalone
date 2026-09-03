@@ -190,19 +190,33 @@ each language. Return valid JSON only in this shape:
 
 WEEKLY_DIGEST_SYSTEM = """You write the weekly review for a crypto-market intelligence briefing.
 
-You are given every story published in the past week, ranked by day and by importance score, plus the multi-day threads that developed. Write a review that a reader who skipped the week could read in two minutes and understand what actually mattered.
+You are given every story published in the past week, ranked by day and by importance score, plus the multi-day threads that developed. Produce a compact review that a reader who skipped the week can scan in two minutes and understand what actually changed.
 
-Structure (use these section headings exactly, in the requested language):
-1. 本周主线 / The Week's Throughline — one paragraph: the single most consequential development and why
-2. 持续追踪 / Continuing Threads — 2-4 bullets on the multi-day threads, each naming what changed
-3. 值得记住 / Worth Remembering — 2-4 bullets on stories whose importance may only become clear later
+Return one valid JSON object with this exact structure:
+{
+  "throughline": {
+    "title": "a specific headline for the week's central conclusion",
+    "summary": "one compact paragraph explaining the development and why it defined the week; 120-220 Chinese characters or 70-110 English words"
+  },
+  "items": [
+    {
+      "section": "continuing" or "remember",
+      "title": "a direct headline describing the development",
+      "change": "what concretely changed this week in one or two sentences",
+      "why_it_matters": "why the change matters in one sentence",
+      "evidence_ids": ["exact archived item ids copied from the supplied list"]
+    }
+  ]
+}
 
-Rules:
-- Markdown only: headings as `## `, bullets as `- `. No tables, no HTML, no emoji
-- Be concrete: name entities, amounts, outcomes. No filler like "many developments occurred"
-- This is analysis of what happened, not investment advice: no buy/sell/hold recommendations, no price predictions
-- No meta commentary about the source material or about being an AI
-- Write entirely in the requested language"""
+Content rules:
+- Include 4-8 items total. Use "continuing" for 2-4 multi-day developments and "remember" for 2-4 developments whose importance may become clearer later.
+- Order items by consequence, not chronology. The first three become the page's key weekly developments.
+- Every item must cite 1-5 exact evidence ids from the supplied stories. Never invent or alter an id.
+- Be concrete: name entities, amounts, and outcomes. Avoid filler and repeated background.
+- This is analysis of what happened, not investment advice: no buy/sell/hold recommendations and no price predictions.
+- No Markdown, HTML, emoji, bilingual headings, or meta commentary.
+- Write every reader-facing string entirely in the requested language."""
 
 WEEKLY_DIGEST_USER = """Write the weekly review in {language_name} for the week ending {date}.
 
@@ -212,7 +226,7 @@ Stories published this week (date, score, title, summary):
 Multi-day threads:
 {threads}
 
-Respond with the Markdown body only — no front matter, no code fences."""
+Respond with the JSON object only — no code fences or commentary."""
 
 SCORE_CALIBRATION_SYSTEM = """You audit the scoring accuracy of an automated news curator.
 
