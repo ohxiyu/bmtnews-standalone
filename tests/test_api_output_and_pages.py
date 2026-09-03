@@ -389,7 +389,7 @@ def test_event_page_renders_material_updates_in_chronological_order() -> None:
     assert "历史刊期" in page
     assert page.index("第 1 个变化") < page.index("第 2 个变化")
     assert "https://example.com/evt_example1/0" in page
-    assert "当前状态" in page
+    assert "目前结论" in page
     assert 'id="upd_example1"' in page
     assert "/api/events/evt_example1.json" in page
     assert "alternate_url: /en/events/evt_example1/" in page
@@ -468,6 +468,9 @@ def test_event_index_template_reuses_feed_layout_and_filters() -> None:
     assert 'class="digest-item event-feed-item"' in template
     assert "data-event-filters" in template
     assert 'class="headline-rail event-overview-rail"' in template
+    assert 'class="event-feed-summary"' not in template
+    assert "当前状态" not in template
+    assert "最新进展" not in template
     assert "page.page_class" in layout
 
 
