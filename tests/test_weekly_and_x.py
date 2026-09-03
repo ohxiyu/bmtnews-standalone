@@ -93,12 +93,12 @@ async def _test_generate_weekly_digest_returns_body() -> None:
     assert "Simplified Chinese" in client.calls[0]["user"]
 
 
-async def _test_weekly_digest_uses_provider_compatible_text_transport() -> None:
-    """Some configured providers reject a JSON response-format flag."""
+async def _test_weekly_digest_uses_json_transport() -> None:
+    """The structured prompt must activate provider JSON mode when available."""
     context = build_weekly_context([make_record("2026-08-09")], end=date(2026, 8, 9))
     client = StubClient()
     await generate_weekly_digest(client, context, language="zh")
-    assert client.calls[0]["response_format"] == "text"
+    assert client.calls[0]["response_format"] == "json"
 
 
 async def _test_generate_weekly_digest_surfaces_provider_errors() -> None:
@@ -335,8 +335,8 @@ def test_generate_weekly_digest_surfaces_provider_errors() -> None:
     asyncio.run(_test_generate_weekly_digest_surfaces_provider_errors())
 
 
-def test_weekly_digest_uses_provider_compatible_text_transport() -> None:
-    asyncio.run(_test_weekly_digest_uses_provider_compatible_text_transport())
+def test_weekly_digest_uses_json_transport() -> None:
+    asyncio.run(_test_weekly_digest_uses_json_transport())
 
 
 def test_x_publisher_skips_without_credentials(monkeypatch) -> None:
@@ -401,12 +401,12 @@ def test_x_delivery_skips_languages_already_posted() -> None:
 
 
 def test_ai_response_modes_match_prompt_shapes() -> None:
-    """Prose uses text mode while the structured overview uses JSON mode.
+    """Prose uses text mode while structured outputs use JSON mode.
 
     A provider JSON mode fails two ways on a prose prompt: it is rejected
     outright when the prompt never says "json", or it wraps prose in JSON.
-    The homepage overview now deliberately has a schema and should request
-    JSON; the remaining prose calls must continue to request text.
+    The homepage overview and weekly digest deliberately have schemas and
+    should request JSON; the remaining prose calls must request text.
     """
     import inspect
     import re
@@ -414,7 +414,6 @@ def test_ai_response_modes_match_prompt_shapes() -> None:
     from src.ai import prompts as prompt_module
 
     prose_prompts = (
-        "WEEKLY_DIGEST",
         "SCORE_CALIBRATION",
         "X_POST",
     )
@@ -433,6 +432,9 @@ def test_ai_response_modes_match_prompt_shapes() -> None:
         assert 'response_format="text"' in sources[name], (
             f"{name} composes prose but does not ask for text mode"
         )
+
+    assert 'response_format="json"' in sources["WEEKLY_DIGEST"]
+    assert re.search(r"valid JSON", prompt_module.WEEKLY_DIGEST_SYSTEM, re.I)
 
     overview_source = inspect.getsource(
         __import__("src.ai.summarizer", fromlist=["x"]).generate_edition_overview
