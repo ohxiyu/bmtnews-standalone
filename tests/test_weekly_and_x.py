@@ -141,6 +141,58 @@ def test_weekly_digest_keeps_legacy_markdown_as_fallback() -> None:
     assert [item.section for item in digest.items] == ["continuing", "remember"]
 
 
+def test_weekly_digest_normalizes_wrapped_provider_json() -> None:
+    digest = parse_weekly_digest(
+        json.dumps(
+            {
+                "weekly_review": {
+                    "throughline": {
+                        "headline": "安全事件主导本周",
+                        "analysis": "共享基础设施暴露了多链系统性风险。",
+                    },
+                    "items": [
+                        {
+                            "category": "持续追踪",
+                            "headline": "Cosmos EVM 影响扩大",
+                            "what_changed": "受影响网络数量增加。",
+                            "significance": "共享代码放大单点风险。",
+                            "sources": [{"item_id": "2026-08-09-1"}],
+                        }
+                    ],
+                }
+            },
+            ensure_ascii=False,
+        ),
+        "zh",
+    )
+    assert digest is not None
+    assert digest.throughline.title == "安全事件主导本周"
+    assert digest.items[0].section == "continuing"
+    assert digest.items[0].evidence_ids == ["2026-08-09-1"]
+
+
+def test_weekly_digest_normalizes_split_section_arrays() -> None:
+    digest = parse_weekly_digest(
+        json.dumps(
+            {
+                "main_theme": "本周的核心变化是风险从单点向系统扩散。",
+                "continuing_threads": [
+                    {
+                        "title": "持续事件",
+                        "summary": "事件有了新的确认结果。",
+                        "record_ids": ["2026-08-09-1"],
+                    }
+                ],
+                "worth_remembering": ["量子签名：首次概念验证。"],
+            },
+            ensure_ascii=False,
+        ),
+        "zh",
+    )
+    assert digest is not None
+    assert [item.section for item in digest.items] == ["continuing", "remember"]
+
+
 def test_weekly_index_entry_resolves_only_archived_evidence() -> None:
     record = make_record("2026-08-09")
     record.event_id = "event-1"

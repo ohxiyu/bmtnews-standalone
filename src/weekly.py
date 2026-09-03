@@ -235,6 +235,203 @@ def _legacy_digest(text: str, language: str) -> Optional[WeeklyDigest]:
     )
 
 
+def _first_value(values: Mapping[str, object], *keys: str) -> object:
+    for key in keys:
+        value = values.get(key)
+        if value not in (None, "", [], {}):
+            return value
+    return ""
+
+
+def _evidence_ids(value: object) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if not isinstance(value, list):
+        return []
+    ids = []
+    for item in value:
+        if isinstance(item, str):
+            candidate = item
+        elif isinstance(item, Mapping):
+            candidate = str(_first_value(item, "id", "item_id", "record_id"))
+        else:
+            continue
+        if candidate and candidate not in ids:
+            ids.append(candidate)
+    return ids
+
+
+def _loose_item(
+    value: object,
+    *,
+    default_section: Literal["continuing", "remember"],
+) -> Optional[WeeklyDigestItem]:
+    if isinstance(value, str):
+        copy = _clean_copy(value, limit=520)
+        if not copy:
+            return None
+        title, separator, change = copy.partition("：")
+        if not separator:
+            title, separator, change = copy.partition(":")
+        return WeeklyDigestItem(
+            section=default_section,
+            title=(title or copy)[:140],
+            change=(change or copy)[:520],
+            why_it_matters="",
+        )
+    if not isinstance(value, Mapping):
+        return None
+    raw_section = str(_first_value(value, "section", "type", "category")).lower()
+    section: Literal["continuing", "remember"] = default_section
+    if any(
+        marker in raw_section
+        for marker in ("remember", "worth", "future", "记住", "未来")
+    ):
+        section = "remember"
+    elif any(marker in raw_section for marker in ("continu", "thread", "持续")):
+        section = "continuing"
+    title = _clean_copy(
+        _first_value(value, "title", "headline", "name", "subject"), limit=140
+    )
+    change = _clean_copy(
+        _first_value(
+            value,
+            "change",
+            "what_changed",
+            "summary",
+            "development",
+            "body",
+            "content",
+        ),
+        limit=520,
+    )
+    if not title and change:
+        title = change[:80]
+    if not change:
+        change = title
+    if not title or not change:
+        return None
+    why = _clean_copy(
+        _first_value(
+            value,
+            "why_it_matters",
+            "why",
+            "significance",
+            "impact",
+            "importance",
+        ),
+        limit=360,
+    )
+    evidence = _first_value(
+        value,
+        "evidence_ids",
+        "source_ids",
+        "record_ids",
+        "evidence",
+        "sources",
+    )
+    return WeeklyDigestItem(
+        section=section,
+        title=title,
+        change=change,
+        why_it_matters=why,
+        evidence_ids=_evidence_ids(evidence),
+    )
+
+
+def _loose_digest(payload: Mapping[str, object], language: str) -> Optional[WeeklyDigest]:
+    """Normalize harmless provider variations without trusting generated links."""
+    current: Mapping[str, object] = payload
+    for key in (
+        language,
+        "digest",
+        "review",
+        "weekly_digest",
+        "weekly_review",
+        "data",
+    ):
+        nested = current.get(key)
+        if isinstance(nested, Mapping):
+            current = nested
+            break
+
+    raw_throughline = _first_value(
+        current,
+        "throughline",
+        "week_throughline",
+        "main_thread",
+        "main_theme",
+        "judgment",
+        "overview",
+    )
+    if isinstance(raw_throughline, Mapping):
+        throughline_title = _clean_copy(
+            _first_value(raw_throughline, "title", "headline", "name"), limit=120
+        )
+        throughline_summary = _clean_copy(
+            _first_value(
+                raw_throughline,
+                "summary",
+                "body",
+                "content",
+                "analysis",
+                "judgment",
+            ),
+            limit=900,
+        )
+    else:
+        throughline_title = "本周判断" if language == "zh" else "This week's judgment"
+        throughline_summary = _clean_copy(raw_throughline, limit=900)
+    if not throughline_title:
+        throughline_title = "本周判断" if language == "zh" else "This week's judgment"
+
+    items: list[WeeklyDigestItem] = []
+
+    def append_items(values: object, section: Literal["continuing", "remember"]):
+        candidates = values if isinstance(values, list) else [values]
+        for candidate in candidates:
+            item = _loose_item(candidate, default_section=section)
+            if item is not None:
+                items.append(item)
+
+    append_items(
+        _first_value(current, "items", "developments", "key_developments", "highlights"),
+        "continuing",
+    )
+    if not items:
+        append_items(
+            _first_value(
+                current,
+                "continuing_threads",
+                "continuing",
+                "threads",
+                "ongoing_events",
+            ),
+            "continuing",
+        )
+        append_items(
+            _first_value(
+                current,
+                "worth_remembering",
+                "remember",
+                "watchlist",
+                "future_significance",
+            ),
+            "remember",
+        )
+    if not throughline_summary or not items:
+        return None
+    return _normalize_digest(
+        WeeklyDigest(
+            throughline=WeeklyThroughline(
+                title=throughline_title,
+                summary=throughline_summary,
+            ),
+            items=items,
+        )
+    )
+
+
 def parse_weekly_digest(response: object, language: str) -> Optional[WeeklyDigest]:
     """Parse the structured contract, retaining a Markdown compatibility path."""
     text = str(response or "").strip()
@@ -248,10 +445,22 @@ def parse_weekly_digest(response: object, language: str) -> Optional[WeeklyDiges
             normalized = _normalize_digest(digest)
             if normalized.throughline.summary:
                 return normalized
+        normalized = _loose_digest(payload, language)
+        if normalized is not None:
+            return normalized
     prose = unwrap_prose_response(
         response, keys=("digest", "review", "body", "markdown", "text")
     ).strip()
-    return _legacy_digest(prose, language)
+    legacy = _legacy_digest(prose, language)
+    if legacy is None:
+        keys = sorted(str(key)[:40] for key in payload) if isinstance(payload, dict) else []
+        logger.warning(
+            "Weekly digest response shape was unsupported (type=%s, keys=%s, length=%d)",
+            type(payload).__name__ if payload is not None else type(response).__name__,
+            keys,
+            len(text),
+        )
+    return legacy
 
 
 async def generate_weekly_digest(
