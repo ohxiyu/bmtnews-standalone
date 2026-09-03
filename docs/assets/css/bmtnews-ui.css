@@ -1465,8 +1465,9 @@ time,
 }
 
 .event-index-layout {
-  grid-template-columns: minmax(0, 1fr) 268px;
+  grid-template-columns: minmax(0, 1fr) 264px;
   grid-template-areas: "stream overview";
+  gap: 0 32px;
 }
 
 .event-detail-layout {
@@ -1543,6 +1544,11 @@ time,
 .event-brief-discussion {
   padding-top: 7px;
   border-top: 1px solid var(--border);
+}
+
+.event-brief-latest p {
+  color: var(--text);
+  font-size: var(--fs-m);
 }
 
 .event-brief-references {
@@ -2369,7 +2375,7 @@ time,
   margin-top: 0;
 }
 
-.docs-page .main-content h2 {
+.docs-page:not(.event-index-page):not(.event-detail-page) .main-content h2 {
   margin-top: 2em;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border);

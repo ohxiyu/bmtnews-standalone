@@ -534,6 +534,22 @@ def test_event_index_template_reuses_feed_layout_and_filters() -> None:
     assert "page.page_class" in layout
 
 
+def test_event_index_styles_match_the_daily_feed_without_docs_heading_leaks() -> None:
+    stylesheet = Path("docs/assets/css/bmtnews-ui.css").read_text(encoding="utf-8")
+    event_layout = stylesheet.split(".event-index-layout {", 1)[1].split("}", 1)[0]
+    latest_update = stylesheet.split(".event-brief-latest p {", 1)[1].split(
+        "}", 1
+    )[0]
+
+    assert (
+        ".docs-page:not(.event-index-page):not(.event-detail-page) "
+        ".main-content h2"
+    ) in stylesheet
+    assert "grid-template-columns: minmax(0, 1fr) 264px;" in event_layout
+    assert "gap: 0 32px;" in event_layout
+    assert "font-size: var(--fs-m);" in latest_update
+
+
 def test_publish_event_compatibility_pages_writes_real_redirect_targets(
     tmp_path: Path,
 ) -> None:
