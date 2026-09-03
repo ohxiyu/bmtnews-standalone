@@ -19,6 +19,7 @@ from src.services.x_delivery import (
 )
 from src.weekly import (
     build_weeks_index_data,
+    build_fallback_weekly_digest,
     build_weekly_context,
     build_weekly_index_entry,
     generate_weekly_digest,
@@ -81,6 +82,28 @@ def test_build_weekly_context_windows_records() -> None:
         "2026-08-09",
     ]
     assert context.stats["days"] == 2
+
+
+def test_fallback_weekly_digest_uses_published_records_only() -> None:
+    first = make_record("2026-08-08", rank=1, score=9.2)
+    first.event_id = "event-a"
+    first.summary_zh = "事件首次出现。\n\n它暴露了系统性风险。"
+    second = make_record("2026-08-09", rank=1, score=9.4)
+    second.event_id = "event-a"
+    second.title_zh = "事件影响扩大"
+    second.summary_zh = "影响扩大到多条网络。\n\n共享代码放大了单点风险。"
+    other = make_record("2026-08-09", rank=2, score=8.8)
+    other.title_zh = "另一件值得记住的事"
+    context = build_weekly_context(
+        [first, second, other], end=date(2026, 8, 9)
+    )
+    digest = build_fallback_weekly_digest(context, language="zh")
+    assert digest is not None
+    assert digest.throughline.title == "事件影响扩大"
+    assert digest.items[0].section == "continuing"
+    assert digest.items[0].evidence_ids == [first.item_id, second.item_id]
+    assert digest.items[1].section == "remember"
+    assert digest.items[1].evidence_ids == [other.item_id]
 
 
 async def _test_generate_weekly_digest_returns_body() -> None:
