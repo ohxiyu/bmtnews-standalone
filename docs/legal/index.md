@@ -3,9 +3,9 @@ layout: default
 title: 法律与内容权利
 description: BMTNews 软件许可、内容权利与第三方材料说明
 permalink: /legal/
+eyebrow: BMTNEWS LEGAL
+hide_language_toggle: true
 ---
-
-# 法律与内容权利
 
 ## 软件
 

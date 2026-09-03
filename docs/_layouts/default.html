@@ -6,6 +6,16 @@
 {% if interface_language == "en" %}
   {% assign interface_home_url = en_language_url %}
 {% endif %}
+{% assign current_section = "" %}
+{% if page.page_type == "home" or page.lang %}
+  {% assign current_section = "feed" %}
+{% elsif page.page_class contains "event-" or page.url contains "/events/" or page.url contains "/threads/" %}
+  {% assign current_section = "events" %}
+{% elsif page.page_class contains "entity-" or page.url contains "/entity/" %}
+  {% assign current_section = "entities" %}
+{% elsif page.page_type == "weekly" or page.url contains "/weekly/" %}
+  {% assign current_section = "weekly" %}
+{% endif %}
 {% if page.alternate_url %}
   {% if interface_language == "en" %}
     {% assign zh_language_url = page.alternate_url | relative_url %}
@@ -79,11 +89,13 @@
         >
           <a
             href="{{ interface_home_url }}"
+            {% if current_section == "feed" %}class="is-current" aria-current="page"{% endif %}
             data-i18n-zh="信息流"
             data-i18n-en="Feed"
           >{% if interface_language == "en" %}Feed{% else %}信息流{% endif %}</a>
           <a
             href="{% if interface_language == 'en' %}{{ '/en/threads/' | relative_url }}{% else %}{{ '/threads/' | relative_url }}{% endif %}"
+            {% if current_section == "events" %}class="is-current" aria-current="page"{% endif %}
             data-i18n-zh="事件线"
             data-i18n-en="Threads"
             data-i18n-href-zh="{{ '/threads/' | relative_url }}"
@@ -91,6 +103,7 @@
           >{% if interface_language == "en" %}Threads{% else %}事件线{% endif %}</a>
           <a
             href="{% if interface_language == 'en' %}{{ '/en/entity/' | relative_url }}{% else %}{{ '/entity/' | relative_url }}{% endif %}"
+            {% if current_section == "entities" %}class="is-current" aria-current="page"{% endif %}
             data-i18n-zh="实体"
             data-i18n-en="Entities"
             data-i18n-href-zh="{{ '/entity/' | relative_url }}"
@@ -98,6 +111,7 @@
           >{% if interface_language == "en" %}Entities{% else %}实体{% endif %}</a>
           <a
             href="{% if interface_language == 'en' %}{{ '/en/weekly/' | relative_url }}{% else %}{{ '/weekly/' | relative_url }}{% endif %}"
+            {% if current_section == "weekly" %}class="is-current" aria-current="page"{% endif %}
             data-i18n-zh="周报"
             data-i18n-en="Weekly"
             data-i18n-href-zh="{{ '/weekly/' | relative_url }}"
@@ -113,7 +127,7 @@
         </nav>
 
         <div class="site-actions">
-          {% unless page.page_type == "source_console" %}
+          {% unless page.page_type == "source_console" or page.hide_language_toggle %}
             <nav
               class="lang-toggle"
               aria-label="语言切换"
@@ -196,10 +210,16 @@
     {% elsif page.page_type == "weekly" %}
       {% comment %}Weekly pages render their own dense editorial masthead.{% endcomment %}
     {% elsif page.page_type == "archive" %}
+      {% assign archive_eyebrow = "BMTNEWS ARCHIVE" %}
+      {% if page.page_class contains "event-" %}
+        {% assign archive_eyebrow = "BMTNEWS EVENTS" %}
+      {% elsif page.page_class contains "entity-" %}
+        {% assign archive_eyebrow = "BMTNEWS ENTITIES" %}
+      {% endif %}
       <section class="page-intro page-intro-docs">
         <div class="page-intro-inner">
           <div>
-            <p class="eyebrow">{% if interface_language == "en" %}BMTNEWS ARCHIVE{% else %}BMTNEWS 存档{% endif %}</p>
+            <p class="eyebrow">{{ archive_eyebrow }}</p>
             <h1>{{ page.title }}</h1>
           </div>
         </div>
@@ -208,7 +228,7 @@
       <section class="page-intro page-intro-docs">
         <div class="page-intro-inner">
           <div>
-            <p class="eyebrow">BMTNEWS NOTES</p>
+            <p class="eyebrow">{{ page.eyebrow | default: "BMTNEWS NOTES" }}</p>
             <h1>{{ page.title }}</h1>
           </div>
         </div>
