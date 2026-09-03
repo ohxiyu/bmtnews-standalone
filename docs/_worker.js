@@ -236,6 +236,19 @@ function cachePolicy(request) {
   if (request.method !== 'GET') return null;
   const url = new URL(request.url);
   if (url.pathname === '/s' || url.pathname.startsWith('/s/')) return null;
+  // CSS and JavaScript must be able to recover from a deployment where new
+  // markup reaches the edge before its matching asset. The query fingerprint
+  // remains the primary cache key, but these files deliberately revalidate
+  // quickly instead of freezing a mismatched response for a year.
+  if (
+    url.pathname.startsWith('/assets/css/') ||
+    url.pathname.startsWith('/assets/js/')
+  ) {
+    return {ttl: 300};
+  }
+  if (url.pathname.startsWith('/assets/images/')) {
+    return {ttl: 31536000, immutable: true};
+  }
   if (url.pathname.startsWith('/assets/')) {
     return url.searchParams.has('v')
       ? {ttl: 31536000, immutable: true}

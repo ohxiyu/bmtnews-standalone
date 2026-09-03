@@ -37,6 +37,15 @@ function environment({includeLatest = true} = {}) {
         if (path === '/index.html.md') {
           return new Response('# BMTNews — static agent overview\n', {headers: {'Content-Type': 'text/markdown'}});
         }
+        if (path === '/assets/css/bmtnews-ui.css') {
+          return new Response('body{}', {headers: {'Content-Type': 'text/css'}});
+        }
+        if (path === '/assets/js/bmtnews-ui.js') {
+          return new Response('export {};', {headers: {'Content-Type': 'text/javascript'}});
+        }
+        if (path === '/assets/images/app-icon.svg') {
+          return new Response('<svg/>', {headers: {'Content-Type': 'image/svg+xml'}});
+        }
         if (path === '/') return new Response('<h1>BMTNews</h1>', {headers: {'Content-Type': 'text/html'}});
         return new Response('<h1>Not found</h1>', {status: 404, headers: {'Content-Type': 'text/html'}});
       }
@@ -119,6 +128,37 @@ test('edge cache varies homepage markdown and HTML without repeating asset work'
     assert.equal(second.headers.get('X-BMTNews-Cache'), 'HIT');
     assert.equal(html.headers.get('X-BMTNews-Cache'), 'MISS');
     assert.equal(originCalls, 2);
+  } finally {
+    delete globalThis.caches;
+  }
+});
+
+test('versioned CSS and JavaScript revalidate while images remain immutable', async () => {
+  const stored = new Map();
+  globalThis.caches = {
+    default: {
+      async match(request) {
+        return stored.get(request.url)?.clone();
+      },
+      async put(request, response) {
+        stored.set(request.url, response.clone());
+      }
+    }
+  };
+  try {
+    const cases = [
+      ['https://bmt.news/assets/css/bmtnews-ui.css?v=fingerprint', false],
+      ['https://bmt.news/assets/js/bmtnews-ui.js?v=fingerprint', false],
+      ['https://bmt.news/assets/images/app-icon.svg?v=fingerprint', true]
+    ];
+    for (const [url, immutable] of cases) {
+      await worker.handleRequest(new Request(url), environment());
+      const cached = await worker.handleRequest(new Request(url), environment());
+      const policy = cached.headers.get('Cache-Control');
+      assert.equal(cached.headers.get('X-BMTNews-Cache'), 'HIT');
+      assert.match(policy, immutable ? /max-age=31536000/ : /max-age=300/);
+      assert.equal(policy.includes('immutable'), immutable);
+    }
   } finally {
     delete globalThis.caches;
   }
