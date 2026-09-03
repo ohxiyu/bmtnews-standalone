@@ -1180,6 +1180,33 @@ def write_index_data(
     return written
 
 
+def publish_entity_pages(
+    entities: Sequence[EntitySummary],
+    languages: Iterable[str],
+    *,
+    entity_root: Path = ENTITY_ROOT,
+    data_root: Path = DATA_ROOT,
+) -> int:
+    """Regenerate entity data and pages without touching other archives."""
+    data_root.mkdir(parents=True, exist_ok=True)
+    _atomic_write_text(
+        data_root / "entities.json",
+        json.dumps(build_entity_index_data(entities), ensure_ascii=False, indent=2)
+        + "\n",
+    )
+    written = 0
+    for language in languages:
+        normalized = "en" if str(language).lower().startswith("en") else "zh"
+        suffix = "" if normalized == "zh" else "en-"
+        for entity in entities:
+            _write(
+                entity_root / f"{suffix}{entity.slug}.html",
+                render_entity_page(entity, normalized),
+            )
+            written += 1
+    return written
+
+
 def _write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     _atomic_write_text(path, content)

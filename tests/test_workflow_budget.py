@@ -71,3 +71,15 @@ def test_event_migration_has_explicit_gate_and_incremental_continuation() -> Non
     assert "_data/events.json" in daily
     assert "python -m src.event_brief_backfill" in daily
     assert "Apply approved event archive migration" not in daily
+
+
+def test_docs_deploy_rebuilds_entities_from_published_archive() -> None:
+    deploy = _workflow("deploy-docs.yml")
+
+    assert "'src/entity_republish.py'" in deploy
+    assert "Checkout current published site" in deploy
+    assert "Restore current published archive" in deploy
+    assert "python -m src.entity_republish" in deploy
+    assert "--archive-root docs/_data/archive" in deploy
+    assert "--entity-root docs/entity" in deploy
+    assert "--data-root docs/_data" in deploy

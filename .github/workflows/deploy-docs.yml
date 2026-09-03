@@ -3,7 +3,12 @@ name: Deploy Docs
 on:
   push:
     branches: [main]
-    paths: ['docs/**']
+    paths:
+      - 'docs/**'
+      - 'src/entity_republish.py'
+      - 'src/site_pages.py'
+      - 'src/threads.py'
+      - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
     inputs:
       history_repository:
@@ -62,12 +67,19 @@ jobs:
           fi
 
       - name: Checkout current published site
-        if: ${{ github.event_name == 'workflow_dispatch' }}
         uses: actions/checkout@v6
         with:
           ref: gh-pages
           path: current-site
           persist-credentials: false
+
+      - name: Restore current published archive
+        if: ${{ github.event_name == 'push' }}
+        shell: bash
+        run: |
+          test -d current-site/_data/archive
+          mkdir -p docs/_data/archive
+          cp -a current-site/_data/archive/. docs/_data/archive/
 
       - name: Checkout pinned history snapshot
         if: ${{ github.event_name == 'workflow_dispatch' }}
@@ -94,6 +106,26 @@ jobs:
           name: history-import-report
           path: history-import-report.json
           if-no-files-found: error
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Rebuild entity pages from published history
+        run: >-
+          uv run python -m src.entity_republish
+          --archive-root docs/_data/archive
+          --entity-root docs/entity
+          --data-root docs/_data
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
