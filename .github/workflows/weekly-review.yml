@@ -38,12 +38,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Restore published archive and weekly pages
+      - name: Restore published archive, weekly data, and weekly pages
         shell: bash
         run: |
           git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
           mkdir -p docs/_data/archive docs/weekly
-          for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive weekly 2>/dev/null); do
+          for path in $(git ls-tree -r --name-only origin/gh-pages -- _data/archive _data/weeks.json weekly 2>/dev/null); do
             mkdir -p "docs/$(dirname "${path}")"
             git show "origin/gh-pages:${path}" > "docs/${path}"
           done

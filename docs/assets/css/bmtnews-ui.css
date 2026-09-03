@@ -2126,6 +2126,295 @@ time,
   font-size: var(--fs-xs);
 }
 
+/* Weekly reviews use the same numbered stream and right rail as events.
+   The difference is editorial: one judgment frames a whole seven-day window. */
+.docs-page.weekly-index-page .main-content,
+.docs-page.weekly-detail-page .main-content {
+  max-width: var(--content);
+  padding-top: 18px;
+}
+
+.weekly-masthead {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.weekly-masthead .eyebrow {
+  margin: 0 0 3px;
+}
+
+.weekly-masthead h1 {
+  margin: 0;
+  font-size: clamp(1.85rem, 3vw, 2.65rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.weekly-range {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.weekly-range > span {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.weekly-range time {
+  color: var(--text);
+  font-size: var(--fs-s);
+  font-weight: 650;
+}
+
+.weekly-range a {
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+}
+
+.weekly-judgment {
+  padding: 16px 0 15px;
+  border-bottom: 2px solid var(--text);
+}
+
+.weekly-judgment > .edition-overview-title {
+  margin: 0 0 4px;
+}
+
+.weekly-judgment h2 {
+  max-width: 34ch;
+  margin: 0;
+  font-size: var(--fs-xl);
+  line-height: 1.4;
+  letter-spacing: -0.018em;
+}
+
+.weekly-judgment > p:last-child {
+  max-width: 92ch;
+  margin: 8px 0 0;
+  color: var(--text-soft);
+  font-size: var(--fs-s);
+  line-height: 1.72;
+}
+
+.weekly-context {
+  margin: 18px 0 16px;
+  padding-bottom: 12px;
+  border-bottom-width: 1px;
+}
+
+.weekly-context-heading h2 {
+  font-size: var(--fs-l);
+}
+
+.weekly-context-list li {
+  padding-bottom: 8px;
+}
+
+.weekly-context-list p {
+  -webkit-line-clamp: 3;
+}
+
+.weekly-layout {
+  grid-template-areas: "stream overview";
+}
+
+.weekly-orientation {
+  min-height: 0;
+}
+
+.weekly-feed-item .digest-item-rail time {
+  max-width: 54px;
+  line-height: 1.35;
+}
+
+.weekly-feed-item h2 {
+  font-size: var(--fs-l);
+  line-height: 1.45;
+}
+
+.weekly-brief-grid {
+  margin-top: 8px;
+}
+
+.weekly-brief-grid .event-brief-latest,
+.weekly-brief-grid .event-brief-discussion {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.weekly-brief-grid .event-brief-latest p {
+  font-size: var(--fs-s);
+  font-weight: 500;
+}
+
+.weekly-entity-link {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.weekly-evidence a {
+  max-width: 18ch;
+}
+
+.weekly-feed-meta:empty {
+  display: none;
+}
+
+.weekly-ranking {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.weekly-ranking .event-ranking-list li {
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+}
+
+.weekly-edition-nav .event-ranking-list li.is-current a,
+.weekly-edition-nav .event-ranking-list li.is-current > span {
+  color: var(--accent);
+}
+
+.weekly-history {
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 2px solid var(--text);
+}
+
+.weekly-history-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 9px;
+}
+
+.weekly-history-heading .edition-overview-title {
+  margin: 0 0 3px;
+}
+
+.weekly-history-heading h2 {
+  margin: 0;
+  font-size: var(--fs-xl);
+}
+
+.weekly-history-heading > span {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.weekly-history-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.weekly-history-list > li {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr) 24px;
+  gap: 18px;
+  align-items: start;
+  padding: 15px 0;
+  border-top: 1px solid var(--border);
+}
+
+.weekly-history-date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.weekly-history-date > span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.weekly-history-copy h3 {
+  margin: 0;
+  font-size: var(--fs-m);
+  line-height: 1.45;
+}
+
+.weekly-history-copy h3 a {
+  color: var(--text);
+}
+
+.weekly-history-copy > p {
+  display: -webkit-box;
+  max-width: 90ch;
+  margin: 4px 0 0;
+  overflow: hidden;
+  color: var(--text-soft);
+  font-size: var(--fs-s);
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.weekly-history-copy ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 7px 0 0;
+  padding: 7px 0 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+
+.weekly-history-copy li {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.weekly-history-copy li::before {
+  content: "·";
+  margin-right: 5px;
+  color: var(--accent);
+}
+
+.weekly-history-open {
+  color: var(--accent);
+  font-size: var(--fs-l);
+  line-height: 1;
+}
+
+.weekly-load-more {
+  margin-top: 14px;
+  padding: 7px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-soft);
+  background: transparent;
+  font: inherit;
+  font-size: var(--fs-xs);
+  cursor: pointer;
+}
+
+.weekly-empty {
+  padding: 30px 0;
+  color: var(--text-muted);
+  font-size: var(--fs-s);
+}
+
 /* Headline numbers for one thread or entity: how much coverage, over how
    long, how recently — the questions a reader has before reading the list. */
 .archive-stats {
@@ -2787,6 +3076,51 @@ time,
   .event-detail-link {
     width: 100%;
     margin-left: 0;
+  }
+
+  .weekly-masthead {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .weekly-range {
+    padding-top: 3px;
+  }
+
+  .weekly-judgment h2 {
+    font-size: var(--fs-l);
+  }
+
+  .weekly-context {
+    margin-top: 14px;
+  }
+
+  .weekly-feed-item .digest-item-rail time {
+    max-width: none;
+  }
+
+  .weekly-brief-grid .event-brief-discussion {
+    padding-top: 7px;
+    border-top: 1px solid var(--border);
+  }
+
+  .weekly-history-list > li {
+    grid-template-columns: minmax(0, 1fr) 20px;
+    gap: 8px 10px;
+  }
+
+  .weekly-history-date {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .weekly-history-copy ul {
+    display: block;
+  }
+
+  .weekly-history-copy li + li {
+    margin-top: 3px;
   }
 
   .event-current-state {
