@@ -436,3 +436,52 @@ def test_four_hour_collection_analyzes_only_new_urls(
     assert len(events) == 1
     assert events[0].updates[0].story_ids == ["rss:new"]
     assert (tmp_path / "docs" / "api" / "events.json").exists()
+
+
+def test_four_hour_collection_refreshes_event_index_without_new_urls(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.chdir(tmp_path)
+    catalog_path = tmp_path / "docs" / "_data" / "events.json"
+    save_event_catalog({"schema_version": 1}, [existing_event()], catalog_path)
+    staging_path = tmp_path / "data" / "staging-items.json"
+    old = item("old", title="Previously staged story")
+    save_staging_state([old], staging_path, updated_at=NOW)
+    config = Config(
+        ai=AIConfig(
+            provider="openai",
+            model="test",
+            api_key_env="TEST_API_KEY",
+            languages=["zh", "en"],
+        ),
+        sources=SourcesConfig(),
+        filtering=FilteringConfig(
+            ai_score_threshold=7.0,
+            daily_timezone="Asia/Shanghai",
+        ),
+    )
+    orchestrator = BMTNewsOrchestrator(
+        config,
+        StorageManager(data_dir=str(tmp_path / "data")),
+    )
+    published = 0
+
+    async def fetch(since):  # type: ignore[no-untyped-def]
+        return [old.model_copy(deep=True)]
+
+    def publish(*, events=None):  # type: ignore[no-untyped-def]
+        nonlocal published
+        published += 1
+
+    monkeypatch.setattr(orchestrator, "fetch_all_sources", fetch)
+    monkeypatch.setattr(orchestrator, "_publish_current_event_pages", publish)
+
+    asyncio.run(
+        orchestrator.fetch_to_staging(
+            force_hours=12,
+            staging_path=staging_path,
+            now=NOW + timedelta(hours=1),
+        )
+    )
+
+    assert published == 1

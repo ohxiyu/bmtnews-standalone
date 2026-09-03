@@ -489,6 +489,29 @@ def test_event_index_contains_progressions_not_single_updates() -> None:
     assert [row["event_id"] for row in payload["ranking"]] == ["evt_progress1"]
 
 
+def test_event_ranking_prioritizes_importance_before_recency() -> None:
+    higher_score = make_event("evt_higher01", updates=2)
+    newer = make_event("evt_newer001", updates=2)
+    higher_score.updates[-1].importance_score = 9.5
+    for update in newer.updates:
+        update.occurred_at += timedelta(days=10)
+        update.published_at += timedelta(days=10)
+        update.first_seen_at += timedelta(days=10)
+    newer.last_updated_at += timedelta(days=10)
+    newer.last_material_change_at += timedelta(days=10)
+
+    payload = build_event_index_data([newer, higher_score])
+
+    assert [row["event_id"] for row in payload["threads"]] == [
+        "evt_newer001",
+        "evt_higher01",
+    ]
+    assert [row["event_id"] for row in payload["ranking"]] == [
+        "evt_higher01",
+        "evt_newer001",
+    ]
+
+
 def test_event_index_template_reuses_feed_layout_and_filters() -> None:
     template = (
         Path("docs/_includes/archive-index.html").read_text(encoding="utf-8")
@@ -499,9 +522,15 @@ def test_event_index_template_reuses_feed_layout_and_filters() -> None:
     assert 'class="digest-item event-feed-item"' in template
     assert "data-event-filters" in template
     assert 'class="headline-rail event-overview-rail"' in template
+    assert 'class="event-context"' in template
+    assert 'class="event-brief-grid"' in template
+    assert 'class="headline-index event-ranking"' in template
+    assert "事件背景" in template
+    assert "最新进展" in template
+    assert "讨论焦点" in template
+    assert "参考资料" in template
     assert 'class="event-feed-summary"' not in template
     assert "当前状态" not in template
-    assert "最新进展" not in template
     assert "page.page_class" in layout
 
 
