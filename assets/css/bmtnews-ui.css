@@ -1418,27 +1418,12 @@ time,
   margin-bottom: 5px;
 }
 
-.event-feed-summary,
 .event-feed-latest {
   max-width: min(72ch, 760px);
   margin: 0 0 5px;
   color: var(--text-soft);
   font-size: var(--fs-s);
   line-height: 1.65;
-}
-
-.event-feed-summary strong,
-.event-feed-latest strong {
-  margin-right: 8px;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  font-weight: 650;
-  letter-spacing: 0.04em;
-}
-
-.event-feed-latest {
-  color: var(--text-muted);
 }
 
 .event-feed-meta {
