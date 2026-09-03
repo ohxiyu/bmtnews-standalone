@@ -533,6 +533,37 @@
     });
   }
 
+  function setupEventPages() {
+    document.querySelectorAll('[data-event-filters]').forEach(function (filterBar) {
+      if (filterBar.dataset.bound === 'true') return;
+      var layout = filterBar.closest('.event-index-layout');
+      if (!layout) return;
+      var events = Array.prototype.slice.call(
+        layout.querySelectorAll('[data-event-stream] > .event-feed-item')
+      );
+      filterBar.dataset.bound = 'true';
+      filterBar.querySelectorAll('button[data-category]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var category = button.dataset.category || 'all';
+          filterBar.querySelectorAll('button[data-category]').forEach(function (candidate) {
+            var active = candidate === button;
+            candidate.classList.toggle('active', active);
+            candidate.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+          events.forEach(function (event) {
+            event.hidden = category !== 'all' && event.dataset.category !== category;
+          });
+        });
+      });
+    });
+
+    if (window.matchMedia('(max-width: 760px)').matches) {
+      document.querySelectorAll('.event-node-panel').forEach(function (panel) {
+        panel.removeAttribute('open');
+      });
+    }
+  }
+
   function isExtraStoryNode(node) {
     if (node.tagName === 'DETAILS' || node.classList.contains('tag-line')) return true;
     if (node.tagName !== 'P') return false;
@@ -1218,6 +1249,7 @@
     setupInterfaceLanguage();
     setupPwaInstall();
     setupStorySharing();
+    setupEventPages();
     enhanceDailyFeeds();
     setupScrollspy();
     setupKeyboardNav();
