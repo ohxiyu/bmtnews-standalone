@@ -30,6 +30,7 @@ from src.site_pages import (
     build_entity_index_data,
     build_thread_index_data,
     publish_archive_pages,
+    publish_entity_pages,
     publish_event_compatibility_pages,
     write_event_api,
     render_entity_page,
@@ -429,6 +430,33 @@ def test_publish_archive_pages_writes_both_languages(tmp_path: Path) -> None:
     assert (tmp_path / "threads" / "en-tabc.html").exists()
     assert (tmp_path / "entity" / "en-bybit.html").exists()
     assert (tmp_path / "_data" / "threads.json").exists()
+
+
+def test_publish_entity_pages_does_not_replace_thread_index(tmp_path: Path) -> None:
+    data_root = tmp_path / "_data"
+    data_root.mkdir()
+    thread_index = data_root / "threads.json"
+    thread_index.write_text('{"threads":[{"thread_id":"keep"}]}\n', encoding="utf-8")
+    entities = [
+        EntitySummary(slug="bybit", label="Bybit", count=3, records=[make_record()])
+    ]
+
+    pages = publish_entity_pages(
+        entities,
+        ["zh", "en"],
+        entity_root=tmp_path / "entity",
+        data_root=data_root,
+    )
+
+    assert pages == 2
+    assert json.loads(thread_index.read_text(encoding="utf-8"))["threads"][0][
+        "thread_id"
+    ] == "keep"
+    assert json.loads((data_root / "entities.json").read_text(encoding="utf-8"))[
+        "entities"
+    ][0]["label"] == "Bybit"
+    assert (tmp_path / "entity" / "bybit.html").exists()
+    assert (tmp_path / "entity" / "en-bybit.html").exists()
 
 
 def test_event_page_renders_material_updates_in_chronological_order() -> None:
