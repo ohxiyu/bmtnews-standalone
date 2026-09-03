@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-02T00:00:00Z</updated>
+  <updated>2026-09-03T00:00:00Z</updated>
+  <entry>
+    <title>FBI investigates alleged IDScan.net breach exposing over 150M driver licenses</title>
+    <link href="https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/"/>
+    <id>https://bmt.news/editions/2026-09-03/#gdelt:article:20260902T221500Z::https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>The FBI is investigating an alleged data breach at identity verification firm IDScan.net after dark-web service Nexus reportedly offered over 150 million U.S. and Canadian driver licenses for sale, including one belonging to U.S. Secretary of War Pete Hegseth. KrebsOnSecurity first reported the apparent leak, which is also described as involving 153 million records.
+
+If confirmed, this would be one of the largest identity data breaches on record, exposing millions of drivers&#x27; sensitive personal information to potential identity theft and fraud. The alleged breach also puts major Fortune 500 companies and institutions that rely on IDScan.net at risk and raises broader concerns about the security of third-party identity verification services.
+
+Security researcher vx-underground published a list of IDScan.net clients that may be affected, including Shell, DraftKings, FedEx, Hertz, General Motors, Caesars Entertainment, and Motorola. Privacy researcher Zach Edwards said his ID was leaked after visiting Planet13, a Las Vegas cannabis dispensary, and that signs point to an ongoing real-time breach at IDScan.net; Nexus claims it has been continuously exfiltrating data for over a year but its service is currently unavailable.</summary>
+  </entry>
+  <entry>
+    <title>TAC Network Frozen Over 10 Days After Exploit Spurs 1.26B Token Bailout</title>
+    <link href="https://cryptoslate.com/tac-remains-frozen-for-over-10-days-after-a-massive-exploit-forces-a-1-26-billion-token-bailout/"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:39a7694bb715c014</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>The TAC network has remained halted at block 24,671,475 for over 10 days after an Aug. 22 exploit drained 2.99 billion TAC, roughly 28.6% of supply, from the bonded staking pool. The proposed recovery plan would replace the ~1.26 billion sold TAC from treasury reserves, while the treatment of ~1.66 billion attacker-held TAC on BNB Chain remains unresolved.
+
+The prolonged halt traps staked funds and disables bridging and redemptions for TAC users, while the unresolved 1.66 billion TAC balance on BNB Chain leaves a large part of the drained supply in limbo. Because the vulnerable module is shared by multiple Cosmos-EVM chains, the incident has implications beyond TAC itself.
+
+The attacker exploited an arithmetic overflow: the EVM StateDB tracked only spendable balances, while the Cosmos SDK ledger also allowed delegating locked vesting tokens, so an unchecked subtraction wrapped toward roughly 2^256 and a second overflow then let the attacker zero a victim account. The proposed recovery is a targeted state edit at the halt block, not a rollback, restoring the bonded pool and delegator balances while preserving 7,772 legitimate transactions from 218 unrelated addresses.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase launches regulated crypto derivatives in Canada</title>
+    <link href="https://cointelegraph.com/news/coinbase-launches-regulated-crypto-derivatives-in-canada?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cointelegraph.com_rss:4b3658772a406b0c</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>Coinbase has launched crypto derivatives trading in Canada, offering eligible customers perpetual and dated futures on Bitcoin, Ether, Solana and other assets. The service, introduced via Coinbase Financial Markets, includes 23 crypto futures, five commodity futures and the Coinbase 50 Index, and is billed as the first native crypto futures offering from a major crypto-native platform in the country.
+
+This expands regulated derivatives access in Canada, a market where crypto ownership has risen sharply, and positions Coinbase ahead of other crypto-native competitors. It also shows U.S. crypto platforms treating Canada as a viable regulated expansion market even as broader regulatory pressure increases.
+
+Access is limited to eligible Canadian clients, including individuals with at least $5 million in net financial assets and registered investment advisers and dealers. The contracts use nano-sized positions, offer up to 10x leverage, and the offering also includes commodity futures and the Coinbase 50 Index.</summary>
+  </entry>
+  <entry>
+    <title>Layer-1 blockchain Injective halts for 4 hours to stop $4.9M exploit, calls it an upgrade</title>
+    <link href="https://cryptoslate.com/a-layer-1-blockchain-froze-for-4-hours-to-stop-a-4-9-million-hack-then-claimed-it-was-just-an-upgrade/"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:b471d67f8d349c0a</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an &#x27;upgrade, not halted&#x27; and said consensus, native INJ, and staked assets were not compromised.
+
+The incident shows that even a major layer-1&#x27;s core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.
+
+Researcher Earthling Paddy disputed the foundation&#x27;s claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective&#x27;s native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.</summary>
+  </entry>
+  <entry>
+    <title>Binance launches physically settled options on 1,000+ US equities</title>
+    <link href="https://cryptoslate.com/binance-deepens-tradfi-push-with-physically-settled-options-on-over-1000-us-equities/"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:1d5893cfe87f7f25</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>On September 1, Binance began offering eligible non-US users physically settled options covering more than 1,000 selected US stocks and ETFs. Orders are introduced by Nest Trading and routed to Alpaca Securities, which executes, clears, settles, and holds any shares delivered after exercise.
+
+This puts traditional equity options in the same Binance account as crypto and tokenized equity products, removing the need for eligible clients to open a separate brokerage account. It also deepens Binance&#x27;s push into traditional finance while keeping regulated securities execution and custody with Alpaca rather than Binance.
+
+The options are physically settled, so exercising a call delivers underlying shares that Alpaca holds on the user&#x27;s behalf. Binance says users must submit exercise instructions through its platform up to 30 minutes before expiration; otherwise an in-the-money option may be auto-liquidated on a best-efforts basis or expire worthless.</summary>
+  </entry>
+  <entry>
+    <title>Binance Adds U.S. Stock Options to Multi-Asset Platform</title>
+    <link href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBxbUxDRkF0YWp0SHBfMGJKU1VvLVd6bTEwcUdTbGVyVWI1V19kQVpqWlByV3VMMmIxVVI0SWFXb3R0V2pFYnV4UDJLeFRUQjIzd29ueUZkaTdnSk9ETTVkVEJ3NVNmRG10RnVfVEh3?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-03/#google_news:article:656a054dc939b2b5</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>Binance has expanded its multi-asset trading platform to include U.S. stock options, giving users access to traditional equity derivatives alongside crypto assets. The move extends Binance beyond its original cryptocurrency-only offering into conventional securities trading.
+
+A top-tier crypto exchange adding U.S. stock options signals continued convergence between digital-asset platforms and traditional finance. It broadens Binance&#x27;s product suite and could intensify competition with conventional brokers for traders who want both crypto and equities in one venue.
+
+U.S. stock options are derivative contracts tied to individual U.S.-listed equities, offering leveraged exposure with a fixed expiry. The addition positions Binance to compete with established securities brokers rather than only with other crypto exchanges.</summary>
+  </entry>
+  <entry>
+    <title>Wyoming Adopts Chainlink Proof of Reserve for FRNT Stable Token</title>
+    <link href="https://cointelegraph.com/news/wyoming-chainlink-onchain-reserves-of-state-issued-stable-token?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cointelegraph.com_rss:feb86ee19621d6cd</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>The Wyoming Stable Token Commission on Wednesday adopted Chainlink Proof of Reserve to publish near-real-time onchain verification of FRNT&#x27;s reserves and token supply. The integration complements daily attestations and comes ahead of a planned Chainlink Secure Mint enforcement feature.
+
+This marks a notable institutional adoption of Chainlink by a US state-issued stablecoin, bringing near-real-time transparency to a fiat-backed tokenized asset. It strengthens Chainlink&#x27;s position in regulated tokenized finance and may serve as a template for other public issuers seeking verifiable onchain reserve reporting.
+
+FRNT, which launched in January under the Wyoming Stable Token Commission, is backed by US dollars and short-term US Treasurys, with interest income channeled into Wyoming&#x27;s School Foundation Program. The commission is also working to adopt Chainlink&#x27;s Secure Mint, which would require verified reserves to equal or exceed FRNT&#x27;s total supply before new tokens can be minted.</summary>
+  </entry>
+  <entry>
+    <title>Securitize and Socios Partner to Tokenize Sports Team Equity</title>
+    <link href="https://www.theblock.co/news/ecosystems/2026-09-02-securitize-and-socios-team-up-to-tokenize-equity-in-pro-sports-teams-413378"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:www.theblock.co_rss.xml:25104c6512d75650</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>Securitize announced a partnership with Socios to tokenize equity in professional sports teams. The project will be the first to launch on Securitize&#x27;s authorized European Trading &amp; Settlement System under the EU DLT Pilot Regime.
+
+This is an early real-world asset tokenization use case within a formal EU regulatory pilot and could create a precedent for regulated on-chain equity in Europe. It may also encourage sports franchises and other issuers to explore tokenized ownership alongside fan engagement.
+
+No transaction terms or specific teams have been disclosed. Securitize is expected to provide the regulated trading and settlement infrastructure, while Socios will contribute its sports partnerships and fan-engagement experience through fan-token ecosystems such as Chiliz.</summary>
+  </entry>
+  <entry>
+    <title>World Open-Sources ProveKit, a Zero-Knowledge Identity Toolkit</title>
+    <link href="https://www.theblock.co/news/ecosystems/2026-09-02-world-provekit-zero-knowledge-identity-proving-toolkit-413364"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:www.theblock.co_rss.xml:65ea340a927eed03</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.
+
+This gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users&#x27; devices, without trusted setups or server round-trips. It lowers the barrier to building private &#x27;proof of human&#x27; systems on the web and in Web3 applications.
+
+The toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.</summary>
+  </entry>
   <entry>
     <title>Cronos validators roll back chain to contain $75M Tectonic exploit</title>
     <link href="https://cryptoslate.com/cronos-restart-after-tectonic-exploit-chain-rollback/"/>
@@ -341,104 +440,5 @@ The exploit affected six chains, including an estimated $3.6 million loss for MA
 The episode highlights the risks of celebrity- and politician-linked memecoins, where insider dumping can wipe out retail investors within hours. It also intensifies scrutiny of Trump-associated crypto ventures while the administration pushes Congress to reshape crypto regulation.
 
 Lookonchain noted the token developer held 600 million GOLD while 15 newly created wallets spent $18,657 to buy another 224.5 million tokens, giving the team roughly 82.45% of the total supply. After the 15 wallets sold all of their GOLD for 3,178 SOL (~$330,000), the token&#x27;s market capitalization fell from about $50 million to $500,000; the Real Trump Coins website still promoted GOLD with a 4% trading fee and a pledge to use 99% of fees for buybacks.</summary>
-  </entry>
-  <entry>
-    <title>Polygon Labs Urges Node Upgrades After Austin, Kyoto Hardforks</title>
-    <link href="https://cryptoslate.com/polygon-labs-issues-urgent-client-upgrade-notice-following-austin-and-kyoto-hardforks/"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:cryptoslate.com_feed_:cc24af99cc5c3546</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>Polygon Labs issued an urgent notice requiring Polygon PoS node operators to upgrade Bor to v2.10.0 or later and Heimdall to v0.11.0 or later after the Austin and Kyoto hardforks activated. Nodes that remained on pre-hardfork binaries have already fallen out of canonical consensus and must catch up to rejoin the network.
-
-The upgrade is mandatory for all Polygon PoS nodes that want to stay in consensus, making it critical for validators and infrastructure providers. It also ships security hardening fixes that reduce resource-exhaustion and liveness risks, strengthening the network ahead of further architectural transitions.
-
-Austin capped gas consumption during Bor&#x27;s processing of state-sync bridge events and removed the unbounded TxDependency extra-data field, while Kyoto added nesting checks for protobuf.Any messages, capped fee-coin lists, and fixed several checkpoint and signature edge cases. Both hardforks are plain binary upgrades with no state migration, so non-diverged nodes do not need a resync.</summary>
-  </entry>
-  <entry>
-    <title>Crypto Card Hack Drains $1.1M, Crashes Neobank Token 49%</title>
-    <link href="https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:www.coindesk.com_arc_outboundfeeds_rss_:3c0d03a858c7ca0b</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>A $1.1 million hack exploiting a crypto card caused a neobank&#x27;s token to plummet 49%, according to a report on August 29, 2026.
-
-The incident highlights security vulnerabilities in crypto payment infrastructure and shows how quickly a security breach can erode trust and token value. It underscores the risks faced by digital-first banks that integrate crypto services.
-
-The hack specifically targeted a crypto debit card, resulting in $1.1 million in losses. The neobank&#x27;s token dropped 49%, reflecting a severe market reaction to the breach.</summary>
-  </entry>
-  <entry>
-    <title>Polygon discloses security flaws fixed in Austin and Kyoto hard forks</title>
-    <link href="https://cointelegraph.com/news/polygon-discloses-security-flaws-fixed-in-recent-hard-forks?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:cointelegraph.com_rss:3180fb2584d7080a</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>Polygon Labs disclosed previously private security vulnerabilities in its Bor and Heimdall clients that were silently patched via the Austin and Kyoto hard forks before public disclosure. The flaws included denial-of-service risks, validator resource exhaustion, and checkpoint/milestone processing issues.
-
-This disclosure matters because it reveals that Polygon&#x27;s proof-of-stake network faced serious stability threats that could have disrupted consensus. It also underscores the importance of timely patching, since nodes running older client versions have already fallen out of consensus.
-
-The most severe issue was in Heimdall, where a specially crafted transaction could force validators to do excessive processing work. Bor v2.10.0 is now required for all Polygon PoS nodes, and Heimdall v0.11.0 is required for validators and full nodes; both upgrades are already active on mainnet.</summary>
-  </entry>
-  <entry>
-    <title>Strategy Faces Fresh Threat of Removal from MSCI Global Equity Indexes</title>
-    <link href="https://www.foreignpolicyjournal.com/2026/08/29/strategy-nasdaq-mstr-faces-fresh-threat-of-removal-from-msci-global-equity-indexes/"/>
-    <id>https://bmt.news/editions/2026-08-30/#gdelt:article:20260829T184500Z::https://www.foreignpolicyjournal.com/2026/08/29/strategy-nasdaq-mstr-faces-fresh-threat-of-removal-from-msci-global-equity-indexes/</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>According to a report dated August 29, 2026, Strategy (NASDAQ: MSTR) faces a renewed threat of removal from MSCI Global Equity Indexes. If removed, passive funds tracking these indexes would be forced to sell their MSTR holdings.
-
-MSCI Global Equity Indexes are used by institutional investors worldwide for benchmarking and asset allocation. Removal would trigger forced selling by passive funds, putting downward pressure on MSTR, a widely watched Bitcoin proxy stock, and potentially dampening crypto market sentiment.
-
-The report from Foreign Policy Journal describes the development as a &#x27;threat&#x27; rather than a confirmed decision. MSCI previously paused the exclusion of bitcoin treasury companies in its February 2026 review, but the risk has resurfaced in the August 2026 review cycle.</summary>
-  </entry>
-  <entry>
-    <title>BitGo Buys NYDIG&#x27;s Institutional Trading Arm for $42.5M</title>
-    <link href="https://decrypt.co/376864/bitgo-buys-nydig-institutional-trading-arm"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:decrypt.co_feed:6016aedc2043af9d</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>BitGo has completed the acquisition of NYDIG&#x27;s institutional trading business for about $42.5 million, adding derivatives, structured products, financing, and capital-markets solutions. The deal includes roughly 30 employees and is structured as a two-step merger with $7 million cash and about $35.5 million in BitGo stock.
-
-This consolidation strengthens BitGo&#x27;s trading platform to offer institutions custody, trading, financing, and settlement under one roof. It signals growing demand for full-lifecycle digital asset services among asset managers, hedge funds, and family offices, and sharpens NYDIG&#x27;s focus on mining and HPC data centers.
-
-NYDIG&#x27;s sale includes earnout provisions, including a $10 million cash payment tied to one revenue milestone and up to $5 million more plus additional shares tied to a second. NYDIG will concentrate on its power-generation, Bitcoin mining, and high-performance computing data-center business, which has a development pipeline exceeding 3 gigawatts.</summary>
-  </entry>
-  <entry>
-    <title>Cosmos misjudged critical EVM bug for 4 months before $6M cross-chain exploit</title>
-    <link href="https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/"/>
-    <id>https://bmt.news/editions/2026-08-29/#rss:cryptoslate.com_feed_:21be4de7336ce345</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>On August 28, Cosmos Labs disclosed that a misjudged EVM vulnerability was exploited across six networks, including MANTRA, TAC, and KiiChain, causing nearly $6 million in losses. The flaw was first reported on April 25 but was deemed low-risk due to decimal assumptions; a silent patch was merged on May 15, and the real exploit began on August 20 after the assessment was revised.
-
-This incident exposes a months-long triage failure in a shared software layer — Cosmos EVM — that provides Ethereum compatibility to Cosmos SDK chains. With roughly 40 networks potentially affected and 11 previously unknown deployments discovered, it raises urgent questions about security disclosure and patch distribution across the broader Cosmos ecosystem.
-
-The exploit combined two accounting failures: an unsigned-integer underflow created an abnormally large balance, which was then used to overflow another account and extract its legitimate balance without increasing total token supply. Cosmos Labs contacted 40 networks, with 13 potentially exposed chains patching, halting, or applying mitigations; MANTRA suffered the largest disclosed hit, with about 720.9 million tokens moved from two unauthorized addresses.</summary>
-  </entry>
-  <entry>
-    <title>Solana Approves Doubled Disinflation, Slashing SOL Issuance by 2029</title>
-    <link href="https://decrypt.co/376825/solana-sol-disinflation-vote-passes"/>
-    <id>https://bmt.news/editions/2026-08-29/#rss:decrypt.co_feed:9d7c93d7b1b0584f</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Solana validators passed SGP-0002, doubling the disinflation rate from 15% to 30%, so SOL&#x27;s issuance floor of 1.5% will be reached in 2029 instead of 2032. The vote closed at 67.0% support, barely clearing the 66.67% threshold, with 60.7% quorum participation.
-
-This is the first binding on-chain governance decision in Solana&#x27;s history, setting a precedent for tokenholder-driven protocol changes. The accelerated supply reduction could tighten SOL&#x27;s supply schedule and is widely expected to be a long-term positive for the token, though it also lowers staking yields.
-
-The proposal tracks SIMD-550, authored by engineers at infrastructure firm Helius, and passed with 176.29 million SOL in favor and 66.19 million against across 1,326 votes. Validators also ratified the Solana Constitution (SGP-0001) with 86% support, while rejecting SGP-0003, a Resource and Inclusion Fee that would have burned up to 14 times more SOL daily.</summary>
-  </entry>
-  <entry>
-    <title>Schwab Plans to Add SOL, AVAX, and LINK Trading Across 39.9 Million Accounts</title>
-    <link href="https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html"/>
-    <id>https://bmt.news/editions/2026-08-29/#gdelt:article:20260828T160000Z::https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Charles Schwab plans to offer trading in Solana (SOL), Avalanche (AVAX), and Chainlink (LINK) across its roughly 39.9 million brokerage accounts. The move expands the crypto assets available to the firm&#x27;s retail investor base.
-
-This signals continued mainstream adoption of cryptocurrencies by traditional financial institutions, giving millions of retail investors a convenient, regulated way to access these tokens. It could also boost the legitimacy and liquidity of SOL, AVAX, and LINK within the broader crypto market.
-
-The planned service would make SOL, AVAX, and LINK available to clients across Schwab&#x27;s roughly 39.9 million brokerage accounts. This represents one of the largest retail-facing crypto expansions announced by a traditional US brokerage.</summary>
-  </entry>
-  <entry>
-    <title>Solana validators approve doubling disinflation to 30% in first binding vote</title>
-    <link href="https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-08-29/#rss:cointelegraph.com_rss:7be6ac4b112b4b8a</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Solana validators passed SGP-0002 (&#x27;Double Disinflation&#x27;), raising the network&#x27;s annual disinflation rate from 15% to 30% with 67% support and 60.7% participation. The change accelerates SOL&#x27;s path to its 1.5% terminal inflation target to roughly 2.8 years, cutting projected issuance by about 18.9 million SOL over six years.
-
-This is Solana&#x27;s first binding governance vote, establishing an on-chain governance precedent while materially altering SOL&#x27;s supply schedule — a key tokenomics event for a top-tier protocol. Lower future issuance reduces dilution for SOL holders, but also cuts staking rewards for validators and delegators.
-
-Support came in at 67% with 25.16% against and 7.84% abstaining, while top voters were split: Figment voted entirely against with 17.1 million SOL staked, Helius and Jupiter overwhelmingly supported, and Kraken reversed from an initial &#x27;no&#x27; to over 90% support. The same vote ratified a Solana Constitution and rejected a separate proposal on resource and inclusion fees.</summary>
   </entry>
 </feed>

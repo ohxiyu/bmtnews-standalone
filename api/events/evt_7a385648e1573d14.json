@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "event_id": "evt_7a385648e1573d14",
+  "url": "https://bmt.news/events/evt_7a385648e1573d14/",
+  "json": "https://bmt.news/api/events/evt_7a385648e1573d14.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Layer 1 区块链 Injective 为阻止 490 万美元攻击停止出块 4 小时，却称只是升级",
+    "en": "Layer-1 blockchain Injective halts for 4 hours to stop $4.9M exploit, calls it an upgrade"
+  },
+  "current_state": {
+    "zh": "9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。\n\n此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。\n\n研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。",
+    "en": "On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an 'upgrade, not halted' and said consensus, native INJ, and staked assets were not compromised.\n\nThe incident shows that even a major layer-1's core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.\n\nResearcher Earthling Paddy disputed the foundation's claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective's native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers."
+  },
+  "first_seen_at": "2026-09-02T18:12:26.652724+00:00",
+  "last_updated_at": "2026-09-02T18:12:26.652724+00:00",
+  "last_material_change_at": "2026-09-02T18:12:26.652724+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "injective",
+    "layer",
+    "layer-1"
+  ],
+  "identifiers": [],
+  "topics": [
+    "injective",
+    "layer-1",
+    "network-halt"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_75feab7ee516489c",
+      "event_id": "evt_7a385648e1573d14",
+      "occurred_at": "2026-09-02T11:50:26Z",
+      "published_at": "2026-09-02T11:50:26Z",
+      "first_seen_at": "2026-09-02T18:12:26.652724Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Layer 1 区块链 Injective 为阻止 490 万美元攻击停止出块 4 小时，却称只是升级",
+      "title_en": "Layer-1 blockchain Injective halts for 4 hours to stop $4.9M exploit, calls it an upgrade",
+      "what_changed_zh": "9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。\n\n此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。\n\n研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。",
+      "what_changed_en": "On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an 'upgrade, not halted' and said consensus, native INJ, and staked assets were not compromised.\n\nThe incident shows that even a major layer-1's core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.\n\nResearcher Earthling Paddy disputed the foundation's claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective's native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.",
+      "current_state_zh": "9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。\n\n此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。\n\n研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。",
+      "current_state_en": "On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an 'upgrade, not halted' and said consensus, native INJ, and staked assets were not compromised.\n\nThe incident shows that even a major layer-1's core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.\n\nResearcher Earthling Paddy disputed the foundation's claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective's native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.",
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:b471d67f8d349c0a"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/a-layer-1-blockchain-froze-for-4-hours-to-stop-a-4-9-million-hack-then-claimed-it-was-just-an-upgrade/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

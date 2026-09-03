@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-09-02T00:00:00Z</updated>
+  <updated>2026-09-03T00:00:00Z</updated>
+  <entry>
+    <title>FBI调查IDScan.net涉嫌泄露超1.5亿份驾照信息</title>
+    <link href="https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/"/>
+    <id>https://bmt.news/editions/2026-09-03/#gdelt:article:20260902T221500Z::https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>美国联邦调查局(FBI)正在调查身份核验公司IDScan.net疑似发生的数据泄露事件。据称，暗网服务Nexus出售了超过1.5亿份美国和加拿大驾照信息，其中包括美国战争部长皮特·赫格塞斯的驾照。KrebsOnSecurity率先报道了这一疑似泄露事件，相关数据量也被描述为1.53亿条记录。
+
+如果泄露属实，这将成为有记录以来规模最大的身份数据泄露事件之一，数百万驾车人的敏感个人信息面临身份盗窃和欺诈风险。此外，大量依赖IDScan.net的财富500强企业和机构也可能受到波及，并引发外界对第三方身份核验服务安全性的广泛担忧。
+
+安全研究员vx-underground公布了一份可能受影响的IDScan.net客户名单，包括壳牌、DraftKings、联邦快递、赫兹、通用汽车、凯撒娱乐和摩托罗拉等。隐私研究员Zach Edwards表示，他在拉斯维加斯一家名为Planet13的大麻药房扫描证件后信息即遭泄露，种种迹象表明IDScan.net正遭受持续的实时入侵；Nexus声称其已持续窃取数据一年多，但该服务目前已无法访问。</summary>
+  </entry>
+  <entry>
+    <title>TAC网络遭质押池攻击冻结超10天，财库拟1.26B代币救助</title>
+    <link href="https://cryptoslate.com/tac-remains-frozen-for-over-10-days-after-a-massive-exploit-forces-a-1-26-billion-token-bailout/"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:39a7694bb715c014</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>TAC网络在8月22日质押池遭攻击后已停在区块24,671,475超过10天，共被盗走约29.9亿枚TAC，约占总供应量28.6%。提议中的恢复方案拟用财库储备补足约12.58亿枚已售出的TAC，但约16.6亿枚攻击者留在BNB Chain上的TAC如何处理仍悬而未决。
+
+长时间停摆锁定了TAC用户的质押资金，并使其桥接与赎回功能中断；BNB Chain上未处置的约16.6亿枚TAC，也让大部分被盗代币的最终归属悬而未决。由于该漏洞模块被多个Cosmos-EVM链共用这一事实，事件影响并不只限于TAC本身。
+
+攻击者利用的是算术溢出漏洞：EVM StateDB只跟踪可花费余额，而Cosmos SDK账本还允许委托锁定的归属代币，导致未校验的减法回绕至接近2^256，随后第二次溢出使攻击者可清空受害者账户而保留其合法代币。提议的恢复方案是在停止区块上做定向状态编辑而非回滚，可恢复质押池和委托人余额，同时保留来自218个无关地址的7,772笔正常交易。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase在加拿大推出受监管的加密衍生品交易</title>
+    <link href="https://cointelegraph.com/news/coinbase-launches-regulated-crypto-derivatives-in-canada?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cointelegraph.com_rss:4b3658772a406b0c</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>Coinbase已在加拿大推出加密衍生品交易，面向合格客户提供比特币（BTC）、以太坊（ETH）、Solana（SOL）等资产的永续合约和定期期货。该服务通过Coinbase Financial Markets提供，包含23种加密期货、5种大宗商品期货以及Coinbase 50指数，并声称是大型加密原生平台在加拿大推出的首个原生加密期货产品。
+
+此举扩大了加拿大受监管衍生品市场的准入范围，而该国加密资产持有率近年来大幅上升，也使Coinbase在加密原生竞争者中占据先机。同时表明，在整体监管压力增大的背景下，美国加密平台正将加拿大视为可行的受监管扩张市场。
+
+服务仅面向符合条件的加拿大客户，包括拥有至少500万美元净金融资产的个人，以及注册投资顾问和交易商。合约采用迷你型“纳米”头寸，最高提供10倍杠杆，同时产品线还包括大宗商品期货和Coinbase 50指数。</summary>
+  </entry>
+  <entry>
+    <title>Layer 1 区块链 Injective 为阻止 490 万美元攻击停止出块 4 小时，却称只是升级</title>
+    <link href="https://cryptoslate.com/a-layer-1-blockchain-froze-for-4-hours-to-stop-a-4-9-million-hack-then-claimed-it-was-just-an-upgrade/"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:b471d67f8d349c0a</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。
+
+此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。
+
+研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。</summary>
+  </entry>
+  <entry>
+    <title>Binance推出超千只美股及ETF实物交割期权</title>
+    <link href="https://cryptoslate.com/binance-deepens-tradfi-push-with-physically-settled-options-on-over-1000-us-equities/"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:1d5893cfe87f7f25</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>9月1日，Binance开始向符合条件的美国以外用户提供覆盖超过1000只精选美股和ETF的实物交割期权。订单由Nest Trading介绍并路由至Alpaca Securities，由其负责执行、清算和结算，并在行权后托管任何已交割的股票。
+
+这使传统股票期权与加密货币及代币化股票产品同处一个Binance账户，符合条件的客户无需另开经纪账户。此举进一步深化Binance向传统金融（TradFi）的拓展，同时将受监管的证券执行和托管保留在Alpaca而非Binance手中。
+
+这些期权为实物交割，因此行权看涨期权会交付标的股票，由Alpaca代用户托管。Binance表示，用户必须在到期前最迟30分钟内通过其平台提交行权指令；否则即使期权处于实值状态，也可能被尽力自动平仓，甚至到期作废。</summary>
+  </entry>
+  <entry>
+    <title>币安为多资产平台新增美股期权</title>
+    <link href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBxbUxDRkF0YWp0SHBfMGJKU1VvLVd6bTEwcUdTbGVyVWI1V19kQVpqWlByV3VMMmIxVVI0SWFXb3R0V2pFYnV4UDJLeFRUQjIzd29ueUZkaTdnSk9ETTVkVEJ3NVNmRG10RnVfVEh3?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-03/#google_news:article:656a054dc939b2b5</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>币安已将其多资产交易平台扩展至包含美股期权，让用户能够在加密货币资产之外交易传统股票衍生品。此举标志着币安从纯粹的加密货币业务进一步拓展至传统证券交易领域。
+
+头部加密交易所上线美股期权，标志着数字资产平台与传统金融进一步融合。此举拓宽了币安的产品线，并可能加剧与传统券商之间的竞争，吸引希望在同一平台交易加密货币和股票的投资者。
+
+美股期权是与美国上市个股挂钩的衍生品合约，在固定到期日下提供杠杆化敞口。这一新增功能使币安不仅与其他加密交易所竞争，也与成熟的证券经纪商直接竞争。</summary>
+  </entry>
+  <entry>
+    <title>怀俄明州为 FRNT 稳定币引入 Chainlink 储备证明</title>
+    <link href="https://cointelegraph.com/news/wyoming-chainlink-onchain-reserves-of-state-issued-stable-token?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:cointelegraph.com_rss:feb86ee19621d6cd</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>怀俄明州稳定币委员会已于周三采用 Chainlink 的 Proof of Reserve（储备证明），将 FRNT 的储备和代币供应量以近乎实时的链上验证方式发布。该集成补充了现有的每日认证，并先于计划中的 Chainlink Secure Mint 执行功能落地。
+
+这标志着美国州级发行的稳定币对 Chainlink 的一次重要机构级采用，为法币支持的代币化资产带来了近乎实时的透明度。此举巩固了 Chainlink 在受监管代币化金融领域的地位，并可能为其他公共发行人提供可借鉴的链上储备验证模板。
+
+FRNT 于今年 1 月在怀俄明州稳定币委员会框架下推出，由美元和短期美国国债支持，储备产生的利息收入将进入怀俄明州学校基金会计划。该委员会还计划采用 Chainlink 的 Secure Mint 功能，即只有在经核实的储备等于或超过 FRNT 总供应量时，才能铸造新代币。</summary>
+  </entry>
+  <entry>
+    <title>Securitize与Socios合作，将职业球队股权代币化</title>
+    <link href="https://www.theblock.co/news/ecosystems/2026-09-02-securitize-and-socios-team-up-to-tokenize-equity-in-pro-sports-teams-413378"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:www.theblock.co_rss.xml:25104c6512d75650</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>Securitize宣布与Socios合作，将职业体育球队的股权进行代币化。该项目将是欧盟DLT试点制度下Securitize获授权的欧洲交易与结算系统推出的首个项目。
+
+这是欧盟正式监管试点框架下较早的真实世界资产（RWA）代币化案例，可为欧洲受监管的链上股权产品树立先例。这可能会鼓励更多体育俱乐部及其他发行人，在球迷互动之外探索所有权代币化。
+
+目前尚未公布具体交易条款或涉及哪些球队。预计Securitize将提供受监管的交易与结算基础设施，而Socios将借助其体育合作网络以及Chiliz等球迷代币体系的粉丝运营经验推动项目落地。</summary>
+  </entry>
+  <entry>
+    <title>World 开源零知识身份证明工具包 ProveKit</title>
+    <link href="https://www.theblock.co/news/ecosystems/2026-09-02-world-provekit-zero-knowledge-identity-proving-toolkit-413364"/>
+    <id>https://bmt.news/editions/2026-09-03/#rss:www.theblock.co_rss.xml:65ea340a927eed03</id>
+    <updated>2026-09-03T00:00:00Z</updated>
+    <summary>World 已将客户端零知识身份证明工具包 ProveKit 开源，该工具使用 Rust 编写并提供 WebAssembly 绑定。ProveKit 自 4 月起就已投入 World ID 的生产环境使用。
+
+此举让身份与隐私开发者能够获得经过生产验证的工具包，直接在用户设备上生成和验证零知识证明，无需可信设置或服务器往返。这降低了在 Web 与 Web3 应用中构建私密“人类身份证明”系统的门槛。
+
+该工具包将 prover、verifier 和电路编译器集成到一个轻量级组件中，可把 Noir 电路转换为可验证的 WHIR 证明。开发者可以在本地、Rust 服务、浏览器、iOS/Android，或通过 Groth16 递归验证器在链上完成证明验证。</summary>
+  </entry>
   <entry>
     <title>Cronos 验证者回滚链以遏制 Tectonic 7500 万美元漏洞</title>
     <link href="https://cryptoslate.com/cronos-restart-after-tectonic-exploit-chain-rollback/"/>
@@ -341,104 +440,5 @@ Deribit现有系统使用保护隐私的二叉默克尔树和每日快照，让�
 这一事件凸显了与名人及政客挂钩的迷因币的风险——内部人员抛售可在数小时内让散户投资者血本无归。在特朗普政府推动国会重塑加密监管之际，此事也加剧了对特朗普关联加密项目的审视。
 
 Lookonchain指出，代币开发者持有6亿枚GOLD，而15个新建钱包花费18,657美元购买了另外2.245亿枚代币，使团队控制了总供应量约82.45%。这15个钱包将全部GOLD卖出换取3,178枚SOL（约33万美元）后，代币市值从约5,000万美元跌至50万美元。Real Trump Coins网站仍在推广GOLD，宣传4%的交易费，并承诺将99%的交易费用于回购。</summary>
-  </entry>
-  <entry>
-    <title>Polygon Labs 敦促节点在 Austin 与 Kyoto 硬分叉后升级</title>
-    <link href="https://cryptoslate.com/polygon-labs-issues-urgent-client-upgrade-notice-following-austin-and-kyoto-hardforks/"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:cryptoslate.com_feed_:cc24af99cc5c3546</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>Polygon Labs 发布紧急通知，要求 Polygon PoS 节点运营者在 Austin 和 Kyoto 硬分叉激活后将 Bor 升级到 v2.10.0 或更高版本，并将 Heimdall 升级到 v0.11.0 或更高版本。仍然运行硬分叉前二进制的节点已经脱离规范共识，必须追赶同步后才能重新加入网络。
-
-这次升级对于所有希望保持共识的 Polygon PoS 节点都是强制性的，因此对验证者和基础设施提供商至关重要。它还带来了安全加固修复，降低了资源耗尽和活性风险，为网络后续的架构转型打下更坚实的基础。
-
-Austin 限制了 Bor 处理状态同步桥接事件时的 gas 消耗，并移除了无大小限制的 TxDependency 附加数据字段；Kyoto 则增加了对 protobuf.Any 消息的嵌套检查、限制了 fee-coin 列表，并修复了多个检查点和签名边界情况。两个硬分叉均为纯二进制升级，无状态迁移，因此未发生分叉的节点无需重新同步。</summary>
-  </entry>
-  <entry>
-    <title>加密卡遭黑客攻击损失110万美元，新银行代币暴跌49%</title>
-    <link href="https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:www.coindesk.com_arc_outboundfeeds_rss_:3c0d03a858c7ca0b</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>据2026年8月29日的报道，一起利用加密卡进行、造成110万美元损失的黑客攻击，导致一家新银行（neobank）的代币暴跌49%。
-
-该事件凸显了加密支付基础设施中的安全漏洞，并表明安全漏洞能多快侵蚀信任和代币价值。它也提醒人们注意整合加密货币服务的数字优先银行所面临的风险。
-
-此次黑客攻击专门针对加密借记卡，造成110万美元损失。该新银行的代币下跌49%，反映出市场对此次安全事件的严重反应。</summary>
-  </entry>
-  <entry>
-    <title>Polygon披露Austin与Kyoto硬分叉修复的安全漏洞</title>
-    <link href="https://cointelegraph.com/news/polygon-discloses-security-flaws-fixed-in-recent-hard-forks?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:cointelegraph.com_rss:3180fb2584d7080a</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>Polygon Labs披露了此前未公开的、影响Bor和Heimdall客户端的安全漏洞，这些漏洞已在公开披露前通过Austin和Kyoto硬分叉悄悄修复。漏洞包括拒绝服务风险、验证人资源耗尽以及检查点和里程碑处理问题。
-
-此次披露意义重大，因为它揭示了Polygon的权益证明网络曾面临可能破坏共识的严重稳定性威胁。同时，它也凸显了及时打补丁的重要性，因为运行旧版客户端的节点已经无法参与共识。
-
-最严重的问题出在Heimdall，精心构造的交易可迫使验证人执行过多处理工作。现在所有Polygon PoS节点都需要Bor v2.10.0，验证人和全节点需要Heimdall v0.11.0；两项升级均已在主网生效。</summary>
-  </entry>
-  <entry>
-    <title>Strategy 面临被剔出 MSCI 全球股票指数的新威胁</title>
-    <link href="https://www.foreignpolicyjournal.com/2026/08/29/strategy-nasdaq-mstr-faces-fresh-threat-of-removal-from-msci-global-equity-indexes/"/>
-    <id>https://bmt.news/editions/2026-08-30/#gdelt:article:20260829T184500Z::https://www.foreignpolicyjournal.com/2026/08/29/strategy-nasdaq-mstr-faces-fresh-threat-of-removal-from-msci-global-equity-indexes/</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>据2026年8月29日的报道，Strategy（NASDAQ: MSTR）面临被剔除出MSCI全球股票指数的新威胁。若被剔除，跟踪这些指数的被动基金将被迫卖出其持有的MSTR股票。
-
-MSCI全球股票指数被全球机构投资者用于基准分析和资产配置。若被剔除，被动基金将被迫卖出，给作为比特币代理股的MSTR带来下行压力，并可能抑制加密货币市场情绪。
-
-《外交政策杂志》的报道将该进展描述为“威胁”而非已确认的决定。MSCI在2026年2月的审议中曾暂停将比特币储备公司剔除，但在2026年8月的审议周期中这一风险再度浮现。</summary>
-  </entry>
-  <entry>
-    <title>BitGo斥资4250万美元收购NYDIG机构交易部门</title>
-    <link href="https://decrypt.co/376864/bitgo-buys-nydig-institutional-trading-arm"/>
-    <id>https://bmt.news/editions/2026-08-30/#rss:decrypt.co_feed:6016aedc2043af9d</id>
-    <updated>2026-08-30T00:00:00Z</updated>
-    <summary>BitGo已完成对NYDIG机构交易业务的收购，交易总额约4250万美元，增加了衍生品、结构化产品、融资和资本市场解决方案。该交易包含约30名员工，分两步完成合并，其中700万美元现金加约3550万美元BitGo股票。
-
-此次整合增强了BitGo的交易平台，使机构能够在同一屋檐下获得托管、交易、融资和结算服务。这表明资产管理公司、对冲基金和家族办公室对数字资产全生命周期服务的需求日益增长，同时让NYDIG更专注于挖矿和高性能计算数据中心。
-
-NYDIG的出售包含业绩对赌条款，包括与一项收入里程碑挂钩的1000万美元现金支付，以及与另一里程碑挂钩的至多500万美元现金和额外股份。NYDIG将专注于发电、比特币挖矿和高性能计算数据中心业务，其开发管道超过3吉瓦。</summary>
-  </entry>
-  <entry>
-    <title>Cosmos 误判关键 EVM 漏洞达 4 个月，导致约 600 万美元跨链被盗</title>
-    <link href="https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/"/>
-    <id>https://bmt.news/editions/2026-08-29/#rss:cryptoslate.com_feed_:21be4de7336ce345</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>8 月 28 日，Cosmos Labs 披露一个被误判的 EVM 漏洞在包括 MANTRA、TAC 和 KiiChain 在内的六个网络上被利用，造成近 600 万美元损失。该漏洞于 4 月 25 日首次上报，但因小数位假设被评估为低风险；5 月 15 日合并了静默补丁，而在评估修正后，实际攻击始于 8 月 20 日。
-
-该事件暴露出共享软件层 Cosmos EVM 在数月内的安全分级失误，而这一层为 Cosmos SDK 链提供以太坊兼容性。由于约 40 条网络可能受影响，并在响应过程中发现 11 个此前未知的部署，这引发了关于整个 Cosmos 生态中安全披露和补丁分发的紧迫问题。
-
-该漏洞利用结合了两个记账缺陷：无符号整数下溢生成了异常巨大的余额，随后利用该状态使另一个账户溢出，从而在不增加总代币供应量的情况下提取其合法余额。Cosmos Labs 联系了 40 条网络，其中 13 条潜在暴露的链进行了修补、暂停或部署缓解措施；MANTRA 遭受了已披露的最大损失，约有 7.209 亿枚代币从两个未授权地址被转出。</summary>
-  </entry>
-  <entry>
-    <title>Solana 通过加倍通缩提案，提前削减 SOL 发行量</title>
-    <link href="https://decrypt.co/376825/solana-sol-disinflation-vote-passes"/>
-    <id>https://bmt.news/editions/2026-08-29/#rss:decrypt.co_feed:9d7c93d7b1b0584f</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Solana 验证者通过了 SGP-0002，将年度通缩率从 15% 提高至 30%，使 SOL 的 1.5% 发行下限提前到 2029 年而非 2032 年到达。投票以 67.0% 的支持率勉强超过 66.67% 的门槛，参与率为 60.7%。
-
-这是 Solana 历史上首个具有约束力的链上治理决定，为代币持有者驱动的协议变更开创了先例。加速的供应缩减可能使 SOL 的供应时间表收紧，市场普遍认为这对 SOL 长期有利，但也降低了质押收益率。
-
-该提案对应由基础设施公司 Helius 工程师提出的 SIMD-550，最终以 1.76 亿 SOL 赞成、6619 万 SOL 反对的结果通过，共 1326 票参与。验证者还以 86% 的支持率通过了 Solana 宪法（SGP-0001），但否决了 SGP-0003 资源与纳入费提案，该提案原本可能每日销毁多达 14 倍的 SOL。</summary>
-  </entry>
-  <entry>
-    <title>嘉信理财计划为3990万账户新增SOL、AVAX和LINK交易</title>
-    <link href="https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html"/>
-    <id>https://bmt.news/editions/2026-08-29/#gdelt:article:20260828T160000Z::https://www.aol.com/articles/schwab-plans-add-sol-avax-145303000.html</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>嘉信理财（Charles Schwab）计划在其约3990万个经纪账户中提供Solana（SOL）、Avalanche（AVAX）和Chainlink（LINK）交易。此举扩大了该公司零售投资者可用的加密资产范围。
-
-这标志着传统金融机构对加密货币的主流采用持续加深，为数百万零售投资者提供了便捷、受监管的渠道来接触这些代币。同时，这也可能提升SOL、AVAX和LINK在更广泛加密市场中的合法性与流动性。
-
-这项计划中的服务将使Schwab约3990万个经纪账户的客户能够交易SOL、AVAX和LINK。这是美国传统券商面向散户推出的规模最大的加密扩展之一。</summary>
-  </entry>
-  <entry>
-    <title>Solana验证者批准将通胀递减率翻倍至30%的首个约束性投票</title>
-    <link href="https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-08-29/#rss:cointelegraph.com_rss:7be6ac4b112b4b8a</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Solana验证者通过了SGP-0002（“双倍去通胀”）提案，以67%的支持率和60.7%的参与率将网络年度通胀递减率从15%提高至30%。这一变化将SOL达到1.5%最终通胀目标的时间缩短至约2.8年，未来六年预计减少约1890万枚SOL的发行。
-
-这是Solana首次具有约束力的治理投票，开创了链上治理先例，同时实质性改变了SOL的供应计划，对顶级协议而言是重要的代币经济事件。未来发行量减少降低了SOL持有者的稀释，但也会降低验证者和委托者的质押奖励。
-
-投票支持率为67%，反对25.16%，弃权7.84%；主要投票者立场分歧：质押1710万SOL的Figment全部投反对票，Helius和Jupiter压倒性支持，Kraken从最初反对转为最终超90%支持。同一场投票还批准了Solana章程，并否决了关于资源和包含费用的另一项提案。</summary>
   </entry>
 </feed>

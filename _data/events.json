@@ -9664,7 +9664,7 @@
       "first_seen_at": "2026-09-02T08:00:00+08:00",
       "identifiers": [],
       "last_material_change_at": "2026-09-02T08:00:00+08:00",
-      "last_updated_at": "2026-09-02T08:00:00+08:00",
+      "last_updated_at": "2026-09-02T16:46:22.338938Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -9693,10 +9693,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/business/2026-09-01-binance-adds-options-1000-us-stocks-etfs-monthly-tradfi-perpetual-volume-surge-413213"
+            },
+            {
+              "label": "BlockchainReporter",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBxbUxDRkF0YWp0SHBfMGJKU1VvLVd6bTEwcUdTbGVyVWI1V19kQVpqWlByV3VMMmIxVVI0SWFXb3R0V2pFYnV4UDJLeFRUQjIzd29ueUZkaTdnSk9ETTVkVEJ3NVNmRG10RnVfVEh3?oc=5"
             }
           ],
           "story_ids": [
-            "rss:www.theblock.co_rss.xml:36c29682cca3233e"
+            "rss:www.theblock.co_rss.xml:36c29682cca3233e",
+            "google_news:article:656a054dc939b2b5"
           ],
           "time_precision": "edition",
           "title_en": "Binance launches options on 1,000 US stocks and ETFs",
@@ -10239,6 +10246,121 @@
       ]
     },
     {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an 'upgrade, not halted' and said consensus, native INJ, and staked assets were not compromised.\n\nThe incident shows that even a major layer-1's core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.\n\nResearcher Earthling Paddy disputed the foundation's claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective's native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.",
+      "current_state_zh": "9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。\n\n此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。\n\n研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。",
+      "entities": [
+        "injective",
+        "layer",
+        "layer-1"
+      ],
+      "event_id": "evt_7a385648e1573d14",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-02T18:12:26.652724Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-02T18:12:26.652724Z",
+      "last_updated_at": "2026-09-02T18:12:26.652724Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Layer-1 blockchain Injective halts for 4 hours to stop $4.9M exploit, calls it an upgrade",
+      "title_zh": "Layer 1 区块链 Injective 为阻止 490 万美元攻击停止出块 4 小时，却称只是升级",
+      "topics": [
+        "injective",
+        "layer-1",
+        "network-halt"
+      ],
+      "updates": [
+        {
+          "confidence": 0.75,
+          "current_state_en": "On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an 'upgrade, not halted' and said consensus, native INJ, and staked assets were not compromised.\n\nThe incident shows that even a major layer-1's core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.\n\nResearcher Earthling Paddy disputed the foundation's claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective's native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.",
+          "current_state_zh": "9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。\n\n此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。\n\n研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。",
+          "event_id": "evt_7a385648e1573d14",
+          "first_seen_at": "2026-09-02T18:12:26.652724Z",
+          "material_change": true,
+          "occurred_at": "2026-09-02T11:50:26Z",
+          "published_at": "2026-09-02T11:50:26Z",
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/a-layer-1-blockchain-froze-for-4-hours-to-stop-a-4-9-million-hack-then-claimed-it-was-just-an-upgrade/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:b471d67f8d349c0a"
+          ],
+          "time_precision": "published",
+          "title_en": "Layer-1 blockchain Injective halts for 4 hours to stop $4.9M exploit, calls it an upgrade",
+          "title_zh": "Layer 1 区块链 Injective 为阻止 490 万美元攻击停止出块 4 小时，却称只是升级",
+          "update_id": "upd_75feab7ee516489c",
+          "update_type": "initial",
+          "what_changed_en": "On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an 'upgrade, not halted' and said consensus, native INJ, and staked assets were not compromised.\n\nThe incident shows that even a major layer-1's core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.\n\nResearcher Earthling Paddy disputed the foundation's claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective's native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.",
+          "what_changed_zh": "9 月 1 日，Injective 在遭遇约 490 万美元的漏洞攻击（涉及二元期权市场）后，暂停出块近四个小时，让验证者部署紧急补丁。基金会称这是“升级而非停机”，并表示共识、原生 INJ 和质押资产均未受影响。\n\n此次事件表明，即使是主流 Layer 1 的核心模块也可能存在可利用的逻辑漏洞，而遏制攻击可能需要暂停整条链，这引发了关于透明度和去中心化的疑问。这对 Injective 用户、验证者以及 Layer 1 安全与紧急治理的广泛讨论都很重要。\n\n研究员 Earthling Paddy 质疑基金会“仅影响生态应用”的说法，指出攻击使用了 Injective 原生交易和保险模块的消息，而紧急补丁增加了保险基金计价单位检查并禁用了主网二元期权结算。8 月 31 日区块 181027005（16:09:59 UTC）之后链上停止生产约四小时，部分验证者因错过升级窗口被暂时监禁，Coinbase 和 Coins.ph 等交易所也临时限制了转账。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "On September 1, Binance began offering eligible non-US users physically settled options covering more than 1,000 selected US stocks and ETFs. Orders are introduced by Nest Trading and routed to Alpaca Securities, which executes, clears, settles, and holds any shares delivered after exercise.\n\nThis puts traditional equity options in the same Binance account as crypto and tokenized equity products, removing the need for eligible clients to open a separate brokerage account. It also deepens Binance's push into traditional finance while keeping regulated securities execution and custody with Alpaca rather than Binance.\n\nThe options are physically settled, so exercising a call delivers underlying shares that Alpaca holds on the user's behalf. Binance says users must submit exercise instructions through its platform up to 30 minutes before expiration; otherwise an in-the-money option may be auto-liquidated on a best-efforts basis or expire worthless.",
+      "current_state_zh": "9月1日，Binance开始向符合条件的美国以外用户提供覆盖超过1000只精选美股和ETF的实物交割期权。订单由Nest Trading介绍并路由至Alpaca Securities，由其负责执行、清算和结算，并在行权后托管任何已交割的股票。\n\n这使传统股票期权与加密货币及代币化股票产品同处一个Binance账户，符合条件的客户无需另开经纪账户。此举进一步深化Binance向传统金融（TradFi）的拓展，同时将受监管的证券执行和托管保留在Alpaca而非Binance手中。\n\n这些期权为实物交割，因此行权看涨期权会交付标的股票，由Alpaca代用户托管。Binance表示，用户必须在到期前最迟30分钟内通过其平台提交行权指令；否则即使期权处于实值状态，也可能被尽力自动平仓，甚至到期作废。",
+      "entities": [
+        "binance",
+        "etf"
+      ],
+      "event_id": "evt_b934d5f446d74ac8",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-02T18:12:26.800270Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-02T18:12:26.800270Z",
+      "last_updated_at": "2026-09-02T18:12:26.800270Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance launches physically settled options on 1,000+ US equities",
+      "title_zh": "Binance推出超千只美股及ETF实物交割期权",
+      "topics": [
+        "alpaca",
+        "binance",
+        "equity-options",
+        "tradfi",
+        "trading-products"
+      ],
+      "updates": [
+        {
+          "confidence": 0.75,
+          "current_state_en": "On September 1, Binance began offering eligible non-US users physically settled options covering more than 1,000 selected US stocks and ETFs. Orders are introduced by Nest Trading and routed to Alpaca Securities, which executes, clears, settles, and holds any shares delivered after exercise.\n\nThis puts traditional equity options in the same Binance account as crypto and tokenized equity products, removing the need for eligible clients to open a separate brokerage account. It also deepens Binance's push into traditional finance while keeping regulated securities execution and custody with Alpaca rather than Binance.\n\nThe options are physically settled, so exercising a call delivers underlying shares that Alpaca holds on the user's behalf. Binance says users must submit exercise instructions through its platform up to 30 minutes before expiration; otherwise an in-the-money option may be auto-liquidated on a best-efforts basis or expire worthless.",
+          "current_state_zh": "9月1日，Binance开始向符合条件的美国以外用户提供覆盖超过1000只精选美股和ETF的实物交割期权。订单由Nest Trading介绍并路由至Alpaca Securities，由其负责执行、清算和结算，并在行权后托管任何已交割的股票。\n\n这使传统股票期权与加密货币及代币化股票产品同处一个Binance账户，符合条件的客户无需另开经纪账户。此举进一步深化Binance向传统金融（TradFi）的拓展，同时将受监管的证券执行和托管保留在Alpaca而非Binance手中。\n\n这些期权为实物交割，因此行权看涨期权会交付标的股票，由Alpaca代用户托管。Binance表示，用户必须在到期前最迟30分钟内通过其平台提交行权指令；否则即使期权处于实值状态，也可能被尽力自动平仓，甚至到期作废。",
+          "event_id": "evt_b934d5f446d74ac8",
+          "first_seen_at": "2026-09-02T18:12:26.800270Z",
+          "material_change": true,
+          "occurred_at": "2026-09-02T10:40:35Z",
+          "published_at": "2026-09-02T10:40:35Z",
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/binance-deepens-tradfi-push-with-physically-settled-options-on-over-1000-us-equities/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:1d5893cfe87f7f25"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance launches physically settled options on 1,000+ US equities",
+          "title_zh": "Binance推出超千只美股及ETF实物交割期权",
+          "update_id": "upd_c5d825269f13e38b",
+          "update_type": "initial",
+          "what_changed_en": "On September 1, Binance began offering eligible non-US users physically settled options covering more than 1,000 selected US stocks and ETFs. Orders are introduced by Nest Trading and routed to Alpaca Securities, which executes, clears, settles, and holds any shares delivered after exercise.\n\nThis puts traditional equity options in the same Binance account as crypto and tokenized equity products, removing the need for eligible clients to open a separate brokerage account. It also deepens Binance's push into traditional finance while keeping regulated securities execution and custody with Alpaca rather than Binance.\n\nThe options are physically settled, so exercising a call delivers underlying shares that Alpaca holds on the user's behalf. Binance says users must submit exercise instructions through its platform up to 30 minutes before expiration; otherwise an in-the-money option may be auto-liquidated on a best-efforts basis or expire worthless.",
+          "what_changed_zh": "9月1日，Binance开始向符合条件的美国以外用户提供覆盖超过1000只精选美股和ETF的实物交割期权。订单由Nest Trading介绍并路由至Alpaca Securities，由其负责执行、清算和结算，并在行权后托管任何已交割的股票。\n\n这使传统股票期权与加密货币及代币化股票产品同处一个Binance账户，符合条件的客户无需另开经纪账户。此举进一步深化Binance向传统金融（TradFi）的拓展，同时将受监管的证券执行和托管保留在Alpaca而非Binance手中。\n\n这些期权为实物交割，因此行权看涨期权会交付标的股票，由Alpaca代用户托管。Binance表示，用户必须在到期前最迟30分钟内通过其平台提交行权指令；否则即使期权处于实值状态，也可能被尽力自动平仓，甚至到期作废。"
+        }
+      ]
+    },
+    {
       "category": "policy",
       "confidence": 0.75,
       "current_state_en": "Crypto groups and financial firms are urging the SEC to adopt tailored rules for novel exchange-traded products beyond traditional ETFs, covering crypto, private assets, event contracts, and leveraged strategies.",
@@ -10768,6 +10890,254 @@
           "update_type": "initial",
           "what_changed_en": "Wyoming has adopted Chainlink Proof of Reserve to publish near-real-time onchain reserve and supply data for its state-issued FRNT stable token.",
           "what_changed_zh": "Wyoming has adopted Chainlink Proof of Reserve to publish near-real-time onchain reserve and supply data for its state-issued FRNT stable token."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI says its new Astra AI can autonomously build cyberattacks without human help, raising significant safety and security concerns.",
+      "current_state_zh": "OpenAI称其新型Astra人工智能可在无人协助的情况下自主构建网络攻击，引发重大的安全和安保担忧。",
+      "entities": [
+        "astra",
+        "openai"
+      ],
+      "event_id": "evt_aae7c78265a57315",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-03T00:30:57.577006Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T00:30:57.577006Z",
+      "last_updated_at": "2026-09-03T00:30:57.577006Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI says its new 'Astra' AI can build attacks without human help",
+      "title_zh": "OpenAI称其新型“Astra”人工智能无需人类帮助即可构建攻击",
+      "topics": [
+        "ai-safety",
+        "autonomous-agents",
+        "cybersecurity",
+        "openai",
+        "vulnerability-research"
+      ],
+      "updates": [
+        {
+          "confidence": 0.75,
+          "current_state_en": "OpenAI says its new Astra AI can autonomously build cyberattacks without human help, raising significant safety and security concerns.",
+          "current_state_zh": "OpenAI称其新型Astra人工智能可在无人协助的情况下自主构建网络攻击，引发重大的安全和安保担忧。",
+          "event_id": "evt_aae7c78265a57315",
+          "first_seen_at": "2026-09-03T00:30:57.577006Z",
+          "material_change": true,
+          "occurred_at": "2026-09-02T05:28:51Z",
+          "published_at": "2026-09-02T05:28:51Z",
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/02/openai-says-its-new-astra-ai-can-build-attacks-without-human-help"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:2c2a16a4e2fdc2c3"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI says its new 'Astra' AI can build attacks without human help",
+          "title_zh": "OpenAI称其新型“Astra”人工智能无需人类帮助即可构建攻击",
+          "update_id": "upd_3a87012fc9d5a449",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI says its new Astra AI can autonomously build cyberattacks without human help, raising significant safety and security concerns.",
+          "what_changed_zh": "OpenAI称其新型Astra人工智能可在无人协助的情况下自主构建网络攻击，引发重大的安全和安保担忧。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.\n\nThis gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users' devices, without trusted setups or server round-trips. It lowers the barrier to building private 'proof of human' systems on the web and in Web3 applications.\n\nThe toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.",
+      "current_state_zh": "World 已将客户端零知识身份证明工具包 ProveKit 开源，该工具使用 Rust 编写并提供 WebAssembly 绑定。ProveKit 自 4 月起就已投入 World ID 的生产环境使用。\n\n此举让身份与隐私开发者能够获得经过生产验证的工具包，直接在用户设备上生成和验证零知识证明，无需可信设置或服务器往返。这降低了在 Web 与 Web3 应用中构建私密“人类身份证明”系统的门槛。\n\n该工具包将 prover、verifier 和电路编译器集成到一个轻量级组件中，可把 Noir 电路转换为可验证的 WHIR 证明。开发者可以在本地、Rust 服务、浏览器、iOS/Android，或通过 Groth16 递归验证器在链上完成证明验证。",
+      "entities": [
+        "identity",
+        "knowledge",
+        "open",
+        "open-source",
+        "provekit",
+        "sources",
+        "toolkit",
+        "world",
+        "zero",
+        "zero-knowledge"
+      ],
+      "event_id": "evt_0831bef4599f556f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T00:30:58.633487Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T00:30:58.633487Z",
+      "last_updated_at": "2026-09-03T00:30:58.633487Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "World Open-Sources ProveKit, a Zero-Knowledge Identity Toolkit",
+      "title_zh": "World 开源零知识身份证明工具包 ProveKit",
+      "topics": [
+        "identity",
+        "open-source",
+        "privacy",
+        "world-id",
+        "zero-knowledge"
+      ],
+      "updates": [
+        {
+          "confidence": 0.75,
+          "current_state_en": "World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.\n\nThis gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users' devices, without trusted setups or server round-trips. It lowers the barrier to building private 'proof of human' systems on the web and in Web3 applications.\n\nThe toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.",
+          "current_state_zh": "World 已将客户端零知识身份证明工具包 ProveKit 开源，该工具使用 Rust 编写并提供 WebAssembly 绑定。ProveKit 自 4 月起就已投入 World ID 的生产环境使用。\n\n此举让身份与隐私开发者能够获得经过生产验证的工具包，直接在用户设备上生成和验证零知识证明，无需可信设置或服务器往返。这降低了在 Web 与 Web3 应用中构建私密“人类身份证明”系统的门槛。\n\n该工具包将 prover、verifier 和电路编译器集成到一个轻量级组件中，可把 Noir 电路转换为可验证的 WHIR 证明。开发者可以在本地、Rust 服务、浏览器、iOS/Android，或通过 Groth16 递归验证器在链上完成证明验证。",
+          "event_id": "evt_0831bef4599f556f",
+          "first_seen_at": "2026-09-03T00:30:58.633487Z",
+          "material_change": true,
+          "occurred_at": "2026-09-02T16:00:03Z",
+          "published_at": "2026-09-02T16:00:03Z",
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/ecosystems/2026-09-02-world-provekit-zero-knowledge-identity-proving-toolkit-413364"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:65ea340a927eed03"
+          ],
+          "time_precision": "published",
+          "title_en": "World Open-Sources ProveKit, a Zero-Knowledge Identity Toolkit",
+          "title_zh": "World 开源零知识身份证明工具包 ProveKit",
+          "update_id": "upd_23f0622cc823c8ed",
+          "update_type": "initial",
+          "what_changed_en": "World has open-sourced ProveKit, its client-side zero-knowledge identity proving toolkit built in Rust with WebAssembly bindings. ProveKit has already been used in production by World ID since April.\n\nThis gives identity and privacy developers access to a production-tested toolkit that can generate and verify zero-knowledge proofs directly on users' devices, without trusted setups or server round-trips. It lowers the barrier to building private 'proof of human' systems on the web and in Web3 applications.\n\nThe toolkit bundles a prover, verifier, and circuit compiler into a single lightweight package, and can turn a Noir circuit into a verifiable WHIR proof. Verification is supported locally, in a Rust service, in the browser, on iOS or Android, or on-chain via a Groth16 recursive verifier.",
+          "what_changed_zh": "World 已将客户端零知识身份证明工具包 ProveKit 开源，该工具使用 Rust 编写并提供 WebAssembly 绑定。ProveKit 自 4 月起就已投入 World ID 的生产环境使用。\n\n此举让身份与隐私开发者能够获得经过生产验证的工具包，直接在用户设备上生成和验证零知识证明，无需可信设置或服务器往返。这降低了在 Web 与 Web3 应用中构建私密“人类身份证明”系统的门槛。\n\n该工具包将 prover、verifier 和电路编译器集成到一个轻量级组件中，可把 Noir 电路转换为可验证的 WHIR 证明。开发者可以在本地、Rust 服务、浏览器、iOS/Android，或通过 Groth16 递归验证器在链上完成证明验证。"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "On September 1, OpenAI announced that its unreleased Astra model meets the \"Critical\" cybersecurity threshold under its Preparedness Framework, the first model to receive that designation. Astra scored a perfect 100% on ExploitBench and autonomously discovered and chained two previously unknown zero-days in Google's V8 JavaScript engine.\n\nThis is a frontier-lab milestone in AI safety and capability, showing that models can autonomously execute full compromise chains against hardened real-world systems. It will likely shape access restrictions, defensive AI programs, and industry-wide discussions about catastrophic cyber risk.\n\nOpenAI says Astra tops GPT-5.6 Sol, which maxed out at the lower \"High\" tier, and Astra refused 91.5% of cyber jailbreak attempts in internal tests versus 59% for GPT-5.6 Sol. Access starts with a small alpha test group and will later expand through the Daybreak Blue defensive security program; a public launch date has not been set.",
+      "current_state_zh": "9月1日，OpenAI 宣布其未发布的 Astra 模型达到其 Preparedness Framework 下的“严重”网络安全级别，这是首个获得该级别的模型。Astra 在 ExploitBench 上获得 100% 满分，并自主发现、串联利用了 Google V8 JavaScript 引擎中两个此前未知的零日漏洞。\n\n这是AI安全与能力领域的前沿实验室里程碑，表明模型能够自主对加固后的真实世界系统执行完整入侵链条。它很可能影响访问限制、防御性AI计划，以及业界围绕灾难性网络风险的讨论。\n\nOpenAI 表示 Astra 超过了此前最高为“高级”级别的 GPT-5.6 Sol；在内部测试中，Astra 拒绝了 91.5% 的网络越狱尝试，而 GPT-5.6 Sol 为 59%。早期访问从小型 alpha 测试组开始，后续将通过 Daybreak Blue 防御性安全计划扩大，目前尚未设定公开发布日期。",
+      "entities": [
+        "abilities",
+        "astra",
+        "becomes",
+        "critical",
+        "first",
+        "hacking",
+        "model",
+        "openai"
+      ],
+      "event_id": "evt_4f80dda6b34bf340",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-03T00:31:06.848520Z",
+      "identifiers": [
+        "gpt-5"
+      ],
+      "last_material_change_at": "2026-09-03T00:31:06.848520Z",
+      "last_updated_at": "2026-09-03T00:31:06.848520Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI's Astra Becomes First AI Model with 'Critical' Hacking Abilities",
+      "title_zh": "OpenAI Astra 成首个具备“严重”黑客能力的AI模型",
+      "topics": [
+        "ai-safety",
+        "cybersecurity",
+        "model-capabilities",
+        "openai"
+      ],
+      "updates": [
+        {
+          "confidence": 0.75,
+          "current_state_en": "On September 1, OpenAI announced that its unreleased Astra model meets the \"Critical\" cybersecurity threshold under its Preparedness Framework, the first model to receive that designation. Astra scored a perfect 100% on ExploitBench and autonomously discovered and chained two previously unknown zero-days in Google's V8 JavaScript engine.\n\nThis is a frontier-lab milestone in AI safety and capability, showing that models can autonomously execute full compromise chains against hardened real-world systems. It will likely shape access restrictions, defensive AI programs, and industry-wide discussions about catastrophic cyber risk.\n\nOpenAI says Astra tops GPT-5.6 Sol, which maxed out at the lower \"High\" tier, and Astra refused 91.5% of cyber jailbreak attempts in internal tests versus 59% for GPT-5.6 Sol. Access starts with a small alpha test group and will later expand through the Daybreak Blue defensive security program; a public launch date has not been set.",
+          "current_state_zh": "9月1日，OpenAI 宣布其未发布的 Astra 模型达到其 Preparedness Framework 下的“严重”网络安全级别，这是首个获得该级别的模型。Astra 在 ExploitBench 上获得 100% 满分，并自主发现、串联利用了 Google V8 JavaScript 引擎中两个此前未知的零日漏洞。\n\n这是AI安全与能力领域的前沿实验室里程碑，表明模型能够自主对加固后的真实世界系统执行完整入侵链条。它很可能影响访问限制、防御性AI计划，以及业界围绕灾难性网络风险的讨论。\n\nOpenAI 表示 Astra 超过了此前最高为“高级”级别的 GPT-5.6 Sol；在内部测试中，Astra 拒绝了 91.5% 的网络越狱尝试，而 GPT-5.6 Sol 为 59%。早期访问从小型 alpha 测试组开始，后续将通过 Daybreak Blue 防御性安全计划扩大，目前尚未设定公开发布日期。",
+          "event_id": "evt_4f80dda6b34bf340",
+          "first_seen_at": "2026-09-03T00:31:06.848520Z",
+          "material_change": true,
+          "occurred_at": "2026-09-02T16:43:53Z",
+          "published_at": "2026-09-02T16:43:53Z",
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377180/openai-astra-first-ai-model-critical-hacking"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:7e6c657170fd3ded"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI's Astra Becomes First AI Model with 'Critical' Hacking Abilities",
+          "title_zh": "OpenAI Astra 成首个具备“严重”黑客能力的AI模型",
+          "update_id": "upd_90df6bc6a67ecce3",
+          "update_type": "initial",
+          "what_changed_en": "On September 1, OpenAI announced that its unreleased Astra model meets the \"Critical\" cybersecurity threshold under its Preparedness Framework, the first model to receive that designation. Astra scored a perfect 100% on ExploitBench and autonomously discovered and chained two previously unknown zero-days in Google's V8 JavaScript engine.\n\nThis is a frontier-lab milestone in AI safety and capability, showing that models can autonomously execute full compromise chains against hardened real-world systems. It will likely shape access restrictions, defensive AI programs, and industry-wide discussions about catastrophic cyber risk.\n\nOpenAI says Astra tops GPT-5.6 Sol, which maxed out at the lower \"High\" tier, and Astra refused 91.5% of cyber jailbreak attempts in internal tests versus 59% for GPT-5.6 Sol. Access starts with a small alpha test group and will later expand through the Daybreak Blue defensive security program; a public launch date has not been set.",
+          "what_changed_zh": "9月1日，OpenAI 宣布其未发布的 Astra 模型达到其 Preparedness Framework 下的“严重”网络安全级别，这是首个获得该级别的模型。Astra 在 ExploitBench 上获得 100% 满分，并自主发现、串联利用了 Google V8 JavaScript 引擎中两个此前未知的零日漏洞。\n\n这是AI安全与能力领域的前沿实验室里程碑，表明模型能够自主对加固后的真实世界系统执行完整入侵链条。它很可能影响访问限制、防御性AI计划，以及业界围绕灾难性网络风险的讨论。\n\nOpenAI 表示 Astra 超过了此前最高为“高级”级别的 GPT-5.6 Sol；在内部测试中，Astra 拒绝了 91.5% 的网络越狱尝试，而 GPT-5.6 Sol 为 59%。早期访问从小型 alpha 测试组开始，后续将通过 Daybreak Blue 防御性安全计划扩大，目前尚未设定公开发布日期。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The FBI is investigating an alleged data breach at identity verification firm IDScan.net after dark-web service Nexus reportedly offered over 150 million U.S. and Canadian driver licenses for sale, including one belonging to U.S. Secretary of War Pete Hegseth. KrebsOnSecurity first reported the apparent leak, which is also described as involving 153 million records.\n\nIf confirmed, this would be one of the largest identity data breaches on record, exposing millions of drivers' sensitive personal information to potential identity theft and fraud. The alleged breach also puts major Fortune 500 companies and institutions that rely on IDScan.net at risk and raises broader concerns about the security of third-party identity verification services.\n\nSecurity researcher vx-underground published a list of IDScan.net clients that may be affected, including Shell, DraftKings, FedEx, Hertz, General Motors, Caesars Entertainment, and Motorola. Privacy researcher Zach Edwards said his ID was leaked after visiting Planet13, a Las Vegas cannabis dispensary, and that signs point to an ongoing real-time breach at IDScan.net; Nexus claims it has been continuously exfiltrating data for over a year but its service is currently unavailable.",
+      "current_state_zh": "美国联邦调查局(FBI)正在调查身份核验公司IDScan.net疑似发生的数据泄露事件。据称，暗网服务Nexus出售了超过1.5亿份美国和加拿大驾照信息，其中包括美国战争部长皮特·赫格塞斯的驾照。KrebsOnSecurity率先报道了这一疑似泄露事件，相关数据量也被描述为1.53亿条记录。\n\n如果泄露属实，这将成为有记录以来规模最大的身份数据泄露事件之一，数百万驾车人的敏感个人信息面临身份盗窃和欺诈风险。此外，大量依赖IDScan.net的财富500强企业和机构也可能受到波及，并引发外界对第三方身份核验服务安全性的广泛担忧。\n\n安全研究员vx-underground公布了一份可能受影响的IDScan.net客户名单，包括壳牌、DraftKings、联邦快递、赫兹、通用汽车、凯撒娱乐和摩托罗拉等。隐私研究员Zach Edwards表示，他在拉斯维加斯一家名为Planet13的大麻药房扫描证件后信息即遭泄露，种种迹象表明IDScan.net正遭受持续的实时入侵；Nexus声称其已持续窃取数据一年多，但该服务目前已无法访问。",
+      "entities": [
+        "driver-licenses",
+        "fbi",
+        "idscan"
+      ],
+      "event_id": "evt_e9ee7f079807703d",
+      "event_type": "other",
+      "first_seen_at": "2026-09-03T00:31:24.447850Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-03T00:31:24.447850Z",
+      "last_updated_at": "2026-09-03T00:31:24.447850Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "FBI investigates alleged IDScan.net breach exposing over 150M driver licenses",
+      "title_zh": "FBI调查IDScan.net涉嫌泄露超1.5亿份驾照信息",
+      "topics": [
+        "data-breach",
+        "driver-licenses",
+        "fbi",
+        "identity-theft",
+        "privacy"
+      ],
+      "updates": [
+        {
+          "confidence": 0.75,
+          "current_state_en": "The FBI is investigating an alleged data breach at identity verification firm IDScan.net after dark-web service Nexus reportedly offered over 150 million U.S. and Canadian driver licenses for sale, including one belonging to U.S. Secretary of War Pete Hegseth. KrebsOnSecurity first reported the apparent leak, which is also described as involving 153 million records.\n\nIf confirmed, this would be one of the largest identity data breaches on record, exposing millions of drivers' sensitive personal information to potential identity theft and fraud. The alleged breach also puts major Fortune 500 companies and institutions that rely on IDScan.net at risk and raises broader concerns about the security of third-party identity verification services.\n\nSecurity researcher vx-underground published a list of IDScan.net clients that may be affected, including Shell, DraftKings, FedEx, Hertz, General Motors, Caesars Entertainment, and Motorola. Privacy researcher Zach Edwards said his ID was leaked after visiting Planet13, a Las Vegas cannabis dispensary, and that signs point to an ongoing real-time breach at IDScan.net; Nexus claims it has been continuously exfiltrating data for over a year but its service is currently unavailable.",
+          "current_state_zh": "美国联邦调查局(FBI)正在调查身份核验公司IDScan.net疑似发生的数据泄露事件。据称，暗网服务Nexus出售了超过1.5亿份美国和加拿大驾照信息，其中包括美国战争部长皮特·赫格塞斯的驾照。KrebsOnSecurity率先报道了这一疑似泄露事件，相关数据量也被描述为1.53亿条记录。\n\n如果泄露属实，这将成为有记录以来规模最大的身份数据泄露事件之一，数百万驾车人的敏感个人信息面临身份盗窃和欺诈风险。此外，大量依赖IDScan.net的财富500强企业和机构也可能受到波及，并引发外界对第三方身份核验服务安全性的广泛担忧。\n\n安全研究员vx-underground公布了一份可能受影响的IDScan.net客户名单，包括壳牌、DraftKings、联邦快递、赫兹、通用汽车、凯撒娱乐和摩托罗拉等。隐私研究员Zach Edwards表示，他在拉斯维加斯一家名为Planet13的大麻药房扫描证件后信息即遭泄露，种种迹象表明IDScan.net正遭受持续的实时入侵；Nexus声称其已持续窃取数据一年多，但该服务目前已无法访问。",
+          "event_id": "evt_e9ee7f079807703d",
+          "first_seen_at": "2026-09-03T00:31:24.447850Z",
+          "material_change": true,
+          "occurred_at": "2026-09-02T22:15:00Z",
+          "published_at": "2026-09-02T22:15:00Z",
+          "sources": [
+            {
+              "label": "americanbazaaronline.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260902T221500Z::https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/"
+          ],
+          "time_precision": "published",
+          "title_en": "FBI investigates alleged IDScan.net breach exposing over 150M driver licenses",
+          "title_zh": "FBI调查IDScan.net涉嫌泄露超1.5亿份驾照信息",
+          "update_id": "upd_a1bcecd3b08d09b7",
+          "update_type": "initial",
+          "what_changed_en": "The FBI is investigating an alleged data breach at identity verification firm IDScan.net after dark-web service Nexus reportedly offered over 150 million U.S. and Canadian driver licenses for sale, including one belonging to U.S. Secretary of War Pete Hegseth. KrebsOnSecurity first reported the apparent leak, which is also described as involving 153 million records.\n\nIf confirmed, this would be one of the largest identity data breaches on record, exposing millions of drivers' sensitive personal information to potential identity theft and fraud. The alleged breach also puts major Fortune 500 companies and institutions that rely on IDScan.net at risk and raises broader concerns about the security of third-party identity verification services.\n\nSecurity researcher vx-underground published a list of IDScan.net clients that may be affected, including Shell, DraftKings, FedEx, Hertz, General Motors, Caesars Entertainment, and Motorola. Privacy researcher Zach Edwards said his ID was leaked after visiting Planet13, a Las Vegas cannabis dispensary, and that signs point to an ongoing real-time breach at IDScan.net; Nexus claims it has been continuously exfiltrating data for over a year but its service is currently unavailable.",
+          "what_changed_zh": "美国联邦调查局(FBI)正在调查身份核验公司IDScan.net疑似发生的数据泄露事件。据称，暗网服务Nexus出售了超过1.5亿份美国和加拿大驾照信息，其中包括美国战争部长皮特·赫格塞斯的驾照。KrebsOnSecurity率先报道了这一疑似泄露事件，相关数据量也被描述为1.53亿条记录。\n\n如果泄露属实，这将成为有记录以来规模最大的身份数据泄露事件之一，数百万驾车人的敏感个人信息面临身份盗窃和欺诈风险。此外，大量依赖IDScan.net的财富500强企业和机构也可能受到波及，并引发外界对第三方身份核验服务安全性的广泛担忧。\n\n安全研究员vx-underground公布了一份可能受影响的IDScan.net客户名单，包括壳牌、DraftKings、联邦快递、赫兹、通用汽车、凯撒娱乐和摩托罗拉等。隐私研究员Zach Edwards表示，他在拉斯维加斯一家名为Planet13的大麻药房扫描证件后信息即遭泄露，种种迹象表明IDScan.net正遭受持续的实时入侵；Nexus声称其已持续窃取数据一年多，但该服务目前已无法访问。"
         }
       ]
     }
