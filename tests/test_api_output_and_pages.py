@@ -50,6 +50,7 @@ def make_record(
     title_zh: str = "一条新闻",
     top_category: str = "crypto",
     thread_id: str | None = None,
+    event_id: str | None = None,
     url: str = "https://example.com/a",
 ) -> ArchiveRecord:
     return ArchiveRecord(
@@ -69,6 +70,7 @@ def make_record(
         sources_count=2,
         thread_id=thread_id,
         thread_day=2 if thread_id else None,
+        event_id=event_id,
     )
 
 
@@ -298,7 +300,30 @@ def test_entity_page_escapes_labels_and_keeps_titles_plain() -> None:
     assert "<" not in front_matter.split("title:")[1].split("\n")[0]
     # The body escapes rather than strips.
     assert "Bybit &lt;script&gt; halts" in body
-    assert "<strong>3</strong><span>entries</span>" in body
+    assert 'page_class: entity-detail-page' in front_matter
+    assert "Entity overview" in body
+    assert "Recent developments" in body
+    assert "<dt>Coverage</dt><dd>3</dd>" in body
+    assert "BMTNews has tracked 3 related reports" in body
+
+
+def test_entity_page_links_reports_to_related_event_timelines() -> None:
+    entity = EntitySummary(
+        slug="bybit",
+        label="Bybit",
+        count=2,
+        records=[
+            make_record("2026-08-08", title_zh="事件出现", event_id="evt_bybit"),
+            make_record("2026-08-09", title_zh="事件进展", event_id="evt_bybit"),
+        ],
+    )
+    page = render_entity_page(entity, "zh")
+
+    assert 'class="event-detail-layout entity-detail-layout"' in page
+    assert "实体概览" in page
+    assert "近期进展" in page
+    assert "关联事件线" in page
+    assert page.count('href="/events/evt_bybit/"') == 3
 
 
 
@@ -341,6 +366,10 @@ def test_entity_index_carries_what_a_reader_needs_to_choose() -> None:
     assert row["days"] == 2
     assert row["title_zh"] == "最新一条"
     assert row["category"] == "crypto"
+    assert row["summary_zh"] == "摘要文本"
+    assert len(row["recent_items"]) == 2
+    assert row["recent_items"][0]["date"] == "2026-08-11"
+    assert row["events_count"] == 0
 
 
 def test_entity_index_puts_still_active_names_first() -> None:
