@@ -15,11 +15,11 @@
     "en": "Kraken is delisting 21 tokens on September 11, leaving European traders without a secondary venue for these assets."
   },
   "first_seen_at": "2026-09-03T03:50:27.382351+00:00",
-  "last_updated_at": "2026-09-03T03:50:27.382351+00:00",
+  "last_updated_at": "2026-09-03T13:36:17.728444+00:00",
   "last_material_change_at": "2026-09-03T03:50:27.382351+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "cryptoticker",
     "delists",
@@ -68,12 +68,19 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "google_news:article:c7f7f0c3b29066a0"
+        "google_news:article:c7f7f0c3b29066a0",
+        "google_news:article:8323f8fecdeda11a"
       ],
       "sources": [
         {
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBCQng0ZEFMdnpRUHBDQlZRdEdNb0VLUzFuVGZyUGM0VkJ0RkFXa0JYQWZIUlNNRWFLa29KVHdqTDFjQTlPTE1fc180aVlWRHg3MmdtVGlOazFGOEZSa2dtYjh3VGV3TGNBVlBtMnBIMXFvRV91d2c?oc=5",
           "label": "CryptoTicker",
+          "source_type": "google_news",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA4eHZTY0hZSWI3Yzl3Zjc2TlRGQ3Zya0xpU05KMVB0cFZpREtlODlpV0VsUXI4cEN0VVpIM0NLcUdnU1ZOWDNHeV9TWjZEaGdjcUQ2SWdSSQ?oc=5",
+          "label": "Cryptonews.net",
           "source_type": "google_news",
           "official": false
         }
