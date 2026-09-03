@@ -4,9 +4,9 @@ title: BMTNews API and Agent Developer Resources
 description: Public BMTNews REST API, OpenAPI specification, feeds, agent instructions, caching, errors, and attribution guidance.
 permalink: /developers/
 interface_language: en
+eyebrow: BMTNEWS API
+hide_language_toggle: true
 ---
-
-# BMTNews API and Agent Developer Resources
 
 BMTNews exposes a public, read-only REST surface for agents, research tools,
 notebooks, and feed readers. No API key or account is required. The files are

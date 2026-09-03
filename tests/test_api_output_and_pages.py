@@ -649,7 +649,9 @@ def test_event_index_styles_match_the_daily_feed_without_docs_heading_leaks() ->
     )[0]
 
     assert (
-        ".docs-page:not(.event-index-page):not(.event-detail-page) "
+        ".docs-page:not(.event-index-page):not(.event-detail-page)"
+        ":not(.entity-index-page):not(.entity-detail-page)"
+        ":not(.weekly-index-page):not(.weekly-detail-page) "
         ".main-content h2"
     ) in stylesheet
     assert "grid-template-columns: minmax(0, 1fr) 264px;" in event_layout

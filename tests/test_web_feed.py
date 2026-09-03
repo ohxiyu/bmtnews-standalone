@@ -341,3 +341,40 @@ def test_home_templates_keep_two_editions_and_split_languages() -> None:
     assert "permalink: /en/" in en_home
     assert "zh_language_url" in layout
     assert "en_language_url" in layout
+
+
+def test_shared_chrome_keeps_reader_modules_visually_consistent() -> None:
+    root = Path(__file__).parents[1]
+    layout = (root / "docs" / "_layouts" / "default.html").read_text(
+        encoding="utf-8"
+    )
+    css = (root / "docs" / "assets" / "css" / "bmtnews-ui.css").read_text(
+        encoding="utf-8"
+    )
+
+    assert 'current_section = "events"' in layout
+    assert 'current_section = "entities"' in layout
+    assert 'current_section = "weekly"' in layout
+    assert 'aria-current="page"' in layout
+    assert "BMTNEWS EVENTS" in layout
+    assert "BMTNEWS ENTITIES" in layout
+    assert 'page.hide_language_toggle' in layout
+
+    # The generic prose-document heading rule must not add document-sized
+    # margins and borders to headings inside dense reader feeds.
+    assert ":not(.entity-index-page)" in css
+    assert ":not(.entity-detail-page)" in css
+    assert ":not(.weekly-index-page)" in css
+    assert ":not(.weekly-detail-page)" in css
+    assert "grid-template-columns: minmax(0, 1fr) 264px" in css
+
+    for relative_path in (
+        "about/index.md",
+        "contact/index.md",
+        "developers/index.md",
+        "legal/index.md",
+        "404.html",
+    ):
+        page = (root / "docs" / relative_path).read_text(encoding="utf-8")
+        body = page.split("---", 2)[-1]
+        assert not any(line.startswith("# ") for line in body.splitlines())

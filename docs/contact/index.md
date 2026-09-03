@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Contact BMTNews
+title: 联系 BMTNews
 description: Public and private channels for BMTNews corrections, rights requests, source suggestions, security reports, and technical issues.
 permalink: /contact/
+eyebrow: BMTNEWS CONTACT
+hide_language_toggle: true
 ---
-
-# 联系 BMTNews / Contact BMTNews
 
 BMTNews 通过公开仓库提供可核查的联系路径，不要求读者创建额外的站内账号。普通错误、
 页面问题、API 兼容性问题、功能建议和公开信息源建议，可以在

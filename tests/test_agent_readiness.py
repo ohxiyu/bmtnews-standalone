@@ -97,10 +97,16 @@ def test_llms_txt_follows_the_required_discovery_shape() -> None:
 
 def test_home_template_and_metadata_are_present_without_javascript() -> None:
     feed_home = (DOCS / "_includes" / "feed-home.html").read_text(encoding="utf-8")
+    edition_header = (DOCS / "_includes" / "edition-header.html").read_text(
+        encoding="utf-8"
+    )
     layout = (DOCS / "_layouts" / "default.html").read_text(encoding="utf-8")
     head = (DOCS / "_includes" / "head-custom.html").read_text(encoding="utf-8")
 
-    assert '<h1 class="visually-hidden">' in feed_home
+    assert '<h1 class="visually-hidden">' not in feed_home
+    assert "{% include edition-header.html" in feed_home
+    assert "<h1>" in edition_header
+    assert "每日情报" in edition_header
     assert '<html lang="' in layout
     assert '<link rel="canonical"' in layout
     assert '<meta property="og:type"' in layout
