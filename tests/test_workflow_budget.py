@@ -65,6 +65,9 @@ def test_event_migration_has_explicit_gate_and_incremental_continuation() -> Non
 
     collection = _workflow("feed-collection.yml")
     assert "Restore published event state" in collection
+    assert "_data/archive" in collection
+    assert "python -m src.event_brief_backfill" in collection
     assert "Deploy incremental event pages" in collection
     assert "_data/events.json" in daily
+    assert "python -m src.event_brief_backfill" in daily
     assert "Apply approved event archive migration" not in daily

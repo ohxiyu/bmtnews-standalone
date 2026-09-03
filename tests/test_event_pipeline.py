@@ -8,7 +8,11 @@ from pathlib import Path
 
 import pytest
 
+from src.archive import ArchiveRecord
+from src.daily_feed import DailyFeedState, save_daily_feed_state
+from src.event_brief_backfill import backfill_catalog
 from src.event_pipeline import (
+    backfill_event_briefs,
     load_event_catalog,
     save_event_catalog,
     update_events,
@@ -52,7 +56,24 @@ def item(
         url=url or f"https://example.com/{name}",
         published_at=NOW,
         fetched_at=NOW + timedelta(minutes=5),
-        metadata={"feed_name": f"Source {name}", "category": "crypto-security"},
+        metadata={
+            "feed_name": f"Source {name}",
+            "category": "crypto-security",
+            "detailed_summary_zh": f"{title} 的详细中文摘要。",
+            "detailed_summary_en": f"Detailed summary for {title}.",
+            "background_zh": f"{title} 的背景。",
+            "background_en": f"Background for {title}.",
+            "community_discussion_zh": f"{title} 的讨论。",
+            "community_discussion_en": f"Discussion of {title}.",
+            "market_impact_zh": f"{title} 的市场影响。",
+            "market_impact_en": f"Market impact of {title}.",
+            "sources": [
+                {
+                    "url": f"https://reference.example.com/{name}",
+                    "title": f"Reference {name}",
+                }
+            ],
+        },
         ai_score=8.5,
         ai_summary=f"{title} changed materially.",
         ai_tags=["Tectonic", "security", "exploit"],
@@ -145,6 +166,10 @@ def test_no_candidate_creates_event_without_relation_call() -> None:
     assert result.candidates_classified == 0
     assert story.metadata["event_id"] == events[0].event_id
     assert story.metadata["event_update_id"] == events[0].updates[0].update_id
+    update = events[0].updates[0]
+    assert update.background_zh == f"{story.title} 的背景。"
+    assert update.importance_score == 8.5
+    assert update.references[0].url == "https://reference.example.com/new"
 
 
 def test_material_update_is_added_once_and_reused_on_retry() -> None:
@@ -175,6 +200,95 @@ def test_material_update_is_added_once_and_reused_on_retry() -> None:
     assert retry_result.already_known == 1
     assert retry_result.candidates_classified == 0
     assert len(retried[0].updates) == 2
+
+
+def test_known_story_is_enriched_without_relation_call() -> None:
+    story = item("initial", title="Tectonic first reported a security incident")
+
+    async def never_again(client, event, evidence):  # type: ignore[no-untyped-def]
+        raise AssertionError("a catalogued story must never be reclassified")
+
+    events, result = asyncio.run(
+        update_events(
+            [story], [existing_event()], client=None, classifier=never_again
+        )
+    )
+
+    assert result.already_known == 1
+    assert result.briefs_enriched == 1
+    assert events[0].updates[0].background_zh.endswith("的背景。")
+    assert events[0].updates[0].importance_score == 8.5
+
+
+def test_brief_backfill_is_idempotent_and_uses_archive_fallback() -> None:
+    event = existing_event()
+    archived = ArchiveRecord(
+        date="2026-09-02",
+        rank=1,
+        item_id="rss:initial",
+        url="https://example.com/initial",
+        summary_zh="历史归档中的详细事件摘要。",
+        summary_en="Detailed event summary from the public archive.",
+        score=9.0,
+    )
+    hydrated, changed = backfill_event_briefs(
+        [event], archive_records=[archived]
+    )
+    repeated, repeated_changed = backfill_event_briefs(
+        hydrated, archive_records=[archived]
+    )
+
+    assert changed == 1
+    assert repeated_changed == 0
+    assert repeated == hydrated
+    assert hydrated[0].updates[0].detailed_summary_zh.startswith("历史归档")
+    assert hydrated[0].updates[0].importance_score == 9.0
+
+
+def test_catalog_backfill_prefers_enriched_public_daily_state(
+    tmp_path: Path,
+) -> None:
+    catalog_path = tmp_path / "events.json"
+    staging_path = tmp_path / "staging.json"
+    daily_state_path = tmp_path / "daily.json"
+    archive_root = tmp_path / "archive"
+    save_event_catalog({"schema_version": 1}, [existing_event()], catalog_path)
+    staging_story = item(
+        "initial", title="Tectonic first reported a security incident"
+    ).model_copy(update={"metadata": {"category": "crypto-security"}})
+    save_staging_state([staging_story], staging_path, updated_at=NOW)
+    enriched_story = item(
+        "initial", title="Tectonic first reported a security incident"
+    )
+    save_daily_feed_state(
+        DailyFeedState(
+            date="2026-09-03",
+            timezone="Asia/Shanghai",
+            updated_at=NOW,
+            items=[enriched_story],
+        ),
+        daily_state_path,
+    )
+
+    changed = backfill_catalog(
+        catalog_path=catalog_path,
+        staging_path=staging_path,
+        daily_state_path=daily_state_path,
+        archive_root=archive_root,
+    )
+    repeated = backfill_catalog(
+        catalog_path=catalog_path,
+        staging_path=staging_path,
+        daily_state_path=daily_state_path,
+        archive_root=archive_root,
+    )
+    _, events = load_event_catalog(catalog_path)
+
+    assert changed == 1
+    assert repeated == 0
+    assert events[0].updates[0].background_zh.endswith("的背景。")
+    assert events[0].updates[0].community_discussion_zh.endswith("的讨论。")
+    assert events[0].updates[0].references[0].title == "Reference initial"
 
 
 def test_duplicate_coverage_adds_source_but_not_timeline_node() -> None:

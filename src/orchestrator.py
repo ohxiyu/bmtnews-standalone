@@ -2210,6 +2210,7 @@ class BMTNewsOrchestrator:
             "event_duplicate_sources": result.duplicate_sources,
             "event_new_events": result.new_events,
             "event_classifier_errors": result.classifier_errors,
+            "event_briefs_enriched": result.briefs_enriched,
         }.items():
             run_report.set_metric(
                 key, run_report.metrics.get(key, 0) + value
