@@ -13,6 +13,7 @@ from src.archive import (
 from src.models import ContentItem, SourceType
 from src.threads import (
     assign_threads,
+    clean_label,
     collect_entities,
     collect_threads,
     fingerprint,
@@ -147,6 +148,12 @@ def test_normalize_tag_slugifies() -> None:
     assert normalize_tag("#Lazarus Group") == "lazarus-group"
     assert normalize_tag("X Layer") == "x-layer"
     assert normalize_tag("  ") == ""
+
+
+def test_clean_label_preserves_known_brand_capitalization() -> None:
+    assert clean_label("openai") == "OpenAI"
+    assert clean_label("evm") == "EVM"
+    assert clean_label("okx") == "OKX"
 
 
 def test_same_thread_matches_continuing_coverage() -> None:

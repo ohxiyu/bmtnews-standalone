@@ -55,6 +55,14 @@ _CAPITALIZED = re.compile(r"[A-Z][A-Za-z0-9]{2,}")
 _SENTENCE_SPLIT = re.compile(r"[.!?;:\n。！？；]\s*")
 _EDGE_PUNCTUATION = "\"'“”‘’()[]{}<>,、·—–-"
 
+_ENTITY_DISPLAY_NAMES = {
+    "cftc": "CFTC",
+    "evm": "EVM",
+    "okx": "OKX",
+    "openai": "OpenAI",
+    "sec": "SEC",
+}
+
 # Capitalized words that name no one: sentence openers, months, and the
 # domain vocabulary that appears in most headlines here.
 _ANCHOR_STOPWORDS = {
@@ -98,6 +106,8 @@ def clean_label(tag: str) -> str:
     text = unicodedata.normalize("NFKC", str(tag or "")).strip().lstrip("#")
     text = re.sub(r"[<>\"'&`]", "", text)
     text = re.sub(r"\s+", " ", text).strip()[:60]
+    if text.lower() in _ENTITY_DISPLAY_NAMES:
+        return _ENTITY_DISPLAY_NAMES[text.lower()]
     # Tags arrive as lowercase slugs ("lazarus-group"), which reads as a
     # machine label rather than a name once it is a page heading.
     if text and text == text.lower() and re.fullmatch(r"[a-z0-9 -]+", text):

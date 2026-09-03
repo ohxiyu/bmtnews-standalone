@@ -58,7 +58,14 @@ _LABELS = {
         "back_entities": "全部实体",
         "back_threads": "全部事件线",
         "last_seen": "最近报道",
+        "first_seen": "首次收录",
         "peak_score": "最高评分",
+        "entity_overview": "实体概览",
+        "recent_developments": "近期进展",
+        "related_events": "关联事件线",
+        "related_events_short": "关联事件",
+        "source": "来源",
+        "open_event": "查看事件线",
         "weekly_title": "本周回顾",
     },
     "en": {
@@ -77,7 +84,14 @@ _LABELS = {
         "back_entities": "All entities",
         "back_threads": "All threads",
         "last_seen": "Last seen",
+        "first_seen": "First tracked",
         "peak_score": "Peak score",
+        "entity_overview": "Entity overview",
+        "recent_developments": "Recent developments",
+        "related_events": "Related events",
+        "related_events_short": "Related events",
+        "source": "Source",
+        "open_event": "Open event timeline",
         "weekly_title": "Weekly Review",
     },
 }
@@ -846,28 +860,178 @@ def _stat(value: str, label: str) -> str:
 def render_entity_page(entity: EntitySummary, language: str) -> str:
     labels = _LABELS[language]
     prefix = "" if language == "zh" else "/en"
-    dates = sorted({record.date for record in entity.records})
+    ordered = sorted(
+        entity.records,
+        key=lambda record: (record.date, -record.rank, record.item_id),
+        reverse=True,
+    )
+    dates = sorted({record.date for record in ordered})
     top_score = max(
-        (record.score for record in entity.records if record.score is not None),
+        (record.score for record in ordered if record.score is not None),
         default=None,
     )
-    stats = _stat(str(entity.count), labels["entries"]) + _stat(
-        str(len(dates)), labels["days"]
+    latest = ordered[0] if ordered else None
+    description = latest.summary_for(language) if latest else ""
+    category = _dominant_category(ordered)
+
+    related: dict[str, ArchiveRecord] = {}
+    for record in ordered:
+        if record.event_id and record.event_id not in related:
+            related[record.event_id] = record
+
+    rows = []
+    for index, record in enumerate(ordered[:60], start=1):
+        title = escape_text(record.title_for(language) or record.url)
+        url = safe_url(record.url)
+        title_html = (
+            f'<a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a>'
+            if url
+            else title
+        )
+        summary = escape_text(record.summary_for(language))
+        source = escape_text(record.source_label or record.source_type)
+        category_label = escape_text(record.top_category or record.category)
+        score = (
+            f'<span class="score-badge" data-tier="'
+            f'{"high" if (record.score or 0) >= 9 else "good" if (record.score or 0) >= 7 else "mid"}'
+            f'">{record.score:.1f}</span>'
+            if record.score is not None
+            else ""
+        )
+        event_link = (
+            '<a class="event-detail-link" '
+            f'href="{prefix}/events/{escape_text(record.event_id)}/">'
+            f'{escape_text(labels["open_event"])} →</a>'
+            if record.event_id
+            else ""
+        )
+        short_date = (
+            record.date[5:].replace("-", ".")
+            if len(record.date) >= 10
+            else record.date
+        )
+        rows.append(
+            '<li class="digest-item entity-feed-item">'
+            '<div class="digest-item-rail">'
+            f'<strong>#{index:02d}</strong><time datetime="{escape_text(record.date)}">'
+            f'{escape_text(short_date)}</time></div>'
+            '<div class="digest-item-content">'
+            '<div class="digest-item-meta"><div>'
+            + (
+                f'<span class="category-pill" data-category="{category_label}">'
+                f'{category_label}</span>'
+                if category_label
+                else ""
+            )
+            + (
+                f'<span class="entity-report-source">{source}</span>'
+                if source
+                else ""
+            )
+            + f'</div>{score}</div><h2>{title_html}</h2>'
+            + (f'<p class="entity-report-summary">{summary}</p>' if summary else "")
+            + '<p class="source-line entity-report-meta">'
+            + (
+                f'{record.sources_count} {escape_text(labels["source"])}'
+                if language == "en"
+                else f'{record.sources_count} 个来源'
+            )
+            + event_link
+            + '</p></div></li>'
+        )
+
+    related_rows = []
+    for index, (event_id, record) in enumerate(list(related.items())[:10], start=1):
+        related_rows.append(
+            '<li><span>'
+            f'{index:02d}&nbsp;&nbsp;{escape_text(record.date[5:].replace("-", "."))}'
+            '</span>'
+            f'<a href="{prefix}/events/{escape_text(event_id)}/">'
+            f'{escape_text(record.title_for(language) or event_id)}</a></li>'
+        )
+
+    overview_text = ""
+    if latest and dates:
+        latest_title = latest.title_for(language) or entity.label
+        if language == "zh":
+            overview_text = (
+                f"自 {dates[0]} 起共收录 {entity.count} 条相关报道，"
+                f"最新关注“{latest_title}”。"
+                f"其中 {len(related)} 条持续事件线可用于追踪后续变化。"
+            )
+        else:
+            overview_text = (
+                f"BMTNews has tracked {entity.count} related reports since {dates[0]}. "
+                f'The latest focus is “{latest_title}”. '
+                f"{len(related)} continuing event timelines connect the coverage over time."
+            )
+    overview = (
+        f'<section class="event-current-state entity-current-state">'
+        f'<h2>{escape_text(labels["entity_overview"])}</h2>'
+        f'<p>{escape_text(overview_text)}</p></section>'
+        if overview_text
+        else ""
+    )
+    status_line = '<div class="event-status-line">'
+    if category:
+        status_line += (
+            f'<span class="category-pill" data-category="{escape_text(category)}">'
+            f'{escape_text(category)}</span>'
+        )
+    if dates:
+        status_line += (
+            f'<span>{escape_text(labels["first_seen"])} {escape_text(dates[0])}</span>'
+            f'<span>{escape_text(labels["last_seen"])} {escape_text(dates[-1])}</span>'
+        )
+    status_line += '</div>'
+
+    facts = (
+        f'<div><dt>{escape_text(labels["mentions"])}</dt>'
+        f'<dd>{entity.count}</dd></div>'
+        f'<div><dt>{escape_text(labels["days"])}</dt><dd>{len(dates)}</dd></div>'
+        f'<div><dt>{escape_text(labels["related_events_short"])}</dt>'
+        f'<dd>{len(related)}</dd></div>'
     )
     if dates:
-        stats += _stat(dates[-1], labels["last_seen"])
+        facts += (
+            f'<div><dt>{escape_text(labels["first_seen"])}</dt>'
+            f'<dd>{escape_text(dates[0])}</dd></div>'
+            f'<div><dt>{escape_text(labels["last_seen"])}</dt>'
+            f'<dd>{escape_text(dates[-1])}</dd></div>'
+        )
     if top_score is not None:
-        stats += _stat(f"{top_score:.1f}", labels["peak_score"])
+        facts += (
+            f'<div><dt>{escape_text(labels["peak_score"])}</dt>'
+            f'<dd>{top_score:.1f}</dd></div>'
+        )
+
+    related_panel = ""
+    if related_rows:
+        related_panel = (
+            '<details class="headline-index event-node-panel entity-event-panel" open>'
+            f'<summary><span>{escape_text(labels["related_events"])}</span>'
+            f'<small>{len(related)}</small></summary>'
+            f'<ol class="headline-list entity-event-list">{"".join(related_rows)}</ol>'
+            '</details>'
+        )
     body = (
-        f'<div class="archive-stats">{stats}</div>'
-        f"<h2>{escape_text(labels['mentions'])}</h2>"
-        f"{_records_list(entity.records[:60], language)}"
+        '<div class="event-detail-layout entity-detail-layout">'
+        '<article class="event-detail-stream entity-detail-stream">'
+        f'<div class="event-detail-orientation">{status_line}{overview}</div>'
+        '<div class="event-timeline-heading">'
+        f'<h2>{escape_text(labels["recent_developments"])}</h2>'
+        f'<span>{len(ordered)} {escape_text(labels["entries"])}</span></div>'
+        f'<ol class="event-feed entity-report-feed">{"".join(rows)}</ol>'
         f'<p class="archive-back"><a href="{prefix}/entity/">'
-        f'{labels["back_entities"]}</a> · '
-        f'<a href="{prefix}/">{labels["back"]}</a></p>'
-    )
-    description = (
-        entity.records[0].summary_for(language) if entity.records else ""
+        f'{escape_text(labels["back_entities"])}</a> · '
+        f'<a href="{prefix}/">{escape_text(labels["back"])}</a></p>'
+        '</article>'
+        '<aside class="headline-rail event-detail-rail entity-detail-rail">'
+        '<details class="headline-index event-facts-panel" open>'
+        f'<summary><span>{escape_text(labels["entity_overview"])}</span>'
+        f'<small>{len(ordered)}</small></summary>'
+        f'<dl class="event-facts">{facts}</dl></details>'
+        f'{related_panel}</aside></div>'
     )
     return (
         _front_matter(
@@ -875,6 +1039,12 @@ def render_entity_page(entity: EntitySummary, language: str) -> str:
             permalink=f"{prefix}/entity/{entity.slug}/",
             language=language,
             description=description,
+            alternate_url=(
+                f"/en/entity/{entity.slug}/"
+                if language == "zh"
+                else f"/entity/{entity.slug}/"
+            ),
+            page_class="entity-detail-page",
         )
         + body
         + "\n"
@@ -939,8 +1109,24 @@ def build_entity_index_data(
 
     rows = []
     for entity in entities:
-        records = sorted(entity.records, key=lambda record: record.date)
+        records = sorted(
+            entity.records,
+            key=lambda record: (record.date, -record.rank, record.item_id),
+        )
         latest = records[-1]
+        recent_items = []
+        for record in reversed(records[-3:]):
+            recent_items.append(
+                {
+                    "date": record.date,
+                    "title_zh": record.title_zh,
+                    "title_en": record.title_en,
+                    "summary_zh": record.summary_zh,
+                    "summary_en": record.summary_en,
+                    "url": safe_url(record.url) or "",
+                    "event_id": record.event_id,
+                }
+            )
         rows.append(
             {
                 "slug": entity.slug,
@@ -959,12 +1145,18 @@ def build_entity_index_data(
                 ),
                 "title_zh": latest.title_zh,
                 "title_en": latest.title_en,
+                "summary_zh": latest.summary_zh.split("\n\n", 1)[0],
+                "summary_en": latest.summary_en.split("\n\n", 1)[0],
+                "events_count": len(
+                    {record.event_id for record in records if record.event_id}
+                ),
+                "recent_items": recent_items,
             }
         )
     # Still-developing subjects first; a name last seen two weeks ago is a
     # lookup, not something to put at the top of the page.
     rows.sort(key=lambda row: (-row["recent"], -row["mentions"], row["slug"]))
-    return {"entities": rows}
+    return {"entities": rows, "ranking": rows}
 
 
 def write_index_data(

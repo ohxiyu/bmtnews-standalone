@@ -1366,7 +1366,9 @@ time,
 
 /* Event pages reuse the feed's grid, rank rail, typography, and hairlines. */
 .docs-page.event-index-page .main-content,
-.docs-page.event-detail-page .main-content {
+.docs-page.event-detail-page .main-content,
+.docs-page.entity-index-page .main-content,
+.docs-page.entity-detail-page .main-content {
   max-width: var(--content);
   padding-top: 18px;
 }
@@ -1592,6 +1594,114 @@ time,
 .event-update-precision {
   color: var(--text-muted);
   font-size: var(--fs-xs);
+}
+
+/* Entity pages use the same editorial feed grammar as event timelines. */
+.entity-activity {
+  color: var(--accent);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.entity-feed-overview {
+  margin: 7px 0 8px;
+}
+
+.entity-feed-overview h3 {
+  margin: 0 0 2px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.entity-feed-overview p,
+.entity-report-summary {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: var(--fs-s);
+  line-height: 1.65;
+}
+
+.entity-update-list {
+  margin: 8px 0 0;
+  padding: 7px 0 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.entity-update-list li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 8px;
+  padding: 2px 0;
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+}
+
+.entity-update-list time {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.entity-update-list a {
+  overflow: hidden;
+  color: var(--text-soft);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entity-update-list a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.entity-feed-meta {
+  margin-top: 8px;
+}
+
+.entity-feed-item.is-active > .digest-item-rail strong,
+.entity-ranking-list li:first-child > span {
+  color: var(--accent);
+}
+
+.entity-report-source {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.entity-report-feed .entity-feed-item:first-child {
+  border-top: 0;
+}
+
+.entity-report-summary {
+  margin-top: 5px;
+}
+
+.entity-report-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 7px 0 0;
+}
+
+.entity-event-list li > span {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.entity-event-list a {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .event-status {
