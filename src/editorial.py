@@ -28,7 +28,7 @@ from datetime import date as date_type, datetime, time, timezone
 from pathlib import Path
 from typing import List, Optional
 
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 from .models import ContentItem, SourceType
 
@@ -46,6 +46,17 @@ class EditorialEntry(BaseModel):
     title_en: Optional[str] = None
     summary_zh: Optional[str] = None
     summary_en: Optional[str] = None
+    background_zh: Optional[str] = None
+    background_en: Optional[str] = None
+    market_impact_zh: Optional[str] = None
+    market_impact_en: Optional[str] = None
+    community_discussion_zh: Optional[str] = None
+    community_discussion_en: Optional[str] = None
+    category: str = "crypto-markets"
+    tags: List[str] = Field(default_factory=list)
+    sources: List[dict[str, str]] = Field(default_factory=list)
+    official: bool = False
+    note: Optional[str] = None
     label: Optional[str] = None
     date: Optional[date_type] = None
     starts: Optional[date_type] = None
@@ -147,7 +158,8 @@ def editorial_content_item(
     metadata = {
         "editorial": True,
         "source_name": entry.label or "Editorial",
-        "category": "crypto-markets",
+        "category": entry.category or "crypto-markets",
+        "official": entry.official,
     }
     for language in ("zh", "en"):
         title = entry.best_title(language)
@@ -156,6 +168,27 @@ def editorial_content_item(
             metadata[f"title_{language}"] = title
         if summary:
             metadata[f"detailed_summary_{language}"] = summary
+        for field_name in (
+            "background",
+            "market_impact",
+            "community_discussion",
+        ):
+            value = str(getattr(entry, f"{field_name}_{language}") or "").strip()
+            if value:
+                metadata[f"{field_name}_{language}"] = value
+    references = []
+    for source in entry.sources:
+        url = str(source.get("url") or "").strip()
+        if not url.startswith(("https://", "http://")):
+            continue
+        references.append(
+            {
+                "title": str(source.get("title") or url).strip(),
+                "url": url,
+            }
+        )
+    if references:
+        metadata["sources"] = references
     return ContentItem(
         id=f"editorial:pick:{digest}",
         source_type=SourceType.EDITORIAL,
@@ -166,4 +199,5 @@ def editorial_content_item(
         published_at=published_at,
         metadata=metadata,
         ai_summary=entry.best_summary("zh") or entry.best_summary("en") or None,
+        ai_tags=[tag.strip() for tag in entry.tags if tag.strip()],
     )

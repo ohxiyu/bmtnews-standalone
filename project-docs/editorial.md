@@ -7,8 +7,10 @@
 ## 使用方式一：网页后台（推荐）
 
 访问 **https://bmt.news/admin/**（Sveltia CMS，一个静态页面，无服务器）。
-所有字段都是表单：类型下拉选择、日期用日历选择器、URL 有格式校验，
-写不出坏 JSON。点「保存」即自动 commit 到 `main` 并触发重刊。
+后台分为三种明确操作：发布编辑精选、安排广告、隐藏已有报道。选择操作后只显示
+对应字段；日期使用日历选择器，URL 有格式校验。编辑精选还可以填写分类、背景、
+市场影响、讨论焦点、标签和补充参考资料，使手动内容保持与自动内容相同的信息结构。
+点「保存」即自动 commit 到 `main` 并触发重刊。
 
 首次登录需要一个 GitHub Personal Access Token：
 
@@ -71,6 +73,13 @@ daily-dispatcher Worker 已内置 OAuth 中转路由（`/oauth/auth`、
   "title_en": "English title",
   "summary_zh": "一两句中文摘要。",
   "summary_en": "Optional English summary.",
+  "category": "crypto-markets",
+  "background_zh": "理解本条消息所需的背景。",
+  "market_impact_zh": "影响对象与传导路径。",
+  "tags": ["example", "announcement"],
+  "sources": [
+    {"title": "补充资料", "url": "https://example.com/reference"}
+  ],
   "date": "2026-08-09"
 }
 ```
@@ -78,7 +87,9 @@ daily-dispatcher Worker 已内置 OAuth 中转路由（`/oauth/auth`、
 - 插入当天日报并**置顶**，页面上带「编辑精选」标签，不参与 AI 评分（评分位显示 —）
 - 会随日报一起进入 Telegram / 邮件 / webhook 推送
 - `date` 指定生效的刊期（东八区刊期日）；省略则每期都会插入，一般都应填
-- 至少要有 `url` 和一个标题；缺某语言时自动回退另一语言
+- 至少要有 `url` 和一个标题；后台现在要求中文标题和中文摘要，英文留空时自动回退中文
+- `background_*`、`market_impact_*`、`community_discussion_*`、`tags` 和 `sources`
+  会进入日报详情区及后续事件线证据，均为可选字段
 
 ### `sponsored` — 广告位
 
