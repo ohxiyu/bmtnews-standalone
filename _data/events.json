@@ -13964,7 +13964,7 @@
       "first_seen_at": "2026-09-03T09:05:03.298055Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-03T09:05:03.298055Z",
-      "last_updated_at": "2026-09-03T09:05:03.298055Z",
+      "last_updated_at": "2026-09-04T22:27:17.577576Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -14002,10 +14002,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://decrypt.co/377238/michigan-judge-bars-kalshi-sports-bets-threatens-500k-daily-fine"
+            },
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/kalshi-faces-500000-daily-fines-as-michigan-forces-sports-event-contracts-offline/"
             }
           ],
           "story_ids": [
-            "rss:decrypt.co_feed:c39cab95b06551c0"
+            "rss:decrypt.co_feed:c39cab95b06551c0",
+            "rss:cryptoslate.com_feed_:0e2b35daad4ce829"
           ],
           "time_precision": "published",
           "title_en": "Michigan Judge Bars Kalshi Sports Bets, Threatens $500K Daily Fine",
@@ -17721,36 +17728,50 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Coinbase has filed SEC notices to offer single-stock perpetuals to U.S. customers, marking a potential expansion of regulated crypto derivatives.",
-      "current_state_zh": "Coinbase has filed SEC notices to offer single-stock perpetuals to U.S. customers, marking a potential expansion of regulated crypto derivatives.",
+      "current_state_en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, but faces a CME lawsuit that clouds the launch.",
+      "current_state_zh": "Coinbase 已根据证券期货规则提交国内股票永续合约申请，但面临 CME 诉讼，使推出前景不确定。",
       "entities": [
         "bring",
+        "clouds",
+        "cme",
         "coin",
         "coinbase",
+        "domestic",
         "edition",
         "files",
+        "futures",
+        "launch",
         "notices",
         "perpetuals",
+        "perps",
         "sec",
+        "security-futures",
         "single",
         "single-stock-perpetuals",
-        "stock"
+        "stock",
+        "suit",
+        "tech",
+        "times",
+        "under"
       ],
       "event_id": "evt_c50722fab4c3608f",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-04T08:58:13.576688Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-04T08:58:13.576688Z",
-      "last_updated_at": "2026-09-04T08:58:13.576688Z",
+      "last_material_change_at": "2026-09-04T22:27:12.676368Z",
+      "last_updated_at": "2026-09-04T22:27:12.676368Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition",
       "title_zh": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition",
       "topics": [
+        "cme",
         "coinbase",
         "crypto-regulation",
+        "perpetual-futures",
         "sec",
+        "security-futures",
         "single-stock-perpetuals",
         "us-markets"
       ],
@@ -17792,6 +17813,44 @@
           "update_type": "initial",
           "what_changed_en": "Coinbase has filed SEC notices to offer single-stock perpetuals to U.S. customers, marking a potential expansion of regulated crypto derivatives.",
           "what_changed_zh": "Coinbase has filed SEC notices to offer single-stock perpetuals to U.S. customers, marking a potential expansion of regulated crypto derivatives."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, but faces a CME lawsuit that clouds the launch.",
+          "current_state_zh": "Coinbase 已根据证券期货规则提交国内股票永续合约申请，但面临 CME 诉讼，使推出前景不确定。",
+          "detailed_summary_en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, while a CME lawsuit casts uncertainty over the launch.",
+          "detailed_summary_zh": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, while a CME lawsuit casts uncertainty over the launch.",
+          "event_id": "evt_c50722fab4c3608f",
+          "first_seen_at": "2026-09-04T22:27:12.676368Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T18:59:27Z",
+          "published_at": "2026-09-04T18:59:27Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Tech Times",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORjlYZ2hfU0VwLUFYWlpEVVA4RkNiam1ZRHR2eUZkX2RidE5wWi1CZEpJMzdMZ0tmYnVuQUMyMFFfRGxFcWdYWVNjMjNiRlJzaHk0WTU0NzlqRnNBUmRKN2duTFNlYVREY2MyLVlraXpVNzkyQl9DYjVadnF1UU9lVG9Ra1ktd3BIdVRkNDNsMUIza0YwTkN1OWIya2JidF9hQm4wcUxjTTJKZmlWaXE3SFp3blh0cGhURTVQZFRQNmJJNkRYZ3lmRGJ2UkxISElJeGc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:133eea585fbf1296"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Files for Domestic Stock Perps Under Security Futures: CME Suit Clouds Launch - Tech Times",
+          "title_zh": "Coinbase Files for Domestic Stock Perps Under Security Futures: CME Suit Clouds Launch - Tech Times",
+          "update_id": "upd_69d9cf2636cde77a",
+          "update_type": "escalation",
+          "what_changed_en": "CME has filed a lawsuit casting uncertainty over Coinbase's plan to launch single-stock perpetuals in the U.S.",
+          "what_changed_zh": "CME 提起诉讼，对 Coinbase 在美国推出单一股票永续合约的计划构成不确定性。"
         }
       ]
     },
@@ -18941,7 +19000,7 @@
       "first_seen_at": "2026-09-04T16:32:18.267418Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-04T16:32:18.267418Z",
-      "last_updated_at": "2026-09-04T16:32:18.267418Z",
+      "last_updated_at": "2026-09-04T22:27:23.515189Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -18979,10 +19038,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cointelegraph.com/news/revolut-openreserve-occ-approval-national-bank-crypto-plan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377458/openreserve-occ-approval-full-service-national-bank"
             }
           ],
           "story_ids": [
-            "rss:cointelegraph.com_rss:cf3a9b841d018d97"
+            "rss:cointelegraph.com_rss:cf3a9b841d018d97",
+            "rss:decrypt.co_feed:b14e551a00866da5"
           ],
           "time_precision": "published",
           "title_en": "Revolut, OpenReserve get preliminary US bank approval with crypto plans",
@@ -19126,6 +19192,519 @@
           "update_type": "initial",
           "what_changed_en": "South Korea's Financial Services Commission has introduced a three-phase roadmap for tokenized securities, with legal recognition scheduled to begin in February 2027.",
           "what_changed_zh": "South Korea's Financial Services Commission has introduced a three-phase roadmap for tokenized securities, with legal recognition scheduled to begin in February 2027."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+      "current_state_zh": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+      "entities": [
+        "fermat",
+        "formalizing",
+        "last",
+        "theorem"
+      ],
+      "event_id": "evt_482a7ee0a8287cf6",
+      "event_type": "other",
+      "first_seen_at": "2026-09-04T22:27:12.693733Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:12.693733Z",
+      "last_updated_at": "2026-09-04T22:27:12.693733Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Formalizing Fermat's Last Theorem",
+      "title_zh": "Formalizing Fermat's Last Theorem",
+      "topics": [
+        "anthropic",
+        "artificial-intelligence",
+        "formal-verification",
+        "lean",
+        "mathematics"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+          "current_state_zh": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+          "detailed_summary_en": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+          "detailed_summary_zh": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+          "event_id": "evt_482a7ee0a8287cf6",
+          "first_seen_at": "2026-09-04T22:27:12.693733Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T18:42:56Z",
+          "published_at": "2026-09-04T18:42:56Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49568506"
+            }
+          ],
+          "sources": [
+            {
+              "label": "jlebar",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49568506"
+          ],
+          "time_precision": "published",
+          "title_en": "Formalizing Fermat's Last Theorem",
+          "title_zh": "Formalizing Fermat's Last Theorem",
+          "update_id": "upd_e9e956b2bc4fe520",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
+          "what_changed_zh": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+      "current_state_zh": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+      "entities": [
+        "bike",
+        "bike-computer",
+        "computer",
+        "e-ink",
+        "open",
+        "open-source",
+        "show",
+        "source"
+      ],
+      "event_id": "evt_932604b875a7dbf3",
+      "event_type": "other",
+      "first_seen_at": "2026-09-04T22:27:12.693848Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:12.693848Z",
+      "last_updated_at": "2026-09-04T22:27:12.693848Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Show HN: Open-Source eInk Bike Computer",
+      "title_zh": "Show HN: Open-Source eInk Bike Computer",
+      "topics": [
+        "bike-computer",
+        "e-ink",
+        "esp32",
+        "hardware",
+        "open-source"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+          "current_state_zh": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+          "detailed_summary_en": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+          "detailed_summary_zh": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+          "event_id": "evt_932604b875a7dbf3",
+          "first_seen_at": "2026-09-04T22:27:12.693848Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T17:18:08Z",
+          "published_at": "2026-09-04T17:18:08Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49567437"
+            }
+          ],
+          "sources": [
+            {
+              "label": "stingrae",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://opentrailpaper.com/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49567437"
+          ],
+          "time_precision": "published",
+          "title_en": "Show HN: Open-Source eInk Bike Computer",
+          "title_zh": "Show HN: Open-Source eInk Bike Computer",
+          "update_id": "upd_95aeb6e8254d3b09",
+          "update_type": "initial",
+          "what_changed_en": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32.",
+          "what_changed_zh": "Show HN presents OpenTrailPaper, an open-source e-ink bike computer whose development included AI-assisted creation of an ANT protocol implementation for ESP32."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+      "current_state_zh": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+      "entities": [
+        "hidden",
+        "solana"
+      ],
+      "event_id": "evt_f62aace5a1652190",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-04T22:27:16.971894Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:16.971894Z",
+      "last_updated_at": "2026-09-04T22:27:16.971894Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hidden Solana upgrade bug can freeze network readers and silently disable fee limits",
+      "title_zh": "Hidden Solana upgrade bug can freeze network readers and silently disable fee limits",
+      "topics": [
+        "network-risk",
+        "protocol-upgrade",
+        "rpc-infrastructure",
+        "solana",
+        "transaction-format"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+          "current_state_zh": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+          "detailed_summary_en": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+          "detailed_summary_zh": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+          "event_id": "evt_f62aace5a1652190",
+          "first_seen_at": "2026-09-04T22:27:16.971894Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T22:05:12Z",
+          "published_at": "2026-09-04T22:05:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/hidden-solana-upgrade-bug-can-freeze-network-readers-and-silently-disable-fee-limits/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:dd7db4423ca398dd"
+          ],
+          "time_precision": "published",
+          "title_en": "Hidden Solana upgrade bug can freeze network readers and silently disable fee limits",
+          "title_zh": "Hidden Solana upgrade bug can freeze network readers and silently disable fee limits",
+          "update_id": "upd_095a2e2ee25ef49f",
+          "update_type": "initial",
+          "what_changed_en": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
+          "what_changed_zh": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+      "current_state_zh": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+      "entities": [
+        "privacy",
+        "privacy-coin"
+      ],
+      "event_id": "evt_75de257f8e4bea2d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-04T22:27:17.282910Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:17.282910Z",
+      "last_updated_at": "2026-09-04T22:27:17.282910Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Privacy coin flaw risks endless token creation, leaving node operators with a deadline in hours to fix it",
+      "title_zh": "Privacy coin flaw risks endless token creation, leaving node operators with a deadline in hours to fix it",
+      "topics": [
+        "firo",
+        "hard-fork",
+        "privacy-coin",
+        "vulnerability"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+          "current_state_zh": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+          "detailed_summary_en": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+          "detailed_summary_zh": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+          "event_id": "evt_75de257f8e4bea2d",
+          "first_seen_at": "2026-09-04T22:27:17.282910Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T20:05:37Z",
+          "published_at": "2026-09-04T20:05:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/privacy-coin-flaw-risks-endless-token-creation-leaving-node-operators-with-a-deadline-in-hours-to-fix-it/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:906867f0703d8344"
+          ],
+          "time_precision": "published",
+          "title_en": "Privacy coin flaw risks endless token creation, leaving node operators with a deadline in hours to fix it",
+          "title_zh": "Privacy coin flaw risks endless token creation, leaving node operators with a deadline in hours to fix it",
+          "update_id": "upd_89e8351d5cda98d0",
+          "update_type": "initial",
+          "what_changed_en": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
+          "what_changed_zh": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+      "current_state_zh": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+      "entities": [
+        "anthropic",
+        "fermat",
+        "fermats-last-theorem",
+        "formalizing",
+        "last",
+        "theorem"
+      ],
+      "event_id": "evt_e327ebdcc6dc081c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-04T22:27:21.381160Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:21.381160Z",
+      "last_updated_at": "2026-09-04T22:27:21.381160Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Formalizing Fermat's Last Theorem - Anthropic",
+      "title_zh": "Formalizing Fermat's Last Theorem - Anthropic",
+      "topics": [
+        "ai-research",
+        "anthropic",
+        "fermats-last-theorem",
+        "formal-mathematics",
+        "proof-assistants"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+          "current_state_zh": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+          "detailed_summary_en": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+          "detailed_summary_zh": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+          "event_id": "evt_e327ebdcc6dc081c",
+          "first_seen_at": "2026-09-04T22:27:21.381160Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T18:35:51Z",
+          "published_at": "2026-09-04T18:35:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Anthropic News",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyWFpGbGlCLVpoN2ZBUGs1UUZNSXJDaHNZNWZoV0g1RFVLc3BKbi1Nc2xVUWZ6SWZPR2JsanI3X1BIb25vZURqckE0Q1ltM1U3RnZXRkR1STVYei1VQ00tenotVjhNS0FfV2lIQ25WTXY5VlRPamc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&hl=en-US&gl=US&ceid=US:en:e1d12cf801806eb7"
+          ],
+          "time_precision": "published",
+          "title_en": "Formalizing Fermat's Last Theorem - Anthropic",
+          "title_zh": "Formalizing Fermat's Last Theorem - Anthropic",
+          "update_id": "upd_2bd116577eca72cb",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof.",
+          "what_changed_zh": "Anthropic announced work on formalizing Fermat's Last Theorem, a major technical milestone in AI-assisted mathematical proof."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+      "current_state_zh": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+      "entities": [
+        "all",
+        "billion",
+        "borrowed",
+        "company",
+        "just",
+        "parent",
+        "tiktok"
+      ],
+      "event_id": "evt_472254cfd2e7f93c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-04T22:27:22.258849Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:22.258849Z",
+      "last_updated_at": "2026-09-04T22:27:22.258849Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "TikTok's Parent Company Just Borrowed $30 Billion to Go All-In on AI",
+      "title_zh": "TikTok's Parent Company Just Borrowed $30 Billion to Go All-In on AI",
+      "topics": [
+        "ai-investment",
+        "bytedance",
+        "corporate-debt",
+        "financing",
+        "tiktok"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+          "current_state_zh": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+          "detailed_summary_en": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+          "detailed_summary_zh": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+          "event_id": "evt_472254cfd2e7f93c",
+          "first_seen_at": "2026-09-04T22:27:22.258849Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T21:46:03Z",
+          "published_at": "2026-09-04T21:46:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377489/tiktok-bytedance-loan-ai"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:4b8eb34654a195dc"
+          ],
+          "time_precision": "published",
+          "title_en": "TikTok's Parent Company Just Borrowed $30 Billion to Go All-In on AI",
+          "title_zh": "TikTok's Parent Company Just Borrowed $30 Billion to Go All-In on AI",
+          "update_id": "upd_05d64e317e623d7a",
+          "update_type": "initial",
+          "what_changed_en": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target.",
+          "what_changed_zh": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+      "current_state_zh": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+      "entities": [
+        "amc",
+        "backing",
+        "down",
+        "from",
+        "isn",
+        "lawyers",
+        "over",
+        "robinhood",
+        "send",
+        "stock",
+        "stock-tokens",
+        "tokens",
+        "your"
+      ],
+      "event_id": "evt_360b1b2afa14edf5",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-04T22:27:23.278364Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-04T22:27:23.278364Z",
+      "last_updated_at": "2026-09-04T22:27:23.278364Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "'Send Your Lawyers': Robinhood Isn't Backing Down From AMC Over Stock Tokens",
+      "title_zh": "'Send Your Lawyers': Robinhood Isn't Backing Down From AMC Over Stock Tokens",
+      "topics": [
+        "amc",
+        "crypto-regulation",
+        "robinhood",
+        "securities-law",
+        "stock-tokens"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+          "current_state_zh": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+          "detailed_summary_en": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+          "detailed_summary_zh": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+          "event_id": "evt_360b1b2afa14edf5",
+          "first_seen_at": "2026-09-04T22:27:23.278364Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T18:36:41Z",
+          "published_at": "2026-09-04T18:36:41Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377461/send-your-lawyers-robinhood-not-backing-down-amc"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:a6ada97aad4ff729"
+          ],
+          "time_precision": "published",
+          "title_en": "'Send Your Lawyers': Robinhood Isn't Backing Down From AMC Over Stock Tokens",
+          "title_zh": "'Send Your Lawyers': Robinhood Isn't Backing Down From AMC Over Stock Tokens",
+          "update_id": "upd_05db07ccbe2b74c8",
+          "update_type": "initial",
+          "what_changed_en": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product.",
+          "what_changed_zh": "Robinhood publicly rejected AMC's demand to stop trading tokenized stock, urging legal action and defending its Stock Tokens product."
         }
       ]
     }

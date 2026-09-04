@@ -15,11 +15,11 @@
     "en": "A Michigan judge ordered Kalshi to stop offering sports wagers in the state and to pay $500,000 per day if it fails to geofence Michigan residents."
   },
   "first_seen_at": "2026-09-03T09:05:03.298055+00:00",
-  "last_updated_at": "2026-09-03T09:05:03.298055+00:00",
+  "last_updated_at": "2026-09-04T22:27:17.577576+00:00",
   "last_material_change_at": "2026-09-03T09:05:03.298055+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "bars",
     "bets",
@@ -66,12 +66,19 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:decrypt.co_feed:c39cab95b06551c0"
+        "rss:decrypt.co_feed:c39cab95b06551c0",
+        "rss:cryptoslate.com_feed_:0e2b35daad4ce829"
       ],
       "sources": [
         {
           "url": "https://decrypt.co/377238/michigan-judge-bars-kalshi-sports-bets-threatens-500k-daily-fine",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/kalshi-faces-500000-daily-fines-as-michigan-forces-sports-event-contracts-offline/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

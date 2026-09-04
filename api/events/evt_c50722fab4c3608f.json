@@ -4,40 +4,54 @@
   "url": "https://bmt.news/events/evt_c50722fab4c3608f/",
   "json": "https://bmt.news/api/events/evt_c50722fab4c3608f.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition",
     "en": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition"
   },
   "current_state": {
-    "zh": "Coinbase has filed SEC notices to offer single-stock perpetuals to U.S. customers, marking a potential expansion of regulated crypto derivatives.",
-    "en": "Coinbase has filed SEC notices to offer single-stock perpetuals to U.S. customers, marking a potential expansion of regulated crypto derivatives."
+    "zh": "Coinbase 已根据证券期货规则提交国内股票永续合约申请，但面临 CME 诉讼，使推出前景不确定。",
+    "en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, but faces a CME lawsuit that clouds the launch."
   },
   "first_seen_at": "2026-09-04T08:58:13.576688+00:00",
-  "last_updated_at": "2026-09-04T08:58:13.576688+00:00",
-  "last_material_change_at": "2026-09-04T08:58:13.576688+00:00",
+  "last_updated_at": "2026-09-04T22:27:12.676368+00:00",
+  "last_material_change_at": "2026-09-04T22:27:12.676368+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "bring",
+    "clouds",
+    "cme",
     "coin",
     "coinbase",
+    "domestic",
     "edition",
     "files",
+    "futures",
+    "launch",
     "notices",
     "perpetuals",
+    "perps",
     "sec",
+    "security-futures",
     "single",
     "single-stock-perpetuals",
-    "stock"
+    "stock",
+    "suit",
+    "tech",
+    "times",
+    "under"
   ],
   "identifiers": [],
   "topics": [
+    "cme",
     "coinbase",
     "crypto-regulation",
+    "perpetual-futures",
     "sec",
+    "security-futures",
     "single-stock-perpetuals",
     "us-markets"
   ],
@@ -75,6 +89,44 @@
         {
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQW9JdGtUUURsZmpwRmNuNG9PWkdKdW1GaDZ6TzJ1R1pJRWd4elp3MVdzX1VmWl8zTlZvbzRReWVWYnFvX3VmQmgyQ1lOSWJ3akx4ajFPT1lnM1hzYm5ONUJYWnEwVmgybUdpSkRyWnRaQ3lGUi1xTGJHcGFwUjdGS1hjRmRGeGNnMXFPdTBhZjlFWjZWek5yV3hudTNOVFJQSXRmRDhvczhxX3NW?oc=5",
           "label": "Coin Edition",
+          "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_69d9cf2636cde77a",
+      "event_id": "evt_c50722fab4c3608f",
+      "occurred_at": "2026-09-04T18:59:27Z",
+      "published_at": "2026-09-04T18:59:27Z",
+      "first_seen_at": "2026-09-04T22:27:12.676368Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Coinbase Files for Domestic Stock Perps Under Security Futures: CME Suit Clouds Launch - Tech Times",
+      "title_en": "Coinbase Files for Domestic Stock Perps Under Security Futures: CME Suit Clouds Launch - Tech Times",
+      "what_changed_zh": "CME 提起诉讼，对 Coinbase 在美国推出单一股票永续合约的计划构成不确定性。",
+      "what_changed_en": "CME has filed a lawsuit casting uncertainty over Coinbase's plan to launch single-stock perpetuals in the U.S.",
+      "current_state_zh": "Coinbase 已根据证券期货规则提交国内股票永续合约申请，但面临 CME 诉讼，使推出前景不确定。",
+      "current_state_en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, but faces a CME lawsuit that clouds the launch.",
+      "detailed_summary_zh": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, while a CME lawsuit casts uncertainty over the launch.",
+      "detailed_summary_en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, while a CME lawsuit casts uncertainty over the launch.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.92,
+      "story_ids": [
+        "google_news:article:133eea585fbf1296"
+      ],
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORjlYZ2hfU0VwLUFYWlpEVVA4RkNiam1ZRHR2eUZkX2RidE5wWi1CZEpJMzdMZ0tmYnVuQUMyMFFfRGxFcWdYWVNjMjNiRlJzaHk0WTU0NzlqRnNBUmRKN2duTFNlYVREY2MyLVlraXpVNzkyQl9DYjVadnF1UU9lVG9Ra1ktd3BIdVRkNDNsMUIza0YwTkN1OWIya2JidF9hQm4wcUxjTTJKZmlWaXE3SFp3blh0cGhURTVQZFRQNmJJNkRYZ3lmRGJ2UkxISElJeGc?oc=5",
+          "label": "Tech Times",
           "source_type": "google_news",
           "official": false
         }

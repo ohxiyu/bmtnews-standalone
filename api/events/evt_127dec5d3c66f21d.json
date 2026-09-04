@@ -15,11 +15,11 @@
     "en": "Revolut and a16z-backed OpenReserve received preliminary OCC approval to establish US national banks, with plans to offer crypto custody and stablecoin-related services."
   },
   "first_seen_at": "2026-09-04T16:32:18.267418+00:00",
-  "last_updated_at": "2026-09-04T16:32:18.267418+00:00",
+  "last_updated_at": "2026-09-04T22:27:23.515189+00:00",
   "last_material_change_at": "2026-09-04T16:32:18.267418+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "openreserve",
     "revolut"
@@ -59,12 +59,19 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:cointelegraph.com_rss:cf3a9b841d018d97"
+        "rss:cointelegraph.com_rss:cf3a9b841d018d97",
+        "rss:decrypt.co_feed:b14e551a00866da5"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/revolut-openreserve-occ-approval-national-bank-crypto-plan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377458/openreserve-occ-approval-full-service-national-bank",
+          "label": "Decrypt",
           "source_type": "rss",
           "official": false
         }
