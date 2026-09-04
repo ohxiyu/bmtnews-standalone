@@ -18,6 +18,8 @@ BMTNews 是一个公开、双语、每日更新的信息整理项目，主要覆
 公司和协议会进入实体索引。公开 JSON API、Atom feeds 和 OpenAPI 文档允许研究工具与
 智能体直接读取结构化结果，而不必抓取页面。
 
+## English
+
 BMTNews is a public, bilingual daily intelligence project focused primarily
 on crypto markets, exchanges, protocols, security incidents, and regulation,
 with a deliberately limited allocation for material AI and macro-policy news.
