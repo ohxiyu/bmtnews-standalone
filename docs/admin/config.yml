@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ohxiyu/bmtnews-standalone
   branch: main
-  automatic_deployments: true
+  skip_ci: false
   # One-click GitHub sign-in (optional). To enable:
   #   1. Create a GitHub OAuth App (callback URL:
   #      https://<worker-host>/oauth/callback)
@@ -15,16 +15,22 @@ backend:
 
 site_url: https://bmt.news
 display_url: https://bmt.news
+logout_redirect_url: https://bmt.news/
+app_title: BMTNews 发布台
+logo:
+  src: /assets/images/app-icon.svg
+  show_in_header: true
 media_folder: docs/assets/uploads
 public_folder: /assets/uploads
 
 collections:
   - name: editorial
-    label: 日报编辑
-    icon: edit_note
+    label: 手动发布
+    icon: campaign
     files:
       - name: editorial_items
-        label: 插入条目（编辑精选 / 广告 / 压稿）
+        label: 内容与发布安排
+        icon: edit_calendar
         file: data/editorial.json
         format: json
         fields:
@@ -33,104 +39,121 @@ collections:
             required: false
 
           - name: items
-            label: 条目列表
-            label_singular: 条目
+            label: 发布队列
+            label_singular: 新建操作
             widget: list
-            collapsed: true
+            collapsed: auto
+            minimize_collapsed: true
+            add_to_top: true
             summary: "{{fields.type}} ｜ {{fields.title_zh}} {{fields.url}}"
             hint: >-
-              保存后会自动 commit 到 main 并触发重刊，约 5 分钟后 bmt.news
-              更新。不再需要的条目请把「启用」关掉或直接删除。
-            fields:
-              - name: type
-                label: 类型
-                widget: select
-                options:
-                  - { label: "编辑精选 — 自己插入一条新闻（置顶展示）", value: editorial }
-                  - { label: "广告 — 带广告标签的推广位（仅网页）", value: sponsored }
-                  - { label: "压稿 — 按 URL 隐藏一条新闻", value: suppress }
-                default: editorial
+              选择一种操作，只填写该操作需要的字段。保存会提交到 main 并重刊当日内容，
+              通常约 5 分钟上线；关闭「立即生效」可保留草稿。
+            types:
+              - name: editorial
+                label: 发布编辑精选
+                fields:
+                  - { name: enabled, label: 立即生效, widget: boolean, default: true, hint: 关闭后只保存草稿，不进入日报。 }
+                  - name: date
+                    label: 刊期日期
+                    widget: datetime
+                    type: date
+                    format: YYYY-MM-DD
+                    input_timezone: Asia/Shanghai
+                    default: "{{now}}"
+                    hint: 默认今天，仅在这个东八区刊期中出现，避免内容跨日重复发布。
+                  - name: url
+                    label: 原始报道链接
+                    widget: string
+                    pattern: ["^https?://.+", "必须是以 http:// 或 https:// 开头的完整链接"]
+                  - { name: label, label: 来源名称, widget: string, required: false, default: BMTNews, hint: 例如 Binance、SEC 或 The Block。 }
+                  - { name: official, label: 官方或第一手来源, widget: boolean, required: false, default: false }
+                  - name: category
+                    label: 内容分类
+                    widget: select
+                    default: crypto-markets
+                    options:
+                      - { label: 加密市场, value: crypto-markets }
+                      - { label: 交易所公告, value: crypto-exchange }
+                      - { label: 协议与链上生态, value: crypto-protocol }
+                      - { label: 安全事件, value: crypto-security }
+                      - { label: 加密监管, value: policy-regulation }
+                      - { label: AI 与科技, value: ai-technology }
+                      - { label: 宏观政策, value: macro-policy }
+                  - { name: title_zh, label: 中文标题, widget: string, hint: 直接说明发生了什么，避免宣传语。 }
+                  - { name: summary_zh, label: 中文摘要, widget: text, hint: 用 1–2 段说明事实、主体和结果。 }
+                  - { name: title_en, label: 英文标题, widget: string, required: false, hint: 留空时英文版回退到中文。 }
+                  - { name: summary_en, label: 英文摘要, widget: text, required: false }
+                  - { name: background_zh, label: 背景, widget: text, required: false, hint: 解释读者理解这条消息所需的前因。 }
+                  - { name: background_en, label: Background, widget: text, required: false }
+                  - { name: market_impact_zh, label: 市场影响, widget: text, required: false, hint: 说明影响对象和传导路径，不写喊单结论。 }
+                  - { name: market_impact_en, label: Market impact, widget: text, required: false }
+                  - { name: community_discussion_zh, label: 讨论焦点, widget: text, required: false, hint: 记录仍有分歧或尚待确认的部分。 }
+                  - { name: community_discussion_en, label: Discussion, widget: text, required: false }
+                  - { name: tags, label: 标签, widget: list, required: false, hint: 每行一个实体或主题，例如 Binance、listing。 }
+                  - name: sources
+                    label: 补充参考资料
+                    label_singular: 参考链接
+                    widget: list
+                    required: false
+                    collapsed: auto
+                    summary: "{{title}} — {{url}}"
+                    fields:
+                      - { name: title, label: 资料名称, widget: string, required: false }
+                      - name: url
+                        label: 资料链接
+                        widget: string
+                        pattern: ["^https?://.+", "必须是完整的 http:// 或 https:// 链接"]
 
-              - name: enabled
-                label: 启用
-                widget: boolean
-                default: true
-                hint: 关掉即整条失效，适合先写好草稿再上线。
+              - name: sponsored
+                label: 安排广告
+                fields:
+                  - { name: enabled, label: 立即生效, widget: boolean, default: true, hint: 关闭后只保存草稿。 }
+                  - name: starts
+                    label: 开始日期
+                    widget: datetime
+                    type: date
+                    format: YYYY-MM-DD
+                    input_timezone: Asia/Shanghai
+                    default: "{{now}}"
+                  - name: expires
+                    label: 结束日期
+                    widget: datetime
+                    type: date
+                    format: YYYY-MM-DD
+                    input_timezone: Asia/Shanghai
+                    hint: 必填；到期后的下一次重刊会自动下架。
+                  - name: position
+                    label: 插入位置
+                    widget: number
+                    value_type: int
+                    min: 1
+                    max: 20
+                    default: 4
+                    hint: 默认第 4 条，即放在前三条重点内容之后。
+                  - name: url
+                    label: 广告链接
+                    widget: string
+                    pattern: ["^https?://.+", "必须是以 http:// 或 https:// 开头的完整链接"]
+                  - { name: title_zh, label: 中文标题, widget: string }
+                  - { name: summary_zh, label: 中文说明, widget: text, required: false }
+                  - { name: title_en, label: 英文标题, widget: string, required: false }
+                  - { name: summary_en, label: 英文说明, widget: text, required: false }
 
-              - name: url
-                label: 链接 URL
-                widget: string
-                pattern:
-                  - "^https?://.+"
-                  - "必须是以 http:// 或 https:// 开头的完整链接"
-                hint: 编辑精选/广告的跳转链接；压稿时填要隐藏的新闻链接。
-
-              - name: title_zh
-                label: 中文标题
-                widget: string
-                required: false
-                hint: 编辑精选和广告必填（压稿可留空）。
-
-              - name: title_en
-                label: 英文标题
-                widget: string
-                required: false
-                hint: 留空时英文版会直接使用中文标题。
-
-              - name: summary_zh
-                label: 中文摘要
-                widget: text
-                required: false
-                hint: 一两句话；会显示在标题下方。
-
-              - name: summary_en
-                label: 英文摘要
-                widget: text
-                required: false
-
-              - name: date
-                label: 生效日期（单日）
-                widget: datetime
-                format: YYYY-MM-DD
-                date_format: YYYY-MM-DD
-                time_format: false
-                required: false
-                default: ""
-                hint: >-
-                  只在这一天的刊期生效（东八区刊期日）。编辑精选和压稿一般填今天。
-                  留空 = 每期都生效，慎用。
-
-              - name: starts
-                label: 开始日期（区间）
-                widget: datetime
-                format: YYYY-MM-DD
-                date_format: YYYY-MM-DD
-                time_format: false
-                required: false
-                default: ""
-                hint: 广告用：从这天开始自动上刊。
-
-              - name: expires
-                label: 结束日期（区间）
-                widget: datetime
-                format: YYYY-MM-DD
-                date_format: YYYY-MM-DD
-                time_format: false
-                required: false
-                default: ""
-                hint: 广告用：过了这天自动下刊。
-
-              - name: position
-                label: 广告插入位置
-                widget: number
-                value_type: int
-                min: 1
-                max: 20
-                required: false
-                hint: 仅广告有效：插在第几条新闻的位置，默认 4（第三条之后）。
-
-              - name: label
-                label: 来源署名
-                widget: string
-                required: false
-                hint: 编辑精选的来源显示名，默认 Editorial。
+              - name: suppress
+                label: 隐藏已有报道
+                fields:
+                  - { name: enabled, label: 立即生效, widget: boolean, default: true, hint: 关闭后不执行隐藏操作。 }
+                  - name: date
+                    label: 刊期日期
+                    widget: datetime
+                    type: date
+                    format: YYYY-MM-DD
+                    input_timezone: Asia/Shanghai
+                    default: "{{now}}"
+                    hint: 只影响这个刊期，不会永久屏蔽来源。
+                  - name: url
+                    label: 要隐藏的报道 URL
+                    widget: string
+                    pattern: ["^https?://.+", "请粘贴该报道的完整原始链接"]
+                  - { name: note, label: 内部备注, widget: text, required: false, hint: 仅用于记录原因，不会显示在网站上。 }

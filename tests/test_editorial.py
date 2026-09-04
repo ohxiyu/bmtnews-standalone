@@ -112,6 +112,64 @@ def test_editorial_content_item_carries_bilingual_metadata() -> None:
     assert item.ai_score is None
 
 
+def test_editorial_content_item_carries_full_manual_context() -> None:
+    entry = EditorialEntry(
+        type="editorial",
+        url="https://example.com/pick",
+        title_zh="交易所发布公告",
+        summary_zh="公告确认了具体变更。",
+        background_zh="该功能此前只面向机构用户。",
+        market_impact_zh="变更扩大了零售用户的市场准入。",
+        community_discussion_zh="执行时间仍需确认。",
+        category="crypto-exchange",
+        tags=["Exchange", " announcement "],
+        sources=[
+            {"title": "官方说明", "url": "https://example.com/reference"},
+            {"title": "坏链接", "url": "javascript:alert(1)"},
+        ],
+        official=True,
+    )
+
+    item = editorial_content_item(entry, date(2026, 8, 9))
+
+    assert item.metadata["background_zh"] == "该功能此前只面向机构用户。"
+    assert item.metadata["market_impact_zh"] == "变更扩大了零售用户的市场准入。"
+    assert item.metadata["community_discussion_zh"] == "执行时间仍需确认。"
+    assert item.metadata["category"] == "crypto-exchange"
+    assert item.metadata["official"] is True
+    assert item.metadata["sources"] == [
+        {"title": "官方说明", "url": "https://example.com/reference"}
+    ]
+    assert item.ai_tags == ["Exchange", "announcement"]
+    markup = render_web_feed(
+        [item],
+        date="2026-08-09",
+        total_fetched=1,
+        language="zh",
+        display_timezone="Asia/Shanghai",
+    )
+    assert "该功能此前只面向机构用户。" in markup
+    assert "变更扩大了零售用户的市场准入。" in markup
+    assert "执行时间仍需确认。" in markup
+    assert "官方说明" in markup
+    assert "#Exchange" in markup
+
+
+def test_admin_config_uses_branded_action_specific_editor() -> None:
+    config = Path("docs/admin/config.yml").read_text(encoding="utf-8")
+
+    assert "app_title: BMTNews 发布台" in config
+    assert "src: /assets/images/app-icon.svg" in config
+    assert "types:" in config
+    assert config.count("\n              - name: editorial\n") == 1
+    assert config.count("\n              - name: sponsored\n") == 1
+    assert config.count("\n              - name: suppress\n") == 1
+    for field in ("background_zh", "market_impact_zh", "tags", "sources"):
+        assert f"name: {field}" in config
+    for field in ("starts", "expires", "position", "note"):
+        assert f"name: {field}" in config
+
+
 def test_render_web_feed_marks_editorial_and_sponsored() -> None:
     pick = editorial_content_item(
         EditorialEntry(
