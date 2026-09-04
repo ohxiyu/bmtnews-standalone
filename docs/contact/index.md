@@ -19,6 +19,8 @@ BMTNews 通过公开仓库提供可核查的联系路径，不要求读者创建
 说明来源地址、内容类型、建议分类和调整原因。BMTNews 会保留编辑判断，不保证收录每个
 来源，也不会通过公开表单接收付费排名、秘密投放或绕过来源验证的请求。
 
+## English
+
 For ordinary bugs, corrections, API interoperability reports, feature
 requests, and public source suggestions, open a
 [GitHub issue](https://github.com/ohxiyu/bmtnews-standalone/issues/new/choose).

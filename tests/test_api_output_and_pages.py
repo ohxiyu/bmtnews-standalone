@@ -659,6 +659,20 @@ def test_event_index_styles_match_the_daily_feed_without_docs_heading_leaks() ->
     assert "font-size: var(--fs-m);" in latest_update
 
 
+def test_secondary_layout_keeps_content_first_and_separates_bilingual_copy() -> None:
+    stylesheet = Path("docs/assets/css/bmtnews-ui.css").read_text(encoding="utf-8")
+    tablet_rules = stylesheet.split("@media (max-width: 1100px)", 1)[1].split(
+        "@media (max-width: 760px)", 1
+    )[0]
+    about = Path("docs/about/index.md").read_text(encoding="utf-8")
+    contact = Path("docs/contact/index.md").read_text(encoding="utf-8")
+
+    assert 'grid-template-areas:\n      "stream"\n      "rail";' in tablet_rules
+    assert ".main-content > h2:first-child" in stylesheet
+    assert "\n## English\n" in about
+    assert "\n## English\n" in contact
+
+
 def test_publish_event_compatibility_pages_writes_real_redirect_targets(
     tmp_path: Path,
 ) -> None:
