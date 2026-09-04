@@ -54,17 +54,29 @@
       "current_state_en": "OpenAI has released GPT-6 Astra, a new frontier model showing major gains on ARC-AGI-3 and coding agent benchmarks, with a deployment system card now available.",
       "detailed_summary_zh": "OpenAI has released GPT-6 Astra, a new frontier model showing major gains on ARC-AGI-3 and coding agent benchmarks, with a deployment system card now available.",
       "detailed_summary_en": "OpenAI has released GPT-6 Astra, a new frontier model showing major gains on ARC-AGI-3 and coding agent benchmarks, with a deployment system card now available.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "系统卡（System Card）又称AI模型卡，是AI提供商发布的一种标准化文档，用于说明模型的能力、安全评估以及负责任的部署决策。ARC-AGI-3是一个交互式推理基准测试，要求智能体探索陌生环境、即时推断目标并构建可适应的世界模型；满分意味着AI能够像人类一样高效地通关所有游戏。Artificial Analysis编程智能体指数是由DeepSWE、Terminal-Bench v2.1和SWE-Atlas-QnA等基准综合计算得出的得分。",
+      "background_en": "System cards, also called AI model cards, are standardized documents published by AI providers to explain a model's capabilities, safety evaluations, and responsible-deployment decisions. ARC-AGI-3 is an interactive reasoning benchmark in which agents must explore novel environments, infer goals on the fly, and build adaptable world models; a perfect score means an AI can beat every game as efficiently as a human. The Artificial Analysis Coding Agent Index is a composite score built from benchmarks such as DeepSWE, Terminal-Bench v2.1, and SWE-Atlas-QnA.",
+      "community_discussion_zh": "Hacker News上的评论者讨论热烈但态度谨慎。有人认为ARC-AGI-3评分卡具有误导性，因为GPT-6 Astra使用了Responses API工作流测试，而GPT-5.6 Sol没有，据估算后者在同一配置下得分约为30%。还有人指出，除ARC外的大多数基准提升幅度有限，质疑这究竟是真正的AGI里程碑还是仅相当于一次“点版本”更新；也有评论者将这一轨迹与François Chollet的观点相比较——前沿模型的进步看起来仍像技能习得，而非通用智能。",
+      "community_discussion_en": "Hacker News commenters were engaged but skeptical. Some argued that the ARC-AGI-3 scorecard is misleading because GPT-6 Astra was tested with a Responses API harness while GPT-5.6 Sol was not, estimating that Sol would score roughly 30% under the same setup. Others noted that most benchmarks outside ARC improved only modestly, questioning whether this is a true AGI milestone or a mere point update, and a few compared the trajectory to François Chollet's argument that frontier-model progress still resembles skill acquisition rather than general intelligence.",
+      "market_impact_zh": "这主要是AI行业事件，与加密市场之间不存在直接的链上、托管或监管传导路径。可能的影响是间接的、由情绪驱动的：前沿模型发布的新闻往往带动AI主题代币以及集成LLM智能体的项目的叙事性交易，因此相关交叉板块可能出现交易热度，但大多数加密资产的基本面并不因此改变。",
+      "market_impact_en": "This is primarily an AI-industry event with no direct on-chain, custody, or regulatory transmission path to crypto markets. Any effect would be indirect and sentiment-driven: frontier-model announcements tend to feed narrative trading in AI-themed tokens and projects integrating LLM agents, so trading interest may appear in that crossover segment even though most crypto assets' fundamentals are unaffected.",
       "importance_score": 9.0,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49554643",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://arcprize.org/arc-agi/3",
+          "title": "ARC-AGI-3"
+        },
+        {
+          "url": "https://artificialanalysis.ai/agents/coding-agents",
+          "title": "AI Coding Agent Benchmarks & Leaderboard | Artificial Analysis"
+        },
+        {
+          "url": "https://www.anthropic.com/system-cards",
+          "title": "Model system cards \\ Anthropic"
         }
       ],
       "confidence": 0.75,
