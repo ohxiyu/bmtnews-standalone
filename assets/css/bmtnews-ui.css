@@ -2834,6 +2834,10 @@ time,
   font-size: var(--fs-l);
 }
 
+.docs-page:not(.event-index-page):not(.event-detail-page):not(.entity-index-page):not(.entity-detail-page):not(.weekly-index-page):not(.weekly-detail-page) .main-content > h2:first-child {
+  margin-top: 0;
+}
+
 .docs-page pre {
   background: var(--surface-soft);
   border: 1px solid var(--border);
@@ -2925,12 +2929,12 @@ time,
 
   .event-detail-layout {
     grid-template-areas:
-      "rail"
-      "stream";
+      "stream"
+      "rail";
   }
 
   .event-detail-rail {
-    margin: 0 0 12px;
+    margin: 18px 0 0;
   }
 
   .headline-rail {
