@@ -34,6 +34,7 @@ def test_shared_coordinator(monkeypatch, code, state, success, expected):
     request = opener.call_args.args[0]
     assert request.method == "POST"
     assert request.get_header("Authorization") == "Bearer test-secret"
+    assert request.get_header("User-agent") == "bmtnews-schedule-watchdog"
     assert "test-secret" not in request.full_url
     direct.assert_not_called()
 
