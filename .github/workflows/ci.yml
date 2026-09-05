@@ -17,19 +17,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v7
         with:
           version: "0.11.32"
           enable-cache: true
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: uv sync --frozen --extra dev
       - run: uv run pytest
       - run: uv export --all-extras --no-dev --no-hashes --no-emit-project --output-file "${RUNNER_TEMP}/requirements.txt"
       - run: uvx --from pip-audit==2.10.1 pip-audit --requirement "${RUNNER_TEMP}/requirements.txt" --no-deps --disable-pip --progress-spinner off
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
           cache: npm
