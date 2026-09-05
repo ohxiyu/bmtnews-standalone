@@ -686,6 +686,29 @@ def test_event_index_styles_match_the_daily_feed_without_docs_heading_leaks() ->
     assert "font-size: var(--fs-m);" in latest_update
 
 
+def test_shared_rules_keep_primary_boundaries_and_unruled_rankings() -> None:
+    stylesheet = Path("docs/assets/css/bmtnews-ui.css").read_text()
+
+    def rule(selector: str) -> str:
+        return stylesheet.split(selector + " {", 1)[1].split("}", 1)[0]
+
+    assert "border-bottom: 2px solid var(--text)" in rule(".day-divider")
+    assert "border-top:" not in rule(".market-snapshot")
+    assert "border-bottom: 1px solid var(--border)" in rule(".market-snapshot")
+    assert "border-top: 2px solid var(--text)" in rule(".event-context-list")
+    assert "border-bottom: 1px solid var(--border)" in rule(".event-context")
+    assert "border-bottom:" not in rule(".event-index-orientation")
+    assert "border-bottom: 2px solid var(--text)" in rule(".weekly-masthead")
+    assert "border-bottom: 1px solid var(--border)" in rule(".weekly-judgment")
+    assert "border-top: 0" in rule(".weekly-context-list")
+    assert "border-" not in rule(".event-ranking-list li")
+    assert "border-" not in rule(".event-overview-stats > div,\n.event-facts > div")
+    assert "border-top: 1px solid var(--border)" in rule("*/\n.event-facts > div")
+    assert "max-width:" not in rule(".event-context-heading > p")
+    assert "min-width: 0" in rule(".event-context-heading > p")
+    assert "nowrap" not in rule(".event-context-heading > p")
+
+
 def test_secondary_layout_keeps_content_first_and_separates_bilingual_copy() -> None:
     stylesheet = Path("docs/assets/css/bmtnews-ui.css").read_text(encoding="utf-8")
     tablet_rules = stylesheet.split("@media (max-width: 1100px)", 1)[1].split(

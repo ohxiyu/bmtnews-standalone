@@ -654,11 +654,6 @@ time,
   color: var(--accent);
 }
 
-.day-nav-today {
-  color: var(--text);
-  font-weight: 650;
-}
-
 .day-nav a[aria-current="true"] {
   color: var(--text);
   font-weight: 650;
@@ -700,7 +695,6 @@ time,
   flex-wrap: wrap;
   gap: 4px 22px;
   padding: 7px 0;
-  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   font-family: var(--font-mono);
   font-size: var(--fs-s);
@@ -1395,7 +1389,7 @@ time,
 .event-context {
   margin-bottom: 16px;
   padding: 0 0 14px;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 1px solid var(--border);
 }
 
 .event-context-heading {
@@ -1413,7 +1407,8 @@ time,
 }
 
 .event-context-heading > p {
-  max-width: 42ch;
+  flex: 1;
+  min-width: 0;
   margin: 0;
   color: var(--text-muted);
   font-size: var(--fs-xs);
@@ -1427,7 +1422,7 @@ time,
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--border);
+  border-top: 2px solid var(--text);
 }
 
 .event-context-list li {
@@ -1507,7 +1502,6 @@ time,
   gap: 16px;
   min-height: 42px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--text);
 }
 
 .event-index-orientation .archive-lede {
@@ -1815,7 +1809,6 @@ time,
   gap: 7px;
   align-items: start;
   padding: 7px 0;
-  border-top: 1px solid var(--border);
 }
 
 .event-ranking-list li > span,
@@ -1865,6 +1858,11 @@ time,
   justify-content: space-between;
   gap: 16px;
   padding: 6px 0;
+}
+
+/* Facts inside an individual event remain a table; index overviews and
+   rankings use spacing, like the daily feed's headline rail. */
+.event-facts > div {
   border-top: 1px solid var(--border);
 }
 
@@ -2161,7 +2159,7 @@ time,
   justify-content: space-between;
   gap: 24px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--text);
 }
 
 .weekly-masthead .eyebrow {
@@ -2207,7 +2205,7 @@ time,
 
 .weekly-judgment {
   padding: 16px 0 15px;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 1px solid var(--border);
 }
 
 .weekly-judgment > .edition-overview-title {
@@ -2233,7 +2231,11 @@ time,
 .weekly-context {
   margin: 18px 0 16px;
   padding-bottom: 12px;
-  border-bottom-width: 1px;
+}
+
+/* The dated weekly masthead already supplies the primary rule. */
+.weekly-context-list {
+  border-top: 0;
 }
 
 .weekly-context-heading h2 {
