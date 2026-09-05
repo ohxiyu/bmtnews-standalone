@@ -225,6 +225,8 @@ class StoryEvidence(BaseModel):
     summary_en: str = ""
     tags: list[str] = Field(default_factory=list)
     source_label: str = ""
+    source_excerpt: str = ""
+    evidence_quality: str = "unknown"
     entities: list[str] = Field(default_factory=list)
     identifiers: list[str] = Field(default_factory=list)
 

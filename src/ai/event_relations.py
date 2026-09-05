@@ -6,7 +6,7 @@ import json
 
 from pydantic import ValidationError
 
-from ..events import EventRelationDecision, StoryEvidence, TrackedEvent
+from ..events import EventRelation, EventRelationDecision, StoryEvidence, TrackedEvent
 from .client import AIClient
 from .prompts import EVENT_RELATION_SYSTEM, EVENT_RELATION_USER
 from .utils import parse_json_response
@@ -52,6 +52,8 @@ def _story_context(story: StoryEvidence) -> dict:
         "summary_en": story.summary_en,
         "tags": story.tags,
         "source_label": story.source_label,
+        "source_excerpt": story.source_excerpt,
+        "evidence_quality": story.evidence_quality,
     }
 
 
@@ -85,4 +87,10 @@ async def classify_event_relation(
         max_tokens=900,
         response_format="json",
     )
-    return parse_event_relation(response, event_id=event.event_id)
+    decision = parse_event_relation(response, event_id=event.event_id)
+    if (
+        decision.relation is EventRelation.SAME_EVENT_UPDATE
+        and story.evidence_quality == "headline_only"
+    ):
+        raise EventRelationError("headline-only evidence cannot confirm a material change")
+    return decision

@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Awaitable, Callable, Iterable, Mapping, Sequence
+from bs4 import BeautifulSoup
 
 from ._file_utils import _atomic_write_text
 from .ai.client import AIClient
@@ -169,6 +170,8 @@ def story_evidence(item: ContentItem) -> StoryEvidence:
     summary_zh = _localized(item, "detailed_summary", "zh")
     summary_en = _localized(item, "detailed_summary", "en")
     fallback_summary = str(item.ai_summary or "").strip()
+    excerpt = BeautifulSoup(item.content or "", "html.parser").get_text(" ", strip=True)
+    headline_only = len(excerpt) < max(120, len(item.title) + 60)
     return StoryEvidence(
         story_id=item.id,
         url=str(item.url),
@@ -179,6 +182,8 @@ def story_evidence(item: ContentItem) -> StoryEvidence:
         summary_en=summary_en or fallback_summary,
         tags=list(item.ai_tags or []),
         source_label=_source_label(item),
+        source_excerpt=excerpt[:4000],
+        evidence_quality="headline_only" if headline_only else "source_text",
         entities=[str(value) for value in item.metadata.get("entities", [])],
         identifiers=[
             str(value) for value in item.metadata.get("identifiers", [])
@@ -507,12 +512,13 @@ def _append_material_update(
         [*event.updates, update],
         key=lambda row: (row.occurred_at, row.first_seen_at, row.update_id),
     )
+    is_latest = updates[-1].update_id == update_id
     return (
         event.model_copy(
             update={
-                "status": _status_after_update(event.status, update_type),
-                "current_state_zh": state_zh or event.current_state_zh,
-                "current_state_en": state_en or event.current_state_en,
+                "status": _status_after_update(event.status, update_type) if is_latest else event.status,
+                "current_state_zh": (state_zh or event.current_state_zh) if is_latest else event.current_state_zh,
+                "current_state_en": (state_en or event.current_state_en) if is_latest else event.current_state_en,
                 "entities": sorted({*event.entities, *signature.entities}),
                 "identifiers": sorted(
                     {*event.identifiers, *signature.identifiers}
@@ -520,7 +526,7 @@ def _append_material_update(
                 "topics": sorted({*event.topics, *signature.topics}),
                 "last_updated_at": max(event.last_updated_at, first_seen),
                 "last_material_change_at": max(
-                    event.last_material_change_at, first_seen
+                    event.last_material_change_at, first_seen if is_latest else event.last_material_change_at
                 ),
                 "confidence": min(event.confidence, decision.confidence),
                 "updates": updates,
@@ -600,6 +606,7 @@ async def update_events(
     )
     for item in ordered_items:
         considered += 1
+        item.metadata.pop("event_retry_pending", None)
         known = assignments.get(item.id)
         if known is not None:
             event_id, update_id = known
@@ -629,6 +636,7 @@ async def update_events(
             story, working, limit=MAX_RELATION_CANDIDATES
         )
         decisions: list[EventRelationDecision] = []
+        failed = False
         if candidates and client is None:
             raise ValueError("an AI client is required for unseen event candidates")
         for candidate in candidates:
@@ -639,6 +647,12 @@ async def update_events(
                 classified += 1
             except Exception:
                 errors += 1
+                failed = True
+        # An unavailable classification is not proof of a distinct event.
+        # Retry the story without assigning a permanent event membership.
+        if failed:
+            item.metadata["event_retry_pending"] = True
+            continue
         attachment = select_event_attachment(
             decisions, threshold=ATTACHMENT_THRESHOLD
         )
@@ -665,14 +679,8 @@ async def update_events(
                 except ValueError:
                     # An invalid update target is not allowed to corrupt or
                     # stop the catalog. Keep the story separate and auditable.
-                    event = _new_event(item, story)
-                    working.append(event)
-                    update_id = event.updates[0].update_id
-                    created += 1
                     errors += 1
-                    item.metadata["event_id"] = event.event_id
-                    item.metadata["event_update_id"] = update_id
-                    assignments[item.id] = (event.event_id, update_id)
+                    item.metadata["event_retry_pending"] = True
                     continue
             else:
                 event, update_id = _append_material_update(

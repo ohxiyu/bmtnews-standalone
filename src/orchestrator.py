@@ -624,9 +624,11 @@ class BMTNewsOrchestrator:
                 run_report.set_metric("event_analyzed", len(analyzed))
                 run_report.set_metric("event_qualified", len(qualified))
                 await self._update_event_timeline(qualified, run_report=run_report)
-            # Commit the incoming staging batch only after event processing
-            # succeeds. A failed classification run is therefore refetched,
-            # not silently marked old and skipped forever.
+            elif EVENT_CATALOG_PATH.exists():
+                # Retry durable pending relations even when no new URLs arrive.
+                await self._update_event_timeline([], run_report=run_report)
+            # Relation failures are retained in the catalog's pending queue;
+            # collection may succeed without assigning false event IDs.
             save_staging_state(
                 staged_items,
                 staging_path,
@@ -1266,6 +1268,7 @@ class BMTNewsOrchestrator:
                 important_items,
                 run_report=run_report,
             )
+            important_items = self.merge_event_update_duplicates(important_items)
 
             # Link continuing coverage to its thread before anything renders.
             self._apply_threads(important_items, edition_date=window.date)
@@ -2215,16 +2218,47 @@ class BMTNewsOrchestrator:
         run_report: RunReport,
     ) -> None:
         """Update the restored catalog with qualified, previously unseen stories."""
-        if not items or not EVENT_CATALOG_PATH.exists():
+        if not EVENT_CATALOG_PATH.exists():
             return
         metadata, events = load_event_catalog(EVENT_CATALOG_PATH)
+        pending = {row["item"]["id"]: row for row in metadata.get("pending_relations", [])}
+        incoming = {item.id: item for item in items}
+        retry_count = 0
+        for story_id, row in pending.items():
+            fresh = incoming.get(story_id)
+            changed_evidence = fresh is not None and (fresh.content or "") != (row["item"].get("content") or "")
+            if changed_evidence:
+                row["attempts"] = 0
+            if row["attempts"] >= 3:
+                incoming.pop(story_id, None)
+                continue
+            if row["attempts"] < 3 and story_id not in incoming and retry_count < 25:
+                incoming[story_id] = ContentItem.model_validate(row["item"])
+                retry_count += 1
+        work = list(incoming.values())
+        if not work:
+            return
         known = known_story_assignments(events)
         client = (
             create_ai_client(self.config.ai)
-            if any(item.id not in known for item in items)
+            if any(item.id not in known for item in work)
             else None
         )
-        updated, result = await update_events(items, events, client=client)
+        updated, result = await update_events(work, events, client=client)
+        for item in work:
+            if item.metadata.get("event_retry_pending"):
+                previous = pending.get(item.id, {})
+                pending[item.id] = {
+                    "item": item.model_dump(mode="json"),
+                    "attempts": previous.get("attempts", 0) + 1,
+                }
+            else:
+                pending.pop(item.id, None)
+        # Preserve exhausted entries for inspection. A backlog must not stop
+        # the daily edition; retry work is bounded separately above.
+        metadata["pending_relations"] = list(pending.values())
+        run_report.set_metric("event_relations_pending", sum(row["attempts"] < 3 for row in pending.values()))
+        run_report.set_metric("event_relations_parked", sum(row["attempts"] >= 3 for row in pending.values()))
         save_event_catalog(metadata, updated, EVENT_CATALOG_PATH)
         self._publish_current_event_pages(events=updated)
         for key, value in {
@@ -2454,6 +2488,20 @@ class BMTNewsOrchestrator:
             merged.append(primary)
 
         return merged
+
+    def merge_event_update_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
+        """One feed entry per confirmed event update, regardless of AI dedup."""
+        result: List[ContentItem] = []
+        seen: dict[tuple[str, str], ContentItem] = {}
+        for item in items:
+            key = (item.metadata.get("event_id"), item.metadata.get("event_update_id"))
+            if all(key) and key in seen:
+                self._record_confirming_source(seen[key], item)
+                continue
+            if all(key):
+                seen[key] = item
+            result.append(item)
+        return result
 
     def _provenance_label(self, item: ContentItem) -> str:
         """Name the outlet behind an item, falling back to its source type."""
