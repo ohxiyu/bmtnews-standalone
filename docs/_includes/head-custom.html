@@ -52,6 +52,9 @@
 <script>
   (function () {
     document.documentElement.classList.add('js');
+    if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true) {
+      document.documentElement.classList.add('pwa-installed');
+    }
     try {
       var savedTheme = localStorage.getItem('bmtnews-theme');
       if (savedTheme === 'light' || savedTheme === 'dark') {
@@ -70,6 +73,12 @@
 <link rel="stylesheet" href="{{ '/assets/css/source-console.css' | relative_url }}?v={{ site.asset_version }}">
 {% endif %}
 <script src="{{ '/assets/js/bmtnews-ui.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
+{% unless page.page_type == "source_console" or page.noindex %}
+<meta name="bmt-assets" content="{{ site.asset_version }}">
+<meta name="bmt-build" content="{{ site.time | date_to_xmlschema }}">
+<link rel="stylesheet" href="{{ '/assets/css/pwa-reader.css' | relative_url }}?v={{ site.asset_version }}">
+<script type="module" src="{{ '/assets/js/pwa-reader.js' | relative_url }}?v={{ site.asset_version }}"></script>
+{% endunless %}
 {% if page.page_type == "source_console" %}
 <script src="{{ '/assets/js/source-console.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
 {% endif %}

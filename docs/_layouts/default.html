@@ -132,6 +132,9 @@
         </nav>
 
         <div class="site-actions">
+          {% unless page.page_type == "source_console" or page.noindex %}
+          <button class="reader-open" type="button" data-reader-open hidden>{% if interface_language == "en" %}Saved{% else %}阅读{% endif %}</button>
+          {% endunless %}
           {% unless page.page_type == "source_console" or page.hide_language_toggle %}
             <nav
               class="lang-toggle"
@@ -252,6 +255,15 @@
       {{ content }}
     </main>
 
+    {% unless page.page_type == "source_console" or page.noindex %}
+    <nav class="pwa-bottom-nav" aria-label="{% if interface_language == 'en' %}App navigation{% else %}App 导航{% endif %}">
+      <a href="{{ interface_home_url }}" {% if current_section == "feed" %}aria-current="page"{% endif %}>{% if interface_language == "en" %}Feed{% else %}信息流{% endif %}</a>
+      <a href="{% if interface_language == 'en' %}/en{% endif %}/threads/" {% if current_section == "events" %}aria-current="page"{% endif %}>{% if interface_language == "en" %}Threads{% else %}事件线{% endif %}</a>
+      <a href="{% if interface_language == 'en' %}/en{% endif %}/entity/" {% if current_section == "entities" %}aria-current="page"{% endif %}>{% if interface_language == "en" %}Entities{% else %}实体{% endif %}</a>
+      <a href="{% if interface_language == 'en' %}/en{% endif %}/weekly/" {% if current_section == "weekly" %}aria-current="page"{% endif %}>{% if interface_language == "en" %}Weekly{% else %}周报{% endif %}</a>
+    </nav>
+    {% endunless %}
+
     <footer class="site-footer">
       <div>
         <strong>BMTNews</strong>
@@ -300,9 +312,9 @@
         <p class="pwa-install-copy" data-pwa-install-copy></p>
         <p
           class="pwa-install-note"
-          data-i18n-zh="安装后将以独立窗口运行；内容仍由 bmt.news 实时更新。"
-          data-i18n-en="After installation, BMTNews opens in its own window and continues to update from bmt.news."
-        >{% if interface_language == "en" %}After installation, BMTNews opens in its own window and continues to update from bmt.news.{% else %}安装后将以独立窗口运行；内容仍由 bmt.news 实时更新。{% endif %}</p>
+          data-i18n-zh="安装后独立运行，联网时检查内容更新，已保存的页面可离线阅读。"
+          data-i18n-en="Open in a standalone window, check for updates online and read saved pages offline."
+        >{% if interface_language == "en" %}Open in a standalone window, check for updates online and read saved pages offline.{% else %}安装后独立运行，联网时检查内容更新，已保存的页面可离线阅读。{% endif %}</p>
       </div>
     </dialog>
   </body>
