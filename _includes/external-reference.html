@@ -1,0 +1,9 @@
+{%- comment -%}Validate old published data too; escape is not URL validation.{%- endcomment -%}
+{%- assign reference_url = include.url | strip -%}
+{%- assign reference_scheme = reference_url | slice: 0, 8 | downcase -%}
+{%- assign reference_http = reference_url | slice: 0, 7 | downcase -%}
+{%- if reference_scheme == 'https://' or reference_http == 'http://' -%}
+<a href="{{ reference_url | escape }}" target="_blank" rel="noopener noreferrer">{{ include.title | escape }}</a>
+{%- else -%}
+<span>{{ include.title | escape }}</span>
+{%- endif -%}
