@@ -449,7 +449,13 @@ def check_coordinator(*, success_on_recovery: bool = False) -> int:
     request = Request(
         "https://bmtnews-daily-dispatcher.drminutes.workers.dev/publication/check",
         method="POST",
-        headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/json",
+            # Cloudflare Browser Integrity Check rejects Python-urllib's
+            # generic agent (HTTP 403 / 1010) before invoking the Worker.
+            "User-Agent": "bmtnews-schedule-watchdog",
+        },
     )
     try:
         try:
@@ -473,6 +479,9 @@ def check_coordinator(*, success_on_recovery: bool = False) -> int:
         if status_code == 202 and success_on_recovery:
             return 0
         _emit_error("刊期尚未在生产网站确认；请查看检查结果")
+        return 1
+    except HTTPError as error:
+        _emit_error(f"共享检查接口返回 HTTP {error.code}；不会绕过共享锁重复补发")
         return 1
     except (OSError, ValueError):
         # Do not include exception URLs/headers; they may contain credentials.

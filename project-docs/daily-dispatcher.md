@@ -77,4 +77,6 @@ Worker 当前没有仓库内的自动部署流程。修改或合并 `ops/daily-d
 
 ## 发布顺序与回滚
 
+GitHub 检查客户端必须发送 `User-Agent: bmtnews-schedule-watchdog`。生产验证发现 Cloudflare 会在 Worker 执行前拒绝默认的 `Python-urllib/3.12` 客户端标识（HTTP 403 / 1010）；这里使用应用标识，不关闭 Cloudflare 安全检查。若调用失败，先查看 HTTP 状态，再核对 Secret，不绕过共享锁直接补发。
+
 先配置 Worker 的两个新 Secret 和 GitHub 的 `RECOVERY_CHECK_TOKEN`，运行 Worker 检查并部署，再验证生产 `/publication/check` 返回正确刊期；随后合并启用共享接口的 GitHub 工作流，最后接入静默外部定时。Durable Object 使用 SQLite 首次迁移 `recovery-v1`，后续修改不要删除已部署的迁移记录。若回滚业务代码，保留绑定和迁移，避免丢失重试预算；若暂时停止外部自动恢复，先禁用外部检查任务，不要删除锁数据后继续派发。
