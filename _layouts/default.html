@@ -174,7 +174,7 @@
       {% assign edition_key = page.date | date: "%Y-%m-%d" %}
       <section class="continuous-feed edition-archive-chrome" data-language="{{ page.lang }}">
         {% include edition-header.html language=page.lang current=edition_key %}
-        <header class="day-divider">
+        {% capture archive_metadata %}
           <div class="day-divider-title">
             <span class="day-state">{% if page.lang == "zh" %}存档{% else %}Archive{% endif %}</span>
             <time datetime="{{ edition_key }}">{{ page.date | date: "%Y.%m.%d" }}</time>
@@ -197,7 +197,8 @@
               <span data-short="H"><strong data-stat="critical">{{ page.critical_count | default: "—" }}</strong> high priority</span>
             {% endif %}
           </div>
-        </header>
+        {% endcapture %}
+        {% include section-divider.html content=archive_metadata %}
       </section>
     {% elsif page.page_type == "source_console" %}
       <section class="page-intro page-intro-docs">
@@ -213,7 +214,9 @@
         </div>
       </section>
     {% elsif page.page_type == "weekly" %}
-      {% comment %}Weekly pages render their own dense editorial masthead.{% endcomment %}
+      {% comment %}Weekly pages render the shared section masthead inside main.{% endcomment %}
+    {% elsif page.page_class == "event-index-page" or page.page_class == "entity-index-page" %}
+      {% comment %}Index mastheads live with their overview, not in a separate full-width banner.{% endcomment %}
     {% elsif page.page_type == "archive" %}
       {% assign archive_eyebrow = "BMTNEWS ARCHIVE" %}
       {% if page.page_class contains "event-" %}

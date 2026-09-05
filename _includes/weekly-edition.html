@@ -17,17 +17,7 @@
 
 {% if edition and edition.throughline %}
   <article class="weekly-edition" data-week="{{ entry.date }}">
-    <header class="weekly-masthead">
-      <div>
-        <p class="eyebrow">BMTNEWS WEEKLY</p>
-        <h1>{% if is_en %}Weekly Review{% else %}周报{% endif %}</h1>
-      </div>
-      <div class="weekly-range">
-        <span>{% if is_en %}EDITION{% else %}本期{% endif %}</span>
-        <time datetime="{{ entry.date }}">{{ entry.start | date: "%Y.%m.%d" }}—{{ entry.date | date: "%m.%d" }}</time>
-        {% if older_date %}<a href="{{ prefix }}/weekly/{{ older_date }}/">{% if is_en %}Previous edition{% else %}上一期{% endif %} →</a>{% endif %}
-      </div>
-    </header>
+    {% include weekly-header.html entry=entry language=include.language older_date=older_date %}
 
     {% unless edition.throughline.title == edition.items.first.title %}
     <section class="weekly-judgment" aria-labelledby="weekly-judgment-{{ entry.date }}">
@@ -149,5 +139,6 @@
     </div>
   </article>
 {% else %}
+  {% include weekly-header.html entry=entry language=include.language %}
   <section class="weekly-empty"><p>{% if is_en %}This language edition was not generated.{% else %}这一语言版本尚未生成。{% endif %}</p></section>
 {% endif %}

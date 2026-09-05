@@ -7,6 +7,7 @@
   {% if latest.date %}
     {% include weekly-edition.html entry=latest language=include.language %}
   {% else %}
+    {% include weekly-header.html language=include.language %}
     <section class="weekly-empty">
       <p>{% if is_en %}The latest weekly review still uses the legacy format.{% else %}最新一期周报仍使用旧版格式。{% endif %}</p>
       <a href="{% if is_en %}/en/weekly/{{ latest }}/{% else %}/weekly/{{ latest }}/{% endif %}">{% if is_en %}Read the latest review{% else %}阅读最新周报{% endif %}</a>
@@ -49,6 +50,7 @@
     </section>
   {% endif %}
 {% else %}
+  {% include weekly-header.html language=include.language %}
   <section class="weekly-empty">
     <p>{% if is_en %}No weekly review has been published yet.{% else %}还没有周报。积累足够的日报后，系统会自动生成第一期。{% endif %}</p>
   </section>

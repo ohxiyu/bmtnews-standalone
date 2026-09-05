@@ -13,6 +13,25 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
 {% assign prefix = "" %}
 {% if is_en %}{% assign prefix = "/en" %}{% endif %}
 
+{% if include.kind == "threads" or include.kind == "entities" %}
+  {% assign section_rows = site.data.threads.threads %}
+  {% assign section_description = page.description %}
+  {% if include.kind == "entities" %}
+    {% assign section_rows = site.data.entities.entities %}
+    {% capture section_description %}{% if is_en %}Follow companies, protocols, and regulators across reports and continuing events.{% else %}从不同报道和持续事件中，追踪反复出现的公司、协议与监管机构。{% endif %}{% endcapture %}
+  {% endif %}
+  {% include section-header.html title=page.title description=section_description %}
+  {% assign section_latest = section_rows | map: "latest_date" | sort | last %}
+  {% capture section_metadata %}
+    <div class="day-divider-title">
+      <span class="day-state">{% if is_en %}Latest update{% else %}最近更新{% endif %}</span>
+      {% if section_latest %}<time datetime="{{ section_latest | escape }}">{{ section_latest | date: "%Y.%m.%d" | escape }}</time>{% else %}<span class="day-window">{% if is_en %}Awaiting coverage{% else %}暂无更新{% endif %}</span>{% endif %}
+    </div>
+    <div class="day-divider-stats"><span>{{ section_rows.size | default: 0 | escape }} {% if include.kind == "threads" %}{% if is_en %}events{% else %}条事件线{% endif %}{% else %}{% if is_en %}entities{% else %}个实体{% endif %}{% endif %}</span></div>
+  {% endcapture %}
+  {% include section-divider.html content=section_metadata %}
+{% endif %}
+
 {% if include.kind == "threads" %}
   {% assign rows = site.data.threads.threads %}
   {% if rows and rows.size > 0 %}
@@ -180,7 +199,6 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
           <p class="edition-overview-title">{% if is_en %}ACTIVE ENTITIES{% else %}近期焦点{% endif %}</p>
           <h2 id="entity-context-title" class="visually-hidden">{% if is_en %}Three entities driving recent coverage{% else %}最近最活跃的三个实体{% endif %}</h2>
         </div>
-        <p>{% if is_en %}Follow the actors behind separate reports and continuing events.{% else %}从不同报道和持续事件中，追踪反复出现的公司、协议与监管机构。{% endif %}</p>
       </header>
       <ol class="event-context-list entity-context-list">
         {% for row in ranking limit: 3 %}

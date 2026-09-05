@@ -1,0 +1,10 @@
+{% comment %}Shared masthead for feed, events, entities and weekly pages.
+Title/description are plain text; navigation is trusted template markup.
+The date/update row is rendered separately by section-divider.html so the
+continuous feed can repeat that boundary for older days without another h1.
+{% endcomment %}
+<header class="section-header">
+  <h1>{% if include.home_url %}<a href="{{ include.home_url | relative_url }}">{{ include.title | escape }}</a>{% else %}{{ include.title | escape }}{% endif %}</h1>
+  <p class="section-description">{{ include.description | escape }}</p>
+  {{ include.navigation }}
+</header>

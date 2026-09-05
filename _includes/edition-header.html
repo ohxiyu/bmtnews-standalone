@@ -17,21 +17,7 @@ Parameters:
 {% assign home_url = "/" %}
 {% if include.language == "en" %}{% assign home_url = "/en/" %}{% endif %}
 
-<header class="daily-feed-header">
-  <div class="daily-feed-heading">
-    <div class="daily-title-row">
-      {% if is_archive %}
-        <h1><a href="{{ home_url | relative_url }}">{% if include.language == "en" %}Daily Briefing{% else %}每日情报{% endif %}</a></h1>
-      {% else %}
-        <h1>{% if include.language == "en" %}Daily Briefing{% else %}每日情报{% endif %}</h1>
-      {% endif %}
-    </div>
-    {% if include.language == "en" %}
-      <p>One crypto intelligence edition a day, with selected AI, technology, and policy coverage.</p>
-    {% else %}
-      <p>每日一期加密市场情报，兼顾 AI 科技与政策变化。</p>
-    {% endif %}
-  </div>
+{% capture edition_navigation %}
   {% if nav_posts.size > 0 %}
     <nav class="day-nav" aria-label="{% if include.language == "en" %}Recent editions{% else %}近期日报{% endif %}">
       <span class="day-nav-label">{% if include.language == "en" %}Recent{% else %}近期{% endif %}</span>
@@ -49,4 +35,9 @@ Parameters:
       {% endfor %}
     </nav>
   {% endif %}
-</header>
+{% endcapture %}
+{% capture edition_title %}{% if include.language == "en" %}Daily Briefing{% else %}每日情报{% endif %}{% endcapture %}
+{% capture edition_description %}{% if include.language == "en" %}One crypto intelligence edition a day, with selected AI, technology, and policy coverage.{% else %}每日一期加密市场情报，兼顾 AI 科技与政策变化。{% endif %}{% endcapture %}
+{% assign edition_home_link = nil %}
+{% if is_archive %}{% assign edition_home_link = home_url %}{% endif %}
+{% include section-header.html title=edition_title description=edition_description navigation=edition_navigation home_url=edition_home_link %}
