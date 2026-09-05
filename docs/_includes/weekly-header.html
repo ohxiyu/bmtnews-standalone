@@ -1,0 +1,11 @@
+{% capture weekly_title %}{% if include.language == "en" %}Weekly Review{% else %}周报{% endif %}{% endcapture %}
+{% capture weekly_description %}{% if include.language == "en" %}The week's key changes, continuing events, and editorial judgments.{% else %}每周重要变化、持续事件与编辑判断。{% endif %}{% endcapture %}
+{% include section-header.html title=weekly_title description=weekly_description %}
+{% capture weekly_metadata %}
+  <div class="day-divider-title">
+    <span class="day-state">{% if include.language == "en" %}Edition{% else %}本期{% endif %}</span>
+    {% if include.entry.date %}<time datetime="{{ include.entry.date }}">{{ include.entry.start | default: include.entry.date | date: "%Y.%m.%d" }}—{{ include.entry.date | date: "%m.%d" }}</time>{% else %}<span class="day-window">{% if include.language == "en" %}Weekly archive{% else %}周度归档{% endif %}</span>{% endif %}
+  </div>
+  {% if include.older_date %}<div class="day-divider-stats"><a href="{% if include.language == 'en' %}/en{% endif %}/weekly/{{ include.older_date }}/">{% if include.language == "en" %}Previous edition{% else %}上一期{% endif %} →</a></div>{% endif %}
+{% endcapture %}
+{% include section-divider.html content=weekly_metadata %}

@@ -108,7 +108,8 @@ def test_home_template_and_metadata_are_present_without_javascript() -> None:
 
     assert '<h1 class="visually-hidden">' not in feed_home
     assert "{% include edition-header.html" in feed_home
-    assert "<h1>" in edition_header
+    assert "include section-header.html" in edition_header
+    assert "<h1>" in (DOCS / "_includes" / "section-header.html").read_text()
     assert "每日情报" in edition_header
     assert '<html lang="' in layout
     assert '<link rel="canonical"' in layout

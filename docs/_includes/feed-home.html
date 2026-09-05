@@ -57,7 +57,7 @@
       {% for post in feed_posts limit:2 %}
         {% assign post_key = post.date | date: "%Y-%m-%d" %}
         <section class="daily-day" data-language="{{ include.language }}" data-date="{{ post_key }}">
-          <header class="day-divider">
+          {% capture day_metadata %}
             <div class="day-divider-title">
               {% if forloop.first %}
                 <span class="day-state">
@@ -88,7 +88,8 @@
                 <span data-short="H"><strong data-stat="critical">{{ post.critical_count | default: "—" }}</strong> high priority</span>
               {% endif %}
             </div>
-          </header>
+          {% endcapture %}
+          {% include section-divider.html content=day_metadata %}
           <div class="daily-feed-content" data-language="{{ include.language }}" data-date="{{ post_key }}">
             {{ post.content }}
           </div>

@@ -10,6 +10,7 @@
 {% if selected and selected.date %}
   {% include weekly-edition.html entry=selected language=include.language show_history_link=true %}
 {% else %}
+  {% include weekly-header.html language=include.language %}
   <section class="weekly-empty">
     <p>{% if is_en %}This weekly edition is not available in the structured archive yet.{% else %}这一期周报尚未进入结构化存档。{% endif %}</p>
     <a href="{% if is_en %}/en/weekly/{% else %}/weekly/{% endif %}">{% if is_en %}Return to Weekly{% else %}返回周报{% endif %}</a>
