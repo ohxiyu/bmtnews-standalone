@@ -1,4 +1,4 @@
-import { checkReadiness } from "./lib";
+import { checkReadiness, SCHEDULE_CRONS } from "./lib";
 import { runRecovery, runSchedule, responseStatus } from "./recovery";
 import { timingSafeEqual } from "node:crypto";
 export { RecoveryGate } from "./gate";
@@ -72,7 +72,10 @@ export default {
       service: "bmtnews-daily-dispatcher",
       status: "ok",
       primary_cron_utc: "30 0 * * *",
-      final_cron_utc: "10 1 * * *",
+      schedule_crons_utc: SCHEDULE_CRONS,
+      schedule_timezone: env.EDITION_TIMEZONE,
+      first_check_local: "08:30",
+      last_check_local: "23:00",
       admin_oauth: Boolean(
         oauthEnv.GITHUB_OAUTH_CLIENT_ID && oauthEnv.GITHUB_OAUTH_CLIENT_SECRET,
       )

@@ -1,7 +1,7 @@
 import { env } from "cloudflare:test";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import worker from "../src/index";
-import { runRecovery, responseStatus, recoveryTesting } from "../src/recovery";
+import { runRecovery, runSchedule, responseStatus, recoveryTesting } from "../src/recovery";
 
 afterEach(() => { vi.unstubAllGlobals(); vi.restoreAllMocks(); });
 let sequence = 0;
@@ -55,6 +55,16 @@ function fixture(options: {
 }
 
 describe("production-aware recovery", () => {
+  it.each(["40,50 0 * * *", "*/10 1-3 * * *", "0 4-15 * * *"])(
+    "runs the scheduled handler for %s without dispatching a healthy edition",
+    async (cron) => {
+      const f = fixture({ raw: true, public: true, homepage: true });
+      const now = f.now + 4 * 60 * 60_000;
+      vi.spyOn(Date, "now").mockReturnValue(now);
+      await runSchedule(cron, now, env);
+      expect(f.posts()).toHaveLength(0);
+    },
+  );
   it("requires matching raw JSON, both posts, public JSON and actual homepage items", async () => {
     const f = fixture({ raw: true, public: true, homepage: true });
     const result = await runRecovery(env, f.now, "test");

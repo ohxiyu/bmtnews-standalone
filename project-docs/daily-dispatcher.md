@@ -12,15 +12,16 @@ BMTNews 每天生成一期早间日报，业务时区固定为 `Asia/Shanghai`�
 | --- | --- | --- |
 | 08:30 | Cloudflare Cron | 主触发；当期未发布且没有运行中任务时，触发日报。 |
 | 08:37 | GitHub Feed Collection | 独立采集并在任务结束后调用共享刊期检查接口。 |
-| 08:40 | Cloudflare Cron | 第一次检查；失败或未创建运行时补触发。 |
+| 08:40–11:50 | Cloudflare Cron | 每 10 分钟检查；缺失时按共享锁、冷却期和重试预算补发。 |
 | 08:47 | GitHub Actions | 独立备用 Watchdog；Cloudflare 主链路失效时补触发。 |
-| 08:55 | Cloudflare Cron | 第二次检查；继续按“已发布、运行中、缺失”三态去重。 |
-| 09:10 | Cloudflare Cron | 上午末次检查；仍按共享锁、冷却期和重试预算恢复。 |
 | 09:17–15:17 | GitHub Actions | Watchdog 每小时复查，恢复被 GitHub 延迟或丢弃的早期事件。 |
+| 12:00–23:00 | Cloudflare Cron | 每小时整点检查；上午漏触发后继续自动恢复。 |
+
+Cloudflare 每天共 33 次检查，08:30 前和 23:00 后不安排新的 Cron 检查。正常检查仅读取发布状态和页面，不调用 AI；增加检查频率不会增加每期的自动派发上限。仅使用现有 Cloudflare 和 GitHub，不接入 cron-job.org 等第三方定时服务，也不新增通知通道。
 
 Cloudflare Worker 同时验证生成物和实际生产页面：`gh-pages/api/latest.json` 的刊期与非空条目、中英文 Markdown、生产 `/api/latest.json` 的刊期和条目数、首页第一天的日期及文章数量，以及中英文详情页的日期和文章数量。探测使用独立查询参数避免命中旧缓存；不是 HTTP 200 或 GitHub 成功记录就算发布完成。
 
-所有自动入口（Cloudflare Cron、GitHub Watchdog、Feed Collection 恢复检查、外部 HTTP 检查）共用按刊期命名的 Durable Object 锁。每次检查持有最长 2 分钟的租约；日报最多尝试 3 次、Pages 最多尝试 2 次，两类操作各有 30 分钟冷却期。派发前先持久化预算，即使请求超时也不立即重试，避免响应丢失造成重复派发。任何 main 日报任务处于队列或运行中都不再提交；持续超过 45 分钟报卡住，不自动取消人工或生产任务。
+所有自动入口（Cloudflare Cron、GitHub Watchdog、Feed Collection 恢复检查）共用按刊期命名的 Durable Object 锁。每次检查持有最长 2 分钟的租约；日报最多尝试 3 次、Pages 最多尝试 2 次，两类操作各有 30 分钟冷却期。派发前先持久化预算，即使请求超时也不立即重试，避免响应丢失造成重复派发。任何 main 日报任务处于队列或运行中都不再提交；持续超过 45 分钟报卡住，不自动取消人工或生产任务。
 
 内容已生成但生产页面未确认时，先留出 15 分钟部署时间，再调用仅绑定 `gh-pages` 的 Pages Deploy Hook，不重跑 AI。两次重建后仍未恢复转人工处理。空日报、上游 5xx、无效 JSON 或认证失败不会被当作成功；探测故障不会绕过共享锁直接补发。手动发布仍是显式人工入口，不受自动恢复次数限制，正常的发布工作流并发控制继续保留。
 
@@ -45,7 +46,7 @@ npm run check
 npx wrangler deploy
 ```
 
-`wrangler.jsonc` 通过 `secrets.required` 强制校验令牌，缺少 Secret 时生产部署会失败。Cloudflare Cron 使用 UTC，因此 08:30、08:40、08:55、09:10 分别配置为 `00:30`、`00:40`、`00:55`、`01:10` UTC；配置变更后应在 Dashboard 的 Cron Events 中确认四个触发器已生效。
+`wrangler.jsonc` 通过 `secrets.required` 强制校验令牌，缺少 Secret 时生产部署会失败。Cloudflare Cron 使用 UTC，四组表达式为 `30 0 * * *`、`40,50 0 * * *`、`*/10 1-3 * * *`、`0 4-15 * * *`，分别对应上海时间 08:30、08:40/08:50、09:00–11:50 每 10 分钟、12:00–23:00 每小时。修改后读取生产 schedules API 核对，并验证实际 Cron 记录；`/health` 只反映代码声明，不证明调度已经触发。配置传播期间继续兼容旧 Cron 事件。
 
 Worker 当前没有仓库内的自动部署流程。修改或合并 `ops/daily-dispatcher/` 后，必须执行上述部署命令并验证 `/ready`；只合并代码不会更新生产 Worker。若 `/ready` 失败，先修复 Cloudflare Secret 中的 GitHub fine-grained token，再等待下一次 Cron。
 
@@ -57,11 +58,11 @@ Worker 当前没有仓库内的自动部署流程。修改或合并 `ops/daily-d
 4. 检查 `gh-pages/_posts/YYYY-MM-DD-summary-{zh,en}.md`，再检查站点 `/YYYY/MM/DD/summary-{zh,en}.html`。
 5. 如果 09:15 后仍未确认发布，接口返回 HTTP 503。优先区分 GitHub API/令牌问题、日报 workflow 失败、`gh-pages` 提交失败和 Pages 渲染失败；不要直接使用 `force_publish`，除非确认需要覆盖已发布期号。
 
-## 外部静默检查接入
+## GitHub 备用检查与静默恢复
 
-新增的受保护接口为 `POST /publication/check`，请求头必须携带 `Authorization: Bearer <RECOVERY_CHECK_TOKEN>`。不能用 GET、查询参数令牌或 GitHub PAT 替代；令牌只允许检查并按固定策略恢复当前刊期，不能指定仓库、历史日期或任意工作流。同一个随机令牌存入 Worker Secret、GitHub Actions 仓库 Secret 和外部检查服务的加密请求头配置。GitHub 的两个恢复入口必须使用 `--coordinator`，接口故障时失败告警，不降级为无锁直接派发。
+新增的受保护接口为 `POST /publication/check`，请求头必须携带 `Authorization: Bearer <RECOVERY_CHECK_TOKEN>`。不能用 GET、查询参数令牌或 GitHub PAT 替代；令牌只允许检查并按固定策略恢复当前刊期，不能指定仓库、历史日期或任意工作流。同一个随机令牌存入 Worker Secret、GitHub Actions 仓库 Secret。GitHub 的两个恢复入口必须使用 `--coordinator`，接口故障时记录失败，不降级为无锁直接派发。
 
-外部服务建议使用 cron-job.org，业务时区 `Asia/Shanghai`。接入需要管理员登录其账号；只有接口代码合并、Worker 部署不代表外部任务已配置。计划为 08:50–12:00 每 10 分钟检查，之后每小时检查到 23:00；可按服务支持的日历规则拆分任务。09:15 是后台逾期判定阈值，下一次轮询才记录失败状态，不发送用户通知。
+外部独立定时方案已取消，无需注册或登录第三方账号。受保护的 HTTP 接口继续供现有 GitHub 备用检查及管理员验收使用，不删除其 Secret。09:15 仅用于后台逾期状态判定，不接入邮件或消息通知。
 
 响应语义：
 
@@ -69,14 +70,14 @@ Worker 当前没有仓库内的自动部署流程。修改或合并 `ops/daily-d
 | --- | --- |
 | 200 `healthy` | 当期已在生产页面验证，无须补发。 |
 | 200 `not_due` | 当天尚未到 08:30，不触发提前生成。 |
-| 202 | 未到告警时限，正在生成、等待部署或恢复冷却中。 |
+| 202 | 未到逾期时限，正在生成、等待部署或恢复冷却中。 |
 | 503 | 09:15 后仍未确认发布、任务卡住、次数耗尽或检查本身失败。 |
 | 401 / 405 | 密钥错误或请求方法错误，属于配置故障。 |
 
-按管理员要求，关闭外部服务的失败通知、恢复通知、停用通知及成功通知，不接入邮件或消息发送服务。系统静默检查并自动补发，异常和重试耗尽只保留后台日志。外部服务只持有上述低权限检查令牌，不持有 GitHub 或 Cloudflare 管理令牌。验收需确认正常 200、未授权 401、模拟故障自动恢复和定时任务实际执行记录；不能仅以保存成功为准。此方案降低“定时事件漏触发”风险，不能保证 GitHub、Cloudflare 或外部检查服务全面故障时仍能发布，也不无限重试付费 AI 任务。
+按管理员要求，不接入新的邮件或消息通知服务。系统静默检查并自动补发，异常和重试耗尽保留后台日志。验收需确认正常 200、未授权 401、模拟故障恢复和实际定时执行记录。两套现有平台增加检查机会，但不构成第三方独立调度；GitHub 和 Cloudflare 同时异常时仍可能延迟，也不无限重试付费 AI 任务。
 
 ## 发布顺序与回滚
 
 GitHub 检查客户端必须发送 `User-Agent: bmtnews-schedule-watchdog`。生产验证发现 Cloudflare 会在 Worker 执行前拒绝默认的 `Python-urllib/3.12` 客户端标识（HTTP 403 / 1010）；这里使用应用标识，不关闭 Cloudflare 安全检查。若调用失败，先查看 HTTP 状态，再核对 Secret，不绕过共享锁直接补发。
 
-先配置 Worker 的两个新 Secret 和 GitHub 的 `RECOVERY_CHECK_TOKEN`，运行 Worker 检查并部署，再验证生产 `/publication/check` 返回正确刊期；随后合并启用共享接口的 GitHub 工作流，最后接入静默外部定时。Durable Object 使用 SQLite 首次迁移 `recovery-v1`，后续修改不要删除已部署的迁移记录。若回滚业务代码，保留绑定和迁移，避免丢失重试预算；若暂时停止外部自动恢复，先禁用外部检查任务，不要删除锁数据后继续派发。
+先配置 Worker 的两个新 Secret 和 GitHub 的 `RECOVERY_CHECK_TOKEN`，运行 Worker 检查并部署，再验证生产 `/publication/check` 返回正确刊期；随后合并启用共享接口的 GitHub 工作流；无需接入任何外部定时服务。Durable Object 使用 SQLite 首次迁移 `recovery-v1`，后续修改不要删除已部署的迁移记录。若回滚业务代码，保留绑定和迁移，避免丢失重试预算；若暂时停止自动恢复，应同时停用 Cloudflare Cron 和 GitHub 的自动恢复入口，不要删除锁数据后继续派发。
