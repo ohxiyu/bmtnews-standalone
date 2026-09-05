@@ -225,6 +225,11 @@ def _overview_html(
     )
 
 
+def category_label(category: str, language: str) -> str:
+    """One display vocabulary for feed, event, and entity pages."""
+    return _LABELS.get(language, _LABELS["zh"]).get(category, category)
+
+
 def _top_level_category(item: ContentItem) -> str:
     category = str(item.metadata.get("category") or "").strip().lower()
     if (

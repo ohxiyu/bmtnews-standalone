@@ -14,6 +14,7 @@ from collections import Counter
 from datetime import date as date_type, timedelta
 from pathlib import Path
 from typing import Iterable, List, Mapping, Optional, Sequence
+from zoneinfo import ZoneInfo
 
 from ._file_utils import _atomic_write_text
 from .archive import ArchiveRecord
@@ -24,6 +25,7 @@ from .threads import EntitySummary
 
 # Shared HTML helpers; same escaping rules as the daily feed rendering.
 from .web_feed import _escape as escape_text, _safe_url as safe_url
+from .web_feed import category_label as localized_category
 
 logger = logging.getLogger(__name__)
 
@@ -525,7 +527,7 @@ def render_event_page(event: TrackedEvent, language: str) -> str:
         f'<span class="event-status" data-status="{event.status.value}">'
         f'{escape_text(status_label)}</span>'
         f'<span class="category-pill" data-category="{escape_text(event.category)}">'
-        f'{escape_text(event.category)}</span>'
+        f'{escape_text(localized_category(event.category, normalized))}</span>'
         f'<span>{escape_text(event_type_label)}</span>'
         f'<span>{escape_text(labels["first_seen"])} {escape_text(first_seen)}</span>'
         f'<span>{escape_text(labels["last_changed"])} {escape_text(last_changed)}</span>'
@@ -737,15 +739,19 @@ def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
                 reference_links.append(
                     {"url": reference.url, "title": reference.title or reference.url}
                 )
-        first = min(update.first_seen_at for update in material).date().isoformat()
-        latest = max(update.first_seen_at for update in material).date().isoformat()
+        local_zone = ZoneInfo("Asia/Shanghai")
+        first = min(update.first_seen_at for update in material).astimezone(local_zone).date().isoformat()
+        # A late-discovered historical node must not bump a continuing event.
+        latest_at = event.last_material_change_at.astimezone(local_zone)
+        latest = latest_at.date().isoformat()
         rows.append(
             {
                 "thread_id": event.event_id,
                 "event_id": event.event_id,
                 "latest_date": latest,
+                "latest_at": latest_at.isoformat(),
                 "first_date": first,
-                "days": len({update.first_seen_at.date() for update in material}),
+                "days": len({update.first_seen_at.astimezone(local_zone).date() for update in material}),
                 "entries": len(material),
                 "updates_count": len(material),
                 "sources_count": len(
@@ -785,7 +791,7 @@ def build_event_index_data(events: Sequence[TrackedEvent]) -> dict:
                 "reference_links": reference_links,
             }
         )
-    rows.sort(key=lambda row: (row["latest_date"], row["event_id"]), reverse=True)
+    rows.sort(key=lambda row: (row["latest_at"], row["event_id"]), reverse=True)
     ranking = sorted(
         rows,
         key=lambda row: (
@@ -913,7 +919,7 @@ def render_entity_page(
         )
         summary = escape_text(record.summary_for(language))
         source = escape_text(record.source_label or record.source_type)
-        category_label = escape_text(record.top_category or record.category)
+        category_label = escape_text(localized_category(record.top_category or record.category, language))
         score = (
             f'<span class="score-badge" data-tier="'
             f'{"high" if (record.score or 0) >= 9 else "good" if (record.score or 0) >= 7 else "mid"}'
@@ -1027,7 +1033,7 @@ def render_entity_page(
     if category:
         status_line += (
             f'<span class="category-pill" data-category="{escape_text(category)}">'
-            f'{escape_text(category)}</span>'
+            f'{escape_text(localized_category(category, language))}</span>'
         )
     if entity_type:
         status_line += f'<span>{escape_text(entity_type)}</span>'

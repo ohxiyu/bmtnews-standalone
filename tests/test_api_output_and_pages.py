@@ -619,6 +619,33 @@ def test_event_ranking_prioritizes_importance_before_recency() -> None:
     ]
 
 
+def test_event_index_uses_local_material_timestamp_not_late_discovery() -> None:
+    from zoneinfo import ZoneInfo
+
+    event = make_event("evt_local001", updates=2)
+    event.last_material_change_at = datetime(2026, 9, 4, 18, tzinfo=timezone.utc)
+    event.updates[0].first_seen_at = datetime(2026, 9, 9, tzinfo=timezone.utc)
+    row = build_event_index_data([event])["threads"][0]
+    assert row["latest_date"] == "2026-09-05"
+    assert row["latest_at"] == event.last_material_change_at.astimezone(ZoneInfo("Asia/Shanghai")).isoformat()
+
+
+def test_context_is_recent_and_latest_precedes_background() -> None:
+    template = Path("docs/_includes/archive-index.html").read_text()
+    context = template.split('<div class="event-index-layout">')[0]
+    assert "for row in rows limit: 3" in context
+    assert "for row in ranking limit: 3" not in context
+    assert template.index('event-brief-latest') < template.index('event-brief-background')
+    for section in ("threads", "entity"):
+        assert f"alternate_url: /en/{section}/" in Path(f"docs/{section}.html").read_text()
+        assert f"alternate_url: /{section}/" in Path(f"docs/en/{section}.html").read_text()
+
+
+def test_weekly_fallback_does_not_repeat_leading_story_as_judgment() -> None:
+    template = Path("docs/_includes/weekly-edition.html").read_text()
+    assert "unless edition.throughline.title == edition.items.first.title" in template
+
+
 def test_event_index_template_reuses_feed_layout_and_filters() -> None:
     template = (
         Path("docs/_includes/archive-index.html").read_text(encoding="utf-8")

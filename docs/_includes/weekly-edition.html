@@ -29,18 +29,20 @@
       </div>
     </header>
 
+    {% unless edition.throughline.title == edition.items.first.title %}
     <section class="weekly-judgment" aria-labelledby="weekly-judgment-{{ entry.date }}">
       <p class="edition-overview-title">{% if is_en %}THIS WEEK'S JUDGMENT{% else %}本周判断{% endif %}</p>
       <h2 id="weekly-judgment-{{ entry.date }}">{{ edition.throughline.title | escape }}</h2>
       <p>{{ edition.throughline.summary | escape }}</p>
     </section>
+    {% endunless %}
 
     {% if edition.items and edition.items.size > 0 %}
       <section class="event-context weekly-context" aria-labelledby="weekly-context-{{ entry.date }}">
         <header class="event-context-heading">
           <div>
             <p class="edition-overview-title">{% if is_en %}KEY DEVELOPMENTS{% else %}关键脉络{% endif %}</p>
-            <h2 id="weekly-context-{{ entry.date }}">{% if is_en %}Three developments that defined the week{% else %}定义本周的三条重大变化{% endif %}</h2>
+            <h2 id="weekly-context-{{ entry.date }}" class="visually-hidden">{% if is_en %}Three developments that defined the week{% else %}定义本周的三条重大变化{% endif %}</h2>
           </div>
           <p>{% if is_en %}Ranked by consequence, with evidence from the published archive.{% else %}按影响程度排序，依据本周已发布报道。{% endif %}</p>
         </header>
