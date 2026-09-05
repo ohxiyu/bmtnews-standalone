@@ -79,10 +79,12 @@ noindex: true
       Sveltia CMS: a single static script; content edits are Git commits to
       data/editorial.json on main, which triggers the editorial-rebuild
       workflow. No server, no database. Sign in with a fine-grained GitHub
-      personal access token (repo: bmtnews, Contents: Read and write) —
+      personal access token (repo: bmtnews-standalone, Contents: Read and write) —
       see project-docs/editorial.md for setup.
     -->
     <!-- Version pinned deliberately: bump manually after reviewing releases. -->
-    <script src="https://unpkg.com/@sveltia/cms@0.176.0/dist/sveltia-cms.js"></script>
+    <script src="https://unpkg.com/@sveltia/cms@0.176.0/dist/sveltia-cms.js"
+      integrity="sha384-fdfr1N0RHfH/PQqUh8GT8MBIu9RdbSaMFGUbJ//47IKHK9p+LobwHwpCx+BcFcA6"
+      crossorigin="anonymous"></script>
   </body>
 </html>

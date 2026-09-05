@@ -11,17 +11,37 @@ on:
 
 permissions:
   actions: write
+  contents: read
 
 jobs:
   rebuild:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.32"
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Check effective Shanghai edition changes
+        id: changes
+        env:
+          BEFORE_REF: ${{ github.event.before }}
+        run: uv run python -m src.editorial_changes --before-ref "$BEFORE_REF" >> "$GITHUB_OUTPUT"
       - name: Dispatch daily edition rebuild
+        if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          EDITION_DATE: ${{ steps.changes.outputs.edition_date }}
         run: |
           gh workflow run daily-summary.yml \
             --repo "$GITHUB_REPOSITORY" \
+            -f edition_date="$EDITION_DATE" \
             -f force_publish=true \
             -f trigger_source=editorial-update
