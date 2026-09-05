@@ -1,0 +1,6 @@
+{%- case include.category -%}
+  {%- when 'crypto' -%}Crypto
+  {%- when 'technology' -%}{% if include.language == 'en' %}AI &amp; Tech{% else %}AI 科技{% endif %}
+  {%- when 'policy' -%}{% if include.language == 'en' %}Policy{% else %}政策{% endif %}
+  {%- else -%}{{ include.category | escape }}
+{%- endcase -%}

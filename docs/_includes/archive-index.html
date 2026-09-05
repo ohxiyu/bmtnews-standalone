@@ -31,12 +31,12 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
       <header class="event-context-heading">
         <div>
           <p class="edition-overview-title">{% if is_en %}TODAY'S THROUGHLINE{% else %}今日脉络{% endif %}</p>
-          <h2 id="event-context-title">{% if is_en %}Three major events worth tracking now{% else %}最近值得追踪的三条重大事件{% endif %}</h2>
+          <h2 id="event-context-title" class="visually-hidden">{% if is_en %}Three recently updated events{% else %}最近出现进展的三条事件{% endif %}</h2>
         </div>
         <p>{% if today_updates.size > 0 %}{% if is_en %}{{ today_updates.size | escape }} verified event changes today{% else %}今日 {{ today_updates.size | escape }} 条事件出现确认进展{% endif %}{% else %}{% if is_en %}No new material change today; showing the most important recent events.{% else %}今日暂无新的实质变化，以下为近期重要事件。{% endif %}{% endif %}</p>
       </header>
       <ol class="event-context-list">
-        {% for row in ranking limit: 3 %}
+        {% for row in rows limit: 3 %}
           {% assign context_title = row.title_zh | default: row.title_en %}
           {% assign context_update = row.latest_update_zh | default: row.latest_update_en %}
           {% if is_en %}
@@ -86,22 +86,22 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
               </div>
               <div class="digest-item-content">
                 <div class="digest-item-meta"><div>
-                  {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category | escape }}">{{ row.category | escape }}</span>{% endif %}
+                  {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category | escape }}">{% include category-label.html category=row.category language=include.language %}</span>{% endif %}
                   <span class="event-status" data-status="{{ row.status | escape }}">{% if is_en %}{{ row.status_en | escape }}{% else %}{{ row.status_zh | escape }}{% endif %}</span>
                   {% if event_type and event_type != "" %}<span class="event-feed-type">{{ event_type | escape }}</span>{% endif %}
                 </div>{% if row.score %}<span class="score-badge" data-tier="{% if row.score >= 9 %}high{% elsif row.score >= 7 %}good{% else %}mid{% endif %}">{{ row.score | escape }}</span>{% endif %}</div>
                 <h2><a href="{{ prefix | escape }}/{% if row.event_id %}events/{{ row.event_id | escape }}{% else %}threads/{{ row.thread_id | escape }}{% endif %}/">{% if is_en %}{{ row.title_en | default: row.title_zh | escape }}{% else %}{{ row.title_zh | default: row.title_en | escape }}{% endif %}</a></h2>
                 <div class="event-brief-grid">
-                  {% if background and background != "" %}
-                    <section class="event-brief-block event-brief-background">
-                      <h3>{% if is_en %}Background{% else %}事件背景{% endif %}</h3>
-                      <p>{{ background | escape }}</p>
-                    </section>
-                  {% endif %}
                   {% if latest_update and latest_update != "" %}
                     <section class="event-brief-block event-brief-latest">
                       <h3>{% if is_en %}Latest{% else %}最新进展{% endif %}</h3>
                       <p>{{ latest_update | escape }}</p>
+                    </section>
+                  {% endif %}
+                  {% if background and background != "" %}
+                    <section class="event-brief-block event-brief-background">
+                      <h3>{% if is_en %}Background{% else %}事件背景{% endif %}</h3>
+                      <p>{{ background | escape }}</p>
                     </section>
                   {% endif %}
                   {% if discussion and discussion != "" %}
@@ -178,7 +178,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
       <header class="event-context-heading">
         <div>
           <p class="edition-overview-title">{% if is_en %}ACTIVE ENTITIES{% else %}近期焦点{% endif %}</p>
-          <h2 id="entity-context-title">{% if is_en %}Three entities driving recent coverage{% else %}最近最活跃的三个实体{% endif %}</h2>
+          <h2 id="entity-context-title" class="visually-hidden">{% if is_en %}Three entities driving recent coverage{% else %}最近最活跃的三个实体{% endif %}</h2>
         </div>
         <p>{% if is_en %}Follow the actors behind separate reports and continuing events.{% else %}从不同报道和持续事件中，追踪反复出现的公司、协议与监管机构。{% endif %}</p>
       </header>
@@ -225,7 +225,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
               </div>
               <div class="digest-item-content">
                 <div class="digest-item-meta"><div>
-                  {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category | escape }}">{{ row.category | escape }}</span>{% endif %}
+                  {% if row.category and row.category != "" %}<span class="category-pill" data-category="{{ row.category | escape }}">{% include category-label.html category=row.category language=include.language %}</span>{% endif %}
                   {% if entity_type and entity_type != "" %}<span class="entity-type">{{ entity_type | escape }}</span>{% endif %}
                   {% if row.recent > 0 %}<span class="entity-activity">{% if is_en %}{{ row.recent | escape }} in 7d{% else %}近 7 日 {{ row.recent | escape }} 条{% endif %}</span>{% endif %}
                 </div>{% if row.top_score %}<span class="score-badge" data-tier="{% if row.top_score >= 9 %}high{% elsif row.top_score >= 7 %}good{% else %}mid{% endif %}">{{ row.top_score | escape }}</span>{% endif %}</div>
