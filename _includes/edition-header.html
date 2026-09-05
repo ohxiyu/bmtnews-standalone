@@ -35,9 +35,6 @@ Parameters:
   {% if nav_posts.size > 0 %}
     <nav class="day-nav" aria-label="{% if include.language == "en" %}Recent editions{% else %}近期日报{% endif %}">
       <span class="day-nav-label">{% if include.language == "en" %}Recent{% else %}近期{% endif %}</span>
-      {% if is_archive %}
-        <a class="day-nav-today" href="{{ home_url | relative_url }}">{% if include.language == "en" %}Today{% else %}今日{% endif %}</a>
-      {% endif %}
       {% for post in nav_posts limit:7 %}
         {% assign nav_key = post.date | date: "%Y-%m-%d" %}
         {% assign is_current = false %}
@@ -46,7 +43,9 @@ Parameters:
         {% elsif forloop.first %}
           {% assign is_current = true %}
         {% endif %}
-        <a href="{{ post.url | relative_url }}"{% if is_current %} aria-current="true"{% endif %}>{{ post.date | date: "%m.%d" }}</a>
+        {% assign nav_url = post.url %}
+        {% if forloop.first %}{% assign nav_url = home_url %}{% endif %}
+        <a href="{{ nav_url | relative_url }}"{% if is_current %} aria-current="true"{% endif %}>{{ post.date | date: "%m.%d" }}</a>
       {% endfor %}
     </nav>
   {% endif %}
