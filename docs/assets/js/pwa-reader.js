@@ -75,6 +75,11 @@ export function installedMode(mediaMatches, appleStandalone) {
   return Boolean(mediaMatches || appleStandalone === true);
 }
 
+export function waitingUpdate(hasWaitingWorker, hasController) {
+  // A first installation briefly enters "waiting" before automatic activation.
+  return Boolean(hasWaitingWorker && hasController);
+}
+
 function initReader() {
   const main = document.querySelector('#content');
   const opener = document.querySelector('[data-reader-open]');
@@ -380,7 +385,9 @@ function initReader() {
       registration = value;
       checkVersion();
       const showUpdate = () => {
-        if (registration.waiting) { updateReady = true; update.hidden = false; showConnectivity(); }
+        if (waitingUpdate(registration.waiting, navigator.serviceWorker.controller)) {
+          updateReady = true; update.hidden = false; showConnectivity();
+        }
       };
       showUpdate();
       registration.addEventListener('updatefound', () => {
