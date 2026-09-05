@@ -163,10 +163,10 @@ def build_records(
                 title_zh=str(metadata.get("title_zh") or item.title),
                 title_en=str(metadata.get("title_en") or item.title),
                 summary_zh=str(
-                    metadata.get("detailed_summary_zh") or item.ai_summary or ""
+                    metadata.get("detailed_summary_zh") or metadata.get("detailed_summary") or item.ai_summary or ""
                 ),
                 summary_en=str(
-                    metadata.get("detailed_summary_en") or item.ai_summary or ""
+                    metadata.get("detailed_summary_en") or metadata.get("detailed_summary") or item.ai_summary or ""
                 ),
                 score=item.ai_score,
                 category=str(metadata.get("category") or ""),

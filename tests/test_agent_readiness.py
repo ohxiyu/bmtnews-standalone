@@ -31,7 +31,8 @@ def test_public_assets_use_fingerprint_and_revalidate() -> None:
     assert "max-age=300" in js_cache_rule
     assert "must-revalidate" in js_cache_rule
     assert "immutable" not in js_cache_rule
-    assert "immutable" in image_cache_rule
+    assert "immutable" not in image_cache_rule
+    assert "max-age=300" in image_cache_rule
     assert "max-age=0" in home_cache_rule
     assert "must-revalidate" in home_cache_rule
 

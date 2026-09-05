@@ -235,7 +235,9 @@ async function handleOriginRequest(request, env) {
 function cachePolicy(request) {
   if (request.method !== 'GET') return null;
   const url = new URL(request.url);
-  if (url.pathname === '/s' || url.pathname.startsWith('/s/')) return null;
+  if (url.pathname === '/s' || url.pathname.startsWith('/s/') ||
+      url.pathname === '/admin' || url.pathname.startsWith('/admin/') ||
+      url.searchParams.has('publication_check')) return null;
   // CSS and JavaScript must be able to recover from a deployment where new
   // markup reaches the edge before its matching asset. The query fingerprint
   // remains the primary cache key, but these files deliberately revalidate
@@ -244,17 +246,19 @@ function cachePolicy(request) {
     url.pathname.startsWith('/assets/css/') ||
     url.pathname.startsWith('/assets/js/')
   ) {
-    return {ttl: 300};
+    return {ttl: 300, browserTtl: 300};
   }
   if (url.pathname.startsWith('/assets/images/')) {
-    return {ttl: 31536000, immutable: true};
+    return url.searchParams.has('v')
+      ? {ttl: 31536000, browserTtl: 31536000, immutable: true}
+      : {ttl: 300, browserTtl: 300};
   }
   if (url.pathname.startsWith('/assets/')) {
     return url.searchParams.has('v')
-      ? {ttl: 31536000, immutable: true}
-      : {ttl: 300};
+      ? {ttl: 31536000, browserTtl: 31536000, immutable: true}
+      : {ttl: 300, browserTtl: 300};
   }
-  if (DATED_EDITION_PATH.test(url.pathname)) return {ttl: 86400, immutable: true};
+  if (DATED_EDITION_PATH.test(url.pathname)) return {ttl: 300};
   if (url.pathname === '/api/editions.json') return {ttl: 1800};
   if (url.pathname === '/api/events.json' || EVENT_DETAIL_PATH.test(url.pathname)) return {ttl: 300};
   if (url.pathname === '/api/latest.json') return {ttl: 600};
@@ -265,6 +269,8 @@ function cachePolicy(request) {
 
 function cacheKey(request) {
   const url = new URL(request.url);
+  // Leave the old immutable namespace behind when rolling out this policy.
+  url.searchParams.set('__bmt_cache', 'mutable-v2');
   if (MARKDOWN_ROUTES.has(url.pathname)) {
     url.searchParams.set(
       '__bmt_variant',
@@ -274,9 +280,14 @@ function cacheKey(request) {
   return new Request(url, {method: 'GET'});
 }
 
-function cachedResponse(response, status) {
+function cachedResponse(response, status, policy) {
   return responseWithHeaders(response, (headers) => {
     headers.set('X-BMTNews-Cache', status);
+    if (policy) {
+      const suffix = policy.immutable ? ', immutable' : ', must-revalidate';
+      headers.set('Cache-Control', `public, max-age=${policy.browserTtl ?? 0}${suffix}`);
+      headers.set('CDN-Cache-Control', `public, max-age=${policy.ttl}${suffix}`);
+    }
   });
 }
 
@@ -287,7 +298,7 @@ export async function handleRequest(request, env, ctx) {
 
   const key = cacheKey(request);
   const hit = await cache.match(key);
-  if (hit) return cachedResponse(hit, 'HIT');
+  if (hit) return cachedResponse(hit, 'HIT', policy);
 
   const response = await handleOriginRequest(request, env);
   if (!response.ok || response.headers.get('Cache-Control') === 'no-store') {
@@ -299,10 +310,12 @@ export async function handleRequest(request, env, ctx) {
     headers.set('CDN-Cache-Control', `public, max-age=${policy.ttl}${suffix}`);
     headers.delete('Set-Cookie');
   });
-  const write = cache.put(key, stored);
+  const write = cache.put(key, stored).catch((error) => {
+    console.warn(JSON.stringify({event: 'edge_cache_write_failed', message: String(error?.message || error)}));
+  });
   if (ctx?.waitUntil) ctx.waitUntil(write);
   else await write;
-  return cachedResponse(response, 'MISS');
+  return cachedResponse(response, 'MISS', policy);
 }
 
 export default {

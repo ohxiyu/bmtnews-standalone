@@ -74,6 +74,28 @@ function editionItems(text: string | null, date: string): number {
   return data.date === date ? data.items.length : 0;
 }
 
+function contentRevisions(text: string | null, language: "zh" | "en"): string[] | null {
+  if (!text) return null;
+  const data = JSON.parse(text);
+  // Keep old editions readable until a normal publication adds the markers.
+  if (data.content_revision_version !== 1) return null;
+  return data.items.map((item: {content_revision?: Record<string, unknown>}) => {
+    const revision = item.content_revision?.[language];
+    if (typeof revision !== "string" || !/^[a-f0-9]{64}$/.test(revision)) {
+      throw new Error("Invalid story content revision");
+    }
+    return revision;
+  });
+}
+
+function renderedRevisionsMatch(html: string, expected: string[] | null): boolean {
+  if (expected === null) return true;
+  const actual = Array.from(html.matchAll(/data-content-revision="([a-f0-9]{64})"/g))
+    .map((match) => match[1]);
+  return actual.length === expected.length &&
+    expected.every((revision, index) => actual[index] === revision);
+}
+
 export async function inspectPublication(env: Env, date: string, now: number) {
   const base = env.PUBLIC_SITE_URL.replace(/\/+$/, "");
   const nonce = "?publication_check=" + now;
@@ -88,6 +110,13 @@ export async function inspectPublication(env: Env, date: string, now: number) {
   ]);
   const items = editionItems(rawJson, date);
   const publicItems = editionItems(publicJson, date);
+  const revisions = {
+    zh: contentRevisions(rawJson, "zh"),
+    en: contentRevisions(rawJson, "en"),
+  };
+  // Same date/count is not enough: compare the actual published payload.
+  const samePayload = rawJson !== null && publicJson !== null &&
+    JSON.stringify(JSON.parse(rawJson)) === JSON.stringify(JSON.parse(publicJson));
   const rawReady = items > 0 && rawPosts.every(Boolean);
   // Both latest marker and actual first-day article count must match. Old
   // articles from the second day cannot make an empty current day healthy.
@@ -96,12 +125,14 @@ export async function inspectPublication(env: Env, date: string, now: number) {
   )[0] ?? "";
   const homeItems = (firstDay.match(/<article class="digest-item(?:\s|")/g) ?? []).length;
   const homeReady = home?.includes('data-latest-edition-date="' + date + '"') &&
-    firstDay.includes('data-date="' + date + '"') && homeItems >= items;
-  const rendered = rawReady && publicItems === items && homeReady
-    ? await Promise.all(urls.rendered.map(async (url) => {
+    firstDay.includes('data-date="' + date + '"') && homeItems >= items &&
+    renderedRevisionsMatch(firstDay, revisions.zh);
+  const rendered = rawReady && publicItems === items && samePayload && homeReady
+    ? await Promise.all(urls.rendered.map(async (url, index) => {
         const html = await getText(url + nonce);
         return Boolean(html?.includes('data-date="' + date + '"') &&
-          (html.match(/<article class="digest-item(?:\s|")/g) ?? []).length >= items);
+          (html.match(/<article class="digest-item(?:\s|")/g) ?? []).length >= items &&
+          renderedRevisionsMatch(html, index === 0 ? revisions.zh : revisions.en));
       }))
     : [false];
   return { rawReady, publicReady: Boolean(rawReady && rendered.every(Boolean)), items };
@@ -187,4 +218,4 @@ export async function runSchedule(cron: string, time: number, env: Env): Promise
   if (responseStatus(result) === 503) throw new Error("Publication recovery needs attention");
 }
 
-export const recoveryTesting = { editionItems };
+export const recoveryTesting = { editionItems, contentRevisions, renderedRevisionsMatch };
