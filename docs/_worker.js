@@ -233,7 +233,7 @@ async function handleOriginRequest(request, env) {
 }
 
 function cachePolicy(request) {
-  if (request.method !== 'GET') return null;
+  if (request.method !== 'GET' || request.headers.has('Authorization')) return null;
   const url = new URL(request.url);
   if (url.pathname === '/s' || url.pathname.startsWith('/s/') ||
       url.pathname === '/admin' || url.pathname.startsWith('/admin/') ||
@@ -297,11 +297,12 @@ export async function handleRequest(request, env, ctx) {
   if (!policy || !cache) return handleOriginRequest(request, env);
 
   const key = cacheKey(request);
-  const hit = await cache.match(key);
+  const hit = await cache.match(key).catch(() => undefined);
   if (hit) return cachedResponse(hit, 'HIT', policy);
 
   const response = await handleOriginRequest(request, env);
-  if (!response.ok || response.headers.get('Cache-Control') === 'no-store') {
+  if (!response.ok || response.headers.has('Set-Cookie') ||
+      /\b(no-store|private)\b/i.test(response.headers.get('Cache-Control') || '')) {
     return cachedResponse(response, 'BYPASS');
   }
   const stored = responseWithHeaders(response.clone(), (headers) => {

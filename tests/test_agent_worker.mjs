@@ -209,6 +209,27 @@ test('unknown API paths and methods return structured JSON errors', async () => 
   assert.equal((await method.json()).error.code, 'method_not_allowed');
 });
 
+test('private or cookie-bearing responses bypass storage and cache outages serve origin', async () => {
+  let writes = 0;
+  globalThis.caches = {default: {
+    async match() { throw new Error('cache unavailable'); },
+    async put() { writes += 1; }
+  }};
+  try {
+    for (const headers of [
+      {'Cache-Control': 'private, max-age=300'},
+      {'Cache-Control': 'public, no-store'},
+      {'Set-Cookie': 'session=value; Secure; HttpOnly'}
+    ]) {
+      const response = await worker.handleRequest(new Request('https://bmt.news/'),
+        {ASSETS: {fetch: async () => new Response('origin', {headers})}});
+      assert.equal(await response.text(), 'origin');
+      assert.equal(response.headers.get('X-BMTNews-Cache'), 'BYPASS');
+    }
+    assert.equal(writes, 0);
+  } finally { delete globalThis.caches; }
+});
+
 test('event index and detail are public JSON API routes', async () => {
   const index = await worker.handleRequest(
     new Request('https://bmt.news/api/events.json'), environment()
