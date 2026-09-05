@@ -43,6 +43,16 @@ def test_rss_ids_are_deterministic() -> None:
     assert first == "rss:example.com_feed.xml:5e2d5d1e58e94d76"
 
 
+def test_failed_feed_is_diagnosed_not_silently_empty():
+    import httpx
+    client = AsyncMock()
+    client.get.side_effect = httpx.ConnectError("unavailable")
+    source = RSSSourceConfig(name="Test", url="https://example.com/feed.xml")
+    scraper = RSSScraper([source], client)
+    assert asyncio.run(scraper.fetch(_SINCE)) == []
+    assert scraper.feed_results == [{"name": "Test", "items": 0, "status": "failure", "error": "ConnectError"}]
+
+
 def test_rss_requests_use_browser_compatible_user_agent() -> None:
     client = _make_feed_client(_FEED)
     source = RSSSourceConfig(name="Test", url="https://example.com/feed.xml")

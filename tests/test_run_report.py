@@ -269,6 +269,9 @@ def test_native_pipeline_writes_funnel_and_frontend_stats(
         "newly_displayed": 1,
         "displayed_today": 1,
         "high_priority": 1,
+        "ai_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_total_tokens": 0,
     }
     assert payload["summaries"] == ["zh"]
 

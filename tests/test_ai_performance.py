@@ -53,6 +53,49 @@ def test_result_cache_restores_analysis_and_enrichment(tmp_path):
     assert reloaded.restore_analysis(changed) is False
 
 
+def test_cache_invalidates_changed_prompt_and_enrichment_inputs(tmp_path, monkeypatch):
+    from src.ai import prompts
+    cache = AnalysisResultCache(tmp_path / "cache.json", model="test")
+    item = _item(1)
+    item.ai_score = 8
+    item.ai_summary = "Initial summary"
+    item.metadata["background_zh"] = "背景"
+    cache.store_analysis(item)
+    cache.store_enrichment(item)
+    item.ai_summary = "Corrected summary"
+    assert not cache.restore_enrichment(item)
+    monkeypatch.setattr(prompts, "CONTENT_ANALYSIS_SYSTEM", "Changed policy")
+    assert not cache.restore_analysis(_item(1))
+
+
+def test_cached_items_never_reenter_paid_prefilter(tmp_path, monkeypatch):
+    config = Config(ai=AIConfig(provider="openai", model="test", api_key_env="TEST",
+                    prefilter_enabled=True, prefilter_max_candidates=20,
+                    result_cache_path=str(tmp_path / "cache.json")),
+                    sources=SourcesConfig(), filtering=FilteringConfig())
+    orchestrator = BMTNewsOrchestrator(config, StorageManager(data_dir=str(tmp_path / "data")))
+    cache = orchestrator._result_cache()
+    for i in range(20):
+        cached = _item(i)
+        cached.ai_score = 8
+        cache.store_analysis(cached)
+    seen = []
+    async def select(self, items, **kwargs):
+        from src.ai.prefilter import PrefilterResult
+        seen.extend(row.id for row in items)
+        return PrefilterResult(items[:5], len(items), len(items)-5, 0)
+    async def analyze(self, items):
+        for row in items:
+            row.ai_score = 9
+    monkeypatch.setattr("src.orchestrator.create_ai_client", lambda config: object())
+    monkeypatch.setattr(ContentPrefilter, "select", select)
+    monkeypatch.setattr("src.orchestrator.ContentAnalyzer.analyze_batch", analyze)
+    result = asyncio.run(orchestrator._analyze_content([_item(i) for i in range(30)]))
+    assert seen == [f"rss:test:{i}" for i in range(20, 30)]
+    assert len(result) == 20
+    assert result[0].ai_score == 9
+
+
 def test_prefilter_batches_candidates_and_preserves_scarce_categories():
     calls = 0
 

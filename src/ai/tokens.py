@@ -6,7 +6,7 @@ BMTNews run, so the orchestrator can print a summary at the end.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from typing import Dict
 
 
@@ -32,9 +32,13 @@ class TokenUsageSnapshot:
 
 
 _provider_usage: Dict[str, ProviderUsage] = {}
+_task_usage: dict[str, dict] = {}
 
 
-def record_usage(provider: str, input_tokens: int = 0, output_tokens: int = 0) -> None:
+def record_usage(provider: str, input_tokens: int = 0, output_tokens: int = 0, *,
+                 model: str = "unspecified", stage: str = "other",
+                 cached_input_tokens: int = 0, reasoning_tokens: int = 0,
+                 elapsed_ms: int = 0, finish_reason: str | None = None) -> None:
     """Accumulate token usage for a given provider.
 
     Args:
@@ -48,6 +52,18 @@ def record_usage(provider: str, input_tokens: int = 0, output_tokens: int = 0) -
     usage = _provider_usage.setdefault(provider, ProviderUsage())
     usage.input_tokens += max(0, input_tokens)
     usage.output_tokens += max(0, output_tokens)
+    key = f"{provider}:{model}:{stage}"
+    task = _task_usage.setdefault(key, {
+        "provider": provider, "model": model, "stage": stage, "calls": 0,
+        "input_tokens": 0, "output_tokens": 0, "cached_input_tokens": 0,
+        "reasoning_tokens": 0, "elapsed_ms": 0, "truncated_calls": 0,
+    })
+    task["calls"] += 1
+    for name, value in (("input_tokens", input_tokens), ("output_tokens", output_tokens),
+                        ("cached_input_tokens", cached_input_tokens), ("reasoning_tokens", reasoning_tokens),
+                        ("elapsed_ms", elapsed_ms)):
+        task[name] += max(0, int(value or 0))
+    task["truncated_calls"] += int(finish_reason == "length")
 
 
 def get_usage_snapshot() -> TokenUsageSnapshot:
@@ -57,10 +73,16 @@ def get_usage_snapshot() -> TokenUsageSnapshot:
     return TokenUsageSnapshot(
         total_input_tokens=total_in,
         total_output_tokens=total_out,
-        per_provider=dict(_provider_usage),
+        per_provider={key: replace(value) for key, value in _provider_usage.items()},
     )
 
 
 def reset_usage() -> None:
     """Reset all accumulated usage (useful for tests)."""
     _provider_usage.clear()
+    _task_usage.clear()
+
+
+def task_usage_snapshot() -> list[dict]:
+    """Only numeric usage and model/stage labels; never prompts or responses."""
+    return [dict(value) for _, value in sorted(_task_usage.items())]

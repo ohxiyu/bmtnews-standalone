@@ -2,6 +2,7 @@
 
 import os
 import re
+import time
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Literal, Optional
 from openai import AsyncAzureOpenAI, AsyncOpenAI
@@ -13,6 +14,7 @@ from google.genai import types
 from ..models import AIConfig, AIProvider, AI_PROVIDER_DEFAULTS
 from rich import print as rich_print
 from .tokens import record_usage
+from .policy import prompt_stage, SIMPLE_BUDGETS
 
 
 _ENV_VAR_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
@@ -221,7 +223,9 @@ class OpenAIClient(AIClient):
         if base_url:
             kwargs["base_url"] = base_url
 
-        self.client = AsyncOpenAI(**kwargs)
+        self.client = AsyncOpenAI(
+            **kwargs, timeout=config.request_timeout_seconds, max_retries=1
+        )
         self.model = config.model
         self.temperature = config.temperature
         self.max_tokens = config.max_tokens
@@ -268,8 +272,11 @@ class OpenAIClient(AIClient):
         Returns:
             str: Generated text
         """
+        started = time.perf_counter()
         temperature = self.temperature if temperature is None else temperature
-        max_tokens = self.max_tokens if max_tokens is None else max_tokens
+        stage = prompt_stage(system)
+        default_budget = SIMPLE_BUDGETS.get(stage, self.max_tokens) if self.config.economy_mode else self.max_tokens
+        max_tokens = default_budget if max_tokens is None else max_tokens
 
         # Clamp temperature for providers that require it
         if self.provider in self._TEMP_CLAMP and temperature <= 0:
@@ -316,8 +323,20 @@ class OpenAIClient(AIClient):
                 self.provider,
                 input_tokens=getattr(usage, "prompt_tokens", 0),
                 output_tokens=getattr(usage, "completion_tokens", 0),
+                model=self.model,
+                stage=stage,
+                cached_input_tokens=getattr(usage, "prompt_cache_hit_tokens", 0),
+                reasoning_tokens=getattr(getattr(usage, "completion_tokens_details", None), "reasoning_tokens", 0) or 0,
+                elapsed_ms=int((time.perf_counter() - started) * 1000),
+                finish_reason=getattr(response.choices[0], "finish_reason", None),
             )
-        return response.choices[0].message.content
+        choice = response.choices[0]
+        if getattr(choice, "finish_reason", None) == "length":
+            raise ValueError("AI completion was truncated; refusing partial output")
+        content = choice.message.content
+        if not isinstance(content, str) or not content.strip():
+            raise ValueError("AI completion returned no usable content")
+        return content
 
     async def _do_request(
         self,
@@ -339,6 +358,14 @@ class OpenAIClient(AIClient):
         }
         token_param = "max_completion_tokens" if use_max_completion_tokens else "max_tokens"
         request_kwargs[token_param] = max_tokens
+        if self.provider == "deepseek" and self.config.economy_mode:
+            stage = prompt_stage(system)
+            if stage in SIMPLE_BUDGETS:
+                request_kwargs["extra_body"] = {"thinking": {"type": "disabled"}}
+            elif stage == "event_relation":
+                request_kwargs["extra_body"] = {"thinking": {"type": "enabled"}}
+                request_kwargs["reasoning_effort"] = "low"
+                include_temperature = False
         if include_temperature:
             request_kwargs["temperature"] = temperature
         if response_format == "json" and self.provider not in self._NO_RESPONSE_FORMAT:

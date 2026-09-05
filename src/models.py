@@ -143,6 +143,8 @@ class AIConfig(BaseModel):
     api_key_env: str
     temperature: float = 0.3
     max_tokens: int = 4096
+    economy_mode: bool = False
+    request_timeout_seconds: int = Field(default=120, ge=10, le=600)
     throttle_sec: float = 0.0
     analysis_concurrency: int = 1
     enrichment_concurrency: int = 1
