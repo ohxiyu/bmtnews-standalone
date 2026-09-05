@@ -11,11 +11,11 @@
     "check": "npm run types:check && npm run typecheck && npm test && wrangler deploy --dry-run"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "0.19.0",
-    "@cloudflare/workers-types": "5.20260730.1",
+    "@cloudflare/vitest-pool-workers": "0.22.0",
+    "@cloudflare/workers-types": "5.20260905.1",
     "@types/node": "26.1.2",
     "typescript": "5.9.3",
     "vitest": "4.1.10",
-    "wrangler": "4.115.0"
+    "wrangler": "4.129.0"
   }
 }
