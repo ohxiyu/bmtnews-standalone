@@ -347,6 +347,10 @@ def _build_parser() -> argparse.ArgumentParser:
         help="GitHub repository in owner/name form",
     )
     parser.add_argument("--workflow", default=DEFAULT_WORKFLOW)
+    parser.add_argument(
+        "--coordinator", action="store_true",
+        help="Use the shared production-aware recovery gate (no direct fallback)",
+    )
     parser.add_argument("--ref", default=DEFAULT_REF)
     parser.add_argument("--timezone", default=DEFAULT_TIMEZONE)
     parser.add_argument("--cutoff-hour", type=int, default=DEFAULT_CUTOFF_HOUR)
@@ -370,6 +374,8 @@ def _build_parser() -> argparse.ArgumentParser:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = _build_parser().parse_args(argv)
+    if args.coordinator:
+        return check_coordinator(success_on_recovery=args.success_on_recovery)
     token = os.getenv("GITHUB_TOKEN", "")
     now = datetime.now(timezone.utc)
 
@@ -432,6 +438,46 @@ def main(argv: Sequence[str] | None = None) -> int:
     else:
         _emit_error("当期日报已到期但没有成功记录，已有发布正在运行")
     return 1
+
+
+def check_coordinator(*, success_on_recovery: bool = False) -> int:
+    """All automatic dispatchers share an edition lock and retry budget."""
+    token = os.getenv("RECOVERY_CHECK_TOKEN", "")
+    if not token:
+        _emit_error("缺少 RECOVERY_CHECK_TOKEN；不会绕过共享锁补发")
+        return 1
+    request = Request(
+        "https://bmtnews-daily-dispatcher.drminutes.workers.dev/publication/check",
+        method="POST",
+        headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
+    )
+    try:
+        try:
+            response = urlopen(request, timeout=90)
+        except HTTPError as error:
+            if error.code != 503:
+                raise
+            response = error
+        with response:
+            status_code = response.code
+            result = json.loads(response.read(16_384))
+        state = result.get("status") if isinstance(result, dict) else None
+        if not isinstance(state, str):
+            raise ValueError("invalid coordinator response")
+        _append_summary(
+            "## BMTNews 生产刊期检查\n\n"
+            + json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+        )
+        if status_code == 200 and state in {"healthy", "not_due"}:
+            return 0
+        if status_code == 202 and success_on_recovery:
+            return 0
+        _emit_error("刊期尚未在生产网站确认；请查看检查结果")
+        return 1
+    except (OSError, ValueError):
+        # Do not include exception URLs/headers; they may contain credentials.
+        _emit_error("共享检查接口不可用；不会绕过共享锁重复补发")
+        return 1
 
 
 if __name__ == "__main__":

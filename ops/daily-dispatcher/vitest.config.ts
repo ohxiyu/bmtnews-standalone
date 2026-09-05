@@ -12,6 +12,8 @@ export default defineConfig({
         compatibilityDate: "2026-07-29",
         bindings: {
           GITHUB_DISPATCH_TOKEN: "test-token",
+          RECOVERY_CHECK_TOKEN: "test-check-token",
+          PAGES_DEPLOY_HOOK: "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/test",
         },
       },
     }),

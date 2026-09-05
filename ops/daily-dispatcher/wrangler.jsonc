@@ -15,8 +15,12 @@
     "PUBLIC_SITE_URL": "https://bmt.news"
   },
   "secrets": {
-    "required": ["GITHUB_DISPATCH_TOKEN"]
+    "required": ["GITHUB_DISPATCH_TOKEN", "RECOVERY_CHECK_TOKEN", "PAGES_DEPLOY_HOOK"]
   },
+  "durable_objects": {
+    "bindings": [{"name": "RECOVERY_GATE", "class_name": "RecoveryGate"}]
+  },
+  "migrations": [{"tag": "recovery-v1", "new_sqlite_classes": ["RecoveryGate"]}],
   "triggers": {
     "crons": [
       "30 0 * * *",
