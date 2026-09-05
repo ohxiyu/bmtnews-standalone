@@ -53,6 +53,8 @@ def test_public_assets_use_fingerprint_and_revalidate() -> None:
     )
 
     assert match is not None
+    preview_config = (DOCS.parent / "_config.yml").read_text(encoding="utf-8")
+    assert f'asset_version: "{expected}"' in preview_config
     assert match.group(1) == expected, (
         "Public CSS/JS changed without a matching cache key. Update asset_version "
         f'to "{expected}" whenever one of them changes.'
