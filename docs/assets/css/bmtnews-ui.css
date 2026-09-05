@@ -3082,6 +3082,13 @@ time,
     -webkit-line-clamp: 1;
   }
 
+  .event-context-list h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
   .event-context-list li + li {
     padding-left: 0;
     border-top: 1px solid var(--border);
