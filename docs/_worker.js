@@ -212,6 +212,16 @@ async function handleOriginRequest(request, env) {
   }
 
   const assetResponse = await env.ASSETS.fetch(request);
+  if (url.pathname === '/service-worker.js' || url.pathname === '/pwa-version.json') {
+    return responseWithHeaders(assetResponse, (headers) => {
+      headers.set('Cache-Control', 'no-store');
+      headers.set('CDN-Cache-Control', 'no-store');
+      if (url.pathname === '/service-worker.js' && assetResponse.ok) {
+        headers.set('Content-Type', 'application/javascript; charset=utf-8');
+        headers.set('Service-Worker-Allowed', '/');
+      }
+    });
+  }
   if (apiPath) {
     if (!assetResponse.ok || !String(assetResponse.headers.get('Content-Type')).includes('application/json')) {
       return jsonError(404, 'not_found', 'The requested API resource does not exist.', 'Use /api/editions.json or /api/events.json to discover available resources.');
@@ -235,6 +245,7 @@ async function handleOriginRequest(request, env) {
 function cachePolicy(request) {
   if (request.method !== 'GET' || request.headers.has('Authorization')) return null;
   const url = new URL(request.url);
+  if (url.pathname === '/service-worker.js' || url.pathname === '/pwa-version.json') return null;
   if (url.pathname === '/s' || url.pathname.startsWith('/s/') ||
       url.pathname === '/admin' || url.pathname.startsWith('/admin/') ||
       url.searchParams.has('publication_check')) return null;

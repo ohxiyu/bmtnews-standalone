@@ -6,6 +6,26 @@ const source = await readFile(new URL('../docs/_worker.js', import.meta.url), 'u
 const moduleUrl = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
 const worker = await import(moduleUrl);
 
+test('PWA worker and build metadata bypass stale edge cache with no-store headers', async () => {
+  let cacheReads = 0;
+  globalThis.caches = {default: {match: async () => { cacheReads++; return new Response('old'); }}};
+  try {
+    for (const path of ['/service-worker.js', '/pwa-version.json']) {
+      const response = await worker.handleRequest(new Request(`https://bmt.news${path}`), {
+        ASSETS: {fetch: async () => new Response('fresh', {headers: {'Content-Type': 'application/json'}})}
+      });
+      assert.equal(await response.text(), 'fresh');
+      assert.equal(response.headers.get('Cache-Control'), 'no-store');
+      assert.equal(response.headers.get('CDN-Cache-Control'), 'no-store');
+      if (path.endsWith('.js')) {
+        assert.equal(response.headers.get('Service-Worker-Allowed'), '/');
+        assert.match(response.headers.get('Content-Type'), /javascript/);
+      }
+    }
+    assert.equal(cacheReads, 0);
+  } finally { delete globalThis.caches; }
+});
+
 const edition = {
   date: '2026-08-24',
   overview: {zh: '今天的重要变化集中在政策与市场结构。', en: 'Today focused on policy and market structure.'},
