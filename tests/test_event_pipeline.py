@@ -328,10 +328,107 @@ def test_duplicate_with_unknown_update_target_fails_safe() -> None:
     )
 
     assert result.classifier_errors == 1
-    assert result.new_events == 1
+    assert result.new_events == 0
     assert result.duplicate_sources == 0
-    assert len(events) == 2
-    assert story.metadata["event_id"] != "evt_tectonic1"
+    assert len(events) == 1
+    assert story.metadata["event_retry_pending"] is True
+    assert "event_id" not in story.metadata
+
+
+def test_transient_relation_failure_is_not_permanent_membership() -> None:
+    story = item("retry", title="Tectonic confirms exploit losses")
+
+    async def fail(*args):
+        raise TimeoutError("temporary")
+
+    async def recover(*args):
+        return decision(EventRelation.SAME_EVENT_UPDATE, update_type=EventUpdateType.CONFIRMATION)
+
+    events, result = asyncio.run(update_events([story], [existing_event()], client=object(), classifier=fail))
+    assert result.new_events == 0
+    assert story.metadata["event_retry_pending"]
+    events, result = asyncio.run(update_events([story], events, client=object(), classifier=recover))
+    assert result.material_updates == 1
+    assert "event_retry_pending" not in story.metadata
+    assert story.metadata["event_id"] == "evt_tectonic1"
+
+
+def test_late_old_story_preserves_latest_state_and_status() -> None:
+    recent = item("restored", title="Tectonic restores operation after exploit")
+    older = item("late", title="Tectonic confirms exploit losses")
+    older.published_at = NOW - timedelta(hours=12)
+    older.fetched_at = NOW + timedelta(hours=1)
+
+    async def restored(*args):
+        return decision(EventRelation.SAME_EVENT_UPDATE, update_type=EventUpdateType.RESOLUTION).model_copy(
+            update={"current_state_zh": "已恢复运行。"})
+
+    async def loss(*args):
+        return decision(EventRelation.SAME_EVENT_UPDATE, update_type=EventUpdateType.CONFIRMATION)
+
+    events, _ = asyncio.run(update_events([recent], [existing_event()], client=object(), classifier=restored))
+    latest_change = events[0].last_material_change_at
+    events, _ = asyncio.run(update_events([older], events, client=object(), classifier=loss))
+    assert events[0].current_state_zh == "已恢复运行。"
+    assert events[0].status is EventStatus.RESOLVED
+    assert events[0].last_material_change_at == latest_change
+    TrackedEvent.model_validate(events[0].model_dump())
+
+
+def test_pending_relations_survive_restart_and_have_retry_budget(tmp_path, monkeypatch):
+    from src.run_report import RunReport
+    monkeypatch.chdir(tmp_path)
+    save_event_catalog({}, [existing_event()])
+    config = Config(ai=AIConfig(provider="openai", model="test", api_key_env="TEST_API_KEY"), sources=SourcesConfig(), filtering=FilteringConfig())
+    orchestrator = BMTNewsOrchestrator(config, StorageManager(data_dir=str(tmp_path / "data")))
+    story = item("retry-budget", title="Tectonic confirms exploit losses")
+    calls = 0
+
+    async def fail(*args):
+        nonlocal calls
+        calls += 1
+        raise TimeoutError("temporary")
+
+    async def failed_update(items, events, *, client):
+        return await update_events(items, events, client=client, classifier=fail)
+
+    monkeypatch.setattr("src.orchestrator.create_ai_client", lambda config: object())
+    monkeypatch.setattr("src.orchestrator.update_events", failed_update)
+    for batch in ([story], [], [], [story.model_copy(deep=True)], []):
+        report = RunReport.start(date="2026-09-03", timezone_name="Asia/Shanghai", started_at=NOW)
+        asyncio.run(orchestrator._update_event_timeline(batch, run_report=report))
+    metadata, events = load_event_catalog()
+    assert calls == 3
+    assert len(events) == 1
+    assert metadata["pending_relations"][0]["attempts"] == 3
+
+
+def test_headline_only_cannot_confirm_material_event_change():
+    from src.ai.event_relations import EventRelationError, classify_event_relation
+    from src.event_pipeline import story_evidence
+    story = item("headline", title="Tectonic resumes operation")
+    story.content = '<a href="https://example.com">Tectonic resumes operation</a>'
+
+    class Client:
+        async def complete(self, **kwargs):
+            assert '"evidence_quality": "headline_only"' in kwargs["user"]
+            return decision(EventRelation.SAME_EVENT_UPDATE, update_type=EventUpdateType.RESOLUTION).model_dump_json()
+
+    with pytest.raises(EventRelationError, match="headline-only"):
+        asyncio.run(classify_event_relation(Client(), event=existing_event(), story=story_evidence(story)))
+
+
+def test_feed_collapses_only_identical_event_nodes(tmp_path):
+    config = Config(ai=AIConfig(provider="openai", model="test", api_key_env="TEST_API_KEY"), sources=SourcesConfig(), filtering=FilteringConfig())
+    orchestrator = BMTNewsOrchestrator(config, StorageManager(data_dir=str(tmp_path)))
+    first = item("first", title="First report")
+    repeat = item("repeat", title="Second source")
+    later = item("later", title="Next development")
+    for row, update_id in ((first, "one"), (repeat, "one"), (later, "two")):
+        row.metadata.update(event_id="evt_one", event_update_id=update_id)
+    result = orchestrator.merge_event_update_duplicates([first, repeat, later])
+    assert [row.id for row in result] == [first.id, later.id]
+    assert len(first.metadata["merged_sources"]) == 2
 
 
 def test_low_confidence_relation_remains_a_separate_event() -> None:
