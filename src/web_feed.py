@@ -13,6 +13,7 @@ from .editorial import EditorialEntry
 from .market_snapshot import MarketSnapshot
 from .models import ContentItem
 from .overview import EditionOverview
+from .publication_revision import story_revision
 
 
 _URL_SAFE_CHARS = ":/?#[]@!$&'*,;=~%+"
@@ -503,6 +504,7 @@ def _render_article(
 
     article = (
         f'<article class="digest-item{priority_class}" id="{article_id}" '
+        f'data-content-revision="{story_revision(str(item.url), _localized_title(item, language), summary)}" '
         f'data-category="{category}" data-score="{score:.1f}">'
         '<div class="digest-item-rail">'
         f"<strong>#{index:02d}</strong>"

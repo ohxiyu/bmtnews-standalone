@@ -18,6 +18,7 @@ from typing import Iterable, List, Sequence
 from ._file_utils import _atomic_write_text
 from .archive import ArchiveRecord
 from .market_snapshot import MarketSnapshot
+from .publication_revision import story_revision
 
 logger = logging.getLogger(__name__)
 
@@ -100,6 +101,10 @@ def build_edition_payload(
                 "url": record.url,
                 "title": {"zh": record.title_zh, "en": record.title_en},
                 "summary": {"zh": record.summary_zh, "en": record.summary_en},
+                "content_revision": {
+                    "zh": story_revision(record.url, record.title_zh, record.summary_zh),
+                    "en": story_revision(record.url, record.title_en, record.summary_en),
+                },
                 "score": record.score,
                 "category": record.category,
                 "top_category": record.top_category,
@@ -116,6 +121,7 @@ def build_edition_payload(
         )
     payload = {
         "version": 1,
+        "content_revision_version": 1,
         "date": date,
         "generated_at": _iso(datetime.now(timezone.utc)),
         "site": base,

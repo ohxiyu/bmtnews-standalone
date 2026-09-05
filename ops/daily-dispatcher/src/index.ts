@@ -70,6 +70,8 @@ export default {
     const oauthEnv = env as OAuthEnv;
     return Response.json({
       service: "bmtnews-daily-dispatcher",
+      version_id: env.CF_VERSION_METADATA?.id ?? null,
+      publication_revision: "story-content-v1",
       status: "ok",
       primary_cron_utc: "30 0 * * *",
       schedule_crons_utc: SCHEDULE_CRONS,

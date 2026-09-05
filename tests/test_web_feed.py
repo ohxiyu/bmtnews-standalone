@@ -92,6 +92,29 @@ def test_render_web_feed_outputs_final_cards_and_top_level_filters() -> None:
     ).endswith("分享")
 
 
+def test_rendered_revisions_match_api_and_change_when_core_text_changes():
+    from src.archive import build_records
+    from src.api_output import build_edition_payload
+
+    item = make_item("revision", "crypto-markets")
+    item.metadata.pop("detailed_summary_zh")
+    item.metadata.pop("detailed_summary_en")
+    item.metadata["detailed_summary"] = "  shared fallback text  "
+    markers = []
+    for text in ("first version", "corrected version"):
+        item.title = text
+        records = build_records([item], date="2026-09-05", top_category_of=lambda _: "crypto")
+        payload = build_edition_payload(records, date="2026-09-05", stats={})
+        assert payload["content_revision_version"] == 1
+        for language in ("zh", "en"):
+            markup = render_web_feed([item], date="2026-09-05", total_fetched=1,
+                                     language=language, display_timezone="Asia/Shanghai")
+            card = BeautifulSoup(markup, "html.parser").select_one("article.digest-item")
+            assert card["data-content-revision"] == payload["items"][0]["content_revision"][language]
+        markers.append(payload["items"][0]["content_revision"]["zh"])
+    assert markers[0] != markers[1]
+
+
 def test_render_web_feed_escapes_text_and_rejects_unsafe_references() -> None:
     item = make_item("unsafe", "crypto-markets")
     item.title = '<script>alert("title")</script>'

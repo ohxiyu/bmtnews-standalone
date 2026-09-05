@@ -9,15 +9,22 @@ function fixture(options: {
   raw?: boolean; public?: boolean; homepage?: boolean; active?: boolean;
   success?: boolean; broken?: boolean; dispatchTimeout?: boolean;
   redirects?: boolean;
+  versioned?: boolean; staleJson?: boolean; staleHtml?: boolean; staleEnglish?: boolean;
 } = {}) {
   sequence += 1;
   const date = "2026-09-" + String(sequence).padStart(2, "0");
   const now = Date.parse(date + "T00:50:00Z");
   const requests: Request[] = [];
-  const json = JSON.stringify({ date, items: [{ id: "one" }] });
+  const json = JSON.stringify({ date,
+    ...(options.versioned ? {content_revision_version: 1} : {}),
+    items: [{ id: "one", ...(options.versioned ? {
+      content_revision: {zh: "a".repeat(64), en: "a".repeat(64)},
+    } : {}) }],
+  });
+  const marker = options.versioned ? ' data-content-revision="' + "a".repeat(64) + '"' : "";
   const home = '<div data-latest-edition-date="' + date + '"></div>' +
     '<section class="daily-day" data-date="' + date + '">' +
-    '<article class="digest-item">News</article></section>';
+    '<article class="digest-item"' + marker + '>News</article></section>';
   vi.stubGlobal("fetch", vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
     const request = new Request(input, init);
     requests.push(request);
@@ -38,6 +45,9 @@ function fixture(options: {
       return new Response(null, { status: (raw ? options.raw : options.public) ? 200 : 404 });
     }
     if (request.url.includes("/api/latest.json")) {
+      if (!raw && options.public && options.staleJson) {
+        return new Response(json.replace('"one"', '"old"'));
+      }
       return new Response((raw ? options.raw : options.public) ? json :
         JSON.stringify({ date: "2026-08-31", items: [{ id: "old" }] }));
     }
@@ -46,15 +56,41 @@ function fixture(options: {
         Location: new URL(request.url).pathname.replace(".html", ""),
       } });
     }
-    if (request.url.includes("/summary-")) return new Response(options.public ? home : "", {
+    if (request.url.includes("/summary-")) return new Response(options.public
+      ? (options.staleEnglish && request.url.includes("summary-en")
+        ? home.replaceAll("a".repeat(64), "b".repeat(64)) : home) : "", {
       status: options.public ? 200 : 404,
     });
-    return new Response(options.homepage ? home : "<html>Yesterday</html>");
+    return new Response(options.homepage
+      ? (options.staleHtml ? home.replaceAll("a".repeat(64), "b".repeat(64)) : home)
+      : "<html>Yesterday</html>");
   }));
   return { date, now, requests, posts: () => requests.filter((r) => r.method === "POST") };
 }
 
 describe("production-aware recovery", () => {
+  it("accepts matching story revisions in both rendered languages", async () => {
+    const f = fixture({raw: true, public: true, homepage: true, versioned: true});
+    expect((await runRecovery(env, f.now, "test")).status).toBe("healthy");
+    expect(f.posts()).toHaveLength(0);
+  });
+
+  it.each(["staleJson", "staleHtml", "staleEnglish"] as const)(
+    "does not accept same-count stale content: %s", async (stale) => {
+      const f = fixture({raw: true, public: true, homepage: true, versioned: true, [stale]: true});
+      expect((await runRecovery(env, f.now, "test")).status).toBe("pages_waiting");
+      expect(f.posts()).toHaveLength(0);
+    },
+  );
+
+  it("checks ordered markers and rejects incomplete revision payloads", () => {
+    expect(recoveryTesting.renderedRevisionsMatch(
+      'data-content-revision="' + "b".repeat(64) + '"', ["a".repeat(64)],
+    )).toBe(false);
+    expect(() => recoveryTesting.contentRevisions(
+      '{"content_revision_version":1,"items":[{}]}', "zh",
+    )).toThrow("Invalid story content revision");
+  });
   it.each(["40,50 0 * * *", "*/10 1-3 * * *", "0 4-15 * * *"])(
     "runs the scheduled handler for %s without dispatching a healthy edition",
     async (cron) => {
