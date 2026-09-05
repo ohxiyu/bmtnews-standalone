@@ -13,7 +13,9 @@ does not change collection schedules, AI analysis, publishing, or authentication
   its matching versioned CSS/JS before it is committed. Orphaned asset versions
   are pruned. Browser storage pressure can evict these caches at any time.
 - Admin, source operations, APIs, credential-bearing requests, unknown query
-  parameters, private/no-store responses, redirects and error pages are not saved.
+  parameters, private/no-store responses, unrelated redirects and error pages are
+  not saved. Cloudflare's dated `.html` → extensionless canonical redirect is
+  accepted only when both URLs resolve to the same public offline key.
   A server 401, 403 or 404 is never replaced by an old saved page.
 - `/pwa-version.json` and `/service-worker.js` bypass edge cache. On open/resume,
   the client checks for a new build and offers a user-controlled refresh. Updates
@@ -67,3 +69,5 @@ remained opt-in; accepting it loaded the new build and restored the same story.
 Chinese and English layouts were checked down to 320 px, including the four section
 indexes. A standalone CSS fixture at 390 px verified four 52 px-high bottom targets,
 hidden duplicate top navigation and no sideways overflow; it is not a device test.
+Production acceptance additionally covers Cloudflare's canonical dated URLs and
+the transient first-install waiting state, which must not trigger an update prompt.

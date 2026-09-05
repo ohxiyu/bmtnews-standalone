@@ -85,6 +85,25 @@ test('offline navigation returns saved content with an honest timestamp and matc
   assert.equal(missing.status, 503);
   assert.match(await missing.text(), /尚未离线保存/);
 });
+test('Cloudflare dated HTML redirects share an offline key; private and cross-origin redirects stay excluded', async () => {
+  const h = harness();
+  const alias = `${origin}/2026/09/05/summary-zh.html`;
+  const canonical = `${origin}/2026/09/05/summary-zh`;
+  assert.equal(h.api.pageURL(alias), canonical);
+  const redirected = destination => {
+    const response = html(page());
+    Object.defineProperty(response, 'redirected', {value: true});
+    Object.defineProperty(response, 'url', {value: destination});
+    return response;
+  };
+  assert.equal(h.api.safeResponse(redirected(`${origin}/admin/`), 'text/html', canonical), false);
+  assert.equal(h.api.safeResponse(redirected('https://external.org/'), 'text/html', canonical), false);
+  assert.equal(h.api.safeResponse(redirected(`${origin}/`), 'text/html', canonical), false);
+  await h.api.enqueue(token => h.api.savePage(canonical, redirected(canonical), token));
+  h.offline();
+  assert.match(await (await h.dispatch(alias)).text(), /bmt-offline/);
+  assert.match(await (await h.dispatch(canonical)).text(), /bmt-offline/);
+});
 test('403/404 remain authoritative, 503 may fall back, private responses are not saved', async () => {
   const h = harness();
   await h.dispatch(`${origin}/`);

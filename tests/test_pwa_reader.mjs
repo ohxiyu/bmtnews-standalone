@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 
 const source = await readFile(new URL('../docs/assets/js/pwa-reader.js', import.meta.url), 'utf8');
-const {canonicalURL, storyKey, createReaderStore, isRead, installedMode} = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+const {canonicalURL, storyKey, createReaderStore, isRead, installedMode, waitingUpdate} = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
 function storage() {
   const data = new Map();
   return {get length() { return data.size; }, key: i => [...data.keys()][i], getItem: k => data.get(k) ?? null,
@@ -61,6 +61,11 @@ test('standalone detection does not change ordinary mobile or desktop browser na
   assert.equal(installedMode(true, undefined), true);
   assert.equal(installedMode(false, true), true);
   assert.equal(installedMode(false, 'true'), false);
+});
+test('a first install does not report an update, but a waiting replacement does', () => {
+  assert.equal(waitingUpdate(true, false), false);
+  assert.equal(waitingUpdate(false, true), false);
+  assert.equal(waitingUpdate(true, true), true);
 });
 test('layout and manifest keep four app sections and versioned local reader assets', async () => {
   const layout = await readFile(new URL('../docs/_layouts/default.html', import.meta.url), 'utf8');

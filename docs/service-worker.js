@@ -20,11 +20,15 @@ function pageURL(value) {
   }
   url.search = '';
   url.hash = '';
+  // Cloudflare Pages canonicalizes dated *.html links to extensionless URLs.
+  // Both forms must resolve to the same offline entry, including old bookmarks.
+  if (/\/summary-(zh|en)\.html$/.test(url.pathname)) url.pathname = url.pathname.slice(0, -5);
   return url.href;
 }
 
-function safeResponse(response, type) {
-  return response.ok && !response.redirected &&
+function safeResponse(response, type, canonical = null) {
+  const redirectSafe = !response.redirected || (canonical && pageURL(response.url) === canonical);
+  return response.ok && redirectSafe &&
     !/private|no-store/i.test(response.headers.get('Cache-Control') || '') &&
     !response.headers.has('Set-Cookie') &&
     (response.headers.get('Content-Type') || '').includes(type);
@@ -81,7 +85,7 @@ async function prune(pages, assets) {
 }
 
 async function savePage(url, response, token) {
-  if (!safeResponse(response, 'text/html')) return;
+  if (!safeResponse(response, 'text/html', url)) return;
   const html = await response.text();
   if (new TextEncoder().encode(html).length > 2 * 1024 * 1024) return;
   const fingerprint = html.match(/<meta name="bmt-assets" content="([a-z0-9-]+)"/)?.[1];
@@ -173,13 +177,17 @@ self.addEventListener('message', event => {
       reply({ok: true, count: (await cache.keys()).length, build: BUILD});
     }
     if (event.data?.type === 'WARM') {
-      const urls = [...new Set((event.data.urls || []).slice(0, 3).map(pageURL).filter(Boolean))];
+      const targets = new Map();
+      for (const value of (event.data.urls || []).slice(0, 3)) {
+        const key = pageURL(value);
+        if (key) targets.set(key, new URL(value, self.location.origin).href);
+      }
       await enqueue(async token => {
-        for (const url of urls) {
+        for (const [key, url] of targets) {
           if (token !== generation) break;
-          const previous = await (await caches.open(PAGES)).match(url);
+          const previous = await (await caches.open(PAGES)).match(key);
           if (previous && Date.now() - Number(previous.headers.get('X-BMT-Saved')) < 60000) continue;
-          await fresh(url).then(response => savePage(url, response, token)).catch(() => {});
+          await fresh(url).then(response => savePage(key, response, token)).catch(() => {});
         }
       });
       reply({ok: true});
