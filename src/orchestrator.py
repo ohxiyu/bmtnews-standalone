@@ -2223,6 +2223,7 @@ class BMTNewsOrchestrator:
         metadata, events = load_event_catalog(EVENT_CATALOG_PATH)
         pending = {row["item"]["id"]: row for row in metadata.get("pending_relations", [])}
         incoming = {item.id: item for item in items}
+        retry_count = 0
         for story_id, row in pending.items():
             fresh = incoming.get(story_id)
             changed_evidence = fresh is not None and (fresh.content or "") != (row["item"].get("content") or "")
@@ -2231,8 +2232,9 @@ class BMTNewsOrchestrator:
             if row["attempts"] >= 3:
                 incoming.pop(story_id, None)
                 continue
-            if row["attempts"] < 3 and story_id not in incoming:
+            if row["attempts"] < 3 and story_id not in incoming and retry_count < 25:
                 incoming[story_id] = ContentItem.model_validate(row["item"])
+                retry_count += 1
         work = list(incoming.values())
         if not work:
             return
@@ -2252,10 +2254,8 @@ class BMTNewsOrchestrator:
                 }
             else:
                 pending.pop(item.id, None)
-        # Preserve exhausted entries for inspection instead of creating false
-        # events or retrying them forever. Reject an unbounded queue safely.
-        if len(pending) > 500:
-            raise RuntimeError("event relation queue exceeded 500 stories")
+        # Preserve exhausted entries for inspection. A backlog must not stop
+        # the daily edition; retry work is bounded separately above.
         metadata["pending_relations"] = list(pending.values())
         run_report.set_metric("event_relations_pending", sum(row["attempts"] < 3 for row in pending.values()))
         run_report.set_metric("event_relations_parked", sum(row["attempts"] >= 3 for row in pending.values()))
