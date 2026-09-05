@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import worker from "../src/index";
-import { testing } from "../src/lib";
+import { testing, SCHEDULE_CRONS } from "../src/lib";
 import { env } from "cloudflare:test";
 
 const ENV = {
@@ -21,6 +21,15 @@ afterEach(() => {
 });
 
 describe("edition scheduling", () => {
+  it("routes all extended schedule groups and accepts queued legacy events", () => {
+    expect(SCHEDULE_CRONS.map(testing.stageForCron)).toEqual([
+      "primary", "morning-check", "morning-check", "hourly-check",
+    ]);
+    expect(testing.stageForCron("40 0 * * *")).toBe("retry-1");
+    expect(testing.stageForCron("55 0 * * *")).toBe("retry-2");
+    expect(testing.stageForCron("10 1 * * *")).toBe("final");
+    expect(() => testing.stageForCron("* * * * *")).toThrow("Unsupported");
+  });
   it("targets the Shanghai edition ending at 08:00", () => {
     const context = testing.editionContextFor(
       Date.parse("2026-07-31T00:30:00Z"),
@@ -65,6 +74,10 @@ describe("dispatcher behavior", () => {
       service: "bmtnews-daily-dispatcher",
       status: "ok",
       admin_oauth: "not_configured",
+      schedule_crons_utc: SCHEDULE_CRONS,
+      schedule_timezone: "Asia/Shanghai",
+      first_check_local: "08:30",
+      last_check_local: "23:00",
     });
     expect(notFound.status).toBe(404);
   });

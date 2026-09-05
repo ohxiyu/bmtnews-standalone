@@ -1,5 +1,12 @@
 const PRIMARY_CRON = "30 0 * * *";
 const FINAL_CRON = "10 1 * * *";
+// UTC: Shanghai 08:30, 08:40/08:50, 09:00–11:50, 12:00–23:00.
+export const SCHEDULE_CRONS = [
+  "30 0 * * *",
+  "40,50 0 * * *",
+  "*/10 1-3 * * *",
+  "0 4-15 * * *"
+] as const;
 const PERMISSION_PROBE_REF =
   "refs/heads/__bmtnews_permission_probe__/invalid..ref";
 export const ACTIVE_STATUSES = new Set([
@@ -10,7 +17,8 @@ export const ACTIVE_STATUSES = new Set([
   "requested",
 ]);
 
-type TriggerStage = "primary" | "retry-1" | "retry-2" | "final";
+type TriggerStage = "primary" | "morning-check" | "hourly-check" |
+  "retry-1" | "retry-2" | "final";
 
 interface WorkflowRun {
   status: string;
@@ -80,6 +88,10 @@ function parseWorkflowRuns(value: unknown): WorkflowRun[] {
 function stageForCron(cron: string): TriggerStage {
   const stages: Record<string, TriggerStage> = {
     [PRIMARY_CRON]: "primary",
+    [SCHEDULE_CRONS[1]]: "morning-check",
+    [SCHEDULE_CRONS[2]]: "morning-check",
+    [SCHEDULE_CRONS[3]]: "hourly-check",
+    // Accept already-queued legacy events while Cron configuration propagates.
     "40 0 * * *": "retry-1",
     "55 0 * * *": "retry-2",
     [FINAL_CRON]: "final",
