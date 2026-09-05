@@ -4,24 +4,25 @@
   "url": "https://bmt.news/events/evt_c50722fab4c3608f/",
   "json": "https://bmt.news/api/events/evt_c50722fab4c3608f.json",
   "type": "regulatory_action",
-  "status": "developing",
+  "status": "monitoring",
   "category": "policy",
   "title": {
     "zh": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition",
     "en": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition"
   },
   "current_state": {
-    "zh": "Coinbase 已根据证券期货规则提交国内股票永续合约申请，但面临 CME 诉讼，使推出前景不确定。",
-    "en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, but faces a CME lawsuit that clouds the launch."
+    "zh": "Coinbase 已正式面向美国客户推出 24/7 股票永续合约，此前已提交 SEC 通知并面临 CME 诉讼，但实际推出已实现。",
+    "en": "Coinbase has launched 24/7 stock perpetuals for US customers, following its SEC filings and pending CME lawsuit, with the product now live."
   },
   "first_seen_at": "2026-09-04T08:58:13.576688+00:00",
-  "last_updated_at": "2026-09-04T22:27:12.676368+00:00",
-  "last_material_change_at": "2026-09-04T22:27:12.676368+00:00",
+  "last_updated_at": "2026-09-05T04:52:55.898762+00:00",
+  "last_material_change_at": "2026-09-05T04:52:55.898762+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 2,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
     "bring",
+    "brings",
     "clouds",
     "cme",
     "coin",
@@ -31,6 +32,7 @@
     "files",
     "futures",
     "launch",
+    "news",
     "notices",
     "perpetuals",
     "perps",
@@ -49,10 +51,13 @@
     "cme",
     "coinbase",
     "crypto-regulation",
+    "exchange-announcement",
     "perpetual-futures",
+    "perpetuals",
     "sec",
     "security-futures",
     "single-stock-perpetuals",
+    "stock-derivatives",
     "us-markets"
   ],
   "updates": [
@@ -140,6 +145,44 @@
         {
           "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORjlYZ2hfU0VwLUFYWlpEVVA4RkNiam1ZRHR2eUZkX2RidE5wWi1CZEpJMzdMZ0tmYnVuQUMyMFFfRGxFcWdYWVNjMjNiRlJzaHk0WTU0NzlqRnNBUmRKN2duTFNlYVREY2MyLVlraXpVNzkyQl9DYjVadnF1UU9lVG9Ra1ktd3BIdVRkNDNsMUIza0YwTkN1OWIya2JidF9hQm4wcUxjTTJKZmlWaXE3SFp3blh0cGhURTVQZFRQNmJJNkRYZ3lmRGJ2UkxISElJeGc?oc=5",
           "label": "Tech Times",
+          "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_78398b96b29a97a9",
+      "event_id": "evt_c50722fab4c3608f",
+      "occurred_at": "2026-09-04T20:54:59Z",
+      "published_at": "2026-09-04T20:54:59Z",
+      "first_seen_at": "2026-09-05T04:52:55.898762Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Coinbase Brings 24/7 Stock Perpetuals to the US - Bitcoin News",
+      "title_en": "Coinbase Brings 24/7 Stock Perpetuals to the US - Bitcoin News",
+      "what_changed_zh": "Coinbase 宣布面向美国客户正式推出 24/7 股票永续合约，表明该产品已从申请阶段进入实际可用阶段。",
+      "what_changed_en": "Coinbase announces the launch of 24/7 stock perpetuals for US customers, advancing the product from filing stage to availability.",
+      "current_state_zh": "Coinbase 已正式面向美国客户推出 24/7 股票永续合约，此前已提交 SEC 通知并面临 CME 诉讼，但实际推出已实现。",
+      "current_state_en": "Coinbase has launched 24/7 stock perpetuals for US customers, following its SEC filings and pending CME lawsuit, with the product now live.",
+      "detailed_summary_zh": "Coinbase announces launch of 24/7 stock perpetuals for US customers, enabling round-the-clock trading of equity-linked derivatives.",
+      "detailed_summary_en": "Coinbase announces launch of 24/7 stock perpetuals for US customers, enabling round-the-clock trading of equity-linked derivatives.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "google_news:article:550e3f6c1e711ba9"
+      ],
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ09pcDVTNG5aU0pPSEZSb3h4dkZ4dElMZVJvQzMzdGlsa1FKdHdZOUNmYTNFanpYc2w1MXQ5N2l3NmNpNjlSNDJXMHRTbFpVclIxQmROcE01T3o0N3VseFlpQ2s1TG9ZNElmSERZaE9jOUk0TE5hY0VRcHdENUZGTDJQR2FqdmZz?oc=5",
+          "label": "Bitcoin News",
           "source_type": "google_news",
           "official": false
         }

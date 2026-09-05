@@ -17728,10 +17728,11 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Coinbase has filed to offer domestic stock perpetuals under security-futures rules, but faces a CME lawsuit that clouds the launch.",
-      "current_state_zh": "Coinbase 已根据证券期货规则提交国内股票永续合约申请，但面临 CME 诉讼，使推出前景不确定。",
+      "current_state_en": "Coinbase has launched 24/7 stock perpetuals for US customers, following its SEC filings and pending CME lawsuit, with the product now live.",
+      "current_state_zh": "Coinbase 已正式面向美国客户推出 24/7 股票永续合约，此前已提交 SEC 通知并面临 CME 诉讼，但实际推出已实现。",
       "entities": [
         "bring",
+        "brings",
         "clouds",
         "cme",
         "coin",
@@ -17741,6 +17742,7 @@
         "files",
         "futures",
         "launch",
+        "news",
         "notices",
         "perpetuals",
         "perps",
@@ -17758,21 +17760,24 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-04T08:58:13.576688Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-04T22:27:12.676368Z",
-      "last_updated_at": "2026-09-04T22:27:12.676368Z",
+      "last_material_change_at": "2026-09-05T04:52:55.898762Z",
+      "last_updated_at": "2026-09-05T04:52:55.898762Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "developing",
+      "status": "monitoring",
       "title_en": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition",
       "title_zh": "Coinbase Files SEC Notices to Bring Single-Stock Perpetuals to U.S. - Coin Edition",
       "topics": [
         "cme",
         "coinbase",
         "crypto-regulation",
+        "exchange-announcement",
         "perpetual-futures",
+        "perpetuals",
         "sec",
         "security-futures",
         "single-stock-perpetuals",
+        "stock-derivatives",
         "us-markets"
       ],
       "updates": [
@@ -17864,6 +17869,44 @@
           "update_type": "escalation",
           "what_changed_en": "CME has filed a lawsuit casting uncertainty over Coinbase's plan to launch single-stock perpetuals in the U.S.",
           "what_changed_zh": "CME 提起诉讼，对 Coinbase 在美国推出单一股票永续合约的计划构成不确定性。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Coinbase has launched 24/7 stock perpetuals for US customers, following its SEC filings and pending CME lawsuit, with the product now live.",
+          "current_state_zh": "Coinbase 已正式面向美国客户推出 24/7 股票永续合约，此前已提交 SEC 通知并面临 CME 诉讼，但实际推出已实现。",
+          "detailed_summary_en": "Coinbase announces launch of 24/7 stock perpetuals for US customers, enabling round-the-clock trading of equity-linked derivatives.",
+          "detailed_summary_zh": "Coinbase announces launch of 24/7 stock perpetuals for US customers, enabling round-the-clock trading of equity-linked derivatives.",
+          "event_id": "evt_c50722fab4c3608f",
+          "first_seen_at": "2026-09-05T04:52:55.898762Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T20:54:59Z",
+          "published_at": "2026-09-04T20:54:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Bitcoin News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ09pcDVTNG5aU0pPSEZSb3h4dkZ4dElMZVJvQzMzdGlsa1FKdHdZOUNmYTNFanpYc2w1MXQ5N2l3NmNpNjlSNDJXMHRTbFpVclIxQmROcE01T3o0N3VseFlpQ2s1TG9ZNElmSERZaE9jOUk0TE5hY0VRcHdENUZGTDJQR2FqdmZz?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:550e3f6c1e711ba9"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Brings 24/7 Stock Perpetuals to the US - Bitcoin News",
+          "title_zh": "Coinbase Brings 24/7 Stock Perpetuals to the US - Bitcoin News",
+          "update_id": "upd_78398b96b29a97a9",
+          "update_type": "confirmation",
+          "what_changed_en": "Coinbase announces the launch of 24/7 stock perpetuals for US customers, advancing the product from filing stage to availability.",
+          "what_changed_zh": "Coinbase 宣布面向美国客户正式推出 24/7 股票永续合约，表明该产品已从申请阶段进入实际可用阶段。"
         }
       ]
     },
@@ -19922,6 +19965,233 @@
           "update_type": "initial",
           "what_changed_en": "A type-confusion vulnerability in V8, tracked as CVE-2026-85046, is being actively exploited in the wild and affects Chromium-based browsers prior to version 152.0.7977.82. A crafted HTML page can let a remote attacker run arbitrary code inside the browser sandbox.\n\nSince Chrome, Edge, Brave, and most other major browsers share the Chromium engine, the flaw exposes billions of users to a credible, actively exploited attack. It highlights the fragility of relying on a single rendering engine across the web and makes urgent patching essential for both consumers and enterprises.\n\nThe bug is a type confusion in V8, Chrome's JavaScript and WebAssembly engine, and carries a CVSS score of 8.8 (High). Google fixed it in Chrome 152.0.7977.82 and reportedly paid a $1,000 bug bounty; users should also update Chromium derivatives because many browsers lag upstream releases.",
           "what_changed_zh": "V8 中的一个类型混淆漏洞（编号 CVE-2026-85046）正在野外被积极利用，影响 152.0.7977.82 之前版本的 Chromium 内核浏览器。攻击者可通过特制 HTML 页面在浏览器沙盒内远程执行任意代码。\n\n由于 Chrome、Edge、Brave 以及大多数主流浏览器都共享 Chromium 内核，该漏洞使数十亿用户暴露在真实且已遭利用的攻击之下。它也凸显了整个互联网依赖单一渲染引擎的脆弱性，消费者和企业都需要尽快打补丁。\n\n该漏洞是 V8（Chrome 的 JavaScript 和 WebAssembly 引擎）中的类型混淆问题，CVSS 评分为 8.8（高危）。Google 已在 Chrome 152.0.7977.82 中修复，并据报道支付了 1000 美元漏洞赏金；由于许多衍生浏览器滞后于上游版本，用户也应及时更新这些浏览器。"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+      "current_state_zh": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+      "entities": [
+        "bring",
+        "coinbase",
+        "cryptopotato",
+        "files",
+        "futures",
+        "investors",
+        "perpetual",
+        "perpetual-futures",
+        "sec",
+        "single",
+        "stock",
+        "with"
+      ],
+      "event_id": "evt_e4e91c9c411c1826",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-05T04:52:55.898447Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-05T04:52:55.898447Z",
+      "last_updated_at": "2026-09-05T04:52:55.898447Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase Files With SEC to Bring Single-Stock Perpetual Futures to US Investors - CryptoPotato",
+      "title_zh": "Coinbase Files With SEC to Bring Single-Stock Perpetual Futures to US Investors - CryptoPotato",
+      "topics": [
+        "coinbase",
+        "derivatives",
+        "perpetual-futures",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+          "current_state_zh": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+          "detailed_summary_en": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+          "detailed_summary_zh": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+          "event_id": "evt_e4e91c9c411c1826",
+          "first_seen_at": "2026-09-05T04:52:55.898447Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T22:37:00Z",
+          "published_at": "2026-09-04T22:37:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoPotato",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ0c3YklNVm1FLTQ2YTVGRjZXRzFfV0g2WUhWVnBOTWtlVm9NN0RGR3JaNGRUaG05YkRrU05UNEJCSV9qOW5ZVnlEWUdpVW9rM1YzN09GWnU1ZDh6VGtXc1BSOFlJVk1RYW1VRy05Ny1WMXc3aVhSM05VMDBkcVQ0Mi1CNmdleTdadGkwc3dtWjdfdGpsdDBiYXBPdl8xaWJvbGpJVm41VWk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:04fbea4cda0a4c9f"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Files With SEC to Bring Single-Stock Perpetual Futures to US Investors - CryptoPotato",
+          "title_zh": "Coinbase Files With SEC to Bring Single-Stock Perpetual Futures to US Investors - CryptoPotato",
+          "update_id": "upd_60161b9b7005f9cf",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors.",
+          "what_changed_zh": "Coinbase has filed with the SEC seeking approval to bring single-stock perpetual futures to US investors."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+      "current_state_zh": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+      "entities": [
+        "binance",
+        "customers",
+        "despite",
+        "economy",
+        "finds",
+        "keep",
+        "licensing",
+        "loophole",
+        "mica",
+        "miss"
+      ],
+      "event_id": "evt_78a6b3bdc790ad99",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-05T04:52:55.898725Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-05T04:52:55.898725Z",
+      "last_updated_at": "2026-09-05T04:52:55.898725Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Finds MiCA Loophole to Keep EU Customers Despite Licensing Miss - Crypto Economy",
+      "title_zh": "Binance Finds MiCA Loophole to Keep EU Customers Despite Licensing Miss - Crypto Economy",
+      "topics": [
+        "binance",
+        "eu-regulation",
+        "licensing",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+          "current_state_zh": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+          "detailed_summary_en": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+          "detailed_summary_zh": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+          "event_id": "evt_78a6b3bdc790ad99",
+          "first_seen_at": "2026-09-05T04:52:55.898725Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T20:35:31Z",
+          "published_at": "2026-09-04T20:35:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Crypto Economy",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1oczdLckhadWlxNHV3d0V4dXpxRzY2a2YzYzBXWUlmS1BReXBqZkdyQlBiUmxwVjlZem5fR3RlQWUwTXFjVElvbFUwQl9sTENFVzhpYWtlSmdNQTN4NC1BdHlSdjYxZmkwU1o1cTR1V2RJUkhQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:1e43f8e3ea6d3e23"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Finds MiCA Loophole to Keep EU Customers Despite Licensing Miss - Crypto Economy",
+          "title_zh": "Binance Finds MiCA Loophole to Keep EU Customers Despite Licensing Miss - Crypto Economy",
+          "update_id": "upd_e47c338548bc516e",
+          "update_type": "initial",
+          "what_changed_en": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license.",
+          "what_changed_zh": "Binance has reportedly found a MiCA loophole to continue serving European customers despite not yet obtaining the required EU license."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+      "current_state_zh": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+      "entities": [
+        "compiler",
+        "react",
+        "rust",
+        "vite"
+      ],
+      "event_id": "evt_846fd4944d49448f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-05T04:52:55.918986Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-05T04:52:55.918986Z",
+      "last_updated_at": "2026-09-05T04:52:55.918986Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "The Rust React Compiler is now native in Vite",
+      "title_zh": "The Rust React Compiler is now native in Vite",
+      "topics": [
+        "frontend-tooling",
+        "oxc",
+        "react",
+        "rust",
+        "vite"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+          "current_state_zh": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+          "detailed_summary_en": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+          "detailed_summary_zh": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+          "event_id": "evt_846fd4944d49448f",
+          "first_seen_at": "2026-09-05T04:52:55.918986Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-04T17:49:09Z",
+          "published_at": "2026-09-04T17:49:09Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49567873"
+            }
+          ],
+          "sources": [
+            {
+              "label": "acusti",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://blog.master.dev/react-now-rusted-all-the-way-out/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49567873"
+          ],
+          "time_precision": "published",
+          "title_en": "The Rust React Compiler is now native in Vite",
+          "title_zh": "The Rust React Compiler is now native in Vite",
+          "update_id": "upd_b87d6d05ecfd583b",
+          "update_type": "initial",
+          "what_changed_en": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline.",
+          "what_changed_zh": "The React Compiler can now be used via Vite with Rust-based Oxc transforms, eliminating Babel from the frontend compilation pipeline."
         }
       ]
     }
