@@ -695,18 +695,57 @@ def test_shared_rules_keep_primary_boundaries_and_unruled_rankings() -> None:
     assert "border-bottom: 2px solid var(--text)" in rule(".day-divider")
     assert "border-top:" not in rule(".market-snapshot")
     assert "border-bottom: 1px solid var(--border)" in rule(".market-snapshot")
-    assert "border-top: 2px solid var(--text)" in rule(".event-context-list")
+    assert "border-top:" not in rule(".event-context-list")
     assert "border-bottom: 1px solid var(--border)" in rule(".event-context")
     assert "border-bottom:" not in rule(".event-index-orientation")
-    assert "border-bottom: 2px solid var(--text)" in rule(".weekly-masthead")
-    assert "border-bottom: 1px solid var(--border)" in rule(".weekly-judgment")
-    assert "border-top: 0" in rule(".weekly-context-list")
+    assert ".weekly-masthead" not in stylesheet
+    assert ".weekly-range" not in stylesheet
+    assert ".weekly-context-list" not in stylesheet
+    assert "border-" not in rule(".weekly-judgment")
     assert "border-" not in rule(".event-ranking-list li")
     assert "border-" not in rule(".event-overview-stats > div,\n.event-facts > div")
     assert "border-top: 1px solid var(--border)" in rule("*/\n.event-facts > div")
     assert "max-width:" not in rule(".event-context-heading > p")
     assert "min-width: 0" in rule(".event-context-heading > p")
     assert "nowrap" not in rule(".event-context-heading > p")
+
+
+def test_all_section_mastheads_share_title_and_metadata_templates() -> None:
+    includes = Path("docs/_includes")
+    for name in ("edition-header.html", "archive-index.html", "weekly-header.html"):
+        template = (includes / name).read_text()
+        assert "include section-header.html" in template
+        assert "<h1" not in template
+    for name in ("feed-home.html", "archive-index.html", "weekly-header.html"):
+        assert "include section-divider.html" in (includes / name).read_text()
+    assert 'class="day-divider"' in (includes / "section-divider.html").read_text()
+    header = (includes / "section-header.html").read_text()
+    assert 'class="section-header"' in header
+    assert 'class="section-description"' in header
+    assert "include.title | escape" in header
+    assert "include.description | escape" in header
+    assert "eyebrow" not in header
+    layout = Path("docs/_layouts/default.html").read_text()
+    assert "include section-divider.html" in layout
+    # Index pages bypass the document banner, but event/entity detail pages
+    # and other docs retain it; no extra full-width rule above their overview.
+    index_branch = 'page.page_class == "event-index-page" or page.page_class == "entity-index-page"'
+    assert layout.index(index_branch) < layout.index('page.page_type == "archive"')
+    css = Path("docs/assets/css/bmtnews-ui.css").read_text()
+    title_rule = css.split(".section-header h1 {", 1)[1].split("}", 1)[0]
+    assert "font-size: var(--fs-xl)" in title_rule
+    assert "line-height: 1.35" in title_rule
+    assert ".daily-title-row" not in css
+
+
+def test_empty_indexes_keep_the_shared_masthead() -> None:
+    includes = Path("docs/_includes")
+    archive = (includes / "archive-index.html").read_text()
+    assert archive.index("include section-header.html") < archive.index("if rows and rows.size > 0")
+    for name in ("weekly-index.html", "weekly-detail.html", "weekly-edition.html"):
+        template = (includes / name).read_text()
+        fallback = template.rsplit("{% else %}", 1)[0]
+        assert "include weekly-header.html" in fallback
 
 
 def test_secondary_layout_keeps_content_first_and_separates_bilingual_copy() -> None:
