@@ -49,14 +49,23 @@
       "current_state_en": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
       "detailed_summary_zh": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
       "detailed_summary_en": "Firo activates a hard fork within hours to fix a Spark vulnerability that could allow endless token creation, requiring node operators to upgrade.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Firo 原名 Zcoin，是 2016 年推出的隐私导向加密货币，定位为私人数字现金。其 Spark 协议基于 Lelantus Spark 设计，利用零知识证明隐藏发送方、接收方和金额，同时保持区块链可验证；主网 Spark 地址以“sm”开头，长度为 144 个字符。硬分叉是一种网络级规则变更，要求所有节点升级以保持兼容；masternode（主节点）是除常规交易验证外还承担额外功能的专用节点。",
+      "background_en": "Firo, formerly known as Zcoin, is a privacy-focused cryptocurrency launched in 2016 that aims to serve as private digital cash. Its Spark protocol, built on the Lelantus Spark design, uses zero-knowledge proofs to hide the sender, receiver, and amounts while keeping the blockchain verifiable; Spark addresses on mainnet start with 'sm' and are 144 characters long. A hard fork is a network-wide rule change that requires all nodes to update to remain compatible, and masternodes are specialized nodes that perform extra functions beyond standard transaction verification.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 7.0,
-      "references": [],
+      "market_impact_zh": "此次漏洞直接关系到 Firo 网络的原生代币 FIRO，因为可伪造代币的缺陷会威胁其供应上限并削弱持有者信心；极短的升级窗口还给交易所和节点运营者带来运营风险，可能影响硬分叉前后的 FIRO 交易与流动性。该事件或会波及整个隐私币赛道的市场情绪，但直接冲击可能局限于 Firo 自身生态。",
+      "market_impact_en": "The vulnerability directly exposes FIRO, the network's native token, because a flaw that permits forged coins threatens its supply cap and could undermine holder confidence; the short upgrade window also creates operational risk for exchanges and node operators, which could affect FIRO trading and liquidity around the fork. The incident may ripple into sentiment for privacy-coin projects generally, although the direct market impact is likely contained to Firo's ecosystem.",
+      "importance_score": 8.0,
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Firo_(cryptocurrency)",
+          "title": "Firo (cryptocurrency) - Wikipedia"
+        },
+        {
+          "url": "https://firo.org/2024/01/18/spark-is-live.html",
+          "title": "Lelantus Spark is live on Firo | Firo - Privacy-preserving cryptocurrency"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:906867f0703d8344"

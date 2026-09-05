@@ -49,14 +49,23 @@
       "current_state_en": "Mina's Mesa hard fork halted transaction processing for ~8 hours and requires deployed zkApps to adopt o1js 3.0 verification keys before proof-authorized activity can resume.",
       "detailed_summary_zh": "Mina's Mesa hard fork halted transaction processing for ~8 hours and requires deployed zkApps to adopt o1js 3.0 verification keys before proof-authorized activity can resume.",
       "detailed_summary_en": "Mina's Mesa hard fork halted transaction processing for ~8 hours and requires deployed zkApps to adopt o1js 3.0 verification keys before proof-authorized activity can resume.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Mina 是一条围绕零知识证明（尤其是 zk-SNARKs）构建的 L1 区块链。zkApps 是由这类证明驱动的 Mina 智能合约，开发者使用 TypeScript 和 o1js 库编写它们。验证密钥与电路约束绑定，因此 Mesa 改变协议常量和电路约束后，升级前的密钥便不再有效；Mina 允许在开发者更新密钥之前，暂时从 proof 授权回退到 signature 授权。",
+      "background_en": "Mina is a layer-1 blockchain built around zero-knowledge proofs, specifically zk-SNARKs. zkApps are Mina smart contracts powered by these proofs, and developers write them in TypeScript using the o1js library. Verification keys are tied to circuit constraints, so Mesa's changes to protocol constants and circuit constraints invalidated pre-upgrade keys; Mina is allowing a temporary fallback from proof to signature authorization until developers update their keys.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "此次网络宕机以及交易所暂停充值与提现，直接影响 MINA 在中心化平台上的流动性和转账可用性；zkApp 密钥迁移要求也给基于 Mina 开发的团队带来了额外的运维成本。市场对 L1 升级风险的看法可能会影响其对类似权益证明网络升级事件的定价，但本文不推断任何方向性结果。",
+      "market_impact_en": "The outage and mandatory exchange deposit/withdrawal suspensions directly affect MINA's liquidity and transfer availability on centralized venues, while the key-migration requirement adds operational friction for teams building zkApps on Mina. Broader sentiment toward layer-1 upgrade risk could influence how markets price similar proof-of-stake network upgrades, but no directional outcome should be inferred.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://minaprotocol.com/blog/what-are-zkapps",
+          "title": "What are zkApps? | Mina Protocol"
+        },
+        {
+          "url": "https://docs.minaprotocol.com/zkapps/o1js",
+          "title": "Introduction to o1js | Mina Documentation"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:3ba797cbc0827440"

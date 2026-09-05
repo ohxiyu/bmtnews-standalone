@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-04T00:00:00Z</updated>
+  <updated>2026-09-05T00:00:00Z</updated>
+  <entry>
+    <title>Firo&#x27;s Urgent Hard Fork Fixes Spark Flaw That Could Allow Endless Token Creation</title>
+    <link href="https://cryptoslate.com/privacy-coin-flaw-risks-endless-token-creation-leaving-node-operators-with-a-deadline-in-hours-to-fix-it/"/>
+    <id>https://bmt.news/editions/2026-09-05/#rss:cryptoslate.com_feed_:906867f0703d8344</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>Firo is carrying out an urgent hard fork that activates at block 1,371,000 on September 4, 2024, requiring all node operators, miners, exchanges, and wallet users to upgrade to v0.14.18.0. The upgrade permanently repairs an August vulnerability in Spark that could, under specific conditions, allow forged coins and inflate FIRO&#x27;s supply, and it restores normal multi-input Spark spending.
+
+A proof-of-supply-inflation flaw in a privacy protocol is a serious security event because it directly threatens the token&#x27;s scarcity and user trust. The fork also highlights how a small privacy coin must rapidly coordinate nodes, exchanges, and users to neutralize a critical vulnerability before it can be exploited.
+
+The vulnerability was disclosed on August 13 and did not compromise wallets, keys, or single-input spends, though a researcher had minted about 200 FIRO on mainnet in a controlled test. As an interim defense, v0.14.17.2 restricted Spark spending to one input, which reduced privacy by making separate payment amounts easier to correlate, until v0.14.18.0 introduced a versioned Chaum V2 proof and transaction format to fix it.</summary>
+  </entry>
+  <entry>
+    <title>Hidden Solana v1 Upgrade Flaws Can Freeze RPC Readers and Disable Fee Limits</title>
+    <link href="https://cryptoslate.com/hidden-solana-upgrade-bug-can-freeze-network-readers-and-silently-disable-fee-limits/"/>
+    <id>https://bmt.news/editions/2026-09-05/#rss:cryptoslate.com_feed_:dd7db4423ca398dd</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>Solana&#x27;s v1 transaction format, which raises the maximum payload from 1,232 to 4,096 bytes, can freeze RPC readers that do not opt in and can silently disable ComputeBudget-based fee limits for indexers and sponsors. The format is active on testnet and devnet but not yet activated on mainnet as of September 4.
+
+RPC clients, indexers, relayers, and fee sponsors that fail to update could experience hard outages or enforce incorrect resource and fee limits once the first v1 transaction appears. This makes the pre-activation window a compatibility deadline for nearly all Solana infrastructure operators.
+
+Consumers must set maxSupportedTransactionVersion: 1 for getTransaction, getBlock, and blockSubscribe, otherwise v1 requests return error -32015, whole blocks fail, and subscriptions emit null. V1 moves compute-unit and priority-fee data into a transactionConfig object, so stale indexers may report zero compute budgets; Geyser/gRPC consumers must regenerate protobuf stubs and check field 7 before reading the version flag.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Files to Offer Stock Perps as Security Futures Amid CME Lawsuit</title>
+    <link href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxORjlYZ2hfU0VwLUFYWlpEVVA4RkNiam1ZRHR2eUZkX2RidE5wWi1CZEpJMzdMZ0tmYnVuQUMyMFFfRGxFcWdYWVNjMjNiRlJzaHk0WTU0NzlqRnNBUmRKN2duTFNlYVREY2MyLVlraXpVNzkyQl9DYjVadnF1UU9lVG9Ra1ktd3BIdVRkNDNsMUIza0YwTkN1OWIya2JidF9hQm4wcUxjTTJKZmlWaXE3SFp3blh0cGhURTVQZFRQNmJJNkRYZ3lmRGJ2UkxISElJeGc?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-05/#google_news:article:133eea585fbf1296</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>Coinbase has filed to list perpetual futures on domestic U.S. stocks as security futures, a product classification that brings it under securities and futures regulation. The launch is clouded by a CME lawsuit over the move.
+
+The filing could bring crypto-style 24/7 perpetual trading to equities from a major U.S. exchange, potentially reshaping how investors access stock exposure. A legal challenge from CME adds regulatory and market-structure uncertainty that could delay or alter the product.
+
+Stock perps are typically USDC-settled perpetual contracts whose prices track listed equities, allowing exposure without owning the underlying shares. Categorizing them as security futures would put the product under the joint oversight of the SEC and CFTC and may involve special margin and trading rules.</summary>
+  </entry>
+  <entry>
+    <title>Mina&#x27;s Mesa hard fork halts network, invalidates zkApp verification keys</title>
+    <link href="https://cryptoslate.com/zero-knowledge-apps-go-dark-after-chain-upgrade-breaks-their-underlying-verification-keys/"/>
+    <id>https://bmt.news/editions/2026-09-05/#rss:cryptoslate.com_feed_:3ba797cbc0827440</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>On September 3, Mina&#x27;s Mesa hard fork halted transaction processing on mainnet for about eight hours, with block production pausing at roughly 15:00 UTC before the first Mesa slot at 18:00 UTC. Exchanges were instructed to suspend MINA deposits and withdrawals from the 10:00 UTC stop-transaction slot until the upgraded network became operational.
+
+This is a high-severity protocol upgrade incident for Mina because it interrupted live transaction service, forced centralized exchanges to pause MINA transfers, and rendered deployed zkApps unable to process proof-authorized activity. It illustrates how core protocol changes, such as altered circuit constants, can directly affect application developers and users on layer-1 networks.
+
+The upgrade halves slot time from three minutes to 90 seconds and temporarily caps zkApp transactions at 12 per block after stress tests found memory spikes when the soft limit was removed. zkApp developers must compile Mesa-compatible verification keys with o1js 3.0 and update the key stored on-chain; until then, proof-authorized activity remains paused, with no fixed migration deadline.</summary>
+  </entry>
+  <entry>
+    <title>UK&#x27;s Largest Retail Investment Platform Opens Access to Crypto ETNs</title>
+    <link href="https://www.coindesk.com/business/2026/09/04/from-warning-to-listing-uk-s-largest-wealth-platform-opens-access-to-crypto-etns"/>
+    <id>https://bmt.news/editions/2026-09-05/#rss:www.coindesk.com_arc_outboundfeeds_rss_:bc36fc0fc7c93870</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>The UK&#x27;s largest retail investment platform has opened access to cryptocurrency exchange-traded notes (ETNs), marking a reversal of its previous warnings about crypto assets. This move brings regulated, exchange-traded crypto products to a broad base of retail investors for the first time at this platform.
+
+This development is a milestone for crypto adoption in the UK because it gives mainstream retail investors a familiar, regulated route to crypto exposure. It could set a precedent for other large wealth platforms and increase the perceived legitimacy of crypto assets in traditional retail finance.
+
+Crypto ETNs are unsecured debt instruments that track an underlying cryptocurrency&#x27;s price, so investors bear issuer credit risk in contrast to ETFs, which physically hold the underlying assets. The switch from prior warnings to listing suggests the platform now views these products as suitable for its clients while still acknowledging the risks inherent to crypto.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Files SEC Notices for 24/7 Leveraged Stock Trading in US</title>
+    <link href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1aWUtFTFpXSUFFTFBMYnc3WkVUWjctaXdUV1VHd2UzUkNBUHMteVhvQ0xtVHg5TmozZmYybHJKdURqYTYxUjN3THdGZURlQXhCOGZTRGFyMU5SZ1NkaVNPSUl4Zktkemowd3ppeHNVdkxQMzJsN0Ew?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-05/#google_news:article:abcee05e1d8e9965</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>Coinbase has filed regulatory notices with the U.S. Securities and Exchange Commission (SEC) that could pave the way for offering 24/7 leveraged stock trading to American customers. The filings are a preliminary step and do not mean the product has been approved or launched yet.
+
+If approved, this would mark a major US crypto exchange moving into around-the-clock, leverage-enabled equities trading, blurring the line between crypto and traditional markets. It could pressure legacy brokerages to offer similar 24/7 access and expand Coinbase&#x27;s business beyond digital assets.
+
+The notices are part of a regulatory process with the SEC, but no official confirmation or product details have been published. Leveraged stock trading involves borrowing capital to amplify both potential gains and losses, while 24/7 trading relies on electronic communication networks (ECNs) to match orders outside regular exchange hours.</summary>
+  </entry>
+  <entry>
+    <title>Bitcoin Slides Below $80K as Blowout Jobs Report Boosts Fed Hike Odds</title>
+    <link href="https://decrypt.co/377414/bitcoin-slides-blowout-jobs-report-fed-hike-odds"/>
+    <id>https://bmt.news/editions/2026-09-05/#rss:decrypt.co_feed:be7db8b7c7a901a3</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>The U.S. economy added 162,000 jobs in August, nearly triple the 53,000 economists expected, pushing the implied probability of a September Fed rate hike to 58% from 49.4%. Bitcoin slipped below $80,000 after touching a four-month high of $82,240 earlier on Friday.
+
+The strong jobs report revived expectations of a Federal Reserve rate hike at the September 15-16 meeting, tightening financial conditions just as risk assets had been rallying on hopes of a pause. This macro shift directly pressured Bitcoin, gold, and stocks, illustrating how U.S. labor data can ripple through crypto markets.
+
+The unemployment rate held at 4.1%, while June and July payrolls were revised higher and the two-year Treasury yield reached its highest level since January 2025. Bitcoin traded near $79,300 within minutes of the release, even as spot Bitcoin ETFs logged $730.8 million in net inflows and CoinMarketCap&#x27;s Fear and Greed Index remained at 75 (&quot;greed&quot;).</summary>
+  </entry>
+  <entry>
+    <title>Trezor data breach expands by 67,000 users, now over 80,000 affected</title>
+    <link href="https://protos.com/trezor-says-mailing-breach-leaked-67k-more-users-than-first-thought/"/>
+    <id>https://bmt.news/editions/2026-09-05/#rss:protos.com_feed_:08f06c7d3e1a35b3</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>Trezor has revealed that last month&#x27;s mailing partner breach at ShipMonk affected an additional 67,000 U.S. users, bringing the total number of affected users to over 80,000. It also admitted that its 90-day data deletion policy was never enforced during its relationship with ShipMonk.
+
+This disclosure significantly expands a privacy breach involving users of Trezor&#x27;s hardware wallet, exposing them to heightened phishing and targeted-scam risk. It also raises significant questions about Trezor&#x27;s oversight of third-party data processors and the reliability of its stated data retention policy.
+
+Initially, Trezor reported only 13,689 affected customers and downplayed the incident by citing its 90-day data deletion policy. ShipMonk informed Trezor on August 10 of the initial 90-day scope and then on September 2 revealed the breach actually dated back to 2019 and 2021, while Trezor claims repeated written assurances gave it no reason to expect further leaks.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Brings Stock Perpetuals Onshore, Hinting at 24/7 U.S. Equity Trading</title>
+    <link href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPT0ZIOVNaN3U3YlRTOUtKU1J0emN1Vy1nZ3ltbDdhRm9QdDY1ZlpQc3NCcUJUUVgtR3hrTWFDMmk2dFNVcERpaVpaWVUtRGRVUFFsNjZkQ2UxMThtVVZTcl9MaVFoVEp3RmRpU0hYdVBLMVhDQVlxVlJzdktKazBucDMwZkcxN0ljdVJKeEZHTlhkS2ZPeWNfUjhZWkxET0Jk?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-05/#google_news:article:84f42aaa5dfc9c5b</id>
+    <updated>2026-09-05T00:00:00Z</updated>
+    <summary>Coinbase is reportedly bringing its stock perpetual futures product onshore to the United States, a move that could give American traders access to round-the-clock equity exposure. This signals a potential shift toward 24/7 stock trading in the U.S., mirroring crypto market conventions.
+
+Stock perpetuals enable leveraged equity exposure without owning the underlying shares, and offering them onshore could expand retail access to sophisticated trading tools. The move also highlights the growing convergence between traditional equity markets and crypto-native derivatives infrastructure, potentially pressuring legacy exchanges to innovate.
+
+Stock perpetual contracts track a stock&#x27;s price without transferring share ownership and rely on funding rates to keep contract prices anchored to the spot market. These instruments are traded nearly 24/7 across crypto platforms, though specific regulatory approvals or launch timelines for Coinbase&#x27;s onshore product were not included in the report.</summary>
+  </entry>
   <entry>
     <title>Standard Chartered offers spot BTC, ETH trading in UAE via Dubai FX platform</title>
     <link href="https://www.coindesk.com/business/2026/09/03/standard-chartered-first-top-global-bank-to-offer-bitcoin-and-ether-trading-in-uae"/>
@@ -337,104 +436,5 @@ Hyperliquid handles more than $4 billion in daily volume with a permissionless d
 This marks a major institutional adoption signal, as a top global exchange operator is integrating blockchain-based tokenized asset infrastructure into mainstream market structure. The move could accelerate the acceptance of tokenized securities among traditional financial institutions and set a precedent for other exchanges.
 
 tZERO provides blockchain-powered multi-asset infrastructure and operates through regulated broker-dealer subsidiaries. The partnership positions tZERO as a design partner for ICE&#x27;s platform, with ICE also joining tZERO&#x27;s financing round, though no further technical specifications of the platform were disclosed.</summary>
-  </entry>
-  <entry>
-    <title>Ontology Halts Mainnet Block Production Over Potential Security Issue</title>
-    <link href="https://cryptoslate.com/ontology-halts-mainnet-transactions-as-technical-team-investigates-potential-security-issue/"/>
-    <id>https://bmt.news/editions/2026-09-01/#rss:cryptoslate.com_feed_:79bbf2b9b10f7ffe</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Ontology suspended mainnet block production on Aug. 31 after identifying a potential security concern during a daily security check, with the network&#x27;s last recorded block at height 20,770,893. The project has not confirmed any exploit or asset loss, and no restart timetable has been disclosed.
-
-A mainnet halt is a significant event for any blockchain because it interrupts transaction settlement and dependent services such as bridge transfers, potentially affecting user trust and the ecosystem&#x27;s reliability. This incident also highlights the security risks that even established Layer 1 networks can face, making it relevant to the broader crypto industry.
-
-The last visible block timestamp was 08:24:26 UTC on Aug. 31, and the pause was announced at 09:09 UTC, resulting in a gap of about five hours and six minutes in block production on the public node dappnode1.ont.io. The project stated that ONT, ONG, and other on-chain assets remained unaffected based on its preliminary assessment, but the duration of the suspension remains undetermined.</summary>
-  </entry>
-  <entry>
-    <title>OpenSea Adds Solana NFT Trading Over Four Years After Initial Beta</title>
-    <link href="https://www.theblock.co/news/markets/2026-08-31-opensea-solana-nft-trading-413128"/>
-    <id>https://bmt.news/editions/2026-09-01/#rss:www.theblock.co_rss.xml:a90871f6eb93695d</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>OpenSea has enabled buying, selling, and trading of Solana-based NFTs on its marketplace, more than four years after its initial beta. Users can now access Solana digital collectibles alongside existing listings on the platform.
-
-This broadens OpenSea&#x27;s cross-chain reach and gives Solana-based NFT projects access to one of the largest NFT marketplaces. It could increase liquidity and awareness for Solana collectibles and signal continued multi-chain adoption in the NFT ecosystem.
-
-The launch arrives more than four years after OpenSea&#x27;s initial Solana beta. Solana uses a proof-of-stake consensus and, according to Blockchain.com, can theoretically process up to 65,000 transactions per second, though the network has also experienced outages and SEC scrutiny.</summary>
-  </entry>
-  <entry>
-    <title>More Markets reserve drained of ~$9.3M in WFLOW via E-mode exploit</title>
-    <link href="https://cointelegraph.com/news/more-markets-lending-reserve-drained-93m?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-01/#rss:cointelegraph.com_rss:a0bcd519181b9c44</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Web3 security firm Blockaid reported that an attacker drained roughly 15.5 million Wrapped Flow (WFLOW), worth about $9.3 million, from More Markets&#x27; mFlowWFLOW lending reserve on Flow EVM. The exploit used Ankr Staked FLOW (ankrFLOW) and E-mode, an Aave V3 feature, to overborrow against the reserve.
-
-This incident highlights how E-mode configurations intended for correlated assets can be exploited when a liquid staking token&#x27;s pricing becomes distorted, exposing DeFi users to reserve-level losses. It also adds to a month that already saw major exploit losses, reinforcing security risk as a central concern for the lending ecosystem.
-
-Blockaid said the attacker drained about $9.3 million in WFLOW from the mFlowWFLOW reserve, and the total value stolen across crypto hacks in August reached $139.7 million, per DefiLlama data. At the time of publication, More Markets had not publicly confirmed the incident or stated whether users suffered losses.</summary>
-  </entry>
-  <entry>
-    <title>Binance Ends BounceBit Mainnet Support After Chain Sunset</title>
-    <link href="https://www.binance.com/en/support/announcement/detail/665bd5c72a414130bfe4843f5b48456c?utm_source=EnglishTelegram&amp;amp;utm_medium=GlobalCommunity&amp;amp;utm_campaign=AnnouncementBot"/>
-    <id>https://bmt.news/editions/2026-09-01/#telegram:binance_announcements:8886</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Binance announced it will discontinue mainnet support for BounceBit (BB) after the project decided to permanently sunset BounceBit Chain following a hacking incident. Deposits and withdrawals of BB will be moved to the BNB Smart Chain (BEP20) network.
-
-This is significant because it marks the permanent shutdown of a Layer 1 blockchain after a security breach, forcing BB holders to migrate to BNB Smart Chain. It also highlights how exchange support changes can directly affect a token&#x27;s viability and network choice for a mid-cap asset.
-
-The exploit reportedly resulted in a loss of about $3 million, leading BounceBit to permanently sunset its chain. On Binance, BB deposits and withdrawals will now use the BEP20 token standard on BNB Smart Chain, so users must select the new network to avoid asset loss.</summary>
-  </entry>
-  <entry>
-    <title>Binance Launches Agent OS Platform Connecting AI Agents to Financial Services</title>
-    <link href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1rUnNHc2lSckE0T3NRYzJOVFFFQU52bWRJbmNKWTBsVlZHcDFZUmdtczBZSnJ5emtNLVRpMTdodDBiVGNWanU4b0VObC1xRnNoTjhTTg?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-01/#google_news:article:b0f9d08bcd427ee3</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Binance has launched Agent OS, a developer toolkit that connects AI agents to Binance&#x27;s exchange services. The platform unifies the Binance MCP server, exchange APIs, and ready-made agent skills, enabling agents to access market data, track positions, and initiate transactions.
-
-Agent OS marks a significant step in integrating AI agents with crypto finance, potentially accelerating the adoption of agentic AI across the crypto ecosystem. As the world&#x27;s largest cryptocurrency exchange, Binance&#x27;s launch could reshape how developers build automated trading and financial applications.
-
-Specifically, Agent OS provides a Binance MCP server, exchange APIs, and pre-built agent skills in one place, allowing agents to read both crypto and TradFi market data and execute trades. The announcement, however, currently lacks detailed technical specifications or evidence of user adoption, and the platform&#x27;s live status on Binance&#x27;s official domain suggests it is available for developers to explore.</summary>
-  </entry>
-  <entry>
-    <title>First Quantum-Resistant Bitcoin Transaction Mined on Mainnet</title>
-    <link href="https://www.aol.com/articles/first-quantum-resistant-bitcoin-transaction-140728000.html"/>
-    <id>https://bmt.news/editions/2026-08-31/#gdelt:article:20260830T160000Z::https://www.aol.com/articles/first-quantum-resistant-bitcoin-transaction-140728000.html</id>
-    <updated>2026-08-31T00:00:00Z</updated>
-    <summary>The first quantum-resistant Bitcoin transaction has been mined, using a Winternitz one-time signature (WOTS), a hash-based post-quantum signature scheme. This marks a proof-of-concept milestone for future-proofing Bitcoin against quantum computing threats.
-
-This milestone demonstrates that quantum-resistant signatures can be executed on Bitcoin today, at least as a proof-of-concept. It carries long-term implications for blockchain security and protocol evolution as quantum computing advances.
-
-The transaction used a Winternitz one-time signature, where each key pair can securely sign only one message. The new approach remains a proof-of-concept and does not represent a network-wide protocol upgrade; further standardization and soft-fork discussions, such as OP_CAT, are still ongoing.</summary>
-  </entry>
-  <entry>
-    <title>Moonwell Loses $8.7M in MAMO Price Manipulation Attack</title>
-    <link href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOTVFhaVhJN1ZjdFFKWEg1R3MxbXhqUUhMUU5FWGs0VENrZkxNelVOX1RWZWhqOEtFcWNxODA1ZFlSUUpYazAza0lVSUZ1YnFSdjlLMkc3bGZCU2FBU0dZYmNpdFF3ZlppUzRSU3JGZTJNalR5ckZxdlJoallTNUFfeWI4Y2RDby1EYzZZMExZZzdBV2xFWWNsTDJLeVE?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-31/#google_news:article:1e714397b5d1d6c7</id>
-    <updated>2026-08-31T00:00:00Z</updated>
-    <summary>Moonwell, a cross-chain lending protocol, was drained of approximately $8.7 million after an attacker manipulated the price of the MAMO token. The exploit appears to have used price oracle manipulation to inflate collateral value and withdraw funds from the protocol.
-
-This incident highlights ongoing security risks in DeFi lending protocols, where price oracle manipulation can directly cause user fund losses. It affects Moonwell users across supported networks and may erode confidence in protocols that depend on manipulable token price feeds.
-
-MAMO is a Base-native token with a circulating supply of 600 million tokens and a market cap of about $5.6 million, according to CoinGecko. Moonwell operates on Base, Optimism, Moonbeam, and Moonriver, and uses liquidation incentives to maintain protocol solvency.</summary>
-  </entry>
-  <entry>
-    <title>Vulnerability Reported in Six Cosmos EVM Chains</title>
-    <link href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5TS094NGgzR2NuUUZndHp6RFpxX1RvSEpJTUQwaURhZ0c4bTVIeF9MSkhVdEFkR1h1eGtRRWppRXpJaTF3STN4cEdPWElNLTFLN1dMbEdMNW00STR5aWVvck95UXNlenNIT2lVRm1aU3M?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-31/#google_news:article:67f52d46815b6359</id>
-    <updated>2026-08-31T00:00:00Z</updated>
-    <summary>CryptoTicker has reported a security vulnerability affecting six Cosmos EVM chains. The report highlights a protocol-wide security risk for these EVM-compatible Cosmos networks.
-
-This matters because EVM-compatible chains in the Cosmos ecosystem host significant DeFi activity, and a shared vulnerability could expose multiple networks simultaneously. It underscores the systemic risk that arises when multiple chains rely on common infrastructure such as the Cosmos EVM module.
-
-The vulnerability affects chains that use the Cosmos EVM module for Ethereum compatibility, meaning the attack surface is shared across those networks. No exploit has been publicly reported so far.</summary>
-  </entry>
-  <entry>
-    <title>Deribit moves 90% of client assets to Coinbase, ends daily proof-of-reserves</title>
-    <link href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOczgta2hXZlM3LUxRZXkzRG5rLTRENUd3YXl2RTdUb0NxQXNQWkl1THlhTDNUTE1PZGlNS3Rrc0RyME1YMkhpcXpoUWc4Q0VtNzJYTXhUd01BOGhRRy1ZM2x1aWRaUjRHdnZuc0hjSElKanFaYTZkZHplMXZFT3RwX3diU2ZoVEtOQTh2Um5ad2xXWV96ZU9aME9MOGN5NGdweGRjM3RwVURsdU1sX2RMSVpsb0I3MV9rZXBRWTQ0YjJKT0FfTE13bw?oc=5"/>
-    <id>https://bmt.news/editions/2026-08-31/#google_news:article:63fdb6087f84039a</id>
-    <updated>2026-08-31T00:00:00Z</updated>
-    <summary>Deribit transferred 90% of its client assets to Coinbase Custody and discontinued its daily proof-of-reserves verification. The move replaces self-custody of most user funds with an external institutional custodian while removing a regular public audit check.
-
-This is a significant trust and operational shift for one of the largest crypto derivatives exchanges, directly affecting how user funds are safeguarded and how solvency is publicly verified. It may influence user confidence in Deribit and prompt broader questions about exchange transparency and custody concentration in the industry.
-
-Deribit had previously published daily proof-of-reserves reports, which have now been discontinued after the transfer to Coinbase Custody. The change also centralizes a large share of Deribit client assets under Coinbase&#x27;s custody infrastructure, creating a single large custodian dependency.</summary>
   </entry>
 </feed>

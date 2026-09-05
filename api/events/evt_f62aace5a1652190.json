@@ -50,14 +50,27 @@
       "current_state_en": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
       "detailed_summary_zh": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
       "detailed_summary_en": "Solana's v1 transaction upgrade increases payload limits but risks freezing unprepared RPC readers and silently enforcing wrong fee limits for indexers and sponsors before mainnet activation.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Solana v1是一种新的交易序列化格式，通过将负载上限从1,232字节提高到4,096字节，使单笔交易空间增至约3.3倍。与legacy和v0不同，v1要求RPC层显式选择接入，并使用transactionConfig对象替代ComputeBudget指令来承载资源和费用元数据。最低兼容版本包括@solana/kit 8.0.0、@solana/web3.js 3.0.0-rc.3、Rust solana-* 4.2.x、Python solders 0.29.0和solana-go 1.23.0。",
+      "background_en": "Solana v1 is a new transaction serialization format that increases transaction room by roughly 3.3x by raising the payload cap from 1,232 to 4,096 bytes. Unlike legacy and v0 transactions, v1 requires explicit opt-in at the RPC layer and uses a transactionConfig object instead of ComputeBudget instructions for resource and fee metadata. Minimum compatible releases include @solana/kit 8.0.0, @solana/web3.js 3.0.0-rc.3, Rust solana-* 4.2.x, Python solders 0.29.0, and solana-go 1.23.0.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "市场影响渠道主要在运营层面：如果交易所、钱包或索引服务在激活前后出现RPC故障，Solana生态服务可能被短暂中断，投资者情绪也可能受到影响。由于该问题属于应用程序兼容性缺陷而非共识层问题，不应据此推断任何方向性的市场走势。",
+      "market_impact_en": "The market impact channel is operational reliability: if exchange, wallet, or indexer infrastructure suffers RPC failures near activation, Solana-based services could be temporarily disrupted and investor sentiment could be affected. The flaw is an application-level compatibility issue rather than a consensus defect, so no directional market effect should be inferred.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.bitrue.com/blog/what-is-solana-transaction-v1",
+          "title": "What Is Solana Transaction V1?"
+        },
+        {
+          "url": "https://solanacompass.com/news/solana-transaction-v1-heads-to-mainnet-september-9-format-breaking-changes-and-what-it-unlocks",
+          "title": "Solana Transaction V1 Mainnet Sept... | Solana Compass"
+        },
+        {
+          "url": "https://solana.com/docs/rpc/json-structures",
+          "title": "Solana RPC JSON Structures | Solana"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:dd7db4423ca398dd"

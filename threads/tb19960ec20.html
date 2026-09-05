@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Firo 紧急硬分叉修复 Spark 漏洞，防止无限代币铸造"
+permalink: /threads/tb19960ec20/
+interface_language: zh
+description: "Firo 正在执行一项紧急硬分叉，该分叉于 2024 年 9 月 4 日在区块 1,371,000 处激活，要求所有节点运营者、矿工、交易所和钱包用户升级至 v0.14.18.0。该升级永久修复了 8 月披露的 Spark 漏洞——该漏洞在特定条件下可伪造代币并增发 FIRO——同时恢复正常的 multi-input Spark 支付功能。  隐私协议中出现"
+page_type: archive
+---
+
+<div class="archive-stats"><div class="archive-stat"><strong>2</strong><span>天</span></div><div class="archive-stat"><strong>2</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-05</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-05">2026-09-05</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/privacy-coin-flaw-risks-endless-token-creation-leaving-node-operators-with-a-deadline-in-hours-to-fix-it/" target="_blank" rel="noopener noreferrer">Firo 紧急硬分叉修复 Spark 漏洞，防止无限代币铸造</a></h3><p class="archive-row-summary">Firo 正在执行一项紧急硬分叉，该分叉于 2024 年 9 月 4 日在区块 1,371,000 处激活，要求所有节点运营者、矿工、交易所和钱包用户升级至 v0.14.18.0。该升级永久修复了 8 月披露的 Spark 漏洞——该漏洞在特定条件下可伪造代币并增发 FIRO——同时恢复正常的 multi-input Spark 支付功能。
+
+隐私协议中出现可增发供给的漏洞属于严重安全事件，因为它直接威胁代币的稀缺性和用户信任。此次硬分叉也表明，小型隐私币必须迅速协调节点、交易所和用户，才能在漏洞被利用之前完成修复。
+
+该漏洞于 8 月 13 日披露，并未危及钱包、密钥或单输入支付；不过一名研究人员曾在主网受控测试中铸造了约 200 FIRO。作为临时防御措施，v0.14.17.2 曾将 Spark 支付限制为单输入，但这会因拆分金额更容易被关联而削弱隐私；v0.14.18.0 通过引入版本化的 Chaum V2 证明和交易格式来彻底修复。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.0</span></li><li class="archive-row"><time datetime="2026-08-27">2026-08-27</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/old-lightning-nodes-may-be-exposed-to-a-full-channel-wipeout-after-lnd-fix-lands-later-than-disclosed/" target="_blank" rel="noopener noreferrer">LND合作关闭漏洞可致旧版节点通道资金全损</a></h3><p class="archive-row-summary">8月13日，LND开发者Bastien Teinturier披露了一个合作关闭漏洞，恶意对等节点可利用一个区块重组和旧版已撤销承诺交易耗尽整个通道余额。官方修复仅在LND 0.21.0版本中落地，低于0.21.0的标准版本除非单独打补丁，否则仍存在风险。
+
+由于LND是闪电网络上部署最广泛的节点实现，这一可复现的“全额余额损失”场景即使尚无已知攻击，也构成严重安全风险。运行旧版本的操作者应将自身节点视为未修复，并升级到0.21.0及以上版本以保持安全。
+
+修复前，LND在合作关闭交易获得第一次链上确认后就会遗忘该通道，如果比特币随后发生重组使该交易失效，节点将无法广播惩罚交易来应对对方发布的已撤销承诺。最大损失可达通道全部余额；目前尚无受影响用户或在野利用的确认报告。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.0</span></li></ul><p class="archive-back"><a href="/threads/">全部事件线</a> · <a href="/">返回首页</a></p>

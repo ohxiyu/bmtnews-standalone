@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "event_id": "evt_169ee4d841a2c3a7",
+  "url": "https://bmt.news/events/evt_169ee4d841a2c3a7/",
+  "json": "https://bmt.news/api/events/evt_169ee4d841a2c3a7.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "Chromium 沙盒 RCE 漏洞正被积极利用，影响所有主要浏览器",
+    "en": "Actively Exploited Chromium Sandbox RCE Affects All Major Browsers"
+  },
+  "current_state": {
+    "zh": "V8 中的一个类型混淆漏洞（编号 CVE-2026-85046）正在野外被积极利用，影响 152.0.7977.82 之前版本的 Chromium 内核浏览器。攻击者可通过特制 HTML 页面在浏览器沙盒内远程执行任意代码。\n\n由于 Chrome、Edge、Brave 以及大多数主流浏览器都共享 Chromium 内核，该漏洞使数十亿用户暴露在真实且已遭利用的攻击之下。它也凸显了整个互联网依赖单一渲染引擎的脆弱性，消费者和企业都需要尽快打补丁。\n\n该漏洞是 V8（Chrome 的 JavaScript 和 WebAssembly 引擎）中的类型混淆问题，CVSS 评分为 8.8（高危）。Google 已在 Chrome 152.0.7977.82 中修复，并据报道支付了 1000 美元漏洞赏金；由于许多衍生浏览器滞后于上游版本，用户也应及时更新这些浏览器。",
+    "en": "A type-confusion vulnerability in V8, tracked as CVE-2026-85046, is being actively exploited in the wild and affects Chromium-based browsers prior to version 152.0.7977.82. A crafted HTML page can let a remote attacker run arbitrary code inside the browser sandbox.\n\nSince Chrome, Edge, Brave, and most other major browsers share the Chromium engine, the flaw exposes billions of users to a credible, actively exploited attack. It highlights the fragility of relying on a single rendering engine across the web and makes urgent patching essential for both consumers and enterprises.\n\nThe bug is a type confusion in V8, Chrome's JavaScript and WebAssembly engine, and carries a CVSS score of 8.8 (High). Google fixed it in Chrome 152.0.7977.82 and reportedly paid a $1,000 bug bounty; users should also update Chromium derivatives because many browsers lag upstream releases."
+  },
+  "first_seen_at": "2026-09-05T03:14:31.528625+00:00",
+  "last_updated_at": "2026-09-05T03:14:31.528625+00:00",
+  "last_material_change_at": "2026-09-05T03:14:31.528625+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "actively",
+    "affects",
+    "all",
+    "browser",
+    "browsers",
+    "chromium",
+    "exploited",
+    "major",
+    "rce",
+    "sandbox"
+  ],
+  "identifiers": [
+    "cve-2026",
+    "cve-2026-85046"
+  ],
+  "topics": [
+    "browser",
+    "chromium",
+    "cve",
+    "rce"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_3dfefb04524b59e0",
+      "event_id": "evt_169ee4d841a2c3a7",
+      "occurred_at": "2026-09-04T21:52:01Z",
+      "published_at": "2026-09-04T21:52:01Z",
+      "first_seen_at": "2026-09-05T03:14:31.528625Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Chromium 沙盒 RCE 漏洞正被积极利用，影响所有主要浏览器",
+      "title_en": "Actively Exploited Chromium Sandbox RCE Affects All Major Browsers",
+      "what_changed_zh": "V8 中的一个类型混淆漏洞（编号 CVE-2026-85046）正在野外被积极利用，影响 152.0.7977.82 之前版本的 Chromium 内核浏览器。攻击者可通过特制 HTML 页面在浏览器沙盒内远程执行任意代码。\n\n由于 Chrome、Edge、Brave 以及大多数主流浏览器都共享 Chromium 内核，该漏洞使数十亿用户暴露在真实且已遭利用的攻击之下。它也凸显了整个互联网依赖单一渲染引擎的脆弱性，消费者和企业都需要尽快打补丁。\n\n该漏洞是 V8（Chrome 的 JavaScript 和 WebAssembly 引擎）中的类型混淆问题，CVSS 评分为 8.8（高危）。Google 已在 Chrome 152.0.7977.82 中修复，并据报道支付了 1000 美元漏洞赏金；由于许多衍生浏览器滞后于上游版本，用户也应及时更新这些浏览器。",
+      "what_changed_en": "A type-confusion vulnerability in V8, tracked as CVE-2026-85046, is being actively exploited in the wild and affects Chromium-based browsers prior to version 152.0.7977.82. A crafted HTML page can let a remote attacker run arbitrary code inside the browser sandbox.\n\nSince Chrome, Edge, Brave, and most other major browsers share the Chromium engine, the flaw exposes billions of users to a credible, actively exploited attack. It highlights the fragility of relying on a single rendering engine across the web and makes urgent patching essential for both consumers and enterprises.\n\nThe bug is a type confusion in V8, Chrome's JavaScript and WebAssembly engine, and carries a CVSS score of 8.8 (High). Google fixed it in Chrome 152.0.7977.82 and reportedly paid a $1,000 bug bounty; users should also update Chromium derivatives because many browsers lag upstream releases.",
+      "current_state_zh": "V8 中的一个类型混淆漏洞（编号 CVE-2026-85046）正在野外被积极利用，影响 152.0.7977.82 之前版本的 Chromium 内核浏览器。攻击者可通过特制 HTML 页面在浏览器沙盒内远程执行任意代码。\n\n由于 Chrome、Edge、Brave 以及大多数主流浏览器都共享 Chromium 内核，该漏洞使数十亿用户暴露在真实且已遭利用的攻击之下。它也凸显了整个互联网依赖单一渲染引擎的脆弱性，消费者和企业都需要尽快打补丁。\n\n该漏洞是 V8（Chrome 的 JavaScript 和 WebAssembly 引擎）中的类型混淆问题，CVSS 评分为 8.8（高危）。Google 已在 Chrome 152.0.7977.82 中修复，并据报道支付了 1000 美元漏洞赏金；由于许多衍生浏览器滞后于上游版本，用户也应及时更新这些浏览器。",
+      "current_state_en": "A type-confusion vulnerability in V8, tracked as CVE-2026-85046, is being actively exploited in the wild and affects Chromium-based browsers prior to version 152.0.7977.82. A crafted HTML page can let a remote attacker run arbitrary code inside the browser sandbox.\n\nSince Chrome, Edge, Brave, and most other major browsers share the Chromium engine, the flaw exposes billions of users to a credible, actively exploited attack. It highlights the fragility of relying on a single rendering engine across the web and makes urgent patching essential for both consumers and enterprises.\n\nThe bug is a type confusion in V8, Chrome's JavaScript and WebAssembly engine, and carries a CVSS score of 8.8 (High). Google fixed it in Chrome 152.0.7977.82 and reportedly paid a $1,000 bug bounty; users should also update Chromium derivatives because many browsers lag upstream releases.",
+      "detailed_summary_zh": "V8 中的一个类型混淆漏洞（编号 CVE-2026-85046）正在野外被积极利用，影响 152.0.7977.82 之前版本的 Chromium 内核浏览器。攻击者可通过特制 HTML 页面在浏览器沙盒内远程执行任意代码。\n\n由于 Chrome、Edge、Brave 以及大多数主流浏览器都共享 Chromium 内核，该漏洞使数十亿用户暴露在真实且已遭利用的攻击之下。它也凸显了整个互联网依赖单一渲染引擎的脆弱性，消费者和企业都需要尽快打补丁。\n\n该漏洞是 V8（Chrome 的 JavaScript 和 WebAssembly 引擎）中的类型混淆问题，CVSS 评分为 8.8（高危）。Google 已在 Chrome 152.0.7977.82 中修复，并据报道支付了 1000 美元漏洞赏金；由于许多衍生浏览器滞后于上游版本，用户也应及时更新这些浏览器。",
+      "detailed_summary_en": "A type-confusion vulnerability in V8, tracked as CVE-2026-85046, is being actively exploited in the wild and affects Chromium-based browsers prior to version 152.0.7977.82. A crafted HTML page can let a remote attacker run arbitrary code inside the browser sandbox.\n\nSince Chrome, Edge, Brave, and most other major browsers share the Chromium engine, the flaw exposes billions of users to a credible, actively exploited attack. It highlights the fragility of relying on a single rendering engine across the web and makes urgent patching essential for both consumers and enterprises.\n\nThe bug is a type confusion in V8, Chrome's JavaScript and WebAssembly engine, and carries a CVSS score of 8.8 (High). Google fixed it in Chrome 152.0.7977.82 and reportedly paid a $1,000 bug bounty; users should also update Chromium derivatives because many browsers lag upstream releases.",
+      "background_zh": "浏览器使用沙盒机制将互联网下载的代码与操作系统隔离，从而防止恶意网页控制整个系统。RCE（远程代码执行）指攻击者能在受害者机器上运行自己代码的漏洞类型。类型混淆指的是引擎把某种 JavaScript 对象类型误当成另一种类型，进而造成可利用的内存破坏。这类 V8 缺陷历来是 Chrome 零日漏洞被积极利用的最常见根因之一；沙盒内 RCE 依然很严重，因为它可与单独的沙盒逃逸漏洞配合，从而获得系统完全控制权。",
+      "background_en": "Browsers use sandboxing to isolate code downloaded from the internet so that a malicious page cannot compromise the rest of the operating system. RCE refers to a vulnerability that lets attackers run their own code on a victim's machine. Type confusion means the engine mistakes one JavaScript object type for another, corrupting memory in an exploitable way. V8 bugs of this kind have historically been among the most common root causes of actively exploited Chrome zero-days; a sandboxed RCE is still serious because it can be paired with a separate sandbox-escape exploit to gain full system access.",
+      "community_discussion_zh": "评论者讨论了该漏洞的经济价值，指出 Google 对一个已在野利用的零日漏洞只奖励了 1000 美元；也有人质疑为何在 V8 类型混淆漏洞频繁出现的情况下，这个漏洞会集中获得关注。还有人表达了对浏览器执行互联网传来的 JavaScript/WASM 代码这一固有风险的沮丧，开玩笑想彻底断网，并比较了 Brave 与 GrapheneOS 的 Vanadium 谁更快发布修复。",
+      "community_discussion_en": "Commenters debated the economics of the bug, noting that Google paid only $1,000 for an already exploited zero-day, and questioned why another V8 type-confusion got attention when similar bugs appear constantly. Others expressed frustration about the inherent risk of executing JavaScript/WASM from the web, joked about disconnecting entirely, and compared how quickly Brave versus GrapheneOS' Vanadium shipped fixes.",
+      "market_impact_zh": "传导渠道在基础设施层面：在完成修补前，Chromium 内核浏览器可能成为盗取加密货币钱包私钥、助记词或 DeFi 会话凭据的入口。没有特定资产或交易平台受到直接影响，因此市场影响是间接的，与 Web3 用户安全相关，而非交易基本面。",
+      "market_impact_en": "The transmission channel is infrastructure-level: until patched, Chromium-based browsers are a potential entry point for stealing crypto wallet keys, recovery phrases, or DeFi session credentials. No specific asset or venue is directly implicated, so the market effect is indirect and tied to Web3 user security rather than to trading fundamentals.",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://socprime.com/blog/cve-2026-85046-analysis/",
+          "title": "CVE-2026-85046: Chrome V8 Zero-Day Exploited"
+        },
+        {
+          "url": "https://vuldb.com/cve/CVE-2026-85046",
+          "title": "CVE-2026-85046 in Chrome"
+        },
+        {
+          "url": "https://www.browserstack.com/guide/what-is-browser-sandboxing",
+          "title": "What is Browser Sandboxing? | BrowserStack"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49570669",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49570669"
+      ],
+      "sources": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+          "label": "negura",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

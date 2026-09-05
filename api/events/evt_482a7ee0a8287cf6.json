@@ -52,10 +52,10 @@
       "current_state_en": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
       "detailed_summary_zh": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
       "detailed_summary_en": "Anthropic used AI agents to formalize a proof of Fermat's Last Theorem in Lean, generating 13 million lines of proof and 29,500 intermediate theorems.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "background_zh": "费马大定理的内容是：对于任何大于2的整数 n，不存在正整数 a、b、c 使得 a^n + b^n = c^n。Andrew Wiles于1994年证明了该定理，Richard Taylor协助填补了其中的缺口，但证明极其冗长且涉及高深理论。Lean是一个开源证明助手，也是一种函数式编程语言，它让计算机能够逐步检验数学证明。Lean等交互式工具正越来越常与大型语言模型结合，用于自动化或加快形式化过程，这类研究有时被称为AI辅助定理证明。",
+      "background_en": "Fermat's Last Theorem states that no three positive integers a, b, and c satisfy a^n + b^n = c^n for any integer n greater than 2. Andrew Wiles proved it in 1994, with Richard Taylor helping to close a gap, but the proof is exceptionally long and advanced. Lean is an open-source proof assistant and functional programming language that lets computers check mathematical proofs line by line. Interactive tools like Lean are increasingly paired with large language models to automate or accelerate formalization, an area sometimes called AI-assisted theorem proving.",
+      "community_discussion_zh": "Hacker News用户的反应既有热情也有细致的思考。数学家Kevin Buzzard本人一直在形式化另一条证明路径，他表示Anthropic“抢先了一步”，并提供了自己的博客供参考；其他评论者指出，此次形式化采用的是较早的Darmon–Diamond–Taylor阐述。有人称赞这一成果，但认为“帮助发现错误、减轻审稿负担”这一关键意义应放在公告更靠前的位置；还有用户对Anthropic可能通过数据供应商雇佣承包商来形式化数学教科书表示担忧。",
+      "community_discussion_en": "Hacker News users responded with both enthusiasm and nuance. Mathematician Kevin Buzzard, who has been formalizing a different path to Fermat's Last Theorem, said Anthropic had beaten him to it, and pointed to his blog post for context; other commenters noted the formalization follows the older Darmon–Diamond–Taylor exposition. Some praised the result but argued the key implication for spotting errors and aiding referees should appear much earlier in the announcement, while one commenter raised concerns that Anthropic may rely on contractors hired through data vendors to formalize mathematical textbooks.",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 9.0,
@@ -63,6 +63,14 @@
         {
           "url": "https://news.ycombinator.com/item?id=49568506",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Lean_(proof_assistant)",
+          "title": "Lean (proof assistant)"
+        },
+        {
+          "url": "https://lean-lang.org/",
+          "title": "Lean Programming Language"
         }
       ],
       "confidence": 0.75,
