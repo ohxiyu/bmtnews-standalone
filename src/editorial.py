@@ -111,6 +111,12 @@ def load_editorial_plan(
         logger.warning("Ignoring unreadable editorial file %s: %s", path, exc)
         return plan
 
+    return editorial_plan_from_payload(payload, edition_date)
+
+
+def editorial_plan_from_payload(payload: object, edition_date: date_type) -> EditorialPlan:
+    """Resolve active entries identically for rendering and rebuild decisions."""
+    plan = EditorialPlan()
     rows = payload.get("items") if isinstance(payload, dict) else None
     if not isinstance(rows, list):
         return plan

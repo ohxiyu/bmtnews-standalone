@@ -2,6 +2,7 @@ backend:
   name: github
   repo: ohxiyu/bmtnews-standalone
   branch: main
+  auth_methods: [token]
   skip_ci: false
   # One-click GitHub sign-in (optional). To enable:
   #   1. Create a GitHub OAuth App (callback URL:
@@ -9,7 +10,8 @@ backend:
   #   2. wrangler secret put GITHUB_OAUTH_CLIENT_ID / GITHUB_OAUTH_CLIENT_SECRET
   #      in ops/daily-dispatcher, then redeploy the worker
   #   3. Uncomment and fill in the worker host below.
-  # Until then the sign-in screen offers personal-access-token login.
+  # Until then only personal-access-token login is offered. When enabling
+  # OAuth, also change auth_methods to [oauth, token].
   # base_url: https://<worker-host>
   # auth_endpoint: /oauth/auth
 
@@ -47,8 +49,9 @@ collections:
             add_to_top: true
             summary: "{{fields.type}} ｜ {{fields.title_zh}} {{fields.url}}"
             hint: >-
-              选择一种操作，只填写该操作需要的字段。保存会提交到 main 并重刊当日内容，
-              通常约 5 分钟上线；关闭「立即生效」可保留草稿。
+              选择一种操作，只填写该操作需要的字段。保存会提交到 main；
+              仅当今日有效内容改变时重刊，通常约 5 分钟上线。
+              关闭「立即生效」可保留草稿，草稿或未来日期编辑不会触发今日重刊。
             types:
               - name: editorial
                 label: 发布编辑精选

@@ -1,8 +1,9 @@
 # 人工编辑层（Editorial Layer）
 
 `data/editorial.json` 是日报的人工编辑入口：改这个文件、推送到 `main`，
-`editorial-rebuild` workflow 会自动以 `force_publish` 重刊当天日报，
-几分钟后网页更新。不需要任何服务器或后台系统；git 历史就是审计日志。
+`editorial-rebuild` workflow 会先比较上海时区当天的有效内容，只有实际变化才以
+`force_publish` 重刊。草稿和未来日期编辑仍会保存，但不消耗当日 AI 重刊任务。
+有效内容变化通常几分钟后上线，不需要新增服务器或数据库；git 历史就是审计日志。
 
 ## 使用方式一：网页后台（推荐）
 
@@ -20,9 +21,8 @@
 4. 生成后复制，在 /admin/ 登录界面点 **「Sign In with Token」按钮**（不是
    "Sign In with GitHub"）粘贴即可（浏览器本地保存，不经过任何第三方服务器）
 
-> ⚠️ 登录界面上的 **"Sign In with GitHub"** 按钮走 OAuth 流程，在完成下面的
-> 「一键 GitHub 授权登录」配置之前点它会得到 Not Found —— 请用
-> **"Sign In with Token"**。
+目前只显示 Token 登录，未配置的 OAuth 入口已隐藏。Token 权限仍由 GitHub
+控制；这个修改不代表已增加 Cloudflare Access 前置保护。
 
 ### 可选：一键 GitHub 授权登录（免 token）
 
@@ -35,7 +35,7 @@ daily-dispatcher Worker 已内置 OAuth 中转路由（`/oauth/auth`、
    `wrangler secret put GITHUB_OAUTH_CLIENT_ID` 和
    `wrangler secret put GITHUB_OAUTH_CLIENT_SECRET`，重新部署 Worker
 3. 取消 `docs/admin/config.yml` 里 `base_url` / `auth_endpoint` 的注释并填入
-   Worker 域名
+   Worker 域名，并将 `auth_methods` 改为 `[oauth, token]`
 
 注意取舍：OAuth App 的授权范围是 `public_repo`（所有公开仓库的写权限），
 比只授权单个仓库的 fine-grained token **更宽**；胜在方便。个人使用推荐
@@ -50,7 +50,7 @@ daily-dispatcher Worker 已内置 OAuth 中转路由（`/oauth/auth`、
 - fine-grained token 的实际权限 = 向本仓库推送内容。它**改不了 GitHub
   Actions workflow 文件**（需要单独的 workflow 权限），但能改 `src/` 代码
   和页面内容，所以 token 要当密码保管，建议设 90 天有效期定期轮换
-- CMS 脚本从 unpkg 加载并**钉死版本号**，升级需手动改版本（防止上游被
+- CMS 脚本从 unpkg 加载并**钉死版本号及 SRI 摘要**，升级需同时校验并更新二者（防止上游被
   投毒时自动带入）；`/admin/*` 配置了 CSP，只允许连接 GitHub API 等
   白名单域名，限制恶意脚本外传凭证的通道（CSP 头由 Cloudflare 生效）
 - 所有写入都是 git commit：任何误操作都可以从提交历史一键回滚
