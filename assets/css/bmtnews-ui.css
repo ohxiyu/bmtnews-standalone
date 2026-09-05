@@ -243,6 +243,9 @@ time,
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
   color: var(--text-soft);
   font-size: var(--fs-s);
   /* Chinese labels otherwise wrap to one character per line when the
@@ -1538,8 +1541,10 @@ time,
   min-width: 0;
 }
 
-.event-brief-background {
+.event-feed-item:not(.weekly-feed-item) .event-brief-latest {
   grid-column: 1 / -1;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .event-brief-block h3 {
@@ -1558,7 +1563,7 @@ time,
   line-height: 1.65;
 }
 
-.event-brief-latest,
+.event-brief-background,
 .event-brief-discussion {
   padding-top: 7px;
   border-top: 1px solid var(--border);
@@ -3070,7 +3075,18 @@ time,
   }
 
   .event-context-list li {
-    padding: 9px 0;
+    padding: 7px 0;
+  }
+
+  .event-context-list p {
+    -webkit-line-clamp: 1;
+  }
+
+  .event-context-list h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 
   .event-context-list li + li {
