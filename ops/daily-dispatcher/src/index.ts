@@ -1,4 +1,7 @@
-import { checkReadiness, runSchedule } from "./lib";
+import { checkReadiness } from "./lib";
+import { runRecovery, runSchedule, responseStatus } from "./recovery";
+import { timingSafeEqual } from "node:crypto";
+export { RecoveryGate } from "./gate";
 import {
   handleOAuthAuth,
   handleOAuthCallback,
@@ -8,6 +11,34 @@ import {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    if (url.pathname === "/publication/check") {
+      if (request.method !== "POST") {
+        return new Response(null, { status: 405, headers: { Allow: "POST" } });
+      }
+      const provided = new TextEncoder().encode(request.headers.get("Authorization") ?? "");
+      const expected = new TextEncoder().encode("Bearer " + env.RECOVERY_CHECK_TOKEN);
+      if (!env.RECOVERY_CHECK_TOKEN || provided.length !== expected.length ||
+          !timingSafeEqual(provided, expected)) {
+        return Response.json({ error: "Unauthorized" }, { status: 401 });
+      }
+      try {
+        const result = await runRecovery(env, Date.now(), "publication-watchdog");
+        console.log(JSON.stringify({ event: "publication_check", ...result }));
+        return Response.json(result, {
+          status: responseStatus(result), headers: { "Cache-Control": "no-store" },
+        });
+      } catch (error) {
+        const message = String(error instanceof Error ? error.message : "unknown")
+          .replaceAll(env.RECOVERY_CHECK_TOKEN, "[secret]")
+          .replaceAll(env.GITHUB_DISPATCH_TOKEN, "[secret]")
+          .replaceAll(env.PAGES_DEPLOY_HOOK, "[secret]")
+          .replace(/https?:\/\/\S+/g, "[url]").slice(0, 300);
+        console.error(JSON.stringify({ event: "publication_check_failed", message }));
+        return Response.json({ status: "check_failed" }, {
+          status: 503, headers: { "Cache-Control": "no-store" },
+        });
+      }
+    }
     if (request.method === "GET" && url.pathname === "/oauth/auth") {
       return handleOAuthAuth(request, env as OAuthEnv);
     }

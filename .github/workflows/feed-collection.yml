@@ -148,8 +148,10 @@ jobs:
       - name: Recover a missing daily edition
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RECOVERY_CHECK_TOKEN: ${{ secrets.RECOVERY_CHECK_TOKEN }}
         run: >-
           python -m src.schedule_watchdog
+          --coordinator
           --repository "${GITHUB_REPOSITORY}"
           --workflow daily-summary.yml
           --ref main

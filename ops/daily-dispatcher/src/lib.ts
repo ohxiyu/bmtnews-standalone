@@ -2,7 +2,7 @@ const PRIMARY_CRON = "30 0 * * *";
 const FINAL_CRON = "10 1 * * *";
 const PERMISSION_PROBE_REF =
   "refs/heads/__bmtnews_permission_probe__/invalid..ref";
-const ACTIVE_STATUSES = new Set([
+export const ACTIVE_STATUSES = new Set([
   "queued",
   "in_progress",
   "waiting",
@@ -18,16 +18,6 @@ interface WorkflowRun {
   headBranch: string;
   startedAt: Date;
   htmlUrl: string | null;
-}
-
-interface PublicationAssets {
-  rawPostsReady: boolean;
-  renderedPostsReady: boolean;
-}
-
-interface PublicationAssessment extends PublicationAssets {
-  successfulRunUrl: string | null;
-  activeRunUrl: string | null;
 }
 
 interface EditionContext {
@@ -169,7 +159,7 @@ function zonedLocalToUtc(
   return new Date(candidate);
 }
 
-function editionContextFor(
+export function editionContextFor(
   scheduledTime: number,
   timezoneName: string,
   cutoffHour: number,
@@ -199,7 +189,7 @@ function githubHeaders(env: Env): HeadersInit {
   };
 }
 
-async function githubRequest(
+export async function githubRequest(
   env: Env,
   path: string,
   init: RequestInit = {},
@@ -264,7 +254,7 @@ export async function checkReadiness(env: Env): Promise<{
   };
 }
 
-async function fetchWorkflowRuns(env: Env): Promise<WorkflowRun[]> {
+export async function fetchWorkflowRuns(env: Env): Promise<WorkflowRun[]> {
   const repository = encodeURIComponent(env.GITHUB_REPOSITORY).replace(
     "%2F",
     "/",
@@ -277,7 +267,7 @@ async function fetchWorkflowRuns(env: Env): Promise<WorkflowRun[]> {
   return parseWorkflowRuns(await response.json());
 }
 
-async function urlExists(url: string): Promise<boolean> {
+export async function urlExists(url: string): Promise<boolean> {
   const response = await fetch(url, {
     method: "HEAD",
     headers: {
@@ -287,10 +277,12 @@ async function urlExists(url: string): Promise<boolean> {
     redirect: "follow",
     signal: AbortSignal.timeout(10_000),
   });
-  return response.ok;
+  if (response.status === 404) return false;
+  if (!response.ok) throw new Error(`Publication probe returned HTTP ${response.status}`);
+  return true;
 }
 
-function publicationUrls(env: Env, editionDate: string): {
+export function publicationUrls(env: Env, editionDate: string): {
   raw: string[];
   rendered: string[];
 } {
@@ -313,173 +305,6 @@ function publicationUrls(env: Env, editionDate: string): {
   };
 }
 
-async function inspectAssets(
-  env: Env,
-  editionDate: string,
-): Promise<PublicationAssets> {
-  const urls = publicationUrls(env, editionDate);
-  const rawResults = await Promise.all(urls.raw.map(urlExists));
-  const rawPostsReady = rawResults.every(Boolean);
-  if (!rawPostsReady) {
-    return {
-      rawPostsReady: false,
-      renderedPostsReady: false,
-    };
-  }
-  const renderedResults = await Promise.all(urls.rendered.map(urlExists));
-  return {
-    rawPostsReady: true,
-    renderedPostsReady: renderedResults.every(Boolean),
-  };
-}
-
-async function assessPublication(
-  env: Env,
-  context: EditionContext,
-): Promise<PublicationAssessment> {
-  const [runs, assets] = await Promise.all([
-    fetchWorkflowRuns(env),
-    inspectAssets(env, context.date),
-  ]);
-  const eligibleRuns = runs.filter(
-    (run) =>
-      run.headBranch === env.GITHUB_REF &&
-      run.startedAt >= context.cutoffUtc,
-  );
-  const successfulRun = eligibleRuns
-    .filter(
-      (run) =>
-        run.status === "completed" && run.conclusion === "success",
-    )
-    .sort((left, right) => right.startedAt.getTime() - left.startedAt.getTime())
-    .at(0);
-  const activeRun = eligibleRuns
-    .filter((run) => ACTIVE_STATUSES.has(run.status))
-    .sort((left, right) => right.startedAt.getTime() - left.startedAt.getTime())
-    .at(0);
-  return {
-    ...assets,
-    successfulRunUrl: successfulRun?.htmlUrl ?? null,
-    activeRunUrl: activeRun?.htmlUrl ?? null,
-  };
-}
-
-async function dispatchDailyEdition(
-  env: Env,
-  editionDate: string,
-  stage: TriggerStage,
-): Promise<void> {
-  const repository = encodeURIComponent(env.GITHUB_REPOSITORY).replace(
-    "%2F",
-    "/",
-  );
-  const workflow = encodeURIComponent(env.GITHUB_WORKFLOW);
-  await githubRequest(
-    env,
-    `/repos/${repository}/actions/workflows/${workflow}/dispatches`,
-    {
-      method: "POST",
-      body: JSON.stringify({
-        ref: env.GITHUB_REF,
-        inputs: {
-          edition_date: editionDate,
-          trigger_source: `cloudflare-${stage}`,
-        },
-      }),
-    },
-  );
-}
-
-function log(
-  level: "info" | "warning" | "error",
-  fields: Record<string, unknown>,
-): void {
-  const payload = JSON.stringify({
-    service: "bmtnews-daily-dispatcher",
-    level,
-    ...fields,
-  });
-  if (level === "error") {
-    console.error(payload);
-  } else if (level === "warning") {
-    console.warn(payload);
-  } else {
-    console.log(payload);
-  }
-}
-
-export async function runSchedule(
-  cron: string,
-  scheduledTime: number,
-  env: Env,
-): Promise<void> {
-  const stage = stageForCron(cron);
-  const context = editionContextFor(
-    scheduledTime,
-    env.EDITION_TIMEZONE,
-    Number(env.EDITION_CUTOFF_HOUR),
-  );
-  const assessment = await assessPublication(env, context);
-  const baseLog = {
-    cron,
-    stage,
-    edition_date: context.date,
-    cutoff_utc: context.cutoffUtc.toISOString(),
-    raw_posts_ready: assessment.rawPostsReady,
-    rendered_posts_ready: assessment.renderedPostsReady,
-    successful_run_url: assessment.successfulRunUrl,
-    active_run_url: assessment.activeRunUrl,
-  };
-
-  if (assessment.rawPostsReady && assessment.renderedPostsReady) {
-    log("info", { ...baseLog, outcome: "healthy" });
-    return;
-  }
-  if (assessment.rawPostsReady) {
-    log(stage === "final" ? "error" : "warning", {
-      ...baseLog,
-      outcome: "pages_not_rendered",
-    });
-    if (stage === "final") {
-      throw new Error(
-        `Edition ${context.date} exists on gh-pages but is not rendered`,
-      );
-    }
-    return;
-  }
-  if (assessment.activeRunUrl !== null) {
-    log(stage === "final" ? "error" : "info", {
-      ...baseLog,
-      outcome: "publication_active",
-    });
-    if (stage === "final") {
-      throw new Error(
-        `Edition ${context.date} is still publishing at the final check`,
-      );
-    }
-    return;
-  }
-
-  try {
-    await dispatchDailyEdition(env, context.date, stage);
-  } catch (error) {
-    log("error", {
-      ...baseLog,
-      outcome: "recovery_dispatch_failed",
-      error: String(error instanceof Error ? error.message : error),
-    });
-    throw error;
-  }
-  log(stage === "final" ? "error" : "warning", {
-    ...baseLog,
-    outcome: "recovery_dispatched",
-  });
-  if (stage === "final") {
-    throw new Error(
-      `Edition ${context.date} was still missing; final recovery dispatched`,
-    );
-  }
-}
 
 export const testing = {
   editionContextFor,
