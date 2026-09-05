@@ -9,6 +9,23 @@ from src.models import ContentItem, SourceType
 from src.web_feed import render_web_feed
 
 
+def test_recent_editions_share_one_date_link_per_edition() -> None:
+    template = Path("docs/_includes/edition-header.html").read_text()
+    nav = template.split('<nav class="day-nav"', 1)[1].split("</nav>", 1)[0]
+    # Both home and archived editions use the same seven dates. The newest
+    # date is also the way home, rather than a second misleading Today link.
+    assert nav.count("<a ") == 1
+    assert "for post in nav_posts limit:7" in nav
+    assert "if forloop.first %}{% assign nav_url = home_url" in nav
+    assert '{{ nav_url | relative_url }}' in nav
+    assert '{{ post.date | date: "%m.%d" }}' in nav
+    assert 'aria-current="true"' in nav
+    assert "nav_key == include.current" in nav
+    assert "day-nav-today" not in nav
+    assert "Today" not in nav
+    assert "今日" not in nav
+
+
 def make_item(
     item_id: str,
     category: str,
