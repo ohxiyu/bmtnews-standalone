@@ -19,7 +19,7 @@
   Cache-Control: public, max-age=300, must-revalidate
 
 /assets/images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=300, must-revalidate
 
 /manifest.webmanifest
   Cache-Control: public, max-age=3600, must-revalidate
@@ -45,12 +45,10 @@
   Cache-Control: public, max-age=300, stale-while-revalidate=60
   CDN-Cache-Control: public, max-age=300, stale-while-revalidate=60
 
-# Past editions never change once published. These are the pages an X post
-# or a search result lands on, so they are also the ones most likely to take
-# a burst.
+# Dated editions can be corrected or republished; they are not immutable.
 /20*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
-  CDN-Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=300, must-revalidate
 
 # Threads, entities and weekly reviews are rewritten once per publish.
 /threads/*
