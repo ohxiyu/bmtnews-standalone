@@ -8,6 +8,7 @@ let sequence = 0;
 function fixture(options: {
   raw?: boolean; public?: boolean; homepage?: boolean; active?: boolean;
   success?: boolean; broken?: boolean; dispatchTimeout?: boolean;
+  redirects?: boolean;
 } = {}) {
   sequence += 1;
   const date = "2026-09-" + String(sequence).padStart(2, "0");
@@ -40,6 +41,11 @@ function fixture(options: {
       return new Response((raw ? options.raw : options.public) ? json :
         JSON.stringify({ date: "2026-08-31", items: [{ id: "old" }] }));
     }
+    if (options.redirects && new URL(request.url).pathname.endsWith(".html")) {
+      return new Response(null, { status: 308, headers: {
+        Location: new URL(request.url).pathname.replace(".html", ""),
+      } });
+    }
     if (request.url.includes("/summary-")) return new Response(options.public ? home : "", {
       status: options.public ? 200 : 404,
     });
@@ -54,6 +60,14 @@ describe("production-aware recovery", () => {
     const result = await runRecovery(env, f.now, "test");
     expect(result.status).toBe("healthy");
     expect(result.items).toBe(1);
+    expect(f.posts()).toHaveLength(0);
+  });
+
+  it("follows Pages canonical redirects without accepting arbitrary destinations", async () => {
+    const f = fixture({ raw: true, public: true, homepage: true, redirects: true });
+    expect((await runRecovery(env, f.now, "test")).status).toBe("healthy");
+    expect(f.requests.filter((r) => r.url.includes("/summary-") &&
+      !new URL(r.url).pathname.endsWith(".html"))).toHaveLength(2);
     expect(f.posts()).toHaveLength(0);
   });
 

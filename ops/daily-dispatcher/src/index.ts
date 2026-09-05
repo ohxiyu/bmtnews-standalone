@@ -27,8 +27,13 @@ export default {
         return Response.json(result, {
           status: responseStatus(result), headers: { "Cache-Control": "no-store" },
         });
-      } catch {
-        console.error(JSON.stringify({ event: "publication_check_failed" }));
+      } catch (error) {
+        const message = String(error instanceof Error ? error.message : "unknown")
+          .replaceAll(env.RECOVERY_CHECK_TOKEN, "[secret]")
+          .replaceAll(env.GITHUB_DISPATCH_TOKEN, "[secret]")
+          .replaceAll(env.PAGES_DEPLOY_HOOK, "[secret]")
+          .replace(/https?:\/\/\S+/g, "[url]").slice(0, 300);
+        console.error(JSON.stringify({ event: "publication_check_failed", message }));
         return Response.json({ status: "check_failed" }, {
           status: 503, headers: { "Cache-Control": "no-store" },
         });

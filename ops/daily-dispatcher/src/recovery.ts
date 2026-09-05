@@ -38,13 +38,28 @@ async function readBounded(response: Response, limit = 2_000_000): Promise<strin
 }
 
 async function getText(url: string): Promise<string | null> {
-  const response = await fetch(url, {
-    headers: { "Cache-Control": "no-cache", Accept: "text/html, application/json" },
-    redirect: "manual", signal: AbortSignal.timeout(10_000),
-  });
-  if (response.status === 404) return null;
-  if (!response.ok) throw new Error("Publication probe failed: HTTP " + response.status);
-  return readBounded(response);
+  let target = new URL(url);
+  for (let redirects = 0; redirects <= 3; redirects++) {
+    const response = await fetch(target, {
+      headers: { "Cache-Control": "no-cache", Accept: "text/html, application/json" },
+      redirect: "manual", signal: AbortSignal.timeout(10_000),
+    });
+    if ([301, 302, 303, 307, 308].includes(response.status)) {
+      const location = response.headers.get("Location");
+      if (!location) throw new Error("Publication redirect lacks Location");
+      const next = new URL(location, target);
+      if (next.origin !== target.origin) throw new Error("Publication redirect changed origin");
+      // Pages canonicalizes .html to extensionless routes.
+      next.searchParams.set("publication_check", new URL(url).searchParams.get("publication_check") ?? "");
+      await response.body?.cancel();
+      target = next;
+      continue;
+    }
+    if (response.status === 404) return null;
+    if (!response.ok) throw new Error("Publication probe failed: HTTP " + response.status);
+    return readBounded(response);
+  }
+  throw new Error("Publication redirect limit exceeded");
 }
 
 function editionItems(text: string | null, date: string): number {
