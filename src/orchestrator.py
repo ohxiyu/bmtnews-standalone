@@ -2,6 +2,8 @@
 
 import asyncio
 import time
+import hashlib
+import json
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date as date_type, datetime, timedelta, timezone
@@ -38,7 +40,7 @@ from .ai.summarizer import DailySummarizer, generate_edition_overviews
 from .ai.enricher import ContentEnricher
 from .ai.prefilter import ContentPrefilter
 from .ai.result_cache import AnalysisResultCache, split_cached
-from .ai.tokens import get_usage_snapshot, reset_usage
+from .ai.tokens import get_usage_snapshot, reset_usage, task_usage_snapshot
 from .event_pipeline import (
     EVENT_CATALOG_PATH,
     known_story_assignments,
@@ -173,7 +175,7 @@ class SourceFetchOutcome:
     """Result of fetching one configured source."""
 
     source_name: str
-    status: Literal["success", "empty", "failure"]
+    status: Literal["success", "empty", "failure", "partial_failure"]
     items: List[ContentItem] = field(default_factory=list)
     subsource_counts: Dict[str, int] = field(default_factory=dict)
     error: Optional[str] = None
@@ -202,7 +204,7 @@ class FetchReport:
             return "not_attempted"
         if self.failed_count == len(self.outcomes):
             return "failure"
-        if self.failed_count:
+        if self.failed_count or any(outcome.status == "partial_failure" for outcome in self.outcomes):
             return "partial_failure"
         return "success"
 
@@ -279,12 +281,32 @@ class BMTNewsOrchestrator:
                 model=f"{self.config.ai.provider.value}:{self.config.ai.model}",
                 ttl_days=self.config.ai.result_cache_ttl_days,
                 max_entries=self.config.ai.result_cache_max_entries,
+                prompt_revision=hashlib.sha256(json.dumps({
+                    "version": "input-aware-v2",
+                    "economy": self.config.ai.economy_mode,
+                    "temperature": self.config.ai.temperature,
+                    "languages": self.config.ai.languages,
+                    "categories": self._analysis_categories(),
+                    "base_url": self.config.ai.base_url,
+                }, sort_keys=True).encode()).hexdigest(),
             )
         return self._analysis_cache
 
     def _set_timing(self, name: str, started: float) -> None:
         if self.last_run_report is not None:
             self.last_run_report.add_timing(name, time.perf_counter() - started)
+
+    def _finish_run_report(self, report: RunReport) -> Path:
+        usage = get_usage_snapshot()
+        report.set_metric("ai_input_tokens", usage.total_input_tokens)
+        report.set_metric("ai_output_tokens", usage.total_output_tokens)
+        report.set_metric("ai_total_tokens", usage.total_tokens)
+        report.ai_usage = task_usage_snapshot()
+        cache = getattr(self, "_analysis_cache", None)
+        if cache is not None:
+            cache.save()
+        report.finish()
+        return save_run_report(report)
 
     async def run(self, force_hours: int = None) -> None:
         """Execute the complete workflow.
@@ -302,6 +324,7 @@ class BMTNewsOrchestrator:
             timezone_name=daily_timezone,
             started_at=run_started_at,
         )
+        reset_usage()
         self.last_run_report = run_report
         try:
             # Check email subscriptions if configured
@@ -535,9 +558,8 @@ class BMTNewsOrchestrator:
 
             raise
         finally:
-            run_report.finish()
             try:
-                report_path = save_run_report(run_report)
+                report_path = self._finish_run_report(run_report)
                 self.console.print(f"\n📊 Saved run report to: {report_path}")
             except Exception as report_error:
                 self.console.print(
@@ -569,6 +591,7 @@ class BMTNewsOrchestrator:
             started_at=run_started_at,
             kind="staging_fetch",
         )
+        reset_usage()
         self.last_run_report = run_report
         self.console.print(
             "[bold cyan]📥 BMTNews - Collecting items for the daily edition...[/bold cyan]\n"
@@ -647,8 +670,7 @@ class BMTNewsOrchestrator:
             self.console.print(f"[bold red]❌ Collection failed: {exc}[/bold red]")
             raise
         finally:
-            run_report.finish()
-            save_run_report(run_report)
+            self._finish_run_report(run_report)
 
     async def run_daily_edition(
         self,
@@ -712,6 +734,7 @@ class BMTNewsOrchestrator:
                 "edition_started_late",
                 f"日报在固定截止时间后 {cutoff_lag_minutes} 分钟才开始运行。",
             )
+        reset_usage()
         self.last_run_report = run_report
         self.console.print(
             "[bold cyan]🗞️ BMTNews - Building the daily edition...[/bold cyan]\n"
@@ -1362,8 +1385,7 @@ class BMTNewsOrchestrator:
             if cache is not None:
                 cache.save()
                 run_report.set_metric("analysis_cache_entries", len(cache.entries))
-            run_report.finish()
-            save_run_report(run_report)
+            self._finish_run_report(run_report)
 
     async def run_x_slot(
         self,
@@ -1406,6 +1428,7 @@ class BMTNewsOrchestrator:
             started_at=run_started_at,
             kind="x_slot",
         )
+        reset_usage()
         self.last_run_report = run_report
         path = state_path or DEFAULT_STATE_PATH
 
@@ -1526,8 +1549,7 @@ class BMTNewsOrchestrator:
             self.console.print(f"[bold red]❌ X slot failed: {exc}[/bold red]")
             raise
         finally:
-            run_report.finish()
-            save_run_report(run_report)
+            self._finish_run_report(run_report)
 
     async def run_weekly_review(
         self,
@@ -1563,6 +1585,7 @@ class BMTNewsOrchestrator:
             started_at=run_started_at,
             kind="weekly_review",
         )
+        reset_usage()
         self.last_run_report = run_report
         self.console.print(
             "[bold cyan]🗓️ BMTNews - Building the weekly review...[/bold cyan]\n"
@@ -1684,8 +1707,7 @@ class BMTNewsOrchestrator:
             self.console.print(f"[bold red]❌ Weekly review failed: {exc}[/bold red]")
             raise
         finally:
-            run_report.finish()
-            save_run_report(run_report)
+            self._finish_run_report(run_report)
 
     async def _publish_outputs(
         self,
@@ -2117,6 +2139,13 @@ class BMTNewsOrchestrator:
             )
 
         self.console.print(f"   Found {len(items)} items from {name}")
+        feed_results = getattr(scraper, "feed_results", [])
+        failed_feeds = [row for row in feed_results if row["status"] == "failure"]
+        source_status = "success" if items else "empty"
+        source_error = None
+        if failed_feeds:
+            source_status = "failure" if len(failed_feeds) == len(feed_results) else "partial_failure"
+            source_error = "; ".join(f'{row["name"]}: {row["error"]}' for row in failed_feeds)
 
         # Show per-sub-source breakdown when there are multiple sub-sources
         sub_counts: Dict[str, int] = defaultdict(int)
@@ -2128,7 +2157,8 @@ class BMTNewsOrchestrator:
 
         return SourceFetchOutcome(
             source_name=name,
-            status="success" if items else "empty",
+            status=source_status,
+            error=source_error,
             items=items,
             subsource_counts=dict(sorted(sub_counts.items())),
         )
@@ -3087,80 +3117,40 @@ class BMTNewsOrchestrator:
         self._set_timing("enrichment", started)
 
     async def _analyze_content(self, items: List[ContentItem]) -> List[ContentItem]:
-        """Analyze content items with AI.
-
-        Args:
-            items: Items to analyze
-
-        Returns:
-            List[ContentItem]: Analyzed items
-        """
+        """Reuse valid results before paying for prefiltering unseen inputs."""
         started = time.perf_counter()
-        self.console.print("🤖 Analyzing content with AI...")
-
-        ai_client = create_ai_client(self.config.ai)
-        selected = items
-        if (
-            self.config.ai.prefilter_enabled
-            and len(items) > self.config.ai.prefilter_max_candidates
-        ):
-            prefilter_started = time.perf_counter()
-            result = await ContentPrefilter(
-                ai_client,
-                batch_size=self.config.ai.prefilter_batch_size,
-            ).select(
-                items,
-                maximum=self.config.ai.prefilter_max_candidates,
-            )
-            selected = result.items
-            if self.last_run_report is not None:
-                report = self.last_run_report
-                report.set_metric(
-                    "prefilter_evaluated",
-                    report.metrics.get("prefilter_evaluated", 0) + result.evaluated,
-                )
-                report.set_metric(
-                    "prefilter_removed",
-                    report.metrics.get("prefilter_removed", 0) + result.removed,
-                )
-                report.set_metric(
-                    "prefilter_failed_batches",
-                    report.metrics.get("prefilter_failed_batches", 0)
-                    + result.failed_batches,
-                )
-                report.add_timing(
-                    "prefilter", time.perf_counter() - prefilter_started
-                )
-            self.console.print(
-                f"   Prefilter kept {len(selected)}/{len(items)} candidates"
-                f" ({result.failed_batches} fail-open batches)\n"
-            )
-
         cache = self._result_cache()
-        cached: list[ContentItem] = []
-        misses = selected
-        if cache is not None:
-            cached, misses = split_cached(cache, selected, stage="analysis")
-            if self.last_run_report is not None:
-                report = self.last_run_report
-                report.set_metric(
-                    "analysis_cache_hits",
-                    report.metrics.get("analysis_cache_hits", 0) + len(cached),
-                )
-                report.set_metric(
-                    "analysis_cache_misses",
-                    report.metrics.get("analysis_cache_misses", 0) + len(misses),
-                )
-        analyzer = ContentAnalyzer(
-            ai_client,
-            allowed_categories=self._analysis_categories(),
-        )
+        cached, misses = split_cached(cache, items, stage="analysis") if cache else ([], list(items))
+        limit = self.config.ai.prefilter_max_candidates
+        # Reserve a quarter of the budget for new inputs even if old cache
+        # hits fill the pool. Final scoring, not cache status, determines rank.
+        new_budget = max(limit // 4, limit - len(cached))
+        ai_client = create_ai_client(self.config.ai) if misses else None
+        if self.config.ai.prefilter_enabled and len(misses) > new_budget:
+            result = await ContentPrefilter(
+                ai_client, batch_size=self.config.ai.prefilter_batch_size,
+            ).select(misses, maximum=new_budget)
+            misses = result.items
+            if self.last_run_report:
+                for key, value in {
+                    "prefilter_evaluated": result.evaluated,
+                    "prefilter_removed": result.removed,
+                    "prefilter_failed_batches": result.failed_batches,
+                }.items():
+                    self.last_run_report.set_metric(key, self.last_run_report.metrics.get(key, 0) + value)
+        if self.last_run_report:
+            for key, value in {"analysis_cache_hits": len(cached), "analysis_cache_misses": len(misses)}.items():
+                self.last_run_report.set_metric(key, self.last_run_report.metrics.get(key, 0) + value)
         if misses:
-            await analyzer.analyze_batch(misses)
-            if cache is not None:
+            await ContentAnalyzer(ai_client, allowed_categories=self._analysis_categories()).analyze_batch(misses)
+            if cache:
                 for item in misses:
                     cache.store_analysis(item)
                 cache.save()
+        selected = [*cached, *misses]
+        if self.config.ai.prefilter_enabled:
+            selected.sort(key=lambda item: (item.ai_score or 0, item.published_at, item.id), reverse=True)
+            selected = selected[:limit]
         self._set_timing("analysis", started)
         return selected
 

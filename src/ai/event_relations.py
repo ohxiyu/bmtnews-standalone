@@ -84,7 +84,7 @@ async def classify_event_relation(
             story=json.dumps(_story_context(story), ensure_ascii=False, indent=2),
         ),
         temperature=0.0,
-        max_tokens=900,
+        max_tokens=4096,
         response_format="json",
     )
     decision = parse_event_relation(response, event_id=event.event_id)

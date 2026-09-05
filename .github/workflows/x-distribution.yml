@@ -112,6 +112,15 @@ jobs:
         if: ${{ always() }}
         run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
 
+      - name: Keep machine-readable cost and health report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: run-report-${{ github.run_id }}-${{ github.run_attempt }}
+          path: data/run-report.json
+          retention-days: 30
+          if-no-files-found: warn
+
       - name: Persist drip queue
         if: ${{ always() }}
         shell: bash

@@ -10,6 +10,7 @@ from typing import Any, Iterable
 
 from .._file_utils import _atomic_write_text
 from ..models import ContentItem
+from . import prompts
 
 
 CACHE_VERSION = 1
@@ -42,7 +43,7 @@ class AnalysisResultCache:
         model: str,
         ttl_days: int = 30,
         max_entries: int = 4000,
-        prompt_revision: str = "2026-08-performance-v1",
+        prompt_revision: str = "2026-09-input-aware-v2",
     ) -> None:
         self.path = path
         self.model = model
@@ -72,9 +73,22 @@ class AnalysisResultCache:
                 "stage": stage,
                 "model": self.model,
                 "prompt": self.prompt_revision,
+                "prompt_text": [
+                    getattr(prompts, name, "")
+                    for name in (
+                        ("CONTENT_ANALYSIS_SYSTEM", "CONTENT_ANALYSIS_USER")
+                        if stage == "analysis" else
+                        ("CONTENT_ENRICHMENT_SYSTEM", "CONTENT_ENRICHMENT_USER", "CONCEPT_EXTRACTION_SYSTEM")
+                    )
+                ],
                 "url": str(item.url),
                 "title": item.title,
                 "content": (item.content or "")[:8000],
+                "engagement": {key: item.metadata.get(key) for key in ("score", "descendants", "num_comments", "comments", "replies")},
+                "analysis_inputs": {
+                    "summary": item.ai_summary, "score": item.ai_score,
+                    "reason": item.ai_reason, "tags": item.ai_tags,
+                } if stage == "enrichment" else None,
             },
             ensure_ascii=False,
             sort_keys=True,
@@ -144,8 +158,8 @@ class AnalysisResultCache:
             or any(key.startswith(prefix) for prefix in ENRICHMENT_PREFIXES)
         }
         complete = any(
-            key.startswith(("background_", "market_impact_"))
-            for key in value
+            key.startswith(("background_", "market_impact_")) and bool(val)
+            for key, val in value.items()
         )
         if value and complete:
             self._put(item, "enrichment", value)

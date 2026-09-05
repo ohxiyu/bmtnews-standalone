@@ -44,6 +44,7 @@ class RSSScraper(BaseScraper):
         """
         super().__init__({"sources": sources}, http_client)
         self._extractors = extractors
+        self.feed_results: list[dict] = []
 
     async def fetch(self, since: datetime) -> List[ContentItem]:
         """Fetch RSS feed items.
@@ -56,6 +57,7 @@ class RSSScraper(BaseScraper):
         """
         items = []
         sources = self.config["sources"]
+        self.feed_results = []
 
         for source in sources:
             if not source.enabled:
@@ -79,6 +81,7 @@ class RSSScraper(BaseScraper):
             List[ContentItem]: Feed content items
         """
         items = []
+        failure = None
 
         try:
             # Expand environment variables in URL (e.g. ${LWN_TOKEN})
@@ -146,9 +149,17 @@ class RSSScraper(BaseScraper):
 
         except httpx.HTTPError as e:
             logger.warning("Error fetching RSS feed %s: %s", source.name, e)
+            response = getattr(e, "response", None)
+            failure = f"HTTP {response.status_code}" if response is not None else type(e).__name__
         except Exception as e:
             logger.warning("Error parsing RSS feed %s: %s", source.name, e)
+            failure = type(e).__name__
 
+        self.feed_results.append({
+            "name": source.name, "items": len(items),
+            "status": "failure" if failure else ("success" if items else "empty"),
+            "error": failure,
+        })
         return items
 
     def _parse_date(self, entry: dict) -> datetime:

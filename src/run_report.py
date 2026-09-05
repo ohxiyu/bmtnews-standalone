@@ -63,7 +63,8 @@ _DAILY_METRIC_LABELS = (
     ("skipped_published_history", "跳过历史发布"),
     ("prefilter_evaluated", "批量粗筛评估"),
     ("prefilter_removed", "批量粗筛移除"),
-    ("analyzed_this_run", "本次 AI 分析"),
+    ("analyzed_this_run", "本次评估（含缓存）"),
+    ("analysis_cache_misses", "新增 AI 分析"),
     ("analysis_cache_hits", "分析缓存命中"),
     ("enrichment_cache_hits", "补充缓存命中"),
     ("fallback_analyzed", "保底补充分析"),
@@ -188,6 +189,7 @@ class RunReport:
     finished_at: datetime | None = None
     duration_seconds: float | None = None
     metrics: dict[str, int] = field(default_factory=dict)
+    ai_usage: list[dict[str, Any]] = field(default_factory=list)
     timings: dict[str, float] = field(default_factory=dict)
     fetch_report: dict[str, Any] | None = None
     summaries: list[str] = field(default_factory=list)
@@ -245,7 +247,7 @@ class RunReport:
             self.add_alert(
                 "warning",
                 "partial_source_failure",
-                f"{failed}/{attempted} 个顶层来源采集失败，已使用其余来源继续生成。",
+                f"采集存在部分失败（{failed}/{attempted} 个顶层来源完全失败）；详见来源诊断，已使用其余内容继续生成。",
             )
 
     def add_alert(
@@ -307,6 +309,7 @@ class RunReport:
                 else None
             ),
             "metrics": dict(self.metrics),
+            "ai_usage": list(self.ai_usage),
             "timings": dict(self.timings),
             "fetch_report": self.fetch_report,
             "summaries": list(self.summaries),
@@ -514,6 +517,16 @@ def render_markdown_report(payload: dict[str, Any]) -> str:
                     f"| ↳ {_markdown_cell(subsource)} | — | "
                     f"{int(count)} | — |"
                 )
+
+    if payload.get("ai_usage"):
+        lines += ["", "### AI 分阶段用量", "",
+                  "| 模型 / 阶段 | 调用 | 输入 | 输出 | 输入缓存 | 截断 |",
+                  "| --- | ---: | ---: | ---: | ---: | ---: |"]
+        for row in payload["ai_usage"]:
+            label = _markdown_cell(f'{row.get("model", "")} / {row.get("stage", "")}')
+            values = [int(row.get(key, 0)) for key in
+                      ("calls", "input_tokens", "output_tokens", "cached_input_tokens", "truncated_calls")]
+            lines.append("| " + label + " | " + " | ".join(map(str, values)) + " |")
 
     alerts = payload.get("alerts") or []
     if alerts:
