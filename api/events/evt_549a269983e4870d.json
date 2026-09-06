@@ -15,11 +15,11 @@
     "en": "OpenAI has released GPT-6 Astra, a new frontier model showing major gains on ARC-AGI-3 and coding agent benchmarks, with a deployment system card now available."
   },
   "first_seen_at": "2026-09-03T22:43:22.823319+00:00",
-  "last_updated_at": "2026-09-03T22:43:22.823319+00:00",
+  "last_updated_at": "2026-09-06T18:30:55.226894+00:00",
   "last_material_change_at": "2026-09-03T22:43:22.823319+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "astra",
     "gpt",
@@ -81,13 +81,20 @@
       ],
       "confidence": 0.75,
       "story_ids": [
-        "hackernews:story:49554643"
+        "hackernews:story:49554643",
+        "rss:decrypt.co_feed:a743c21d652a374d"
       ],
       "sources": [
         {
           "url": "https://openai.com/index/gpt-6-astra/",
           "label": "kibae",
           "source_type": "hackernews",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377514/openai-gpt-6-astra-review-shockingly-good",
+          "label": "Decrypt",
+          "source_type": "rss",
           "official": false
         }
       ]
