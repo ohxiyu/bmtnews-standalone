@@ -21860,12 +21860,16 @@
     {
       "category": "technology",
       "confidence": 0.75,
-      "current_state_en": "German startup Isar Aerospace successfully reached orbit from European soil, marking a historic first for private European rocketry.",
-      "current_state_zh": "German startup Isar Aerospace successfully reached orbit from European soil, marking a historic first for private European rocketry.",
+      "current_state_en": "German startup Isar Aerospace successfully reached orbit and deployed payloads on its second flight, marking a historic first for private European spaceflight.",
+      "current_state_zh": "德国初创公司Isar Aerospace在第二次飞行中成功进入轨道并部署有效载荷，标志着欧洲私人航天史上的首次。",
       "entities": [
+        "aerospace",
         "europe",
         "european",
         "german",
+        "isar",
+        "isar-aerospace",
+        "orbit",
         "private",
         "rocket"
       ],
@@ -21873,8 +21877,8 @@
       "event_type": "other",
       "first_seen_at": "2026-09-05T22:09:10.920432Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-05T22:09:10.920432Z",
-      "last_updated_at": "2026-09-05T22:09:10.920432Z",
+      "last_material_change_at": "2026-09-06T15:37:18.936444Z",
+      "last_updated_at": "2026-09-06T15:37:18.936444Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -21883,8 +21887,11 @@
       "topics": [
         "europe",
         "isar-aerospace",
+        "orbit",
+        "private-space",
         "rocket",
-        "space"
+        "space",
+        "spaceflight"
       ],
       "updates": [
         {
@@ -21941,6 +21948,49 @@
           "update_type": "initial",
           "what_changed_en": "German startup Isar Aerospace successfully reached orbit from European soil, marking a historic first for private European rocketry.",
           "what_changed_zh": "German startup Isar Aerospace successfully reached orbit from European soil, marking a historic first for private European rocketry."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "German startup Isar Aerospace successfully reached orbit and deployed payloads on its second flight, marking a historic first for private European spaceflight.",
+          "current_state_zh": "德国初创公司Isar Aerospace在第二次飞行中成功进入轨道并部署有效载荷，标志着欧洲私人航天史上的首次。",
+          "detailed_summary_en": "Isar Aerospace successfully reached orbit and deployed payloads on its second flight, a historic achievement for European private spaceflight.",
+          "detailed_summary_zh": "Isar Aerospace successfully reached orbit and deployed payloads on its second flight, a historic achievement for European private spaceflight.",
+          "event_id": "evt_59b2760922a84137",
+          "first_seen_at": "2026-09-06T15:37:18.936444Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T07:21:06Z",
+          "published_at": "2026-09-06T07:21:06Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49584083"
+            }
+          ],
+          "sources": [
+            {
+              "label": "mpweiher",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49584083"
+          ],
+          "time_precision": "published",
+          "title_en": "Isar Aerospace reaches orbit and deploys payloads on second flight",
+          "title_zh": "Isar Aerospace reaches orbit and deploys payloads on second flight",
+          "update_id": "upd_a88b72c4dd3129f9",
+          "update_type": "confirmation",
+          "what_changed_en": "Isar Aerospace's second flight reached orbit and deployed payloads.",
+          "what_changed_zh": "Isar Aerospace第二次飞行成功进入轨道并部署有效载荷。"
         }
       ]
     },
@@ -22321,6 +22371,573 @@
           "update_type": "initial",
           "what_changed_en": "GPT-6 Astra demonstrates advanced capabilities in controlling robot arms and computer use, sparking enthusiastic community discussion about its potential for robotics applications.",
           "what_changed_zh": "GPT-6 Astra demonstrates advanced capabilities in controlling robot arms and computer use, sparking enthusiastic community discussion about its potential for robotics applications."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+      "current_state_zh": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+      "entities": [
+        "fly",
+        "intellectual",
+        "open"
+      ],
+      "event_id": "evt_c71d0d1768570225",
+      "event_type": "other",
+      "first_seen_at": "2026-09-06T15:37:18.936361Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:18.936361Z",
+      "last_updated_at": "2026-09-06T15:37:18.936361Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Intellectual Fly Is Open (2025)",
+      "title_zh": "Intellectual Fly Is Open (2025)",
+      "topics": [
+        "ai-ethics",
+        "disclosure",
+        "intellectual-honesty",
+        "llm",
+        "writing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+          "current_state_zh": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+          "detailed_summary_en": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+          "detailed_summary_zh": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+          "event_id": "evt_c71d0d1768570225",
+          "first_seen_at": "2026-09-06T15:37:18.936361Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T11:56:43Z",
+          "published_at": "2026-09-06T11:56:43Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49585644"
+            }
+          ],
+          "sources": [
+            {
+              "label": "cyb0rg0",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49585644"
+          ],
+          "time_precision": "published",
+          "title_en": "Intellectual Fly Is Open (2025)",
+          "title_zh": "Intellectual Fly Is Open (2025)",
+          "update_id": "upd_afd533f415fde458",
+          "update_type": "initial",
+          "what_changed_en": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'",
+          "what_changed_zh": "Bryan Cantrill argues that using LLMs to write without disclosure is intellectually dishonest and harmful, comparing it to an 'intellectual fly being open.'"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+      "current_state_zh": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+      "entities": [
+        "stay"
+      ],
+      "event_id": "evt_9f6d61b0ae5b678d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-06T15:37:18.936407Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:18.936407Z",
+      "last_updated_at": "2026-09-06T15:37:18.936407Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A/I shuts down – Stay human",
+      "title_zh": "A/I shuts down – Stay human",
+      "topics": [
+        "censorship",
+        "digital-rights",
+        "hacker-news",
+        "internet-freedom",
+        "shutdown"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+          "current_state_zh": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+          "detailed_summary_en": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+          "detailed_summary_zh": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+          "event_id": "evt_9f6d61b0ae5b678d",
+          "first_seen_at": "2026-09-06T15:37:18.936407Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T14:34:34Z",
+          "published_at": "2026-09-06T14:34:34Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49586898"
+            }
+          ],
+          "sources": [
+            {
+              "label": "captainmuon",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49586898"
+          ],
+          "time_precision": "published",
+          "title_en": "A/I shuts down – Stay human",
+          "title_zh": "A/I shuts down – Stay human",
+          "update_id": "upd_05f25b6d276008cb",
+          "update_type": "initial",
+          "what_changed_en": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship.",
+          "what_changed_zh": "Independent internet provider A/I shuts down, citing government pressure, sparking community discussion on internet fragility and censorship."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+      "current_state_zh": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+      "entities": [
+        "binance",
+        "can",
+        "cryptorank",
+        "currencies",
+        "korea",
+        "local",
+        "lower",
+        "pairs",
+        "push",
+        "stablecoin"
+      ],
+      "event_id": "evt_c745965de79cff12",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-06T15:37:19.229781Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:19.229781Z",
+      "last_updated_at": "2026-09-06T15:37:19.229781Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bank of Korea: Binance Stablecoin Pairs Can Push Local Currencies Lower - CryptoRank",
+      "title_zh": "Bank of Korea: Binance Stablecoin Pairs Can Push Local Currencies Lower - CryptoRank",
+      "topics": [
+        "binance",
+        "central-bank",
+        "forex",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+          "current_state_zh": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+          "detailed_summary_en": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+          "detailed_summary_zh": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+          "event_id": "evt_c745965de79cff12",
+          "first_seen_at": "2026-09-06T15:37:19.229781Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T13:29:53Z",
+          "published_at": "2026-09-06T13:29:53Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoRank",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4WGJzcUJZUFdDa09LUTVUUWJnbm03N2RWbUFfRGdzUGNjQ0x1dXNxMTBNbDRDanA3N09udGJOV3B2LUZMUGJTQldtY1poei1HOU9pNWhJa3JvdmNqM201c2dueHpZQ2hPQWNUNUhHRWtGWHpPWGEyZDBpRkRxSkU?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:912b3e7f2d44b608"
+          ],
+          "time_precision": "published",
+          "title_en": "Bank of Korea: Binance Stablecoin Pairs Can Push Local Currencies Lower - CryptoRank",
+          "title_zh": "Bank of Korea: Binance Stablecoin Pairs Can Push Local Currencies Lower - CryptoRank",
+          "update_id": "upd_556b6712f4760dd1",
+          "update_type": "initial",
+          "what_changed_en": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower.",
+          "what_changed_zh": "The Bank of Korea warns that Binance's stablecoin trading pairs could push local currencies lower."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+      "current_state_zh": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+      "entities": [
+        "anthropic",
+        "ipo",
+        "kraken",
+        "news",
+        "openai",
+        "pre-ipo-perps"
+      ],
+      "event_id": "evt_99a5bf25702211d6",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-06T15:37:19.229838Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:19.229838Z",
+      "last_updated_at": "2026-09-06T15:37:19.229838Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kraken launches OpenAI and Anthropic pre-IPO perps - Crypto News",
+      "title_zh": "Kraken launches OpenAI and Anthropic pre-IPO perps - Crypto News",
+      "topics": [
+        "anthropic",
+        "crypto-derivatives",
+        "kraken",
+        "openai",
+        "pre-ipo-perps"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+          "current_state_zh": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+          "detailed_summary_en": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+          "detailed_summary_zh": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+          "event_id": "evt_99a5bf25702211d6",
+          "first_seen_at": "2026-09-06T15:37:19.229838Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T12:24:18Z",
+          "published_at": "2026-09-06T12:24:18Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Crypto News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9XQnlEanVlcVdnUFNqcnRIb1poRVo4STFhZUprZnR6UVlERGJoX25admx6YzlJRmpJVDlGN2FpSm1VbnN3SnVvSEFmdmwzRlhrNHdVM1czS25qWXN4ZVFyUnZjdGxhbEdGQTUtUTZDRmN2RDIyZ1hkLVI1Zw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:4c5804c92cbb4a72"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken launches OpenAI and Anthropic pre-IPO perps - Crypto News",
+          "title_zh": "Kraken launches OpenAI and Anthropic pre-IPO perps - Crypto News",
+          "update_id": "upd_9dfd7d5fbca15dd5",
+          "update_type": "initial",
+          "what_changed_en": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings.",
+          "what_changed_zh": "Kraken introduces pre-IPO perpetual futures for OpenAI and Anthropic, allowing crypto traders to speculate on these AI companies before their public listings."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+      "current_state_zh": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+      "entities": [
+        "claim",
+        "cryptoticker",
+        "file",
+        "how",
+        "insolvency",
+        "time",
+        "your",
+        "zondacrypto"
+      ],
+      "event_id": "evt_c669f93d3d5f420a",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-06T15:37:19.229885Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:19.229885Z",
+      "last_updated_at": "2026-09-06T15:37:19.229885Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Zondacrypto Insolvency: How To File Your Claim In Time - CryptoTicker",
+      "title_zh": "Zondacrypto Insolvency: How To File Your Claim In Time - CryptoTicker",
+      "topics": [
+        "claims",
+        "insolvency",
+        "zondacrypto"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+          "current_state_zh": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+          "detailed_summary_en": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+          "detailed_summary_zh": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+          "event_id": "evt_c669f93d3d5f420a",
+          "first_seen_at": "2026-09-06T15:37:19.229885Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T12:24:39Z",
+          "published_at": "2026-09-06T12:24:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoTicker",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Kd1NaUENzdW8zajg0dkpFWDR6WXRwZFJucHRqb0VQX0FJUUxrOWdCRXNDRDZGZVFLQXNEMVdfQ2ZZWEdSeDFPbXJ4SFNBQVZFVzJRM3M5NVByS184U1h6WGZuSEpHMFZ3OUN4Z2xB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:feac50050eb838ea"
+          ],
+          "time_precision": "published",
+          "title_en": "Zondacrypto Insolvency: How To File Your Claim In Time - CryptoTicker",
+          "title_zh": "Zondacrypto Insolvency: How To File Your Claim In Time - CryptoTicker",
+          "update_id": "upd_1112c138956847c5",
+          "update_type": "initial",
+          "what_changed_en": "Guide on how users can file claims in the Zondacrypto insolvency case.",
+          "what_changed_zh": "Guide on how users can file claims in the Zondacrypto insolvency case."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+      "current_state_zh": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+      "entities": [
+        "better",
+        "coinbase",
+        "mortgages"
+      ],
+      "event_id": "evt_07a78793f7db1a87",
+      "event_type": "other",
+      "first_seen_at": "2026-09-06T15:37:20.316476Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:20.316476Z",
+      "last_updated_at": "2026-09-06T15:37:20.316476Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Better and Coinbase’s bitcoin-backed mortgages can reuse borrowers’ collateral",
+      "title_zh": "Better and Coinbase’s bitcoin-backed mortgages can reuse borrowers’ collateral",
+      "topics": [
+        "coinbase",
+        "mortgages"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+          "current_state_zh": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+          "detailed_summary_en": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+          "detailed_summary_zh": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+          "event_id": "evt_07a78793f7db1a87",
+          "first_seen_at": "2026-09-06T15:37:20.316476Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T14:00:00Z",
+          "published_at": "2026-09-06T14:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/06/better-and-coinbase-s-bitcoin-backed-mortgages-can-reuse-borrowers-collateral"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:9d7f0d2e868eee69"
+          ],
+          "time_precision": "published",
+          "title_en": "Better and Coinbase’s bitcoin-backed mortgages can reuse borrowers’ collateral",
+          "title_zh": "Better and Coinbase’s bitcoin-backed mortgages can reuse borrowers’ collateral",
+          "update_id": "upd_9e3f8e1fd52404f7",
+          "update_type": "initial",
+          "what_changed_en": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending.",
+          "what_changed_zh": "Better and Coinbase are launching bitcoin-backed mortgages that allow borrowers' collateral to be reused, marking a notable step in crypto-backed lending."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+      "current_state_zh": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+      "entities": [
+        "banks",
+        "scale",
+        "stablecoins",
+        "without",
+        "won"
+      ],
+      "event_id": "evt_ef6a59e6524a207b",
+      "event_type": "other",
+      "first_seen_at": "2026-09-06T15:37:26.619266Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:26.619266Z",
+      "last_updated_at": "2026-09-06T15:37:26.619266Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Stablecoins Won't Scale Without Banks",
+      "title_zh": "Stablecoins Won't Scale Without Banks",
+      "topics": [
+        "cross-border-payments",
+        "operational-risk",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+          "current_state_zh": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+          "detailed_summary_en": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+          "detailed_summary_zh": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+          "event_id": "evt_ef6a59e6524a207b",
+          "first_seen_at": "2026-09-06T15:37:26.619266Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T15:01:03Z",
+          "published_at": "2026-09-06T15:01:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377280/stablecoins-wont-scale-without-banks"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:7ed938a58770d05f"
+          ],
+          "time_precision": "published",
+          "title_en": "Stablecoins Won't Scale Without Banks",
+          "title_zh": "Stablecoins Won't Scale Without Banks",
+          "update_id": "upd_e95c6c6d306e5d6b",
+          "update_type": "initial",
+          "what_changed_en": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
+          "what_changed_zh": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+      "current_state_zh": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+      "entities": [
+        "custody",
+        "orionx",
+        "tether"
+      ],
+      "event_id": "evt_8231c7d5183310e9",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-06T15:37:27.863751Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-06T15:37:27.863751Z",
+      "last_updated_at": "2026-09-06T15:37:27.863751Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Tether-backed Orionx to shut down after audit flags $7M custody gap",
+      "title_zh": "Tether-backed Orionx to shut down after audit flags $7M custody gap",
+      "topics": [
+        "custody",
+        "orionx",
+        "tether"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+          "current_state_zh": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+          "detailed_summary_en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+          "detailed_summary_zh": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+          "event_id": "evt_8231c7d5183310e9",
+          "first_seen_at": "2026-09-06T15:37:27.863751Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T09:07:08Z",
+          "published_at": "2026-09-06T09:07:08Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/orionx-shut-down-7-million-move-outside-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:2a55d9425dc08713"
+          ],
+          "time_precision": "published",
+          "title_en": "Tether-backed Orionx to shut down after audit flags $7M custody gap",
+          "title_zh": "Tether-backed Orionx to shut down after audit flags $7M custody gap",
+          "update_id": "upd_c579b20b9d4893c2",
+          "update_type": "initial",
+          "what_changed_en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
+          "what_changed_zh": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended."
         }
       ]
     }
