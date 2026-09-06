@@ -34,11 +34,11 @@ function safeResponse(response, type, canonical = null) {
     (response.headers.get('Content-Type') || '').includes(type);
 }
 
-async function fresh(url, timeout = 8000) {
+async function fresh(url, timeout = 8000, redirect = 'follow') {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeout);
   try {
-    return await fetch(url, {cache: 'no-store', credentials: 'omit', signal: controller.signal});
+    return await fetch(url, {cache: 'no-store', credentials: 'omit', redirect, signal: controller.signal});
   } finally { clearTimeout(timer); }
 }
 
@@ -133,7 +133,11 @@ function offlinePage() {
 
 async function navigate(request, url, event) {
   try {
-    const response = await fresh(request.url, 3500);
+    // Navigation uses manual redirects. Following inside fetch produces a
+    // redirected response that respondWith rejects (ERR_FAILED), outside this
+    // try/catch. Pass the opaque redirect back so the browser navigates normally.
+    const response = await fresh(request.url, 3500, request.redirect);
+    if (response.type === 'opaqueredirect') return response;
     if (response.status >= 500) throw new Error('Origin unavailable');
     // A 401/403/404 is authoritative, never replace it with stale content.
     const copy = response.clone();

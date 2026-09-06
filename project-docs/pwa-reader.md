@@ -16,6 +16,9 @@ does not change collection schedules, AI analysis, publishing, or authentication
   parameters, private/no-store responses, unrelated redirects and error pages are
   not saved. Cloudflare's dated `.html` → extensionless canonical redirect is
   accepted only when both URLs resolve to the same public offline key.
+  Online navigation preserves the request's redirect mode: the browser follows
+  redirects itself, and opaque redirect responses are never saved. Background
+  warming may follow redirects subject to the public-key check above.
   A server 401, 403 or 404 is never replaced by an old saved page.
 - `/pwa-version.json` and `/service-worker.js` bypass edge cache. On open/resume,
   the client checks for a new build and offers a user-controlled refresh. Updates
@@ -42,7 +45,8 @@ node --test tests/test_pwa_*.mjs tests/test_agent_worker.mjs tests/test_story_ca
 ```
 
 The PWA tests cover the
-route/security boundary, offline fallback, timeout, version mismatch, retained
+route/security boundary, online manual redirects (including browser response
+validation), offline fallback, timeout, version mismatch, retained
 asset versions, cache limits, clearing races, local storage failures, stable
 identity and revision-aware read markers. These run in PR CI.
 
@@ -71,3 +75,18 @@ indexes. A standalone CSS fixture at 390 px verified four 52 px-high bottom targ
 hidden duplicate top navigation and no sideways overflow; it is not a device test.
 Production acceptance additionally covers Cloudflare's canonical dated URLs and
 the transient first-install waiting state, which must not trigger an update prompt.
+
+## Online redirect regression
+
+Run `node tests/fixtures/pwa_navigation_server.mjs`, open
+`http://127.0.0.1:4178/`, and wait for the visible "Worker controlling" status.
+The fixture serves the actual reader and service worker with Pages-style 308
+redirects. Click both dates and the English date, refresh, return home, and visit
+the three other sections. Stop the server, reload and click a dated `.html` link:
+the saved page and timestamp must remain visible. This was verified in a real
+browser, in addition to unit tests that fail against the old redirect-following
+implementation. The fixture is not a substitute for post-deployment date clicks.
+
+This worker-only fix preserves cache names and reading data. Jekyll's build
+timestamp and changed service-worker bytes trigger the existing opt-in update
+flow; no asset fingerprint bump or cache purge is needed.
