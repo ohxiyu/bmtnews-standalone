@@ -57,14 +57,27 @@
       "current_state_en": "Anthropic's Claude AI independently produced the longest formal proof ever, solving Fermat's Last Theorem in 11 days, a feat that a human-led project has not yet completed.",
       "detailed_summary_zh": "Anthropic's Claude AI independently produced the longest formal proof ever, solving Fermat's Last Theorem in 11 days, a feat that a human-led project has not yet completed.",
       "detailed_summary_en": "Anthropic's Claude AI independently produced the longest formal proof ever, solving Fermat's Last Theorem in 11 days, a feat that a human-led project has not yet completed.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "费马大定理的内容是：不存在正整数a、b、c，使得对于大于2的整数n有a^n + b^n = c^n。法国数学家皮埃尔·德·费马约在1637年将这一论断写在书页边缘，并称自己有一个‘绝妙的证明’，只是空白处写不下；直到1995年安德鲁·怀尔斯发表了129页的证明，才最终解决这一猜想。形式化证明是指将数学推理转换成Lean等计算机可核验的形式语言，使每个逻辑步骤都能由机器检查。",
+      "background_en": "Fermat's Last Theorem states that for integers greater than 2, no three positive integers a, b, and c can satisfy a^n + b^n = c^n. French mathematician Pierre de Fermat wrote the claim in a book margin around 1637 and said he had a proof too large to fit; it took Andrew Wiles's 129-page proof, published in 1995, to resolve the conjecture. Formalizing a proof means translating mathematical reasoning into a machine-checkable formal language such as Lean, so that every logical step can be verified by a computer.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fermat's_Last_Theorem",
+          "title": "Fermat's Last Theorem"
+        },
+        {
+          "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+          "title": "Formalizing Fermat's Last Theorem \\ Anthropic"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Formal_proof",
+          "title": "Formal proof - Wikipedia"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:1bbd15abd636205c"

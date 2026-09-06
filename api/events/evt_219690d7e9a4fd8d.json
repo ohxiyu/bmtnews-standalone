@@ -48,14 +48,27 @@
       "current_state_en": "Compound's Proposal 289 nearly transferred $24 million in COMP due to a late voting surge, exposing how DAO governance rules can be exploited and prompting debates on emergency brakes versus code immutability.",
       "detailed_summary_zh": "Compound's Proposal 289 nearly transferred $24 million in COMP due to a late voting surge, exposing how DAO governance rules can be exploited and prompting debates on emergency brakes versus code immutability.",
       "detailed_summary_en": "Compound's Proposal 289 nearly transferred $24 million in COMP due to a late voting surge, exposing how DAO governance rules can be exploited and prompting debates on emergency brakes versus code immutability.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "DAO（去中心化自治组织）由代币持有者通过投票来治理协议，投票结果由软件在区块链上自动执行。在 Compound 的治理中，COMP 持有者可以委托投票权，但钱包注册、委托以及交易费用等要求实际上决定了哪些人能够投票。第 289 号提案由名为 Humpy 或“Golden Boys”的代表团体提出，内容涉及一个向锁定者返还额外 COMP 的收益金库。由于 Compound 没有紧急权力机构，截止前形成的微弱多数也足以让该转账通过。",
+      "background_en": "A DAO is a decentralized autonomous organization in which token holders govern a protocol by voting on proposals that software then executes automatically. In Compound's governance, COMP holders can delegate voting power, but requirements such as wallet registration, delegation, and transaction fees shape who actually gets to vote. Proposal 289 was brought by a delegate group known as Humpy or the 'Golden Boys' and involved a yield vault that paid extra COMP to lockers. Because Compound had no emergency authority, a narrow majority formed just before the deadline was enough to pass the transfer.",
+      "community_discussion_zh": "社区成员 alextnetto 对第 289 号提案的反应是提出若干激烈选项，包括将管理员权限移交给受信任的多签地址、剥夺 goldCOMP 被委托人的投票权，甚至铸造一个排除相关方的新治理代币。相关讨论大多将该事件定性为治理攻击，但围绕用紧急制动还是拆分代币权来补救，并未形成共识。",
+      "community_discussion_en": "Community member alextnetto reacted to Proposal 289 by floating drastic options such as transferring admin control to a trusted multisig, stripping voting rights from the goldCOMP delegatee, or even minting a new governance token excluding the involved parties. The surrounding discussion largely framed the episode as a governance attack, but there was no consensus on whether emergency brakes or token-splitting measures are the right remedy.",
+      "market_impact_zh": "头部借贷协议的治理漏洞可能削弱市场对 DAO 治理型 DeFi 的信任，从而可能提高 COMP 等治理代币的风险溢价，并让用户转向保护机制更明确的协议。传导渠道主要是市场情绪与治理安全感知，而非代币供应或现金流发生直接变化，实际价格影响仍不确定。",
+      "market_impact_en": "A governance failure in a top lending protocol can undermine trust in DAO-based DeFi, potentially raising risk premiums on governance tokens such as COMP and pushing users toward protocols with clearer safeguard mechanisms. The transmission channel is mainly sentiment and perceived security of governance, not a direct change in token supply or cash flows, and actual price effects remain uncertain.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://beincrypto.com/compound-finance-proposal-289-governance-attack-claims/",
+          "title": "Compound Finance’s Controversial Proposal 289 Approval Sparks Governance Attack Claims"
+        },
+        {
+          "url": "https://crypto.news/the-bonk-governance-attack-how-a-dao-lost-20-million-in-one-proposal/",
+          "title": "The BONK governance attack: How a DAO lost $20 million in one proposal"
+        },
+        {
+          "url": "https://baltimorecrash.com/article/compound-governance-approves-proposal-289-sparking-concerns-of-governance-attack?tags=AVAX",
+          "title": "Compound Governance Approves Proposal 289 Sparking Concerns of Governance Attack"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:e4aa163f73ec8f26"

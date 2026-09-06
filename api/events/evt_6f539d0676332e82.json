@@ -61,14 +61,27 @@
       "current_state_en": "Google patched a high-severity Chrome zero-day (CVE-2026-85046) that was already being exploited in the wild, with the update rolling out across Windows, Mac, and Linux.",
       "detailed_summary_zh": "Google patched a high-severity Chrome zero-day (CVE-2026-85046) that was already being exploited in the wild, with the update rolling out across Windows, Mac, and Linux.",
       "detailed_summary_en": "Google patched a high-severity Chrome zero-day (CVE-2026-85046) that was already being exploited in the wild, with the update rolling out across Windows, Mac, and Linux.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "类型混淆是指软件将对象当作其实际不属于的数据类型来处理，可能导致内存损坏或意外行为。V8 是谷歌开源的 JavaScript 和 WebAssembly 引擎，用于 Chrome、Node.js 及其他基于 Chromium 的浏览器，因此其中的漏洞影响尤其重大。",
+      "background_en": "Type confusion occurs when software treats an object as a data type it does not actually have, which can lead to memory corruption or unexpected behavior. V8 is Google's open-source JavaScript and WebAssembly engine used in Chrome, Node.js, and other Chromium-based browsers, making vulnerabilities there especially impactful.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "谷歌尚未将此漏洞与加密货币盗窃相关联，因此目前没有明确直接影响数字资产市场的传导渠道。该事件主要影响基于浏览器的钱包和交易所用户的安全态势，只有当后续报告将此漏洞与加密货币相关攻击联系起来时，才可能出现针对加密领域的市场影响。",
+      "market_impact_en": "Google has not tied this vulnerability to cryptocurrency theft, so there is no identified direct transmission channel to digital asset markets. The story mainly affects security posture for browser-based wallets and exchange users, and any crypto-specific market impact would only materialize if later reports connect this exploit to cryptocurrency-related campaigns.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://shattered.io/chrome-zero-day-cve-2026-85046-sixth-2026/",
+          "title": "Chrome Zero-Day CVE-2026-85046: 6th of 2026, CVSS 8.8"
+        },
+        {
+          "url": "https://blog.gridinsoft.com/chrome-cve-2026-85046-update/",
+          "title": "Chrome CVE-2026-85046: Update and Verify Your Browser"
+        },
+        {
+          "url": "https://www.huntress.com/cybersecurity-101/topic/type-confusion",
+          "title": "What Is Type Confusion and How Does It Work? | Huntress"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:28dc26bc566b81bc"

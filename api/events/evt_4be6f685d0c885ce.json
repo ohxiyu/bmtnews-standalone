@@ -49,14 +49,27 @@
       "current_state_en": "Trezor's breach at logistics provider ShipMonk now affects ~80,689 customers after old shipping logs from 2019-2021 were found, exposing contact and order data despite deletion assurances.",
       "detailed_summary_zh": "Trezor's breach at logistics provider ShipMonk now affects ~80,689 customers after old shipping logs from 2019-2021 were found, exposing contact and order data despite deletion assurances.",
       "detailed_summary_en": "Trezor's breach at logistics provider ShipMonk now affects ~80,689 customers after old shipping logs from 2019-2021 were found, exposing contact and order data despite deletion assurances.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Trezor 是硬件钱包制造商，其设备将私钥保存在离线环境中，因此本次泄露不直接威胁用户加密货币资金。事件最初于8月13日披露，当时约1.37万名客户受影响，Trezor 曾声称更早的订单记录已删除；ShipMonk 的未授权访问被归因于分析平台 Metabase 的零日漏洞。Trezor 的数据保留政策要求自有系统及物流合作方在90天后删除客户数据，但旧记录仍在系统中保留，尽管 Trezor 多次收到书面删除保证。",
+      "background_en": "Trezor is a hardware wallet manufacturer whose devices keep private keys offline, so this leak does not directly put cryptocurrency funds at risk. The incident was first disclosed on August 13 with about 13,689 customers affected, and Trezor initially said older order records had already been deleted; ShipMonk's unauthorized access was attributed to a zero-day vulnerability in the analytics platform Metabase. Trezor's data-retention policy requires customer details to be deleted from both its own and fulfillment partners' systems after 90 days, but the old records remained despite written assurances.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html",
+          "title": "Trezor Says ShipMonk Breach Exposed 67,000 U.S. Customers' Data It Said Was Deleted"
+        },
+        {
+          "url": "https://blockonomi.com/shipmonk-breach-exposes-67000-more-trezor-wallet-users-despite-deletion-assurances",
+          "title": "ShipMonk Breach Exposes 67,000 More Trezor Wallet Users Despite Deletion Assurances - Blockonomi"
+        },
+        {
+          "url": "https://cyberpress.org/shipmonk-data-breach-2/",
+          "title": "ShipMonk Data Breach Exposes Personal Data of 67,000 Additional Trezor Customers"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:81d53d9a5bda073a"
