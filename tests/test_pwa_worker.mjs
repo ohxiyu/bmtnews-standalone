@@ -8,7 +8,7 @@ const origin = 'https://bmt.news';
 const page = (assets = 'sha256-one', css = true) => `<html><head><meta name="bmt-assets" content="${assets}">${css ? `<link href="/assets/css/pwa-reader.css?v=${assets}" rel="stylesheet">` : ''}</head><body>Full story</body></html>`;
 const html = body => new Response(body, {headers: {'Content-Type': 'text/html'}});
 function harness() {
-  const stores = new Map(), events = new Map(), calls = [];
+  const stores = new Map(), events = new Map(), calls = [], redirects = new Map();
   let offline = false, assets = 'sha256-one', status = 200, cacheHeader = 'public', activated = false;
   const caches = {
     async open(name) {
@@ -30,6 +30,21 @@ function harness() {
       const url = new URL(typeof value === 'string' ? value : value.url || value.href);
       calls.push({url: url.href, options});
       if (offline) throw new Error('Offline');
+      if (redirects.has(url.href)) {
+        const destination = redirects.get(url.href);
+        if (options.redirect === 'error') throw new TypeError('Redirect forbidden');
+        if (options.redirect === 'manual') {
+          // Browser fetch hides the Location header behind an opaque redirect.
+          const response = new Response(null);
+          Object.defineProperties(response, {
+            type: {value: 'opaqueredirect'}, status: {value: 0}, ok: {value: false}
+          });
+          return response;
+        }
+        const response = html(page(assets));
+        Object.defineProperties(response, {redirected: {value: true}, url: {value: destination}});
+        return response;
+      }
       if (url.pathname === '/pwa-version.json') return Response.json({assets, build: 'test-build'});
       if (url.pathname.endsWith('.css')) return new Response(`/* ${assets} */`, {headers: {'Content-Type': 'text/css'}});
       return new Response(page(assets), {status, headers: {'Content-Type': 'text/html', 'Cache-Control': cacheHeader}});
@@ -40,11 +55,14 @@ function harness() {
   async function dispatch(url, options = {}) {
     const pending = [];
     let response;
-    const request = new Request(url, options);
+    const request = new Request(url, {redirect: !options.mode || options.mode === 'navigate' ? 'manual' : 'follow', ...options});
     Object.defineProperty(request, 'mode', {value: options.mode || 'navigate'});
     events.get('fetch')({request, waitUntil: p => pending.push(p), respondWith: p => { response = p; }});
     const result = response && await response;
     await Promise.all(pending);
+    // Model respondWith's browser validation, not just the function's return value.
+    if (result?.redirected && request.redirect !== 'follow') throw new TypeError('Redirected response rejected by navigation');
+    if (result?.type === 'opaqueredirect' && request.redirect !== 'manual') throw new TypeError('Opaque redirect requires manual mode');
     return result;
   }
   async function message(data, from = `${origin}/`) {
@@ -54,7 +72,7 @@ function harness() {
     await Promise.all(pending);
     return reply;
   }
-  return {api, caches, calls, dispatch, message, context, events,
+  return {api, caches, calls, dispatch, message, context, events, redirects,
     offline: () => { offline = true; }, setAssets: value => { assets = value; },
     setStatus: value => { status = value; }, setPrivate: () => { cacheHeader = 'private'; },
     activated: () => activated};
@@ -103,6 +121,46 @@ test('Cloudflare dated HTML redirects share an offline key; private and cross-or
   h.offline();
   assert.match(await (await h.dispatch(alias)).text(), /bmt-offline/);
   assert.match(await (await h.dispatch(canonical)).text(), /bmt-offline/);
+});
+test('online dated links preserve manual redirects, then canonical pages remain readable offline', async () => {
+  const h = harness();
+  for (const language of ['zh', 'en']) {
+    const alias = `${origin}/2026/09/04/summary-${language}.html?source=pwa`;
+    const canonical = `${origin}/2026/09/04/summary-${language}`;
+    h.redirects.set(alias, canonical);
+    const redirect = await h.dispatch(alias);
+    assert.equal(redirect.type, 'opaqueredirect');
+    assert.equal(h.calls.at(-1).url, alias, 'keep the actual request URL and query');
+    assert.equal(h.calls.at(-1).options.redirect, 'manual');
+    assert.equal((await h.message({type: 'STATUS'})).count, language === 'zh' ? 0 : 1);
+    // The browser follows the redirect as a new navigation, not inside worker fetch.
+    const destination = await h.dispatch(canonical);
+    assert.equal(destination.status, 200);
+    assert.equal(destination.redirected, false);
+    assert.doesNotMatch(await destination.text(), /bmt-offline/);
+    assert.equal((await h.dispatch(canonical)).status, 200, 'refresh stays online');
+  }
+  h.offline();
+  for (const language of ['zh', 'en']) {
+    for (const suffix of ['', '.html']) {
+      assert.match(await (await h.dispatch(`${origin}/2026/09/04/summary-${language}${suffix}`)).text(), /bmt-offline/);
+    }
+  }
+});
+test('navigation does not follow or cache redirects to private or external destinations', async () => {
+  const h = harness();
+  for (const destination of [`${origin}/admin/`, 'https://external.org/']) {
+    h.redirects.set(`${origin}/threads/`, destination);
+    assert.equal((await h.dispatch(`${origin}/threads/`)).type, 'opaqueredirect');
+    assert.equal((await h.message({type: 'STATUS'})).count, 0);
+  }
+});
+test('static hosts without canonical redirects still serve dated HTML links', async () => {
+  const h = harness();
+  const url = `${origin}/2026/09/04/summary-zh.html?publication_check=pwa-test`;
+  assert.equal((await h.dispatch(url)).status, 200);
+  assert.equal(h.calls[0].url, url);
+  assert.equal((await h.message({type: 'STATUS'})).count, 1);
 });
 test('403/404 remain authoritative, 503 may fall back, private responses are not saved', async () => {
   const h = harness();
