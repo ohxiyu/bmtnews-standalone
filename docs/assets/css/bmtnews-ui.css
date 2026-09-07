@@ -203,7 +203,7 @@ time,
 
 .site-brand {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
   color: var(--text);
   white-space: nowrap;
@@ -215,8 +215,47 @@ time,
 }
 
 .site-brand-mark {
-  display: none;
+  display: block;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  color: var(--accent);
 }
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-brand .site-brand-mark {
+  width: 18px;
+  height: 18px;
+  flex-basis: 18px;
+}
+
+.brand-kit-previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.brand-kit-previews figure {
+  margin: 0;
+  padding: 16px;
+  background: #faf9f7;
+}
+
+.brand-kit-previews img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brand-kit-previews figcaption a { color: #1d4c96; }
+.brand-kit-previews .brand-kit-dark { background: #111214; color: #e8e6e1; }
+.brand-kit-previews .brand-kit-dark a { color: #8fb0e6; }
 
 .site-brand-copy strong {
   font-size: 1rem;
