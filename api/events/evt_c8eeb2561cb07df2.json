@@ -19,7 +19,7 @@
   "last_material_change_at": "2026-09-07T17:50:00.058019+00:00",
   "confidence": 0.75,
   "updates_count": 6,
-  "sources_count": 12,
+  "sources_count": 13,
   "entities": [
     "after",
     "attacker",
@@ -334,12 +334,19 @@
       "references": [],
       "confidence": 0.95,
       "story_ids": [
-        "rss:thedefiant.io_api_feed:8f1088304a7f689f"
+        "rss:thedefiant.io_api_feed:8f1088304a7f689f",
+        "rss:www.theblock.co_rss.xml:64fcd3fd83985445"
       ],
       "sources": [
         {
           "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
           "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673",
+          "label": "The Block",
           "source_type": "rss",
           "official": false
         }
