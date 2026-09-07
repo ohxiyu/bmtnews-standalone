@@ -27,6 +27,7 @@
     </section>
     {% endunless %}
 
+    <div class="section-index-body">
     {% if edition.items and edition.items.size > 0 %}
       <section class="event-context weekly-context" aria-labelledby="weekly-context-{{ entry.date }}">
         <header class="event-context-heading">
@@ -136,6 +137,7 @@
           </details>
         {% endif %}
       </aside>
+    </div>
     </div>
   </article>
 {% else %}

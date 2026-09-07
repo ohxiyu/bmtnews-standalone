@@ -80,6 +80,10 @@ export function waitingUpdate(hasWaitingWorker, hasController) {
   return Boolean(hasWaitingWorker && hasController);
 }
 
+export function readingSize(value) {
+  return ['14', '15', '17'].includes(String(value)) ? String(value) : '15';
+}
+
 function initReader() {
   const main = document.querySelector('#content');
   const opener = document.querySelector('[data-reader-open]');
@@ -187,6 +191,31 @@ function initReader() {
   });
   const toolsRow = element('div', '', 'reader-tools');
   toolsRow.append(resume, saveThisPage);
+  const fontControls = element('div', '', 'reader-font-controls');
+  fontControls.setAttribute('role', 'group');
+  fontControls.setAttribute('aria-label', tr('正文字号', 'Reading text size'));
+  fontControls.append(element('span', tr('正文字号', 'Text size')));
+  let fontSize = '15';
+  try { fontSize = readingSize(storage?.getItem('bmtnews-reading-size')); } catch { /* Optional preference. */ }
+  function applyFont(value, persist = false) {
+    fontSize = readingSize(value);
+    document.documentElement.style.setProperty('--reading-size', `${fontSize}px`);
+    fontControls.querySelectorAll('button').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.size === fontSize)));
+    if (persist) {
+      try { storage.setItem('bmtnews-reading-size', fontSize); }
+      catch { notify(tr('字号已应用，但无法保存到本机。', 'Text size applied but could not be saved.')); }
+    }
+  }
+  for (const [value, label] of [['14', 'A−'], ['15', tr('默认', 'Default')], ['17', 'A＋']]) {
+    const control = button(label, () => applyFont(value, true));
+    control.dataset.size = value;
+    control.setAttribute('aria-label', `${tr('正文字号', 'Text size')} ${value}px`);
+    fontControls.append(control);
+  }
+  applyFont(fontSize);
+  window.addEventListener('storage', event => {
+    if (event.key === 'bmtnews-reading-size' || event.key === null) applyFont(event.newValue);
+  });
   const list = element('ol', '', 'reader-bookmarks');
   const cacheStatus = element('p', cacheMessage, 'reader-muted');
   cacheStatus.setAttribute('role', 'status');
@@ -217,7 +246,7 @@ function initReader() {
     checkUpdate.disabled = false;
   });
   maintenance.append(checkUpdate, clearCache, clearReading);
-  dialog.append(header, explanation, toolsRow, list, cacheStatus, maintenance);
+  dialog.append(header, explanation, fontControls, toolsRow, list, cacheStatus, maintenance);
   document.body.append(dialog);
   opener.hidden = false;
   opener.addEventListener('click', () => { renderLibrary(); dialog.showModal(); updateCacheStatus(); });
