@@ -1,6 +1,69 @@
 {
   "threads": [
     {
+      "thread_id": "evt_c8eeb2561cb07df2",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "latest_date": "2026-09-07",
+      "latest_at": "2026-09-07T08:31:17.854172+08:00",
+      "first_date": "2026-09-07",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "summary_zh": "Liquid 网络在自称白帽黑客提取约 3,998 BTC 至单一地址后仍处于暂停状态，联邦钱包储备接近归零，或需等待资金归还才能恢复脱钩提现。",
+      "summary_en": "Liquid Network remains paused after self-identified white-hat hackers withdrew ~3,998 BTC to a single address, leaving the federation wallet's reserves near zero and potentially preventing peg-outs until funds are returned.",
+      "latest_update_zh": "具体指出约 3,998 BTC（价值约 3.2 亿美元）被提取至单一地址，收款方在交易中留言“我们是白帽黑客”。此举使联邦钱包的比特币储备几乎归零，可能导致在资金归还前无法进行peg-out。",
+      "latest_update_en": "Specified that approximately 3,998 BTC (worth ~$320 million) were withdrawn to a single address, with the recipient writing 'we are whitehats' in the transaction. This nearly depleted the federation wallet's Bitcoin reserves, potentially preventing peg-outs until the funds are returned.",
+      "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
+      "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
+      "latest_summary_zh": "Blockstream 旗下 Liquid 侧链在几乎全部用于支持 L-BTC 的比特币储备（约 3,998 BTC）被提取至一个单一地址后，暂停了其桥接节点。收款方在交易中写入“我们是白帽黑客”。\n\n此事件影响重大，因为 L-BTC 是一种 1:1 比特币锚定资产，其锚定的安全性取决于联邦钱包的储备。如果被提取的比特币无法妥善保管并归还，Liquid 及同类侧链的信任可能受到动摇。\n\n该笔转账使联邦钱包中的比特币储备几乎归零，在资金归还前可能无法进行 peg-out（脱钩提现）。地址所有者的“我们是白帽黑客”信息暗示这是一次声明的救援行动，但尚未有官方确认发布。",
+      "latest_summary_en": "Blockstream's Liquid sidechain disabled its bridge nodes after nearly all the bitcoin reserves backing L-BTC, approximately 3,998 BTC, were withdrawn to a single address. The recipient wrote \"we are whitehats\" in the transaction.\n\nThis event is significant because L-BTC is a 1:1 Bitcoin-backed asset, and the safety of its peg depends on the federation wallet's reserves. If the withdrawn Bitcoin is not fully secured and returned, trust in Liquid and similar sidechains could be shaken.\n\nThe move reduced the federation wallet's Bitcoin reserves to near zero, potentially preventing peg-outs until the coins are returned. The address owner's \"we are whitehats\" message suggests a claimed rescue, but official confirmation has not been published.",
+      "discussion_zh": "此事件影响重大，因为 L-BTC 是一种 1:1 比特币锚定资产，其锚定的安全性取决于联邦钱包的储备。如果被提取的比特币无法妥善保管并归还，Liquid 及同类侧链的信任可能受到动摇。",
+      "discussion_en": "This event is significant because L-BTC is a 1:1 Bitcoin-backed asset, and the safety of its peg depends on the federation wallet's reserves. If the withdrawn Bitcoin is not fully secured and returned, trust in Liquid and similar sidechains could be shaken.",
+      "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
+      "market_impact_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://docs.liquid.net/docs/technical-overview",
+          "title": "Technical Overview - Documentation - The Liquid Network"
+        },
+        {
+          "url": "https://blockstream.com/liquid/",
+          "title": "The Liquid Network | Bitcoin layer-2 solution for digital asset issuance."
+        },
+        {
+          "url": "https://river.com/learn/terms/l/liquid-network/",
+          "title": "Liquid Network - River Financial"
+        },
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
+          "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_59b2760922a84137",
       "event_id": "evt_59b2760922a84137",
       "latest_date": "2026-09-06",
@@ -641,6 +704,69 @@
         }
       ],
       "reference_links": []
+    },
+    {
+      "thread_id": "evt_c8eeb2561cb07df2",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "latest_date": "2026-09-07",
+      "latest_at": "2026-09-07T08:31:17.854172+08:00",
+      "first_date": "2026-09-07",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "summary_zh": "Liquid 网络在自称白帽黑客提取约 3,998 BTC 至单一地址后仍处于暂停状态，联邦钱包储备接近归零，或需等待资金归还才能恢复脱钩提现。",
+      "summary_en": "Liquid Network remains paused after self-identified white-hat hackers withdrew ~3,998 BTC to a single address, leaving the federation wallet's reserves near zero and potentially preventing peg-outs until funds are returned.",
+      "latest_update_zh": "具体指出约 3,998 BTC（价值约 3.2 亿美元）被提取至单一地址，收款方在交易中留言“我们是白帽黑客”。此举使联邦钱包的比特币储备几乎归零，可能导致在资金归还前无法进行peg-out。",
+      "latest_update_en": "Specified that approximately 3,998 BTC (worth ~$320 million) were withdrawn to a single address, with the recipient writing 'we are whitehats' in the transaction. This nearly depleted the federation wallet's Bitcoin reserves, potentially preventing peg-outs until the funds are returned.",
+      "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
+      "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
+      "latest_summary_zh": "Blockstream 旗下 Liquid 侧链在几乎全部用于支持 L-BTC 的比特币储备（约 3,998 BTC）被提取至一个单一地址后，暂停了其桥接节点。收款方在交易中写入“我们是白帽黑客”。\n\n此事件影响重大，因为 L-BTC 是一种 1:1 比特币锚定资产，其锚定的安全性取决于联邦钱包的储备。如果被提取的比特币无法妥善保管并归还，Liquid 及同类侧链的信任可能受到动摇。\n\n该笔转账使联邦钱包中的比特币储备几乎归零，在资金归还前可能无法进行 peg-out（脱钩提现）。地址所有者的“我们是白帽黑客”信息暗示这是一次声明的救援行动，但尚未有官方确认发布。",
+      "latest_summary_en": "Blockstream's Liquid sidechain disabled its bridge nodes after nearly all the bitcoin reserves backing L-BTC, approximately 3,998 BTC, were withdrawn to a single address. The recipient wrote \"we are whitehats\" in the transaction.\n\nThis event is significant because L-BTC is a 1:1 Bitcoin-backed asset, and the safety of its peg depends on the federation wallet's reserves. If the withdrawn Bitcoin is not fully secured and returned, trust in Liquid and similar sidechains could be shaken.\n\nThe move reduced the federation wallet's Bitcoin reserves to near zero, potentially preventing peg-outs until the coins are returned. The address owner's \"we are whitehats\" message suggests a claimed rescue, but official confirmation has not been published.",
+      "discussion_zh": "此事件影响重大，因为 L-BTC 是一种 1:1 比特币锚定资产，其锚定的安全性取决于联邦钱包的储备。如果被提取的比特币无法妥善保管并归还，Liquid 及同类侧链的信任可能受到动摇。",
+      "discussion_en": "This event is significant because L-BTC is a 1:1 Bitcoin-backed asset, and the safety of its peg depends on the federation wallet's reserves. If the withdrawn Bitcoin is not fully secured and returned, trust in Liquid and similar sidechains could be shaken.",
+      "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
+      "market_impact_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://docs.liquid.net/docs/technical-overview",
+          "title": "Technical Overview - Documentation - The Liquid Network"
+        },
+        {
+          "url": "https://blockstream.com/liquid/",
+          "title": "The Liquid Network | Bitcoin layer-2 solution for digital asset issuance."
+        },
+        {
+          "url": "https://river.com/learn/terms/l/liquid-network/",
+          "title": "Liquid Network - River Financial"
+        },
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
+          "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
+        }
+      ]
     },
     {
       "thread_id": "evt_59b2760922a84137",

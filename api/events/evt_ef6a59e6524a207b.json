@@ -51,14 +51,27 @@
       "current_state_en": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
       "detailed_summary_zh": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
       "detailed_summary_en": "Stablecoins' enterprise adoption is constrained by their reliance on traditional banking rails, with single-bank dependency posing a significant operational risk.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "传统跨境支付依赖代理行（correspondent banking）模式，即一家银行在另一家银行开设往来账户（nostro/vostro），并通过 SWIFT 报文在多个中介机构之间逐级传递结算指令。稳定币轨道可以在数秒内完成跨境结算，但前提是法币先兑换为稳定币，且收款方之后还需换回法币。FDIC 在 2022-2023 年发出的“暂停函”（pause letters）以及 Silvergate、Signature 等银行的倒闭，反映出稳定币生态对少数银行合作伙伴的高度依赖。",
+      "background_en": "Traditional cross-border payments rely on correspondent banking, where one bank holds an account with another — nostro or vostro — and SWIFT messages relay settlement instructions hop between intermediary institutions. Stablecoin rails can settle a cross-border payment in seconds, but only after fiat has been converted into a stablecoin and only before the recipient converts back. The FDIC's 2022-2023 'pause letters' and the failures of institutions like Silvergate and Signature illustrate how dependent this ecosystem is on a small set of banking partners.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该分析揭示了一条通过银行准入传导的渠道：稳定币发行方储备以及 Bridge 等支付平台的托管、法币兑换和结算都依赖少数银行，因此银行倒闭或监管施压可能限制其流动性与可兑换性。这可能影响主要稳定币及其支付基础设施所嵌入的风险，但文章并未暗示近期有触发因素。",
+      "market_impact_en": "The analysis exposes a transmission channel via banking access: stablecoin issuers' reserves and payment companies like Bridge depend on a narrow set of banks for custody, on/off ramps, and settlement, so bank failures or heightened regulatory pushback could constrain liquidity and convertibility. This affects the risks embedded in major stablecoins and stablecoin-based payment infrastructure, though the article implies no imminent trigger.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Correspondent_banking",
+          "title": "Correspondent banking"
+        },
+        {
+          "url": "https://www.ledgerinsights.com/fdic-publishes-crypto-pause-letters-including-usdf-consortium/",
+          "title": "FDIC publishes crypto 'pause' letters including USDF consortium - Ledger Insights - blockchain for enterprise"
+        },
+        {
+          "url": "https://www.payram.com/blog/stablecoins-vs-fiat-payments",
+          "title": "Stablecoins vs. Fiat Payments: The Merchant’s Guide to Instant..."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:7ed938a58770d05f"

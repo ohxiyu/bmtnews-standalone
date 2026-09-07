@@ -49,14 +49,23 @@
       "current_state_en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
       "detailed_summary_zh": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
       "detailed_summary_en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "加密货币领域的法务审计通常使用链上追踪、地址聚类、实体标签和风险评分等方法，以核验交易所的账面记录与其钱包实际控制的资产是否一致。当账面余额超过已知地址中实际持有的资产时，就出现所谓“托管缺口”，这是中心化交易所的核心风险之一，FTX 等事件已凸显这种风险，因为一旦交易所资不抵债，客户资金可能被冻结或损失。此处，Orionx 在根据智利《金融科技法》进行合规审查时发现了账实不符的问题。",
+      "background_en": "A forensic audit in crypto typically uses on-chain tracing, clustering, entity labeling, and risk scoring to verify whether an exchange's records match assets actually controlled by its wallets. Custody gaps — when recorded balances exceed assets held at known addresses — are a central risk in centralized exchanges, highlighted by failures like FTX, because customer funds can be frozen or lost when an exchange becomes insolvent. In this case, Orionx was conducting a review to comply with Chile's Fintech Law when the mismatch surfaced.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "这一事件可能强化市场对中心化交易所托管风险的担忧，尤其在拉丁美洲地区，并可能促使部分交易者转向自托管或具备透明储备证明的平台。对市场的直接传导可能主要限于 Orionx 用户以及 Tether 的声誉问题，而非系统性的稳定币或交易所偿付能力事件。",
+      "market_impact_en": "This incident could reinforce custody risk concerns for centralized exchanges, especially in Latin America, and may push some traders toward self-custody or platforms with transparent reserve proofs. The direct market transmission is likely limited to Orionx users and a reputational question for Tether, rather than a systemic stablecoin or exchange solvency event.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.blockchain-council.org/cryptocurrency/on-chain-forensics-for-crypto-audits-detecting-fraud-wash-trading-suspicious-wallet-activity/",
+          "title": "On-Chain Forensics for Crypto Audits - Blockchain Council"
+        },
+        {
+          "url": "https://snout0x.com/exchange-custody-risks/",
+          "title": "Exchange Custody Risks Explained: Freezes, Insolvency, and Access"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:2a55d9425dc08713"

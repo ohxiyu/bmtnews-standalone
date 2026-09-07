@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-09-06T00:00:00Z</updated>
+  <updated>2026-09-07T00:00:00Z</updated>
+  <entry>
+    <title>GPT-6 Astra Wows at Spatial and Agentic AI, Struggles With Writing</title>
+    <link href="https://decrypt.co/377514/openai-gpt-6-astra-review-shockingly-good"/>
+    <id>https://bmt.news/editions/2026-09-07/#rss:decrypt.co_feed:a743c21d652a374d</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <summary>On September 3, OpenAI released GPT-6 Astra, priced at $10 per million input tokens and $50 per million output tokens—about 2.5 times the rate of GPT-5.6 Sol. Early testers demonstrated state-of-the-art spatial reconstruction, computer use, and agentic behavior, while also reporting weaker writing and professional benchmark scores than its predecessor.
+
+GPT-6 Astra represents a major step for agentic AI—models that can operate a computer themselves—and for turning text prompts into detailed 3D scenes. Its uneven performance across writing versus spatial and agentic tasks matters for developers, enterprises, and benchmark designers deciding how to evaluate and deploy frontier AI models.
+
+OpenAI reported a 72.6% completion rate on OSWorld 2.0 at roughly 40 minutes per task, versus 65.7% at 75 minutes for GPT-5.6 Sol, and said Astra is its first model rated at the critical threshold for cybersecurity. Testers quickly produced everything from a street-by-street Manhattan built in Unreal Engine to a photo-based Apple Park reconstruction in Blender.</summary>
+  </entry>
+  <entry>
+    <title>OpenAI Essay &#x27;An Alien Mind&#x27; Probes Agentic AI Risks and Alignment</title>
+    <link href="https://openai.com/index/an-alien-mind/"/>
+    <id>https://bmt.news/editions/2026-09-07/#hackernews:story:49588080</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <summary>OpenAI has published an essay titled &#x27;An Alien Mind&#x27; that examines the nature of agentic AI, weighs its possible benefits and dangers, and highlights how difficult it is to align and control autonomous systems. The post has sparked substantial public discussion, drawing hundreds of comments from the community.
+
+As a top AI laboratory, OpenAI&#x27;s framing of agentic AI carries weight in shaping industry practice and policy debates. This essay indicates that safety and alignment of increasingly autonomous agents are becoming central public concerns.
+
+The essay appears to address both the upside and the potential downsides of agentic AI, with alignment and control as central themes. Based on the supplied material, it does not name specific models or outline new technical proposals.</summary>
+  </entry>
+  <entry>
+    <title>A/I Collective Shuts Down, Citing US Pressure Over Sabotage Claims</title>
+    <link href="https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/"/>
+    <id>https://bmt.news/editions/2026-09-07/#hackernews:story:49586898</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <summary>Anarchist tech collective A/I (Autistici/Inventati) has announced that it is shutting down, saying U.S. government pressure has made further operation untenable. The closure comes amid official allegations that its encrypted tools and services amounted to material support for rail-sabotage cells across Europe.
+
+The shutdown removes one of the few long-running, non-commercial, encrypted communication platforms that activists, journalists, and dissidents have relied on. It also signals that privacy-enhancing services can become the target of legal and political pressure when their users commit violent acts, which has chilling implications for digital rights and free expression.
+
+A/I, also known as Autistici/Inventati, is an anti-commercial, collectively run project best known for free encrypted email and internet services. Commenters note that the legal theory appears to treat A/I&#x27;s user vetting plus tool provision as material support, a claim they dispute.</summary>
+  </entry>
   <entry>
     <title>AI Proves Fermat&#x27;s Last Theorem in 11 Days, Writing Longest Proof Ever</title>
     <link href="https://decrypt.co/377491/ai-solved-350-year-old-math-problem"/>
@@ -403,26 +436,5 @@ In this MoE design, a gating network routes each token to a small subset of expe
 AArch64 is the dominant architecture for mobile, embedded, and increasingly server systems, so proving seL4&#x27;s security properties on this platform can enable high-assurance deployments in safety-critical industries such as automotive, avionics, and defense. It also demonstrates that large-scale formal verification is becoming practical for real-world production kernels.
 
 The completed proofs cover seL4&#x27;s security properties on AArch64, but community comments note that they currently exclude MCS (mixed criticality system) extensions and are limited to unicore (single-core) configurations. The verification is a machine-code-level proof, yet side-channel timing attacks are not covered by the result.</summary>
-  </entry>
-  <entry>
-    <title>Slovakia uncovers Russian backdoor in traffic speed cameras</title>
-    <link href="https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/"/>
-    <id>https://bmt.news/editions/2026-08-24/#hackernews:story:49409200</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Slovak authorities discovered a hidden Russian backdoor in traffic speed cameras intended for national infrastructure, prompting an investigation before deployment. The cameras matched Russian-made models by appearance and serial number, contradicting earlier government denials. This discovery highlights severe supply-chain security risks in critical national infrastructure and carries strong geopolitical implications. It shows that state actors can compromise hardware before it reaches end users, affecting any country that procures foreign-made equipment. The cameras expose live video streams to anyone without a password who knows the broadcast IP address. Commenters also pointed out the lack of auditable open-source firmware and noted that SecureBoot should have been signed with the deployer&#x27;s keys rather than the manufacturer&#x27;s.</summary>
-  </entry>
-  <entry>
-    <title>Richard Cook&#x27;s 1998 Essay &#x27;How Complex Systems Fail&#x27; Draws Practitioner Praise</title>
-    <link href="https://how.complexsystems.fail/"/>
-    <id>https://bmt.news/editions/2026-08-24/#hackernews:story:49409473</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>Richard Cook&#x27;s 1998 essay &#x27;How Complex Systems Fail&#x27; is being widely shared and discussed on Hacker News, where practitioners connect its lessons to chaos engineering and Safety II. The discussion reframes the essay&#x27;s core argument that root cause analysis in complex systems is largely a fool&#x27;s errand. This essay is foundational for resilience engineering, site reliability, and modern chaos engineering practice. Its ideas challenge the industry&#x27;s default reliance on root cause analysis and encourage engineers to design systems that anticipate inevitable failure. Cook argues that complex systems run in a degraded mode almost all the time and continue functioning because of redundancy and human adaptability. He notes that &#x27;failure-free operations require experience with failure,&#x27; an idea later formalized in chaos engineering.</summary>
-  </entry>
-  <entry>
-    <title>AI Models Root Amazon Fire HD Tablet for $266; GLM-5.3 Finishes in a Day</title>
-    <link href="https://ericpardee.github.io/fire-hd-ownership/"/>
-    <id>https://bmt.news/editions/2026-08-24/#hackernews:story:49409073</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>An independent researcher spent $266 in AI API credits and used four AI models to reverse-engineer an Amazon Fire HD tablet, uncovering unpatched vulnerabilities and building a working root exploit. Chinese-model GLM-5.3 completed the job in a single day, while American frontier models declined the task due to safety guardrails. This demonstrates that large language models can now carry out sophisticated offensive security work with minimal human guidance, potentially democratizing vulnerability research. It also spotlights a behavioral divide between Chinese and American AI models on safety policies, a key debate in AI alignment. The exploit chain targets unpatched vulnerabilities in the Fire HD tablet&#x27;s firmware. According to Z.ai, GLM-5.3 shares its base model with GLM-5.2, with all improvements coming from post-training; open weights are expected on Hugging Face within two weeks of its announcement.</summary>
   </entry>
 </feed>
