@@ -790,6 +790,36 @@
     return aside;
   }
 
+  function ensureTitleOverview(root, articles, language) {
+    // Historical editions may predate structured throughlines. Preserve their
+    // original impact ordering and reuse only the first three published titles.
+    if (root.querySelector('.edition-overview')) return;
+    var host = root.querySelector('.feed-orientation');
+    if (!host || !articles.length) return;
+    var section = document.createElement('section');
+    section.className = 'edition-overview feed-title-overview';
+    section.setAttribute('aria-label', language === 'zh' ? '本期重点' : 'Edition highlights');
+    var title = document.createElement('p');
+    title.className = 'edition-overview-title';
+    title.textContent = language === 'zh' ? '本期重点' : 'Edition highlights';
+    var list = document.createElement('ol');
+    articles.slice(0, 3).forEach(function (article, index) {
+      var heading = article.querySelector('h2');
+      if (!heading || !article.id) return;
+      var row = document.createElement('li');
+      var number = document.createElement('span');
+      number.textContent = '0' + (index + 1);
+      var link = document.createElement('a');
+      link.href = '#' + article.id;
+      link.textContent = heading.textContent;
+      row.append(number, link);
+      list.appendChild(row);
+    });
+    if (!list.children.length) return;
+    section.append(title, list);
+    host.prepend(section);
+  }
+
   function enhanceDigest(root) {
     if (!root || root.dataset.enhanced === 'true') return;
     root.dataset.enhanced = 'true';
@@ -817,6 +847,7 @@
         staticStream,
         staticStats
       );
+      ensureTitleOverview(root, staticArticles, language);
       bindStaticFilters(root, staticArticles, staticTocItems);
       if (staticDetails) configureHeadlineDisclosure(staticDetails);
       if (overviewDetails) configureOverviewDisclosure(overviewDetails);
@@ -877,6 +908,7 @@
     layout.appendChild(aside);
 
     root.replaceChildren(layout);
+    ensureTitleOverview(root, articles, language);
     var statsScope = root.closest('.daily-day') || root;
     updateFeedStats(statsScope, articles, stream, runStats);
     setupFilters(filterHost, articles, language, function (category) {

@@ -46,6 +46,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
     {% assign resolved_rows = rows | where: "status", "resolved" %}
     {% assign closed_rows = rows | where: "status", "closed" %}
     {% assign disputed_rows = rows | where: "status", "disputed" %}
+    <div class="section-index-body">
     <section class="event-context" aria-labelledby="event-context-title">
       <header class="event-context-heading">
         <div>
@@ -182,6 +183,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
         </div>
       </aside>
     </div>
+    </div>
   {% else %}
     <p class="empty-state">
       {% if is_en %}No event has two verified material updates yet.{% else %}暂时没有出现两次已确认实质变化的事件。{% endif %}
@@ -193,6 +195,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
   {% if rows and rows.size > 0 %}
     {% assign ranking = site.data.entities.ranking | default: rows %}
     {% assign active_rows = rows | where_exp: "row", "row.recent > 0" %}
+    <div class="section-index-body">
     <section class="event-context entity-context" aria-labelledby="entity-context-title">
       <header class="event-context-heading">
         <div>
@@ -251,6 +254,14 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
                 {% if entity_identity and entity_identity != "" %}
                   <p class="entity-identity">{{ entity_identity | escape }}</p>
                 {% endif %}
+                {% assign entity_background = row.background_zh %}
+                {% if is_en %}{% assign entity_background = row.background_en %}{% endif %}
+                {% if entity_background and entity_background != "" %}
+                  <section class="entity-feed-overview">
+                    <h3>{% if is_en %}Background{% else %}实体背景{% endif %}</h3>
+                    <p>{{ entity_background | escape }}</p>
+                  </section>
+                {% endif %}
                 {% if latest_summary and latest_summary != "" %}
                   <section class="entity-feed-overview">
                     <h3>{% if is_en %}Latest overview{% else %}近期概览{% endif %}</h3>
@@ -308,6 +319,7 @@ Parameters: kind ("threads" | "entities" | "weekly"), language ("zh" | "en").
           <p>{% if is_en %}An entity appears after three published reports mention it. Ranking favors recent activity, then total coverage.{% else %}同一实体被三条已发布报道提及后进入列表；排序优先考虑近期活跃度，其次是累计报道量。{% endif %}</p>
         </div>
       </aside>
+    </div>
     </div>
   {% else %}
     <p class="empty-state">
