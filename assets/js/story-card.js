@@ -427,13 +427,24 @@ function buildLayout(context, story) {
 }
 
 function drawHeader(context) {
+  // Reuse the inline master path, without a network request or raster resampling.
+  const mark = document.querySelector('.site-brand .site-brand-mark path');
+  const markWidth = mark && typeof Path2D !== 'undefined' ? 30 : 0;
+  if (markWidth) {
+    context.save();
+    context.translate(METRICS.left, 11);
+    context.scale(24 / 512, 24 / 512);
+    context.fillStyle = COLORS.accent;
+    context.fill(new Path2D(mark.getAttribute('d')), 'evenodd');
+    context.restore();
+  }
   setFont(context, 16, 750, false, 0.6);
   context.fillStyle = COLORS.text;
-  context.fillText('BMTNews', METRICS.left, 17);
+  context.fillText('BMTNews', METRICS.left + markWidth, 17);
   const brandWidth = context.measureText('BMTNews').width;
   setFont(context, METRICS.small, 450, true, 0.7);
   context.fillStyle = COLORS.muted;
-  context.fillText('bmt.news', METRICS.left + brandWidth + 12, 20);
+  context.fillText('bmt.news', METRICS.left + markWidth + brandWidth + 12, 20);
 
   context.fillStyle = COLORS.border;
   context.fillRect(0, METRICS.headerHeight - 1, CARD_CSS_WIDTH, 1);
