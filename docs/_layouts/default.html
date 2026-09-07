@@ -56,7 +56,11 @@
     <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:type" content="{% if page.lang %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ '/assets/images/og-default.svg' | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/bmtnews-social-v1.png' | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ '/assets/images/bmtnews-social-v1.png' | absolute_url }}">
     <meta property="og:image:alt" content="BMTNews — Crypto, AI, and policy intelligence">
     {% include head-custom.html %}
   </head>
@@ -80,6 +84,7 @@
           data-i18n-aria-zh="BMTNews 首页"
           data-i18n-aria-en="BMTNews Home"
         >
+          {% include brand-mark.html %}
           <span class="site-brand-copy">
             <strong>BMTNews</strong>
           </span>
@@ -266,7 +271,7 @@
 
     <footer class="site-footer">
       <div>
-        <strong>BMTNews</strong>
+        <strong class="footer-brand">{% include brand-mark.html %} BMTNews</strong>
         <span
           data-i18n-zh="面向加密、AI 与宏观市场的每日情报雷达。"
           data-i18n-en="A daily intelligence radar for crypto, AI, and macro markets."
@@ -275,6 +280,7 @@
       <span>
         © {{ site.time | date: "%Y" }} BMTNews ·
         <a href="{{ '/about/' | relative_url }}">{% if interface_language == "en" %}About{% else %}关于{% endif %}</a> ·
+        <a href="{{ '/media-kit/' | relative_url }}">{% if interface_language == "en" %}Media kit{% else %}媒体资源{% endif %}</a> ·
         <a href="{{ '/developers/' | relative_url }}">API</a> ·
         <a href="{{ '/contact/' | relative_url }}">{% if interface_language == "en" %}Contact{% else %}联系{% endif %}</a> ·
         <a
