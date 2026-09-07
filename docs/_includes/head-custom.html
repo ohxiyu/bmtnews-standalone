@@ -80,6 +80,9 @@
 <link rel="stylesheet" href="{{ '/assets/css/pwa-reader.css' | relative_url }}?v={{ site.asset_version }}">
 <script type="module" src="{{ '/assets/js/pwa-reader.js' | relative_url }}?v={{ site.asset_version }}"></script>
 {% endunless %}
+{% unless page.page_type == "source_console" %}
+<link rel="stylesheet" href="{{ '/assets/css/editorial-ui.css' | relative_url }}?v={{ site.asset_version }}">
+{% endunless %}
 {% if page.page_type == "source_console" %}
 <script src="{{ '/assets/js/source-console.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
 {% endif %}

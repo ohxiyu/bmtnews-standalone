@@ -1213,6 +1213,8 @@ def build_entity_index_data(
                     else _LABELS["en"]["background_pending"]
                 ),
                 "profile_status": "verified" if profile else "pending",
+                "background_zh": profile.background_zh if profile else "",
+                "background_en": profile.background_en if profile else "",
                 "mentions": entity.count,
                 "days": len({record.date for record in records}),
                 "first_date": records[0].date,

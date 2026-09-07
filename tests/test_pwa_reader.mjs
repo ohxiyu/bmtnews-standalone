@@ -3,7 +3,13 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 
 const source = await readFile(new URL('../docs/assets/js/pwa-reader.js', import.meta.url), 'utf8');
-const {canonicalURL, storyKey, createReaderStore, isRead, installedMode, waitingUpdate} = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+const {canonicalURL, storyKey, createReaderStore, isRead, installedMode, waitingUpdate, readingSize} = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+test('reading size accepts only the shared supported presets', () => {
+  for (const size of [14, 15, 17, '14', '15', '17']) assert.equal(readingSize(size), String(size));
+  for (const size of [null, undefined, '', '99', '17px', 'initial', {}]) assert.equal(readingSize(size), '15');
+  assert.match(source, /setProperty\('--reading-size'/);
+  assert.match(source, /bmtnews-reading-size/);
+});
 function storage() {
   const data = new Map();
   return {get length() { return data.size; }, key: i => [...data.keys()][i], getItem: k => data.get(k) ?? null,
