@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_65f972f6d8c15c28/",
   "json": "https://bmt.news/api/events/evt_65f972f6d8c15c28.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
     "en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says"
   },
   "current_state": {
-    "zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
-    "en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims."
+    "zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
+    "en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim."
   },
   "first_seen_at": "2026-09-07T09:34:03.581519+00:00",
-  "last_updated_at": "2026-09-07T09:34:03.581519+00:00",
-  "last_material_change_at": "2026-09-07T09:34:03.581519+00:00",
+  "last_updated_at": "2026-09-07T17:50:05.285366+00:00",
+  "last_material_change_at": "2026-09-07T17:50:05.285366+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 3,
   "entities": [
     "coldcard",
     "galaxy",
@@ -29,6 +29,8 @@
   "topics": [
     "coldcard",
     "galaxy",
+    "galaxy-research",
+    "laundering",
     "theft"
   ],
   "updates": [
@@ -59,12 +61,57 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd"
+        "rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd",
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:fd4b96583feeca2c"
       ],
       "sources": [
         {
           "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/07/coldcard-hacker-moves-45-of-bitcoin-stolen-in-third-attack-wave",
+          "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_e117025cf87297a9",
+      "event_id": "evt_65f972f6d8c15c28",
+      "occurred_at": "2026-09-07T09:36:19Z",
+      "published_at": "2026-09-07T09:36:19Z",
+      "first_seen_at": "2026-09-07T17:50:05.285366Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Coldcard third-wave attacker moves 45% of stolen Bitcoin",
+      "title_en": "Coldcard third-wave attacker moves 45% of stolen Bitcoin",
+      "what_changed_zh": "攻击者通过THORChain和CoinJoin转移资金；所有波次中82%的被盗比特币仍留在原始地址；创建了293个多签金库，并已转移其中11个最大金库的资金；发现了一个可能属于另一受害者的未知金库。",
+      "what_changed_en": "Attacker moved funds via THORChain and CoinJoin; across all waves, 82% of stolen Bitcoin remains in original addresses; created 293 multisig vaults and moved funds from the 11 largest; identified a previously unknown vault likely holding another victim's funds.",
+      "current_state_zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
+      "current_state_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
+      "detailed_summary_zh": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
+      "detailed_summary_en": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:c79508931f63a9c3"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/coldcard-third-wave-attacker-moves-bitcoin-stolen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }

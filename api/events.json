@@ -2,6 +2,25 @@
   "version": 1,
   "events": [
     {
+      "event_id": "evt_65f972f6d8c15c28",
+      "url": "https://bmt.news/events/evt_65f972f6d8c15c28/",
+      "json": "https://bmt.news/api/events/evt_65f972f6d8c15c28.json",
+      "status": "developing",
+      "type": "security_incident",
+      "title": {
+        "zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+        "en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says"
+      },
+      "current_state": {
+        "zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
+        "en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim."
+      },
+      "first_seen_at": "2026-09-07T09:34:03.581519+00:00",
+      "last_material_change_at": "2026-09-07T17:50:05.285366+00:00",
+      "updates_count": 2,
+      "sources_count": 3
+    },
+    {
       "event_id": "evt_c8eeb2561cb07df2",
       "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/",
       "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json",
@@ -12,13 +31,13 @@
         "en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin"
       },
       "current_state": {
-        "zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
-        "en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control."
+        "zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
+        "en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring."
       },
       "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
-      "last_material_change_at": "2026-09-07T09:34:09.103537+00:00",
-      "updates_count": 3,
-      "sources_count": 7
+      "last_material_change_at": "2026-09-07T17:50:00.058019+00:00",
+      "updates_count": 6,
+      "sources_count": 12
     },
     {
       "event_id": "evt_59b2760922a84137",

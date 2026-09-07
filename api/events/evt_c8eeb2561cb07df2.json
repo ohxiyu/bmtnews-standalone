@@ -11,32 +11,41 @@
     "en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin"
   },
   "current_state": {
-    "zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
-    "en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control."
+    "zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
+    "en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring."
   },
   "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
-  "last_updated_at": "2026-09-07T09:34:13.838441+00:00",
-  "last_material_change_at": "2026-09-07T09:34:09.103537+00:00",
+  "last_updated_at": "2026-09-07T17:50:03.877221+00:00",
+  "last_material_change_at": "2026-09-07T17:50:00.058019+00:00",
   "confidence": 0.75,
-  "updates_count": 3,
-  "sources_count": 7,
+  "updates_count": 6,
+  "sources_count": 12,
   "entities": [
     "after",
+    "attacker",
+    "blockstream",
+    "broadcasts",
     "btc",
     "federation",
+    "how",
+    "keeps",
     "leaves",
     "liquid",
     "liquid-network",
     "paused",
+    "return",
     "sidechain",
+    "tokens",
     "wallet"
   ],
   "identifiers": [],
   "topics": [
     "blockstream",
     "btc",
+    "hack",
     "liquid",
     "liquid-network",
+    "recovery",
     "sidechain"
   ],
   "updates": [
@@ -141,7 +150,8 @@
         "rss:thedefiant.io_api_feed:0023433b27f57fec",
         "google_news:article:1763e2b7a7d7cf05",
         "gdelt:article:20260907T051500Z::https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
-        "gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
+        "gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
+        "gdelt:article:20260907T051500Z::https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html"
       ],
       "sources": [
         {
@@ -165,6 +175,12 @@
         {
           "url": "https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
           "label": "thestar.com.my",
+          "source_type": "gdelt",
+          "official": false
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+          "label": "finance.yahoo.com",
           "source_type": "gdelt",
           "official": false
         }
@@ -197,12 +213,133 @@
       "references": [],
       "confidence": 0.95,
       "story_ids": [
-        "rss:cointelegraph.com_rss:9c816436a3a93fd3"
+        "rss:cointelegraph.com_rss:9c816436a3a93fd3",
+        "rss:decrypt.co_feed:174f57f5d36b3dbb"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377528/purported-white-hat-hackers-withdraw-320m-in-bitcoin-from-liquid",
+          "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_20b32ffc42979a2f",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "occurred_at": "2026-09-07T12:20:26Z",
+      "published_at": "2026-09-07T12:20:26Z",
+      "first_seen_at": "2026-09-07T17:50:00.058019Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "How 4,000 BTC walked out of Blockstream’s Liquid Network",
+      "title_en": "How 4,000 BTC walked out of Blockstream’s Liquid Network",
+      "what_changed_zh": "详细披露了攻击手法：攻击者利用Elements软件中的校验漏洞，通过SideSwap的PAK授权从联邦钱包中提取了约4000 BTC，绕过了紧急备用密钥路径，所有输入均使用11/15签名成功完成交易。",
+      "what_changed_en": "Detailed the attack method: the attacker exploited a validation flaw in the Elements software, using SideSwap's PAK authorization to withdraw ~4,000 BTC from the federation wallet, bypassing the emergency backup key path, with all inputs spending 11 of the 15 required signatures.",
+      "current_state_zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 谈判并承诺归还资金但未归还，大部分BTC仍由黑客控制，具体攻击细节已披露。",
+      "current_state_en": "Liquid Network remains paused; white-hat hackers have negotiated but not yet returned funds, with most BTC still under their control; detailed attack method now disclosed.",
+      "detailed_summary_zh": "Blockstream's Liquid Network was hacked, with approximately 4,000 BTC (~$320M) drained from its federation wallet via a faulty LBTC redemption, prompting a pause of the sidechain.",
+      "detailed_summary_en": "Blockstream's Liquid Network was hacked, with approximately 4,000 BTC (~$320M) drained from its federation wallet via a faulty LBTC redemption, prompting a pause of the sidechain.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 9.0,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:protos.com_feed_:cb619437abd2da25"
+      ],
+      "sources": [
+        {
+          "url": "https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/",
+          "label": "Protos",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_46b1b1baa58496b2",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "occurred_at": "2026-09-07T13:05:17Z",
+      "published_at": "2026-09-07T13:05:17Z",
+      "first_seen_at": "2026-09-07T17:49:59.195236Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Tokens created out of thin air may explain how $320 million in Bitcoin left the Liquid sidechain",
+      "title_en": "Tokens created out of thin air may explain how $320 million in Bitcoin left the Liquid sidechain",
+      "what_changed_zh": "研究人员怀疑Liquid侧链中的验证缓存缺陷允许无支持的L-BTC兑换为真实BTC，提供了更具体的攻击机制解释，包括缓存键碰撞让无效交易绕过range-proof检查，并报告了节点分裂的可能原因。",
+      "what_changed_en": "Researchers suspect a validation cache flaw in the Liquid sidechain allowed unbacked L-BTC to be redeemed for real Bitcoin, providing a more specific explanation of the attack mechanism, including a cache-key collision that let invalid transactions bypass range-proof checks, and reporting a possible node split.",
+      "current_state_zh": "Liquid 网络仍暂停；白帽黑客尚未归还资金，大部分BTC仍在控制中；攻击机制已进一步明确，涉及验证缓存缺陷和节点分裂，但尚未有官方确认的补丁或资金归还。",
+      "current_state_en": "Liquid Network remains paused; white-hat hackers have not yet returned funds, with most BTC still under their control; the attack mechanism is now further clarified involving a validation cache flaw and node split, but no official patch or return of funds has been confirmed.",
+      "detailed_summary_zh": "Researchers suspect a validation cache flaw in the Liquid sidechain allowed unbacked L-BTC to be redeemed for real Bitcoin, potentially explaining the $320 million loss.",
+      "detailed_summary_en": "Researchers suspect a validation cache flaw in the Liquid sidechain allowed unbacked L-BTC to be redeemed for real Bitcoin, potentially explaining the $320 million loss.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:cc33351408a5953b"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/tokens-created-out-of-thin-air-may-explain-how-320-million-in-bitcoin-left-a-sidechain/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_51999ea55e828ae8",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "occurred_at": "2026-09-07T16:06:06Z",
+      "published_at": "2026-09-07T16:06:06Z",
+      "first_seen_at": "2026-09-07T17:49:58.342722Z",
+      "time_precision": "published",
+      "update_type": "response",
+      "material_change": true,
+      "title_zh": "Liquid Attacker Broadcasts Return Of 3,400 BTC, Keeps 598",
+      "title_en": "Liquid Attacker Broadcasts Return Of 3,400 BTC, Keeps 598",
+      "what_changed_zh": "攻击者广播了一笔交易，将3,400 BTC返还给Liquid联邦钱包，同时保留598.50 BTC；该交易尚未确认且标记为可替换，双方均未公开关于此次分拆的说明。",
+      "what_changed_en": "The attacker broadcast a transaction returning 3,400 BTC to the Liquid federation wallet while keeping 598.50 BTC; the transaction is unconfirmed and flagged as replaceable, and neither side has published anything about the split.",
+      "current_state_zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
+      "current_state_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
+      "detailed_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
+      "detailed_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:8f1088304a7f689f"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }

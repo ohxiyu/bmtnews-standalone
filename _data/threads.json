@@ -1,15 +1,66 @@
 {
   "threads": [
     {
+      "thread_id": "evt_65f972f6d8c15c28",
+      "event_id": "evt_65f972f6d8c15c28",
+      "latest_date": "2026-09-08",
+      "latest_at": "2026-09-08T01:50:05.285366+08:00",
+      "first_date": "2026-09-07",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+      "title_en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+      "summary_zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
+      "summary_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
+      "latest_update_zh": "攻击者通过THORChain和CoinJoin转移资金；所有波次中82%的被盗比特币仍留在原始地址；创建了293个多签金库，并已转移其中11个最大金库的资金；发现了一个可能属于另一受害者的未知金库。",
+      "latest_update_en": "Attacker moved funds via THORChain and CoinJoin; across all waves, 82% of stolen Bitcoin remains in original addresses; created 293 multisig vaults and moved funds from the 11 largest; identified a previously unknown vault likely holding another victim's funds.",
+      "background_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "background_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "latest_summary_zh": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
+      "latest_summary_en": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/07/coldcard-hacker-moves-45-of-bitcoin-stolen-in-third-attack-wave",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/coldcard-third-wave-attacker-moves-bitcoin-stolen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
       "thread_id": "evt_c8eeb2561cb07df2",
       "event_id": "evt_c8eeb2561cb07df2",
-      "latest_date": "2026-09-07",
-      "latest_at": "2026-09-07T17:34:09.103537+08:00",
+      "latest_date": "2026-09-08",
+      "latest_at": "2026-09-08T01:50:00.058019+08:00",
       "first_date": "2026-09-07",
-      "days": 1,
-      "entries": 3,
-      "updates_count": 3,
-      "sources_count": 7,
+      "days": 2,
+      "entries": 6,
+      "updates_count": 6,
+      "sources_count": 12,
       "category": "crypto",
       "status": "developing",
       "status_zh": "进展中",
@@ -19,14 +70,14 @@
       "event_type_en": "Security incident",
       "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
-      "summary_zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
-      "summary_en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control.",
-      "latest_update_zh": "白帽黑客通过链上消息与 Blockstream 进行联系，并承诺在漏洞修复及节点更新后归还大部分比特币，但目前资金尚未归还。同时披露了更多谈判细节。",
-      "latest_update_en": "White-hat hackers contacted Blockstream via on-chain messages, promising to return most of the Bitcoin after the vulnerability is patched and nodes updated; funds have not yet been returned. Additional negotiation details were disclosed.",
+      "summary_zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
+      "summary_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
+      "latest_update_zh": "攻击者广播了一笔交易，将3,400 BTC返还给Liquid联邦钱包，同时保留598.50 BTC；该交易尚未确认且标记为可替换，双方均未公开关于此次分拆的说明。",
+      "latest_update_en": "The attacker broadcast a transaction returning 3,400 BTC to the Liquid federation wallet while keeping 598.50 BTC; the transaction is unconfirmed and flagged as replaceable, and neither side has published anything about the split.",
       "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
       "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
-      "latest_summary_zh": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
-      "latest_summary_en": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
+      "latest_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
+      "latest_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
       "discussion_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
       "discussion_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
       "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
@@ -64,8 +115,33 @@
           "official": false
         },
         {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+          "title": "finance.yahoo.com",
+          "official": false
+        },
+        {
           "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377528/purported-white-hat-hackers-withdraw-320m-in-bitcoin-from-liquid",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/",
+          "title": "Protos",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/tokens-created-out-of-thin-air-may-explain-how-320-million-in-bitcoin-left-a-sidechain/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
+          "title": "The Defiant",
           "official": false
         }
       ],
@@ -672,13 +748,13 @@
     {
       "thread_id": "evt_c8eeb2561cb07df2",
       "event_id": "evt_c8eeb2561cb07df2",
-      "latest_date": "2026-09-07",
-      "latest_at": "2026-09-07T17:34:09.103537+08:00",
+      "latest_date": "2026-09-08",
+      "latest_at": "2026-09-08T01:50:00.058019+08:00",
       "first_date": "2026-09-07",
-      "days": 1,
-      "entries": 3,
-      "updates_count": 3,
-      "sources_count": 7,
+      "days": 2,
+      "entries": 6,
+      "updates_count": 6,
+      "sources_count": 12,
       "category": "crypto",
       "status": "developing",
       "status_zh": "进展中",
@@ -688,14 +764,14 @@
       "event_type_en": "Security incident",
       "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
-      "summary_zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
-      "summary_en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control.",
-      "latest_update_zh": "白帽黑客通过链上消息与 Blockstream 进行联系，并承诺在漏洞修复及节点更新后归还大部分比特币，但目前资金尚未归还。同时披露了更多谈判细节。",
-      "latest_update_en": "White-hat hackers contacted Blockstream via on-chain messages, promising to return most of the Bitcoin after the vulnerability is patched and nodes updated; funds have not yet been returned. Additional negotiation details were disclosed.",
+      "summary_zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
+      "summary_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
+      "latest_update_zh": "攻击者广播了一笔交易，将3,400 BTC返还给Liquid联邦钱包，同时保留598.50 BTC；该交易尚未确认且标记为可替换，双方均未公开关于此次分拆的说明。",
+      "latest_update_en": "The attacker broadcast a transaction returning 3,400 BTC to the Liquid federation wallet while keeping 598.50 BTC; the transaction is unconfirmed and flagged as replaceable, and neither side has published anything about the split.",
       "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
       "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
-      "latest_summary_zh": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
-      "latest_summary_en": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
+      "latest_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
+      "latest_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
       "discussion_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
       "discussion_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
       "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
@@ -733,8 +809,33 @@
           "official": false
         },
         {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+          "title": "finance.yahoo.com",
+          "official": false
+        },
+        {
           "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377528/purported-white-hat-hackers-withdraw-320m-in-bitcoin-from-liquid",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/",
+          "title": "Protos",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/tokens-created-out-of-thin-air-may-explain-how-320-million-in-bitcoin-left-a-sidechain/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
+          "title": "The Defiant",
           "official": false
         }
       ],
@@ -813,6 +914,57 @@
         {
           "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TS094NGgzR2NuUUZndHp6RFpxX1RvSEpJTUQwaURhZ0c4bTVIeF9MSkhVdEFkR1h1eGtRRWppRXpJaTF3STN4cEdPWElNLTFLN1dMbEdMNW00STR5aWVvck95UXNlenNIT2lVRm1aU3M?oc=5",
           "title": "CryptoTicker",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_65f972f6d8c15c28",
+      "event_id": "evt_65f972f6d8c15c28",
+      "latest_date": "2026-09-08",
+      "latest_at": "2026-09-08T01:50:05.285366+08:00",
+      "first_date": "2026-09-07",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+      "title_en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+      "summary_zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
+      "summary_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
+      "latest_update_zh": "攻击者通过THORChain和CoinJoin转移资金；所有波次中82%的被盗比特币仍留在原始地址；创建了293个多签金库，并已转移其中11个最大金库的资金；发现了一个可能属于另一受害者的未知金库。",
+      "latest_update_en": "Attacker moved funds via THORChain and CoinJoin; across all waves, 82% of stolen Bitcoin remains in original addresses; created 293 multisig vaults and moved funds from the 11 largest; identified a previously unknown vault likely holding another victim's funds.",
+      "background_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "background_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "latest_summary_zh": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
+      "latest_summary_en": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/07/coldcard-hacker-moves-45-of-bitcoin-stolen-in-third-attack-wave",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/coldcard-third-wave-attacker-moves-bitcoin-stolen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
           "official": false
         }
       ],
