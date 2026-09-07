@@ -23537,7 +23537,7 @@
       "first_seen_at": "2026-09-06T22:13:15.375035Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-07T00:31:17.854172Z",
-      "last_updated_at": "2026-09-07T00:31:17.854172Z",
+      "last_updated_at": "2026-09-07T05:08:27.707146Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -23640,10 +23640,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet"
+            },
+            {
+              "label": "blockchain.news",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFBiTFJfSDk3c3RTT1dDS1VrWmtZN2ZSYmpXNDhST1RJOTh0cWt4YU5ydDdDOEV4ZXVHTFhSSGxKZW9RU2lXaXhzX2tSRlJoUURkU3c4ZjFfcXdrOXZXNWI3Ty0xY1d5Z1hCbEFfNFdYSTh5YndPWG85V0R6bFZsN1JLV2M1aFVPbEh0SW5R?oc=5"
             }
           ],
           "story_ids": [
-            "rss:thedefiant.io_api_feed:0023433b27f57fec"
+            "rss:thedefiant.io_api_feed:0023433b27f57fec",
+            "google_news:article:1763e2b7a7d7cf05"
           ],
           "time_precision": "published",
           "title_en": "Liquid Sidechain Paused After 3,998 BTC Leaves Federation Wallet",
@@ -23652,6 +23659,417 @@
           "update_type": "confirmation",
           "what_changed_en": "Specified that approximately 3,998 BTC (worth ~$320 million) were withdrawn to a single address, with the recipient writing 'we are whitehats' in the transaction. This nearly depleted the federation wallet's Bitcoin reserves, potentially preventing peg-outs until the funds are returned.",
           "what_changed_zh": "具体指出约 3,998 BTC（价值约 3.2 亿美元）被提取至单一地址，收款方在交易中留言“我们是白帽黑客”。此举使联邦钱包的比特币储备几乎归零，可能导致在资金归还前无法进行peg-out。"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+      "current_state_zh": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+      "entities": [
+        "interpreter",
+        "making",
+        "python"
+      ],
+      "event_id": "evt_9f0e23a6fe2428f3",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-07T05:08:27.717336Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T05:08:27.717336Z",
+      "last_updated_at": "2026-09-07T05:08:27.717336Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Making a Python interpreter in 1024 bytes",
+      "title_zh": "Making a Python interpreter in 1024 bytes",
+      "topics": [
+        "code-golf",
+        "hacker-news",
+        "interpreter",
+        "programming",
+        "python"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+          "current_state_zh": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+          "detailed_summary_en": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+          "detailed_summary_zh": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+          "event_id": "evt_9f0e23a6fe2428f3",
+          "first_seen_at": "2026-09-07T05:08:27.717336Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T23:14:08Z",
+          "published_at": "2026-09-06T23:14:08Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49591876"
+            }
+          ],
+          "sources": [
+            {
+              "label": "azhenley",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://austinhenley.com/blog/python1024.html"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49591876"
+          ],
+          "time_precision": "published",
+          "title_en": "Making a Python interpreter in 1024 bytes",
+          "title_zh": "Making a Python interpreter in 1024 bytes",
+          "update_id": "upd_92caf7809dfaa5ab",
+          "update_type": "initial",
+          "what_changed_en": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation.",
+          "what_changed_zh": "The article presents a Python interpreter squeezed into 1024 bytes of C, demonstrating extreme code golfing and minimalistic language implementation."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+      "current_state_zh": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+      "entities": [
+        "anubis",
+        "webassembly"
+      ],
+      "event_id": "evt_15ffad2005f1b302",
+      "event_type": "other",
+      "first_seen_at": "2026-09-07T05:08:27.717380Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T05:08:27.717380Z",
+      "last_updated_at": "2026-09-07T05:08:27.717380Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "It took a year to ship WebAssembly in Anubis",
+      "title_zh": "It took a year to ship WebAssembly in Anubis",
+      "topics": [
+        "browser-compatibility",
+        "open-source",
+        "software-engineering",
+        "webassembly"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+          "current_state_zh": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+          "detailed_summary_en": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+          "detailed_summary_zh": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+          "event_id": "evt_15ffad2005f1b302",
+          "first_seen_at": "2026-09-07T05:08:27.717380Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-06T20:32:38Z",
+          "published_at": "2026-09-06T20:32:38Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49590611"
+            }
+          ],
+          "sources": [
+            {
+              "label": "xena",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49590611"
+          ],
+          "time_precision": "published",
+          "title_en": "It took a year to ship WebAssembly in Anubis",
+          "title_zh": "It took a year to ship WebAssembly in Anubis",
+          "update_id": "upd_371760d9ea577034",
+          "update_type": "initial",
+          "what_changed_en": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers.",
+          "what_changed_zh": "The author details the year-long effort to add WebAssembly support to Anubis, emphasizing backwards compatibility and the challenges of supporting older browsers."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+      "current_state_zh": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+      "entities": [
+        "iranian",
+        "oil"
+      ],
+      "event_id": "evt_bb9504a622c290c3",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-07T05:08:28.898098Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T05:08:28.898098Z",
+      "last_updated_at": "2026-09-07T05:08:28.898098Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Oil up, bitcoin down as U.S. strikes Iranian crude carriers",
+      "title_zh": "Oil up, bitcoin down as U.S. strikes Iranian crude carriers",
+      "topics": [
+        "geopolitics",
+        "market-impact",
+        "oil"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+          "current_state_zh": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+          "detailed_summary_en": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+          "detailed_summary_zh": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+          "event_id": "evt_bb9504a622c290c3",
+          "first_seen_at": "2026-09-07T05:08:28.898098Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T04:44:16Z",
+          "published_at": "2026-09-07T04:44:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/07/oil-up-bitcoin-down-as-u-s-strikes-iranian-crude-carriers"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:0ad917e28116f59b"
+          ],
+          "time_precision": "published",
+          "title_en": "Oil up, bitcoin down as U.S. strikes Iranian crude carriers",
+          "title_zh": "Oil up, bitcoin down as U.S. strikes Iranian crude carriers",
+          "update_id": "upd_c66ad88d49cd75f8",
+          "update_type": "initial",
+          "what_changed_en": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets.",
+          "what_changed_zh": "U.S. strikes on Iranian crude carriers push oil prices up while bitcoin falls, reflecting risk-off sentiment in markets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+      "current_state_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+      "entities": [
+        "hack",
+        "hackers"
+      ],
+      "event_id": "evt_79a9bd1c0f79b57c",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-07T05:08:28.934440Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T05:08:28.934440Z",
+      "last_updated_at": "2026-09-07T05:08:28.934440Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin network used by exchanges hit by $320 million exploit. Hackers claim they're the 'good guys'",
+      "title_zh": "Bitcoin network used by exchanges hit by $320 million exploit. Hackers claim they're the 'good guys'",
+      "topics": [
+        "hack"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+          "current_state_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+          "detailed_summary_en": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+          "detailed_summary_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+          "event_id": "evt_79a9bd1c0f79b57c",
+          "first_seen_at": "2026-09-07T05:08:28.934440Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T03:43:12Z",
+          "published_at": "2026-09-07T03:43:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:6191bdd9469e9c21"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin network used by exchanges hit by $320 million exploit. Hackers claim they're the 'good guys'",
+          "title_zh": "Bitcoin network used by exchanges hit by $320 million exploit. Hackers claim they're the 'good guys'",
+          "update_id": "upd_3371ce7bc47a77c1",
+          "update_type": "initial",
+          "what_changed_en": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+          "what_changed_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+      "current_state_zh": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+      "entities": [
+        "bitcoin-etf",
+        "etfs",
+        "institutional-demand",
+        "spot"
+      ],
+      "event_id": "evt_5ae9ac7d803254f1",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-07T05:08:29.075924Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T05:08:29.075924Z",
+      "last_updated_at": "2026-09-07T05:08:29.075924Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Spot bitcoin ETFs pull in $987 million last week as institutional demand recovers",
+      "title_zh": "Spot bitcoin ETFs pull in $987 million last week as institutional demand recovers",
+      "topics": [
+        "bitcoin-etf",
+        "institutional-demand",
+        "market-inflows"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+          "current_state_zh": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+          "detailed_summary_en": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+          "detailed_summary_zh": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+          "event_id": "evt_5ae9ac7d803254f1",
+          "first_seen_at": "2026-09-07T05:08:29.075924Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T02:15:55Z",
+          "published_at": "2026-09-07T02:15:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/markets/2026-09-06-bitcoin-etfs-987-million-weekly-inflow-413639"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:1921158092a9abf6"
+          ],
+          "time_precision": "published",
+          "title_en": "Spot bitcoin ETFs pull in $987 million last week as institutional demand recovers",
+          "title_zh": "Spot bitcoin ETFs pull in $987 million last week as institutional demand recovers",
+          "update_id": "upd_b06276b6a6e5c0c8",
+          "update_type": "initial",
+          "what_changed_en": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025.",
+          "what_changed_zh": "Spot bitcoin ETFs saw $987 million in net inflows last week, contributing to their largest monthly inflows ($3.52B) since September 2025."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+      "current_state_zh": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+      "entities": [
+        "harmony",
+        "layer-1",
+        "one"
+      ],
+      "event_id": "evt_887037fc915d4b1e",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-07T05:08:33.030480Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T05:08:33.030480Z",
+      "last_updated_at": "2026-09-07T05:08:33.030480Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Harmony proposes shutting down layer 1, migrating ONE to Ethereum",
+      "title_zh": "Harmony proposes shutting down layer 1, migrating ONE to Ethereum",
+      "topics": [
+        "harmony",
+        "layer-1",
+        "migration"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+          "current_state_zh": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+          "detailed_summary_en": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+          "detailed_summary_zh": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+          "event_id": "evt_887037fc915d4b1e",
+          "first_seen_at": "2026-09-07T05:08:33.030480Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T05:00:49Z",
+          "published_at": "2026-09-07T05:00:49Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/harmony-proposes-shutting-down-layer-1-migrating-one-to-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:7cbe23aef9c8714f"
+          ],
+          "time_precision": "published",
+          "title_en": "Harmony proposes shutting down layer 1, migrating ONE to Ethereum",
+          "title_zh": "Harmony proposes shutting down layer 1, migrating ONE to Ethereum",
+          "update_id": "upd_44f1c46b457e1f6c",
+          "update_type": "initial",
+          "what_changed_en": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit.",
+          "what_changed_zh": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit."
         }
       ]
     }
