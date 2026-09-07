@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/",
   "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
     "en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin"
   },
   "current_state": {
-    "zh": "Liquid 网络在自称白帽黑客提取约 3,998 BTC 至单一地址后仍处于暂停状态，联邦钱包储备接近归零，或需等待资金归还才能恢复脱钩提现。",
-    "en": "Liquid Network remains paused after self-identified white-hat hackers withdrew ~3,998 BTC to a single address, leaving the federation wallet's reserves near zero and potentially preventing peg-outs until funds are returned."
+    "zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
+    "en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control."
   },
   "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
-  "last_updated_at": "2026-09-07T05:08:27.707146+00:00",
-  "last_material_change_at": "2026-09-07T00:31:17.854172+00:00",
+  "last_updated_at": "2026-09-07T09:34:13.838441+00:00",
+  "last_material_change_at": "2026-09-07T09:34:09.103537+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 3,
+  "updates_count": 3,
+  "sources_count": 7,
   "entities": [
     "after",
     "btc",
@@ -63,7 +63,7 @@
       "community_discussion_en": "",
       "market_impact_zh": "这一事件暴露了侧链或桥接资产的风险：交易所已暂停LBTC充值与提现，这可能减少LBTC交易对的流动性，并加剧市场参与者对交易对手方及安全性的担忧。该事件也可能影响市场对比特币二层产品的信心，但具体市场影响将取决于网络恢复的速度与调查结果。",
       "market_impact_en": "The incident exposes risks in sidechain or bridged assets: exchanges have already suspended LBTC deposits and withdrawals, which can diminish available liquidity for LBTC trading pairs and raise counterparty and security concerns among market participants. This could also color sentiment toward Bitcoin layer-2 products, though the concrete market impact depends on the speed of the network's recovery and investigation outcomes.",
-      "importance_score": 8.5,
+      "importance_score": 9.0,
       "references": [
         {
           "url": "https://docs.liquid.net/docs/technical-overview",
@@ -80,13 +80,20 @@
       ],
       "confidence": 0.75,
       "story_ids": [
-        "rss:www.theblock.co_rss.xml:d1e5d6fc899ed822"
+        "rss:www.theblock.co_rss.xml:d1e5d6fc899ed822",
+        "gdelt:article:20260907T064500Z::https://www.ksl.com:443/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
       ],
       "sources": [
         {
           "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626",
           "label": "The Block",
           "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
+          "label": "ksl.com",
+          "source_type": "gdelt",
           "official": false
         }
       ]
@@ -114,7 +121,7 @@
       "community_discussion_en": "",
       "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
       "market_impact_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
-      "importance_score": 8.5,
+      "importance_score": 9.0,
       "references": [
         {
           "url": "https://blockstream.com/liquid/",
@@ -132,7 +139,9 @@
       "confidence": 0.95,
       "story_ids": [
         "rss:thedefiant.io_api_feed:0023433b27f57fec",
-        "google_news:article:1763e2b7a7d7cf05"
+        "google_news:article:1763e2b7a7d7cf05",
+        "gdelt:article:20260907T051500Z::https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
+        "gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
       ],
       "sources": [
         {
@@ -145,6 +154,56 @@
           "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFBiTFJfSDk3c3RTT1dDS1VrWmtZN2ZSYmpXNDhST1RJOTh0cWt4YU5ydDdDOEV4ZXVHTFhSSGxKZW9RU2lXaXhzX2tSRlJoUURkU3c4ZjFfcXdrOXZXNWI3Ty0xY1d5Z1hCbEFfNFdYSTh5YndPWG85V0R6bFZsN1JLV2M1aFVPbEh0SW5R?oc=5",
           "label": "blockchain.news",
           "source_type": "google_news",
+          "official": false
+        },
+        {
+          "url": "https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
+          "label": "lufkindailynews.com",
+          "source_type": "gdelt",
+          "official": false
+        },
+        {
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
+          "label": "thestar.com.my",
+          "source_type": "gdelt",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_95653bdffbde14c0",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "occurred_at": "2026-09-07T05:40:05Z",
+      "published_at": "2026-09-07T05:40:05Z",
+      "first_seen_at": "2026-09-07T09:34:09.103537Z",
+      "time_precision": "published",
+      "update_type": "response",
+      "material_change": true,
+      "title_zh": "Bitcoin sidechain Liquid pauses after purported ‘white hats’ withdraw $320M in BTC",
+      "title_en": "Bitcoin sidechain Liquid pauses after purported ‘white hats’ withdraw $320M in BTC",
+      "what_changed_zh": "白帽黑客通过链上消息与 Blockstream 进行联系，并承诺在漏洞修复及节点更新后归还大部分比特币，但目前资金尚未归还。同时披露了更多谈判细节。",
+      "what_changed_en": "White-hat hackers contacted Blockstream via on-chain messages, promising to return most of the Bitcoin after the vulnerability is patched and nodes updated; funds have not yet been returned. Additional negotiation details were disclosed.",
+      "current_state_zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
+      "current_state_en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control.",
+      "detailed_summary_zh": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
+      "detailed_summary_en": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:9c816436a3a93fd3"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
           "official": false
         }
       ]

@@ -22645,7 +22645,7 @@
       "first_seen_at": "2026-09-06T15:37:19.229838Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-06T15:37:19.229838Z",
-      "last_updated_at": "2026-09-06T22:13:13.195937Z",
+      "last_updated_at": "2026-09-07T09:34:01.566150Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -22703,11 +22703,25 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0xZlJkdVlPcS1TZTBMY1ZEUFRJYndDQV82XzlTTmxPTGsydU5fRnhvS0dPTEx5b1NoT2M2dTBXLTFKSnA3b1gxZ1k2ZHB1MzBWZk1RcXVBcw?oc=5"
+            },
+            {
+              "label": "Blockonomi",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZVMxWjhpejdlS29veVZXZXVBYkZhZTFJT1Q4US1DbVhFTlV2RWs3aTlrUzVGU25EZWxXLTRwcEZncDBkLUxYaWY2RURvdnpMVUFudWNYaWkyMHVwcGpIdHJIODdCNXFhZFF3eGpqanU5U1VCOTB4eUVZZk1ETE0tZ1E1MU1CTWhQRU1EbTMyelBuNUtiSWRkMHZMek9kSGdqUFE?oc=5"
+            },
+            {
+              "label": "coingabbar.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSEtpNERFZ0ZQazY5UlFrSktlemFhSHl0TVhiVTVQa0hvMktqTS0yVDdoVlhYZm92am55TnRTX3pUWmlRQ3ZKeVU4N2txTS1MMFJIZ3AyU25LSnp0UldxNDQ2cTl3cTM0YzBJYmRkajZqTG91UGlwVE13SnVrLUZXOUpSMHN6STlZVXlDSXd5LXNxSF9VRXdZYXItelJ3cW9FZ3pB?oc=5"
             }
           ],
           "story_ids": [
             "google_news:article:4c5804c92cbb4a72",
-            "google_news:article:c570af7d3284df38"
+            "google_news:article:c570af7d3284df38",
+            "google_news:article:f79ce7a60ba56545",
+            "google_news:article:7371785549767bcf"
           ],
           "time_precision": "published",
           "title_en": "Kraken launches OpenAI and Anthropic pre-IPO perps - Crypto News",
@@ -23519,8 +23533,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Liquid Network remains paused after self-identified white-hat hackers withdrew ~3,998 BTC to a single address, leaving the federation wallet's reserves near zero and potentially preventing peg-outs until funds are returned.",
-      "current_state_zh": "Liquid 网络在自称白帽黑客提取约 3,998 BTC 至单一地址后仍处于暂停状态，联邦钱包储备接近归零，或需等待资金归还才能恢复脱钩提现。",
+      "current_state_en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control.",
+      "current_state_zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
       "entities": [
         "after",
         "btc",
@@ -23536,11 +23550,11 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-06T22:13:15.375035Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-07T00:31:17.854172Z",
-      "last_updated_at": "2026-09-07T05:08:27.707146Z",
+      "last_material_change_at": "2026-09-07T09:34:09.103537Z",
+      "last_updated_at": "2026-09-07T09:34:13.838441Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "topics": [
@@ -23563,7 +23577,7 @@
           "detailed_summary_zh": "Liquid Network pauses operations after purported white-hat hackers withdraw $320 million in bitcoin, prompting exchanges to suspend LBTC deposits and withdrawals.",
           "event_id": "evt_c8eeb2561cb07df2",
           "first_seen_at": "2026-09-06T22:13:15.375035Z",
-          "importance_score": 8.5,
+          "importance_score": 9.0,
           "market_impact_en": "The incident exposes risks in sidechain or bridged assets: exchanges have already suspended LBTC deposits and withdrawals, which can diminish available liquidity for LBTC trading pairs and raise counterparty and security concerns among market participants. This could also color sentiment toward Bitcoin layer-2 products, though the concrete market impact depends on the speed of the network's recovery and investigation outcomes.",
           "market_impact_zh": "这一事件暴露了侧链或桥接资产的风险：交易所已暂停LBTC充值与提现，这可能减少LBTC交易对的流动性，并加剧市场参与者对交易对手方及安全性的担忧。该事件也可能影响市场对比特币二层产品的信心，但具体市场影响将取决于网络恢复的速度与调查结果。",
           "material_change": true,
@@ -23589,10 +23603,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626"
+            },
+            {
+              "label": "ksl.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
             }
           ],
           "story_ids": [
-            "rss:www.theblock.co_rss.xml:d1e5d6fc899ed822"
+            "rss:www.theblock.co_rss.xml:d1e5d6fc899ed822",
+            "gdelt:article:20260907T064500Z::https://www.ksl.com:443/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
           ],
           "time_precision": "published",
           "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
@@ -23614,7 +23635,7 @@
           "detailed_summary_zh": "Blockstream 旗下 Liquid 侧链在几乎全部用于支持 L-BTC 的比特币储备（约 3,998 BTC）被提取至一个单一地址后，暂停了其桥接节点。收款方在交易中写入“我们是白帽黑客”。\n\n此事件影响重大，因为 L-BTC 是一种 1:1 比特币锚定资产，其锚定的安全性取决于联邦钱包的储备。如果被提取的比特币无法妥善保管并归还，Liquid 及同类侧链的信任可能受到动摇。\n\n该笔转账使联邦钱包中的比特币储备几乎归零，在资金归还前可能无法进行 peg-out（脱钩提现）。地址所有者的“我们是白帽黑客”信息暗示这是一次声明的救援行动，但尚未有官方确认发布。",
           "event_id": "evt_c8eeb2561cb07df2",
           "first_seen_at": "2026-09-07T00:31:17.854172Z",
-          "importance_score": 8.5,
+          "importance_score": 9.0,
           "market_impact_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
           "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
           "material_change": true,
@@ -23646,11 +23667,25 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFBiTFJfSDk3c3RTT1dDS1VrWmtZN2ZSYmpXNDhST1RJOTh0cWt4YU5ydDdDOEV4ZXVHTFhSSGxKZW9RU2lXaXhzX2tSRlJoUURkU3c4ZjFfcXdrOXZXNWI3Ty0xY1d5Z1hCbEFfNFdYSTh5YndPWG85V0R6bFZsN1JLV2M1aFVPbEh0SW5R?oc=5"
+            },
+            {
+              "label": "lufkindailynews.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html"
+            },
+            {
+              "label": "thestar.com.my",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
             }
           ],
           "story_ids": [
             "rss:thedefiant.io_api_feed:0023433b27f57fec",
-            "google_news:article:1763e2b7a7d7cf05"
+            "google_news:article:1763e2b7a7d7cf05",
+            "gdelt:article:20260907T051500Z::https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
+            "gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"
           ],
           "time_precision": "published",
           "title_en": "Liquid Sidechain Paused After 3,998 BTC Leaves Federation Wallet",
@@ -23659,6 +23694,44 @@
           "update_type": "confirmation",
           "what_changed_en": "Specified that approximately 3,998 BTC (worth ~$320 million) were withdrawn to a single address, with the recipient writing 'we are whitehats' in the transaction. This nearly depleted the federation wallet's Bitcoin reserves, potentially preventing peg-outs until the funds are returned.",
           "what_changed_zh": "具体指出约 3,998 BTC（价值约 3.2 亿美元）被提取至单一地址，收款方在交易中留言“我们是白帽黑客”。此举使联邦钱包的比特币储备几乎归零，可能导致在资金归还前无法进行peg-out。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Liquid Network remains paused; white-hat hackers have negotiated with Blockstream and promised to return funds after patching, but funds have not yet been returned, and most of the federation wallet's Bitcoin remains under the hackers' control.",
+          "current_state_zh": "Liquid 网络仍暂停，白帽黑客已与 Blockstream 进行谈判并承诺在漏洞修复后归还资金，但目前尚未归还，联邦钱包大部分比特币仍由黑客控制。",
+          "detailed_summary_en": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
+          "detailed_summary_zh": "Bitcoin sidechain Liquid pauses operations after purported white-hat hackers withdraw $320M in BTC, promising return after vulnerability patch.",
+          "event_id": "evt_c8eeb2561cb07df2",
+          "first_seen_at": "2026-09-07T09:34:09.103537Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T05:40:05Z",
+          "published_at": "2026-09-07T05:40:05Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:9c816436a3a93fd3"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin sidechain Liquid pauses after purported ‘white hats’ withdraw $320M in BTC",
+          "title_zh": "Bitcoin sidechain Liquid pauses after purported ‘white hats’ withdraw $320M in BTC",
+          "update_id": "upd_95653bdffbde14c0",
+          "update_type": "response",
+          "what_changed_en": "White-hat hackers contacted Blockstream via on-chain messages, promising to return most of the Bitcoin after the vulnerability is patched and nodes updated; funds have not yet been returned. Additional negotiation details were disclosed.",
+          "what_changed_zh": "白帽黑客通过链上消息与 Blockstream 进行联系，并承诺在漏洞修复及节点更新后归还大部分比特币，但目前资金尚未归还。同时披露了更多谈判细节。"
         }
       ]
     },
@@ -24072,6 +24145,500 @@
           "what_changed_zh": "Harmony proposes sunsetting its layer-1 blockchain and migrating ONE to Ethereum following a recent exploit."
         }
       ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+      "current_state_zh": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+      "entities": [
+        "ahead",
+        "coinbase",
+        "coindesk",
+        "deribit",
+        "inflation",
+        "week"
+      ],
+      "event_id": "evt_6ca3e3fb32b4ceff",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-07T09:34:01.565581Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:01.565581Z",
+      "last_updated_at": "2026-09-07T09:34:03.049055Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "U.S. inflation, Coinbase’s Deribit switch: Crypto Week Ahead - CoinDesk",
+      "title_zh": "U.S. inflation, Coinbase’s Deribit switch: Crypto Week Ahead - CoinDesk",
+      "topics": [
+        "coinbase",
+        "deribit",
+        "inflation",
+        "macro"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+          "current_state_zh": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+          "detailed_summary_en": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+          "detailed_summary_zh": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+          "event_id": "evt_6ca3e3fb32b4ceff",
+          "first_seen_at": "2026-09-07T09:34:01.565581Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T08:07:05Z",
+          "published_at": "2026-09-07T08:07:05Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQLTBTcVZoTmFfTWdhTzFBeG14ekhRY1pUZDhacko4Q2xBZFhsM0ZXLURkbm9MSjdkN0hUSHVEbGxhenphQlJmQl9VTkZRbUJNc3AzZXdfeHF0QW5pU2N1NmE3SzNCbGtibkhIdERTTy0zZWFhUHNNMzMyRHhUX3dkS3ZUamlKVHhXal94MEVpX3g0Smtrd0VUNUZ4a0JsVkhiY2dj?oc=5"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/07/u-s-inflation-coinbase-s-deribit-switch-crypto-week-ahead"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:a2cdccca871b4d00",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:eb3abcdd60108518"
+          ],
+          "time_precision": "published",
+          "title_en": "U.S. inflation, Coinbase’s Deribit switch: Crypto Week Ahead - CoinDesk",
+          "title_zh": "U.S. inflation, Coinbase’s Deribit switch: Crypto Week Ahead - CoinDesk",
+          "update_id": "upd_5df98f793a8d0516",
+          "update_type": "initial",
+          "what_changed_en": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets.",
+          "what_changed_zh": "CoinDesk's week ahead highlights upcoming U.S. inflation data and Coinbase's move to Deribit as key events for crypto markets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+      "current_state_zh": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+      "entities": [
+        "approves",
+        "bitpinas",
+        "gcash",
+        "ipo",
+        "listing",
+        "mynt",
+        "october",
+        "parent",
+        "sec",
+        "targeted"
+      ],
+      "event_id": "evt_5cc774b5dd5a97c0",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-07T09:34:01.565770Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:01.565770Z",
+      "last_updated_at": "2026-09-07T09:34:01.565770Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SEC Approves GCash Parent Mynt’s ₱92.3B IPO Targeted for October 20 Listing - BitPinas",
+      "title_zh": "SEC Approves GCash Parent Mynt’s ₱92.3B IPO Targeted for October 20 Listing - BitPinas",
+      "topics": [
+        "gcash",
+        "ipo",
+        "mynt",
+        "philippines",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+          "current_state_zh": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+          "detailed_summary_en": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+          "detailed_summary_zh": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+          "event_id": "evt_5cc774b5dd5a97c0",
+          "first_seen_at": "2026-09-07T09:34:01.565770Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T03:50:00Z",
+          "published_at": "2026-09-07T03:50:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "BitPinas",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5TUpyZ3k2eldnSV9FejR2aUd4NUZiZlR0NEZEak1kbmlTcEhWS2IteUtxa2JvOFg2eVhReTZtMTNCSVJLazJrN3VxblBmRU03N0pQRk5rQnJxNDB6SzJ0RUdn?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:1f9f4141edda84df"
+          ],
+          "time_precision": "published",
+          "title_en": "SEC Approves GCash Parent Mynt’s ₱92.3B IPO Targeted for October 20 Listing - BitPinas",
+          "title_zh": "SEC Approves GCash Parent Mynt’s ₱92.3B IPO Targeted for October 20 Listing - BitPinas",
+          "update_id": "upd_8481f22e3dfd78f5",
+          "update_type": "initial",
+          "what_changed_en": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20.",
+          "what_changed_zh": "The SEC approved the ₱92.3B IPO of GCash parent Mynt, targeted for listing on October 20."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+      "current_state_zh": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+      "entities": [
+        "banking",
+        "cryptodaily",
+        "kraken",
+        "link",
+        "liquidity",
+        "rails",
+        "sofi",
+        "sofiusd"
+      ],
+      "event_id": "evt_659275e940531408",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-07T09:34:01.565978Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:01.565978Z",
+      "last_updated_at": "2026-09-07T09:34:01.565978Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SoFi and Kraken Link Banking Rails, SoFiUSD and Crypto Liquidity - CryptoDaily",
+      "title_zh": "SoFi and Kraken Link Banking Rails, SoFiUSD and Crypto Liquidity - CryptoDaily",
+      "topics": [
+        "kraken",
+        "liquidity",
+        "partnership"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+          "current_state_zh": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+          "detailed_summary_en": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+          "detailed_summary_zh": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+          "event_id": "evt_659275e940531408",
+          "first_seen_at": "2026-09-07T09:34:01.565978Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T07:00:00Z",
+          "published_at": "2026-09-07T07:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoDaily",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNM2ZlV0ZpajNTYlNlTzNKZHp2NjdVUHNsamF2WU1GQzNZZHQ2UzhmRW5aUHpHVVVmU2M3b2hxc1NUeDBfdG4wYWpxS2N2UDI0MGpOWW5ZbWlBbmlDdkFGVTJDVVBDZ01Dcms1ek9HS2FibGpEUEl1aGY2MWMxb1NhQWpIX3pLYW5WbWwwclJB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:9ed32119630ddf49"
+          ],
+          "time_precision": "published",
+          "title_en": "SoFi and Kraken Link Banking Rails, SoFiUSD and Crypto Liquidity - CryptoDaily",
+          "title_zh": "SoFi and Kraken Link Banking Rails, SoFiUSD and Crypto Liquidity - CryptoDaily",
+          "update_id": "upd_247b2297678fcc2f",
+          "update_type": "initial",
+          "what_changed_en": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity.",
+          "what_changed_zh": "SoFi and Kraken are partnering to integrate banking rails, potentially boosting SoFiUSD and crypto liquidity."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+      "current_state_zh": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+      "entities": [
+        "ai-threats",
+        "harmony",
+        "once"
+      ],
+      "event_id": "evt_e8495491f7bdd7d8",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-07T09:34:03.090645Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:03.090645Z",
+      "last_updated_at": "2026-09-07T09:34:03.090645Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Once-hyped Ethereum rival Harmony wants to shut its blockchain over AI threats",
+      "title_zh": "Once-hyped Ethereum rival Harmony wants to shut its blockchain over AI threats",
+      "topics": [
+        "ai-threats",
+        "blockchain-shutdown",
+        "harmony"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+          "current_state_zh": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+          "detailed_summary_en": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+          "detailed_summary_zh": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+          "event_id": "evt_e8495491f7bdd7d8",
+          "first_seen_at": "2026-09-07T09:34:03.090645Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T08:02:18Z",
+          "published_at": "2026-09-07T08:02:18Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/07/once-hyped-ethereum-rival-harmony-wants-to-shut-its-blockchain-over-ai-threats"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:f5c3bfd9a4143b7b"
+          ],
+          "time_precision": "published",
+          "title_en": "Once-hyped Ethereum rival Harmony wants to shut its blockchain over AI threats",
+          "title_zh": "Once-hyped Ethereum rival Harmony wants to shut its blockchain over AI threats",
+          "update_id": "upd_cb2858dd4a70796b",
+          "update_type": "initial",
+          "what_changed_en": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI.",
+          "what_changed_zh": "Harmony, a once-prominent Ethereum rival, is proposing to shut down its blockchain due to perceived threats from AI."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "current_state_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "entities": [
+        "coldcard",
+        "galaxy",
+        "wave"
+      ],
+      "event_id": "evt_65f972f6d8c15c28",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-07T09:34:03.581519Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:03.581519Z",
+      "last_updated_at": "2026-09-07T09:34:03.581519Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+      "title_zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+      "topics": [
+        "coldcard",
+        "galaxy",
+        "theft"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+          "current_state_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+          "detailed_summary_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+          "detailed_summary_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+          "event_id": "evt_65f972f6d8c15c28",
+          "first_seen_at": "2026-09-07T09:34:03.581519Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T07:30:32Z",
+          "published_at": "2026-09-07T07:30:32Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd"
+          ],
+          "time_precision": "published",
+          "title_en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+          "title_zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
+          "update_id": "upd_cea4abd91245eb8d",
+          "update_type": "initial",
+          "what_changed_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+          "what_changed_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+      "current_state_zh": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+      "entities": [
+        "avalanche",
+        "hanwha",
+        "korea",
+        "south",
+        "south-korea",
+        "tokenized-securities"
+      ],
+      "event_id": "evt_848e981a74a7c055",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-07T09:34:03.626043Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:03.626043Z",
+      "last_updated_at": "2026-09-07T09:34:03.626043Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "South Korea’s Hanwha develops tokenized securities platform on Avalanche as local regulation takes shape: report",
+      "title_zh": "South Korea’s Hanwha develops tokenized securities platform on Avalanche as local regulation takes shape: report",
+      "topics": [
+        "avalanche",
+        "south-korea",
+        "tokenized-securities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+          "current_state_zh": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+          "detailed_summary_en": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+          "detailed_summary_zh": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+          "event_id": "evt_848e981a74a7c055",
+          "first_seen_at": "2026-09-07T09:34:03.626043Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T06:24:46Z",
+          "published_at": "2026-09-07T06:24:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-07-south-korea-hanwha-tokenized-securities-platform-avalanche-413652"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:7eace5cd948eb6a4"
+          ],
+          "time_precision": "published",
+          "title_en": "South Korea’s Hanwha develops tokenized securities platform on Avalanche as local regulation takes shape: report",
+          "title_zh": "South Korea’s Hanwha develops tokenized securities platform on Avalanche as local regulation takes shape: report",
+          "update_id": "upd_7d64a5ef0d762b97",
+          "update_type": "initial",
+          "what_changed_en": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape.",
+          "what_changed_zh": "South Korea's Hanwha is developing a tokenized securities platform on Avalanche as local regulation integrating such securities into the financial system takes shape."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+      "current_state_zh": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+      "entities": [
+        "whitehat"
+      ],
+      "event_id": "evt_e348821b679e23e3",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-07T09:34:05.470561Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-07T09:34:05.470561Z",
+      "last_updated_at": "2026-09-07T09:34:05.470561Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw",
+      "title_zh": "A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw",
+      "topics": [
+        "liquid-network",
+        "whitehat"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+          "current_state_zh": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+          "detailed_summary_en": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+          "detailed_summary_zh": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+          "event_id": "evt_e348821b679e23e3",
+          "first_seen_at": "2026-09-07T09:34:05.470561Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T08:55:13Z",
+          "published_at": "2026-09-07T08:55:13Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:8f3dfceab3f33c00"
+          ],
+          "time_precision": "published",
+          "title_en": "A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw",
+          "title_zh": "A whitehat hacker is holding $320 million in drained Bitcoin until developers prove they patched a fatal network flaw",
+          "update_id": "upd_a90108914e8c9e0e",
+          "update_type": "initial",
+          "what_changed_en": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
+          "what_changed_zh": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -24102,6 +24669,67 @@
         "source_type": "google_news",
         "title": "Binance Keeps EU Foothold Without MiCA License Using Reverse Solicitation, Abu Dhabi Routing - finance.biggo.com",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1qNndxMW1GeFFWdUpFMkJFRUZkekw5NGJzVUhEdzJCdzhSSkJTQXJoeDlYeURPZHloQTJGVmxVS2N0WnRvbnUzdFdGMVdXaE13TUdCSnVFLUJnVVJMZzhUd1Q0TlRqTkN5N0tLRlJTWWxJdGlTU0E?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Confirmed hack on a Bitcoin sidechain with $320 million withdrawn, indicating a major security incident with significant user impact and market implications.",
+        "ai_score": 9.0,
+        "ai_summary": "Bitcoin-based Liquid Network reports $320 million withdrawn in a hack.",
+        "ai_tags": [
+          "hack",
+          "bitcoin",
+          "liquid network",
+          "security",
+          "crypto"
+        ],
+        "author": "finance.yahoo.com",
+        "content": null,
+        "fetched_at": "2026-09-07T09:34:13.838432Z",
+        "id": "gdelt:article:20260907T051500Z::https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+        "metadata": {
+          "category": "crypto-protocols",
+          "domain": "finance.yahoo.com",
+          "event_retry_pending": true,
+          "language": "English",
+          "query": "(cryptocurrency OR bitcoin OR ethereum OR stablecoin OR blockchain)",
+          "source_category": "crypto-markets",
+          "sourcecountry": "United States"
+        },
+        "published_at": "2026-09-07T05:15:00Z",
+        "source_type": "gdelt",
+        "title": "Bitcoin - based Liquid Network says $320 million withdrawn in hack",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A presidential veto of a crypto bill in Poland is a significant regulatory development that could affect market access and industry structure in the country, though its broader impact is limited to Poland.",
+        "ai_score": 7.5,
+        "ai_summary": "Poland's crypto bill has been blocked after a third presidential veto, creating regulatory uncertainty for the industry.",
+        "ai_tags": [
+          "Poland",
+          "regulation",
+          "crypto bill",
+          "veto"
+        ],
+        "author": "blockchainreporter",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNT3FtRG9kYl9adHNCSlVlLVdmamtGYkNpeS0yVFhSYXJOaWxKbm5aNWxNbTNhVWlaLU1uZHRyR3hBb2hGOTJFeXlGbkl2a3hsejRIdlFjdDRWVTc5b2Y0YklNcG9VZWU4UC1tV1Y4cWUxc3N3X2x5d2t4SHg3cTFTRVRxUGpMUjNTelE?oc=5\" target=\"_blank\">Poland Crypto Bill Blocked After Third Presidential Veto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">blockchainreporter</font>",
+        "fetched_at": "2026-09-07T09:34:01.566051Z",
+        "id": "google_news:article:827a241e8e2c3d3c",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "blockchainreporter"
+        },
+        "published_at": "2026-09-07T07:01:03Z",
+        "source_type": "google_news",
+        "title": "Poland Crypto Bill Blocked After Third Presidential Veto - blockchainreporter",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNT3FtRG9kYl9adHNCSlVlLVdmamtGYkNpeS0yVFhSYXJOaWxKbm5aNWxNbTNhVWlaLU1uZHRyR3hBb2hGOTJFeXlGbkl2a3hsejRIdlFjdDRWVTc5b2Y0YklNcG9VZWU4UC1tV1Y4cWUxc3N3X2x5d2t4SHg3cTFTRVRxUGpMUjNTelE?oc=5"
       }
     }
   ],
