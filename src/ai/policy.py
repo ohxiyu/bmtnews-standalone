@@ -18,6 +18,8 @@ SIMPLE_BUDGETS = {
     # Dedup returns indices for at most 12 stories, not a reasoning essay.
     # DeepSeek's implicit thinking can consume the entire output budget.
     "topic_dedup": 1536,
+    # Bilingual overview is a short extraction from already enriched stories.
+    "edition_overview": 2048,
     "prefilter": 2048,
     "content_analysis": 1536,
     "concept_extraction": 768,
