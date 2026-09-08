@@ -66,17 +66,19 @@ def test_daily_event_cap_uses_latest_without_false_confirmation(tmp_path, monkey
 
 
 def test_overview_receives_enriched_numeric_scope():
+    captured = {}
     story = item(0)
     story.ai_summary = "45% moved"
     story.metadata["detailed_summary_zh"] = "第三波资金的45%，不是全部损失。"
     story.metadata["detailed_summary_en"] = "45% of Wave 3, not aggregate losses."
     class Client:
         async def complete(self, **kwargs):
-            assert "第三波资金的45%" in kwargs["user"]
-            assert "45% of Wave 3" in kwargs["user"]
-            assert "subset" in kwargs["system"]
+            captured.update(kwargs)
             return '{}'
     asyncio.run(generate_edition_overviews(Client(), [story], date="2026-09-08", languages=["zh", "en"]))
+    assert "第三波资金的45%" in captured["user"]
+    assert "45% of Wave 3" in captured["user"]
+    assert "subset" in captured["system"]
 
 
 def test_enrichment_degradation_is_visible(monkeypatch):
