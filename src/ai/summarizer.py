@@ -152,8 +152,8 @@ async def generate_edition_overviews(
     for index, item in enumerate(items, start=1):
         title_zh = item.metadata.get("title_zh") or item.title
         title_en = item.metadata.get("title_en") or item.title
-        summary_zh = item.metadata.get("whats_new_zh") or item.ai_summary or ""
-        summary_en = item.metadata.get("whats_new_en") or item.ai_summary or ""
+        summary_zh = item.metadata.get("detailed_summary_zh") or item.metadata.get("whats_new_zh") or item.ai_summary or ""
+        summary_en = item.metadata.get("detailed_summary_en") or item.metadata.get("whats_new_en") or item.ai_summary or ""
         score = f"{item.ai_score:.1f}" if item.ai_score is not None else "?"
         lines.append(
             f"{index}. [{score}/10] ZH: {title_zh} — {summary_zh}\n"

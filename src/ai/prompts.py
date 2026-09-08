@@ -163,6 +163,7 @@ Rules:
 - Include only 1-3 genuinely important signals. Do not force Crypto, AI, or Policy representation and do not pad a quiet edition.
 - Each signal is 25-50 Chinese characters / 8-20 English words and adds information not already repeated verbatim in the headline.
 - Prefer concrete entities, amounts, decisions, outcomes, and current status.
+- Preserve each number's exact scope, subject and observation time. A percentage of one wave, tranche or subset is NOT a percentage of the overall total. Never combine amounts from different dates or denominators. If scope is unclear, omit the number instead of inferring it.
 - Do not repeat the edition date; it is already visible directly above this section.
 - Do not repeat BTC, ETH, or sentiment readings unless a ranked event has a clearly supported causal relationship to the move.
 - Avoid hype or unsupported synthesis such as "fully embraced", "historic breakthrough", or "risks remain". State only what the supplied stories support.
