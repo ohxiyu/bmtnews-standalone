@@ -224,7 +224,7 @@ def test_daily_edition_combines_staging_and_final_fetch(
         analyzed_ids.extend(item.id for item in items)
         return items
 
-    async def no_topic_duplicates(items, *, log=True):  # type: ignore[no-untyped-def]
+    async def no_topic_duplicates(items, *, log=True, daily_events=False):  # type: ignore[no-untyped-def]
         return items
 
     async def no_op(items):  # type: ignore[no-untyped-def]
@@ -411,7 +411,7 @@ def test_daily_edition_uses_unpublished_36_hour_fallback_when_short(
         analyzed_ids.extend(item.id for item in items)
         return items
 
-    async def no_topic_duplicates(items, *, log=True):  # type: ignore[no-untyped-def]
+    async def no_topic_duplicates(items, *, log=True, daily_events=False):  # type: ignore[no-untyped-def]
         return items
 
     async def no_op(items):  # type: ignore[no-untyped-def]
