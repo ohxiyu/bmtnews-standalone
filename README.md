@@ -17,6 +17,11 @@
 
 ## What BMTNews is
 
+For repository work, start with [AGENTS.md](AGENTS.md) and the
+[current execution pointer](project-docs/handoff.md). See the
+[collaboration guide](project-docs/codex-collaboration.md) for task ownership,
+verification and handoff conventions.
+
 Crypto moves faster than anyone can read. BMTNews watches exchange announcement
 channels, protocol releases, regulators, and the crypto and AI press, then
 publishes **one ranked edition every morning at 08:30 Asia/Shanghai** — typically

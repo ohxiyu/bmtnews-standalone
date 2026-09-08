@@ -1,0 +1,32 @@
+name: Agent task
+description: Claim one bounded implementation task before editing
+title: "[Task] "
+body:
+  - type: textarea
+    id: ownership
+    attributes:
+      label: Owner and execution pointer
+      description: Name one editing owner, branch/worktree, and the current handoff entry. Confirm no conflicting claim.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and files
+      description: Goal, affected files/modules, non-goals, dependencies and overlapping PRs.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance and verification
+      description: Observable outcomes and exact tests. Separate implementation, tests, merge, deploy and live acceptance.
+    validations:
+      required: true
+  - type: textarea
+    id: authority
+    attributes:
+      label: Authority and handoff
+      description: Default PR only. Record explicit merge/deployment authorization, production owner, cost constraints, required permissions, rollback and unfinished work. Never include secrets.
+    validations:
+      required: true
