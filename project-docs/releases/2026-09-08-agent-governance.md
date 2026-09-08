@@ -1,6 +1,7 @@
 # Issue #64 协作机制交付记录
 
 - 任务：[Issue #64](https://github.com/ohxiyu/bmtnews-standalone/issues/64)
+- 交付：[PR #65](https://github.com/ohxiyu/bmtnews-standalone/pull/65)；已核验实现提交 fb3152b333be617db8260b04d91f8c6f02b6eba2。最终 HEAD 与远端检查以 PR 为准。
 - 范围：仓库规则、入口、交接、backlog、UI/数据规范、模板与自动检查。
 - 应用版本：0.2.0（不变）；Worker 版本：1.0.0（不变）。
 - 源码基线：950fc42f726be68df51c8217dbb4df29986ae496；最终任务提交与 PR 见 [当前交接](../handoff.md)。

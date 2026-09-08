@@ -9,15 +9,15 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/64",
   "owner": "Codex / agent-governance",
   "branch": "agent/agent-governance",
-  "last_verified_commit": "950fc42f726be68df51c8217dbb4df29986ae496",
-  "pr": "pending creation",
+  "last_verified_commit": "fb3152b333be617db8260b04d91f8c6f02b6eba2",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/65",
   "completed": [
     "统一 AGENTS 与三个短入口；项目状态/规范/历史证据职责分离",
     "新增任务 Issue Form、PR 交付模板与 CI governance job",
     "版本、文件链接、唯一交接和交付证据检查及 11 个回归用例"
   ],
   "unfinished": [
-    "创建 PR 并等待远端检查",
+    "等待 PR #65 最终提交的远端检查及用户审阅",
     "用户审阅和合并决定；本任务不合并或部署"
   ],
   "validation": [
@@ -41,7 +41,7 @@
   "blockers": [
     "无开发阻塞；合并/生产部署需本任务明确授权，历史授权不可自动沿用"
   ],
-  "next_action": "创建目标 main 的 PR，核验 governance/test/analyze 后交用户审阅；未经新授权不合并、部署或处理 backlog。",
+  "next_action": "核验 PR #65 的 governance/test/analyze 后交用户审阅；未经新授权不合并、部署或处理 backlog。",
   "states": {
     "code": "complete",
     "tests": "complete",
