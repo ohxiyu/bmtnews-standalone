@@ -50,9 +50,11 @@ class ContentEnricher:
             async with semaphore:
                 try:
                     await self._enrich_item(item)
+                    item.metadata["enrichment_status"] = "complete"
                 except Exception as e:
                     print(f"Error enriching item {item.id}: {e}, falling back to translation")
                     await self._translate_item(item)
+                    item.metadata["enrichment_status"] = "translation_only"
             progress.advance(progress_task)
 
         with Progress(

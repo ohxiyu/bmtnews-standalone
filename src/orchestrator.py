@@ -13,7 +13,7 @@ from urllib.parse import unquote_plus, urlsplit
 import httpx
 from rich.console import Console
 
-from .models import Config, ContentItem
+from .models import Config, ContentItem, SourceType
 from ._file_utils import _atomic_write_text
 from .storage.manager import StorageManager, safe_output_path
 from .services.email import EmailManager
@@ -993,7 +993,7 @@ class BMTNewsOrchestrator:
                 apply_balance=False,
                 dedup_context=daily_state.dedup_history,
             )
-            qualified_items = filtering_result.items
+            qualified_items = self._distinct_daily_events(filtering_result.items)
             threshold_count = filtering_result.threshold_count
             topic_duplicates_removed = filtering_result.topic_dedup_removed
 
@@ -1078,7 +1078,7 @@ class BMTNewsOrchestrator:
                 )
                 fallback_qualified = fallback_filtering.items
                 await self._expand_twitter_discussion(fallback_qualified)
-                qualified_items = [*qualified_items, *fallback_qualified]
+                qualified_items = self._distinct_daily_events([*qualified_items, *fallback_qualified])
                 balanced_result = self.apply_balanced_digest(
                     qualified_items,
                     allow_primary_borrowing=True,
@@ -1247,6 +1247,10 @@ class BMTNewsOrchestrator:
                 self._source_breakdown(qualified_items),
             )
             await self._enrich_important_items(important_items)
+            degraded = sum(item.metadata.get("enrichment_status") == "translation_only" for item in important_items)
+            run_report.set_metric("enrichment_degraded", degraded)
+            if degraded:
+                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容扩写失败，仅保留翻译，需编辑复核。")
 
             # Manual editor's picks are pinned ahead of the ranked stories.
             if editorial_plan.editorial:
@@ -1291,7 +1295,7 @@ class BMTNewsOrchestrator:
                 important_items,
                 run_report=run_report,
             )
-            important_items = self.merge_event_update_duplicates(important_items)
+            important_items = self._distinct_daily_events(important_items)
 
             # Link continuing coverage to its thread before anything renders.
             self._apply_threads(important_items, edition_date=window.date)
@@ -2519,6 +2523,43 @@ class BMTNewsOrchestrator:
 
         return merged
 
+    def _distinct_daily_events(self, items: List[ContentItem]) -> List[ContentItem]:
+        """Keep the newest story per known event before quota selection.
+
+        Event timelines retain all updates; the daily ranking needs only the
+        latest state. Editorial picks stay pinned and are never auto-removed.
+        """
+        known = {}
+        if EVENT_CATALOG_PATH.exists():
+            _, events = load_event_catalog(EVENT_CATALOG_PATH)
+            known = known_story_assignments(events)
+        representatives = {}
+        for item in items:
+            if item.id in known:
+                item.metadata["event_id"], item.metadata["event_update_id"] = known[item.id]
+            key = item.metadata.get("event_id")
+            if not key or item.source_type == SourceType.EDITORIAL:
+                continue
+            previous = representatives.get(key)
+            if previous is None or item.published_at > previous.published_at:
+                representatives[key] = item
+        result = []
+        emitted = set()
+        for item in items:
+            key = item.metadata.get("event_id")
+            if not key or item.source_type == SourceType.EDITORIAL:
+                result.append(item)
+                continue
+            primary = representatives[key]
+            # Different updates are not independent confirmations of the
+            # latest development; do not inflate the source count.
+            if item is not primary and item.metadata.get("event_update_id") == primary.metadata.get("event_update_id"):
+                self._record_confirming_source(primary, item)
+            if key not in emitted:
+                result.append(primary)
+                emitted.add(key)
+        return result
+
     def merge_event_update_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
         """One feed entry per confirmed event update, regardless of AI dedup."""
         result: List[ContentItem] = []
@@ -2569,12 +2610,12 @@ class BMTNewsOrchestrator:
 
         This is a stable stage helper for integrations such as MCP.
 
-        Sends all item titles, tags, and summaries to AI in a single call.
+        Compare bounded local clusters, retrying invalid responses once.
         Items must already be sorted by ai_score descending so that the first
         item in each duplicate group is always the highest-scored one.
         Content (comments) from duplicate items is merged into the primary.
 
-        Falls back to returning items unchanged if the AI call fails.
+        Stop publication if comparisons remain unavailable after retry.
         """
         if len(items) <= 1:
             return items
@@ -2623,36 +2664,14 @@ class BMTNewsOrchestrator:
                 "topic_dedup_ai_candidates", len(items)
             )
 
-        from .ai.prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
-        from .ai.utils import parse_json_response
+        from .ai.topic_dedup import duplicate_groups as compare_duplicates
 
-        # Build the item list for the prompt
-        lines = []
-        for i, item in enumerate(items):
-            tags = ", ".join(item.ai_tags) if item.ai_tags else "—"
-            summary = item.ai_summary or "—"
-            lines.append(f"[{i}] {item.title}\n    Tags: {tags}\n    Summary: {summary}")
-        items_text = "\n\n".join(lines)
-
-        try:
-            ai_client = create_ai_client(self.config.ai)
-            response = await ai_client.complete(
-                system=TOPIC_DEDUP_SYSTEM,
-                user=TOPIC_DEDUP_USER.format(items=items_text),
-            )
-            result = parse_json_response(response)
-            if result is None:
-                if log:
-                    self.console.print("[yellow]  dedup: could not parse AI response, skipping[/yellow]")
-                self._set_timing("topic_dedup", started)
-                return original_items
-
-            duplicate_groups = result.get("duplicates", [])
-        except Exception as e:
-            if log:
-                self.console.print(f"[yellow]  dedup: AI call failed ({e}), skipping[/yellow]")
-            self._set_timing("topic_dedup", started)
-            return original_items
+        clusters: Dict[int, List[int]] = defaultdict(list)
+        for local, original in enumerate(candidate_indices):
+            clusters[find(original)].append(local)
+        duplicate_groups = await compare_duplicates(
+            create_ai_client(self.config.ai), items, list(clusters.values())
+        )
 
         if not duplicate_groups:
             self._set_timing("topic_dedup", started)

@@ -5,6 +5,7 @@ TOPIC_DEDUP_SYSTEM = """You are a news deduplication assistant. Identify groups 
 Rules:
 - Group items ONLY if they report on the identical event (same product release, same incident, same announcement)
 - Items about the same product but different events are NOT duplicates ("Gemma 4 released" vs "Gemma 4 jailbroken")
+- A material new development is NOT a duplicate of earlier coverage: funds returned versus funds stolen, service restored versus suspended, or approved versus proposed. Preserve the new development even if the incident and entities are the same. Rewording old facts or merely adding commentary is still a duplicate.
 - Err on the side of keeping items separate when unsure"""
 
 TOPIC_DEDUP_USER = """The following news items have already been sorted by importance score (descending). Identify which items are duplicates of each other.
@@ -163,6 +164,7 @@ Rules:
 - Include only 1-3 genuinely important signals. Do not force Crypto, AI, or Policy representation and do not pad a quiet edition.
 - Each signal is 25-50 Chinese characters / 8-20 English words and adds information not already repeated verbatim in the headline.
 - Prefer concrete entities, amounts, decisions, outcomes, and current status.
+- Preserve each number's exact scope, subject and observation time. A percentage of one wave, tranche or subset is NOT a percentage of the overall total. Never combine amounts from different dates or denominators. If scope is unclear, omit the number instead of inferring it.
 - Do not repeat the edition date; it is already visible directly above this section.
 - Do not repeat BTC, ETH, or sentiment readings unless a ranked event has a clearly supported causal relationship to the move.
 - Avoid hype or unsupported synthesis such as "fully embraced", "historic breakthrough", or "risks remain". State only what the supplied stories support.
