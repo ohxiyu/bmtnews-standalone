@@ -993,7 +993,9 @@ class BMTNewsOrchestrator:
                 apply_balance=False,
                 dedup_context=daily_state.dedup_history,
             )
-            qualified_items = self._distinct_daily_events(filtering_result.items)
+            qualified_items = self._distinct_daily_events(
+                await self.merge_topic_duplicates(filtering_result.items, daily_events=True)
+            )
             threshold_count = filtering_result.threshold_count
             topic_duplicates_removed = filtering_result.topic_dedup_removed
 
@@ -1078,7 +1080,9 @@ class BMTNewsOrchestrator:
                 )
                 fallback_qualified = fallback_filtering.items
                 await self._expand_twitter_discussion(fallback_qualified)
-                qualified_items = self._distinct_daily_events([*qualified_items, *fallback_qualified])
+                qualified_items = self._distinct_daily_events(
+                    await self.merge_topic_duplicates([*qualified_items, *fallback_qualified], daily_events=True)
+                )
                 balanced_result = self.apply_balanced_digest(
                     qualified_items,
                     allow_primary_borrowing=True,
@@ -2605,6 +2609,7 @@ class BMTNewsOrchestrator:
         items: List[ContentItem],
         *,
         log: bool = True,
+        daily_events: bool = False,
     ) -> List[ContentItem]:
         """Merge items covering the same topic using AI semantic deduplication.
 
@@ -2661,17 +2666,24 @@ class BMTNewsOrchestrator:
         items = [items[index] for index in candidate_indices]
         if self.last_run_report is not None:
             self.last_run_report.set_metric(
-                "topic_dedup_ai_candidates", len(items)
+                "daily_event_dedup_ai_candidates" if daily_events else "topic_dedup_ai_candidates", len(items)
             )
 
         from .ai.topic_dedup import duplicate_groups as compare_duplicates
+        from .ai.prompts import DAILY_EVENT_DEDUP_SYSTEM, TOPIC_DEDUP_SYSTEM
 
         clusters: Dict[int, List[int]] = defaultdict(list)
         for local, original in enumerate(candidate_indices):
             clusters[find(original)].append(local)
         duplicate_groups = await compare_duplicates(
-            create_ai_client(self.config.ai), items, list(clusters.values())
+            create_ai_client(self.config.ai), items, list(clusters.values()),
+            system=DAILY_EVENT_DEDUP_SYSTEM if daily_events else TOPIC_DEDUP_SYSTEM,
         )
+        if daily_events:
+            duplicate_groups = [
+                sorted(group, key=lambda index: items[index].published_at, reverse=True)
+                for group in duplicate_groups
+            ]
 
         if not duplicate_groups:
             self._set_timing("topic_dedup", started)
@@ -2696,9 +2708,10 @@ class BMTNewsOrchestrator:
                 # Most duplicates are the same event under different URLs, so
                 # this — not URL-level dedup — is what makes the provenance
                 # badge meaningful.
-                self._record_confirming_source(primary, dup)
+                if not daily_events:
+                    self._record_confirming_source(primary, dup)
                 # Merge comments/content from the duplicate into the primary
-                if dup.content:
+                if dup.content and not daily_events:
                     if not primary.content or dup.content not in primary.content:
                         label = dup.source_type.value
                         primary.content = (primary.content or "") + f"\n\n--- From {label} ---\n{dup.content}"

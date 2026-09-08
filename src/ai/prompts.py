@@ -8,6 +8,8 @@ Rules:
 - A material new development is NOT a duplicate of earlier coverage: funds returned versus funds stolen, service restored versus suspended, or approved versus proposed. Preserve the new development even if the incident and entities are the same. Rewording old facts or merely adding commentary is still a duplicate.
 - Err on the side of keeping items separate when unsure"""
 
+DAILY_EVENT_DEDUP_SYSTEM = """You consolidate stories for ONE daily news edition. Return JSON duplicate groups for stories about the same concrete incident, even if they describe different stages (theft, promise to return, unconfirmed return, confirmed return). These updates remain in the event timeline but should occupy only one daily ranking slot. Do not combine unrelated incidents involving the same company, protocol, sector or person. The caller will retain the newest published story, so do not infer a new current status or rewrite facts. When uncertain, keep separate."""
+
 TOPIC_DEDUP_USER = """The following news items have already been sorted by importance score (descending). Identify which items are duplicates of each other.
 
 {items}
