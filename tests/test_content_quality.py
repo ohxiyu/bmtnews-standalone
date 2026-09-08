@@ -65,6 +65,29 @@ def test_daily_event_cap_uses_latest_without_false_confirmation(tmp_path, monkey
     assert orchestrator._distinct_daily_events([old, other, new]) == [old, other, new]
 
 
+def test_daily_consolidation_differs_from_cross_day_dedup(tmp_path, monkeypatch):
+    from src.models import Config, AIConfig, SourcesConfig, FilteringConfig
+    from src.storage.manager import StorageManager
+    from src.ai.prompts import DAILY_EVENT_DEDUP_SYSTEM
+    config = Config(ai=AIConfig(provider="openai", model="test", api_key_env="TEST"), sources=SourcesConfig(), filtering=FilteringConfig())
+    orchestrator = BMTNewsOrchestrator(config, StorageManager(data_dir=str(tmp_path)))
+    old, new = item(0), item(1)
+    for story in (old, new):
+        story.title = "Liquid Network attackers return stolen bitcoin"
+        story.ai_tags = ["liquid-network", "bitcoin", "hack"]
+    old.content = "Old unconfirmed transaction"
+    new.content = "Latest confirmation"
+    class Client:
+        async def complete(self, **kwargs):
+            assert kwargs["system"] == DAILY_EVENT_DEDUP_SYSTEM
+            return '{"duplicates": [[0, 1]]}'
+    monkeypatch.setattr("src.orchestrator.create_ai_client", lambda config: Client())
+    result = asyncio.run(orchestrator.merge_topic_duplicates([old, new], daily_events=True))
+    assert result == [new]
+    assert new.content == "Latest confirmation"
+    assert "merged_sources" not in new.metadata
+
+
 def test_overview_receives_enriched_numeric_scope():
     captured = {}
     story = item(0)

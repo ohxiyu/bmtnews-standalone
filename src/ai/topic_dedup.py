@@ -6,7 +6,7 @@ from .prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
 from .utils import parse_json_response
 
 
-async def duplicate_groups(client, items, clusters):
+async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM):
     groups = []
 
     async def compare(indices):
@@ -21,7 +21,7 @@ async def duplicate_groups(client, items, clusters):
         for attempt in range(2):
             try:
                 response = await client.complete(
-                    system=TOPIC_DEDUP_SYSTEM,
+                    system=system,
                     user=TOPIC_DEDUP_USER.format(items="\n\n".join(lines)),
                 )
                 payload = parse_json_response(response)
