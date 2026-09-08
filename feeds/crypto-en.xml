@@ -6,6 +6,15 @@
   <id>https://bmt.news/feeds/crypto-en.xml</id>
   <updated>2026-09-08T00:00:00Z</updated>
   <entry>
+    <title>Coldcard: 45% of Wave 3 funds moved, not 45% of all losses</title>
+    <link href="https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"/>
+    <id>https://bmt.news/editions/2026-09-08/#editorial:pick:4f8fc5e553adc57b</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>The Block reported on September 7, citing Galaxy Research, that approximately 45% of funds stolen in Coldcard&#x27;s third attack wave had moved. The percentage applies to Wave 3, not all stolen bitcoin.
+
+This corrects the earlier edition&#x27;s conflation of a wave-specific percentage with historical aggregate losses. Figures from different waves and observation dates must not be combined.</summary>
+  </entry>
+  <entry>
     <title>Hackers Return $270M to Liquid Network After $320M Bitcoin Theft</title>
     <link href="https://decrypt.co/377600/liquid-hackers-return-270m-bitcoin"/>
     <id>https://bmt.news/editions/2026-09-08/#rss:decrypt.co_feed:645a6466a40fe810</id>
@@ -15,57 +24,6 @@
 Returning the bulk of stolen assets is unusual in crypto heists and may restore some confidence in the Liquid Network, a Bitcoin sidechain that exchanges use for settlement. Even so, the breach highlights security weaknesses in sidechain and custodial infrastructure that many exchange operations depend on.
 
 Liquid Network suspended all transactions after the exploit, and the hackers reportedly described themselves as &#x27;the good guys&#x27; when returning funds. The precise attack vector and the fate of the remaining stolen bitcoin have not been publicly confirmed.</summary>
-  </entry>
-  <entry>
-    <title>How 4,000 BTC walked out of Blockstream’s Liquid Network</title>
-    <link href="https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:protos.com_feed_:cb619437abd2da25</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Blockstream&#x27;s Liquid Network was hacked, with approximately 4,000 BTC (~$320M) drained from its federation wallet via a faulty LBTC redemption, prompting a pause of the sidechain.</summary>
-  </entry>
-  <entry>
-    <title>Whitehat holding $320M in drained Bitcoin awaits proof of flaw fix</title>
-    <link href="https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:cryptoslate.com_feed_:8f3dfceab3f33c00</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>A bug-created batch of 4,000 L-BTC passed SideSwap&#x27;s peg-out checks on Sept. 6, prompting the Liquid Federation to release roughly 3,996 Bitcoin (~$320 million) from its reserve. The fund holder later messaged via OP_RETURN that it is a whitehat and will return most funds once Blockstream fixes the underlying Elements bug on every affected node.
-
-This appears to be one of the largest security failures on a Bitcoin sidechain, exposing the risk that a federated network can release real BTC when multiple signers approve the same invalid state. Exchanges relying on Liquid for fast settlement paused bridge and L-BTC activity, shaking confidence in sidechain reserve accounting and the broader Bitcoin ecosystem&#x27;s second-layer security.
-
-Liquid said neither SideSwap&#x27;s Peg-out Authorization Key nor other federation keys were compromised; Blockstream reportedly traced the invalid L-BTC to a flaw in Elements, the software underlying Liquid. At least 11 of Liquid&#x27;s 15 functionaries signed the transaction, and no independent technical postmortem or patch description was public at the latest check.</summary>
-  </entry>
-  <entry>
-    <title>Liquid Network Hacked: $320M in Bitcoin Withdrawn from Sidechain</title>
-    <link href="https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"/>
-    <id>https://bmt.news/editions/2026-09-08/#gdelt:article:20260907T064500Z::https://www.ksl.com:443/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>The Liquid Network, a Bitcoin sidechain developed by Blockstream, has been hacked, with roughly $320 million (about 4,000 of 4,200 BTC) withdrawn from its federation wallet via SideSwap. The incident was traced to a bug in Blockstream&#x27;s Elements software, and the network has been paused.
-
-This is one of the largest security breaches on a Bitcoin sidechain and raises serious questions about the security model of federated sidechains and the safety of funds bridged to layer-two solutions. It affects Liquid users, exchanges, and institutions using Liquid for tokenized assets and faster trading settlement.
-
-The attacker exploited a bug in Elements software to withdraw BTC from the Liquid Federation wallet via the SideSwap protocol. Blockstream has publicly told the hacker that it is &#x27;safe to return the funds,&#x27; with the hackers describing themselves as &#x27;good guys,&#x27; complicating the question of intent and resolution.</summary>
-  </entry>
-  <entry>
-    <title>Bitcoin Sidechain Liquid Reports $320M Hack, Halts Network</title>
-    <link href="https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"/>
-    <id>https://bmt.news/editions/2026-09-08/#gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>On September 6, 2026, the Bitcoin sidechain Liquid Network suffered a security exploit that drained roughly 4,000 BTC (~$320 million), prompting network operators to halt all transactions. The attackers have described themselves as ethical security researchers, claiming they are the &#x27;good guys.&#x27;
-
-Liquid is Bitcoin&#x27;s main layer-2 sidechain for institutional settlement and digital asset issuance, so a breach of this size undermines confidence in Bitcoin-based custody and sidechain security. This is one of the largest security incidents in the Bitcoin sidechain ecosystem and could renew scrutiny on bridging and pegged-asset risk.
-
-Liquid is a federated sidechain run by Blockstream and a group of functionaries, meaning the stolen bitcoin was held under multisig by trusted parties rather than a simple smart contract. The hackers claim to be &#x27;good guys,&#x27; implying the exploit may have been framed as a white-hat rescue, and the network suspended block production while the incident was investigated.</summary>
-  </entry>
-  <entry>
-    <title>Liquid Network Bitcoin Sidechain Hit by $320M Exploit; Hackers Claim White-Hat Status</title>
-    <link href="https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:6191bdd9469e9c21</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>On September 6, 2026, approximately 4,000 BTC worth about $320 million was drained from the federation wallet backing Blockstream&#x27;s Liquid Network, a Bitcoin sidechain used by exchanges. The network halted all transactions after the exploit, and the attacker or attackers claimed to be white-hat hackers acting as the &#x27;good guys&#x27;.
-
-This is a major security breach on settlement infrastructure that exchanges rely on, undermining confidence in federated sidechains and custodial models. If funds belonging to exchanges or users were affected, it could disrupt settlement and withdrawal operations for multiple platforms.
-
-The exploit targeted the federation wallet that pegs bitcoin to the Liquid Network, moving roughly 4,000 BTC. The attackers described their action as a white-hat operation and reportedly kept about $47 million for themselves, according to one report; the network was halted to prevent further losses.</summary>
   </entry>
   <entry>
     <title>Orionx Halts Withdrawals and Winds Down After Alleged $7M Transfers</title>
@@ -79,37 +37,81 @@ This incident highlights the custodial risks of centralized exchanges, where use
 The alleged asset transfers total approximately $7 million, but further details about the destination or nature of the transfers have not been disclosed. The Chilean financial regulator&#x27;s statement confirms that Orionx&#x27;s wind-down falls outside its current supervisory remit, leaving no clear authority to compel refunds.</summary>
   </entry>
   <entry>
-    <title>Coldcard Wave 3 exploiter moves 45% of stolen BTC, Galaxy finds</title>
-    <link href="https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd</id>
+    <title>Liquid attacker returns 3,400 BTC, keeps 598.5 in replaceable transaction</title>
+    <link href="https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:thedefiant.io_api_feed:8f1088304a7f689f</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Galaxy Research reports that the Coldcard &#x27;Wave 3&#x27; exploiter has moved 45% of stolen Bitcoin, spending about 97.09 BTC — worth around $7.8 million — through THORChain and CoinJoins. As of mid-August, Galaxy had identified roughly 1,779 BTC stolen from 190 victims across more than 8,600 addresses.
+    <summary>The attacker who drained Liquid Network&#x27;s federation wallet broadcast an unconfirmed transaction sending 3,400 BTC back to Liquid&#x27;s federation wallet while paying 598.50 BTC to their own address. The move came after Blockstream said its bridge nodes had been patched; neither party has publicly commented on the proposed split.
 
-This ongoing movement shows the attacker is actively laundering a large, multi-victim Bitcoin theft, complicating recovery and law-enforcement efforts. It also underscores that compromised hardware-wallet seed entropy can hit many users at once, highlighting broader self-custody security risks.
+This development could significantly reduce user losses from one of the largest Bitcoin sidechain security incidents, potentially easing pressure on Liquid and Blockstream. It also tests whether on-chain negotiation and partial restitution can work as a resolution path for exchange hacks.
 
-Galaxy says the moved funds include 97 BTC that exited 12 vaults, with the attacker relying on THORChain swaps and CoinJoin transactions to obscure the trail. Earlier analysis from Galaxy linked about 1,789 BTC to the hack, with roughly 1,561 BTC still sitting in attacker-controlled addresses unmoved.</summary>
+The transaction remains unconfirmed and is flagged as replaceable (RBF), meaning the attacker could alter or cancel it before it is mined. The split leaves roughly 598.50 BTC in attacker-controlled funds after Blockstream reported patching the bridge nodes involved in the exploit.</summary>
   </entry>
   <entry>
-    <title>Canopy (CNPY) Lists on Six Major Crypto Exchanges</title>
-    <link href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPNUdjWFBGcy1iU3gzYldyQXBZX1J1TUJ2SXZQT3ZuaW9KdFB0WGVPTmtkdjEzRUpSQy1zSENRQzlfTFZjUmxZUk5JaXpNTUdQLU8wTlkzNlZ0bGV0OG1iQ1dha09lalNBOXd1cm9QU1VqUUEyemVIczhyWVJxa1lvbDF5Z1BDcmlua2Q3aFVqTGJnTXdyRnhzbmI0U0k4SzQ?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-08/#google_news:article:db17b0b2558eafeb</id>
+    <title>Ethereum commits to letting users pay gas fees without holding ETH</title>
+    <link href="https://www.coindesk.com/tech/2026/09/07/ethereum-commits-to-letting-users-pay-gas-fees-without-having-to-hold-eth"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:580738b824be8bf0</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Canopy&#x27;s CNPY token has become available for trading on Binance, OKX, Bitget, Gate, MEXC, and Bitvavo, giving it a simultaneous multi-exchange debut. The listings cover multiple major spot venues and expose the token to a global trading audience.
+    <summary>Ethereum has committed to a roadmap that would let users pay gas fees without holding ETH, based on EIP-8141, also known as &quot;Frames.&quot; Vitalik Buterin highlighted on Sept. 5, 2026 that the proposal has quietly advanced, and press reports tie the feature to the Hegotá hard fork expected in 2027.
 
-A debut on this many top-tier exchanges, including Binance and OKX, substantially increases CNPY&#x27;s liquidity, accessibility, and visibility. For Web3 infrastructure projects, such listings are a key milestone for user adoption, although they are also a routine business step for the exchanges themselves.
+This would remove a major onboarding barrier, letting wallets that only hold stablecoins transact normally and allowing applications to sponsor user fees without requiring migration to a smart account. It also reduces Ethereum&#x27;s reliance on ECDSA signature verification, paving the way toward signature aggregation and post-quantum security.
 
-Canopy&#x27;s website describes the project as an infrastructure layer that lets developers build and deploy on-chain apps with familiar programming languages and tools, while CryptoRank frames it as a framework with restaked security for launching sovereign L1 blockchains. Separate search listings also show another asset named Canopy Finance using the same CNPY symbol, underlining the importance of verifying the official contract address before trading.</summary>
+EIP-8141 defines a new EIP-2718 transaction type containing up to 64 independent &quot;frames,&quot; each an ordinary contract call for validation, fee payment, or execution, thereby decoupling the signing account from the fee-paying account. The proposal also includes &quot;default code&quot; so existing externally owned accounts benefit from sponsored gas, token-denominated fees, batched calls, and native key rotation; it has been a draft since January and is not yet formally scheduled.</summary>
   </entry>
   <entry>
-    <title>DBS and Citi Complete First Weekend USD Cross-Border Payment Using Tokenized Deposits</title>
+    <title>Two-Key Breach Could Expose $91B in USDT, Hacken Finds</title>
+    <link href="https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:c7ac573a20f26251</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Security firm Hacken released a technical review finding that roughly half of all circulating USDT—about $91.3 billion on Tron—is protected by just two signing keys. An attacker who compromised both keys could mint unlimited USDT and potentially take over contract ownership, stripping Tether of its administrative controls.
+
+This highlights a systemic risk in stablecoin infrastructure: if exploited, an attacker could mint unlimited USDT, threatening the stablecoin&#x27;s peg and the trust of users and exchanges. It also underscores key concentration risks on Ethereum, Avalanche, and Celo, where reused signing keys may extend administrative vulnerabilities.
+
+Hacken found no evidence of actual key compromise or a security incident, but warned that reused signing keys could broaden administrative risks across multiple chains. The review arrived alongside a KPMG audit that helped Tether earn a ratings upgrade from Bluechip, and a two-key attack could also let an attacker transfer USDT contract ownership, preventing Tether from freezing funds.</summary>
+  </entry>
+  <entry>
+    <title>Harmony Proposes Shutting Down Chain, Migrating ONE to Ethereum Over AI Threats</title>
+    <link href="https://www.coindesk.com/markets/2026/09/07/once-hyped-ethereum-rival-harmony-wants-to-shut-its-blockchain-over-ai-threats"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:f5c3bfd9a4143b7b</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>On Sept. 6, Harmony proposed ending its independent network and moving ONE to Ethereum via a final-block snapshot and automatic airdrop of ERC-20 tokens. The plan comes less than three weeks after a controversial rollback following an Aug. 11 exploit that forged roughly 3.01 trillion ONE.
+
+A once-prominent layer-1 voluntarily retiring marks an unusual existential outcome and highlights new perceived security pressures from AI and state actors. It affects ONE holders, validators, dApp users, and broader confidence in smaller blockchains&#x27; long-term resilience.
+
+Smart contracts, liquidity pools, and multisig safes will not migrate automatically, so users are urged to exit contracts before Sept. 10; validators may begin shutting down at 7 a.m. PT that day. The non-binding proposal includes a $1.37 million compensation pool, redirects future emissions to an AI-video initiative, and does not disclose final block or airdrop dates.</summary>
+  </entry>
+  <entry>
+    <title>DBS and Citi Complete First Weekend Tokenized-Deposit USD Payment</title>
     <link href="https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689"/>
     <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:a8a39e1465a90b11</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>On September 5, 2026, DBS and Citi executed the first weekend cross-border USD payment between Singapore and the U.S. using tokenized deposits, with settlement completed in minutes instead of days.
+    <summary>DBS and Citi completed the first weekend cross-border USD settlement between Singapore and the U.S. using tokenized deposits over Swift&#x27;s blockchain-based ledger. The transaction settled in minutes instead of the conventional one to two business days.
 
-This milestone signals growing institutional adoption of tokenized deposits and shows that blockchain-based settlement can operate outside conventional banking hours. It could accelerate banks&#x27; exploration of 24/7 payment rails and prompt regulators to assess the implications for cross-border payments.
+This milestone shows major incumbent banks are moving tokenized deposits from pilots toward live use, potentially enabling 24/7 cross-border payments without leaving the regulated banking system. It signals growing institutional adoption of blockchain rails for real-world payment infrastructure.
 
-The transaction settled over Swift&#x27;s ledger and took minutes instead of the standard two business days. The pilot&#x27;s timing on a Saturday highlights the potential for weekend settlement that was previously impossible.</summary>
+The transaction used tokenized deposits on Swift Digital Ledger, avoiding the constraints of traditional banking hours. Standard Chartered and HSBC completed the first tokenized cross-border transaction on Swift&#x27;s ledger in August, and Swift has been preparing to pilot the service with 17 major banks including Citi and DBS.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Launches Regulated BTC, ETH and SOL Derivatives in Canada</title>
+    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTFUwSE5JSF9oQjVoQjZQb3p2UjVYT2FZWFFSdlVERUN6N1BVT3BDSHpCa2x4dG1OYVBxMWNydXhTR0NfT0ZZc3BOMEktVG9sX2Z2OEtuS0RvTWJJZS00UjlEVW5VREZEQjA1NkQtWVJ6bmd4SkFSUXJzbjlPam12NG5PVDQ5eHM?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-08/#google_news:article:e7231a853fbedda5</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Coinbase has launched regulated crypto derivatives in Canada, giving eligible users access to perpetual and dated futures on Bitcoin (BTC), Ether (ETH), Solana (SOL) and other assets. The launch covers 23 futures contracts and supports leverage up to 10x.
+
+This marks one of the largest regulated crypto derivatives offerings for Canadian retail and institutional clients, expanding Coinbase&#x27;s &#x27;Everything Exchange&#x27; strategy beyond spot trading. Broader derivatives access can deepen market participation and give traders regulated hedging tools for BTC, ETH and SOL.
+
+According to reports, the derivatives suite includes 23 futures contracts and leverage up to 10x. The products are offered only to eligible Canadian users and are subject to Canada&#x27;s regulated derivatives framework.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Integrates with Deribit to Expand Crypto Options and Derivatives Access</title>
+    <link href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFA3aFdsa1FzaHhtSV93NU95R1o1cGk5NVFJR2sxQzgtb3NlYTVad0ZHZXhZbnNDZktZNXpxOEV1aFZXZmVJSmd0SGRPbXVNazhDZF90OA?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-08/#google_news:article:4245dbf73433af6b</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Coinbase International Exchange and Deribit are joining forces to create a unified derivatives platform covering perpetuals, dated futures, spot, and options. Reports also indicate that Coinbase Global has completed its acquisition of Deribit.
+
+This consolidation combines Coinbase&#x27;s regulated exchange infrastructure with Deribit&#x27;s dominant liquidity in cryptocurrency options, reshaping market structure for institutional derivatives trading. It could widen access to sophisticated hedging instruments and deepen the overall derivatives ecosystem.
+
+Deribit is the world&#x27;s largest Bitcoin and Ethereum options exchange, offering futures and perpetuals with up to 50x leverage. According to Coinbase&#x27;s official help page, the combined platform brings deep liquidity across perpetuals, dated futures, and spot, while Yahoo Finance reported the completed acquisition.</summary>
   </entry>
   <entry>
     <title>Liquid Sidechain Paused After 3,998 BTC Leaves Federation Wallet</title>

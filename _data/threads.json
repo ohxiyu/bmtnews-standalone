@@ -217,10 +217,10 @@
       "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
       "latest_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
       "latest_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
-      "discussion_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
-      "discussion_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
-      "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
-      "market_impact_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
+      "discussion_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "discussion_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
+      "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "market_impact_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
       "score": 9.0,
       "source_links": [
         {
@@ -329,6 +329,14 @@
         {
           "url": "https://liquid.net/",
           "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets"
+        },
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-federation",
+          "title": "Blockstream Help Center | What is the Liquid Federation?"
+        },
+        {
+          "url": "https://en.bitcoin.it/wiki/Transaction_replacement",
+          "title": "Transaction replacement - Bitcoin Wiki"
         }
       ]
     },
@@ -940,10 +948,10 @@
       "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
       "latest_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
       "latest_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
-      "discussion_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
-      "discussion_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
-      "market_impact_zh": "此事件暴露了 L-BTC 锚定的托管与偿付风险：Liquid 已暂停桥接，几乎所有主链储备均已转移至未经验证的地址。对市场的传导渠道在于储备偿付能力和提现可用性，影响 L-BTC 以及依赖该侧链锚定运行的已发行资产。",
-      "market_impact_en": "This incident exposes custody and solvency risks in the L-BTC peg, since Liquid has paused its bridge and nearly all mainchain reserves have moved to an unverified address. The transmission channel to markets is reserve solvency and withdrawal availability, affecting L-BTC and assets issued on Liquid that depend on the sidechain's peg functioning.",
+      "discussion_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "discussion_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
+      "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "market_impact_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
       "score": 9.0,
       "source_links": [
         {
@@ -1052,6 +1060,14 @@
         {
           "url": "https://liquid.net/",
           "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets"
+        },
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-federation",
+          "title": "Blockstream Help Center | What is the Liquid Federation?"
+        },
+        {
+          "url": "https://en.bitcoin.it/wiki/Transaction_replacement",
+          "title": "Transaction replacement - Bitcoin Wiki"
         }
       ]
     },

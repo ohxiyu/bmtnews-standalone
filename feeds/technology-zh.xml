@@ -6,15 +6,26 @@
   <id>https://bmt.news/feeds/technology-zh.xml</id>
   <updated>2026-09-08T00:00:00Z</updated>
   <entry>
-    <title>LG电视在看似关机时仍监听并扫描Wi-Fi网络</title>
+    <title>黑客新闻用户重构震网网络武器源代码</title>
+    <link href="https://github.com/Sadpainy/Stuxnet"/>
+    <id>https://bmt.news/editions/2026-09-08/#hackernews:story:49603546</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。
+
+震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。
+
+根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。</summary>
+  </entry>
+  <entry>
+    <title>LG电视关机后仍会监听并扫描Wi-Fi</title>
     <link href="https://decrypt.co/377637/lg-tv-might-be-listening-even-when-off"/>
     <id>https://bmt.news/editions/2026-09-08/#rss:decrypt.co_feed:f78fed6e97b94590</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Gamers Nexus 与安全研究人员的调查发现，LG 智能电视在看似关机或断开网络时仍会扫描家中 Wi-Fi 网络并收集麦克风音频。LG 已于5月与得克萨斯州监管机构就未披露的观看数据收集达成和解。
+    <summary>Gamers Nexus联合Level1Techs及独立研究人员调查发现，LG智能电视即使在屏幕熄灭或断开互联网连接时，也会扫描家庭整个Wi-Fi网络并捕获麦克风音频。LG已于五月与得克萨斯州监管机构就未披露的观看数据收集达成和解。
 
-该调查揭示常见消费设备中严重的隐私漏洞，说明静音键或“关机”状态并不能停止数据采集，未修补的远程访问漏洞甚至可能让攻击者完全控制电视。这影响数百万家庭，也引发对智能电视广告数据如何被采集和出售的新质疑。
+这影响到数百万LG智能电视用户，并在未经用户明确同意的情况下进行后台监听和网络扫描，引发严重的隐私担忧。这一事件还凸显了联网电视的更大风险：默认遥测和未修补的漏洞可能危及家庭隐私与安全。
 
-测试中，研究者即便在设置中关闭主麦克风后仍能通过隐藏的第二个麦克风录到可用音频；另一次测试还能隔着墙壁在大约60英尺外捕获语音，并在电视重新连接以太网后上传。研究者还发现了 LG 尚未完全修复的远程代码执行漏洞，以及可能让陌生人的网络流量经买家家庭连接转发的住宅代理组件。</summary>
+值得注意的是，当电视仅作为HDMI显示器使用时，ACR追踪仍在运行；在设置中静音主麦克风并不会阻止第二个隐藏麦克风继续录音。研究人员还发现了未修补的远程代码执行漏洞和住宅代理代码，LG要求他们在协调披露期间暂缓公布技术细节。</summary>
   </entry>
   <entry>
     <title>OpenAI首席科学家呼吁AI行业放缓开发</title>
@@ -425,16 +436,5 @@ OpenAI 表示，模型无法看到用户的用户名或密码，凭据既不会�
 这标志着AI硬件格局可能发生转变，表明定制推理芯片能与英伟达的主导产品抗衡。如果该结果得到确认，将可能降低OpenAI对英伟达的依赖，并促使其他大型AI实验室推进自研芯片。
 
 该结果基于SemiAnalysis的InferenceX基准测试，OpenAI硬件负责人Richard Ho称性能提升&#x27;非常非常显著&#x27;。对比主要集中于FP4精度和推理专用指标，据报道该芯片裸片尺寸与英伟达Rubin相近，但NVFP4峰值算力约为其三分之一。</summary>
-  </entry>
-  <entry>
-    <title>苹果发布M6与M5 Ultra芯片，AI计算能力大幅跃升</title>
-    <link href="https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"/>
-    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49433292</id>
-    <updated>2026-08-26T00:00:00Z</updated>
-    <summary>2026年8月25日，苹果发布了M6和M5 Ultra芯片，其中M6是苹果首款2纳米芯片，而M5 Ultra是苹果迄今最强大的芯片。M6配备12核CPU、12核GPU和双16核神经引擎，M5 Ultra则采用四芯片（quad-die）架构，性能相比M5 Max翻倍。
-
-此次发布标志着苹果Mac产品线在性能和AI计算方面的重大飞跃，巩固了其在高端计算和AI工作负载领域的地位。开发者和创意专业人士将获得明显更快的设备，苹果也通过2纳米制程技术继续推动芯片设计的边界。
-
-M6是苹果首款采用2纳米制程的芯片，配备12核CPU、12核GPU和双16核神经引擎，AI性能翻倍。M5 Ultra是苹果首款四芯片（quad-die）芯片，通过UltraFusion技术将两个M5 Max芯片组合而成，新款Mac Studio可选配最高256GB内存（512GB版本将于10月推出）和16TB存储。</summary>
   </entry>
 </feed>

@@ -6,6 +6,15 @@
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
   <updated>2026-09-08T00:00:00Z</updated>
   <entry>
+    <title>Coldcard 第三波被盗资金约45%已转移，比例不代表全部损失</title>
+    <link href="https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"/>
+    <id>https://bmt.news/editions/2026-09-08/#editorial:pick:4f8fc5e553adc57b</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>据 The Block 9月7日援引 Galaxy Research 的追踪，Coldcard 第三波攻击者已转移该波被盗资金的约45%。这个比例仅针对第三波资金，不是全部被盗比特币的45%。
+
+原日报将第三波比例与历史累计损失混用，现已更正。不同波次及观察时间的数据应分别理解，不能直接合并计算。</summary>
+  </entry>
+  <entry>
     <title>黑客向 Liquid Network 归还 2.7 亿美元比特币，此前盗走 3.2 亿美元</title>
     <link href="https://decrypt.co/377600/liquid-hackers-return-270m-bitcoin"/>
     <id>https://bmt.news/editions/2026-09-08/#rss:decrypt.co_feed:645a6466a40fe810</id>
@@ -15,57 +24,6 @@
 在加密货币盗窃案中归还大部分被盗资产并不常见，这可能会在一定程度上恢复用户对 Liquid Network（交易所用于结算的比特币侧链）的信心。尽管如此，此次漏洞仍暴露出许多交易所运作所依赖的侧链与托管基础设施的安全弱点。
 
 Liquid Network 在遭到攻击后暂停了所有交易，黑客在归还资金时自称“好人”。关于具体的攻击手段以及剩余被盗比特币的下落，尚未得到公开证实。</summary>
-  </entry>
-  <entry>
-    <title>4000枚比特币如何从Blockstream的Liquid网络中被转走</title>
-    <link href="https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:protos.com_feed_:cb619437abd2da25</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Blockstream的Liquid网络遭到攻击，约4000枚比特币（约3.2亿美元）通过有缺陷的LBTC赎回流程从其联盟钱包中被盗，导致侧链暂停。</summary>
-  </entry>
-  <entry>
-    <title>白帽黑客扣押3.2亿美元比特币，等待修复漏洞的证明</title>
-    <link href="https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:cryptoslate.com_feed_:8f3dfceab3f33c00</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>9月6日，一批因软件缺陷生成的4,000枚L-BTC通过了SideSwap的提款授权检查，促使Liquid Federation从储备中释放了约3,996枚比特币（约3.2亿美元）。持有资金者随后通过OP_RETURN消息自称是白帽黑客，并表示一旦Blockstream修复底层Elements缺陷并让所有受影响的节点完成升级，将归还大部分资金。
-
-这似乎是比特币侧链上最严重的安全事件之一，暴露出一种风险：当多个联邦签名者批准同一无效状态时，联邦网络可能释放真实BTC。依赖Liquid进行快速结算的交易所暂停了跨链桥和L-BTC业务，动摇了市场对侧链储备记账及比特币二层网络安全的信心。
-
-Liquid表示，SideSwap的提款授权密钥（PAK）及其他联邦密钥均未被泄露；Blockstream据称把无效L-BTC追溯到Liquid底层软件Elements中的缺陷。Liquid的15个联盟签署方中至少有11个签署了该交易，且截至最新检查时，尚无独立技术复盘或详细补丁说明公开发布。</summary>
-  </entry>
-  <entry>
-    <title>Liquid Network 遭黑客攻击：约3.2亿美元比特币被取出</title>
-    <link href="https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"/>
-    <id>https://bmt.news/editions/2026-09-08/#gdelt:article:20260907T064500Z::https://www.ksl.com:443/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>由 Blockstream 开发的比特币侧链 Liquid Network 遭到攻击，约 3.2 亿美元（约 4,000/4,200 枚比特币）通过 SideSwap 从联邦钱包中被取出。此次事件被追溯到 Blockstream Elements 软件中的一个漏洞，网络目前已暂停。
-
-这是比特币侧链上最大规模的安全事件之一，引发了对联邦侧链安全模型以及桥接至二层解决方案的资金安全的严重质疑。事件影响 Liquid 用户、交易所，以及使用 Liquid 进行代币化资产和更快速交易结算的机构。
-
-攻击者利用 Elements 软件中的漏洞，通过 SideSwap 协议从 Liquid 联邦钱包中取出了比特币。Blockstream 公开告知黑客“归还资金是安全的”，而黑客自称是“好人”，使得这一事件的意图和解决方式更加复杂。</summary>
-  </entry>
-  <entry>
-    <title>比特币侧链 Liquid 遭攻击，约3.2亿美元被提取</title>
-    <link href="https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"/>
-    <id>https://bmt.news/editions/2026-09-08/#gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>2026年9月6日，比特币侧链 Liquid Network 遭遇安全漏洞攻击，约4000枚BTC（约3.2亿美元）被提取，网络运营方随即暂停了所有交易。攻击者自称是道德安全研究员，声称他们是“好人”。
-
-Liquid 是比特币上用于机构结算和数字资产发行的主流二层侧链，如此规模的漏洞会削弱市场对基于比特币的托管和侧链安全的信心。这是比特币侧链生态中最严重的安全事件之一，可能引发对桥接和锚定资产风险的重新审视。
-
-Liquid 是一个由 Blockstream 和一组功能节点运营的联盟侧链，这意味着被盗的比特币由受信方通过多重签名保管，而非简单的智能合约。黑客声称自己是“好人”，暗示此次利用可能被构造成白帽救援行动；事件调查期间，网络已暂停区块生产。</summary>
-  </entry>
-  <entry>
-    <title>比特币侧链Liquid Network遭3.2亿美元攻击，黑客自称白帽</title>
-    <link href="https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:6191bdd9469e9c21</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>2026年9月6日，约4000枚比特币（价值约3.2亿美元）从支持Blockstream Liquid Network的联邦钱包中被盗。Liquid Network是一个被交易所使用的比特币侧链。事件发生后网络暂停了所有交易，攻击者自称是白帽黑客，声称是‘好人’。
-
-这是对交易所依赖的结算基础设施的一次重大安全破坏，削弱了市场对联邦侧链和托管模式的信心。如果交易所或用户的资金受到影响，可能扰乱多个平台的结算和提币业务。
-
-该漏洞攻击了将比特币锚定到Liquid Network的联邦钱包，转出了约4000枚比特币。攻击者称此举属于白帽行动，并据相关报道保留了约4700万美元作为报酬；网络随即暂停以防止更多损失。</summary>
   </entry>
   <entry>
     <title>Orionx涉嫌转移700万美元资产，停止提款并清盘</title>
@@ -79,37 +37,81 @@ Liquid 是一个由 Blockstream 和一组功能节点运营的联盟侧链，这
 涉嫌转移的资产总额约为700万美元，但有关资金流向或具体性质的更多细节尚未披露。智利金融监管机构的声明证实，Orionx的清盘不属于其现行监管职责范围，目前没有明确机构有权强制要求退款。</summary>
   </entry>
   <entry>
-    <title>Coldcard 第三波攻击者已转移45%被盗比特币，Galaxy 研究显示</title>
-    <link href="https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd</id>
+    <title>Liquid 攻击者退回 3,400 BTC，保留 598.5 BTC</title>
+    <link href="https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:thedefiant.io_api_feed:8f1088304a7f689f</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Galaxy Research 报告称，Coldcard“第三波”攻击者已转移45%的被盗比特币，已花费约97.09 BTC（约合780万美元），资金经由 THORChain 和 CoinJoin 转移。截至8月中旬，Galaxy 已识别出约1,779 BTC 被盗，涉及190名受害者和超过8,600个地址。
+    <summary>攻击 Liquid Network 联邦钱包的攻击者广播了一笔未确认交易，将 3,400 BTC 退回 Liquid 联邦钱包，同时将 598.50 BTC 支付到自己的地址。此举发生在 Blockstream 表示其桥接节点已修补之后，双方均未公开评论这一分配方案。
 
-这种持续的资金转移表明，攻击者正在积极清洗这起涉及多名受害者的大规模比特币盗窃所得，加大了追回资金和执法的难度。同时，这也提醒人们，硬件钱包种子熵不足可能导致大量用户同时受害，凸显了更广泛的自托管安全风险。
+这一进展可能大幅减少这起最大比特币侧链安全事件之一给用户造成的损失，并可能缓解 Liquid 和 Blockstream 面临的压力。它也在检验链上协商与部分返还能否成为交易所遭黑客攻击后的一种解决方案。
 
-Galaxy 表示，转移资金中有97 BTC 从12个保险库（vault）中流出，攻击者利用 THORChain 兑换和 CoinJoin 交易来混淆追踪线索。Galaxy 早些时候的分析将约1,789 BTC 与该黑客事件关联，其中约1,561 BTC 仍留在攻击者控制的地址中未被转移。</summary>
+这笔交易尚未确认，并被标记为可替换（RBF），意味着攻击者在交易上链前仍可更改或取消。在 Blockstream 报告已修补相关桥接节点后，约 598.50 BTC 仍留在攻击者控制的地址中。</summary>
   </entry>
   <entry>
-    <title>Canopy（CNPY）上线六大主流加密货币交易所</title>
-    <link href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPNUdjWFBGcy1iU3gzYldyQXBZX1J1TUJ2SXZQT3ZuaW9KdFB0WGVPTmtkdjEzRUpSQy1zSENRQzlfTFZjUmxZUk5JaXpNTUdQLU8wTlkzNlZ0bGV0OG1iQ1dha09lalNBOXd1cm9QU1VqUUEyemVIczhyWVJxa1lvbDF5Z1BDcmlua2Q3aFVqTGJnTXdyRnhzbmI0U0k4SzQ?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-08/#google_news:article:db17b0b2558eafeb</id>
+    <title>以太坊承诺让用户无需持有 ETH 即可支付 Gas 费</title>
+    <link href="https://www.coindesk.com/tech/2026/09/07/ethereum-commits-to-letting-users-pay-gas-fees-without-having-to-hold-eth"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:580738b824be8bf0</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Canopy 的 CNPY 代币已在 Binance、OKX、Bitget、Gate、MEXC 和 Bitvavo 上线交易，实现同时登陆多家主流现货平台。此次同步上线让该代币得以面向全球多平台的交易用户。
+    <summary>以太坊已承诺推进一项路线图，计划基于 EIP-8141（又称“Frames”）允许用户无需持有 ETH 即可支付 Gas 费。2026 年 9 月 5 日，Vitalik Buterin 公开表示该提案已取得阶段性进展，相关报道将其与预计在 2027 年进行的 Hegotá 升级相关联。
 
-能在 Binance、OKX 等多家顶级交易所同步上线，将显著提升 CNPY 的流动性、可访问性和可见度。对 Web3 基础设施类项目而言，这类上币是实现用户采用的关键节点，不过对交易所本身而言也是常规的商务操作。
+这将移除新用户的一大入门障碍，让仅持有稳定币的钱包可以正常交易，也让应用无需用户迁移至智能合约账户即可直接赞助 Gas 费用。同时，它降低了以太坊对 ECDSA 签名验证的依赖，为签名聚合与抗量子安全铺平了道路。
 
-Canopy 官网将其定位为基础设施层，让开发者能用熟悉的编程语言和工具构建并部署链上应用；CryptoRank 则把 Canopy Network 描述为具有再质押（restaked）安全机制的框架，用于启动主权 L1 应用链。搜索信息也显示名为 Canopy Finance 的另一个资产使用相同代币符号 CNPY，因此交易前有必要核对官方合约地址。</summary>
+EIP-8141 定义了一种新的 EIP-2718 交易类型，包含最多 64 个相互独立的“frames”（帧），每个帧都是一次普通的合约调用，用于验证、支付或执行，从而实现签名账户与支付账户的解耦。该提案还包含“默认代码”，使现有的外部账户（EOA）也能获得 Gas 赞助、代币支付、批量调用和原生私钥轮换等能力；提案自 1 月起仍是草案，尚未被正式纳入排期。</summary>
   </entry>
   <entry>
-    <title>星展与花旗完成首笔周末跨境美元代币化存款结算</title>
+    <title>Hacken报告：两把密钥泄露或危及910亿美元USDT</title>
+    <link href="https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:c7ac573a20f26251</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>安全公司Hacken发布技术审查发现，Tron上约913亿美元的USDT（约占流通总量的一半）仅由两个签名密钥保护。攻击者一旦突破这两个密钥，就能铸造无限量USDT，甚至夺取合约所有权，使Tether失去管理控制权。
+
+这凸显了稳定币基础设施的系统性风险：一旦被利用，攻击者可能无限铸造USDT，威胁稳定币的锚定以及用户和交易所的信任。同时，在以太坊、Avalanche和Celo上复用签名密钥，也可能扩大管理权限方面的脆弱性。
+
+Hacken未发现密钥实际被入侵或发生安全事件的证据，但警告称复用签名密钥可能扩大跨链管理风险。该审查发布之际，KPMG审计帮助Tether获得Bluechip评级上调；两密钥攻击还可能让攻击者转移USDT合约所有权，使Tether无法冻结资金。</summary>
+  </entry>
+  <entry>
+    <title>Harmony 提议关停区块链，以应对 AI 威胁将 ONE 迁移至以太坊</title>
+    <link href="https://www.coindesk.com/markets/2026/09/07/once-hyped-ethereum-rival-harmony-wants-to-shut-its-blockchain-over-ai-threats"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:f5c3bfd9a4143b7b</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>9月6日，Harmony 提议终止其独立网络，通过最终区块快照和自动空投将 ONE 转换为以太坊上的 ERC-20 代币。该方案距8月11日遭攻击、伪造约3.01万亿 ONE 后于8月21日完成的回滚不到三周。
+
+一个曾经备受关注的 Layer 1 主动选择关停，是非常罕见的结局，也凸显了 AI 和国家行为者带来的新型安全压力。这会影响 ONE 持有者、验证者、DApp 用户，并影响市场对小型区块链长期韧性的信心。
+
+智能合约、流动性池和多重签名金库不会自动迁移，因此用户被敦促在9月10日前退出相关合约；验证者可从太平洋时间当天上午7点起停止运行。该提案不具约束力，包含一个137万美元的补偿池，计划将未来 ONE 增发转用于 AI 视频项目，且未披露最终区块或空投日期。</summary>
+  </entry>
+  <entry>
+    <title>星展银行与花旗完成首笔周末代币化存款美元跨境支付</title>
     <link href="https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689"/>
     <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:a8a39e1465a90b11</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>2026年9月5日，星展银行（DBS）与花旗（Citi）使用代币化存款完成了新加坡与美国之间的首笔周末跨境美元支付，结算在几分钟内完成，而非数日。
+    <summary>星展银行（DBS）与花旗银行（Citi）通过Swift基于区块链的账本，完成了新加坡与美国之间首笔周末跨境美元代币化存款结算。该交易在数分钟内完成，而非传统跨境转账通常需要的一至两个工作日。
 
-这一里程碑标志着机构对代币化存款的采用正在加速，并表明基于区块链的结算可以突破传统银行营业时间的限制。它可能推动更多银行探索7×24小时支付轨道，并促使监管机构评估其对跨境支付的影响。
+这一里程碑表明，大型传统银行正将代币化存款从试点推向实际应用，有望在受监管的银行体系内实现全天候跨境支付。这也显示出机构对区块链技术用于现实支付基础设施的接受度不断提升。
 
-这笔交易通过Swift的账本完成结算，耗时数分钟而非通常的两个工作日。试点选在周六进行，凸显了以往不可能实现的周末结算潜力。</summary>
+该交易通过Swift数字账本（Swift Digital Ledger）上的代币化存款完成，绕开了传统银行营业时间的限制。渣打银行与汇丰银行于8月率先在Swift账本上完成了代币化跨境交易，Swift此后一直在筹备与包括花旗、星展在内的17家主要银行试点该服务。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase在加拿大为BTC、ETH和SOL推出受监管衍生品交易</title>
+    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTFUwSE5JSF9oQjVoQjZQb3p2UjVYT2FZWFFSdlVERUN6N1BVT3BDSHpCa2x4dG1OYVBxMWNydXhTR0NfT0ZZc3BOMEktVG9sX2Z2OEtuS0RvTWJJZS00UjlEVW5VREZEQjA1NkQtWVJ6bmd4SkFSUXJzbjlPam12NG5PVDQ5eHM?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-08/#google_news:article:e7231a853fbedda5</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Coinbase已在加拿大推出受监管的加密货币衍生品交易，为符合条件的用户提供比特币(BTC)、以太币(ETH)、Solana(SOL)等资产的永续合约及定期期货。此次上线涵盖23份期货合约，最高支持10倍杠杆。
+
+这标志着加拿大零售及机构客户可获得的受监管加密衍生品范围进一步扩大，也是Coinbase在现货交易之外推进&#x27;Everything Exchange&#x27;战略的重要一步。衍生品渠道拓宽有助于提升市场参与度，并为BTC、ETH和SOL交易者提供受监管的对冲工具。
+
+据报道，该衍生品系列包含23份期货合约，最高杠杆为10倍。这些产品仅面向符合条件的加拿大用户开放，并受加拿大受监管衍生品框架约束。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase整合Deribit，扩展加密期权与衍生品服务</title>
+    <link href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFA3aFdsa1FzaHhtSV93NU95R1o1cGk5NVFJR2sxQzgtb3NlYTVad0ZHZXhZbnNDZktZNXpxOEV1aFZXZmVJSmd0SGRPbXVNazhDZF90OA?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-08/#google_news:article:4245dbf73433af6b</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Coinbase International Exchange与Deribit正联手打造统一的衍生品平台，覆盖永续合约、定期期货、现货和期权。另有报道称，Coinbase Global已完成对Deribit的收购。
+
+此次整合将Coinbase受监管的交易基础设施与Deribit在加密货币期权领域的主导流动性相结合，重塑机构衍生品交易的市场结构。它可能拓宽投资者接触复杂对冲工具的渠道，并深化整个衍生品生态系统。
+
+Deribit是全球最大的比特币和以太坊期权交易所，提供最高50倍杠杆的期货和永续合约。Coinbase官方帮助页面显示，合并后的平台将在永续合约、定期期货和现货方面提供深度流动性；Yahoo Finance则报道收购已完成。</summary>
   </entry>
   <entry>
     <title>Liquid 侧链暂停：联邦钱包流出 3,998 BTC</title>

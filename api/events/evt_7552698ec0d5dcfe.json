@@ -47,14 +47,27 @@
       "current_state_en": "Ethereum commits to enabling gas fee payments without requiring users to hold ETH, a significant usability upgrade.",
       "detailed_summary_zh": "Ethereum commits to enabling gas fee payments without requiring users to hold ETH, a significant usability upgrade.",
       "detailed_summary_en": "Ethereum commits to enabling gas fee payments without requiring users to hold ETH, a significant usability upgrade.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "在以太坊上，用户目前必须使用 ETH 支付交易费用（即 Gas 费），而且签署交易的账户通常也是支付费用的账户。ERC-4337 于 2023 年通过独立的内存池实现了账户抽象，但仍依赖第三方打包者。Frames 方案将这些能力直接融入基础协议，使签名者与费用支付者可以不同；其作者将其描述为从 ECDSA 走向抗量子签名的“原生过渡通道”。",
+      "background_en": "On Ethereum, users must currently pay transaction fees, called gas, in ETH, and typically the account that signs a transaction is the same account that pays for it. ERC-4337 introduced account abstraction on a separate mempool in 2023, but it relies on third-party bundlers. Frames embeds similar capabilities into the base protocol, letting signers and fee payers differ, and is described by its authors as a \"native off-ramp\" from ECDSA toward post-quantum signatures.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该提案直接触及 ETH 作为强制性“Gas 资产”的核心用途；如果实施，可能改变需要持有 ETH 的用户群体和交易类型，进而影响交易所、钱包及 DeFi 应用对 ETH 的定位。由于实施时间尚未正式确定，当前链上费用流并未改变，任何市场影响都将取决于未来的协议进展，而非当下的费用经济。",
+      "market_impact_en": "The proposal directly touches ETH's core utility as the mandatory gas asset; if implemented, it could shift which users and transaction types need ETH, affecting how exchanges, wallets, and DeFi applications position the token. Since implementation is not yet officially scheduled, current on-chain fee flows remain unchanged and any market effect would hinge on future protocol milestones rather than immediate economics.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://cryptobriefing.com/ethereum-eip-8141-frame-transaction-scaling/",
+          "title": "Ethereum advances scaling with EIP-8141, a new transaction type..."
+        },
+        {
+          "url": "https://cryptobriefing.com/ethereum-gas-fees-without-eth-2027/",
+          "title": "Ethereum set to enable gas fee payments without holding ETH in 2027 upgrade"
+        },
+        {
+          "url": "https://decrypt.co/377559/ethereum-proposal-would-let-users-pay-gas-without-holding-eth",
+          "title": "Ethereum Proposal Would Let Users Pay Gas Without Holding ETH - Decrypt"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:580738b824be8bf0"

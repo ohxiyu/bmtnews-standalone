@@ -6,15 +6,26 @@
   <id>https://bmt.news/feeds/technology-en.xml</id>
   <updated>2026-09-08T00:00:00Z</updated>
   <entry>
-    <title>LG TVs Found Scanning Wi-Fi and Listening Even While Appearing Off</title>
+    <title>Hacker News User Reconstructs Stuxnet Cyber-Weapon Source Code</title>
+    <link href="https://github.com/Sadpainy/Stuxnet"/>
+    <id>https://bmt.news/editions/2026-09-08/#hackernews:story:49603546</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.
+
+Stuxnet is widely regarded as the world&#x27;s first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran&#x27;s nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.
+
+According to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7.</summary>
+  </entry>
+  <entry>
+    <title>LG Smart TVs Still Listen and Scan Home Wi-Fi When &#x27;Off&#x27;</title>
     <link href="https://decrypt.co/377637/lg-tv-might-be-listening-even-when-off"/>
     <id>https://bmt.news/editions/2026-09-08/#rss:decrypt.co_feed:f78fed6e97b94590</id>
     <updated>2026-09-08T00:00:00Z</updated>
-    <summary>An investigation by Gamers Nexus and security researchers found LG smart TVs scan home Wi-Fi networks and capture microphone audio even when they appear off or unplugged from the internet. LG settled with Texas regulators in May over undisclosed viewing-data collection.
+    <summary>A Gamers Nexus investigation with Level1Techs and independent researchers found that LG smart TVs scan a home&#x27;s entire Wi-Fi network and capture microphone audio even when the screen is dark or the TV is unplugged from the internet. LG agreed to a settlement with Texas regulators in May over undisclosed viewing-data collection.
 
-The findings expose serious privacy gaps in widely used consumer devices, showing that features like a mute switch or &#x27;off&#x27; state do not stop data collection, and that unpatched remote-access flaws could let attackers take over TVs. This affects millions of households and raises fresh questions about how smart-TV advertising data is gathered and sold.
+This affects millions of LG smart TV owners and raises serious privacy concerns because background listening and network mapping operate without clear user consent. It also highlights broader risks in connected TVs, where default telemetry and unpatched vulnerabilities can compromise home privacy and security.
 
-In one test, researchers pulled usable audio from a hidden second microphone after muting the main mic; in another, speech was captured from roughly 60 feet away through a wall and uploaded once the TV reconnected to ethernet. Researchers also found partially unpatched remote-code-execution bugs and a residential-proxy component that could route strangers&#x27; internet traffic through a buyer&#x27;s home connection.</summary>
+Notably, ACR tracking remains active when the TV is used purely as an HDMI monitor, and muting the main microphone in settings does not stop a second, hidden microphone from recording. Researchers also found unpatched remote-code-execution flaws and residential-proxy code, with LG asking them to hold back technical disclosure during an ongoing coordinated-disclosure process.</summary>
   </entry>
   <entry>
     <title>OpenAI Chief Scientist Urges AI Industry to Slow Down</title>
@@ -425,16 +436,5 @@ Community commenters note that GLM-5.3-Flash roughly halves the parameter count 
 This marks a potential shift in AI hardware economics, suggesting that custom inference chips can rival Nvidia&#x27;s dominant offerings. If confirmed, it could reduce OpenAI&#x27;s reliance on Nvidia and pressure other major AI labs to pursue in-house silicon.
 
 The results come from SemiAnalysis&#x27; InferenceX benchmark, with OpenAI hardware head Richard Ho describing the improvement as &#x27;very, very significant.&#x27; Comparisons reportedly focus on FP4 precision and inference-specific metrics, with the chip&#x27;s die size similar to Nvidia&#x27;s Rubin but at roughly one-third the NVFP4 peak flops.</summary>
-  </entry>
-  <entry>
-    <title>Apple Announces M6 and M5 Ultra Chips with Major AI Compute Leap</title>
-    <link href="https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"/>
-    <id>https://bmt.news/editions/2026-08-26/#hackernews:story:49433292</id>
-    <updated>2026-08-26T00:00:00Z</updated>
-    <summary>On August 25, 2026, Apple announced the M6 and M5 Ultra chips, its first 2nm chip and its most powerful chip ever, respectively. The M6 features a 12-core CPU, 12-core GPU, and a Dual 16-core Neural Engine, while the M5 Ultra uses a quad-die architecture for doubling performance over the M5 Max.
-
-The launch marks a major leap in performance and AI compute for Apple&#x27;s Mac lineup, strengthening its position in high-end computing and AI workloads. Developers and creative professionals will gain significantly faster machines, while Apple continues to push the boundaries of chip design with 2nm process technology.
-
-The M6 is the first Apple chip built on a 2nm process, featuring a 12-core CPU, 12-core GPU, and Dual 16-core Neural Engine, doubling AI performance. The M5 Ultra, Apple&#x27;s first quad-die chip, combines two M5 Max dies using UltraFusion and is available in the new Mac Studio with configurations up to 256GB RAM (512GB coming in October) and 16TB storage.</summary>
   </entry>
 </feed>

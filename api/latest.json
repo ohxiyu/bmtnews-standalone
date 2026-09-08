@@ -2,33 +2,70 @@
   "version": 1,
   "content_revision_version": 1,
   "date": "2026-09-08",
-  "generated_at": "2026-09-08T00:36:55.887409Z",
+  "generated_at": "2026-09-08T04:14:08.840364Z",
   "site": "https://bmt.news",
   "window": {
     "start": "2026-09-07T00:00:00Z",
     "end": "2026-09-08T00:00:00Z"
   },
   "stats": {
-    "candidates": 249,
+    "candidates": 246,
     "analyzed": 140,
-    "displayed": 13,
-    "high_priority": 6
+    "displayed": 15,
+    "high_priority": 1
   },
-  "overview": {
-    "zh": "Liquid网络遭3.2亿美元攻击后虽有2.7亿美元归还，但Orionx清盘停业、Coldcard被盗资金持续流动，安全压力未减。 侧链暂停：Liquid约4000枚比特币经由LBTC赎回漏洞从联盟钱包被转出，Blockstream随后暂停该侧链。 监管缺位：智利交易所Orionx涉嫌转移700万美元资产，停止提款并清盘；监管机构称无权责令偿还。 盗币异动：Coldcard第三波攻击者已将约1779枚、来自190名受害者的被盗比特币中的45%转走。",
-    "en": "Liquid Network returned $270M after a $320M exploit, yet Orionx’s shutdown and Coldcard's moving stolen BTC keep security pressure high. Sidechain halt：Blockstream paused Liquid after about 4,000 BTC was drained from its federation wallet through a faulty LBTC redemption. Regulatory gap：Chilean exchange Orionx halted withdrawals and began winding down after alleged $7M transfers, with regulators saying they cannot order repayments. Stolen fund moves：The Coldcard Wave 3 exploiter has moved 45% of the roughly 1,779 BTC stolen from 190 victims."
-  },
+  "overview": {},
   "market": {
-    "btc_usd": 79109.0,
-    "btc_change_24h": -1.2758054861192014,
-    "eth_usd": 2488.18,
-    "eth_change_24h": -1.01581956016061,
+    "btc_usd": 78831.0,
+    "btc_change_24h": -0.9846608481871111,
+    "eth_usd": 2483.25,
+    "eth_change_24h": -0.5602833002065221,
     "fear_greed": 69,
     "fear_greed_label": "Greed"
   },
   "items": [
     {
       "rank": 1,
+      "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661",
+      "title": {
+        "zh": "Coldcard 第三波被盗资金约45%已转移，比例不代表全部损失",
+        "en": "Coldcard: 45% of Wave 3 funds moved, not 45% of all losses"
+      },
+      "summary": {
+        "zh": "据 The Block 9月7日援引 Galaxy Research 的追踪，Coldcard 第三波攻击者已转移该波被盗资金的约45%。这个比例仅针对第三波资金，不是全部被盗比特币的45%。\n\n原日报将第三波比例与历史累计损失混用，现已更正。不同波次及观察时间的数据应分别理解，不能直接合并计算。",
+        "en": "The Block reported on September 7, citing Galaxy Research, that approximately 45% of funds stolen in Coldcard's third attack wave had moved. The percentage applies to Wave 3, not all stolen bitcoin.\n\nThis corrects the earlier edition's conflation of a wave-specific percentage with historical aggregate losses. Figures from different waves and observation dates must not be combined."
+      },
+      "content_revision": {
+        "zh": "f69ae1e6853fc1aa6d9ddee1cb62db3d9dfceac9def5bbd3f1fbd4a926de317f",
+        "en": "d34499ef52ffb7ca26def59b655851e52e6f184aa27bfa2df77f729a35431372"
+      },
+      "score": null,
+      "category": "crypto-markets",
+      "top_category": "crypto",
+      "source": {
+        "type": "editorial",
+        "label": "BMTNews 更正"
+      },
+      "tags": [
+        "coldcard",
+        "security"
+      ],
+      "sources_count": 1,
+      "editorial": true,
+      "thread": {
+        "id": "t4f8fc5e553",
+        "day": 1,
+        "url": "https://bmt.news/threads/t4f8fc5e553/"
+      },
+      "event": {
+        "event_id": "evt_65f972f6d8c15c28",
+        "update_id": "upd_cea4abd91245eb8d",
+        "url": "https://bmt.news/events/evt_65f972f6d8c15c28/#upd_cea4abd91245eb8d",
+        "json": "https://bmt.news/api/events/evt_65f972f6d8c15c28.json"
+      }
+    },
+    {
+      "rank": 2,
       "url": "https://decrypt.co/377600/liquid-hackers-return-270m-bitcoin",
       "title": {
         "zh": "黑客向 Liquid Network 归还 2.7 亿美元比特币，此前盗走 3.2 亿美元",
@@ -56,7 +93,7 @@
         "hack",
         "recovery"
       ],
-      "sources_count": 1,
+      "sources_count": 3,
       "editorial": false,
       "thread": {
         "id": "t0023433b27",
@@ -71,222 +108,7 @@
       }
     },
     {
-      "rank": 2,
-      "url": "https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/",
-      "title": {
-        "zh": "4000枚比特币如何从Blockstream的Liquid网络中被转走",
-        "en": "How 4,000 BTC walked out of Blockstream’s Liquid Network"
-      },
-      "summary": {
-        "zh": "Blockstream的Liquid网络遭到攻击，约4000枚比特币（约3.2亿美元）通过有缺陷的LBTC赎回流程从其联盟钱包中被盗，导致侧链暂停。",
-        "en": "Blockstream's Liquid Network was hacked, with approximately 4,000 BTC (~$320M) drained from its federation wallet via a faulty LBTC redemption, prompting a pause of the sidechain."
-      },
-      "content_revision": {
-        "zh": "ea00bc39543e949d9842d323e91e0e9ecdd1e7c259cd01886a81f3ff00ab1ab4",
-        "en": "7fa30eb26d20429d28a7f22f61af9ab131d0629962cbdfc115b67a5d1bd57ab6"
-      },
-      "score": 9.0,
-      "category": "crypto-protocols",
-      "top_category": "crypto",
-      "source": {
-        "type": "rss",
-        "label": "Protos"
-      },
-      "tags": [
-        "security",
-        "exploit",
-        "bitcoin",
-        "liquid-network",
-        "blockstream"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "ta4a72c5f94",
-        "day": 2,
-        "url": "https://bmt.news/threads/ta4a72c5f94/"
-      },
-      "event": {
-        "event_id": "evt_c8eeb2561cb07df2",
-        "update_id": "upd_20b32ffc42979a2f",
-        "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/#upd_20b32ffc42979a2f",
-        "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json"
-      }
-    },
-    {
       "rank": 3,
-      "url": "https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/",
-      "title": {
-        "zh": "白帽黑客扣押3.2亿美元比特币，等待修复漏洞的证明",
-        "en": "Whitehat holding $320M in drained Bitcoin awaits proof of flaw fix"
-      },
-      "summary": {
-        "zh": "9月6日，一批因软件缺陷生成的4,000枚L-BTC通过了SideSwap的提款授权检查，促使Liquid Federation从储备中释放了约3,996枚比特币（约3.2亿美元）。持有资金者随后通过OP_RETURN消息自称是白帽黑客，并表示一旦Blockstream修复底层Elements缺陷并让所有受影响的节点完成升级，将归还大部分资金。\n\n这似乎是比特币侧链上最严重的安全事件之一，暴露出一种风险：当多个联邦签名者批准同一无效状态时，联邦网络可能释放真实BTC。依赖Liquid进行快速结算的交易所暂停了跨链桥和L-BTC业务，动摇了市场对侧链储备记账及比特币二层网络安全的信心。\n\nLiquid表示，SideSwap的提款授权密钥（PAK）及其他联邦密钥均未被泄露；Blockstream据称把无效L-BTC追溯到Liquid底层软件Elements中的缺陷。Liquid的15个联盟签署方中至少有11个签署了该交易，且截至最新检查时，尚无独立技术复盘或详细补丁说明公开发布。",
-        "en": "A bug-created batch of 4,000 L-BTC passed SideSwap's peg-out checks on Sept. 6, prompting the Liquid Federation to release roughly 3,996 Bitcoin (~$320 million) from its reserve. The fund holder later messaged via OP_RETURN that it is a whitehat and will return most funds once Blockstream fixes the underlying Elements bug on every affected node.\n\nThis appears to be one of the largest security failures on a Bitcoin sidechain, exposing the risk that a federated network can release real BTC when multiple signers approve the same invalid state. Exchanges relying on Liquid for fast settlement paused bridge and L-BTC activity, shaking confidence in sidechain reserve accounting and the broader Bitcoin ecosystem's second-layer security.\n\nLiquid said neither SideSwap's Peg-out Authorization Key nor other federation keys were compromised; Blockstream reportedly traced the invalid L-BTC to a flaw in Elements, the software underlying Liquid. At least 11 of Liquid's 15 functionaries signed the transaction, and no independent technical postmortem or patch description was public at the latest check."
-      },
-      "content_revision": {
-        "zh": "1028bcfca1a99e5308a3f04a82d482f9821aaff6e4e990e7b293f2fcc8fb44f7",
-        "en": "73b6664582b68223fdf9291251e4df6eae843bbc976bf6d14fa279980fe2ec19"
-      },
-      "score": 9.0,
-      "category": "crypto-protocols",
-      "top_category": "crypto",
-      "source": {
-        "type": "rss",
-        "label": "CryptoSlate"
-      },
-      "tags": [
-        "security",
-        "bitcoin",
-        "liquid-network",
-        "exploit",
-        "whitehat"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "ta4a72c5f94",
-        "day": 2,
-        "url": "https://bmt.news/threads/ta4a72c5f94/"
-      },
-      "event": {
-        "event_id": "evt_e348821b679e23e3",
-        "update_id": "upd_a90108914e8c9e0e",
-        "url": "https://bmt.news/events/evt_e348821b679e23e3/#upd_a90108914e8c9e0e",
-        "json": "https://bmt.news/api/events/evt_e348821b679e23e3.json"
-      }
-    },
-    {
-      "rank": 4,
-      "url": "https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
-      "title": {
-        "zh": "Liquid Network 遭黑客攻击：约3.2亿美元比特币被取出",
-        "en": "Liquid Network Hacked: $320M in Bitcoin Withdrawn from Sidechain"
-      },
-      "summary": {
-        "zh": "由 Blockstream 开发的比特币侧链 Liquid Network 遭到攻击，约 3.2 亿美元（约 4,000/4,200 枚比特币）通过 SideSwap 从联邦钱包中被取出。此次事件被追溯到 Blockstream Elements 软件中的一个漏洞，网络目前已暂停。\n\n这是比特币侧链上最大规模的安全事件之一，引发了对联邦侧链安全模型以及桥接至二层解决方案的资金安全的严重质疑。事件影响 Liquid 用户、交易所，以及使用 Liquid 进行代币化资产和更快速交易结算的机构。\n\n攻击者利用 Elements 软件中的漏洞，通过 SideSwap 协议从 Liquid 联邦钱包中取出了比特币。Blockstream 公开告知黑客“归还资金是安全的”，而黑客自称是“好人”，使得这一事件的意图和解决方式更加复杂。",
-        "en": "The Liquid Network, a Bitcoin sidechain developed by Blockstream, has been hacked, with roughly $320 million (about 4,000 of 4,200 BTC) withdrawn from its federation wallet via SideSwap. The incident was traced to a bug in Blockstream's Elements software, and the network has been paused.\n\nThis is one of the largest security breaches on a Bitcoin sidechain and raises serious questions about the security model of federated sidechains and the safety of funds bridged to layer-two solutions. It affects Liquid users, exchanges, and institutions using Liquid for tokenized assets and faster trading settlement.\n\nThe attacker exploited a bug in Elements software to withdraw BTC from the Liquid Federation wallet via the SideSwap protocol. Blockstream has publicly told the hacker that it is 'safe to return the funds,' with the hackers describing themselves as 'good guys,' complicating the question of intent and resolution."
-      },
-      "content_revision": {
-        "zh": "0c17b5f2e9b7521c2fc757c531c04346c4609c876e87b3cabf34ed4f0c09a98a",
-        "en": "647e1122c5aba63dbdb7668ded853418ae64cee0467c275cdecb6fa82a657b55"
-      },
-      "score": 9.0,
-      "category": "crypto-protocols",
-      "top_category": "crypto",
-      "source": {
-        "type": "gdelt",
-        "label": "ksl.com"
-      },
-      "tags": [
-        "security",
-        "hack",
-        "bitcoin",
-        "liquid network",
-        "crypto"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t0023433b27",
-        "day": 2,
-        "url": "https://bmt.news/threads/t0023433b27/"
-      },
-      "event": {
-        "event_id": "evt_c8eeb2561cb07df2",
-        "update_id": "upd_ea2e704d45bf9957",
-        "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/#upd_ea2e704d45bf9957",
-        "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json"
-      }
-    },
-    {
-      "rank": 5,
-      "url": "https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
-      "title": {
-        "zh": "比特币侧链 Liquid 遭攻击，约3.2亿美元被提取",
-        "en": "Bitcoin Sidechain Liquid Reports $320M Hack, Halts Network"
-      },
-      "summary": {
-        "zh": "2026年9月6日，比特币侧链 Liquid Network 遭遇安全漏洞攻击，约4000枚BTC（约3.2亿美元）被提取，网络运营方随即暂停了所有交易。攻击者自称是道德安全研究员，声称他们是“好人”。\n\nLiquid 是比特币上用于机构结算和数字资产发行的主流二层侧链，如此规模的漏洞会削弱市场对基于比特币的托管和侧链安全的信心。这是比特币侧链生态中最严重的安全事件之一，可能引发对桥接和锚定资产风险的重新审视。\n\nLiquid 是一个由 Blockstream 和一组功能节点运营的联盟侧链，这意味着被盗的比特币由受信方通过多重签名保管，而非简单的智能合约。黑客声称自己是“好人”，暗示此次利用可能被构造成白帽救援行动；事件调查期间，网络已暂停区块生产。",
-        "en": "On September 6, 2026, the Bitcoin sidechain Liquid Network suffered a security exploit that drained roughly 4,000 BTC (~$320 million), prompting network operators to halt all transactions. The attackers have described themselves as ethical security researchers, claiming they are the 'good guys.'\n\nLiquid is Bitcoin's main layer-2 sidechain for institutional settlement and digital asset issuance, so a breach of this size undermines confidence in Bitcoin-based custody and sidechain security. This is one of the largest security incidents in the Bitcoin sidechain ecosystem and could renew scrutiny on bridging and pegged-asset risk.\n\nLiquid is a federated sidechain run by Blockstream and a group of functionaries, meaning the stolen bitcoin was held under multisig by trusted parties rather than a simple smart contract. The hackers claim to be 'good guys,' implying the exploit may have been framed as a white-hat rescue, and the network suspended block production while the incident was investigated."
-      },
-      "content_revision": {
-        "zh": "f90f52a44f83d854db848d3630f8779781876ce4a4ea1cf79e7050fb6ed7b549",
-        "en": "52fc1035e72f4620ae3eef34054ea70628f90bb6e3fa3695fdee04c6cdb320a7"
-      },
-      "score": 9.0,
-      "category": "crypto-protocols",
-      "top_category": "crypto",
-      "source": {
-        "type": "gdelt",
-        "label": "thestar.com.my"
-      },
-      "tags": [
-        "security",
-        "hack",
-        "bitcoin",
-        "liquid-network",
-        "crypto"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t0023433b27",
-        "day": 2,
-        "url": "https://bmt.news/threads/t0023433b27/"
-      },
-      "event": {
-        "event_id": "evt_c8eeb2561cb07df2",
-        "update_id": "upd_859c1aec0061613a",
-        "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/#upd_859c1aec0061613a",
-        "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json"
-      }
-    },
-    {
-      "rank": 6,
-      "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
-      "title": {
-        "zh": "比特币侧链Liquid Network遭3.2亿美元攻击，黑客自称白帽",
-        "en": "Liquid Network Bitcoin Sidechain Hit by $320M Exploit; Hackers Claim White-Hat Status"
-      },
-      "summary": {
-        "zh": "2026年9月6日，约4000枚比特币（价值约3.2亿美元）从支持Blockstream Liquid Network的联邦钱包中被盗。Liquid Network是一个被交易所使用的比特币侧链。事件发生后网络暂停了所有交易，攻击者自称是白帽黑客，声称是‘好人’。\n\n这是对交易所依赖的结算基础设施的一次重大安全破坏，削弱了市场对联邦侧链和托管模式的信心。如果交易所或用户的资金受到影响，可能扰乱多个平台的结算和提币业务。\n\n该漏洞攻击了将比特币锚定到Liquid Network的联邦钱包，转出了约4000枚比特币。攻击者称此举属于白帽行动，并据相关报道保留了约4700万美元作为报酬；网络随即暂停以防止更多损失。",
-        "en": "On September 6, 2026, approximately 4,000 BTC worth about $320 million was drained from the federation wallet backing Blockstream's Liquid Network, a Bitcoin sidechain used by exchanges. The network halted all transactions after the exploit, and the attacker or attackers claimed to be white-hat hackers acting as the 'good guys'.\n\nThis is a major security breach on settlement infrastructure that exchanges rely on, undermining confidence in federated sidechains and custodial models. If funds belonging to exchanges or users were affected, it could disrupt settlement and withdrawal operations for multiple platforms.\n\nThe exploit targeted the federation wallet that pegs bitcoin to the Liquid Network, moving roughly 4,000 BTC. The attackers described their action as a white-hat operation and reportedly kept about $47 million for themselves, according to one report; the network was halted to prevent further losses."
-      },
-      "content_revision": {
-        "zh": "107523ecdb95ce5fc77a1a5ef0b6a08364e72bb75130fce26d155fff6d798d1c",
-        "en": "229038c7ac084f6bb77c7aaf5097f4098c8c4af91c4c1120504b94ed095f692e"
-      },
-      "score": 9.0,
-      "category": "crypto-markets",
-      "top_category": "crypto",
-      "source": {
-        "type": "rss",
-        "label": "CoinDesk"
-      },
-      "tags": [
-        "bitcoin",
-        "exploit",
-        "security",
-        "exchange",
-        "hack"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "ta4a72c5f94",
-        "day": 2,
-        "url": "https://bmt.news/threads/ta4a72c5f94/"
-      },
-      "event": {
-        "event_id": "evt_79a9bd1c0f79b57c",
-        "update_id": "upd_3371ce7bc47a77c1",
-        "url": "https://bmt.news/events/evt_79a9bd1c0f79b57c/#upd_3371ce7bc47a77c1",
-        "json": "https://bmt.news/api/events/evt_79a9bd1c0f79b57c.json"
-      }
-    },
-    {
-      "rank": 7,
       "url": "https://thedefiant.io/news/cefi/orionx-halts-withdrawals-and-winds-down-after-alleged-7m-asset-transfers",
       "title": {
         "zh": "Orionx涉嫌转移700万美元资产，停止提款并清盘",
@@ -328,21 +150,193 @@
       }
     },
     {
-      "rank": 8,
-      "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661",
+      "rank": 4,
+      "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
       "title": {
-        "zh": "Coldcard 第三波攻击者已转移45%被盗比特币，Galaxy 研究显示",
-        "en": "Coldcard Wave 3 exploiter moves 45% of stolen BTC, Galaxy finds"
+        "zh": "Liquid 攻击者退回 3,400 BTC，保留 598.5 BTC",
+        "en": "Liquid attacker returns 3,400 BTC, keeps 598.5 in replaceable transaction"
       },
       "summary": {
-        "zh": "Galaxy Research 报告称，Coldcard“第三波”攻击者已转移45%的被盗比特币，已花费约97.09 BTC（约合780万美元），资金经由 THORChain 和 CoinJoin 转移。截至8月中旬，Galaxy 已识别出约1,779 BTC 被盗，涉及190名受害者和超过8,600个地址。\n\n这种持续的资金转移表明，攻击者正在积极清洗这起涉及多名受害者的大规模比特币盗窃所得，加大了追回资金和执法的难度。同时，这也提醒人们，硬件钱包种子熵不足可能导致大量用户同时受害，凸显了更广泛的自托管安全风险。\n\nGalaxy 表示，转移资金中有97 BTC 从12个保险库（vault）中流出，攻击者利用 THORChain 兑换和 CoinJoin 交易来混淆追踪线索。Galaxy 早些时候的分析将约1,789 BTC 与该黑客事件关联，其中约1,561 BTC 仍留在攻击者控制的地址中未被转移。",
-        "en": "Galaxy Research reports that the Coldcard 'Wave 3' exploiter has moved 45% of stolen Bitcoin, spending about 97.09 BTC — worth around $7.8 million — through THORChain and CoinJoins. As of mid-August, Galaxy had identified roughly 1,779 BTC stolen from 190 victims across more than 8,600 addresses.\n\nThis ongoing movement shows the attacker is actively laundering a large, multi-victim Bitcoin theft, complicating recovery and law-enforcement efforts. It also underscores that compromised hardware-wallet seed entropy can hit many users at once, highlighting broader self-custody security risks.\n\nGalaxy says the moved funds include 97 BTC that exited 12 vaults, with the attacker relying on THORChain swaps and CoinJoin transactions to obscure the trail. Earlier analysis from Galaxy linked about 1,789 BTC to the hack, with roughly 1,561 BTC still sitting in attacker-controlled addresses unmoved."
+        "zh": "攻击 Liquid Network 联邦钱包的攻击者广播了一笔未确认交易，将 3,400 BTC 退回 Liquid 联邦钱包，同时将 598.50 BTC 支付到自己的地址。此举发生在 Blockstream 表示其桥接节点已修补之后，双方均未公开评论这一分配方案。\n\n这一进展可能大幅减少这起最大比特币侧链安全事件之一给用户造成的损失，并可能缓解 Liquid 和 Blockstream 面临的压力。它也在检验链上协商与部分返还能否成为交易所遭黑客攻击后的一种解决方案。\n\n这笔交易尚未确认，并被标记为可替换（RBF），意味着攻击者在交易上链前仍可更改或取消。在 Blockstream 报告已修补相关桥接节点后，约 598.50 BTC 仍留在攻击者控制的地址中。",
+        "en": "The attacker who drained Liquid Network's federation wallet broadcast an unconfirmed transaction sending 3,400 BTC back to Liquid's federation wallet while paying 598.50 BTC to their own address. The move came after Blockstream said its bridge nodes had been patched; neither party has publicly commented on the proposed split.\n\nThis development could significantly reduce user losses from one of the largest Bitcoin sidechain security incidents, potentially easing pressure on Liquid and Blockstream. It also tests whether on-chain negotiation and partial restitution can work as a resolution path for exchange hacks.\n\nThe transaction remains unconfirmed and is flagged as replaceable (RBF), meaning the attacker could alter or cancel it before it is mined. The split leaves roughly 598.50 BTC in attacker-controlled funds after Blockstream reported patching the bridge nodes involved in the exploit."
       },
       "content_revision": {
-        "zh": "5919b387a828bea75ff435205a2b7adf2e11d9b3d53d92bfdd8bddcc1dab36fb",
-        "en": "abee63e81d62eced5a0c9ba88f15a27146de799cf9d343d69f502c27c72f478d"
+        "zh": "679e28b47fd1e3102c9503eec0b7a4b797239ebf3acce85ea054db0c32fda90f",
+        "en": "ce5d2547a0e4efaf7832044234f8d558db74193138b58ae900b681e1fd8f6387"
       },
       "score": 8.5,
+      "category": "crypto-protocols",
+      "top_category": "crypto",
+      "source": {
+        "type": "rss",
+        "label": "The Defiant"
+      },
+      "tags": [
+        "security",
+        "exchange",
+        "bitcoin",
+        "hack",
+        "recovery"
+      ],
+      "sources_count": 2,
+      "editorial": false,
+      "thread": {
+        "id": "t8f1088304a",
+        "day": 1,
+        "url": "https://bmt.news/threads/t8f1088304a/"
+      },
+      "event": {
+        "event_id": "evt_c8eeb2561cb07df2",
+        "update_id": "upd_51999ea55e828ae8",
+        "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/#upd_51999ea55e828ae8",
+        "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json"
+      }
+    },
+    {
+      "rank": 5,
+      "url": "https://www.coindesk.com/tech/2026/09/07/ethereum-commits-to-letting-users-pay-gas-fees-without-having-to-hold-eth",
+      "title": {
+        "zh": "以太坊承诺让用户无需持有 ETH 即可支付 Gas 费",
+        "en": "Ethereum commits to letting users pay gas fees without holding ETH"
+      },
+      "summary": {
+        "zh": "以太坊已承诺推进一项路线图，计划基于 EIP-8141（又称“Frames”）允许用户无需持有 ETH 即可支付 Gas 费。2026 年 9 月 5 日，Vitalik Buterin 公开表示该提案已取得阶段性进展，相关报道将其与预计在 2027 年进行的 Hegotá 升级相关联。\n\n这将移除新用户的一大入门障碍，让仅持有稳定币的钱包可以正常交易，也让应用无需用户迁移至智能合约账户即可直接赞助 Gas 费用。同时，它降低了以太坊对 ECDSA 签名验证的依赖，为签名聚合与抗量子安全铺平了道路。\n\nEIP-8141 定义了一种新的 EIP-2718 交易类型，包含最多 64 个相互独立的“frames”（帧），每个帧都是一次普通的合约调用，用于验证、支付或执行，从而实现签名账户与支付账户的解耦。该提案还包含“默认代码”，使现有的外部账户（EOA）也能获得 Gas 赞助、代币支付、批量调用和原生私钥轮换等能力；提案自 1 月起仍是草案，尚未被正式纳入排期。",
+        "en": "Ethereum has committed to a roadmap that would let users pay gas fees without holding ETH, based on EIP-8141, also known as \"Frames.\" Vitalik Buterin highlighted on Sept. 5, 2026 that the proposal has quietly advanced, and press reports tie the feature to the Hegotá hard fork expected in 2027.\n\nThis would remove a major onboarding barrier, letting wallets that only hold stablecoins transact normally and allowing applications to sponsor user fees without requiring migration to a smart account. It also reduces Ethereum's reliance on ECDSA signature verification, paving the way toward signature aggregation and post-quantum security.\n\nEIP-8141 defines a new EIP-2718 transaction type containing up to 64 independent \"frames,\" each an ordinary contract call for validation, fee payment, or execution, thereby decoupling the signing account from the fee-paying account. The proposal also includes \"default code\" so existing externally owned accounts benefit from sponsored gas, token-denominated fees, batched calls, and native key rotation; it has been a draft since January and is not yet formally scheduled."
+      },
+      "content_revision": {
+        "zh": "fc6a1138443815ab6c16939e6f591d46a8b83f4abc7a47f60ac926276e9fed36",
+        "en": "88a9444a25eb3f47704176df831e911155b98e44709ff0ca50a81a13d9d57aee"
+      },
+      "score": 8.5,
+      "category": "crypto-protocols",
+      "top_category": "crypto",
+      "source": {
+        "type": "rss",
+        "label": "CoinDesk"
+      },
+      "tags": [
+        "ethereum",
+        "gas-fees",
+        "protocol-upgrade",
+        "usability",
+        "crypto"
+      ],
+      "sources_count": 2,
+      "editorial": false,
+      "thread": {
+        "id": "t8f99497cd3",
+        "day": 1,
+        "url": "https://bmt.news/threads/t8f99497cd3/"
+      },
+      "event": {
+        "event_id": "evt_7552698ec0d5dcfe",
+        "update_id": "upd_2e77b49317886c29",
+        "url": "https://bmt.news/events/evt_7552698ec0d5dcfe/#upd_2e77b49317886c29",
+        "json": "https://bmt.news/api/events/evt_7552698ec0d5dcfe.json"
+      }
+    },
+    {
+      "rank": 6,
+      "url": "https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps",
+      "title": {
+        "zh": "Hacken报告：两把密钥泄露或危及910亿美元USDT",
+        "en": "Two-Key Breach Could Expose $91B in USDT, Hacken Finds"
+      },
+      "summary": {
+        "zh": "安全公司Hacken发布技术审查发现，Tron上约913亿美元的USDT（约占流通总量的一半）仅由两个签名密钥保护。攻击者一旦突破这两个密钥，就能铸造无限量USDT，甚至夺取合约所有权，使Tether失去管理控制权。\n\n这凸显了稳定币基础设施的系统性风险：一旦被利用，攻击者可能无限铸造USDT，威胁稳定币的锚定以及用户和交易所的信任。同时，在以太坊、Avalanche和Celo上复用签名密钥，也可能扩大管理权限方面的脆弱性。\n\nHacken未发现密钥实际被入侵或发生安全事件的证据，但警告称复用签名密钥可能扩大跨链管理风险。该审查发布之际，KPMG审计帮助Tether获得Bluechip评级上调；两密钥攻击还可能让攻击者转移USDT合约所有权，使Tether无法冻结资金。",
+        "en": "Security firm Hacken released a technical review finding that roughly half of all circulating USDT—about $91.3 billion on Tron—is protected by just two signing keys. An attacker who compromised both keys could mint unlimited USDT and potentially take over contract ownership, stripping Tether of its administrative controls.\n\nThis highlights a systemic risk in stablecoin infrastructure: if exploited, an attacker could mint unlimited USDT, threatening the stablecoin's peg and the trust of users and exchanges. It also underscores key concentration risks on Ethereum, Avalanche, and Celo, where reused signing keys may extend administrative vulnerabilities.\n\nHacken found no evidence of actual key compromise or a security incident, but warned that reused signing keys could broaden administrative risks across multiple chains. The review arrived alongside a KPMG audit that helped Tether earn a ratings upgrade from Bluechip, and a two-key attack could also let an attacker transfer USDT contract ownership, preventing Tether from freezing funds."
+      },
+      "content_revision": {
+        "zh": "b78589bbe73e85a4242bd9eeebfabef341af00b3a54664abe3c290a9f1cf6bc1",
+        "en": "38453b32c79e450536bbbf17d0c6ee11716d9374afca04c453dca87eaefb78f8"
+      },
+      "score": 8.5,
+      "category": "crypto-protocols",
+      "top_category": "crypto",
+      "source": {
+        "type": "rss",
+        "label": "CoinDesk"
+      },
+      "tags": [
+        "security",
+        "stablecoin",
+        "Tether",
+        "key management",
+        "exploit"
+      ],
+      "sources_count": 1,
+      "editorial": false,
+      "thread": {
+        "id": "t1654f2daa6",
+        "day": 1,
+        "url": "https://bmt.news/threads/t1654f2daa6/"
+      },
+      "event": {
+        "event_id": "evt_0765a8f5c1a4b9f7",
+        "update_id": "upd_d014e9dcdab1c60f",
+        "url": "https://bmt.news/events/evt_0765a8f5c1a4b9f7/#upd_d014e9dcdab1c60f",
+        "json": "https://bmt.news/api/events/evt_0765a8f5c1a4b9f7.json"
+      }
+    },
+    {
+      "rank": 7,
+      "url": "https://www.coindesk.com/markets/2026/09/07/once-hyped-ethereum-rival-harmony-wants-to-shut-its-blockchain-over-ai-threats",
+      "title": {
+        "zh": "Harmony 提议关停区块链，以应对 AI 威胁将 ONE 迁移至以太坊",
+        "en": "Harmony Proposes Shutting Down Chain, Migrating ONE to Ethereum Over AI Threats"
+      },
+      "summary": {
+        "zh": "9月6日，Harmony 提议终止其独立网络，通过最终区块快照和自动空投将 ONE 转换为以太坊上的 ERC-20 代币。该方案距8月11日遭攻击、伪造约3.01万亿 ONE 后于8月21日完成的回滚不到三周。\n\n一个曾经备受关注的 Layer 1 主动选择关停，是非常罕见的结局，也凸显了 AI 和国家行为者带来的新型安全压力。这会影响 ONE 持有者、验证者、DApp 用户，并影响市场对小型区块链长期韧性的信心。\n\n智能合约、流动性池和多重签名金库不会自动迁移，因此用户被敦促在9月10日前退出相关合约；验证者可从太平洋时间当天上午7点起停止运行。该提案不具约束力，包含一个137万美元的补偿池，计划将未来 ONE 增发转用于 AI 视频项目，且未披露最终区块或空投日期。",
+        "en": "On Sept. 6, Harmony proposed ending its independent network and moving ONE to Ethereum via a final-block snapshot and automatic airdrop of ERC-20 tokens. The plan comes less than three weeks after a controversial rollback following an Aug. 11 exploit that forged roughly 3.01 trillion ONE.\n\nA once-prominent layer-1 voluntarily retiring marks an unusual existential outcome and highlights new perceived security pressures from AI and state actors. It affects ONE holders, validators, dApp users, and broader confidence in smaller blockchains' long-term resilience.\n\nSmart contracts, liquidity pools, and multisig safes will not migrate automatically, so users are urged to exit contracts before Sept. 10; validators may begin shutting down at 7 a.m. PT that day. The non-binding proposal includes a $1.37 million compensation pool, redirects future emissions to an AI-video initiative, and does not disclose final block or airdrop dates."
+      },
+      "content_revision": {
+        "zh": "2f3f4f18d93967faabfae0124da7978fe0721e0f94bd5de404b590a1e48aed23",
+        "en": "d29e3bd024f8e4d2c629d2d681a75831a36627d4750b0f39d2e6c2f27ee3c381"
+      },
+      "score": 8.5,
+      "category": "crypto-protocols",
+      "top_category": "crypto",
+      "source": {
+        "type": "rss",
+        "label": "CoinDesk"
+      },
+      "tags": [
+        "Harmony",
+        "blockchain shutdown",
+        "AI threats",
+        "security",
+        "governance"
+      ],
+      "sources_count": 4,
+      "editorial": false,
+      "thread": {
+        "id": "t12cc560d77",
+        "day": 1,
+        "url": "https://bmt.news/threads/t12cc560d77/"
+      },
+      "event": {
+        "event_id": "evt_e8495491f7bdd7d8",
+        "update_id": "upd_cb2858dd4a70796b",
+        "url": "https://bmt.news/events/evt_e8495491f7bdd7d8/#upd_cb2858dd4a70796b",
+        "json": "https://bmt.news/api/events/evt_e8495491f7bdd7d8.json"
+      }
+    },
+    {
+      "rank": 8,
+      "url": "https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689",
+      "title": {
+        "zh": "星展银行与花旗完成首笔周末代币化存款美元跨境支付",
+        "en": "DBS and Citi Complete First Weekend Tokenized-Deposit USD Payment"
+      },
+      "summary": {
+        "zh": "星展银行（DBS）与花旗银行（Citi）通过Swift基于区块链的账本，完成了新加坡与美国之间首笔周末跨境美元代币化存款结算。该交易在数分钟内完成，而非传统跨境转账通常需要的一至两个工作日。\n\n这一里程碑表明，大型传统银行正将代币化存款从试点推向实际应用，有望在受监管的银行体系内实现全天候跨境支付。这也显示出机构对区块链技术用于现实支付基础设施的接受度不断提升。\n\n该交易通过Swift数字账本（Swift Digital Ledger）上的代币化存款完成，绕开了传统银行营业时间的限制。渣打银行与汇丰银行于8月率先在Swift账本上完成了代币化跨境交易，Swift此后一直在筹备与包括花旗、星展在内的17家主要银行试点该服务。",
+        "en": "DBS and Citi completed the first weekend cross-border USD settlement between Singapore and the U.S. using tokenized deposits over Swift's blockchain-based ledger. The transaction settled in minutes instead of the conventional one to two business days.\n\nThis milestone shows major incumbent banks are moving tokenized deposits from pilots toward live use, potentially enabling 24/7 cross-border payments without leaving the regulated banking system. It signals growing institutional adoption of blockchain rails for real-world payment infrastructure.\n\nThe transaction used tokenized deposits on Swift Digital Ledger, avoiding the constraints of traditional banking hours. Standard Chartered and HSBC completed the first tokenized cross-border transaction on Swift's ledger in August, and Swift has been preparing to pilot the service with 17 major banks including Citi and DBS."
+      },
+      "content_revision": {
+        "zh": "6935507c528dfdd6a31e3e6a2d8f1c58362e17fcba89dc45bdd5b12a8d609493",
+        "en": "dcd6a7616369c43b321b1764dc71d73c4344bc188e5d9ee7840fcb422a1c373d"
+      },
+      "score": 7.5,
       "category": "crypto-markets",
       "top_category": "crypto",
       "source": {
@@ -350,83 +344,170 @@
         "label": "The Block"
       },
       "tags": [
-        "security",
-        "theft",
-        "bitcoin",
-        "coldcard",
-        "galaxy"
+        "tokenized deposits",
+        "cross-border payments",
+        "DBS",
+        "Citi",
+        "institutional adoption"
       ],
-      "sources_count": 1,
+      "sources_count": 3,
       "editorial": false,
       "thread": {
-        "id": "t4f8fc5e553",
-        "day": 1,
-        "url": "https://bmt.news/threads/t4f8fc5e553/"
+        "id": "t329295a613",
+        "day": 2,
+        "url": "https://bmt.news/threads/t329295a613/"
       },
       "event": {
-        "event_id": "evt_65f972f6d8c15c28",
-        "update_id": "upd_cea4abd91245eb8d",
-        "url": "https://bmt.news/events/evt_65f972f6d8c15c28/#upd_cea4abd91245eb8d",
-        "json": "https://bmt.news/api/events/evt_65f972f6d8c15c28.json"
+        "event_id": "evt_6ee1360e2b34e86b",
+        "update_id": "upd_cee3fefa06423314",
+        "url": "https://bmt.news/events/evt_6ee1360e2b34e86b/#upd_cee3fefa06423314",
+        "json": "https://bmt.news/api/events/evt_6ee1360e2b34e86b.json"
       }
     },
     {
       "rank": 9,
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNUdjWFBGcy1iU3gzYldyQXBZX1J1TUJ2SXZQT3ZuaW9KdFB0WGVPTmtkdjEzRUpSQy1zSENRQzlfTFZjUmxZUk5JaXpNTUdQLU8wTlkzNlZ0bGV0OG1iQ1dha09lalNBOXd1cm9QU1VqUUEyemVIczhyWVJxa1lvbDF5Z1BDcmlua2Q3aFVqTGJnTXdyRnhzbmI0U0k4SzQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTFUwSE5JSF9oQjVoQjZQb3p2UjVYT2FZWFFSdlVERUN6N1BVT3BDSHpCa2x4dG1OYVBxMWNydXhTR0NfT0ZZc3BOMEktVG9sX2Z2OEtuS0RvTWJJZS00UjlEVW5VREZEQjA1NkQtWVJ6bmd4SkFSUXJzbjlPam12NG5PVDQ5eHM?oc=5",
       "title": {
-        "zh": "Canopy（CNPY）上线六大主流加密货币交易所",
-        "en": "Canopy (CNPY) Lists on Six Major Crypto Exchanges"
+        "zh": "Coinbase在加拿大为BTC、ETH和SOL推出受监管衍生品交易",
+        "en": "Coinbase Launches Regulated BTC, ETH and SOL Derivatives in Canada"
       },
       "summary": {
-        "zh": "Canopy 的 CNPY 代币已在 Binance、OKX、Bitget、Gate、MEXC 和 Bitvavo 上线交易，实现同时登陆多家主流现货平台。此次同步上线让该代币得以面向全球多平台的交易用户。\n\n能在 Binance、OKX 等多家顶级交易所同步上线，将显著提升 CNPY 的流动性、可访问性和可见度。对 Web3 基础设施类项目而言，这类上币是实现用户采用的关键节点，不过对交易所本身而言也是常规的商务操作。\n\nCanopy 官网将其定位为基础设施层，让开发者能用熟悉的编程语言和工具构建并部署链上应用；CryptoRank 则把 Canopy Network 描述为具有再质押（restaked）安全机制的框架，用于启动主权 L1 应用链。搜索信息也显示名为 Canopy Finance 的另一个资产使用相同代币符号 CNPY，因此交易前有必要核对官方合约地址。",
-        "en": "Canopy's CNPY token has become available for trading on Binance, OKX, Bitget, Gate, MEXC, and Bitvavo, giving it a simultaneous multi-exchange debut. The listings cover multiple major spot venues and expose the token to a global trading audience.\n\nA debut on this many top-tier exchanges, including Binance and OKX, substantially increases CNPY's liquidity, accessibility, and visibility. For Web3 infrastructure projects, such listings are a key milestone for user adoption, although they are also a routine business step for the exchanges themselves.\n\nCanopy's website describes the project as an infrastructure layer that lets developers build and deploy on-chain apps with familiar programming languages and tools, while CryptoRank frames it as a framework with restaked security for launching sovereign L1 blockchains. Separate search listings also show another asset named Canopy Finance using the same CNPY symbol, underlining the importance of verifying the official contract address before trading."
+        "zh": "Coinbase已在加拿大推出受监管的加密货币衍生品交易，为符合条件的用户提供比特币(BTC)、以太币(ETH)、Solana(SOL)等资产的永续合约及定期期货。此次上线涵盖23份期货合约，最高支持10倍杠杆。\n\n这标志着加拿大零售及机构客户可获得的受监管加密衍生品范围进一步扩大，也是Coinbase在现货交易之外推进'Everything Exchange'战略的重要一步。衍生品渠道拓宽有助于提升市场参与度，并为BTC、ETH和SOL交易者提供受监管的对冲工具。\n\n据报道，该衍生品系列包含23份期货合约，最高杠杆为10倍。这些产品仅面向符合条件的加拿大用户开放，并受加拿大受监管衍生品框架约束。",
+        "en": "Coinbase has launched regulated crypto derivatives in Canada, giving eligible users access to perpetual and dated futures on Bitcoin (BTC), Ether (ETH), Solana (SOL) and other assets. The launch covers 23 futures contracts and supports leverage up to 10x.\n\nThis marks one of the largest regulated crypto derivatives offerings for Canadian retail and institutional clients, expanding Coinbase's 'Everything Exchange' strategy beyond spot trading. Broader derivatives access can deepen market participation and give traders regulated hedging tools for BTC, ETH and SOL.\n\nAccording to reports, the derivatives suite includes 23 futures contracts and leverage up to 10x. The products are offered only to eligible Canadian users and are subject to Canada's regulated derivatives framework."
       },
       "content_revision": {
-        "zh": "2df44de8a4d092ad9b3deb48c5e04fc3575164b56c35932ae79aeda86e3f3108",
-        "en": "d5af32ea4b629e8c086fa7b3816d704f56d9f709e09d6d42b3ded97cd114cf77"
+        "zh": "ce2a54dd3d5bcc72ea780df73a976eb7f45fe7b7fa84ba2a4dcf485453652ea5",
+        "en": "4ac4ab981b672bfde929ab988b4b3775afcd595f7cc6d94fa267bae10f887cac"
       },
       "score": 7.5,
       "category": "exchange-announcements",
       "top_category": "crypto",
       "source": {
         "type": "google_news",
-        "label": "CoinCodex"
+        "label": "CCN.com"
       },
       "tags": [
-        "exchange-listing",
-        "CNPY",
-        "Binance",
-        "OKX",
-        "crypto-markets"
+        "Coinbase",
+        "Canada",
+        "derivatives",
+        "BTC",
+        "ETH",
+        "SOL"
       ],
       "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "t0fb5ea4daf",
-        "day": 2,
-        "url": "https://bmt.news/threads/t0fb5ea4daf/"
+        "id": "t0029fb5092",
+        "day": 4,
+        "url": "https://bmt.news/threads/t0029fb5092/"
       },
       "event": {
-        "event_id": "evt_f4af0cd874c9ad58",
-        "update_id": "upd_dc151c69df0550d2",
-        "url": "https://bmt.news/events/evt_f4af0cd874c9ad58/#upd_dc151c69df0550d2",
-        "json": "https://bmt.news/api/events/evt_f4af0cd874c9ad58.json"
+        "event_id": "evt_47dba460170f6ac5",
+        "update_id": "upd_96d2e5b61a39c194",
+        "url": "https://bmt.news/events/evt_47dba460170f6ac5/#upd_96d2e5b61a39c194",
+        "json": "https://bmt.news/api/events/evt_47dba460170f6ac5.json"
       }
     },
     {
       "rank": 10,
-      "url": "https://decrypt.co/377637/lg-tv-might-be-listening-even-when-off",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA3aFdsa1FzaHhtSV93NU95R1o1cGk5NVFJR2sxQzgtb3NlYTVad0ZHZXhZbnNDZktZNXpxOEV1aFZXZmVJSmd0SGRPbXVNazhDZF90OA?oc=5",
       "title": {
-        "zh": "LG电视在看似关机时仍监听并扫描Wi-Fi网络",
-        "en": "LG TVs Found Scanning Wi-Fi and Listening Even While Appearing Off"
+        "zh": "Coinbase整合Deribit，扩展加密期权与衍生品服务",
+        "en": "Coinbase Integrates with Deribit to Expand Crypto Options and Derivatives Access"
       },
       "summary": {
-        "zh": "Gamers Nexus 与安全研究人员的调查发现，LG 智能电视在看似关机或断开网络时仍会扫描家中 Wi-Fi 网络并收集麦克风音频。LG 已于5月与得克萨斯州监管机构就未披露的观看数据收集达成和解。\n\n该调查揭示常见消费设备中严重的隐私漏洞，说明静音键或“关机”状态并不能停止数据采集，未修补的远程访问漏洞甚至可能让攻击者完全控制电视。这影响数百万家庭，也引发对智能电视广告数据如何被采集和出售的新质疑。\n\n测试中，研究者即便在设置中关闭主麦克风后仍能通过隐藏的第二个麦克风录到可用音频；另一次测试还能隔着墙壁在大约60英尺外捕获语音，并在电视重新连接以太网后上传。研究者还发现了 LG 尚未完全修复的远程代码执行漏洞，以及可能让陌生人的网络流量经买家家庭连接转发的住宅代理组件。",
-        "en": "An investigation by Gamers Nexus and security researchers found LG smart TVs scan home Wi-Fi networks and capture microphone audio even when they appear off or unplugged from the internet. LG settled with Texas regulators in May over undisclosed viewing-data collection.\n\nThe findings expose serious privacy gaps in widely used consumer devices, showing that features like a mute switch or 'off' state do not stop data collection, and that unpatched remote-access flaws could let attackers take over TVs. This affects millions of households and raises fresh questions about how smart-TV advertising data is gathered and sold.\n\nIn one test, researchers pulled usable audio from a hidden second microphone after muting the main mic; in another, speech was captured from roughly 60 feet away through a wall and uploaded once the TV reconnected to ethernet. Researchers also found partially unpatched remote-code-execution bugs and a residential-proxy component that could route strangers' internet traffic through a buyer's home connection."
+        "zh": "Coinbase International Exchange与Deribit正联手打造统一的衍生品平台，覆盖永续合约、定期期货、现货和期权。另有报道称，Coinbase Global已完成对Deribit的收购。\n\n此次整合将Coinbase受监管的交易基础设施与Deribit在加密货币期权领域的主导流动性相结合，重塑机构衍生品交易的市场结构。它可能拓宽投资者接触复杂对冲工具的渠道，并深化整个衍生品生态系统。\n\nDeribit是全球最大的比特币和以太坊期权交易所，提供最高50倍杠杆的期货和永续合约。Coinbase官方帮助页面显示，合并后的平台将在永续合约、定期期货和现货方面提供深度流动性；Yahoo Finance则报道收购已完成。",
+        "en": "Coinbase International Exchange and Deribit are joining forces to create a unified derivatives platform covering perpetuals, dated futures, spot, and options. Reports also indicate that Coinbase Global has completed its acquisition of Deribit.\n\nThis consolidation combines Coinbase's regulated exchange infrastructure with Deribit's dominant liquidity in cryptocurrency options, reshaping market structure for institutional derivatives trading. It could widen access to sophisticated hedging instruments and deepen the overall derivatives ecosystem.\n\nDeribit is the world's largest Bitcoin and Ethereum options exchange, offering futures and perpetuals with up to 50x leverage. According to Coinbase's official help page, the combined platform brings deep liquidity across perpetuals, dated futures, and spot, while Yahoo Finance reported the completed acquisition."
       },
       "content_revision": {
-        "zh": "f135e1219868e691bd5acb046bdaa213088507ff48de1e831fea00cf07a08926",
-        "en": "eb97a2b2bfed87d42033ee101ca58b2187a24e6f20416a37fe0c26d96ff301a4"
+        "zh": "bc2c5bb2941c73360751d42dea4deef0ae56a8a19ae8c0f9d797052b9a368ba4",
+        "en": "b3d21c8ff5bf1ccf247e661576c3bb6814929eb6e76cc61cf153d3dbaf41d2d5"
+      },
+      "score": 7.5,
+      "category": "exchange-announcements",
+      "top_category": "crypto",
+      "source": {
+        "type": "google_news",
+        "label": "bloomingbit"
+      },
+      "tags": [
+        "Coinbase",
+        "Deribit",
+        "derivatives",
+        "options trading",
+        "exchange"
+      ],
+      "sources_count": 1,
+      "editorial": false,
+      "thread": {
+        "id": "t7186200671",
+        "day": 2,
+        "url": "https://bmt.news/threads/t7186200671/"
+      },
+      "event": {
+        "event_id": "evt_31bb1dc667f98306",
+        "update_id": "upd_a6ebfcbc14001409",
+        "url": "https://bmt.news/events/evt_31bb1dc667f98306/#upd_a6ebfcbc14001409",
+        "json": "https://bmt.news/api/events/evt_31bb1dc667f98306.json"
+      }
+    },
+    {
+      "rank": 11,
+      "url": "https://github.com/Sadpainy/Stuxnet",
+      "title": {
+        "zh": "黑客新闻用户重构震网网络武器源代码",
+        "en": "Hacker News User Reconstructs Stuxnet Cyber-Weapon Source Code"
+      },
+      "summary": {
+        "zh": "一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。\n\n震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。\n\n根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。",
+        "en": "A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.\n\nStuxnet is widely regarded as the world's first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran's nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.\n\nAccording to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7."
+      },
+      "content_revision": {
+        "zh": "9fcf6b7ed0552b2cf66ee7773e3f7fb1b606bf6042cf20bca41b52ca196e5dd5",
+        "en": "cbc9031a8a2b53938494aed68a6eb7e70f8b72d1e6bd921d8d4f069b24f36074"
+      },
+      "score": 7.5,
+      "category": "tech-community",
+      "top_category": "technology",
+      "source": {
+        "type": "hackernews",
+        "label": "CMDDestory"
+      },
+      "tags": [
+        "cybersecurity",
+        "stuxnet",
+        "source-code",
+        "critical-infrastructure",
+        "hackernews"
+      ],
+      "sources_count": 1,
+      "editorial": false,
+      "thread": {
+        "id": "tf27f9bc594",
+        "day": 1,
+        "url": "https://bmt.news/threads/tf27f9bc594/"
+      },
+      "event": {
+        "event_id": "evt_9ac8e4c2aaabe3f9",
+        "update_id": "upd_b3c119bcd928d07c",
+        "url": "https://bmt.news/events/evt_9ac8e4c2aaabe3f9/#upd_b3c119bcd928d07c",
+        "json": "https://bmt.news/api/events/evt_9ac8e4c2aaabe3f9.json"
+      }
+    },
+    {
+      "rank": 12,
+      "url": "https://decrypt.co/377637/lg-tv-might-be-listening-even-when-off",
+      "title": {
+        "zh": "LG电视关机后仍会监听并扫描Wi-Fi",
+        "en": "LG Smart TVs Still Listen and Scan Home Wi-Fi When 'Off'"
+      },
+      "summary": {
+        "zh": "Gamers Nexus联合Level1Techs及独立研究人员调查发现，LG智能电视即使在屏幕熄灭或断开互联网连接时，也会扫描家庭整个Wi-Fi网络并捕获麦克风音频。LG已于五月与得克萨斯州监管机构就未披露的观看数据收集达成和解。\n\n这影响到数百万LG智能电视用户，并在未经用户明确同意的情况下进行后台监听和网络扫描，引发严重的隐私担忧。这一事件还凸显了联网电视的更大风险：默认遥测和未修补的漏洞可能危及家庭隐私与安全。\n\n值得注意的是，当电视仅作为HDMI显示器使用时，ACR追踪仍在运行；在设置中静音主麦克风并不会阻止第二个隐藏麦克风继续录音。研究人员还发现了未修补的远程代码执行漏洞和住宅代理代码，LG要求他们在协调披露期间暂缓公布技术细节。",
+        "en": "A Gamers Nexus investigation with Level1Techs and independent researchers found that LG smart TVs scan a home's entire Wi-Fi network and capture microphone audio even when the screen is dark or the TV is unplugged from the internet. LG agreed to a settlement with Texas regulators in May over undisclosed viewing-data collection.\n\nThis affects millions of LG smart TV owners and raises serious privacy concerns because background listening and network mapping operate without clear user consent. It also highlights broader risks in connected TVs, where default telemetry and unpatched vulnerabilities can compromise home privacy and security.\n\nNotably, ACR tracking remains active when the TV is used purely as an HDMI monitor, and muting the main microphone in settings does not stop a second, hidden microphone from recording. Researchers also found unpatched remote-code-execution flaws and residential-proxy code, with LG asking them to hold back technical disclosure during an ongoing coordinated-disclosure process."
+      },
+      "content_revision": {
+        "zh": "dfeec2746a0c0b2904261bf3964c6992a186719bd0627411f915d17b3e603f49",
+        "en": "e75d55a67c9b62e591b89d6d0c4812ed4e46dff009929bead9f342d1f29269b1"
       },
       "score": 7.5,
       "category": "tech-community",
@@ -442,7 +523,7 @@
         "smart TV",
         "consumer tech"
       ],
-      "sources_count": 1,
+      "sources_count": 3,
       "editorial": false,
       "thread": {
         "id": "ted97842747",
@@ -457,7 +538,7 @@
       }
     },
     {
-      "rank": 11,
+      "rank": 13,
       "url": "https://decrypt.co/377635/openai-chief-scientist-warns-ai-slow-down",
       "title": {
         "zh": "OpenAI首席科学家呼吁AI行业放缓开发",
@@ -500,7 +581,7 @@
       }
     },
     {
-      "rank": 12,
+      "rank": 14,
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdjVxUi1kME9SMEE2R2ZMQWRfdmNCM3huamZZUFVhQTdzWnpvTm5FeExFSzI5blhWQjAyTm5NZ1JTX25mdEloaHV6WnNGMUxnLXJHdXBDcXF2UFEzYlFDY29ZTHZ4dHlnODA4WDE5UXpDSlhTeW9heGxlTjZYMWtPaGF4NXlSOHRaMnBkS2ctbXl2YU5zckdLNEE0c1FJai1o?oc=5",
       "title": {
         "zh": "Kraken向CFTC申请推出美国受监管永续期货",
@@ -543,46 +624,46 @@
       }
     },
     {
-      "rank": 13,
-      "url": "https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689",
+      "rank": 15,
+      "url": "https://cointelegraph.com/news/philippines-payment-operator-freeze-vasp-checks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "title": {
-        "zh": "星展与花旗完成首笔周末跨境美元代币化存款结算",
-        "en": "DBS and Citi Complete First Weekend USD Cross-Border Payment Using Tokenized Deposits"
+        "zh": "菲律宾拟冻结支付系统运营商注册12个月并加强VASP监管",
+        "en": "Philippines proposes 12-month freeze on payment-system operator registrations"
       },
       "summary": {
-        "zh": "2026年9月5日，星展银行（DBS）与花旗（Citi）使用代币化存款完成了新加坡与美国之间的首笔周末跨境美元支付，结算在几分钟内完成，而非数日。\n\n这一里程碑标志着机构对代币化存款的采用正在加速，并表明基于区块链的结算可以突破传统银行营业时间的限制。它可能推动更多银行探索7×24小时支付轨道，并促使监管机构评估其对跨境支付的影响。\n\n这笔交易通过Swift的账本完成结算，耗时数分钟而非通常的两个工作日。试点选在周六进行，凸显了以往不可能实现的周末结算潜力。",
-        "en": "On September 5, 2026, DBS and Citi executed the first weekend cross-border USD payment between Singapore and the U.S. using tokenized deposits, with settlement completed in minutes instead of days.\n\nThis milestone signals growing institutional adoption of tokenized deposits and shows that blockchain-based settlement can operate outside conventional banking hours. It could accelerate banks' exploration of 24/7 payment rails and prompt regulators to assess the implications for cross-border payments.\n\nThe transaction settled over Swift's ledger and took minutes instead of the standard two business days. The pilot's timing on a Saturday highlights the potential for weekend settlement that was previously impossible."
+        "zh": "菲律宾中央银行（BSP）发布通告草案，提议暂停受理新的支付系统运营商（OPS）注册申请12个月。草案还要求受BSP监管的支付机构通过直接商户安排处理受监管的虚拟资产服务提供商（VASP），并施加加强的尽职调查与交易限额。\n\n这项提议将直接影响菲律宾加密货币交易平台和金融科技公司接入本地支付通道的方式。若最终通过，将抬高合规成本，并可能缩小VASP处理商户支付的可用渠道。\n\n该暂停措施针对新的OPS申请；此前已提交的申请仍可继续评估，但在暂停结束前不会获批或被否决。更严格的VASP规则适用于已获BSP、菲律宾证券交易委员会或其他机构许可、注册或授权的实体，并将VASP与赌博业务、游戏服务商、成人业务和货币服务企业列入同一风险类别。",
+        "en": "The Philippines' Bangko Sentral ng Pilipinas (BSP) issued a draft circular proposing a 12-month moratorium on new registrations for operators of payment systems (OPS). The draft also would require BSP-supervised payment institutions serving merchants to handle regulated virtual asset service providers (VASPs) through direct merchant arrangements with enhanced due diligence and transaction limits.\n\nThis proposal would directly affect how crypto exchanges and fintech firms in the Philippines connect to local payment rails. If finalized, it raises compliance costs and could narrow the options VASPs have for processing merchant payments.\n\nThe moratorium would apply to new OPS applications, while applications already submitted could still be evaluated but would not be approved or denied until the pause ends. The stricter VASP rules cover entities licensed, registered, or authorized by the BSP, the Philippine Securities and Exchange Commission, or another authority, and place VASPs in the same risk group as gambling businesses, gaming providers, adult-oriented businesses, and money service businesses."
       },
       "content_revision": {
-        "zh": "f1584c10423acc901052b75d905a87cbd89c6696251e7a7d4c4b79e2ad2f400c",
-        "en": "74b974c2cbca35252be1f1c987d3108422ebfc843c4814f3b856bea5cd4052dc"
+        "zh": "f9add1a32c7ab0569fb93d1894d70620105ba46ee9b315edc39a530e4bdf6c22",
+        "en": "ff5124251107ecd495e40f0b3c5ce34a3f6f614e3bd6cd70ac3d58465d9160d1"
       },
       "score": 7.5,
-      "category": "crypto-markets",
-      "top_category": "crypto",
+      "category": "crypto-regulation",
+      "top_category": "policy",
       "source": {
         "type": "rss",
-        "label": "The Block"
+        "label": "Cointelegraph"
       },
       "tags": [
-        "tokenized deposits",
-        "cross-border payments",
-        "DBS",
-        "Citi",
-        "institutional adoption"
+        "regulation",
+        "Philippines",
+        "VASP",
+        "payment systems",
+        "central bank"
       ],
-      "sources_count": 2,
+      "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "t2b4b88d780",
+        "id": "t3dd966aa23",
         "day": 1,
-        "url": "https://bmt.news/threads/t2b4b88d780/"
+        "url": "https://bmt.news/threads/t3dd966aa23/"
       },
       "event": {
-        "event_id": "evt_6ee1360e2b34e86b",
-        "update_id": "upd_cee3fefa06423314",
-        "url": "https://bmt.news/events/evt_6ee1360e2b34e86b/#upd_cee3fefa06423314",
-        "json": "https://bmt.news/api/events/evt_6ee1360e2b34e86b.json"
+        "event_id": "evt_3be63544f4f42436",
+        "update_id": "upd_f90f4d97969b9e2b",
+        "url": "https://bmt.news/events/evt_3be63544f4f42436/#upd_f90f4d97969b9e2b",
+        "json": "https://bmt.news/api/events/evt_3be63544f4f42436.json"
       }
     }
   ]

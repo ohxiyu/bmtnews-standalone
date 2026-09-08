@@ -348,14 +348,23 @@
       "current_state_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
       "detailed_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
       "detailed_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Liquid Network 是 Blockstream 开发的比特币侧链。用户存入由联盟（federation）控制的多签钱包中的 BTC，用于发行该侧链的原生资产 L-BTC。联盟成员轮流提出并签署新区块，同时管理双向比特币锚定和存储在联盟钱包中的比特币。所谓可替换交易是指启用了 opt-in RBF，在交易确认前可被另一笔冲突交易替换。",
+      "background_en": "Liquid Network is a Bitcoin sidechain developed by Blockstream. BTC deposited into a federation-controlled multisig wallet is used to issue L-BTC, the native asset on the sidechain. The federation's members take turns proposing and signing new blocks, and they manage the two-way Bitcoin peg and the bitcoin held in the federation wallet. A replaceable transaction uses opt-in RBF, which allows it to be replaced by another conflicting transaction until it is confirmed.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "market_impact_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-federation",
+          "title": "Blockstream Help Center | What is the Liquid Federation?"
+        },
+        {
+          "url": "https://en.bitcoin.it/wiki/Transaction_replacement",
+          "title": "Transaction replacement - Bitcoin Wiki"
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:thedefiant.io_api_feed:8f1088304a7f689f",

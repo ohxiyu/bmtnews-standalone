@@ -12916,6 +12916,18 @@
             {
               "title": "Coinbase: Unlocking New Opportunities in Crypto Derivatives",
               "url": "https://www.coinbase.com/blog/coinbase-unlocking-new-opportunities-in-crypto-derivatives"
+            },
+            {
+              "title": "Coinbase Launches Crypto Futures With 10x Leverage in Canada",
+              "url": "https://cointelegraph.com/news/coinbase-launches-regulated-crypto-derivatives-in-canada"
+            },
+            {
+              "title": "Coinbase Launches Regulated Crypto Derivatives for Canadians...",
+              "url": "https://digg.com/tech/7ed3973a-9bb9-4d26-93e4-d1044ae913a9"
+            },
+            {
+              "title": "Analyst explains what is Coinbase’s ’everything exchange’ vision?",
+              "url": "https://finance.yahoo.com/news/analyst-explains-coinbase-everything-exchange-103002503.html"
             }
           ],
           "sources": [
@@ -23931,8 +23943,8 @@
           "what_changed_zh": "研究人员怀疑Liquid侧链中的验证缓存缺陷允许无支持的L-BTC兑换为真实BTC，提供了更具体的攻击机制解释，包括缓存键碰撞让无效交易绕过range-proof检查，并报告了节点分裂的可能原因。"
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Liquid Network is a Bitcoin sidechain developed by Blockstream. BTC deposited into a federation-controlled multisig wallet is used to issue L-BTC, the native asset on the sidechain. The federation's members take turns proposing and signing new blocks, and they manage the two-way Bitcoin peg and the bitcoin held in the federation wallet. A replaceable transaction uses opt-in RBF, which allows it to be replaced by another conflicting transaction until it is confirmed.",
+          "background_zh": "Liquid Network 是 Blockstream 开发的比特币侧链。用户存入由联盟（federation）控制的多签钱包中的 BTC，用于发行该侧链的原生资产 L-BTC。联盟成员轮流提出并签署新区块，同时管理双向比特币锚定和存储在联盟钱包中的比特币。所谓可替换交易是指启用了 opt-in RBF，在交易确认前可被另一笔冲突交易替换。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.95,
@@ -23943,12 +23955,21 @@
           "event_id": "evt_c8eeb2561cb07df2",
           "first_seen_at": "2026-09-07T17:49:58.342722Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
+          "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
           "material_change": true,
           "occurred_at": "2026-09-07T16:06:06Z",
           "published_at": "2026-09-07T16:06:06Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Blockstream Help Center | What is the Liquid Federation?",
+              "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-federation"
+            },
+            {
+              "title": "Transaction replacement - Bitcoin Wiki",
+              "url": "https://en.bitcoin.it/wiki/Transaction_replacement"
+            }
+          ],
           "sources": [
             {
               "label": "The Defiant",
@@ -24708,8 +24729,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Harmony is a sharded proof-of-stake blockchain launched as an Ethereum competitor. In June 2022, its Horizon bridge lost nearly $100 million in an attack the FBI attributed to North Korea's Lazarus Group; in August 2026, an attacker exploited cross-shard receipt handling to mint enormous numbers of forged ONE, leading Harmony to roll back the chain and discard over 109,000 transactions. The new proposal reverses its earlier rejection of migration as too disruptive and is presented as a response to threats from state actors and AI agents.",
+          "background_zh": "Harmony 是一个分片权益证明区块链，曾作为以太坊的竞争对手推出。2022年6月，其 Horizon 桥在攻击中损失近1亿美元，FBI 后来将此归因于朝鲜的 Lazarus Group；2026年8月，攻击者利用跨分片收据处理的漏洞铸造了大量伪造 ONE，导致 Harmony 回滚链并丢弃超过10.9万笔交易。新提案逆转了之前以“破坏性过强”为由拒绝迁移的立场，并将关停描述为对国家和 AI 行为者威胁的回应。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -24720,12 +24741,25 @@
           "event_id": "evt_e8495491f7bdd7d8",
           "first_seen_at": "2026-09-07T09:34:03.090645Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The proposal directly affects ONE's market venue: holders would receive Ethereum-based ERC-20 tokens, exposing the asset to Ethereum's liquidity and exchange infrastructure while the L1 chain winds down. Broader sentiment toward small proof-of-stake networks could shift given a high-profile chain citing AI and state-actor threats as reasons to shutter, although actual market effects depend on community approval and execution details.",
+          "market_impact_zh": "该提案会改变 ONE 的市场载体：持有者将获得以太坊上的 ERC-20 代币，使该资产转而依赖以太坊的流动性与交易基础设施，同时原 Layer 1 关闭。一条知名公链以 AI 和国家行为者威胁为由关停，可能影响市场对小型权益证明网络的信心；实际影响取决于社区批准情况和执行细节。",
           "material_change": true,
           "occurred_at": "2026-09-07T08:02:18Z",
           "published_at": "2026-09-07T08:02:18Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Harmony ONE Migration Plan Highlights Blockchain Shutdown",
+              "url": "https://en.cryptonomist.ch/2026/09/07/harmony-one-migration/"
+            },
+            {
+              "title": "Harmony Cross-Shard ONE Mint + ~$47M Key Losses | BlockSec Weekly",
+              "url": "https://blocksec.com/blog/web3-security-harmony-kite-exploits"
+            },
+            {
+              "title": "Harmony Proposes Retiring Layer-1 Mainnet and Migrating ONE to Ethereum (ETH) - COINOTAG",
+              "url": "https://en.coinotag.com/harmony-one-ethereum-erc20-migration"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -24762,7 +24796,7 @@
       "first_seen_at": "2026-09-07T09:34:03.581519Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-07T17:50:05.285366Z",
-      "last_updated_at": "2026-09-07T17:50:05.285366Z",
+      "last_updated_at": "2026-09-08T04:12:31.302204Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
@@ -24824,7 +24858,8 @@
           ],
           "story_ids": [
             "rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd",
-            "rss:www.coindesk.com_arc_outboundfeeds_rss_:fd4b96583feeca2c"
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:fd4b96583feeca2c",
+            "editorial:pick:4f8fc5e553adc57b"
           ],
           "time_precision": "published",
           "title_en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
@@ -25130,8 +25165,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Crypto derivatives are financial contracts tied to digital assets, such as options, which give the right to buy or sell at a set price, and futures or perpetuals, which obligate the parties to transact at a future date. Deribit has long been the leading venue for Bitcoin and Ethereum options, while Coinbase is a prominent regulated spot exchange. Bringing these two platforms together positions Coinbase at the center of institutional crypto options and derivatives trading.",
+          "background_zh": "加密衍生品是与数字资产挂钩的金融合约，例如期权赋予在约定价格买入或卖出的权利，而期货或永续合约则要求双方在未来某个日期进行交割。Deribit长期以来是比特币和以太坊期权的领先交易平台，而Coinbase是知名的受监管现货交易所。将这两个平台整合在一起，使Coinbase处于机构级加密期权与衍生品交易的核心位置。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -25142,12 +25177,25 @@
           "event_id": "evt_31bb1dc667f98306",
           "first_seen_at": "2026-09-07T17:49:55.749138Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "By merging Deribit's substantial options and perpetuals liquidity with Coinbase International's infrastructure, the combined venue centralizes derivatives execution and collateral flows, potentially influencing BTC and ETH derivatives market depth and fee dynamics. The transmission path runs through institutional trading venues, clearing, and settlement rather than directly through spot prices, with outcomes depending on client migration and ongoing regulatory approvals.",
+          "market_impact_zh": "通过将Deribit庞大的期权与永续合约流动性与Coinbase International的基础设施合并，统一的平台将集中衍生品执行和抵押品流动，可能影响BTC和ETH衍生品的市场深度及费用结构。传导路径主要通过机构交易场所、清算和结算环节，而非直接影响现货价格；最终影响将取决于客户迁移进展及后续监管审批情况。",
           "material_change": true,
           "occurred_at": "2026-09-07T08:20:57Z",
           "published_at": "2026-09-07T08:20:57Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Deribit - Crypto Options and Futures Exchange for Bitcoin ...",
+              "url": "https://www.deribit.com/"
+            },
+            {
+              "title": "Coinbase International Exchange and Deribit Are Coming ...",
+              "url": "https://help.coinbase.com/en/international-exchange/deribit/what-you-need-to-know"
+            },
+            {
+              "title": "Coinbase Expands Infrastructure And Derivatives As Valuation...",
+              "url": "https://finance.yahoo.com/news/coinbase-expands-infrastructure-derivatives-valuation-122327132.html"
+            }
+          ],
           "sources": [
             {
               "label": "bloomingbit",
@@ -25635,8 +25683,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "On Ethereum, users must currently pay transaction fees, called gas, in ETH, and typically the account that signs a transaction is the same account that pays for it. ERC-4337 introduced account abstraction on a separate mempool in 2023, but it relies on third-party bundlers. Frames embeds similar capabilities into the base protocol, letting signers and fee payers differ, and is described by its authors as a \"native off-ramp\" from ECDSA toward post-quantum signatures.",
+          "background_zh": "在以太坊上，用户目前必须使用 ETH 支付交易费用（即 Gas 费），而且签署交易的账户通常也是支付费用的账户。ERC-4337 于 2023 年通过独立的内存池实现了账户抽象，但仍依赖第三方打包者。Frames 方案将这些能力直接融入基础协议，使签名者与费用支付者可以不同；其作者将其描述为从 ECDSA 走向抗量子签名的“原生过渡通道”。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -25647,12 +25695,25 @@
           "event_id": "evt_7552698ec0d5dcfe",
           "first_seen_at": "2026-09-07T17:49:56.594871Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The proposal directly touches ETH's core utility as the mandatory gas asset; if implemented, it could shift which users and transaction types need ETH, affecting how exchanges, wallets, and DeFi applications position the token. Since implementation is not yet officially scheduled, current on-chain fee flows remain unchanged and any market effect would hinge on future protocol milestones rather than immediate economics.",
+          "market_impact_zh": "该提案直接触及 ETH 作为强制性“Gas 资产”的核心用途；如果实施，可能改变需要持有 ETH 的用户群体和交易类型，进而影响交易所、钱包及 DeFi 应用对 ETH 的定位。由于实施时间尚未正式确定，当前链上费用流并未改变，任何市场影响都将取决于未来的协议进展，而非当下的费用经济。",
           "material_change": true,
           "occurred_at": "2026-09-07T13:54:07Z",
           "published_at": "2026-09-07T13:54:07Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Ethereum advances scaling with EIP-8141, a new transaction type...",
+              "url": "https://cryptobriefing.com/ethereum-eip-8141-frame-transaction-scaling/"
+            },
+            {
+              "title": "Ethereum set to enable gas fee payments without holding ETH in 2027 upgrade",
+              "url": "https://cryptobriefing.com/ethereum-gas-fees-without-eth-2027/"
+            },
+            {
+              "title": "Ethereum Proposal Would Let Users Pay Gas Without Holding ETH - Decrypt",
+              "url": "https://decrypt.co/377559/ethereum-proposal-would-let-users-pay-gas-without-holding-eth"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -25828,8 +25889,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "USDT is a stablecoin whose transactions require cryptographic keys to sign and verify activity on the blockchain, making key management protocols critical to its security. Tron hosts the largest share of circulating USDT, so key risks there carry outsized consequences. In this context, a two-key breach means an attacker gaining control over two signing keys that jointly authorize critical administrative functions such as minting or freezing funds.",
+          "background_zh": "USDT是一种稳定币，其交易需要密码学密钥在区块链上签名和验证，因此密钥管理协议对其安全至关重要。Tron承载着流通中USDT的最大份额，因此那里的密钥风险具有不成比例的巨大影响。所谓“两密钥入侵”，是指攻击者获得两个签名密钥的控制权，这两个密钥共同授权铸造或冻结资金等关键管理功能。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -25840,12 +25901,21 @@
           "event_id": "evt_0765a8f5c1a4b9f7",
           "first_seen_at": "2026-09-07T17:49:56.694392Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The report raises concerns about Tether's key custody and could heighten regulatory or counterparty scrutiny, but no exploit has occurred, so actual market effects remain uncertain. Exposures would run through stablecoin supply confidence, issuer trust, and the liquidity of trading venues that rely heavily on USDT; a real breach could affect USDT's peg and broader crypto market sentiment.",
+          "market_impact_zh": "该报告引发了对Tether密钥托管的担忧，可能加强监管和交易对手方的审视，但尚未发生实际攻击，因此实际市场影响仍不确定。风险敞口将体现在稳定币供应信心、发行方信任以及高度依赖USDT的交易平台的流动性上；若真实发生入侵，可能影响USDT的锚定和整体加密市场情绪。",
           "material_change": true,
           "occurred_at": "2026-09-07T10:35:23Z",
           "published_at": "2026-09-07T10:35:23Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Half of all USDT sits behind two signing keys, security review finds",
+              "url": "https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps"
+            },
+            {
+              "title": "Tether faces breach risk that could expose $91B in USDT to hackers",
+              "url": "https://cryptobriefing.com/tether-breach-risk-usdt-hackers/"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -26500,6 +26570,18 @@
             {
               "title": "DBS and Citi Just Settled a Weekend Cross-Border Payment in Minutes – and the Implications Go Beyond Banking Hours",
               "url": "https://forkast.news/dbs-and-citi-just-settled-a-weekend-cross-border-payment-in-minutes-and-the-implications-go-beyond-banking-hours/"
+            },
+            {
+              "title": "What Are Tokenized Deposits? | Chainlink",
+              "url": "https://chain.link/article/tokenized-deposits"
+            },
+            {
+              "title": "What are tokenized deposits?",
+              "url": "https://www.elliptic.co/blockchain-basics/what-are-tokenized-deposits"
+            },
+            {
+              "title": "Swift Integrates Blockchain Ledger for 24/7 Cross-Border... | KuCoin",
+              "url": "https://www.kucoin.com/news/flash/swift-integrates-blockchain-ledger-for-24-7-cross-border-payments"
             }
           ],
           "sources": [
@@ -26565,8 +26647,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Operators of payment systems in the Philippines are entities that require registration with the Bangko Sentral ng Pilipinas under the National Payment Systems Act, which gives the central bank oversight of the country's payment infrastructure. Virtual asset service providers are regulated by the BSP through Circular No. 944 and later amendments. The draft circular targets merchant acquisition services—payment firms that sign up and process transactions for merchants—when those merchants are VASPs supervised by the BSP, SEC, or another relevant authority.",
+          "background_zh": "菲律宾的支付系统运营商是根据《国家支付系统法》需要在菲律宾央行登记的实体，央行借此对全国支付基础设施进行监督。虚拟资产服务提供商则通过BSP第944号通告及其后续修订受到监管。该草案针对的是商户收单服务——即为商户签约并处理交易的支付机构——当其商户属于受BSP、菲律宾SEC或其他相关机构监管的VASP时，需要满足更严要求。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -26577,12 +26659,17 @@
           "event_id": "evt_3be63544f4f42436",
           "first_seen_at": "2026-09-07T17:50:05.240238Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The proposal targets the fiat on/off-ramp layer between VASPs and the domestic payment system, so Philippine-facing exchanges and payment processors could face narrower payment channels and higher due-diligence burdens. Market transmission is likely indirect, operating through perceived regulatory risk and operational costs rather than through supply or custody channels.",
+          "market_impact_zh": "该提案针对VASP与国内支付体系之间的法币出入金环节，因此面向菲律宾市场的交易平台和支付处理商可能面临支付渠道收窄和尽职调查负担上升。市场传导影响可能较为间接，主要经由监管不确定性和运营成本变化，而非通过供给或托管渠道。",
           "material_change": true,
           "occurred_at": "2026-09-07T09:51:00Z",
           "published_at": "2026-09-07T09:51:00Z",
-          "references": [],
+          "references": [
+            {
+              "title": "BSP Licensing for Crypto Exchanges and Virtual Asset Service...",
+              "url": "https://ndvlaw.com/bsp-licensing-for-crypto-exchanges-and-virtual-asset-service-providers-vasp-in-the-philippines/"
+            }
+          ],
           "sources": [
             {
               "label": "Cointelegraph",
@@ -26806,8 +26893,8 @@
         {
           "background_en": "Smart TVs rely on Automatic Content Recognition (ACR) software that samples screen images or audio, creates a digital fingerprint, and matches it against a database to identify what is being watched. UPnP (Universal Plug and Play) is a networking protocol that lets devices on a local network discover each other and share services; the LG TVs were found using it to map other connected devices. Residential proxy software routes internet traffic through real ISP-assigned residential IP addresses, and is often associated with data collection or ad fraud. Such techniques matter because modern smart TVs are network-connected computers with microphones, not just displays.",
           "background_zh": "智能电视依靠自动内容识别（ACR）软件，采集屏幕画面或声音片段，生成数字指纹并与数据库比对以识别正在播放的内容。UPnP（通用即插即用）是一种网络协议，让局域网内设备能自动发现彼此并共享服务；调查发现 LG 电视利用它来绘制其他已连接设备。住宅代理软件通过真实 ISP 分配的家庭 IP 地址转发网络流量，常与数据采集或广告欺诈相关联。这些技术之所以重要，是因为现代智能电视并非单纯显示器，而是内置麦克风并可联网的计算机设备。",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "community_discussion_en": "Commenters were not surprised by the findings, and several described practical mitigation steps such as disabling the TV's network functions or using an external streaming box as an HDMI input. One owner said they were previously ridiculed for rejecting LG's data terms, while another noted the report validated choosing Sony Bravia over LG and Samsung. A separate commenter added that cheap modems increasingly make such surveillance threats widespread.",
+          "community_discussion_zh": "评论者对此并不感到意外，好几人分享了实际防范措施，如禁用电视的网络功能，或仅将电视作为显示器搭配Apple TV等外部流媒体设备使用。有用户提到自己曾因拒绝LG的数据条款而被嘲笑，另一名用户则表示此次调查结果印证了选择索尼Bravia而非LG或三星的做法。还有评论补充说，调制解调器越来越便宜，让这类监视威胁变得越来越普遍。",
           "confidence": 0.75,
           "current_state_en": "An investigation found LG smart TVs may scan home Wi-Fi networks and capture audio even when off, leading to a regulatory settlement and highlighting unpatched security flaws.",
           "current_state_zh": "An investigation found LG smart TVs may scan home Wi-Fi networks and capture audio even when off, leading to a regulatory settlement and highlighting unpatched security flaws.",
@@ -26829,6 +26916,14 @@
             {
               "title": "Residential proxy",
               "url": "https://en.wikipedia.org/wiki/Residential_proxy"
+            },
+            {
+              "title": "Universal Plug and Play (UPnP) Protocol — The Good, The... | Medium",
+              "url": "https://medium.com/@mdibrahifzu/universal-plug-and-play-upnp-protocol-the-good-the-bad-and-the-vulnerable-0e312661c7c9"
+            },
+            {
+              "title": "LG TVs at risk from hackers spying on users — what to do nowLg CVEs and Security Vulnerabilities - OpenCVEOver 91,000 LG smart TVs running webOS are vulnerable to hackingVulnerabilities in LG TVs: Audio Recording and Security ...",
+              "url": "https://www.tomsguide.com/computing/online-security/hackers-could-spy-on-you-through-your-lg-tv-update-now-to-patch-these-critical-vulnerabilities"
             }
           ],
           "sources": [
@@ -27058,6 +27153,96 @@
           "update_type": "initial",
           "what_changed_en": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
           "what_changed_zh": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.\n\nStuxnet is widely regarded as the world's first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran's nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.\n\nAccording to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7.",
+      "current_state_zh": "一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。\n\n震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。\n\n根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。",
+      "entities": [
+        "code",
+        "cyber",
+        "hacker",
+        "hackernews",
+        "news",
+        "reconstructs",
+        "source",
+        "source-code",
+        "stuxnet",
+        "user",
+        "weapon"
+      ],
+      "event_id": "evt_9ac8e4c2aaabe3f9",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T04:10:55.024836Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T04:10:55.024836Z",
+      "last_updated_at": "2026-09-08T04:10:55.024836Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hacker News User Reconstructs Stuxnet Cyber-Weapon Source Code",
+      "title_zh": "黑客新闻用户重构震网网络武器源代码",
+      "topics": [
+        "critical-infrastructure",
+        "cybersecurity",
+        "hackernews",
+        "source-code",
+        "stuxnet"
+      ],
+      "updates": [
+        {
+          "background_en": "Stuxnet is a notorious computer worm discovered in 2010, created by U.S. and Israeli intelligence agencies in the mid-2000s. It crossed the air gap to attack Siemens industrial control equipment at Iran's Natanz uranium enrichment facility, manipulating centrifuge speeds to physically destroy them. This demonstrated how malware could move from the digital realm into the physical world, posing a direct threat to critical infrastructure.",
+          "background_zh": "震网是2010年被公开发现的著名计算机蠕虫，由美国情报机构联合以色列情报部门于2000年代中期开发。它利用U盘等方式突破物理隔离，攻击了伊朗纳坦兹铀浓缩工厂的西门子工业控制设备，通过篡改离心机转速造成其物理损毁。这证明了恶意软件能够从数字领域跨越到物理世界，对关键基础设施构成直接威胁。",
+          "community_discussion_en": "Commenters largely appreciated the post, with one user noting the roughly 15,000 lines give plenty to examine and recommending the book \"Countdown to Zero Day.\" Another raised a question about the feasibility of USB-drive propagation and whether infected hardware may have come from resellers. The tone was technical and positive, including a playful code joke referencing the centrifuge-destruction counter.",
+          "community_discussion_zh": "评论者总体上对该帖表示赞赏，一位用户提到约1.5万行代码提供了大量可供审阅的内容，并推荐了《Countdown to Zero Day》一书。还有人质疑U盘传播途径的可行性，并猜测受感染的硬件是否可能来自不规范的经销商。讨论整体偏向技术性且态度正面，包括一个关于离心机销毁计数器的代码玩笑。",
+          "confidence": 0.75,
+          "current_state_en": "A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.\n\nStuxnet is widely regarded as the world's first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran's nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.\n\nAccording to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7.",
+          "current_state_zh": "一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。\n\n震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。\n\n根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。",
+          "detailed_summary_en": "A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.\n\nStuxnet is widely regarded as the world's first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran's nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.\n\nAccording to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7.",
+          "detailed_summary_zh": "一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。\n\n震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。\n\n根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。",
+          "event_id": "evt_9ac8e4c2aaabe3f9",
+          "first_seen_at": "2026-09-08T04:10:55.024836Z",
+          "importance_score": 7.5,
+          "market_impact_en": "Public availability of a Stuxnet reconstruction could renew organizational and governmental focus on OT/ICS security, potentially supporting spending on industrial cybersecurity defenses. No direct crypto-asset transmission channel is apparent; impact, if any, would be indirect through the cybersecurity sector and broader risk sentiment.",
+          "market_impact_zh": "震网重构源代码的公开可能会促使企业和政府重新关注OT/ICS安全，进而可能推动对工业网络安全防护的投入。目前并没有明显的直接加密资产传导渠道；若产生影响，也将是通过网络安全板块与整体风险偏好的间接传导。",
+          "material_change": true,
+          "occurred_at": "2026-09-07T22:12:38Z",
+          "published_at": "2026-09-07T22:12:38Z",
+          "references": [
+            {
+              "title": "Stuxnet - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Stuxnet"
+            },
+            {
+              "title": "GitHub - Sadpainy/Stuxnet at upstract.com · GitHub",
+              "url": "https://github.com/Sadpainy/Stuxnet?ref=upstract.com"
+            },
+            {
+              "title": "Show HN: Stuxnet – A reconstructed source code of... | Hacker News",
+              "url": "https://news.ycombinator.com/item?id=49603546"
+            }
+          ],
+          "sources": [
+            {
+              "label": "CMDDestory",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://github.com/Sadpainy/Stuxnet"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49603546"
+          ],
+          "time_precision": "published",
+          "title_en": "Hacker News User Reconstructs Stuxnet Cyber-Weapon Source Code",
+          "title_zh": "黑客新闻用户重构震网网络武器源代码",
+          "update_id": "upd_b3c119bcd928d07c",
+          "update_type": "initial",
+          "what_changed_en": "A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.\n\nStuxnet is widely regarded as the world's first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran's nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.\n\nAccording to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7.",
+          "what_changed_zh": "一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。\n\n震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。\n\n根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。"
         }
       ]
     }

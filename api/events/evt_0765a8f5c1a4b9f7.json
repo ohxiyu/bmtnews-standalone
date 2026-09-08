@@ -46,14 +46,23 @@
       "current_state_en": "A Hacken report reveals that a two-key breach could compromise control of $91 billion in USDT, highlighting major key security gaps in Tether's infrastructure.",
       "detailed_summary_zh": "A Hacken report reveals that a two-key breach could compromise control of $91 billion in USDT, highlighting major key security gaps in Tether's infrastructure.",
       "detailed_summary_en": "A Hacken report reveals that a two-key breach could compromise control of $91 billion in USDT, highlighting major key security gaps in Tether's infrastructure.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "USDT是一种稳定币，其交易需要密码学密钥在区块链上签名和验证，因此密钥管理协议对其安全至关重要。Tron承载着流通中USDT的最大份额，因此那里的密钥风险具有不成比例的巨大影响。所谓“两密钥入侵”，是指攻击者获得两个签名密钥的控制权，这两个密钥共同授权铸造或冻结资金等关键管理功能。",
+      "background_en": "USDT is a stablecoin whose transactions require cryptographic keys to sign and verify activity on the blockchain, making key management protocols critical to its security. Tron hosts the largest share of circulating USDT, so key risks there carry outsized consequences. In this context, a two-key breach means an attacker gaining control over two signing keys that jointly authorize critical administrative functions such as minting or freezing funds.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该报告引发了对Tether密钥托管的担忧，可能加强监管和交易对手方的审视，但尚未发生实际攻击，因此实际市场影响仍不确定。风险敞口将体现在稳定币供应信心、发行方信任以及高度依赖USDT的交易平台的流动性上；若真实发生入侵，可能影响USDT的锚定和整体加密市场情绪。",
+      "market_impact_en": "The report raises concerns about Tether's key custody and could heighten regulatory or counterparty scrutiny, but no exploit has occurred, so actual market effects remain uncertain. Exposures would run through stablecoin supply confidence, issuer trust, and the liquidity of trading venues that rely heavily on USDT; a real breach could affect USDT's peg and broader crypto market sentiment.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps",
+          "title": "Half of all USDT sits behind two signing keys, security review finds"
+        },
+        {
+          "url": "https://cryptobriefing.com/tether-breach-risk-usdt-hackers/",
+          "title": "Tether faces breach risk that could expose $91B in USDT to hackers"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:c7ac573a20f26251"

@@ -59,8 +59,8 @@
       "detailed_summary_en": "An investigation found LG smart TVs may scan home Wi-Fi networks and capture audio even when off, leading to a regulatory settlement and highlighting unpatched security flaws.",
       "background_zh": "智能电视依靠自动内容识别（ACR）软件，采集屏幕画面或声音片段，生成数字指纹并与数据库比对以识别正在播放的内容。UPnP（通用即插即用）是一种网络协议，让局域网内设备能自动发现彼此并共享服务；调查发现 LG 电视利用它来绘制其他已连接设备。住宅代理软件通过真实 ISP 分配的家庭 IP 地址转发网络流量，常与数据采集或广告欺诈相关联。这些技术之所以重要，是因为现代智能电视并非单纯显示器，而是内置麦克风并可联网的计算机设备。",
       "background_en": "Smart TVs rely on Automatic Content Recognition (ACR) software that samples screen images or audio, creates a digital fingerprint, and matches it against a database to identify what is being watched. UPnP (Universal Plug and Play) is a networking protocol that lets devices on a local network discover each other and share services; the LG TVs were found using it to map other connected devices. Residential proxy software routes internet traffic through real ISP-assigned residential IP addresses, and is often associated with data collection or ad fraud. Such techniques matter because modern smart TVs are network-connected computers with microphones, not just displays.",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "community_discussion_zh": "评论者对此并不感到意外，好几人分享了实际防范措施，如禁用电视的网络功能，或仅将电视作为显示器搭配Apple TV等外部流媒体设备使用。有用户提到自己曾因拒绝LG的数据条款而被嘲笑，另一名用户则表示此次调查结果印证了选择索尼Bravia而非LG或三星的做法。还有评论补充说，调制解调器越来越便宜，让这类监视威胁变得越来越普遍。",
+      "community_discussion_en": "Commenters were not surprised by the findings, and several described practical mitigation steps such as disabling the TV's network functions or using an external streaming box as an HDMI input. One owner said they were previously ridiculed for rejecting LG's data terms, while another noted the report validated choosing Sony Bravia over LG and Samsung. A separate commenter added that cheap modems increasingly make such surveillance threats widespread.",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
@@ -72,6 +72,14 @@
         {
           "url": "https://en.wikipedia.org/wiki/Residential_proxy",
           "title": "Residential proxy"
+        },
+        {
+          "url": "https://medium.com/@mdibrahifzu/universal-plug-and-play-upnp-protocol-the-good-the-bad-and-the-vulnerable-0e312661c7c9",
+          "title": "Universal Plug and Play (UPnP) Protocol — The Good, The... | Medium"
+        },
+        {
+          "url": "https://www.tomsguide.com/computing/online-security/hackers-could-spy-on-you-through-your-lg-tv-update-now-to-patch-these-critical-vulnerabilities",
+          "title": "LG TVs at risk from hackers spying on users — what to do nowLg CVEs and Security Vulnerabilities - OpenCVEOver 91,000 LG smart TVs running webOS are vulnerable to hackingVulnerabilities in LG TVs: Audio Recording and Security ..."
         }
       ],
       "confidence": 0.75,
