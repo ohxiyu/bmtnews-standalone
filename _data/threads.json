@@ -23,14 +23,14 @@
       "summary_en": "Liquid exchange suffered a $320 million exploit; hackers have returned $270M in Bitcoin.",
       "latest_update_zh": "Liquid黑客在窃取3.2亿美元后归还了2.7亿美元的比特币。",
       "latest_update_en": "Liquid hackers returned $270M in Bitcoin after stealing $320 million.",
-      "background_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
-      "background_en": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+      "background_zh": "Liquid Network是Blockstream开发的比特币侧链，采用联邦模型，让交易所和机构能够更快速、更私密地转移比特币。用户将比特币存入联邦钱包，在侧链上获得对应的L-BTC，交易由一组验证节点共同确认。由于Liquid充当交易所的结算基础设施，这一层面的破坏可能对多个平台上的资金产生广泛影响。",
+      "background_en": "Liquid Network is a federated Bitcoin sidechain developed by Blockstream that allows exchanges and institutions to move bitcoin faster and with more privacy. Users peg bitcoin into a federation wallet and receive L-BTC on the sidechain, with transactions validated by a group of functionaries. Because Liquid functions as settlement infrastructure for exchanges, a compromise at this layer can have broad implications for funds across multiple platforms.",
       "latest_summary_zh": "Liquid hackers returned $270M in Bitcoin after stealing $320 million, marking a major exchange security incident with substantial recovery.",
       "latest_summary_en": "Liquid hackers returned $270M in Bitcoin after stealing $320 million, marking a major exchange security incident with substantial recovery.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "被盗资金是存放在交易所使用的结算层上的比特币，因此该事件与依赖 Liquid 的比特币托管服务和交易所资产负债表关联最直接。大部分资金归还可能缓解对大规模抛售或交易所资不抵债的担忧，但剩余未归还资金的不确定性仍可能给托管基础设施的信任带来压力。",
+      "discussion_en": "The stolen funds were bitcoin held on a settlement layer used by exchanges, so the event is most directly exposed to Bitcoin custody services and exchange balance sheets that rely on Liquid. The return of the majority of funds may ease fears of a large BTC sell-off or exchange insolvency, but persistent uncertainty about unreturned funds could keep pressure on confidence in custodial infrastructure.",
+      "market_impact_zh": "被盗资金是存放在交易所使用的结算层上的比特币，因此该事件与依赖 Liquid 的比特币托管服务和交易所资产负债表关联最直接。大部分资金归还可能缓解对大规模抛售或交易所资不抵债的担忧，但剩余未归还资金的不确定性仍可能给托管基础设施的信任带来压力。",
+      "market_impact_en": "The stolen funds were bitcoin held on a settlement layer used by exchanges, so the event is most directly exposed to Bitcoin custody services and exchange balance sheets that rely on Liquid. The return of the majority of funds may ease fears of a large BTC sell-off or exchange insolvency, but persistent uncertainty about unreturned funds could keep pressure on confidence in custodial infrastructure.",
       "score": 9.0,
       "source_links": [
         {
@@ -44,7 +44,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://gizmodo.com/hackers-drain-320-million-from-bitcoins-liquid-network-keep-47-million-for-themselves-in-white-hat-operation-2000808262",
+          "title": "Hackers Drain $320 Million From Bitcoin’s Liquid Network ..."
+        },
+        {
+          "url": "https://shattered.io/liquid-network-320-million-hack-2026/",
+          "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]"
+        },
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-01-01-biggest-crypto-hacks-2025-380992",
+          "title": "From Bybit to GMX: The 10 biggest crypto hacks of 2025"
+        }
+      ]
     },
     {
       "thread_id": "evt_0720893b934a9e7f",
@@ -106,6 +119,14 @@
         {
           "url": "https://news.ycombinator.com/item?id=49588080",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI_scaling_law",
+          "title": "AI scaling law"
+        },
+        {
+          "url": "https://arxiv.org/abs/2001.08361",
+          "title": "[2001.08361] Scaling Laws for Neural Language Models"
         }
       ]
     },
@@ -132,14 +153,14 @@
       "summary_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
       "latest_update_zh": "攻击者通过THORChain和CoinJoin转移资金；所有波次中82%的被盗比特币仍留在原始地址；创建了293个多签金库，并已转移其中11个最大金库的资金；发现了一个可能属于另一受害者的未知金库。",
       "latest_update_en": "Attacker moved funds via THORChain and CoinJoin; across all waves, 82% of stolen Bitcoin remains in original addresses; created 293 multisig vaults and moved funds from the 11 largest; identified a previously unknown vault likely holding another victim's funds.",
-      "background_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
-      "background_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "background_zh": "Coldcard 是一款流行的比特币硬件钱包。所谓“第三波”攻击指一系列针对钱包的盗窃事件，这些钱包的助记词显然是在熵不足或可预测的情况下生成的，因此攻击者即使未接触硬件也能推导出私钥。THORChain 是一个跨链流动性协议，CoinJoin 则是一种比特币隐私技术，通过混币来切断交易链条。Galaxy Research 一直在追踪这些链上资金流动，并呼吁受影响用户上报损失。",
+      "background_en": "Coldcard is a popular Bitcoin hardware wallet. The so-called 'Wave 3' attacks refer to a series of thefts from wallets whose seed phrases were apparently generated with insufficient or predictable entropy, so attackers could derive private keys despite the hardware being offline. THORChain is a cross-chain liquidity protocol, and CoinJoin is a Bitcoin privacy technique that mixes coins to break the transaction trail. Galaxy Research has been tracking these on-chain movements and asking affected users to report their losses.",
       "latest_summary_zh": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
       "latest_summary_en": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "主要受影响的资产是比特币，但链上洗钱行为本身并不会直接改变市场供应。如果攻击者最终通过交易所出售清洗后的 BTC，可能会带来卖压；否则，其影响可能仅限于硬件钱包安全和自托管方面的负面情绪。",
+      "discussion_en": "The main asset exposed is Bitcoin, but the on-chain laundering itself does not directly alter market supply. Potential market impact would arise if the attacker eventually sells the cleaned BTC on exchanges, adding sell-side pressure; otherwise, the likely effect remains limited to negative sentiment around hardware-wallet security and self-custody.",
+      "market_impact_zh": "主要受影响的资产是比特币，但链上洗钱行为本身并不会直接改变市场供应。如果攻击者最终通过交易所出售清洗后的 BTC，可能会带来卖压；否则，其影响可能仅限于硬件钱包安全和自托管方面的负面情绪。",
+      "market_impact_en": "The main asset exposed is Bitcoin, but the on-chain laundering itself does not directly alter market supply. Potential market impact would arise if the attacker eventually sells the cleaned BTC on exchanges, adding sell-side pressure; otherwise, the likely effect remains limited to negative sentiment around hardware-wallet security and self-custody.",
       "score": 8.5,
       "source_links": [
         {
@@ -158,7 +179,16 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://cointelegraph.com/news/coldcard-hack-galaxy-btc-lost-87-unmoved",
+          "title": "Galaxy Finds 1,561 Bitcoin From Coldcard Hack Still Unmoved"
+        },
+        {
+          "url": "https://www.galaxy.com/insights/research/your-keys-not-your-coins-coldcard-wallets-hacked-for-130m-and-counting",
+          "title": "Coldcard Wallets Hacked for $130m and Counting | Galaxy"
+        }
+      ]
     },
     {
       "thread_id": "evt_c8eeb2561cb07df2",
@@ -273,8 +303,32 @@
           "title": "Liquid Network - River Financial"
         },
         {
+          "url": "https://www.technadu.com/320-million-vanishes-from-liquid-networks-bitcoin-reserves-and-the-hackers-say-theyre-the-good-guys/635599/",
+          "title": "Liquid Network Hack: $320M in Bitcoin Withdrawn via SideSwap - TechNadu"
+        },
+        {
+          "url": "https://news.bitcoin.com/security/blockstream-to-liquid-network-hacker-safe-to-return-the-funds/",
+          "title": "Blockstream to Liquid Network Hacker: 'Safe to Return the Funds'"
+        },
+        {
+          "url": "https://crypto.news/blockstream-launches-the-liquid-network-bitcoins-first-sidechain/",
+          "title": "Blockstream Launches the Liquid Network, Bitcoin’s First Sidechain"
+        },
+        {
           "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
           "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
+        },
+        {
+          "url": "https://shattered.io/liquid-network-320-million-hack-2026/",
+          "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]"
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
+          "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ..."
+        },
+        {
+          "url": "https://liquid.net/",
+          "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets"
         }
       ]
     },
@@ -972,8 +1026,32 @@
           "title": "Liquid Network - River Financial"
         },
         {
+          "url": "https://www.technadu.com/320-million-vanishes-from-liquid-networks-bitcoin-reserves-and-the-hackers-say-theyre-the-good-guys/635599/",
+          "title": "Liquid Network Hack: $320M in Bitcoin Withdrawn via SideSwap - TechNadu"
+        },
+        {
+          "url": "https://news.bitcoin.com/security/blockstream-to-liquid-network-hacker-safe-to-return-the-funds/",
+          "title": "Blockstream to Liquid Network Hacker: 'Safe to Return the Funds'"
+        },
+        {
+          "url": "https://crypto.news/blockstream-launches-the-liquid-network-bitcoins-first-sidechain/",
+          "title": "Blockstream Launches the Liquid Network, Bitcoin’s First Sidechain"
+        },
+        {
           "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
           "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
+        },
+        {
+          "url": "https://shattered.io/liquid-network-320-million-hack-2026/",
+          "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]"
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
+          "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ..."
+        },
+        {
+          "url": "https://liquid.net/",
+          "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets"
         }
       ]
     },
@@ -1000,14 +1078,14 @@
       "summary_en": "Liquid exchange suffered a $320 million exploit; hackers have returned $270M in Bitcoin.",
       "latest_update_zh": "Liquid黑客在窃取3.2亿美元后归还了2.7亿美元的比特币。",
       "latest_update_en": "Liquid hackers returned $270M in Bitcoin after stealing $320 million.",
-      "background_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
-      "background_en": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'.",
+      "background_zh": "Liquid Network是Blockstream开发的比特币侧链，采用联邦模型，让交易所和机构能够更快速、更私密地转移比特币。用户将比特币存入联邦钱包，在侧链上获得对应的L-BTC，交易由一组验证节点共同确认。由于Liquid充当交易所的结算基础设施，这一层面的破坏可能对多个平台上的资金产生广泛影响。",
+      "background_en": "Liquid Network is a federated Bitcoin sidechain developed by Blockstream that allows exchanges and institutions to move bitcoin faster and with more privacy. Users peg bitcoin into a federation wallet and receive L-BTC on the sidechain, with transactions validated by a group of functionaries. Because Liquid functions as settlement infrastructure for exchanges, a compromise at this layer can have broad implications for funds across multiple platforms.",
       "latest_summary_zh": "Liquid hackers returned $270M in Bitcoin after stealing $320 million, marking a major exchange security incident with substantial recovery.",
       "latest_summary_en": "Liquid hackers returned $270M in Bitcoin after stealing $320 million, marking a major exchange security incident with substantial recovery.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "被盗资金是存放在交易所使用的结算层上的比特币，因此该事件与依赖 Liquid 的比特币托管服务和交易所资产负债表关联最直接。大部分资金归还可能缓解对大规模抛售或交易所资不抵债的担忧，但剩余未归还资金的不确定性仍可能给托管基础设施的信任带来压力。",
+      "discussion_en": "The stolen funds were bitcoin held on a settlement layer used by exchanges, so the event is most directly exposed to Bitcoin custody services and exchange balance sheets that rely on Liquid. The return of the majority of funds may ease fears of a large BTC sell-off or exchange insolvency, but persistent uncertainty about unreturned funds could keep pressure on confidence in custodial infrastructure.",
+      "market_impact_zh": "被盗资金是存放在交易所使用的结算层上的比特币，因此该事件与依赖 Liquid 的比特币托管服务和交易所资产负债表关联最直接。大部分资金归还可能缓解对大规模抛售或交易所资不抵债的担忧，但剩余未归还资金的不确定性仍可能给托管基础设施的信任带来压力。",
+      "market_impact_en": "The stolen funds were bitcoin held on a settlement layer used by exchanges, so the event is most directly exposed to Bitcoin custody services and exchange balance sheets that rely on Liquid. The return of the majority of funds may ease fears of a large BTC sell-off or exchange insolvency, but persistent uncertainty about unreturned funds could keep pressure on confidence in custodial infrastructure.",
       "score": 9.0,
       "source_links": [
         {
@@ -1021,7 +1099,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://gizmodo.com/hackers-drain-320-million-from-bitcoins-liquid-network-keep-47-million-for-themselves-in-white-hat-operation-2000808262",
+          "title": "Hackers Drain $320 Million From Bitcoin’s Liquid Network ..."
+        },
+        {
+          "url": "https://shattered.io/liquid-network-320-million-hack-2026/",
+          "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]"
+        },
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-01-01-biggest-crypto-hacks-2025-380992",
+          "title": "From Bybit to GMX: The 10 biggest crypto hacks of 2025"
+        }
+      ]
     },
     {
       "thread_id": "evt_e76fdfcc6ef4904a",
@@ -1107,14 +1198,14 @@
       "summary_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
       "latest_update_zh": "攻击者通过THORChain和CoinJoin转移资金；所有波次中82%的被盗比特币仍留在原始地址；创建了293个多签金库，并已转移其中11个最大金库的资金；发现了一个可能属于另一受害者的未知金库。",
       "latest_update_en": "Attacker moved funds via THORChain and CoinJoin; across all waves, 82% of stolen Bitcoin remains in original addresses; created 293 multisig vaults and moved funds from the 11 largest; identified a previously unknown vault likely holding another victim's funds.",
-      "background_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
-      "background_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
+      "background_zh": "Coldcard 是一款流行的比特币硬件钱包。所谓“第三波”攻击指一系列针对钱包的盗窃事件，这些钱包的助记词显然是在熵不足或可预测的情况下生成的，因此攻击者即使未接触硬件也能推导出私钥。THORChain 是一个跨链流动性协议，CoinJoin 则是一种比特币隐私技术，通过混币来切断交易链条。Galaxy Research 一直在追踪这些链上资金流动，并呼吁受影响用户上报损失。",
+      "background_en": "Coldcard is a popular Bitcoin hardware wallet. The so-called 'Wave 3' attacks refer to a series of thefts from wallets whose seed phrases were apparently generated with insufficient or predictable entropy, so attackers could derive private keys despite the hardware being offline. THORChain is a cross-chain liquidity protocol, and CoinJoin is a Bitcoin privacy technique that mixes coins to break the transaction trail. Galaxy Research has been tracking these on-chain movements and asking affected users to report their losses.",
       "latest_summary_zh": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
       "latest_summary_en": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "主要受影响的资产是比特币，但链上洗钱行为本身并不会直接改变市场供应。如果攻击者最终通过交易所出售清洗后的 BTC，可能会带来卖压；否则，其影响可能仅限于硬件钱包安全和自托管方面的负面情绪。",
+      "discussion_en": "The main asset exposed is Bitcoin, but the on-chain laundering itself does not directly alter market supply. Potential market impact would arise if the attacker eventually sells the cleaned BTC on exchanges, adding sell-side pressure; otherwise, the likely effect remains limited to negative sentiment around hardware-wallet security and self-custody.",
+      "market_impact_zh": "主要受影响的资产是比特币，但链上洗钱行为本身并不会直接改变市场供应。如果攻击者最终通过交易所出售清洗后的 BTC，可能会带来卖压；否则，其影响可能仅限于硬件钱包安全和自托管方面的负面情绪。",
+      "market_impact_en": "The main asset exposed is Bitcoin, but the on-chain laundering itself does not directly alter market supply. Potential market impact would arise if the attacker eventually sells the cleaned BTC on exchanges, adding sell-side pressure; otherwise, the likely effect remains limited to negative sentiment around hardware-wallet security and self-custody.",
       "score": 8.5,
       "source_links": [
         {
@@ -1133,7 +1224,16 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://cointelegraph.com/news/coldcard-hack-galaxy-btc-lost-87-unmoved",
+          "title": "Galaxy Finds 1,561 Bitcoin From Coldcard Hack Still Unmoved"
+        },
+        {
+          "url": "https://www.galaxy.com/insights/research/your-keys-not-your-coins-coldcard-wallets-hacked-for-130m-and-counting",
+          "title": "Coldcard Wallets Hacked for $130m and Counting | Galaxy"
+        }
+      ]
     },
     {
       "thread_id": "evt_59b2760922a84137",
@@ -1354,6 +1454,14 @@
         {
           "url": "https://news.ycombinator.com/item?id=49588080",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI_scaling_law",
+          "title": "AI scaling law"
+        },
+        {
+          "url": "https://arxiv.org/abs/2001.08361",
+          "title": "[2001.08361] Scaling Laws for Neural Language Models"
         }
       ]
     },

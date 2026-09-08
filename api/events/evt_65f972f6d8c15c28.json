@@ -51,14 +51,27 @@
       "current_state_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
       "detailed_summary_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
       "detailed_summary_en": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Coldcard 是一款流行的比特币硬件钱包。所谓“第三波”攻击指一系列针对钱包的盗窃事件，这些钱包的助记词显然是在熵不足或可预测的情况下生成的，因此攻击者即使未接触硬件也能推导出私钥。THORChain 是一个跨链流动性协议，CoinJoin 则是一种比特币隐私技术，通过混币来切断交易链条。Galaxy Research 一直在追踪这些链上资金流动，并呼吁受影响用户上报损失。",
+      "background_en": "Coldcard is a popular Bitcoin hardware wallet. The so-called 'Wave 3' attacks refer to a series of thefts from wallets whose seed phrases were apparently generated with insufficient or predictable entropy, so attackers could derive private keys despite the hardware being offline. THORChain is a cross-chain liquidity protocol, and CoinJoin is a Bitcoin privacy technique that mixes coins to break the transaction trail. Galaxy Research has been tracking these on-chain movements and asking affected users to report their losses.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "主要受影响的资产是比特币，但链上洗钱行为本身并不会直接改变市场供应。如果攻击者最终通过交易所出售清洗后的 BTC，可能会带来卖压；否则，其影响可能仅限于硬件钱包安全和自托管方面的负面情绪。",
+      "market_impact_en": "The main asset exposed is Bitcoin, but the on-chain laundering itself does not directly alter market supply. Potential market impact would arise if the attacker eventually sells the cleaned BTC on exchanges, adding sell-side pressure; otherwise, the likely effect remains limited to negative sentiment around hardware-wallet security and self-custody.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661",
+          "title": "Coldcard exploiter moves 45% of funds stolen from 'Wave 3 ..."
+        },
+        {
+          "url": "https://cointelegraph.com/news/coldcard-hack-galaxy-btc-lost-87-unmoved",
+          "title": "Galaxy Finds 1,561 Bitcoin From Coldcard Hack Still Unmoved"
+        },
+        {
+          "url": "https://www.galaxy.com/insights/research/your-keys-not-your-coins-coldcard-wallets-hacked-for-130m-and-counting",
+          "title": "Coldcard Wallets Hacked for $130m and Counting | Galaxy"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd",

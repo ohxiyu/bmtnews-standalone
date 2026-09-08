@@ -46,14 +46,23 @@
       "current_state_en": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
       "detailed_summary_zh": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
       "detailed_summary_en": "A whitehat hacker drained ~$320M in Bitcoin from Liquid Network's federation reserve via a bug in SideSwap's peg-out process and is holding it until developers prove the underlying network flaw is patched.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Liquid Network是一个由Liquid Federation运营的比特币侧链：联邦在多重签名储备中持有比特币，并按1:1比例发行L-BTC。用户通过peg-in将比特币转入侧链、获得L-BTC用于更快结算；peg-out则会销毁L-BTC，同时联邦从储备中释放对应比特币。本次事件中，一名客户向SideSwap的peg-out服务提交了4,000枚L-BTC，但这些代币是因软件缺陷凭空产生、没有对应比特币支撑的，却仍然被联邦签名者视为合法，导致储备中的大部分真实比特币被放行。",
+      "background_en": "Liquid Network is a Bitcoin sidechain operated by the Liquid Federation, which holds BTC in a multisig reserve and issues L-BTC on a one-to-one basis. Users peg in Bitcoin to receive L-BTC for faster settlement, and peg-outs burn L-BTC while the federation releases real BTC from the reserve. In this incident, a customer submitted 4,000 L-BTC to SideSwap's peg-out service, but the tokens had been created by a software bug without corresponding Bitcoin backing; they still appeared legitimate to federation signers, causing most of the reserve to be sent out.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该事件直接影响使用Liquid结算的交易所上的L-BTC及对应法币债权：储备曾接近4,200枚BTC，事件后仅剩约197枚BTC，且跨链桥提取已暂停。在漏洞修复得到证实、白帽黑客归还资金之前，市场影响主要经由储备充足性不确定性、peg-in/out流动性暂停以及交易所敞口传导，而非比特币主网本身。",
+      "market_impact_en": "The incident directly affects L-BTC and fiat-denominated claims on exchanges using Liquid for settlement, since a reserve that once held roughly 4,200 BTC dropped to around 197 BTC and bridge withdrawals were halted. Until the patch is proven and the whitehat returns funds, any market impact flows through reserve-backing uncertainty, halted peg-in/out liquidity, and exchange exposure rather than through Bitcoin's base layer.",
       "importance_score": 9.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
+          "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
+        },
+        {
+          "url": "https://www.cryptotimes.io/2026/09/07/liquid-network-pauses-after-4000-btc-leave-federation-wallet/",
+          "title": "Liquid Network Lost 4,000 BTC From Its Federation Wallet, Leaving Just 197 BTC Behind."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:8f3dfceab3f33c00"

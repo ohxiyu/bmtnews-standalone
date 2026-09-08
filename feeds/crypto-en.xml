@@ -4,7 +4,113 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-07T00:00:00Z</updated>
+  <updated>2026-09-08T00:00:00Z</updated>
+  <entry>
+    <title>Hackers Return $270M to Liquid Network After $320M Bitcoin Theft</title>
+    <link href="https://decrypt.co/377600/liquid-hackers-return-270m-bitcoin"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:decrypt.co_feed:645a6466a40fe810</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Hackers who exploited the Liquid Network returned approximately $270 million in bitcoin after initially stealing about $320 million. The partial return leaves an estimated $50 million in stolen bitcoin still outstanding.
+
+Returning the bulk of stolen assets is unusual in crypto heists and may restore some confidence in the Liquid Network, a Bitcoin sidechain that exchanges use for settlement. Even so, the breach highlights security weaknesses in sidechain and custodial infrastructure that many exchange operations depend on.
+
+Liquid Network suspended all transactions after the exploit, and the hackers reportedly described themselves as &#x27;the good guys&#x27; when returning funds. The precise attack vector and the fate of the remaining stolen bitcoin have not been publicly confirmed.</summary>
+  </entry>
+  <entry>
+    <title>How 4,000 BTC walked out of Blockstream’s Liquid Network</title>
+    <link href="https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:protos.com_feed_:cb619437abd2da25</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Blockstream&#x27;s Liquid Network was hacked, with approximately 4,000 BTC (~$320M) drained from its federation wallet via a faulty LBTC redemption, prompting a pause of the sidechain.</summary>
+  </entry>
+  <entry>
+    <title>Whitehat holding $320M in drained Bitcoin awaits proof of flaw fix</title>
+    <link href="https://cryptoslate.com/a-whitehat-hacker-is-holding-320-million-in-drained-bitcoin-until-developers-prove-they-patched-a-fatal-network-flaw/"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:cryptoslate.com_feed_:8f3dfceab3f33c00</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>A bug-created batch of 4,000 L-BTC passed SideSwap&#x27;s peg-out checks on Sept. 6, prompting the Liquid Federation to release roughly 3,996 Bitcoin (~$320 million) from its reserve. The fund holder later messaged via OP_RETURN that it is a whitehat and will return most funds once Blockstream fixes the underlying Elements bug on every affected node.
+
+This appears to be one of the largest security failures on a Bitcoin sidechain, exposing the risk that a federated network can release real BTC when multiple signers approve the same invalid state. Exchanges relying on Liquid for fast settlement paused bridge and L-BTC activity, shaking confidence in sidechain reserve accounting and the broader Bitcoin ecosystem&#x27;s second-layer security.
+
+Liquid said neither SideSwap&#x27;s Peg-out Authorization Key nor other federation keys were compromised; Blockstream reportedly traced the invalid L-BTC to a flaw in Elements, the software underlying Liquid. At least 11 of Liquid&#x27;s 15 functionaries signed the transaction, and no independent technical postmortem or patch description was public at the latest check.</summary>
+  </entry>
+  <entry>
+    <title>Liquid Network Hacked: $320M in Bitcoin Withdrawn from Sidechain</title>
+    <link href="https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"/>
+    <id>https://bmt.news/editions/2026-09-08/#gdelt:article:20260907T064500Z::https://www.ksl.com:443/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>The Liquid Network, a Bitcoin sidechain developed by Blockstream, has been hacked, with roughly $320 million (about 4,000 of 4,200 BTC) withdrawn from its federation wallet via SideSwap. The incident was traced to a bug in Blockstream&#x27;s Elements software, and the network has been paused.
+
+This is one of the largest security breaches on a Bitcoin sidechain and raises serious questions about the security model of federated sidechains and the safety of funds bridged to layer-two solutions. It affects Liquid users, exchanges, and institutions using Liquid for tokenized assets and faster trading settlement.
+
+The attacker exploited a bug in Elements software to withdraw BTC from the Liquid Federation wallet via the SideSwap protocol. Blockstream has publicly told the hacker that it is &#x27;safe to return the funds,&#x27; with the hackers describing themselves as &#x27;good guys,&#x27; complicating the question of intent and resolution.</summary>
+  </entry>
+  <entry>
+    <title>Bitcoin Sidechain Liquid Reports $320M Hack, Halts Network</title>
+    <link href="https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack"/>
+    <id>https://bmt.news/editions/2026-09-08/#gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>On September 6, 2026, the Bitcoin sidechain Liquid Network suffered a security exploit that drained roughly 4,000 BTC (~$320 million), prompting network operators to halt all transactions. The attackers have described themselves as ethical security researchers, claiming they are the &#x27;good guys.&#x27;
+
+Liquid is Bitcoin&#x27;s main layer-2 sidechain for institutional settlement and digital asset issuance, so a breach of this size undermines confidence in Bitcoin-based custody and sidechain security. This is one of the largest security incidents in the Bitcoin sidechain ecosystem and could renew scrutiny on bridging and pegged-asset risk.
+
+Liquid is a federated sidechain run by Blockstream and a group of functionaries, meaning the stolen bitcoin was held under multisig by trusted parties rather than a simple smart contract. The hackers claim to be &#x27;good guys,&#x27; implying the exploit may have been framed as a white-hat rescue, and the network suspended block production while the incident was investigated.</summary>
+  </entry>
+  <entry>
+    <title>Liquid Network Bitcoin Sidechain Hit by $320M Exploit; Hackers Claim White-Hat Status</title>
+    <link href="https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:6191bdd9469e9c21</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>On September 6, 2026, approximately 4,000 BTC worth about $320 million was drained from the federation wallet backing Blockstream&#x27;s Liquid Network, a Bitcoin sidechain used by exchanges. The network halted all transactions after the exploit, and the attacker or attackers claimed to be white-hat hackers acting as the &#x27;good guys&#x27;.
+
+This is a major security breach on settlement infrastructure that exchanges rely on, undermining confidence in federated sidechains and custodial models. If funds belonging to exchanges or users were affected, it could disrupt settlement and withdrawal operations for multiple platforms.
+
+The exploit targeted the federation wallet that pegs bitcoin to the Liquid Network, moving roughly 4,000 BTC. The attackers described their action as a white-hat operation and reportedly kept about $47 million for themselves, according to one report; the network was halted to prevent further losses.</summary>
+  </entry>
+  <entry>
+    <title>Orionx Halts Withdrawals and Winds Down After Alleged $7M Transfers</title>
+    <link href="https://thedefiant.io/news/cefi/orionx-halts-withdrawals-and-winds-down-after-alleged-7m-asset-transfers"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:thedefiant.io_api_feed:1a87bc7ce87cf7c4</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Chilean crypto exchange Orionx has halted withdrawals and begun winding down operations after allegedly transferring approximately $7 million in user assets. Chile&#x27;s financial regulator stated it does not oversee the exchange&#x27;s closure and lacks the power to order customer repayments.
+
+This incident highlights the custodial risks of centralized exchanges, where user funds can be exposed to misappropriation or insolvency. The regulator&#x27;s lack of oversight and enforcement power underscores a regulatory gap that may leave affected users with limited legal recourse.
+
+The alleged asset transfers total approximately $7 million, but further details about the destination or nature of the transfers have not been disclosed. The Chilean financial regulator&#x27;s statement confirms that Orionx&#x27;s wind-down falls outside its current supervisory remit, leaving no clear authority to compel refunds.</summary>
+  </entry>
+  <entry>
+    <title>Coldcard Wave 3 exploiter moves 45% of stolen BTC, Galaxy finds</title>
+    <link href="https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:8d4075dd8b42c6bd</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Galaxy Research reports that the Coldcard &#x27;Wave 3&#x27; exploiter has moved 45% of stolen Bitcoin, spending about 97.09 BTC — worth around $7.8 million — through THORChain and CoinJoins. As of mid-August, Galaxy had identified roughly 1,779 BTC stolen from 190 victims across more than 8,600 addresses.
+
+This ongoing movement shows the attacker is actively laundering a large, multi-victim Bitcoin theft, complicating recovery and law-enforcement efforts. It also underscores that compromised hardware-wallet seed entropy can hit many users at once, highlighting broader self-custody security risks.
+
+Galaxy says the moved funds include 97 BTC that exited 12 vaults, with the attacker relying on THORChain swaps and CoinJoin transactions to obscure the trail. Earlier analysis from Galaxy linked about 1,789 BTC to the hack, with roughly 1,561 BTC still sitting in attacker-controlled addresses unmoved.</summary>
+  </entry>
+  <entry>
+    <title>Canopy (CNPY) Lists on Six Major Crypto Exchanges</title>
+    <link href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPNUdjWFBGcy1iU3gzYldyQXBZX1J1TUJ2SXZQT3ZuaW9KdFB0WGVPTmtkdjEzRUpSQy1zSENRQzlfTFZjUmxZUk5JaXpNTUdQLU8wTlkzNlZ0bGV0OG1iQ1dha09lalNBOXd1cm9QU1VqUUEyemVIczhyWVJxa1lvbDF5Z1BDcmlua2Q3aFVqTGJnTXdyRnhzbmI0U0k4SzQ?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-08/#google_news:article:db17b0b2558eafeb</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>Canopy&#x27;s CNPY token has become available for trading on Binance, OKX, Bitget, Gate, MEXC, and Bitvavo, giving it a simultaneous multi-exchange debut. The listings cover multiple major spot venues and expose the token to a global trading audience.
+
+A debut on this many top-tier exchanges, including Binance and OKX, substantially increases CNPY&#x27;s liquidity, accessibility, and visibility. For Web3 infrastructure projects, such listings are a key milestone for user adoption, although they are also a routine business step for the exchanges themselves.
+
+Canopy&#x27;s website describes the project as an infrastructure layer that lets developers build and deploy on-chain apps with familiar programming languages and tools, while CryptoRank frames it as a framework with restaked security for launching sovereign L1 blockchains. Separate search listings also show another asset named Canopy Finance using the same CNPY symbol, underlining the importance of verifying the official contract address before trading.</summary>
+  </entry>
+  <entry>
+    <title>DBS and Citi Complete First Weekend USD Cross-Border Payment Using Tokenized Deposits</title>
+    <link href="https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689"/>
+    <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:a8a39e1465a90b11</id>
+    <updated>2026-09-08T00:00:00Z</updated>
+    <summary>On September 5, 2026, DBS and Citi executed the first weekend cross-border USD payment between Singapore and the U.S. using tokenized deposits, with settlement completed in minutes instead of days.
+
+This milestone signals growing institutional adoption of tokenized deposits and shows that blockchain-based settlement can operate outside conventional banking hours. It could accelerate banks&#x27; exploration of 24/7 payment rails and prompt regulators to assess the implications for cross-border payments.
+
+The transaction settled over Swift&#x27;s ledger and took minutes instead of the standard two business days. The pilot&#x27;s timing on a Saturday highlights the potential for weekend settlement that was previously impossible.</summary>
+  </entry>
   <entry>
     <title>Liquid Sidechain Paused After 3,998 BTC Leaves Federation Wallet</title>
     <link href="https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet"/>
@@ -330,115 +436,5 @@ Memecoin generators typically allow any user to create a token with a few clicks
 Offering options and margin trading in Europe broadens derivatives access to a large base of customers and positions Coinbase to compete more directly with other derivatives-focused exchanges serving the region. Because leveraged products generally produce higher trading fees than spot markets, the expansion also strengthens Coinbase&#x27;s revenue potential in Europe.
 
 Options are contracts that give the buyer the right—but not the obligation—to buy or sell an underlying asset at an agreed price before expiration; margin trading lets customers borrow funds from the exchange to open positions larger than their own collateral would allow. Both products are leveraged and carry greater risk than ordinary spot trading, and they are typically subject to stricter regulatory and compliance requirements in Europe.</summary>
-  </entry>
-  <entry>
-    <title>Standard Chartered launches spot Bitcoin and Ether trading in UAE</title>
-    <link href="https://cointelegraph.com/news/standard-chartered-bitcoin-ether-trading-uae?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-04/#rss:cointelegraph.com_rss:1ee1a0464aec6a1b</id>
-    <updated>2026-09-04T00:00:00Z</updated>
-    <summary>Standard Chartered has launched spot Bitcoin and Ether trading for institutional clients in the United Arab Emirates through its Dubai International Financial Centre (DIFC)-regulated entity. The bank claims to be the first major global bank and the first Global Systemically Important Bank (G-SIB) to offer such regulated institutional digital asset trading in the region.
-
-This is a significant institutional adoption milestone, as a G-SIB offering regulated spot crypto trading through its existing banking platforms signals growing mainstream acceptance of digital assets. It could pressure other major global banks to follow suit and expand regulated crypto access for institutional capital in the Middle East.
-
-Eligible institutional clients can access the trading via Standard Chartered&#x27;s electronic trading channels integrated into its existing platforms. The bank previously launched digital asset custody services in the UAE in September 2024, and in June it entered a banking agreement with crypto exchange CoinMENA to support fiat on- and off-ramps, client money accounts, and virtual account-based transaction management.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase Launches Direct Native Crypto Futures in Canada</title>
-    <link href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQN1ZNcjVkcHQ1MEJRMHBmemNqZEtXTktsSGlLNEhhS0hBR3E4a0d5WEQtUkpiZjRzbERsTzVhMGUwd1AxWmZmek5GbVpTemRZQ3NhcWZkeUdwNEFmNWtyWlRfS2Jxa0dUVVlrY0YtalZmZVM3b2FpQTNfYXp0YUQ0RVU0S1I3U1NZVGV0dg?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-04/#google_news:article:733e2f0558cb893a</id>
-    <updated>2026-09-04T00:00:00Z</updated>
-    <summary>Coinbase has become the first major crypto-native platform to offer direct native crypto futures in Canada. The launch brings crypto derivatives trading to Canadian users through a major regulated exchange.
-
-This expands derivatives access for Canadian retail and institutional traders through a major US-listed crypto exchange, signaling continued international growth of regulated crypto derivatives. It also strengthens Coinbase&#x27;s competitive position in Canada&#x27;s evolving crypto market.
-
-Native crypto futures often differ from traditional expiring futures; for example, crypto-native perpetual contracts have no expiration date and use funding rates to keep prices aligned with the underlying asset. The launch reportedly gives Coinbase a first-mover advantage over other major global platforms that have not yet offered this direct product in Canada.</summary>
-  </entry>
-  <entry>
-    <title>Kraken Delists 21 Tokens for European Users; Trading Ends Sept 11</title>
-    <link href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBCQng0ZEFMdnpRUHBDQlZRdEdNb0VLUzFuVGZyUGM0VkJ0RkFXa0JYQWZIUlNNRWFLa29KVHdqTDFjQTlPTE1fc180aVlWRHg3MmdtVGlOazFGOEZSa2dtYjh3VGV3TGNBVlBtMnBIMXFvRV91d2c?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-04/#google_news:article:c7f7f0c3b29066a0</id>
-    <updated>2026-09-04T00:00:00Z</updated>
-    <summary>Kraken has announced it will delist 21 tokens, with all trading in these assets for European users ending on September 11. No alternative venue in Europe will remain available for these tokens after the delisting, according to the report.
-
-This is a material exchange action that removes regulated access to 21 tokens for European customers. The absence of a second venue means affected holders may need to transfer assets elsewhere or face reduced liquidity, highlighting how regulatory pressure such as MiCA is reshaping token availability in Europe.
-
-The delisting deadline is September 11, after which trading will be halted for the affected pairs. The announcement specifically impacts Kraken&#x27;s European operations, and the report notes that affected users will not have a second European venue to fall back on for these tokens.</summary>
-  </entry>
-  <entry>
-    <title>Mantle Adds Paxos USDG Stablecoin, Joins Global Dollar Network</title>
-    <link href="https://cointelegraph.com/news/paxos-usdg-goes-live-mantle-network-joins-global-dollar-network?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-04/#rss:cointelegraph.com_rss:65b40eb1aab81671</id>
-    <updated>2026-09-04T00:00:00Z</updated>
-    <summary>Paxos-issued USDG stablecoin has launched natively on Mantle, an Ethereum layer-2 network, according to a Thursday announcement. Mantle has also joined the Global Dollar Network as a partner, becoming eligible to receive a share of rewards generated by USDG activity.
-
-This makes USDG one of the first stablecoins to be natively minted on Mantle and extends USDG&#x27;s reward-sharing model into a major Ethereum L2 ecosystem. It also strengthens competition among stablecoins and supports Mantle&#x27;s push into DeFi and institutional real-world asset allocation.
-
-USDG has a market capitalization of roughly $3.18 billion, making it the seventh-largest stablecoin tracked by DefiLlama, and is issued by Paxos under regulatory frameworks in Singapore and the EU with monthly reserve reports. Mantle joins more than 150 Global Dollar Network partners, including Kraken and Robinhood, and already supports other stablecoins such as Agora&#x27;s AUSD, Ethena&#x27;s USDe, and Tether&#x27;s USDT0.</summary>
-  </entry>
-  <entry>
-    <title>FBI investigates alleged IDScan.net breach exposing over 150M driver licenses</title>
-    <link href="https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/"/>
-    <id>https://bmt.news/editions/2026-09-03/#gdelt:article:20260902T221500Z::https://americanbazaaronline.com/2026/09/02/fbi-probes-alleged-leak-of-153m-us-canadian-drivers-licenses-487467/</id>
-    <updated>2026-09-03T00:00:00Z</updated>
-    <summary>The FBI is investigating an alleged data breach at identity verification firm IDScan.net after dark-web service Nexus reportedly offered over 150 million U.S. and Canadian driver licenses for sale, including one belonging to U.S. Secretary of War Pete Hegseth. KrebsOnSecurity first reported the apparent leak, which is also described as involving 153 million records.
-
-If confirmed, this would be one of the largest identity data breaches on record, exposing millions of drivers&#x27; sensitive personal information to potential identity theft and fraud. The alleged breach also puts major Fortune 500 companies and institutions that rely on IDScan.net at risk and raises broader concerns about the security of third-party identity verification services.
-
-Security researcher vx-underground published a list of IDScan.net clients that may be affected, including Shell, DraftKings, FedEx, Hertz, General Motors, Caesars Entertainment, and Motorola. Privacy researcher Zach Edwards said his ID was leaked after visiting Planet13, a Las Vegas cannabis dispensary, and that signs point to an ongoing real-time breach at IDScan.net; Nexus claims it has been continuously exfiltrating data for over a year but its service is currently unavailable.</summary>
-  </entry>
-  <entry>
-    <title>TAC Network Frozen Over 10 Days After Exploit Spurs 1.26B Token Bailout</title>
-    <link href="https://cryptoslate.com/tac-remains-frozen-for-over-10-days-after-a-massive-exploit-forces-a-1-26-billion-token-bailout/"/>
-    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:39a7694bb715c014</id>
-    <updated>2026-09-03T00:00:00Z</updated>
-    <summary>The TAC network has remained halted at block 24,671,475 for over 10 days after an Aug. 22 exploit drained 2.99 billion TAC, roughly 28.6% of supply, from the bonded staking pool. The proposed recovery plan would replace the ~1.26 billion sold TAC from treasury reserves, while the treatment of ~1.66 billion attacker-held TAC on BNB Chain remains unresolved.
-
-The prolonged halt traps staked funds and disables bridging and redemptions for TAC users, while the unresolved 1.66 billion TAC balance on BNB Chain leaves a large part of the drained supply in limbo. Because the vulnerable module is shared by multiple Cosmos-EVM chains, the incident has implications beyond TAC itself.
-
-The attacker exploited an arithmetic overflow: the EVM StateDB tracked only spendable balances, while the Cosmos SDK ledger also allowed delegating locked vesting tokens, so an unchecked subtraction wrapped toward roughly 2^256 and a second overflow then let the attacker zero a victim account. The proposed recovery is a targeted state edit at the halt block, not a rollback, restoring the bonded pool and delegator balances while preserving 7,772 legitimate transactions from 218 unrelated addresses.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase launches regulated crypto derivatives in Canada</title>
-    <link href="https://cointelegraph.com/news/coinbase-launches-regulated-crypto-derivatives-in-canada?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-03/#rss:cointelegraph.com_rss:4b3658772a406b0c</id>
-    <updated>2026-09-03T00:00:00Z</updated>
-    <summary>Coinbase has launched crypto derivatives trading in Canada, offering eligible customers perpetual and dated futures on Bitcoin, Ether, Solana and other assets. The service, introduced via Coinbase Financial Markets, includes 23 crypto futures, five commodity futures and the Coinbase 50 Index, and is billed as the first native crypto futures offering from a major crypto-native platform in the country.
-
-This expands regulated derivatives access in Canada, a market where crypto ownership has risen sharply, and positions Coinbase ahead of other crypto-native competitors. It also shows U.S. crypto platforms treating Canada as a viable regulated expansion market even as broader regulatory pressure increases.
-
-Access is limited to eligible Canadian clients, including individuals with at least $5 million in net financial assets and registered investment advisers and dealers. The contracts use nano-sized positions, offer up to 10x leverage, and the offering also includes commodity futures and the Coinbase 50 Index.</summary>
-  </entry>
-  <entry>
-    <title>Layer-1 blockchain Injective halts for 4 hours to stop $4.9M exploit, calls it an upgrade</title>
-    <link href="https://cryptoslate.com/a-layer-1-blockchain-froze-for-4-hours-to-stop-a-4-9-million-hack-then-claimed-it-was-just-an-upgrade/"/>
-    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:b471d67f8d349c0a</id>
-    <updated>2026-09-03T00:00:00Z</updated>
-    <summary>On Sept. 1, Injective paused block production for nearly four hours while validators deployed an emergency patch after an exploit drained roughly $4.9 million via binary-options markets. The foundation described the event as an &#x27;upgrade, not halted&#x27; and said consensus, native INJ, and staked assets were not compromised.
-
-The incident shows that even a major layer-1&#x27;s core modules can contain exploitable logic, and that containing an attack may require halting the chain, which raises transparency and decentralization questions. It matters for Injective users, validators, and the broader L1 security and emergency governance discussion.
-
-Researcher Earthling Paddy disputed the foundation&#x27;s claim that the exploit only affected ecosystem applications, noting the attack used messages from Injective&#x27;s native exchange and insurance modules, and that the emergency patch added an insurance-fund denomination check and disabled binary-options settlement on mainnet. Block 181027005 at 16:09:59 UTC on Aug. 31 was followed by roughly four hours of halted production; some validators were temporarily jailed and exchanges such as Coinbase and Coins.ph restricted transfers.</summary>
-  </entry>
-  <entry>
-    <title>Binance launches physically settled options on 1,000+ US equities</title>
-    <link href="https://cryptoslate.com/binance-deepens-tradfi-push-with-physically-settled-options-on-over-1000-us-equities/"/>
-    <id>https://bmt.news/editions/2026-09-03/#rss:cryptoslate.com_feed_:1d5893cfe87f7f25</id>
-    <updated>2026-09-03T00:00:00Z</updated>
-    <summary>On September 1, Binance began offering eligible non-US users physically settled options covering more than 1,000 selected US stocks and ETFs. Orders are introduced by Nest Trading and routed to Alpaca Securities, which executes, clears, settles, and holds any shares delivered after exercise.
-
-This puts traditional equity options in the same Binance account as crypto and tokenized equity products, removing the need for eligible clients to open a separate brokerage account. It also deepens Binance&#x27;s push into traditional finance while keeping regulated securities execution and custody with Alpaca rather than Binance.
-
-The options are physically settled, so exercising a call delivers underlying shares that Alpaca holds on the user&#x27;s behalf. Binance says users must submit exercise instructions through its platform up to 30 minutes before expiration; otherwise an in-the-money option may be auto-liquidated on a best-efforts basis or expire worthless.</summary>
-  </entry>
-  <entry>
-    <title>Binance Adds U.S. Stock Options to Multi-Asset Platform</title>
-    <link href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBxbUxDRkF0YWp0SHBfMGJKU1VvLVd6bTEwcUdTbGVyVWI1V19kQVpqWlByV3VMMmIxVVI0SWFXb3R0V2pFYnV4UDJLeFRUQjIzd29ueUZkaTdnSk9ETTVkVEJ3NVNmRG10RnVfVEh3?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-03/#google_news:article:656a054dc939b2b5</id>
-    <updated>2026-09-03T00:00:00Z</updated>
-    <summary>Binance has expanded its multi-asset trading platform to include U.S. stock options, giving users access to traditional equity derivatives alongside crypto assets. The move extends Binance beyond its original cryptocurrency-only offering into conventional securities trading.
-
-A top-tier crypto exchange adding U.S. stock options signals continued convergence between digital-asset platforms and traditional finance. It broadens Binance&#x27;s product suite and could intensify competition with conventional brokers for traders who want both crypto and equities in one venue.
-
-U.S. stock options are derivative contracts tied to individual U.S.-listed equities, offering leveraged exposure with a fixed expiry. The addition positions Binance to compete with established securities brokers rather than only with other crypto exchanges.</summary>
   </entry>
 </feed>

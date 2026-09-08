@@ -23552,8 +23552,8 @@
           "what_changed_zh": "OpenAI发布了一篇题为《异类心智》的文章，探讨智能体AI的本质，权衡其可能的益处与风险，并强调让自主系统与人类意图对齐并加以控制的难度。该文章引发了大量公开讨论，社区中已有数百条评论。\n\n作为顶尖AI实验室，OpenAI对智能体AI的论述对行业实践和政策讨论有重要影响。这篇文章表明，日益自主的智能体的安全与对齐正成为公众关注的核心问题。\n\n从现有材料看，这篇文章似乎同时讨论了智能体AI的正面价值与潜在弊端，核心主题是对齐与控制。文章没有提及具体模型，也没有提出新的技术方案。"
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "AI alignment is the research field concerned with steering AI systems toward human intentions and values; misaligned systems may pursue unintended objectives or engage in reward hacking and deception. Scaling laws describe how model performance improves with larger parameter counts, datasets, and compute, which drives the industry's race to build ever-larger systems. These concepts underlie Pachocki's argument that safety research has not kept pace with capability growth, and that more powerful systems could develop power-seeking or deceptive behaviors if deployed without adequate safeguards.",
+          "background_zh": "AI对齐是一个研究领域，旨在让AI系统遵循人类的意图和价值观；未对齐的系统可能追求非预期目标，或出现奖励黑客行为与欺骗。规模定律描述了模型性能随着参数量、数据集规模和算力增加而提升的规律，这推动了业界竞相构建更大系统的趋势。这些概念是帕乔基观点的基础：安全研究尚未追上能力增长的速度，若在缺乏足够保障的情况下部署，更强大的系统可能产生追求权力或欺骗性行为。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.9,
@@ -23569,7 +23569,20 @@
           "material_change": true,
           "occurred_at": "2026-09-07T21:16:03Z",
           "published_at": "2026-09-07T21:16:03Z",
-          "references": [],
+          "references": [
+            {
+              "title": "AI alignment",
+              "url": "https://en.wikipedia.org/wiki/AI_alignment"
+            },
+            {
+              "title": "AI scaling law",
+              "url": "https://en.wikipedia.org/wiki/AI_scaling_law"
+            },
+            {
+              "title": "[2001.08361] Scaling Laws for Neural Language Models",
+              "url": "https://arxiv.org/abs/2001.08361"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",
@@ -23665,6 +23678,18 @@
             {
               "title": "Liquid Network - River Financial",
               "url": "https://river.com/learn/terms/l/liquid-network/"
+            },
+            {
+              "title": "Liquid Network Hack: $320M in Bitcoin Withdrawn via SideSwap - TechNadu",
+              "url": "https://www.technadu.com/320-million-vanishes-from-liquid-networks-bitcoin-reserves-and-the-hackers-say-theyre-the-good-guys/635599/"
+            },
+            {
+              "title": "Blockstream to Liquid Network Hacker: 'Safe to Return the Funds'",
+              "url": "https://news.bitcoin.com/security/blockstream-to-liquid-network-hacker-safe-to-return-the-funds/"
+            },
+            {
+              "title": "Blockstream Launches the Liquid Network, Bitcoin’s First Sidechain",
+              "url": "https://crypto.news/blockstream-launches-the-liquid-network-bitcoins-first-sidechain/"
             }
           ],
           "sources": [
@@ -23723,6 +23748,18 @@
             {
               "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?",
               "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work"
+            },
+            {
+              "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]",
+              "url": "https://shattered.io/liquid-network-320-million-hack-2026/"
+            },
+            {
+              "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ...",
+              "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"
+            },
+            {
+              "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets",
+              "url": "https://liquid.net/"
             }
           ],
           "sources": [
@@ -24183,8 +24220,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Liquid Network is a federated Bitcoin sidechain developed by Blockstream that allows exchanges and institutions to move bitcoin faster and with more privacy. Users peg bitcoin into a federation wallet and receive L-BTC on the sidechain, with transactions validated by a group of functionaries. Because Liquid functions as settlement infrastructure for exchanges, a compromise at this layer can have broad implications for funds across multiple platforms.",
+          "background_zh": "Liquid Network是Blockstream开发的比特币侧链，采用联邦模型，让交易所和机构能够更快速、更私密地转移比特币。用户将比特币存入联邦钱包，在侧链上获得对应的L-BTC，交易由一组验证节点共同确认。由于Liquid充当交易所的结算基础设施，这一层面的破坏可能对多个平台上的资金产生广泛影响。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -24195,12 +24232,25 @@
           "event_id": "evt_79a9bd1c0f79b57c",
           "first_seen_at": "2026-09-07T05:08:28.934440Z",
           "importance_score": 9.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "Exchanges that rely on Liquid for settlement may face liquidity and withdrawal pressure if their bitcoin holdings were part of the affected federation wallet, making custodial and platform risk the primary transmission channel. Broader crypto sentiment around bitcoin sidechains and federated custody could also be affected, although the halted network and the attackers' white-hat claim leave the ultimate outcome uncertain.",
+          "market_impact_zh": "依赖Liquid进行结算的交易所，若其比特币资产涉及受影响的联邦钱包，可能面临流动性和提币压力，因此托管与平台风险是主要传导渠道。该事件也可能影响市场对比特币侧链和联邦托管模式的整体信心，但网络已暂停且攻击者自称白帽，最终影响仍存在不确定性。",
           "material_change": true,
           "occurred_at": "2026-09-07T03:43:12Z",
           "published_at": "2026-09-07T03:43:12Z",
-          "references": [],
+          "references": [
+            {
+              "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ...",
+              "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"
+            },
+            {
+              "title": "Hackers Drain $320 Million From Bitcoin’s Liquid Network ...",
+              "url": "https://gizmodo.com/hackers-drain-320-million-from-bitcoins-liquid-network-keep-47-million-for-themselves-in-white-hat-operation-2000808262"
+            },
+            {
+              "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]",
+              "url": "https://shattered.io/liquid-network-320-million-hack-2026/"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -24221,8 +24271,8 @@
           "what_changed_zh": "A Bitcoin network used by exchanges suffered a $320 million exploit, with hackers claiming to be 'good guys'."
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Liquid Network is a Bitcoin sidechain used by exchanges for faster, more confidential settlement, separate from the Bitcoin main chain and managed by a federation of trusted functionaries. Historically, major crypto exchange hacks have often ended with funds unrecovered, making the return of the majority of stolen assets in this case exceptional.",
+          "background_zh": "Liquid Network 是比特币的侧链，用于为交易所提供更快、更隐秘的结算服务。它独立于比特币主链，依靠一组受信任的功能节点（functionaries）进行管理。历史上，大型加密货币交易所遭黑客攻击时，资金往往难以追回，因此这次大部分被盗资产被归还的情况实属少见。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.9,
@@ -24232,13 +24282,22 @@
           "detailed_summary_zh": "Liquid hackers returned $270M in Bitcoin after stealing $320 million, marking a major exchange security incident with substantial recovery.",
           "event_id": "evt_79a9bd1c0f79b57c",
           "first_seen_at": "2026-09-07T22:56:43.546138Z",
-          "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "importance_score": 9.0,
+          "market_impact_en": "The stolen funds were bitcoin held on a settlement layer used by exchanges, so the event is most directly exposed to Bitcoin custody services and exchange balance sheets that rely on Liquid. The return of the majority of funds may ease fears of a large BTC sell-off or exchange insolvency, but persistent uncertainty about unreturned funds could keep pressure on confidence in custodial infrastructure.",
+          "market_impact_zh": "被盗资金是存放在交易所使用的结算层上的比特币，因此该事件与依赖 Liquid 的比特币托管服务和交易所资产负债表关联最直接。大部分资金归还可能缓解对大规模抛售或交易所资不抵债的担忧，但剩余未归还资金的不确定性仍可能给托管基础设施的信任带来压力。",
           "material_change": true,
           "occurred_at": "2026-09-07T19:13:56Z",
           "published_at": "2026-09-07T19:13:56Z",
-          "references": [],
+          "references": [
+            {
+              "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ...",
+              "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"
+            },
+            {
+              "title": "From Bybit to GMX: The 10 biggest crypto hacks of 2025",
+              "url": "https://www.theblock.co/news/regulation/2026-01-01-biggest-crypto-hacks-2025-380992"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",
@@ -24718,8 +24777,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Coldcard is a popular Bitcoin hardware wallet. The so-called 'Wave 3' attacks refer to a series of thefts from wallets whose seed phrases were apparently generated with insufficient or predictable entropy, so attackers could derive private keys despite the hardware being offline. THORChain is a cross-chain liquidity protocol, and CoinJoin is a Bitcoin privacy technique that mixes coins to break the transaction trail. Galaxy Research has been tracking these on-chain movements and asking affected users to report their losses.",
+          "background_zh": "Coldcard 是一款流行的比特币硬件钱包。所谓“第三波”攻击指一系列针对钱包的盗窃事件，这些钱包的助记词显然是在熵不足或可预测的情况下生成的，因此攻击者即使未接触硬件也能推导出私钥。THORChain 是一个跨链流动性协议，CoinJoin 则是一种比特币隐私技术，通过混币来切断交易链条。Galaxy Research 一直在追踪这些链上资金流动，并呼吁受影响用户上报损失。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -24730,12 +24789,25 @@
           "event_id": "evt_65f972f6d8c15c28",
           "first_seen_at": "2026-09-07T09:34:03.581519Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The main asset exposed is Bitcoin, but the on-chain laundering itself does not directly alter market supply. Potential market impact would arise if the attacker eventually sells the cleaned BTC on exchanges, adding sell-side pressure; otherwise, the likely effect remains limited to negative sentiment around hardware-wallet security and self-custody.",
+          "market_impact_zh": "主要受影响的资产是比特币，但链上洗钱行为本身并不会直接改变市场供应。如果攻击者最终通过交易所出售清洗后的 BTC，可能会带来卖压；否则，其影响可能仅限于硬件钱包安全和自托管方面的负面情绪。",
           "material_change": true,
           "occurred_at": "2026-09-07T07:30:32Z",
           "published_at": "2026-09-07T07:30:32Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Coldcard exploiter moves 45% of funds stolen from 'Wave 3 ...",
+              "url": "https://www.theblock.co/news/defi/2026-09-07-coldcard-exploiter-moves-wave-3-413661"
+            },
+            {
+              "title": "Galaxy Finds 1,561 Bitcoin From Coldcard Hack Still Unmoved",
+              "url": "https://cointelegraph.com/news/coldcard-hack-galaxy-btc-lost-87-unmoved"
+            },
+            {
+              "title": "Coldcard Wallets Hacked for $130m and Counting | Galaxy",
+              "url": "https://www.galaxy.com/insights/research/your-keys-not-your-coins-coldcard-wallets-hacked-for-130m-and-counting"
+            }
+          ],
           "sources": [
             {
               "label": "The Block",
@@ -24897,8 +24969,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Liquid Network is a Bitcoin sidechain operated by the Liquid Federation, which holds BTC in a multisig reserve and issues L-BTC on a one-to-one basis. Users peg in Bitcoin to receive L-BTC for faster settlement, and peg-outs burn L-BTC while the federation releases real BTC from the reserve. In this incident, a customer submitted 4,000 L-BTC to SideSwap's peg-out service, but the tokens had been created by a software bug without corresponding Bitcoin backing; they still appeared legitimate to federation signers, causing most of the reserve to be sent out.",
+          "background_zh": "Liquid Network是一个由Liquid Federation运营的比特币侧链：联邦在多重签名储备中持有比特币，并按1:1比例发行L-BTC。用户通过peg-in将比特币转入侧链、获得L-BTC用于更快结算；peg-out则会销毁L-BTC，同时联邦从储备中释放对应比特币。本次事件中，一名客户向SideSwap的peg-out服务提交了4,000枚L-BTC，但这些代币是因软件缺陷凭空产生、没有对应比特币支撑的，却仍然被联邦签名者视为合法，导致储备中的大部分真实比特币被放行。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -24909,12 +24981,21 @@
           "event_id": "evt_e348821b679e23e3",
           "first_seen_at": "2026-09-07T09:34:05.470561Z",
           "importance_score": 9.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The incident directly affects L-BTC and fiat-denominated claims on exchanges using Liquid for settlement, since a reserve that once held roughly 4,200 BTC dropped to around 197 BTC and bridge withdrawals were halted. Until the patch is proven and the whitehat returns funds, any market impact flows through reserve-backing uncertainty, halted peg-in/out liquidity, and exchange exposure rather than through Bitcoin's base layer.",
+          "market_impact_zh": "该事件直接影响使用Liquid结算的交易所上的L-BTC及对应法币债权：储备曾接近4,200枚BTC，事件后仅剩约197枚BTC，且跨链桥提取已暂停。在漏洞修复得到证实、白帽黑客归还资金之前，市场影响主要经由储备充足性不确定性、peg-in/out流动性暂停以及交易所敞口传导，而非比特币主网本身。",
           "material_change": true,
           "occurred_at": "2026-09-07T08:55:13Z",
           "published_at": "2026-09-07T08:55:13Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?",
+              "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work"
+            },
+            {
+              "title": "Liquid Network Lost 4,000 BTC From Its Federation Wallet, Leaving Just 197 BTC Behind.",
+              "url": "https://www.cryptotimes.io/2026/09/07/liquid-network-pauses-after-4000-btc-leave-federation-wallet/"
+            }
+          ],
           "sources": [
             {
               "label": "CryptoSlate",
@@ -25267,8 +25348,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "A cryptocurrency exchange listing refers to the process by which a token is added to a platform's tradeable assets; after being listed, users can buy, sell, or trade it against other currencies. Projects often time a multi-exchange launch to maximize simultaneous exposure and liquidity. Canopy is part of a newer wave of AI-focused infrastructure projects that aim to make blockchain development feel closer to conventional backend programming.",
+          "background_zh": "加密货币上币（listing）指代币被加入交易所可交易资产列表的过程，上线后用户即可买卖或与其他币种交易。项目方通常会选择在代币生成事件（TGE）时安排多家交易所同步上币，以最大化市场曝光和流动性。Canopy 属于较新的 AI 相关基础设施方向之一，目标是让区块链开发体验更接近传统的后端编程。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -25279,12 +25360,25 @@
           "event_id": "evt_f4af0cd874c9ad58",
           "first_seen_at": "2026-09-07T17:49:55.749964Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "Adding CNPY to several major centralized exchanges broadens its pool of potential investors and provides deeper order books, which can attract both retail and quantitative traders. The main transmission channels are distribution, liquidity, and market sentiment; the eventual market reaction will depend on actual demand and broader conditions.",
+          "market_impact_zh": "CNPY 上线多家主流中心化交易所将扩大其潜在投资者基础，并提供更深的订单簿，从而吸引更多零售和量化交易者。影响主要通过流动性、分发渠道和市场情绪传导，最终市场表现仍取决于实际需求与整体行情。",
           "material_change": true,
           "occurred_at": "2026-09-07T15:21:00Z",
           "published_at": "2026-09-07T15:21:00Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Canopy Network Price | CNPY Price Today, Live Chart, USD converter, Market Capitalization | CryptoRank.io",
+              "url": "https://cryptorank.io/price/canopy-network"
+            },
+            {
+              "title": "Canopy Finance Price, CNPY Price, Live Charts, and Marketcap: 0x532c5583671870723ceef573600208af49c87c54",
+              "url": "https://www.coinbase.com/price/canopy-finance"
+            },
+            {
+              "title": "Canopy: Build Onchain Apps with AI, fast",
+              "url": "https://www.canopynetwork.org/"
+            }
+          ],
           "sources": [
             {
               "label": "CoinCodex",
@@ -25806,8 +25900,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Orionx is a Chilean cryptocurrency exchange that allowed users to buy, sell, and store digital assets. Centralized exchanges typically hold customer funds in their own wallets, exposing users to counterparty risk if the exchange misappropriates funds or becomes insolvent. In many jurisdictions, crypto exchanges are not yet fully covered by traditional financial regulation, leaving gaps in consumer protection.",
+          "background_zh": "Orionx是一家智利加密货币交易所，用户可在此买卖和存储数字资产。中心化交易所通常将客户资金存放在自己的钱包中，这意味着一旦交易所挪用资金或资不抵债，用户将面临交易对手风险。许多司法管辖区的加密货币交易所尚未完全纳入传统金融监管框架，消费者保护因此存在缺口。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -25818,8 +25912,8 @@
           "event_id": "evt_a7c35ee758445c83",
           "first_seen_at": "2026-09-07T17:49:58.333177Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The halt of withdrawals at Orionx may dampen user confidence in centralized exchanges operating in jurisdictions with limited regulatory oversight, potentially accelerating a shift toward regulated platforms or self-custody solutions. The event itself is unlikely to move broad crypto markets, but it could increase scrutiny of smaller regional exchanges and negatively affect trust in Chilean crypto services.",
+          "market_impact_zh": "Orionx暂停提款可能削弱用户对监管薄弱司法辖区中心化交易所的信心，从而促使更多用户转向受监管平台或自托管方案。该事件本身不太可能影响整体加密市场，但可能引发对同类小型区域性交易所的更严格审视，并对智利加密服务的信任造成负面影响。",
           "material_change": true,
           "occurred_at": "2026-09-07T16:14:35Z",
           "published_at": "2026-09-07T16:14:35Z",
@@ -26365,8 +26459,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Tokenized deposits are bank liabilities issued as programmable digital tokens on a blockchain, distinct from stablecoins and central bank digital currencies. Swift's Digital Ledger is an experimental infrastructure being integrated into Swift's existing cross-border messaging and settlement ecosystem, responding to demand for round-the-clock settlement. The quick weekend settlement compares with the traditional correspondent banking model, where payments initiated outside business hours may take one to two business days to clear.",
+          "background_zh": "代币化存款是银行以区块链上的可编程数字代币形式发行的负债，与稳定币和央行数字货币有所区别。Swift数字账本是一种试验性基础设施，正在融入Swift现有的跨境报文与结算生态系统，以响应全天候结算的需求。传统代理行模式下，非工作时间发起的支付可能需要一到两个工作日才能清算；而此次周末交易在几分钟内完成结算。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -26377,12 +26471,37 @@
           "event_id": "evt_6ee1360e2b34e86b",
           "first_seen_at": "2026-09-07T17:50:05.198238Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transaction points to deepening institutional use of programmable bank money and an alternative settlement route to public stablecoins, which could shape competitive dynamics and sentiment for tokenization-related markets. It does not directly change liquidity for crypto spot or derivatives venues, since this test ran on a permissioned banking ledger rather than public blockchain infrastructure.",
+          "market_impact_zh": "这一交易表明机构对可编程银行货币的使用正在加深，并出现了不同于公开稳定币的结算路径，这可能影响代币化相关市场的竞争格局与情绪。由于该测试运行在许可制银行账本而非公共区块链基础设施上，它并不会直接改变加密现货或衍生品市场的流动性。",
           "material_change": true,
           "occurred_at": "2026-09-07T10:34:47Z",
           "published_at": "2026-09-07T10:34:47Z",
-          "references": [],
+          "references": [
+            {
+              "title": "DBS and Citi execute first weekend cross-border payment on Swift...",
+              "url": "https://www.coindesk.com/business/2026/09/07/dbs-and-citi-enable-instant-24-7-cross-border-tokenised-deposit-payments-on-the-swift-ledger"
+            },
+            {
+              "title": "Swift",
+              "url": "https://www.swift.com/"
+            },
+            {
+              "title": "Tokenized deposits: the future of tokenized money for ...",
+              "url": "https://bankingjournal.aba.com/2026/03/tokenized-deposits-the-future-of-tokenized-money-for-financial-market-settlement/"
+            },
+            {
+              "title": "Tokenized Deposits: What They Are and Why U.S. Financial Institutions Should Care | Nacha",
+              "url": "https://www.nacha.org/tokenized-deposits-why-care"
+            },
+            {
+              "title": "DBS and Citi complete first weekend tokenized cross-border payment via Swift",
+              "url": "https://en.coin-turk.com/dbs-and-citi-complete-first-weekend-tokenized-cross-border-payment-via-swift/"
+            },
+            {
+              "title": "DBS and Citi Just Settled a Weekend Cross-Border Payment in Minutes – and the Implications Go Beyond Banking Hours",
+              "url": "https://forkast.news/dbs-and-citi-just-settled-a-weekend-cross-border-payment-in-minutes-and-the-implications-go-beyond-banking-hours/"
+            }
+          ],
           "sources": [
             {
               "label": "Cointelegraph",
@@ -26597,8 +26716,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Perpetual futures are derivatives contracts with no expiry date; they use an exchange-set funding rate to track the underlying spot price and allow traders to speculate with leverage. The CFTC oversees derivatives markets tied to commodities such as Bitcoin and Ethereum under the Commodity Exchange Act, but it does not directly regulate spot crypto trading. A CFTC-regulated perpetual futures product would give U.S. traders a domestically supervised alternative to offshore crypto derivatives exchanges.",
+          "background_zh": "永续合约(perpetual futures)是一种没有到期日的衍生品合约，通过交易所设定的资金费率(funding rate)将价格锚定在标的现货价格附近，并允许交易者使用杠杆进行交易。CFTC依据《商品交易法》(Commodity Exchange Act)对与比特币、以太坊等商品相关的衍生品市场进行监管，但并未直接监管加密现货交易。获得CFTC监管的永续期货产品将为美国交易者提供一个受国内监管的替代选择，不必再依赖离岸加密衍生品交易所。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -26609,12 +26728,25 @@
           "event_id": "evt_37d2b6d94536f66b",
           "first_seen_at": "2026-09-07T22:56:33.997975Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The filing could affect crypto derivatives market structure by potentially adding a CFTC-regulated venue for U.S. traders, increasing competition with existing derivatives platforms and possibly influencing liquidity flows. If approved, it may also set a precedent for how other U.S. exchanges structure regulated perpetual futures offerings.",
+          "market_impact_zh": "该申请可能影响加密衍生品市场结构，因为若获批将新增一家面向美国交易者的CFTC监管平台，与现有衍生品平台形成竞争并可能影响流动性流动。同时，它还可能为其他美国交易所如何构建受监管的永续期货产品树立先例。",
           "material_change": true,
           "occurred_at": "2026-09-07T18:36:21Z",
           "published_at": "2026-09-07T18:36:21Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Perpetual futures - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Perpetual_futures"
+            },
+            {
+              "title": "Understanding Perpetual Futures: A Guide for Cryptocurrency ...",
+              "url": "https://www.investopedia.com/what-are-perpetual-futures-7494870"
+            },
+            {
+              "title": "The CFTC’s Role in Crypto: Commodities and Futures Market Regulation",
+              "url": "https://www.merklescience.com/blog/the-cftcs-role-in-crypto-commodities-and-futures-market-regulation"
+            }
+          ],
           "sources": [
             {
               "label": "CryptoRank",
@@ -26672,8 +26804,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Smart TVs rely on Automatic Content Recognition (ACR) software that samples screen images or audio, creates a digital fingerprint, and matches it against a database to identify what is being watched. UPnP (Universal Plug and Play) is a networking protocol that lets devices on a local network discover each other and share services; the LG TVs were found using it to map other connected devices. Residential proxy software routes internet traffic through real ISP-assigned residential IP addresses, and is often associated with data collection or ad fraud. Such techniques matter because modern smart TVs are network-connected computers with microphones, not just displays.",
+          "background_zh": "智能电视依靠自动内容识别（ACR）软件，采集屏幕画面或声音片段，生成数字指纹并与数据库比对以识别正在播放的内容。UPnP（通用即插即用）是一种网络协议，让局域网内设备能自动发现彼此并共享服务；调查发现 LG 电视利用它来绘制其他已连接设备。住宅代理软件通过真实 ISP 分配的家庭 IP 地址转发网络流量，常与数据采集或广告欺诈相关联。这些技术之所以重要，是因为现代智能电视并非单纯显示器，而是内置麦克风并可联网的计算机设备。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -26689,7 +26821,16 @@
           "material_change": true,
           "occurred_at": "2026-09-07T21:46:04Z",
           "published_at": "2026-09-07T21:46:04Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Universal Plug and Play - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Universal_Plug_and_Play"
+            },
+            {
+              "title": "Residential proxy",
+              "url": "https://en.wikipedia.org/wiki/Residential_proxy"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",

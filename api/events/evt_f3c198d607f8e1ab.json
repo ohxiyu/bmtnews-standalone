@@ -57,14 +57,23 @@
       "current_state_en": "An investigation found LG smart TVs may scan home Wi-Fi networks and capture audio even when off, leading to a regulatory settlement and highlighting unpatched security flaws.",
       "detailed_summary_zh": "An investigation found LG smart TVs may scan home Wi-Fi networks and capture audio even when off, leading to a regulatory settlement and highlighting unpatched security flaws.",
       "detailed_summary_en": "An investigation found LG smart TVs may scan home Wi-Fi networks and capture audio even when off, leading to a regulatory settlement and highlighting unpatched security flaws.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "智能电视依靠自动内容识别（ACR）软件，采集屏幕画面或声音片段，生成数字指纹并与数据库比对以识别正在播放的内容。UPnP（通用即插即用）是一种网络协议，让局域网内设备能自动发现彼此并共享服务；调查发现 LG 电视利用它来绘制其他已连接设备。住宅代理软件通过真实 ISP 分配的家庭 IP 地址转发网络流量，常与数据采集或广告欺诈相关联。这些技术之所以重要，是因为现代智能电视并非单纯显示器，而是内置麦克风并可联网的计算机设备。",
+      "background_en": "Smart TVs rely on Automatic Content Recognition (ACR) software that samples screen images or audio, creates a digital fingerprint, and matches it against a database to identify what is being watched. UPnP (Universal Plug and Play) is a networking protocol that lets devices on a local network discover each other and share services; the LG TVs were found using it to map other connected devices. Residential proxy software routes internet traffic through real ISP-assigned residential IP addresses, and is often associated with data collection or ad fraud. Such techniques matter because modern smart TVs are network-connected computers with microphones, not just displays.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Universal_Plug_and_Play",
+          "title": "Universal Plug and Play - Wikipedia"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Residential_proxy",
+          "title": "Residential proxy"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:f78fed6e97b94590"
