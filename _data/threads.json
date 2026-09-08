@@ -1,6 +1,82 @@
 {
   "threads": [
     {
+      "thread_id": "evt_7cec54c7d44b7cd5",
+      "event_id": "evt_7cec54c7d44b7cd5",
+      "latest_date": "2026-09-08",
+      "latest_at": "2026-09-08T16:58:42.219120+08:00",
+      "first_date": "2026-09-01",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "closed",
+      "status_zh": "已结束",
+      "status_en": "Closed",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Tectonic 遭攻击并触发 Cronos 回滚",
+      "title_en": "Tectonic exploit triggers Cronos rollback",
+      "summary_zh": "事件后报告已发布，确认了具体逃逸金额，链已恢复运行，监控继续。",
+      "summary_en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues.",
+      "latest_update_zh": "Cronos 官方事后报告确认受影响的借贷活动约 1.204 亿美元，其中约 1.112 亿美元通过回滚恢复，但 919 万美元在验证者暂停网络前已转出。",
+      "latest_update_en": "Cronos official post-mortem confirms affected borrowing activity about $120.4M, with ~$111.2M reversed via rollback, but $9.19M exited before validators halted the network.",
+      "background_zh": "Tectonic是构建在Cronos上的去中心化借贷协议，Cronos是Crypto.com创建的兼容EVM的区块链。Crypto.com通过法币购买、Visa卡奖励和质押产品大力推广TONIC代币，成为该协议最大的散户入口之一。区块链回滚依靠验证者协调删除攻击后的区块，虽然能追回被盗资产，但也会抹除该窗口期内合法用户的交易记录。",
+      "background_en": "Tectonic is a decentralized lending protocol built on Cronos, the EVM-compatible blockchain created by Crypto.com. Crypto.com heavily promoted TONIC, the protocol's token, through fiat purchases, Visa card rewards, and staking products, making it one of the largest retail onramps for the protocol. A blockchain rollback uses validator coordination to erase post-exploit blocks, which can recover stolen assets but also removes legitimate user transactions recorded during that window.",
+      "latest_summary_zh": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+      "latest_summary_en": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+      "discussion_zh": "此次攻击及随后的暂停与回滚可能会拖累CRO及其他Cronos生态资产的市场情绪，用户担忧安全性与不可篡改性。该事件也可能加速Cronos DeFi的资金外流——其TVL自2022年以来已下降92%，并凸显单链生态中的集中度风险。",
+      "discussion_en": "The exploit and subsequent halt/rollback are likely to weigh on sentiment for CRO and other Cronos-based assets, as users worry about safety and immutability. The incident may also accelerate capital outflow from Cronos DeFi, whose TVL had already dropped 92% since 2022, and it highlights concentration risks in single-chain ecosystems.",
+      "market_impact_zh": "此次攻击及随后的暂停与回滚可能会拖累CRO及其他Cronos生态资产的市场情绪，用户担忧安全性与不可篡改性。该事件也可能加速Cronos DeFi的资金外流——其TVL自2022年以来已下降92%，并凸显单链生态中的集中度风险。",
+      "market_impact_en": "The exploit and subsequent halt/rollback are likely to weigh on sentiment for CRO and other Cronos-based assets, as users worry about safety and immutability. The incident may also accelerate capital outflow from Cronos DeFi, whose TVL had already dropped 92% since 2022, and it highlights concentration risks in single-chain ecosystems.",
+      "score": 9.0,
+      "source_links": [
+        {
+          "url": "https://protos.com/crypto-com-promoted-tectonic-forces-cronos-to-halt-rewind/",
+          "title": "Protos",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/cronos-restart-after-tectonic-exploit-chain-rollback/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://decrypt.co/376913/crypto-coms-cronos-halts-entire-blockchain-after-75m-tectonic-exploit",
+          "title": "Crypto.com's Cronos Halts Entire Blockchain After $75M ..."
+        },
+        {
+          "url": "https://cryptodaily.co.uk/2026/08/cronos-resumes-tectonic-exploit-rollback",
+          "title": "Cronos Resumes After Tectonic Exploit Rollback"
+        },
+        {
+          "url": "https://defillama.com/protocol/tectonic",
+          "title": "Tectonic TVL, Fees & Revenue"
+        },
+        {
+          "url": "https://coinmarketcap.com/currencies/cronos/",
+          "title": "Cronos price today, CRO to USD live price, marketcap and chart | CoinMarketCap"
+        },
+        {
+          "url": "https://tectonic.gitbook.io/docs",
+          "title": "What is Tectonic? | Tectonic - GitBook"
+        },
+        {
+          "url": "https://thebitcoinmanual.com/articles/chain-rollback/",
+          "title": "What Is A Chain Rollback? - The Bitcoin Manual"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_79a9bd1c0f79b57c",
       "event_id": "evt_79a9bd1c0f79b57c",
       "latest_date": "2026-09-08",
@@ -219,7 +295,7 @@
       "days": 2,
       "entries": 6,
       "updates_count": 6,
-      "sources_count": 13,
+      "sources_count": 15,
       "category": "crypto",
       "status": "developing",
       "status_zh": "进展中",
@@ -279,6 +355,11 @@
           "official": false
         },
         {
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1nN0lySEdxR0UzalpQUlUzY2Y2SGJSa3dyRHprQTk0ZTVHU1dXY1FvcFkxdGVWaS04Z3JoeXFmd3dpS3J0Um12cUNLR0FrLV8zOW91NGdXZEpOcXNRbTVzakY2bml2NEVKTURlLWU3ZkFqbHdaT2IteHc1OXB4dw?oc=5",
+          "title": "Binance",
+          "official": false
+        },
+        {
           "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "title": "Cointelegraph",
           "official": false
@@ -306,6 +387,11 @@
         {
           "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673",
           "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
+          "title": "CoinDesk",
           "official": false
         }
       ],
@@ -950,7 +1036,7 @@
       "days": 2,
       "entries": 6,
       "updates_count": 6,
-      "sources_count": 13,
+      "sources_count": 15,
       "category": "crypto",
       "status": "developing",
       "status_zh": "进展中",
@@ -1010,6 +1096,11 @@
           "official": false
         },
         {
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1nN0lySEdxR0UzalpQUlUzY2Y2SGJSa3dyRHprQTk0ZTVHU1dXY1FvcFkxdGVWaS04Z3JoeXFmd3dpS3J0Um12cUNLR0FrLV8zOW91NGdXZEpOcXNRbTVzakY2bml2NEVKTURlLWU3ZkFqbHdaT2IteHc1OXB4dw?oc=5",
+          "title": "Binance",
+          "official": false
+        },
+        {
           "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "title": "Cointelegraph",
           "official": false
@@ -1037,6 +1128,11 @@
         {
           "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673",
           "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
+          "title": "CoinDesk",
           "official": false
         }
       ],
@@ -1088,6 +1184,82 @@
         {
           "url": "https://en.bitcoin.it/wiki/Transaction_replacement",
           "title": "Transaction replacement - Bitcoin Wiki"
+        }
+      ]
+    },
+    {
+      "thread_id": "evt_7cec54c7d44b7cd5",
+      "event_id": "evt_7cec54c7d44b7cd5",
+      "latest_date": "2026-09-08",
+      "latest_at": "2026-09-08T16:58:42.219120+08:00",
+      "first_date": "2026-09-01",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "closed",
+      "status_zh": "已结束",
+      "status_en": "Closed",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Tectonic 遭攻击并触发 Cronos 回滚",
+      "title_en": "Tectonic exploit triggers Cronos rollback",
+      "summary_zh": "事件后报告已发布，确认了具体逃逸金额，链已恢复运行，监控继续。",
+      "summary_en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues.",
+      "latest_update_zh": "Cronos 官方事后报告确认受影响的借贷活动约 1.204 亿美元，其中约 1.112 亿美元通过回滚恢复，但 919 万美元在验证者暂停网络前已转出。",
+      "latest_update_en": "Cronos official post-mortem confirms affected borrowing activity about $120.4M, with ~$111.2M reversed via rollback, but $9.19M exited before validators halted the network.",
+      "background_zh": "Tectonic是构建在Cronos上的去中心化借贷协议，Cronos是Crypto.com创建的兼容EVM的区块链。Crypto.com通过法币购买、Visa卡奖励和质押产品大力推广TONIC代币，成为该协议最大的散户入口之一。区块链回滚依靠验证者协调删除攻击后的区块，虽然能追回被盗资产，但也会抹除该窗口期内合法用户的交易记录。",
+      "background_en": "Tectonic is a decentralized lending protocol built on Cronos, the EVM-compatible blockchain created by Crypto.com. Crypto.com heavily promoted TONIC, the protocol's token, through fiat purchases, Visa card rewards, and staking products, making it one of the largest retail onramps for the protocol. A blockchain rollback uses validator coordination to erase post-exploit blocks, which can recover stolen assets but also removes legitimate user transactions recorded during that window.",
+      "latest_summary_zh": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+      "latest_summary_en": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+      "discussion_zh": "此次攻击及随后的暂停与回滚可能会拖累CRO及其他Cronos生态资产的市场情绪，用户担忧安全性与不可篡改性。该事件也可能加速Cronos DeFi的资金外流——其TVL自2022年以来已下降92%，并凸显单链生态中的集中度风险。",
+      "discussion_en": "The exploit and subsequent halt/rollback are likely to weigh on sentiment for CRO and other Cronos-based assets, as users worry about safety and immutability. The incident may also accelerate capital outflow from Cronos DeFi, whose TVL had already dropped 92% since 2022, and it highlights concentration risks in single-chain ecosystems.",
+      "market_impact_zh": "此次攻击及随后的暂停与回滚可能会拖累CRO及其他Cronos生态资产的市场情绪，用户担忧安全性与不可篡改性。该事件也可能加速Cronos DeFi的资金外流——其TVL自2022年以来已下降92%，并凸显单链生态中的集中度风险。",
+      "market_impact_en": "The exploit and subsequent halt/rollback are likely to weigh on sentiment for CRO and other Cronos-based assets, as users worry about safety and immutability. The incident may also accelerate capital outflow from Cronos DeFi, whose TVL had already dropped 92% since 2022, and it highlights concentration risks in single-chain ecosystems.",
+      "score": 9.0,
+      "source_links": [
+        {
+          "url": "https://protos.com/crypto-com-promoted-tectonic-forces-cronos-to-halt-rewind/",
+          "title": "Protos",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/cronos-restart-after-tectonic-exploit-chain-rollback/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://decrypt.co/376913/crypto-coms-cronos-halts-entire-blockchain-after-75m-tectonic-exploit",
+          "title": "Crypto.com's Cronos Halts Entire Blockchain After $75M ..."
+        },
+        {
+          "url": "https://cryptodaily.co.uk/2026/08/cronos-resumes-tectonic-exploit-rollback",
+          "title": "Cronos Resumes After Tectonic Exploit Rollback"
+        },
+        {
+          "url": "https://defillama.com/protocol/tectonic",
+          "title": "Tectonic TVL, Fees & Revenue"
+        },
+        {
+          "url": "https://coinmarketcap.com/currencies/cronos/",
+          "title": "Cronos price today, CRO to USD live price, marketcap and chart | CoinMarketCap"
+        },
+        {
+          "url": "https://tectonic.gitbook.io/docs",
+          "title": "What is Tectonic? | Tectonic - GitBook"
+        },
+        {
+          "url": "https://thebitcoinmanual.com/articles/chain-rollback/",
+          "title": "What Is A Chain Rollback? - The Bitcoin Manual"
         }
       ]
     },

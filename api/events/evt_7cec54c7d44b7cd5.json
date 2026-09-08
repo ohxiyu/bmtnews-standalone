@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_7cec54c7d44b7cd5/",
   "json": "https://bmt.news/api/events/evt_7cec54c7d44b7cd5.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "closed",
   "category": "crypto",
   "title": {
     "zh": "Tectonic 遭攻击并触发 Cronos 回滚",
     "en": "Tectonic exploit triggers Cronos rollback"
   },
   "current_state": {
-    "zh": "链已通过回滚遏制攻击影响，事件继续观察。",
-    "en": "The rollback contained the incident; monitoring continues."
+    "zh": "事件后报告已发布，确认了具体逃逸金额，链已恢复运行，监控继续。",
+    "en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues."
   },
   "first_seen_at": "2026-09-01T08:00:00+08:00",
-  "last_updated_at": "2026-09-01T08:00:00+08:00",
-  "last_material_change_at": "2026-09-01T08:00:00+08:00",
-  "confidence": 1.0,
-  "updates_count": 1,
-  "sources_count": 2,
+  "last_updated_at": "2026-09-08T08:58:42.219120+00:00",
+  "last_material_change_at": "2026-09-08T08:58:42.219120+00:00",
+  "confidence": 0.95,
+  "updates_count": 2,
+  "sources_count": 3,
   "entities": [
     "after",
     "cronos",
@@ -103,6 +103,44 @@
         {
           "url": "https://cryptoslate.com/cronos-restart-after-tectonic-exploit-chain-rollback/",
           "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_80d7146af144fbb2",
+      "event_id": "evt_7cec54c7d44b7cd5",
+      "occurred_at": "2026-09-08T08:10:44Z",
+      "published_at": "2026-09-08T08:10:44Z",
+      "first_seen_at": "2026-09-08T08:58:42.219120Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Cronos confirms $9.2M slipped away before Tectonic exploit rollback",
+      "title_en": "Cronos confirms $9.2M slipped away before Tectonic exploit rollback",
+      "what_changed_zh": "Cronos 官方事后报告确认受影响的借贷活动约 1.204 亿美元，其中约 1.112 亿美元通过回滚恢复，但 919 万美元在验证者暂停网络前已转出。",
+      "what_changed_en": "Cronos official post-mortem confirms affected borrowing activity about $120.4M, with ~$111.2M reversed via rollback, but $9.19M exited before validators halted the network.",
+      "current_state_zh": "事件后报告已发布，确认了具体逃逸金额，链已恢复运行，监控继续。",
+      "current_state_en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues.",
+      "detailed_summary_zh": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+      "detailed_summary_en": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:b8a5701740ed59ba"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }

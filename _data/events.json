@@ -10459,9 +10459,9 @@
     },
     {
       "category": "crypto",
-      "confidence": 1.0,
-      "current_state_en": "The rollback contained the incident; monitoring continues.",
-      "current_state_zh": "链已通过回滚遏制攻击影响，事件继续观察。",
+      "confidence": 0.95,
+      "current_state_en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues.",
+      "current_state_zh": "事件后报告已发布，确认了具体逃逸金额，链已恢复运行，监控继续。",
       "entities": [
         "after",
         "cronos",
@@ -10476,13 +10476,13 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-01T08:00:00+08:00",
       "identifiers": [],
-      "last_material_change_at": "2026-09-01T08:00:00+08:00",
-      "last_updated_at": "2026-09-01T08:00:00+08:00",
+      "last_material_change_at": "2026-09-08T08:58:42.219120Z",
+      "last_updated_at": "2026-09-08T08:58:42.219120Z",
       "legacy_thread_ids": [
         "t46141326bb"
       ],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "Tectonic exploit triggers Cronos rollback",
       "title_zh": "Tectonic 遭攻击并触发 Cronos 回滚",
       "topics": [
@@ -10561,6 +10561,44 @@
           "update_type": "initial",
           "what_changed_en": "Tectonic lost about $75M and Cronos validators halted and rolled back the chain.",
           "what_changed_zh": "Tectonic 遭窃约 7,500 万美元，Cronos 验证者暂停并回滚链。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues.",
+          "current_state_zh": "事件后报告已发布，确认了具体逃逸金额，链已恢复运行，监控继续。",
+          "detailed_summary_en": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+          "detailed_summary_zh": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
+          "event_id": "evt_7cec54c7d44b7cd5",
+          "first_seen_at": "2026-09-08T08:58:42.219120Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T08:10:44Z",
+          "published_at": "2026-09-08T08:10:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:b8a5701740ed59ba"
+          ],
+          "time_precision": "published",
+          "title_en": "Cronos confirms $9.2M slipped away before Tectonic exploit rollback",
+          "title_zh": "Cronos confirms $9.2M slipped away before Tectonic exploit rollback",
+          "update_id": "upd_80d7146af144fbb2",
+          "update_type": "aftermath",
+          "what_changed_en": "Cronos official post-mortem confirms affected borrowing activity about $120.4M, with ~$111.2M reversed via rollback, but $9.19M exited before validators halted the network.",
+          "what_changed_zh": "Cronos 官方事后报告确认受影响的借贷活动约 1.204 亿美元，其中约 1.112 亿美元通过回滚恢复，但 919 万美元在验证者暂停网络前已转出。"
         }
       ]
     },
@@ -23644,7 +23682,7 @@
       "first_seen_at": "2026-09-06T22:13:15.375035Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-07T17:50:00.058019Z",
-      "last_updated_at": "2026-09-07T17:50:03.877221Z",
+      "last_updated_at": "2026-09-08T08:58:35.462065Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
@@ -23804,6 +23842,12 @@
               "official": false,
               "source_type": "gdelt",
               "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html"
+            },
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1nN0lySEdxR0UzalpQUlUzY2Y2SGJSa3dyRHprQTk0ZTVHU1dXY1FvcFkxdGVWaS04Z3JoeXFmd3dpS3J0Um12cUNLR0FrLV8zOW91NGdXZEpOcXNRbTVzakY2bml2NEVKTURlLWU3ZkFqbHdaT2IteHc1OXB4dw?oc=5"
             }
           ],
           "story_ids": [
@@ -23811,7 +23855,8 @@
             "google_news:article:1763e2b7a7d7cf05",
             "gdelt:article:20260907T051500Z::https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
             "gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
-            "gdelt:article:20260907T051500Z::https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html"
+            "gdelt:article:20260907T051500Z::https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+            "google_news:article:77527cf4efb33c91"
           ],
           "time_precision": "published",
           "title_en": "Liquid Sidechain Paused After 3,998 BTC Leaves Federation Wallet",
@@ -23982,11 +24027,18 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network"
             }
           ],
           "story_ids": [
             "rss:thedefiant.io_api_feed:8f1088304a7f689f",
-            "rss:www.theblock.co_rss.xml:64fcd3fd83985445"
+            "rss:www.theblock.co_rss.xml:64fcd3fd83985445",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:caec230ba8e5f1ca"
           ],
           "time_precision": "published",
           "title_en": "Liquid Attacker Broadcasts Return Of 3,400 BTC, Keeps 598",
@@ -27611,6 +27663,215 @@
           "what_changed_zh": "Senator Lummis states that the Clarity Act will ensure the US establishes clear rules for digital assets."
         }
       ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+      "current_state_zh": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+      "entities": [
+        "cnbc"
+      ],
+      "event_id": "evt_7b81938934d7fe93",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T08:58:35.461241Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T08:58:35.461241Z",
+      "last_updated_at": "2026-09-08T08:58:35.461241Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto platforms have lost over $3.63 billion to cyberattacks — even though most of them did security checks - CNBC",
+      "title_zh": "Crypto platforms have lost over $3.63 billion to cyberattacks — even though most of them did security checks - CNBC",
+      "topics": [
+        "cybersecurity",
+        "hacks",
+        "losses"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+          "current_state_zh": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+          "detailed_summary_en": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+          "detailed_summary_zh": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+          "event_id": "evt_7b81938934d7fe93",
+          "first_seen_at": "2026-09-08T08:58:35.461241Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T08:16:11Z",
+          "published_at": "2026-09-08T08:16:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CNBC",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLVd0azV6dlAxY2R1eE9RQ21fNk9tSTFDaWxFdV9ZZlA2WkFqWW1UQTlsV1czMmhUNkM5OEM2Qldyc0lZdndHaG5SMUtUWDRpUzhlWTkzSkxHbHlKcUhITW8xWkRRalJPeDZrRlpkYXNpV3RTYkN2RXBNZ3VsdUdfUmtIcDN3cWpSTXFNREJOa1QyZXhVMXExSVRhczRxWUxuUlpUUXR2LVRZQdIBrwFBVV95cUxQRUZYbHB2SktUaWJSV202V3RJa19tN0duWFlCQ1ZSckQ4WjJUdXVxaDJjZmJzTmZCOGt2aVl3ZTUxTEdFVjA4b193X3R1bEN0bXBmQnA0dzk5VnpvSndGY2dpRVhXT09MaWxLZXk2N1hESk56alVWN1R6dHJrOUVqaDlzU1BtWGdCRW1vallVSFgxczNVbk5KYl9mT1RxRFA0c05qNEluRU5nSWx5RHA0?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:24b752f8ec9c10e5"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto platforms have lost over $3.63 billion to cyberattacks — even though most of them did security checks - CNBC",
+          "title_zh": "Crypto platforms have lost over $3.63 billion to cyberattacks — even though most of them did security checks - CNBC",
+          "update_id": "upd_25d5188777d6091f",
+          "update_type": "initial",
+          "what_changed_en": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry.",
+          "what_changed_zh": "Crypto platforms have lost over $3.63 billion to cyberattacks despite most having conducted security checks, underscoring persistent vulnerabilities in the industry."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+      "current_state_zh": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+      "entities": [
+        "mistral"
+      ],
+      "event_id": "evt_fda317a94c62adac",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T08:58:35.627747Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T08:58:35.627747Z",
+      "last_updated_at": "2026-09-08T08:58:35.627747Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Mistral raises €3B",
+      "title_zh": "Mistral raises €3B",
+      "topics": [
+        "europe",
+        "funding",
+        "mistral",
+        "sovereign-ai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+          "current_state_zh": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+          "detailed_summary_en": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+          "detailed_summary_zh": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+          "event_id": "evt_fda317a94c62adac",
+          "first_seen_at": "2026-09-08T08:58:35.627747Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T05:06:23Z",
+          "published_at": "2026-09-08T05:06:23Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49605767"
+            }
+          ],
+          "sources": [
+            {
+              "label": "kuberwastaken",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49605767"
+          ],
+          "time_precision": "published",
+          "title_en": "Mistral raises €3B",
+          "title_zh": "Mistral raises €3B",
+          "update_id": "upd_0f63407780c5fa28",
+          "update_type": "initial",
+          "what_changed_en": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs.",
+          "what_changed_zh": "Mistral raises €3 billion to advance sovereign open-weight AI, positioning itself as a key European counterweight to US and Chinese frontier labs."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+      "current_state_zh": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+      "entities": [
+        "australia",
+        "remittance"
+      ],
+      "event_id": "evt_620ec4d07d1f9b19",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T08:58:42.377796Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T08:58:42.377796Z",
+      "last_updated_at": "2026-09-08T08:58:42.377796Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Australia says it removed 45 crypto, remittance registrations over the past year",
+      "title_zh": "Australia says it removed 45 crypto, remittance registrations over the past year",
+      "topics": [
+        "austrac",
+        "australia",
+        "remittance"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+          "current_state_zh": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+          "detailed_summary_en": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+          "detailed_summary_zh": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+          "event_id": "evt_620ec4d07d1f9b19",
+          "first_seen_at": "2026-09-08T08:58:42.377796Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T05:10:33Z",
+          "published_at": "2026-09-08T05:10:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/australia-removes-45-crypto-remittance-registrations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "BitKE",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQZEMtY2pUR2ZuWk9ZUkNPTGd5SUZULWV5RmpTTnI5MTJHeXFRZ3JIa3AzQV9QV2NCbko4UkRQLVQtSFdXVzhxTWkwUDh0NlFzcE1hcFpBMU10Z0JtaFVMMEloSXZrc1VBT0dZQVhlUVhRX3lLbTJWNF9wRFVWaXJlMHB4RU9FTGYyM0E?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:3120f100f958fb52",
+            "google_news:article:6155e08e23aa8f89"
+          ],
+          "time_precision": "published",
+          "title_en": "Australia says it removed 45 crypto, remittance registrations over the past year",
+          "title_zh": "Australia says it removed 45 crypto, remittance registrations over the past year",
+          "update_id": "upd_69deda8eaadeaa4e",
+          "update_type": "initial",
+          "what_changed_en": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks.",
+          "what_changed_zh": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -27675,35 +27936,37 @@
     {
       "attempts": 1,
       "item": {
-        "ai_reason": "Major security incident involving $320M in bitcoin returned by whitehat hackers, with ongoing negotiations for the remainder. Direct impact on user funds and protocol trust, high severity and significance.",
+        "ai_reason": "A confirmed exploit on the Cronos chain with $9.2 million unrecovered despite a rollback is a significant security incident affecting user funds and protocol integrity, warranting high attention.",
         "ai_score": 8.5,
-        "ai_summary": "Whitehat hackers returned most of the $320M bitcoin taken from the Liquid Network, with talks ongoing for the rest.",
+        "ai_summary": "Cronos reports that $9.2 million remains unrecovered after a Tectonic exploit, despite a chain rollback reversing about $111.2 million.",
         "ai_tags": [
+          "crypto",
           "security",
-          "bitcoin",
-          "Liquid Network",
-          "hack",
-          "recovery"
+          "exploit",
+          "Cronos",
+          "Tectonic"
         ],
-        "author": "Omkar Godbole",
-        "content": "",
-        "fetched_at": "2026-09-08T05:06:32.579746Z",
-        "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:caec230ba8e5f1ca",
+        "author": "Timmy Shen",
+        "content": "A subsequent rollback reversed roughly $111.2 million, but $9.19 million had already left the chain and remains unrecovered, Cronos says.",
+        "fetched_at": "2026-09-08T08:58:37.260429Z",
+        "id": "rss:www.theblock.co_rss.xml:e22ed4ddaf60cf0c",
         "metadata": {
           "category": "crypto-protocols",
           "event_retry_pending": true,
-          "feed_name": "CoinDesk",
+          "feed_name": "The Block",
           "source_category": "crypto-markets",
           "tags": [
-            "Markets",
-            "Bitcoin News",
+            "Crypto Ecosystems",
+            "DeFi",
+            "Security",
+            "Exploits",
             "News"
           ]
         },
-        "published_at": "2026-09-08T04:41:17Z",
+        "published_at": "2026-09-08T05:51:16Z",
         "source_type": "rss",
-        "title": "Liquid Network gets back 3,400 bitcoin from whitehat hackers; talks underway for the rest",
-        "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network"
+        "title": "Cronos says $9.2 million remains unrecovered after Tectonic exploit, chain rollback",
+        "url": "https://www.theblock.co/news/ecosystems/2026-09-08-cronos-post-mortem-413724"
       }
     }
   ],

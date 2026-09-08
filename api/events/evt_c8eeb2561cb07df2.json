@@ -15,11 +15,11 @@
     "en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring."
   },
   "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
-  "last_updated_at": "2026-09-07T17:50:03.877221+00:00",
+  "last_updated_at": "2026-09-08T08:58:35.462065+00:00",
   "last_material_change_at": "2026-09-07T17:50:00.058019+00:00",
   "confidence": 0.75,
   "updates_count": 6,
-  "sources_count": 13,
+  "sources_count": 15,
   "entities": [
     "after",
     "attacker",
@@ -175,7 +175,8 @@
         "google_news:article:1763e2b7a7d7cf05",
         "gdelt:article:20260907T051500Z::https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
         "gdelt:article:20260907T053000Z::https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
-        "gdelt:article:20260907T051500Z::https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html"
+        "gdelt:article:20260907T051500Z::https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+        "google_news:article:77527cf4efb33c91"
       ],
       "sources": [
         {
@@ -206,6 +207,12 @@
           "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
           "label": "finance.yahoo.com",
           "source_type": "gdelt",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1nN0lySEdxR0UzalpQUlUzY2Y2SGJSa3dyRHprQTk0ZTVHU1dXY1FvcFkxdGVWaS04Z3JoeXFmd3dpS3J0Um12cUNLR0FrLV8zOW91NGdXZEpOcXNRbTVzakY2bml2NEVKTURlLWU3ZkFqbHdaT2IteHc1OXB4dw?oc=5",
+          "label": "Binance",
+          "source_type": "google_news",
           "official": false
         }
       ]
@@ -368,7 +375,8 @@
       "confidence": 0.95,
       "story_ids": [
         "rss:thedefiant.io_api_feed:8f1088304a7f689f",
-        "rss:www.theblock.co_rss.xml:64fcd3fd83985445"
+        "rss:www.theblock.co_rss.xml:64fcd3fd83985445",
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:caec230ba8e5f1ca"
       ],
       "sources": [
         {
@@ -380,6 +388,12 @@
         {
           "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
+          "label": "CoinDesk",
           "source_type": "rss",
           "official": false
         }
