@@ -10477,7 +10477,7 @@
       "first_seen_at": "2026-09-01T08:00:00+08:00",
       "identifiers": [],
       "last_material_change_at": "2026-09-08T08:58:42.219120Z",
-      "last_updated_at": "2026-09-08T16:47:10.245657Z",
+      "last_updated_at": "2026-09-08T22:53:15.005515Z",
       "legacy_thread_ids": [
         "t46141326bb"
       ],
@@ -10599,12 +10599,19 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.coindesk.com/business/2026/09/08/cronos-executes-controversial-blockchain-rollback-to-recover-crypto-worth-usd111-million"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377686/cronos-erased-two-hours-transactions-defi-exploit"
             }
           ],
           "story_ids": [
             "rss:cointelegraph.com_rss:b8a5701740ed59ba",
             "rss:www.theblock.co_rss.xml:e22ed4ddaf60cf0c",
-            "rss:www.coindesk.com_arc_outboundfeeds_rss_:e7b337386cde89f0"
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:e7b337386cde89f0",
+            "rss:decrypt.co_feed:fef103daafdd50fd"
           ],
           "time_precision": "published",
           "title_en": "Cronos confirms $9.2M slipped away before Tectonic exploit rollback",
@@ -26357,8 +26364,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Malone Lam, accused of orchestrating a $245M Bitcoin theft via social engineering, faces a plea hearing in federal court.",
-      "current_state_zh": "Malone Lam, accused of orchestrating a $245M Bitcoin theft via social engineering, faces a plea hearing in federal court.",
+      "current_state_en": "Malone Lam has pleaded guilty to his role in a $245M cryptocurrency social engineering scheme.",
+      "current_state_zh": "Malone Lam has pleaded guilty to his role in a $245M cryptocurrency social engineering scheme.",
       "entities": [
         "faces",
         "hearing",
@@ -26372,11 +26379,11 @@
       "event_type": "legal_case",
       "first_seen_at": "2026-09-07T17:50:02.484854Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-07T17:50:02.484854Z",
-      "last_updated_at": "2026-09-07T17:50:02.484854Z",
+      "last_material_change_at": "2026-09-08T22:53:08.162068Z",
+      "last_updated_at": "2026-09-08T22:53:08.162068Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Malone Lam Faces Plea Hearing Over $245M Bitcoin Theft",
       "title_zh": "Malone Lam Faces Plea Hearing Over $245M Bitcoin Theft",
       "topics": [
@@ -26436,6 +26443,44 @@
           "update_type": "initial",
           "what_changed_en": "Malone Lam, accused of orchestrating a $245M Bitcoin theft via social engineering, faces a plea hearing in federal court.",
           "what_changed_zh": "Malone Lam, accused of orchestrating a $245M Bitcoin theft via social engineering, faces a plea hearing in federal court."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Malone Lam has pleaded guilty to his role in a $245M cryptocurrency social engineering scheme.",
+          "current_state_zh": "Malone Lam has pleaded guilty to his role in a $245M cryptocurrency social engineering scheme.",
+          "detailed_summary_en": "A 22-year-old ringleader pleads guilty to a $245 million cryptocurrency social engineering scheme.",
+          "detailed_summary_zh": "A 22-year-old ringleader pleads guilty to a $245 million cryptocurrency social engineering scheme.",
+          "event_id": "evt_4c5db86454cbdba0",
+          "first_seen_at": "2026-09-08T22:53:08.162068Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T19:17:17Z",
+          "published_at": "2026-09-08T19:17:17Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-08-a-22-year-old-crypto-ringleader-pleads-guilty-to-245-million-racketeering-scheme-413911"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:4e48034106bdfdd5"
+          ],
+          "time_precision": "published",
+          "title_en": "A 22 year-old crypto ringleader pleads guilty to $245 million racketeering scheme",
+          "title_zh": "A 22 year-old crypto ringleader pleads guilty to $245 million racketeering scheme",
+          "update_id": "upd_ee8f96f23e192a55",
+          "update_type": "escalation",
+          "what_changed_en": "Malone Lam pleaded guilty to leading a $245M cryptocurrency social engineering scheme.",
+          "what_changed_zh": "Malone Lam pleaded guilty to leading a $245M cryptocurrency social engineering scheme."
         }
       ]
     },
@@ -28429,10 +28474,16 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
-      "current_state_zh": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+      "current_state_en": "Visa is combining VisaNet settlement data with blockchain-based lending to help stablecoin-linked card programs and fintechs access working capital; the model has financed over $2.5 billion in settlement volume since 2023, and Visa's stablecoin settlement volume has risen to an annualized rate above $20 billion.",
+      "current_state_zh": "Visa正在将VisaNet结算数据与基于区块链的借贷相结合，帮助与稳定币关联的卡项目和金融科技公司获取营运资金；该模式自2023年以来已融资超过25亿美元的结算量，Visa的稳定币结算量年化率已超过200亿美元。",
       "entities": [
+        "card",
+        "lending",
+        "onchain",
         "onchain-lending",
+        "programs",
+        "stablecoin",
+        "taps",
         "visa",
         "visanet"
       ],
@@ -28440,8 +28491,8 @@
       "event_type": "other",
       "first_seen_at": "2026-09-08T16:47:09.869856Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-08T16:47:09.869856Z",
-      "last_updated_at": "2026-09-08T16:47:19.124975Z",
+      "last_material_change_at": "2026-09-08T22:53:14.440258Z",
+      "last_updated_at": "2026-09-08T22:53:14.440258Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -28497,6 +28548,44 @@
           "update_type": "initial",
           "what_changed_en": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
           "what_changed_zh": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Visa is combining VisaNet settlement data with blockchain-based lending to help stablecoin-linked card programs and fintechs access working capital; the model has financed over $2.5 billion in settlement volume since 2023, and Visa's stablecoin settlement volume has risen to an annualized rate above $20 billion.",
+          "current_state_zh": "Visa正在将VisaNet结算数据与基于区块链的借贷相结合，帮助与稳定币关联的卡项目和金融科技公司获取营运资金；该模式自2023年以来已融资超过25亿美元的结算量，Visa的稳定币结算量年化率已超过200亿美元。",
+          "detailed_summary_en": "Visa is using VisaNet settlement data and blockchain records to help lenders finance stablecoin-linked card programs, with over $2.5 billion in settlement volume supported since 2023.",
+          "detailed_summary_zh": "Visa is using VisaNet settlement data and blockchain records to help lenders finance stablecoin-linked card programs, with over $2.5 billion in settlement volume supported since 2023.",
+          "event_id": "evt_6854286a74468024",
+          "first_seen_at": "2026-09-08T22:53:14.440258Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T18:16:04Z",
+          "published_at": "2026-09-08T18:16:04Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377696/visa-onchain-lending-finance-stablecoin-card"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:83a3ed2d3b12b850"
+          ],
+          "time_precision": "published",
+          "title_en": "Visa Taps Onchain Lending to Finance Stablecoin Card Programs",
+          "title_zh": "Visa Taps Onchain Lending to Finance Stablecoin Card Programs",
+          "update_id": "upd_c78d2f0ab0ad5c8e",
+          "update_type": "confirmation",
+          "what_changed_en": "Visa announced that its stablecoin settlement volume has exceeded a $20 billion annualized rate, and an early financing model with Credit Coop has supported more than $2.5 billion in cumulative settlement volume since 2023 with zero defaults.",
+          "what_changed_zh": "Visa宣布其稳定币结算量年化率已超过200亿美元，与Credit Coop的早期融资模式自2023年以来支持了超过25亿美元的累计结算量，且零违约。"
         }
       ]
     },
@@ -29552,6 +29641,1351 @@
           "update_type": "initial",
           "what_changed_en": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
           "what_changed_zh": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+      "current_state_zh": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+      "entities": [
+        "additional",
+        "against",
+        "canada",
+        "canadian",
+        "discrimination",
+        "duties",
+        "imposed",
+        "modifying",
+        "motor",
+        "offset",
+        "products",
+        "respect",
+        "scope",
+        "states",
+        "subject",
+        "united",
+        "vehicles"
+      ],
+      "event_id": "evt_ad0dfde9c331acc8",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T22:53:06.381597Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:06.381597Z",
+      "last_updated_at": "2026-09-08T22:53:06.381597Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the United States with Respect to Motor Vehicles",
+      "title_zh": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the United States with Respect to Motor Vehicles",
+      "topics": [
+        "automotive",
+        "macro-regulation",
+        "tariffs",
+        "trade-policy",
+        "us-canada"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+          "current_state_zh": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+          "detailed_summary_en": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+          "detailed_summary_zh": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+          "event_id": "evt_ad0dfde9c331acc8",
+          "first_seen_at": "2026-09-08T22:53:06.381597Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T22:50:00Z",
+          "published_at": "2026-09-08T22:50:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "White House Presidential Actions",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/09/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-united-states-with-respect-to-motor-vehicles/"
+            }
+          ],
+          "story_ids": [
+            "rss:www.whitehouse.gov_presidential-actions_feed_:fc181dc5215202cf"
+          ],
+          "time_precision": "published",
+          "title_en": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the United States with Respect to Motor Vehicles",
+          "title_zh": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the United States with Respect to Motor Vehicles",
+          "update_id": "upd_42c0812080e8ee75",
+          "update_type": "initial",
+          "what_changed_en": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination.",
+          "what_changed_zh": "The White House issued a proclamation modifying the scope of additional duties on Canadian motor vehicle products to address trade discrimination."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+      "current_state_zh": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+      "entities": [
+        "additional",
+        "against",
+        "alcohol",
+        "alcoholic",
+        "beverages",
+        "canada",
+        "canadian",
+        "commerce",
+        "discrimination",
+        "duties",
+        "imposed",
+        "modifying",
+        "offset",
+        "products",
+        "respect",
+        "scope",
+        "states",
+        "subject",
+        "united"
+      ],
+      "event_id": "evt_b768f545c7c7df90",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T22:53:06.381755Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:06.381755Z",
+      "last_updated_at": "2026-09-08T22:53:06.381755Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages",
+      "title_zh": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages",
+      "topics": [
+        "alcohol",
+        "canada",
+        "tariffs",
+        "trade-policy",
+        "us"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+          "current_state_zh": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+          "detailed_summary_en": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+          "detailed_summary_zh": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+          "event_id": "evt_b768f545c7c7df90",
+          "first_seen_at": "2026-09-08T22:53:06.381755Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T22:50:00Z",
+          "published_at": "2026-09-08T22:50:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "White House Presidential Actions",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/09/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-alcoholic-beverages/"
+            }
+          ],
+          "story_ids": [
+            "rss:www.whitehouse.gov_presidential-actions_feed_:4e3f558037623812"
+          ],
+          "time_precision": "published",
+          "title_en": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages",
+          "title_zh": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages",
+          "update_id": "upd_89485697aaa23238",
+          "update_type": "initial",
+          "what_changed_en": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages.",
+          "what_changed_zh": "The US President issued a proclamation modifying the scope of additional duties on Canadian products to address Canadian discrimination against US alcoholic beverages."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+      "current_state_zh": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+      "entities": [
+        "against",
+        "canadian",
+        "certain",
+        "commerce",
+        "continued",
+        "discrimination",
+        "excluding",
+        "importation",
+        "motor",
+        "products",
+        "respect",
+        "response",
+        "states",
+        "united",
+        "vehicles"
+      ],
+      "event_id": "evt_8bac5352198cf193",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T22:53:06.381788Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:06.381788Z",
+      "last_updated_at": "2026-09-08T22:53:06.381788Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Excluding Certain Canadian Products from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Motor Vehicles",
+      "title_zh": "Excluding Certain Canadian Products from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Motor Vehicles",
+      "topics": [
+        "macro-regulation",
+        "tariffs",
+        "trade",
+        "us-canada"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+          "current_state_zh": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+          "detailed_summary_en": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+          "detailed_summary_zh": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+          "event_id": "evt_8bac5352198cf193",
+          "first_seen_at": "2026-09-08T22:53:06.381788Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T22:50:00Z",
+          "published_at": "2026-09-08T22:50:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "White House Presidential Actions",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/09/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued-discrimination-against-the-commerce-of-the-united-states-with-respect-to-motor-vehicles/"
+            }
+          ],
+          "story_ids": [
+            "rss:www.whitehouse.gov_presidential-actions_feed_:430579c9ce7e3f08"
+          ],
+          "time_precision": "published",
+          "title_en": "Excluding Certain Canadian Products from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Motor Vehicles",
+          "title_zh": "Excluding Certain Canadian Products from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Motor Vehicles",
+          "update_id": "upd_b81da3ff41b5021b",
+          "update_type": "initial",
+          "what_changed_en": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles.",
+          "what_changed_zh": "The US President issued a proclamation excluding certain Canadian products from importation in response to continued Canadian discrimination against US commerce regarding motor vehicles."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+      "current_state_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+      "entities": [
+        "ahead",
+        "benzinga",
+        "clarity",
+        "clarity-act",
+        "coinbase",
+        "exec",
+        "key",
+        "next",
+        "package",
+        "powerful",
+        "says",
+        "vote",
+        "week"
+      ],
+      "event_id": "evt_c675aee2c3feca60",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T22:53:07.351687Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:07.351687Z",
+      "last_updated_at": "2026-09-08T22:53:07.351687Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - Benzinga",
+      "title_zh": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - Benzinga",
+      "topics": [
+        "clarity-act",
+        "coinbase",
+        "crypto-policy",
+        "us-congress"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+          "current_state_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+          "detailed_summary_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+          "detailed_summary_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+          "event_id": "evt_c675aee2c3feca60",
+          "first_seen_at": "2026-09-08T22:53:07.351687Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T13:05:38Z",
+          "published_at": "2026-09-08T13:05:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Benzinga",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPaTNxWUFSM1ZYV2xOd1lyalE1ZmRua2t5Wm5nQmVlUnREdHJPSldmWS01SkhtRHc1RXVpX3pxREs2VHc5N3BoUmtXay1IaUsxaFBHbUI2ZEc0TUF6RW5OU2JNWVhiY3lYSEJRZlV4c0pzcE9TM0JuMmFydHlOdXFRZXFHdjNTaFI2N21oMktLdnlibzJXdFV6b045RDNQcUd3dXZhZHRuQldPUmtIT29xTURHUXJwUGZDbHNOYUloN1VwWnFmMTRoT3RwS0lFUG1YWHhTSGE5bUxhQQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:1bc4bc0de08c88c1"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - Benzinga",
+          "title_zh": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - Benzinga",
+          "update_id": "upd_3abc9100d09e3e15",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets.",
+          "what_changed_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week, signaling potential major regulatory progress for US crypto markets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+      "current_state_zh": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+      "entities": [
+        "binance",
+        "chain",
+        "era",
+        "ipo",
+        "passes",
+        "predicts",
+        "tokenized",
+        "trading",
+        "yellow"
+      ],
+      "event_id": "evt_fdd182d436d89752",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-08T22:53:07.352050Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:07.352050Z",
+      "last_updated_at": "2026-09-08T22:53:07.352050Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CZ Predicts On-Chain IPO Era As Binance Tokenized Trading Passes $30B - Yellow.com",
+      "title_zh": "CZ Predicts On-Chain IPO Era As Binance Tokenized Trading Passes $30B - Yellow.com",
+      "topics": [
+        "binance",
+        "cz",
+        "ipo"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+          "current_state_zh": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+          "detailed_summary_en": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+          "detailed_summary_zh": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+          "event_id": "evt_fdd182d436d89752",
+          "first_seen_at": "2026-09-08T22:53:07.352050Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:50:33Z",
+          "published_at": "2026-09-08T11:50:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yellow.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQeHJaRHY2RjVfYlpCY3huOUtzTHVXZzhKSXZYNEpNQTFRbWpzZWFRWXR2Zk9ud3ZKZWgybktvWlpITk01WjRXbkpTZVQ2U0JjbnJsSERKTUM0TkRpSE9VVk13NnVLYkVCVXZIa3o0NHZDcXE3eTVSWlNzNkYtMXhvS0lPdk1fVVlRVnAtTFA2aw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:e7a4b767f60468cb"
+          ],
+          "time_precision": "published",
+          "title_en": "CZ Predicts On-Chain IPO Era As Binance Tokenized Trading Passes $30B - Yellow.com",
+          "title_zh": "CZ Predicts On-Chain IPO Era As Binance Tokenized Trading Passes $30B - Yellow.com",
+          "update_id": "upd_1701ecea3c6aecc2",
+          "update_type": "initial",
+          "what_changed_en": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era.",
+          "what_changed_zh": "Binance's tokenized trading volume surpasses $30B, prompting CZ to predict an on-chain IPO era."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+      "current_state_zh": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+      "entities": [
+        "account",
+        "adds",
+        "bybit",
+        "derivatives",
+        "its",
+        "majors",
+        "tradingview"
+      ],
+      "event_id": "evt_1c5fbbfb9dfd2861",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-08T22:53:07.352089Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:07.352089Z",
+      "last_updated_at": "2026-09-08T22:53:07.352089Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bybit Adds 24/7 FX Majors to Its Crypto Derivatives Account - TradingView",
+      "title_zh": "Bybit Adds 24/7 FX Majors to Its Crypto Derivatives Account - TradingView",
+      "topics": [
+        "bybit",
+        "crypto-fiat-integration",
+        "derivatives",
+        "exchange-expansion",
+        "fx-trading"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+          "current_state_zh": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+          "detailed_summary_en": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+          "detailed_summary_zh": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+          "event_id": "evt_1c5fbbfb9dfd2861",
+          "first_seen_at": "2026-09-08T22:53:07.352089Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T18:00:00Z",
+          "published_at": "2026-09-08T18:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "TradingView",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSUlDUUlCeEVQalo5VFN4TF9OUC15dUczMlpybHZtdFVZX1dmWEktVExBekRhWkhkRXg2UG1xb0RINzhSdHRDRDJ3Sy1YaTJkRU5CQkN6V1BFd2J6cEhlUHVqZzFiNUJzZWRkLVBrdXBSd3RXalA3bkx2c25FSWdYRk1MSUM3R2ZpUThOdS1JRzA4U29VbWZCYk9McHNIajhsNF9jWXJkQjhvQzhnSzZGMG8xa1hXakJKOWZOYkZhUzhhVFU?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:c266747eabc9fc8a"
+          ],
+          "time_precision": "published",
+          "title_en": "Bybit Adds 24/7 FX Majors to Its Crypto Derivatives Account - TradingView",
+          "title_zh": "Bybit Adds 24/7 FX Majors to Its Crypto Derivatives Account - TradingView",
+          "update_id": "upd_52db27e90d404b7a",
+          "update_type": "initial",
+          "what_changed_en": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies.",
+          "what_changed_zh": "Bybit now offers 24/7 trading of major FX pairs within its crypto derivatives account, expanding its product suite to include traditional currencies."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "current_state_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "entities": [
+        "bank-charter",
+        "block",
+        "dorsey",
+        "jack",
+        "occ"
+      ],
+      "event_id": "evt_31e3c2c4d291996e",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T22:53:08.119189Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:08.119189Z",
+      "last_updated_at": "2026-09-08T22:53:08.119189Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+      "title_zh": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+      "topics": [
+        "bank-charter",
+        "block",
+        "occ"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+          "current_state_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+          "detailed_summary_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+          "detailed_summary_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+          "event_id": "evt_31e3c2c4d291996e",
+          "first_seen_at": "2026-09-08T22:53:08.119189Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T21:58:33Z",
+          "published_at": "2026-09-08T21:58:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-08-jack-dorsey-block-joins-rush-federal-bank-charters-from-occ-413947"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:24dd3798b332575a"
+          ],
+          "time_precision": "published",
+          "title_en": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+          "title_zh": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+          "update_id": "upd_922f12eb3adeb650",
+          "update_type": "initial",
+          "what_changed_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+          "what_changed_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+      "current_state_zh": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+      "entities": [
+        "millennium",
+        "millennium-prize",
+        "navier",
+        "navier-stokes",
+        "prize",
+        "problem",
+        "stokes"
+      ],
+      "event_id": "evt_fde028f4447c7239",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T22:53:08.168333Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:08.168333Z",
+      "last_updated_at": "2026-09-08T22:53:08.168333Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "On the Navier–Stokes Millennium Prize Problem",
+      "title_zh": "On the Navier–Stokes Millennium Prize Problem",
+      "topics": [
+        "ai-research",
+        "mathematics",
+        "millennium-prize",
+        "navier-stokes",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+          "current_state_zh": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+          "detailed_summary_en": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+          "detailed_summary_zh": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+          "event_id": "evt_fde028f4447c7239",
+          "first_seen_at": "2026-09-08T22:53:08.168333Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T17:13:21Z",
+          "published_at": "2026-09-08T17:13:21Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49613262"
+            }
+          ],
+          "sources": [
+            {
+              "label": "tedsanders",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://openai.com/index/navier-stokes-solution/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49613262"
+          ],
+          "time_precision": "published",
+          "title_en": "On the Navier–Stokes Millennium Prize Problem",
+          "title_zh": "On the Navier–Stokes Millennium Prize Problem",
+          "update_id": "upd_f8ad55fc3a81fca2",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
+          "what_changed_zh": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+      "current_state_zh": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+      "entities": [
+        "kimi",
+        "macbook",
+        "pro",
+        "ssds"
+      ],
+      "event_id": "evt_e12722c7818329de",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T22:53:08.168358Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:08.168358Z",
+      "last_updated_at": "2026-09-08T22:53:08.168358Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
+      "title_zh": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
+      "topics": [
+        "hardware",
+        "llm",
+        "local-inference",
+        "open-source"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+          "current_state_zh": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+          "detailed_summary_en": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+          "detailed_summary_zh": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+          "event_id": "evt_e12722c7818329de",
+          "first_seen_at": "2026-09-08T22:53:08.168358Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T20:07:55Z",
+          "published_at": "2026-09-08T20:07:55Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49616257"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Argonautlabs",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://github.com/argonautlabsai/deltafin"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49616257"
+          ],
+          "time_precision": "published",
+          "title_en": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
+          "title_zh": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
+          "update_id": "upd_2ce83c94bacd43fd",
+          "update_type": "initial",
+          "what_changed_en": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits.",
+          "what_changed_zh": "A project demonstrates running the Kimi K3 2.8T parameter model at 1 token/s on a MacBook Pro by streaming weights from four SSDs, sparking community discussion on feasibility and hardware limits."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+      "current_state_zh": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+      "entities": [
+        "benchmark",
+        "benchmarking",
+        "quantization",
+        "qwen",
+        "qwen3"
+      ],
+      "event_id": "evt_04c27203d1e932de",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T22:53:08.168411Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:08.168411Z",
+      "last_updated_at": "2026-09-08T22:53:08.168411Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+      "title_zh": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+      "topics": [
+        "benchmark",
+        "llm",
+        "local-inference",
+        "quantization",
+        "qwen"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+          "current_state_zh": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+          "detailed_summary_en": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+          "detailed_summary_zh": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+          "event_id": "evt_04c27203d1e932de",
+          "first_seen_at": "2026-09-08T22:53:08.168411Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T14:49:19Z",
+          "published_at": "2026-09-08T14:49:19Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49611128"
+            }
+          ],
+          "sources": [
+            {
+              "label": "stared",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49611128"
+          ],
+          "time_precision": "published",
+          "title_en": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+          "title_zh": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+          "update_id": "upd_354365c7b247a64f",
+          "update_type": "initial",
+          "what_changed_en": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints.",
+          "what_changed_zh": "Benchmark of Qwen3 27B quantizations shows 4-bit retains quality while 1-bit collapses, with community discussion on quantization trade-offs and hardware constraints."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+      "current_state_zh": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+      "entities": [
+        "approve",
+        "ark",
+        "asks",
+        "class",
+        "fund",
+        "sec",
+        "share",
+        "tokenized",
+        "venture",
+        "venture-fund"
+      ],
+      "event_id": "evt_199da5348aba3b63",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T22:53:09.303312Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:09.303312Z",
+      "last_updated_at": "2026-09-08T22:53:09.303312Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "ARK Asks SEC To Approve Tokenized Share Class of Venture Fund",
+      "title_zh": "ARK Asks SEC To Approve Tokenized Share Class of Venture Fund",
+      "topics": [
+        "ark",
+        "sec",
+        "securities-regulation",
+        "venture-fund"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+          "current_state_zh": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+          "detailed_summary_en": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+          "detailed_summary_zh": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+          "event_id": "evt_199da5348aba3b63",
+          "first_seen_at": "2026-09-08T22:53:09.303312Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T21:19:54Z",
+          "published_at": "2026-09-08T21:19:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/regulation/ark-sec-tokenized-share-class-venture-fund"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:89f5f047f74cac85"
+          ],
+          "time_precision": "published",
+          "title_en": "ARK Asks SEC To Approve Tokenized Share Class of Venture Fund",
+          "title_zh": "ARK Asks SEC To Approve Tokenized Share Class of Venture Fund",
+          "update_id": "upd_b71cf925d3173beb",
+          "update_type": "initial",
+          "what_changed_en": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues.",
+          "what_changed_zh": "ARK Investment Management has filed an exemptive application with the SEC to create a tokenized share class of its venture fund, which would trade on registered ATS venues."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+      "current_state_zh": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+      "entities": [
+        "billion",
+        "market",
+        "shut",
+        "stock",
+        "stocks",
+        "tokenized",
+        "traded",
+        "was",
+        "while"
+      ],
+      "event_id": "evt_d96f0ee9f8bffaa3",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-08T22:53:09.313916Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:09.313916Z",
+      "last_updated_at": "2026-09-08T22:53:09.313916Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Tokenized Stocks Traded $1 Billion While The Stock Market Was Shut",
+      "title_zh": "Tokenized Stocks Traded $1 Billion While The Stock Market Was Shut",
+      "topics": [
+        "24-7-trading",
+        "bnb-chain",
+        "robinhood-chain",
+        "tokenized-equities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+          "current_state_zh": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+          "detailed_summary_en": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+          "detailed_summary_zh": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+          "event_id": "evt_d96f0ee9f8bffaa3",
+          "first_seen_at": "2026-09-08T22:53:09.313916Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T21:16:19Z",
+          "published_at": "2026-09-08T21:16:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/tradfi-and-fintech/tokenized-stocks-traded-1-billion-while-the-stock-market-was-shut"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:906bd74ac2a556ac"
+          ],
+          "time_precision": "published",
+          "title_en": "Tokenized Stocks Traded $1 Billion While The Stock Market Was Shut",
+          "title_zh": "Tokenized Stocks Traded $1 Billion While The Stock Market Was Shut",
+          "update_id": "upd_622c74d87e4e75a2",
+          "update_type": "initial",
+          "what_changed_en": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain.",
+          "what_changed_zh": "Tokenized stocks saw over $1 billion in weekend trading volume, highlighting the growing demand for 24/7 markets via blockchain."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+      "current_state_zh": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+      "entities": [
+        "compound",
+        "institutional",
+        "lending",
+        "lending-market",
+        "market",
+        "only",
+        "opens"
+      ],
+      "event_id": "evt_dd871f344409cf0d",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-08T22:53:09.323872Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:09.323872Z",
+      "last_updated_at": "2026-09-08T22:53:09.323872Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Compound Opens Institutional-Only Lending Market",
+      "title_zh": "Compound Opens Institutional-Only Lending Market",
+      "topics": [
+        "compound",
+        "crypto-protocols",
+        "institutional-lending",
+        "lending-market"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+          "current_state_zh": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+          "detailed_summary_en": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+          "detailed_summary_zh": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+          "event_id": "evt_dd871f344409cf0d",
+          "first_seen_at": "2026-09-08T22:53:09.323872Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T17:33:14Z",
+          "published_at": "2026-09-08T17:33:14Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/compound-institutional-market-launch"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:8c4e73e53ba53913"
+          ],
+          "time_precision": "published",
+          "title_en": "Compound Opens Institutional-Only Lending Market",
+          "title_zh": "Compound Opens Institutional-Only Lending Market",
+          "update_id": "upd_5c69189493bc7576",
+          "update_type": "initial",
+          "what_changed_en": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn.",
+          "what_changed_zh": "Compound launches an institutional-only lending market for USDC against ETH, wstETH, WBTC, and cbBTC with up to 87% LTV, oversubscribed at launch with participation from DeFi Saver, K3/Nexo, KPK, and Yearn."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+      "current_state_zh": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+      "entities": [
+        "gpt",
+        "how",
+        "quantum-computing",
+        "sol"
+      ],
+      "event_id": "evt_ea48a4a6749fba34",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T22:53:12.619942Z",
+      "identifiers": [
+        "gpt-5"
+      ],
+      "last_material_change_at": "2026-09-08T22:53:12.619942Z",
+      "last_updated_at": "2026-09-08T22:53:12.619942Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "title_zh": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "topics": [
+        "codex",
+        "openai",
+        "quantum-computing",
+        "research"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+          "current_state_zh": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+          "detailed_summary_en": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+          "detailed_summary_zh": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+          "event_id": "evt_ea48a4a6749fba34",
+          "first_seen_at": "2026-09-08T22:53:12.619942Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T17:00:00Z",
+          "published_at": "2026-09-08T17:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OpenAI Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://openai.com/index/codex-quantum-computing-experiments"
+            }
+          ],
+          "story_ids": [
+            "rss:openai.com_blog_rss.xml:503e9c2326e78f3e"
+          ],
+          "time_precision": "published",
+          "title_en": "How GPT-5.6 Sol helps run quantum computing experiments",
+          "title_zh": "How GPT-5.6 Sol helps run quantum computing experiments",
+          "update_id": "upd_1d1abab9eb65288d",
+          "update_type": "initial",
+          "what_changed_en": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments.",
+          "what_changed_zh": "MIT researcher uses GPT-5.6 Sol with Codex to autonomously run and calibrate quantum computing experiments."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+      "current_state_zh": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+      "entities": [
+        "chatgpt",
+        "images",
+        "introducing"
+      ],
+      "event_id": "evt_c18de058e869075f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T22:53:12.620030Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:12.620030Z",
+      "last_updated_at": "2026-09-08T22:53:12.620030Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Introducing ChatGPT Images 2.5",
+      "title_zh": "Introducing ChatGPT Images 2.5",
+      "topics": [
+        "ai-model",
+        "chatgpt",
+        "image-generation",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+          "current_state_zh": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+          "detailed_summary_en": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+          "detailed_summary_zh": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+          "event_id": "evt_c18de058e869075f",
+          "first_seen_at": "2026-09-08T22:53:12.620030Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:30:00Z",
+          "published_at": "2026-09-08T11:30:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OpenAI Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://openai.com/index/introducing-chatgpt-images-2-5"
+            }
+          ],
+          "story_ids": [
+            "rss:openai.com_blog_rss.xml:1dcea8b0f8acab14"
+          ],
+          "time_precision": "published",
+          "title_en": "Introducing ChatGPT Images 2.5",
+          "title_zh": "Introducing ChatGPT Images 2.5",
+          "update_id": "upd_dbf43395895437b2",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos.",
+          "what_changed_zh": "OpenAI introduces ChatGPT Images 2.5, a new model that generates more personalized and polished images from ideas, sketches, and reference photos."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+      "current_state_zh": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+      "entities": [
+        "did",
+        "first",
+        "math",
+        "mathematician",
+        "openai",
+        "problem",
+        "rival",
+        "says",
+        "solved"
+      ],
+      "event_id": "evt_1e9dfd44ea652026",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T22:53:13.739236Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:13.739236Z",
+      "last_updated_at": "2026-09-08T22:53:13.739236Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI Says It Solved a $1M Math Problem. A Rival Mathematician Says He Did It First",
+      "title_zh": "OpenAI Says It Solved a $1M Math Problem. A Rival Mathematician Says He Did It First",
+      "topics": [
+        "mathematics",
+        "navier-stokes",
+        "openai",
+        "research-ethics"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+          "current_state_zh": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+          "detailed_summary_en": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+          "detailed_summary_zh": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+          "event_id": "evt_1e9dfd44ea652026",
+          "first_seen_at": "2026-09-08T22:53:13.739236Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T21:38:34Z",
+          "published_at": "2026-09-08T21:38:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/resources/openai-solved-1m-math-problem-rival-mathematician"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:731715c6c11c8599"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI Says It Solved a $1M Math Problem. A Rival Mathematician Says He Did It First",
+          "title_zh": "OpenAI Says It Solved a $1M Math Problem. A Rival Mathematician Says He Did It First",
+          "update_id": "upd_fc4997f323773fc8",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
+          "what_changed_zh": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+      "current_state_zh": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+      "entities": [
+        "after",
+        "bargains",
+        "blockstream",
+        "hack",
+        "hats",
+        "liquid",
+        "missing",
+        "still",
+        "white",
+        "with"
+      ],
+      "event_id": "evt_e050e095d3ccb192",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T22:53:13.983813Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:13.983813Z",
+      "last_updated_at": "2026-09-08T22:53:13.983813Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "$47M Still Missing After Liquid Hack as Blockstream Bargains With 'White Hats'",
+      "title_zh": "$47M Still Missing After Liquid Hack as Blockstream Bargains With 'White Hats'",
+      "topics": [
+        "blockstream",
+        "liquid-network"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+          "current_state_zh": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+          "detailed_summary_en": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+          "detailed_summary_zh": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+          "event_id": "evt_e050e095d3ccb192",
+          "first_seen_at": "2026-09-08T22:53:13.983813Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T20:46:34Z",
+          "published_at": "2026-09-08T20:46:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377723/liquid-hack-47m-blockstream-bargains-white-hat"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:299b274287d514fd"
+          ],
+          "time_precision": "published",
+          "title_en": "$47M Still Missing After Liquid Hack as Blockstream Bargains With 'White Hats'",
+          "title_zh": "$47M Still Missing After Liquid Hack as Blockstream Bargains With 'White Hats'",
+          "update_id": "upd_c54b22421a24ed7c",
+          "update_type": "initial",
+          "what_changed_en": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned.",
+          "what_changed_zh": "Blockstream is negotiating with hackers to recover ~598.5 BTC still missing after a $320M Liquid Network exploit, with 3,400 BTC already returned."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+      "current_state_zh": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+      "entities": [
+        "cryptocom",
+        "prediction-markets",
+        "robinhood"
+      ],
+      "event_id": "evt_46c7bbb84c20a8d5",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-08T22:53:16.664330Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T22:53:16.664330Z",
+      "last_updated_at": "2026-09-08T22:53:16.664330Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Robinhood takes stakes in Crypto.com, OG.com in prediction markets deal",
+      "title_zh": "Robinhood takes stakes in Crypto.com, OG.com in prediction markets deal",
+      "topics": [
+        "cftc",
+        "cryptocom",
+        "event-contracts",
+        "prediction-markets",
+        "robinhood"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+          "current_state_zh": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+          "detailed_summary_en": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+          "detailed_summary_zh": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+          "event_id": "evt_46c7bbb84c20a8d5",
+          "first_seen_at": "2026-09-08T22:53:16.664330Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T17:03:47Z",
+          "published_at": "2026-09-08T17:03:47Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/robinhood-takes-stakes-in-cryptocom-ogcom-in-prediction-markets-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:cd2a70e01f96cd0b"
+          ],
+          "time_precision": "published",
+          "title_en": "Robinhood takes stakes in Crypto.com, OG.com in prediction markets deal",
+          "title_zh": "Robinhood takes stakes in Crypto.com, OG.com in prediction markets deal",
+          "update_id": "upd_3b880053ccc9994d",
+          "update_type": "initial",
+          "what_changed_en": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership.",
+          "what_changed_zh": "Robinhood acquires equity stakes in Crypto.com and OG.com and will route event contracts through OG.com's CFTC-regulated exchange as part of a multi-year prediction markets partnership."
         }
       ]
     }

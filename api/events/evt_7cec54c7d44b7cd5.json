@@ -15,11 +15,11 @@
     "en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues."
   },
   "first_seen_at": "2026-09-01T08:00:00+08:00",
-  "last_updated_at": "2026-09-08T16:47:10.245657+00:00",
+  "last_updated_at": "2026-09-08T22:53:15.005515+00:00",
   "last_material_change_at": "2026-09-08T08:58:42.219120+00:00",
   "confidence": 0.95,
   "updates_count": 2,
-  "sources_count": 5,
+  "sources_count": 6,
   "entities": [
     "after",
     "cronos",
@@ -137,7 +137,8 @@
       "story_ids": [
         "rss:cointelegraph.com_rss:b8a5701740ed59ba",
         "rss:www.theblock.co_rss.xml:e22ed4ddaf60cf0c",
-        "rss:www.coindesk.com_arc_outboundfeeds_rss_:e7b337386cde89f0"
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:e7b337386cde89f0",
+        "rss:decrypt.co_feed:fef103daafdd50fd"
       ],
       "sources": [
         {
@@ -155,6 +156,12 @@
         {
           "url": "https://www.coindesk.com/business/2026/09/08/cronos-executes-controversial-blockchain-rollback-to-recover-crypto-worth-usd111-million",
           "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377686/cronos-erased-two-hours-transactions-defi-exploit",
+          "label": "Decrypt",
           "source_type": "rss",
           "official": false
         }
