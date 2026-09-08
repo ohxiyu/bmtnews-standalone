@@ -4,7 +4,7 @@ from types import SimpleNamespace
 import pytest
 
 from src.ai.client import OpenAIClient
-from src.ai.prompts import CONTENT_ANALYSIS_SYSTEM, EVENT_RELATION_SYSTEM
+from src.ai.prompts import CONTENT_ANALYSIS_SYSTEM, EVENT_RELATION_SYSTEM, TOPIC_DEDUP_SYSTEM
 from src.ai.tokens import reset_usage, task_usage_snapshot
 from src.models import AIConfig
 
@@ -35,6 +35,14 @@ def test_simple_tasks_use_explicit_non_thinking_budget(monkeypatch):
     assert usage["stage"] == "content_analysis"
     assert usage["cached_input_tokens"] == 60
     assert usage["calls"] == 1
+
+
+def test_topic_dedup_disables_unbounded_implicit_reasoning(monkeypatch):
+    client, calls = client_fixture(monkeypatch)
+    asyncio.run(client.complete(TOPIC_DEDUP_SYSTEM, "Return duplicate indices as JSON"))
+    assert calls[0]["extra_body"] == {"thinking": {"type": "disabled"}}
+    assert calls[0]["max_tokens"] == 1536
+    assert task_usage_snapshot()[0]["stage"] == "topic_dedup"
 
 
 def test_event_reasoning_is_explicit_and_temperature_is_not_sent(monkeypatch):
