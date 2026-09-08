@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/",
   "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json",
   "type": "security_incident",
-  "status": "developing",
+  "status": "monitoring",
   "category": "crypto",
   "title": {
     "zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
     "en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin"
   },
   "current_state": {
-    "zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
-    "en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring."
+    "zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
+    "en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed."
   },
   "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
-  "last_updated_at": "2026-09-08T08:58:35.462065+00:00",
-  "last_material_change_at": "2026-09-07T17:50:00.058019+00:00",
+  "last_updated_at": "2026-09-08T16:47:13.470928+00:00",
+  "last_material_change_at": "2026-09-08T16:47:13.470928+00:00",
   "confidence": 0.75,
-  "updates_count": 6,
-  "sources_count": 15,
+  "updates_count": 7,
+  "sources_count": 16,
   "entities": [
     "after",
     "attacker",
@@ -394,6 +394,44 @@
         {
           "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
           "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_3f6427321465f82d",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "occurred_at": "2026-09-08T11:10:30Z",
+      "published_at": "2026-09-08T11:10:30Z",
+      "first_seen_at": "2026-09-08T16:47:13.470928Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Liquid recovers 3,400 BTC as hacker asks “is that ok?” after pocketing $47 million in Bitcoin",
+      "title_en": "Liquid recovers 3,400 BTC as hacker asks “is that ok?” after pocketing $47 million in Bitcoin",
+      "what_changed_zh": "确认了攻击者广播的归还交易已在区块965950中于16:09:25 UTC得到确认，实际返还3,400 BTC至联邦钱包，黑客保留598.5 BTC（约合4700万美元），并在链上留言询问是否可接受。Blockstream状态页面仍显示活动事件和公共桥接节点中断，完整的L-BTC支持和赎回通道尚未恢复。",
+      "what_changed_en": "Confirmed that the attacker's broadcast return transaction was confirmed in block 965950 at 16:09:25 UTC, actually returning 3,400 BTC to the federation wallet, while the hacker retained approximately 598.5 BTC (~$47 million), with an on-chain message asking 'is that ok.' Blockstream's status page still lists an active incident and major outage affecting public bridge nodes; full L-BTC backing and redemption access are not yet restored.",
+      "current_state_zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
+      "current_state_en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed.",
+      "detailed_summary_zh": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+      "detailed_summary_en": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 1.0,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:62576320db607dfb"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/liquid-recovers-3400-btc-as-hacker-asks-is-that-ok-after-pocketing-47-million-in-bitcoin/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

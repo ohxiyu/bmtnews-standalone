@@ -2,6 +2,44 @@
   "version": 1,
   "events": [
     {
+      "event_id": "evt_c8eeb2561cb07df2",
+      "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/",
+      "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json",
+      "status": "monitoring",
+      "type": "security_incident",
+      "title": {
+        "zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+        "en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin"
+      },
+      "current_state": {
+        "zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
+        "en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed."
+      },
+      "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
+      "last_material_change_at": "2026-09-08T16:47:13.470928+00:00",
+      "updates_count": 7,
+      "sources_count": 16
+    },
+    {
+      "event_id": "evt_69e2ababecd4f924",
+      "url": "https://bmt.news/events/evt_69e2ababecd4f924/",
+      "json": "https://bmt.news/api/events/evt_69e2ababecd4f924.json",
+      "status": "monitoring",
+      "type": "protocol_change",
+      "title": {
+        "zh": "Ethereum Foundation names 2 ‘must ship’ EIPs for Hegotá upgrade",
+        "en": "Ethereum Foundation names 2 ‘must ship’ EIPs for Hegotá upgrade"
+      },
+      "current_state": {
+        "zh": "Ethereum Foundation将Hegotá升级范围缩小至FOCIL和Frame Transactions（必须包含），并推迟发行量变更，将其归入更广泛的生态系统流程。",
+        "en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions (must-ship), and defers issuance changes to a broader ecosystem process."
+      },
+      "first_seen_at": "2026-09-07T22:56:47.323198+00:00",
+      "last_material_change_at": "2026-09-08T16:47:12.009391+00:00",
+      "updates_count": 2,
+      "sources_count": 2
+    },
+    {
       "event_id": "evt_7cec54c7d44b7cd5",
       "url": "https://bmt.news/events/evt_7cec54c7d44b7cd5/",
       "json": "https://bmt.news/api/events/evt_7cec54c7d44b7cd5.json",
@@ -18,7 +56,7 @@
       "first_seen_at": "2026-09-01T08:00:00+08:00",
       "last_material_change_at": "2026-09-08T08:58:42.219120+00:00",
       "updates_count": 2,
-      "sources_count": 3
+      "sources_count": 5
     },
     {
       "event_id": "evt_79a9bd1c0f79b57c",
@@ -76,25 +114,6 @@
       "last_material_change_at": "2026-09-07T17:50:05.285366+00:00",
       "updates_count": 2,
       "sources_count": 3
-    },
-    {
-      "event_id": "evt_c8eeb2561cb07df2",
-      "url": "https://bmt.news/events/evt_c8eeb2561cb07df2/",
-      "json": "https://bmt.news/api/events/evt_c8eeb2561cb07df2.json",
-      "status": "developing",
-      "type": "security_incident",
-      "title": {
-        "zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
-        "en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin"
-      },
-      "current_state": {
-        "zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
-        "en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring."
-      },
-      "first_seen_at": "2026-09-06T22:13:15.375035+00:00",
-      "last_material_change_at": "2026-09-07T17:50:00.058019+00:00",
-      "updates_count": 6,
-      "sources_count": 15
     },
     {
       "event_id": "evt_59b2760922a84137",

@@ -1,6 +1,217 @@
 {
   "threads": [
     {
+      "thread_id": "evt_c8eeb2561cb07df2",
+      "event_id": "evt_c8eeb2561cb07df2",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T00:47:13.470928+08:00",
+      "first_date": "2026-09-07",
+      "days": 3,
+      "entries": 7,
+      "updates_count": 7,
+      "sources_count": 16,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "summary_zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
+      "summary_en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed.",
+      "latest_update_zh": "确认了攻击者广播的归还交易已在区块965950中于16:09:25 UTC得到确认，实际返还3,400 BTC至联邦钱包，黑客保留598.5 BTC（约合4700万美元），并在链上留言询问是否可接受。Blockstream状态页面仍显示活动事件和公共桥接节点中断，完整的L-BTC支持和赎回通道尚未恢复。",
+      "latest_update_en": "Confirmed that the attacker's broadcast return transaction was confirmed in block 965950 at 16:09:25 UTC, actually returning 3,400 BTC to the federation wallet, while the hacker retained approximately 598.5 BTC (~$47 million), with an on-chain message asking 'is that ok.' Blockstream's status page still lists an active incident and major outage affecting public bridge nodes; full L-BTC backing and redemption access are not yet restored.",
+      "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
+      "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
+      "latest_summary_zh": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+      "latest_summary_en": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+      "discussion_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "discussion_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
+      "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
+      "market_impact_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
+      "score": 9.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
+          "title": "ksl.com",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFBiTFJfSDk3c3RTT1dDS1VrWmtZN2ZSYmpXNDhST1RJOTh0cWt4YU5ydDdDOEV4ZXVHTFhSSGxKZW9RU2lXaXhzX2tSRlJoUURkU3c4ZjFfcXdrOXZXNWI3Ty0xY1d5Z1hCbEFfNFdYSTh5YndPWG85V0R6bFZsN1JLV2M1aFVPbEh0SW5R?oc=5",
+          "title": "blockchain.news",
+          "official": false
+        },
+        {
+          "url": "https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
+          "title": "lufkindailynews.com",
+          "official": false
+        },
+        {
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
+          "title": "thestar.com.my",
+          "official": false
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
+          "title": "finance.yahoo.com",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1nN0lySEdxR0UzalpQUlUzY2Y2SGJSa3dyRHprQTk0ZTVHU1dXY1FvcFkxdGVWaS04Z3JoeXFmd3dpS3J0Um12cUNLR0FrLV8zOW91NGdXZEpOcXNRbTVzakY2bml2NEVKTURlLWU3ZkFqbHdaT2IteHc1OXB4dw?oc=5",
+          "title": "Binance",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377528/purported-white-hat-hackers-withdraw-320m-in-bitcoin-from-liquid",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/",
+          "title": "Protos",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/tokens-created-out-of-thin-air-may-explain-how-320-million-in-bitcoin-left-a-sidechain/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/liquid-recovers-3400-btc-as-hacker-asks-is-that-ok-after-pocketing-47-million-in-bitcoin/",
+          "title": "CryptoSlate",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://docs.liquid.net/docs/technical-overview",
+          "title": "Technical Overview - Documentation - The Liquid Network"
+        },
+        {
+          "url": "https://blockstream.com/liquid/",
+          "title": "The Liquid Network | Bitcoin layer-2 solution for digital asset issuance."
+        },
+        {
+          "url": "https://river.com/learn/terms/l/liquid-network/",
+          "title": "Liquid Network - River Financial"
+        },
+        {
+          "url": "https://www.technadu.com/320-million-vanishes-from-liquid-networks-bitcoin-reserves-and-the-hackers-say-theyre-the-good-guys/635599/",
+          "title": "Liquid Network Hack: $320M in Bitcoin Withdrawn via SideSwap - TechNadu"
+        },
+        {
+          "url": "https://news.bitcoin.com/security/blockstream-to-liquid-network-hacker-safe-to-return-the-funds/",
+          "title": "Blockstream to Liquid Network Hacker: 'Safe to Return the Funds'"
+        },
+        {
+          "url": "https://crypto.news/blockstream-launches-the-liquid-network-bitcoins-first-sidechain/",
+          "title": "Blockstream Launches the Liquid Network, Bitcoin’s First Sidechain"
+        },
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
+          "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
+        },
+        {
+          "url": "https://shattered.io/liquid-network-320-million-hack-2026/",
+          "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]"
+        },
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
+          "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ..."
+        },
+        {
+          "url": "https://liquid.net/",
+          "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets"
+        },
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-federation",
+          "title": "Blockstream Help Center | What is the Liquid Federation?"
+        },
+        {
+          "url": "https://en.bitcoin.it/wiki/Transaction_replacement",
+          "title": "Transaction replacement - Bitcoin Wiki"
+        }
+      ]
+    },
+    {
+      "thread_id": "evt_69e2ababecd4f924",
+      "event_id": "evt_69e2ababecd4f924",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T00:47:12.009391+08:00",
+      "first_date": "2026-09-08",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "protocol_change",
+      "event_type_zh": "协议变化",
+      "event_type_en": "Protocol change",
+      "title_zh": "Ethereum Foundation names 2 ‘must ship’ EIPs for Hegotá upgrade",
+      "title_en": "Ethereum Foundation names 2 ‘must ship’ EIPs for Hegotá upgrade",
+      "summary_zh": "Ethereum Foundation将Hegotá升级范围缩小至FOCIL和Frame Transactions（必须包含），并推迟发行量变更，将其归入更广泛的生态系统流程。",
+      "summary_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions (must-ship), and defers issuance changes to a broader ecosystem process.",
+      "latest_update_zh": "以太坊基金会将Hegotá升级范围缩小至FOCIL和Frame Transactions，并推迟发行量变更（放弃逐渐减少的发行量和强制燃烧执行奖励），将其归入更广泛的生态系统流程。",
+      "latest_update_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions, and defers issuance changes (declining tapered issuance burn and mandatory burn of execution rewards) to a broader ecosystem process.",
+      "background_zh": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
+      "background_en": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
+      "latest_summary_zh": "Ethereum Foundation sets a 2029 quantum target and narrows Hegotá scope, prioritizing FOCIL and Frame Transactions while deferring issuance changes.",
+      "latest_summary_en": "Ethereum Foundation sets a 2029 quantum target and narrows Hegotá scope, prioritizing FOCIL and Frame Transactions while deferring issuance changes.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://cointelegraph.com/news/ethereum-foundation-names-2-must-ship-eips-for-hegot-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/blockchains/ethereum-foundation-sets-2029-quantum-target-and-narrows-hegot-scope",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
       "thread_id": "evt_7cec54c7d44b7cd5",
       "event_id": "evt_7cec54c7d44b7cd5",
       "latest_date": "2026-09-08",
@@ -9,7 +220,7 @@
       "days": 2,
       "entries": 2,
       "updates_count": 2,
-      "sources_count": 3,
+      "sources_count": 5,
       "category": "crypto",
       "status": "closed",
       "status_zh": "已结束",
@@ -46,6 +257,16 @@
         {
           "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/ecosystems/2026-09-08-cronos-post-mortem-413724",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/08/cronos-executes-controversial-blockchain-rollback-to-recover-crypto-worth-usd111-million",
+          "title": "CoinDesk",
           "official": false
         }
       ],
@@ -283,166 +504,6 @@
         {
           "url": "https://pluang.com/en/news-feed/kerentanan-dompet-hardware-coldcard-bobol-rp38-miliar-bitcoin",
           "title": "$38M stolen from Coldcard bitcoin wallets due t... | Pluang"
-        }
-      ]
-    },
-    {
-      "thread_id": "evt_c8eeb2561cb07df2",
-      "event_id": "evt_c8eeb2561cb07df2",
-      "latest_date": "2026-09-08",
-      "latest_at": "2026-09-08T01:50:00.058019+08:00",
-      "first_date": "2026-09-07",
-      "days": 2,
-      "entries": 6,
-      "updates_count": 6,
-      "sources_count": 15,
-      "category": "crypto",
-      "status": "developing",
-      "status_zh": "进展中",
-      "status_en": "Developing",
-      "event_type": "security_incident",
-      "event_type_zh": "安全事件",
-      "event_type_en": "Security incident",
-      "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
-      "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
-      "summary_zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
-      "summary_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
-      "latest_update_zh": "攻击者广播了一笔交易，将3,400 BTC返还给Liquid联邦钱包，同时保留598.50 BTC；该交易尚未确认且标记为可替换，双方均未公开关于此次分拆的说明。",
-      "latest_update_en": "The attacker broadcast a transaction returning 3,400 BTC to the Liquid federation wallet while keeping 598.50 BTC; the transaction is unconfirmed and flagged as replaceable, and neither side has published anything about the split.",
-      "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
-      "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
-      "latest_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
-      "latest_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
-      "discussion_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
-      "discussion_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
-      "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
-      "market_impact_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
-      "score": 9.0,
-      "source_links": [
-        {
-          "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626",
-          "title": "The Block",
-          "official": false
-        },
-        {
-          "url": "https://www.ksl.com/article/51620859/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
-          "title": "ksl.com",
-          "official": false
-        },
-        {
-          "url": "https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet",
-          "title": "The Defiant",
-          "official": false
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFBiTFJfSDk3c3RTT1dDS1VrWmtZN2ZSYmpXNDhST1RJOTh0cWt4YU5ydDdDOEV4ZXVHTFhSSGxKZW9RU2lXaXhzX2tSRlJoUURkU3c4ZjFfcXdrOXZXNWI3Ty0xY1d5Z1hCbEFfNFdYSTh5YndPWG85V0R6bFZsN1JLV2M1aFVPbEh0SW5R?oc=5",
-          "title": "blockchain.news",
-          "official": false
-        },
-        {
-          "url": "https://lufkindailynews.com/news_reuters/business/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack/article_490f69f9-3c80-5b2f-931d-a0d5fa6ad5d7.html",
-          "title": "lufkindailynews.com",
-          "official": false
-        },
-        {
-          "url": "https://www.thestar.com.my/tech/tech-news/2026/09/07/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack",
-          "title": "thestar.com.my",
-          "official": false
-        },
-        {
-          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-based-liquid-network-says-040533085.html",
-          "title": "finance.yahoo.com",
-          "official": false
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1nN0lySEdxR0UzalpQUlUzY2Y2SGJSa3dyRHprQTk0ZTVHU1dXY1FvcFkxdGVWaS04Z3JoeXFmd3dpS3J0Um12cUNLR0FrLV8zOW91NGdXZEpOcXNRbTVzakY2bml2NEVKTURlLWU3ZkFqbHdaT2IteHc1OXB4dw?oc=5",
-          "title": "Binance",
-          "official": false
-        },
-        {
-          "url": "https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "title": "Cointelegraph",
-          "official": false
-        },
-        {
-          "url": "https://decrypt.co/377528/purported-white-hat-hackers-withdraw-320m-in-bitcoin-from-liquid",
-          "title": "Decrypt",
-          "official": false
-        },
-        {
-          "url": "https://protos.com/how-4000-btc-walked-out-of-blockstreams-liquid-network/",
-          "title": "Protos",
-          "official": false
-        },
-        {
-          "url": "https://cryptoslate.com/tokens-created-out-of-thin-air-may-explain-how-320-million-in-bitcoin-left-a-sidechain/",
-          "title": "CryptoSlate",
-          "official": false
-        },
-        {
-          "url": "https://thedefiant.io/news/security/liquid-attacker-broadcasts-return-of-3400-btc-keeps-598",
-          "title": "The Defiant",
-          "official": false
-        },
-        {
-          "url": "https://www.theblock.co/news/defi/2026-09-07-liquid-network-attacker-says-they-will-return-most-of-4000-btc-after-bug-fix-413673",
-          "title": "The Block",
-          "official": false
-        },
-        {
-          "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
-          "title": "CoinDesk",
-          "official": false
-        }
-      ],
-      "reference_links": [
-        {
-          "url": "https://docs.liquid.net/docs/technical-overview",
-          "title": "Technical Overview - Documentation - The Liquid Network"
-        },
-        {
-          "url": "https://blockstream.com/liquid/",
-          "title": "The Liquid Network | Bitcoin layer-2 solution for digital asset issuance."
-        },
-        {
-          "url": "https://river.com/learn/terms/l/liquid-network/",
-          "title": "Liquid Network - River Financial"
-        },
-        {
-          "url": "https://www.technadu.com/320-million-vanishes-from-liquid-networks-bitcoin-reserves-and-the-hackers-say-theyre-the-good-guys/635599/",
-          "title": "Liquid Network Hack: $320M in Bitcoin Withdrawn via SideSwap - TechNadu"
-        },
-        {
-          "url": "https://news.bitcoin.com/security/blockstream-to-liquid-network-hacker-safe-to-return-the-funds/",
-          "title": "Blockstream to Liquid Network Hacker: 'Safe to Return the Funds'"
-        },
-        {
-          "url": "https://crypto.news/blockstream-launches-the-liquid-network-bitcoins-first-sidechain/",
-          "title": "Blockstream Launches the Liquid Network, Bitcoin’s First Sidechain"
-        },
-        {
-          "url": "https://help.blockstream.com/liquid-network/faqs/how-does-liquid-bitcoin-lbtc-work",
-          "title": "Blockstream Help Center | How does Liquid Bitcoin (LBTC) work?"
-        },
-        {
-          "url": "https://shattered.io/liquid-network-320-million-hack-2026/",
-          "title": "Liquid Network Hack: $320M Bitcoin Sidechain Exploit [2026]"
-        },
-        {
-          "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
-          "title": "$320 million bitcoin exploit hits Liquid Network. Hacker ..."
-        },
-        {
-          "url": "https://liquid.net/",
-          "title": "The Liquid Network: The Financial Layer for Bitcoin Capital Markets"
-        },
-        {
-          "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-federation",
-          "title": "Blockstream Help Center | What is the Liquid Federation?"
-        },
-        {
-          "url": "https://en.bitcoin.it/wiki/Transaction_replacement",
-          "title": "Transaction replacement - Bitcoin Wiki"
         }
       ]
     },
@@ -1030,30 +1091,30 @@
     {
       "thread_id": "evt_c8eeb2561cb07df2",
       "event_id": "evt_c8eeb2561cb07df2",
-      "latest_date": "2026-09-08",
-      "latest_at": "2026-09-08T01:50:00.058019+08:00",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T00:47:13.470928+08:00",
       "first_date": "2026-09-07",
-      "days": 2,
-      "entries": 6,
-      "updates_count": 6,
-      "sources_count": 15,
+      "days": 3,
+      "entries": 7,
+      "updates_count": 7,
+      "sources_count": 16,
       "category": "crypto",
-      "status": "developing",
-      "status_zh": "进展中",
-      "status_en": "Developing",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
       "event_type": "security_incident",
       "event_type_zh": "安全事件",
       "event_type_en": "Security incident",
       "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
-      "summary_zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
-      "summary_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
-      "latest_update_zh": "攻击者广播了一笔交易，将3,400 BTC返还给Liquid联邦钱包，同时保留598.50 BTC；该交易尚未确认且标记为可替换，双方均未公开关于此次分拆的说明。",
-      "latest_update_en": "The attacker broadcast a transaction returning 3,400 BTC to the Liquid federation wallet while keeping 598.50 BTC; the transaction is unconfirmed and flagged as replaceable, and neither side has published anything about the split.",
+      "summary_zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
+      "summary_en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed.",
+      "latest_update_zh": "确认了攻击者广播的归还交易已在区块965950中于16:09:25 UTC得到确认，实际返还3,400 BTC至联邦钱包，黑客保留598.5 BTC（约合4700万美元），并在链上留言询问是否可接受。Blockstream状态页面仍显示活动事件和公共桥接节点中断，完整的L-BTC支持和赎回通道尚未恢复。",
+      "latest_update_en": "Confirmed that the attacker's broadcast return transaction was confirmed in block 965950 at 16:09:25 UTC, actually returning 3,400 BTC to the federation wallet, while the hacker retained approximately 598.5 BTC (~$47 million), with an on-chain message asking 'is that ok.' Blockstream's status page still lists an active incident and major outage affecting public bridge nodes; full L-BTC backing and redemption access are not yet restored.",
       "background_zh": "Liquid Network是Blockstream开发的开源比特币侧链和layer-2解决方案，旨在实现更快、更便宜且支持机密交易的比特币交易，并支持数字资产的发行。在Liquid上，比特币以LBTC表示，与BTC 1:1锚定，用于交易、借贷和转账。与比特币主链不同，Liquid依赖一组受信任的联盟成员共同托管资金，因此它是一种基于信任的模式，而非完全去中心化。",
       "background_en": "The Liquid Network is an open-source Bitcoin sidechain and layer-2 solution developed by Blockstream, designed to enable faster, more affordable, and confidential Bitcoin transactions as well as the issuance of digital assets. On Liquid, bitcoin is represented by LBTC, a token pegged 1:1 to BTC and used for trading, lending, and transfers. Unlike Bitcoin's main chain, Liquid relies on a group of authorized federation members to jointly secure funds, which makes it a trust-based model rather than a fully decentralized one.",
-      "latest_summary_zh": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
-      "latest_summary_en": "The Liquid attacker has broadcast a transaction returning 3,400 BTC to the exchange's federation wallet while keeping 598.50 BTC, though the transaction remains unconfirmed and flagged as replaceable.",
+      "latest_summary_zh": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+      "latest_summary_en": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
       "discussion_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
       "discussion_en": "The restitution transaction, if confirmed, would restore most of the stolen BTC backing L-BTC and reduce the risk of a shortfall in Liquid's peg, which supports confidence in Bitcoin sidechains and federated custody more broadly. Because the transaction is unconfirmed and replaceable, uncertainty remains, so market impact is currently limited to sentiment around the Liquid sidechain and Blockstream rather than direct spot-market flows.",
       "market_impact_zh": "如果这笔返还交易得到确认，将能恢复支撑 L-BTC 的大部分被盗 BTC，降低 Liquid 锚定出现缺口的风险，从而有助于增强对比特币侧链和联邦托管模式的信心。由于交易尚未确认且可被替换，不确定性依然存在，因此当前市场影响更多局限于 Liquid 侧链和 Blockstream 相关的情绪层面，而非直接波及现货市场资金流动。",
@@ -1134,6 +1195,11 @@
           "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network",
           "title": "CoinDesk",
           "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/liquid-recovers-3400-btc-as-hacker-asks-is-that-ok-after-pocketing-47-million-in-bitcoin/",
+          "title": "CryptoSlate",
+          "official": false
         }
       ],
       "reference_links": [
@@ -1196,7 +1262,7 @@
       "days": 2,
       "entries": 2,
       "updates_count": 2,
-      "sources_count": 3,
+      "sources_count": 5,
       "category": "crypto",
       "status": "closed",
       "status_zh": "已结束",
@@ -1233,6 +1299,16 @@
         {
           "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/ecosystems/2026-09-08-cronos-post-mortem-413724",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/08/cronos-executes-controversial-blockchain-rollback-to-recover-crypto-worth-usd111-million",
+          "title": "CoinDesk",
           "official": false
         }
       ],
@@ -1924,6 +2000,52 @@
         {
           "url": "https://protos.com/bitmart-suggests-restructuring-weeks-after-closure-announcement/",
           "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_69e2ababecd4f924",
+      "event_id": "evt_69e2ababecd4f924",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T00:47:12.009391+08:00",
+      "first_date": "2026-09-08",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "protocol_change",
+      "event_type_zh": "协议变化",
+      "event_type_en": "Protocol change",
+      "title_zh": "Ethereum Foundation names 2 ‘must ship’ EIPs for Hegotá upgrade",
+      "title_en": "Ethereum Foundation names 2 ‘must ship’ EIPs for Hegotá upgrade",
+      "summary_zh": "Ethereum Foundation将Hegotá升级范围缩小至FOCIL和Frame Transactions（必须包含），并推迟发行量变更，将其归入更广泛的生态系统流程。",
+      "summary_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions (must-ship), and defers issuance changes to a broader ecosystem process.",
+      "latest_update_zh": "以太坊基金会将Hegotá升级范围缩小至FOCIL和Frame Transactions，并推迟发行量变更（放弃逐渐减少的发行量和强制燃烧执行奖励），将其归入更广泛的生态系统流程。",
+      "latest_update_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions, and defers issuance changes (declining tapered issuance burn and mandatory burn of execution rewards) to a broader ecosystem process.",
+      "background_zh": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
+      "background_en": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
+      "latest_summary_zh": "Ethereum Foundation sets a 2029 quantum target and narrows Hegotá scope, prioritizing FOCIL and Frame Transactions while deferring issuance changes.",
+      "latest_summary_en": "Ethereum Foundation sets a 2029 quantum target and narrows Hegotá scope, prioritizing FOCIL and Frame Transactions while deferring issuance changes.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://cointelegraph.com/news/ethereum-foundation-names-2-must-ship-eips-for-hegot-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/blockchains/ethereum-foundation-sets-2029-quantum-target-and-narrows-hegot-scope",
+          "title": "The Defiant",
           "official": false
         }
       ],

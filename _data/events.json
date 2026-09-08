@@ -10477,7 +10477,7 @@
       "first_seen_at": "2026-09-01T08:00:00+08:00",
       "identifiers": [],
       "last_material_change_at": "2026-09-08T08:58:42.219120Z",
-      "last_updated_at": "2026-09-08T08:58:42.219120Z",
+      "last_updated_at": "2026-09-08T16:47:10.245657Z",
       "legacy_thread_ids": [
         "t46141326bb"
       ],
@@ -10587,10 +10587,24 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cointelegraph.com/news/cronos-tectonic-rollback-111m-9m-escaped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/ecosystems/2026-09-08-cronos-post-mortem-413724"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/08/cronos-executes-controversial-blockchain-rollback-to-recover-crypto-worth-usd111-million"
             }
           ],
           "story_ids": [
-            "rss:cointelegraph.com_rss:b8a5701740ed59ba"
+            "rss:cointelegraph.com_rss:b8a5701740ed59ba",
+            "rss:www.theblock.co_rss.xml:e22ed4ddaf60cf0c",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:e7b337386cde89f0"
           ],
           "time_precision": "published",
           "title_en": "Cronos confirms $9.2M slipped away before Tectonic exploit rollback",
@@ -23657,8 +23671,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "The Liquid Network remains paused; the attacker has broadcast a transaction returning 3,400 BTC while keeping 598.50 BTC, but the transaction is unconfirmed and flagged as replaceable, so funds have not yet been returned; the situation remains under monitoring.",
-      "current_state_zh": "Liquid网络仍暂停；攻击者已广播返还3,400 BTC的交易，但保留598.50 BTC，交易尚未确认且可替换，资金仍未归还，事件状态持续监控中。",
+      "current_state_en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed.",
+      "current_state_zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
       "entities": [
         "after",
         "attacker",
@@ -23681,11 +23695,11 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-06T22:13:15.375035Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-07T17:50:00.058019Z",
-      "last_updated_at": "2026-09-08T08:58:35.462065Z",
+      "last_material_change_at": "2026-09-08T16:47:13.470928Z",
+      "last_updated_at": "2026-09-08T16:47:13.470928Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "developing",
+      "status": "monitoring",
       "title_en": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "title_zh": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
       "topics": [
@@ -24047,6 +24061,44 @@
           "update_type": "response",
           "what_changed_en": "The attacker broadcast a transaction returning 3,400 BTC to the Liquid federation wallet while keeping 598.50 BTC; the transaction is unconfirmed and flagged as replaceable, and neither side has published anything about the split.",
           "what_changed_zh": "攻击者广播了一笔交易，将3,400 BTC返还给Liquid联邦钱包，同时保留598.50 BTC；该交易尚未确认且标记为可替换，双方均未公开关于此次分拆的说明。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 1.0,
+          "current_state_en": "The Liquid Network remains paused; 3,400 BTC have been confirmed returned to the federation wallet, but the attacker retains approximately 598.5 BTC; redemption access is not restored, Blockstream's status page shows the incident continuing, and full backing and recovery remain unconfirmed.",
+          "current_state_zh": "Liquid网络仍处于暂停状态，部分资金（3,400 BTC）已确认归还至联邦钱包，但攻击者仍保有598.5 BTC，赎回通道未开放，Blockstream状态页面显示事件持续，资金支持和恢复仍有待确认。",
+          "detailed_summary_en": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+          "detailed_summary_zh": "Liquid sidechain recovers 3,400 BTC after a $47 million reserve drain, but full backing and redemption access remain uncertain.",
+          "event_id": "evt_c8eeb2561cb07df2",
+          "first_seen_at": "2026-09-08T16:47:13.470928Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:10:30Z",
+          "published_at": "2026-09-08T11:10:30Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/liquid-recovers-3400-btc-as-hacker-asks-is-that-ok-after-pocketing-47-million-in-bitcoin/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:62576320db607dfb"
+          ],
+          "time_precision": "published",
+          "title_en": "Liquid recovers 3,400 BTC as hacker asks “is that ok?” after pocketing $47 million in Bitcoin",
+          "title_zh": "Liquid recovers 3,400 BTC as hacker asks “is that ok?” after pocketing $47 million in Bitcoin",
+          "update_id": "upd_3f6427321465f82d",
+          "update_type": "confirmation",
+          "what_changed_en": "Confirmed that the attacker's broadcast return transaction was confirmed in block 965950 at 16:09:25 UTC, actually returning 3,400 BTC to the federation wallet, while the hacker retained approximately 598.5 BTC (~$47 million), with an on-chain message asking 'is that ok.' Blockstream's status page still lists an active incident and major outage affecting public bridge nodes; full L-BTC backing and redemption access are not yet restored.",
+          "what_changed_zh": "确认了攻击者广播的归还交易已在区块965950中于16:09:25 UTC得到确认，实际返还3,400 BTC至联邦钱包，黑客保留598.5 BTC（约合4700万美元），并在链上留言询问是否可接受。Blockstream状态页面仍显示活动事件和公共桥接节点中断，完整的L-BTC支持和赎回通道尚未恢复。"
         }
       ]
     },
@@ -27196,20 +27248,25 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
-      "current_state_zh": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
+      "current_state_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions (must-ship), and defers issuance changes to a broader ecosystem process.",
+      "current_state_zh": "Ethereum Foundation将Hegotá升级范围缩小至FOCIL和Frame Transactions（必须包含），并推迟发行量变更，将其归入更广泛的生态系统流程。",
       "entities": [
         "eip",
         "eips",
         "foundation",
-        "hegot"
+        "hegot",
+        "narrows",
+        "quantum",
+        "scope",
+        "sets",
+        "target"
       ],
       "event_id": "evt_69e2ababecd4f924",
       "event_type": "protocol_change",
       "first_seen_at": "2026-09-07T22:56:47.323198Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-07T22:56:47.323198Z",
-      "last_updated_at": "2026-09-07T22:56:47.323198Z",
+      "last_material_change_at": "2026-09-08T16:47:12.009391Z",
+      "last_updated_at": "2026-09-08T16:47:12.009391Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -27219,7 +27276,9 @@
         "account-abstraction",
         "censorship-resistance",
         "eip",
-        "protocol-upgrade"
+        "protocol-upgrade",
+        "quantum",
+        "roadmap"
       ],
       "updates": [
         {
@@ -27259,6 +27318,44 @@
           "update_type": "initial",
           "what_changed_en": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication.",
           "what_changed_zh": "Ethereum Foundation names FOCIL and Frame Transactions as must-ship EIPs for the Hegotá upgrade, focusing on censorship resistance and flexible account authentication."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions (must-ship), and defers issuance changes to a broader ecosystem process.",
+          "current_state_zh": "Ethereum Foundation将Hegotá升级范围缩小至FOCIL和Frame Transactions（必须包含），并推迟发行量变更，将其归入更广泛的生态系统流程。",
+          "detailed_summary_en": "Ethereum Foundation sets a 2029 quantum target and narrows Hegotá scope, prioritizing FOCIL and Frame Transactions while deferring issuance changes.",
+          "detailed_summary_zh": "Ethereum Foundation sets a 2029 quantum target and narrows Hegotá scope, prioritizing FOCIL and Frame Transactions while deferring issuance changes.",
+          "event_id": "evt_69e2ababecd4f924",
+          "first_seen_at": "2026-09-08T16:47:12.009391Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T15:48:15Z",
+          "published_at": "2026-09-08T15:48:15Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/blockchains/ethereum-foundation-sets-2029-quantum-target-and-narrows-hegot-scope"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:270a9c946dd81e29"
+          ],
+          "time_precision": "published",
+          "title_en": "Ethereum Foundation Sets 2029 Quantum Target and Narrows Hegotá Scope",
+          "title_zh": "Ethereum Foundation Sets 2029 Quantum Target and Narrows Hegotá Scope",
+          "update_id": "upd_61514b3b687aeb79",
+          "update_type": "confirmation",
+          "what_changed_en": "Ethereum Foundation narrows Hegotá upgrade scope to FOCIL and Frame Transactions, and defers issuance changes (declining tapered issuance burn and mandatory burn of execution rewards) to a broader ecosystem process.",
+          "what_changed_zh": "以太坊基金会将Hegotá升级范围缩小至FOCIL和Frame Transactions，并推迟发行量变更（放弃逐渐减少的发行量和强制燃烧执行奖励），将其归入更广泛的生态系统流程。"
         }
       ]
     },
@@ -27538,7 +27635,7 @@
       "first_seen_at": "2026-09-08T05:06:31.151680Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-08T05:06:31.151680Z",
-      "last_updated_at": "2026-09-08T05:06:31.151680Z",
+      "last_updated_at": "2026-09-08T16:47:08.324752Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -27575,10 +27672,17 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9IQXplYk5EdEZJUTV2QXZuZnZReTlOcnNxdV9RSEVwQ1FCOTRCNFpaZkc2WEZFNHlnanppLUduLWNKR3VxMzAwWUVlZ2dsOGtuWlVOd0NLdkV1WFBjMTZRVmVIRDBYTWpsX3BNbE1GeDVwVmpBQkYtQQ?oc=5"
+            },
+            {
+              "label": "cryptonews.net",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9YQmpkNUpYSW9FVmFxMnMzekpab2FIaU9wVmZSUzU0VEFtS0ZaQm9ncDc0TWF3c1JoVVk2UXJxRjlSRU1UUjdjc2F4RVd0V0RFLXNzNkRIa0Z2QQ?oc=5"
             }
           ],
           "story_ids": [
-            "google_news:article:0a295ce9d95c051a"
+            "google_news:article:0a295ce9d95c051a",
+            "google_news:article:b31952db68a3dcc9"
           ],
           "time_precision": "published",
           "title_en": "BNB Vulnerability Leads to Loss of 62.28 BNB - Coinfomania",
@@ -27872,6 +27976,1584 @@
           "what_changed_zh": "Australia's AUSTRAC canceled, suspended, or refused renewal for 45 crypto and remittance registrations over the past year to combat money laundering and terrorism financing risks."
         }
       ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+      "current_state_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+      "entities": [
+        "ahead",
+        "clarity",
+        "clarity-act",
+        "coinbase",
+        "exec",
+        "key",
+        "next",
+        "package",
+        "powerful",
+        "says",
+        "tradingview",
+        "vote",
+        "week"
+      ],
+      "event_id": "evt_2de5b17601fe3bb5",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-08T16:47:08.323134Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:08.323134Z",
+      "last_updated_at": "2026-09-08T16:47:08.323134Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - TradingView",
+      "title_zh": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - TradingView",
+      "topics": [
+        "clarity-act",
+        "coinbase",
+        "us"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+          "current_state_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+          "detailed_summary_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+          "detailed_summary_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+          "event_id": "evt_2de5b17601fe3bb5",
+          "first_seen_at": "2026-09-08T16:47:08.323134Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T13:05:38Z",
+          "published_at": "2026-09-08T13:05:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "TradingView",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdzFlaHVPN2l6emVVTEc3WV83eFhkbkxYTHVkM0JSVHFwa3VSc3g0WG9QQ1prbzViRlBTYVVnOFlnWkdScExwak5rb0VxaDI4RlFaR3RsYnJrOW53S3prUjBHcXV1TG1pdTloZ2h1VlRadXgwcnVfbU1VWTQySWdPaG5leW5PNkZsMVVSaV9HZFlGQnlHM3ktYjc4azBBczctejEtV0lGMWprNnlTWm9JLWZaeF9mWmt5aE9mTUJNTThJUXplU2VtcGRjc0xvd2pvei1pdjN3?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:b744892d02a82d23"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - TradingView",
+          "title_zh": "CLARITY Act Is a 'Powerful Package' Ahead of Key Vote Next Week, Coinbase Exec Says - TradingView",
+          "update_id": "upd_cff650038949516f",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week.",
+          "what_changed_zh": "Coinbase executive praises the CLARITY Act as a 'powerful package' ahead of a key vote next week."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+      "current_state_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+      "entities": [
+        "alphagenome",
+        "atlas",
+        "deepmind",
+        "google",
+        "releases"
+      ],
+      "event_id": "evt_5684cfda4eaed05a",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-08T16:47:08.756554Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:08.756554Z",
+      "last_updated_at": "2026-09-08T16:47:08.756554Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Google DeepMind Releases AlphaGenome Atlas",
+      "title_zh": "Google DeepMind Releases AlphaGenome Atlas",
+      "topics": [
+        "bioinformatics",
+        "deepmind",
+        "genomics",
+        "research"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+          "current_state_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+          "detailed_summary_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+          "detailed_summary_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+          "event_id": "evt_5684cfda4eaed05a",
+          "first_seen_at": "2026-09-08T16:47:08.756554Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T14:55:45Z",
+          "published_at": "2026-09-08T14:55:45Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49611251"
+            }
+          ],
+          "sources": [
+            {
+              "label": "utiiiD",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49611251"
+          ],
+          "time_precision": "published",
+          "title_en": "Google DeepMind Releases AlphaGenome Atlas",
+          "title_zh": "Google DeepMind Releases AlphaGenome Atlas",
+          "update_id": "upd_e4b9f096d461ab78",
+          "update_type": "initial",
+          "what_changed_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
+          "what_changed_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+      "current_state_zh": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+      "entities": [
+        "davinci",
+        "resolve"
+      ],
+      "event_id": "evt_9f370f6caeca8656",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-08T16:47:08.756597Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:08.756597Z",
+      "last_updated_at": "2026-09-08T16:47:08.756597Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "DaVinci Resolve 21.1",
+      "title_zh": "DaVinci Resolve 21.1",
+      "topics": [
+        "ai-integration",
+        "blackmagic",
+        "creative-tools",
+        "software-release",
+        "video-editing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+          "current_state_zh": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+          "detailed_summary_en": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+          "detailed_summary_zh": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+          "event_id": "evt_9f370f6caeca8656",
+          "first_seen_at": "2026-09-08T16:47:08.756597Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T13:36:53Z",
+          "published_at": "2026-09-08T13:36:53Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49610181"
+            }
+          ],
+          "sources": [
+            {
+              "label": "tosh",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.blackmagicdesign.com/media/release/20260908-03"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49610181"
+          ],
+          "time_precision": "published",
+          "title_en": "DaVinci Resolve 21.1",
+          "title_zh": "DaVinci Resolve 21.1",
+          "update_id": "upd_44154dac7a78cf42",
+          "update_type": "initial",
+          "what_changed_en": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users.",
+          "what_changed_zh": "DaVinci Resolve 21.1 adds AI assistant integrations (Claude, Codex) for project analysis, media organization, and batch rendering, alongside continued free upgrades for Pro users."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+      "current_state_zh": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+      "entities": [
+        "copperhead",
+        "fast",
+        "hardware",
+        "show",
+        "software"
+      ],
+      "event_id": "evt_13cda55365e29150",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:08.756653Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:08.756653Z",
+      "last_updated_at": "2026-09-08T16:47:08.756653Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Show HN: Copperhead – Hardware as Fast as Software",
+      "title_zh": "Show HN: Copperhead – Hardware as Fast as Software",
+      "topics": [
+        "developer-tools",
+        "hardware-design",
+        "pcb"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+          "current_state_zh": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+          "detailed_summary_en": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+          "detailed_summary_zh": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+          "event_id": "evt_13cda55365e29150",
+          "first_seen_at": "2026-09-08T16:47:08.756653Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T13:26:45Z",
+          "published_at": "2026-09-08T13:26:45Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49610059"
+            }
+          ],
+          "sources": [
+            {
+              "label": "animeshchouhan",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://copperhead.sh/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49610059"
+          ],
+          "time_precision": "published",
+          "title_en": "Show HN: Copperhead – Hardware as Fast as Software",
+          "title_zh": "Show HN: Copperhead – Hardware as Fast as Software",
+          "update_id": "upd_68e9d0754f8daabb",
+          "update_type": "initial",
+          "what_changed_en": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations.",
+          "what_changed_zh": "Copperhead is a new hardware design tool that aims to accelerate PCB design through AI assistance, with community feedback highlighting both its potential and current limitations."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+      "current_state_zh": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+      "entities": [
+        "americans",
+        "analyzing",
+        "dhs",
+        "financial",
+        "habits",
+        "policing",
+        "predictive",
+        "predictive-policing",
+        "unit"
+      ],
+      "event_id": "evt_d0fe2166ed5a08ab",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:08.756679Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:08.756679Z",
+      "last_updated_at": "2026-09-08T16:47:08.756679Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "DHS 'Predictive Policing' Unit Is Analyzing Americans' Financial Habits",
+      "title_zh": "DHS 'Predictive Policing' Unit Is Analyzing Americans' Financial Habits",
+      "topics": [
+        "dhs",
+        "financial-data",
+        "predictive-policing",
+        "privacy",
+        "surveillance"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+          "current_state_zh": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+          "detailed_summary_en": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+          "detailed_summary_zh": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+          "event_id": "evt_d0fe2166ed5a08ab",
+          "first_seen_at": "2026-09-08T16:47:08.756679Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T14:40:30Z",
+          "published_at": "2026-09-08T14:40:30Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49610988"
+            }
+          ],
+          "sources": [
+            {
+              "label": "abraham",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.404media.co/a-secretive-dhs-predictive-policing-unit-is-analyzing-americans-financial-habits-and-pulling-them-over/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49610988"
+          ],
+          "time_precision": "published",
+          "title_en": "DHS 'Predictive Policing' Unit Is Analyzing Americans' Financial Habits",
+          "title_zh": "DHS 'Predictive Policing' Unit Is Analyzing Americans' Financial Habits",
+          "update_id": "upd_2b928115b518f6bd",
+          "update_type": "initial",
+          "what_changed_en": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns.",
+          "what_changed_zh": "A secretive DHS 'predictive policing' unit is analyzing Americans' financial habits and using them to pull over drivers, raising serious privacy and constitutional concerns."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+      "current_state_zh": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+      "entities": [
+        "amar",
+        "ceo",
+        "copper",
+        "kuchinad"
+      ],
+      "event_id": "evt_96fc7f32cc50c444",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:09.731395Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:09.731395Z",
+      "last_updated_at": "2026-09-08T16:47:09.731395Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Copper CEO Amar Kuchinad departs as search for a buyer enters a fourth month",
+      "title_zh": "Copper CEO Amar Kuchinad departs as search for a buyer enters a fourth month",
+      "topics": [
+        "ceo-departure",
+        "copper",
+        "crypto-custodian",
+        "institutional",
+        "ma"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+          "current_state_zh": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+          "detailed_summary_en": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+          "detailed_summary_zh": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+          "event_id": "evt_96fc7f32cc50c444",
+          "first_seen_at": "2026-09-08T16:47:09.731395Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T15:23:46Z",
+          "published_at": "2026-09-08T15:23:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/08/copper-ceo-amar-kuchinad-departs-as-search-for-a-buyer-enters-a-fourth-month"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:5a221dfc77c1b288"
+          ],
+          "time_precision": "published",
+          "title_en": "Copper CEO Amar Kuchinad departs as search for a buyer enters a fourth month",
+          "title_zh": "Copper CEO Amar Kuchinad departs as search for a buyer enters a fourth month",
+          "update_id": "upd_75c9ad2b0fc00912",
+          "update_type": "initial",
+          "what_changed_en": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian.",
+          "what_changed_zh": "Copper CEO Amar Kuchinad has left the company as its search for a buyer continues into a fourth month, highlighting ongoing uncertainty for the crypto custodian."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+      "current_state_zh": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+      "entities": [
+        "onchain-lending",
+        "visa",
+        "visanet"
+      ],
+      "event_id": "evt_6854286a74468024",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:09.869856Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:09.869856Z",
+      "last_updated_at": "2026-09-08T16:47:19.124975Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Visa combines VisaNet data with onchain lending to power stablecoin card working capital",
+      "title_zh": "Visa combines VisaNet data with onchain lending to power stablecoin card working capital",
+      "topics": [
+        "crypto-cards",
+        "onchain-lending",
+        "visa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+          "current_state_zh": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+          "detailed_summary_en": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+          "detailed_summary_zh": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+          "event_id": "evt_6854286a74468024",
+          "first_seen_at": "2026-09-08T16:47:09.869856Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T14:29:14Z",
+          "published_at": "2026-09-08T14:29:14Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/08/visa-opens-settlement-data-to-help-blockchain-lenders-finance-crypto-cards-as-volume-surges"
+            },
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/visa-stablecoin-blockchain-lending-payment-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:6c5fb03dc4a63806",
+            "rss:cointelegraph.com_rss:efd007e32be6fa65"
+          ],
+          "time_precision": "published",
+          "title_en": "Visa combines VisaNet data with onchain lending to power stablecoin card working capital",
+          "title_zh": "Visa combines VisaNet data with onchain lending to power stablecoin card working capital",
+          "update_id": "upd_1437a94c7cdaa472",
+          "update_type": "initial",
+          "what_changed_en": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge.",
+          "what_changed_zh": "Visa is opening its settlement data to blockchain lenders to finance stablecoin card working capital as volumes surge."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+      "current_state_zh": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+      "entities": [
+        "how",
+        "layer-2"
+      ],
+      "event_id": "evt_cc8a20cacb3f3157",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T16:47:10.022560Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:10.022560Z",
+      "last_updated_at": "2026-09-08T16:47:10.022560Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin’s complexity paradox: How layer-2 scalers became AI's main target",
+      "title_zh": "Bitcoin’s complexity paradox: How layer-2 scalers became AI's main target",
+      "topics": [
+        "layer-2",
+        "vulnerabilities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+          "current_state_zh": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+          "detailed_summary_en": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+          "detailed_summary_zh": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+          "event_id": "evt_cc8a20cacb3f3157",
+          "first_seen_at": "2026-09-08T16:47:10.022560Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T12:09:26Z",
+          "published_at": "2026-09-08T12:09:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/08/bitcoin-security-risks-grow-as-ai-uncovers-hidden-vulnerabilities"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:1e2f5bd0ed8c66dd"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin’s complexity paradox: How layer-2 scalers became AI's main target",
+          "title_zh": "Bitcoin’s complexity paradox: How layer-2 scalers became AI's main target",
+          "update_id": "upd_fcf78bf6b0e50270",
+          "update_type": "initial",
+          "what_changed_en": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem.",
+          "what_changed_zh": "AI tools are increasingly targeting Bitcoin layer-2 protocols, exposing security vulnerabilities that could threaten the broader ecosystem."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+      "current_state_zh": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+      "entities": [
+        "curve",
+        "how",
+        "liquidation"
+      ],
+      "event_id": "evt_9d70039f096941dd",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-08T16:47:10.218016Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:10.218016Z",
+      "last_updated_at": "2026-09-08T16:47:10.218016Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "How Curve's soft liquidation model lets borrowers survive market drawdowns",
+      "title_zh": "How Curve's soft liquidation model lets borrowers survive market drawdowns",
+      "topics": [
+        "curve",
+        "liquidation",
+        "risk-management"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+          "current_state_zh": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+          "detailed_summary_en": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+          "detailed_summary_zh": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+          "event_id": "evt_9d70039f096941dd",
+          "first_seen_at": "2026-09-08T16:47:10.218016Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:06:31Z",
+          "published_at": "2026-09-08T11:06:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/08/hundreds-of-defi-loans-on-curve-stayed-in-liquidation-for-weeks-without-dying"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:79a37ddab66c1842"
+          ],
+          "time_precision": "published",
+          "title_en": "How Curve's soft liquidation model lets borrowers survive market drawdowns",
+          "title_zh": "How Curve's soft liquidation model lets borrowers survive market drawdowns",
+          "update_id": "upd_9e3b5ca08a3b7ee2",
+          "update_type": "initial",
+          "what_changed_en": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns.",
+          "what_changed_zh": "Curve's soft liquidation model allowed hundreds of DeFi loans to remain in liquidation for weeks without being fully liquidated, helping borrowers survive market drawdowns."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+      "current_state_zh": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+      "entities": [
+        "sata",
+        "strive"
+      ],
+      "event_id": "evt_3633adb85875c463",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:10.736710Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:10.736710Z",
+      "last_updated_at": "2026-09-08T16:47:10.736710Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Strive adds 1,375 bitcoin as SATA approaches ‘billion-dollar’ milestone",
+      "title_zh": "Strive adds 1,375 bitcoin as SATA approaches ‘billion-dollar’ milestone",
+      "topics": [
+        "capital-raise",
+        "sata",
+        "strive"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+          "current_state_zh": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+          "detailed_summary_en": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+          "detailed_summary_zh": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+          "event_id": "evt_3633adb85875c463",
+          "first_seen_at": "2026-09-08T16:47:10.736710Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T15:11:59Z",
+          "published_at": "2026-09-08T15:11:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/markets/2026-09-08-strive-adds-1375-bitcoin-sata-approaches-billion-dollar-milestone-413800"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:0d1c8ea4c20fe6c1"
+          ],
+          "time_precision": "published",
+          "title_en": "Strive adds 1,375 bitcoin as SATA approaches ‘billion-dollar’ milestone",
+          "title_zh": "Strive adds 1,375 bitcoin as SATA approaches ‘billion-dollar’ milestone",
+          "update_id": "upd_d06e1acd4f22350d",
+          "update_type": "initial",
+          "what_changed_en": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales.",
+          "what_changed_zh": "Strive adds 1,375 bitcoin as its SATA perpetual preferred stock approaches a billion-dollar milestone, with 70% of weekly capital raised from SATA sales."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+      "current_state_zh": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+      "entities": [
+        "bundesbank",
+        "labs",
+        "matter",
+        "matter-labs",
+        "open-source",
+        "prividium",
+        "zksync"
+      ],
+      "event_id": "evt_a2a27897f5ea05f7",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:10.789034Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:10.789034Z",
+      "last_updated_at": "2026-09-08T16:47:10.789034Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "ZKsync developer Matter Labs open-sources Prividium permissioning engine; Bundesbank tests platform",
+      "title_zh": "ZKsync developer Matter Labs open-sources Prividium permissioning engine; Bundesbank tests platform",
+      "topics": [
+        "bundesbank",
+        "matter-labs",
+        "open-source",
+        "prividium",
+        "zksync"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+          "current_state_zh": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+          "detailed_summary_en": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+          "detailed_summary_zh": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+          "event_id": "evt_a2a27897f5ea05f7",
+          "first_seen_at": "2026-09-08T16:47:10.789034Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T15:05:03Z",
+          "published_at": "2026-09-08T15:05:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/ecosystems/2026-09-08-zksync-developer-matter-labs-open-sources-prividium-permissioning-engine-bundesbank-tests-platform-413814"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:1fa85045ecf433b3"
+          ],
+          "time_precision": "published",
+          "title_en": "ZKsync developer Matter Labs open-sources Prividium permissioning engine; Bundesbank tests platform",
+          "title_zh": "ZKsync developer Matter Labs open-sources Prividium permissioning engine; Bundesbank tests platform",
+          "update_id": "upd_a8237bffa54ecf91",
+          "update_type": "initial",
+          "what_changed_en": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank.",
+          "what_changed_zh": "Matter Labs open-sources the permissioning engine of its Prividium platform, which is being tested by the Bundesbank."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "current_state_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "entities": [
+        "bitmine"
+      ],
+      "event_id": "evt_8c0cf5d1ff7fd2a0",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-08T16:47:10.824815Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:10.824815Z",
+      "last_updated_at": "2026-09-08T16:47:12.035517Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+      "title_zh": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+      "topics": [
+        "treasury"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+          "current_state_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+          "detailed_summary_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+          "detailed_summary_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+          "event_id": "evt_8c0cf5d1ff7fd2a0",
+          "first_seen_at": "2026-09-08T16:47:10.824815Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T13:51:54Z",
+          "published_at": "2026-09-08T13:51:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-08-bitmine-nears-5-of-ethereum-supply-after-buying-28086-eth-413790"
+            },
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/tradfi-and-fintech/bitmine-adds-28-086-eth-as-treasury-nears-5-of-supply"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:54232f92004c310c",
+            "rss:thedefiant.io_api_feed:8d1bf78f95b92d8b"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+          "title_zh": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+          "update_id": "upd_45e4bfd1f4b19701",
+          "update_type": "initial",
+          "what_changed_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+          "what_changed_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+      "current_state_zh": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+      "entities": [
+        "stablecoins",
+        "visa"
+      ],
+      "event_id": "evt_bc1165d99c69f4c3",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:10.928004Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:10.928004Z",
+      "last_updated_at": "2026-09-08T16:47:10.928004Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Visa stablecoin settlement tops $20 billion annualized run rate, up more than 15x year over year",
+      "title_zh": "Visa stablecoin settlement tops $20 billion annualized run rate, up more than 15x year over year",
+      "topics": [
+        "stablecoins",
+        "visa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+          "current_state_zh": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+          "detailed_summary_en": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+          "detailed_summary_zh": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+          "event_id": "evt_bc1165d99c69f4c3",
+          "first_seen_at": "2026-09-08T16:47:10.928004Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:09:21Z",
+          "published_at": "2026-09-08T11:09:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-08-visa-stablecoin-settlement-tops-20-billion-annualized-run-rate-up-more-than-15x-year-over-year-413749"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:28cd38256c5a7466"
+          ],
+          "time_precision": "published",
+          "title_en": "Visa stablecoin settlement tops $20 billion annualized run rate, up more than 15x year over year",
+          "title_zh": "Visa stablecoin settlement tops $20 billion annualized run rate, up more than 15x year over year",
+          "update_id": "upd_01cefaf872fe0754",
+          "update_type": "initial",
+          "what_changed_en": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year.",
+          "what_changed_zh": "Visa's stablecoin settlement volume has surpassed a $20 billion annualized run rate, growing more than 15x year over year."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+      "current_state_zh": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+      "entities": [
+        "citi",
+        "complete",
+        "dbs",
+        "dollar",
+        "ledger",
+        "payment",
+        "swift",
+        "weekend"
+      ],
+      "event_id": "evt_d7d0f1cc19ba3130",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:11.997357Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:11.997357Z",
+      "last_updated_at": "2026-09-08T16:47:11.997357Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "DBS and Citi Complete Weekend Dollar Payment on Swift Ledger",
+      "title_zh": "DBS and Citi Complete Weekend Dollar Payment on Swift Ledger",
+      "topics": [
+        "citi",
+        "cross-border-payments",
+        "dbs",
+        "swift"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+          "current_state_zh": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+          "detailed_summary_en": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+          "detailed_summary_zh": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+          "event_id": "evt_d7d0f1cc19ba3130",
+          "first_seen_at": "2026-09-08T16:47:11.997357Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T16:01:32Z",
+          "published_at": "2026-09-08T16:01:32Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/dbs-and-citi-complete-weekend-dollar-payment-on-swift-ledger"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:89ea900d50c1294d"
+          ],
+          "time_precision": "published",
+          "title_en": "DBS and Citi Complete Weekend Dollar Payment on Swift Ledger",
+          "title_zh": "DBS and Citi Complete Weekend Dollar Payment on Swift Ledger",
+          "update_id": "upd_6e2a08fba76b99ed",
+          "update_type": "initial",
+          "what_changed_en": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails.",
+          "what_changed_zh": "DBS and Citi completed a weekend dollar transfer on Swift's ledger in minutes, though settlement still occurs through traditional banking rails."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+      "current_state_zh": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+      "entities": [
+        "harmony",
+        "moving",
+        "one",
+        "pivot",
+        "proposes",
+        "sunsetting",
+        "video"
+      ],
+      "event_id": "evt_6da3ba3e0444bbd1",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:12.021938Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:12.021938Z",
+      "last_updated_at": "2026-09-08T16:47:12.021938Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Harmony Proposes Sunsetting Network and Moving ONE to Ethereum for AI Video Pivot",
+      "title_zh": "Harmony Proposes Sunsetting Network and Moving ONE to Ethereum for AI Video Pivot",
+      "topics": [
+        "ai-pivot",
+        "harmony",
+        "network-sunset",
+        "one"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+          "current_state_zh": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+          "detailed_summary_en": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+          "detailed_summary_zh": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+          "event_id": "evt_6da3ba3e0444bbd1",
+          "first_seen_at": "2026-09-08T16:47:12.021938Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T15:40:18Z",
+          "published_at": "2026-09-08T15:40:18Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/blockchains/harmony-proposes-sunsetting-network-and-moving-one-to-ethereum"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:736c043e4616be83"
+          ],
+          "time_precision": "published",
+          "title_en": "Harmony Proposes Sunsetting Network and Moving ONE to Ethereum for AI Video Pivot",
+          "title_zh": "Harmony Proposes Sunsetting Network and Moving ONE to Ethereum for AI Video Pivot",
+          "update_id": "upd_fc8478beab860d92",
+          "update_type": "initial",
+          "what_changed_en": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10.",
+          "what_changed_zh": "Harmony proposes sunsetting its network, snapshotting ONE at the final block, and redirecting emissions to an AI video business, urging users to exit smart contracts before Sept. 10."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+      "current_state_zh": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+      "entities": [
+        "and",
+        "contracts",
+        "cryptocom",
+        "exchange",
+        "football",
+        "robinhood",
+        "routes",
+        "stakes",
+        "takes",
+        "their"
+      ],
+      "event_id": "evt_55274fd582b2741b",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-08T16:47:12.063737Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:12.063737Z",
+      "last_updated_at": "2026-09-08T16:47:17.732745Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Robinhood Takes Stakes In Crypto.com And OG.com, Routes Football Contracts To Their Exchange",
+      "title_zh": "Robinhood Takes Stakes In Crypto.com And OG.com, Routes Football Contracts To Their Exchange",
+      "topics": [
+        "cftc",
+        "cryptocom",
+        "partnership",
+        "prediction-markets",
+        "robinhood"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+          "current_state_zh": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+          "detailed_summary_en": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+          "detailed_summary_zh": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+          "event_id": "evt_55274fd582b2741b",
+          "first_seen_at": "2026-09-08T16:47:12.063737Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T15:01:38Z",
+          "published_at": "2026-09-08T15:01:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/tradfi-and-fintech/robinhood-takes-stakes-in-crypto-com-and-og-com-as-it-routes-football-contracts"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377676/robinhood-equity-crypto-com-prediction-markets"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/markets/2026-09-08-robinhood-expands-prediction-markets-crypto-com-og-partnerships-nfl-season-413832"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:66e204741f5db7e7",
+            "rss:decrypt.co_feed:f48bd026060ac175",
+            "rss:www.theblock.co_rss.xml:866171e0d6c2bad3"
+          ],
+          "time_precision": "published",
+          "title_en": "Robinhood Takes Stakes In Crypto.com And OG.com, Routes Football Contracts To Their Exchange",
+          "title_zh": "Robinhood Takes Stakes In Crypto.com And OG.com, Routes Football Contracts To Their Exchange",
+          "update_id": "upd_cafb904ce773f5d4",
+          "update_type": "initial",
+          "what_changed_en": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange.",
+          "what_changed_zh": "Robinhood takes stakes in Crypto.com and OG.com, routing football event contracts to Crypto.com's CFTC-regulated exchange."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+      "current_state_zh": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+      "entities": [
+        "active",
+        "malware"
+      ],
+      "event_id": "evt_245b08386a24cb44",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T16:47:13.043546Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:13.043546Z",
+      "last_updated_at": "2026-09-08T16:47:13.043546Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Active crypto address “copy and paste attack” threatens users even after major malware cleanup cut off hackers",
+      "title_zh": "Active crypto address “copy and paste attack” threatens users even after major malware cleanup cut off hackers",
+      "topics": [
+        "botnet",
+        "crypto-theft",
+        "law-enforcement",
+        "malware"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+          "current_state_zh": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+          "detailed_summary_en": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+          "detailed_summary_zh": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+          "event_id": "evt_245b08386a24cb44",
+          "first_seen_at": "2026-09-08T16:47:13.043546Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T14:35:04Z",
+          "published_at": "2026-09-08T14:35:04Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/copy-and-paste-crypto-address-attack-remains-active-after-major-malware-cleanup-cut-off-hacker-controls/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:40f1659ef76501ff"
+          ],
+          "time_precision": "published",
+          "title_en": "Active crypto address “copy and paste attack” threatens users even after major malware cleanup cut off hackers",
+          "title_zh": "Active crypto address “copy and paste attack” threatens users even after major malware cleanup cut off hackers",
+          "update_id": "upd_d2579c841c1f5afb",
+          "update_type": "initial",
+          "what_changed_en": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users.",
+          "what_changed_zh": "The Sality botnet takedown cut off new malware delivery, but existing infections with the EggJagger crypto-address-swapping malware remain active, posing ongoing risks to users."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+      "current_state_zh": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+      "entities": [
+        "staking"
+      ],
+      "event_id": "evt_96b5093a9ee978a4",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-08T16:47:13.262199Z",
+      "identifiers": [
+        "eip-8363"
+      ],
+      "last_material_change_at": "2026-09-08T16:47:13.262199Z",
+      "last_updated_at": "2026-09-08T16:47:13.262199Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "The fight over Ethereum’s supply is forcing a choice between high staking yields and the value of your ETH",
+      "title_zh": "The fight over Ethereum’s supply is forcing a choice between high staking yields and the value of your ETH",
+      "topics": [
+        "eip-8363",
+        "issuance",
+        "staking"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+          "current_state_zh": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+          "detailed_summary_en": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+          "detailed_summary_zh": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+          "event_id": "evt_96b5093a9ee978a4",
+          "first_seen_at": "2026-09-08T16:47:13.262199Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T12:35:47Z",
+          "published_at": "2026-09-08T12:35:47Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/the-fight-over-ethereums-supply-is-forcing-a-choice-between-high-staking-yields-and-the-value-of-your-eth/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:dae0ea2001ce151a"
+          ],
+          "time_precision": "published",
+          "title_en": "The fight over Ethereum’s supply is forcing a choice between high staking yields and the value of your ETH",
+          "title_zh": "The fight over Ethereum’s supply is forcing a choice between high staking yields and the value of your ETH",
+          "update_id": "upd_58f306b97f43177a",
+          "update_type": "initial",
+          "what_changed_en": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value.",
+          "what_changed_zh": "The Ethereum Foundation's Protocol cluster has declined to prioritize EIP-8363, which would burn part of validator rewards, and instead calls for a broader ecosystem debate on issuance policy, highlighting a trade-off between staking yields and ETH value."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+      "current_state_zh": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+      "entities": [
+        "ada",
+        "cardano",
+        "leios",
+        "scaling"
+      ],
+      "event_id": "evt_581198c167380cbb",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-08T16:47:13.369296Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:13.369296Z",
+      "last_updated_at": "2026-09-08T16:47:13.369296Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Cardano’s Leios 6x scaling breakthrough comes with a much harder ADA problem",
+      "title_zh": "Cardano’s Leios 6x scaling breakthrough comes with a much harder ADA problem",
+      "topics": [
+        "cardano",
+        "crypto-protocols",
+        "leios",
+        "scaling",
+        "staking"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+          "current_state_zh": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+          "detailed_summary_en": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+          "detailed_summary_zh": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+          "event_id": "evt_581198c167380cbb",
+          "first_seen_at": "2026-09-08T16:47:13.369296Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:50:28Z",
+          "published_at": "2026-09-08T11:50:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/cardanos-leios-6x-scaling-breakthrough-comes-with-a-much-harder-ada-problem/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:61792470fdd1d6cc"
+          ],
+          "time_precision": "published",
+          "title_en": "Cardano’s Leios 6x scaling breakthrough comes with a much harder ADA problem",
+          "title_zh": "Cardano’s Leios 6x scaling breakthrough comes with a much harder ADA problem",
+          "update_id": "upd_d71e7678708083e7",
+          "update_type": "initial",
+          "what_changed_en": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees.",
+          "what_changed_zh": "Cardano's Leios upgrade shows sixfold throughput gains in testnet but faces economic challenges as staking rewards depend on real user fees."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+      "current_state_zh": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+      "entities": [],
+      "event_id": "evt_0fe9486d1156b483",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-08T16:47:13.571221Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:13.571221Z",
+      "last_updated_at": "2026-09-08T16:47:13.571221Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ethereum’s 2029 quantum deadline is starting to reshape what gets built next",
+      "title_zh": "Ethereum’s 2029 quantum deadline is starting to reshape what gets built next",
+      "topics": [
+        "protocol-upgrade",
+        "quantum-resistance",
+        "roadmap"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+          "current_state_zh": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+          "detailed_summary_en": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+          "detailed_summary_zh": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+          "event_id": "evt_0fe9486d1156b483",
+          "first_seen_at": "2026-09-08T16:47:13.571221Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T10:40:21Z",
+          "published_at": "2026-09-08T10:40:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/ethereums-2029-quantum-deadline-is-starting-to-reshape-what-gets-built-next/"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/08/ethereum-makes-quantum-resistance-a-top-priority-with-a-2029-deadline"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:1c053dc8b38033a2",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:73061c17e32007d0"
+          ],
+          "time_precision": "published",
+          "title_en": "Ethereum’s 2029 quantum deadline is starting to reshape what gets built next",
+          "title_zh": "Ethereum’s 2029 quantum deadline is starting to reshape what gets built next",
+          "update_id": "upd_2b854ec55382c712",
+          "update_type": "initial",
+          "what_changed_en": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
+          "what_changed_zh": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+      "current_state_zh": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+      "entities": [
+        "harmony"
+      ],
+      "event_id": "evt_47011d8b1de79cfb",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T16:47:14.233433Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:14.233433Z",
+      "last_updated_at": "2026-09-08T16:47:14.233433Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Harmony shuts down over AI fears, but will it be safer on Ethereum?",
+      "title_zh": "Harmony shuts down over AI fears, but will it be safer on Ethereum?",
+      "topics": [
+        "harmony",
+        "shutdown"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+          "current_state_zh": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+          "detailed_summary_en": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+          "detailed_summary_zh": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+          "event_id": "evt_47011d8b1de79cfb",
+          "first_seen_at": "2026-09-08T16:47:14.233433Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:38:06Z",
+          "published_at": "2026-09-08T11:38:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/harmony-shuts-down-over-ai-fears-but-will-it-be-safer-on-ethereum/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:2e1e56ed4c811b3c"
+          ],
+          "time_precision": "published",
+          "title_en": "Harmony shuts down over AI fears, but will it be safer on Ethereum?",
+          "title_zh": "Harmony shuts down over AI fears, but will it be safer on Ethereum?",
+          "update_id": "upd_3e664d3f7193a77f",
+          "update_type": "initial",
+          "what_changed_en": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there.",
+          "what_changed_zh": "Harmony Protocol is shutting down due to fears of state actors and AI agents, migrating to Ethereum for safety, despite ongoing hack risks there."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+      "current_state_zh": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+      "entities": [
+        "circle",
+        "cross-border-payments",
+        "tazapay",
+        "usdc"
+      ],
+      "event_id": "evt_0b525c2cc69801b7",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T16:47:19.994649Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T16:47:19.994649Z",
+      "last_updated_at": "2026-09-08T16:47:19.994649Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Circle to acquire Tazapay to expand USDC cross-border payments",
+      "title_zh": "Circle to acquire Tazapay to expand USDC cross-border payments",
+      "topics": [
+        "acquisition",
+        "circle",
+        "cross-border-payments",
+        "usdc"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+          "current_state_zh": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+          "detailed_summary_en": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+          "detailed_summary_zh": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+          "event_id": "evt_0b525c2cc69801b7",
+          "first_seen_at": "2026-09-08T16:47:19.994649Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-08T11:33:14Z",
+          "published_at": "2026-09-08T11:33:14Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/circle-tazapay-usdc-cross-border-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/08/circle-agrees-to-buy-cross-border-payments-firm-tazapay-for-usd400-million"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:20e46ae9730d191b",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:0c439be8d053f62f"
+          ],
+          "time_precision": "published",
+          "title_en": "Circle to acquire Tazapay to expand USDC cross-border payments",
+          "title_zh": "Circle to acquire Tazapay to expand USDC cross-border payments",
+          "update_id": "upd_4e0efadfea4c26ab",
+          "update_type": "initial",
+          "what_changed_en": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments.",
+          "what_changed_zh": "Circle agrees to acquire Singapore-based cross-border payments platform Tazapay for $400 million in stock to expand USDC's reach in global payments."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -27931,42 +29613,6 @@
         "source_type": "google_news",
         "title": "Poland Crypto Bill Blocked After Third Presidential Veto - blockchainreporter",
         "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNT3FtRG9kYl9adHNCSlVlLVdmamtGYkNpeS0yVFhSYXJOaWxKbm5aNWxNbTNhVWlaLU1uZHRyR3hBb2hGOTJFeXlGbkl2a3hsejRIdlFjdDRWVTc5b2Y0YklNcG9VZWU4UC1tV1Y4cWUxc3N3X2x5d2t4SHg3cTFTRVRxUGpMUjNTelE?oc=5"
-      }
-    },
-    {
-      "attempts": 1,
-      "item": {
-        "ai_reason": "A confirmed exploit on the Cronos chain with $9.2 million unrecovered despite a rollback is a significant security incident affecting user funds and protocol integrity, warranting high attention.",
-        "ai_score": 8.5,
-        "ai_summary": "Cronos reports that $9.2 million remains unrecovered after a Tectonic exploit, despite a chain rollback reversing about $111.2 million.",
-        "ai_tags": [
-          "crypto",
-          "security",
-          "exploit",
-          "Cronos",
-          "Tectonic"
-        ],
-        "author": "Timmy Shen",
-        "content": "A subsequent rollback reversed roughly $111.2 million, but $9.19 million had already left the chain and remains unrecovered, Cronos says.",
-        "fetched_at": "2026-09-08T08:58:37.260429Z",
-        "id": "rss:www.theblock.co_rss.xml:e22ed4ddaf60cf0c",
-        "metadata": {
-          "category": "crypto-protocols",
-          "event_retry_pending": true,
-          "feed_name": "The Block",
-          "source_category": "crypto-markets",
-          "tags": [
-            "Crypto Ecosystems",
-            "DeFi",
-            "Security",
-            "Exploits",
-            "News"
-          ]
-        },
-        "published_at": "2026-09-08T05:51:16Z",
-        "source_type": "rss",
-        "title": "Cronos says $9.2 million remains unrecovered after Tectonic exploit, chain rollback",
-        "url": "https://www.theblock.co/news/ecosystems/2026-09-08-cronos-post-mortem-413724"
       }
     }
   ],
