@@ -15,11 +15,11 @@
     "en": "Bybit uncovers an AI-assisted macOS malware campaign targeting users searching for Claude Code, highlighting a new security threat in the crypto ecosystem."
   },
   "first_seen_at": "2026-09-07T17:49:55.748803+00:00",
-  "last_updated_at": "2026-09-07T17:49:55.748803+00:00",
+  "last_updated_at": "2026-09-08T04:22:27.814322+00:00",
   "last_material_change_at": "2026-09-07T17:49:55.748803+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "assisted",
     "bybit",
@@ -58,21 +58,41 @@
       "current_state_en": "Bybit uncovers an AI-assisted macOS malware campaign targeting users searching for Claude Code, highlighting a new security threat in the crypto ecosystem.",
       "detailed_summary_zh": "Bybit uncovers an AI-assisted macOS malware campaign targeting users searching for Claude Code, highlighting a new security threat in the crypto ecosystem.",
       "detailed_summary_en": "Bybit uncovers an AI-assisted macOS malware campaign targeting users searching for Claude Code, highlighting a new security threat in the crypto ecosystem.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Claude Code是Anthropic推出的一款代理式编码工具，可供使用Claude AI模型的开发者读取代码库、编辑文件、运行命令，并集成到开发工具中。它在程序员中迅速流行，因此成为攻击者眼中的诱人目标。AI辅助恶意软件是一个日益增长的趋势，多个研究团队已记录到攻击者利用LLM编写或改进信息窃取器、挖矿程序及其他恶意工具的活动。",
+      "background_en": "Claude Code is Anthropic's agentic coding tool that reads codebases, edits files, runs commands, and integrates with development tools for developers using Claude AI models. It has quickly gained popularity among programmers, making it an attractive lure for attackers. AI-assisted malware is a growing trend, with research teams documenting campaigns where threat actors use LLMs to write or refine infostealers, coin miners, and other malicious tools.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该披露主要是一项安全警告，而非影响市场的重大事件。主要风险传导渠道是间接的：受macOS恶意软件感染的开发者可能面临凭据或加密货币钱包密钥被盗的风险，而同时使用Claude Code的交易所用户也可能受到波及，但目前尚未有实际入侵或资金损失的报道。",
+      "market_impact_en": "The disclosure is primarily a security notice rather than a market-moving event. The main risk channel is indirect: developers infected by the macOS malware could have their credentials or crypto wallet keys stolen, and exchange users who also use Claude Code could be exposed, but no actual compromise or fund loss has been reported.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
+          "title": "Claude (AI) - Wikipedia"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/overview",
+          "title": "Overview - Claude Code Docs"
+        },
+        {
+          "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/ai-written-malware-vibe-coded-campaign/",
+          "title": "AI Wrote This Malware: Dissecting the Insides of a Vibe-Coded Malware Campaign | McAfee Blog"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
-        "google_news:article:69074cb688a65327"
+        "google_news:article:69074cb688a65327",
+        "google_news:article:00dcd87f37c755cc"
       ],
       "sources": [
         {
           "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQaWpyVVFvMzFzSWV5VWlTeTN6TEhNMU5CaVAwOWpETzlQYU95RHZHU3FHQUVYUjhnSFhfNERjeFFKd3RuYmZqMmZ5d2hFbUd1X21EQ1NHbFpKd1psRzRsTFFjYlRJcVcxX3N4ck1iOGFfNmdvbGxOdldrNmZoTGxwa3J1N2I0ZUZRQnNQWnZRTHZPTzhEejR3Q1lTcTVmTWNHUml4X3FnZ0NObDk3aUh6a3BHRV85RFJlXzlLc2lxdHNUdTRxN0VXcTRNQXBtSHk1LUp6UGc2SC1lYmx6SHVudVBqVURGc0o1ZDg2WFE4R0NBcUlGUEJkcE1HTEdYQkhQOUpJSFFCM0RaM1RfZUln?oc=5",
+          "label": "Yellow.com",
+          "source_type": "google_news",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMDdSaFZGOUVUSkVDVTlJSlBCbEdEdTJZUUNPQ0U0b19iVWV3VGV6MmllSnhTazd6UTFsMEpZSG9BdDBOUmpuUVFRSTQyS1dsOEt0YTlocGlBVkt2c2g5OWNIXzNtVC11VGttdkJacnFYUHYyVkRIai1BNWhDajZmeTB6Z0RVUmt6bDJsOWFZMWVlSVdXZ2lGNjFDc0drTWxFaFNPV2ZGQnRmc1NkdDlQTjgzNzIyMGdxWlBSZkNDY1BoYzBmTVF0R1VZTmFNekNlTXhPT2M2NVcxdW9PNXlVa19Ldkw?oc=5",
           "label": "Yellow.com",
           "source_type": "google_news",
           "official": false

@@ -24317,6 +24317,14 @@
             {
               "title": "From Bybit to GMX: The 10 biggest crypto hacks of 2025",
               "url": "https://www.theblock.co/news/regulation/2026-01-01-biggest-crypto-hacks-2025-380992"
+            },
+            {
+              "title": "Liquid Exchange Hacker Covers Tracks by Sending $20M to ETH Mixer",
+              "url": "https://www.coindesk.com/business/2021/08/21/liquid-exchange-hacker-covers-tracks-by-sending-20m-to-eth-mixer"
+            },
+            {
+              "title": "Liquid Exchange Hacker 1 | Address... | Etherscan",
+              "url": "https://etherscan.io/address/0x5578840aae68682a9779623fa9e8714802b59946"
             }
           ],
           "sources": [
@@ -24870,8 +24878,8 @@
           "what_changed_zh": "The Coldcard exploiter has moved 45% of the funds stolen from 'Wave 3' attacks, totaling roughly 1,779 BTC from 190 victims."
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Coldcard is a Bitcoin hardware wallet that keeps private keys offline, and attackers have exploited flaws in its key-generation process to drain wallets. THORChain is a decentralized exchange that lets users swap native Bitcoin across blockchains without KYC or wrapped tokens, while CoinJoin is a Bitcoin privacy technique that combines multiple users' payments into one transaction to obscure the trail. Galaxy Research tracked these movements on-chain to estimate how much of the stolen funds has been laundered and how much remains under attacker control.",
+          "background_zh": "Coldcard 是一种比特币硬件钱包，通过离线保存私钥来保护资产，而攻击者利用其密钥生成过程中的漏洞掏空了用户钱包。THORChain 是一个去中心化交易所，允许用户无需 KYC 或包装代币即可跨链兑换原生比特币；CoinJoin 则是一种比特币隐私技术，将多个用户的付款合并到一笔交易中以混淆资金去向。Galaxy Research 通过链上追踪这些转账，估算已被洗钱以及仍由攻击者控制的资金比例。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.9,
@@ -24882,12 +24890,25 @@
           "event_id": "evt_65f972f6d8c15c28",
           "first_seen_at": "2026-09-07T17:50:05.285366Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "Movement of stolen BTC through THORChain and CoinJoin raises the likelihood that some funds eventually reach exchanges, which could affect Bitcoin liquidity and sentiment; at the same time, high-profile Coldcard incidents may shake confidence in hardware-wallet products. The transfers themselves do not constitute a direct market trade and should not be read as a directional signal.",
+          "market_impact_zh": "被盗 BTC 经 THORChain 和 CoinJoin 转移，增加了部分资金最终流入交易所的可能性，可能影响比特币的流动性和市场情绪；同时，备受关注的 Coldcard 事件也可能削弱用户对硬件钱包产品的信心。这些转账本身不算直接市场交易，不应被视为价格方向性信号。",
           "material_change": true,
           "occurred_at": "2026-09-07T09:36:19Z",
           "published_at": "2026-09-07T09:36:19Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Crypto DEX | Swap BTC, ETH, & XMR | No KYC | THORChain",
+              "url": "https://thorchain.org/"
+            },
+            {
+              "title": "Monero vs CoinJoin: अंतर्निहित प्राइवेसी vs बिटकॉइन... | MoneroSwapper",
+              "url": "https://moneroswapper.io/blog/monero-vs-coinjoin-privacy-comparison-hi"
+            },
+            {
+              "title": "$38M stolen from Coldcard bitcoin wallets due t... | Pluang",
+              "url": "https://pluang.com/en/news-feed/kerentanan-dompet-hardware-coldcard-bobol-rp38-miliar-bitcoin"
+            }
+          ],
           "sources": [
             {
               "label": "Cointelegraph",
@@ -25076,7 +25097,7 @@
       "first_seen_at": "2026-09-07T17:49:55.748803Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-07T17:49:55.748803Z",
-      "last_updated_at": "2026-09-07T17:49:55.748803Z",
+      "last_updated_at": "2026-09-08T04:22:27.814322Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -25089,8 +25110,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Claude Code is Anthropic's agentic coding tool that reads codebases, edits files, runs commands, and integrates with development tools for developers using Claude AI models. It has quickly gained popularity among programmers, making it an attractive lure for attackers. AI-assisted malware is a growing trend, with research teams documenting campaigns where threat actors use LLMs to write or refine infostealers, coin miners, and other malicious tools.",
+          "background_zh": "Claude Code是Anthropic推出的一款代理式编码工具，可供使用Claude AI模型的开发者读取代码库、编辑文件、运行命令，并集成到开发工具中。它在程序员中迅速流行，因此成为攻击者眼中的诱人目标。AI辅助恶意软件是一个日益增长的趋势，多个研究团队已记录到攻击者利用LLM编写或改进信息窃取器、挖矿程序及其他恶意工具的活动。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -25101,22 +25122,42 @@
           "event_id": "evt_1e23aadf6dbd433d",
           "first_seen_at": "2026-09-07T17:49:55.748803Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The disclosure is primarily a security notice rather than a market-moving event. The main risk channel is indirect: developers infected by the macOS malware could have their credentials or crypto wallet keys stolen, and exchange users who also use Claude Code could be exposed, but no actual compromise or fund loss has been reported.",
+          "market_impact_zh": "该披露主要是一项安全警告，而非影响市场的重大事件。主要风险传导渠道是间接的：受macOS恶意软件感染的开发者可能面临凭据或加密货币钱包密钥被盗的风险，而同时使用Claude Code的交易所用户也可能受到波及，但目前尚未有实际入侵或资金损失的报道。",
           "material_change": true,
           "occurred_at": "2026-09-07T12:23:48Z",
           "published_at": "2026-09-07T12:23:48Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Claude (AI) - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Claude_(AI)"
+            },
+            {
+              "title": "Overview - Claude Code Docs",
+              "url": "https://code.claude.com/docs/en/overview"
+            },
+            {
+              "title": "AI Wrote This Malware: Dissecting the Insides of a Vibe-Coded Malware Campaign | McAfee Blog",
+              "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/ai-written-malware-vibe-coded-campaign/"
+            }
+          ],
           "sources": [
             {
               "label": "Yellow.com",
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQaWpyVVFvMzFzSWV5VWlTeTN6TEhNMU5CaVAwOWpETzlQYU95RHZHU3FHQUVYUjhnSFhfNERjeFFKd3RuYmZqMmZ5d2hFbUd1X21EQ1NHbFpKd1psRzRsTFFjYlRJcVcxX3N4ck1iOGFfNmdvbGxOdldrNmZoTGxwa3J1N2I0ZUZRQnNQWnZRTHZPTzhEejR3Q1lTcTVmTWNHUml4X3FnZ0NObDk3aUh6a3BHRV85RFJlXzlLc2lxdHNUdTRxN0VXcTRNQXBtSHk1LUp6UGc2SC1lYmx6SHVudVBqVURGc0o1ZDg2WFE4R0NBcUlGUEJkcE1HTEdYQkhQOUpJSFFCM0RaM1RfZUln?oc=5"
+            },
+            {
+              "label": "Yellow.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMDdSaFZGOUVUSkVDVTlJSlBCbEdEdTJZUUNPQ0U0b19iVWV3VGV6MmllSnhTazd6UTFsMEpZSG9BdDBOUmpuUVFRSTQyS1dsOEt0YTlocGlBVkt2c2g5OWNIXzNtVC11VGttdkJacnFYUHYyVkRIai1BNWhDajZmeTB6Z0RVUmt6bDJsOWFZMWVlSVdXZ2lGNjFDc0drTWxFaFNPV2ZGQnRmc1NkdDlQTjgzNzIyMGdxWlBSZkNDY1BoYzBmTVF0R1VZTmFNekNlTXhPT2M2NVcxdW9PNXlVa19Ldkw?oc=5"
             }
           ],
           "story_ids": [
-            "google_news:article:69074cb688a65327"
+            "google_news:article:69074cb688a65327",
+            "google_news:article:00dcd87f37c755cc"
           ],
           "time_precision": "published",
           "title_en": "Bybit Uncovers AI-Assisted macOS Malware Campaign Targeting Users Searching for Claude Code - Yellow.com",
@@ -26242,8 +26283,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Social engineering is a form of psychological manipulation used to pressure people into revealing confidential information or performing actions, and phishing is a common subtype. In the cryptocurrency world, fraudsters often impersonate support staff from trusted services such as Google or Gemini to obtain security codes or persuade victims to install remote-access software. A hardware wallet stores private keys offline, which is why physical break-ins became part of the alleged scheme. Prosecutors also allege the group laundered proceeds through privacy-focused Monero and 'peel chains' before spending cash on luxury goods.",
+          "background_zh": "社会工程学是一种通过心理操控迫使人们泄露机密信息或执行操作的攻击方式，网络钓鱼是其常见类型。在加密货币领域，诈骗者常冒充Google或Gemini等可信服务的客服人员，骗取安全代码或诱骗受害者安装远程访问软件。硬件钱包将私钥离线存储，因此该团伙被指控在必要时入室盗窃硬件钱包。检方还指控该团伙通过注重隐私的Monero和“peel chain”洗钱，再将现金用于购买奢侈品。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -26259,7 +26300,20 @@
           "material_change": true,
           "occurred_at": "2026-09-07T17:41:55Z",
           "published_at": "2026-09-07T17:41:55Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Social engineering (security) - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+            },
+            {
+              "title": "Hardware wallet",
+              "url": "https://en.wikipedia.org/wiki/Hardware_wallet"
+            },
+            {
+              "title": "investopedia.com/terms/r/racketeering.asp",
+              "url": "https://www.investopedia.com/terms/r/racketeering.asp"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",
@@ -27223,6 +27277,14 @@
             {
               "title": "Show HN: Stuxnet – A reconstructed source code of... | Hacker News",
               "url": "https://news.ycombinator.com/item?id=49603546"
+            },
+            {
+              "title": "GitHub - Sadpainy/Stuxnet: Stuxnet, Here reproduced by me, Only for ...",
+              "url": "https://github.com/Sadpainy/Stuxnet"
+            },
+            {
+              "title": "Stuxnet - Educational reconstruction · Hacker News | Zeli",
+              "url": "https://zeli.app/story/49603546"
             }
           ],
           "sources": [
@@ -27243,6 +27305,98 @@
           "update_type": "initial",
           "what_changed_en": "A Hacker News user posted a reconstructed source code of the Stuxnet malware on GitHub, claiming it is for research and educational use only. The project, which runs on Windows XP and Windows 7, reproduces the code of the cyber-weapon that was discovered in 2010.\n\nStuxnet is widely regarded as the world's first digital weapon to cause physical destruction, having reportedly ruined nearly one-fifth of Iran's nuclear centrifuges. Making a reconstructed version accessible supports historical and technical education, but also raises dual-use concerns about enabling attackers to study a real offensive cyber-capability.\n\nAccording to a comment in the discussion, the reconstructed code spans roughly 15,000 lines and is based on the same target as the original Stuxnet: Siemens S7 PLCs and WINCC HMI systems. The repository explicitly states it works only on Windows XP and Windows 7.",
           "what_changed_zh": "一位黑客新闻（Hacker News）用户发布了震网（Stuxnet）恶意软件的重构源代码，声称仅供研究和教育使用。该项目于GitHub上公开，可在Windows XP和Windows 7上运行，复现了2010年被发现的这款网络武器的代码。\n\n震网被广泛认为是全球首款能够造成物理破坏的数字武器，据报道曾摧毁伊朗近五分之一的核离心机。公开其重构源代码有助于历史和技术教育，但也引发了双重用途的担忧，即可能让攻击者研究真实的攻击性网络能力。\n\n根据讨论区评论，这段重构代码约有15,000行，针对与原始震网相同的目标：西门子S7 PLC和WINCC HMI系统。仓库声明其仅在Windows XP和Windows 7上运行。"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Terrastruct's TALA layout engine, optimized for D2 software architecture diagrams, has been open-sourced. Previously a separate commercial and proprietary component, TALA is now available on GitHub and can be activated via the D2_LAYOUT environment variable.\n\nD2 users previously had to pay for or skip TALA, despite many finding its output markedly better than D2's default layout or ELK. Open-sourcing makes this layout engine freely available to the community and invites outside contributions, which could accelerate its improvement and broaden adoption.\n\nTALA is a separate install from D2, preserving D2 itself as fully free and open-source software, and it is invoked by setting the D2_LAYOUT environment variable rather than being the default renderer. It powers all diagrams in D2 Studio, and Terrastruct invites users to file bugs and feature requests as GitHub issues.",
+      "current_state_zh": "Terrastruct 推出的 TALA 布局引擎已开源，它专为 D2 软件架构图优化。TALA 之前是独立销售、闭源的组件，现已发布到 GitHub，并可通过 D2_LAYOUT 环境变量来启用。\n\n此前 D2 用户通常需要付费购买 TALA，或者因为售价超出个人预算而放弃使用，尽管不少人认为它的输出效果明显优于 D2 默认布局甚至 ELK。开源使这一布局引擎免费向社区开放，并接受外部贡献，有望加快其演进并扩大使用范围。\n\nTALA 并不随 D2 默认打包，而是需要独立安装，这样可以让 D2 本身保持完全免费开源；使用时要通过 D2_LAYOUT 环境变量来指定，而不是作为默认渲染器。TALA 支撑着 D2 Studio 中所有图表的布局，Terrastruct 欢迎用户在 GitHub 上提交错误报告和功能请求。",
+      "entities": [
+        "diagrams",
+        "engine",
+        "goes",
+        "layout",
+        "layout-engine",
+        "open",
+        "open-source",
+        "source",
+        "tala"
+      ],
+      "event_id": "evt_28372e3fe9ddf3f8",
+      "event_type": "other",
+      "first_seen_at": "2026-09-08T04:22:28.727372Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T04:22:28.727372Z",
+      "last_updated_at": "2026-09-08T04:22:28.727372Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "TALA Layout Engine for D2 Diagrams Goes Open-Source",
+      "title_zh": "D2 图表布局引擎 TALA 宣布开源",
+      "topics": [
+        "d2",
+        "developer-tools",
+        "diagramming",
+        "layout-engine",
+        "open-source"
+      ],
+      "updates": [
+        {
+          "background_en": "D2 is a declarative diagramming language that turns text into diagrams, similar to Mermaid or GraphViz. Automatic layout quality matters greatly because poorly arranged nodes make diagrams hard to read and understand. TALA was originally developed by Terrastruct as a proprietary engine focused specifically on software architecture diagrams, rather than generic graph types.",
+          "background_zh": "D2 是一种声明式图表语言，能用文本生成图表，类似 Mermaid 或 GraphViz。自动布局质量非常重要，因为节点摆放不佳会让图表难以阅读和理解。TALA 最初由 Terrastruct 开发，是一款专有引擎，专门面向软件架构图，而不是通用的图类型。",
+          "community_discussion_en": "Reactions are broadly positive: one user calls the output much tidier, another plans to integrate it into Daedalus, and several note that TALA often improves on ELK. Some caveats emerged, including a Go queue example where TALA looks more complicated than alternatives, as well as a user who said TALA's old price exceeded their discretionary budget.",
+          "community_discussion_zh": "社区反馈总体积极：有用户称其输出整洁得多，有人计划把它集成到 Daedalus 中，还有多位用户指出 TALA 常常优于 ELK。不过也有保留意见：在 Go 队列示例中，TALA 的效果比其他方案看起来更复杂；还有用户表示，TALA 原来的定价超出了自己的可支配预算。",
+          "confidence": 0.75,
+          "current_state_en": "Terrastruct's TALA layout engine, optimized for D2 software architecture diagrams, has been open-sourced. Previously a separate commercial and proprietary component, TALA is now available on GitHub and can be activated via the D2_LAYOUT environment variable.\n\nD2 users previously had to pay for or skip TALA, despite many finding its output markedly better than D2's default layout or ELK. Open-sourcing makes this layout engine freely available to the community and invites outside contributions, which could accelerate its improvement and broaden adoption.\n\nTALA is a separate install from D2, preserving D2 itself as fully free and open-source software, and it is invoked by setting the D2_LAYOUT environment variable rather than being the default renderer. It powers all diagrams in D2 Studio, and Terrastruct invites users to file bugs and feature requests as GitHub issues.",
+          "current_state_zh": "Terrastruct 推出的 TALA 布局引擎已开源，它专为 D2 软件架构图优化。TALA 之前是独立销售、闭源的组件，现已发布到 GitHub，并可通过 D2_LAYOUT 环境变量来启用。\n\n此前 D2 用户通常需要付费购买 TALA，或者因为售价超出个人预算而放弃使用，尽管不少人认为它的输出效果明显优于 D2 默认布局甚至 ELK。开源使这一布局引擎免费向社区开放，并接受外部贡献，有望加快其演进并扩大使用范围。\n\nTALA 并不随 D2 默认打包，而是需要独立安装，这样可以让 D2 本身保持完全免费开源；使用时要通过 D2_LAYOUT 环境变量来指定，而不是作为默认渲染器。TALA 支撑着 D2 Studio 中所有图表的布局，Terrastruct 欢迎用户在 GitHub 上提交错误报告和功能请求。",
+          "detailed_summary_en": "Terrastruct's TALA layout engine, optimized for D2 software architecture diagrams, has been open-sourced. Previously a separate commercial and proprietary component, TALA is now available on GitHub and can be activated via the D2_LAYOUT environment variable.\n\nD2 users previously had to pay for or skip TALA, despite many finding its output markedly better than D2's default layout or ELK. Open-sourcing makes this layout engine freely available to the community and invites outside contributions, which could accelerate its improvement and broaden adoption.\n\nTALA is a separate install from D2, preserving D2 itself as fully free and open-source software, and it is invoked by setting the D2_LAYOUT environment variable rather than being the default renderer. It powers all diagrams in D2 Studio, and Terrastruct invites users to file bugs and feature requests as GitHub issues.",
+          "detailed_summary_zh": "Terrastruct 推出的 TALA 布局引擎已开源，它专为 D2 软件架构图优化。TALA 之前是独立销售、闭源的组件，现已发布到 GitHub，并可通过 D2_LAYOUT 环境变量来启用。\n\n此前 D2 用户通常需要付费购买 TALA，或者因为售价超出个人预算而放弃使用，尽管不少人认为它的输出效果明显优于 D2 默认布局甚至 ELK。开源使这一布局引擎免费向社区开放，并接受外部贡献，有望加快其演进并扩大使用范围。\n\nTALA 并不随 D2 默认打包，而是需要独立安装，这样可以让 D2 本身保持完全免费开源；使用时要通过 D2_LAYOUT 环境变量来指定，而不是作为默认渲染器。TALA 支撑着 D2 Studio 中所有图表的布局，Terrastruct 欢迎用户在 GitHub 上提交错误报告和功能请求。",
+          "event_id": "evt_28372e3fe9ddf3f8",
+          "first_seen_at": "2026-09-08T04:22:28.727372Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-07T23:37:42Z",
+          "published_at": "2026-09-07T23:37:42Z",
+          "references": [
+            {
+              "title": "TALA | D2 Documentation",
+              "url": "https://d2lang.com/tour/tala/"
+            },
+            {
+              "title": "TALA | Terrastruct's AutoLayout Approach",
+              "url": "https://terrastruct.com/tala/"
+            },
+            {
+              "title": "GitHub - terrastruct/TALA: A diagram layout engine designed specifically for software architecture diagrams · GitHub",
+              "url": "https://github.com/terrastruct/TALA"
+            },
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49604150"
+            }
+          ],
+          "sources": [
+            {
+              "label": "alixanderwang",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://d2lang.com/blog/tala-is-open-source/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49604150"
+          ],
+          "time_precision": "published",
+          "title_en": "TALA Layout Engine for D2 Diagrams Goes Open-Source",
+          "title_zh": "D2 图表布局引擎 TALA 宣布开源",
+          "update_id": "upd_b3711202436bce7a",
+          "update_type": "initial",
+          "what_changed_en": "Terrastruct's TALA layout engine, optimized for D2 software architecture diagrams, has been open-sourced. Previously a separate commercial and proprietary component, TALA is now available on GitHub and can be activated via the D2_LAYOUT environment variable.\n\nD2 users previously had to pay for or skip TALA, despite many finding its output markedly better than D2's default layout or ELK. Open-sourcing makes this layout engine freely available to the community and invites outside contributions, which could accelerate its improvement and broaden adoption.\n\nTALA is a separate install from D2, preserving D2 itself as fully free and open-source software, and it is invoked by setting the D2_LAYOUT environment variable rather than being the default renderer. It powers all diagrams in D2 Studio, and Terrastruct invites users to file bugs and feature requests as GitHub issues.",
+          "what_changed_zh": "Terrastruct 推出的 TALA 布局引擎已开源，它专为 D2 软件架构图优化。TALA 之前是独立销售、闭源的组件，现已发布到 GitHub，并可通过 D2_LAYOUT 环境变量来启用。\n\n此前 D2 用户通常需要付费购买 TALA，或者因为售价超出个人预算而放弃使用，尽管不少人认为它的输出效果明显优于 D2 默认布局甚至 ELK。开源使这一布局引擎免费向社区开放，并接受外部贡献，有望加快其演进并扩大使用范围。\n\nTALA 并不随 D2 默认打包，而是需要独立安装，这样可以让 D2 本身保持完全免费开源；使用时要通过 D2_LAYOUT 环境变量来指定，而不是作为默认渲染器。TALA 支撑着 D2 Studio 中所有图表的布局，Terrastruct 欢迎用户在 GitHub 上提交错误报告和功能请求。"
         }
       ]
     }

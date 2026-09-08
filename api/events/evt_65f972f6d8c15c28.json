@@ -110,14 +110,27 @@
       "current_state_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
       "detailed_summary_zh": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
       "detailed_summary_en": "The Coldcard third-wave attacker has moved 45% of stolen Bitcoin via THORChain and CoinJoin, with 82% of all stolen funds still in original addresses.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Coldcard 是一种比特币硬件钱包，通过离线保存私钥来保护资产，而攻击者利用其密钥生成过程中的漏洞掏空了用户钱包。THORChain 是一个去中心化交易所，允许用户无需 KYC 或包装代币即可跨链兑换原生比特币；CoinJoin 则是一种比特币隐私技术，将多个用户的付款合并到一笔交易中以混淆资金去向。Galaxy Research 通过链上追踪这些转账，估算已被洗钱以及仍由攻击者控制的资金比例。",
+      "background_en": "Coldcard is a Bitcoin hardware wallet that keeps private keys offline, and attackers have exploited flaws in its key-generation process to drain wallets. THORChain is a decentralized exchange that lets users swap native Bitcoin across blockchains without KYC or wrapped tokens, while CoinJoin is a Bitcoin privacy technique that combines multiple users' payments into one transaction to obscure the trail. Galaxy Research tracked these movements on-chain to estimate how much of the stolen funds has been laundered and how much remains under attacker control.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "被盗 BTC 经 THORChain 和 CoinJoin 转移，增加了部分资金最终流入交易所的可能性，可能影响比特币的流动性和市场情绪；同时，备受关注的 Coldcard 事件也可能削弱用户对硬件钱包产品的信心。这些转账本身不算直接市场交易，不应被视为价格方向性信号。",
+      "market_impact_en": "Movement of stolen BTC through THORChain and CoinJoin raises the likelihood that some funds eventually reach exchanges, which could affect Bitcoin liquidity and sentiment; at the same time, high-profile Coldcard incidents may shake confidence in hardware-wallet products. The transfers themselves do not constitute a direct market trade and should not be read as a directional signal.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://thorchain.org/",
+          "title": "Crypto DEX | Swap BTC, ETH, & XMR | No KYC | THORChain"
+        },
+        {
+          "url": "https://moneroswapper.io/blog/monero-vs-coinjoin-privacy-comparison-hi",
+          "title": "Monero vs CoinJoin: अंतर्निहित प्राइवेसी vs बिटकॉइन... | MoneroSwapper"
+        },
+        {
+          "url": "https://pluang.com/en/news-feed/kerentanan-dompet-hardware-coldcard-bobol-rp38-miliar-bitcoin",
+          "title": "$38M stolen from Coldcard bitcoin wallets due t... | Pluang"
+        }
+      ],
       "confidence": 0.9,
       "story_ids": [
         "rss:cointelegraph.com_rss:c79508931f63a9c3"
