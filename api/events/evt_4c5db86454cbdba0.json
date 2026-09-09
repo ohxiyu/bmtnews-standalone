@@ -15,11 +15,11 @@
     "en": "Malone Lam has pleaded guilty to his role in a $245M cryptocurrency social engineering scheme."
   },
   "first_seen_at": "2026-09-07T17:50:02.484854+00:00",
-  "last_updated_at": "2026-09-08T22:53:08.162068+00:00",
+  "last_updated_at": "2026-09-09T05:05:53.442392+00:00",
   "last_material_change_at": "2026-09-08T22:53:08.162068+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 2,
+  "sources_count": 3,
   "entities": [
     "faces",
     "hearing",
@@ -124,12 +124,19 @@
       ],
       "confidence": 0.95,
       "story_ids": [
-        "rss:www.theblock.co_rss.xml:4e48034106bdfdd5"
+        "rss:www.theblock.co_rss.xml:4e48034106bdfdd5",
+        "rss:cointelegraph.com_rss:b629a15923727bf7"
       ],
       "sources": [
         {
           "url": "https://www.theblock.co/news/regulation/2026-09-08-a-22-year-old-crypto-ringleader-pleads-guilty-to-245-million-racketeering-scheme-413911",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/malone-lam-pleads-guilty-245m-crypto-theft-conspiracy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }
