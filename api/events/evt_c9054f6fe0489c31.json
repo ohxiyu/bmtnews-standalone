@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "event_id": "evt_c9054f6fe0489c31",
+  "url": "https://bmt.news/events/evt_c9054f6fe0489c31/",
+  "json": "https://bmt.news/api/events/evt_c9054f6fe0489c31.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分",
+    "en": "Liquid Network hackers steal $320M in Bitcoin, return most after patch"
+  },
+  "current_state": {
+    "zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+    "en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding."
+  },
+  "first_seen_at": "2026-09-08T04:22:41.335877+00:00",
+  "last_updated_at": "2026-09-08T04:22:41.335877+00:00",
+  "last_material_change_at": "2026-09-08T04:22:41.335877+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "liquid",
+    "liquid-network"
+  ],
+  "identifiers": [],
+  "topics": [
+    "liquid-network",
+    "recovery"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_8a090cf5df4c6cad",
+      "event_id": "evt_c9054f6fe0489c31",
+      "occurred_at": "2026-09-08T00:30:00Z",
+      "published_at": "2026-09-08T00:30:00Z",
+      "first_seen_at": "2026-09-08T04:22:41.335877Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分",
+      "title_en": "Liquid Network hackers steal $320M in Bitcoin, return most after patch",
+      "what_changed_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+      "what_changed_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+      "current_state_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+      "current_state_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+      "detailed_summary_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+      "detailed_summary_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+      "background_zh": "Liquid Network 是由 Liquid Federation 运营的比特币侧链，由一组分布式 functionary（函数节点）管理主链与侧链。用户通过“peg-in”将真实 BTC 锁定到主链，获得按 1:1 锚定的 L-BTC，以便在侧链上进行更快、更隐私的交易。Peg-out 机制允许白名单地址将 L-BTC 兑换回储备 BTC。本次事件中，无锚定的 L-BTC 是利用 Liquid 底层开源软件 Elements 的漏洞被铸造出来，并经由 SideSwap 换成了真实 BTC。",
+      "background_en": "The Liquid Network is a Bitcoin sidechain run by the Liquid Federation, in which a distributed set of functionary nodes manages the mainchain and sidechain. To use it, users send real BTC in a peg-in transaction and receive L-BTC, an asset designed to be backed 1:1 by Bitcoin held by the federation. Peg-out mechanisms allow whitelisted addresses to redeem L-BTC for the reserve Bitcoin. In this incident, the flawed L-BTC was created through a bug in Elements, the open-source software powering Liquid, and then swapped through SideSwap for real BTC.",
+      "community_discussion_zh": "相关讨论主要集中在对白帽身份声明的质疑：Ledger 首席技术官 Charles Guillemet 称，攻击者仍持有 600 BTC，这更像是敲诈而非白帽黑客行为。更广泛的讨论也指出，仅归还 BTC 并不能保证 L-BTC 的完整锚定，也无法在桥接节点仍中断的情况下恢复提现和兑换通道。",
+      "community_discussion_en": "Commentary focused on skepticism about the white-hat designation: Ledger CTO Charles Guillemet called the decision to keep 600 BTC more like extortion than white-hat hacking. The broader discussion also noted that the returned BTC alone does not guarantee full L-BTC backing or restored withdrawal and redemption access while bridge nodes remained down.",
+      "market_impact_zh": "该事件直接涉及 L-BTC 以及 Liquid 上发行资产的锚定与提现基础设施，因此依赖 Liquid 的机构和交易所可能面临流动性与信任方面的摩擦。若市场产生反应，传导渠道主要是托管和验证结算信心，而非比特币主链本身；后续影响取决于最终追偿结果和网络恢复情况，而非任何预设方向。",
+      "market_impact_en": "The incident directly touches the peg and redemption infrastructure for L-BTC and Liquid-issued assets, so institutions and exchanges relying on Liquid may face liquidity and trust frictions. Market effects, if any, would flow through custody and validator-settlement confidence rather than the Bitcoin base chain; further impact depends on the final recovery and network restoration, not any predetermined direction.",
+      "importance_score": 9.0,
+      "references": [
+        {
+          "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-network",
+          "title": "What is the Liquid Network? | Blockstream Help Center"
+        },
+        {
+          "url": "https://help.blockstream.com/hc/en-us/articles/900001408623-How-does-Liquid-Bitcoin-LBTC-work",
+          "title": "How does Liquid Bitcoin (L-BTC) work?"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "gdelt:article:20260908T003000Z::https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/"
+      ],
+      "sources": [
+        {
+          "url": "https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/",
+          "label": "siliconangle.com",
+          "source_type": "gdelt",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

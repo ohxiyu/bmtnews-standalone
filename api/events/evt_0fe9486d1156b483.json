@@ -45,14 +45,27 @@
       "current_state_en": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
       "detailed_summary_zh": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
       "detailed_summary_en": "Ethereum developers are prioritizing quantum resistance by December 2029, reshaping upcoming upgrades and forcing trade-offs in engineering capacity.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "需要准备抗量子密码学，是因为未来足够强大的量子计算机可能破解当前保护区块链的公钥密码体系。以太坊基金会并不是预测2030年就会出现这种机器，而是把这一天视为最早的“Q-day”（量子危险日），并以此倒推工作计划。以太坊计划借助账户抽象和Frame Transactions（EIP-8141），让单个账户渐进迁移至后量子签名，而不是进行破坏性全协议“flag day”切换。2029年12月这一时间窗口也与Google、Cloudflare、Microsoft等公司独立设定的后量子迁移目标大致吻合。",
+      "background_en": "Quantum-resistant cryptography is being prepared because a sufficiently powerful quantum computer could one day break the public-key cryptography securing today's blockchains. The Ethereum Foundation is not predicting such a machine by 2030; it is treating that date as the earliest possible \"Q-day\" and working backward from it. Ethereum's planned approach relies on account abstraction and Frame Transactions (EIP-8141) to let individual accounts migrate to post-quantum signatures gradually rather than via a disruptive protocol-wide \"flag day.\" The December 2029 window also broadly matches independent post-quantum migration targets set by Google, Cloudflare, and Microsoft.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "固定的2029年抗量子截止日期提高了以太坊硬分叉节奏的重要性，若出现延误或开发者在K*/L*内容交换上的分歧，可能影响市场对网络升级执行力的信心。长期来看，后量子认证与验证者签名变更涉及质押安全假设，随着风险图景演变，ETH及质押相关生态资产的风险定价可能被市场参与者重新评估。",
+      "market_impact_en": "A fixed 2029 quantum deadline raises the stakes for Ethereum's hard-fork cadence, and any delay or developer disagreement over the K*/L* content swap could influence confidence in the network's upgrade execution. In the longer run, post-quantum attestations and validator-signature changes touch staking security assumptions, a channel through which ETH and staking-related ecosystem assets could be reassessed by market participants as the risk picture evolves.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://eips.ethereum.org/EIPS/eip-7805",
+          "title": "EIP-7805: Fork-choice enforced Inclusion Lists (FOCIL)"
+        },
+        {
+          "url": "https://eips.ethereum.org/EIPS/eip-8141",
+          "title": "EIP-8141: Frame Transaction"
+        },
+        {
+          "url": "https://ethereum.org/roadmap/future-proofing/quantum-resistance/",
+          "title": "Post-quantum cryptography on Ethereum | ethereum.org"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:1c053dc8b38033a2",

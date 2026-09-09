@@ -10563,8 +10563,8 @@
           "what_changed_zh": "Tectonic 遭窃约 7,500 万美元，Cronos 验证者暂停并回滚链。"
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Cronos is an Ethereum-compatible blockchain network backed by Crypto.com, and Tectonic is a lending protocol built on it where users can borrow crypto by depositing collateral. In this incident, the hacker manipulated TONIC's price on thin markets and borrowed large sums against the inflated value. A blockchain rollback restores the ledger to an earlier state, discarding all blocks and transactions after that point; the alternative—restarting without restoring state—would have left the borrowed assets in the attacker's control.",
+          "background_zh": "Cronos 是由 Crypto.com 支持的兼容以太坊的区块链网络，Tectonic 是构建在其上的借贷协议，用户可通过存入抵押品借入加密资产。在此事件中，黑客在流动性薄弱的市场上操纵 TONIC 价格，并以虚高的价值大量借款。区块链回滚会将账本恢复到较早状态，丢弃该时间点之后的所有区块和交易；另一种选择——在不恢复状态的情况下重启——会让借出的资产继续留在攻击者手中。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.95,
@@ -10575,12 +10575,17 @@
           "event_id": "evt_7cec54c7d44b7cd5",
           "first_seen_at": "2026-09-08T08:58:42.219120Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The rollback sets a governance precedent that could make users and developers reassess trust assumptions on Cronos, potentially affecting liquidity and activity in Cronos DeFi markets and related tokens, since finality was overridden. That said, roughly 92% of affected funds were retained on-chain, and any market effects depend on how the ecosystem responds; this is not investment advice.",
+          "market_impact_zh": "这次回滚开创了治理先例，可能使用户和开发者重新评估对 Cronos 的信任假设，并因最终性被推翻而影响 Cronos DeFi 市场及相关代币的流动性和活动。不过，约 92% 的受影响资金仍保留在链上，市场影响将取决于生态系统的后续反应；本文不构成投资建议。",
           "material_change": true,
           "occurred_at": "2026-09-08T08:10:44Z",
           "published_at": "2026-09-08T08:10:44Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Cronos executes controversial blockchain rollback to recover ...",
+              "url": "https://cryptonews.net/news/security/33412727/"
+            }
+          ],
           "sources": [
             {
               "label": "Cointelegraph",
@@ -23059,7 +23064,7 @@
       "first_seen_at": "2026-09-06T15:37:27.863751Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-06T15:37:27.863751Z",
-      "last_updated_at": "2026-09-06T15:37:27.863751Z",
+      "last_updated_at": "2026-09-08T08:58:38.920659Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -23097,6 +23102,14 @@
             {
               "title": "Exchange Custody Risks Explained: Freezes, Insolvency, and Access",
               "url": "https://snout0x.com/exchange-custody-risks/"
+            },
+            {
+              "title": "Chile’s Orionx Exchange Begins Permanent Shutdown After Audit...",
+              "url": "https://www.coinlive.com/news/chile-s-orionx-exchange-begins-permanent-shutdown-after-audit-finds-more"
+            },
+            {
+              "title": "Chile | Blockchain Technology & Cryptocurrency Data",
+              "url": "https://blockspot.io/country/chile/"
             }
           ],
           "sources": [
@@ -23105,10 +23118,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cointelegraph.com/news/orionx-shut-down-7-million-move-outside-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/tether-backed-crypto-exchange-freezes-withdrawals-after-7-million-leaves-custody/"
             }
           ],
           "story_ids": [
-            "rss:cointelegraph.com_rss:2a55d9425dc08713"
+            "rss:cointelegraph.com_rss:2a55d9425dc08713",
+            "rss:cryptoslate.com_feed_:a860b8c69200a8e1"
           ],
           "time_precision": "published",
           "title_en": "Tether-backed Orionx to shut down after audit flags $7M custody gap",
@@ -26445,8 +26465,8 @@
           "what_changed_zh": "Malone Lam, accused of orchestrating a $245M Bitcoin theft via social engineering, faces a plea hearing in federal court."
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Social engineering is a form of psychological manipulation that tricks people into revealing confidential information or performing actions that compromise their security; in crypto scams it often involves phishing, fake customer support, or SIM-swapping to steal wallet credentials. U.S. authorities, including the Department of Justice and IRS criminal investigation units, have increasingly pursued cryptocurrency criminals under conspiracy and racketeering statutes in addition to traditional wire fraud charges, treating sophisticated theft rings as organized crime.",
+          "background_zh": "社会工程学是一种心理操纵手段，通过诱骗人们泄露机密信息或执行有损安全的行为来实施攻击；在加密货币诈骗中，常见形式包括钓鱼、假冒客服或SIM卡劫持，以窃取钱包凭据。美国执法机构，包括司法部和国税局刑事调查部门，越来越多地以共谋和敲诈勒索罪名起诉加密货币犯罪分子，而不仅仅是电信欺诈，将复杂的盗窃团伙视为有组织犯罪。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.95,
@@ -26457,12 +26477,21 @@
           "event_id": "evt_4c5db86454cbdba0",
           "first_seen_at": "2026-09-08T22:53:08.162068Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "News of a large crypto theft and a guilty plea can reinforce concerns about crypto crime risks and invite stronger regulatory attention, but direct market transmission is limited because the stolen assets were taken through social engineering rather than an exchange breach. The broader effect is likely on sentiment and on compliance pressure for crypto exchanges and custody providers to improve user protections.",
+          "market_impact_zh": "大型加密盗窃案及认罪消息可能强化市场对加密犯罪风险的担忧并引来更严格的监管关注，但由于被盗资产是通过社会工程而非交易所被黑获取，对市场的直接传导有限。更广泛的影响可能体现在市场情绪，以及交易所和托管机构在加强用户保护方面所面临的合规压力。",
           "material_change": true,
           "occurred_at": "2026-09-08T19:17:17Z",
           "published_at": "2026-09-08T19:17:17Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Guilty Plea and Superseding Indictment Announced in Social ...",
+              "url": "https://www.justice.gov/usao-dc/pr/guilty-plea-and-superseding-indictment-announced-social-engineering-scheme-stole-263"
+            },
+            {
+              "title": "investopedia.com/terms/r/racketeering.asp",
+              "url": "https://www.investopedia.com/terms/r/racketeering.asp"
+            }
+          ],
           "sources": [
             {
               "label": "The Block",
@@ -27597,6 +27626,80 @@
     {
       "category": "crypto",
       "confidence": 0.75,
+      "current_state_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+      "current_state_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+      "entities": [
+        "liquid",
+        "liquid-network"
+      ],
+      "event_id": "evt_c9054f6fe0489c31",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-08T04:22:41.335877Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-08T04:22:41.335877Z",
+      "last_updated_at": "2026-09-08T04:22:41.335877Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Liquid Network hackers steal $320M in Bitcoin, return most after patch",
+      "title_zh": "黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分",
+      "topics": [
+        "liquid-network",
+        "recovery"
+      ],
+      "updates": [
+        {
+          "background_en": "The Liquid Network is a Bitcoin sidechain run by the Liquid Federation, in which a distributed set of functionary nodes manages the mainchain and sidechain. To use it, users send real BTC in a peg-in transaction and receive L-BTC, an asset designed to be backed 1:1 by Bitcoin held by the federation. Peg-out mechanisms allow whitelisted addresses to redeem L-BTC for the reserve Bitcoin. In this incident, the flawed L-BTC was created through a bug in Elements, the open-source software powering Liquid, and then swapped through SideSwap for real BTC.",
+          "background_zh": "Liquid Network 是由 Liquid Federation 运营的比特币侧链，由一组分布式 functionary（函数节点）管理主链与侧链。用户通过“peg-in”将真实 BTC 锁定到主链，获得按 1:1 锚定的 L-BTC，以便在侧链上进行更快、更隐私的交易。Peg-out 机制允许白名单地址将 L-BTC 兑换回储备 BTC。本次事件中，无锚定的 L-BTC 是利用 Liquid 底层开源软件 Elements 的漏洞被铸造出来，并经由 SideSwap 换成了真实 BTC。",
+          "community_discussion_en": "Commentary focused on skepticism about the white-hat designation: Ledger CTO Charles Guillemet called the decision to keep 600 BTC more like extortion than white-hat hacking. The broader discussion also noted that the returned BTC alone does not guarantee full L-BTC backing or restored withdrawal and redemption access while bridge nodes remained down.",
+          "community_discussion_zh": "相关讨论主要集中在对白帽身份声明的质疑：Ledger 首席技术官 Charles Guillemet 称，攻击者仍持有 600 BTC，这更像是敲诈而非白帽黑客行为。更广泛的讨论也指出，仅归还 BTC 并不能保证 L-BTC 的完整锚定，也无法在桥接节点仍中断的情况下恢复提现和兑换通道。",
+          "confidence": 0.75,
+          "current_state_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+          "current_state_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+          "detailed_summary_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+          "detailed_summary_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。",
+          "event_id": "evt_c9054f6fe0489c31",
+          "first_seen_at": "2026-09-08T04:22:41.335877Z",
+          "importance_score": 9.0,
+          "market_impact_en": "The incident directly touches the peg and redemption infrastructure for L-BTC and Liquid-issued assets, so institutions and exchanges relying on Liquid may face liquidity and trust frictions. Market effects, if any, would flow through custody and validator-settlement confidence rather than the Bitcoin base chain; further impact depends on the final recovery and network restoration, not any predetermined direction.",
+          "market_impact_zh": "该事件直接涉及 L-BTC 以及 Liquid 上发行资产的锚定与提现基础设施，因此依赖 Liquid 的机构和交易所可能面临流动性与信任方面的摩擦。若市场产生反应，传导渠道主要是托管和验证结算信心，而非比特币主链本身；后续影响取决于最终追偿结果和网络恢复情况，而非任何预设方向。",
+          "material_change": true,
+          "occurred_at": "2026-09-08T00:30:00Z",
+          "published_at": "2026-09-08T00:30:00Z",
+          "references": [
+            {
+              "title": "What is the Liquid Network? | Blockstream Help Center",
+              "url": "https://help.blockstream.com/liquid-network/faqs/what-is-the-liquid-network"
+            },
+            {
+              "title": "How does Liquid Bitcoin (L-BTC) work?",
+              "url": "https://help.blockstream.com/hc/en-us/articles/900001408623-How-does-Liquid-Bitcoin-LBTC-work"
+            }
+          ],
+          "sources": [
+            {
+              "label": "siliconangle.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260908T003000Z::https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/"
+          ],
+          "time_precision": "published",
+          "title_en": "Liquid Network hackers steal $320M in Bitcoin, return most after patch",
+          "title_zh": "黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分",
+          "update_id": "upd_8a090cf5df4c6cad",
+          "update_type": "initial",
+          "what_changed_en": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.\n\nThis is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.\n\nLiquid's reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap's node and Liquid's distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.",
+          "what_changed_zh": "攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。\n\n这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。\n\nLiquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
       "current_state_en": "Hackers returned 3400 BTC to the Liquid Network following a security breach.",
       "current_state_zh": "Hackers returned 3400 BTC to the Liquid Network following a security breach.",
       "entities": [
@@ -28130,10 +28233,10 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "background_en": "The human genome consists of about 3 billion DNA base pairs, and small differences at individual positions (single-nucleotide variants) are linked to numerous diseases and traits. Most computational variant-effect predictors have been limited to short sequence windows or protein-coding regions, leaving long non-coding DNA poorly understood. AlphaGenome builds on DeepMind's broader AI-for-science work and provides a unified DNA model that can reason over much longer genomic stretches.",
+          "background_zh": "人类基因组由约30亿个DNA碱基对组成，单个位点的碱基差异（即单核苷酸变异）与多种疾病和性状相关。以往大多数计算性变异效应预测工具只能处理较短的序列窗口或编码蛋白质的基因区域，对长片段非编码DNA的理解十分有限。AlphaGenome基于DeepMind在科学AI领域的积累，提供一个可以对更长基因组片段进行推理的统一DNA模型。",
+          "community_discussion_en": "Hacker News readers reacted positively but raised practical questions, such as whether promoter sequences and regulatory grammar are fully represented and whether consumer genomes like 23andMe data can be uploaded for analysis. Others pointed out that the affiliation box is optional and shared a Science blog critique noting that the Atlas's predictions lack broad experimental validation.",
+          "community_discussion_zh": "Hacker News读者的反应总体积极，但提出了不少实际问题，例如启动子序列和调控规则是否被完整纳入，以及能否直接上传23andMe等消费级基因检测数据进行分析。还有评论者指出机构信息并非必填项，并分享了一篇Science博客评论，批评该图谱的预测缺乏广泛的实验验证。",
           "confidence": 0.75,
           "current_state_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
           "current_state_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
@@ -28141,7 +28244,7 @@
           "detailed_summary_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
           "event_id": "evt_5684cfda4eaed05a",
           "first_seen_at": "2026-09-08T16:47:08.756554Z",
-          "importance_score": 7.5,
+          "importance_score": 8.5,
           "market_impact_en": "",
           "market_impact_zh": "",
           "material_change": true,
@@ -28151,6 +28254,14 @@
             {
               "title": "Community discussion",
               "url": "https://news.ycombinator.com/item?id=49611251"
+            },
+            {
+              "title": "Advancing regulatory variant effect prediction with AlphaGenome | Nature",
+              "url": "https://www.nature.com/articles/s41586-025-10014-0"
+            },
+            {
+              "title": "AlphaGenome Atlas: Molecular predictions for 9 Billion human DNA...",
+              "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/"
             }
           ],
           "sources": [
@@ -28505,8 +28616,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "VisaNet is Visa's global payment processing network that handles authorization, clearing and settlement for card transactions. Stablecoin-linked card programs let users spend stablecoins like USDC or USDT at merchants, with the underlying value converted to fiat at settlement. Visa is increasingly integrating with stablecoin infrastructure; it has also joined OpenStandard, a consortium planning to issue the OpenUSD stablecoin. By feeding VisaNet settlement data into blockchain lending protocols, lenders gain an additional, trustworthy data source for underwriting credit.",
+          "background_zh": "VisaNet是Visa的全球支付处理网络，负责卡交易的授权、清算和结算。与稳定币挂钩的卡项目允许用户用USDC或USDT等稳定币在商户消费，底层价值在结算时转换为法定货币。Visa正越来越多地与稳定币基础设施整合，还加入了计划发行OpenUSD稳定币的OpenStandard联盟。通过将VisaNet结算数据输入区块链借贷协议，贷款方在信贷审核中可获得额外的可信数据源。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -28517,12 +28628,25 @@
           "event_id": "evt_6854286a74468024",
           "first_seen_at": "2026-09-08T16:47:09.869856Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The primary transmission channel is operational and infrastructure-based: linking Visa settlement data to onchain credit could raise stablecoin transaction volumes, increase usage of payment-focused stablecoins such as USDC and USDT, and potentially deepen demand for the blockchains used in settlement. Actual market outcomes remain contingent on lender adoption and program growth, not on any direct asset buying or selling signal.",
+          "market_impact_zh": "主要的传导渠道属于运营和基础设施层面：将Visa结算数据与链上信贷相结合，可能会提高稳定币交易量、增加USDC和USDT等支付类稳定币的使用，并可能加深对用于结算的区块链的需求。实际市场结果取决于贷款方采纳情况和项目增长，而非任何直接的资产买卖信号。",
           "material_change": true,
           "occurred_at": "2026-09-08T14:29:14Z",
           "published_at": "2026-09-08T14:29:14Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Visa Expands Stablecoin Strategy with Blockchain Lending",
+              "url": "https://cointelegraph.com/news/visa-stablecoin-blockchain-lending-payment-settlement"
+            },
+            {
+              "title": "Visa Taps VisaNet Data for Onchain Stablecoin Lending",
+              "url": "https://coin360.com/news/visa-visanet-onchain-stablecoin-lending"
+            },
+            {
+              "title": "Visa Adds On-Chain Credit to Expand Stablecoin Card Push",
+              "url": "https://www.cryptobreaking.com/visa-adds-on-chain-credit/"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -29458,8 +29582,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Quantum-resistant cryptography is being prepared because a sufficiently powerful quantum computer could one day break the public-key cryptography securing today's blockchains. The Ethereum Foundation is not predicting such a machine by 2030; it is treating that date as the earliest possible \"Q-day\" and working backward from it. Ethereum's planned approach relies on account abstraction and Frame Transactions (EIP-8141) to let individual accounts migrate to post-quantum signatures gradually rather than via a disruptive protocol-wide \"flag day.\" The December 2029 window also broadly matches independent post-quantum migration targets set by Google, Cloudflare, and Microsoft.",
+          "background_zh": "需要准备抗量子密码学，是因为未来足够强大的量子计算机可能破解当前保护区块链的公钥密码体系。以太坊基金会并不是预测2030年就会出现这种机器，而是把这一天视为最早的“Q-day”（量子危险日），并以此倒推工作计划。以太坊计划借助账户抽象和Frame Transactions（EIP-8141），让单个账户渐进迁移至后量子签名，而不是进行破坏性全协议“flag day”切换。2029年12月这一时间窗口也与Google、Cloudflare、Microsoft等公司独立设定的后量子迁移目标大致吻合。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -29470,12 +29594,25 @@
           "event_id": "evt_0fe9486d1156b483",
           "first_seen_at": "2026-09-08T16:47:13.571221Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "A fixed 2029 quantum deadline raises the stakes for Ethereum's hard-fork cadence, and any delay or developer disagreement over the K*/L* content swap could influence confidence in the network's upgrade execution. In the longer run, post-quantum attestations and validator-signature changes touch staking security assumptions, a channel through which ETH and staking-related ecosystem assets could be reassessed by market participants as the risk picture evolves.",
+          "market_impact_zh": "固定的2029年抗量子截止日期提高了以太坊硬分叉节奏的重要性，若出现延误或开发者在K*/L*内容交换上的分歧，可能影响市场对网络升级执行力的信心。长期来看，后量子认证与验证者签名变更涉及质押安全假设，随着风险图景演变，ETH及质押相关生态资产的风险定价可能被市场参与者重新评估。",
           "material_change": true,
           "occurred_at": "2026-09-08T10:40:21Z",
           "published_at": "2026-09-08T10:40:21Z",
-          "references": [],
+          "references": [
+            {
+              "title": "EIP-7805: Fork-choice enforced Inclusion Lists (FOCIL)",
+              "url": "https://eips.ethereum.org/EIPS/eip-7805"
+            },
+            {
+              "title": "EIP-8141: Frame Transaction",
+              "url": "https://eips.ethereum.org/EIPS/eip-8141"
+            },
+            {
+              "title": "Post-quantum cryptography on Ethereum | ethereum.org",
+              "url": "https://ethereum.org/roadmap/future-proofing/quantum-resistance/"
+            }
+          ],
           "sources": [
             {
               "label": "CryptoSlate",
@@ -29688,8 +29825,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Section 338 of the Tariff Act of 1930 allows the President to impose added duties on imports from countries that discriminate against US commerce. In July 2026, Proclamation 11048 applied additional duties to Canadian motor vehicles after Canada's Surtax Order targeted US-built vehicles. This latest proclamation adjusts the product scope of those duties, reflecting continued friction between the two neighbors over automotive trade despite their broader USMCA partnership.",
+          "background_zh": "1930年《关税法》第338条授权总统对歧视美国商业的国家加征额外进口关税。2026年7月，由于加拿大的附加税令针对美国制造的汽车，第11048号公告对加拿大汽车加征了额外关税。最新公告对相关关税的产品范围作出调整，反映了两国在汽车贸易上的持续摩擦，尽管它们同属《美墨加协定》(USMCA)框架。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -29700,12 +29837,25 @@
           "event_id": "evt_ad0dfde9c331acc8",
           "first_seen_at": "2026-09-08T22:53:06.381597Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "Because the measure applies narrowly to Canadian motor-vehicle products, its direct effect on crypto markets is limited. Any impact would come indirectly through changes in broader trade-war risk sentiment and risk appetite across global markets.",
+          "market_impact_zh": "由于该措施仅针对加拿大汽车产品，其对加密货币市场的直接影响有限。任何影响都将通过更广泛的贸易战风险情绪和全球市场风险偏好的变化间接传导。",
           "material_change": true,
           "occurred_at": "2026-09-08T22:50:00Z",
           "published_at": "2026-09-08T22:50:00Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Modifying the Scope of Products of Canada Subject to the ...",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/09/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-united-states-with-respect-to-motor-vehicles/"
+            },
+            {
+              "title": "Imposing Additional Duties To Offset Canadian Discrimination ...",
+              "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14997/imposing-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united"
+            },
+            {
+              "title": "Proclamation 11048—Imposing Additional Duties To Offset ...",
+              "url": "https://www.govinfo.gov/content/pkg/DCPD-202600476/pdf/DCPD-202600476.pdf"
+            }
+          ],
           "sources": [
             {
               "label": "White House Presidential Actions",
@@ -30077,8 +30227,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Traditionally, forex markets trade nearly 24 hours a day during the business week but close on weekends. Bybit, primarily a crypto derivatives exchange, now extends 24/7 access to FX pairs through its derivatives infrastructure, eliminating the weekend gap. Other exchanges such as BitMEX have also launched 24/7 FX perpetual swaps, highlighting a convergence of crypto and traditional trading products.",
+          "background_zh": "传统上，外汇市场在工作日几乎24小时交易，但周末休市。Bybit最初是一家加密货币衍生品交易所，现在通过其衍生品基础设施提供全天候外汇对交易，消除了周末空白。BitMEX等交易所也推出了24/7外汇永续合约，凸显了加密与传统交易产品的融合趋势。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -30089,12 +30239,25 @@
           "event_id": "evt_1c5fbbfb9dfd2861",
           "first_seen_at": "2026-09-08T22:53:07.352089Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The integration of FX into a crypto derivatives account lets traders use crypto collateral or margin for forex exposure, potentially increasing demand for stablecoins and exchange-native tokens used as margin. It also expands the exchange's addressable market, though direct price effects on crypto assets are indirect; the more relevant impact is on Bybit's competitive positioning against hybrid and traditional brokers.",
+          "market_impact_zh": "将外汇产品整合到加密货币衍生品账户中，交易者可以使用加密货币抵押品或保证金来获取外汇敞口，这可能会增加对稳定币及交易所原生代币（用于保证金）的需求。这也扩大了交易所的可服务市场，但对加密资产价格的影响较为间接；更相关的是Bybit与混合型及传统经纪商之间竞争地位的提升。",
           "material_change": true,
           "occurred_at": "2026-09-08T18:00:00Z",
           "published_at": "2026-09-08T18:00:00Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Платформа CFD на Bybit | При поддержке MetaTrader 5",
+              "url": "https://www.bybit.com/ru-RU/derivative-activity/tradfi/"
+            },
+            {
+              "title": "BitMEX Opens 24/7 FX Perpetual Trading for Crypto Traders",
+              "url": "https://finance.yahoo.com/markets/currencies/articles/bitmex-opens-24-7-fx-145656609.html?fr=sycsrp_catchall"
+            },
+            {
+              "title": "Bybit FX Pairs",
+              "url": "https://traderstrusted.com/companies/brokers/bybit-fx-pairs/"
+            }
+          ],
           "sources": [
             {
               "label": "TradingView",
@@ -30219,10 +30382,10 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "background_en": "In 2000, the Clay Mathematics Institute designated seven Millennium Prize Problems, each with a one-million-dollar prize for a correct solution. The Navier–Stokes problem asks whether solutions to the equations of fluid motion always remain smooth and well-defined for all time, or whether singularities can form in finite time. A rigorous example of finite-time blow-up would resolve the problem negatively, but no such proof has yet been accepted by the mathematical community.",
+          "background_zh": "2000 年，克雷数学研究所选定了七个千禧年大奖难题，每个问题的正确解答将获得一百万美元奖金。纳维-斯托克斯问题要求判断流体运动方程的解是否总能保持光滑并长时间存在，还是可能在有限时间内形成奇点。若能严格构造有限时间爆破的例子，就等于对该问题给出否定解答；但迄今为止，数学界仍未接受这样的证明。",
+          "community_discussion_en": "The Hacker News discussion mixes heavy skepticism with genuine fascination. Several commenters reference Terence Tao’s warning that premature AI-powered effort around unannounced ideas could discourage researchers from sharing promising directions, while others point to documents claiming the result is built on another researcher’s actual work and prompts. One commenter marvels at the reported pace of capability growth, and another argues the episode raises governance questions about who controls such AI systems and underscores that natural science is not purely computational.",
+          "community_discussion_zh": "Hacker News 的讨论同时充满强烈怀疑与真心惊叹。有多位评论者引用陶哲轩的提醒：针对尚未公开的研究方向过早发动大规模 AI 算力，可能打击研究者分享有前途想法的意愿；另一些人则贴出链接，声称该结果建立在另一位研究者的真实工作与提示词之上。还有评论者对报道中模型能力增长的速度感到震惊，也有人认为此事引发对 AI 研究主导权的治理问题，并提醒自然科学并不只是计算问题。",
           "confidence": 0.75,
           "current_state_en": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
           "current_state_zh": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
@@ -30240,6 +30403,18 @@
             {
               "title": "Community discussion",
               "url": "https://news.ycombinator.com/item?id=49613262"
+            },
+            {
+              "title": "Millennium Prize Problems - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Millennium_Prize_Problems"
+            },
+            {
+              "title": "The Millennium Prize Problems - Clay Mathematics Institute",
+              "url": "https://www.claymath.org/millennium-problems/"
+            },
+            {
+              "title": "On the Navier–Stokes Millennium Prize Problem | OpenAI",
+              "url": "https://openai.com/index/navier-stokes-solution/"
             }
           ],
           "sources": [
@@ -30523,8 +30698,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Tokenized securities are traditional financial instruments, such as stocks, bonds, or fund interests, represented as crypto assets recorded on a blockchain or distributed ledger. Regular stock exchanges typically close on weekends and holidays, which creates an opening for tokenized versions that can trade around the clock. Robinhood Chain is a permissionless, Ethereum-compatible Layer-2 designed for onchain financial services, while BNB Smart Chain is a high-performance, EVM-compatible Layer-1 blockchain.",
+          "background_zh": "代币化证券是将股票、债券或基金权益等传统金融工具，表示为记录在区块链或分布式账本上的加密资产。常规证券交易所通常在周末和节假日休市，这为可以全天候交易的代币化版本创造了空间。Robinhood Chain是一个为链上金融服务设计的无需许可、兼容以太坊的Layer-2网络，而BNB Smart Chain则是一个高性能、兼容EVM的Layer-1区块链。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -30535,12 +30710,25 @@
           "event_id": "evt_d96f0ee9f8bffaa3",
           "first_seen_at": "2026-09-08T22:53:09.313916Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The weekend trading volume illustrates that tokenized equity products can draw activity even when traditional exchanges are closed, reinforcing the viability of public blockchains as trading venues. Chains hosting these assets, such as BNB Chain and Robinhood Chain, could see increased usage and fee generation, while crypto exchanges and platforms offering tokenized stocks may benefit from elevated attention and inflows.",
+          "market_impact_zh": "周末交易量表明，即使在传统交易所休市时，代币化股票产品也能吸引交易活动，进一步验证了公有链作为交易场所的可行性。承载这些资产的链，如BNB Chain和Robinhood Chain，可能获得更高的使用量和手续费收入，而提供代币化股票的加密交易所和平台也可能受益于关注度提升和资金流入。",
           "material_change": true,
           "occurred_at": "2026-09-08T21:16:19Z",
           "published_at": "2026-09-08T21:16:19Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Tokenized Securities | Investor.gov",
+              "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/tokenized-securities"
+            },
+            {
+              "title": "Robinhood Chain",
+              "url": "https://grokipedia.com/page/Robinhood_Chain"
+            },
+            {
+              "title": "BNB Smart Chain",
+              "url": "https://grokipedia.com/page/BNB_Smart_Chain"
+            }
+          ],
           "sources": [
             {
               "label": "The Defiant",
@@ -30808,8 +30996,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "The Navier-Stokes equations describe the motion of fluids, and the Navier-Stokes existence and smoothness problem asks whether smooth solutions always exist in three dimensions or can break down, such as via 'blow-up' where the math predicts infinite velocity. Lean is an open-source proof assistant that verifies every step of a mathematical proof, so a Lean-verified result is considered formally checkable. Buckmaster is a professor at NYU's Courant Institute who received the 2019 Clay Research Award for related work on Navier-Stokes equations.",
+          "background_zh": "纳维-斯托克斯方程描述流体运动，其存在性与光滑性问题问的是三维空间中光滑解是否总是存在，还是会发生破裂，例如数学上预测无限速度的“爆破”。Lean是一个开源证明助手，可以逐步验证数学证明，因此经Lean验证的结果通常被认为是可形式化检查的。Buckmaster是纽约大学库朗数学研究所教授，曾因纳维-斯托克斯方程的相关研究获得2019年克莱研究奖。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -30825,7 +31013,20 @@
           "material_change": true,
           "occurred_at": "2026-09-08T21:38:34Z",
           "published_at": "2026-09-08T21:38:34Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Navier–Stokes existence and smoothness - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Navier–Stokes_existence_and_smoothness"
+            },
+            {
+              "title": "Lean (proof assistant)",
+              "url": "https://en.wikipedia.org/wiki/Lean_(proof_assistant)"
+            },
+            {
+              "title": "Navier–Stokes equations - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Navier–Stokes_equations"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",
@@ -30950,8 +31151,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Prediction markets let users trade event contracts, a type of financial derivative tied to outcomes such as elections, awards, or sports results. In the US, these products are often offered through CFTC-regulated exchanges and clearinghouses. Robinhood launched its prediction-markets hub in March 2025 with Kalshi, and the business has grown rapidly. The space is facing legal challenges, with states such as Nevada and New Jersey seeking to apply gambling laws to sports-related contracts.",
+          "background_zh": "预测市场允许用户交易事件合约，这是一种与选举、奖项或体育赛事结果等结果挂钩的金融衍生品。在美国，此类产品通常通过受CFTC监管的交易所和清算所提供。Robinhood于2025年3月与Kalshi合作推出预测市场中心，该业务增长迅速。与此同时，该领域面临法律挑战，例如内华达州和新泽西州等州试图将赌博法适用于体育相关合约。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -30962,12 +31163,25 @@
           "event_id": "evt_46c7bbb84c20a8d5",
           "first_seen_at": "2026-09-08T22:53:16.664330Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The announcement coincided with a roughly 3.4% premarket gain in HOOD shares and a move in Crypto.com's CRO token toward a weekly high near $0.063. The partnership ties Robinhood's event-contract volume to Crypto.com-affiliated infrastructure, making CRO sentiment sensitive to adoption and regulatory developments in US prediction markets.",
+          "market_impact_zh": "消息公布后，HOOD股价盘前上涨约3.4%，Crypto.com的代币CRO则一度升至约0.063美元的周内高点附近。该合作将Robinhood的事件合约交易量与Crypto.com关联的基础设施绑定，因此CRO的市场情绪可能对美国预测市场的采用进展和监管动向保持敏感。",
           "material_change": true,
           "occurred_at": "2026-09-08T17:03:47Z",
           "published_at": "2026-09-08T17:03:47Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Understanding Prediction Markets and Event Contracts | CFTC",
+              "url": "https://www.cftc.gov/LearnandProtect/PredictionMarkets"
+            },
+            {
+              "title": "Event Contracts: What They Are and How They Are Used",
+              "url": "https://www.investopedia.com/events-contracts-8601422"
+            },
+            {
+              "title": "Derivatives Clearing Organizations",
+              "url": "https://www.cftc.gov/IndustryOversight/ClearingOrganizations/index.htm"
+            }
+          ],
           "sources": [
             {
               "label": "Cointelegraph",
@@ -31047,6 +31261,63 @@
         "source_type": "google_news",
         "title": "Poland Crypto Bill Blocked After Third Presidential Veto - blockchainreporter",
         "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNT3FtRG9kYl9adHNCSlVlLVdmamtGYkNpeS0yVFhSYXJOaWxKbm5aNWxNbTNhVWlaLU1uZHRyR3hBb2hGOTJFeXlGbkl2a3hsejRIdlFjdDRWVTc5b2Y0YklNcG9VZWU4UC1tV1Y4cWUxc3N3X2x5d2t4SHg3cTFTRVRxUGpMUjNTelE?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A $320M theft from a crypto network is a major security incident with significant user impact, warranting high importance despite limited details.",
+        "ai_score": 8.5,
+        "ai_summary": "A Bitcoin hack has drained US$320 million from a crypto network, marking a major security breach.",
+        "ai_tags": [
+          "bitcoin",
+          "hack",
+          "security",
+          "crypto"
+        ],
+        "author": "freemalaysiatoday.com",
+        "content": null,
+        "fetched_at": "2026-09-08T04:22:41.335673Z",
+        "id": "gdelt:article:20260908T020000Z::https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network",
+        "metadata": {
+          "background": "Liquid Network is a Bitcoin sidechain: a separate blockchain that runs alongside Bitcoin, allowing exchanges to settle transactions more quickly and privately than on the main blockchain. Users lock bitcoin on the main chain and receive a corresponding balance on Liquid for faster settlement. Because it is an additional layer, a vulnerability in its code can put funds at risk even though Bitcoin's main blockchain itself is not directly compromised.",
+          "background_en": "Liquid Network is a Bitcoin sidechain: a separate blockchain that runs alongside Bitcoin, allowing exchanges to settle transactions more quickly and privately than on the main blockchain. Users lock bitcoin on the main chain and receive a corresponding balance on Liquid for faster settlement. Because it is an additional layer, a vulnerability in its code can put funds at risk even though Bitcoin's main blockchain itself is not directly compromised.",
+          "background_zh": "Liquid Network是一条比特币侧链：它是一条与比特币并行运行的独立区块链，使交易所能够比在主链上更快、更保密地完成结算。用户将比特币锁定在主链上，并在Liquid上获得对应的余额用于快速结算。由于它是额外的层，其代码中的漏洞可能会使资金面临风险，即使比特币主链本身并未被直接攻击。",
+          "category": "crypto-protocols",
+          "community_discussion": "",
+          "detailed_summary": "The Liquid Network, a blockchain settlement layer used by several cryptocurrency exchanges to move Bitcoin, was hacked for $320 million. The network halted all transactions after the exploit, which was reported around September 7, 2026.\n\nThis is one of the latest major breaches to shake confidence in digital-asset security, and it exposes risks in the settlement infrastructure exchanges depend on. The incident may lead to stricter scrutiny of sidechain security and affect trust in exchange-related Bitcoin custody and transfer methods.\n\nLiquid Network is a Bitcoin sidechain designed to allow faster and more confidential transfers between exchanges. CoinDesk reported that the hacker made a conditional offer, with the attackers claiming they were 'the good guys.'",
+          "detailed_summary_en": "The Liquid Network, a blockchain settlement layer used by several cryptocurrency exchanges to move Bitcoin, was hacked for $320 million. The network halted all transactions after the exploit, which was reported around September 7, 2026.\n\nThis is one of the latest major breaches to shake confidence in digital-asset security, and it exposes risks in the settlement infrastructure exchanges depend on. The incident may lead to stricter scrutiny of sidechain security and affect trust in exchange-related Bitcoin custody and transfer methods.\n\nLiquid Network is a Bitcoin sidechain designed to allow faster and more confidential transfers between exchanges. CoinDesk reported that the hacker made a conditional offer, with the attackers claiming they were 'the good guys.'",
+          "detailed_summary_zh": "多个加密货币交易所用于转移比特币的结算层Liquid Network遭到黑客攻击，被盗3.2亿美元。据报道，该网络在2026年9月7日前后遭到攻击后已暂停所有交易。\n\n这是近期一系列重大安全事件中最新的一起，动摇了人们对数字资产安全的信心，也暴露出交易所依赖的结算基础设施所面临的风险。该事件可能促使业界更严格地审视侧链安全，并影响人们对交易所相关比特币托管和转账方式的信任。\n\nLiquid Network是一条比特币侧链，旨在让交易所之间进行更快、更保密的转账。CoinDesk报道称，黑客提出了附带条件的提议，并自称“好人”。",
+          "domain": "freemalaysiatoday.com",
+          "enrichment_status": "complete",
+          "event_retry_pending": true,
+          "language": "English",
+          "market_impact_en": "Because Liquid Network is a settlement layer used by exchanges to move Bitcoin, the exploit may disrupt exchange settlement and custody flows that rely on it, and it could dampen sentiment toward Bitcoin sidechains. The transmission channel is operational and reputational risk to crypto infrastructure rather than a direct attack on the Bitcoin mainnet.",
+          "market_impact_zh": "由于Liquid Network是交易所用来转移比特币的结算层，此次攻击可能扰乱依赖该网络的交易所结算和托管流程，并可能影响市场对比特币侧链的乐观情绪。其传导渠道是加密基础设施面临的运营与声誉风险，而非直接攻击比特币主网。",
+          "query": "(cryptocurrency OR bitcoin OR ethereum OR stablecoin OR blockchain)",
+          "source_category": "crypto-markets",
+          "sourcecountry": "Malaysia",
+          "sources": [
+            {
+              "title": "Bitcoin hack drains US$320mil from crypto network | FMT",
+              "url": "https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network"
+            },
+            {
+              "title": "Bitcoin Hack Drains $320 Million From Crypto Network - Bloomberg",
+              "url": "https://www.bloomberg.com/news/articles/2026-09-07/bitcoin-network-says-320-million-stolen-in-latest-crypto-hack"
+            },
+            {
+              "title": "$320 million bitcoin exploit hits Liquid Network. Hacker makes conditional offer",
+              "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys"
+            }
+          ],
+          "title_en": "Liquid Network Bitcoin Hack Drains $320 Million",
+          "title_zh": "Liquid Network遭比特币黑客攻击被盗3.2亿美元"
+        },
+        "published_at": "2026-09-08T02:00:00Z",
+        "source_type": "gdelt",
+        "title": "Bitcoin hack drains US$320mil from crypto network",
+        "url": "https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network"
       }
     }
   ],

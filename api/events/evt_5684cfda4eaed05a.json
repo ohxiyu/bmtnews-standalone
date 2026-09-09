@@ -52,17 +52,25 @@
       "current_state_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
       "detailed_summary_zh": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
       "detailed_summary_en": "Google DeepMind releases AlphaGenome Atlas, a predictive map of human genome function, integrating multiple resources for easier scientific access.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "background_zh": "人类基因组由约30亿个DNA碱基对组成，单个位点的碱基差异（即单核苷酸变异）与多种疾病和性状相关。以往大多数计算性变异效应预测工具只能处理较短的序列窗口或编码蛋白质的基因区域，对长片段非编码DNA的理解十分有限。AlphaGenome基于DeepMind在科学AI领域的积累，提供一个可以对更长基因组片段进行推理的统一DNA模型。",
+      "background_en": "The human genome consists of about 3 billion DNA base pairs, and small differences at individual positions (single-nucleotide variants) are linked to numerous diseases and traits. Most computational variant-effect predictors have been limited to short sequence windows or protein-coding regions, leaving long non-coding DNA poorly understood. AlphaGenome builds on DeepMind's broader AI-for-science work and provides a unified DNA model that can reason over much longer genomic stretches.",
+      "community_discussion_zh": "Hacker News读者的反应总体积极，但提出了不少实际问题，例如启动子序列和调控规则是否被完整纳入，以及能否直接上传23andMe等消费级基因检测数据进行分析。还有评论者指出机构信息并非必填项，并分享了一篇Science博客评论，批评该图谱的预测缺乏广泛的实验验证。",
+      "community_discussion_en": "Hacker News readers reacted positively but raised practical questions, such as whether promoter sequences and regulatory grammar are fully represented and whether consumer genomes like 23andMe data can be uploaded for analysis. Others pointed out that the affiliation box is optional and shared a Science blog critique noting that the Atlas's predictions lack broad experimental validation.",
       "market_impact_zh": "",
       "market_impact_en": "",
-      "importance_score": 7.5,
+      "importance_score": 8.5,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49611251",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-025-10014-0",
+          "title": "Advancing regulatory variant effect prediction with AlphaGenome | Nature"
+        },
+        {
+          "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+          "title": "AlphaGenome Atlas: Molecular predictions for 9 Billion human DNA..."
         }
       ],
       "confidence": 0.75,

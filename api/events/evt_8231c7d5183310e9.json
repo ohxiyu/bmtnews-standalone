@@ -15,11 +15,11 @@
     "en": "Tether-backed Chilean exchange Orionx is permanently closing after a forensic audit found over $7 million in customer assets moved to wallets outside its custody, with withdrawals suspended."
   },
   "first_seen_at": "2026-09-06T15:37:27.863751+00:00",
-  "last_updated_at": "2026-09-06T15:37:27.863751+00:00",
+  "last_updated_at": "2026-09-08T08:58:38.920659+00:00",
   "last_material_change_at": "2026-09-06T15:37:27.863751+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "custody",
     "orionx",
@@ -64,16 +64,31 @@
         {
           "url": "https://snout0x.com/exchange-custody-risks/",
           "title": "Exchange Custody Risks Explained: Freezes, Insolvency, and Access"
+        },
+        {
+          "url": "https://www.coinlive.com/news/chile-s-orionx-exchange-begins-permanent-shutdown-after-audit-finds-more",
+          "title": "Chile’s Orionx Exchange Begins Permanent Shutdown After Audit..."
+        },
+        {
+          "url": "https://blockspot.io/country/chile/",
+          "title": "Chile | Blockchain Technology & Cryptocurrency Data"
         }
       ],
       "confidence": 0.75,
       "story_ids": [
-        "rss:cointelegraph.com_rss:2a55d9425dc08713"
+        "rss:cointelegraph.com_rss:2a55d9425dc08713",
+        "rss:cryptoslate.com_feed_:a860b8c69200a8e1"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/orionx-shut-down-7-million-move-outside-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/tether-backed-crypto-exchange-freezes-withdrawals-after-7-million-leaves-custody/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

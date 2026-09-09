@@ -125,14 +125,19 @@
       "current_state_en": "Post-mortem published confirming escaped amount, chain resumed, monitoring continues.",
       "detailed_summary_zh": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
       "detailed_summary_en": "Cronos confirms $9.2M escaped before validators halted the network during the Tectonic exploit, with $111.2M reversed via rollback.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Cronos 是由 Crypto.com 支持的兼容以太坊的区块链网络，Tectonic 是构建在其上的借贷协议，用户可通过存入抵押品借入加密资产。在此事件中，黑客在流动性薄弱的市场上操纵 TONIC 价格，并以虚高的价值大量借款。区块链回滚会将账本恢复到较早状态，丢弃该时间点之后的所有区块和交易；另一种选择——在不恢复状态的情况下重启——会让借出的资产继续留在攻击者手中。",
+      "background_en": "Cronos is an Ethereum-compatible blockchain network backed by Crypto.com, and Tectonic is a lending protocol built on it where users can borrow crypto by depositing collateral. In this incident, the hacker manipulated TONIC's price on thin markets and borrowed large sums against the inflated value. A blockchain rollback restores the ledger to an earlier state, discarding all blocks and transactions after that point; the alternative—restarting without restoring state—would have left the borrowed assets in the attacker's control.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "这次回滚开创了治理先例，可能使用户和开发者重新评估对 Cronos 的信任假设，并因最终性被推翻而影响 Cronos DeFi 市场及相关代币的流动性和活动。不过，约 92% 的受影响资金仍保留在链上，市场影响将取决于生态系统的后续反应；本文不构成投资建议。",
+      "market_impact_en": "The rollback sets a governance precedent that could make users and developers reassess trust assumptions on Cronos, potentially affecting liquidity and activity in Cronos DeFi markets and related tokens, since finality was overridden. That said, roughly 92% of affected funds were retained on-chain, and any market effects depend on how the ecosystem responds; this is not investment advice.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://cryptonews.net/news/security/33412727/",
+          "title": "Cronos executes controversial blockchain rollback to recover ..."
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:cointelegraph.com_rss:b8a5701740ed59ba",

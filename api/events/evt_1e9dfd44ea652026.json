@@ -56,14 +56,27 @@
       "current_state_en": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
       "detailed_summary_zh": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
       "detailed_summary_en": "OpenAI claims its AI solved a $1M math problem, but a rival mathematician says he did it first and accuses OpenAI of racing to claim credit.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "纳维-斯托克斯方程描述流体运动，其存在性与光滑性问题问的是三维空间中光滑解是否总是存在，还是会发生破裂，例如数学上预测无限速度的“爆破”。Lean是一个开源证明助手，可以逐步验证数学证明，因此经Lean验证的结果通常被认为是可形式化检查的。Buckmaster是纽约大学库朗数学研究所教授，曾因纳维-斯托克斯方程的相关研究获得2019年克莱研究奖。",
+      "background_en": "The Navier-Stokes equations describe the motion of fluids, and the Navier-Stokes existence and smoothness problem asks whether smooth solutions always exist in three dimensions or can break down, such as via 'blow-up' where the math predicts infinite velocity. Lean is an open-source proof assistant that verifies every step of a mathematical proof, so a Lean-verified result is considered formally checkable. Buckmaster is a professor at NYU's Courant Institute who received the 2019 Clay Research Award for related work on Navier-Stokes equations.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier–Stokes_existence_and_smoothness",
+          "title": "Navier–Stokes existence and smoothness - Wikipedia"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Lean_(proof_assistant)",
+          "title": "Lean (proof assistant)"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier–Stokes_equations",
+          "title": "Navier–Stokes equations - Wikipedia"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:731715c6c11c8599"
