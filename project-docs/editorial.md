@@ -5,7 +5,27 @@
 `force_publish` 重刊。草稿和未来日期编辑仍会保存，但不消耗当日 AI 重刊任务。
 有效内容变化通常几分钟后上线，不需要新增服务器或数据库；git 历史就是审计日志。
 
-## 使用方式一：网页后台（推荐）
+## 当前网页后台：Quick Post + 邮箱验证
+
+入口为 **https://bmt.news/s/**。只允许平台中配置的邮箱通过 Cloudflare Access
+验证码登录，不再在浏览器输入 GitHub Token。旧 /admin/ 在鉴权后跳转到 /s/。
+首次上线配置与验收参见 [Quick Post 交付记录](releases/2026-09-10-quick-post-implementation.md)；
+只有完成其中平台配置和线上验证，才能宣称已上线。
+
+Quick Post 只要求正文，支持可选链接、PNG/JPEG/WebP 配图（最大 1 MB）、
+分类、Breaking、刊期内置顶。草稿保存于 Git，未提交输入在当前标签页会话中恢复。
+Git 仓库仍然公开：不要在正文、草稿、备注和上传图片中保存秘密。
+后台下方保留旧编辑精选、广告和压稿的新建、编辑、启用/停用操作。
+
+新条目类型 quick_post 独立显示在首页 Quick Post 区块和 /api/quick-posts.json，
+不伪造标题、来源、AI 评分，不计入日报 Crypto/AI/政策条数。
+首页显示上海时间今天与昨天的已启用条目，未来日期和草稿不公开输出。
+数据仍在同一 editorial.json；由 Deploy Docs 无 AI 发布，不自动发送 Telegram，
+也不自动翻译。旧 editorial/sponsored/suppress 仍走原有重刊流程。
+“已保存”表示 Git 写入成功；“已上线”必须匹配公共 API 的 id 与 updated_at。
+信息源管理在 /s/sources/，来源更改仍提交检查与 PR 审核。
+
+## 历史实现：Sveltia CMS（已由新入口替代，不按以下步骤配置）
 
 访问 **https://bmt.news/admin/**（Sveltia CMS，一个静态页面，无服务器）。
 后台分为三种明确操作：发布编辑精选、安排广告、隐藏已有报道。选择操作后只显示

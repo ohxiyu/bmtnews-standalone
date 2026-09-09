@@ -114,6 +114,9 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
+      - name: Render Quick Post without AI
+        run: uv run python -m src.quick_posts
+
       - name: Deploy incremental event pages
         uses: peaceiris/actions-gh-pages@v4
         with:

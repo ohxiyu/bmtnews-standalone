@@ -16,6 +16,10 @@ polling, and retain the original publisher URL when presenting a story.
 
 ## REST endpoints
 
+- [`GET /api/quick-posts.json`](/api/quick-posts.json) returns enabled manual
+  Quick Posts for today and yesterday in Asia/Shanghai. These are separate
+  from the AI-ranked edition, with body text but no fabricated title or score.
+  Git saves become visible after asynchronous deployment; drafts are excluded.
 - [`GET /api/latest.json`](/api/latest.json) returns the newest complete edition.
 - [`GET /api/editions.json`](/api/editions.json) lists available edition dates.
 - `GET /editions/{date}/edition.json` returns one dated edition, where `date`
@@ -28,8 +32,8 @@ polling, and retain the original publisher URL when presenting a story.
   description. Every operation has a unique `operationId`, typed parameters,
   response schemas, and an explicit JSON error response.
 
-The API is intentionally read-only. It does not expose source-management,
-editorial, authentication, webhook, or publishing operations. A successful
+The public API is intentionally read-only. Private administrative operations
+are not part of this public specification. A successful
 edition response contains bilingual titles and summaries, ranking, score,
 category, source attribution, original URLs, tags, source-confirmation count,
 and optional thread data. The latest edition also includes publication-window,

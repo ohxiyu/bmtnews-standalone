@@ -1,11 +1,10 @@
 # Source Registry and Management
 
-BMTNews exposes a lightweight, read-only source registry at
-[`https://bmt.news/s`](https://bmt.news/s). It is an unlisted static GitHub
-Pages view of the production source configuration on `main`.
+BMTNews keeps the source registry at
+[`https://bmt.news/s/sources/`](https://bmt.news/s/sources/), behind the same
+email-only Cloudflare Access policy as Quick Post at /s/.
 
-The page intentionally has no database, custom authentication, or long-running
-service:
+The page has no database or self-managed login service:
 
 - reads `data/config.github.json` directly from `main`;
 - lists source type, editorial track, category, effective status, and stable
@@ -14,22 +13,21 @@ service:
 - lets maintainers copy the exact source key needed for an update;
 - never stores a GitHub token or writes production configuration.
 
-Anyone who knows the address can view the registry because the repository and
-configuration are public. The address is not linked from the public navigation
-and is marked `noindex`; write access is handled separately by GitHub, not by
-the public page.
+The repository and source configuration remain public, but the management UI
+and write dispatcher are authenticated. The address is not linked from the
+public navigation. The browser never receives the server-side GitHub token.
 
 ## Maintainer workflow
 
-1. Open **Actions → BMTNews Source Management → Run workflow**.
+1. Open /s/sources/ and use the source-change form after email verification.
 2. Choose `add`, `update`, `pause`, `resume`, or `remove`.
-3. For an existing source, copy its stable source key from `/s/`.
+3. For an existing source, copy its stable source key from the table.
 4. Fill only the fields needed for the operation:
    - `add`: type, endpoint, category, state, reason, and an RSS name;
    - `update`: source key and any fields that should change;
    - `pause`, `resume`, or `remove`: source key and reason.
-5. Run the workflow. GitHub permits this only for repository collaborators with
-   write access, and the job verifies the actor permission again.
+5. Submit the form. The authenticated server dispatches the existing workflow;
+   the job verifies the GitHub token owner's repository permission again.
 6. The workflow validates the request, public RSS endpoint, and complete
    Pydantic production configuration.
 7. It creates a unique `agent/source-run-<run-id>-<attempt>` branch containing

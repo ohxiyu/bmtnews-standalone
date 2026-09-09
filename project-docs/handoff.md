@@ -5,7 +5,7 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "以 Quick Post 替代现有手动插入入口，先确认即时发布的存储边界",
+  "goal": "落地 Quick Post 与指定邮箱验证码登录，保留 Git 存储并完成上线验收",
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/66",
   "owner": "Codex / quick-post",
   "branch": "agent/quick-post",
@@ -14,21 +14,23 @@
   "completed": [
     "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
     "确认当前 CMS 使用 GitHub Token 写 editorial.json，图片存 Git，发布经整期重建",
-    "确认没有内容 D1/KV/R2，也没有现成的 post creation API；记录两条接入路径"
+    "用户已确认 Git 分钟级发布与 Cloudflare Access 邮箱登录，并提供唯一允许邮箱（仅存平台，不写入仓库）",
+    "实现 Quick Post、受保护写入接口、图片上传、旧编辑管理、来源变更申请及无 AI 的独立发布输出",
+    "新增 JWT、CSRF、并发、防重复提交、图片与渲染测试；修复治理测试依赖旧指针状态的问题"
   ],
   "unfinished": [
-    "用户决定保留 Git 分钟级生效，或授权在现有 Cloudflare 内增加实时持久化存储",
-    "确认后实现 Quick Post、兼容旧内容、接口与安全校验、UI 和功能测试",
-    "本任务只有 PR 交付权限，尚未授权合并或生产部署"
+    "完成 Cloudflare Zero Trust / Access 配置及 Pages 生产绑定",
+    "用户在平台配置专用受限 GitHub 写入凭据，不复用本机 gh OAuth 或调度 Token",
+    "远端 CI、PR 合并、正式部署与真实邮箱端到端验收；未满足前不合并"
   ],
   "validation": [
-    "只读代码审查完成；尚未实现功能，不沿用之前任务的测试结果",
-    "python3 scripts/check_governance.py 与 git diff --check 通过（仅文档结构检查）",
-    "2026-09-10 主站 pwa-version.json 返回 assets sha256-fc44e345414e / build 2026-09-09T09:10:02+00:00"
+    "本地 uv sync --frozen --extra dev 成功；完整 pytest 通过，确切计数见发布记录",
+    "管理接口 15 项 Node 测试通过，公开 Worker、分享和 PWA 回归测试通过",
+    "390px 与 1280px 模拟浏览器通过草稿恢复、冲突保留、保存状态和横向溢出检查"
   ],
   "unverified": [
-    "当前浏览器 CMS Token 有效性、生产 Cloudflare 绑定与写入权限未探测",
-    "Quick Post 尚未开发，所有功能与移动端测试均待执行",
+    "真实邮箱 OTP、生产 Git 写入与发布完成尚未验证；不得把 mock 测试等同线上验收",
+    "真实 iPhone/PWA 未验收，生产未配置后台专用 Secrets",
     "下方 production 为继承的 09-08 快照，不是本次核验的新发布"
   ],
   "production": {
@@ -40,17 +42,18 @@
     "verified_at": "2026-09-08"
   },
   "blockers": [
-    "静态 Git 重建无法承诺发布后立即对所有读者生效；需用户确认时效或存储扩展"
+    "现有 Cloudflare OAuth 查询 Zero Trust organization 返回 403，需要用户完成平台开通/授权",
+    "Pages 当前没有 ADMIN_GITHUB_TOKEN 与 Access 绑定；缺配置时管理路由故意返回 503"
   ],
-  "next_action": "等待用户选择即时发布接入路径；先更新 Issue #66 范围，再实现。勿继续旧治理任务或合并旧本地 handoff 分支。",
+  "next_action": "按交付记录配置 Access 与受限凭据，再完成 CI、发布与真实 OTP 验收；配置前保持 Draft，不替换生产后台。",
   "states": {
-    "code": "pending",
-    "tests": "pending",
+    "code": "complete",
+    "tests": "complete",
     "pr_merged": "pending",
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-10-quick-post-discovery.md"
+  "evidence": "project-docs/releases/2026-09-10-quick-post-implementation.md"
 }
 ```
 

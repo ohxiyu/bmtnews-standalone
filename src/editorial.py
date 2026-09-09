@@ -122,6 +122,9 @@ def editorial_plan_from_payload(payload: object, edition_date: date_type) -> Edi
         return plan
 
     for index, row in enumerate(rows):
+        # Quick Post has a separate public stream, not a fabricated AI-ranked story.
+        if isinstance(row, dict) and row.get("type") == "quick_post":
+            continue
         try:
             entry = EditorialEntry.model_validate(row)
         except ValidationError as exc:

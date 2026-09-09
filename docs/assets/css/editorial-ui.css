@@ -160,3 +160,10 @@
   .site-brand { gap: 5px; }
   .lang-toggle a { padding-inline: 6px; }
 }
+/* Manual updates remain distinct from the AI-ranked daily edition. */
+.quick-post-stream { margin: 24px 0; }
+.quick-post-stream h2 { font-size: 18px; }
+.quick-post-public { padding: 18px 0; border-bottom: 1px solid currentColor; }
+.quick-post-public small { opacity: .65; }
+.quick-post-public p { max-width: 72ch; line-height: 1.8; white-space: normal; overflow-wrap: anywhere; }
+.quick-post-public img { display: block; max-width: 100%; max-height: 640px; height: auto; margin: 12px 0; }
