@@ -10,7 +10,7 @@
   "owner": "Codex / quick-post",
   "branch": "agent/quick-post",
   "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
-  "pr": "pending: discovery draft PR",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/67",
   "completed": [
     "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
     "确认当前 CMS 使用 GitHub Token 写 editorial.json，图片存 Git，发布经整期重建",
@@ -23,6 +23,7 @@
   ],
   "validation": [
     "只读代码审查完成；尚未实现功能，不沿用之前任务的测试结果",
+    "python3 scripts/check_governance.py 与 git diff --check 通过（仅文档结构检查）",
     "2026-09-10 主站 pwa-version.json 返回 assets sha256-fc44e345414e / build 2026-09-09T09:10:02+00:00"
   ],
   "unverified": [
