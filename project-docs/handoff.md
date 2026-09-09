@@ -5,30 +5,30 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "建立仓库内统一的 Agent 交接、任务认领与交付检查",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/64",
-  "owner": "Codex / agent-governance",
-  "branch": "agent/agent-governance",
-  "last_verified_commit": "fb3152b333be617db8260b04d91f8c6f02b6eba2",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/65",
+  "goal": "以 Quick Post 替代现有手动插入入口，先确认即时发布的存储边界",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/66",
+  "owner": "Codex / quick-post",
+  "branch": "agent/quick-post",
+  "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
+  "pr": "pending: discovery draft PR",
   "completed": [
-    "统一 AGENTS 与三个短入口；项目状态/规范/历史证据职责分离",
-    "新增任务 Issue Form、PR 交付模板与 CI governance job",
-    "版本、文件链接、唯一交接和交付证据检查及 11 个回归用例"
+    "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
+    "确认当前 CMS 使用 GitHub Token 写 editorial.json，图片存 Git，发布经整期重建",
+    "确认没有内容 D1/KV/R2，也没有现成的 post creation API；记录两条接入路径"
   ],
   "unfinished": [
-    "等待 PR #65 最终提交的远端检查及用户审阅",
-    "用户审阅和合并决定；本任务不合并或部署"
+    "用户决定保留 Git 分钟级生效，或授权在现有 Cloudflare 内增加实时持久化存储",
+    "确认后实现 Quick Post、兼容旧内容、接口与安全校验、UI 和功能测试",
+    "本任务只有 PR 交付权限，尚未授权合并或生产部署"
   ],
   "validation": [
-    "uv sync --frozen --extra dev: passed",
-    "uv run python scripts/check_governance.py: passed",
-    "uv run pytest: 740 passed, 1 dependency deprecation warning",
-    "git diff --check: passed"
+    "只读代码审查完成；尚未实现功能，不沿用之前任务的测试结果",
+    "2026-09-10 主站 pwa-version.json 返回 assets sha256-fc44e345414e / build 2026-09-09T09:10:02+00:00"
   ],
   "unverified": [
-    "最终 PR HEAD 的实时 GitHub 检查：须从 PR checks 核验，不从交接推断",
-    "生产 Worker 当前版本和权限（本任务未部署，无需运行时验收）"
+    "当前浏览器 CMS Token 有效性、生产 Cloudflare 绑定与写入权限未探测",
+    "Quick Post 尚未开发，所有功能与移动端测试均待执行",
+    "下方 production 为继承的 09-08 快照，不是本次核验的新发布"
   ],
   "production": {
     "source_commit": "950fc42f726be68df51c8217dbb4df29986ae496",
@@ -39,17 +39,17 @@
     "verified_at": "2026-09-08"
   },
   "blockers": [
-    "无开发阻塞；合并/生产部署需本任务明确授权，历史授权不可自动沿用"
+    "静态 Git 重建无法承诺发布后立即对所有读者生效；需用户确认时效或存储扩展"
   ],
-  "next_action": "核验 PR #65 的 governance/test/analyze 后交用户审阅；未经新授权不合并、部署或处理 backlog。",
+  "next_action": "等待用户选择即时发布接入路径；先更新 Issue #66 范围，再实现。勿继续旧治理任务或合并旧本地 handoff 分支。",
   "states": {
-    "code": "complete",
-    "tests": "complete",
+    "code": "pending",
+    "tests": "pending",
     "pr_merged": "pending",
-    "deployed": "not_required",
-    "production_verified": "not_required"
+    "deployed": "pending",
+    "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-08-agent-governance.md"
+  "evidence": "project-docs/releases/2026-09-10-quick-post-discovery.md"
 }
 ```
 
