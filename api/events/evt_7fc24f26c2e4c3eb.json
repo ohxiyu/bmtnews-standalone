@@ -19,7 +19,7 @@
   "last_material_change_at": "2026-09-09T16:49:41.002472+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 3,
+  "sources_count": 4,
   "entities": [
     "capital",
     "credit",
@@ -112,16 +112,23 @@
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
-      "importance_score": 7.0,
+      "importance_score": 7.5,
       "references": [],
       "confidence": 0.95,
       "story_ids": [
-        "rss:cointelegraph.com_rss:18c07a61ea98fc24"
+        "rss:cointelegraph.com_rss:18c07a61ea98fc24",
+        "rss:www.theblock.co_rss.xml:89dddeb356f7da88"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/tether-fasanara-launch-400m-private-credit-fund-targeting-3b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/deals/2026-09-09-tether-fasanara-launch-400-million-fund-for-stablecoin-enabled-private-credit-414011",
+          "label": "The Block",
           "source_type": "rss",
           "official": false
         }

@@ -15,11 +15,11 @@
     "en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations."
   },
   "first_seen_at": "2026-09-08T22:53:08.119189+00:00",
-  "last_updated_at": "2026-09-09T09:04:51.286726+00:00",
+  "last_updated_at": "2026-09-09T22:41:01.627713+00:00",
   "last_material_change_at": "2026-09-09T09:04:51.286726+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 3,
+  "sources_count": 4,
   "entities": [
     "bank-charter",
     "block",
@@ -103,7 +103,8 @@
       "confidence": 0.95,
       "story_ids": [
         "rss:cointelegraph.com_rss:c24e861be853ec41",
-        "rss:decrypt.co_feed:20f33c29f5922560"
+        "rss:decrypt.co_feed:20f33c29f5922560",
+        "rss:thedefiant.io_api_feed:66f200e81593b50f"
       ],
       "sources": [
         {
@@ -115,6 +116,12 @@
         {
           "url": "https://decrypt.co/377746/jack-dorseys-block-applies-for-bank-charter-to-custody-bitcoin",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/converge/tradfi-and-fintech/block-seeks-occ-charter-for-uninsured-bitcoin-and-stablecoin-custody-bank",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }

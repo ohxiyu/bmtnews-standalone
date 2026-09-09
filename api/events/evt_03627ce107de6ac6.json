@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "event_id": "evt_03627ce107de6ac6",
+  "url": "https://bmt.news/events/evt_03627ce107de6ac6/",
+  "json": "https://bmt.news/api/events/evt_03627ce107de6ac6.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "Understanding the recent DDoS attack against Read the Docs",
+    "en": "Understanding the recent DDoS attack against Read the Docs"
+  },
+  "current_state": {
+    "zh": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+    "en": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned."
+  },
+  "first_seen_at": "2026-09-09T22:40:59.523523+00:00",
+  "last_updated_at": "2026-09-09T22:40:59.523523+00:00",
+  "last_material_change_at": "2026-09-09T22:40:59.523523+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "ddos",
+    "docs",
+    "read",
+    "read-the-docs",
+    "understanding"
+  ],
+  "identifiers": [],
+  "topics": [
+    "ddos",
+    "infrastructure",
+    "read-the-docs"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_92cb38a2130d5847",
+      "event_id": "evt_03627ce107de6ac6",
+      "occurred_at": "2026-09-09T15:55:53Z",
+      "published_at": "2026-09-09T15:55:53Z",
+      "first_seen_at": "2026-09-09T22:40:59.523523Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Understanding the recent DDoS attack against Read the Docs",
+      "title_en": "Understanding the recent DDoS attack against Read the Docs",
+      "what_changed_zh": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+      "what_changed_en": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+      "current_state_zh": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+      "current_state_en": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+      "detailed_summary_zh": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+      "detailed_summary_en": "Read the Docs details a sophisticated DDoS attack, including attack vectors, mitigation efforts, and lessons learned.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49628614",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49628614"
+      ],
+      "sources": [
+        {
+          "url": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+          "label": "davidfischer",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}
