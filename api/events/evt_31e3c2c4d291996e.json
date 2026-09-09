@@ -4,34 +4,37 @@
   "url": "https://bmt.news/events/evt_31e3c2c4d291996e/",
   "json": "https://bmt.news/api/events/evt_31e3c2c4d291996e.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
     "en": "Jack Dorsey’s Block joins rush for federal bank charters from OCC"
   },
   "current_state": {
-    "zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
-    "en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status."
+    "zh": "Jack Dorsey 的支付公司 Block 已向美国货币监理署（OCC）提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，专门提供受联邦监管的比特币和稳定币托管及其他信托服务。该银行不吸收存款或发放贷款，将受 OCC 监管。若获批准，将为 Block 的数字资产托管业务提供统一的国家监管框架。",
+    "en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations."
   },
   "first_seen_at": "2026-09-08T22:53:08.119189+00:00",
-  "last_updated_at": "2026-09-08T22:53:08.119189+00:00",
-  "last_material_change_at": "2026-09-08T22:53:08.119189+00:00",
+  "last_updated_at": "2026-09-09T09:04:51.286726+00:00",
+  "last_material_change_at": "2026-09-09T09:04:51.286726+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 3,
   "entities": [
     "bank-charter",
     "block",
     "dorsey",
     "jack",
-    "occ"
+    "occ",
+    "trust-bank"
   ],
   "identifiers": [],
   "topics": [
     "bank-charter",
     "block",
-    "occ"
+    "crypto-custody",
+    "occ",
+    "trust-bank"
   ],
   "updates": [
     {
@@ -67,6 +70,51 @@
         {
           "url": "https://www.theblock.co/news/regulation/2026-09-08-jack-dorsey-block-joins-rush-federal-bank-charters-from-occ-413947",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_b02b4368b6e7f001",
+      "event_id": "evt_31e3c2c4d291996e",
+      "occurred_at": "2026-09-09T07:36:21Z",
+      "published_at": "2026-09-09T07:36:21Z",
+      "first_seen_at": "2026-09-09T09:04:51.286726Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Jack Dorsey’s Block seeks US trust bank charter for Bitcoin, stablecoin",
+      "title_en": "Jack Dorsey’s Block seeks US trust bank charter for Bitcoin, stablecoin",
+      "what_changed_zh": "Block 已向 OCC 正式提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，提供受联邦监管的比特币和稳定币托管服务，且不吸收存款或发放贷款。李·伍利将担任总裁兼首席执行官。",
+      "what_changed_en": "Block has formally applied to the OCC to create Builders Bank & Trust, an uninsured national trust bank offering federally supervised Bitcoin and stablecoin custody, without accepting deposits or issuing loans. Lee Woolley would serve as President and CEO.",
+      "current_state_zh": "Jack Dorsey 的支付公司 Block 已向美国货币监理署（OCC）提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，专门提供受联邦监管的比特币和稳定币托管及其他信托服务。该银行不吸收存款或发放贷款，将受 OCC 监管。若获批准，将为 Block 的数字资产托管业务提供统一的国家监管框架。",
+      "current_state_en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations.",
+      "detailed_summary_zh": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+      "detailed_summary_en": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:c24e861be853ec41",
+        "rss:decrypt.co_feed:20f33c29f5922560"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/block-us-trust-bank-charter-bitcoin-stablecoin-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377746/jack-dorseys-block-applies-for-bank-charter-to-custody-bitcoin",
+          "label": "Decrypt",
           "source_type": "rss",
           "official": false
         }

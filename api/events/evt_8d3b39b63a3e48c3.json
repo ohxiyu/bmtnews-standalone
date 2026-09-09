@@ -4,26 +4,27 @@
   "url": "https://bmt.news/events/evt_8d3b39b63a3e48c3/",
   "json": "https://bmt.news/api/events/evt_8d3b39b63a3e48c3.json",
   "type": "other",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
     "en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability"
   },
   "current_state": {
-    "zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
-    "en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability"
+    "zh": "Core Lightning 运营商仍需修复未修补的漏洞，现在需检查 Docker 镜像摘要以确认修补是否到位，并计划于 9 月 11 日公开披露。",
+    "en": "Core Lightning operators still need to address the unpatched vulnerability, now with added instructions to verify Docker image digests, with source disclosure planned for Sept. 11."
   },
   "first_seen_at": "2026-08-27T08:00:00+08:00",
-  "last_updated_at": "2026-08-27T08:00:00+08:00",
-  "last_material_change_at": "2026-08-27T08:00:00+08:00",
+  "last_updated_at": "2026-09-09T09:04:47.363343+00:00",
+  "last_material_change_at": "2026-09-09T09:04:47.363343+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "advises",
     "core",
     "core-lightning",
+    "docker",
     "lightning",
     "node",
     "offline",
@@ -35,6 +36,7 @@
   "identifiers": [],
   "topics": [
     "core-lightning",
+    "docker",
     "lightning",
     "vulnerability"
   ],
@@ -72,6 +74,44 @@
         {
           "url": "https://thedefiant.io/news/security/core-lightning-tells-node-operators-to-go-offline-with-no-patch-published",
           "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_fcbe0642c9488519",
+      "event_id": "evt_8d3b39b63a3e48c3",
+      "occurred_at": "2026-09-09T08:30:48Z",
+      "published_at": "2026-09-09T08:30:48Z",
+      "first_seen_at": "2026-09-09T09:04:47.363343Z",
+      "time_precision": "published",
+      "update_type": "response",
+      "material_change": true,
+      "title_zh": "Bitcoin Core Lightning Docker bug leaves node operators exposed despite showing updated version",
+      "title_en": "Bitcoin Core Lightning Docker bug leaves node operators exposed despite showing updated version",
+      "what_changed_zh": "披露 Kubernetes 构建错误导致四个 Docker 标签分发了未修补的二进制文件，即使启动时显示为 v26.06.7，要求运营商验证镜像摘要并更换受影响的镜像。",
+      "what_changed_en": "Disclosed a Docker build error distributing unpatched binaries under four tags that reported v26.06.7 at startup, requiring operators to verify image digests and replace affected images.",
+      "current_state_zh": "Core Lightning 运营商仍需修复未修补的漏洞，现在需检查 Docker 镜像摘要以确认修补是否到位，并计划于 9 月 11 日公开披露。",
+      "current_state_en": "Core Lightning operators still need to address the unpatched vulnerability, now with added instructions to verify Docker image digests, with source disclosure planned for Sept. 11.",
+      "detailed_summary_zh": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+      "detailed_summary_en": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:fad8b8ca05ade2e0"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/bitcoin-core-lightning-docker-bug-leaves-node-operators-exposed-despite-showing-updated-version/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

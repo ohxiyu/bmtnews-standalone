@@ -1,6 +1,103 @@
 {
   "threads": [
     {
+      "thread_id": "evt_31e3c2c4d291996e",
+      "event_id": "evt_31e3c2c4d291996e",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T17:04:51.286726+08:00",
+      "first_date": "2026-09-09",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "policy",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+      "title_en": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+      "summary_zh": "Jack Dorsey 的支付公司 Block 已向美国货币监理署（OCC）提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，专门提供受联邦监管的比特币和稳定币托管及其他信托服务。该银行不吸收存款或发放贷款，将受 OCC 监管。若获批准，将为 Block 的数字资产托管业务提供统一的国家监管框架。",
+      "summary_en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations.",
+      "latest_update_zh": "Block 已向 OCC 正式提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，提供受联邦监管的比特币和稳定币托管服务，且不吸收存款或发放贷款。李·伍利将担任总裁兼首席执行官。",
+      "latest_update_en": "Block has formally applied to the OCC to create Builders Bank & Trust, an uninsured national trust bank offering federally supervised Bitcoin and stablecoin custody, without accepting deposits or issuing loans. Lee Woolley would serve as President and CEO.",
+      "background_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "background_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "latest_summary_zh": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+      "latest_summary_en": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-09-08-jack-dorsey-block-joins-rush-federal-bank-charters-from-occ-413947",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/block-us-trust-bank-charter-bitcoin-stablecoin-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377746/jack-dorseys-block-applies-for-bank-charter-to-custody-bitcoin",
+          "title": "Decrypt",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_8d3b39b63a3e48c3",
+      "event_id": "evt_8d3b39b63a3e48c3",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T17:04:47.363343+08:00",
+      "first_date": "2026-08-27",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "other",
+      "event_type_zh": "其他事件",
+      "event_type_en": "Other",
+      "title_zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
+      "title_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
+      "summary_zh": "Core Lightning 运营商仍需修复未修补的漏洞，现在需检查 Docker 镜像摘要以确认修补是否到位，并计划于 9 月 11 日公开披露。",
+      "summary_en": "Core Lightning operators still need to address the unpatched vulnerability, now with added instructions to verify Docker image digests, with source disclosure planned for Sept. 11.",
+      "latest_update_zh": "披露 Kubernetes 构建错误导致四个 Docker 标签分发了未修补的二进制文件，即使启动时显示为 v26.06.7，要求运营商验证镜像摘要并更换受影响的镜像。",
+      "latest_update_en": "Disclosed a Docker build error distributing unpatched binaries under four tags that reported v26.06.7 at startup, requiring operators to verify image digests and replace affected images.",
+      "background_zh": "Core Lightning（CLN）开发者已告知节点运营者让其节点下线，因为存在一个严重且尚未修补的漏洞。修复后的二进制文件尚未发布，细节目前处于两周的保密期（embargo）内。",
+      "background_en": "Core Lightning (CLN) developers have told node operators to take their nodes offline because of a critical unpatched vulnerability. The fixed binaries have not yet been released, and details are under a two-week embargo.",
+      "latest_summary_zh": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+      "latest_summary_en": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://thedefiant.io/news/security/core-lightning-tells-node-operators-to-go-offline-with-no-patch-published",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/bitcoin-core-lightning-docker-bug-leaves-node-operators-exposed-despite-showing-updated-version/",
+          "title": "CryptoSlate",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
       "thread_id": "evt_6854286a74468024",
       "event_id": "evt_6854286a74468024",
       "latest_date": "2026-09-09",
@@ -1684,6 +1781,103 @@
           "title": "Guilty Plea and Superseding Indictment Announced in Social ..."
         }
       ]
+    },
+    {
+      "thread_id": "evt_31e3c2c4d291996e",
+      "event_id": "evt_31e3c2c4d291996e",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T17:04:51.286726+08:00",
+      "first_date": "2026-09-09",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "policy",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+      "title_en": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
+      "summary_zh": "Jack Dorsey 的支付公司 Block 已向美国货币监理署（OCC）提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，专门提供受联邦监管的比特币和稳定币托管及其他信托服务。该银行不吸收存款或发放贷款，将受 OCC 监管。若获批准，将为 Block 的数字资产托管业务提供统一的国家监管框架。",
+      "summary_en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations.",
+      "latest_update_zh": "Block 已向 OCC 正式提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，提供受联邦监管的比特币和稳定币托管服务，且不吸收存款或发放贷款。李·伍利将担任总裁兼首席执行官。",
+      "latest_update_en": "Block has formally applied to the OCC to create Builders Bank & Trust, an uninsured national trust bank offering federally supervised Bitcoin and stablecoin custody, without accepting deposits or issuing loans. Lee Woolley would serve as President and CEO.",
+      "background_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "background_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "latest_summary_zh": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+      "latest_summary_en": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-09-08-jack-dorsey-block-joins-rush-federal-bank-charters-from-occ-413947",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/block-us-trust-bank-charter-bitcoin-stablecoin-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/377746/jack-dorseys-block-applies-for-bank-charter-to-custody-bitcoin",
+          "title": "Decrypt",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_8d3b39b63a3e48c3",
+      "event_id": "evt_8d3b39b63a3e48c3",
+      "latest_date": "2026-09-09",
+      "latest_at": "2026-09-09T17:04:47.363343+08:00",
+      "first_date": "2026-08-27",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "other",
+      "event_type_zh": "其他事件",
+      "event_type_en": "Other",
+      "title_zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
+      "title_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
+      "summary_zh": "Core Lightning 运营商仍需修复未修补的漏洞，现在需检查 Docker 镜像摘要以确认修补是否到位，并计划于 9 月 11 日公开披露。",
+      "summary_en": "Core Lightning operators still need to address the unpatched vulnerability, now with added instructions to verify Docker image digests, with source disclosure planned for Sept. 11.",
+      "latest_update_zh": "披露 Kubernetes 构建错误导致四个 Docker 标签分发了未修补的二进制文件，即使启动时显示为 v26.06.7，要求运营商验证镜像摘要并更换受影响的镜像。",
+      "latest_update_en": "Disclosed a Docker build error distributing unpatched binaries under four tags that reported v26.06.7 at startup, requiring operators to verify image digests and replace affected images.",
+      "background_zh": "Core Lightning（CLN）开发者已告知节点运营者让其节点下线，因为存在一个严重且尚未修补的漏洞。修复后的二进制文件尚未发布，细节目前处于两周的保密期（embargo）内。",
+      "background_en": "Core Lightning (CLN) developers have told node operators to take their nodes offline because of a critical unpatched vulnerability. The fixed binaries have not yet been released, and details are under a two-week embargo.",
+      "latest_summary_zh": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+      "latest_summary_en": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://thedefiant.io/news/security/core-lightning-tells-node-operators-to-go-offline-with-no-patch-published",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/bitcoin-core-lightning-docker-bug-leaves-node-operators-exposed-despite-showing-updated-version/",
+          "title": "CryptoSlate",
+          "official": false
+        }
+      ],
+      "reference_links": []
     },
     {
       "thread_id": "evt_65f972f6d8c15c28",

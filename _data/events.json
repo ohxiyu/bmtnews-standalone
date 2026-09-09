@@ -6048,12 +6048,13 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
-      "current_state_zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
+      "current_state_en": "Core Lightning operators still need to address the unpatched vulnerability, now with added instructions to verify Docker image digests, with source disclosure planned for Sept. 11.",
+      "current_state_zh": "Core Lightning 运营商仍需修复未修补的漏洞，现在需检查 Docker 镜像摘要以确认修补是否到位，并计划于 9 月 11 日公开披露。",
       "entities": [
         "advises",
         "core",
         "core-lightning",
+        "docker",
         "lightning",
         "node",
         "offline",
@@ -6066,15 +6067,16 @@
       "event_type": "other",
       "first_seen_at": "2026-08-27T08:00:00+08:00",
       "identifiers": [],
-      "last_material_change_at": "2026-08-27T08:00:00+08:00",
-      "last_updated_at": "2026-08-27T08:00:00+08:00",
+      "last_material_change_at": "2026-09-09T09:04:47.363343Z",
+      "last_updated_at": "2026-09-09T09:04:47.363343Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
       "title_zh": "Core Lightning 建议节点运营者因未修补漏洞下线",
       "topics": [
         "core-lightning",
+        "docker",
         "lightning",
         "vulnerability"
       ],
@@ -6116,6 +6118,44 @@
           "update_type": "initial",
           "what_changed_en": "Core Lightning Advises Node Operators to Go Offline Over Unpatched Vulnerability",
           "what_changed_zh": "Core Lightning 建议节点运营者因未修补漏洞下线"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Core Lightning operators still need to address the unpatched vulnerability, now with added instructions to verify Docker image digests, with source disclosure planned for Sept. 11.",
+          "current_state_zh": "Core Lightning 运营商仍需修复未修补的漏洞，现在需检查 Docker 镜像摘要以确认修补是否到位，并计划于 9 月 11 日公开披露。",
+          "detailed_summary_en": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+          "detailed_summary_zh": "Core Lightning Docker tags distributed unpatched binaries while reporting v26.06.7, requiring operators to verify image digests and replace faulty images before fixes become public.",
+          "event_id": "evt_8d3b39b63a3e48c3",
+          "first_seen_at": "2026-09-09T09:04:47.363343Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T08:30:48Z",
+          "published_at": "2026-09-09T08:30:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/bitcoin-core-lightning-docker-bug-leaves-node-operators-exposed-despite-showing-updated-version/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:fad8b8ca05ade2e0"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin Core Lightning Docker bug leaves node operators exposed despite showing updated version",
+          "title_zh": "Bitcoin Core Lightning Docker bug leaves node operators exposed despite showing updated version",
+          "update_id": "upd_fcbe0642c9488519",
+          "update_type": "response",
+          "what_changed_en": "Disclosed a Docker build error distributing unpatched binaries under four tags that reported v26.06.7 at startup, requiring operators to verify image digests and replace affected images.",
+          "what_changed_zh": "披露 Kubernetes 构建错误导致四个 Docker 标签分发了未修补的二进制文件，即使启动时显示为 v26.06.7，要求运营商验证镜像摘要并更换受影响的镜像。"
         }
       ]
     },
@@ -30289,30 +30329,33 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
-      "current_state_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
+      "current_state_en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations.",
+      "current_state_zh": "Jack Dorsey 的支付公司 Block 已向美国货币监理署（OCC）提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，专门提供受联邦监管的比特币和稳定币托管及其他信托服务。该银行不吸收存款或发放贷款，将受 OCC 监管。若获批准，将为 Block 的数字资产托管业务提供统一的国家监管框架。",
       "entities": [
         "bank-charter",
         "block",
         "dorsey",
         "jack",
-        "occ"
+        "occ",
+        "trust-bank"
       ],
       "event_id": "evt_31e3c2c4d291996e",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-08T22:53:08.119189Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-08T22:53:08.119189Z",
-      "last_updated_at": "2026-09-08T22:53:08.119189Z",
+      "last_material_change_at": "2026-09-09T09:04:51.286726Z",
+      "last_updated_at": "2026-09-09T09:04:51.286726Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
       "title_zh": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
       "topics": [
         "bank-charter",
         "block",
-        "occ"
+        "crypto-custody",
+        "occ",
+        "trust-bank"
       ],
       "updates": [
         {
@@ -30352,6 +30395,51 @@
           "update_type": "initial",
           "what_changed_en": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status.",
           "what_changed_zh": "Jack Dorsey's Block is seeking a federal bank charter from the OCC, joining a trend of fintech and crypto companies pursuing national bank status."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Jack Dorsey's payments company Block has submitted an application to the OCC to establish Builders Bank & Trust, a national trust bank focused on federally supervised custody for Bitcoin and stablecoins. The bank would not accept deposits or issue loans and would operate under OCC supervision. If approved, it would provide a consistent national framework for Block's digital asset custody operations.",
+          "current_state_zh": "Jack Dorsey 的支付公司 Block 已向美国货币监理署（OCC）提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，专门提供受联邦监管的比特币和稳定币托管及其他信托服务。该银行不吸收存款或发放贷款，将受 OCC 监管。若获批准，将为 Block 的数字资产托管业务提供统一的国家监管框架。",
+          "detailed_summary_en": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+          "detailed_summary_zh": "Jack Dorsey's Block has applied for a US national trust bank charter to offer federally supervised Bitcoin and stablecoin custody services.",
+          "event_id": "evt_31e3c2c4d291996e",
+          "first_seen_at": "2026-09-09T09:04:51.286726Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T07:36:21Z",
+          "published_at": "2026-09-09T07:36:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/block-us-trust-bank-charter-bitcoin-stablecoin-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377746/jack-dorseys-block-applies-for-bank-charter-to-custody-bitcoin"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:c24e861be853ec41",
+            "rss:decrypt.co_feed:20f33c29f5922560"
+          ],
+          "time_precision": "published",
+          "title_en": "Jack Dorsey’s Block seeks US trust bank charter for Bitcoin, stablecoin",
+          "title_zh": "Jack Dorsey’s Block seeks US trust bank charter for Bitcoin, stablecoin",
+          "update_id": "upd_b02b4368b6e7f001",
+          "update_type": "escalation",
+          "what_changed_en": "Block has formally applied to the OCC to create Builders Bank & Trust, an uninsured national trust bank offering federally supervised Bitcoin and stablecoin custody, without accepting deposits or issuing loans. Lee Woolley would serve as President and CEO.",
+          "what_changed_zh": "Block 已向 OCC 正式提交申请，拟成立名为 Builders Bank & Trust 的全国性信托银行，提供受联邦监管的比特币和稳定币托管服务，且不吸收存款或发放贷款。李·伍利将担任总裁兼首席执行官。"
         }
       ]
     },
@@ -31364,7 +31452,7 @@
       "first_seen_at": "2026-09-09T05:05:41.481846Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-09T05:05:41.481846Z",
-      "last_updated_at": "2026-09-09T05:05:41.481846Z",
+      "last_updated_at": "2026-09-09T09:04:45.710910Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -31407,10 +31495,17 @@
               "official": false,
               "source_type": "hackernews",
               "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/09/anthropic-researcher-quits-with-a-warning-on-ai-that-echoes-the-terminator-script"
             }
           ],
           "story_ids": [
-            "hackernews:story:49619227"
+            "hackernews:story:49619227",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:4d2a60250e3952f1"
           ],
           "time_precision": "published",
           "title_en": "I resigned from Anthropic today",
@@ -31847,6 +31942,279 @@
           "what_changed_zh": "Crypto industry groups launch a seven-figure TV ad campaign to push the CLARITY Act through a critical Senate cloture vote on Sept. 15, which would establish federal digital-asset market rules and split SEC/CFTC oversight."
         }
       ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+      "current_state_zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "cloture",
+        "coinbase",
+        "cryptonews",
+        "explained",
+        "senate",
+        "vote"
+      ],
+      "event_id": "evt_d918c8d1e6c25a31",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-09T09:04:44.593538Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-09T09:04:44.593538Z",
+      "last_updated_at": "2026-09-09T09:04:44.593538Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
+      "title_zh": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
+      "topics": [
+        "clarity-act",
+        "coinbase",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+          "current_state_zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+          "detailed_summary_en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+          "detailed_summary_zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+          "event_id": "evt_d918c8d1e6c25a31",
+          "first_seen_at": "2026-09-09T09:04:44.593538Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T08:23:33Z",
+          "published_at": "2026-09-09T08:23:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cryptonews",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1tWlFpamR2YUNMWFkwQUdHMEVQUWxIX3NwOENtOGhKVHRfbFc5REpEOVJpRkpTamFtT1Zrc01OX0RKa2owYmkwb2hyaTBlU0pzVUlnWEN4WnRsMnpHbUk5YVJpOA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:0b01348323639cfc"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
+          "title_zh": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
+          "update_id": "upd_763cd8c164949818",
+          "update_type": "initial",
+          "what_changed_en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+          "what_changed_zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+      "current_state_zh": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+      "entities": [
+        "aml",
+        "india"
+      ],
+      "event_id": "evt_3827e5b4ab3534b4",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-09T09:04:45.642999Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-09T09:04:45.642999Z",
+      "last_updated_at": "2026-09-09T09:04:45.642999Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "India’s financial intelligence unit flags 15 crypto platforms for AML lapses",
+      "title_zh": "India’s financial intelligence unit flags 15 crypto platforms for AML lapses",
+      "topics": [
+        "aml",
+        "crypto-exchanges",
+        "india"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+          "current_state_zh": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+          "detailed_summary_en": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+          "detailed_summary_zh": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+          "event_id": "evt_3827e5b4ab3534b4",
+          "first_seen_at": "2026-09-09T09:04:45.642999Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T08:17:54Z",
+          "published_at": "2026-09-09T08:17:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/09/india-s-financial-intelligence-unit-flags-15-crypto-platforms-for-aml-lapses"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:4e9cec491e8afdcd"
+          ],
+          "time_precision": "published",
+          "title_en": "India’s financial intelligence unit flags 15 crypto platforms for AML lapses",
+          "title_zh": "India’s financial intelligence unit flags 15 crypto platforms for AML lapses",
+          "update_id": "upd_e4ce959d9786e508",
+          "update_type": "initial",
+          "what_changed_en": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny.",
+          "what_changed_zh": "India's financial intelligence unit has flagged 15 crypto platforms for anti-money laundering compliance failures, signaling increased regulatory scrutiny."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+      "current_state_zh": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+      "entities": [
+        "iran",
+        "report",
+        "sanctions"
+      ],
+      "event_id": "evt_d7d9d7db2c2f887d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-09T09:04:51.244995Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-09T09:04:51.244995Z",
+      "last_updated_at": "2026-09-09T09:04:51.244995Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Iran eases currency rules to bypass US sanctions with crypto: Report",
+      "title_zh": "Iran eases currency rules to bypass US sanctions with crypto: Report",
+      "topics": [
+        "crypto-adoption",
+        "geopolitics",
+        "iran",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+          "current_state_zh": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+          "detailed_summary_en": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+          "detailed_summary_zh": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+          "event_id": "evt_d7d9d7db2c2f887d",
+          "first_seen_at": "2026-09-09T09:04:51.244995Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T07:36:39Z",
+          "published_at": "2026-09-09T07:36:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/iran-central-bank-encourages-crypto-evade-sanctions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:48af0357fe7298c7"
+          ],
+          "time_precision": "published",
+          "title_en": "Iran eases currency rules to bypass US sanctions with crypto: Report",
+          "title_zh": "Iran eases currency rules to bypass US sanctions with crypto: Report",
+          "update_id": "upd_2da902364ef98f2e",
+          "update_type": "initial",
+          "what_changed_en": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions.",
+          "what_changed_zh": "Iran's central bank has reportedly eased foreign currency controls to encourage businesses to use cryptocurrencies like Bitcoin and Tether to bypass US sanctions and settle cross-border transactions."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+      "current_state_zh": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+      "entities": [
+        "gemini",
+        "license",
+        "singapore"
+      ],
+      "event_id": "evt_95c51f3c4469837e",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-09T09:04:51.376122Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-09T09:04:51.376122Z",
+      "last_updated_at": "2026-09-09T09:04:51.376122Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Gemini receives Singapore payment license for crypto services",
+      "title_zh": "Gemini receives Singapore payment license for crypto services",
+      "topics": [
+        "gemini",
+        "license",
+        "singapore"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+          "current_state_zh": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+          "detailed_summary_en": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+          "detailed_summary_zh": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+          "event_id": "evt_95c51f3c4469837e",
+          "first_seen_at": "2026-09-09T09:04:51.376122Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T05:27:12Z",
+          "published_at": "2026-09-09T05:27:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/gemini-singapore-mpi-license-crypto-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:22f65a62c644acfe"
+          ],
+          "time_precision": "published",
+          "title_en": "Gemini receives Singapore payment license for crypto services",
+          "title_zh": "Gemini receives Singapore payment license for crypto services",
+          "update_id": "upd_c2cb4355aacacf71",
+          "update_type": "initial",
+          "what_changed_en": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits.",
+          "what_changed_zh": "Gemini receives a Major Payment Institution license from the Monetary Authority of Singapore, allowing its local entity to offer digital payment token services and cross-border money transfers without transaction-volume limits."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -31909,7 +32277,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "A $320M theft from a crypto network is a major security incident with significant user impact, warranting high importance despite limited details.",
         "ai_score": 8.5,
