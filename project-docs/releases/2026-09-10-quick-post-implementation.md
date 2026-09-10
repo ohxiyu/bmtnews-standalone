@@ -90,6 +90,25 @@ gh-pages，生产与 Preview 均无后台 env vars。Access applications 和 ide
 
 ## 上线验收与回退
 
+### 2026-09-11 平台配置进展
+
+- 用户确认仅允许指定本人邮箱以 OTP 登录，24 小时会话，其他新闻页面不加 Access。
+- 已创建一个 BMTNews Admin 自托管应用及一个精确邮箱 Allow 策略，覆盖
+  /s、/s/*、/admin、/admin/*、/api/admin、/api/admin/*。
+- 仅选择 onetimepin，关闭接受所有身份提供商；保存后重新读取确认路径和 24 小时会话。
+- Pages 生产 ADMIN_ACCESS_ISSUER、ADMIN_ACCESS_AUD、ADMIN_ALLOWED_EMAIL 已保存；
+  ADMIN_GITHUB_TOKEN 显示密钥类型且值已加密。邮箱行 AX 文本为空但实际页面截图正确，
+  未创建重复变量。真实邮箱、AUD 和凭据不写入公开仓库。
+- HEAD 9eab064 的 test、analyze、governance、CodeQL、Cloudflare Pages 全部成功。
+- 配置后重新执行 uv sync --frozen --extra dev 成功；uv run pytest：748 passed，
+  1 个既有依赖警告，57.45s；治理检查和 git diff --check 通过。
+- 匿名 /s、/s/、/api/admin/state 已观察到 302 到配置的 Access 团队域名；
+  主页重试返回 200，仍公开；其余路径检查遭遇间歇性网络错误，
+  不声称完整匿名验收通过。
+- git fetch 初次遇到 TLS 连接失败，重试成功；merge origin/main 为 Already up to date。
+  未合并 PR、未部署。生产变量在下次部署时生效，
+  保存绑定不等同新后台上线。仍需验证真实 OTP、Git 权限及发布链路。
+
 上线后先匿名检查：主站可访问、/s 被 Access 登录拦截、匿名写入失败、
 直接 pages.dev 管理路径失败。再由用户用允许邮箱收码登录，创建一条草稿确认
 公共 API 不包含它；经用户确认发布一条实际内容，等待 API 与主页一致后再标已上线。

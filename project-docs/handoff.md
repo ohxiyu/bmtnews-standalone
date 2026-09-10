@@ -19,8 +19,7 @@
     "新增 JWT、CSRF、并发、防重复提交、图片与渲染测试；修复治理测试依赖旧指针状态的问题"
   ],
   "unfinished": [
-    "完成 Cloudflare Zero Trust / Access 配置及 Pages 生产绑定",
-    "用户在平台配置专用受限 GitHub 写入凭据，不复用本机 gh OAuth 或调度 Token",
+    "Access 和 Pages 生产绑定已保存；仍需部署后验证 JWT 与 GitHub 凭据权限",
     "远端 CI、PR 合并、正式部署与真实邮箱端到端验收；未满足前不合并"
   ],
   "validation": [
@@ -30,7 +29,7 @@
   ],
   "unverified": [
     "真实邮箱 OTP、生产 Git 写入与发布完成尚未验证；不得把 mock 测试等同线上验收",
-    "真实 iPhone/PWA 未验收，生产未配置后台专用 Secrets",
+    "真实 iPhone/PWA 未验收；生产密钥已确认加密保存，但有效性与权限尚未验证",
     "下方 production 为继承的 09-08 快照，不是本次核验的新发布"
   ],
   "production": {
@@ -42,10 +41,10 @@
     "verified_at": "2026-09-08"
   },
   "blockers": [
-    "现有 Cloudflare OAuth 查询 Zero Trust organization 返回 403，需要用户完成平台开通/授权",
-    "Pages 当前没有 ADMIN_GITHUB_TOKEN 与 Access 绑定；缺配置时管理路由故意返回 503"
+    "2026-09-11：本机 Cloudflare OAuth 过期；已使用已登录控制台完成 Access 与生产绑定配置",
+    "部分线上 HTTP 检查间歇性 TLS 失败，完整匿名验收尚未完成；git fetch 重试成功，merge origin/main 已确认 up to date"
   ],
-  "next_action": "按交付记录配置 Access 与受限凭据，再完成 CI、发布与真实 OTP 验收；配置前保持 Draft，不替换生产后台。",
+  "next_action": "完成最新交接提交的 CI 与完整匿名检查，确认当前任务合并部署授权后发布，再由用户进行真实 OTP 与草稿验收。不要重复创建 Access 应用或放宽邮箱策略。",
   "states": {
     "code": "complete",
     "tests": "complete",
