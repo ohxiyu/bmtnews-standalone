@@ -36,6 +36,96 @@
     }
   ],
   "paths": {
+    "/api/quick-posts.json": {
+      "get": {
+        "summary": "Read the manual Quick Post stream",
+        "description": "Returns enabled manual posts for today and yesterday in Asia/Shanghai. Separate from AI-ranked daily editions; no AI score or invented title. Publication is asynchronous.",
+        "operationId": "getQuickPosts",
+        "responses": {
+          "200": {
+            "description": "Published manual updates; drafts and internal metadata are excluded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "version",
+                    "date",
+                    "items"
+                  ],
+                  "properties": {
+                    "version": {
+                      "type": "integer",
+                      "const": 1
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "body",
+                          "url",
+                          "image",
+                          "date",
+                          "category",
+                          "pin",
+                          "breaking",
+                          "created_at",
+                          "updated_at"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "pattern": "^[a-f0-9-]{36}$"
+                          },
+                          "body": {
+                            "type": "string",
+                            "maxLength": 10000
+                          },
+                          "url": {
+                            "type": "string",
+                            "description": "Optional original-source URL, empty when absent."
+                          },
+                          "image": {
+                            "type": "string",
+                            "description": "Optional same-origin uploaded image path."
+                          },
+                          "date": {
+                            "type": "string",
+                            "format": "date"
+                          },
+                          "category": {
+                            "type": "string"
+                          },
+                          "pin": {
+                            "type": "boolean"
+                          },
+                          "breaking": {
+                            "type": "boolean"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/latest.json": {
       "get": {
         "tags": ["Editions"],

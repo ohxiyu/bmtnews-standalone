@@ -16,20 +16,24 @@ polling, and retain the original publisher URL when presenting a story.
 
 ## REST endpoints
 
-- [`GET /api/latest.json`](/api/latest.json) returns the newest complete edition.
-- [`GET /api/editions.json`](/api/editions.json) lists available edition dates.
+- [`GET /api/quick-posts.json`](https://bmt.news/api/quick-posts.json) returns enabled manual
+  Quick Posts for today and yesterday in Asia/Shanghai. These are separate
+  from the AI-ranked edition, with body text but no fabricated title or score.
+  Git saves become visible after asynchronous deployment; drafts are excluded.
+- [`GET /api/latest.json`](https://bmt.news/api/latest.json) returns the newest complete edition.
+- [`GET /api/editions.json`](https://bmt.news/api/editions.json) lists available edition dates.
 - `GET /editions/{date}/edition.json` returns one dated edition, where `date`
   uses `YYYY-MM-DD`.
-- [`GET /api/events.json`](/api/events.json) lists events with at least two
+- [`GET /api/events.json`](https://bmt.news/api/events.json) lists events with at least two
   verified material updates, newest change first.
 - `GET /api/events/{event_id}.json` returns one chronological event timeline,
   including status, current state, update type, story IDs, and source evidence.
-- [`GET /openapi.json`](/openapi.json) is the authoritative OpenAPI 3.1
+- [`GET /openapi.json`](https://bmt.news/openapi.json) is the authoritative OpenAPI 3.1
   description. Every operation has a unique `operationId`, typed parameters,
   response schemas, and an explicit JSON error response.
 
-The API is intentionally read-only. It does not expose source-management,
-editorial, authentication, webhook, or publishing operations. A successful
+The public API is intentionally read-only. Private administrative operations
+are not part of this public specification. A successful
 edition response contains bilingual titles and summaries, ranking, score,
 category, source attribution, original URLs, tags, source-confirmation count,
 and optional thread data. The latest edition also includes publication-window,
@@ -68,19 +72,19 @@ from the same canonical URL. Responses declare
 `Content-Type: text/markdown; charset=utf-8` and
 `Vary: Accept, Accept-Encoding`. Browser requests continue to receive the
 normal HTML page. Stable Markdown files are also available at
-[`/index.html.md`](/index.html.md) and [`/en/index.html.md`](/en/index.html.md).
+[`/index.html.md`](https://bmt.news/index.html.md) and [`/en/index.html.md`](https://bmt.news/en/index.html.md).
 
-Start agent discovery with [`/llms.txt`](/llms.txt), and use
-[`/sitemap.xml`](/sitemap.xml) for the complete indexable page inventory.
+Start agent discovery with [`/llms.txt`](https://bmt.news/llms.txt), and use
+[`/sitemap.xml`](https://bmt.news/sitemap.xml) for the complete indexable page inventory.
 Category-specific Atom feeds are available for
-[crypto](/feeds/crypto-en.xml), [AI and technology](/feeds/technology-en.xml),
-and [policy](/feeds/policy-en.xml), with corresponding `-zh.xml` files.
+[crypto](https://bmt.news/feeds/crypto-en.xml), [AI and technology](https://bmt.news/feeds/technology-en.xml),
+and [policy](https://bmt.news/feeds/policy-en.xml), with corresponding `-zh.xml` files.
 
 ## Attribution and limits
 
 BMTNews analysis is not investment advice. Third-party titles, reporting, and
 other source materials remain subject to their original rights. When quoting or
 summarizing an item, cite the original URL from the API and identify BMTNews as
-the ranking and analysis layer. See [Legal and content rights](/legal/) for the
+the ranking and analysis layer. See [Legal and content rights](https://bmt.news/legal/) for the
 full boundary. For corrections, rights concerns, or security reports, use the
-channels on the [contact page](/contact/).
+channels on the [contact page](https://bmt.news/contact/).

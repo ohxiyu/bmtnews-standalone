@@ -15,11 +15,11 @@
     "en": "U.S. Bank completed a live cross-border payment using its proprietary USBDC stablecoin on the Stellar blockchain, testing minting, redemption, freezing, and clawback functions."
   },
   "first_seen_at": "2026-09-09T16:49:40.774098+00:00",
-  "last_updated_at": "2026-09-09T16:49:40.774098+00:00",
+  "last_updated_at": "2026-09-10T16:35:54.800249+00:00",
   "last_material_change_at": "2026-09-09T16:49:40.774098+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "stellar"
   ],
@@ -69,12 +69,19 @@
       ],
       "confidence": 0.75,
       "story_ids": [
-        "rss:cointelegraph.com_rss:55704e943f02b86a"
+        "rss:cointelegraph.com_rss:55704e943f02b86a",
+        "rss:thedefiant.io_api_feed:6e04f8f630a1eabf"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/us-bank-launches-usbdc-stablecoin-with-live-cross-border-payment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/converge/defi/us-bank-usbdc-stablecoin-stellar-cross-border-pilot",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }

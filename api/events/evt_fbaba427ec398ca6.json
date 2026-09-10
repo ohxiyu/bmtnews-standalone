@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_fbaba427ec398ca6/",
   "json": "https://bmt.news/api/events/evt_fbaba427ec398ca6.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Secret Service Freezes $52.8 Million in Crypto Tied to Telegram Bazaar Behind Global Scams",
     "en": "Secret Service Freezes $52.8 Million in Crypto Tied to Telegram Bazaar Behind Global Scams"
   },
   "current_state": {
-    "zh": "U.S. Secret Service froze $52.8 million in USDT linked to Telegram-based scam marketplace Xinbi, which was also designated by OFAC as a significant transnational criminal organization.",
-    "en": "U.S. Secret Service froze $52.8 million in USDT linked to Telegram-based scam marketplace Xinbi, which was also designated by OFAC as a significant transnational criminal organization."
+    "zh": "美国当局已限制超5200万美元加密资产，扣押Xinbi相关Telegram频道和钱包，制裁Xinbi及其服务提供商SafeW和Anwen，并将Xinbi认定为跨国犯罪组织，推动对同类洗钱网络的更广泛打击。",
+    "en": "U.S. authorities have restrained over $52 million in crypto, seized Xinbi-linked Telegram channels and wallets, sanctioned Xinbi and service providers SafeW and Anwen, and designated Xinbi a transnational criminal organization, prompting broader disruption among rival laundering networks."
   },
   "first_seen_at": "2026-09-09T22:41:07.189325+00:00",
-  "last_updated_at": "2026-09-09T22:41:07.189325+00:00",
-  "last_material_change_at": "2026-09-09T22:41:07.189325+00:00",
+  "last_updated_at": "2026-09-10T16:35:55.469260+00:00",
+  "last_material_change_at": "2026-09-10T16:35:55.469260+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "bazaar",
     "behind",
@@ -37,7 +37,9 @@
     "crypto-regulation",
     "illicit-finance",
     "law-enforcement",
+    "money-laundering",
     "ofac",
+    "sanctions",
     "stablecoins"
   ],
   "updates": [
@@ -87,6 +89,44 @@
         {
           "url": "https://decrypt.co/377804/secret-service-freezes-crypto-telegram-bazaar-xinbi",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_8378589b772becc6",
+      "event_id": "evt_fbaba427ec398ca6",
+      "occurred_at": "2026-09-10T14:00:51Z",
+      "published_at": "2026-09-10T14:00:51Z",
+      "first_seen_at": "2026-09-10T16:35:55.469260Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "US hit on $24 billion crypto black market sends rival money launderers running for exits",
+      "title_en": "US hit on $24 billion crypto black market sends rival money launderers running for exits",
+      "what_changed_zh": "新增：联邦法院于9月7日授权扣押与Xinbi相关的Telegram频道；调查人员扣押两个约1200万美元的钱包并寻求限制47个额外地址；财政部制裁SafeW Technology和Anwen Technology；Xinbi将商户协调转向SafeW并推出XinbiPay。",
+      "what_changed_en": "New: federal court authorized seizure of Xinbi-linked Telegram channels on Sept. 7; investigators seized two wallets holding about $12 million and sought restraint of 47 additional addresses; Treasury sanctioned SafeW Technology and Anwen Technology; Xinbi shifted merchant coordination to SafeW and introduced XinbiPay.",
+      "current_state_zh": "美国当局已限制超5200万美元加密资产，扣押Xinbi相关Telegram频道和钱包，制裁Xinbi及其服务提供商SafeW和Anwen，并将Xinbi认定为跨国犯罪组织，推动对同类洗钱网络的更广泛打击。",
+      "current_state_en": "U.S. authorities have restrained over $52 million in crypto, seized Xinbi-linked Telegram channels and wallets, sanctioned Xinbi and service providers SafeW and Anwen, and designated Xinbi a transnational criminal organization, prompting broader disruption among rival laundering networks.",
+      "detailed_summary_zh": "US authorities restrained over $52 million in crypto, seized Telegram channels and wallets tied to the $24 billion Xinbi Guarantee black market, and sanctioned it as a transnational criminal organization, causing rival laundering networks to adjust operations.",
+      "detailed_summary_en": "US authorities restrained over $52 million in crypto, seized Telegram channels and wallets tied to the $24 billion Xinbi Guarantee black market, and sanctioned it as a transnational criminal organization, causing rival laundering networks to adjust operations.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.92,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:6e88fc4f2d054e3b"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/us-hit-on-24-billion-crypto-black-market-sends-rival-money-launderers-running-for-exits/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

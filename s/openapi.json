@@ -1,0 +1,455 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "BMTNews Admin API",
+    "version": "1.0.0",
+    "description": "Private same-origin Access-authenticated admin API. Git-backed writes use optimistic SHA concurrency. Successful save is not a deployment confirmation. Public APIs remain in /openapi.json."
+  },
+  "servers": [
+    {
+      "url": "https://bmt.news"
+    }
+  ],
+  "security": [
+    {
+      "CloudflareAccess": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "CloudflareAccess": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "CF_Authorization",
+        "description": "Cloudflare Access browser session. The edge forwards a signed assertion verified by the Worker; no GitHub credential is accepted from the browser."
+      }
+    }
+  },
+  "paths": {
+    "/api/admin/state": {
+      "get": {
+        "operationId": "adminState",
+        "description": "Read the editorial registry and current Git SHA.",
+        "responses": {
+          "200": {
+            "description": "Registry with sha and items.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input."
+          },
+          "401": {
+            "description": "Missing, expired or invalid Access session."
+          },
+          "403": {
+            "description": "Wrong origin or missing CSRF guard."
+          },
+          "409": {
+            "description": "Stale Git revision; refresh before retrying."
+          },
+          "503": {
+            "description": "Required admin configuration is missing."
+          }
+        }
+      }
+    },
+    "/api/admin/posts": {
+      "post": {
+        "operationId": "adminPosts",
+        "description": "Create or update an idempotent body-only Quick Post. Requires current sha; identical id and payload retries do not duplicate.",
+        "responses": {
+          "200": {
+            "description": "Saved or queued. Not proof of live publication.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input."
+          },
+          "401": {
+            "description": "Missing, expired or invalid Access session."
+          },
+          "403": {
+            "description": "Wrong origin or missing CSRF guard."
+          },
+          "409": {
+            "description": "Stale Git revision; refresh before retrying."
+          },
+          "503": {
+            "description": "Required admin configuration is missing."
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-BMT-Admin",
+            "in": "header",
+            "required": true,
+            "description": "Same-origin CSRF request marker.",
+            "schema": {
+              "type": "string",
+              "const": "1"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9-]{36}$"
+                  },
+                  "body": {
+                    "type": "string",
+                    "maxLength": 10000
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Optional original-source URL, empty when absent."
+                  },
+                  "image": {
+                    "type": "string",
+                    "description": "Optional same-origin uploaded image path."
+                  },
+                  "date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "pin": {
+                    "type": "boolean"
+                  },
+                  "breaking": {
+                    "type": "boolean"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "type": "string"
+                  },
+                  "enabled": {
+                    "type": "boolean"
+                  },
+                  "sha": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/entry-state": {
+      "post": {
+        "operationId": "adminEntryState",
+        "description": "Enable or disable an existing entry by zero-based index and current sha.",
+        "responses": {
+          "200": {
+            "description": "Saved or queued. Not proof of live publication.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input."
+          },
+          "401": {
+            "description": "Missing, expired or invalid Access session."
+          },
+          "403": {
+            "description": "Wrong origin or missing CSRF guard."
+          },
+          "409": {
+            "description": "Stale Git revision; refresh before retrying."
+          },
+          "503": {
+            "description": "Required admin configuration is missing."
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-BMT-Admin",
+            "in": "header",
+            "required": true,
+            "description": "Same-origin CSRF request marker.",
+            "schema": {
+              "type": "string",
+              "const": "1"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sha": {
+                    "type": "string"
+                  },
+                  "index": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "enabled": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/legacy": {
+      "post": {
+        "operationId": "adminLegacy",
+        "description": "Create (index -1) or edit a legacy editorial, sponsored or suppress entry with current sha.",
+        "responses": {
+          "200": {
+            "description": "Saved or queued. Not proof of live publication.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input."
+          },
+          "401": {
+            "description": "Missing, expired or invalid Access session."
+          },
+          "403": {
+            "description": "Wrong origin or missing CSRF guard."
+          },
+          "409": {
+            "description": "Stale Git revision; refresh before retrying."
+          },
+          "503": {
+            "description": "Required admin configuration is missing."
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-BMT-Admin",
+            "in": "header",
+            "required": true,
+            "description": "Same-origin CSRF request marker.",
+            "schema": {
+              "type": "string",
+              "const": "1"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sha": {
+                    "type": "string"
+                  },
+                  "index": {
+                    "type": "integer",
+                    "minimum": -1
+                  },
+                  "entry": {
+                    "type": "object",
+                    "description": "Legacy editorial schema documented in project-docs/editorial.md; unsupported types are rejected."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/image": {
+      "post": {
+        "operationId": "adminImage",
+        "description": "Upload a PNG, JPEG or WebP up to 1 MB using a content-addressed path. An uploaded image is public after deployment.",
+        "responses": {
+          "200": {
+            "description": "Saved or queued. Not proof of live publication.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input."
+          },
+          "401": {
+            "description": "Missing, expired or invalid Access session."
+          },
+          "403": {
+            "description": "Wrong origin or missing CSRF guard."
+          },
+          "409": {
+            "description": "Stale Git revision; refresh before retrying."
+          },
+          "503": {
+            "description": "Required admin configuration is missing."
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-BMT-Admin",
+            "in": "header",
+            "required": true,
+            "description": "Same-origin CSRF request marker.",
+            "schema": {
+              "type": "string",
+              "const": "1"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "mime": {
+                    "type": "string",
+                    "enum": [
+                      "image/png",
+                      "image/jpeg",
+                      "image/webp"
+                    ]
+                  },
+                  "data": {
+                    "type": "string",
+                    "contentEncoding": "base64",
+                    "maxLength": 1400000
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/sources": {
+      "post": {
+        "operationId": "adminSources",
+        "description": "Dispatch the existing source review workflow. Returns queued, not applied. Requires a later PR review.",
+        "responses": {
+          "202": {
+            "description": "Saved or queued. Not proof of live publication.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input."
+          },
+          "401": {
+            "description": "Missing, expired or invalid Access session."
+          },
+          "403": {
+            "description": "Wrong origin or missing CSRF guard."
+          },
+          "409": {
+            "description": "Stale Git revision; refresh before retrying."
+          },
+          "503": {
+            "description": "Required admin configuration is missing."
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-BMT-Admin",
+            "in": "header",
+            "required": true,
+            "description": "Same-origin CSRF request marker.",
+            "schema": {
+              "type": "string",
+              "const": "1"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "operation": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "source_type": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "source_key": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "name": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "endpoint": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "category": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "enabled": {
+                    "type": "string",
+                    "maxLength": 2048
+                  },
+                  "reason": {
+                    "type": "string",
+                    "maxLength": 2048
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

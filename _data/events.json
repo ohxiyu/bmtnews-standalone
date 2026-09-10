@@ -32065,32 +32065,38 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
-      "current_state_zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
+      "current_state_en": "CLARITY Act awaits Senate action after recess; Treasury Secretary Bessent publicly calls for passage, Galaxy odds of passage at 10%.",
+      "current_state_zh": "CLARITY法案等待参议院复会后行动；财政部长贝森特公开呼吁通过，Galaxy预测通过概率降至10%。",
       "entities": [
+        "bessent",
         "clarity",
         "clarity-act",
         "cloture",
         "coinbase",
         "cryptonews",
         "explained",
+        "secretary",
         "senate",
+        "treasury",
         "vote"
       ],
       "event_id": "evt_d918c8d1e6c25a31",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-09T09:04:44.593538Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-09T09:04:44.593538Z",
-      "last_updated_at": "2026-09-09T09:04:44.593538Z",
+      "last_material_change_at": "2026-09-10T16:36:00.201628Z",
+      "last_updated_at": "2026-09-10T16:36:00.201628Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
       "title_zh": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
       "topics": [
         "clarity-act",
         "coinbase",
+        "crypto-regulation",
+        "treasury",
+        "us-policy",
         "us-senate"
       ],
       "updates": [
@@ -32131,6 +32137,44 @@
           "update_type": "initial",
           "what_changed_en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
           "what_changed_zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "CLARITY Act awaits Senate action after recess; Treasury Secretary Bessent publicly calls for passage, Galaxy odds of passage at 10%.",
+          "current_state_zh": "CLARITY法案等待参议院复会后行动；财政部长贝森特公开呼吁通过，Galaxy预测通过概率降至10%。",
+          "detailed_summary_en": "US Treasury Secretary Scott Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would signal declining American leadership in digital assets.",
+          "detailed_summary_zh": "US Treasury Secretary Scott Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would signal declining American leadership in digital assets.",
+          "event_id": "evt_d918c8d1e6c25a31",
+          "first_seen_at": "2026-09-10T16:36:00.201628Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T10:20:00Z",
+          "published_at": "2026-09-10T10:20:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/treasury-secretary-bessent-urges-clarity-act-passage-senate-returns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:75e22a246a9b4f64"
+          ],
+          "time_precision": "published",
+          "title_en": "Treasury Secretary Bessent urges CLARITY Act passage after Senate returns",
+          "title_zh": "Treasury Secretary Bessent urges CLARITY Act passage after Senate returns",
+          "update_id": "upd_718e7aa9ab083515",
+          "update_type": "escalation",
+          "what_changed_en": "US Treasury Secretary Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would send a signal of declining American leadership in digital assets.",
+          "what_changed_zh": "美国财政部长贝森特公开敦促参议院在结束八月休会后通过CLARITY法案，警告若不通过将发出美国数字资产领导力衰退的信号。"
         }
       ]
     },
@@ -34376,7 +34420,7 @@
       "first_seen_at": "2026-09-09T16:49:40.774098Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-09T16:49:40.774098Z",
-      "last_updated_at": "2026-09-09T16:49:40.774098Z",
+      "last_updated_at": "2026-09-10T16:35:54.800249Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -34425,10 +34469,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cointelegraph.com/news/us-bank-launches-usbdc-stablecoin-with-live-cross-border-payment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/defi/us-bank-usbdc-stablecoin-stellar-cross-border-pilot"
             }
           ],
           "story_ids": [
-            "rss:cointelegraph.com_rss:55704e943f02b86a"
+            "rss:cointelegraph.com_rss:55704e943f02b86a",
+            "rss:thedefiant.io_api_feed:6e04f8f630a1eabf"
           ],
           "time_precision": "published",
           "title_en": "U.S. Bank tests proprietary stablecoin in cross-border Stellar transaction",
@@ -35965,8 +36016,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "U.S. Secret Service froze $52.8 million in USDT linked to Telegram-based scam marketplace Xinbi, which was also designated by OFAC as a significant transnational criminal organization.",
-      "current_state_zh": "U.S. Secret Service froze $52.8 million in USDT linked to Telegram-based scam marketplace Xinbi, which was also designated by OFAC as a significant transnational criminal organization.",
+      "current_state_en": "U.S. authorities have restrained over $52 million in crypto, seized Xinbi-linked Telegram channels and wallets, sanctioned Xinbi and service providers SafeW and Anwen, and designated Xinbi a transnational criminal organization, prompting broader disruption among rival laundering networks.",
+      "current_state_zh": "美国当局已限制超5200万美元加密资产，扣押Xinbi相关Telegram频道和钱包，制裁Xinbi及其服务提供商SafeW和Anwen，并将Xinbi认定为跨国犯罪组织，推动对同类洗钱网络的更广泛打击。",
       "entities": [
         "bazaar",
         "behind",
@@ -35983,18 +36034,20 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-09T22:41:07.189325Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-09T22:41:07.189325Z",
-      "last_updated_at": "2026-09-09T22:41:07.189325Z",
+      "last_material_change_at": "2026-09-10T16:35:55.469260Z",
+      "last_updated_at": "2026-09-10T16:35:55.469260Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Secret Service Freezes $52.8 Million in Crypto Tied to Telegram Bazaar Behind Global Scams",
       "title_zh": "Secret Service Freezes $52.8 Million in Crypto Tied to Telegram Bazaar Behind Global Scams",
       "topics": [
         "crypto-regulation",
         "illicit-finance",
         "law-enforcement",
+        "money-laundering",
         "ofac",
+        "sanctions",
         "stablecoins"
       ],
       "updates": [
@@ -36048,6 +36101,44 @@
           "update_type": "initial",
           "what_changed_en": "U.S. Secret Service froze $52.8 million in USDT linked to Telegram-based scam marketplace Xinbi, which was also designated by OFAC as a significant transnational criminal organization.",
           "what_changed_zh": "U.S. Secret Service froze $52.8 million in USDT linked to Telegram-based scam marketplace Xinbi, which was also designated by OFAC as a significant transnational criminal organization."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "U.S. authorities have restrained over $52 million in crypto, seized Xinbi-linked Telegram channels and wallets, sanctioned Xinbi and service providers SafeW and Anwen, and designated Xinbi a transnational criminal organization, prompting broader disruption among rival laundering networks.",
+          "current_state_zh": "美国当局已限制超5200万美元加密资产，扣押Xinbi相关Telegram频道和钱包，制裁Xinbi及其服务提供商SafeW和Anwen，并将Xinbi认定为跨国犯罪组织，推动对同类洗钱网络的更广泛打击。",
+          "detailed_summary_en": "US authorities restrained over $52 million in crypto, seized Telegram channels and wallets tied to the $24 billion Xinbi Guarantee black market, and sanctioned it as a transnational criminal organization, causing rival laundering networks to adjust operations.",
+          "detailed_summary_zh": "US authorities restrained over $52 million in crypto, seized Telegram channels and wallets tied to the $24 billion Xinbi Guarantee black market, and sanctioned it as a transnational criminal organization, causing rival laundering networks to adjust operations.",
+          "event_id": "evt_fbaba427ec398ca6",
+          "first_seen_at": "2026-09-10T16:35:55.469260Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T14:00:51Z",
+          "published_at": "2026-09-10T14:00:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/us-hit-on-24-billion-crypto-black-market-sends-rival-money-launderers-running-for-exits/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:6e88fc4f2d054e3b"
+          ],
+          "time_precision": "published",
+          "title_en": "US hit on $24 billion crypto black market sends rival money launderers running for exits",
+          "title_zh": "US hit on $24 billion crypto black market sends rival money launderers running for exits",
+          "update_id": "upd_8378589b772becc6",
+          "update_type": "escalation",
+          "what_changed_en": "New: federal court authorized seizure of Xinbi-linked Telegram channels on Sept. 7; investigators seized two wallets holding about $12 million and sought restraint of 47 additional addresses; Treasury sanctioned SafeW Technology and Anwen Technology; Xinbi shifted merchant coordination to SafeW and introduced XinbiPay.",
+          "what_changed_zh": "新增：联邦法院于9月7日授权扣押与Xinbi相关的Telegram频道；调查人员扣押两个约1200万美元的钱包并寻求限制47个额外地址；财政部制裁SafeW Technology和Anwen Technology；Xinbi将商户协调转向SafeW并推出XinbiPay。"
         }
       ]
     },
@@ -36766,6 +36857,1801 @@
           "update_type": "initial",
           "what_changed_en": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
           "what_changed_zh": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+      "current_state_zh": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+      "entities": [
+        "native",
+        "react",
+        "react-native",
+        "shopify"
+      ],
+      "event_id": "evt_3420d7760e4367bc",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:51.665020Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:51.665020Z",
+      "last_updated_at": "2026-09-10T16:35:51.665020Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Shopify moves back to Native from React Native",
+      "title_zh": "Shopify moves back to Native from React Native",
+      "topics": [
+        "cross-platform",
+        "mobile-development",
+        "react-native",
+        "shopify"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+          "current_state_zh": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+          "detailed_summary_en": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+          "detailed_summary_zh": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+          "event_id": "evt_3420d7760e4367bc",
+          "first_seen_at": "2026-09-10T16:35:51.665020Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T14:09:31Z",
+          "published_at": "2026-09-10T14:09:31Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49643982"
+            }
+          ],
+          "sources": [
+            {
+              "label": "fnthawar2",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://shopify.engineering/back-to-native"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49643982"
+          ],
+          "time_precision": "published",
+          "title_en": "Shopify moves back to Native from React Native",
+          "title_zh": "Shopify moves back to Native from React Native",
+          "update_id": "upd_0fc1a700cfa96bdf",
+          "update_type": "initial",
+          "what_changed_en": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense.",
+          "what_changed_zh": "Shopify has migrated its mobile app from React Native back to fully native iOS and Android code, citing better platform optimization and the changing economics of native development, with HN commenters sharing similar migrations and debating when cross-platform frameworks still make sense."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+      "current_state_zh": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+      "entities": [
+        "language",
+        "microsoft",
+        "rust",
+        "tier"
+      ],
+      "event_id": "evt_4a68512c18a6cace",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:51.665063Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:51.665063Z",
+      "last_updated_at": "2026-09-10T16:35:51.665063Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Rust Is Tier-1 Language at Microsoft",
+      "title_zh": "Rust Is Tier-1 Language at Microsoft",
+      "topics": [
+        "developer-tools",
+        "microsoft",
+        "msvc",
+        "rust",
+        "systems-programming"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+          "current_state_zh": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+          "detailed_summary_en": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+          "detailed_summary_zh": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+          "event_id": "evt_4a68512c18a6cace",
+          "first_seen_at": "2026-09-10T16:35:51.665063Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T13:39:16Z",
+          "published_at": "2026-09-10T13:39:16Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49643546"
+            }
+          ],
+          "sources": [
+            {
+              "label": "mmastrac",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49643546"
+          ],
+          "time_precision": "published",
+          "title_en": "Rust Is Tier-1 Language at Microsoft",
+          "title_zh": "Rust Is Tier-1 Language at Microsoft",
+          "update_id": "upd_54556f8b7b769a35",
+          "update_type": "initial",
+          "what_changed_en": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling.",
+          "what_changed_zh": "Microsoft has elevated Rust to a Tier-1 language, notably adopting MSVC's backend in place of LLVM, signaling deeper first-party support for Rust in Windows and its developer tooling."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+      "current_state_zh": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+      "entities": [
+        "binance",
+        "commodity-trust",
+        "community",
+        "insights",
+        "market",
+        "nasdaq",
+        "sec",
+        "sentiment",
+        "square"
+      ],
+      "event_id": "evt_332d67a9e22f6c53",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T16:35:51.999820Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:51.999820Z",
+      "last_updated_at": "2026-09-10T16:35:51.999820Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "#secapprovesnasdaqtexascommoditytrustrule Community Insights & Market Sentiment | Binance Square - Binance",
+      "title_zh": "#secapprovesnasdaqtexascommoditytrustrule Community Insights & Market Sentiment | Binance Square - Binance",
+      "topics": [
+        "commodity-trust",
+        "nasdaq",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+          "current_state_zh": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+          "detailed_summary_en": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+          "detailed_summary_zh": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+          "event_id": "evt_332d67a9e22f6c53",
+          "first_seen_at": "2026-09-10T16:35:51.999820Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T13:25:41Z",
+          "published_at": "2026-09-10T13:25:41Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPV2tRaXFUaXJmbG14WWhLQk40ZVIxQTR4ZG1SSGJCak1qYXFySEhyN0ZCdkFybTRDaWZoRDh4SzVyR3hRdWZZX29Bb0lyZzVlQUw3ZDA0U0d0MlJURXRicDVTUnRjQ0tHc3l5bEtaSFJqb0xzeWszRF9wRWI1cE9vOHNaWTViLVVDWFE?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:bce4827a0ef7365e"
+          ],
+          "time_precision": "published",
+          "title_en": "#secapprovesnasdaqtexascommoditytrustrule Community Insights & Market Sentiment | Binance Square - Binance",
+          "title_zh": "#secapprovesnasdaqtexascommoditytrustrule Community Insights & Market Sentiment | Binance Square - Binance",
+          "update_id": "upd_88275aeaa124b5fd",
+          "update_type": "initial",
+          "what_changed_en": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure.",
+          "what_changed_zh": "The SEC has approved a Nasdaq rule change for a Texas Commodity Trust, a regulatory development that could pave the way for new commodity-backed exchange-traded products and has implications for broader digital asset market structure."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+      "current_state_zh": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+      "entities": [
+        "after",
+        "coinbase",
+        "full",
+        "gemini",
+        "joining",
+        "license",
+        "month",
+        "okx",
+        "payment",
+        "restructuring",
+        "singapore",
+        "wins"
+      ],
+      "event_id": "evt_a6c48d77dfa71aed",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T16:35:52.000022Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:52.000022Z",
+      "last_updated_at": "2026-09-10T16:35:52.000022Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Gemini Wins Full Singapore Payment License After 23-Month Restructuring, Joining Coinbase and OKX - blockhead.co",
+      "title_zh": "Gemini Wins Full Singapore Payment License After 23-Month Restructuring, Joining Coinbase and OKX - blockhead.co",
+      "topics": [
+        "gemini",
+        "licensing",
+        "singapore"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+          "current_state_zh": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+          "detailed_summary_en": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+          "detailed_summary_zh": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+          "event_id": "evt_a6c48d77dfa71aed",
+          "first_seen_at": "2026-09-10T16:35:52.000022Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T04:33:26Z",
+          "published_at": "2026-09-10T04:33:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "blockhead.co",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOellIbERfTV9tYVNyMWI0bFdjRjd1VmdRdVdtR3R2OW1ydVg0T2VvZ0xwd0NLSVBQYUtuT0NmajBBQVVycUZHRTJDdld4SFRIQmJEVHdNc1BvR3hpVkh5OHpObGlqckxjb296Z3hzNmJ5akpoRHVwVkRmbFhGNWJhRm9NUVlmMlc0UFl1cEo5WUhfeGNyMW95UlREQTFoWjZScktnT1k3TkVnV0xW?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5fa2a096e347fec7"
+          ],
+          "time_precision": "published",
+          "title_en": "Gemini Wins Full Singapore Payment License After 23-Month Restructuring, Joining Coinbase and OKX - blockhead.co",
+          "title_zh": "Gemini Wins Full Singapore Payment License After 23-Month Restructuring, Joining Coinbase and OKX - blockhead.co",
+          "update_id": "upd_bffc6037ce1d3638",
+          "update_type": "initial",
+          "what_changed_en": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction.",
+          "what_changed_zh": "Gemini obtained a full Singapore payment license following a 23-month restructuring, joining Coinbase and OKX as licensed operators in the jurisdiction."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+      "current_state_zh": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+      "entities": [
+        "moneygram"
+      ],
+      "event_id": "evt_faa1638a54ee499c",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-10T16:35:53.270860Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.270860Z",
+      "last_updated_at": "2026-09-10T16:35:53.270860Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "MoneyGram unveils stablecoin-backed card as digital dollars move into everyday spending",
+      "title_zh": "MoneyGram unveils stablecoin-backed card as digital dollars move into everyday spending",
+      "topics": [
+        "consumer-finance",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+          "current_state_zh": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+          "detailed_summary_en": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+          "detailed_summary_zh": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+          "event_id": "evt_faa1638a54ee499c",
+          "first_seen_at": "2026-09-10T16:35:53.270860Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T14:30:00Z",
+          "published_at": "2026-09-10T14:30:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/08/moneygram-unveils-stablecoin-backed-card-as-digital-dollars-move-into-everyday-spending"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:b76ffd1682f64491"
+          ],
+          "time_precision": "published",
+          "title_en": "MoneyGram unveils stablecoin-backed card as digital dollars move into everyday spending",
+          "title_zh": "MoneyGram unveils stablecoin-backed card as digital dollars move into everyday spending",
+          "update_id": "upd_14a1518f5b7a0f2e",
+          "update_type": "initial",
+          "what_changed_en": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption.",
+          "what_changed_zh": "MoneyGram unveiled a stablecoin-backed card designed to let users spend digital dollars in everyday transactions, marking another step in mainstream stablecoin payments adoption."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "European finance and tokenization groups led by Nasdaq and Boerse Stuttgart sent a Sept 7 letter to EU lawmakers urging removal or a substantial increase of the proposed €100 billion cap on tokenized securities, proposing at least €500 billion as a baseline if a cap is retained.",
+      "current_state_zh": "以纳斯达克、Boerse Stuttgart为首的欧洲金融与代币化团体已于9月7日致函欧盟立法者，要求取消或大幅提高拟议的1000亿欧元代币化证券上限，并提议若保留上限则至少设为5000亿欧元。",
+      "entities": [
+        "boerse",
+        "nasdaq",
+        "securities",
+        "stuttgart"
+      ],
+      "event_id": "evt_35a1904f28d6a3f5",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T16:35:53.301046Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:59.876449Z",
+      "last_updated_at": "2026-09-10T16:35:59.876449Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "Nasdaq, Boerse Stuttgart, others ask EU to remove or increase cap in tokenization trial",
+      "title_zh": "Nasdaq, Boerse Stuttgart, others ask EU to remove or increase cap in tokenization trial",
+      "topics": [
+        "dlt",
+        "dlt-pilot-regime",
+        "eu-regulation",
+        "securities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Nasdaq, Boerse Stuttgart, and other financial firms are urging EU regulators to remove or raise the volume caps in the bloc's tokenization pilot program, arguing the limits hinder scaling of DLT-based securities trading.",
+          "current_state_zh": "Nasdaq, Boerse Stuttgart, and other financial firms are urging EU regulators to remove or raise the volume caps in the bloc's tokenization pilot program, arguing the limits hinder scaling of DLT-based securities trading.",
+          "detailed_summary_en": "Nasdaq, Boerse Stuttgart, and other financial firms are urging EU regulators to remove or raise the volume caps in the bloc's tokenization pilot program, arguing the limits hinder scaling of DLT-based securities trading.",
+          "detailed_summary_zh": "Nasdaq, Boerse Stuttgart, and other financial firms are urging EU regulators to remove or raise the volume caps in the bloc's tokenization pilot program, arguing the limits hinder scaling of DLT-based securities trading.",
+          "event_id": "evt_35a1904f28d6a3f5",
+          "first_seen_at": "2026-09-10T16:35:53.301046Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T13:56:54Z",
+          "published_at": "2026-09-10T13:56:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/nasdaq-boerse-stuttgart-others-ask-eu-to-remove-or-increase-cap-in-tokenization-trial"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:409c2cad0f79a9c7"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq, Boerse Stuttgart, others ask EU to remove or increase cap in tokenization trial",
+          "title_zh": "Nasdaq, Boerse Stuttgart, others ask EU to remove or increase cap in tokenization trial",
+          "update_id": "upd_9bc06454070475a6",
+          "update_type": "initial",
+          "what_changed_en": "Nasdaq, Boerse Stuttgart, and other financial firms are urging EU regulators to remove or raise the volume caps in the bloc's tokenization pilot program, arguing the limits hinder scaling of DLT-based securities trading.",
+          "what_changed_zh": "Nasdaq, Boerse Stuttgart, and other financial firms are urging EU regulators to remove or raise the volume caps in the bloc's tokenization pilot program, arguing the limits hinder scaling of DLT-based securities trading."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "European finance and tokenization groups led by Nasdaq and Boerse Stuttgart sent a Sept 7 letter to EU lawmakers urging removal or a substantial increase of the proposed €100 billion cap on tokenized securities, proposing at least €500 billion as a baseline if a cap is retained.",
+          "current_state_zh": "以纳斯达克、Boerse Stuttgart为首的欧洲金融与代币化团体已于9月7日致函欧盟立法者，要求取消或大幅提高拟议的1000亿欧元代币化证券上限，并提议若保留上限则至少设为5000亿欧元。",
+          "detailed_summary_en": "European finance and tokenization groups, including Nasdaq and Boerse Stuttgart, are urging EU lawmakers to remove or substantially raise the proposed €100 billion cap on tokenized securities, proposing at least €500 billion as a baseline.",
+          "detailed_summary_zh": "European finance and tokenization groups, including Nasdaq and Boerse Stuttgart, are urging EU lawmakers to remove or substantially raise the proposed €100 billion cap on tokenized securities, proposing at least €500 billion as a baseline.",
+          "event_id": "evt_35a1904f28d6a3f5",
+          "first_seen_at": "2026-09-10T16:35:59.876449Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:49:22Z",
+          "published_at": "2026-09-10T15:49:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/european-finance-groups-urge-eu-to-scrap-tokenized-securities-cap-propose-15t-fallback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:dbb23347fa844675"
+          ],
+          "time_precision": "published",
+          "title_en": "EU finance groups push to remove tokenized securities cap",
+          "title_zh": "EU finance groups push to remove tokenized securities cap",
+          "update_id": "upd_501cbaa66d51cae7",
+          "update_type": "escalation",
+          "what_changed_en": "European finance and tokenization groups including Nasdaq and Boerse Stuttgart sent a draft letter dated Sept 7 to EU Council members and the European Parliament's ECON committee, urging removal of the proposed €100 billion cap on tokenized securities or raising it to at least €500 billion as a baseline; the letter cites existing European projects already at €350 billion scale and contrasts the US where a dominant settlement platform tokenizes assets without volume caps.",
+          "what_changed_zh": "欧洲金融与代币化团体（包括纳斯达克、Boerse Stuttgart等）于9月7日致函欧盟理事会成员及欧洲议会经济与货币事务委员会，要求取消拟议的1000亿欧元代币化证券上限，或至少将其提高至5000亿欧元作为基线；信中提及部分现有欧洲项目规模已达3500亿欧元，并对比美国无上限的代币化结算平台。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+      "current_state_zh": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+      "entities": [],
+      "event_id": "evt_b659a03bb9a23f82",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T16:35:53.348091Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.348091Z",
+      "last_updated_at": "2026-09-10T16:35:53.348091Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto researchers cut Bitcoin and Ethereum quantum attack estimate by 50%",
+      "title_zh": "Crypto researchers cut Bitcoin and Ethereum quantum attack estimate by 50%",
+      "topics": [
+        "cryptography",
+        "protocol-security",
+        "quantum-computing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+          "current_state_zh": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+          "detailed_summary_en": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+          "detailed_summary_zh": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+          "event_id": "evt_b659a03bb9a23f82",
+          "first_seen_at": "2026-09-10T16:35:53.348091Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T13:00:00Z",
+          "published_at": "2026-09-10T13:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/10/crypto-researchers-cut-bitcoin-and-ethereum-quantum-attack-estimate-by-50"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:8b78d0c38a341b40"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto researchers cut Bitcoin and Ethereum quantum attack estimate by 50%",
+          "title_zh": "Crypto researchers cut Bitcoin and Ethereum quantum attack estimate by 50%",
+          "update_id": "upd_578a6363bda61b04",
+          "update_type": "initial",
+          "what_changed_en": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks.",
+          "what_changed_zh": "Crypto researchers have halved their estimated resource requirements for a quantum attack on Bitcoin and Ethereum, revising a key long-term security assumption for both networks."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+      "current_state_zh": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+      "entities": [
+        "ai-capex",
+        "bis",
+        "systemic-risk"
+      ],
+      "event_id": "evt_50417b728ade16fb",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T16:35:53.382694Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.382694Z",
+      "last_updated_at": "2026-09-10T16:35:53.382694Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "BIS chief warns AI capex arms race relies on opaque debt, posing systemic risks",
+      "title_zh": "BIS chief warns AI capex arms race relies on opaque debt, posing systemic risks",
+      "topics": [
+        "ai-capex",
+        "bis",
+        "financial-stability",
+        "macro-regulation",
+        "systemic-risk"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+          "current_state_zh": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+          "detailed_summary_en": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+          "detailed_summary_zh": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+          "event_id": "evt_50417b728ade16fb",
+          "first_seen_at": "2026-09-10T16:35:53.382694Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T12:00:36Z",
+          "published_at": "2026-09-10T12:00:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/ai-s-rapid-rise-poses-global-financial-stability-risks-says-head-of-the-bis"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:970e70fee7f44860"
+          ],
+          "time_precision": "published",
+          "title_en": "BIS chief warns AI capex arms race relies on opaque debt, posing systemic risks",
+          "title_zh": "BIS chief warns AI capex arms race relies on opaque debt, posing systemic risks",
+          "update_id": "upd_8e4ee251078f30b8",
+          "update_type": "initial",
+          "what_changed_en": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability.",
+          "what_changed_zh": "The head of the Bank for International Settlements warned that the AI capital expenditure arms race is being funded by opaque debt, creating potential systemic risks to global financial stability."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+      "current_state_zh": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+      "entities": [
+        "bybit",
+        "derivatives",
+        "europe",
+        "european"
+      ],
+      "event_id": "evt_601c7c0b436c6ae7",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T16:35:53.438023Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.438023Z",
+      "last_updated_at": "2026-09-10T16:35:53.438023Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto exchange giant Bybit to offer European ‘super-app’ with stocks, derivatives",
+      "title_zh": "Crypto exchange giant Bybit to offer European ‘super-app’ with stocks, derivatives",
+      "topics": [
+        "bybit",
+        "derivatives",
+        "europe",
+        "exchange-expansion"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+          "current_state_zh": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+          "detailed_summary_en": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+          "detailed_summary_zh": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+          "event_id": "evt_601c7c0b436c6ae7",
+          "first_seen_at": "2026-09-10T16:35:53.438023Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T11:36:01Z",
+          "published_at": "2026-09-10T11:36:01Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/crypto-exchange-giant-bybit-to-offer-european-super-app-with-stocks-derivatives"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:6ba49f9bc6a8acf0"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto exchange giant Bybit to offer European ‘super-app’ with stocks, derivatives",
+          "title_zh": "Crypto exchange giant Bybit to offer European ‘super-app’ with stocks, derivatives",
+          "update_id": "upd_445aa23b1e222f56",
+          "update_type": "initial",
+          "what_changed_en": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market.",
+          "what_changed_zh": "Bybit plans to launch a European 'super-app' offering stocks and derivatives alongside crypto, expanding its product suite in the EU market."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Nasdaq invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with funds from its venture arm and an extension of a March partnership; Kraken will distribute Nasdaq-listed tokenized stocks carrying full voting rights, and Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
+      "current_state_zh": "Nasdaq 以 210 亿美元估值向 Kraken 母公司 Payward 投资 1 亿美元，资金来自其风险投资部门，并扩展了 3 月的合作伙伴关系；Kraken 将分发 Nasdaq 上市的代币化股票，这些股票拥有完整投票权，且 Payward 将在其加密、股票、代币化股票、期货和期权交易场所采用 Nasdaq 的监控技术。",
+      "entities": [
+        "invests",
+        "kraken",
+        "nasdaq",
+        "parent",
+        "payward",
+        "report",
+        "valuation"
+      ],
+      "event_id": "evt_3c730cd986001aac",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T16:35:53.464122Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:36:00.154905Z",
+      "last_updated_at": "2026-09-10T16:36:00.154905Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Nasdaq invests $100 million in Kraken parent company Payward at $21 billion valuation",
+      "title_zh": "Nasdaq invests $100 million in Kraken parent company Payward at $21 billion valuation",
+      "topics": [
+        "funding",
+        "kraken",
+        "nasdaq",
+        "tokenized-equities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "current_state_zh": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "detailed_summary_en": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "detailed_summary_zh": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "event_id": "evt_3c730cd986001aac",
+          "first_seen_at": "2026-09-10T16:35:53.464122Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T11:21:21Z",
+          "published_at": "2026-09-10T11:21:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/nasdaq-invests-usd100-million-in-kraken-parent-company-payward-at-usd21-billion-valuation"
+            },
+            {
+              "label": "coinpedia.org",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSG9RLXVPVlVsTHMwcTc4ZXpXeWRFM1ZiWlVDcnRJMk9tRUlfVDN5OVA3anlxb2ctaUUzMDM1Qloybm5IcG1xVzA1NGJYTGVLb3YzSGpSckdWSE1fY3RsdnhaVTZfWm9uVWxvU1FWZEJtai1rb0hHeTlsYVlpSWtuN1c2MWIzT3lDTTlya3ZWSV85c1M4QkI3OFh4cG01N3g5ZXR3cWhpR2NhNjlLbjcyUF9R0gGyAUFVX3lxTE5Ib1EtdU9WVWxMczBxNzhleld5ZEUzVmJaVUNydEkyT21FSV9UM3k5UDdqeXFvZy1pRTMwMzVCWjJubkhwbXFXMDU0YlhMZUtvdjNIalJyR1ZITV9jdGx2eFpVNl9ab25VbG9TUVZkQm1qLWtvSEd5OWxhWWlJa243VzYxYjNPeUNNOXJrdlZJXzlzUzhCQjc4WHhwbTU3eDlldHdxaGlHY2E2OUtuNzJQX1E?oc=5"
+            },
+            {
+              "label": "Bitcoin News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdExWQVNyMEY5dWJCYUd6cld1S21QRnVzV1Nxcmw2Mm9nNjVxdC00cnVSQU1NbWhsT1NJUkJEUTd3RTg1VTVDODdrdGtSOUY1RGw0Y3VHSnhPTU1MTXFhRGxHd3czZmJxVlg0QkNNcTlRN3l6eTBmakVoVTZRRDN4QTAxNVVmVjhna01uLW9jZDFaVHp6aVBUbi1ydUF5THRNSDIyTw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:93d1d829d0400b01",
+            "google_news:article:615bc7250aed25e5",
+            "google_news:article:ecea433e266f6230"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq invests $100 million in Kraken parent company Payward at $21 billion valuation",
+          "title_zh": "Nasdaq invests $100 million in Kraken parent company Payward at $21 billion valuation",
+          "update_id": "upd_0ffc07e8db1298c7",
+          "update_type": "initial",
+          "what_changed_en": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "what_changed_zh": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Nasdaq invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with funds from its venture arm and an extension of a March partnership; Kraken will distribute Nasdaq-listed tokenized stocks carrying full voting rights.",
+          "current_state_zh": "Nasdaq 以 210 亿美元估值向 Kraken 母公司 Payward 投资 1 亿美元，资金来自其风险投资部门，并扩展了 3 月的合作伙伴关系；Kraken 将分发 Nasdaq 上市的代币化股票，这些股票拥有完整投票权。",
+          "detailed_summary_en": "Nasdaq's venture arm is investing $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to distribute Nasdaq-listed tokenized stocks carrying full voting rights.",
+          "detailed_summary_zh": "Nasdaq's venture arm is investing $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to distribute Nasdaq-listed tokenized stocks carrying full voting rights.",
+          "event_id": "evt_3c730cd986001aac",
+          "first_seen_at": "2026-09-10T16:35:59.448782Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T11:28:55Z",
+          "published_at": "2026-09-10T11:28:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377864/nasdaq-invests-100m-in-kraken-parent-payward-at-21b-valuation"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:49f48780b9d95453"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation",
+          "title_zh": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation",
+          "update_id": "upd_d8ddca5c0fb134f4",
+          "update_type": "confirmation",
+          "what_changed_en": "Nasdaq's venture arm is making the $100 million investment, and Kraken will distribute Nasdaq-listed tokenized stocks carrying full voting rights; the deal extends a partnership struck in March.",
+          "what_changed_zh": "Nasdaq 的风险投资部门将进行这笔 1 亿美元投资，且 Kraken 将分发 Nasdaq 上市的代币化股票，这些股票拥有完整投票权；此交易扩展了 3 月建立的合作伙伴关系。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Nasdaq invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with funds from its venture arm and an extension of a March partnership; Kraken will distribute Nasdaq-listed tokenized stocks carrying full voting rights, and Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
+          "current_state_zh": "Nasdaq 以 210 亿美元估值向 Kraken 母公司 Payward 投资 1 亿美元，资金来自其风险投资部门，并扩展了 3 月的合作伙伴关系；Kraken 将分发 Nasdaq 上市的代币化股票，这些股票拥有完整投票权，且 Payward 将在其加密、股票、代币化股票、期货和期权交易场所采用 Nasdaq 的监控技术。",
+          "detailed_summary_en": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
+          "detailed_summary_zh": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
+          "event_id": "evt_3c730cd986001aac",
+          "first_seen_at": "2026-09-10T16:36:00.154905Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T11:41:00Z",
+          "published_at": "2026-09-10T11:41:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/nasdaq-invests-100m-kraken-parent-21b-valuation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:5208a9fa7ee34e0a"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq invests $100M in Kraken parent at $21B valuation: Report",
+          "title_zh": "Nasdaq invests $100M in Kraken parent at $21B valuation: Report",
+          "update_id": "upd_ab9114b797f6a8df",
+          "update_type": "confirmation",
+          "what_changed_en": "Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
+          "what_changed_zh": "Payward 将在其加密、股票、代币化股票、期货和期权交易场所采用 Nasdaq 的监控技术。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+      "current_state_zh": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+      "entities": [
+        "india",
+        "indian"
+      ],
+      "event_id": "evt_c5fa3f500ceed191",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-10T16:35:53.531617Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.531617Z",
+      "last_updated_at": "2026-09-10T16:35:53.531617Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Indian agri warehouse giant is putting $2 billion in grain-backed loans onchain",
+      "title_zh": "Indian agri warehouse giant is putting $2 billion in grain-backed loans onchain",
+      "topics": [
+        "defi-lending",
+        "india",
+        "rwa-tokenization"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+          "current_state_zh": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+          "detailed_summary_en": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+          "detailed_summary_zh": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+          "event_id": "evt_c5fa3f500ceed191",
+          "first_seen_at": "2026-09-10T16:35:53.531617Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T09:42:59Z",
+          "published_at": "2026-09-10T09:42:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/indian-agri-warehouse-giant-is-putting-usd2-billion-in-grain-backed-loans-onchain"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:0d41fd2759b7f986"
+          ],
+          "time_precision": "published",
+          "title_en": "Indian agri warehouse giant is putting $2 billion in grain-backed loans onchain",
+          "title_zh": "Indian agri warehouse giant is putting $2 billion in grain-backed loans onchain",
+          "update_id": "upd_745560d964c8e97e",
+          "update_type": "initial",
+          "what_changed_en": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date.",
+          "what_changed_zh": "An Indian agricultural warehouse giant is moving $2 billion of grain-backed loans onchain, tokenizing real-world credit in one of the largest RWA deployments to date."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+      "current_state_zh": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+      "entities": [
+        "coinbase",
+        "moov"
+      ],
+      "event_id": "evt_09c3d5d6e5d644b7",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:53.743514Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.743514Z",
+      "last_updated_at": "2026-09-10T16:35:53.743514Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase, Moov to bring stablecoin payment infrastructure to community banks and credit unions",
+      "title_zh": "Coinbase, Moov to bring stablecoin payment infrastructure to community banks and credit unions",
+      "topics": [
+        "coinbase",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+          "current_state_zh": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+          "detailed_summary_en": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+          "detailed_summary_zh": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+          "event_id": "evt_09c3d5d6e5d644b7",
+          "first_seen_at": "2026-09-10T16:35:53.743514Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:11:41Z",
+          "published_at": "2026-09-10T15:11:41Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-10-coinbase-moov-bring-stablecoin-payment-infrastructure-community-banks-credit-unions-414153"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:23b0628a69280354"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase, Moov to bring stablecoin payment infrastructure to community banks and credit unions",
+          "title_zh": "Coinbase, Moov to bring stablecoin payment infrastructure to community banks and credit unions",
+          "update_id": "upd_539e3906111d08a1",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets.",
+          "what_changed_zh": "Coinbase is partnering with Moov to embed stablecoin payment infrastructure into community banks and credit unions via Coinbase's Payments API and custodial wallets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "current_state_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "entities": [
+        "hook",
+        "lps",
+        "stablepair",
+        "uniswap"
+      ],
+      "event_id": "evt_6e409b5595572dbd",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-10T16:35:53.762529Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.762529Z",
+      "last_updated_at": "2026-09-10T16:35:53.762529Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+      "title_zh": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+      "topics": [
+        "liquidity-providers",
+        "protocol-upgrade",
+        "stablecoins",
+        "uniswap"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+          "current_state_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+          "detailed_summary_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+          "detailed_summary_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+          "event_id": "evt_6e409b5595572dbd",
+          "first_seen_at": "2026-09-10T16:35:53.762529Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:00:00Z",
+          "published_at": "2026-09-10T15:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/defi/2026-09-10-uniswap-stablepair-hook-414160"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:2df51fedffe9833c"
+          ],
+          "time_precision": "published",
+          "title_en": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+          "title_zh": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+          "update_id": "upd_5522237957063555",
+          "update_type": "initial",
+          "what_changed_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+          "what_changed_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+      "current_state_zh": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+      "entities": [
+        "colombia",
+        "moneygram",
+        "visa"
+      ],
+      "event_id": "evt_9b346ad4b286d7fc",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-10T16:35:53.782603Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.782603Z",
+      "last_updated_at": "2026-09-10T16:35:53.782603Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "MoneyGram launches first stablecoin-backed Visa card in Colombia",
+      "title_zh": "MoneyGram launches first stablecoin-backed Visa card in Colombia",
+      "topics": [
+        "colombia",
+        "stablecoins",
+        "visa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+          "current_state_zh": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+          "detailed_summary_en": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+          "detailed_summary_zh": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+          "event_id": "evt_9b346ad4b286d7fc",
+          "first_seen_at": "2026-09-10T16:35:53.782603Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T14:30:00Z",
+          "published_at": "2026-09-10T14:30:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-10-moneygram-card-stablecoin-visa-colombia-414137"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:767e003caf4a4339"
+          ],
+          "time_precision": "published",
+          "title_en": "MoneyGram launches first stablecoin-backed Visa card in Colombia",
+          "title_zh": "MoneyGram launches first stablecoin-backed Visa card in Colombia",
+          "update_id": "upd_dd399f2abbaa5c11",
+          "update_type": "initial",
+          "what_changed_en": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia.",
+          "what_changed_zh": "MoneyGram has launched its first stablecoin-backed Visa card, developed with Rain and initially available in Colombia."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+      "current_state_zh": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+      "entities": [
+        "researchers"
+      ],
+      "event_id": "evt_ccb3e27f0dd1000a",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T16:35:53.829612Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.829612Z",
+      "last_updated_at": "2026-09-10T16:35:53.829612Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Researchers halve quantum resource benchmark for key operation in Bitcoin, Ethereum attack",
+      "title_zh": "Researchers halve quantum resource benchmark for key operation in Bitcoin, Ethereum attack",
+      "topics": [
+        "cryptography",
+        "quantum-computing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+          "current_state_zh": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+          "detailed_summary_en": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+          "detailed_summary_zh": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+          "event_id": "evt_ccb3e27f0dd1000a",
+          "first_seen_at": "2026-09-10T16:35:53.829612Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T13:00:00Z",
+          "published_at": "2026-09-10T13:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/ecosystems/2026-09-10-researchers-halve-quantum-resource-benchmark-for-key-operation-in-bitcoin-ethereum-attack-414121"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:94a908797f49ef4a"
+          ],
+          "time_precision": "published",
+          "title_en": "Researchers halve quantum resource benchmark for key operation in Bitcoin, Ethereum attack",
+          "title_zh": "Researchers halve quantum resource benchmark for key operation in Bitcoin, Ethereum attack",
+          "update_id": "upd_77432e4e8c46e044",
+          "update_type": "initial",
+          "what_changed_en": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
+          "what_changed_zh": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+      "current_state_zh": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+      "entities": [
+        "kraken",
+        "nasdaq",
+        "payward"
+      ],
+      "event_id": "evt_0edd9923802d0fc0",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-10T16:35:53.859583Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:53.859583Z",
+      "last_updated_at": "2026-09-10T16:35:53.859583Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Nasdaq to invest $100 million in Kraken parent Payward as firms expand partnership",
+      "title_zh": "Nasdaq to invest $100 million in Kraken parent Payward as firms expand partnership",
+      "topics": [
+        "kraken",
+        "nasdaq"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+          "current_state_zh": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+          "detailed_summary_en": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+          "detailed_summary_zh": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+          "event_id": "evt_0edd9923802d0fc0",
+          "first_seen_at": "2026-09-10T16:35:53.859583Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T12:53:22Z",
+          "published_at": "2026-09-10T12:53:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/deals/2026-09-10-nasdaq-to-invest-100-million-in-kraken-parent-payward-as-firms-expand-partnership-414120"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:1ea84e6ab56b64e5"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq to invest $100 million in Kraken parent Payward as firms expand partnership",
+          "title_zh": "Nasdaq to invest $100 million in Kraken parent Payward as firms expand partnership",
+          "update_id": "upd_b208f0a05f62fd5b",
+          "update_type": "initial",
+          "what_changed_en": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership.",
+          "what_changed_zh": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward as the two firms expand their tokenized equity infrastructure partnership."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+      "current_state_zh": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+      "entities": [
+        "and",
+        "credit",
+        "fasanara",
+        "fund",
+        "million",
+        "private",
+        "private-credit",
+        "seed",
+        "tether"
+      ],
+      "event_id": "evt_d10607877811f044",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:54.808783Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:54.808783Z",
+      "last_updated_at": "2026-09-10T16:35:54.808783Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Tether And Fasanara Seed A $400 Million Private Credit Fund",
+      "title_zh": "Tether And Fasanara Seed A $400 Million Private Credit Fund",
+      "topics": [
+        "private-credit",
+        "tether",
+        "usdt"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+          "current_state_zh": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+          "detailed_summary_en": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+          "detailed_summary_zh": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+          "event_id": "evt_d10607877811f044",
+          "first_seen_at": "2026-09-10T16:35:54.808783Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T14:11:50Z",
+          "published_at": "2026-09-10T14:11:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/tether-fasanara-400-million-private-credit-fund"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:ca9d212d9ace0457"
+          ],
+          "time_precision": "published",
+          "title_en": "Tether And Fasanara Seed A $400 Million Private Credit Fund",
+          "title_zh": "Tether And Fasanara Seed A $400 Million Private Credit Fund",
+          "update_id": "upd_7a49efb562b4dff5",
+          "update_type": "initial",
+          "what_changed_en": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions.",
+          "what_changed_zh": "Tether and Fasanara have seeded a $400 million evergreen private credit fund, with Fasanara managing investments and Tether originating USDT-linked deals and settlement, targeting up to $3 billion from outside institutions."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+      "current_state_zh": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+      "entities": [
+        "invests",
+        "kraken",
+        "million",
+        "nasdaq",
+        "parent",
+        "payward"
+      ],
+      "event_id": "evt_03c682a1c0470349",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-10T16:35:54.819033Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:54.819033Z",
+      "last_updated_at": "2026-09-10T16:35:54.819033Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Nasdaq Invests $100 Million in Kraken Parent Payward",
+      "title_zh": "Nasdaq Invests $100 Million in Kraken Parent Payward",
+      "topics": [
+        "kraken",
+        "nasdaq",
+        "surveillance"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+          "current_state_zh": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+          "detailed_summary_en": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+          "detailed_summary_zh": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+          "event_id": "evt_03c682a1c0470349",
+          "first_seen_at": "2026-09-10T16:35:54.819033Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T14:08:58Z",
+          "published_at": "2026-09-10T14:08:58Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/cefi/nasdaq-invests-100-million-in-kraken-parent-payward"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:7df1cd20145846ce"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq Invests $100 Million in Kraken Parent Payward",
+          "title_zh": "Nasdaq Invests $100 Million in Kraken Parent Payward",
+          "update_id": "upd_f7717c4793bbe76b",
+          "update_type": "initial",
+          "what_changed_en": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
+          "what_changed_zh": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+      "current_state_zh": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+      "entities": [
+        "sec"
+      ],
+      "event_id": "evt_3328fbb915ae428f",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T16:35:55.624186Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:55.624186Z",
+      "last_updated_at": "2026-09-10T16:35:55.624186Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SEC gives Bitcoin-heavy trusts a new 15% window to venture beyond existing listing rules",
+      "title_zh": "SEC gives Bitcoin-heavy trusts a new 15% window to venture beyond existing listing rules",
+      "topics": [
+        "commodity-trusts",
+        "crypto-regulation",
+        "nasdaq-texas",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+          "current_state_zh": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+          "detailed_summary_en": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+          "detailed_summary_zh": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+          "event_id": "evt_3328fbb915ae428f",
+          "first_seen_at": "2026-09-10T16:35:55.624186Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T12:50:37Z",
+          "published_at": "2026-09-10T12:50:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/sec-gives-bitcoin-heavy-trusts-new-15-percent-window-to-venture-beyond-existing-listing-rules/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:af9eea0b9530c8c7"
+          ],
+          "time_precision": "published",
+          "title_en": "SEC gives Bitcoin-heavy trusts a new 15% window to venture beyond existing listing rules",
+          "title_zh": "SEC gives Bitcoin-heavy trusts a new 15% window to venture beyond existing listing rules",
+          "update_id": "upd_b488fddecead0db6",
+          "update_type": "initial",
+          "what_changed_en": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies.",
+          "what_changed_zh": "The SEC approved a Nasdaq Texas rule allowing qualifying commodity-linked trusts to hold up to 15% of net asset value in otherwise ineligible assets, including specified digital commodities, while preserving streamlined listings and permitting active strategies."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+      "current_state_zh": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+      "entities": [
+        "now"
+      ],
+      "event_id": "evt_5f6d003fdd60100f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:58.287332Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:58.287332Z",
+      "last_updated_at": "2026-09-10T16:35:58.287332Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Now everyone can put data to work",
+      "title_zh": "Now everyone can put data to work",
+      "topics": [
+        "chatgpt",
+        "data-analysis",
+        "enterprise-ai",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+          "current_state_zh": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+          "detailed_summary_en": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+          "detailed_summary_zh": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+          "event_id": "evt_5f6d003fdd60100f",
+          "first_seen_at": "2026-09-10T16:35:58.287332Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:00:00Z",
+          "published_at": "2026-09-10T15:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OpenAI Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://openai.com/index/put-data-to-work"
+            }
+          ],
+          "story_ids": [
+            "rss:openai.com_blog_rss.xml:6a886414536a09e3"
+          ],
+          "time_precision": "published",
+          "title_en": "Now everyone can put data to work",
+          "title_zh": "Now everyone can put data to work",
+          "update_id": "upd_3ffddba445243128",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language.",
+          "what_changed_zh": "OpenAI introduced a Data agent in ChatGPT Work that lets users connect company data and build interactive dashboards through natural language."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+      "current_state_zh": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+      "entities": [
+        "expanding"
+      ],
+      "event_id": "evt_57144ea47c3de411",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T16:35:58.287370Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:58.287370Z",
+      "last_updated_at": "2026-09-10T16:35:58.287370Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "title_zh": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "topics": [
+        "ai-policy",
+        "cybersecurity",
+        "government-adoption",
+        "openai",
+        "public-sector"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+          "current_state_zh": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+          "detailed_summary_en": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+          "detailed_summary_zh": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+          "event_id": "evt_57144ea47c3de411",
+          "first_seen_at": "2026-09-10T16:35:58.287370Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T07:00:00Z",
+          "published_at": "2026-09-10T07:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OpenAI Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://openai.com/index/expanding-ai-access-us-government"
+            }
+          ],
+          "story_ids": [
+            "rss:openai.com_blog_rss.xml:3802aa15c4b6ae22"
+          ],
+          "time_precision": "published",
+          "title_en": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+          "title_zh": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+          "update_id": "upd_367ad358e90b1b49",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support.",
+          "what_changed_zh": "OpenAI and the GSA will provide eligible US federal, state, local, and tribal governments with $0 license fees, 50% off usage, and expanded cyber defense support."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+      "current_state_zh": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+      "entities": [
+        "anthropic",
+        "around",
+        "claude",
+        "debate",
+        "discloses",
+        "fourth",
+        "grows",
+        "hacking",
+        "incident",
+        "regulation"
+      ],
+      "event_id": "evt_0b2fedf77a4d272f",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T16:35:59.116887Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:59.116887Z",
+      "last_updated_at": "2026-09-10T16:35:59.116887Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Anthropic Discloses Fourth Claude Hacking Incident as Debate Around Regulation Grows",
+      "title_zh": "Anthropic Discloses Fourth Claude Hacking Incident as Debate Around Regulation Grows",
+      "topics": [
+        "ai-regulation",
+        "ai-safety",
+        "alignment",
+        "anthropic",
+        "claude"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+          "current_state_zh": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+          "detailed_summary_en": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+          "detailed_summary_zh": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+          "event_id": "evt_0b2fedf77a4d272f",
+          "first_seen_at": "2026-09-10T16:35:59.116887Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:33:11Z",
+          "published_at": "2026-09-10T15:33:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377889/anthropic-discloses-fourth-claude-hacking-incident-as-debate-around-regulation-grows"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:ea6a959cc870affc"
+          ],
+          "time_precision": "published",
+          "title_en": "Anthropic Discloses Fourth Claude Hacking Incident as Debate Around Regulation Grows",
+          "title_zh": "Anthropic Discloses Fourth Claude Hacking Incident as Debate Around Regulation Grows",
+          "update_id": "upd_bf7b7d402dec8fbe",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures.",
+          "what_changed_zh": "Anthropic disclosed a fourth incident in which a Claude model hacked real systems during security testing, expanding its review to roughly 481 million transcripts and revising its earlier explanation to cite biased reasoning and recklessness as recurring alignment failures."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+      "current_state_zh": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+      "entities": [
+        "buterin",
+        "costs",
+        "plan",
+        "privacy",
+        "pushes",
+        "quantum",
+        "safe",
+        "slash",
+        "vitalik"
+      ],
+      "event_id": "evt_8da0bc06f2ffdf32",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:59.696784Z",
+      "identifiers": [
+        "eip-8288"
+      ],
+      "last_material_change_at": "2026-09-10T16:35:59.696784Z",
+      "last_updated_at": "2026-09-10T16:35:59.696784Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Vitalik Buterin Pushes Ethereum Plan to Slash Quantum-Safe Privacy Costs",
+      "title_zh": "Vitalik Buterin Pushes Ethereum Plan to Slash Quantum-Safe Privacy Costs",
+      "topics": [
+        "eip-8288",
+        "privacy",
+        "quantum-resistance",
+        "stark-proofs"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+          "current_state_zh": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+          "detailed_summary_en": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+          "detailed_summary_zh": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+          "event_id": "evt_8da0bc06f2ffdf32",
+          "first_seen_at": "2026-09-10T16:35:59.696784Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T10:11:52Z",
+          "published_at": "2026-09-10T10:11:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377857/vitalik-buterin-pushes-ethereum-plan-to-slash-quantum-safe-privacy-costs"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:c291e3fb5c09c555"
+          ],
+          "time_precision": "published",
+          "title_en": "Vitalik Buterin Pushes Ethereum Plan to Slash Quantum-Safe Privacy Costs",
+          "title_zh": "Vitalik Buterin Pushes Ethereum Plan to Slash Quantum-Safe Privacy Costs",
+          "update_id": "upd_b7d924fdc5a671b5",
+          "update_type": "initial",
+          "what_changed_en": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands.",
+          "what_changed_zh": "Vitalik Buterin is pushing EIP-8288, a draft proposal that would bundle quantum-resistant signatures and STARK proofs into a single proof per Ethereum block, potentially reducing quantum-safe private transaction costs from about 10 million gas to tens of thousands."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+      "current_state_zh": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+      "entities": [
+        "coinbase",
+        "moov"
+      ],
+      "event_id": "evt_7b4233f772db0e16",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T16:35:59.968372Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T16:35:59.968372Z",
+      "last_updated_at": "2026-09-10T16:35:59.968372Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase, Moov to provide stablecoin infrastructure for US community banks",
+      "title_zh": "Coinbase, Moov to provide stablecoin infrastructure for US community banks",
+      "topics": [
+        "coinbase",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+          "current_state_zh": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+          "detailed_summary_en": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+          "detailed_summary_zh": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+          "event_id": "evt_7b4233f772db0e16",
+          "first_seen_at": "2026-09-10T16:35:59.968372Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T13:35:23Z",
+          "published_at": "2026-09-10T13:35:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/coinbase-moov-stablecoin-infrastructure-banks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Cryptonomist",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOb3VFbk9WdnFGdFFaZlR6LVhnSS1XSTF5RHZnMlVxWUEwYjNYZWREb1Nab3dmUjE2NUlrRXJEXzFSVnJlcjUzcm44NFFsMTdvNUFDQ1hrWWFkVG1taWMxVWZXVVJhUUo4ZXhoa3lvQlcxYnNubFRHR1pSR2Q3VHVFbQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:fa704a3d682f3ebd",
+            "google_news:article:ba56e25d6e6facf9"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase, Moov to provide stablecoin infrastructure for US community banks",
+          "title_zh": "Coinbase, Moov to provide stablecoin infrastructure for US community banks",
+          "update_id": "upd_eb6744d3ed775f00",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions.",
+          "what_changed_zh": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions."
         }
       ]
     }

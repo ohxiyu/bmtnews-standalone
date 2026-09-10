@@ -4,36 +4,42 @@
   "url": "https://bmt.news/events/evt_d918c8d1e6c25a31/",
   "json": "https://bmt.news/api/events/evt_d918c8d1e6c25a31.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews",
     "en": "Coinbase CLARITY Act: Senate Cloture Vote Explained - Cryptonews"
   },
   "current_state": {
-    "zh": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation.",
-    "en": "Cryptonews explains the Senate cloture vote on the Coinbase-backed CLARITY Act, a proposed US crypto regulation."
+    "zh": "CLARITY法案等待参议院复会后行动；财政部长贝森特公开呼吁通过，Galaxy预测通过概率降至10%。",
+    "en": "CLARITY Act awaits Senate action after recess; Treasury Secretary Bessent publicly calls for passage, Galaxy odds of passage at 10%."
   },
   "first_seen_at": "2026-09-09T09:04:44.593538+00:00",
-  "last_updated_at": "2026-09-09T09:04:44.593538+00:00",
-  "last_material_change_at": "2026-09-09T09:04:44.593538+00:00",
+  "last_updated_at": "2026-09-10T16:36:00.201628+00:00",
+  "last_material_change_at": "2026-09-10T16:36:00.201628+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "bessent",
     "clarity",
     "clarity-act",
     "cloture",
     "coinbase",
     "cryptonews",
     "explained",
+    "secretary",
     "senate",
+    "treasury",
     "vote"
   ],
   "identifiers": [],
   "topics": [
     "clarity-act",
     "coinbase",
+    "crypto-regulation",
+    "treasury",
+    "us-policy",
     "us-senate"
   ],
   "updates": [
@@ -71,6 +77,44 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1tWlFpamR2YUNMWFkwQUdHMEVQUWxIX3NwOENtOGhKVHRfbFc5REpEOVJpRkpTamFtT1Zrc01OX0RKa2owYmkwb2hyaTBlU0pzVUlnWEN4WnRsMnpHbUk5YVJpOA?oc=5",
           "label": "Cryptonews",
           "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_718e7aa9ab083515",
+      "event_id": "evt_d918c8d1e6c25a31",
+      "occurred_at": "2026-09-10T10:20:00Z",
+      "published_at": "2026-09-10T10:20:00Z",
+      "first_seen_at": "2026-09-10T16:36:00.201628Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Treasury Secretary Bessent urges CLARITY Act passage after Senate returns",
+      "title_en": "Treasury Secretary Bessent urges CLARITY Act passage after Senate returns",
+      "what_changed_zh": "美国财政部长贝森特公开敦促参议院在结束八月休会后通过CLARITY法案，警告若不通过将发出美国数字资产领导力衰退的信号。",
+      "what_changed_en": "US Treasury Secretary Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would send a signal of declining American leadership in digital assets.",
+      "current_state_zh": "CLARITY法案等待参议院复会后行动；财政部长贝森特公开呼吁通过，Galaxy预测通过概率降至10%。",
+      "current_state_en": "CLARITY Act awaits Senate action after recess; Treasury Secretary Bessent publicly calls for passage, Galaxy odds of passage at 10%.",
+      "detailed_summary_zh": "US Treasury Secretary Scott Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would signal declining American leadership in digital assets.",
+      "detailed_summary_en": "US Treasury Secretary Scott Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would signal declining American leadership in digital assets.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:75e22a246a9b4f64"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/treasury-secretary-bessent-urges-clarity-act-passage-senate-returns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
           "official": false
         }
       ]

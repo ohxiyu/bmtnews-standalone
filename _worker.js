@@ -1,10 +1,323 @@
 const SITE_ORIGIN = 'https://bmt.news';
+
+// Admin requests are authenticated before ANY asset or cache lookup.
+// No browser-held GitHub credentials, public write proxy, or configurable file paths.
+const ADMIN_REPO = 'ohxiyu/bmtnews-standalone';
+const EDITORIAL_FILE = 'data/editorial.json';
+const QUICK_CATEGORIES = new Set(['', 'crypto-markets', 'crypto-exchange', 'crypto-protocol',
+  'crypto-security', 'policy-regulation', 'ai-technology', 'macro-policy']);
+
+export function isAdminPath(path) {
+  try { path = decodeURIComponent(path).replaceAll('\\', '/'); } catch { return true; }
+  return /^\/(?:s|admin)(?:\/|$)/i.test(path) || /^\/api\/admin(?:\/|$)/i.test(path);
+}
+
+class AdminError extends Error {
+  constructor(status, code, message) { super(message); this.status = status; this.code = code; }
+}
+function adminJson(value, status = 200) {
+  return new Response(JSON.stringify(value), {status, headers: {
+    'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'private, no-store',
+    'CDN-Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Vary': 'Cookie',
+    'X-Robots-Tag': 'noindex, nofollow'
+  }});
+}
+async function boundedText(message, limit) {
+  const reader = message.body?.getReader();
+  if (!reader) return '';
+  const decoder = new TextDecoder('utf-8', {fatal: true});
+  let length = 0, text = '';
+  try {
+    for (;;) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      length += value.byteLength;
+      if (length > limit) throw new AdminError(413, 'too_large', '内容过大，请缩短正文或压缩图片。');
+      text += decoder.decode(value, {stream: true});
+    }
+    return text + decoder.decode();
+  } finally { await reader.cancel().catch(() => {}); reader.releaseLock(); }
+}
+function decodeBase64(value) {
+  return Uint8Array.from(atob(value.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+}
+function encodeBase64(value) {
+  const bytes = new TextEncoder().encode(value);
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
+}
+async function digestText(value) {
+  return [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)))]
+    .map(b => b.toString(16).padStart(2, '0')).join('');
+}
+async function fetchTimed(url, init = {}) {
+  return fetch(url, {...init, redirect: 'error', signal: AbortSignal.timeout(15000)});
+}
+export async function verifyAdmin(request, env) {
+  const issuer = env.ADMIN_ACCESS_ISSUER;
+  if (!/^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(issuer || '') ||
+      !env.ADMIN_ACCESS_AUD || !env.ADMIN_ALLOWED_EMAIL) {
+    throw new AdminError(503, 'admin_not_configured', '后台邮箱登录尚未配置完成，公开新闻仍可正常阅读。');
+  }
+  if (new URL(request.url).origin !== SITE_ORIGIN) {
+    throw new AdminError(403, 'wrong_origin', '请通过 https://bmt.news/s/ 访问后台。');
+  }
+  const token = request.headers.get('Cf-Access-Jwt-Assertion') || '';
+  if (!token || token.length > 16384) throw new AdminError(401, 'login_required', '请重新打开 /s/，完成邮箱验证。');
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) throw new Error('jwt');
+    const header = JSON.parse(new TextDecoder().decode(decodeBase64(parts[0])));
+    const claims = JSON.parse(new TextDecoder().decode(decodeBase64(parts[1])));
+    const now = Date.now() / 1000;
+    if (header.alg !== 'RS256' || typeof header.kid !== 'string' ||
+        claims.iss !== issuer || !Array.isArray(claims.aud) || !claims.aud.includes(env.ADMIN_ACCESS_AUD) ||
+        !Number.isFinite(claims.exp) || claims.exp <= now ||
+        !Number.isFinite(claims.iat) || claims.iat > now + 30 ||
+        (claims.nbf !== undefined && (!Number.isFinite(claims.nbf) || claims.nbf > now + 30)) ||
+        typeof claims.email !== 'string' ||
+        claims.email.toLowerCase() !== env.ADMIN_ALLOWED_EMAIL.trim().toLowerCase()) throw new Error('claims');
+    const response = await fetchTimed(issuer + '/cdn-cgi/access/certs');
+    if (!response.ok) throw new Error('certs');
+    const jwks = JSON.parse(await boundedText(response, 65536));
+    const jwk = jwks.keys?.find(key => key.kid === header.kid && key.kty === 'RSA');
+    if (!jwk) throw new Error('key');
+    const key = await crypto.subtle.importKey('jwk', jwk,
+      {name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256'}, false, ['verify']);
+    if (!await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, decodeBase64(parts[2]),
+      new TextEncoder().encode(parts[0] + '.' + parts[1]))) throw new Error('signature');
+    return claims.email;
+  } catch {
+    throw new AdminError(401, 'invalid_session', '登录已失效或无权访问，请重新验证邮箱。');
+  }
+}
+async function github(env, path, init = {}) {
+  if (!env.ADMIN_GITHUB_TOKEN) throw new AdminError(503, 'write_not_configured', '后台写入权限尚未配置。');
+  const response = await fetchTimed('https://api.github.com/repos/' + ADMIN_REPO + '/' + path, {
+    ...init, headers: {'Authorization': 'Bearer ' + env.ADMIN_GITHUB_TOKEN,
+      'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28',
+      'User-Agent': 'BMTNews-Admin', 'Content-Type': 'application/json'}
+  });
+  if (!response.ok) {
+    if (response.status === 409 || response.status === 422) {
+      throw new AdminError(409, 'conflict', '内容已被其他操作更新，请刷新列表后重试；本地草稿仍保留。');
+    }
+    throw new AdminError(502, 'repository_unavailable', '仓库暂时不可用或权限不足，请稍后重试；不要重复发布。');
+  }
+  if (response.status === 204) return {};
+  return JSON.parse(await boundedText(response, 3 * 1024 * 1024));
+}
+async function readEditorial(env) {
+  const file = await github(env, 'contents/' + EDITORIAL_FILE + '?ref=main');
+  const data = JSON.parse(new TextDecoder().decode(decodeBase64(file.content || '')));
+  if (!data || !Array.isArray(data.items)) throw new AdminError(502, 'invalid_registry', '编辑文件格式异常，未执行修改。');
+  return {sha: file.sha, data};
+}
+function requireRevision(value, current) {
+  if (typeof value !== 'string' || value !== current) {
+    throw new AdminError(409, 'conflict', '列表版本已改变，请刷新后再操作。');
+  }
+}
+async function saveEditorial(env, current, items) {
+  const content = JSON.stringify({...current.data, items}, null, 2) + '\n';
+  const result = await github(env, 'contents/' + EDITORIAL_FILE, {method: 'PUT', body: JSON.stringify({
+    branch: 'main', sha: current.sha, message: 'content: update editorial from Quick Post', content: encodeBase64(content)
+  })});
+  return {sha: result.content.sha, commit: result.commit.sha, status: 'saved', message: '已保存，等待自动发布；不代表已上线。'};
+}
+function httpLink(value) {
+  if (!value) return '';
+  if (typeof value !== 'string' || value.length > 2048) throw new AdminError(400, 'invalid_url', '链接格式不正确。');
+  try {
+    const url = new URL(value);
+    if (!['https:', 'http:'].includes(url.protocol) || url.username || url.password) throw new Error('url');
+    return url.href;
+  } catch { throw new AdminError(400, 'invalid_url', '链接必须使用完整的 http:// 或 https:// 地址。'); }
+}
+export function validateQuickPost(input) {
+  if (!input || typeof input !== 'object' || Array.isArray(input) ||
+      typeof input.body !== 'string' || !input.body.trim() || input.body.length > 10000 ||
+      !/^[a-f0-9-]{36}$/.test(input.id || '') || !QUICK_CATEGORIES.has(input.category || '') ||
+      typeof input.enabled !== 'boolean' || typeof input.pin !== 'boolean' || typeof input.breaking !== 'boolean') {
+    throw new AdminError(400, 'invalid_post', '正文必填且不超过 10000 字，请检查分类和状态。');
+  }
+  const date = input.date;
+  if (!/^20\d{2}-\d{2}-\d{2}$/.test(date || '') ||
+      !Number.isFinite(Date.parse(date)) || new Date(date).toISOString().slice(0,10) !== date) {
+    throw new AdminError(400, 'invalid_date', '请选择有效的刊期日期。');
+  }
+  const image = input.image || '';
+  if (typeof image !== 'string' || (image && !/^\/assets\/uploads\/quick-[a-f0-9]{64}\.(png|jpg|webp)$/.test(image))) {
+    throw new AdminError(400, 'invalid_image', '请使用后台上传的图片。');
+  }
+  return {type: 'quick_post', id: input.id, body: input.body.trim(), url: httpLink(input.url),
+    category: input.category || '', date, enabled: input.enabled, pin: input.pin,
+    breaking: input.breaking, image};
+}
+async function handleAdmin(request, env) {
+  try {
+    await verifyAdmin(request, env);
+    const path = new URL(request.url).pathname;
+    if (!path.startsWith('/api/admin')) {
+      if (request.method !== 'GET' && request.method !== 'HEAD') throw new AdminError(405, 'method_not_allowed', '请使用 GET。');
+      if (path === '/admin' || path === '/admin/' || path === '/admin/index.html') {
+        return new Response(null, {status: 302, headers: {'Location': '/s/', 'Cache-Control': 'no-store'}});
+      }
+      if (path.startsWith('/admin/')) throw new AdminError(404, 'not_found', '旧后台已停用，请使用 /s/。');
+      const result = await env.ASSETS.fetch(request);
+      return responseWithHeaders(result, headers => {
+        headers.set('Cache-Control', 'private, no-store'); headers.set('CDN-Cache-Control', 'no-store');
+        headers.set('X-Robots-Tag', 'noindex, nofollow');
+        headers.set('X-Frame-Options', 'DENY');
+        headers.set('Content-Security-Policy', "frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
+      });
+    }
+    if (request.method === 'GET') {
+      if (path === '/api/admin/state') {
+        const current = await readEditorial(env);
+        return adminJson({sha: current.sha, items: current.data.items});
+      }
+      throw new AdminError(404, 'not_found', '接口不存在。');
+    }
+    if (request.method !== 'POST') throw new AdminError(405, 'method_not_allowed', '写入接口只接受 POST。');
+    if (request.headers.get('Origin') !== SITE_ORIGIN || request.headers.get('X-BMT-Admin') !== '1' ||
+        !/^application\/json(?:;|$)/i.test(request.headers.get('Content-Type') || '')) {
+      throw new AdminError(403, 'invalid_request_origin', '请从后台页面提交操作。');
+    }
+    let input;
+    try { input = JSON.parse(await boundedText(request, path === '/api/admin/image' ? 1500000 : 100000)); }
+    catch (error) { if (error instanceof AdminError) throw error; throw new AdminError(400, 'invalid_json', '请求格式不正确。'); }
+    if (path === '/api/admin/posts') {
+      const post = validateQuickPost(input);
+      const hash = await digestText(JSON.stringify(post));
+      const current = await readEditorial(env);
+      const existing = current.data.items.find(row => row.type === 'quick_post' && row.id === post.id);
+      if (existing?.request_hash === hash) {
+        return adminJson({sha: current.sha, status: 'saved', id: post.id, message: '这次操作已经保存，没有重复创建。'});
+      }
+      requireRevision(input.sha, current.sha);
+      const row = {...post, created_at: existing?.created_at || new Date().toISOString(),
+        updated_at: new Date().toISOString(), request_hash: hash};
+      const items = existing ? current.data.items.map(item => item === existing ? row : item) : [...current.data.items, row];
+      return adminJson({...await saveEditorial(env, current, items), id: post.id});
+    }
+    if (path === '/api/admin/entry-state') {
+      const current = await readEditorial(env);
+      requireRevision(input.sha, current.sha);
+      if (!Number.isInteger(input.index) || input.index < 0 || input.index >= current.data.items.length ||
+          typeof input.enabled !== 'boolean') throw new AdminError(400, 'invalid_entry', '无效的编辑条目。');
+      const items = current.data.items.map((item, index) => index === input.index ? {...item, enabled: input.enabled, request_hash: undefined} : item);
+      return adminJson(await saveEditorial(env, current, items));
+    }
+    if (path === '/api/admin/legacy') {
+      const current = await readEditorial(env);
+      requireRevision(input.sha, current.sha);
+      const row = input.entry;
+      if (!row || !['editorial','sponsored','suppress'].includes(row.type) ||
+          typeof row.enabled !== 'boolean' ||
+          !Number.isInteger(input.index) || input.index < -1 || input.index >= current.data.items.length ||
+          (input.index >= 0 && current.data.items[input.index].type === 'quick_post')) {
+        throw new AdminError(400, 'invalid_entry', '编辑记录格式不正确。');
+      }
+      const clean = {type: row.type, enabled: row.enabled, url: httpLink(row.url)};
+      if (!clean.url) throw new AdminError(400, 'invalid_entry', '旧编辑记录必须有原文链接。');
+      for (const field of ['title_zh','title_en','summary_zh','summary_en','label','note',
+        'background_zh','background_en','market_impact_zh','market_impact_en',
+        'community_discussion_zh','community_discussion_en','category']) {
+        if (row[field] !== undefined && (typeof row[field] !== 'string' || row[field].length > 10000)) {
+          throw new AdminError(400, 'invalid_entry', '编辑字段格式不正确或过长。');
+        }
+        clean[field] = row[field] || '';
+      }
+      if (row.type !== 'suppress' && !clean.title_zh.trim() && !clean.title_en.trim()) {
+        throw new AdminError(400, 'title_required', '旧编辑精选和广告需要标题。');
+      }
+      for (const field of ['date','starts','expires']) {
+        if (row[field] && (!/^20\d{2}-\d{2}-\d{2}$/.test(row[field]) ||
+            !Number.isFinite(Date.parse(row[field])) || new Date(row[field]).toISOString().slice(0,10) !== row[field])) {
+          throw new AdminError(400, 'invalid_date', '日期格式不正确。');
+        }
+        clean[field] = row[field] || null;
+      }
+      if (row.type === 'sponsored' && (!clean.expires || (clean.starts && clean.expires < clean.starts))) {
+        throw new AdminError(400, 'invalid_date', '广告结束日期必填且不能早于开始日期。');
+      }
+      if (row.position !== null && row.position !== undefined &&
+          (!Number.isInteger(row.position) || row.position < 1 || row.position > 20)) {
+        throw new AdminError(400, 'invalid_position', '广告位置应为 1–20。');
+      }
+      clean.position = row.position ?? null;
+      clean.official = row.official === true;
+      if (!Array.isArray(row.tags) || row.tags.length > 50 || row.tags.some(tag => typeof tag !== 'string' || tag.length > 100) ||
+          !Array.isArray(row.sources) || row.sources.length > 30) {
+        throw new AdminError(400, 'invalid_sources', '标签或参考链接格式不正确。');
+      }
+      clean.tags = row.tags;
+      clean.sources = row.sources.map(source => {
+        if (!source || typeof source.title !== 'string' || source.title.length > 500) throw new AdminError(400, 'invalid_sources', '参考链接格式不正确。');
+        return {title: source.title, url: httpLink(source.url)};
+      });
+      const items = current.data.items.slice();
+      if (input.index < 0) items.push(clean);
+      else items[input.index] = {...items[input.index], ...clean};
+      return adminJson(await saveEditorial(env, current, items));
+    }
+    if (path === '/api/admin/image') {
+      if (!['image/png', 'image/jpeg', 'image/webp'].includes(input?.mime) ||
+          typeof input.data !== 'string' || !/^[A-Za-z0-9+/]+={0,2}$/.test(input.data)) {
+        throw new AdminError(400, 'invalid_image', '仅支持 PNG、JPEG 或 WebP 图片。');
+      }
+      let bytes;
+      try { bytes = decodeBase64(input.data); }
+      catch { throw new AdminError(400, 'invalid_image', '图片编码不正确。'); }
+      const prefix = Array.from(bytes.slice(0,12));
+      const valid = input.mime === 'image/png' ? prefix.slice(0,8).join() === '137,80,78,71,13,10,26,10' :
+        input.mime === 'image/jpeg' ? prefix.slice(0,3).join() === '255,216,255' :
+          String.fromCharCode(...prefix.slice(0,4)) === 'RIFF' && String.fromCharCode(...prefix.slice(8,12)) === 'WEBP';
+      if (!valid || bytes.length > 1024 * 1024) throw new AdminError(400, 'invalid_image', '图片格式不匹配，或超过 1 MB。');
+      const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(b => b.toString(16).padStart(2,'0')).join('');
+      const extension = {'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[input.mime];
+      const file = 'docs/assets/uploads/quick-' + hash + '.' + extension;
+      try {
+        await github(env, 'contents/' + file, {method:'PUT', body:JSON.stringify({
+          branch:'main', message:'content: upload Quick Post image', content:input.data
+        })});
+      } catch (error) {
+        if (error.code !== 'conflict') throw error;
+        // A content-addressed path may already exist. Prove the bytes before reusing it.
+        const existing = await github(env, 'contents/' + file + '?ref=main');
+        if ((existing.content || '').replace(/\s/g,'') !== input.data) throw error;
+      }
+      return adminJson({path:file.slice(4), status:'saved', message:'图片已保存，等待部署。'});
+    }
+    if (path === '/api/admin/sources') {
+      const allowed = ['operation','source_type','source_key','name','endpoint','category','enabled','reason'];
+      if (!input || !['add','update','pause','resume','remove'].includes(input.operation) ||
+          !['rss','telegram','github','reddit','hackernews','google_news','gdelt','ossinsight'].includes(input.source_type)) {
+        throw new AdminError(400, 'invalid_source', '来源操作不正确。');
+      }
+      const inputs = Object.fromEntries(allowed.map(key => [key, String(input[key] ?? '').slice(0,2048)]));
+      if (!inputs.reason.trim()) throw new AdminError(400, 'reason_required', '请填写调整原因。');
+      await github(env, 'actions/workflows/source-change.yml/dispatches', {method:'POST',
+        body:JSON.stringify({ref:'main', inputs})});
+      return adminJson({status:'queued', message:'来源变更已提交检查，将创建待审核 PR；尚未修改生产来源。'}, 202);
+    }
+    throw new AdminError(404, 'not_found', '接口不存在。');
+  } catch (error) {
+    const known = error instanceof AdminError;
+    if (!known) console.error(JSON.stringify({event:'admin_request_failed'}));
+    return adminJson({error:{code:known ? error.code : 'internal_error',
+      message:known ? error.message : '服务暂时不可用，草稿未清除，请稍后重试。'}}, known ? error.status : 500);
+  }
+}
+
 const MARKDOWN_ROUTES = new Map([
   ['/', 'zh'],
   ['/en', 'en'],
   ['/en/', 'en']
 ]);
-const JSON_API_PATHS = new Set(['/api/latest.json', '/api/editions.json', '/api/events.json']);
+const JSON_API_PATHS = new Set(['/api/latest.json', '/api/editions.json', '/api/events.json', '/api/quick-posts.json']);
 const DATED_EDITION_PATH = /^\/editions\/\d{4}-\d{2}-\d{2}\/edition\.json$/;
 const EVENT_DETAIL_PATH = /^\/api\/events\/evt_[a-z0-9_-]{6,80}\.json$/;
 
@@ -120,6 +433,7 @@ export function renderEditionMarkdown(payload, language) {
     `- [${isEnglish ? 'Latest edition JSON' : '最新一期 JSON'}](${SITE_ORIGIN}/api/latest.json)`,
     `- [${isEnglish ? 'Edition index JSON' : '历史期次索引 JSON'}](${SITE_ORIGIN}/api/editions.json)`,
     `- [${isEnglish ? 'Event timeline JSON' : '事件线 JSON'}](${SITE_ORIGIN}/api/events.json)`,
+    `- [Quick Post JSON](${SITE_ORIGIN}/api/quick-posts.json)`,
     `- [OpenAPI](${SITE_ORIGIN}/openapi.json)`,
     `- [llms.txt](${SITE_ORIGIN}/llms.txt)`,
     `- [${isEnglish ? 'Developer documentation' : '开发者文档'}](${SITE_ORIGIN}/developers/)`,
@@ -303,6 +617,7 @@ function cachedResponse(response, status, policy) {
 }
 
 export async function handleRequest(request, env, ctx) {
+  if (isAdminPath(new URL(request.url).pathname)) return handleAdmin(request, env);
   const policy = cachePolicy(request);
   const cache = globalThis.caches?.default;
   if (!policy || !cache) return handleOriginRequest(request, env);

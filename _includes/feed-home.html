@@ -4,6 +4,7 @@
 
 <section class="continuous-feed" data-language="{{ include.language }}">
   {% include edition-header.html language=include.language %}
+  {{ site.data.quick_posts.html }}
 
   {% if latest_post %}
     <section
