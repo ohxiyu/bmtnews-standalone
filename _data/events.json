@@ -32851,8 +32851,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The U.S. Treasury sanctioned Xinbi Guarantee, a cyber-scam hub involved in widespread fraud, as part of ongoing efforts to curb illicit crypto activity.",
-      "current_state_zh": "The U.S. Treasury sanctioned Xinbi Guarantee, a cyber-scam hub involved in widespread fraud, as part of ongoing efforts to curb illicit crypto activity.",
+      "current_state_en": "U.S. authorities have sanctioned Xinbi Guarantee, seized and restrained over $52 million in crypto, and designated Xinbi as a significant transnational criminal organization while sanctioning related technology providers.",
+      "current_state_zh": "美国当局已制裁 Xinbi Guarantee，查封和限制超过5200万美元加密货币，并将 Xinbi 指定为重大跨国犯罪组织，同时制裁了其相关的技术供应商。",
       "entities": [
         "cyber-scam",
         "guarantee",
@@ -32864,17 +32864,20 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-09T16:49:31.404404Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-09T16:49:31.404404Z",
-      "last_updated_at": "2026-09-09T16:49:31.404404Z",
+      "last_material_change_at": "2026-09-10T05:08:13.786657Z",
+      "last_updated_at": "2026-09-10T05:08:13.786657Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "U.S. Treasury sanctions another widespread cyber-scam hub, Xinbi Guarantee",
       "title_zh": "U.S. Treasury sanctions another widespread cyber-scam hub, Xinbi Guarantee",
       "topics": [
+        "crypto-crime",
         "crypto-regulation",
         "cyber-scam",
         "illicit-finance",
+        "law-enforcement",
+        "money-laundering",
         "sanctions",
         "treasury"
       ],
@@ -32916,6 +32919,44 @@
           "update_type": "initial",
           "what_changed_en": "The U.S. Treasury sanctioned Xinbi Guarantee, a cyber-scam hub involved in widespread fraud, as part of ongoing efforts to curb illicit crypto activity.",
           "what_changed_zh": "The U.S. Treasury sanctioned Xinbi Guarantee, a cyber-scam hub involved in widespread fraud, as part of ongoing efforts to curb illicit crypto activity."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.97,
+          "current_state_en": "U.S. authorities have sanctioned Xinbi Guarantee, seized and restrained over $52 million in crypto, and designated Xinbi as a significant transnational criminal organization while sanctioning related technology providers.",
+          "current_state_zh": "美国当局已制裁 Xinbi Guarantee，查封和限制超过5200万美元加密货币，并将 Xinbi 指定为重大跨国犯罪组织，同时制裁了其相关的技术供应商。",
+          "detailed_summary_en": "The US Justice Department sanctioned the Xinbi Guarantee scam marketplace, seizing two wallets with about $12 million and restraining 47 additional wallets tied to its laundering network, totaling over $52 million in crypto.",
+          "detailed_summary_zh": "The US Justice Department sanctioned the Xinbi Guarantee scam marketplace, seizing two wallets with about $12 million and restraining 47 additional wallets tied to its laundering network, totaling over $52 million in crypto.",
+          "event_id": "evt_ca3aca23a2846081",
+          "first_seen_at": "2026-09-10T05:08:13.786657Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T04:05:03Z",
+          "published_at": "2026-09-10T04:05:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/us-sanctions-xinbi-restrains-52m-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:176b6556c78605e6"
+          ],
+          "time_precision": "published",
+          "title_en": "US sanctions Xinbi scam marketplace, restrains $52M in crypto",
+          "title_zh": "US sanctions Xinbi scam marketplace, restrains $52M in crypto",
+          "update_id": "upd_680b4a3cbfb9918f",
+          "update_type": "escalation",
+          "what_changed_en": "The U.S. Justice Department seized two wallets linked to Xinbi Guarantee containing about $12 million and sought restraints on 47 additional wallets, totaling over $52 million in crypto; OFAC designated Xinbi as a significant transnational criminal organization and sanctioned SafeW Technology and Anwen Technology.",
+          "what_changed_zh": "美国司法部查封了与 Xinbi Guarantee 相关的两个钱包（约1200万美元），并申请限制另外47个钱包，总计涉及超过5200万美元加密货币；OFAC 将 Xinbi 指定为重大跨国犯罪组织，并制裁了 SafeW Technology 和 Anwen Technology。"
         }
       ]
     },
@@ -36043,6 +36084,81 @@
           "update_type": "initial",
           "what_changed_en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider.",
           "what_changed_zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+      "current_state_zh": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+      "entities": [
+        "automattic",
+        "ceo",
+        "matt",
+        "mullenweg"
+      ],
+      "event_id": "evt_f4625931f2b92a9c",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-10T05:08:07.758206Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T05:08:07.758206Z",
+      "last_updated_at": "2026-09-10T05:08:07.758206Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Automattic's board forces CEO Matt Mullenweg into leave of absence",
+      "title_zh": "Automattic's board forces CEO Matt Mullenweg into leave of absence",
+      "topics": [
+        "automattic",
+        "corporate-governance",
+        "leadership",
+        "open-source",
+        "wordpress"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+          "current_state_zh": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+          "detailed_summary_en": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+          "detailed_summary_zh": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+          "event_id": "evt_f4625931f2b92a9c",
+          "first_seen_at": "2026-09-10T05:08:07.758206Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-09T23:49:29Z",
+          "published_at": "2026-09-09T23:49:29Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49636283"
+            }
+          ],
+          "sources": [
+            {
+              "label": "LeoPanthera",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://techcrunch.com/2026/09/09/automattics-board-forces-ceo-matt-mullenweg-into-leave-of-absence/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49636283"
+          ],
+          "time_precision": "published",
+          "title_en": "Automattic's board forces CEO Matt Mullenweg into leave of absence",
+          "title_zh": "Automattic's board forces CEO Matt Mullenweg into leave of absence",
+          "update_id": "upd_57c59084389258d6",
+          "update_type": "initial",
+          "what_changed_en": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
+          "what_changed_zh": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic."
         }
       ]
     }

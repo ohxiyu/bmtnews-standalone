@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_ca3aca23a2846081/",
   "json": "https://bmt.news/api/events/evt_ca3aca23a2846081.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "U.S. Treasury sanctions another widespread cyber-scam hub, Xinbi Guarantee",
     "en": "U.S. Treasury sanctions another widespread cyber-scam hub, Xinbi Guarantee"
   },
   "current_state": {
-    "zh": "The U.S. Treasury sanctioned Xinbi Guarantee, a cyber-scam hub involved in widespread fraud, as part of ongoing efforts to curb illicit crypto activity.",
-    "en": "The U.S. Treasury sanctioned Xinbi Guarantee, a cyber-scam hub involved in widespread fraud, as part of ongoing efforts to curb illicit crypto activity."
+    "zh": "美国当局已制裁 Xinbi Guarantee，查封和限制超过5200万美元加密货币，并将 Xinbi 指定为重大跨国犯罪组织，同时制裁了其相关的技术供应商。",
+    "en": "U.S. authorities have sanctioned Xinbi Guarantee, seized and restrained over $52 million in crypto, and designated Xinbi as a significant transnational criminal organization while sanctioning related technology providers."
   },
   "first_seen_at": "2026-09-09T16:49:31.404404+00:00",
-  "last_updated_at": "2026-09-09T16:49:31.404404+00:00",
-  "last_material_change_at": "2026-09-09T16:49:31.404404+00:00",
+  "last_updated_at": "2026-09-10T05:08:13.786657+00:00",
+  "last_material_change_at": "2026-09-10T05:08:13.786657+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "cyber-scam",
     "guarantee",
@@ -29,9 +29,12 @@
   ],
   "identifiers": [],
   "topics": [
+    "crypto-crime",
     "crypto-regulation",
     "cyber-scam",
     "illicit-finance",
+    "law-enforcement",
+    "money-laundering",
     "sanctions",
     "treasury"
   ],
@@ -69,6 +72,44 @@
         {
           "url": "https://www.coindesk.com/policy/2026/09/09/u-s-treasury-sanctions-another-widespread-cyber-scam-hub-xinbi-guarantee",
           "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_680b4a3cbfb9918f",
+      "event_id": "evt_ca3aca23a2846081",
+      "occurred_at": "2026-09-10T04:05:03Z",
+      "published_at": "2026-09-10T04:05:03Z",
+      "first_seen_at": "2026-09-10T05:08:13.786657Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "US sanctions Xinbi scam marketplace, restrains $52M in crypto",
+      "title_en": "US sanctions Xinbi scam marketplace, restrains $52M in crypto",
+      "what_changed_zh": "美国司法部查封了与 Xinbi Guarantee 相关的两个钱包（约1200万美元），并申请限制另外47个钱包，总计涉及超过5200万美元加密货币；OFAC 将 Xinbi 指定为重大跨国犯罪组织，并制裁了 SafeW Technology 和 Anwen Technology。",
+      "what_changed_en": "The U.S. Justice Department seized two wallets linked to Xinbi Guarantee containing about $12 million and sought restraints on 47 additional wallets, totaling over $52 million in crypto; OFAC designated Xinbi as a significant transnational criminal organization and sanctioned SafeW Technology and Anwen Technology.",
+      "current_state_zh": "美国当局已制裁 Xinbi Guarantee，查封和限制超过5200万美元加密货币，并将 Xinbi 指定为重大跨国犯罪组织，同时制裁了其相关的技术供应商。",
+      "current_state_en": "U.S. authorities have sanctioned Xinbi Guarantee, seized and restrained over $52 million in crypto, and designated Xinbi as a significant transnational criminal organization while sanctioning related technology providers.",
+      "detailed_summary_zh": "The US Justice Department sanctioned the Xinbi Guarantee scam marketplace, seizing two wallets with about $12 million and restraining 47 additional wallets tied to its laundering network, totaling over $52 million in crypto.",
+      "detailed_summary_en": "The US Justice Department sanctioned the Xinbi Guarantee scam marketplace, seizing two wallets with about $12 million and restraining 47 additional wallets tied to its laundering network, totaling over $52 million in crypto.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.97,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:176b6556c78605e6"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/us-sanctions-xinbi-restrains-52m-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }
