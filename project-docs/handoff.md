@@ -5,30 +5,32 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "建立仓库内统一的 Agent 交接、任务认领与交付检查",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/64",
-  "owner": "Codex / agent-governance",
-  "branch": "agent/agent-governance",
-  "last_verified_commit": "fb3152b333be617db8260b04d91f8c6f02b6eba2",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/65",
+  "goal": "落地 Quick Post 与指定邮箱验证码登录，保留 Git 存储并完成上线验收",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/66",
+  "owner": "Codex / quick-post",
+  "branch": "agent/quick-post",
+  "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/67",
   "completed": [
-    "统一 AGENTS 与三个短入口；项目状态/规范/历史证据职责分离",
-    "新增任务 Issue Form、PR 交付模板与 CI governance job",
-    "版本、文件链接、唯一交接和交付证据检查及 11 个回归用例"
+    "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
+    "确认当前 CMS 使用 GitHub Token 写 editorial.json，图片存 Git，发布经整期重建",
+    "用户已确认 Git 分钟级发布与 Cloudflare Access 邮箱登录，并提供唯一允许邮箱（仅存平台，不写入仓库）",
+    "实现 Quick Post、受保护写入接口、图片上传、旧编辑管理、来源变更申请及无 AI 的独立发布输出",
+    "新增 JWT、CSRF、并发、防重复提交、图片与渲染测试；修复治理测试依赖旧指针状态的问题"
   ],
   "unfinished": [
-    "等待 PR #65 最终提交的远端检查及用户审阅",
-    "用户审阅和合并决定；本任务不合并或部署"
+    "Access 和 Pages 生产绑定已保存；仍需部署后验证 JWT 与 GitHub 凭据权限",
+    "远端 CI、PR 合并、正式部署与真实邮箱端到端验收；未满足前不合并"
   ],
   "validation": [
-    "uv sync --frozen --extra dev: passed",
-    "uv run python scripts/check_governance.py: passed",
-    "uv run pytest: 740 passed, 1 dependency deprecation warning",
-    "git diff --check: passed"
+    "本地 uv sync --frozen --extra dev 成功；完整 pytest 通过，确切计数见发布记录",
+    "管理接口 15 项 Node 测试通过，公开 Worker、分享和 PWA 回归测试通过",
+    "390px 与 1280px 模拟浏览器通过草稿恢复、冲突保留、保存状态和横向溢出检查"
   ],
   "unverified": [
-    "最终 PR HEAD 的实时 GitHub 检查：须从 PR checks 核验，不从交接推断",
-    "生产 Worker 当前版本和权限（本任务未部署，无需运行时验收）"
+    "真实邮箱 OTP、生产 Git 写入与发布完成尚未验证；不得把 mock 测试等同线上验收",
+    "真实 iPhone/PWA 未验收；生产密钥已确认加密保存，但有效性与权限尚未验证",
+    "下方 production 为继承的 09-08 快照，不是本次核验的新发布"
   ],
   "production": {
     "source_commit": "950fc42f726be68df51c8217dbb4df29986ae496",
@@ -39,17 +41,18 @@
     "verified_at": "2026-09-08"
   },
   "blockers": [
-    "无开发阻塞；合并/生产部署需本任务明确授权，历史授权不可自动沿用"
+    "2026-09-11：本机 Cloudflare OAuth 过期；已使用已登录控制台完成 Access 与生产绑定配置",
+    "部分线上 HTTP 检查间歇性 TLS 失败，完整匿名验收尚未完成；git fetch 重试成功，merge origin/main 已确认 up to date"
   ],
-  "next_action": "核验 PR #65 的 governance/test/analyze 后交用户审阅；未经新授权不合并、部署或处理 backlog。",
+  "next_action": "完成最新交接提交的 CI 与完整匿名检查，确认当前任务合并部署授权后发布，再由用户进行真实 OTP 与草稿验收。不要重复创建 Access 应用或放宽邮箱策略。",
   "states": {
     "code": "complete",
     "tests": "complete",
     "pr_merged": "pending",
-    "deployed": "not_required",
-    "production_verified": "not_required"
+    "deployed": "pending",
+    "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-08-agent-governance.md"
+  "evidence": "project-docs/releases/2026-09-10-quick-post-implementation.md"
 }
 ```
 

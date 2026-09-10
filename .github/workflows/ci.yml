@@ -55,5 +55,6 @@ jobs:
         working-directory: ops/daily-dispatcher
       - run: node --check docs/_worker.js
       - run: node --test tests/test_agent_worker.mjs
+      - run: node --test tests/test_admin_worker.mjs
       - run: node --test tests/test_story_card.mjs
       - run: node --test tests/test_pwa_*.mjs

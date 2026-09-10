@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
+      - 'data/editorial.json'
+      - 'src/quick_posts.py'
       - 'src/entity_republish.py'
       - 'src/site_pages.py'
       - 'src/threads.py'
@@ -126,6 +128,9 @@ jobs:
           --archive-root docs/_data/archive
           --entity-root docs/entity
           --data-root docs/_data
+
+      - name: Render Quick Post without AI
+        run: uv run python -m src.quick_posts
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

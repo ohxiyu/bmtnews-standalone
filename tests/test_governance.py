@@ -56,7 +56,13 @@ def test_duplicate_pointer_rejected(tree):
 
 def test_false_deployment_state_rejected(tree):
     path = tree / "project-docs/handoff.md"
-    path.write_text(path.read_text().replace('"deployed": "not_required"', '"deployed": "complete"'))
+    import re
+    text = path.read_text()
+    match = re.search(r"```json\s*(.*?)\s*```", text, re.S)
+    pointer = json.loads(match.group(1))
+    pointer["states"]["deployed"] = "complete"
+    pointer["states"]["pr_merged"] = "pending"
+    path.write_text(text[:match.start(1)] + json.dumps(pointer) + text[match.end(1):])
     assert any("deployed complete requires" in e for e in governance.check(tree))
 
 
