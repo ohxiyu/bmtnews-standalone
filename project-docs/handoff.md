@@ -9,7 +9,7 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/66",
   "owner": "Codex / quick-post",
   "branch": "agent/quick-post",
-  "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
+  "last_verified_commit": "04ea98021f5728728b9e98ab11767dce7bdf12d6",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/67",
   "completed": [
     "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
@@ -20,7 +20,7 @@
   ],
   "unfinished": [
     "Access 和 Pages 生产绑定已保存；仍需部署后验证 JWT 与 GitHub 凭据权限",
-    "远端 CI、PR 合并、正式部署与真实邮箱端到端验收；未满足前不合并"
+    "真实邮箱登录、生产草稿和实际发布端到端验收；PR #67 已合并且 Production 已部署"
   ],
   "validation": [
     "本地 uv sync --frozen --extra dev 成功；完整 pytest 通过，确切计数见发布记录",
@@ -30,26 +30,26 @@
   "unverified": [
     "真实邮箱 OTP、生产 Git 写入与发布完成尚未验证；不得把 mock 测试等同线上验收",
     "真实 iPhone/PWA 未验收；生产密钥已确认加密保存，但有效性与权限尚未验证",
-    "下方 production 为继承的 09-08 快照，不是本次核验的新发布"
+    "本次确认部署版本和匿名访问保护；不宣称真实生产写入已验证"
   ],
   "production": {
-    "source_commit": "950fc42f726be68df51c8217dbb4df29986ae496",
-    "artifact_commit": "69d8cf54140f622b6ba05d02af9748e9e0df1402",
+    "source_commit": "04ea98021f5728728b9e98ab11767dce7bdf12d6",
+    "artifact_commit": "bf0ed47916d48ca05085f6b9fc864c030a0310fb",
     "edition": "2026-09-08",
     "generated_at": "2026-09-08T04:24:17.494842Z",
-    "worker_version": "not verified in this task",
-    "verified_at": "2026-09-08"
+    "worker_version": "Pages deployment 995adb9d-a5ea-4aee-b8d7-c36958c778bc",
+    "verified_at": "2026-09-11"
   },
   "blockers": [
     "2026-09-11：本机 Cloudflare OAuth 过期；已使用已登录控制台完成 Access 与生产绑定配置",
-    "部分线上 HTTP 检查间歇性 TLS 失败，完整匿名验收尚未完成；git fetch 重试成功，merge origin/main 已确认 up to date"
+    "需要用户收取邮箱验证码完成真实登录，未创建虚构生产新闻；edition/generated_at 为旧内容快照，未在本次核验"
   ],
-  "next_action": "完成最新交接提交的 CI 与完整匿名检查，确认当前任务合并部署授权后发布，再由用户进行真实 OTP 与草稿验收。不要重复创建 Access 应用或放宽邮箱策略。",
+  "next_action": "用户访问 /s/ 用允许邮箱登录，验证草稿不公开，再按用户指定内容验证真实发布。不要重复部署、创建 Access 应用或放宽邮箱策略。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
+    "pr_merged": "complete",
+    "deployed": "complete",
     "production_verified": "pending"
   },
   "evidence": "project-docs/releases/2026-09-10-quick-post-implementation.md"

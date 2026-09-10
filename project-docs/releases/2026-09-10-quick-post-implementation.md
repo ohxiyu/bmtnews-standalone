@@ -90,6 +90,31 @@ gh-pages，生产与 Preview 均无后台 env vars。Access applications 和 ide
 
 ## 上线验收与回退
 
+### 2026-09-11 正式部署
+
+Source commit: 04ea98021f5728728b9e98ab11767dce7bdf12d6
+
+Worker version: Pages 995adb9d-a5ea-4aee-b8d7-c36958c778bc
+
+Deployment: Deploy Docs 34503029304; gh-pages bf0ed47916d48ca05085f6b9fc864c030a0310fb
+
+Verification: 公共 API 200，后台 Access 302，备用域名后台 403；真实 OTP 与写入待验收。
+
+Rollback: 获授权后创建 revert PR，沿现有 Actions 重新发布；保留 Git 内容和 Access 防护。
+
+- 用户明确授权合并部署；PR #67 已合并为 04ea98021f5728728b9e98ab11767dce7bdf12d6。
+- HEAD fca006b 的 test、analyze、governance、CodeQL、Pages 检查均成功；
+  本地最终复验 748 passed、1 warning，管理接口 15 项测试与治理检查通过。
+- Deploy Docs 34503029304 成功；遵守发布锁等待 Feed Collection 34503029186，
+  未取消采集、未直接修改 gh-pages。
+- Production 产物 bf0ed47916d48ca05085f6b9fc864c030a0310fb，
+  Pages 部署 995adb9d-a5ea-4aee-b8d7-c36958c778bc。
+- 线上 /api/quick-posts.json 返回 200，version=1、date=2026-09-11、items=[]；
+  / 返回 200；/s、/s/、/admin、/admin/、/api/admin、/api/admin/state
+  匿名返回 302 到 Access；bmtnews.pages.dev/s/ 返回 403 wrong_origin。
+- 真实 OTP、Git 写入与发布闭环仍待用户验收，未写入虚构新闻。以上不是完整功能验收。
+- 发布证据：[Deploy Docs](https://github.com/ohxiyu/bmtnews-standalone/actions/runs/34503029304)。
+
 ### 2026-09-11 平台配置进展
 
 - 用户确认仅允许指定本人邮箱以 OTP 登录，24 小时会话，其他新闻页面不加 Access。
