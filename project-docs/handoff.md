@@ -5,10 +5,10 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "落地 Quick Post 与指定邮箱验证码登录，保留 Git 存储并完成上线验收",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/66",
+  "goal": "修复 Quick Post 上线验收中的 Worker redirect 模式兼容错误",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/69",
   "owner": "Codex / quick-post",
-  "branch": "agent/quick-post",
+  "branch": "agent/access-runtime-fix",
   "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/67",
   "completed": [
@@ -44,7 +44,7 @@
     "2026-09-11：本机 Cloudflare OAuth 过期；已使用已登录控制台完成 Access 与生产绑定配置",
     "部分线上 HTTP 检查间歇性 TLS 失败，完整匿名验收尚未完成；git fetch 重试成功，merge origin/main 已确认 up to date"
   ],
-  "next_action": "完成最新交接提交的 CI 与完整匿名检查，确认当前任务合并部署授权后发布，再由用户进行真实 OTP 与草稿验收。不要重复创建 Access 应用或放宽邮箱策略。",
+  "next_action": "完成 Issue #69 修复测试、CI 与发布后复验真实登录；旧 PR #68 是部署记录，合并前需同步最新交接，不能覆盖本指针。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -52,7 +52,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-10-quick-post-implementation.md"
+  "evidence": "project-docs/releases/2026-09-11-access-runtime-fix.md"
 }
 ```
 

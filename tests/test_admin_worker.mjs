@@ -16,6 +16,24 @@ async function token(changes={},header={alg:'RS256',kid:'test'}) {
 let registry,sha,writes,dispatches;
 const original=globalThis.fetch;
 
+test('upstream redirects are rejected without a second credential-bearing request',async()=>{
+ const previous=globalThis.fetch;
+ for(const status of [301,302,303,307,308]) {
+  let calls=0;
+  globalThis.fetch=async(url,init)=>{
+   assert.equal(init.redirect,'manual');
+   if(url.endsWith('/cdn-cgi/access/certs')) return previous(url,init);
+   calls++;
+   return new Response('redirect',{status,headers:{Location:'https://untrusted.example/'}});
+  };
+  const response=await request('/api/admin/state');
+  assert.equal(response.status,502);
+  assert.equal((await response.json()).error.code,'upstream_redirect');
+  assert.equal(calls,1);
+ }
+ globalThis.fetch=previous;
+});
+
 test('encoded management paths cannot fall through to public assets',async()=>{
  for(const path of ['/%73/','/s%2findex.html','/%61dmin/config.yml','/api/%61dmin/state']){
   assert.equal((await worker.handleRequest(new Request('https://bmt.news'+path),env)).status,401);
@@ -54,6 +72,7 @@ test('valid content-addressed upload and identical retry, invalid MIME and size'
 test.beforeEach(()=>{
  registry={_readme:'keep',items:[{type:'sponsored',title_zh:'old',enabled:false,extra:'preserved'}]};sha='a'.repeat(40);writes=0;dispatches=0;
  globalThis.fetch=async(url,init={})=>{
+  assert.equal(init.redirect,'manual', 'workerd requires manual redirect handling');
   if(url===env.ADMIN_ACCESS_ISSUER+'/cdn-cgi/access/certs')return Response.json({keys:[jwk]});
   assert.ok(url.startsWith('https://api.github.com/repos/ohxiyu/bmtnews-standalone/'));
   assert.equal(init.headers.Authorization,'Bearer server-only-test');

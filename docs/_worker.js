@@ -52,7 +52,13 @@ async function digestText(value) {
     .map(b => b.toString(16).padStart(2, '0')).join('');
 }
 async function fetchTimed(url, init = {}) {
-  return fetch(url, {...init, redirect: 'error', signal: AbortSignal.timeout(15000)});
+  // workerd supports only manual/follow. Never forward credentials to a redirect.
+  const response = await fetch(url, {...init, redirect: 'manual', signal: AbortSignal.timeout(15000)});
+  if (response.status >= 300 && response.status < 400) {
+    await response.body?.cancel().catch(() => {});
+    throw new AdminError(502, 'upstream_redirect', '上游服务返回异常跳转，请稍后重试。');
+  }
+  return response;
 }
 export async function verifyAdmin(request, env) {
   const issuer = env.ADMIN_ACCESS_ISSUER;
