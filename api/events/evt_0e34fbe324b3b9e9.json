@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "event_id": "evt_0e34fbe324b3b9e9",
+  "url": "https://bmt.news/events/evt_0e34fbe324b3b9e9/",
+  "json": "https://bmt.news/api/events/evt_0e34fbe324b3b9e9.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Trezor 邮件服务商遭入侵，官方警告用户防范钓鱼攻击",
+    "en": "Trezor Warns of Phishing After Email Provider Breach"
+  },
+  "current_state": {
+    "zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。",
+    "en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider."
+  },
+  "first_seen_at": "2026-09-10T00:31:45.624208+00:00",
+  "last_updated_at": "2026-09-10T00:31:45.624208+00:00",
+  "last_material_change_at": "2026-09-10T00:31:45.624208+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "after",
+    "breach",
+    "email",
+    "phishing",
+    "provider",
+    "trezor",
+    "warns"
+  ],
+  "identifiers": [],
+  "topics": [
+    "breach",
+    "phishing",
+    "trezor"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_cdcce3e48d321e07",
+      "event_id": "evt_0e34fbe324b3b9e9",
+      "occurred_at": "2026-09-09T23:02:23Z",
+      "published_at": "2026-09-09T23:02:23Z",
+      "first_seen_at": "2026-09-10T00:31:45.624208Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Trezor 邮件服务商遭入侵，官方警告用户防范钓鱼攻击",
+      "title_en": "Trezor Warns of Phishing After Email Provider Breach",
+      "what_changed_zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。",
+      "what_changed_en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider.",
+      "current_state_zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。",
+      "current_state_en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider.",
+      "detailed_summary_zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。",
+      "detailed_summary_en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider.",
+      "background_zh": "硬件钱包是离线存储加密货币私钥的物理设备，用户通过助记词（恢复短语）备份，以便在设备丢失时恢复资金。冒充钱包厂商的钓鱼邮件是常见攻击手段，而邮件服务商遭入侵后，攻击者发出的邮件能通过身份验证并显得十分可信。虚假的 STM32 说法利用的是人们对近期 Coldcard 固件漏洞的担忧——该漏洞绕过了随机数生成器，并被指与超过 1.3 亿美元的比特币被盗有关。",
+      "background_en": "Hardware wallets are physical devices that store cryptocurrency private keys offline, and users back them up with a seed phrase (recovery phrase) that can restore funds if the device is lost. Phishing emails that impersonate wallet vendors are a common attack, but a compromised email provider lets attackers send messages that pass authentication checks and appear legitimate. The fake STM32 claim plays on fears from a recent Coldcard firmware flaw that bypassed its random number generator and was linked to over $130 million in stolen Bitcoin.",
+      "community_discussion_zh": "安全研究人员和业内人士普遍转发并认同这一警告。Nick Neuman 表示该攻击行动可能不止影响 Trezor，并建议用户不要轻信带有可疑链接的服务商邮件；Jameson Lopp 则指出这些邮件“看起来并非伪造”，且 Trezor 与 BitBox 均未发布任何真实的安全公告。",
+      "community_discussion_en": "Security researchers and industry figures amplified the warning rather than disputing it. Nick Neuman said the campaign likely extends beyond Trezor and advised users not to trust provider emails with sketchy links, while Jameson Lopp noted the emails 'don't appear to be spoofed' and that no legitimate security advisory had been issued for either Trezor or BitBox.",
+      "market_impact_zh": "此次入侵主要是 Trezor 的品牌声誉与运营风险，并在同类供应商事件之后加剧了人们对自托管基础设施安全性的整体担忧。由于没有协议、交易所或资产被直接利用，市场传导是间接的：对钓鱼攻击的担忧上升可能让部分用户在与钱包服务商进行线上交互时更加谨慎，但不存在影响特定加密资产的直接价格或流动性渠道。",
+      "market_impact_en": "The breach is primarily a reputational and operational risk for Trezor, and it adds to broader anxiety about the security of self-custody infrastructure after similar vendor incidents. Since no protocol, exchange, or asset was directly exploited, the market transmission is indirect: rising phishing fears could make some users more cautious about online interactions with wallet providers, but there is no direct price or liquidity channel affecting specific crypto assets.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://beincrypto.com/trezor-email-provider-breach-phishing/",
+          "title": "Trezor Reports Another Security Incident: What Users Should Know"
+        },
+        {
+          "url": "https://glitchwire.com/news/trezor-warns-of-email-provider-breach-as-phishing-attacks-escalate-across-crypto/",
+          "title": "Trezor Warns of Email Provider Breach as Phishing Attacks Escalate Across Crypto — Glitchwire"
+        },
+        {
+          "url": "https://www.gncrypto.news/news/trezor-email-provider-breach-phishing-stm32/",
+          "title": "Trezor Warns Customers After Email Provider Breach, Phishing"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:decrypt.co_feed:ee471b0eab55093d"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/377831/bitcoin-wallet-trezor-hackers-breach-email",
+          "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

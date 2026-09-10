@@ -44,14 +44,27 @@
       "current_state_en": "The U.S. government is funding a $300 million quantum computing hardware initiative, intensifying the race for Bitcoin and Ethereum to implement quantum-resistant cryptography before their security is compromised.",
       "detailed_summary_zh": "The U.S. government is funding a $300 million quantum computing hardware initiative, intensifying the race for Bitcoin and Ethereum to implement quantum-resistant cryptography before their security is compromised.",
       "detailed_summary_en": "The U.S. government is funding a $300 million quantum computing hardware initiative, intensifying the race for Bitcoin and Ethereum to implement quantum-resistant cryptography before their security is compromised.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "区块链网络使用的大多数公钥密码学都依赖于整数分解或离散对数问题的难度，包括椭圆曲线离散对数。1994年提出的肖尔算法，能够在足够强大的量子计算机上以多项式时间解决这些问题，因此人们正在设计后量子密码学（PQC）来抵御此类攻击。虽然目前尚不存在先进的量子机器，但“先收集、后解密”的担忧以及漫长的迁移准备期，正在推动各方尽早采用抗量子算法。",
+      "background_en": "Most public-key cryptography used by blockchain networks depends on the difficulty of integer factorization or the discrete logarithm problem, including elliptic-curve discrete logarithm. Shor's algorithm, proposed in 1994, can solve those problems in polynomial time on a sufficiently powerful quantum computer, so post-quantum cryptography (PQC) is being designed to resist such attacks. Advanced quantum machines do not yet exist, but 'harvest now, decrypt later' concerns and the long migration lead time are driving early adoption of quantum-resistant algorithms.",
+      "community_discussion_zh": "关于这一威胁的公开观点存在分歧：一些分析人士将量子计算比作比特币的气候变化——事态缓慢但不可避免；另一些人则认为危险被夸大了，因为量子安全密钥可能在威胁出现之前就已部署。Galaxy Digital为推进比特币抗量子化投入最高500万美元开发者资助计划等项目表明，业内部分力量已经在采取行动。",
+      "community_discussion_en": "Public commentary on the threat is divided: some analysts compare quantum computing to climate change for Bitcoin—a slow-moving but unavoidable risk—while others argue the danger is overstated because quantum-proof keys could be deployed before the threat emerges. New initiatives like Galaxy Digital's up-to-$5 million developer grant program for Bitcoin quantum resistance show that parts of the industry are already mobilizing.",
+      "market_impact_zh": "主要传导渠道是安全情绪：政府对量子硬件的投资提高了“Q日”最终到来（现有密码学被破解）的感知概率，这可能会提高市场对比特币和以太坊要求的风险溢价。反过来，这些网络在抗量子升级方面取得切实进展则可能降低这种折价；依赖易受攻击密钥方案的交易所、托管机构和钱包同样通过这些密码学基础受到敞口影响。",
+      "market_impact_en": "The primary transmission channel is security sentiment: government investment in quantum hardware raises the perceived probability of an eventual 'Q-Day' when current cryptography becomes breakable, which could increase the risk premium applied to Bitcoin and Ethereum. Conversely, credible breakthroughs in quantum-resistant upgrades for these networks could reduce that discount, while exchanges, custodians, and wallets relying on vulnerable key schemes are exposed through the same cryptographic foundations.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Quantum-resistant_cryptography",
+          "title": "Quantum-resistant cryptography"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Shor's_algorithm",
+          "title": "Shor's algorithm"
+        },
+        {
+          "url": "https://www.aol.com/articles/quantum-computing-threat-bitcoin-overblown-201000000.html",
+          "title": "Is the Quantum Computing Threat to Bitcoin Overblown? - AOL"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:f71d460685074c67"

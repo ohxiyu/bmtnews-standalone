@@ -11,31 +11,38 @@
     "en": "On the Navier–Stokes Millennium Prize Problem"
   },
   "current_state": {
-    "zh": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics.",
-    "en": "OpenAI announces an AI model that purportedly solves the Navier-Stokes Millennium Prize Problem, sparking debate over its validity and the role of AI in mathematics."
+    "zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，但尚未得到独立验证；公司表示不会申领千禧年大奖。此事件引发关于AI安全与私营AI系统能力差距扩大的讨论。",
+    "en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours, but the result is not yet independently verified; the company said it will not claim the Millennium Prize. The event has sparked debates on AI safety and the widening gap between private and public AI capabilities."
   },
   "first_seen_at": "2026-09-08T22:53:08.168333+00:00",
-  "last_updated_at": "2026-09-08T22:53:08.168333+00:00",
-  "last_material_change_at": "2026-09-08T22:53:08.168333+00:00",
+  "last_updated_at": "2026-09-10T00:31:40.618361+00:00",
+  "last_material_change_at": "2026-09-10T00:31:40.618361+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "ai-safety",
     "millennium",
     "millennium-prize",
     "navier",
     "navier-stokes",
+    "openai",
     "prize",
     "problem",
     "stokes"
   ],
-  "identifiers": [],
+  "identifiers": [
+    "gpt-6"
+  ],
   "topics": [
     "ai-research",
+    "ai-safety",
+    "frontier-ai",
     "mathematics",
     "millennium-prize",
     "navier-stokes",
-    "openai"
+    "openai",
+    "recursive-self-improvement"
   ],
   "updates": [
     {
@@ -89,6 +96,57 @@
           "url": "https://openai.com/index/navier-stokes-solution/",
           "label": "tedsanders",
           "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_1b2168850ad75743",
+      "event_id": "evt_fde028f4447c7239",
+      "occurred_at": "2026-09-09T22:40:52Z",
+      "published_at": "2026-09-09T22:40:52Z",
+      "first_seen_at": "2026-09-10T00:31:40.618361Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "OpenAI称1万个AI代理攻克纳维-斯托克斯难题，重燃AI安全担忧",
+      "title_en": "OpenAI claims 10,000-agent model solved Navier-Stokes, reigniting AI safety fears",
+      "what_changed_zh": "OpenAI宣布其内部模型协调约10,000个AI智能体在88小时内解决了纳维-斯托克斯存在性与光滑性问题，并强调不会申领克莱数学研究所的千禧年大奖，该结果仍需外部验证。",
+      "what_changed_en": "OpenAI announced that an internal model coordinated ~10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, emphasized it will not claim the Clay Millennium Prize, and that the result remains unverified externally.",
+      "current_state_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，但尚未得到独立验证；公司表示不会申领千禧年大奖。此事件引发关于AI安全与私营AI系统能力差距扩大的讨论。",
+      "current_state_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours, but the result is not yet independently verified; the company said it will not claim the Millennium Prize. The event has sparked debates on AI safety and the widening gap between private and public AI capabilities.",
+      "detailed_summary_zh": "OpenAI于9月8日宣布，一个内部模型协调了约10,000个AI智能体，在88小时内解决了纳维-斯托克斯存在性与光滑性问题，随后使用Lean证明助手对结果进行了形式化。该证明声称平滑流体运动能在有限时间内发展出奇异性，但尚未得到独立数学家及克莱数学研究所的验证。\n\n这一成果表明，前沿AI能够自主开展远超公开模型能力的大规模数学研究，加剧了关于经济集中与递归自我改进风险的辩论。它同时突显了私有AI系统与公共AI工具之间不断扩大的差距，可能影响AI安全、竞争与监管的未来走向。\n\n据报道，该内部模型在数学能力上远超GPT-6 Astra，于8月28日开始训练并在实验期间不断提升；智能体群交换了270万条消息，生成了约1300亿输出token。OpenAI表示不会申领克莱数学研究所100万美元的千禧年大奖，且结果仍需外部验证。",
+      "detailed_summary_en": "OpenAI announced on September 8 that an internal model coordinated roughly 10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, a result later formalized in the Lean proof assistant. The claimed proof—that smooth fluid motion can develop a singularity in finite time—remains unverified by independent mathematicians and the Clay Mathematics Institute.\n\nThe achievement demonstrates that frontier AI can carry out autonomous, large-scale mathematical research far beyond what public models can do, intensifying debates about economic concentration and the risks of recursive self-improvement. It also underscores the widening gap between private and public AI tools, which could shape the future of AI safety, competition, and regulation.\n\nThe internal model is reportedly far more capable than GPT-6 Astra in mathematics, started training on August 28, and kept improving during the experiment; the agent swarm exchanged 2.7 million messages and generated roughly 130 billion output tokens. OpenAI said it will not claim the $1 million Clay Millennium Prize, and the result still requires outside verification.",
+      "background_zh": "纳维-斯托克斯方程描述流体如何流动，其存在性与光滑性问题探讨三维空间中的解能否永远保持光滑，或会在有限时间内产生奇异性。2000年，克莱数学研究所将其列为七个千禧年难题之一，并悬赏100万美元。OpenAI宣称的成果如获验证，将是一个反例，表明初始光滑的流体会在有限时间内发生爆破解。Lean是一种可由计算机核验数学证明的证明辅助工具；OpenAI的智能体群方法也被一些研究者视为递归自我改进的前兆。",
+      "background_en": "The Navier-Stokes equations describe how fluids flow, and the existence and smoothness problem asks whether three-dimensional solutions remain smooth forever or can develop singularities. Posed by the Clay Mathematics Institute in 2000, it is one of seven Millennium Prize Problems with a $1 million prize. OpenAI's claimed result, if verified, would be a counter-example showing that initially smooth flows can blow up in finite time. Lean, the proof assistant OpenAI used for formal verification, lets mathematical proofs be checked by a computer, and the agent-swarm approach is seen by some researchers as a precursor to recursive self-improvement.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "由于这一公告涉及私营实验室的研究突破而非链上事件，其对加密市场的主要传导渠道是市场情绪：它可能助长对AI主题代币以及宣称是闭源前沿实验室的去中心化或开放替代方案的项目产生投机兴趣。这一数学成果与数字资产市场之间没有直接的基本面联系。",
+      "market_impact_en": "Because the announcement concerns a private laboratory's research breakthrough rather than an on-chain event, the main transmission channel to crypto markets is sentiment: it could feed speculative interest in AI-themed tokens and in projects positioning themselves as decentralized or open alternatives to closed frontier labs. There is no direct fundamental link between the mathematical result and digital-asset markets.",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_existence_and_smoothness_problem",
+          "title": "Navier-Stokes existence and smoothness problem"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Millennium_Prize_Problems",
+          "title": "Millennium Prize Problems"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+          "title": "Recursive self-improvement"
+        }
+      ],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:1d21a238807f71c2"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
           "official": false
         }
       ]

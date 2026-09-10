@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-09-09T00:00:00Z</updated>
+  <updated>2026-09-10T00:00:00Z</updated>
+  <entry>
+    <title>OpenAI claims 10,000-agent model solved Navier-Stokes, reigniting AI safety fears</title>
+    <link href="https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/"/>
+    <id>https://bmt.news/editions/2026-09-10/#rss:cryptoslate.com_feed_:1d21a238807f71c2</id>
+    <updated>2026-09-10T00:00:00Z</updated>
+    <summary>OpenAI announced on September 8 that an internal model coordinated roughly 10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, a result later formalized in the Lean proof assistant. The claimed proof—that smooth fluid motion can develop a singularity in finite time—remains unverified by independent mathematicians and the Clay Mathematics Institute.
+
+The achievement demonstrates that frontier AI can carry out autonomous, large-scale mathematical research far beyond what public models can do, intensifying debates about economic concentration and the risks of recursive self-improvement. It also underscores the widening gap between private and public AI tools, which could shape the future of AI safety, competition, and regulation.
+
+The internal model is reportedly far more capable than GPT-6 Astra in mathematics, started training on August 28, and kept improving during the experiment; the agent swarm exchanged 2.7 million messages and generated roughly 130 billion output tokens. OpenAI said it will not claim the $1 million Clay Millennium Prize, and the result still requires outside verification.</summary>
+  </entry>
+  <entry>
+    <title>OpenAI Unveils GPT-6 Astra, Next-Gen Enterprise Work Model</title>
+    <link href="https://openai.com/index/gpt-6-astra-next-generation-work"/>
+    <id>https://bmt.news/editions/2026-09-10/#rss:openai.com_blog_rss.xml:333ccaae81484d3a</id>
+    <updated>2026-09-10T00:00:00Z</updated>
+    <summary>OpenAI announced GPT-6 Astra, its most capable model for business work, featuring advanced reasoning, computer use, and stronger writing and design judgment. The rollout begins today with a limited set of organizations and will expand to all ChatGPT tiers, the OpenAI API, Microsoft Azure, and AWS Bedrock in the coming days.
+
+This release signals a shift in enterprise AI from conversational chatbots toward models that autonomously operate computer interfaces and produce polished work output. It could reshape how organizations deploy AI for coding, writing, and repetitive interface tasks, intensifying competition among AI labs and their cloud partners.
+
+The model is identified as gpt-6-astra with no shorter alias in OpenAI or EvoLink. GPT-6 Astra&#x27;s computer-use capability lets it operate GUIs through code-driven actions or structured mouse and keyboard inputs; usage counts against existing subscription allowances, with extra credits available for purchase. An enterprise gated access program called Daybreak is also part of the rollout.</summary>
+  </entry>
+  <entry>
+    <title>Anthropic Publishes Interactive Economic Scenarios for Transformative AI</title>
+    <link href="https://news.google.com/rss/articles/CBMingFBVV95cUxNTnkxbFNBbk5aakJtVGhqVnZZZWxMcFdvazItYm9tYlBuVU5EMUdFTkRxREZaVnFHSVBRNzF0eWJRQkNFQ2RTQjFvSy03MnM1VkN5ekhjcVZrOGx2R0poMFpFUkptcWMtNWhZOERtWjR6OHlla1lELW1lTXJHbFRPRmdsRE1pb24tSzJDYl9Bd0d0RlRRd1pWMUNxYkIwZw?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-10/#rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en:dd38028e9c747c7e</id>
+    <updated>2026-09-10T00:00:00Z</updated>
+    <summary>Anthropic released an interactive report titled &#x27;Economic Scenarios for Transformative AI&#x27; (Working Paper No. 2026-02), with an accompanying web explorer that lets users examine possible economic outcomes as AI capabilities advance.
+
+The report provides a structured framework for policymakers, researchers, and business leaders to reason about potential labor-market disruption, productivity growth, and societal adaptation. It adds a high-profile, forward-looking analysis to ongoing debates about how advanced AI could reshape the economy.
+
+Based on the corresponding technical report by Korinek et al., the explorer is labeled version 1.0 and dated September 2026. It presents multiple scenarios rather than a single forecast, and is associated with the Anthropic Economic Index and the Anthropic Institute.</summary>
+  </entry>
   <entry>
     <title>OpenAI Claims AI-Generated Navier–Stokes Millennium Prize Solution</title>
     <link href="https://openai.com/index/navier-stokes-solution/"/>
@@ -403,38 +436,5 @@ The court described the administrative record as &quot;slim&quot;—a four-page 
 This acquisition gives Nvidia control over the primary distribution channel for open-source AI models, potentially reshaping how developers access and deploy AI software. It could intensify antitrust scrutiny and affect millions of developers and companies that rely on Hugging Face.
 
 The $12.9 billion price follows Hugging Face&#x27;s rejection of a $500 million Nvidia investment at a $7 billion valuation in late 2025, and a $235 million round at $4.5 billion in 2023. Nvidia has recently positioned itself as an open-source backer, including via Jensen Huang&#x27;s first-ever tweet in support of open source.</summary>
-  </entry>
-  <entry>
-    <title>Cloudflare Saves 100 TB Memory by Optimizing 1.1.1.1 DNS Cache</title>
-    <link href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/"/>
-    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49468083</id>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <summary>Cloudflare engineers detailed how they reduced memory usage by 100 terabytes across their edge network by reworking the data structures and allocation strategies in the 1.1.1.1 DNS resolver cache. The optimization cuts per-record overhead in one of the world&#x27;s busiest DNS services.
-
-This matters because it shows how careful systems-level optimization can yield massive efficiency gains in critical internet infrastructure, reducing hardware costs and energy consumption. The techniques are applicable to other high-throughput, memory-bound services and demonstrate the continued relevance of low-level programming expertise.
-
-The optimization primarily reduces per-record memory overhead by restructuring how cache keys and entries are laid out in memory. Commenters also pointed to cache-line alignment and slab-style allocation as complementary ways to cut fragmentation and improve CPU cache behavior.</summary>
-  </entry>
-  <entry>
-    <title>OpenAI&#x27;s ChatGPT Work Agent Signs Into Sites Without You</title>
-    <link href="https://decrypt.co/376757/openai-agentic-chatgpt-work-signs-in-without-you"/>
-    <id>https://bmt.news/editions/2026-08-28/#rss:decrypt.co_feed:ca96ac88ce991335</id>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <summary>OpenAI&#x27;s August 25 release notes introduced an agentic browser capability for ChatGPT Work that lets the assistant complete tasks on login-gated websites. Users enter credentials once, and the browser session can persist for future tasks so the agent can work unattended.
-
-The feature turns a signed-in session into a standing credential, raising new security and privacy concerns about what an autonomous agent can do on a user&#x27;s behalf without direct oversight. It matters to everyday ChatGPT users and to developers building on OpenAI&#x27;s agentic tools, because the convenience of persistent logins comes with a meaningful tradeoff in account security.
-
-OpenAI states the model cannot see the user&#x27;s username or password, and that credentials are neither stored nor used for training; the login step also supports password managers. However, the session itself remains active until cleared manually per site under Settings &gt; Cloud browser, and the design assumes the user is not watching.</summary>
-  </entry>
-  <entry>
-    <title>FDA Approves First Targeted Therapy for Metastatic Pancreatic Cancer</title>
-    <link href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer"/>
-    <id>https://bmt.news/editions/2026-08-27/#hackernews:story:49451675</id>
-    <updated>2026-08-27T00:00:00Z</updated>
-    <summary>The FDA approved the first-in-class targeted therapy for metastatic pancreatic cancer, an oral small-molecule RAS inhibitor. This is the first time a RAS-targeted drug has been cleared for this indication, overcoming a protein previously deemed undruggable.
-
-Pancreatic cancer is one of the most lethal malignancies, and the vast majority of cases harbor RAS mutations. This approval validates a long-sought approach to target KRAS and could pave the way for similar therapies across many other RAS-mutant cancers.
-
-The approval was granted roughly one month after the FDA accepted the new drug application under the agency&#x27;s CNPV pilot program, much faster than typical priority (8 months) or standard (12 months) review timelines. RAS mutations occur in over 90% of pancreatic ductal adenocarcinomas, and the drug belongs to the RAS(ON) multiselective inhibitor class.</summary>
   </entry>
 </feed>
