@@ -14,3 +14,7 @@ JWT 签名、邮箱、AUD、issuer、有效期、CSRF 与备用域名拦截不�
 生产重新加载已登录页面验收，不写入虚构新闻。
 
 回退：通过 revert PR 和现有 Deploy Docs 回退，不修改 Access 放行规则。
+
+验证：uv sync --frozen --extra dev 成功；pytest 748 passed、1 warning (18.08s)；
+Node 管理接口 16 项通过；真实 workerd 接受有效 JWT 且拒绝重定向公钥。
+治理检查通过。修复 PR #70，生产验收尚未完成。

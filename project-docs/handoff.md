@@ -10,7 +10,7 @@
   "owner": "Codex / quick-post",
   "branch": "agent/access-runtime-fix",
   "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/67",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/70",
   "completed": [
     "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
     "确认当前 CMS 使用 GitHub Token 写 editorial.json，图片存 Git，发布经整期重建",
@@ -19,30 +19,30 @@
     "新增 JWT、CSRF、并发、防重复提交、图片与渲染测试；修复治理测试依赖旧指针状态的问题"
   ],
   "unfinished": [
-    "Access 和 Pages 生产绑定已保存；仍需部署后验证 JWT 与 GitHub 凭据权限",
-    "远端 CI、PR 合并、正式部署与真实邮箱端到端验收；未满足前不合并"
+    "PR #70 等待 CI、合并和部署；修复后复验真实邮箱登录",
+    "GitHub 写入权限与真实内容发布仍待验收"
   ],
   "validation": [
-    "本地 uv sync --frozen --extra dev 成功；完整 pytest 通过，确切计数见发布记录",
-    "管理接口 15 项 Node 测试通过，公开 Worker、分享和 PWA 回归测试通过",
+    "本地 uv sync --frozen --extra dev 成功；pytest 748 passed，1 warning，18.08s",
+    "管理接口 16 项 Node 测试通过；真实 workerd 验证有效 JWT 通过、重定向公钥被拒绝",
     "390px 与 1280px 模拟浏览器通过草稿恢复、冲突保留、保存状态和横向溢出检查"
   ],
   "unverified": [
-    "真实邮箱 OTP、生产 Git 写入与发布完成尚未验证；不得把 mock 测试等同线上验收",
+    "真实邮箱 OTP 已通过 Access，但旧 Worker 报 invalid_session；修复后尚未复验",
     "真实 iPhone/PWA 未验收；生产密钥已确认加密保存，但有效性与权限尚未验证",
-    "下方 production 为继承的 09-08 快照，不是本次核验的新发布"
+    "edition/generated_at 为旧内容快照，不是本次验收范围"
   ],
   "production": {
-    "source_commit": "950fc42f726be68df51c8217dbb4df29986ae496",
-    "artifact_commit": "69d8cf54140f622b6ba05d02af9748e9e0df1402",
+    "source_commit": "04ea98021f5728728b9e98ab11767dce7bdf12d6",
+    "artifact_commit": "bf0ed47916d48ca05085f6b9fc864c030a0310fb",
     "edition": "2026-09-08",
     "generated_at": "2026-09-08T04:24:17.494842Z",
-    "worker_version": "not verified in this task",
-    "verified_at": "2026-09-08"
+    "worker_version": "Pages 995adb9d-a5ea-4aee-b8d7-c36958c778bc",
+    "verified_at": "2026-09-11"
   },
   "blockers": [
     "2026-09-11：本机 Cloudflare OAuth 过期；已使用已登录控制台完成 Access 与生产绑定配置",
-    "部分线上 HTTP 检查间歇性 TLS 失败，完整匿名验收尚未完成；git fetch 重试成功，merge origin/main 已确认 up to date"
+    "已复现根因：workerd 不支持 redirect:error；PR #70 修复待上线，不需要重新配置密钥"
   ],
   "next_action": "完成 Issue #69 修复测试、CI 与发布后复验真实登录；旧 PR #68 是部署记录，合并前需同步最新交接，不能覆盖本指针。",
   "states": {
