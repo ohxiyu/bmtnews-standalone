@@ -11,15 +11,15 @@
     "en": "On the Navier–Stokes Millennium Prize Problem"
   },
   "current_state": {
-    "zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，但尚未得到独立验证；公司表示不会申领千禧年大奖。此事件引发关于AI安全与私营AI系统能力差距扩大的讨论。",
-    "en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours, but the result is not yet independently verified; the company said it will not claim the Millennium Prize. The event has sparked debates on AI safety and the widening gap between private and public AI capabilities."
+    "zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，随后GPT-6 Astra在Lean中形式化并验证了证明（额外17小时），证明覆盖千禧年问题情形C和D；结果仍需独立验证，公司表示不会申领千禧年大奖。事件引发AI安全、数学发现与形式化验证在智能合约安全等方面影响的讨论。",
+    "en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours; subsequently GPT-6 Astra formalized and verified the proof in Lean (additional 17 hours), covering cases C and D of the Millennium Prize formulation; the result remains not independently verified, and the company said it will not claim the Millennium Prize. The event has sparked discussions on AI safety, mathematical discovery, and implications for formal verification in smart-contract security."
   },
   "first_seen_at": "2026-09-08T22:53:08.168333+00:00",
-  "last_updated_at": "2026-09-10T00:31:40.618361+00:00",
-  "last_material_change_at": "2026-09-10T00:31:40.618361+00:00",
+  "last_updated_at": "2026-09-10T22:43:01.882546+00:00",
+  "last_material_change_at": "2026-09-10T22:43:01.882546+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 2,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
     "ai-safety",
     "millennium",
@@ -35,14 +35,18 @@
     "gpt-6"
   ],
   "topics": [
+    "ai-labs",
     "ai-research",
     "ai-safety",
+    "formal-verification",
     "frontier-ai",
     "mathematics",
     "millennium-prize",
     "navier-stokes",
     "openai",
-    "recursive-self-improvement"
+    "recursive-self-improvement",
+    "smart-contract-security",
+    "theorem-proving"
   ],
   "updates": [
     {
@@ -145,6 +149,44 @@
       "sources": [
         {
           "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_36fecc3daf5fed2a",
+      "event_id": "evt_fde028f4447c7239",
+      "occurred_at": "2026-09-10T22:30:50Z",
+      "published_at": "2026-09-10T22:30:50Z",
+      "first_seen_at": "2026-09-10T22:43:01.882546Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "OpenAI’s math breakthrough exposes the next weak link in crypto security",
+      "title_en": "OpenAI’s math breakthrough exposes the next weak link in crypto security",
+      "what_changed_zh": "新报道补充：GPT-6 Astra在Lean中形式化并验证了证明，额外耗时17小时；证明显示初始光滑流体可在有限时间内形成奇点并保持有限能量，对应千禧年问题情形C和D；OpenAI已公开证明及Lean形式化供独立审查。",
+      "what_changed_en": "New report adds: GPT-6 Astra formalized and verified the proof in Lean, taking an additional 17 hours; the proof shows an initially smooth fluid can develop a singularity in finite time while retaining finite energy, establishing cases C and D of the Millennium Prize formulation; OpenAI released the proof and Lean formalization for independent scrutiny.",
+      "current_state_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，随后GPT-6 Astra在Lean中形式化并验证了证明（额外17小时），证明覆盖千禧年问题情形C和D；结果仍需独立验证，公司表示不会申领千禧年大奖。事件引发AI安全、数学发现与形式化验证在智能合约安全等方面影响的讨论。",
+      "current_state_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours; subsequently GPT-6 Astra formalized and verified the proof in Lean (additional 17 hours), covering cases C and D of the Millennium Prize formulation; the result remains not independently verified, and the company said it will not claim the Millennium Prize. The event has sparked discussions on AI safety, mathematical discovery, and implications for formal verification in smart-contract security.",
+      "detailed_summary_zh": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+      "detailed_summary_en": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:712b9202d6e5bc89"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/openais-math-breakthrough-exposes-the-next-weak-link-in-crypto-security/",
           "label": "CryptoSlate",
           "source_type": "rss",
           "official": false

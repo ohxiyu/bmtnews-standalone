@@ -11,23 +11,32 @@
     "en": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value"
   },
   "current_state": {
-    "zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
-    "en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value."
+    "zh": "Uniswap 面向稳定币交易对的动态费用已在两个以太坊资金池（USDC/USDT 和 USDC/USDG）上线，价格区间外的纠正交易费用逐区块递减。",
+    "en": "Uniswap's dynamic fee launch for stablecoin pairs is live on two Ethereum pools (USDC/USDT and USDC/USDG), with corrective trades outside the price band facing a fee that falls each block."
   },
   "first_seen_at": "2026-09-10T16:35:53.762529+00:00",
-  "last_updated_at": "2026-09-10T16:35:53.762529+00:00",
-  "last_material_change_at": "2026-09-10T16:35:53.762529+00:00",
+  "last_updated_at": "2026-09-10T22:43:01.183829+00:00",
+  "last_material_change_at": "2026-09-10T22:43:01.183829+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "dynamic",
+    "dynamic-fees",
+    "fees",
     "hook",
+    "launches",
     "lps",
+    "pair",
+    "pools",
+    "stable",
     "stablepair",
+    "two",
     "uniswap"
   ],
   "identifiers": [],
   "topics": [
+    "dynamic-fees",
     "liquidity-providers",
     "protocol-upgrade",
     "stablecoins",
@@ -67,6 +76,44 @@
         {
           "url": "https://www.theblock.co/news/defi/2026-09-10-uniswap-stablepair-hook-414160",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_05faece9e48136c5",
+      "event_id": "evt_6e409b5595572dbd",
+      "occurred_at": "2026-09-10T18:38:44Z",
+      "published_at": "2026-09-10T18:38:44Z",
+      "first_seen_at": "2026-09-10T22:43:01.183829Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Uniswap Launches Dynamic Fees for Two Stable-Pair Pools",
+      "title_en": "Uniswap Launches Dynamic Fees for Two Stable-Pair Pools",
+      "what_changed_zh": "Uniswap 在两个以太坊稳定币交易对资金池（USDC/USDT 和 USDC/USDG）上线动态费用，价格区间外的纠正交易需支付每区块递减的费用。",
+      "what_changed_en": "Uniswap launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "current_state_zh": "Uniswap 面向稳定币交易对的动态费用已在两个以太坊资金池（USDC/USDT 和 USDC/USDG）上线，价格区间外的纠正交易费用逐区块递减。",
+      "current_state_en": "Uniswap's dynamic fee launch for stablecoin pairs is live on two Ethereum pools (USDC/USDT and USDC/USDG), with corrective trades outside the price band facing a fee that falls each block.",
+      "detailed_summary_zh": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "detailed_summary_en": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:daadf005fce99b8d"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/defi/uniswap-launches-dynamic-fees-for-two-stable-pair-pools",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }

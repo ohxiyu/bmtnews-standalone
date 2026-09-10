@@ -30507,8 +30507,8 @@
     {
       "category": "technology",
       "confidence": 0.75,
-      "current_state_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours, but the result is not yet independently verified; the company said it will not claim the Millennium Prize. The event has sparked debates on AI safety and the widening gap between private and public AI capabilities.",
-      "current_state_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，但尚未得到独立验证；公司表示不会申领千禧年大奖。此事件引发关于AI安全与私营AI系统能力差距扩大的讨论。",
+      "current_state_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours; subsequently GPT-6 Astra formalized and verified the proof in Lean (additional 17 hours), covering cases C and D of the Millennium Prize formulation; the result remains not independently verified, and the company said it will not claim the Millennium Prize. The event has sparked discussions on AI safety, mathematical discovery, and implications for formal verification in smart-contract security.",
+      "current_state_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，随后GPT-6 Astra在Lean中形式化并验证了证明（额外17小时），证明覆盖千禧年问题情形C和D；结果仍需独立验证，公司表示不会申领千禧年大奖。事件引发AI安全、数学发现与形式化验证在智能合约安全等方面影响的讨论。",
       "entities": [
         "ai-safety",
         "millennium",
@@ -30526,22 +30526,26 @@
       "identifiers": [
         "gpt-6"
       ],
-      "last_material_change_at": "2026-09-10T00:31:40.618361Z",
-      "last_updated_at": "2026-09-10T00:31:40.618361Z",
+      "last_material_change_at": "2026-09-10T22:43:01.882546Z",
+      "last_updated_at": "2026-09-10T22:43:01.882546Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
       "title_en": "On the Navier–Stokes Millennium Prize Problem",
       "title_zh": "On the Navier–Stokes Millennium Prize Problem",
       "topics": [
+        "ai-labs",
         "ai-research",
         "ai-safety",
+        "formal-verification",
         "frontier-ai",
         "mathematics",
         "millennium-prize",
         "navier-stokes",
         "openai",
-        "recursive-self-improvement"
+        "recursive-self-improvement",
+        "smart-contract-security",
+        "theorem-proving"
       ],
       "updates": [
         {
@@ -30649,6 +30653,44 @@
           "update_type": "confirmation",
           "what_changed_en": "OpenAI announced that an internal model coordinated ~10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, emphasized it will not claim the Clay Millennium Prize, and that the result remains unverified externally.",
           "what_changed_zh": "OpenAI宣布其内部模型协调约10,000个AI智能体在88小时内解决了纳维-斯托克斯存在性与光滑性问题，并强调不会申领克莱数学研究所的千禧年大奖，该结果仍需外部验证。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours; subsequently GPT-6 Astra formalized and verified the proof in Lean (additional 17 hours), covering cases C and D of the Millennium Prize formulation; the result remains not independently verified, and the company said it will not claim the Millennium Prize. The event has sparked discussions on AI safety, mathematical discovery, and implications for formal verification in smart-contract security.",
+          "current_state_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，随后GPT-6 Astra在Lean中形式化并验证了证明（额外17小时），证明覆盖千禧年问题情形C和D；结果仍需独立验证，公司表示不会申领千禧年大奖。事件引发AI安全、数学发现与形式化验证在智能合约安全等方面影响的讨论。",
+          "detailed_summary_en": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+          "detailed_summary_zh": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+          "event_id": "evt_fde028f4447c7239",
+          "first_seen_at": "2026-09-10T22:43:01.882546Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T22:30:50Z",
+          "published_at": "2026-09-10T22:30:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/openais-math-breakthrough-exposes-the-next-weak-link-in-crypto-security/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:712b9202d6e5bc89"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI’s math breakthrough exposes the next weak link in crypto security",
+          "title_zh": "OpenAI’s math breakthrough exposes the next weak link in crypto security",
+          "update_id": "upd_36fecc3daf5fed2a",
+          "update_type": "confirmation",
+          "what_changed_en": "New report adds: GPT-6 Astra formalized and verified the proof in Lean, taking an additional 17 hours; the proof shows an initially smooth fluid can develop a singularity in finite time while retaining finite energy, establishing cases C and D of the Millennium Prize formulation; OpenAI released the proof and Lean formalization for independent scrutiny.",
+          "what_changed_zh": "新报道补充：GPT-6 Astra在Lean中形式化并验证了证明，额外耗时17小时；证明显示初始光滑流体可在有限时间内形成奇点并保持有限能量，对应千禧年问题情形C和D；OpenAI已公开证明及Lean形式化供独立审查。"
         }
       ]
     },
@@ -37826,26 +37868,35 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
-      "current_state_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "current_state_en": "Uniswap's dynamic fee launch for stablecoin pairs is live on two Ethereum pools (USDC/USDT and USDC/USDG), with corrective trades outside the price band facing a fee that falls each block.",
+      "current_state_zh": "Uniswap 面向稳定币交易对的动态费用已在两个以太坊资金池（USDC/USDT 和 USDC/USDG）上线，价格区间外的纠正交易费用逐区块递减。",
       "entities": [
+        "dynamic",
+        "dynamic-fees",
+        "fees",
         "hook",
+        "launches",
         "lps",
+        "pair",
+        "pools",
+        "stable",
         "stablepair",
+        "two",
         "uniswap"
       ],
       "event_id": "evt_6e409b5595572dbd",
       "event_type": "protocol_change",
       "first_seen_at": "2026-09-10T16:35:53.762529Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-10T16:35:53.762529Z",
-      "last_updated_at": "2026-09-10T16:35:53.762529Z",
+      "last_material_change_at": "2026-09-10T22:43:01.183829Z",
+      "last_updated_at": "2026-09-10T22:43:01.183829Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
       "title_en": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
       "title_zh": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
       "topics": [
+        "dynamic-fees",
         "liquidity-providers",
         "protocol-upgrade",
         "stablecoins",
@@ -37889,6 +37940,44 @@
           "update_type": "initial",
           "what_changed_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
           "what_changed_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Uniswap's dynamic fee launch for stablecoin pairs is live on two Ethereum pools (USDC/USDT and USDC/USDG), with corrective trades outside the price band facing a fee that falls each block.",
+          "current_state_zh": "Uniswap 面向稳定币交易对的动态费用已在两个以太坊资金池（USDC/USDT 和 USDC/USDG）上线，价格区间外的纠正交易费用逐区块递减。",
+          "detailed_summary_en": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+          "detailed_summary_zh": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+          "event_id": "evt_6e409b5595572dbd",
+          "first_seen_at": "2026-09-10T22:43:01.183829Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T18:38:44Z",
+          "published_at": "2026-09-10T18:38:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/uniswap-launches-dynamic-fees-for-two-stable-pair-pools"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:daadf005fce99b8d"
+          ],
+          "time_precision": "published",
+          "title_en": "Uniswap Launches Dynamic Fees for Two Stable-Pair Pools",
+          "title_zh": "Uniswap Launches Dynamic Fees for Two Stable-Pair Pools",
+          "update_id": "upd_05faece9e48136c5",
+          "update_type": "confirmation",
+          "what_changed_en": "Uniswap launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+          "what_changed_zh": "Uniswap 在两个以太坊稳定币交易对资金池（USDC/USDT 和 USDC/USDG）上线动态费用，价格区间外的纠正交易需支付每区块递减的费用。"
         }
       ]
     },
@@ -38654,6 +38743,1415 @@
           "what_changed_zh": "Coinbase and Moov are partnering to provide stablecoin acceptance, settlement, and real-time funding infrastructure to more than 1,000 US community banks and credit unions."
         }
       ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+      "current_state_zh": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+      "entities": [
+        "astra",
+        "cognition",
+        "fable",
+        "gpt",
+        "rivaling",
+        "swe"
+      ],
+      "event_id": "evt_92445176dcf445b5",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-10T22:42:58.230058Z",
+      "identifiers": [
+        "swe-2"
+      ],
+      "last_material_change_at": "2026-09-10T22:42:58.230058Z",
+      "last_updated_at": "2026-09-10T22:42:58.230058Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "title_zh": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "topics": [
+        "ai-models",
+        "benchmarks",
+        "coding-agents",
+        "cognition",
+        "open-weights"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+          "current_state_zh": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+          "detailed_summary_en": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+          "detailed_summary_zh": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+          "event_id": "evt_92445176dcf445b5",
+          "first_seen_at": "2026-09-10T22:42:58.230058Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:29:47Z",
+          "published_at": "2026-09-10T15:29:47Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49645443"
+            }
+          ],
+          "sources": [
+            {
+              "label": "seelos",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://cognition.com/blog/swe-2"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49645443"
+          ],
+          "time_precision": "published",
+          "title_en": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+          "title_zh": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+          "update_id": "upd_fdd44354fbb04b37",
+          "update_type": "initial",
+          "what_changed_en": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution.",
+          "what_changed_zh": "Cognition launched its SWE-2 coding model, claiming performance rivaling Fable 5.1 and GPT-Astra, prompting community scrutiny over benchmark overfitting and closed-weight distribution."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "current_state_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "entities": [
+        "critical",
+        "forgejo",
+        "rce"
+      ],
+      "event_id": "evt_749e2365f6ea897b",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T22:42:58.230233Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:42:58.230233Z",
+      "last_updated_at": "2026-09-10T22:42:58.230233Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Forgejo <=16.0.3 Critical RCE",
+      "title_zh": "Forgejo <=16.0.3 Critical RCE",
+      "topics": [
+        "git",
+        "open-source",
+        "self-hosting",
+        "vulnerability"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+          "current_state_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+          "detailed_summary_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+          "detailed_summary_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+          "event_id": "evt_749e2365f6ea897b",
+          "first_seen_at": "2026-09-10T22:42:58.230233Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T15:57:40Z",
+          "published_at": "2026-09-10T15:57:40Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49645907"
+            }
+          ],
+          "sources": [
+            {
+              "label": "weierstass",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49645907"
+          ],
+          "time_precision": "published",
+          "title_en": "Forgejo <=16.0.3 Critical RCE",
+          "title_zh": "Forgejo <=16.0.3 Critical RCE",
+          "update_id": "upd_146f8166c976908f",
+          "update_type": "initial",
+          "what_changed_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+          "what_changed_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+      "current_state_zh": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+      "entities": [
+        "binance",
+        "dollar",
+        "nov",
+        "pax",
+        "pluang",
+        "usdp"
+      ],
+      "event_id": "evt_8ce5579bdcb4c39b",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T22:42:58.332920Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:42:58.332920Z",
+      "last_updated_at": "2026-09-10T22:42:58.332920Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance to delist Pax Dollar (USDP) stablecoin, ending trading and withdrawals by Nov 24, 2026 - Pluang",
+      "title_zh": "Binance to delist Pax Dollar (USDP) stablecoin, ending trading and withdrawals by Nov 24, 2026 - Pluang",
+      "topics": [
+        "binance",
+        "delisting",
+        "usdp"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+          "current_state_zh": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+          "detailed_summary_en": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+          "detailed_summary_zh": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+          "event_id": "evt_8ce5579bdcb4c39b",
+          "first_seen_at": "2026-09-10T22:42:58.332920Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T18:34:58Z",
+          "published_at": "2026-09-10T18:34:58Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Pluang",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObjhsaDQxOWg0U08wXzhkcVVmRVllSmZTNEF2X1ZJX3ZiUmRBZkpnMVNMQ0c4aHJLZ040SDhlYVoxOFI3b29DQmoxSDRCZl91VGN3aG5qVDVlWEx1SzlQaWg2WWhQcUVNaVh6aGs5eG1iWFZqQU1UeUp4SmY2UFlWUkYxYXg4QWhYMDdRSQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:bce0991a3f45eae4"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance to delist Pax Dollar (USDP) stablecoin, ending trading and withdrawals by Nov 24, 2026 - Pluang",
+          "title_zh": "Binance to delist Pax Dollar (USDP) stablecoin, ending trading and withdrawals by Nov 24, 2026 - Pluang",
+          "update_id": "upd_d4d0e5db30c7f135",
+          "update_type": "initial",
+          "what_changed_en": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026.",
+          "what_changed_zh": "Binance will delist the Pax Dollar (USDP) stablecoin, ending trading and withdrawals by November 24, 2026."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+      "current_state_zh": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+      "entities": [
+        "decrypt",
+        "invests",
+        "kraken",
+        "nasdaq",
+        "parent",
+        "payward",
+        "valuation"
+      ],
+      "event_id": "evt_1e03fabffc7b6b00",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T22:42:58.333163Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:42:58.333163Z",
+      "last_updated_at": "2026-09-10T22:42:58.333163Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation - Decrypt",
+      "title_zh": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation - Decrypt",
+      "topics": [
+        "funding",
+        "kraken",
+        "nasdaq"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "current_state_zh": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "detailed_summary_en": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "detailed_summary_zh": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "event_id": "evt_1e03fabffc7b6b00",
+          "first_seen_at": "2026-09-10T22:42:58.333163Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T11:28:55Z",
+          "published_at": "2026-09-10T11:28:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcnUwa1VXRGV2U2N2RFVpd2pmQy1BaGZpaGM1NXppbHNSZmU4TnJZUnhaOVZYcFotb0RidGppRWhrTTcyTTJDNWp0NGtaM2RSWVZaMDBrUENDcHl4bEs5TVJpSm9GNUNBMzJGdC1wOThubW8xN0RyMXVDcVZJTHA1ZmxJOTJJblg4aHFJNnpBRG9UNDdkT2FoddIBmAFBVV95cUxQcnUwa1VXRGV2U2N2RFVpd2pmQy1BaGZpaGM1NXppbHNSZmU4TnJZUnhaOVZYcFotb0RidGppRWhrTTcyTTJDNWp0NGtaM2RSWVZaMDBrUENDcHl4bEs5TVJpSm9GNUNBMzJGdC1wOThubW8xN0RyMXVDcVZJTHA1ZmxJOTJJblg4aHFJNnpBRG9UNDdkT2FodQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:4d5b7264a4acdbdb"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation - Decrypt",
+          "title_zh": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation - Decrypt",
+          "update_id": "upd_9d86ddc3a949fa55",
+          "update_type": "initial",
+          "what_changed_en": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+          "what_changed_zh": "Nasdaq has invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+      "current_state_zh": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+      "entities": [
+        "sec",
+        "tokenized-securities",
+        "why"
+      ],
+      "event_id": "evt_cc2ee6ed697c7f69",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-10T22:42:59.603645Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:42:59.603645Z",
+      "last_updated_at": "2026-09-10T22:42:59.603645Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Why a new SEC plan could ease a legal headache for tokenized securities",
+      "title_zh": "Why a new SEC plan could ease a legal headache for tokenized securities",
+      "topics": [
+        "sec",
+        "tokenized-securities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+          "current_state_zh": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+          "detailed_summary_en": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+          "detailed_summary_zh": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+          "event_id": "evt_cc2ee6ed697c7f69",
+          "first_seen_at": "2026-09-10T22:42:59.603645Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T19:01:30Z",
+          "published_at": "2026-09-10T19:01:30Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/why-a-new-sec-plan-could-end-the-legal-headaches-of-holding-tokenized-securities"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:3058c2f0c45f708b"
+          ],
+          "time_precision": "published",
+          "title_en": "Why a new SEC plan could ease a legal headache for tokenized securities",
+          "title_zh": "Why a new SEC plan could ease a legal headache for tokenized securities",
+          "update_id": "upd_9ab63efdc93cd0d8",
+          "update_type": "initial",
+          "what_changed_en": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
+          "what_changed_zh": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+      "current_state_zh": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+      "entities": [
+        "anthropic",
+        "europe",
+        "ipo",
+        "okx",
+        "openai",
+        "pre-ipo"
+      ],
+      "event_id": "evt_6a6f95cd09e54f75",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T22:42:59.623136Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:42:59.623136Z",
+      "last_updated_at": "2026-09-10T22:42:59.623136Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OKX brings OpenAI and Anthropic bets to Europe as pre-IPO trading grows",
+      "title_zh": "OKX brings OpenAI and Anthropic bets to Europe as pre-IPO trading grows",
+      "topics": [
+        "ai-companies",
+        "europe",
+        "okx",
+        "perpetual-futures",
+        "pre-ipo"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+          "current_state_zh": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+          "detailed_summary_en": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+          "detailed_summary_zh": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+          "event_id": "evt_6a6f95cd09e54f75",
+          "first_seen_at": "2026-09-10T22:42:59.623136Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:07:59Z",
+          "published_at": "2026-09-10T17:07:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/10/okx-brings-openai-and-anthropic-bets-to-europe-as-pre-ipo-trading-grows"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:5af55c8acf7d4db5"
+          ],
+          "time_precision": "published",
+          "title_en": "OKX brings OpenAI and Anthropic bets to Europe as pre-IPO trading grows",
+          "title_zh": "OKX brings OpenAI and Anthropic bets to Europe as pre-IPO trading grows",
+          "update_id": "upd_5f9ee27d021ecef0",
+          "update_type": "initial",
+          "what_changed_en": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows.",
+          "what_changed_zh": "OKX is expanding its pre-IPO perpetual futures offering on private AI companies including OpenAI and Anthropic to European users, as demand for pre-IPO trading grows."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+      "current_state_zh": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+      "entities": [
+        "europe",
+        "kalshi",
+        "polymarket"
+      ],
+      "event_id": "evt_bd54fa188f0f8633",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:42:59.638366Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:42:59.638366Z",
+      "last_updated_at": "2026-09-10T22:42:59.638366Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Europe’s top regulator questions Polymarket and Kalshi’s EU access, warns of authorization gaps",
+      "title_zh": "Europe’s top regulator questions Polymarket and Kalshi’s EU access, warns of authorization gaps",
+      "topics": [
+        "eu-regulation",
+        "kalshi",
+        "mica",
+        "polymarket",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+          "current_state_zh": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+          "detailed_summary_en": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+          "detailed_summary_zh": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+          "event_id": "evt_bd54fa188f0f8633",
+          "first_seen_at": "2026-09-10T22:42:59.638366Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:03:34Z",
+          "published_at": "2026-09-10T17:03:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/10/europe-s-top-regulator-questions-polymarket-and-kalshi-s-eu-access-warns-of-authorization-gaps"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:d1b086caf65b4593"
+          ],
+          "time_precision": "published",
+          "title_en": "Europe’s top regulator questions Polymarket and Kalshi’s EU access, warns of authorization gaps",
+          "title_zh": "Europe’s top regulator questions Polymarket and Kalshi’s EU access, warns of authorization gaps",
+          "update_id": "upd_54a4735172037304",
+          "update_type": "initial",
+          "what_changed_en": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users.",
+          "what_changed_zh": "Europe's top securities regulator is scrutinizing Polymarket and Kalshi's EU operations, warning that the prediction-market platforms may lack the required authorization to serve European users."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+      "current_state_zh": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+      "entities": [
+        "visa"
+      ],
+      "event_id": "evt_c3464dd71107a6a3",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T22:43:02.179546Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:02.179546Z",
+      "last_updated_at": "2026-09-10T22:43:02.179546Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Visa’s $2.5 billion crypto credit bet puts card settlement financing onchain",
+      "title_zh": "Visa’s $2.5 billion crypto credit bet puts card settlement financing onchain",
+      "topics": [
+        "onchain-credit",
+        "stablecoins",
+        "visa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+          "current_state_zh": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+          "detailed_summary_en": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+          "detailed_summary_zh": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+          "event_id": "evt_c3464dd71107a6a3",
+          "first_seen_at": "2026-09-10T22:43:02.179546Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T20:00:19Z",
+          "published_at": "2026-09-10T20:00:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/visas-2-5-billion-onchain-credit-bet-puts-card-settlement-financing-onchain/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:ea0dea546b999dea"
+          ],
+          "time_precision": "published",
+          "title_en": "Visa’s $2.5 billion crypto credit bet puts card settlement financing onchain",
+          "title_zh": "Visa’s $2.5 billion crypto credit bet puts card settlement financing onchain",
+          "update_id": "upd_66d26ebbc2c250d5",
+          "update_type": "initial",
+          "what_changed_en": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
+          "what_changed_zh": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+      "current_state_zh": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+      "entities": [],
+      "event_id": "evt_cc2577b7119d6160",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T22:43:02.479735Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:02.479735Z",
+      "last_updated_at": "2026-09-10T22:43:02.479735Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A crypto project paying nearly 1 million people a daily income just had its reserves looted",
+      "title_zh": "A crypto project paying nearly 1 million people a daily income just had its reserves looted",
+      "topics": [
+        "celo",
+        "gooddollar",
+        "security-exploit",
+        "superfluid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+          "current_state_zh": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+          "detailed_summary_en": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+          "detailed_summary_zh": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+          "event_id": "evt_cc2577b7119d6160",
+          "first_seen_at": "2026-09-10T22:43:02.479735Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:50:26Z",
+          "published_at": "2026-09-10T17:50:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/a-crypto-project-paying-nearly-1-million-people-a-daily-income-just-had-its-reserves-looted/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:1e2579e36f72279a"
+          ],
+          "time_precision": "published",
+          "title_en": "A crypto project paying nearly 1 million people a daily income just had its reserves looted",
+          "title_zh": "A crypto project paying nearly 1 million people a daily income just had its reserves looted",
+          "update_id": "upd_f6eb007a58098ec1",
+          "update_type": "initial",
+          "what_changed_en": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users.",
+          "what_changed_zh": "A Superfluid bug on Celo allowed an attacker to mint excess G$ and drain over $100,000 from GoodDollar's reserves, threatening the liquidity backing its daily income program for nearly 1 million users."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+      "current_state_zh": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+      "entities": [
+        "india"
+      ],
+      "event_id": "evt_47e089c33e1b2147",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:43:02.621854Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:02.621854Z",
+      "last_updated_at": "2026-09-10T22:43:02.621854Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "India moves to block 15 crypto apps, leaving users facing sudden account lockout",
+      "title_zh": "India moves to block 15 crypto apps, leaving users facing sudden account lockout",
+      "topics": [
+        "aml",
+        "crypto-regulation",
+        "fiu-ind",
+        "india",
+        "market-access"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+          "current_state_zh": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+          "detailed_summary_en": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+          "detailed_summary_zh": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+          "event_id": "evt_47e089c33e1b2147",
+          "first_seen_at": "2026-09-10T22:43:02.621854Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T16:40:32Z",
+          "published_at": "2026-09-10T16:40:32Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/india-moves-to-block-15-crypto-apps-leaving-users-facing-sudden-account-lockout/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:a896562c8207aa89"
+          ],
+          "time_precision": "published",
+          "title_en": "India moves to block 15 crypto apps, leaving users facing sudden account lockout",
+          "title_zh": "India moves to block 15 crypto apps, leaving users facing sudden account lockout",
+          "update_id": "upd_0e2f1afc3031a25a",
+          "update_type": "initial",
+          "what_changed_en": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services.",
+          "what_changed_zh": "India's Financial Intelligence Unit issued non-compliance notices to 15 crypto providers under the Prevention of Money Laundering Act and sought takedowns of their apps and URLs, putting Indian users at risk of sudden loss of access to these services."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+      "current_state_zh": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+      "entities": [
+        "anthropic",
+        "detecting",
+        "september"
+      ],
+      "event_id": "evt_9ece039d22095eb5",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-10T22:43:05.349012Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:05.349012Z",
+      "last_updated_at": "2026-09-10T22:43:05.349012Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Detecting and countering misuse of AI: September 2026 - Anthropic",
+      "title_zh": "Detecting and countering misuse of AI: September 2026 - Anthropic",
+      "topics": [
+        "ai-governance",
+        "ai-misuse",
+        "ai-safety",
+        "anthropic",
+        "trust-and-safety"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+          "current_state_zh": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+          "detailed_summary_en": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+          "detailed_summary_zh": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+          "event_id": "evt_9ece039d22095eb5",
+          "first_seen_at": "2026-09-10T22:43:05.349012Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:10:27Z",
+          "published_at": "2026-09-10T17:10:27Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Anthropic News",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBBeTNVQy1tcnZPVW9SM3drbmxGN1UxRktiY3JfLW9rMDdIMm9SOUd3b3RJNHpSRXVzS1JKckctcFUyZHpNTVE3aEtWVFhka3o3UmlLUzk1ZEs3dUhyVmRJYVctb0IyN1JuNDB6N0hZdTR2TWJTVXc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&hl=en-US&gl=US&ceid=US:en:5b1c2e9f8758349f"
+          ],
+          "time_precision": "published",
+          "title_en": "Detecting and countering misuse of AI: September 2026 - Anthropic",
+          "title_zh": "Detecting and countering misuse of AI: September 2026 - Anthropic",
+          "update_id": "upd_6e52a020e82c06ff",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems.",
+          "what_changed_zh": "Anthropic published its September 2026 report detailing how it detects and counters misuse of its AI systems."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+      "current_state_zh": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+      "entities": [
+        "ai-capabilities",
+        "anthropic",
+        "measuring"
+      ],
+      "event_id": "evt_5649e71d23d9ccc0",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T22:43:05.349075Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:05.349075Z",
+      "last_updated_at": "2026-09-10T22:43:05.349075Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Measuring AI capabilities in intelligence targeting and conventional weapons - Anthropic",
+      "title_zh": "Measuring AI capabilities in intelligence targeting and conventional weapons - Anthropic",
+      "topics": [
+        "ai-capabilities",
+        "ai-safety",
+        "anthropic",
+        "defense",
+        "national-security"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+          "current_state_zh": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+          "detailed_summary_en": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+          "detailed_summary_zh": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+          "event_id": "evt_5649e71d23d9ccc0",
+          "first_seen_at": "2026-09-10T22:43:05.349075Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:09:52Z",
+          "published_at": "2026-09-10T17:09:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Anthropic News",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQTY0c01YMl93bHRWWDNiU0VMYnQwM1VHdDlkZ0VYdlRnOTFoM3RKYTczWVNQZlhtdVkwdkFmbGFWLU9qWmFDOWZfUlJMWl9nUnBoODhCb2ZRWGo0ZnQ5emtNbkstZXpScUlaXzNQd3FKWUcxZXJYV2VmZmIwZDFhcWRfdUpkTGpkNXpfcmhIaFhKaWZldGc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&hl=en-US&gl=US&ceid=US:en:981f91fcb7bdc8a8"
+          ],
+          "time_precision": "published",
+          "title_en": "Measuring AI capabilities in intelligence targeting and conventional weapons - Anthropic",
+          "title_zh": "Measuring AI capabilities in intelligence targeting and conventional weapons - Anthropic",
+          "update_id": "upd_7065bdc9cfdddb3d",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks.",
+          "what_changed_zh": "Anthropic published research measuring AI capabilities in intelligence targeting and conventional weapons, examining how frontier models perform on military-relevant tasks."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+      "current_state_zh": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+      "entities": [
+        "ahead",
+        "clarity",
+        "release",
+        "republicans",
+        "revised",
+        "senate",
+        "september",
+        "vote"
+      ],
+      "event_id": "evt_3d457d6658a8f46a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:43:05.870264Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:05.870264Z",
+      "last_updated_at": "2026-09-10T22:43:05.870264Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Senate Republicans Release Revised Clarity Act Ahead of September 15 Vote",
+      "title_zh": "Senate Republicans Release Revised Clarity Act Ahead of September 15 Vote",
+      "topics": [
+        "cftc",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+          "current_state_zh": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+          "detailed_summary_en": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+          "detailed_summary_zh": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+          "event_id": "evt_3d457d6658a8f46a",
+          "first_seen_at": "2026-09-10T22:43:05.870264Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T21:18:48Z",
+          "published_at": "2026-09-10T21:18:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377928/senate-republicans-revised-clarity-act-draft"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:4adde92c738be819"
+          ],
+          "time_precision": "published",
+          "title_en": "Senate Republicans Release Revised Clarity Act Ahead of September 15 Vote",
+          "title_zh": "Senate Republicans Release Revised Clarity Act Ahead of September 15 Vote",
+          "update_id": "upd_79f6eeb1103cd62f",
+          "update_type": "initial",
+          "what_changed_en": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote.",
+          "what_changed_zh": "Senate Republicans released a revised Clarity Act that would require non-decentralized DeFi trading protocols to register with the CFTC, ahead of a September 15 procedural vote."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+      "current_state_zh": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+      "entities": [
+        "astra",
+        "cost",
+        "deepseek",
+        "design",
+        "gpt",
+        "matches",
+        "model",
+        "nearly",
+        "new"
+      ],
+      "event_id": "evt_42e7a1108f809d66",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T22:43:05.967831Z",
+      "identifiers": [
+        "gpt-6"
+      ],
+      "last_material_change_at": "2026-09-10T22:43:05.967831Z",
+      "last_updated_at": "2026-09-10T22:43:05.967831Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "DeepSeek's New Model Nearly Matches GPT-6 Astra on Design—at 1.4% of the Cost",
+      "title_zh": "DeepSeek's New Model Nearly Matches GPT-6 Astra on Design—at 1.4% of the Cost",
+      "topics": [
+        "ai-models",
+        "benchmarks",
+        "cost-efficiency",
+        "deepseek",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+          "current_state_zh": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+          "detailed_summary_en": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+          "detailed_summary_zh": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+          "event_id": "evt_42e7a1108f809d66",
+          "first_seen_at": "2026-09-10T22:43:05.967831Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T21:16:03Z",
+          "published_at": "2026-09-10T21:16:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377917/deepseek-openai-gpt-6-astra-design-benchmark"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:67622b66689818b7"
+          ],
+          "time_precision": "published",
+          "title_en": "DeepSeek's New Model Nearly Matches GPT-6 Astra on Design—at 1.4% of the Cost",
+          "title_zh": "DeepSeek's New Model Nearly Matches GPT-6 Astra on Design—at 1.4% of the Cost",
+          "update_id": "upd_9e956a841642ba81",
+          "update_type": "initial",
+          "what_changed_en": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design.",
+          "what_changed_zh": "DeepSeek's V4.1 Flash scored 81.2 on OpenDesign Arena's real-world design benchmark—98% of GPT-6 Astra's 82.7—while costing roughly 1.4% as much per completed design."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+      "current_state_zh": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+      "entities": [
+        "digital-asset-strategy",
+        "house",
+        "labour",
+        "lords"
+      ],
+      "event_id": "evt_386cea8985744c3f",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:43:07.677473Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:07.677473Z",
+      "last_updated_at": "2026-09-10T22:43:07.677473Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "UK House of Lords backs mandatory digital asset strategy over Labour position",
+      "title_zh": "UK House of Lords backs mandatory digital asset strategy over Labour position",
+      "topics": [
+        "digital-asset-strategy",
+        "financial-services-bill",
+        "stablecoins",
+        "uk-regulation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+          "current_state_zh": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+          "detailed_summary_en": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+          "detailed_summary_zh": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+          "event_id": "evt_386cea8985744c3f",
+          "first_seen_at": "2026-09-10T22:43:07.677473Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:54:12Z",
+          "published_at": "2026-09-10T17:54:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/uk-house-of-lords-backs-mandatory-digital-asset-strategy-in-194138-vote?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:433c650d7eef133d"
+          ],
+          "time_precision": "published",
+          "title_en": "UK House of Lords backs mandatory digital asset strategy over Labour position",
+          "title_zh": "UK House of Lords backs mandatory digital asset strategy over Labour position",
+          "update_id": "upd_3b10fded783081ab",
+          "update_type": "initial",
+          "what_changed_en": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months.",
+          "what_changed_zh": "The UK House of Lords voted 194–138 to add an amendment to the Financial Services and Markets Bill requiring the Treasury to publish and consult on a digital asset strategy covering cryptoassets, stablecoins, and tokenized securities within 12 months."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+      "current_state_zh": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+      "entities": [
+        "liquid",
+        "liquid-network"
+      ],
+      "event_id": "evt_18fc53f138aba645",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T22:43:07.725464Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:07.725464Z",
+      "last_updated_at": "2026-09-10T22:43:07.725464Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Liquid Network resumes block production after $320M exploit",
+      "title_zh": "Liquid Network resumes block production after $320M exploit",
+      "topics": [
+        "bitcoin-sidechain",
+        "blockchain-recovery",
+        "liquid-network",
+        "security-incident"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+          "current_state_zh": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+          "detailed_summary_en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+          "detailed_summary_zh": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+          "event_id": "evt_18fc53f138aba645",
+          "first_seen_at": "2026-09-10T22:43:07.725464Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T16:38:16Z",
+          "published_at": "2026-09-10T16:38:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:656b87c8d60ff48b"
+          ],
+          "time_precision": "published",
+          "title_en": "Liquid Network resumes block production after $320M exploit",
+          "title_zh": "Liquid Network resumes block production after $320M exploit",
+          "update_id": "upd_0994e70ba0d0ffe3",
+          "update_type": "initial",
+          "what_changed_en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
+          "what_changed_zh": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+      "current_state_zh": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+      "entities": [
+        "government",
+        "money",
+        "scam",
+        "scam-victims",
+        "seizure",
+        "then",
+        "took",
+        "victims",
+        "won"
+      ],
+      "event_id": "evt_3459ad89dfc4ac3c",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-10T22:43:10.000468Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:10.000468Z",
+      "last_updated_at": "2026-09-10T22:43:10.000468Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto Scam Victims Won $225M Seizure , Then the US Government Took the Money",
+      "title_zh": "Crypto Scam Victims Won $225M Seizure , Then the US Government Took the Money",
+      "topics": [
+        "asset-seizure",
+        "crypto-regulation",
+        "legal",
+        "scam-victims",
+        "usdt"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+          "current_state_zh": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+          "detailed_summary_en": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+          "detailed_summary_zh": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+          "event_id": "evt_3459ad89dfc4ac3c",
+          "first_seen_at": "2026-09-10T22:43:10.000468Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T19:45:00Z",
+          "published_at": "2026-09-10T19:45:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "ibtimes.co.uk",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.ibtimes.co.uk/crypto-scam-victims-fight-225m-usdt-seizure-1819027"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260910T194500Z::https://www.ibtimes.co.uk/crypto-scam-victims-fight-225m-usdt-seizure-1819027"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto Scam Victims Won $225M Seizure , Then the US Government Took the Money",
+          "title_zh": "Crypto Scam Victims Won $225M Seizure , Then the US Government Took the Money",
+          "update_id": "upd_b71c8aa881abad35",
+          "update_type": "initial",
+          "what_changed_en": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases.",
+          "what_changed_zh": "Crypto scam victims who won a $225 million USDT seizure case are now fighting the US government's move to take the funds for itself, raising questions about asset forfeiture and victim restitution in crypto cases."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+      "current_state_zh": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+      "entities": [
+        "anchor",
+        "banking",
+        "bitcoin-custody",
+        "block",
+        "charter",
+        "custody",
+        "federal",
+        "federal-charter",
+        "national",
+        "seeks",
+        "system"
+      ],
+      "event_id": "evt_e13fab599f622247",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:43:10.000502Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:10.000502Z",
+      "last_updated_at": "2026-09-10T22:43:10.000502Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Block Seeks Federal Charter to Anchor Bitcoin Custody in National Banking System",
+      "title_zh": "Block Seeks Federal Charter to Anchor Bitcoin Custody in National Banking System",
+      "topics": [
+        "bitcoin-custody",
+        "block",
+        "crypto-regulation",
+        "federal-charter"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+          "current_state_zh": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+          "detailed_summary_en": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+          "detailed_summary_zh": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+          "event_id": "evt_e13fab599f622247",
+          "first_seen_at": "2026-09-10T22:43:10.000502Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T18:45:00Z",
+          "published_at": "2026-09-10T18:45:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "webpronews.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.webpronews.com/block-seeks-federal-charter-to-anchor-bitcoin-custody-in-national-banking-system/"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260910T184500Z::https://www.webpronews.com/block-seeks-federal-charter-to-anchor-bitcoin-custody-in-national-banking-system/"
+          ],
+          "time_precision": "published",
+          "title_en": "Block Seeks Federal Charter to Anchor Bitcoin Custody in National Banking System",
+          "title_zh": "Block Seeks Federal Charter to Anchor Bitcoin Custody in National Banking System",
+          "update_id": "upd_78d615247599c245",
+          "update_type": "initial",
+          "what_changed_en": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody.",
+          "what_changed_zh": "Block is seeking a federal banking charter to bring its Bitcoin custody operations under the national banking framework, a move that would deepen institutional integration of crypto custody."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+      "current_state_zh": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+      "entities": [
+        "cftc",
+        "kalshi",
+        "perpetual-futures"
+      ],
+      "event_id": "evt_28c485aa91a64ad0",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:43:10.000563Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:10.000563Z",
+      "last_updated_at": "2026-09-10T22:43:10.000563Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kalshi launches gold and silver perpetual futures with CFTC approval",
+      "title_zh": "Kalshi launches gold and silver perpetual futures with CFTC approval",
+      "topics": [
+        "cftc",
+        "commodities",
+        "kalshi",
+        "perpetual-futures"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+          "current_state_zh": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+          "detailed_summary_en": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+          "detailed_summary_zh": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+          "event_id": "evt_28c485aa91a64ad0",
+          "first_seen_at": "2026-09-10T22:43:10.000563Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T18:30:00Z",
+          "published_at": "2026-09-10T18:30:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "finance.yahoo.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://finance.yahoo.com/markets/commodities/articles/kalshi-launches-gold-silver-perpetual-175449558.html"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260910T183000Z::https://finance.yahoo.com/markets/commodities/articles/kalshi-launches-gold-silver-perpetual-175449558.html"
+          ],
+          "time_precision": "published",
+          "title_en": "Kalshi launches gold and silver perpetual futures with CFTC approval",
+          "title_zh": "Kalshi launches gold and silver perpetual futures with CFTC approval",
+          "update_id": "upd_b69c180126e1ffd4",
+          "update_type": "initial",
+          "what_changed_en": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets.",
+          "what_changed_zh": "Kalshi has launched CFTC-approved gold and silver perpetual futures, expanding regulated perpetual-style derivatives into traditional commodity markets."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+      "current_state_zh": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+      "entities": [
+        "assets",
+        "interpretation",
+        "new",
+        "releases",
+        "sec"
+      ],
+      "event_id": "evt_bd4c04d6263c5749",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T22:43:10.000627Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T22:43:10.000627Z",
+      "last_updated_at": "2026-09-10T22:43:10.000627Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "The SEC Releases New Interpretation on Crypto Assets",
+      "title_zh": "The SEC Releases New Interpretation on Crypto Assets",
+      "topics": [
+        "compliance",
+        "crypto-regulation",
+        "sec",
+        "securities-law",
+        "token-classification"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+          "current_state_zh": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+          "detailed_summary_en": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+          "detailed_summary_zh": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+          "event_id": "evt_bd4c04d6263c5749",
+          "first_seen_at": "2026-09-10T22:43:10.000627Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T18:15:00Z",
+          "published_at": "2026-09-10T18:15:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "dodd-frank.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.dodd-frank.com/2026/04/the-sec-releases-new-interpretation-on-crypto-assets/"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260910T181500Z::https://www.dodd-frank.com/2026/04/the-sec-releases-new-interpretation-on-crypto-assets/"
+          ],
+          "time_precision": "published",
+          "title_en": "The SEC Releases New Interpretation on Crypto Assets",
+          "title_zh": "The SEC Releases New Interpretation on Crypto Assets",
+          "update_id": "upd_7016770ff214c521",
+          "update_type": "initial",
+          "what_changed_en": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law.",
+          "what_changed_zh": "The SEC has issued a new interpretive release clarifying its position on crypto assets, a development that could reshape how tokens are classified and traded under U.S. securities law."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -38770,6 +40268,76 @@
         "source_type": "gdelt",
         "title": "Bitcoin hack drains US$320mil from crypto network",
         "url": "https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Landmark crypto market-structure legislation advancing to a pivotal Senate vote represents a regulatory development with a clear transmission path to market access and industry structure. The revised bill text and imminent vote are high-value, though the outcome remains uncertain and the article itself is brief.",
+        "ai_score": 8.0,
+        "ai_summary": "Senate Republicans released a revised version of landmark cryptocurrency market-structure legislation ahead of a key initial vote on the Clarity Act next week.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "us-senate",
+          "market-structure",
+          "legislation"
+        ],
+        "author": "Sarah Wynn",
+        "content": "Ahead of a pivotal initial vote next week, Senate Republicans released a revised version of landmark cryptocurrency legislation.",
+        "fetched_at": "2026-09-10T22:43:00.100783Z",
+        "id": "rss:www.theblock.co_rss.xml:a65c876bd7096f17",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Markets",
+            "People",
+            "Policy",
+            "Regulation",
+            "U.S. Policymaking",
+            "Cynthia Lummis",
+            "Senate Agriculture Committee",
+            "Senate Banking Committee",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-10T19:42:06Z",
+        "source_type": "rss",
+        "title": "Senate Republicans unveil revised crypto bill ahead of key Clarity Act vote next week",
+        "url": "https://www.theblock.co/news/regulation/2026-09-10-senate-republicans-unveil-revised-crypto-bill-ahead-of-key-clarity-act-vote-next-week-414180"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The CLARITY Act is a significant piece of crypto market-structure legislation, and the Coinbase CEO publicly backing it ahead of a September 15 vote signals material regulatory momentum with a clear transmission path to market access and industry structure. However, this is a headline-level report without detailed legislative text or confirmed vote outcome, so it falls short of a landmark regulatory decision.",
+        "ai_score": 7.0,
+        "ai_summary": "Coinbase CEO Brian Armstrong is publicly endorsing the CLARITY Act to help secure a 'Yes' vote when it comes up on September 15.",
+        "ai_tags": [
+          "crypto-regulation",
+          "CLARITY Act",
+          "Coinbase",
+          "market-structure",
+          "US-policy"
+        ],
+        "author": "CryptoRank",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOV21HQm1jRzNaTlhtWmp6V01WTHJ3T2l5TTJBX1JFdW1BMU9TY1huUVkxMEEyNHpkRVZZSmJHdzY3cl9vb1JUekItdzdtTU90LVduUXNRcEpVUFg2U0g5aDUzemlGbXhQejMxeGpVY1pWbGFaYlVOQ2NfN3NfaThkQk5HZVQ0NW5PN0JRYWZSaTlGTjhva1pQQkdUM0Q3RDlreXhCYXBn?oc=5\" target=\"_blank\">Coinbase CEO Backs CLARITY Act to Secure ‘Yes’ Vote on September 15</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CryptoRank</font>",
+        "fetched_at": "2026-09-10T22:42:58.332959Z",
+        "id": "google_news:article:bf4e768eabab3f85",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "CryptoRank"
+        },
+        "published_at": "2026-09-10T19:19:16Z",
+        "source_type": "google_news",
+        "title": "Coinbase CEO Backs CLARITY Act to Secure ‘Yes’ Vote on September 15 - CryptoRank",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOV21HQm1jRzNaTlhtWmp6V01WTHJ3T2l5TTJBX1JFdW1BMU9TY1huUVkxMEEyNHpkRVZZSmJHdzY3cl9vb1JUekItdzdtTU90LVduUXNRcEpVUFg2U0g5aDUzemlGbXhQejMxeGpVY1pWbGFaYlVOQ2NfN3NfaThkQk5HZVQ0NW5PN0JRYWZSaTlGTjhva1pQQkdUM0Q3RDlreXhCYXBn?oc=5"
       }
     }
   ],

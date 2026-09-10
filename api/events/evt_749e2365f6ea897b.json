@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "event_id": "evt_749e2365f6ea897b",
+  "url": "https://bmt.news/events/evt_749e2365f6ea897b/",
+  "json": "https://bmt.news/api/events/evt_749e2365f6ea897b.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "Forgejo <=16.0.3 Critical RCE",
+    "en": "Forgejo <=16.0.3 Critical RCE"
+  },
+  "current_state": {
+    "zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+    "en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization."
+  },
+  "first_seen_at": "2026-09-10T22:42:58.230233+00:00",
+  "last_updated_at": "2026-09-10T22:42:58.230233+00:00",
+  "last_material_change_at": "2026-09-10T22:42:58.230233+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "critical",
+    "forgejo",
+    "rce"
+  ],
+  "identifiers": [],
+  "topics": [
+    "git",
+    "open-source",
+    "self-hosting",
+    "vulnerability"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_146f8166c976908f",
+      "event_id": "evt_749e2365f6ea897b",
+      "occurred_at": "2026-09-10T15:57:40Z",
+      "published_at": "2026-09-10T15:57:40Z",
+      "first_seen_at": "2026-09-10T22:42:58.230233Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Forgejo <=16.0.3 Critical RCE",
+      "title_en": "Forgejo <=16.0.3 Critical RCE",
+      "what_changed_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "what_changed_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "current_state_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "current_state_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "detailed_summary_zh": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "detailed_summary_en": "Forgejo released version 16.0.4 to fix a critical remote code execution vulnerability where template expansion during repository generation from a template could interfere with git repo initialization.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49645907",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49645907"
+      ],
+      "sources": [
+        {
+          "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+          "label": "weierstass",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

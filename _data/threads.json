@@ -1,6 +1,124 @@
 {
   "threads": [
     {
+      "thread_id": "evt_fde028f4447c7239",
+      "event_id": "evt_fde028f4447c7239",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T06:43:01.882546+08:00",
+      "first_date": "2026-09-09",
+      "days": 3,
+      "entries": 3,
+      "updates_count": 3,
+      "sources_count": 3,
+      "category": "technology",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "other",
+      "event_type_zh": "其他事件",
+      "event_type_en": "Other",
+      "title_zh": "On the Navier–Stokes Millennium Prize Problem",
+      "title_en": "On the Navier–Stokes Millennium Prize Problem",
+      "summary_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，随后GPT-6 Astra在Lean中形式化并验证了证明（额外17小时），证明覆盖千禧年问题情形C和D；结果仍需独立验证，公司表示不会申领千禧年大奖。事件引发AI安全、数学发现与形式化验证在智能合约安全等方面影响的讨论。",
+      "summary_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours; subsequently GPT-6 Astra formalized and verified the proof in Lean (additional 17 hours), covering cases C and D of the Millennium Prize formulation; the result remains not independently verified, and the company said it will not claim the Millennium Prize. The event has sparked discussions on AI safety, mathematical discovery, and implications for formal verification in smart-contract security.",
+      "latest_update_zh": "新报道补充：GPT-6 Astra在Lean中形式化并验证了证明，额外耗时17小时；证明显示初始光滑流体可在有限时间内形成奇点并保持有限能量，对应千禧年问题情形C和D；OpenAI已公开证明及Lean形式化供独立审查。",
+      "latest_update_en": "New report adds: GPT-6 Astra formalized and verified the proof in Lean, taking an additional 17 hours; the proof shows an initially smooth fluid can develop a singularity in finite time while retaining finite energy, establishing cases C and D of the Millennium Prize formulation; OpenAI released the proof and Lean formalization for independent scrutiny.",
+      "background_zh": "2000 年，克雷数学研究所选定了七个千禧年大奖难题，每个问题的正确解答将获得一百万美元奖金。纳维-斯托克斯问题要求判断流体运动方程的解是否总能保持光滑并长时间存在，还是可能在有限时间内形成奇点。若能严格构造有限时间爆破的例子，就等于对该问题给出否定解答；但迄今为止，数学界仍未接受这样的证明。",
+      "background_en": "In 2000, the Clay Mathematics Institute designated seven Millennium Prize Problems, each with a one-million-dollar prize for a correct solution. The Navier–Stokes problem asks whether solutions to the equations of fluid motion always remain smooth and well-defined for all time, or whether singularities can form in finite time. A rigorous example of finite-time blow-up would resolve the problem negatively, but no such proof has yet been accepted by the mathematical community.",
+      "latest_summary_zh": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+      "latest_summary_en": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+      "discussion_zh": "Hacker News 的讨论同时充满强烈怀疑与真心惊叹。有多位评论者引用陶哲轩的提醒：针对尚未公开的研究方向过早发动大规模 AI 算力，可能打击研究者分享有前途想法的意愿；另一些人则贴出链接，声称该结果建立在另一位研究者的真实工作与提示词之上。还有评论者对报道中模型能力增长的速度感到震惊，也有人认为此事引发对 AI 研究主导权的治理问题，并提醒自然科学并不只是计算问题。",
+      "discussion_en": "The Hacker News discussion mixes heavy skepticism with genuine fascination. Several commenters reference Terence Tao’s warning that premature AI-powered effort around unannounced ideas could discourage researchers from sharing promising directions, while others point to documents claiming the result is built on another researcher’s actual work and prompts. One commenter marvels at the reported pace of capability growth, and another argues the episode raises governance questions about who controls such AI systems and underscores that natural science is not purely computational.",
+      "market_impact_zh": "由于这一公告涉及私营实验室的研究突破而非链上事件，其对加密市场的主要传导渠道是市场情绪：它可能助长对AI主题代币以及宣称是闭源前沿实验室的去中心化或开放替代方案的项目产生投机兴趣。这一数学成果与数字资产市场之间没有直接的基本面联系。",
+      "market_impact_en": "Because the announcement concerns a private laboratory's research breakthrough rather than an on-chain event, the main transmission channel to crypto markets is sentiment: it could feed speculative interest in AI-themed tokens and in projects positioning themselves as decentralized or open alternatives to closed frontier labs. There is no direct fundamental link between the mathematical result and digital-asset markets.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://openai.com/index/navier-stokes-solution/",
+          "title": "tedsanders",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/openais-math-breakthrough-exposes-the-next-weak-link-in-crypto-security/",
+          "title": "CryptoSlate",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49613262",
+          "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Millennium_Prize_Problems",
+          "title": "Millennium Prize Problems - Wikipedia"
+        },
+        {
+          "url": "https://www.claymath.org/millennium-problems/",
+          "title": "The Millennium Prize Problems - Clay Mathematics Institute"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_existence_and_smoothness_problem",
+          "title": "Navier-Stokes existence and smoothness problem"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+          "title": "Recursive self-improvement"
+        }
+      ]
+    },
+    {
+      "thread_id": "evt_6e409b5595572dbd",
+      "event_id": "evt_6e409b5595572dbd",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T06:43:01.183829+08:00",
+      "first_date": "2026-09-11",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "protocol_change",
+      "event_type_zh": "协议变化",
+      "event_type_en": "Protocol change",
+      "title_zh": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+      "title_en": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+      "summary_zh": "Uniswap 面向稳定币交易对的动态费用已在两个以太坊资金池（USDC/USDT 和 USDC/USDG）上线，价格区间外的纠正交易费用逐区块递减。",
+      "summary_en": "Uniswap's dynamic fee launch for stablecoin pairs is live on two Ethereum pools (USDC/USDT and USDC/USDG), with corrective trades outside the price band facing a fee that falls each block.",
+      "latest_update_zh": "Uniswap 在两个以太坊稳定币交易对资金池（USDC/USDT 和 USDC/USDG）上线动态费用，价格区间外的纠正交易需支付每区块递减的费用。",
+      "latest_update_en": "Uniswap launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "background_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "background_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "latest_summary_zh": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "latest_summary_en": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 7.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-10-uniswap-stablepair-hook-414160",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/defi/uniswap-launches-dynamic-fees-for-two-stable-pair-pools",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
       "thread_id": "evt_d918c8d1e6c25a31",
       "event_id": "evt_d918c8d1e6c25a31",
       "latest_date": "2026-09-11",
@@ -308,73 +426,6 @@
         }
       ],
       "reference_links": []
-    },
-    {
-      "thread_id": "evt_fde028f4447c7239",
-      "event_id": "evt_fde028f4447c7239",
-      "latest_date": "2026-09-10",
-      "latest_at": "2026-09-10T08:31:40.618361+08:00",
-      "first_date": "2026-09-09",
-      "days": 2,
-      "entries": 2,
-      "updates_count": 2,
-      "sources_count": 2,
-      "category": "technology",
-      "status": "monitoring",
-      "status_zh": "持续观察",
-      "status_en": "Monitoring",
-      "event_type": "other",
-      "event_type_zh": "其他事件",
-      "event_type_en": "Other",
-      "title_zh": "On the Navier–Stokes Millennium Prize Problem",
-      "title_en": "On the Navier–Stokes Millennium Prize Problem",
-      "summary_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，但尚未得到独立验证；公司表示不会申领千禧年大奖。此事件引发关于AI安全与私营AI系统能力差距扩大的讨论。",
-      "summary_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours, but the result is not yet independently verified; the company said it will not claim the Millennium Prize. The event has sparked debates on AI safety and the widening gap between private and public AI capabilities.",
-      "latest_update_zh": "OpenAI宣布其内部模型协调约10,000个AI智能体在88小时内解决了纳维-斯托克斯存在性与光滑性问题，并强调不会申领克莱数学研究所的千禧年大奖，该结果仍需外部验证。",
-      "latest_update_en": "OpenAI announced that an internal model coordinated ~10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, emphasized it will not claim the Clay Millennium Prize, and that the result remains unverified externally.",
-      "background_zh": "2000 年，克雷数学研究所选定了七个千禧年大奖难题，每个问题的正确解答将获得一百万美元奖金。纳维-斯托克斯问题要求判断流体运动方程的解是否总能保持光滑并长时间存在，还是可能在有限时间内形成奇点。若能严格构造有限时间爆破的例子，就等于对该问题给出否定解答；但迄今为止，数学界仍未接受这样的证明。",
-      "background_en": "In 2000, the Clay Mathematics Institute designated seven Millennium Prize Problems, each with a one-million-dollar prize for a correct solution. The Navier–Stokes problem asks whether solutions to the equations of fluid motion always remain smooth and well-defined for all time, or whether singularities can form in finite time. A rigorous example of finite-time blow-up would resolve the problem negatively, but no such proof has yet been accepted by the mathematical community.",
-      "latest_summary_zh": "OpenAI于9月8日宣布，一个内部模型协调了约10,000个AI智能体，在88小时内解决了纳维-斯托克斯存在性与光滑性问题，随后使用Lean证明助手对结果进行了形式化。该证明声称平滑流体运动能在有限时间内发展出奇异性，但尚未得到独立数学家及克莱数学研究所的验证。\n\n这一成果表明，前沿AI能够自主开展远超公开模型能力的大规模数学研究，加剧了关于经济集中与递归自我改进风险的辩论。它同时突显了私有AI系统与公共AI工具之间不断扩大的差距，可能影响AI安全、竞争与监管的未来走向。\n\n据报道，该内部模型在数学能力上远超GPT-6 Astra，于8月28日开始训练并在实验期间不断提升；智能体群交换了270万条消息，生成了约1300亿输出token。OpenAI表示不会申领克莱数学研究所100万美元的千禧年大奖，且结果仍需外部验证。",
-      "latest_summary_en": "OpenAI announced on September 8 that an internal model coordinated roughly 10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, a result later formalized in the Lean proof assistant. The claimed proof—that smooth fluid motion can develop a singularity in finite time—remains unverified by independent mathematicians and the Clay Mathematics Institute.\n\nThe achievement demonstrates that frontier AI can carry out autonomous, large-scale mathematical research far beyond what public models can do, intensifying debates about economic concentration and the risks of recursive self-improvement. It also underscores the widening gap between private and public AI tools, which could shape the future of AI safety, competition, and regulation.\n\nThe internal model is reportedly far more capable than GPT-6 Astra in mathematics, started training on August 28, and kept improving during the experiment; the agent swarm exchanged 2.7 million messages and generated roughly 130 billion output tokens. OpenAI said it will not claim the $1 million Clay Millennium Prize, and the result still requires outside verification.",
-      "discussion_zh": "Hacker News 的讨论同时充满强烈怀疑与真心惊叹。有多位评论者引用陶哲轩的提醒：针对尚未公开的研究方向过早发动大规模 AI 算力，可能打击研究者分享有前途想法的意愿；另一些人则贴出链接，声称该结果建立在另一位研究者的真实工作与提示词之上。还有评论者对报道中模型能力增长的速度感到震惊，也有人认为此事引发对 AI 研究主导权的治理问题，并提醒自然科学并不只是计算问题。",
-      "discussion_en": "The Hacker News discussion mixes heavy skepticism with genuine fascination. Several commenters reference Terence Tao’s warning that premature AI-powered effort around unannounced ideas could discourage researchers from sharing promising directions, while others point to documents claiming the result is built on another researcher’s actual work and prompts. One commenter marvels at the reported pace of capability growth, and another argues the episode raises governance questions about who controls such AI systems and underscores that natural science is not purely computational.",
-      "market_impact_zh": "由于这一公告涉及私营实验室的研究突破而非链上事件，其对加密市场的主要传导渠道是市场情绪：它可能助长对AI主题代币以及宣称是闭源前沿实验室的去中心化或开放替代方案的项目产生投机兴趣。这一数学成果与数字资产市场之间没有直接的基本面联系。",
-      "market_impact_en": "Because the announcement concerns a private laboratory's research breakthrough rather than an on-chain event, the main transmission channel to crypto markets is sentiment: it could feed speculative interest in AI-themed tokens and in projects positioning themselves as decentralized or open alternatives to closed frontier labs. There is no direct fundamental link between the mathematical result and digital-asset markets.",
-      "score": 8.5,
-      "source_links": [
-        {
-          "url": "https://openai.com/index/navier-stokes-solution/",
-          "title": "tedsanders",
-          "official": false
-        },
-        {
-          "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
-          "title": "CryptoSlate",
-          "official": false
-        }
-      ],
-      "reference_links": [
-        {
-          "url": "https://news.ycombinator.com/item?id=49613262",
-          "title": "Community discussion"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Millennium_Prize_Problems",
-          "title": "Millennium Prize Problems - Wikipedia"
-        },
-        {
-          "url": "https://www.claymath.org/millennium-problems/",
-          "title": "The Millennium Prize Problems - Clay Mathematics Institute"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_existence_and_smoothness_problem",
-          "title": "Navier-Stokes existence and smoothness problem"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
-          "title": "Recursive self-improvement"
-        }
-      ]
     },
     {
       "thread_id": "evt_09f87331a0893067",
@@ -2345,6 +2396,78 @@
       "reference_links": []
     },
     {
+      "thread_id": "evt_fde028f4447c7239",
+      "event_id": "evt_fde028f4447c7239",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T06:43:01.882546+08:00",
+      "first_date": "2026-09-09",
+      "days": 3,
+      "entries": 3,
+      "updates_count": 3,
+      "sources_count": 3,
+      "category": "technology",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "other",
+      "event_type_zh": "其他事件",
+      "event_type_en": "Other",
+      "title_zh": "On the Navier–Stokes Millennium Prize Problem",
+      "title_en": "On the Navier–Stokes Millennium Prize Problem",
+      "summary_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，随后GPT-6 Astra在Lean中形式化并验证了证明（额外17小时），证明覆盖千禧年问题情形C和D；结果仍需独立验证，公司表示不会申领千禧年大奖。事件引发AI安全、数学发现与形式化验证在智能合约安全等方面影响的讨论。",
+      "summary_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours; subsequently GPT-6 Astra formalized and verified the proof in Lean (additional 17 hours), covering cases C and D of the Millennium Prize formulation; the result remains not independently verified, and the company said it will not claim the Millennium Prize. The event has sparked discussions on AI safety, mathematical discovery, and implications for formal verification in smart-contract security.",
+      "latest_update_zh": "新报道补充：GPT-6 Astra在Lean中形式化并验证了证明，额外耗时17小时；证明显示初始光滑流体可在有限时间内形成奇点并保持有限能量，对应千禧年问题情形C和D；OpenAI已公开证明及Lean形式化供独立审查。",
+      "latest_update_en": "New report adds: GPT-6 Astra formalized and verified the proof in Lean, taking an additional 17 hours; the proof shows an initially smooth fluid can develop a singularity in finite time while retaining finite energy, establishing cases C and D of the Millennium Prize formulation; OpenAI released the proof and Lean formalization for independent scrutiny.",
+      "background_zh": "2000 年，克雷数学研究所选定了七个千禧年大奖难题，每个问题的正确解答将获得一百万美元奖金。纳维-斯托克斯问题要求判断流体运动方程的解是否总能保持光滑并长时间存在，还是可能在有限时间内形成奇点。若能严格构造有限时间爆破的例子，就等于对该问题给出否定解答；但迄今为止，数学界仍未接受这样的证明。",
+      "background_en": "In 2000, the Clay Mathematics Institute designated seven Millennium Prize Problems, each with a one-million-dollar prize for a correct solution. The Navier–Stokes problem asks whether solutions to the equations of fluid motion always remain smooth and well-defined for all time, or whether singularities can form in finite time. A rigorous example of finite-time blow-up would resolve the problem negatively, but no such proof has yet been accepted by the mathematical community.",
+      "latest_summary_zh": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+      "latest_summary_en": "OpenAI says roughly 10,000 AI agents produced a Navier-Stokes singularity proof that GPT-6 Astra formalized and verified in Lean, a development that could shift smart-contract security pressure toward specification completeness.",
+      "discussion_zh": "Hacker News 的讨论同时充满强烈怀疑与真心惊叹。有多位评论者引用陶哲轩的提醒：针对尚未公开的研究方向过早发动大规模 AI 算力，可能打击研究者分享有前途想法的意愿；另一些人则贴出链接，声称该结果建立在另一位研究者的真实工作与提示词之上。还有评论者对报道中模型能力增长的速度感到震惊，也有人认为此事引发对 AI 研究主导权的治理问题，并提醒自然科学并不只是计算问题。",
+      "discussion_en": "The Hacker News discussion mixes heavy skepticism with genuine fascination. Several commenters reference Terence Tao’s warning that premature AI-powered effort around unannounced ideas could discourage researchers from sharing promising directions, while others point to documents claiming the result is built on another researcher’s actual work and prompts. One commenter marvels at the reported pace of capability growth, and another argues the episode raises governance questions about who controls such AI systems and underscores that natural science is not purely computational.",
+      "market_impact_zh": "由于这一公告涉及私营实验室的研究突破而非链上事件，其对加密市场的主要传导渠道是市场情绪：它可能助长对AI主题代币以及宣称是闭源前沿实验室的去中心化或开放替代方案的项目产生投机兴趣。这一数学成果与数字资产市场之间没有直接的基本面联系。",
+      "market_impact_en": "Because the announcement concerns a private laboratory's research breakthrough rather than an on-chain event, the main transmission channel to crypto markets is sentiment: it could feed speculative interest in AI-themed tokens and in projects positioning themselves as decentralized or open alternatives to closed frontier labs. There is no direct fundamental link between the mathematical result and digital-asset markets.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://openai.com/index/navier-stokes-solution/",
+          "title": "tedsanders",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/openais-math-breakthrough-exposes-the-next-weak-link-in-crypto-security/",
+          "title": "CryptoSlate",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49613262",
+          "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Millennium_Prize_Problems",
+          "title": "Millennium Prize Problems - Wikipedia"
+        },
+        {
+          "url": "https://www.claymath.org/millennium-problems/",
+          "title": "The Millennium Prize Problems - Clay Mathematics Institute"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_existence_and_smoothness_problem",
+          "title": "Navier-Stokes existence and smoothness problem"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+          "title": "Recursive self-improvement"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_fbaba427ec398ca6",
       "event_id": "evt_fbaba427ec398ca6",
       "latest_date": "2026-09-11",
@@ -2400,73 +2523,6 @@
         {
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/transnational-criminal-organizations",
           "title": "Transnational Criminal Organizations | Office of Foreign Assets Control"
-        }
-      ]
-    },
-    {
-      "thread_id": "evt_fde028f4447c7239",
-      "event_id": "evt_fde028f4447c7239",
-      "latest_date": "2026-09-10",
-      "latest_at": "2026-09-10T08:31:40.618361+08:00",
-      "first_date": "2026-09-09",
-      "days": 2,
-      "entries": 2,
-      "updates_count": 2,
-      "sources_count": 2,
-      "category": "technology",
-      "status": "monitoring",
-      "status_zh": "持续观察",
-      "status_en": "Monitoring",
-      "event_type": "other",
-      "event_type_zh": "其他事件",
-      "event_type_en": "Other",
-      "title_zh": "On the Navier–Stokes Millennium Prize Problem",
-      "title_en": "On the Navier–Stokes Millennium Prize Problem",
-      "summary_zh": "OpenAI于9月8日宣布其AI模型协同10,000个智能体在88小时内解决纳维-斯托克斯问题，但尚未得到独立验证；公司表示不会申领千禧年大奖。此事件引发关于AI安全与私营AI系统能力差距扩大的讨论。",
-      "summary_en": "OpenAI announced on Sept 8 that its AI model coordinated 10,000 agents to solve Navier-Stokes in 88 hours, but the result is not yet independently verified; the company said it will not claim the Millennium Prize. The event has sparked debates on AI safety and the widening gap between private and public AI capabilities.",
-      "latest_update_zh": "OpenAI宣布其内部模型协调约10,000个AI智能体在88小时内解决了纳维-斯托克斯存在性与光滑性问题，并强调不会申领克莱数学研究所的千禧年大奖，该结果仍需外部验证。",
-      "latest_update_en": "OpenAI announced that an internal model coordinated ~10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, emphasized it will not claim the Clay Millennium Prize, and that the result remains unverified externally.",
-      "background_zh": "2000 年，克雷数学研究所选定了七个千禧年大奖难题，每个问题的正确解答将获得一百万美元奖金。纳维-斯托克斯问题要求判断流体运动方程的解是否总能保持光滑并长时间存在，还是可能在有限时间内形成奇点。若能严格构造有限时间爆破的例子，就等于对该问题给出否定解答；但迄今为止，数学界仍未接受这样的证明。",
-      "background_en": "In 2000, the Clay Mathematics Institute designated seven Millennium Prize Problems, each with a one-million-dollar prize for a correct solution. The Navier–Stokes problem asks whether solutions to the equations of fluid motion always remain smooth and well-defined for all time, or whether singularities can form in finite time. A rigorous example of finite-time blow-up would resolve the problem negatively, but no such proof has yet been accepted by the mathematical community.",
-      "latest_summary_zh": "OpenAI于9月8日宣布，一个内部模型协调了约10,000个AI智能体，在88小时内解决了纳维-斯托克斯存在性与光滑性问题，随后使用Lean证明助手对结果进行了形式化。该证明声称平滑流体运动能在有限时间内发展出奇异性，但尚未得到独立数学家及克莱数学研究所的验证。\n\n这一成果表明，前沿AI能够自主开展远超公开模型能力的大规模数学研究，加剧了关于经济集中与递归自我改进风险的辩论。它同时突显了私有AI系统与公共AI工具之间不断扩大的差距，可能影响AI安全、竞争与监管的未来走向。\n\n据报道，该内部模型在数学能力上远超GPT-6 Astra，于8月28日开始训练并在实验期间不断提升；智能体群交换了270万条消息，生成了约1300亿输出token。OpenAI表示不会申领克莱数学研究所100万美元的千禧年大奖，且结果仍需外部验证。",
-      "latest_summary_en": "OpenAI announced on September 8 that an internal model coordinated roughly 10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, a result later formalized in the Lean proof assistant. The claimed proof—that smooth fluid motion can develop a singularity in finite time—remains unverified by independent mathematicians and the Clay Mathematics Institute.\n\nThe achievement demonstrates that frontier AI can carry out autonomous, large-scale mathematical research far beyond what public models can do, intensifying debates about economic concentration and the risks of recursive self-improvement. It also underscores the widening gap between private and public AI tools, which could shape the future of AI safety, competition, and regulation.\n\nThe internal model is reportedly far more capable than GPT-6 Astra in mathematics, started training on August 28, and kept improving during the experiment; the agent swarm exchanged 2.7 million messages and generated roughly 130 billion output tokens. OpenAI said it will not claim the $1 million Clay Millennium Prize, and the result still requires outside verification.",
-      "discussion_zh": "Hacker News 的讨论同时充满强烈怀疑与真心惊叹。有多位评论者引用陶哲轩的提醒：针对尚未公开的研究方向过早发动大规模 AI 算力，可能打击研究者分享有前途想法的意愿；另一些人则贴出链接，声称该结果建立在另一位研究者的真实工作与提示词之上。还有评论者对报道中模型能力增长的速度感到震惊，也有人认为此事引发对 AI 研究主导权的治理问题，并提醒自然科学并不只是计算问题。",
-      "discussion_en": "The Hacker News discussion mixes heavy skepticism with genuine fascination. Several commenters reference Terence Tao’s warning that premature AI-powered effort around unannounced ideas could discourage researchers from sharing promising directions, while others point to documents claiming the result is built on another researcher’s actual work and prompts. One commenter marvels at the reported pace of capability growth, and another argues the episode raises governance questions about who controls such AI systems and underscores that natural science is not purely computational.",
-      "market_impact_zh": "由于这一公告涉及私营实验室的研究突破而非链上事件，其对加密市场的主要传导渠道是市场情绪：它可能助长对AI主题代币以及宣称是闭源前沿实验室的去中心化或开放替代方案的项目产生投机兴趣。这一数学成果与数字资产市场之间没有直接的基本面联系。",
-      "market_impact_en": "Because the announcement concerns a private laboratory's research breakthrough rather than an on-chain event, the main transmission channel to crypto markets is sentiment: it could feed speculative interest in AI-themed tokens and in projects positioning themselves as decentralized or open alternatives to closed frontier labs. There is no direct fundamental link between the mathematical result and digital-asset markets.",
-      "score": 8.5,
-      "source_links": [
-        {
-          "url": "https://openai.com/index/navier-stokes-solution/",
-          "title": "tedsanders",
-          "official": false
-        },
-        {
-          "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
-          "title": "CryptoSlate",
-          "official": false
-        }
-      ],
-      "reference_links": [
-        {
-          "url": "https://news.ycombinator.com/item?id=49613262",
-          "title": "Community discussion"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Millennium_Prize_Problems",
-          "title": "Millennium Prize Problems - Wikipedia"
-        },
-        {
-          "url": "https://www.claymath.org/millennium-problems/",
-          "title": "The Millennium Prize Problems - Clay Mathematics Institute"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_existence_and_smoothness_problem",
-          "title": "Navier-Stokes existence and smoothness problem"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
-          "title": "Recursive self-improvement"
         }
       ]
     },
@@ -3909,6 +3965,52 @@
           "title": "SoFi Technologies, Inc. (SOFI) - SoFiUSD Becomes the First Stablecoin Issued by a US National Bank to Launch on a Banking Platform"
         }
       ]
+    },
+    {
+      "thread_id": "evt_6e409b5595572dbd",
+      "event_id": "evt_6e409b5595572dbd",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T06:43:01.183829+08:00",
+      "first_date": "2026-09-11",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "protocol_change",
+      "event_type_zh": "协议变化",
+      "event_type_en": "Protocol change",
+      "title_zh": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+      "title_en": "Uniswap launches ‘StablePair Hook’ to help LPs capture more stablecoin trading value",
+      "summary_zh": "Uniswap 面向稳定币交易对的动态费用已在两个以太坊资金池（USDC/USDT 和 USDC/USDG）上线，价格区间外的纠正交易费用逐区块递减。",
+      "summary_en": "Uniswap's dynamic fee launch for stablecoin pairs is live on two Ethereum pools (USDC/USDT and USDC/USDG), with corrective trades outside the price band facing a fee that falls each block.",
+      "latest_update_zh": "Uniswap 在两个以太坊稳定币交易对资金池（USDC/USDT 和 USDC/USDG）上线动态费用，价格区间外的纠正交易需支付每区块递减的费用。",
+      "latest_update_en": "Uniswap launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "background_zh": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "background_en": "Uniswap Labs launched StablePair Hook, a Uniswap v4 tool that applies dynamic fees to stablecoin pairs like USDC/USDT to help liquidity providers capture more trading value.",
+      "latest_summary_zh": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "latest_summary_en": "Uniswap has launched dynamic fees on two Ethereum stable-pair pools pairing USDC with USDT and USDG, where corrective trades outside the price band incur a fee that decreases each block.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 7.0,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-10-uniswap-stablepair-hook-414160",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/defi/uniswap-launches-dynamic-fees-for-two-stable-pair-pools",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
     }
   ]
 }
