@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "event_id": "evt_dacf8d366b34d78d",
+  "url": "https://bmt.news/events/evt_dacf8d366b34d78d/",
+  "json": "https://bmt.news/api/events/evt_dacf8d366b34d78d.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+    "en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves"
+  },
+  "current_state": {
+    "zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+    "en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action."
+  },
+  "first_seen_at": "2026-09-10T09:03:46.634022+00:00",
+  "last_updated_at": "2026-09-10T09:03:46.634022+00:00",
+  "last_material_change_at": "2026-09-10T09:03:46.634022+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "nomic",
+    "osmosis"
+  ],
+  "identifiers": [],
+  "topics": [
+    "bridge-exploit",
+    "defi-security",
+    "osmosis"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_3afcd463b325f469",
+      "event_id": "evt_dacf8d366b34d78d",
+      "occurred_at": "2026-09-10T08:50:29Z",
+      "published_at": "2026-09-10T08:50:29Z",
+      "first_seen_at": "2026-09-10T09:03:46.634022Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "title_en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "what_changed_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "what_changed_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "current_state_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "current_state_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "detailed_summary_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "detailed_summary_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:674de2989502d767"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

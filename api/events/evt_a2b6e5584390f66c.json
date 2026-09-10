@@ -11,24 +11,29 @@
     "en": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro"
   },
   "current_state": {
-    "zh": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
-    "en": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash."
+    "zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，附带详细技术报告，引发社区讨论。",
+    "en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion."
   },
   "first_seen_at": "2026-09-09T16:49:30.332633+00:00",
-  "last_updated_at": "2026-09-09T16:49:30.332633+00:00",
-  "last_material_change_at": "2026-09-09T16:49:30.332633+00:00",
+  "last_updated_at": "2026-09-10T09:03:43.746219+00:00",
+  "last_material_change_at": "2026-09-10T09:03:43.746219+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
-    "deepseek"
+    "deepseek",
+    "flash"
   ],
   "identifiers": [],
   "topics": [
     "ai-model-release",
+    "ai-research",
     "api",
     "deepseek",
+    "huggingface",
+    "llm-release",
     "model-replacement",
+    "open-weights",
     "pricing"
   ],
   "updates": [
@@ -70,6 +75,49 @@
         {
           "url": "https://news.ycombinator.com/item?id=49624603",
           "label": "nickweb",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_54a290d2a73f581c",
+      "event_id": "evt_a2b6e5584390f66c",
+      "occurred_at": "2026-09-10T06:11:05Z",
+      "published_at": "2026-09-10T06:11:05Z",
+      "first_seen_at": "2026-09-10T09:03:43.746219Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "DeepSeek v4.1 Flash",
+      "title_en": "DeepSeek v4.1 Flash",
+      "what_changed_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，并提供详细技术报告。",
+      "what_changed_en": "DeepSeek V4.1 Flash has been released on Hugging Face, with 552B parameters and a detailed technical report.",
+      "current_state_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，附带详细技术报告，引发社区讨论。",
+      "current_state_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
+      "detailed_summary_zh": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
+      "detailed_summary_en": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49639090",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.9,
+      "story_ids": [
+        "hackernews:story:49639090"
+      ],
+      "sources": [
+        {
+          "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+          "label": "Liwink",
           "source_type": "hackernews",
           "official": false
         }

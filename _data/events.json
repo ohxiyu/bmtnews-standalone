@@ -32779,17 +32779,18 @@
     {
       "category": "technology",
       "confidence": 0.75,
-      "current_state_en": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
-      "current_state_zh": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
+      "current_state_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
+      "current_state_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，附带详细技术报告，引发社区讨论。",
       "entities": [
-        "deepseek"
+        "deepseek",
+        "flash"
       ],
       "event_id": "evt_a2b6e5584390f66c",
       "event_type": "product_release",
       "first_seen_at": "2026-09-09T16:49:30.332633Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-09T16:49:30.332633Z",
-      "last_updated_at": "2026-09-09T16:49:30.332633Z",
+      "last_material_change_at": "2026-09-10T09:03:43.746219Z",
+      "last_updated_at": "2026-09-10T09:03:43.746219Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -32797,9 +32798,13 @@
       "title_zh": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
       "topics": [
         "ai-model-release",
+        "ai-research",
         "api",
         "deepseek",
+        "huggingface",
+        "llm-release",
         "model-replacement",
+        "open-weights",
         "pricing"
       ],
       "updates": [
@@ -32845,6 +32850,49 @@
           "update_type": "initial",
           "what_changed_en": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
           "what_changed_zh": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
+          "current_state_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，附带详细技术报告，引发社区讨论。",
+          "detailed_summary_en": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
+          "detailed_summary_zh": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
+          "event_id": "evt_a2b6e5584390f66c",
+          "first_seen_at": "2026-09-10T09:03:43.746219Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T06:11:05Z",
+          "published_at": "2026-09-10T06:11:05Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49639090"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Liwink",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49639090"
+          ],
+          "time_precision": "published",
+          "title_en": "DeepSeek v4.1 Flash",
+          "title_zh": "DeepSeek v4.1 Flash",
+          "update_id": "upd_54a290d2a73f581c",
+          "update_type": "confirmation",
+          "what_changed_en": "DeepSeek V4.1 Flash has been released on Hugging Face, with 552B parameters and a detailed technical report.",
+          "what_changed_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，并提供详细技术报告。"
         }
       ]
     },
@@ -36159,6 +36207,565 @@
           "update_type": "initial",
           "what_changed_en": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic.",
           "what_changed_zh": "Automattic's board voted to place CEO Matt Mullenweg on a paid leave of absence, a move he publicly disputed in a company-wide Slack announcement, raising questions about the future of WordPress and Automattic."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+      "current_state_zh": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+      "entities": [
+        "around",
+        "ceo",
+        "clarity",
+        "clarity-act",
+        "coinbase",
+        "crypto-regulation",
+        "even",
+        "expected",
+        "fails",
+        "outline",
+        "regulation"
+      ],
+      "event_id": "evt_8ec8f35897ff5d8c",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-10T09:03:43.534211Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:43.534211Z",
+      "last_updated_at": "2026-09-10T09:03:43.534211Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase CEO: Crypto Regulation Outline Expected Around the 15th, Even if Clarity Act Fails - 재경일보",
+      "title_zh": "Coinbase CEO: Crypto Regulation Outline Expected Around the 15th, Even if Clarity Act Fails - 재경일보",
+      "topics": [
+        "clarity-act",
+        "coinbase",
+        "crypto-regulation",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+          "current_state_zh": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+          "detailed_summary_en": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+          "detailed_summary_zh": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+          "event_id": "evt_8ec8f35897ff5d8c",
+          "first_seen_at": "2026-09-10T09:03:43.534211Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T06:05:00Z",
+          "published_at": "2026-09-10T06:05:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "재경일보",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9SbU5WWGtWQmVabUZzVE4zM1BXUUVkMkRUTG5hSWJwTGRHcjd0Q0lzQ2xPRHo4aHh1cVNZaktwTl8xdGpJQjR1M213?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:b4f83641dd36aa92"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase CEO: Crypto Regulation Outline Expected Around the 15th, Even if Clarity Act Fails - 재경일보",
+          "title_zh": "Coinbase CEO: Crypto Regulation Outline Expected Around the 15th, Even if Clarity Act Fails - 재경일보",
+          "update_id": "upd_25735ddfab8e6365",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass.",
+          "what_changed_zh": "Coinbase CEO Brian Armstrong indicated that a US crypto regulatory framework outline is expected around the 15th, even if the Clarity Act does not pass."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+      "current_state_zh": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+      "entities": [
+        "europe",
+        "real"
+      ],
+      "event_id": "evt_c424ebe400c299ed",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T09:03:43.976567Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:43.976567Z",
+      "last_updated_at": "2026-09-10T09:03:43.976567Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Real-world markets just went live in Europe.",
+      "title_zh": "Real-world markets just went live in Europe.",
+      "topics": [
+        "europe",
+        "exchange-products",
+        "okx",
+        "pre-ipo",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+          "current_state_zh": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+          "detailed_summary_en": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+          "detailed_summary_zh": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+          "event_id": "evt_c424ebe400c299ed",
+          "first_seen_at": "2026-09-10T09:03:43.976567Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T08:10:28Z",
+          "published_at": "2026-09-10T08:10:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OKXAnnouncements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://my.okx.com/ul/Yvep1F?channelid=ACE505900"
+            }
+          ],
+          "story_ids": [
+            "telegram:OKXAnnouncements:7174"
+          ],
+          "time_precision": "published",
+          "title_en": "Real-world markets just went live in Europe.",
+          "title_zh": "Real-world markets just went live in Europe.",
+          "update_id": "upd_2e50590f76c64e17",
+          "update_type": "initial",
+          "what_changed_en": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App.",
+          "what_changed_zh": "OKX announced the launch of pre-IPO access to companies such as OpenAI and Anthropic alongside 24/7 tokenized stocks for European users through its New Money App."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+      "current_state_zh": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+      "entities": [
+        "index",
+        "introducing",
+        "jp225",
+        "okx",
+        "perpetuals",
+        "us100",
+        "us500"
+      ],
+      "event_id": "evt_19dc4ef5ac398348",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T09:03:43.977042Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:43.977042Z",
+      "last_updated_at": "2026-09-10T09:03:43.977042Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "📈 Introducing US100, US500, and JP225 Index Perpetuals on OKX",
+      "title_zh": "📈 Introducing US100, US500, and JP225 Index Perpetuals on OKX",
+      "topics": [
+        "derivatives",
+        "equity-indices",
+        "exchange-listings",
+        "okx",
+        "perpetual-futures"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+          "current_state_zh": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+          "detailed_summary_en": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+          "detailed_summary_zh": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+          "event_id": "evt_19dc4ef5ac398348",
+          "first_seen_at": "2026-09-10T09:03:43.977042Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T08:59:01Z",
+          "published_at": "2026-09-10T08:59:01Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OKXAnnouncements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.okx.com/help/okx-to-list-perpetual-futures-for-us500-us100-and-xom-equities?channelid=ACE505900"
+            }
+          ],
+          "story_ids": [
+            "telegram:OKXAnnouncements:7175"
+          ],
+          "time_precision": "published",
+          "title_en": "📈 Introducing US100, US500, and JP225 Index Perpetuals on OKX",
+          "title_zh": "📈 Introducing US100, US500, and JP225 Index Perpetuals on OKX",
+          "update_id": "upd_771234cd36f4ccc0",
+          "update_type": "initial",
+          "what_changed_en": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares.",
+          "what_changed_zh": "OKX announced the listing of USDT-margined perpetual futures tracking the US100, US500, and JP225 equity indices, allowing traders to go long or short without owning the underlying shares."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+      "current_state_zh": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+      "entities": [
+        "first",
+        "industry",
+        "options",
+        "perp",
+        "perpetuals",
+        "stock",
+        "tradfi"
+      ],
+      "event_id": "evt_a65e4aa266b44eff",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-10T09:03:44.021723Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:44.021723Z",
+      "last_updated_at": "2026-09-10T09:03:44.021723Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Industry First: TradFi Perp Options, a new way to trade Stock Perpetuals.",
+      "title_zh": "Industry First: TradFi Perp Options, a new way to trade Stock Perpetuals.",
+      "topics": [
+        "bybit",
+        "exchange-products",
+        "perpetual-options",
+        "tokenized-stocks",
+        "tradfi-crypto"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+          "current_state_zh": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+          "detailed_summary_en": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+          "detailed_summary_zh": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+          "event_id": "evt_a65e4aa266b44eff",
+          "first_seen_at": "2026-09-10T09:03:44.021723Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T08:21:46Z",
+          "published_at": "2026-09-10T08:21:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Bybit_Announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://telegram.me/Bybit_Announcements/9676"
+            }
+          ],
+          "story_ids": [
+            "telegram:Bybit_Announcements:9676"
+          ],
+          "time_precision": "published",
+          "title_en": "Industry First: TradFi Perp Options, a new way to trade Stock Perpetuals.",
+          "title_zh": "Industry First: TradFi Perp Options, a new way to trade Stock Perpetuals.",
+          "update_id": "upd_6b32a09c493bacc9",
+          "update_type": "initial",
+          "what_changed_en": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+          "what_changed_zh": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+      "current_state_zh": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+      "entities": [
+        "perpetual-futures",
+        "sgx"
+      ],
+      "event_id": "evt_b1017246ac61a190",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T09:03:44.933328Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:44.933328Z",
+      "last_updated_at": "2026-09-10T09:03:44.933328Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SGX's bitcoin and ether perpetual futures are now open to U.S. institutions",
+      "title_zh": "SGX's bitcoin and ether perpetual futures are now open to U.S. institutions",
+      "topics": [
+        "derivatives",
+        "perpetual-futures"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+          "current_state_zh": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+          "detailed_summary_en": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+          "detailed_summary_zh": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+          "event_id": "evt_b1017246ac61a190",
+          "first_seen_at": "2026-09-10T09:03:44.933328Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T07:01:44Z",
+          "published_at": "2026-09-10T07:01:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/10/sgx-s-bitcoin-and-ether-perpetual-futures-are-now-open-to-u-s-institutions"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:aa149f3ca8103442"
+          ],
+          "time_precision": "published",
+          "title_en": "SGX's bitcoin and ether perpetual futures are now open to U.S. institutions",
+          "title_zh": "SGX's bitcoin and ether perpetual futures are now open to U.S. institutions",
+          "update_id": "upd_6c7e91287115a04d",
+          "update_type": "initial",
+          "what_changed_en": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives.",
+          "what_changed_zh": "Singapore Exchange has opened its bitcoin and ether perpetual futures to U.S. institutional investors, expanding regulated access to crypto derivatives."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "current_state_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "entities": [
+        "nomic",
+        "osmosis"
+      ],
+      "event_id": "evt_dacf8d366b34d78d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-10T09:03:46.634022Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:46.634022Z",
+      "last_updated_at": "2026-09-10T09:03:46.634022Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "title_zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "topics": [
+        "bridge-exploit",
+        "defi-security",
+        "osmosis"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+          "current_state_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+          "detailed_summary_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+          "detailed_summary_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+          "event_id": "evt_dacf8d366b34d78d",
+          "first_seen_at": "2026-09-10T09:03:46.634022Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T08:50:29Z",
+          "published_at": "2026-09-10T08:50:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:674de2989502d767"
+          ],
+          "time_precision": "published",
+          "title_en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+          "title_zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+          "update_id": "upd_3afcd463b325f469",
+          "update_type": "initial",
+          "what_changed_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+          "what_changed_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+      "current_state_zh": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+      "entities": [
+        "street",
+        "tether",
+        "usdt",
+        "wall"
+      ],
+      "event_id": "evt_9bda8dd987d1f0b3",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-10T09:03:46.754784Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:46.754784Z",
+      "last_updated_at": "2026-09-10T09:03:46.754784Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Tether is pushing USDT into a cracking $3 trillion Wall Street debt machine as defaults hit five-year highs at major funds",
+      "title_zh": "Tether is pushing USDT into a cracking $3 trillion Wall Street debt machine as defaults hit five-year highs at major funds",
+      "topics": [
+        "private-credit",
+        "stablecoins",
+        "tether",
+        "usdt"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+          "current_state_zh": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+          "detailed_summary_en": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+          "detailed_summary_zh": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+          "event_id": "evt_9bda8dd987d1f0b3",
+          "first_seen_at": "2026-09-10T09:03:46.754784Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T07:50:07Z",
+          "published_at": "2026-09-10T07:50:07Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/tether-is-pushing-usdt-into-a-cracking-3-trillion-wall-street-debt-machine-as-defaults-hit-five-year-highs-at-major-funds/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:8d9db0e65637f026"
+          ],
+          "time_precision": "published",
+          "title_en": "Tether is pushing USDT into a cracking $3 trillion Wall Street debt machine as defaults hit five-year highs at major funds",
+          "title_zh": "Tether is pushing USDT into a cracking $3 trillion Wall Street debt machine as defaults hit five-year highs at major funds",
+          "update_id": "upd_50ba61c58b33bb9d",
+          "update_type": "initial",
+          "what_changed_en": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector.",
+          "what_changed_zh": "Tether and Fasanara Capital launched StableFund with $400 million in sponsor capital and plans to raise up to $3 billion, extending USDT into private credit as defaults and withdrawals pressure the $3 trillion sector."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+      "current_state_zh": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+      "entities": [
+        "anthropic",
+        "claude",
+        "corps"
+      ],
+      "event_id": "evt_f857df2f0bde71c8",
+      "event_type": "other",
+      "first_seen_at": "2026-09-10T09:03:49.246172Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-10T09:03:49.246172Z",
+      "last_updated_at": "2026-09-10T09:03:49.246172Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Claude Corps - anthropic.com",
+      "title_zh": "Claude Corps - anthropic.com",
+      "topics": [
+        "ai-deployment",
+        "ai-labs",
+        "anthropic",
+        "claude",
+        "workforce"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+          "current_state_zh": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+          "detailed_summary_en": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+          "detailed_summary_zh": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+          "event_id": "evt_f857df2f0bde71c8",
+          "first_seen_at": "2026-09-10T09:03:49.246172Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T06:07:04Z",
+          "published_at": "2026-09-10T06:07:04Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Anthropic News",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPZWNUR3U4T1VCRGNQQ0htQzRPVDk4R3BMRjB1dkFaRU9ZOHFBMlljUW1oY2F6dTRIbWxiSmpicF9DZGNjRlJiZFRUV0gxOVhnLUtWd29hcnNTNlM4R1lCNjVGcDd0Sk1QSXV6OUtyc2ZVM0RwYTBGWkk5RGdVWFZxOXo4eUVnb2ZMZG01YVE5VzFWbHgwNmhYeUdlRkRmUjlkTDU5MFRkYUlscVQ4R3Z2SGh6azhrYlpqZTIwV0NPb0hmOThObnp5ZVlxSDlJUHhXTm14S25MNmFLRE5oc1dhQ0xFdU5EVHpBYlk1X2M1dGNhaUFtOTVtYzJad1BzTjJqQ3RtdHRQanJvTkh0YkpBd3ZZVnh1T19zYk5naHVoN1I?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&hl=en-US&gl=US&ceid=US:en:561eb560f5b948b1"
+          ],
+          "time_precision": "published",
+          "title_en": "Claude Corps - anthropic.com",
+          "title_zh": "Claude Corps - anthropic.com",
+          "update_id": "upd_c4e1d6b3968e2e10",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel.",
+          "what_changed_zh": "Anthropic announced Claude Corps, a new initiative from the AI lab, via its official news channel."
         }
       ]
     }
