@@ -92,6 +92,16 @@ gh-pages，生产与 Preview 均无后台 env vars。Access applications 和 ide
 
 ### 2026-09-11 正式部署
 
+Source commit: 04ea98021f5728728b9e98ab11767dce7bdf12d6
+
+Worker version: Pages 995adb9d-a5ea-4aee-b8d7-c36958c778bc
+
+Deployment: Deploy Docs 34503029304; gh-pages bf0ed47916d48ca05085f6b9fc864c030a0310fb
+
+Verification: 公共 API 200，后台 Access 302，备用域名后台 403；真实 OTP 与写入待验收。
+
+Rollback: 获授权后创建 revert PR，沿现有 Actions 重新发布；保留 Git 内容和 Access 防护。
+
 - 用户明确授权合并部署；PR #67 已合并为 04ea98021f5728728b9e98ab11767dce7bdf12d6。
 - HEAD fca006b 的 test、analyze、governance、CodeQL、Pages 检查均成功；
   本地最终复验 748 passed、1 warning，管理接口 15 项测试与治理检查通过。
