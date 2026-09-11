@@ -5,12 +5,12 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "Square持久化随机时间表：日报修订才同步，定时只检查到期队列",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/74",
+  "goal": "记录PR75上线证据，等待新刊随机计划生产验收",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/76",
   "owner": "Codex / square-distribution",
-  "branch": "agent/square-trigger-fix",
-  "last_verified_commit": "eed8b775a7157f1a5e405df8f2012c176575f411",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/75",
+  "branch": "agent/square-rollout-record",
+  "last_verified_commit": "ae5786ff7bb0e256d5da92fd81a4b285208e7691",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/77",
   "completed": [
     "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
@@ -20,15 +20,15 @@
     "实现持久化正文/due_at、内容修订同步、撤下与已发保护、每5分钟标准库轻量检查、单条发送和至少5分钟间隔"
   ],
   "unfinished": [
-    "PR75待更新后CI与授权合并；未触碰生产队列",
-    "合并后验证随机计划首次初始化、定时仅读队列、全期发送完成情况"
+    "PR75已按用户授权合并上线；本次文档PR待提交",
+    "等待9月12日日报，验证随机计划首次初始化、定时仅读队列、全期发送完成情况"
   ],
   "validation": [
     "uv sync --frozen --extra dev 成功；全量pytest 773 passed、1既有warning；随机队列专项25 passed；YAML解析、治理和diff check通过",
     "生产首次分发run34593750085成功，3个帖子ID已持久化，详见发布记录"
   ],
   "unverified": [
-    "随机计划与workflow_run兜底未上线；GitHub5分钟触发及时性及平台最终审核/展示未验证",
+    "新版已上线且手动工作流成功；当前尚无9月12日日报，随机计划生成、定时仅读队列及平台最终展示尚未生产验收",
     "Quick Post 生产内容写入仍未验收；本次不改变后台"
   ],
   "production": {
@@ -40,14 +40,14 @@
     "verified_at": "2026-09-11"
   },
   "blockers": [
-    "本补丁未获合并授权；GitHub 内部为何漏触发不可直接观测"
+    "当前日刊尚未发布；不自动跨日补发昨日剩余内容"
   ],
-  "next_action": "更新PR75并等待授权合并，验证随机计划与轻量检查。保留square-queue；回退旧分发代码前先关闭开关。",
+  "next_action": "提交上线记录PR；新刊发布后核验plans/due_at及schedule短路行为，保留全部square-queue历史。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
+    "pr_merged": "complete",
+    "deployed": "complete",
     "production_verified": "pending"
   },
   "evidence": "project-docs/releases/2026-09-12-square-random-plan.md"
