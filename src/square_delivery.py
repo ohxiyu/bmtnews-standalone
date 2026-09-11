@@ -8,7 +8,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import math
 import os
 from pathlib import Path
 import subprocess
@@ -45,16 +44,8 @@ def compose(item: dict, date: str) -> str:
 
 
 def read_state(path: Path) -> dict:
-    if not path.exists():
-        return {"version": 1, "editions": {}}
-    state = json.loads(path.read_text())  # Corruption must fail closed, never reset.
-    if not isinstance(state, dict) or state.get("version") != 1 or not isinstance(state.get("editions"), dict):
-        raise ValueError("Invalid Square queue")
-    for rows in state["editions"].values():
-        if not isinstance(rows, dict) or any(not isinstance(row, dict) or row.get("status") not in
-            {"pending", "sent", "unknown", "rejected", "blocked"} for row in rows.values()):
-            raise ValueError("Invalid Square queue entries")
-    return state
+    from .square_plan import load
+    return load(path)
 
 
 def git_checkpoint(directory: Path, state: dict) -> None:
@@ -93,70 +84,11 @@ def send(client: httpx.Client, key: str, text: str) -> dict:
         return {"status": "unknown", "detail": "transport_or_response_error"}
 
 
-def distribute(edition: dict, state: dict, *, now: datetime, client: httpx.Client,
-               key: str, checkpoint, explicit_date: str = "") -> dict:
-    today = now.astimezone(SHANGHAI).date().isoformat()
-    date = edition.get("date")
-    if date != (explicit_date or today):
-        return {"status": "skipped", "reason": "edition_date_mismatch"}
-    items = edition.get("items")
-    if not isinstance(items, list) or len(items) > 100 or any(not isinstance(item, dict) for item in items):
-        raise ValueError("Invalid selected items or daily cap exceeded")
-    rows = state["editions"].setdefault(date, {})
-    candidates = []
-    seen = set()
-    for item in items:
-        identity = story_key(item)
-        if identity not in seen and identity not in rows:
-            candidates.append((identity, item))
-        seen.add(identity)
-    # Normal day: one per hourly slot. Lost/delayed slots increase the next
-    # batch just enough to finish by 23:17. No long-running sleeping runner.
-    hour = now.astimezone(SHANGHAI).hour
-    if hour < 8 and not explicit_date:
-        return {"status": "skipped", "reason": "outside_delivery_window"}
-    slots = max(1, 24 - max(9, hour))
-    # Multiple trigger types share one hourly allowance, not just URL dedup.
-    # Old checkpoints already contain attempted_at; no queue migration required.
-    slot = now.astimezone(SHANGHAI).strftime('%Y-%m-%dT%H')
-    used = 0
-    for row in rows.values():
-        timestamp = row.get("attempted_at")
-        if timestamp:
-            attempted_at = datetime.fromisoformat(timestamp)
-            if attempted_at.tzinfo is None:
-                raise ValueError("Queue attempt time must include timezone")
-            used += attempted_at.astimezone(SHANGHAI).strftime('%Y-%m-%dT%H') == slot
-    budget = max(0, math.ceil((len(candidates) + used) / slots) - used)
-    if len(rows) + len(candidates) > 100:
-        raise ValueError("Daily attempt cap exceeded")
-    attempted = 0
-    for identity, item in candidates[:budget]:
-        try:
-            text = compose(item, date)
-        except ValueError:
-            rows[identity] = {"status": "blocked", "detail": "invalid_content"}
-            checkpoint(state)
-            continue
-        rows[identity] = {"status": "pending", "rank": item.get("rank"),
-            "text_hash": hashlib.sha256(text.encode()).hexdigest(), "attempted_at": now.isoformat()}
-        checkpoint(state)  # Must reach the remote before calling Square.
-        result = send(client, key, text)
-        rows[identity].update(result)
-        checkpoint(state)
-        attempted += 1
-        if result["status"] != "sent":
-            break  # Avoid hammering an expired/restricted key or daily cap.
-    counts = {status: sum(row["status"] == status for row in rows.values())
-              for status in ("sent", "pending", "unknown", "rejected", "blocked")}
-    return {"status": "attention" if any(counts[s] for s in counts if s != "sent") else "ok",
-        "date": date, "selected": len(seen), "attempted": attempted,
-        "remaining": sum(identity not in rows for identity in seen), **counts}
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edition", type=Path, required=True)
+    parser.add_argument("--edition", type=Path)
     parser.add_argument("--queue-dir", type=Path, required=True)
     parser.add_argument("--edition-date", default="")
     args = parser.parse_args()
@@ -164,12 +96,16 @@ def main() -> None:
         print("Square disabled or posting key missing; nothing sent.")
         return
     try:
-        edition = json.loads(args.edition.read_text())
-        state = read_state(args.queue_dir / "queue.json")
+        from .square_plan import load, sync_plan, drain
+        state = load(args.queue_dir / "queue.json")
+        now = datetime.now(SHANGHAI)
+        checkpoint = lambda value: git_checkpoint(args.queue_dir, value)
+        if args.edition:
+            sync_plan(json.loads(args.edition.read_text()), state, now, compose, story_key,
+                      checkpoint, args.edition_date)
         with httpx.Client(timeout=20, follow_redirects=False) as client:
-            report = distribute(edition, state, now=datetime.now(SHANGHAI), client=client,
-                key=os.environ["BINANCE_SQUARE_OPENAPI_KEY"].strip(),
-                checkpoint=lambda value: git_checkpoint(args.queue_dir, value), explicit_date=args.edition_date)
+            report = drain(state, now, client, os.environ["BINANCE_SQUARE_OPENAPI_KEY"].strip(),
+                           checkpoint, send, args.edition_date)
         output = json.dumps(report, ensure_ascii=False)
         print(output)
         if os.getenv("GITHUB_STEP_SUMMARY"):

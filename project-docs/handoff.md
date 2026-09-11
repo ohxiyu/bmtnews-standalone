@@ -5,7 +5,7 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "修复 Square 定时未触发，增加已有发布流程兜底与同小时额度",
+  "goal": "Square持久化随机时间表：日报修订才同步，定时只检查到期队列",
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/74",
   "owner": "Codex / square-distribution",
   "branch": "agent/square-trigger-fix",
@@ -16,18 +16,19 @@
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
     "PR73 已合并，用户已配置专用 Secret 并授权启用；SQUARE_ENABLED=true",
     "查明19:22前 Square 工作流零触发；手动生产恢复 run34593750085，API确认首3条成功且有帖子ID",
-    "新增日报/X成功完成兜底与同小时额度回归测试"
+    "用户追加随机分钟与不重复读取日报，沿用PR75更新，替代旧小时额度方案",
+    "实现持久化正文/due_at、内容修订同步、撤下与已发保护、每5分钟标准库轻量检查、单条发送和至少5分钟间隔"
   ],
   "unfinished": [
-    "PR75已提交，待CI与授权合并；今天剩余11条尚未发送",
-    "合并后验证 workflow_run 真实触发与同小时额度"
+    "PR75待更新后CI与授权合并；未触碰生产队列",
+    "合并后验证随机计划首次初始化、定时仅读队列、全期发送完成情况"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 成功；pytest 768 passed、1既有warning（17.46秒）；Square专项20 passed；治理与diff check通过",
+    "uv sync --frozen --extra dev 成功；全量pytest 773 passed、1既有warning；随机队列专项25 passed；YAML解析、治理和diff check通过",
     "生产首次分发run34593750085成功，3个帖子ID已持久化，详见发布记录"
   ],
   "unverified": [
-    "新增 workflow_run 兜底未上线；API成功不代表已人工检查平台展示/审核状态",
+    "随机计划与workflow_run兜底未上线；GitHub5分钟触发及时性及平台最终审核/展示未验证",
     "Quick Post 生产内容写入仍未验收；本次不改变后台"
   ],
   "production": {
@@ -41,7 +42,7 @@
   "blockers": [
     "本补丁未获合并授权；GitHub 内部为何漏触发不可直接观测"
   ],
-  "next_action": "提交触发修复 PR，审核合并后验证自动兜底。保留 square-queue，不能重发已sent项。",
+  "next_action": "更新PR75并等待授权合并，验证随机计划与轻量检查。保留square-queue；回退旧分发代码前先关闭开关。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -49,7 +50,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-11-square-trigger-fix.md"
+  "evidence": "project-docs/releases/2026-09-12-square-random-plan.md"
 }
 ```
 
