@@ -1,6 +1,65 @@
 {
   "threads": [
     {
+      "thread_id": "evt_0e34fbe324b3b9e9",
+      "event_id": "evt_0e34fbe324b3b9e9",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T13:06:25.008820+08:00",
+      "first_date": "2026-09-10",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Trezor 邮件服务商遭入侵，官方警告用户防范钓鱼攻击",
+      "title_en": "Trezor Warns of Phishing After Email Provider Breach",
+      "summary_zh": "Brevo 事后报告确认，攻击者通过其登录系统的授权边界缺陷访问了 138 个客户账户，其中 6 个被用于发送钓鱼邮件、43 个账户的联系人被导出。Trezor 的钓鱼邮件发送至约 347,000 名订阅者，约 2,500 人在恶意域名被关闭前点击了链接；Trezor 表示将全部约 347,000 个地址视为已泄露并可能被再次用于钓鱼。BitBox 与 CoinTracking 的 Brevo 账户也发送了类似欺诈邮件。Trezor 仍然确认钱包与私钥未受影响。",
+      "summary_en": "Brevo's postmortem confirms an attacker accessed 138 client accounts through an authorization-boundary flaw in its login system; six were used to send phishing emails and contacts were exported from 43. Trezor's phishing email reached roughly 347,000 subscribers, with about 2,500 people accessing the link before the malicious domain was disabled; Trezor is treating all ~347,000 addresses as known to the attacker and potentially reusable for phishing. Brevo accounts for BitBox and CoinTracking also sent similar fraudulent messages. Trezor maintains that no wallets or private keys were exposed.",
+      "latest_update_zh": "Brevo 发布事后报告，披露攻击者利用其登录系统的缺陷创建账户、启用单点登录并邀请合法用户进入配置，导致授权边界失效，攻击者因此访问了 138 个客户账户。其中 6 个账户被用于发送钓鱼邮件，联系人从 43 个账户被导出。Trezor 确认钓鱼邮件发送给约 347,000 名订阅者，域名在 20 分钟内于 DNS 层被关闭，但约有 2,500 人在关闭前点击了链接；BitBox 与 CoinTracking 的 Brevo 账户也被用于发送类似钓鱼邮件。",
+      "latest_update_en": "Brevo published a postmortem disclosing the root cause: an attacker created a Brevo account, enabled single sign-on and invited legitimate users into the configuration, causing an authorization boundary failure that granted access to 138 client accounts. Six accounts were used to send phishing emails and contacts were exported from 43 accounts. Trezor confirmed the phishing email went to roughly 347,000 subscribers, that the domain was disabled at the DNS level within 20 minutes, and that about 2,500 people accessed the link before takedown; Brevo accounts belonging to BitBox and CoinTracking were also used for similar phishing emails.",
+      "background_zh": "硬件钱包是离线存储加密货币私钥的物理设备，用户通过助记词（恢复短语）备份，以便在设备丢失时恢复资金。冒充钱包厂商的钓鱼邮件是常见攻击手段，而邮件服务商遭入侵后，攻击者发出的邮件能通过身份验证并显得十分可信。虚假的 STM32 说法利用的是人们对近期 Coldcard 固件漏洞的担忧——该漏洞绕过了随机数生成器，并被指与超过 1.3 亿美元的比特币被盗有关。",
+      "background_en": "Hardware wallets are physical devices that store cryptocurrency private keys offline, and users back them up with a seed phrase (recovery phrase) that can restore funds if the device is lost. Phishing emails that impersonate wallet vendors are a common attack, but a compromised email provider lets attackers send messages that pass authentication checks and appear legitimate. The fake STM32 claim plays on fears from a recent Coldcard firmware flaw that bypassed its random number generator and was linked to over $130 million in stolen Bitcoin.",
+      "latest_summary_zh": "An attacker exploited a flaw in Brevo's login system to access 138 client accounts and send phishing emails to roughly 347,000 Trezor newsletter subscribers, with similar fraudulent messages sent via BitBox and CoinTracking accounts.",
+      "latest_summary_en": "An attacker exploited a flaw in Brevo's login system to access 138 client accounts and send phishing emails to roughly 347,000 Trezor newsletter subscribers, with similar fraudulent messages sent via BitBox and CoinTracking accounts.",
+      "discussion_zh": "安全研究人员和业内人士普遍转发并认同这一警告。Nick Neuman 表示该攻击行动可能不止影响 Trezor，并建议用户不要轻信带有可疑链接的服务商邮件；Jameson Lopp 则指出这些邮件“看起来并非伪造”，且 Trezor 与 BitBox 均未发布任何真实的安全公告。",
+      "discussion_en": "Security researchers and industry figures amplified the warning rather than disputing it. Nick Neuman said the campaign likely extends beyond Trezor and advised users not to trust provider emails with sketchy links, while Jameson Lopp noted the emails 'don't appear to be spoofed' and that no legitimate security advisory had been issued for either Trezor or BitBox.",
+      "market_impact_zh": "此次入侵主要是 Trezor 的品牌声誉与运营风险，并在同类供应商事件之后加剧了人们对自托管基础设施安全性的整体担忧。由于没有协议、交易所或资产被直接利用，市场传导是间接的：对钓鱼攻击的担忧上升可能让部分用户在与钱包服务商进行线上交互时更加谨慎，但不存在影响特定加密资产的直接价格或流动性渠道。",
+      "market_impact_en": "The breach is primarily a reputational and operational risk for Trezor, and it adds to broader anxiety about the security of self-custody infrastructure after similar vendor incidents. Since no protocol, exchange, or asset was directly exploited, the market transmission is indirect: rising phishing fears could make some users more cautious about online interactions with wallet providers, but there is no direct price or liquidity channel affecting specific crypto assets.",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://decrypt.co/377831/bitcoin-wallet-trezor-hackers-breach-email",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/brevo-login-flaw-trezor-bitbox-cointracking-phishing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://beincrypto.com/trezor-email-provider-breach-phishing/",
+          "title": "Trezor Reports Another Security Incident: What Users Should Know"
+        },
+        {
+          "url": "https://glitchwire.com/news/trezor-warns-of-email-provider-breach-as-phishing-attacks-escalate-across-crypto/",
+          "title": "Trezor Warns of Email Provider Breach as Phishing Attacks Escalate Across Crypto — Glitchwire"
+        },
+        {
+          "url": "https://www.gncrypto.news/news/trezor-email-provider-breach-phishing-stm32/",
+          "title": "Trezor Warns Customers After Email Provider Breach, Phishing"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_bf6ebd5e0c99f69a",
       "event_id": "evt_bf6ebd5e0c99f69a",
       "latest_date": "2026-09-11",
@@ -3631,6 +3690,65 @@
         }
       ],
       "reference_links": []
+    },
+    {
+      "thread_id": "evt_0e34fbe324b3b9e9",
+      "event_id": "evt_0e34fbe324b3b9e9",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T13:06:25.008820+08:00",
+      "first_date": "2026-09-10",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Trezor 邮件服务商遭入侵，官方警告用户防范钓鱼攻击",
+      "title_en": "Trezor Warns of Phishing After Email Provider Breach",
+      "summary_zh": "Brevo 事后报告确认，攻击者通过其登录系统的授权边界缺陷访问了 138 个客户账户，其中 6 个被用于发送钓鱼邮件、43 个账户的联系人被导出。Trezor 的钓鱼邮件发送至约 347,000 名订阅者，约 2,500 人在恶意域名被关闭前点击了链接；Trezor 表示将全部约 347,000 个地址视为已泄露并可能被再次用于钓鱼。BitBox 与 CoinTracking 的 Brevo 账户也发送了类似欺诈邮件。Trezor 仍然确认钱包与私钥未受影响。",
+      "summary_en": "Brevo's postmortem confirms an attacker accessed 138 client accounts through an authorization-boundary flaw in its login system; six were used to send phishing emails and contacts were exported from 43. Trezor's phishing email reached roughly 347,000 subscribers, with about 2,500 people accessing the link before the malicious domain was disabled; Trezor is treating all ~347,000 addresses as known to the attacker and potentially reusable for phishing. Brevo accounts for BitBox and CoinTracking also sent similar fraudulent messages. Trezor maintains that no wallets or private keys were exposed.",
+      "latest_update_zh": "Brevo 发布事后报告，披露攻击者利用其登录系统的缺陷创建账户、启用单点登录并邀请合法用户进入配置，导致授权边界失效，攻击者因此访问了 138 个客户账户。其中 6 个账户被用于发送钓鱼邮件，联系人从 43 个账户被导出。Trezor 确认钓鱼邮件发送给约 347,000 名订阅者，域名在 20 分钟内于 DNS 层被关闭，但约有 2,500 人在关闭前点击了链接；BitBox 与 CoinTracking 的 Brevo 账户也被用于发送类似钓鱼邮件。",
+      "latest_update_en": "Brevo published a postmortem disclosing the root cause: an attacker created a Brevo account, enabled single sign-on and invited legitimate users into the configuration, causing an authorization boundary failure that granted access to 138 client accounts. Six accounts were used to send phishing emails and contacts were exported from 43 accounts. Trezor confirmed the phishing email went to roughly 347,000 subscribers, that the domain was disabled at the DNS level within 20 minutes, and that about 2,500 people accessed the link before takedown; Brevo accounts belonging to BitBox and CoinTracking were also used for similar phishing emails.",
+      "background_zh": "硬件钱包是离线存储加密货币私钥的物理设备，用户通过助记词（恢复短语）备份，以便在设备丢失时恢复资金。冒充钱包厂商的钓鱼邮件是常见攻击手段，而邮件服务商遭入侵后，攻击者发出的邮件能通过身份验证并显得十分可信。虚假的 STM32 说法利用的是人们对近期 Coldcard 固件漏洞的担忧——该漏洞绕过了随机数生成器，并被指与超过 1.3 亿美元的比特币被盗有关。",
+      "background_en": "Hardware wallets are physical devices that store cryptocurrency private keys offline, and users back them up with a seed phrase (recovery phrase) that can restore funds if the device is lost. Phishing emails that impersonate wallet vendors are a common attack, but a compromised email provider lets attackers send messages that pass authentication checks and appear legitimate. The fake STM32 claim plays on fears from a recent Coldcard firmware flaw that bypassed its random number generator and was linked to over $130 million in stolen Bitcoin.",
+      "latest_summary_zh": "An attacker exploited a flaw in Brevo's login system to access 138 client accounts and send phishing emails to roughly 347,000 Trezor newsletter subscribers, with similar fraudulent messages sent via BitBox and CoinTracking accounts.",
+      "latest_summary_en": "An attacker exploited a flaw in Brevo's login system to access 138 client accounts and send phishing emails to roughly 347,000 Trezor newsletter subscribers, with similar fraudulent messages sent via BitBox and CoinTracking accounts.",
+      "discussion_zh": "安全研究人员和业内人士普遍转发并认同这一警告。Nick Neuman 表示该攻击行动可能不止影响 Trezor，并建议用户不要轻信带有可疑链接的服务商邮件；Jameson Lopp 则指出这些邮件“看起来并非伪造”，且 Trezor 与 BitBox 均未发布任何真实的安全公告。",
+      "discussion_en": "Security researchers and industry figures amplified the warning rather than disputing it. Nick Neuman said the campaign likely extends beyond Trezor and advised users not to trust provider emails with sketchy links, while Jameson Lopp noted the emails 'don't appear to be spoofed' and that no legitimate security advisory had been issued for either Trezor or BitBox.",
+      "market_impact_zh": "此次入侵主要是 Trezor 的品牌声誉与运营风险，并在同类供应商事件之后加剧了人们对自托管基础设施安全性的整体担忧。由于没有协议、交易所或资产被直接利用，市场传导是间接的：对钓鱼攻击的担忧上升可能让部分用户在与钱包服务商进行线上交互时更加谨慎，但不存在影响特定加密资产的直接价格或流动性渠道。",
+      "market_impact_en": "The breach is primarily a reputational and operational risk for Trezor, and it adds to broader anxiety about the security of self-custody infrastructure after similar vendor incidents. Since no protocol, exchange, or asset was directly exploited, the market transmission is indirect: rising phishing fears could make some users more cautious about online interactions with wallet providers, but there is no direct price or liquidity channel affecting specific crypto assets.",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://decrypt.co/377831/bitcoin-wallet-trezor-hackers-breach-email",
+          "title": "Decrypt",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/brevo-login-flaw-trezor-bitbox-cointracking-phishing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://beincrypto.com/trezor-email-provider-breach-phishing/",
+          "title": "Trezor Reports Another Security Incident: What Users Should Know"
+        },
+        {
+          "url": "https://glitchwire.com/news/trezor-warns-of-email-provider-breach-as-phishing-attacks-escalate-across-crypto/",
+          "title": "Trezor Warns of Email Provider Breach as Phishing Attacks Escalate Across Crypto — Glitchwire"
+        },
+        {
+          "url": "https://www.gncrypto.news/news/trezor-email-provider-breach-phishing-stm32/",
+          "title": "Trezor Warns Customers After Email Provider Breach, Phishing"
+        }
+      ]
     },
     {
       "thread_id": "evt_dfdbe0c9a334bce8",

@@ -2,6 +2,25 @@
   "version": 1,
   "events": [
     {
+      "event_id": "evt_0e34fbe324b3b9e9",
+      "url": "https://bmt.news/events/evt_0e34fbe324b3b9e9/",
+      "json": "https://bmt.news/api/events/evt_0e34fbe324b3b9e9.json",
+      "status": "developing",
+      "type": "security_incident",
+      "title": {
+        "zh": "Trezor 邮件服务商遭入侵，官方警告用户防范钓鱼攻击",
+        "en": "Trezor Warns of Phishing After Email Provider Breach"
+      },
+      "current_state": {
+        "zh": "Brevo 事后报告确认，攻击者通过其登录系统的授权边界缺陷访问了 138 个客户账户，其中 6 个被用于发送钓鱼邮件、43 个账户的联系人被导出。Trezor 的钓鱼邮件发送至约 347,000 名订阅者，约 2,500 人在恶意域名被关闭前点击了链接；Trezor 表示将全部约 347,000 个地址视为已泄露并可能被再次用于钓鱼。BitBox 与 CoinTracking 的 Brevo 账户也发送了类似欺诈邮件。Trezor 仍然确认钱包与私钥未受影响。",
+        "en": "Brevo's postmortem confirms an attacker accessed 138 client accounts through an authorization-boundary flaw in its login system; six were used to send phishing emails and contacts were exported from 43. Trezor's phishing email reached roughly 347,000 subscribers, with about 2,500 people accessing the link before the malicious domain was disabled; Trezor is treating all ~347,000 addresses as known to the attacker and potentially reusable for phishing. Brevo accounts for BitBox and CoinTracking also sent similar fraudulent messages. Trezor maintains that no wallets or private keys were exposed."
+      },
+      "first_seen_at": "2026-09-10T00:31:45.624208+00:00",
+      "last_material_change_at": "2026-09-11T05:06:25.008820+00:00",
+      "updates_count": 2,
+      "sources_count": 2
+    },
+    {
       "event_id": "evt_bf6ebd5e0c99f69a",
       "url": "https://bmt.news/events/evt_bf6ebd5e0c99f69a/",
       "json": "https://bmt.news/api/events/evt_bf6ebd5e0c99f69a.json",

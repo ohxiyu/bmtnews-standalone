@@ -36260,11 +36260,12 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider.",
-      "current_state_zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。",
+      "current_state_en": "Brevo's postmortem confirms an attacker accessed 138 client accounts through an authorization-boundary flaw in its login system; six were used to send phishing emails and contacts were exported from 43. Trezor's phishing email reached roughly 347,000 subscribers, with about 2,500 people accessing the link before the malicious domain was disabled; Trezor is treating all ~347,000 addresses as known to the attacker and potentially reusable for phishing. Brevo accounts for BitBox and CoinTracking also sent similar fraudulent messages. Trezor maintains that no wallets or private keys were exposed.",
+      "current_state_zh": "Brevo 事后报告确认，攻击者通过其登录系统的授权边界缺陷访问了 138 个客户账户，其中 6 个被用于发送钓鱼邮件、43 个账户的联系人被导出。Trezor 的钓鱼邮件发送至约 347,000 名订阅者，约 2,500 人在恶意域名被关闭前点击了链接；Trezor 表示将全部约 347,000 个地址视为已泄露并可能被再次用于钓鱼。BitBox 与 CoinTracking 的 Brevo 账户也发送了类似欺诈邮件。Trezor 仍然确认钱包与私钥未受影响。",
       "entities": [
         "after",
         "breach",
+        "brevo",
         "email",
         "phishing",
         "provider",
@@ -36275,15 +36276,16 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-10T00:31:45.624208Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-10T00:31:45.624208Z",
-      "last_updated_at": "2026-09-10T00:31:45.624208Z",
+      "last_material_change_at": "2026-09-11T05:06:25.008820Z",
+      "last_updated_at": "2026-09-11T05:06:25.008820Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Trezor Warns of Phishing After Email Provider Breach",
       "title_zh": "Trezor 邮件服务商遭入侵，官方警告用户防范钓鱼攻击",
       "topics": [
         "breach",
+        "brevo",
         "phishing",
         "trezor"
       ],
@@ -36338,6 +36340,44 @@
           "update_type": "initial",
           "what_changed_en": "Trezor disclosed that its third-party email provider was breached, allowing attackers to send phishing emails from its legitimate domain. The fake alert claims a critical STM32 entropy vulnerability affects some devices and urges users to click a link; Trezor has taken down the malicious domain and is investigating.\n\nBecause Trezor is a leading hardware wallet maker, a compromised official email channel creates a credible phishing vector that could trick users into exposing recovery phrases or sending funds. The incident, which follows an earlier vendor breach and a recent Coldcard RNG exploit, underscores rising supply-chain and social-engineering risks in the crypto self-custody ecosystem.\n\nThe phishing email claims engineers found a 'critical hardware-level vulnerability' in STM32 microcontrollers and falsely estimates one in four devices could have weak recovery-phrase randomness. Trezor confirms that no wallets or private keys were exposed, while Casa's Nick Neuman and Jameson Lopp report that BitBox users received similar emails, suggesting the compromise may extend beyond a single provider.",
           "what_changed_zh": "Trezor 披露其第三方电子邮件服务商遭到入侵，攻击者得以从其合法域名发送钓鱼邮件。伪造的警报声称 STM32 熵漏洞影响部分设备并诱导用户点击链接；Trezor 已查封恶意域名并展开调查。\n\n由于 Trezor 是领先的硬件钱包厂商，其官方邮件渠道遭到入侵会形成可信的钓鱼途径，可能诱骗用户泄露助记词或转出资金。此次事件发生在先前供应商遭入侵以及近期 Coldcard 随机数漏洞之后，凸显了加密自托管生态中日益上升的供应链与社会工程风险。\n\n钓鱼邮件声称工程师在 STM32 微控制器中发现了“关键硬件级漏洞”，并错误地宣称大约四分之一的设备可能存在助记词随机性不足的问题。Trezor 确认钱包和私钥并未泄露；Casa 的 Nick Neuman 与 Jameson Lopp 表示 BitBox 用户也收到了类似邮件，暗示入侵影响的范围可能不止一家服务商。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "Brevo's postmortem confirms an attacker accessed 138 client accounts through an authorization-boundary flaw in its login system; six were used to send phishing emails and contacts were exported from 43. Trezor's phishing email reached roughly 347,000 subscribers, with about 2,500 people accessing the link before the malicious domain was disabled; Trezor is treating all ~347,000 addresses as known to the attacker and potentially reusable for phishing. Brevo accounts for BitBox and CoinTracking also sent similar fraudulent messages. Trezor maintains that no wallets or private keys were exposed.",
+          "current_state_zh": "Brevo 事后报告确认，攻击者通过其登录系统的授权边界缺陷访问了 138 个客户账户，其中 6 个被用于发送钓鱼邮件、43 个账户的联系人被导出。Trezor 的钓鱼邮件发送至约 347,000 名订阅者，约 2,500 人在恶意域名被关闭前点击了链接；Trezor 表示将全部约 347,000 个地址视为已泄露并可能被再次用于钓鱼。BitBox 与 CoinTracking 的 Brevo 账户也发送了类似欺诈邮件。Trezor 仍然确认钱包与私钥未受影响。",
+          "detailed_summary_en": "An attacker exploited a flaw in Brevo's login system to access 138 client accounts and send phishing emails to roughly 347,000 Trezor newsletter subscribers, with similar fraudulent messages sent via BitBox and CoinTracking accounts.",
+          "detailed_summary_zh": "An attacker exploited a flaw in Brevo's login system to access 138 client accounts and send phishing emails to roughly 347,000 Trezor newsletter subscribers, with similar fraudulent messages sent via BitBox and CoinTracking accounts.",
+          "event_id": "evt_0e34fbe324b3b9e9",
+          "first_seen_at": "2026-09-11T05:06:25.008820Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T04:21:14Z",
+          "published_at": "2026-09-11T04:21:14Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/brevo-login-flaw-trezor-bitbox-cointracking-phishing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:d1c27506cbdc3903"
+          ],
+          "time_precision": "published",
+          "title_en": "Brevo login flaw enabled phishing email targeting 347K Trezor subscribers",
+          "title_zh": "Brevo login flaw enabled phishing email targeting 347K Trezor subscribers",
+          "update_id": "upd_57e94f09602d662b",
+          "update_type": "escalation",
+          "what_changed_en": "Brevo published a postmortem disclosing the root cause: an attacker created a Brevo account, enabled single sign-on and invited legitimate users into the configuration, causing an authorization boundary failure that granted access to 138 client accounts. Six accounts were used to send phishing emails and contacts were exported from 43 accounts. Trezor confirmed the phishing email went to roughly 347,000 subscribers, that the domain was disabled at the DNS level within 20 minutes, and that about 2,500 people accessed the link before takedown; Brevo accounts belonging to BitBox and CoinTracking were also used for similar phishing emails.",
+          "what_changed_zh": "Brevo 发布事后报告，披露攻击者利用其登录系统的缺陷创建账户、启用单点登录并邀请合法用户进入配置，导致授权边界失效，攻击者因此访问了 138 个客户账户。其中 6 个账户被用于发送钓鱼邮件，联系人从 43 个账户被导出。Trezor 确认钓鱼邮件发送给约 347,000 名订阅者，域名在 20 分钟内于 DNS 层被关闭，但约有 2,500 人在关闭前点击了链接；BitBox 与 CoinTracking 的 Brevo 账户也被用于发送类似钓鱼邮件。"
         }
       ]
     },
@@ -37158,7 +37198,7 @@
       "first_seen_at": "2026-09-10T16:35:51.999820Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-10T16:35:51.999820Z",
-      "last_updated_at": "2026-09-10T16:35:51.999820Z",
+      "last_updated_at": "2026-09-11T05:06:14.958915Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -37195,10 +37235,17 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPV2tRaXFUaXJmbG14WWhLQk40ZVIxQTR4ZG1SSGJCak1qYXFySEhyN0ZCdkFybTRDaWZoRDh4SzVyR3hRdWZZX29Bb0lyZzVlQUw3ZDA0U0d0MlJURXRicDVTUnRjQ0tHc3l5bEtaSFJqb0xzeWszRF9wRWI1cE9vOHNaWTViLVVDWFE?oc=5"
+            },
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX2lNUE1vRTZOX084T0cyRzJ6NjY1TUpBQ0pjb1Y1RjFlZ1RZbG9lSDh4VHNIYldjb1Q4Mm1DMmljNzdsZVdHOF8yaURMWk1tUTl6QmR1emEtT1QyNDUwVHU1LWVZU29iYTlCOW81ZHRiX19iZmdTTmdZcExKcGxHQWJ1Sks4RXBfcE52ai1R?oc=5"
             }
           ],
           "story_ids": [
-            "google_news:article:bce4827a0ef7365e"
+            "google_news:article:bce4827a0ef7365e",
+            "google_news:article:6d7fffd6244f5102"
           ],
           "time_precision": "published",
           "title_en": "#secapprovesnasdaqtexascommoditytrustrule Community Insights & Market Sentiment | Binance Square - Binance",
@@ -38837,7 +38884,7 @@
       "first_seen_at": "2026-09-10T16:35:59.968372Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-10T16:35:59.968372Z",
-      "last_updated_at": "2026-09-10T16:35:59.968372Z",
+      "last_updated_at": "2026-09-11T05:06:14.959296Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -38892,11 +38939,18 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOb3VFbk9WdnFGdFFaZlR6LVhnSS1XSTF5RHZnMlVxWUEwYjNYZWREb1Nab3dmUjE2NUlrRXJEXzFSVnJlcjUzcm44NFFsMTdvNUFDQ1hrWWFkVG1taWMxVWZXVVJhUUo4ZXhoa3lvQlcxYnNubFRHR1pSR2Q3VHVFbQ?oc=5"
+            },
+            {
+              "label": "Bitcoin News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUm1ISnVHcnJMMUJlZ3BJc0hwWFJ3bGZUZVlHdll3enduNlFZbEVLUmZLSkhYSDlYZGhaLUJnTS1NLXh6UFRSWGVhVGFoYnRjTDlJcTdzTTVVMDZad0pYeU55azh1bElTWHM2M2lxQ3Y0NjRLUS1mdFQ2eU80Qml4OXM1aldmY3UxVmoyMFl1OTdTTjVkY3ltOTJYX0tIaFRINTdTNGFn?oc=5"
             }
           ],
           "story_ids": [
             "rss:cointelegraph.com_rss:fa704a3d682f3ebd",
-            "google_news:article:ba56e25d6e6facf9"
+            "google_news:article:ba56e25d6e6facf9",
+            "google_news:article:acb04883d695d010"
           ],
           "time_precision": "published",
           "title_en": "Coinbase, Moov to provide stablecoin infrastructure for US community banks",
@@ -40529,6 +40583,370 @@
           "what_changed_zh": "OpenAI 推出了 Agents API，这是一项由 Codex harness 驱动的托管服务，让开发者能够构建并启动具备编排能力、长时运行会话和工具调用能力的云端智能体。该 API 直接运行 Codex harness 并接管底层智能体基础设施，使团队可以专注于智能体本身要完成的任务，而不必操心维持其运行的运行时环境。\n\n这标志着智能体部署正从自托管的 DIY 框架转向由头部 AI 实验室提供的托管运行时，有可能在整个生态中统一长时运行、可调用工具的智能体的构建与部署方式。同时，由于开发者如今多了一个来自 OpenAI 的第一方选择，这也会给开源智能体框架以及自建智能体运行时的云厂商带来更大的竞争压力。\n\n根据 OpenAI 的 API 文档，Agents API 包含自动上下文压缩（automatic context compaction）、多智能体编排、程序化工具调用以及对 MCP 的支持，而 Codex harness 则负责线程恢复、工具续跑、上下文压缩和 app-server 执行等底层会话行为。它建立在更早的 Agents SDK 及其向原生沙箱执行与模型原生 harness 演进的基础上。"
         }
       ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+      "current_state_zh": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+      "entities": [
+        "client",
+        "coinmarketcap",
+        "data",
+        "demand",
+        "extortion",
+        "kraken",
+        "over",
+        "pay",
+        "refuses",
+        "stolen"
+      ],
+      "event_id": "evt_ac308632afb3e340",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-11T05:06:14.958408Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T05:06:14.958408Z",
+      "last_updated_at": "2026-09-11T05:06:14.958408Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kraken Refuses To Pay Extortion Demand Over Stolen Client Data - CoinMarketCap",
+      "title_zh": "Kraken Refuses To Pay Extortion Demand Over Stolen Client Data - CoinMarketCap",
+      "topics": [
+        "data-breach",
+        "extortion",
+        "kraken"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+          "current_state_zh": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+          "detailed_summary_en": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+          "detailed_summary_zh": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+          "event_id": "evt_ac308632afb3e340",
+          "first_seen_at": "2026-09-11T05:06:14.958408Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T19:54:39Z",
+          "published_at": "2026-09-10T19:54:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinMarketCap",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOeEJEbFZ5bTFMNlg3NGliOUdTenFfTXdYV0tDdXVxSHJLbG1DQVkyR256SWJEV3l6UXZaWlE5d1VpeEdlM1hXd2dXbmFWVFFxbHZnVVA1em9Tc1pXMEJHQUlqcVZDX0J1VjVkVlhBWVNSZUt6ZVVQLTUxdEppdWRTdENHRnJETnluSlBXR3RsMVhiZzhKYTIzb04wUUxPMndBNlV2cVFHUQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:400eba9b141e13a1"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken Refuses To Pay Extortion Demand Over Stolen Client Data - CoinMarketCap",
+          "title_zh": "Kraken Refuses To Pay Extortion Demand Over Stolen Client Data - CoinMarketCap",
+          "update_id": "upd_a63fed1a3f7e255c",
+          "update_type": "initial",
+          "what_changed_en": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges.",
+          "what_changed_zh": "Kraken has refused to pay an extortion demand after client data was stolen, highlighting ongoing security challenges for cryptocurrency exchanges."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+      "current_state_zh": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+      "entities": [
+        "account",
+        "agent",
+        "analytics",
+        "builds",
+        "coinbase",
+        "financial",
+        "insight",
+        "scales",
+        "trading"
+      ],
+      "event_id": "evt_c3f09a5a1de0699e",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-11T05:06:14.959023Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T05:06:14.959023Z",
+      "last_updated_at": "2026-09-11T05:06:14.959023Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase Builds AI Financial Account as Agent Trading Scales - Analytics Insight",
+      "title_zh": "Coinbase Builds AI Financial Account as Agent Trading Scales - Analytics Insight",
+      "topics": [
+        "coinbase"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+          "current_state_zh": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+          "detailed_summary_en": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+          "detailed_summary_zh": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+          "event_id": "evt_c3f09a5a1de0699e",
+          "first_seen_at": "2026-09-11T05:06:14.959023Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T17:52:09Z",
+          "published_at": "2026-09-10T17:52:09Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Analytics Insight",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTmozTmVHVVBDQ0hSVHFtOEt3UEEzZFI2RjRTNEQ3MTdfc2VFYTEwYzk0YXhreXotOHVBQzhQTHgxa2FLZkR5SmlRbUlSMDZDVEFoMndzU21IWWNDVUJWTjFVX2RYUlJkY2V4dHNidkVJZTNGUlhnWWo2ZE1ZVFExS0pZWHZVVGNoOEQzVlR4UUtPUy1SVl9ZUkcxdUNIUGYxbUxSQ0hBX0hIMXZP0gGsAUFVX3lxTE5OajNOZUdVUENDSFJUcW04S3dQQTNkUjZGNFM0RDcxN19zZUVhMTBjOTRheGt5ei04dUFDOFBMeDFrYUtmRHlKaVFtSVIwNkNUQWgyd3NTbUhZY0NVQlZOMVVfZFhSUmRjZXh0c2J2RUllM0ZSWGdZajZkTVlUUTFLSllYdlVUY2g4RDNWVHhRS09TLVJWX1lSRzF1Q0hQZjFtTFJDSEFfSEgxdk8?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:6194d4f0b7718aab"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Builds AI Financial Account as Agent Trading Scales - Analytics Insight",
+          "title_zh": "Coinbase Builds AI Financial Account as Agent Trading Scales - Analytics Insight",
+          "update_id": "upd_acf563227a6b06ed",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance.",
+          "what_changed_zh": "Coinbase is building an AI financial account product as AI-agent trading activity scales, positioning the exchange at the intersection of crypto and autonomous agent finance."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+      "current_state_zh": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+      "entities": [
+        "agents",
+        "api",
+        "openai"
+      ],
+      "event_id": "evt_53a40df9a9aa93e6",
+      "event_type": "other",
+      "first_seen_at": "2026-09-11T05:06:15.293550Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T05:06:15.293550Z",
+      "last_updated_at": "2026-09-11T05:06:15.293550Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI Agents API",
+      "title_zh": "OpenAI Agents API",
+      "topics": [
+        "ai-infrastructure",
+        "api",
+        "developer-tools",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+          "current_state_zh": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+          "detailed_summary_en": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+          "detailed_summary_zh": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+          "event_id": "evt_53a40df9a9aa93e6",
+          "first_seen_at": "2026-09-11T05:06:15.293550Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-10T19:43:22Z",
+          "published_at": "2026-09-10T19:43:22Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49649213"
+            }
+          ],
+          "sources": [
+            {
+              "label": "aquir",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://developers.openai.com/api/docs/guides/agents-api/overview"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49649213"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI Agents API",
+          "title_zh": "OpenAI Agents API",
+          "update_id": "upd_274e32ce6b65df09",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in.",
+          "what_changed_zh": "OpenAI released an Agents API that lets developers run hosted agent harnesses and plug in tools, prompting Hacker News discussion about abstraction design, remote hosting tradeoffs, and vendor lock-in."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+      "current_state_zh": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+      "entities": [
+        "finland",
+        "google"
+      ],
+      "event_id": "evt_ca030bbb1e560c23",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-11T05:06:15.293612Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T05:06:15.293612Z",
+      "last_updated_at": "2026-09-11T05:06:15.293612Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Google will buy half the electricity from one of Finland's nuclear power plants",
+      "title_zh": "Google will buy half the electricity from one of Finland's nuclear power plants",
+      "topics": [
+        "data-centers",
+        "energy-markets",
+        "finland",
+        "google",
+        "nuclear-energy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+          "current_state_zh": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+          "detailed_summary_en": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+          "detailed_summary_zh": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+          "event_id": "evt_ca030bbb1e560c23",
+          "first_seen_at": "2026-09-11T05:06:15.293612Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T00:42:41Z",
+          "published_at": "2026-09-11T00:42:41Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49652105"
+            }
+          ],
+          "sources": [
+            {
+              "label": "lukaspetersson",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.bbc.com/news/articles/c8r6y4me2g6o"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49652105"
+          ],
+          "time_precision": "published",
+          "title_en": "Google will buy half the electricity from one of Finland's nuclear power plants",
+          "title_zh": "Google will buy half the electricity from one of Finland's nuclear power plants",
+          "update_id": "upd_4a1a14a12d9cf156",
+          "update_type": "initial",
+          "what_changed_en": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand.",
+          "what_changed_zh": "Google signed a 22-year contract with Finnish utility Fortum to buy up to half the output of the Loviisa nuclear power plant, underscoring the scale of data-center electricity demand."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+      "current_state_zh": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+      "entities": [
+        "bankman",
+        "court",
+        "fraud",
+        "fried",
+        "sam",
+        "sam-bankman-fried",
+        "supreme"
+      ],
+      "event_id": "evt_c325b1cf41632184",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-11T05:06:16.620235Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T05:06:16.620235Z",
+      "last_updated_at": "2026-09-11T05:06:16.620235Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Sam Bankman-Fried asks Supreme Court to overturn fraud conviction and $11 billion forfeiture",
+      "title_zh": "Sam Bankman-Fried asks Supreme Court to overturn fraud conviction and $11 billion forfeiture",
+      "topics": [
+        "crypto-regulation",
+        "fraud",
+        "ftx",
+        "legal",
+        "sam-bankman-fried"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+          "current_state_zh": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+          "detailed_summary_en": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+          "detailed_summary_zh": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+          "event_id": "evt_c325b1cf41632184",
+          "first_seen_at": "2026-09-11T05:06:16.620235Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T04:20:15Z",
+          "published_at": "2026-09-11T04:20:15Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-11-sam-bankman-fried-supreme-court-petition-414226"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:74dadad872ade5a9"
+          ],
+          "time_precision": "published",
+          "title_en": "Sam Bankman-Fried asks Supreme Court to overturn fraud conviction and $11 billion forfeiture",
+          "title_zh": "Sam Bankman-Fried asks Supreme Court to overturn fraud conviction and $11 billion forfeiture",
+          "update_id": "upd_2dea377b6990583f",
+          "update_type": "initial",
+          "what_changed_en": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse.",
+          "what_changed_zh": "Sam Bankman-Fried has petitioned the U.S. Supreme Court to overturn his fraud conviction and $11 billion forfeiture, arguing he was unfairly barred from presenting evidence that FTX held enough assets to cover losses from its collapse."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -40648,7 +41066,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "Landmark crypto market-structure legislation advancing to a pivotal Senate vote represents a regulatory development with a clear transmission path to market access and industry structure. The revised bill text and imminent vote are high-value, though the outcome remains uncertain and the article itself is brief.",
         "ai_score": 8.0,
@@ -40685,6 +41103,35 @@
         "source_type": "rss",
         "title": "Senate Republicans unveil revised crypto bill ahead of key Clarity Act vote next week",
         "url": "https://www.theblock.co/news/regulation/2026-09-10-senate-republicans-unveil-revised-crypto-bill-ahead-of-key-clarity-act-vote-next-week-414180"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Nasdaq's $100M strategic investment in Kraken's parent Payward and plans to launch tokenized Nasdaq stocks by 2027 is a significant institutional and market-structure development, signaling deeper TradFi-crypto convergence with potential to reshape equity trading and tokenization adoption.",
+        "ai_score": 8.0,
+        "ai_summary": "Nasdaq has invested $100 million in Kraken parent company Payward and is targeting a 2027 launch of tokenized Nasdaq-listed stocks.",
+        "ai_tags": [
+          "kraken",
+          "nasdaq",
+          "tokenization",
+          "institutional-adoption",
+          "market-structure"
+        ],
+        "author": "blockhead.co",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1FCbkh2ZEx1d185WjlGMVdieVZDZTRzRTRoQzNNRzd0ZHY0dWFUN0ZmZ2hYRHRXU2JLbzgtYkFUYVhZR2ZaNk0xTHNnRVpmZ2c2RmxKVDNpaF9JU1prX2RzcG1pZ0R4YnB5N0l4d3IzZmMyQmxkLWRBc19vS0h5YUNtQWdvYmYzS3dMOW0wZ2N3MXlzWl9GSzVObjJFNG1jUWRVRk9XbDZFUFAxaVp3SG0wdHVUZGV5OERKeGFfZmpTdFhGNTdOZ3kxNnF3cWt6?oc=5\" target=\"_blank\">Nasdaq Invests $100 Million in Kraken Parent Payward, Targets 2027 Launch of Tokenized Nasdaq Stocks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">blockhead.co</font>",
+        "fetched_at": "2026-09-11T05:06:14.958371Z",
+        "id": "google_news:article:9db98d3bfd708b55",
+        "metadata": {
+          "category": "exchange-announcements",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_name": "blockhead.co"
+        },
+        "published_at": "2026-09-11T03:49:10Z",
+        "source_type": "google_news",
+        "title": "Nasdaq Invests $100 Million in Kraken Parent Payward, Targets 2027 Launch of Tokenized Nasdaq Stocks - blockhead.co",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1FCbkh2ZEx1d185WjlGMVdieVZDZTRzRTRoQzNNRzd0ZHY0dWFUN0ZmZ2hYRHRXU2JLbzgtYkFUYVhZR2ZaNk0xTHNnRVpmZ2c2RmxKVDNpaF9JU1prX2RzcG1pZ0R4YnB5N0l4d3IzZmMyQmxkLWRBc19vS0h5YUNtQWdvYmYzS3dMOW0wZ2N3MXlzWl9GSzVObjJFNG1jUWRVRk9XbDZFUFAxaVp3SG0wdHVUZGV5OERKeGFfZmpTdFhGNTdOZ3kxNnF3cWt6?oc=5"
       }
     }
   ],
