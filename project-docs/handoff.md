@@ -10,7 +10,7 @@
   "owner": "Codex / square-distribution",
   "branch": "agent/square-trigger-fix",
   "last_verified_commit": "eed8b775a7157f1a5e405df8f2012c176575f411",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/75",
   "completed": [
     "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
@@ -19,7 +19,7 @@
     "新增日报/X成功完成兜底与同小时额度回归测试"
   ],
   "unfinished": [
-    "提交触发修复 PR，待授权合并；今天剩余11条尚未发送",
+    "PR75已提交，待CI与授权合并；今天剩余11条尚未发送",
     "合并后验证 workflow_run 真实触发与同小时额度"
   ],
   "validation": [
