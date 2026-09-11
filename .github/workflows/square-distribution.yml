@@ -1,0 +1,68 @@
+name: BMTNews Binance Square Distribution
+
+on:
+  schedule:
+    - cron: '17 1-15 * * *' # 09:17–23:17 Asia/Shanghai, one short job per hour
+  workflow_dispatch:
+    inputs:
+      edition_date:
+        description: 'Optional YYYY-MM-DD for explicit historical catch-up'
+        type: string
+        default: ''
+
+concurrency:
+  group: bmtnews-square-distribution
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: ${{ vars.SQUARE_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: '0.11.32'
+      - run: uv sync --frozen
+      - name: Read published edition, initialize isolated state checkout
+        env:
+          EDITION_DATE: ${{ inputs.edition_date }}
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin gh-pages
+          edition_path=api/latest.json
+          if [ -n "$EDITION_DATE" ]; then
+            [[ "$EDITION_DATE" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] || exit 1
+            edition_path="editions/$EDITION_DATE/edition.json"
+          fi
+          git show "FETCH_HEAD:$edition_path" > "$RUNNER_TEMP/square-edition.json"
+          gh auth setup-git
+          git init "$RUNNER_TEMP/square-state"
+          git -C "$RUNNER_TEMP/square-state" remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
+          git -C "$RUNNER_TEMP/square-state" config user.name 'github-actions[bot]'
+          git -C "$RUNNER_TEMP/square-state" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Network/auth errors must not be interpreted as an empty queue.
+          refs=$(git ls-remote --heads origin refs/heads/square-queue)
+          if [ -n "$refs" ]; then
+            git -C "$RUNNER_TEMP/square-state" fetch --depth=1 origin square-queue
+            git -C "$RUNNER_TEMP/square-state" checkout -b square-queue FETCH_HEAD
+            test -f "$RUNNER_TEMP/square-state/queue.json"
+          else
+            git -C "$RUNNER_TEMP/square-state" checkout --orphan square-queue
+          fi
+      - name: Publish due stories with remote checkpoints
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SQUARE_ENABLED: ${{ vars.SQUARE_ENABLED }}
+          BINANCE_SQUARE_OPENAPI_KEY: ${{ secrets.BINANCE_SQUARE_OPENAPI_KEY }}
+          EDITION_DATE: ${{ inputs.edition_date }}
+        run: uv run python -m src.square_delivery --edition "$RUNNER_TEMP/square-edition.json" --queue-dir "$RUNNER_TEMP/square-state" --edition-date "$EDITION_DATE"

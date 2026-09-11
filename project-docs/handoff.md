@@ -5,46 +5,41 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "修复 Quick Post 上线验收中的 Worker redirect 模式兼容错误",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/69",
-  "owner": "Codex / quick-post",
-  "branch": "agent/access-runtime-fix",
-  "last_verified_commit": "3a035c6a191a7431660cac88daf22da3c3b42bec",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/70",
+  "goal": "每日全部入选新闻分散发布到币安广场，不增加 AI 调用",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/72",
+  "owner": "Codex / square-distribution",
+  "branch": "agent/binance-square",
+  "last_verified_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/73",
   "completed": [
-    "完整读取用户 Quick Post 需求；核验 main、工作区、开放 Issue/PR 并认领 Issue #66",
-    "确认当前 CMS 使用 GitHub Token 写 editorial.json，图片存 Git，发布经整期重建",
-    "用户已确认 Git 分钟级发布与 Cloudflare Access 邮箱登录，并提供唯一允许邮箱（仅存平台，不写入仓库）",
-    "实现 Quick Post、受保护写入接口、图片上传、旧编辑管理、来源变更申请及无 AI 的独立发布输出",
-    "新增 JWT、CSRF、并发、防重复提交、图片与渲染测试；修复治理测试依赖旧指针状态的问题"
+    "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
+    "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
+    "新增独立 Square 分发器、持久化发送前检查点、按小时分发工作流与测试"
   ],
   "unfinished": [
-    "PR #70 等待 CI、合并和部署；修复后复验真实邮箱登录",
-    "GitHub 写入权限与真实内容发布仍待验收"
+    "PR #73 已提交，等待 CI 与用户审核；未合并",
+    "Square 专用发布 Key、启用开关和真实发帖验收未完成"
   ],
   "validation": [
-    "本地 uv sync --frozen --extra dev 成功；pytest 748 passed，1 warning，18.08s",
-    "管理接口 16 项 Node 测试通过；真实 workerd 验证有效 JWT 通过、重定向公钥被拒绝",
-    "390px 与 1280px 模拟浏览器通过草稿恢复、冲突保留、保存状态和横向溢出检查"
+    "uv sync --frozen --extra dev 成功；全量 pytest 764 passed、1 个既有弃用警告，10.22 秒",
+    "Square 专项 16 passed，含本地 bare Git 远端检查点恢复；治理检查和 diff check 通过"
   ],
   "unverified": [
-    "真实邮箱 OTP 已通过 Access，但旧 Worker 报 invalid_session；修复后尚未复验",
-    "真实 iPhone/PWA 未验收；生产密钥已确认加密保存，但有效性与权限尚未验证",
-    "edition/generated_at 为旧内容快照，不是本次验收范围"
+    "Square 真实账号、发布权限、内容长度限制及链接尚未通过实发验收",
+    "Quick Post 生产内容写入仍未验收；本次不改变后台"
   ],
   "production": {
-    "source_commit": "04ea98021f5728728b9e98ab11767dce7bdf12d6",
-    "artifact_commit": "bf0ed47916d48ca05085f6b9fc864c030a0310fb",
-    "edition": "2026-09-08",
-    "generated_at": "2026-09-08T04:24:17.494842Z",
-    "worker_version": "Pages 995adb9d-a5ea-4aee-b8d7-c36958c778bc",
+    "source_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
+    "artifact_commit": "3413ae7b54e00c11fb99d15641c4674f6d41d77c",
+    "edition": "2026-09-11",
+    "generated_at": "2026-09-11T00:34:44.693913Z",
+    "worker_version": "Pages 3e5a820e-9491-410a-918d-b1588dd39872；这是 PR70 部署快照，今日日报已有后续产物",
     "verified_at": "2026-09-11"
   },
   "blockers": [
-    "2026-09-11：本机 Cloudflare OAuth 过期；已使用已登录控制台完成 Access 与生产绑定配置",
-    "已复现根因：workerd 不支持 redirect:error；PR #70 修复待上线，不需要重新配置密钥"
+    "Square 未配置发布凭据和启用开关；本任务只获开发授权，不合并或部署"
   ],
-  "next_action": "完成 Issue #69 修复测试、CI 与发布后复验真实登录；旧 PR #68 是部署记录，合并前需同步最新交接，不能覆盖本指针。",
+  "next_action": "审核 PR #73；另行授权合并并配置 Secret/开关后验收真实发布。PR #68 的旧指针不能覆盖本交接。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -52,7 +47,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-11-access-runtime-fix.md"
+  "evidence": "project-docs/releases/2026-09-11-square-distribution.md"
 }
 ```
 
