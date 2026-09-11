@@ -34,5 +34,5 @@ Issue #72；Codex；agent/binance-square。只提交 PR，不合并或上线。
 
 ## 验证与交接
 
-uv sync --frozen --extra dev 成功；全量 pytest 763 passed、1 个既有弃用警告（新增最后一项 Git 恢复测试前）；Square 专项 16 passed，含本地 bare Git 远端 pending/sent 恢复；治理检查及 diff check 通过。未执行真实发布、未配置密钥或开关、未合并、未部署。
+PR #73。uv sync --frozen --extra dev 成功；全量 pytest 764 passed、1 个既有弃用警告（10.22 秒）；Square 专项 16 passed，含本地 bare Git 远端 pending/sent 恢复；治理检查及 diff check 通过。未执行真实发布、未配置密钥或开关、未合并、未部署。
 回退只暂停工作流并保留队列，不会自动删除已经发布的帖子。

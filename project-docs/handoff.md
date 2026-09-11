@@ -10,18 +10,18 @@
   "owner": "Codex / square-distribution",
   "branch": "agent/binance-square",
   "last_verified_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/73",
   "completed": [
     "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
     "新增独立 Square 分发器、持久化发送前检查点、按小时分发工作流与测试"
   ],
   "unfinished": [
-    "提交 PR 并等待 CI 与用户审核；未合并",
+    "PR #73 已提交，等待 CI 与用户审核；未合并",
     "Square 专用发布 Key、启用开关和真实发帖验收未完成"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 成功；全量 pytest 763 passed（增加最后一项 Git 恢复测试前）",
+    "uv sync --frozen --extra dev 成功；全量 pytest 764 passed、1 个既有弃用警告，10.22 秒",
     "Square 专项 16 passed，含本地 bare Git 远端检查点恢复；治理检查和 diff check 通过"
   ],
   "unverified": [
@@ -39,7 +39,7 @@
   "blockers": [
     "Square 未配置发布凭据和启用开关；本任务只获开发授权，不合并或部署"
   ],
-  "next_action": "完成测试并提交 Square PR；审核后另行授权合并与真实发布验收。PR #68 的旧指针不能覆盖本交接。",
+  "next_action": "审核 PR #73；另行授权合并并配置 Secret/开关后验收真实发布。PR #68 的旧指针不能覆盖本交接。",
   "states": {
     "code": "complete",
     "tests": "complete",
