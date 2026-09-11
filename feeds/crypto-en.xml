@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-10T00:00:00Z</updated>
+  <updated>2026-09-11T00:00:00Z</updated>
+  <entry>
+    <title>Liquid Network resumes block production after $320M exploit</title>
+    <link href="https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cointelegraph.com_rss:656b87c8d60ff48b</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>The Liquid Network resumed block production on Thursday after deploying emergency software updates, though transactions and peg operations remain suspended as a precaution while the network is monitored for full stabilization. The restart follows an incident on Sept. 6 in which roughly 4,000 BTC, worth about $320 million, was withdrawn from the network&#x27;s federation wallet via a bug in the Elements software.
+
+Liquid is one of the largest and longest-running Bitcoin sidechains, and the withdrawal drained roughly 95% of its federation wallet&#x27;s balance, exposing how concentrated trust in federated bridge designs can translate into systemic risk. The incident affects L-BTC holders, issuers of tokenized assets and stablecoins on Liquid, and the exchanges and market makers that rely on it for settlement.
+
+The attacker exploited a proof-verification cache vulnerability in Elements&#x27; range proofs, allowing the minting of roughly 4,000 unbacked L-BTC that were then redeemed for real BTC through SideSwap&#x27;s authorized exit peg path. The emergency patch, Elements v23.3.4, hardened the cache keys used for range proofs; after affected bridge nodes were patched, 3,400 BTC (about $270 million) was returned, leaving roughly 598 BTC (about $46 million) outstanding as of Sept. 7.</summary>
+  </entry>
+  <entry>
+    <title>Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation</title>
+    <link href="https://www.coindesk.com/business/2026/09/10/nasdaq-invests-usd100-million-in-kraken-parent-company-payward-at-usd21-billion-valuation"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.coindesk.com_arc_outboundfeeds_rss_:93d1d829d0400b01</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Nasdaq Ventures agreed to invest $100 million in Payward, the parent company of crypto exchange Kraken, in a deal that values Payward at $21 billion according to Bloomberg sources. As part of the agreement, Kraken will distribute tokenized versions of Nasdaq-listed stocks on its own platform and adopt Nasdaq&#x27;s surveillance technology across its crypto, equities, tokenized equities, futures and options venues.
+
+This is the third time this year that an established traditional exchange operator has taken a stake in a crypto exchange, following Deutsche Börse&#x27;s $200 million investment in Payward in April, and it deepens the convergence between traditional market infrastructure and crypto trading venues. For Nasdaq, the deal buys distribution into round-the-clock tokenized equity trading; for Kraken, it brings institutional-grade surveillance and a blue-chip equity partner into its multi-asset expansion.
+
+Kraken&#x27;s tokenized Nasdaq stocks would reportedly carry the same voting rights as ordinary shares, and the investment builds on a partnership between the two firms announced in March. The valuation figure came from people familiar with the matter rather than a formal disclosure, and the deal followed Nasdaq&#x27;s plan announced a month earlier to acquire Level Markets as part of its push into &#x27;always-on&#x27; markets.</summary>
+  </entry>
+  <entry>
+    <title>Osmosis freezes 22.65 BTC after Nomic bridge bug unbacks allBTC</title>
+    <link href="https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cryptoslate.com_feed_:674de2989502d767</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Osmosis has frozen 22.65 BTC after a flaw in Nomic&#x27;s custom forwarding logic let an attacker double-spend and mint false nBTC vouchers, which were bridged over IBC into Osmosis and counted as genuine backing for its allBTC asset. The invalid nBTC represents 36.03% of allBTC&#x27;s backing, so allBTC minting and redemption are paused while governance decides how to recapitalize the basket.
+
+The incident shows how a bug in one bridge&#x27;s forwarding logic can propagate into a second protocol&#x27;s wrapped-asset basket, leaving holders collectively exposed to a backing shortfall rather than to a direct theft. It also puts a governance vote at the center of user recovery, a pattern that matters for every Cosmos-based wrapped Bitcoin product.
+
+At the reporting cutoff allBTC had 110.57 tokens in circulation against a basket containing 39.84 nBTC, and even a full recovery of the 22.65 frozen BTC would still leave roughly 17.19 BTC of impairment to cover from the community pool. On-chain researcher Rarma traced the principal minting to June 25 and noted 22.65060846 allBTC created in July 17 activity remained unmoved, while the public disclosure came more than two months later; Osmosis administers the allBTC contract, a 3-of-6 moderator subDAO can pause the pool or flag a constituent asset as corrupted, and Nomic&#x27;s custody documentation requires signatures representing over 90% of its signatory set&#x27;s voting power for reserve disbursals.</summary>
+  </entry>
+  <entry>
+    <title>Visa, Credit Coop launch onchain stablecoin credit for card settlement</title>
+    <link href="https://cryptoslate.com/visas-2-5-billion-onchain-credit-bet-puts-card-settlement-financing-onchain/"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cryptoslate.com_feed_:ea0dea546b999dea</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Visa announced on Sept. 8 an onchain lending initiative with Credit Coop, an onchain credit protocol that supplies revolving stablecoin-denominated facilities to fund card programs&#x27; daily settlement obligations and sweep later cardholder payments toward repayment. Visa says the model has financed more than $2.5 billion in cumulative settlement volume since 2023 with zero defaults.
+
+The deal moves a conventional form of receivables finance onto blockchain rails, turning card settlement obligations into collateral and giving Visa&#x27;s fast-growing stablecoin card business a new short-duration funding channel. It signals institutional adoption of onchain credit infrastructure and expands stablecoin utility from payments into lending and working-capital finance.
+
+Smart contracts handle draws, cash-flow control and repayment, with a Credit Coop &quot;Spigot&quot; contract acting as a programmable lockbox that services interest and replenishes the credit line before residual cash reaches the borrower; Visa says Credit Coop has processed more than 3,000 borrow events and 9,000 repayment events. Underwriting still depends on authorized Visa settlement files delivered through a secure pipeline, and the $2.5 billion figure is Credit Coop-supplied with facility-specific loss protections undisclosed.</summary>
+  </entry>
+  <entry>
+    <title>Tether and Fasanara Launch $400M Private Credit Fund, Targeting $3B</title>
+    <link href="https://thedefiant.io/news/defi/tether-fasanara-400-million-private-credit-fund"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:thedefiant.io_api_feed:ca9d212d9ace0457</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>On Sept. 9, Tether and London-based Fasanara Capital launched StableFund, an evergreen private credit vehicle seeded with $400 million in combined sponsor capital from the two firms and targeting up to $3 billion more from outside institutional investors. Fasanara will manage the portfolio, while Tether will originate USDT-linked financing deals and provide settlement and treasury infrastructure.
+
+The fund moves Tether beyond a crypto lending market it already dominates—Galaxy Research estimates it held roughly 60% of the $23 billion centralized crypto-lending market at the end of June, about $13.5 billion in outstanding secured loans—and into the far larger private credit asset class. It gives USDT a new role as an origination and settlement rail for real-economy lending, at a moment when the roughly $3 trillion private credit sector faces rising defaults and closer regulatory scrutiny.
+
+StableFund is structured as an evergreen vehicle, meaning it can keep raising and deploying capital rather than winding down at a fixed maturity, but Tether and Fasanara have not publicly detailed its redemption terms, nor Tether&#x27;s share of losses, underwriting authority, leverage or fee arrangements. Tether&#x27;s USDT supply stands at $183.4 billion, and the fund arrives as an August Wall Street Journal analysis found defaults at publicly traded funds run by Ares, Blackstone, Blue Owl and Golub Capital at their highest levels since at least 2021.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase and Moov to Bring Stablecoin Rails to 1,000+ US Community Banks</title>
+    <link href="https://cointelegraph.com/news/coinbase-moov-stablecoin-infrastructure-banks?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cointelegraph.com_rss:fa704a3d682f3ebd</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Coinbase announced a partnership with payments platform Moov to deliver stablecoin payment acceptance, settlement and real-time funding to more than 1,000 US community banks and credit unions in Moov&#x27;s customer base. The integration embeds Coinbase&#x27;s Payments API and custodial wallets into Moov&#x27;s existing payments platform, supporting consumer stablecoin payments, merchant settlement and payouts.
+
+It pushes stablecoin rails into mainstream community banking channels, giving smaller US institutions access to near-instant settlement and merchant payouts that were previously practical mainly for large banks and fintechs. It also reinforces a broader pattern in which both large banks and non-bank payments firms are moving to build stablecoin capability rather than wait on the sidelines.
+
+The offering is aimed at use cases including consumer stablecoin payments, merchant settlement and payouts, and it also gives businesses and merchants access to Coinbase custodial accounts. Community banks in the US are generally defined as institutions holding less than $10 billion in total assets, including state-chartered banks and savings and loan holding companies.</summary>
+  </entry>
+  <entry>
+    <title>Researchers halve quantum resource benchmark for Bitcoin, Ethereum attack</title>
+    <link href="https://www.theblock.co/news/ecosystems/2026-09-10-researchers-halve-quantum-resource-benchmark-for-key-operation-in-bitcoin-ethereum-attack-414121"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.theblock.co_rss.xml:94a908797f49ef4a</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Researchers reported a new benchmark for a key operation used in a quantum attack on Bitcoin and Ethereum that is less than half of Google Quantum AI&#x27;s previously reported level, a result shared with CoinDesk on Sept. 10, 2026. The paper cuts the estimated quantum resources needed for that core calculation roughly in half while relying on a different accounting method than Google&#x27;s.
+
+The result shrinks the resource envelope for the elliptic-curve discrete-logarithm problem that underpins signature security across most cryptocurrencies, effectively shortening the window developers have to migrate to post-quantum cryptography. It affects Bitcoin, Ethereum and any chain relying on ECDSA over secp256k1, and it raises the urgency of quantum-resistance roadmaps that are still largely in the research stage.
+
+The comparison is not apples-to-apples: the new paper and Google&#x27;s March 31, 2026 whitepaper use different accounting methods, so the practical reduction in threat is uncertain. The benchmark also targets a single core operation rather than a complete end-to-end attack, and the required fault-tolerant hardware has not been demonstrated.</summary>
+  </entry>
+  <entry>
+    <title>Bybit Plans European &#x27;Super-App&#x27; Combining Stocks, Derivatives and Crypto</title>
+    <link href="https://www.coindesk.com/business/2026/09/10/crypto-exchange-giant-bybit-to-offer-european-super-app-with-stocks-derivatives"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.coindesk.com_arc_outboundfeeds_rss_:6ba49f9bc6a8acf0</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Bybit, one of the world&#x27;s largest crypto exchanges by trading volume, announced plans to launch a European &quot;super-app&quot; that would let users trade stocks and derivatives alongside crypto in a single platform. The move marks an expansion of Bybit&#x27;s product suite beyond its core crypto spot and derivatives business into the EU market.
+
+This is a product-expansion and market-structure play: it blurs the line between crypto exchanges and traditional brokerages in Europe, putting Bybit in direct competition with EU neobrokers and other trading platforms for retail order flow. It also signals that major exchanges increasingly see multi-asset &quot;super-apps&quot; as the growth path now that pure crypto trading has become a crowded, fee-compressed business.
+
+The offering combines equities and derivatives with crypto under one interface, and derivatives are leveraged instruments whose retail distribution in the EU is constrained by leverage caps and suitability rules, so the product design will hinge on which licenses Bybit holds in which member states. The success of such an app also depends on execution quality, custody arrangements and how assets are segmented across brokerage and crypto entities.</summary>
+  </entry>
+  <entry>
+    <title>Indian Agri Warehouse Giant Arya.ag Puts $2B Grain-Backed Loans Onchain</title>
+    <link href="https://www.coindesk.com/business/2026/09/10/indian-agri-warehouse-giant-is-putting-usd2-billion-in-grain-backed-loans-onchain"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.coindesk.com_arc_outboundfeeds_rss_:0d41fd2759b7f986</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Indian agricultural warehouse operator Arya.ag is moving $2 billion of grain-backed loans onchain using Avalanche technology, tokenizing grain deposits, warehouse receipts and loan status so that lenders can more reliably verify the crops backing agricultural credit. The scale places it among the largest real-world asset tokenization deployments announced to date.
+
+A $2 billion tokenized credit pool from a non-crypto, agricultural operator is a notable step in institutional adoption of onchain finance, extending RWA tokenization beyond treasuries and real estate into commodity-backed lending. It gives DeFi lenders and traditional financiers a template for collateral verification that could lower credit risk premiums in a segment long troubled by opaque, paper-based warehouse receipts.
+
+The deployment covers grain deposits, warehouse receipts and loan status rather than the loans themselves, so the tokens function primarily as verifiable collateral and provenance records tied to physical agricultural inventory held in Arya.ag&#x27;s warehouses. Avalanche is the chosen settlement layer, whose subnet architecture allows institutions to run customizable, permissioned or high-throughput environments rather than a single public chain.</summary>
+  </entry>
   <entry>
     <title>Mexican Musician and Family Killed Over Bitcoin Cold Wallet</title>
     <link href="https://decrypt.co/377795/mexican-family-killed-bitcoin-cold-wallet"/>
@@ -343,104 +442,5 @@ The reported withdrawal involved roughly $320 million in bitcoin held on the Liq
 This incident underscores custody and solvency risks at even venture-backed exchanges, coming just 15 months after Tether led Orionx&#x27;s Series A to expand in Latin America. It could undermine user trust in centralized exchanges and prompt regulators and investors to scrutinize custody controls more closely.
 
 The forensic audit compared Orionx&#x27;s internal records with onchain data and found shortfalls across Bitcoin, Ether, XRP, and POL at its custody addresses. Orionx filed a criminal complaint against co-founders Roberto Zibert and Joaquín Díaz, who deny wrongdoing; the transfers were allegedly made between 2018 and 2021, including to other crypto platforms.</summary>
-  </entry>
-  <entry>
-    <title>Kraken launches pre-IPO perpetual futures for OpenAI and Anthropic</title>
-    <link href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE0xZlJkdVlPcS1TZTBMY1ZEUFRJYndDQV82XzlTTmxPTGsydU5fRnhvS0dPTEx5b1NoT2M2dTBXLTFKSnA3b1gxZ1k2ZHB1MzBWZk1RcXVBcw?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-07/#google_news:article:c570af7d3284df38</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Kraken has listed pre-IPO perpetual futures on Anthropic and OpenAI, allowing eligible clients to go long or short with up to 5x leverage before either AI company completes an IPO. The cash-settled contracts reference private-market equity valuations and convey no equity ownership.
-
-This extends crypto derivatives into equity-style exposure on two of the world&#x27;s highest-valued private AI companies, creating an on-ramp for traders who want AI-firm beta before an IPO. It also intensifies competition among major exchanges, as Binance and Coinbase already offer similar pre-IPO perpetual products, and may draw more institutional flows into crypto-native derivatives venues.
-
-Kraken&#x27;s contracts are cash-settled synthetic instruments whose pricing tracks each company&#x27;s total equity valuation rather than an estimated IPO share price. Per the launch materials, eligible traders can use up to 5x leverage, and positions do not represent any equity or ownership rights in the underlying companies.</summary>
-  </entry>
-  <entry>
-    <title>Coinbase-backed Router Protocol shuts down, burns 303M ROUTE tokens</title>
-    <link href="https://www.theblock.co/news/defi/2026-09-06-coinbase-backed-router-protocol-to-shut-down-burn-303-million-route-tokens-413618"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:www.theblock.co_rss.xml:f55a2af2b8513237</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Router Protocol, a Coinbase-backed cross-chain interoperability project, announced it is shutting down and will burn 303 million ROUTE tokens. The decision follows failed attempts to commercialize, license, or sell its technology to achieve a sustainable business model.
-
-The shutdown of a Coinbase-backed DeFi protocol highlights ongoing difficulties in monetizing cross-chain infrastructure, affecting ROUTE holders and projects integrated with its Voyager dApp and CrossTalk framework. It also raises questions about the viability of token-based business models for interoperability protocols.
-
-According to The Block&#x27;s report on September 6, 2026, attempts to commercialize, license, or find a buyer for the technology all failed. The burn will permanently remove 303 million ROUTE tokens from circulation, a process that is irreversible and typically involves sending tokens to an inaccessible burn address.</summary>
-  </entry>
-  <entry>
-    <title>Stablecoins Won&#x27;t Scale Without Banks, New Analysis Argues</title>
-    <link href="https://decrypt.co/377280/stablecoins-wont-scale-without-banks"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:decrypt.co_feed:7ed938a58770d05f</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>A new analysis argues that real stablecoin payments are bottlenecked by traditional banking rails, because enterprise flows start and end in fiat, leaving only the cross-border middle leg for on-chain settlement. It points to Stripe&#x27;s Bridge acquisition, Citi&#x27;s crypto custody launch, and Standard Chartered&#x27;s Singapore stablecoin test as evidence that institutional players are integrating deeper into banking, not around it.
-
-This reframes stablecoins from would-be bank replacements into a middle-layer settlement tool whose enterprise adoption depends on banking relationships, compliance infrastructure, and local fiat corridors. Single-bank dependency is highlighted as an underappreciated operational risk that could undermine issuer liquidity and institutional trust.
-
-Citing FXC Intelligence, the article pegs the 2025 cross-border payments market at $208 trillion, while McKinsey and Artemis estimate genuine stablecoin payments at a roughly $390 billion annualized run rate in late 2025 — about 0.02% of global payment volume. It argues the gap between processing $50 million and $10 billion in payment volume is not technology but the breadth of banking, FX, and licensing corridors a provider can support.</summary>
-  </entry>
-  <entry>
-    <title>Better and Coinbase Let Mortgage Borrowers Reuse Bitcoin Collateral</title>
-    <link href="https://www.coindesk.com/business/2026/09/06/better-and-coinbase-s-bitcoin-backed-mortgages-can-reuse-borrowers-collateral"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:www.coindesk.com_arc_outboundfeeds_rss_:9d7f0d2e868eee69</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Online lender Better and crypto exchange Coinbase are launching bitcoin-backed mortgages that allow borrowers to pledge Bitcoin as collateral while also permitting that collateral to be reused, or rehypothecated. This marks a notable entry of collateral-reuse mechanics into a mainstream regulated home-loan product.
-
-The move could normalize Bitcoin as a financing asset by giving holders a way to access home financing without selling their crypto, potentially deepening institutional adoption. It also brings rehypothecation risk into the mortgage market, raising important questions about custody, counterparty exposure, and transparency.
-
-Specific terms such as loan-to-value ratios, interest rates, and the exact structure of the collateral-reuse arrangement have not been fully disclosed. The Better and Coinbase model reportedly lets eligible homebuyers use Bitcoin as collateral for a home purchase without selling their holdings, with the cryptocurrency valued, custodied, and managed throughout the loan term.</summary>
-  </entry>
-  <entry>
-    <title>Over $3.1B Lost to Crypto Hacks Since 2025; Bybit’s $1.4B Exploit Leads</title>
-    <link href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNLThyeEcxamdPN2lQdnlJYmlyMUtXN3lXSFBRR3c4OXh4NkNsV0VGV2gtY1hYNmpWZTdlME5Kc0pWbmxYbXM1QU1uc2J0dlhHSDMxbGhRV0pfU2treUNJc19idUpaNm1wc3MtM2x0VjFMQU1MMEpsdkNqMExfQW1CdE5XUTdWY0NscEZkakVRVW96N2YwRUN5Ym1FaU44eldlMDJUVTktdmpfZEVlZmZadHpR?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-06/#google_news:article:c13a92b5bf34dcb8</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>According to Tekedia’s report, hackers have drained more than $3.1 billion from crypto platforms since 2025, and Bybit’s February exploit—worth about $1.4 billion in staked and other ETH-linked tokens—ranks as the largest single loss.
-
-The Bybit loss is the largest exchange exploit in crypto history and, combined with the $3.1B total, signals that centralized custodians remain high-value targets for highly organized attackers. This raises questions about insurance, security practices, and user trust just as the industry is pushing for wider institutional adoption.
-
-Blockchain analysts attributed the Bybit hack to North Korea’s Lazarus Group, which manipulated the exchange’s cold-to-hot wallet transfer; the stolen assets included liquid-staked Ether (stETH), Mantle Staked ETH (mETH), and other ERC-20 tokens. On-chain tracking as of March 2025 showed roughly 88.87% of the stolen funds remained traceable, while 7.59% had gone dark, emphasizing the difficulty of freezing or recovering assets.</summary>
-  </entry>
-  <entry>
-    <title>Trezor breach grows to ~80,689 users after old ShipMonk logs found</title>
-    <link href="https://cryptoslate.com/users-exposed-by-trezor-breach-grows-sixfold-after-supposedly-deleted-shipping-logs-are-found/"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:cryptoslate.com_feed_:81d53d9a5bda073a</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>On September 4, Trezor disclosed that an additional roughly 67,000 U.S. customers had their contact and order data exposed in the ShipMonk breach, because records from 2019 through 2021 remained on the logistics provider&#x27;s systems despite deletion assurances. Combined with the previously reported 13,689 affected customers, the total is now about 80,689, although Trezor has not published a single combined figure.
-
-This incident connects identifiable people and their physical addresses to hardware-wallet purchases, enabling more convincing phishing, fraudulent calls or letters, and potential physical targeting. It also shows that a third party&#x27;s written deletion assurances offer little real protection unless compliance is independently verified.
-
-The newly disclosed records cover U.S. orders from November 2019 through August 2021 and include names, email addresses, phone numbers, shipping addresses, and order numbers. Trezor emphasized that its wallet systems, recovery seeds, private keys, and funds were not compromised, and it has not confirmed any downstream attacks resulting from this data.</summary>
-  </entry>
-  <entry>
-    <title>DAO governance flaws push protocols to choose code or emergency brakes</title>
-    <link href="https://cryptoslate.com/daos-are-forcing-crypto-protocols-to-choose-between-code-and-emergency-brakes/"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:cryptoslate.com_feed_:e4aa163f73ec8f26</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Compound&#x27;s Proposal 289, which nearly moved 499,000 COMP (~$24 million) into a yield vault, passed in July 2024 after a rush of late votes; the protocol later voided the allocation and added a veto role. Two 2026 studies of 48 Ethereum DAOs found that registration, staking, and delegation routinely concentrate voting power, while valid governance rules can enable treasury raids.
-
-The incident shows that a DAO can be robbed through rules that everyone considers legitimate, because decentralized voting lacks an emergency stop once a majority forms near the deadline. This forces DeFi protocols to weigh pure code enforcement against vetoes, multisigs, and other brakes, a trade-off that affects governance security across the entire ecosystem.
-
-The decisive vote ended at 682,191 against 633,636, with 563,591 votes cast in the final 34 minutes—82% of all support for the proposal. The research across 48 DAOs also found that proposal thresholds, on-chain gas fees, and different voting venues systematically favor wealthy holders and established delegates, as shown by Uniswap&#x27;s diverging electorates between free off-chain polls and paid on-chain votes.</summary>
-  </entry>
-  <entry>
-    <title>Zcash tops $1,000 as spot ETF passes $400 million</title>
-    <link href="https://cryptoslate.com/zcash-breaks-1000-as-its-spot-etf-crosses-400-million-in-assets/"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:cryptoslate.com_feed_:c08093e919ce27ac</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Zcash broke above $1,000 on September 4, reaching an intraday high of $1,050.70, a roughly 20% gain in 24 hours. Grayscale&#x27;s ZCSH spot ETF assets climbed past $400 million less than two weeks after its NYSE Arca debut, while Zcash futures open interest crossed $2 billion for the first time.
-
-This marks a notable revival of institutional and retail interest in privacy coins, with a regulated US spot ETF and record leveraged futures coexisting for the first time in ZEC&#x27;s market structure. It also reopens the debate over whether Zcash can pose a durable challenge to Bitcoin&#x27;s dominance by combining sound money properties with growing privacy demand in the AI era.
-
-ZCSH&#x27;s assets grew from $304.6 million at its August 25 launch to $414.7 million by September 3, while the fund&#x27;s ZEC holdings rose from 387,849 to 428,613. Roughly $40 million of ZEC shorts were liquidated in a day, and 24-hour futures volume briefly exceeded $6 billion, signaling heavy derivative activity.</summary>
-  </entry>
-  <entry>
-    <title>Berlin Cyberattack: Hackers Leak Highly Sensitive Data on Dark Web</title>
-    <link href="https://www.euronews.com/next/2026/09/05/berlin-cyberattack-hackers-leak-highly-sensitive-data-across-dark-web"/>
-    <id>https://bmt.news/editions/2026-09-06/#gdelt:article:20260905T094500Z::https://www.euronews.com/next/2026/09/05/berlin-cyberattack-hackers-leak-highly-sensitive-data-across-dark-web</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Hackers have leaked highly sensitive data stolen during a cyberattack on the German capital, Berlin, across the dark web. The confirmed incident is being treated as a major security breach with potentially broad impact on individuals and government operations.
-
-A data leak of this kind from a major city government can expose residents&#x27; personal information and undermine public trust in government IT systems. It also highlights the escalating threat of cybercrime against public institutions, where stolen data is weaponized on underground markets.
-
-The leaked data is described as highly sensitive and relates to Berlin&#x27;s city government, suggesting it may encompass both personal records of residents and internal administrative information. Publishing such material on the dark web increases the risk that it will be re-sold or used for further criminal activity such as identity theft and extortion.</summary>
   </entry>
 </feed>

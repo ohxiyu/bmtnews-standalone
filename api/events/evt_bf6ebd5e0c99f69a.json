@@ -4,30 +4,36 @@
   "url": "https://bmt.news/events/evt_bf6ebd5e0c99f69a/",
   "json": "https://bmt.news/api/events/evt_bf6ebd5e0c99f69a.json",
   "type": "other",
-  "status": "monitoring",
+  "status": "developing",
   "category": "technology",
   "title": {
     "zh": "OpenAI says 10,000 AI agents solved a $1 million math problem. Now mathematicians are fighting",
     "en": "OpenAI says 10,000 AI agents solved a $1 million math problem. Now mathematicians are fighting"
   },
   "current_state": {
-    "zh": "OpenAI reports that 10,000 AI agents solved a $1 million math problem, triggering controversy and debate within the mathematics community.",
-    "en": "OpenAI reports that 10,000 AI agents solved a $1 million math problem, triggering controversy and debate within the mathematics community."
+    "zh": "OpenAI 报告的纳维-斯托克斯解据称附带 Lean 4 形式化证明，但尚未经外部数学家验证，验证成本高昂，且面临训练数据方面的质疑。",
+    "en": "OpenAI's reported Navier-Stokes solution reportedly includes a Lean 4 formal proof, but it has not been verified by external mathematicians, verification costs are high, and training-data concerns have been raised."
   },
   "first_seen_at": "2026-09-09T16:49:32.142867+00:00",
-  "last_updated_at": "2026-09-09T16:49:32.142867+00:00",
-  "last_material_change_at": "2026-09-09T16:49:32.142867+00:00",
+  "last_updated_at": "2026-09-11T00:31:07.813249+00:00",
+  "last_material_change_at": "2026-09-11T00:31:07.813249+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "lean",
+    "lean4",
+    "navier",
     "now",
-    "openai"
+    "openai",
+    "stokes"
   ],
   "identifiers": [],
   "topics": [
     "ai-research",
     "controversy",
+    "formal-verification",
+    "lean4",
     "mathematics",
     "openai"
   ],
@@ -66,6 +72,61 @@
           "url": "https://www.coindesk.com/tech/2026/09/09/openai-says-10-000-ai-agents-solved-a-usd1-million-math-problem-now-mathematicians-are-fighting",
           "label": "CoinDesk",
           "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_b673ec7e936f94f5",
+      "event_id": "evt_bf6ebd5e0c99f69a",
+      "occurred_at": "2026-09-10T21:22:59Z",
+      "published_at": "2026-09-10T21:22:59Z",
+      "first_seen_at": "2026-09-11T00:31:07.813249Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "OpenAI 纳维-斯托克斯成果据称附带 Lean 4 形式化证明",
+      "title_en": "OpenAI's Navier-Stokes result reportedly ships with a Lean 4 formal proof",
+      "what_changed_zh": "据报 OpenAI 的纳维-斯托克斯成果附带 Lean 4 形式化证明，可机器检验；验证成本高昂，外部数学家未验证，并存在训练数据质疑。",
+      "what_changed_en": "OpenAI's reported Navier-Stokes result reportedly includes a Lean 4 formal proof, enabling machine-checking; verification costs are high, external mathematicians have not verified it, and training-data concerns were raised.",
+      "current_state_zh": "OpenAI 报告的纳维-斯托克斯解据称附带 Lean 4 形式化证明，但尚未经外部数学家验证，验证成本高昂，且面临训练数据方面的质疑。",
+      "current_state_en": "OpenAI's reported Navier-Stokes solution reportedly includes a Lean 4 formal proof, but it has not been verified by external mathematicians, verification costs are high, and training-data concerns have been raised.",
+      "detailed_summary_zh": "OpenAI 于 2026 年 9 月 8 日前后发布的关于纳维-斯托克斯方程存在性与光滑性问题的成果（一个无界反例）据称附带了 Lean 4 形式化证明，这意味着该论证可以逐行接受机器检查，而不只是依赖人类同行评审。Hacker News 上的讨论围绕该成果的意义、验证成本以及大规模部署证明生成智能体的经济性展开。\n\n如果该成果站得住脚，这将是 AI 系统首次针对接近千禧年大奖难题的重大结果给出可机器检验的形式化证明之一，从而把瓶颈从“发现证明”转移到“验证证明”。它同时引出一个问题：当论证的规模或复杂度超出人类审稿人独立核查的能力时，什么才算得上数学知识。\n\n评论者指出验证并不便宜：有人提到检查一个与费马大定理同量级的 Lean 证明大约需要 15 小时和 230GB 内存，仅比智能体生成相应 Lean 代码所需的约 11 天快一个数量级。该次智能体运行的估算成本约为 4000 万美元（动用了大规模智能体集群），而人类等价工作量约为 88 万小时（按每小时 150 美元计约 1.32 亿美元）；此外该解答尚未经过外部数学家验证，研究者 Levent Alpöge 与 Tristan Buckmaster 提出了训练数据方面的质疑，OpenAI 称这种情况“绝对不可能”。",
+      "detailed_summary_en": "OpenAI's release on the Navier-Stokes existence and smoothness problem — an unbounded counterexample announced around 8 September 2026 — reportedly included a Lean 4 formal proof, meaning the argument can be machine-checked line by line rather than only reviewed by humans. A Hacker News thread debated the result's significance, the cost of verification, and the economics of running large fleets of proof-generating agents.\n\nIf it holds up, this is one of the first cases of an AI system producing a machine-checkable formal proof of a landmark result adjacent to a Millennium Prize problem, which shifts the bottleneck from discovering proofs to verifying them. It also raises the question of what counts as mathematical knowledge when the argument may be too large or too complex for human referees to check unaided.\n\nCommenters noted that verification is not cheap: one cited roughly 15 hours and 230 GB of RAM to check a Fermat's Last Theorem-scale Lean proof, only about an order of magnitude faster than the ~11 days agents took to generate the Lean code. The agent run was estimated at around $40 million for a large fleet, against a rough human-equivalent estimate of ~880,000 hours (about $132 million at $150/hour), and the solution has not been verified by external mathematicians, with researchers Levent Alpöge and Tristan Buckmaster raising training-data concerns that OpenAI calls \"categorically impossible.\"",
+      "background_zh": "纳维-斯托克斯方程描述黏性流体的运动，克雷数学研究所提出的千禧年大奖难题所问的是：在三维空间中光滑解是否永远存在，还是会出现无界的“爆破”行为。Lean 4 是一个证明助手（交互式定理证明器），其证明由一个体量很小的可信内核检查，因此“形式化证明”具备机器可验证性，而普通书面证明并不具备这一性质。据称该反例是在 Levent Alpöge 与 Tristan Buckmaster 已发表工作的基础上得到的，后者证明了带光滑外力项的三维不可压缩欧拉方程存在有限时间爆破。",
+      "background_en": "The Navier-Stokes equations describe the motion of viscous fluids, and the Clay Mathematics Institute's Millennium Prize question asks whether smooth solutions exist for all time in three dimensions or whether they can break down into unbounded (blow-up) behavior. Lean 4 is a proof assistant, an interactive theorem prover whose proofs are checked by a small trusted kernel, so a \"formal proof\" is mechanically verifiable in a way an ordinary written proof is not. The reported counterexample followed published work by Levent Alpöge and Tristan Buckmaster proving finite-time blowup for the 3D incompressible Euler equations with smooth forcing.",
+      "community_discussion_zh": "讨论整体对该能力感到震撼，但对叙事框架存在分歧：有评论者强调 Lean 验证只比智能体生成 Lean 代码快约 10 倍；有人重新核算成本对比（人类约 1.32 亿美元对智能体约 4000 万美元），认为谈不上“四个数量级”；也有人认为“每页四十小时”的旧经验法则因证明自动化进步而已经过时；还有人提出一种担忧：AI 给出的解答可能人类根本无法独立验证。",
+      "community_discussion_en": "The thread was broadly impressed by the capability but split on the framing: one commenter stressed that Lean verification only runs about 10× faster than agents generating the Lean code, another recalculated the cost comparison (~$132M human vs ~$40M agent) as \"not quite four orders of magnitude,\" a third argued the old \"forty hours per page\" heuristic is outdated thanks to improved proof automation, and another raised the prospect of AI solutions that humans cannot independently verify at all.",
+      "market_impact_zh": "这一事件对加密市场没有直接的传导渠道——一项纯 AI 与数学研究成果并不涉及代币、协议、托管或监管层面。唯一可能的联系是间接的情绪外溢：如果该成果强化了“AI 智能体产出可独立验证的工作”这一更宏观叙事，AI 概念与可验证计算相关的板块可能获得一定叙事层面的提振。",
+      "market_impact_en": "There is no direct transmission to crypto markets here — no token, protocol, custody, or regulatory channel is involved in a pure AI-and-mathematics research result. The only plausible linkage is indirect sentiment spillover into AI-themed and verifiable-compute narratives, which could get a modest narrative boost if the result strengthens the broader \"AI agents producing independently verified work\" story.",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_equations",
+          "title": "Navier-Stokes equations"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Formal_verification",
+          "title": "Formal verification - Wikipedia"
+        },
+        {
+          "url": "https://teamorouter.cn/blogs/gpt-6-astra-10-math-problems",
+          "title": "GPT-6 Astra's 10 Math Problems: The $2,000 and Lean 4 Story"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49650326",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.95,
+      "story_ids": [
+        "hackernews:story:49650326"
+      ],
+      "sources": [
+        {
+          "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+          "label": "ibobev",
+          "source_type": "hackernews",
           "official": false
         }
       ]

@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-zh.xml</id>
-  <updated>2026-09-10T00:00:00Z</updated>
+  <updated>2026-09-11T00:00:00Z</updated>
+  <entry>
+    <title>OpenAI 纳维-斯托克斯成果据称附带 Lean 4 形式化证明</title>
+    <link href="https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/"/>
+    <id>https://bmt.news/editions/2026-09-11/#hackernews:story:49650326</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>OpenAI 于 2026 年 9 月 8 日前后发布的关于纳维-斯托克斯方程存在性与光滑性问题的成果（一个无界反例）据称附带了 Lean 4 形式化证明，这意味着该论证可以逐行接受机器检查，而不只是依赖人类同行评审。Hacker News 上的讨论围绕该成果的意义、验证成本以及大规模部署证明生成智能体的经济性展开。
+
+如果该成果站得住脚，这将是 AI 系统首次针对接近千禧年大奖难题的重大结果给出可机器检验的形式化证明之一，从而把瓶颈从“发现证明”转移到“验证证明”。它同时引出一个问题：当论证的规模或复杂度超出人类审稿人独立核查的能力时，什么才算得上数学知识。
+
+评论者指出验证并不便宜：有人提到检查一个与费马大定理同量级的 Lean 证明大约需要 15 小时和 230GB 内存，仅比智能体生成相应 Lean 代码所需的约 11 天快一个数量级。该次智能体运行的估算成本约为 4000 万美元（动用了大规模智能体集群），而人类等价工作量约为 88 万小时（按每小时 150 美元计约 1.32 亿美元）；此外该解答尚未经过外部数学家验证，研究者 Levent Alpöge 与 Tristan Buckmaster 提出了训练数据方面的质疑，OpenAI 称这种情况“绝对不可能”。</summary>
+  </entry>
+  <entry>
+    <title>DeepSeek 发布 V4.1-Flash，缓存命中定价极低</title>
+    <link href="https://twitter.com/deepseek_ai/status/2097930608790167907"/>
+    <id>https://bmt.news/editions/2026-09-11/#hackernews:story:49639090</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>DeepSeek 发布了 DeepSeek-V4.1-Flash，这是一款新的前沿规模模型，同时附有详细的技术报告，权重已上传至 Hugging Face。DeepSeek 引用的多方测试显示，V4.1-Flash 在性能、成本、速度和总运行时间上均超过 V4-Pro，其 API 的缓存命中价格仅为每百万 token 0.003 美元。
+
+此次发布进一步巩固了 DeepSeek 作为前沿实验室中性价比最激进者的地位，而如此低的缓存命中价格改变了长上下文、多轮智能体任务的成本结构，因为这类任务会反复复用同一段前缀。同时，它也提高了业界对技术报告透明度的期待——当前不少美国实验室发布的系统卡中，安全与政策内容占据了绝大部分篇幅。
+
+据报该模型参数量为 552B，约为上一代 V4-Flash（284B）的两倍，并新增了视觉能力且价格更低，其中临时测试版本的处理速度可达每秒 400 个 token。为保持兼容，deepseek-v4-flash 与 deepseek-v4-flash-vision-exp 两个接口暂时路由至 V4.1-Flash，而 V4-Pro 的路由调整定于 9 月 14 日。</summary>
+  </entry>
+  <entry>
+    <title>OpenAI 发布 Agents API：基于 Codex harness 的托管云端智能体服务</title>
+    <link href="https://openai.com/index/introducing-the-agents-api"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:openai.com_blog_rss.xml:b32e9b8471353987</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>OpenAI 推出了 Agents API，这是一项由 Codex harness 驱动的托管服务，让开发者能够构建并启动具备编排能力、长时运行会话和工具调用能力的云端智能体。该 API 直接运行 Codex harness 并接管底层智能体基础设施，使团队可以专注于智能体本身要完成的任务，而不必操心维持其运行的运行时环境。
+
+这标志着智能体部署正从自托管的 DIY 框架转向由头部 AI 实验室提供的托管运行时，有可能在整个生态中统一长时运行、可调用工具的智能体的构建与部署方式。同时，由于开发者如今多了一个来自 OpenAI 的第一方选择，这也会给开源智能体框架以及自建智能体运行时的云厂商带来更大的竞争压力。
+
+根据 OpenAI 的 API 文档，Agents API 包含自动上下文压缩（automatic context compaction）、多智能体编排、程序化工具调用以及对 MCP 的支持，而 Codex harness 则负责线程恢复、工具续跑、上下文压缩和 app-server 执行等底层会话行为。它建立在更早的 Agents SDK 及其向原生沙箱执行与模型原生 harness 演进的基础上。</summary>
+  </entry>
   <entry>
     <title>OpenAI称1万个AI代理攻克纳维-斯托克斯难题，重燃AI安全担忧</title>
     <link href="https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/"/>
@@ -403,38 +436,5 @@ Hy4 preview 采用混合专家架构，总参数7700亿，激活参数490亿，�
 这一里程碑式裁决保护了AI公司因政策立场而免受政府报复，强化了对公司言论的第一修正案保护，并限制了行政权力。它开创的法律先例可能制约未来政府基于政治分歧将企业列入黑名单的能力。
 
 法官Rita Lin的59页命令撤销了国防部的认定和抵制令，授予永久禁令，并拒绝了政府提出的七天行政暂缓执行请求。Anthropic关于特朗普指令超越总统权力的主张未获支持，法官同时对未采取行动的机构作出判决。</summary>
-  </entry>
-  <entry>
-    <title>Z.ai发布开放权重模型GLM-5.3</title>
-    <link href="https://twitter.com/Zai_org/status/2093354097122455713"/>
-    <id>https://bmt.news/editions/2026-08-29/#hackernews:story:49479878</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Z.ai发布了其最新的旗舰开放权重模型GLM-5.3，相比GLM-5.2在后训练上大幅改进。该模型现已通过OpenRouter上的DeepInfra等第三方提供商提供。
-
-此次发布增强了开放权重生态系统，为开发者提供了一种有竞争力的、可本地部署的替代方案，以对抗前沿封闭模型。同时凸显了中国实验室正通过后训练缩小与领先模型的差距。
-
-GLM-5.3使用与GLM-5.2相同的基础模型，所有提升均来自针对软件工程和智能体任务的扩展后训练。更快的变体GLM-5.3-Flash为Z.ai的消费者助手提供支持。</summary>
-  </entry>
-  <entry>
-    <title>法官裁定特朗普政府将Anthropic列入黑名单非法</title>
-    <link href="https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html"/>
-    <id>https://bmt.news/editions/2026-08-29/#hackernews:story:49473522</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>一名联邦法官裁定，特朗普政府对Anthropic的列入黑名单行为非法，理由是行政记录单薄且行为具有报复性。法院认定，政府的理由不充分，并认为该行动是出于对Anthropic言论的报复。
-
-该裁决为法院如何审查政府对AI公司采取行动的国家安全理由创立了重要先例。它表明，虽然证据不足可能被容忍，但报复性意图则不会被接受，这可能会抑制对AI实验室的激进监管。
-
-法院称行政记录“单薄”——一份四页的备忘录，其形成时间晚于三项受质疑行动中的两项。政府还放弃了早先的风险评估，该评估声称Anthropic的AI在被部署到国家安全系统后可能存在“后门访问”。</summary>
-  </entry>
-  <entry>
-    <title>英伟达同意以130亿美元收购Hugging Face</title>
-    <link href="https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8"/>
-    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49458161</id>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <summary>据The Information和TechCrunch报道，英伟达已同意以129亿美元收购领先的开源AI模型库Hugging Face。这笔交易于2026年8月24日曝光，标志着AI开发者生态系统的重大整合。
-
-此次收购使英伟达掌握了开源AI模型的主要分发渠道，可能重塑开发者访问和部署AI软件的方式。这可能加剧反垄断审查，并影响依赖Hugging Face的数百万开发者与公司。
-
-129亿美元的价格紧随Hugging Face于2025年末拒绝了英伟达在70亿美元估值下的5亿美元投资，以及2023年以45亿美元估值进行的2.35亿美元融资之后。英伟达近期一直公开支持开源AI，包括黄仁勋首次在推特上表态支持开源。</summary>
   </entry>
 </feed>

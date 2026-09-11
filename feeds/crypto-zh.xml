@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-09-10T00:00:00Z</updated>
+  <updated>2026-09-11T00:00:00Z</updated>
+  <entry>
+    <title>Liquid Network 在 3.2 亿美元漏洞事件后恢复出块</title>
+    <link href="https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cointelegraph.com_rss:656b87c8d60ff48b</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Liquid Network 在部署紧急软件更新后于周四恢复出块，但作为预防措施，交易与锚定（peg）操作仍然暂停，网络正在被持续监控以确认完全稳定。此次重启源于 9 月 6 日的事件：约 4,000 枚 BTC（价值约 3.2 亿美元）通过 Elements 软件中的一个漏洞从该网络的联合钱包中被提取。
+
+Liquid 是规模最大、运行时间最长的比特币侧链之一，这次提取掏空了其联合钱包约 95% 的余额，暴露出联邦式跨链桥设计中高度集中的信任如何转化为系统性风险。事件直接波及 L-BTC 持有者、在 Liquid 上发行代币化资产与稳定币的机构，以及依赖其进行结算的交易所和做市商。
+
+攻击者利用了 Elements 范围证明（range proof）验证缓存中的漏洞，铸造出约 4,000 枚无真实背书的 L-BTC，随后通过 SideSwap 的授权退出锚定路径兑换为真实 BTC。紧急补丁 Elements v23.3.4 加固了范围证明所使用的缓存键；在受影响桥节点完成修补后，3,400 枚 BTC（约 2.7 亿美元）被归还，截至 9 月 7 日仍有约 598 枚 BTC（约 4,600 万美元）未追回。</summary>
+  </entry>
+  <entry>
+    <title>纳斯达克以210亿美元估值向Kraken母公司Payward投资1亿美元</title>
+    <link href="https://www.coindesk.com/business/2026/09/10/nasdaq-invests-usd100-million-in-kraken-parent-company-payward-at-usd21-billion-valuation"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.coindesk.com_arc_outboundfeeds_rss_:93d1d829d0400b01</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>纳斯达克旗下风投部门Nasdaq Ventures同意向加密货币交易所Kraken的母公司Payward投资1亿美元，据彭博援引知情人士消息，此轮交易对Payward的估值达到210亿美元。作为协议的一部分，Kraken将在其平台上分销纳斯达克上市股票的代币化版本，并在其加密货币、股票、代币化股票、期货和期权等各类交易场所全面采用纳斯达克的监控技术。
+
+这是今年第三次有成熟的传统交易所运营商入股加密货币交易所——此前德意志交易所已在4月向Payward投资2亿美元——此举进一步加深了传统市场基础设施与加密交易场所之间的融合。对纳斯达克而言，这笔交易为其24小时不间断的代币化股票交易买到了分销渠道；对Kraken而言，则为其多资产扩张引入了机构级监控能力和一家蓝筹股权合作伙伴。
+
+据报道，Kraken发行的纳斯达克代币化股票将与普通股享有相同的投票权，这笔投资也是双方在今年3月宣布的合作基础上的进一步延伸。210亿美元的估值来自知情人士而非正式披露，而在此之前一个月，纳斯达克刚公布了收购Level Markets的计划，作为其进军“全天候”市场战略的一部分。</summary>
+  </entry>
+  <entry>
+    <title>Nomic 桥漏洞导致 allBTC 部分失去支撑，Osmosis 冻结 22.65 枚 BTC</title>
+    <link href="https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cryptoslate.com_feed_:674de2989502d767</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Osmosis 已冻结 22.65 枚 BTC，原因是 Nomic 自定义转发逻辑中的缺陷让攻击者得以双花并铸造虚假的 nBTC 凭证，这些凭证随后通过 IBC 跨链到 Osmosis 并被计入 allBTC 的合法支撑资产。这批无效 nBTC 占 allBTC 支撑的 36.03%，因此 allBTC 的铸造与赎回已被暂停，等待治理层决定如何补足储备。
+
+这起事件表明，某条桥的转发逻辑漏洞可以传导到另一个协议的封装资产篮子中，使持有人整体暴露在储备缺口之下，而不是遭遇直接盗币。同时它把治理投票推到了用户追偿的核心位置，这一模式对 Cosmos 生态内所有封装比特币产品都具有参照意义。
+
+截至报道截止时，allBTC 流通量为 110.57 枚，篮子中持有 39.84 枚 nBTC；即使 22.65 枚被冻结的 BTC 全部追回，仍有约 17.19 枚 BTC 的缺口需要由社区池补足。链上研究员 Rarma 将主要铸造活动追溯至 6 月 25 日，并指出 7 月 17 日活动中产生的 22.65060846 枚 allBTC 在追踪发布时仍未移动，而官方公开披露发生在两个多月之后；Osmosis 负责管理 allBTC 合约，一个 3-of-6 的 moderator 子 DAO 可暂停池子或将某成分资产标记为受损，而 Nomic 的托管文档规定储备支出需要代表其签名集合 90% 以上投票权的签名。</summary>
+  </entry>
+  <entry>
+    <title>Visa与Credit Coop推链上稳定币信贷，卡结算融资上链</title>
+    <link href="https://cryptoslate.com/visas-2-5-billion-onchain-credit-bet-puts-card-settlement-financing-onchain/"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cryptoslate.com_feed_:ea0dea546b999dea</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Visa于9月8日宣布与链上信贷协议Credit Coop合作推出一项链上借贷计划：由Credit Coop提供以稳定币计价的循环信贷额度，用于垫付卡项目每日对Visa的结算义务，并在之后将持卡人还款扫入偿还流程。Visa表示，该模式自2023年以来累计融资的结算规模已超过25亿美元，且未出现违约。
+
+此举把传统意义上的应收款融资搬上区块链轨道，将卡结算义务转化为抵押品，并为Visa快速增长的稳定币卡业务提供了新的短久期融资渠道。这标志着机构对链上信贷基础设施的采用，也把稳定币的用途从支付扩展到借贷与营运资金融资。
+
+提取、现金流控制与偿还均由智能合约处理，Credit Coop的“Spigot”合约充当可编程的锁箱，先偿付利息并补足信贷额度，剩余现金才流向借款方运营账户；Visa称Credit Coop已处理超过3000笔借款事件和9000笔还款事件。承销仍依赖通过安全通道传输的Visa授权结算文件，而25亿美元这一数据由Credit Coop提供，各具体融资方案的风险损失保护条款尚未披露。</summary>
+  </entry>
+  <entry>
+    <title>Tether与Fasanara推出4亿美元私人信贷基金，目标募资30亿</title>
+    <link href="https://thedefiant.io/news/defi/tether-fasanara-400-million-private-credit-fund"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:thedefiant.io_api_feed:ca9d212d9ace0457</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>9月9日，Tether与总部位于伦敦的Fasanara Capital共同推出StableFund，这是一只永久存续型（evergreen）私人信贷基金，由双方合计出资4亿美元作为种子资本，并计划向外部机构投资者再募资至多30亿美元。Fasanara负责管理投资组合，Tether则负责发起与USDT相关的融资交易，并提供结算与资金管理基础设施。
+
+此举让Tether从它已占据主导地位的加密借贷市场，进一步延伸至规模大得多的私人信贷领域。Galaxy Research估计，截至6月底Tether占230亿美元中心化加密借贷市场的约60%，未偿有担保贷款约135亿美元。这也让USDT在实体经济放贷中获得发起与结算通道的新角色，而此时规模约3万亿美元的私人信贷行业正面临违约上升与更严格的监管审视。
+
+StableFund采用永久存续型结构，意味着它可以持续募资和投放资本，而不必在固定到期日清算；但Tether与Fasanara尚未公开披露其赎回条款，也未披露Tether在亏损分担、承销权限、杠杆使用和费用安排中的比例。《华尔街日报》8月的一项分析显示，由Ares、Blackstone、Blue Owl和Golub Capital管理的公开交易基金违约率升至至少2021年以来的最高水平。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase 与 Moov 合作为逾 1000 家美国社区银行提供稳定币基础设施</title>
+    <link href="https://cointelegraph.com/news/coinbase-moov-stablecoin-infrastructure-banks?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:cointelegraph.com_rss:fa704a3d682f3ebd</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>Coinbase 宣布与支付平台 Moov 达成合作，为 Moov 客户群中超过 1000 家美国社区银行和信用合作社提供稳定币支付受理、结算与实时资金调拨能力。该整合将 Coinbase 的 Payments API 与托管钱包嵌入 Moov 现有的支付平台，支持消费者稳定币支付、商户结算与付款等场景。
+
+这一合作把稳定币通道推进主流社区银行渠道，使规模较小的美国金融机构也能获得此前主要由大型银行和金融科技公司才具备的近乎即时结算与商户付款能力。这同时印证了一个更广泛的趋势：无论是大型银行还是非银行支付机构，都在主动布局稳定币能力，而不是观望等待。
+
+该方案面向消费者稳定币支付、商户结算和付款等用例，同时让企业和商户能够接入 Coinbase 的托管账户。美国社区银行通常指总资产低于 100 亿美元的机构，包括州特许银行以及储蓄与贷款控股公司。</summary>
+  </entry>
+  <entry>
+    <title>研究将比特币、以太坊量子攻击关键运算的资源基准减半</title>
+    <link href="https://www.theblock.co/news/ecosystems/2026-09-10-researchers-halve-quantum-resource-benchmark-for-key-operation-in-bitcoin-ethereum-attack-414121"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.theblock.co_rss.xml:94a908797f49ef4a</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>研究人员公布了一项针对比特币和以太坊量子攻击中关键运算的新基准，其所需量子资源不到 Google Quantum AI 此前公布水平的一半，该结果于2026年9月10日向 CoinDesk 披露。论文将这项核心计算的估算量子资源大约削减了一半，但采用的核算方法与 Google 不同。
+
+这一结果压缩了支撑多数加密货币签名安全的椭圆曲线离散对数问题所需的资源规模，实际上缩短了开发者迁移到抗量子密码学的时间窗口。它影响比特币、以太坊以及所有依赖 secp256k1 上 ECDSA 的链，也提升了目前仍多处于研究阶段的抗量子路线图的紧迫性。
+
+两者并不具备直接可比性：新论文与 Google 于2026年3月31日发布的白皮书采用不同的核算方法，因此实际威胁降低幅度仍不确定。该基准针对的只是单一核心运算，而非完整的端到端攻击，而且所需的容错量子硬件目前尚未被实现。</summary>
+  </entry>
+  <entry>
+    <title>Bybit 计划在欧洲推出整合股票、衍生品与加密资产的“超级应用”</title>
+    <link href="https://www.coindesk.com/business/2026/09/10/crypto-exchange-giant-bybit-to-offer-european-super-app-with-stocks-derivatives"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.coindesk.com_arc_outboundfeeds_rss_:6ba49f9bc6a8acf0</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>全球交易量最大的加密货币交易所之一 Bybit 宣布，计划在欧洲推出一款“超级应用”，让用户可以在同一平台上交易股票、衍生品以及加密资产。此举意味着 Bybit 的产品线将从核心的加密现货与衍生品业务，进一步扩展到欧盟市场。
+
+这是一次产品扩张与市场结构层面的动作：它模糊了加密交易所与传统券商在欧洲的边界，使 Bybit 直接与欧盟的互联网券商及其他交易平台争夺散户订单流。这也表明，在纯加密交易业务日益拥挤、费率被压缩的背景下，大型交易所正把多资产“超级应用”视为新的增长路径。
+
+该产品将在同一界面下把股票、衍生品与加密资产整合在一起；而衍生品属于杠杆类工具，其在欧盟面向散户的分销受到杠杆上限和适当性规则的约束，因此产品设计很大程度上取决于 Bybit 在具体成员国持有哪些牌照。此类应用能否成功，还取决于撮合执行质量、资产托管安排，以及经纪业务与加密业务实体之间的资产如何划分。</summary>
+  </entry>
+  <entry>
+    <title>印度农业仓储巨头 Arya.ag 将 20 亿美元粮食抵押贷款搬上链</title>
+    <link href="https://www.coindesk.com/business/2026/09/10/indian-agri-warehouse-giant-is-putting-usd2-billion-in-grain-backed-loans-onchain"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:www.coindesk.com_arc_outboundfeeds_rss_:0d41fd2759b7f986</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>印度农业仓储运营商 Arya.ag 正借助 Avalanche 技术将 20 亿美元的粮食抵押贷款搬上链，把粮食库存、仓单以及贷款状态代币化，使放贷方能够更可靠地核验农业信贷背后的农作物。这一规模使其跻身迄今公布的最大现实世界资产代币化项目之列。
+
+一个来自非加密领域农业运营商的 20 亿美元代币化信贷池，是机构采用链上金融的重要一步，把 RWA 代币化从国债、房地产扩展到以大宗商品为抵押的借贷领域。它为 DeFi 放贷方和传统金融机构提供了一套抵押品核验范本，有望在这一长期受纸质仓单不透明困扰的细分市场中降低信用风险溢价。
+
+此次上链的是粮食库存、仓单和贷款状态，而非贷款本身，因此这些代币主要是与 Arya.ag 仓库中实际农产品库存绑定的可验证抵押品与来源凭证。结算层选择了 Avalanche，其子网架构允许机构运行可定制、许可制或高吞吐量的环境，而不必依赖单条公共主链。</summary>
+  </entry>
   <entry>
     <title>墨西哥音乐家及家人因比特币冷钱包遭杀害</title>
     <link href="https://decrypt.co/377795/mexican-family-killed-bitcoin-cold-wallet"/>
@@ -343,104 +442,5 @@ Galaxy 称第三波攻击者创建了 293 个 2-of-2 多重签名保险库来存
 这一事件凸显了即使是风投支持的交易所也存在托管与偿付能力风险，而且距离 Tether 领投 Orionx 的 A 轮融资并进军拉美市场仅过去 15 个月。它可能削弱用户对中心化交易所的信任，并促使监管机构和投资者更严格地审视托管控制。
 
 法务审计将 Orionx 的内部记录与链上数据对比，发现其托管地址中的 Bitcoin、Ether、XRP 和 POL 均存在缺口。Orionx 已对联合创始人 Roberto Zibert 和 Joaquín Díaz 提起刑事诉讼，二人否认有不当行为；据称相关转账发生在 2018 年至 2021 年之间，部分流向其他加密平台。</summary>
-  </entry>
-  <entry>
-    <title>Kraken推出OpenAI与Anthropic上市前永续合约</title>
-    <link href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE0xZlJkdVlPcS1TZTBMY1ZEUFRJYndDQV82XzlTTmxPTGsydU5fRnhvS0dPTEx5b1NoT2M2dTBXLTFKSnA3b1gxZ1k2ZHB1MzBWZk1RcXVBcw?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-07/#google_news:article:c570af7d3284df38</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Kraken 已上线 Anthropic 和 OpenAI 的上市前（pre-IPO）永续合约，符合条件的客户可在两家 AI 公司完成上市前以最高 5 倍杠杆做多或做空。这些合约以现金结算，参考私募市场股权估值，且不赋予交易者任何股权。
-
-此举将加密衍生品延伸至两家全球估值极高的私营 AI 公司的类股权敞口，为希望在 IPO 前获得 AI 公司价格波动暴露的交易者提供了通道。它同时加剧了主流交易所之间的竞争——Binance 和 Coinbase 已提供类似的上市前永续产品——并可能吸引更多机构资金流入加密原生的衍生品平台。
-
-Kraken 的合约为现金结算的合成工具，其定价跟踪公司整体股权估值，而非估算的 IPO 股价。根据发布材料，符合条件的交易者最高可使用 5 倍杠杆，且持仓不代表对标的公司的任何股权或所有权。</summary>
-  </entry>
-  <entry>
-    <title>Coinbase支持的Router Protocol关闭并销毁3.03亿枚ROUTE代币</title>
-    <link href="https://www.theblock.co/news/defi/2026-09-06-coinbase-backed-router-protocol-to-shut-down-burn-303-million-route-tokens-413618"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:www.theblock.co_rss.xml:f55a2af2b8513237</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Coinbase支持的跨链互操作项目Router Protocol宣布关闭，并将销毁3.03亿枚ROUTE代币。此前该协议试图将其技术商业化、授权或出售，但未能找到可持续的商业模式。
-
-一家获得Coinbase支持的DeFi协议关闭，凸显了跨链基础设施商业化面临的困难，ROUTE代币持有者以及集成了其Voyager dApp和CrossTalk框架的项目将受到影响。这也引发了对互操作性协议基于代币的商业模式是否可行的质疑。
-
-据The Block在2026年9月6日的报道，Router Protocol尝试将其技术商业化、授权或寻找买家的努力均告失败。销毁操作将把3.03亿枚ROUTE代币永久性地从流通中移除，这一过程不可逆，通常是将代币发送至无法访问的销毁地址。</summary>
-  </entry>
-  <entry>
-    <title>分析：稳定币规模化离不开银行，单一银行依赖是隐形风险</title>
-    <link href="https://decrypt.co/377280/stablecoins-wont-scale-without-banks"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:decrypt.co_feed:7ed938a58770d05f</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>一项新分析认为，真实的稳定币支付规模仍受制于传统银行清算渠道，因为企业级资金流在两端都是法币，只有跨境“中间段”能在链上结算。文章以 Stripe 收购 Bridge、Citi 推出加密托管、Standard Chartered 在新加坡测试稳定币结算为例，说明机构参与者正更深地嵌入银行体系，而非绕开它。
-
-这重新定义了稳定币的角色：它并非要取代银行，而是作为中间层结算工具，其企业级采用依赖银行关系、合规设施与本地法币通道。文章强调，单一银行依赖是被低估的操作风险，可能削弱发行方流动性并损害机构信任。
-
-文章引用 FXC Intelligence 数据称，2025 年跨境支付市场规模达 208 万亿美元；而 McKinsey 与 Artemis 估计，2025 年底真实稳定币支付年化规模约为 3900 亿美元，仅占全球支付总量的约 0.02%。文中指出，业务从 5000 万美元增长到 100 亿美元所跨越的差距并非技术，而是银行、外汇与牌照“管道”的覆盖广度。</summary>
-  </entry>
-  <entry>
-    <title>Better与Coinbase推出支持抵押品再利用的比特币房贷</title>
-    <link href="https://www.coindesk.com/business/2026/09/06/better-and-coinbase-s-bitcoin-backed-mortgages-can-reuse-borrowers-collateral"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:www.coindesk.com_arc_outboundfeeds_rss_:9d7f0d2e868eee69</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>在线贷款机构Better与加密货币交易所Coinbase合作推出比特币抵押贷款，允许借款人质押比特币作为抵押品，同时允许该抵押品被再利用（即再抵押）。这标志着抵押品再利用机制被引入主流受监管住房贷款产品中。
-
-此举可能让比特币作为融资资产进一步常态化，使持有者无需出售加密货币即可获得住房融资，从而加深机构采用。同时，它也将再抵押风险引入房贷市场，引发关于托管、交易对手风险及透明度的关键问题。
-
-贷款价值比、利率以及抵押品再利用安排的具体结构等条款尚未完全披露。据报道，Better和Coinbase的模式允许符合条件的购房者在不卖出比特币持仓的情况下，以比特币作为购房抵押品，并在整个贷款期间对加密货币进行估值、托管和管理。</summary>
-  </entry>
-  <entry>
-    <title>2025年加密黑客损失超31亿美元，Bybit 14亿美元事件居首</title>
-    <link href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNLThyeEcxamdPN2lQdnlJYmlyMUtXN3lXSFBRR3c4OXh4NkNsV0VGV2gtY1hYNmpWZTdlME5Kc0pWbmxYbXM1QU1uc2J0dlhHSDMxbGhRV0pfU2treUNJc19idUpaNm1wc3MtM2x0VjFMQU1MMEpsdkNqMExfQW1CdE5XUTdWY0NscEZkakVRVW96N2YwRUN5Ym1FaU44eldlMDJUVTktdmpfZEVlZmZadHpR?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-06/#google_news:article:c13a92b5bf34dcb8</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>据Tekedia报道，自2025年以来，黑客已从加密货币平台盗走超过31亿美元；Bybit在2月遭到的约14亿美元攻击（涉及流动性质押ETH及其他ETH相关代币）成为金额最高的单一损失事件。
-
-Bybit事件是加密史上最大的交易所攻击，加上31亿美元的总损失，说明中心化托管平台仍是高度组织化攻击者的主要目标。这引发了人们对保险机制、安全实践和用户信任的质疑，而行业正在推动更广泛的机构采用。
-
-链上分析人员将Bybit遭攻击归因于朝鲜Lazarus Group，该组织利用交易所冷钱包向热钱包转账的过程实施攻击；被盗资产包括流动性质押以太币（stETH）、Mantle Staked ETH（mETH）及其他ERC-20代币。截至2025年3月的链上追踪显示，约88.87%被窃资金仍可追踪，7.59%已“失联”，凸显冻结或追回资产的困难。</summary>
-  </entry>
-  <entry>
-    <title>Trezor泄露规模扩大至约8.07万用户，旧物流记录被找到</title>
-    <link href="https://cryptoslate.com/users-exposed-by-trezor-breach-grows-sixfold-after-supposedly-deleted-shipping-logs-are-found/"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:cryptoslate.com_feed_:81d53d9a5bda073a</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>9月4日，Trezor 更新公告称，物流服务商 ShipMonk 的泄露事件又波及约6.7万名美国客户，这些客户在2019年至2021年间的联系方式与订单数据在承诺删除后仍保留在系统中。加上此前披露的1.37万人，两次通报合计受影响人数约8.07万，但 Trezor 尚未给出统一的总数。
-
-该事件将可识别身份与实体地址同硬件钱包购买记录关联起来，可能被用于更具针对性的钓鱼、诈骗电话或信件，甚至造成人身安全风险。它同时说明，若缺乏独立验证，第三方提出的书面删除保证并不能真正保护用户隐私。
-
-新增泄露数据为2019年11月至2021年8月间的美国订单记录，包括姓名、电子邮箱、电话号码、收货地址和订单编号。Trezor 强调其钱包系统、恢复助记词、私钥和资金均未受影响，目前也尚未确认有任何由这批数据引发的下游攻击。</summary>
-  </entry>
-  <entry>
-    <title>DAO治理漏洞迫使协议在代码与紧急制动之间抉择</title>
-    <link href="https://cryptoslate.com/daos-are-forcing-crypto-protocols-to-choose-between-code-and-emergency-brakes/"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:cryptoslate.com_feed_:e4aa163f73ec8f26</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Compound 的 289 号提案差点将 499,000 枚 COMP（约 2400 万美元）转入一个收益金库；该提案在 2024 年 7 月因最后一刻投票激增而通过，此后协议取消了该分配并增设了否决角色。2026 年针对 48 个以太坊 DAO 的两项研究发现，注册、质押和委托流程通常会集中投票权，而合法治理规则可能被利用来实施金库掠夺。
-
-该事件表明，DAO 可以通过所有人认为合理的规则遭到掠夺，因为一旦在截止时间前形成多数，去中心化投票机制便没有紧急停止手段。这迫使 DeFi 协议在纯代码执行与否决权、多签等制动机制之间权衡，这一取舍正影响着整个行业的治理安全。
-
-最终投票结果为 682,191 票对 633,636 票，最后 34 分钟内投出了 563,591 票，占该提案全部支持票的 82%。这项覆盖 48 个 DAO 的研究还发现，提案门槛、链上 gas 费用以及投票渠道的差异会系统性地偏向富有持有者和既有委托人——Uniswap 在免费链下投票与付费链上投票中出现不同选民构成，即是例证。</summary>
-  </entry>
-  <entry>
-    <title>Zcash 突破 1,000 美元，现货 ETF 资产超 4 亿美元</title>
-    <link href="https://cryptoslate.com/zcash-breaks-1000-as-its-spot-etf-crosses-400-million-in-assets/"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:cryptoslate.com_feed_:c08093e919ce27ac</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>9 月 4 日，Zcash 突破 1,000 美元，盘中最高触及 1,050.70 美元，24 小时内上涨约 20%。灰度旗下 ZCSH 现货 ETF 在 NYSE Arca 上市不到两周后，资产规模便超过 4 亿美元；同时 Zcash 期货未平仓合约首次突破 20 亿美元。
-
-这标志着机构与散户对隐私币的兴趣显著回暖，ZEC 的市场结构中首次同时出现受监管的美国现货 ETF 和创纪录的杠杆期货持仓。这也再次引发讨论：Zcash 能否将货币属性与 AI 时代日益增长的隐私需求结合，从而对比特币的主导地位构成持久挑战。
-
-ZCSH 的资产从 8 月 25 日上市时的 3.046 亿美元增至 9 月 3 日的 4.147 亿美元，同时该基金的 ZEC 持仓从 387,849 枚增至 428,613 枚。24 小时内约 4,000 万美元的 ZEC 空头头寸遭清算，24 小时期货成交量一度超过 60 亿美元，显示衍生品交易极为活跃。</summary>
-  </entry>
-  <entry>
-    <title>柏林网络攻击：黑客在暗网泄露高度敏感数据</title>
-    <link href="https://www.euronews.com/next/2026/09/05/berlin-cyberattack-hackers-leak-highly-sensitive-data-across-dark-web"/>
-    <id>https://bmt.news/editions/2026-09-06/#gdelt:article:20260905T094500Z::https://www.euronews.com/next/2026/09/05/berlin-cyberattack-hackers-leak-highly-sensitive-data-across-dark-web</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>黑客已将针对德国首都柏林发动的网络攻击中所窃取的高度敏感数据泄露到了暗网上。这起已获确认的事件被视为一起重大安全泄密，可能对个人和政府运作产生广泛影响。
-
-此类来自重要市政府的数据泄露可能暴露居民的个人信息，并损害公众对政府信息系统的信任。该事件也凸显出针对公共机构的网络犯罪威胁不断升级——被盗数据正被用于黑市上的非法交易和攻击活动。
-
-被泄露的数据被描述为高度敏感且与柏林市政府相关，其中可能既包含居民个人记录，也包含内部行政信息。在暗网上发布此类材料，会加大数据被转卖或用于身份盗用、敲诈等进一步犯罪活动的风险。</summary>
   </entry>
 </feed>

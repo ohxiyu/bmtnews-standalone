@@ -46,14 +46,27 @@
       "current_state_en": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
       "detailed_summary_zh": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
       "detailed_summary_en": "Researchers report halving the quantum resource benchmark for a key operation relevant to attacking Bitcoin and Ethereum, though the comparison uses different accounting methods than Google's prior estimate.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "比特币和以太坊使用 secp256k1 椭圆曲线上的 ECDSA 签名来授权交易，而足够强大的容错量子计算机运行 Shor 算法，理论上可以从已公开的公钥推导出私钥。“量子资源估算”量化的是这类计算需要多少量子比特和量子门；2017 年 Roetteler 等人被广泛引用的论文给出，256 位椭圆曲线大约需要 2,330 个逻辑量子比特和约 1.26×10^11 个 Toffoli 门。Google Quantum AI 于2026年3月与以太坊基金会和斯坦福合作发布的白皮书给出了少于 50 万个物理超导量子比特量级的估算，认为量子威胁比许多人预想的更近。新研究声称以不同的核算方式在某个关键运算上优于该基准，这也是“减半”这一标题不能直接等同于威胁减半的原因。",
+      "background_en": "Bitcoin and Ethereum authorize transactions with ECDSA signatures on the secp256k1 elliptic curve, and a large enough fault-tolerant quantum computer running Shor's algorithm could in principle derive a private key from an exposed public key. \"Quantum resource estimates\" quantify how many qubits and quantum gates such a computation would require; a widely cited 2017 paper by Roetteler and colleagues put a 256-bit elliptic curve at roughly 2,330 logical qubits and about 1.26×10^11 Toffoli gates. Google Quantum AI's March 2026 whitepaper, produced with the Ethereum Foundation and Stanford, reported estimates in the range of fewer than 500,000 physical superconducting qubits, framing quantum exposure as closer than many assumed. The new work claims to beat that benchmark for a key operation using a different accounting approach, which is why the headline halving does not translate directly into a halved threat.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导渠道主要是市场情绪与长期安全风险，而非任何即时可利用的漏洞：直接暴露的是那些资产存放在公钥已公开地址上的部分，例如被重复使用的地址和早期 P2PK 输出，而托管机构、矿工和长期持有者的暴露正集中于此。由于比特币和以太坊的密码学并未被实际攻破，且两种估算采用不同核算方式，该消息本身不会改变余额、流动性或托管安排。",
+      "market_impact_en": "The transmission channel is sentiment and long-horizon security risk rather than any immediate exploit: the directly exposed segment is coins held in addresses whose public keys are already visible, such as reused addresses and early pay-to-public-key outputs, which is where custodians, miners and long-term holders concentrate their exposure. Because no Bitcoin or Ethereum cryptography has actually been broken and the two estimates use different accounting, the story does not by itself alter balances, liquidity or custody arrangements.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/10/crypto-researchers-cut-bitcoin-and-ethereum-quantum-attack-estimate-by-50",
+          "title": "Crypto researchers cut Bitcoin and Ethereum quantum attack ..."
+        },
+        {
+          "url": "https://www.forbes.com/sites/digital-assets/2026/03/31/google-finds-quantum-computers-could-break-bitcoin-sooner-than-expected/",
+          "title": "Google Finds Quantum Computers Could Break Bitcoin Sooner ..."
+        },
+        {
+          "url": "https://arxiv.org/abs/1706.06752",
+          "title": "[1706.06752] Quantum resource estimates for computing elliptic curve discrete logarithms"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.theblock.co_rss.xml:94a908797f49ef4a"

@@ -47,14 +47,27 @@
       "current_state_en": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
       "detailed_summary_zh": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
       "detailed_summary_en": "Visa and Credit Coop have launched an onchain revolving stablecoin credit facility that funds daily card settlement obligations, reportedly financing $2.5 billion since 2023.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "每一笔卡支付都会造成时间错配：卡项目可能需要按每日结算节奏先向Visa付款，而持卡人的资金尚未到账，从而形成反复出现的短期资金缺口。应收款融资正是通过以预期现金流为抵押借款来弥合此类缺口的成熟做法。Visa披露，其2026财年第二季度已有160多个稳定币相关卡项目，这些项目的支付量同比增长近200%，稳定币结算近期年化运行规模也超过200亿美元。Credit Coop是一家链上信贷协议，业务已从点对点借贷扩展到多存款人金库产品。",
+      "background_en": "Every card payment creates a timing mismatch: a card program may owe Visa on a daily settlement schedule before the money arrives from its cardholders, leaving a recurring short-term funding gap. Receivables financing is a long-established way to bridge such gaps by borrowing against expected payment streams. Visa reported more than 160 stablecoin-linked card programs in its fiscal second quarter of 2026, with payment volume on those programs nearly 200% higher year over year, while stablecoin settlement recently exceeded a $20 billion annualized run rate. Credit Coop is an onchain credit protocol that has expanded from peer-to-peer lending into multi-depositor vault products.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径在于稳定币需求与链上信贷市场：循环稳定币额度的提取会带来稳定币流动性需求，而“结算应收款”成为DeFi借贷中的一种新的短久期抵押品类型，可能影响链上信贷资金池的资产构成与风险定价。Visa的结算轨道与信贷协议对接，也加深了机构支付流与区块链基础设施之间的联系，这一渠道涉及稳定币发行方、链上借贷方以及卡项目金融科技公司。",
+      "market_impact_en": "The transmission runs through stablecoin demand and onchain credit markets: draws on revolving stablecoin facilities require stablecoin liquidity, and settlement receivables become a new short-duration collateral type inside DeFi lending, potentially shifting asset composition and risk pricing for onchain credit pools. Visa's settlement rails linking to a credit protocol also deepens the connection between institutional payment flows and blockchain infrastructure, a channel that touches stablecoin issuers, onchain lenders and card-program fintechs.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.visa.com/en-us/thought-leadership/innovation/onchain-settlement-financing",
+          "title": "Onchain credit supports stablecoin-linked card issuers | Visa"
+        },
+        {
+          "url": "https://skynet.certik.com/projects/credit-coop",
+          "title": "Onchain Credit Protocol With Vaults · Skynet Score: 80.16/100"
+        },
+        {
+          "url": "https://cryptoslate.com/visas-2-5-billion-onchain-credit-bet-puts-card-settlement-financing-onchain/",
+          "title": "Visa onchain lending makes card settlement collateral"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:ea0dea546b999dea"

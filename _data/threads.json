@@ -1,6 +1,69 @@
 {
   "threads": [
     {
+      "thread_id": "evt_bf6ebd5e0c99f69a",
+      "event_id": "evt_bf6ebd5e0c99f69a",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T08:31:07.813249+08:00",
+      "first_date": "2026-09-10",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "technology",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "other",
+      "event_type_zh": "其他事件",
+      "event_type_en": "Other",
+      "title_zh": "OpenAI says 10,000 AI agents solved a $1 million math problem. Now mathematicians are fighting",
+      "title_en": "OpenAI says 10,000 AI agents solved a $1 million math problem. Now mathematicians are fighting",
+      "summary_zh": "OpenAI 报告的纳维-斯托克斯解据称附带 Lean 4 形式化证明，但尚未经外部数学家验证，验证成本高昂，且面临训练数据方面的质疑。",
+      "summary_en": "OpenAI's reported Navier-Stokes solution reportedly includes a Lean 4 formal proof, but it has not been verified by external mathematicians, verification costs are high, and training-data concerns have been raised.",
+      "latest_update_zh": "据报 OpenAI 的纳维-斯托克斯成果附带 Lean 4 形式化证明，可机器检验；验证成本高昂，外部数学家未验证，并存在训练数据质疑。",
+      "latest_update_en": "OpenAI's reported Navier-Stokes result reportedly includes a Lean 4 formal proof, enabling machine-checking; verification costs are high, external mathematicians have not verified it, and training-data concerns were raised.",
+      "background_zh": "纳维-斯托克斯方程描述黏性流体的运动，克雷数学研究所提出的千禧年大奖难题所问的是：在三维空间中光滑解是否永远存在，还是会出现无界的“爆破”行为。Lean 4 是一个证明助手（交互式定理证明器），其证明由一个体量很小的可信内核检查，因此“形式化证明”具备机器可验证性，而普通书面证明并不具备这一性质。据称该反例是在 Levent Alpöge 与 Tristan Buckmaster 已发表工作的基础上得到的，后者证明了带光滑外力项的三维不可压缩欧拉方程存在有限时间爆破。",
+      "background_en": "The Navier-Stokes equations describe the motion of viscous fluids, and the Clay Mathematics Institute's Millennium Prize question asks whether smooth solutions exist for all time in three dimensions or whether they can break down into unbounded (blow-up) behavior. Lean 4 is a proof assistant, an interactive theorem prover whose proofs are checked by a small trusted kernel, so a \"formal proof\" is mechanically verifiable in a way an ordinary written proof is not. The reported counterexample followed published work by Levent Alpöge and Tristan Buckmaster proving finite-time blowup for the 3D incompressible Euler equations with smooth forcing.",
+      "latest_summary_zh": "OpenAI 于 2026 年 9 月 8 日前后发布的关于纳维-斯托克斯方程存在性与光滑性问题的成果（一个无界反例）据称附带了 Lean 4 形式化证明，这意味着该论证可以逐行接受机器检查，而不只是依赖人类同行评审。Hacker News 上的讨论围绕该成果的意义、验证成本以及大规模部署证明生成智能体的经济性展开。\n\n如果该成果站得住脚，这将是 AI 系统首次针对接近千禧年大奖难题的重大结果给出可机器检验的形式化证明之一，从而把瓶颈从“发现证明”转移到“验证证明”。它同时引出一个问题：当论证的规模或复杂度超出人类审稿人独立核查的能力时，什么才算得上数学知识。\n\n评论者指出验证并不便宜：有人提到检查一个与费马大定理同量级的 Lean 证明大约需要 15 小时和 230GB 内存，仅比智能体生成相应 Lean 代码所需的约 11 天快一个数量级。该次智能体运行的估算成本约为 4000 万美元（动用了大规模智能体集群），而人类等价工作量约为 88 万小时（按每小时 150 美元计约 1.32 亿美元）；此外该解答尚未经过外部数学家验证，研究者 Levent Alpöge 与 Tristan Buckmaster 提出了训练数据方面的质疑，OpenAI 称这种情况“绝对不可能”。",
+      "latest_summary_en": "OpenAI's release on the Navier-Stokes existence and smoothness problem — an unbounded counterexample announced around 8 September 2026 — reportedly included a Lean 4 formal proof, meaning the argument can be machine-checked line by line rather than only reviewed by humans. A Hacker News thread debated the result's significance, the cost of verification, and the economics of running large fleets of proof-generating agents.\n\nIf it holds up, this is one of the first cases of an AI system producing a machine-checkable formal proof of a landmark result adjacent to a Millennium Prize problem, which shifts the bottleneck from discovering proofs to verifying them. It also raises the question of what counts as mathematical knowledge when the argument may be too large or too complex for human referees to check unaided.\n\nCommenters noted that verification is not cheap: one cited roughly 15 hours and 230 GB of RAM to check a Fermat's Last Theorem-scale Lean proof, only about an order of magnitude faster than the ~11 days agents took to generate the Lean code. The agent run was estimated at around $40 million for a large fleet, against a rough human-equivalent estimate of ~880,000 hours (about $132 million at $150/hour), and the solution has not been verified by external mathematicians, with researchers Levent Alpöge and Tristan Buckmaster raising training-data concerns that OpenAI calls \"categorically impossible.\"",
+      "discussion_zh": "讨论整体对该能力感到震撼，但对叙事框架存在分歧：有评论者强调 Lean 验证只比智能体生成 Lean 代码快约 10 倍；有人重新核算成本对比（人类约 1.32 亿美元对智能体约 4000 万美元），认为谈不上“四个数量级”；也有人认为“每页四十小时”的旧经验法则因证明自动化进步而已经过时；还有人提出一种担忧：AI 给出的解答可能人类根本无法独立验证。",
+      "discussion_en": "The thread was broadly impressed by the capability but split on the framing: one commenter stressed that Lean verification only runs about 10× faster than agents generating the Lean code, another recalculated the cost comparison (~$132M human vs ~$40M agent) as \"not quite four orders of magnitude,\" a third argued the old \"forty hours per page\" heuristic is outdated thanks to improved proof automation, and another raised the prospect of AI solutions that humans cannot independently verify at all.",
+      "market_impact_zh": "这一事件对加密市场没有直接的传导渠道——一项纯 AI 与数学研究成果并不涉及代币、协议、托管或监管层面。唯一可能的联系是间接的情绪外溢：如果该成果强化了“AI 智能体产出可独立验证的工作”这一更宏观叙事，AI 概念与可验证计算相关的板块可能获得一定叙事层面的提振。",
+      "market_impact_en": "There is no direct transmission to crypto markets here — no token, protocol, custody, or regulatory channel is involved in a pure AI-and-mathematics research result. The only plausible linkage is indirect sentiment spillover into AI-themed and verifiable-compute narratives, which could get a modest narrative boost if the result strengthens the broader \"AI agents producing independently verified work\" story.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/09/openai-says-10-000-ai-agents-solved-a-usd1-million-math-problem-now-mathematicians-are-fighting",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+          "title": "ibobev",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_equations",
+          "title": "Navier-Stokes equations"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Formal_verification",
+          "title": "Formal verification - Wikipedia"
+        },
+        {
+          "url": "https://teamorouter.cn/blogs/gpt-6-astra-10-math-problems",
+          "title": "GPT-6 Astra's 10 Math Problems: The $2,000 and Lean 4 Story"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49650326",
+          "title": "Community discussion"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_fde028f4447c7239",
       "event_id": "evt_fde028f4447c7239",
       "latest_date": "2026-09-11",
@@ -187,14 +250,14 @@
       "summary_en": "Nasdaq invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with funds from its venture arm and an extension of a March partnership; Kraken will distribute Nasdaq-listed tokenized stocks carrying full voting rights, and Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
       "latest_update_zh": "Payward 将在其加密、股票、代币化股票、期货和期权交易场所采用 Nasdaq 的监控技术。",
       "latest_update_en": "Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
-      "background_zh": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
-      "background_en": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+      "background_zh": "Payward是Kraken的母公司，旗下拥有一系列覆盖交易、托管、支付、借贷和链上金融的产品。代币化股票是以区块链形式存在的股权数字代表，可以附带投票权和分红等股东权利，其设计初衷是能在区块链基础设施上交易，而不仅仅通过中心化交易所流通。纳斯达克约一年前向美国证券交易委员会提交了代币化提案，并持续围绕7×24小时交易布局；Kraken近期还与伦敦证券交易所合作，计划从2027年起提供追踪英国主要股票产品价值的代币化股票24/5交易。据RWA.xyz汇编的数据，当前代币化股票的分布式总价值已超过29亿美元，过去一个月增长7.4%。",
+      "background_en": "Payward is the parent company behind Kraken and a portfolio of products spanning trading, custody, payments, lending and onchain finance. Tokenized equities are blockchain-based digital representations of equity stakes that can carry shareholder rights such as voting and dividends, and they are designed to trade on blockchain infrastructure rather than only through centralized exchanges. Nasdaq filed a tokenization proposal with the US Securities and Exchange Commission about a year ago and has been positioning itself around 24/7 trading, while Kraken recently partnered with the London Stock Exchange to offer 24/5 trading of tokenized UK equity products starting in 2027. According to data compiled by RWA.xyz, the current distributed value of tokenized stocks is more than $2.9 billion, up 7.4% over the past month.",
       "latest_summary_zh": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
       "latest_summary_en": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
+      "discussion_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
+      "market_impact_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
+      "market_impact_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
       "score": 8.0,
       "source_links": [
         {
@@ -223,7 +286,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.payward.com/",
+          "title": "Payward | Building open, programmable rails for global markets"
+        },
+        {
+          "url": "https://www.kraken.com/learn/tokenized-equities",
+          "title": "Tokenized Equities: Transforming liquidity and accessibility"
+        },
+        {
+          "url": "https://www.nasdaq.com/products/fintech/surveillance",
+          "title": "Nasdaq Surveillance"
+        }
+      ]
     },
     {
       "thread_id": "evt_35a1904f28d6a3f5",
@@ -353,15 +429,15 @@
       "summary_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
       "latest_update_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，并提供详细技术报告。",
       "latest_update_en": "DeepSeek V4.1 Flash has been released on Hugging Face, with 552B parameters and a detailed technical report.",
-      "background_zh": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
-      "background_en": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
+      "background_zh": "DeepSeek 是一家中国 AI 实验室，以发布开放权重模型和内容异常坦率的技术报告而闻名。“前沿规模”指在最大算力层级上训练的模型，与顶级闭源系统处于同一量级。缓存命中定价是指当请求复用服务商已处理并存储的前缀时所享受的折扣费率，这在智能体和编程助手中很常见，因为它们每一轮都会重发相同的系统提示与文件上下文；而未命中缓存的新 token 费率要高得多。“Flash”这一档位通常指旗舰模型中更小、更便宜、更快的版本，而非最大的那一个。",
+      "background_en": "DeepSeek is a Chinese AI lab known for releasing open-weight models and unusually candid technical reports. \"Frontier-scale\" refers to models trained at the largest compute tiers, comparable to the top proprietary systems. Cache-hit pricing is the discounted rate charged when a request reuses a prefix the provider has already processed and stored, which is common in agents and coding assistants that resend the same system prompt and file context on every turn; the cache-miss rate for fresh tokens is much higher. A \"Flash\" tier usually denotes a smaller, cheaper and faster variant of a flagship model rather than the largest one.",
       "latest_summary_zh": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
       "latest_summary_en": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "score": 8.0,
+      "discussion_zh": "Hacker News 上的讨论（747 分、398 条评论）整体持赞赏态度：评论者称赞 DeepSeek 的技术报告充满具体细节，与 Anthropic 式系统卡形成鲜明对比，并对其敢于在接近前沿规模上尝试新奇思路表示惊叹。有评论指出每百万 token 0.003 美元的缓存命中价被讨论得太少，并推测上下文的网络传输成本可能很快会成为任务总成本的主要部分；也有人指出 552B 的参数量几乎是上一代 V4-Flash 的两倍，已不太配得上“Flash”之名。",
+      "discussion_en": "The Hacker News thread (747 points, 398 comments) is broadly admiring: commenters praise DeepSeek's technical report for being full of concrete detail in contrast to Anthropic-style system cards, and marvel at the lab's willingness to try unusual ideas at near-frontier scale. Several flag the $0.003 per million token cache-hit price as underdiscussed, speculating that network transfer costs for context may soon dominate total task cost, while others note that at 552B parameters the model is nearly twice the size of the previous V4-Flash and arguably no longer deserves the \"Flash\" label.",
+      "market_impact_zh": "这主要是一则 AI 基础设施新闻，但前沿推理与缓存价格的下降会传导至加密领域的 AI 与 DePIN 算力叙事——去中心化 GPU 市场的代币定价隐含地与中心化推理成本对标。中心化 API 经济性进一步优化，可能压缩这些网络赖以立足的成本套利逻辑，同时也为智能体应用扩大了设计空间。这种传导是间接的，更多通过情绪与叙事而非直接资金流影响具体资产。",
+      "market_impact_en": "This is primarily an AI-infrastructure story, but falling frontier inference and cache pricing feeds into crypto AI and DePIN compute narratives, where tokens for decentralized GPU marketplaces are implicitly benchmarked against centralized inference costs; cheaper centralized API economics can compress the cost-arbitrage pitch for those networks, while expanding the design space for agent applications. The transmission is indirect, sentiment- and narrative-driven rather than a direct flow into any specific asset.",
+      "score": 8.5,
       "source_links": [
         {
           "url": "https://news.ycombinator.com/item?id=49624603",
@@ -378,6 +454,18 @@
         {
           "url": "https://news.ycombinator.com/item?id=49639090",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+          "title": "DeepSeek | Introducing DeepSeek-V4.1-Flash: smarter, faster ..."
+        },
+        {
+          "url": "https://www.digitalapplied.com/blog/deepseek-v4-1-flash-pro-routing-prices-early-tests",
+          "title": "DeepSeek V4.1 Flash: Benchmarks, Prices and Pro Cutoff"
+        },
+        {
+          "url": "https://www.geeky-gadgets.com/deepseek-v4-1-flash-review/",
+          "title": "DeepSeek V4.1 Flash Review and Performance Test - Geeky Gadgets"
         }
       ]
     },
@@ -2527,6 +2615,132 @@
       ]
     },
     {
+      "thread_id": "evt_bf6ebd5e0c99f69a",
+      "event_id": "evt_bf6ebd5e0c99f69a",
+      "latest_date": "2026-09-11",
+      "latest_at": "2026-09-11T08:31:07.813249+08:00",
+      "first_date": "2026-09-10",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "technology",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "other",
+      "event_type_zh": "其他事件",
+      "event_type_en": "Other",
+      "title_zh": "OpenAI says 10,000 AI agents solved a $1 million math problem. Now mathematicians are fighting",
+      "title_en": "OpenAI says 10,000 AI agents solved a $1 million math problem. Now mathematicians are fighting",
+      "summary_zh": "OpenAI 报告的纳维-斯托克斯解据称附带 Lean 4 形式化证明，但尚未经外部数学家验证，验证成本高昂，且面临训练数据方面的质疑。",
+      "summary_en": "OpenAI's reported Navier-Stokes solution reportedly includes a Lean 4 formal proof, but it has not been verified by external mathematicians, verification costs are high, and training-data concerns have been raised.",
+      "latest_update_zh": "据报 OpenAI 的纳维-斯托克斯成果附带 Lean 4 形式化证明，可机器检验；验证成本高昂，外部数学家未验证，并存在训练数据质疑。",
+      "latest_update_en": "OpenAI's reported Navier-Stokes result reportedly includes a Lean 4 formal proof, enabling machine-checking; verification costs are high, external mathematicians have not verified it, and training-data concerns were raised.",
+      "background_zh": "纳维-斯托克斯方程描述黏性流体的运动，克雷数学研究所提出的千禧年大奖难题所问的是：在三维空间中光滑解是否永远存在，还是会出现无界的“爆破”行为。Lean 4 是一个证明助手（交互式定理证明器），其证明由一个体量很小的可信内核检查，因此“形式化证明”具备机器可验证性，而普通书面证明并不具备这一性质。据称该反例是在 Levent Alpöge 与 Tristan Buckmaster 已发表工作的基础上得到的，后者证明了带光滑外力项的三维不可压缩欧拉方程存在有限时间爆破。",
+      "background_en": "The Navier-Stokes equations describe the motion of viscous fluids, and the Clay Mathematics Institute's Millennium Prize question asks whether smooth solutions exist for all time in three dimensions or whether they can break down into unbounded (blow-up) behavior. Lean 4 is a proof assistant, an interactive theorem prover whose proofs are checked by a small trusted kernel, so a \"formal proof\" is mechanically verifiable in a way an ordinary written proof is not. The reported counterexample followed published work by Levent Alpöge and Tristan Buckmaster proving finite-time blowup for the 3D incompressible Euler equations with smooth forcing.",
+      "latest_summary_zh": "OpenAI 于 2026 年 9 月 8 日前后发布的关于纳维-斯托克斯方程存在性与光滑性问题的成果（一个无界反例）据称附带了 Lean 4 形式化证明，这意味着该论证可以逐行接受机器检查，而不只是依赖人类同行评审。Hacker News 上的讨论围绕该成果的意义、验证成本以及大规模部署证明生成智能体的经济性展开。\n\n如果该成果站得住脚，这将是 AI 系统首次针对接近千禧年大奖难题的重大结果给出可机器检验的形式化证明之一，从而把瓶颈从“发现证明”转移到“验证证明”。它同时引出一个问题：当论证的规模或复杂度超出人类审稿人独立核查的能力时，什么才算得上数学知识。\n\n评论者指出验证并不便宜：有人提到检查一个与费马大定理同量级的 Lean 证明大约需要 15 小时和 230GB 内存，仅比智能体生成相应 Lean 代码所需的约 11 天快一个数量级。该次智能体运行的估算成本约为 4000 万美元（动用了大规模智能体集群），而人类等价工作量约为 88 万小时（按每小时 150 美元计约 1.32 亿美元）；此外该解答尚未经过外部数学家验证，研究者 Levent Alpöge 与 Tristan Buckmaster 提出了训练数据方面的质疑，OpenAI 称这种情况“绝对不可能”。",
+      "latest_summary_en": "OpenAI's release on the Navier-Stokes existence and smoothness problem — an unbounded counterexample announced around 8 September 2026 — reportedly included a Lean 4 formal proof, meaning the argument can be machine-checked line by line rather than only reviewed by humans. A Hacker News thread debated the result's significance, the cost of verification, and the economics of running large fleets of proof-generating agents.\n\nIf it holds up, this is one of the first cases of an AI system producing a machine-checkable formal proof of a landmark result adjacent to a Millennium Prize problem, which shifts the bottleneck from discovering proofs to verifying them. It also raises the question of what counts as mathematical knowledge when the argument may be too large or too complex for human referees to check unaided.\n\nCommenters noted that verification is not cheap: one cited roughly 15 hours and 230 GB of RAM to check a Fermat's Last Theorem-scale Lean proof, only about an order of magnitude faster than the ~11 days agents took to generate the Lean code. The agent run was estimated at around $40 million for a large fleet, against a rough human-equivalent estimate of ~880,000 hours (about $132 million at $150/hour), and the solution has not been verified by external mathematicians, with researchers Levent Alpöge and Tristan Buckmaster raising training-data concerns that OpenAI calls \"categorically impossible.\"",
+      "discussion_zh": "讨论整体对该能力感到震撼，但对叙事框架存在分歧：有评论者强调 Lean 验证只比智能体生成 Lean 代码快约 10 倍；有人重新核算成本对比（人类约 1.32 亿美元对智能体约 4000 万美元），认为谈不上“四个数量级”；也有人认为“每页四十小时”的旧经验法则因证明自动化进步而已经过时；还有人提出一种担忧：AI 给出的解答可能人类根本无法独立验证。",
+      "discussion_en": "The thread was broadly impressed by the capability but split on the framing: one commenter stressed that Lean verification only runs about 10× faster than agents generating the Lean code, another recalculated the cost comparison (~$132M human vs ~$40M agent) as \"not quite four orders of magnitude,\" a third argued the old \"forty hours per page\" heuristic is outdated thanks to improved proof automation, and another raised the prospect of AI solutions that humans cannot independently verify at all.",
+      "market_impact_zh": "这一事件对加密市场没有直接的传导渠道——一项纯 AI 与数学研究成果并不涉及代币、协议、托管或监管层面。唯一可能的联系是间接的情绪外溢：如果该成果强化了“AI 智能体产出可独立验证的工作”这一更宏观叙事，AI 概念与可验证计算相关的板块可能获得一定叙事层面的提振。",
+      "market_impact_en": "There is no direct transmission to crypto markets here — no token, protocol, custody, or regulatory channel is involved in a pure AI-and-mathematics research result. The only plausible linkage is indirect sentiment spillover into AI-themed and verifiable-compute narratives, which could get a modest narrative boost if the result strengthens the broader \"AI agents producing independently verified work\" story.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/09/openai-says-10-000-ai-agents-solved-a-usd1-million-math-problem-now-mathematicians-are-fighting",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+          "title": "ibobev",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Navier-Stokes_equations",
+          "title": "Navier-Stokes equations"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Formal_verification",
+          "title": "Formal verification - Wikipedia"
+        },
+        {
+          "url": "https://teamorouter.cn/blogs/gpt-6-astra-10-math-problems",
+          "title": "GPT-6 Astra's 10 Math Problems: The $2,000 and Lean 4 Story"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49650326",
+          "title": "Community discussion"
+        }
+      ]
+    },
+    {
+      "thread_id": "evt_a2b6e5584390f66c",
+      "event_id": "evt_a2b6e5584390f66c",
+      "latest_date": "2026-09-10",
+      "latest_at": "2026-09-10T17:03:43.746219+08:00",
+      "first_date": "2026-09-10",
+      "days": 1,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "technology",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "product_release",
+      "event_type_zh": "产品发布",
+      "event_type_en": "Product release",
+      "title_zh": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
+      "title_en": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
+      "summary_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，附带详细技术报告，引发社区讨论。",
+      "summary_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
+      "latest_update_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，并提供详细技术报告。",
+      "latest_update_en": "DeepSeek V4.1 Flash has been released on Hugging Face, with 552B parameters and a detailed technical report.",
+      "background_zh": "DeepSeek 是一家中国 AI 实验室，以发布开放权重模型和内容异常坦率的技术报告而闻名。“前沿规模”指在最大算力层级上训练的模型，与顶级闭源系统处于同一量级。缓存命中定价是指当请求复用服务商已处理并存储的前缀时所享受的折扣费率，这在智能体和编程助手中很常见，因为它们每一轮都会重发相同的系统提示与文件上下文；而未命中缓存的新 token 费率要高得多。“Flash”这一档位通常指旗舰模型中更小、更便宜、更快的版本，而非最大的那一个。",
+      "background_en": "DeepSeek is a Chinese AI lab known for releasing open-weight models and unusually candid technical reports. \"Frontier-scale\" refers to models trained at the largest compute tiers, comparable to the top proprietary systems. Cache-hit pricing is the discounted rate charged when a request reuses a prefix the provider has already processed and stored, which is common in agents and coding assistants that resend the same system prompt and file context on every turn; the cache-miss rate for fresh tokens is much higher. A \"Flash\" tier usually denotes a smaller, cheaper and faster variant of a flagship model rather than the largest one.",
+      "latest_summary_zh": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
+      "latest_summary_en": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
+      "discussion_zh": "Hacker News 上的讨论（747 分、398 条评论）整体持赞赏态度：评论者称赞 DeepSeek 的技术报告充满具体细节，与 Anthropic 式系统卡形成鲜明对比，并对其敢于在接近前沿规模上尝试新奇思路表示惊叹。有评论指出每百万 token 0.003 美元的缓存命中价被讨论得太少，并推测上下文的网络传输成本可能很快会成为任务总成本的主要部分；也有人指出 552B 的参数量几乎是上一代 V4-Flash 的两倍，已不太配得上“Flash”之名。",
+      "discussion_en": "The Hacker News thread (747 points, 398 comments) is broadly admiring: commenters praise DeepSeek's technical report for being full of concrete detail in contrast to Anthropic-style system cards, and marvel at the lab's willingness to try unusual ideas at near-frontier scale. Several flag the $0.003 per million token cache-hit price as underdiscussed, speculating that network transfer costs for context may soon dominate total task cost, while others note that at 552B parameters the model is nearly twice the size of the previous V4-Flash and arguably no longer deserves the \"Flash\" label.",
+      "market_impact_zh": "这主要是一则 AI 基础设施新闻，但前沿推理与缓存价格的下降会传导至加密领域的 AI 与 DePIN 算力叙事——去中心化 GPU 市场的代币定价隐含地与中心化推理成本对标。中心化 API 经济性进一步优化，可能压缩这些网络赖以立足的成本套利逻辑，同时也为智能体应用扩大了设计空间。这种传导是间接的，更多通过情绪与叙事而非直接资金流影响具体资产。",
+      "market_impact_en": "This is primarily an AI-infrastructure story, but falling frontier inference and cache pricing feeds into crypto AI and DePIN compute narratives, where tokens for decentralized GPU marketplaces are implicitly benchmarked against centralized inference costs; cheaper centralized API economics can compress the cost-arbitrage pitch for those networks, while expanding the design space for agent applications. The transmission is indirect, sentiment- and narrative-driven rather than a direct flow into any specific asset.",
+      "score": 8.5,
+      "source_links": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49624603",
+          "title": "nickweb",
+          "official": false
+        },
+        {
+          "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+          "title": "Liwink",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49639090",
+          "title": "Community discussion"
+        },
+        {
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+          "title": "DeepSeek | Introducing DeepSeek-V4.1-Flash: smarter, faster ..."
+        },
+        {
+          "url": "https://www.digitalapplied.com/blog/deepseek-v4-1-flash-pro-routing-prices-early-tests",
+          "title": "DeepSeek V4.1 Flash: Benchmarks, Prices and Pro Cutoff"
+        },
+        {
+          "url": "https://www.geeky-gadgets.com/deepseek-v4-1-flash-review/",
+          "title": "DeepSeek V4.1 Flash Review and Performance Test - Geeky Gadgets"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_31e3c2c4d291996e",
       "event_id": "evt_31e3c2c4d291996e",
       "latest_date": "2026-09-09",
@@ -2950,14 +3164,14 @@
       "summary_en": "Nasdaq invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with funds from its venture arm and an extension of a March partnership; Kraken will distribute Nasdaq-listed tokenized stocks carrying full voting rights, and Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
       "latest_update_zh": "Payward 将在其加密、股票、代币化股票、期货和期权交易场所采用 Nasdaq 的监控技术。",
       "latest_update_en": "Payward will adopt Nasdaq's surveillance technology across its crypto, equities, tokenized equities, futures, and options venues.",
-      "background_zh": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
-      "background_en": "Nasdaq invested $100 million in Payward, the parent company of crypto exchange Kraken, at a $21 billion valuation.",
+      "background_zh": "Payward是Kraken的母公司，旗下拥有一系列覆盖交易、托管、支付、借贷和链上金融的产品。代币化股票是以区块链形式存在的股权数字代表，可以附带投票权和分红等股东权利，其设计初衷是能在区块链基础设施上交易，而不仅仅通过中心化交易所流通。纳斯达克约一年前向美国证券交易委员会提交了代币化提案，并持续围绕7×24小时交易布局；Kraken近期还与伦敦证券交易所合作，计划从2027年起提供追踪英国主要股票产品价值的代币化股票24/5交易。据RWA.xyz汇编的数据，当前代币化股票的分布式总价值已超过29亿美元，过去一个月增长7.4%。",
+      "background_en": "Payward is the parent company behind Kraken and a portfolio of products spanning trading, custody, payments, lending and onchain finance. Tokenized equities are blockchain-based digital representations of equity stakes that can carry shareholder rights such as voting and dividends, and they are designed to trade on blockchain infrastructure rather than only through centralized exchanges. Nasdaq filed a tokenization proposal with the US Securities and Exchange Commission about a year ago and has been positioning itself around 24/7 trading, while Kraken recently partnered with the London Stock Exchange to offer 24/5 trading of tokenized UK equity products starting in 2027. According to data compiled by RWA.xyz, the current distributed value of tokenized stocks is more than $2.9 billion, up 7.4% over the past month.",
       "latest_summary_zh": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
       "latest_summary_en": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
+      "discussion_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
+      "market_impact_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
+      "market_impact_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
       "score": 8.0,
       "source_links": [
         {
@@ -2986,7 +3200,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.payward.com/",
+          "title": "Payward | Building open, programmable rails for global markets"
+        },
+        {
+          "url": "https://www.kraken.com/learn/tokenized-equities",
+          "title": "Tokenized Equities: Transforming liquidity and accessibility"
+        },
+        {
+          "url": "https://www.nasdaq.com/products/fintech/surveillance",
+          "title": "Nasdaq Surveillance"
+        }
+      ]
     },
     {
       "thread_id": "evt_09f87331a0893067",
@@ -3059,57 +3286,6 @@
         {
           "url": "https://coinmarketcap.com/cmc-ai/bitmart-token/price-analysis/",
           "title": "Latest BitMart Token (BMX) Price Analysis"
-        }
-      ]
-    },
-    {
-      "thread_id": "evt_a2b6e5584390f66c",
-      "event_id": "evt_a2b6e5584390f66c",
-      "latest_date": "2026-09-10",
-      "latest_at": "2026-09-10T17:03:43.746219+08:00",
-      "first_date": "2026-09-10",
-      "days": 1,
-      "entries": 2,
-      "updates_count": 2,
-      "sources_count": 2,
-      "category": "technology",
-      "status": "monitoring",
-      "status_zh": "持续观察",
-      "status_en": "Monitoring",
-      "event_type": "product_release",
-      "event_type_zh": "产品发布",
-      "event_type_en": "Product release",
-      "title_zh": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
-      "title_en": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
-      "summary_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，附带详细技术报告，引发社区讨论。",
-      "summary_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
-      "latest_update_zh": "DeepSeek V4.1 Flash 已在 Hugging Face 发布，参数规模 552B，并提供详细技术报告。",
-      "latest_update_en": "DeepSeek V4.1 Flash has been released on Hugging Face, with 552B parameters and a detailed technical report.",
-      "background_zh": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
-      "background_en": "DeepSeek announces V4.1 Flash, surpassing V4 Pro on all metrics, with cheaper pricing and temporary routing of Pro requests to Flash.",
-      "latest_summary_zh": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
-      "latest_summary_en": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "score": 8.0,
-      "source_links": [
-        {
-          "url": "https://news.ycombinator.com/item?id=49624603",
-          "title": "nickweb",
-          "official": false
-        },
-        {
-          "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
-          "title": "Liwink",
-          "official": false
-        }
-      ],
-      "reference_links": [
-        {
-          "url": "https://news.ycombinator.com/item?id=49639090",
-          "title": "Community discussion"
         }
       ]
     },

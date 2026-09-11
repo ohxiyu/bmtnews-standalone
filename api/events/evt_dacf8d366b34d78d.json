@@ -48,14 +48,27 @@
       "current_state_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
       "detailed_summary_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
       "detailed_summary_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "allBTC 是 Osmosis 上的一种代币化比特币资产，其发行以链上持有的一篮子比特币变体作为支撑，其中包括由 Nomic 桥发行的 nBTC。Nomic 是一条为比特币提供去中心化托管方案的 Cosmos 区块链，其铸造的 nBTC 与 BTC 按 1:1 支撑，并通过 Cosmos 生态通用的跨链通信协议 IBC 在各链之间转移价值。桥转发逻辑中的双花意味着同一笔底层 BTC 被重复计算，因而在没有新比特币进入托管的情况下生成了看似有效的凭证。",
+      "background_en": "allBTC is a tokenized Bitcoin asset on Osmosis minted against a basket of Bitcoin variants held on the chain, including nBTC issued by the Nomic bridge. Nomic is a Cosmos blockchain that offers decentralized custody for Bitcoin and mints nBTC as a 1:1 BTC-backed token, moving value between chains via IBC, the Inter-Blockchain Communication protocol used across Cosmos. A double-spend in a bridge's forwarding logic means the same underlying BTC was effectively counted twice, so vouchers that looked valid were created without new Bitcoin entering custody.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
+      "market_impact_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://github.com/nomic-io/nomic",
+          "title": "GitHub - nomic-io/nomic: Decentralized Custody Engine for Bitcoin · GitHub"
+        },
+        {
+          "url": "https://www.cryptotimes.io/2026/09/09/osmosis-freezes-22-65-btc-after-nomic-exploit-hits-alloyed-btc-backing/",
+          "title": "Osmosis Freezes 22.65 BTC After Nomic Exploit Hits Alloyed BTC Backing. About 36% of allBTC Now Has No Bitcoin Behind It."
+        },
+        {
+          "url": "https://www.tradingview.com/news/cryptobriefing:f57f4f3ba094b:0-osmosis-pauses-operations-after-nomic-chain-nbtc-exploit-freezes-22-65-btc/",
+          "title": "Osmosis pauses operations after Nomic Chain nBTC exploit freezes..."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:674de2989502d767"

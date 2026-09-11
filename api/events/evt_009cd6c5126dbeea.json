@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "event_id": "evt_009cd6c5126dbeea",
+  "url": "https://bmt.news/events/evt_009cd6c5126dbeea/",
+  "json": "https://bmt.news/api/events/evt_009cd6c5126dbeea.json",
+  "type": "product_release",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "OpenAI 发布 Agents API：基于 Codex harness 的托管云端智能体服务",
+    "en": "OpenAI Launches Agents API: Managed Cloud Agents on Codex Harness"
+  },
+  "current_state": {
+    "zh": "OpenAI 推出了 Agents API，这是一项由 Codex harness 驱动的托管服务，让开发者能够构建并启动具备编排能力、长时运行会话和工具调用能力的云端智能体。该 API 直接运行 Codex harness 并接管底层智能体基础设施，使团队可以专注于智能体本身要完成的任务，而不必操心维持其运行的运行时环境。\n\n这标志着智能体部署正从自托管的 DIY 框架转向由头部 AI 实验室提供的托管运行时，有可能在整个生态中统一长时运行、可调用工具的智能体的构建与部署方式。同时，由于开发者如今多了一个来自 OpenAI 的第一方选择，这也会给开源智能体框架以及自建智能体运行时的云厂商带来更大的竞争压力。\n\n根据 OpenAI 的 API 文档，Agents API 包含自动上下文压缩（automatic context compaction）、多智能体编排、程序化工具调用以及对 MCP 的支持，而 Codex harness 则负责线程恢复、工具续跑、上下文压缩和 app-server 执行等底层会话行为。它建立在更早的 Agents SDK 及其向原生沙箱执行与模型原生 harness 演进的基础上。",
+    "en": "OpenAI introduced the Agents API, a managed service powered by the Codex harness that lets developers build and launch cloud agents with orchestration, long-running sessions, and tool use. The API runs the Codex harness and handles the underlying agent infrastructure so teams can focus on what their agents do rather than on the runtime that keeps them alive.\n\nThis moves agent deployment from self-hosted, DIY frameworks toward a managed runtime shipped by a major AI lab, which could standardize how long-running, tool-using agents are built and deployed across the ecosystem. It also raises competitive pressure on open-source agent frameworks and on cloud providers that offer their own agent runtimes, since developers now have a first-party option from OpenAI.\n\nAccording to OpenAI's API documentation, the Agents API includes automatic context compaction, multi-agent orchestration, programmatic tool calling, and support for MCP, with the Codex harness owning low-level session behavior such as thread resume, tool continuation, compaction, and app-server execution. It builds on the earlier Agents SDK and its evolution toward native sandbox execution and a model-native harness."
+  },
+  "first_seen_at": "2026-09-11T00:31:13.630060+00:00",
+  "last_updated_at": "2026-09-11T00:31:13.630060+00:00",
+  "last_material_change_at": "2026-09-11T00:31:13.630060+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "agents",
+    "api",
+    "cloud",
+    "codex",
+    "harness",
+    "launches",
+    "managed",
+    "openai"
+  ],
+  "identifiers": [],
+  "topics": [
+    "cloud-infrastructure",
+    "codex",
+    "developer-platform",
+    "openai"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_9ffe319b00cf421f",
+      "event_id": "evt_009cd6c5126dbeea",
+      "occurred_at": "2026-09-10T00:00:00Z",
+      "published_at": "2026-09-10T00:00:00Z",
+      "first_seen_at": "2026-09-11T00:31:13.630060Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "OpenAI 发布 Agents API：基于 Codex harness 的托管云端智能体服务",
+      "title_en": "OpenAI Launches Agents API: Managed Cloud Agents on Codex Harness",
+      "what_changed_zh": "OpenAI 推出了 Agents API，这是一项由 Codex harness 驱动的托管服务，让开发者能够构建并启动具备编排能力、长时运行会话和工具调用能力的云端智能体。该 API 直接运行 Codex harness 并接管底层智能体基础设施，使团队可以专注于智能体本身要完成的任务，而不必操心维持其运行的运行时环境。\n\n这标志着智能体部署正从自托管的 DIY 框架转向由头部 AI 实验室提供的托管运行时，有可能在整个生态中统一长时运行、可调用工具的智能体的构建与部署方式。同时，由于开发者如今多了一个来自 OpenAI 的第一方选择，这也会给开源智能体框架以及自建智能体运行时的云厂商带来更大的竞争压力。\n\n根据 OpenAI 的 API 文档，Agents API 包含自动上下文压缩（automatic context compaction）、多智能体编排、程序化工具调用以及对 MCP 的支持，而 Codex harness 则负责线程恢复、工具续跑、上下文压缩和 app-server 执行等底层会话行为。它建立在更早的 Agents SDK 及其向原生沙箱执行与模型原生 harness 演进的基础上。",
+      "what_changed_en": "OpenAI introduced the Agents API, a managed service powered by the Codex harness that lets developers build and launch cloud agents with orchestration, long-running sessions, and tool use. The API runs the Codex harness and handles the underlying agent infrastructure so teams can focus on what their agents do rather than on the runtime that keeps them alive.\n\nThis moves agent deployment from self-hosted, DIY frameworks toward a managed runtime shipped by a major AI lab, which could standardize how long-running, tool-using agents are built and deployed across the ecosystem. It also raises competitive pressure on open-source agent frameworks and on cloud providers that offer their own agent runtimes, since developers now have a first-party option from OpenAI.\n\nAccording to OpenAI's API documentation, the Agents API includes automatic context compaction, multi-agent orchestration, programmatic tool calling, and support for MCP, with the Codex harness owning low-level session behavior such as thread resume, tool continuation, compaction, and app-server execution. It builds on the earlier Agents SDK and its evolution toward native sandbox execution and a model-native harness.",
+      "current_state_zh": "OpenAI 推出了 Agents API，这是一项由 Codex harness 驱动的托管服务，让开发者能够构建并启动具备编排能力、长时运行会话和工具调用能力的云端智能体。该 API 直接运行 Codex harness 并接管底层智能体基础设施，使团队可以专注于智能体本身要完成的任务，而不必操心维持其运行的运行时环境。\n\n这标志着智能体部署正从自托管的 DIY 框架转向由头部 AI 实验室提供的托管运行时，有可能在整个生态中统一长时运行、可调用工具的智能体的构建与部署方式。同时，由于开发者如今多了一个来自 OpenAI 的第一方选择，这也会给开源智能体框架以及自建智能体运行时的云厂商带来更大的竞争压力。\n\n根据 OpenAI 的 API 文档，Agents API 包含自动上下文压缩（automatic context compaction）、多智能体编排、程序化工具调用以及对 MCP 的支持，而 Codex harness 则负责线程恢复、工具续跑、上下文压缩和 app-server 执行等底层会话行为。它建立在更早的 Agents SDK 及其向原生沙箱执行与模型原生 harness 演进的基础上。",
+      "current_state_en": "OpenAI introduced the Agents API, a managed service powered by the Codex harness that lets developers build and launch cloud agents with orchestration, long-running sessions, and tool use. The API runs the Codex harness and handles the underlying agent infrastructure so teams can focus on what their agents do rather than on the runtime that keeps them alive.\n\nThis moves agent deployment from self-hosted, DIY frameworks toward a managed runtime shipped by a major AI lab, which could standardize how long-running, tool-using agents are built and deployed across the ecosystem. It also raises competitive pressure on open-source agent frameworks and on cloud providers that offer their own agent runtimes, since developers now have a first-party option from OpenAI.\n\nAccording to OpenAI's API documentation, the Agents API includes automatic context compaction, multi-agent orchestration, programmatic tool calling, and support for MCP, with the Codex harness owning low-level session behavior such as thread resume, tool continuation, compaction, and app-server execution. It builds on the earlier Agents SDK and its evolution toward native sandbox execution and a model-native harness.",
+      "detailed_summary_zh": "OpenAI 推出了 Agents API，这是一项由 Codex harness 驱动的托管服务，让开发者能够构建并启动具备编排能力、长时运行会话和工具调用能力的云端智能体。该 API 直接运行 Codex harness 并接管底层智能体基础设施，使团队可以专注于智能体本身要完成的任务，而不必操心维持其运行的运行时环境。\n\n这标志着智能体部署正从自托管的 DIY 框架转向由头部 AI 实验室提供的托管运行时，有可能在整个生态中统一长时运行、可调用工具的智能体的构建与部署方式。同时，由于开发者如今多了一个来自 OpenAI 的第一方选择，这也会给开源智能体框架以及自建智能体运行时的云厂商带来更大的竞争压力。\n\n根据 OpenAI 的 API 文档，Agents API 包含自动上下文压缩（automatic context compaction）、多智能体编排、程序化工具调用以及对 MCP 的支持，而 Codex harness 则负责线程恢复、工具续跑、上下文压缩和 app-server 执行等底层会话行为。它建立在更早的 Agents SDK 及其向原生沙箱执行与模型原生 harness 演进的基础上。",
+      "detailed_summary_en": "OpenAI introduced the Agents API, a managed service powered by the Codex harness that lets developers build and launch cloud agents with orchestration, long-running sessions, and tool use. The API runs the Codex harness and handles the underlying agent infrastructure so teams can focus on what their agents do rather than on the runtime that keeps them alive.\n\nThis moves agent deployment from self-hosted, DIY frameworks toward a managed runtime shipped by a major AI lab, which could standardize how long-running, tool-using agents are built and deployed across the ecosystem. It also raises competitive pressure on open-source agent frameworks and on cloud providers that offer their own agent runtimes, since developers now have a first-party option from OpenAI.\n\nAccording to OpenAI's API documentation, the Agents API includes automatic context compaction, multi-agent orchestration, programmatic tool calling, and support for MCP, with the Codex harness owning low-level session behavior such as thread resume, tool continuation, compaction, and app-server execution. It builds on the earlier Agents SDK and its evolution toward native sandbox execution and a model-native harness.",
+      "background_zh": "Codex harness 是支撑所有 Codex 体验（包括网页应用、CLI、IDE 插件以及 Codex macOS 应用）的智能体循环与核心逻辑。此前，想要实现智能体行为的开发者通常需要自行拼装技术栈，例如使用 OpenAI 开源的 Agents SDK，自行串联会话状态、工具执行和上下文管理。所谓托管服务，意味着由 OpenAI 来运行这套循环，包括那些在长会话中难以保持稳定的部分，例如上下文压缩和工具续跑。",
+      "background_en": "The Codex harness is the agent loop and core logic that underlies every Codex experience, including the web app, the CLI, the IDE extension, and the Codex macOS app. Previously, developers who wanted agentic behavior typically assembled their own stack using libraries such as OpenAI's open-source Agents SDK, wiring together session state, tool execution, and context management themselves. A managed service means OpenAI runs that loop, including the parts that are hard to keep stable over long sessions, such as compaction and tool continuation.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "加密市场的 AI 智能体叙事对头部 AI 实验室的开发者平台动向格外敏感，因为许多智能体概念代币和去中心化智能体框架的估值前提，是智能体基础设施将在链上构建与归属。一个第一方托管运行时会降低中心化智能体开发的门槛，这可能促使情绪资金在智能体概念代币之间流入或流出，并影响更广泛的 AI 叙事仓位配置，尽管该 API 本身并没有直接的链上组件。",
+      "market_impact_en": "Crypto's AI-agent narrative is unusually sensitive to developer-platform news from major AI labs, because many agent-themed tokens and decentralized agent frameworks are valued on the premise that agent infrastructure will be built and owned on-chain. A managed, first-party runtime lowers the barrier for centralized agent development, which could feed sentiment flows into or out of agent-themed tokens and into broader AI-narrative positioning, even though the API itself has no direct on-chain component.",
+      "importance_score": 8.0,
+      "references": [
+        {
+          "url": "https://openai.com/index/introducing-the-agents-api/",
+          "title": "Introducing the Agents API | OpenAI"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/guides/agents",
+          "title": "Agents | OpenAI API"
+        },
+        {
+          "url": "https://openai.com/index/unlocking-the-codex-harness/",
+          "title": "Unlocking the Codex harness: how we built the App Server | OpenAI"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:openai.com_blog_rss.xml:b32e9b8471353987"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-the-agents-api",
+          "label": "OpenAI Blog",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

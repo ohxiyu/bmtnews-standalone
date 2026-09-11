@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-09-10T00:00:00Z</updated>
+  <updated>2026-09-11T00:00:00Z</updated>
+  <entry>
+    <title>OpenAI&#x27;s Navier-Stokes result reportedly ships with a Lean 4 formal proof</title>
+    <link href="https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/"/>
+    <id>https://bmt.news/editions/2026-09-11/#hackernews:story:49650326</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>OpenAI&#x27;s release on the Navier-Stokes existence and smoothness problem — an unbounded counterexample announced around 8 September 2026 — reportedly included a Lean 4 formal proof, meaning the argument can be machine-checked line by line rather than only reviewed by humans. A Hacker News thread debated the result&#x27;s significance, the cost of verification, and the economics of running large fleets of proof-generating agents.
+
+If it holds up, this is one of the first cases of an AI system producing a machine-checkable formal proof of a landmark result adjacent to a Millennium Prize problem, which shifts the bottleneck from discovering proofs to verifying them. It also raises the question of what counts as mathematical knowledge when the argument may be too large or too complex for human referees to check unaided.
+
+Commenters noted that verification is not cheap: one cited roughly 15 hours and 230 GB of RAM to check a Fermat&#x27;s Last Theorem-scale Lean proof, only about an order of magnitude faster than the ~11 days agents took to generate the Lean code. The agent run was estimated at around $40 million for a large fleet, against a rough human-equivalent estimate of ~880,000 hours (about $132 million at $150/hour), and the solution has not been verified by external mathematicians, with researchers Levent Alpöge and Tristan Buckmaster raising training-data concerns that OpenAI calls &quot;categorically impossible.&quot;</summary>
+  </entry>
+  <entry>
+    <title>DeepSeek Releases V4.1-Flash With Ultralow Cache-Hit Pricing</title>
+    <link href="https://twitter.com/deepseek_ai/status/2097930608790167907"/>
+    <id>https://bmt.news/editions/2026-09-11/#hackernews:story:49639090</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>DeepSeek released DeepSeek-V4.1-Flash, a new frontier-scale model shipped alongside a detailed technical report and published weights on Hugging Face. Third-party tests cited by DeepSeek put V4.1-Flash ahead of V4-Pro on performance, cost, speed and total runtime, and the API lists a cache-hit price of just $0.003 per million tokens.
+
+The release strengthens DeepSeek&#x27;s position as the most aggressive price-performer among frontier labs, and a cache-hit rate that low shifts the economics of long-context, multi-turn agent workloads where the same prefix is reused repeatedly. It also raises the bar for how transparent technical reports are expected to be, at a time when several US labs publish system cards dominated by safety and policy sections.
+
+The model is reported at 552B parameters, roughly double the 284B of the previous V4-Flash, and it adds vision capabilities plus lower prices, with a temporary test build processing up to 400 tokens per second. For compatibility, the endpoints deepseek-v4-flash and deepseek-v4-flash-vision-exp temporarily route to V4.1-Flash, ahead of a V4-Pro routing change dated September 14.</summary>
+  </entry>
+  <entry>
+    <title>OpenAI Launches Agents API: Managed Cloud Agents on Codex Harness</title>
+    <link href="https://openai.com/index/introducing-the-agents-api"/>
+    <id>https://bmt.news/editions/2026-09-11/#rss:openai.com_blog_rss.xml:b32e9b8471353987</id>
+    <updated>2026-09-11T00:00:00Z</updated>
+    <summary>OpenAI introduced the Agents API, a managed service powered by the Codex harness that lets developers build and launch cloud agents with orchestration, long-running sessions, and tool use. The API runs the Codex harness and handles the underlying agent infrastructure so teams can focus on what their agents do rather than on the runtime that keeps them alive.
+
+This moves agent deployment from self-hosted, DIY frameworks toward a managed runtime shipped by a major AI lab, which could standardize how long-running, tool-using agents are built and deployed across the ecosystem. It also raises competitive pressure on open-source agent frameworks and on cloud providers that offer their own agent runtimes, since developers now have a first-party option from OpenAI.
+
+According to OpenAI&#x27;s API documentation, the Agents API includes automatic context compaction, multi-agent orchestration, programmatic tool calling, and support for MCP, with the Codex harness owning low-level session behavior such as thread resume, tool continuation, compaction, and app-server execution. It builds on the earlier Agents SDK and its evolution toward native sandbox execution and a model-native harness.</summary>
+  </entry>
   <entry>
     <title>OpenAI claims 10,000-agent model solved Navier-Stokes, reigniting AI safety fears</title>
     <link href="https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/"/>
@@ -403,38 +436,5 @@ The exposed records reportedly include customer data from MAG&#x27;s airport ope
 This landmark ruling protects AI companies from government retaliation for their policy positions, reinforcing First Amendment protections for corporate speech and limiting executive power. It sets a legal precedent that could curb future administrations&#x27; ability to blacklist companies based on political disagreements.
 
 Judge Rita Lin&#x27;s 59-page order vacated the Defense Department&#x27;s designation and boycott order, granted a permanent injunction, and denied the government&#x27;s request for a seven-day administrative stay. Anthropic lost its claim that Trump&#x27;s directive exceeded presidential power, and the judge entered judgment for agencies that took no action.</summary>
-  </entry>
-  <entry>
-    <title>Z.ai releases GLM-5.3 as open-weight model</title>
-    <link href="https://twitter.com/Zai_org/status/2093354097122455713"/>
-    <id>https://bmt.news/editions/2026-08-29/#hackernews:story:49479878</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>Z.ai has released GLM-5.3, its latest flagship open-weight model, featuring substantial post-training improvements over GLM-5.2. The model is now available through third-party providers such as DeepInfra on OpenRouter.
-
-This release strengthens the open-weight ecosystem, giving developers a competitive, locally deployable alternative to frontier closed models. It also highlights how Chinese labs are using post-training to close the gap with leading models.
-
-GLM-5.3 uses the same base model as GLM-5.2, with all gains coming from extended post-training focused on software engineering and agentic tasks. A faster variant, GLM-5.3-Flash, powers Z.ai&#x27;s consumer assistant.</summary>
-  </entry>
-  <entry>
-    <title>Judge rules Trump administration&#x27;s blacklisting of Anthropic illegal</title>
-    <link href="https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html"/>
-    <id>https://bmt.news/editions/2026-08-29/#hackernews:story:49473522</id>
-    <updated>2026-08-29T00:00:00Z</updated>
-    <summary>A federal judge ruled that the Trump administration&#x27;s blacklisting of Anthropic was illegal, citing a slim administrative record and retaliatory behavior. The court found that the government&#x27;s justification was insufficient and that the action was motivated by retaliation for Anthropic&#x27;s speech.
-
-This ruling creates an important precedent for how courts scrutinize national-security justifications for government action against AI companies. It signals that while evidence deficiencies might be tolerated, retaliatory intent will not, which could curb aggressive regulation of AI labs.
-
-The court described the administrative record as &quot;slim&quot;—a four-page memo that post-dated two of the three challenged actions. The government also retreated from its earlier risk assessment, which had claimed Anthropic&#x27;s AI could have &quot;backdoor access&quot; once deployed in national security systems.</summary>
-  </entry>
-  <entry>
-    <title>Nvidia agrees to acquire Hugging Face for $13B</title>
-    <link href="https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8"/>
-    <id>https://bmt.news/editions/2026-08-28/#hackernews:story:49458161</id>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <summary>Nvidia has reportedly agreed to acquire Hugging Face, the leading open-source AI model repository, for $12.9 billion, according to The Information and TechCrunch. The deal was reported on August 24, 2026, and represents a major consolidation in the AI developer ecosystem.
-
-This acquisition gives Nvidia control over the primary distribution channel for open-source AI models, potentially reshaping how developers access and deploy AI software. It could intensify antitrust scrutiny and affect millions of developers and companies that rely on Hugging Face.
-
-The $12.9 billion price follows Hugging Face&#x27;s rejection of a $500 million Nvidia investment at a $7 billion valuation in late 2025, and a $235 million round at $4.5 billion in 2023. Nvidia has recently positioned itself as an open-source backer, including via Jensen Huang&#x27;s first-ever tweet in support of open source.</summary>
   </entry>
 </feed>

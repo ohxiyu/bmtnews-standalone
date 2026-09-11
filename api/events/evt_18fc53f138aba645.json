@@ -49,14 +49,27 @@
       "current_state_en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
       "detailed_summary_zh": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
       "detailed_summary_en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Liquid 是 Blockstream 于 2018 年推出的开源比特币侧链，支持更快速、更保密的 BTC 转账，并可用于发行稳定币、证券型代币和债券等数字资产。用户持有的是 L-BTC，它与 BTC 按 1:1 锚定，背后是在由名为 functionary 的联邦节点共同管理的钱包中锁定的真实比特币。Elements 是支撑该网络的开源代码库，其机密交易（Confidential Transactions）功能使用范围证明在不公开金额的前提下验证交易是否合法，而攻击者利用的正是这些验证结果缓存环节中的缺陷。",
+      "background_en": "Liquid is an open-source Bitcoin sidechain launched by Blockstream in 2018 that enables faster, more confidential BTC transfers and the issuance of digital assets such as stablecoins, tokenized securities and bonds. Users hold L-BTC, which is pegged 1:1 to BTC and backed by real bitcoin locked in a wallet collectively managed by federated nodes called functionaries. Elements is the open-source codebase underpinning the network, and its Confidential Transactions feature uses range proofs to validate that transaction amounts are legitimate without revealing them publicly; a flaw in the caching of those verifications is what the attacker exploited.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导渠道主要是锚定信心：由于锚定操作与 PAK 授权提现均被暂停，L-BTC 兑换为 BTC 的赎回通道受限，这直接影响在 Liquid 上结算的交易所、发行方和流动性提供者，包括与 SideSwap 相关的退出路径。该事件还可能推动市场重新评估联邦式比特币二层与跨链桥设计中的托管风险，而 BTC/L-BTC 储备中尚未追回的约 598 枚 BTC 缺口仍是待解决的关键变量。",
+      "market_impact_en": "The transmission channel is peg confidence: with peg operations and PAK-authorized peg-outs suspended, the redemption path connecting L-BTC to BTC is constrained, which bears on venues, issuers and liquidity providers that settle on Liquid, including SideSwap-linked exits. The incident also feeds into a broader reassessment of custody and federation risk across federated Bitcoin layer-2 and bridge designs, and the outstanding ~598 BTC shortfall in the BTC/L-BTC reserve is the key variable still being resolved.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://blockstream.com/liquid/",
+          "title": "The Liquid Network | Bitcoin layer-2 solution for digital ..."
+        },
+        {
+          "url": "https://news.bitcoin.com/crypto-news/liquid-network-resumes-block-production-after-4000-btc-exploit/",
+          "title": "Liquid Network Resumes Block Production After 4,000 BTC ..."
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/liquid-federation-discloses-4-000-btc-vulnerability-incident",
+          "title": "Liquid Federation Discloses 4,000 BTC Vulnerability Incident | KuCoin"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:656b87c8d60ff48b"

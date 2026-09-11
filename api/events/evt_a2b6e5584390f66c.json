@@ -97,17 +97,29 @@
       "current_state_en": "DeepSeek V4.1 Flash is released on Hugging Face, with 552B parameters and a detailed technical report, generating community discussion.",
       "detailed_summary_zh": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
       "detailed_summary_en": "DeepSeek released V4.1 Flash, a 552B-parameter model on Hugging Face with a detailed technical report, drawing strong Hacker News discussion about its scale, benchmark gains, and unusually transparent engineering documentation.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 8.0,
+      "background_zh": "DeepSeek 是一家中国 AI 实验室，以发布开放权重模型和内容异常坦率的技术报告而闻名。“前沿规模”指在最大算力层级上训练的模型，与顶级闭源系统处于同一量级。缓存命中定价是指当请求复用服务商已处理并存储的前缀时所享受的折扣费率，这在智能体和编程助手中很常见，因为它们每一轮都会重发相同的系统提示与文件上下文；而未命中缓存的新 token 费率要高得多。“Flash”这一档位通常指旗舰模型中更小、更便宜、更快的版本，而非最大的那一个。",
+      "background_en": "DeepSeek is a Chinese AI lab known for releasing open-weight models and unusually candid technical reports. \"Frontier-scale\" refers to models trained at the largest compute tiers, comparable to the top proprietary systems. Cache-hit pricing is the discounted rate charged when a request reuses a prefix the provider has already processed and stored, which is common in agents and coding assistants that resend the same system prompt and file context on every turn; the cache-miss rate for fresh tokens is much higher. A \"Flash\" tier usually denotes a smaller, cheaper and faster variant of a flagship model rather than the largest one.",
+      "community_discussion_zh": "Hacker News 上的讨论（747 分、398 条评论）整体持赞赏态度：评论者称赞 DeepSeek 的技术报告充满具体细节，与 Anthropic 式系统卡形成鲜明对比，并对其敢于在接近前沿规模上尝试新奇思路表示惊叹。有评论指出每百万 token 0.003 美元的缓存命中价被讨论得太少，并推测上下文的网络传输成本可能很快会成为任务总成本的主要部分；也有人指出 552B 的参数量几乎是上一代 V4-Flash 的两倍，已不太配得上“Flash”之名。",
+      "community_discussion_en": "The Hacker News thread (747 points, 398 comments) is broadly admiring: commenters praise DeepSeek's technical report for being full of concrete detail in contrast to Anthropic-style system cards, and marvel at the lab's willingness to try unusual ideas at near-frontier scale. Several flag the $0.003 per million token cache-hit price as underdiscussed, speculating that network transfer costs for context may soon dominate total task cost, while others note that at 552B parameters the model is nearly twice the size of the previous V4-Flash and arguably no longer deserves the \"Flash\" label.",
+      "market_impact_zh": "这主要是一则 AI 基础设施新闻，但前沿推理与缓存价格的下降会传导至加密领域的 AI 与 DePIN 算力叙事——去中心化 GPU 市场的代币定价隐含地与中心化推理成本对标。中心化 API 经济性进一步优化，可能压缩这些网络赖以立足的成本套利逻辑，同时也为智能体应用扩大了设计空间。这种传导是间接的，更多通过情绪与叙事而非直接资金流影响具体资产。",
+      "market_impact_en": "This is primarily an AI-infrastructure story, but falling frontier inference and cache pricing feeds into crypto AI and DePIN compute narratives, where tokens for decentralized GPU marketplaces are implicitly benchmarked against centralized inference costs; cheaper centralized API economics can compress the cost-arbitrage pitch for those networks, while expanding the design space for agent applications. The transmission is indirect, sentiment- and narrative-driven rather than a direct flow into any specific asset.",
+      "importance_score": 8.5,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49639090",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+          "title": "DeepSeek | Introducing DeepSeek-V4.1-Flash: smarter, faster ..."
+        },
+        {
+          "url": "https://www.digitalapplied.com/blog/deepseek-v4-1-flash-pro-routing-prices-early-tests",
+          "title": "DeepSeek V4.1 Flash: Benchmarks, Prices and Pro Cutoff"
+        },
+        {
+          "url": "https://www.geeky-gadgets.com/deepseek-v4-1-flash-review/",
+          "title": "DeepSeek V4.1 Flash Review and Performance Test - Geeky Gadgets"
         }
       ],
       "confidence": 0.9,
