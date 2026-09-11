@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_03c682a1c0470349/",
   "json": "https://bmt.news/api/events/evt_03c682a1c0470349.json",
   "type": "market_structure",
-  "status": "monitoring",
+  "status": "disputed",
   "category": "crypto",
   "title": {
     "zh": "Nasdaq Invests $100 Million in Kraken Parent Payward",
     "en": "Nasdaq Invests $100 Million in Kraken Parent Payward"
   },
   "current_state": {
-    "zh": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues.",
-    "en": "Nasdaq Ventures is investing $100 million in Kraken parent Payward at a $21 billion valuation, with Payward adopting Nasdaq's surveillance technology across its trading venues."
+    "zh": "纳斯达克风投已同意向Kraken母公司Payward拟投资1亿美元，后者计划在加密、股票、代币化股票、期货和期权等交易场所部署纳斯达克监控技术；该投资尚未完成，估值条款未披露，NET仍目标于2027年第二季度推出。",
+    "en": "Nasdaq Ventures has agreed to a proposed $100 million investment in Kraken parent Payward, which plans to deploy Nasdaq surveillance across crypto, equities, tokenized equities, futures and options; the deal is not completed, valuation terms are undisclosed, and NETs remain targeted for Q2 2027."
   },
   "first_seen_at": "2026-09-10T16:35:54.819033+00:00",
-  "last_updated_at": "2026-09-10T16:35:54.819033+00:00",
-  "last_material_change_at": "2026-09-10T16:35:54.819033+00:00",
+  "last_updated_at": "2026-09-11T22:43:06.858712+00:00",
+  "last_material_change_at": "2026-09-11T22:43:06.858712+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "invests",
     "kraken",
@@ -32,7 +32,8 @@
   "topics": [
     "kraken",
     "nasdaq",
-    "surveillance"
+    "surveillance",
+    "tokenized-equities"
   ],
   "updates": [
     {
@@ -68,6 +69,44 @@
         {
           "url": "https://thedefiant.io/news/cefi/nasdaq-invests-100-million-in-kraken-parent-payward",
           "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_f230bd7870d6339e",
+      "event_id": "evt_03c682a1c0470349",
+      "occurred_at": "2026-09-11T17:00:43Z",
+      "published_at": "2026-09-11T17:00:43Z",
+      "first_seen_at": "2026-09-11T22:43:06.858712Z",
+      "time_precision": "published",
+      "update_type": "correction",
+      "material_change": true,
+      "title_zh": "Nasdaq deepens Kraken ties with proposed $100 million Payward investment",
+      "title_en": "Nasdaq deepens Kraken ties with proposed $100 million Payward investment",
+      "what_changed_zh": "新信息澄清该1亿美元投资为拟议/已同意但未完成交易，未披露交割日期、估值、持股比例或治理权；并新增NET目标于2027年第二季度推出且代币尚未上线。",
+      "what_changed_en": "New facts clarify the $100 million investment is proposed/agreed but not completed, with no closing date, valuation, ownership percentage or governance rights disclosed; adds NET launch target of Q2 2027 and that tokens are not live.",
+      "current_state_zh": "纳斯达克风投已同意向Kraken母公司Payward拟投资1亿美元，后者计划在加密、股票、代币化股票、期货和期权等交易场所部署纳斯达克监控技术；该投资尚未完成，估值条款未披露，NET仍目标于2027年第二季度推出。",
+      "current_state_en": "Nasdaq Ventures has agreed to a proposed $100 million investment in Kraken parent Payward, which plans to deploy Nasdaq surveillance across crypto, equities, tokenized equities, futures and options; the deal is not completed, valuation terms are undisclosed, and NETs remain targeted for Q2 2027.",
+      "detailed_summary_zh": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward, which will also deploy Nasdaq market-surveillance technology across its crypto, equities, tokenized equities, futures, and options venues as part of their tokenized-equity partnership.",
+      "detailed_summary_en": "Nasdaq Ventures agreed to invest $100 million in Kraken parent Payward, which will also deploy Nasdaq market-surveillance technology across its crypto, equities, tokenized equities, futures, and options venues as part of their tokenized-equity partnership.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:edf36388c0cad74d"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/nasdaq-deepens-kraken-ties-with-proposed-100-million-payward-investment/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }
