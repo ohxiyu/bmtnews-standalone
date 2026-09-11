@@ -5,27 +5,29 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "每日全部入选新闻分散发布到币安广场，不增加 AI 调用",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/72",
+  "goal": "修复 Square 定时未触发，增加已有发布流程兜底与同小时额度",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/74",
   "owner": "Codex / square-distribution",
-  "branch": "agent/binance-square",
-  "last_verified_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/73",
+  "branch": "agent/square-trigger-fix",
+  "last_verified_commit": "eed8b775a7157f1a5e405df8f2012c176575f411",
+  "pr": "pending",
   "completed": [
     "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
-    "新增独立 Square 分发器、持久化发送前检查点、按小时分发工作流与测试"
+    "PR73 已合并，用户已配置专用 Secret 并授权启用；SQUARE_ENABLED=true",
+    "查明19:22前 Square 工作流零触发；手动生产恢复 run34593750085，API确认首3条成功且有帖子ID",
+    "新增日报/X成功完成兜底与同小时额度回归测试"
   ],
   "unfinished": [
-    "PR #73 已提交，等待 CI 与用户审核；未合并",
-    "Square 专用发布 Key、启用开关和真实发帖验收未完成"
+    "提交触发修复 PR，待授权合并；今天剩余11条尚未发送",
+    "合并后验证 workflow_run 真实触发与同小时额度"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 成功；全量 pytest 764 passed、1 个既有弃用警告，10.22 秒",
-    "Square 专项 16 passed，含本地 bare Git 远端检查点恢复；治理检查和 diff check 通过"
+    "uv sync --frozen --extra dev 成功；pytest 768 passed、1既有warning（17.46秒）；Square专项20 passed；治理与diff check通过",
+    "生产首次分发run34593750085成功，3个帖子ID已持久化，详见发布记录"
   ],
   "unverified": [
-    "Square 真实账号、发布权限、内容长度限制及链接尚未通过实发验收",
+    "新增 workflow_run 兜底未上线；API成功不代表已人工检查平台展示/审核状态",
     "Quick Post 生产内容写入仍未验收；本次不改变后台"
   ],
   "production": {
@@ -37,9 +39,9 @@
     "verified_at": "2026-09-11"
   },
   "blockers": [
-    "Square 未配置发布凭据和启用开关；本任务只获开发授权，不合并或部署"
+    "本补丁未获合并授权；GitHub 内部为何漏触发不可直接观测"
   ],
-  "next_action": "审核 PR #73；另行授权合并并配置 Secret/开关后验收真实发布。PR #68 的旧指针不能覆盖本交接。",
+  "next_action": "提交触发修复 PR，审核合并后验证自动兜底。保留 square-queue，不能重发已sent项。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -47,7 +49,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-11-square-distribution.md"
+  "evidence": "project-docs/releases/2026-09-11-square-trigger-fix.md"
 }
 ```
 

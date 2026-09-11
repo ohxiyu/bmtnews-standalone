@@ -113,8 +113,21 @@ def distribute(edition: dict, state: dict, *, now: datetime, client: httpx.Clien
     # Normal day: one per hourly slot. Lost/delayed slots increase the next
     # batch just enough to finish by 23:17. No long-running sleeping runner.
     hour = now.astimezone(SHANGHAI).hour
+    if hour < 8 and not explicit_date:
+        return {"status": "skipped", "reason": "outside_delivery_window"}
     slots = max(1, 24 - max(9, hour))
-    budget = max(1, math.ceil(len(candidates) / slots))
+    # Multiple trigger types share one hourly allowance, not just URL dedup.
+    # Old checkpoints already contain attempted_at; no queue migration required.
+    slot = now.astimezone(SHANGHAI).strftime('%Y-%m-%dT%H')
+    used = 0
+    for row in rows.values():
+        timestamp = row.get("attempted_at")
+        if timestamp:
+            attempted_at = datetime.fromisoformat(timestamp)
+            if attempted_at.tzinfo is None:
+                raise ValueError("Queue attempt time must include timezone")
+            used += attempted_at.astimezone(SHANGHAI).strftime('%Y-%m-%dT%H') == slot
+    budget = max(0, math.ceil((len(candidates) + used) / slots) - used)
     if len(rows) + len(candidates) > 100:
         raise ValueError("Daily attempt cap exceeded")
     attempted = 0

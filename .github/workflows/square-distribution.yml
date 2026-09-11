@@ -1,6 +1,11 @@
 name: BMTNews Binance Square Distribution
 
 on:
+  # Existing production flows provide an independent trigger if this cron is dropped.
+  workflow_run:
+    workflows: ['BMTNews Daily Edition', 'BMTNews X Distribution']
+    types: [completed]
+    branches: [main]
   schedule:
     - cron: '17 1-15 * * *' # 09:17–23:17 Asia/Shanghai, one short job per hour
   workflow_dispatch:
@@ -19,11 +24,17 @@ permissions:
 
 jobs:
   publish:
-    if: ${{ vars.SQUARE_ENABLED == 'true' }}
+    if: >-
+      ${{ vars.SQUARE_ENABLED == 'true' &&
+          (github.event_name != 'workflow_run' ||
+           (github.event.workflow_run.conclusion == 'success' &&
+            github.event.workflow_run.head_repository.full_name == github.repository)) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main # Never execute triggering-run artifacts or untrusted branch code.
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'

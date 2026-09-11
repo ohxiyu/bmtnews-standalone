@@ -42,6 +42,36 @@ def test_final_slot_catches_up_without_truncating_selection():
     assert report["sent"] == 17
 
 
+def test_multiple_trigger_types_share_hourly_budget():
+    state = {"version": 1, "editions": {}}
+    assert run(edition(), state, hour=19)["attempted"] == 3
+    assert run(edition(), state, hour=19)["attempted"] == 0
+    assert run(edition(), state, hour=20)["attempted"] == 3
+
+
+def test_production_pending_checkpoint_uses_same_hour_allowance():
+    state = {"editions": {}}
+    run(edition(), state, hour=9)
+    row = next(iter(state["editions"]["2026-09-11"].values()))
+    row["status"] = "pending"
+    assert run(edition(), state, hour=9)["attempted"] == 0
+
+
+def test_overnight_trigger_does_not_burst_publish():
+    assert run(edition(), {"editions": {}}, hour=2)["reason"] == "outside_delivery_window"
+
+
+def test_workflow_fallback_is_success_only_and_trusted_main():
+    from pathlib import Path
+    workflow = (Path(__file__).parents[1] / ".github/workflows/square-distribution.yml").read_text()
+    assert "workflows: ['BMTNews Daily Edition', 'BMTNews X Distribution']" in workflow
+    assert "branches: [main]" in workflow
+    assert "github.event.workflow_run.conclusion == 'success'" in workflow
+    assert "head_repository.full_name == github.repository" in workflow
+    assert "ref: main" in workflow
+    assert "group: bmtnews-square-distribution" in workflow
+
+
 def test_stale_edition_is_never_automatically_sent():
     payload = edition()
     payload["date"] = "2026-09-10"
