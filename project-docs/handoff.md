@@ -5,27 +5,30 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "每日全部入选新闻分散发布到币安广场，不增加 AI 调用",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/72",
+  "goal": "Square持久化随机时间表：日报修订才同步，定时只检查到期队列",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/74",
   "owner": "Codex / square-distribution",
-  "branch": "agent/binance-square",
-  "last_verified_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/73",
+  "branch": "agent/square-trigger-fix",
+  "last_verified_commit": "eed8b775a7157f1a5e405df8f2012c176575f411",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/75",
   "completed": [
     "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
-    "新增独立 Square 分发器、持久化发送前检查点、按小时分发工作流与测试"
+    "PR73 已合并，用户已配置专用 Secret 并授权启用；SQUARE_ENABLED=true",
+    "查明19:22前 Square 工作流零触发；手动生产恢复 run34593750085，API确认首3条成功且有帖子ID",
+    "用户追加随机分钟与不重复读取日报，沿用PR75更新，替代旧小时额度方案",
+    "实现持久化正文/due_at、内容修订同步、撤下与已发保护、每5分钟标准库轻量检查、单条发送和至少5分钟间隔"
   ],
   "unfinished": [
-    "PR #73 已提交，等待 CI 与用户审核；未合并",
-    "Square 专用发布 Key、启用开关和真实发帖验收未完成"
+    "PR75待更新后CI与授权合并；未触碰生产队列",
+    "合并后验证随机计划首次初始化、定时仅读队列、全期发送完成情况"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 成功；全量 pytest 764 passed、1 个既有弃用警告，10.22 秒",
-    "Square 专项 16 passed，含本地 bare Git 远端检查点恢复；治理检查和 diff check 通过"
+    "uv sync --frozen --extra dev 成功；全量pytest 773 passed、1既有warning；随机队列专项25 passed；YAML解析、治理和diff check通过",
+    "生产首次分发run34593750085成功，3个帖子ID已持久化，详见发布记录"
   ],
   "unverified": [
-    "Square 真实账号、发布权限、内容长度限制及链接尚未通过实发验收",
+    "随机计划与workflow_run兜底未上线；GitHub5分钟触发及时性及平台最终审核/展示未验证",
     "Quick Post 生产内容写入仍未验收；本次不改变后台"
   ],
   "production": {
@@ -37,9 +40,9 @@
     "verified_at": "2026-09-11"
   },
   "blockers": [
-    "Square 未配置发布凭据和启用开关；本任务只获开发授权，不合并或部署"
+    "本补丁未获合并授权；GitHub 内部为何漏触发不可直接观测"
   ],
-  "next_action": "审核 PR #73；另行授权合并并配置 Secret/开关后验收真实发布。PR #68 的旧指针不能覆盖本交接。",
+  "next_action": "更新PR75并等待授权合并，验证随机计划与轻量检查。保留square-queue；回退旧分发代码前先关闭开关。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -47,7 +50,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-11-square-distribution.md"
+  "evidence": "project-docs/releases/2026-09-12-square-random-plan.md"
 }
 ```
 

@@ -1,8 +1,14 @@
 name: BMTNews Binance Square Distribution
 
 on:
+  # Existing production flows provide an independent trigger if this cron is dropped.
+  workflow_run:
+    workflows: ['BMTNews Daily Edition', 'BMTNews Feed Collection', 'Deploy Docs', 'BMTNews X Distribution']
+    types: [completed]
+    branches: [main]
   schedule:
-    - cron: '17 1-15 * * *' # 09:17–23:17 Asia/Shanghai, one short job per hour
+    - cron: '*/5 1-14 * * *' # 09:00–22:55 Shanghai: queue-only checks
+    - cron: '0-30/5 15 * * *' # 23:00–23:30 Shanghai
   workflow_dispatch:
     inputs:
       edition_date:
@@ -19,32 +25,24 @@ permissions:
 
 jobs:
   publish:
-    if: ${{ vars.SQUARE_ENABLED == 'true' }}
+    if: >-
+      ${{ vars.SQUARE_ENABLED == 'true' &&
+          (github.event_name != 'workflow_run' ||
+           (github.event.workflow_run.conclusion == 'success' &&
+            github.event.workflow_run.head_repository.full_name == github.repository)) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
-      - uses: astral-sh/setup-uv@v7
-        with:
-          version: '0.11.32'
-      - run: uv sync --frozen
-      - name: Read published edition, initialize isolated state checkout
+          ref: main # Never execute triggering-run artifacts or untrusted branch code.
+      - name: Restore isolated delivery queue
         env:
           EDITION_DATE: ${{ inputs.edition_date }}
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          git fetch --depth=1 origin gh-pages
-          edition_path=api/latest.json
-          if [ -n "$EDITION_DATE" ]; then
-            [[ "$EDITION_DATE" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] || exit 1
-            edition_path="editions/$EDITION_DATE/edition.json"
-          fi
-          git show "FETCH_HEAD:$edition_path" > "$RUNNER_TEMP/square-edition.json"
           gh auth setup-git
           git init "$RUNNER_TEMP/square-state"
           git -C "$RUNNER_TEMP/square-state" remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
@@ -59,10 +57,58 @@ jobs:
           else
             git -C "$RUNNER_TEMP/square-state" checkout --orphan square-queue
           fi
+      - name: Queue-only gate (no dependencies or edition read)
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          UPSTREAM_NAME: ${{ github.event.workflow_run.name }}
+          EDITION_DATE: ${{ inputs.edition_date }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(--queue "$RUNNER_TEMP/square-state/queue.json" --date "$EDITION_DATE")
+          if [ "$EVENT_NAME" = workflow_dispatch ] ||
+             { [ "$EVENT_NAME" = workflow_run ] && [ "$UPSTREAM_NAME" != 'BMTNews X Distribution' ]; }; then
+            args+=(--force-sync)
+          fi
+          python -m src.square_plan "${args[@]}" | tee -a "$GITHUB_OUTPUT" "$GITHUB_STEP_SUMMARY"
+      - name: Read edition only on publication, revision or bootstrap
+        if: steps.gate.outputs.sync == 'true'
+        env:
+          EDITION_DATE: ${{ inputs.edition_date }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin gh-pages
+          edition_path=api/latest.json
+          if [ -n "$EDITION_DATE" ]; then
+            [[ "$EDITION_DATE" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] || exit 1
+            edition_path="editions/$EDITION_DATE/edition.json"
+          fi
+          git show "FETCH_HEAD:$edition_path" > "$RUNNER_TEMP/square-edition.json"
+      - uses: actions/setup-python@v6
+        if: steps.gate.outputs.sync == 'true' || steps.gate.outputs.due == 'true'
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v7
+        if: steps.gate.outputs.sync == 'true' || steps.gate.outputs.due == 'true'
+        with:
+          version: '0.11.32'
+      - run: uv sync --frozen
+        if: steps.gate.outputs.sync == 'true' || steps.gate.outputs.due == 'true'
       - name: Publish due stories with remote checkpoints
+        if: steps.gate.outputs.sync == 'true' || steps.gate.outputs.due == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           SQUARE_ENABLED: ${{ vars.SQUARE_ENABLED }}
           BINANCE_SQUARE_OPENAPI_KEY: ${{ secrets.BINANCE_SQUARE_OPENAPI_KEY }}
           EDITION_DATE: ${{ inputs.edition_date }}
-        run: uv run python -m src.square_delivery --edition "$RUNNER_TEMP/square-edition.json" --queue-dir "$RUNNER_TEMP/square-state" --edition-date "$EDITION_DATE"
+          SYNC_EDITION: ${{ steps.gate.outputs.sync }}
+        shell: bash
+        run: |
+          args=(--queue-dir "$RUNNER_TEMP/square-state" --edition-date "$EDITION_DATE")
+          if [ "$SYNC_EDITION" = true ]; then args+=(--edition "$RUNNER_TEMP/square-edition.json"); fi
+          uv run python -m src.square_delivery "${args[@]}"
+      - name: Flag unresolved or unscheduled posts
+        if: steps.gate.outputs.attention != '0' || steps.gate.outputs.unscheduled != '0'
+        run: exit 1
