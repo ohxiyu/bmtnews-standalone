@@ -10,7 +10,7 @@
   "owner": "Codex / square-distribution",
   "branch": "agent/square-rollout-record",
   "last_verified_commit": "ae5786ff7bb0e256d5da92fd81a4b285208e7691",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/77",
   "completed": [
     "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
     "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
