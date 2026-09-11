@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: main # Never execute triggering-run artifacts or untrusted branch code.
       - name: Restore isolated delivery queue
@@ -86,7 +86,7 @@ jobs:
             edition_path="editions/$EDITION_DATE/edition.json"
           fi
           git show "FETCH_HEAD:$edition_path" > "$RUNNER_TEMP/square-edition.json"
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         if: steps.gate.outputs.sync == 'true' || steps.gate.outputs.due == 'true'
         with:
           python-version: '3.12'
