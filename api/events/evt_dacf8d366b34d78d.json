@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_dacf8d366b34d78d/",
   "json": "https://bmt.news/api/events/evt_dacf8d366b34d78d.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
     "en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves"
   },
   "current_state": {
-    "zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
-    "en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action."
+    "zh": "Osmosis已通过紧急升级冻结22.65 allBTC；allBTC仍有约36%无支撑；治理提案拟填补40 BTC缺口。",
+    "en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall."
   },
   "first_seen_at": "2026-09-10T09:03:46.634022+00:00",
-  "last_updated_at": "2026-09-10T09:03:46.634022+00:00",
-  "last_material_change_at": "2026-09-10T09:03:46.634022+00:00",
+  "last_updated_at": "2026-09-11T16:40:49.044823+00:00",
+  "last_material_change_at": "2026-09-11T16:40:49.044823+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "nomic",
     "osmosis"
@@ -27,6 +27,8 @@
   "identifiers": [],
   "topics": [
     "bridge-exploit",
+    "bridge-security",
+    "cosmos",
     "defi-security",
     "osmosis"
   ],
@@ -77,6 +79,44 @@
         {
           "url": "https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/",
           "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_6e005346860c0eab",
+      "event_id": "evt_dacf8d366b34d78d",
+      "occurred_at": "2026-09-11T15:59:39Z",
+      "published_at": "2026-09-11T15:59:39Z",
+      "first_seen_at": "2026-09-11T16:40:49.044823Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Osmosis took 74 days to discover 40-BTC Nomic exploit",
+      "title_en": "Osmosis took 74 days to discover 40-BTC Nomic exploit",
+      "what_changed_zh": "新披露：攻击发生于6月25日，攻击者利用两个漏洞凭空铸造40.650602 BTC的nBTC；74天后才发现；攻击者通过671 ETH至Tornado Cash套现约100万美元；治理提案拟没收冻结的22.65 allBTC、取消USDC.noble流动性重新部署并动用Community Pool填补40 BTC缺口。",
+      "what_changed_en": "Newly disclosed: exploit occurred June 25; attacker used two bugs to mint 40.650602 BTC of unbacked nBTC; detection took 74 days; attacker cashed out ~$1M via 671 ETH to Tornado Cash; governance proposal would seize frozen 22.65 allBTC, cancel USDC.noble liquidity re-deployment, and pull Community Pool allBTC to fill the 40 BTC shortfall.",
+      "current_state_zh": "Osmosis已通过紧急升级冻结22.65 allBTC；allBTC仍有约36%无支撑；治理提案拟填补40 BTC缺口。",
+      "current_state_en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall.",
+      "detailed_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+      "detailed_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:protos.com_feed_:e6a7a4cf53344add"
+      ],
+      "sources": [
+        {
+          "url": "https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/",
+          "label": "Protos",
           "source_type": "rss",
           "official": false
         }

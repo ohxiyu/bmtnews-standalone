@@ -4,27 +4,29 @@
   "url": "https://bmt.news/events/evt_8c0cf5d1ff7fd2a0/",
   "json": "https://bmt.news/api/events/evt_8c0cf5d1ff7fd2a0.json",
   "type": "market_structure",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
     "en": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH"
   },
   "current_state": {
-    "zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
-    "en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply."
+    "zh": "BitMine 持有 593 万 ETH，其中 507 万 ETH 已质押，约占以太坊活跃质押量的 11.8%，但 validator 与签名密钥的控制权分布仍未披露。",
+    "en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed."
   },
   "first_seen_at": "2026-09-08T16:47:10.824815+00:00",
-  "last_updated_at": "2026-09-08T16:47:12.035517+00:00",
-  "last_material_change_at": "2026-09-08T16:47:10.824815+00:00",
+  "last_updated_at": "2026-09-11T16:40:48.529007+00:00",
+  "last_material_change_at": "2026-09-11T16:40:48.529007+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 2,
+  "updates_count": 2,
+  "sources_count": 3,
   "entities": [
     "bitmine"
   ],
   "identifiers": [],
   "topics": [
+    "concentration-risk",
+    "staking",
     "treasury"
   ],
   "updates": [
@@ -68,6 +70,44 @@
         {
           "url": "https://thedefiant.io/news/tradfi-and-fintech/bitmine-adds-28-086-eth-as-treasury-nears-5-of-supply",
           "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_a91a668332b223b6",
+      "event_id": "evt_8c0cf5d1ff7fd2a0",
+      "occurred_at": "2026-09-11T12:40:50Z",
+      "published_at": "2026-09-11T12:40:50Z",
+      "first_seen_at": "2026-09-11T16:40:48.529007Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "BitMine’s staked ETH equals nearly 12% of Ethereum’s active stake, but who controls it?",
+      "title_en": "BitMine’s staked ETH equals nearly 12% of Ethereum’s active stake, but who controls it?",
+      "what_changed_zh": "BitMine 已质押 507 万 ETH（约占其 593 万 ETH 持有量的 85%），相当于以太坊活跃质押量的约 11.8%；同时结束与 Ethereum Tower 的管理服务协议，并任命关联公司 American Validator 为 MAVAN Holdings 提供咨询。",
+      "what_changed_en": "BitMine has staked 5.07 million ETH (~85% of its 5.93 million ETH holdings), equal to roughly 11.8% of Ethereum's active stake, and ended its management-services agreement with Ethereum Tower while appointing affiliate American Validator to advise MAVAN Holdings.",
+      "current_state_zh": "BitMine 持有 593 万 ETH，其中 507 万 ETH 已质押，约占以太坊活跃质押量的 11.8%，但 validator 与签名密钥的控制权分布仍未披露。",
+      "current_state_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
+      "detailed_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+      "detailed_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:1fb9b3054e5005be"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/bitmines-staked-eth-equals-nearly-12-of-ethereums-active-stake-but-who-controls-it/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

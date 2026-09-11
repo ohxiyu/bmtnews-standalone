@@ -29088,8 +29088,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
-      "current_state_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "current_state_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
+      "current_state_zh": "BitMine 持有 593 万 ETH，其中 507 万 ETH 已质押，约占以太坊活跃质押量的 11.8%，但 validator 与签名密钥的控制权分布仍未披露。",
       "entities": [
         "bitmine"
       ],
@@ -29097,14 +29097,16 @@
       "event_type": "market_structure",
       "first_seen_at": "2026-09-08T16:47:10.824815Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-08T16:47:10.824815Z",
-      "last_updated_at": "2026-09-08T16:47:12.035517Z",
+      "last_material_change_at": "2026-09-11T16:40:48.529007Z",
+      "last_updated_at": "2026-09-11T16:40:48.529007Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
       "title_zh": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
       "topics": [
+        "concentration-risk",
+        "staking",
         "treasury"
       ],
       "updates": [
@@ -29152,6 +29154,44 @@
           "update_type": "initial",
           "what_changed_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
           "what_changed_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
+          "current_state_zh": "BitMine 持有 593 万 ETH，其中 507 万 ETH 已质押，约占以太坊活跃质押量的 11.8%，但 validator 与签名密钥的控制权分布仍未披露。",
+          "detailed_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+          "detailed_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+          "event_id": "evt_8c0cf5d1ff7fd2a0",
+          "first_seen_at": "2026-09-11T16:40:48.529007Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T12:40:50Z",
+          "published_at": "2026-09-11T12:40:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/bitmines-staked-eth-equals-nearly-12-of-ethereums-active-stake-but-who-controls-it/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:1fb9b3054e5005be"
+          ],
+          "time_precision": "published",
+          "title_en": "BitMine’s staked ETH equals nearly 12% of Ethereum’s active stake, but who controls it?",
+          "title_zh": "BitMine’s staked ETH equals nearly 12% of Ethereum’s active stake, but who controls it?",
+          "update_id": "upd_a91a668332b223b6",
+          "update_type": "escalation",
+          "what_changed_en": "BitMine has staked 5.07 million ETH (~85% of its 5.93 million ETH holdings), equal to roughly 11.8% of Ethereum's active stake, and ended its management-services agreement with Ethereum Tower while appointing affiliate American Validator to advise MAVAN Holdings.",
+          "what_changed_zh": "BitMine 已质押 507 万 ETH（约占其 593 万 ETH 持有量的 85%），相当于以太坊活跃质押量的约 11.8%；同时结束与 Ethereum Tower 的管理服务协议，并任命关联公司 American Validator 为 MAVAN Holdings 提供咨询。"
         }
       ]
     },
@@ -36814,8 +36854,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
-      "current_state_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
+      "current_state_en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall.",
+      "current_state_zh": "Osmosis已通过紧急升级冻结22.65 allBTC；allBTC仍有约36%无支撑；治理提案拟填补40 BTC缺口。",
       "entities": [
         "nomic",
         "osmosis"
@@ -36824,15 +36864,17 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-10T09:03:46.634022Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-10T09:03:46.634022Z",
-      "last_updated_at": "2026-09-10T09:03:46.634022Z",
+      "last_material_change_at": "2026-09-11T16:40:49.044823Z",
+      "last_updated_at": "2026-09-11T16:40:49.044823Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
       "title_zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
       "topics": [
         "bridge-exploit",
+        "bridge-security",
+        "cosmos",
         "defi-security",
         "osmosis"
       ],
@@ -36887,6 +36929,44 @@
           "update_type": "initial",
           "what_changed_en": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action.",
           "what_changed_zh": "Osmosis froze 22.65 BTC after a flaw in Nomic's forwarding system enabled false-voucher minting of nBTC, leaving roughly 36% of allBTC's backing invalid and minting/redemption paused pending governance action."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall.",
+          "current_state_zh": "Osmosis已通过紧急升级冻结22.65 allBTC；allBTC仍有约36%无支撑；治理提案拟填补40 BTC缺口。",
+          "detailed_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+          "detailed_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+          "event_id": "evt_dacf8d366b34d78d",
+          "first_seen_at": "2026-09-11T16:40:49.044823Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T15:59:39Z",
+          "published_at": "2026-09-11T15:59:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:e6a7a4cf53344add"
+          ],
+          "time_precision": "published",
+          "title_en": "Osmosis took 74 days to discover 40-BTC Nomic exploit",
+          "title_zh": "Osmosis took 74 days to discover 40-BTC Nomic exploit",
+          "update_id": "upd_6e005346860c0eab",
+          "update_type": "escalation",
+          "what_changed_en": "Newly disclosed: exploit occurred June 25; attacker used two bugs to mint 40.650602 BTC of unbacked nBTC; detection took 74 days; attacker cashed out ~$1M via 671 ETH to Tornado Cash; governance proposal would seize frozen 22.65 allBTC, cancel USDC.noble liquidity re-deployment, and pull Community Pool allBTC to fill the 40 BTC shortfall.",
+          "what_changed_zh": "新披露：攻击发生于6月25日，攻击者利用两个漏洞凭空铸造40.650602 BTC的nBTC；74天后才发现；攻击者通过671 ETH至Tornado Cash套现约100万美元；治理提案拟没收冻结的22.65 allBTC、取消USDC.noble流动性重新部署并动用Community Pool填补40 BTC缺口。"
         }
       ]
     },
@@ -37986,7 +38066,7 @@
       "first_seen_at": "2026-09-10T16:35:53.743514Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-10T16:35:53.743514Z",
-      "last_updated_at": "2026-09-10T16:35:53.743514Z",
+      "last_updated_at": "2026-09-11T16:40:44.187139Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -38022,10 +38102,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/business/2026-09-10-coinbase-moov-bring-stablecoin-payment-infrastructure-community-banks-credit-unions-414153"
+            },
+            {
+              "label": "Finextra Research",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQWl3MG9IMTNkYmQyY1BhOGlrSmM4X3hXLUQ1OTdRNWQ0WFlIU3FVUkFpRldxajRNeU1UTWVkd0hLWXJ2VGNkZ0NBa1ZwMHp1NDVUSU90WnpMVnZweHVacjM0UTVBMTFRcDhMY1hBRkhON3dnTk5wSjJDdWxpMVFyX3VKQlZFaHpsR0dMSFJ4RVIxcmpvRUR1SHZJTHo4M2RRQlB5eE5xajJyN0ZxTXF5dE9zN1ljNEM5UzVSSGVtNnM4a2R2emxFT2RTSy15NDVCV1RaMTln?oc=5"
             }
           ],
           "story_ids": [
-            "rss:www.theblock.co_rss.xml:23b0628a69280354"
+            "rss:www.theblock.co_rss.xml:23b0628a69280354",
+            "google_news:article:33439b3bb8986247"
           ],
           "time_precision": "published",
           "title_en": "Coinbase, Moov to bring stablecoin payment infrastructure to community banks and credit unions",
@@ -38312,7 +38399,7 @@
       "first_seen_at": "2026-09-10T16:35:53.859583Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-10T16:35:53.859583Z",
-      "last_updated_at": "2026-09-10T16:35:53.859583Z",
+      "last_updated_at": "2026-09-11T16:40:44.187112Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -38348,10 +38435,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/deals/2026-09-10-nasdaq-to-invest-100-million-in-kraken-parent-payward-as-firms-expand-partnership-414120"
+            },
+            {
+              "label": "Bitcoin Foundation",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeEJDU0wwVmR4NGFUdFJJSGNScnZUVlRUekdpZkZZZ1lsbjFQbjdFcjNDakt5LWI5S3c5NS11QlNhU1FWcG13R3J1WktESklNMUhXNktrYVQ5QXJWYTRoYXlUUzdmSXdFOW5LcndPNDZyeW5nZ3o3Q0pnYWh3dXFRTXFKUTVYOGx0MnJCbUJLSGljS0FFUXI5czJKQkdUQ1ZwRk5YUXNKZGtlRnRuUVljd2RxakUyc2Z2Zk9OUWlfMGNhdGQ1?oc=5"
             }
           ],
           "story_ids": [
-            "rss:www.theblock.co_rss.xml:1ea84e6ab56b64e5"
+            "rss:www.theblock.co_rss.xml:1ea84e6ab56b64e5",
+            "google_news:article:680c23260e9ab631"
           ],
           "time_precision": "published",
           "title_en": "Nasdaq to invest $100 million in Kraken parent Payward as firms expand partnership",
@@ -39278,7 +39372,7 @@
       "first_seen_at": "2026-09-10T22:42:58.333163Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-10T22:42:58.333163Z",
-      "last_updated_at": "2026-09-10T22:42:58.333163Z",
+      "last_updated_at": "2026-09-11T16:40:44.187815Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -39315,10 +39409,17 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcnUwa1VXRGV2U2N2RFVpd2pmQy1BaGZpaGM1NXppbHNSZmU4TnJZUnhaOVZYcFotb0RidGppRWhrTTcyTTJDNWp0NGtaM2RSWVZaMDBrUENDcHl4bEs5TVJpSm9GNUNBMzJGdC1wOThubW8xN0RyMXVDcVZJTHA1ZmxJOTJJblg4aHFJNnpBRG9UNDdkT2FoddIBmAFBVV95cUxQcnUwa1VXRGV2U2N2RFVpd2pmQy1BaGZpaGM1NXppbHNSZmU4TnJZUnhaOVZYcFotb0RidGppRWhrTTcyTTJDNWp0NGtaM2RSWVZaMDBrUENDcHl4bEs5TVJpSm9GNUNBMzJGdC1wOThubW8xN0RyMXVDcVZJTHA1ZmxJOTJJblg4aHFJNnpBRG9UNDdkT2FodQ?oc=5"
+            },
+            {
+              "label": "Blockonomi",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdmlJYVdQYWo4UnUtSzJfT3Q5SFlWbjV2T1pwRS1ZVF9aRXN1NVVZVFhiVmczV1JKNmxtdWdWNEt4aXJVS01JV1dGcnVHQVZEMHlIT25Cak93eGdnekxOQktSbFo2LTU5YXFtTXZxQ0lrVEMwRTJ3enhVbldnNEltOWk1Mkk4dnVselJF?oc=5"
             }
           ],
           "story_ids": [
-            "google_news:article:4d5b7264a4acdbdb"
+            "google_news:article:4d5b7264a4acdbdb",
+            "google_news:article:fd5aaae9eacb2f6a"
           ],
           "time_precision": "published",
           "title_en": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation - Decrypt",
@@ -41319,8 +41420,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
-      "current_state_zh": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "current_state_en": "India has launched the Demat 2.0 tokenized corporate bond pilot, with three issuers raising about $107 million; first-phase issuances remain ongoing, and later phases are planned to add secondary trading and retail access.",
+      "current_state_zh": "印度已启动 Demat 2.0 代币化公司债试点，首批三家发行人合计发行约1.07亿美元，第一阶段发行仍在进行，后续阶段将引入二级交易和零售投资者。",
       "entities": [
         "india"
       ],
@@ -41328,8 +41429,8 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-11T09:01:21.883664Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-11T09:01:21.883664Z",
-      "last_updated_at": "2026-09-11T09:01:21.883664Z",
+      "last_material_change_at": "2026-09-11T16:40:55.891072Z",
+      "last_updated_at": "2026-09-11T16:40:55.891072Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -41379,6 +41480,51 @@
           "update_type": "initial",
           "what_changed_en": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
           "what_changed_zh": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.93,
+          "current_state_en": "India has launched the Demat 2.0 tokenized corporate bond pilot, with three issuers raising about $107 million; first-phase issuances remain ongoing, and later phases are planned to add secondary trading and retail access.",
+          "current_state_zh": "印度已启动 Demat 2.0 代币化公司债试点，首批三家发行人合计发行约1.07亿美元，第一阶段发行仍在进行，后续阶段将引入二级交易和零售投资者。",
+          "detailed_summary_en": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
+          "detailed_summary_zh": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
+          "event_id": "evt_c3b1cbd96526ed2a",
+          "first_seen_at": "2026-09-11T16:40:55.891072Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T10:33:24Z",
+          "published_at": "2026-09-11T10:33:24Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/india-launches-tokenized-bond-pilot-with-107m-issued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-11-indias-sebi-demat-2-0-pilot-debuts-with-over-100-million-in-tokenized-bonds-414252"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:fa6e8d78a1a58811",
+            "rss:www.theblock.co_rss.xml:2031367c24a3823f"
+          ],
+          "time_precision": "published",
+          "title_en": "India launches tokenized bond pilot with $107M issued",
+          "title_zh": "India launches tokenized bond pilot with $107M issued",
+          "update_id": "upd_343933d973946a25",
+          "update_type": "confirmation",
+          "what_changed_en": "SEBI and RBI formally launched the Demat 2.0 tokenized corporate bond pilot; REC, Larsen & Toubro and IIFL issued a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to wholesale CBDC settlement.",
+          "what_changed_zh": "印度证券交易委员会（SEBI）与印度储备银行正式启动 Demat 2.0 代币化公司债试点；REC、Larsen & Toubro 和 IIFL 合计发行 102.5 亿卢比（约1.07亿美元），通过分布式账本与批发型 CBDC 结算。"
         }
       ]
     },
@@ -41657,6 +41803,1010 @@
           "what_changed_zh": "A revised CLARITY Act would require US regulators to determine whether operators of 'non-decentralized finance trading protocols' must register and comply with securities, commodities, and AML requirements."
         }
       ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+      "current_state_zh": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+      "entities": [
+        "american",
+        "debut",
+        "enters",
+        "exodus",
+        "makes",
+        "nyse",
+        "nyse-american",
+        "traditional",
+        "yellow"
+      ],
+      "event_id": "evt_ec9ced0269cf6d96",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-11T16:40:44.187464Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:44.187464Z",
+      "last_updated_at": "2026-09-11T16:40:44.187464Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Exodus Makes NYSE American Debut as Crypto Enters Traditional Finance - Yellow.com",
+      "title_zh": "Exodus Makes NYSE American Debut as Crypto Enters Traditional Finance - Yellow.com",
+      "topics": [
+        "crypto-equity",
+        "exodus",
+        "nyse-american"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+          "current_state_zh": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+          "detailed_summary_en": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+          "detailed_summary_zh": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+          "event_id": "evt_ec9ced0269cf6d96",
+          "first_seen_at": "2026-09-11T16:40:44.187464Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T13:54:36Z",
+          "published_at": "2026-09-11T13:54:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yellow.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZDgzNk12TVVZZ2xiUHBfVVN1bEJpNGxSWEYycVpjXzJCeTdfeE0zeE1xb05IaW5tTTdRcUoybUdfN2lDMzVuLTM4dnNFaUxkai1zbnB1c2pVS3lFY1J3RnA5aFdsWGFDdVhsbmFzamxOSzI5NkJRTndrbE5jTy04VGkxZFNNd0FJdVA2MlVEN0ZEYlhwalp1OHp0VTJqaXJXWTN6aU1mVlFLOVB2VXkxY1NnNA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:79ec8d576f348da1"
+          ],
+          "time_precision": "published",
+          "title_en": "Exodus Makes NYSE American Debut as Crypto Enters Traditional Finance - Yellow.com",
+          "title_zh": "Exodus Makes NYSE American Debut as Crypto Enters Traditional Finance - Yellow.com",
+          "update_id": "upd_75084bfaed835ae6",
+          "update_type": "initial",
+          "what_changed_en": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets.",
+          "what_changed_zh": "Crypto wallet provider Exodus Movement begins trading on the NYSE American exchange, marking another step in the convergence of crypto companies and traditional public equity markets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+      "current_state_zh": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+      "entities": [
+        "cryptonomist",
+        "deal",
+        "equities",
+        "fuels",
+        "investment",
+        "nasdaq",
+        "payward",
+        "tokenized"
+      ],
+      "event_id": "evt_4817eec57ad8bdcc",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-11T16:40:44.187557Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:44.187557Z",
+      "last_updated_at": "2026-09-11T16:40:44.187557Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Nasdaq Investment Payward: $100M Deal Fuels Tokenized Equities - The Cryptonomist",
+      "title_zh": "Nasdaq Investment Payward: $100M Deal Fuels Tokenized Equities - The Cryptonomist",
+      "topics": [
+        "kraken",
+        "nasdaq"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+          "current_state_zh": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+          "detailed_summary_en": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+          "detailed_summary_zh": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+          "event_id": "evt_4817eec57ad8bdcc",
+          "first_seen_at": "2026-09-11T16:40:44.187557Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T14:22:50Z",
+          "published_at": "2026-09-11T14:22:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Cryptonomist",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE03WE56NE1CRDFyZnRsMDgwV3VxOGFDY1FkWjk0UnFnSEtFYU1XQ0V4ZE9Wcko1Z0o5bzE2VHpialZ5MEgyb0NIeGktVEg1VlpLcXIyMzB0Nzg3RTZ6T1lEbEFLS3JpdHNWeVlFR3hKNHhTZw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:d997dd0db174305a"
+          ],
+          "time_precision": "published",
+          "title_en": "Nasdaq Investment Payward: $100M Deal Fuels Tokenized Equities - The Cryptonomist",
+          "title_zh": "Nasdaq Investment Payward: $100M Deal Fuels Tokenized Equities - The Cryptonomist",
+          "update_id": "upd_c1f855ae9410aee7",
+          "update_type": "initial",
+          "what_changed_en": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading.",
+          "what_changed_zh": "Nasdaq has invested $100 million in Payward, Kraken's parent company, in a deal aimed at advancing tokenized equities trading."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+      "current_state_zh": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+      "entities": [
+        "claude"
+      ],
+      "event_id": "evt_a37ff7ad862783aa",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:40:44.325895Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:44.325895Z",
+      "last_updated_at": "2026-09-11T16:40:44.325895Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Claude is only available to people over 18 years",
+      "title_zh": "Claude is only available to people over 18 years",
+      "topics": [
+        "age-verification",
+        "ai-policy",
+        "anthropic",
+        "claude",
+        "privacy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+          "current_state_zh": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+          "detailed_summary_en": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+          "detailed_summary_zh": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+          "event_id": "evt_a37ff7ad862783aa",
+          "first_seen_at": "2026-09-11T16:40:44.325895Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T10:48:00Z",
+          "published_at": "2026-09-11T10:48:00Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49656225"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Muhammad523",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49656225"
+          ],
+          "time_precision": "published",
+          "title_en": "Claude is only available to people over 18 years",
+          "title_zh": "Claude is only available to people over 18 years",
+          "update_id": "upd_3de39806fb196f0d",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications.",
+          "what_changed_zh": "Anthropic now restricts Claude access to users 18 and older via age assurance, prompting debate over privacy, ID verification risks, and competitive implications."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+      "current_state_zh": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+      "entities": [
+        "august",
+        "core",
+        "cpi",
+        "fed"
+      ],
+      "event_id": "evt_7ed4a05136c577df",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:40:45.672957Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:45.672957Z",
+      "last_updated_at": "2026-09-11T16:40:45.672957Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Core CPI rose a faster-than-forecast 0.3% in August, setting up possible Fed rate hike",
+      "title_zh": "Core CPI rose a faster-than-forecast 0.3% in August, setting up possible Fed rate hike",
+      "topics": [
+        "cpi",
+        "federal-reserve",
+        "inflation",
+        "macro"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+          "current_state_zh": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+          "detailed_summary_en": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+          "detailed_summary_zh": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+          "event_id": "evt_7ed4a05136c577df",
+          "first_seen_at": "2026-09-11T16:40:45.672957Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T12:32:25Z",
+          "published_at": "2026-09-11T12:32:25Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/11/core-cpi-rose-a-faster-than-forecast-0-3-in-august-setting-up-fed-rate-hike"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:01adfc6b5cfa7bb9"
+          ],
+          "time_precision": "published",
+          "title_en": "Core CPI rose a faster-than-forecast 0.3% in August, setting up possible Fed rate hike",
+          "title_zh": "Core CPI rose a faster-than-forecast 0.3% in August, setting up possible Fed rate hike",
+          "update_id": "upd_806b98c03c40520a",
+          "update_type": "initial",
+          "what_changed_en": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies.",
+          "what_changed_zh": "US core CPI rose 0.3% in August, above forecasts, raising the odds of a Federal Reserve rate hike and pressuring risk assets including cryptocurrencies."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+      "current_state_zh": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+      "entities": [
+        "esma",
+        "kalshi",
+        "polymarket"
+      ],
+      "event_id": "evt_4c864460af6bc4a4",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:40:46.266651Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:46.266651Z",
+      "last_updated_at": "2026-09-11T16:40:46.266651Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "ESMA says major prediction platforms lack EU authorization, questions Polymarket and Kalshi’s partial geo-blocks",
+      "title_zh": "ESMA says major prediction platforms lack EU authorization, questions Polymarket and Kalshi’s partial geo-blocks",
+      "topics": [
+        "eu",
+        "kalshi",
+        "polymarket",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+          "current_state_zh": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+          "detailed_summary_en": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+          "detailed_summary_zh": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+          "event_id": "evt_4c864460af6bc4a4",
+          "first_seen_at": "2026-09-11T16:40:46.266651Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T10:10:37Z",
+          "published_at": "2026-09-11T10:10:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-11-esma-says-major-prediction-platforms-lack-eu-authorization-questions-polymarket-and-kalshis-partial-geo-blocks-414239"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:186fcd98122f50c2"
+          ],
+          "time_precision": "published",
+          "title_en": "ESMA says major prediction platforms lack EU authorization, questions Polymarket and Kalshi’s partial geo-blocks",
+          "title_zh": "ESMA says major prediction platforms lack EU authorization, questions Polymarket and Kalshi’s partial geo-blocks",
+          "update_id": "upd_ee6008d8bad2c70a",
+          "update_type": "initial",
+          "what_changed_en": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services.",
+          "what_changed_zh": "ESMA stated that major prediction platforms lack EU authorization and questioned whether Polymarket and Kalshi's geographic blocks are sufficient to keep EU users off their services."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+      "current_state_zh": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+      "entities": [
+        "before",
+        "clarity",
+        "clarity-act",
+        "cloture",
+        "days",
+        "five",
+        "post",
+        "republicans",
+        "revised",
+        "senate",
+        "text",
+        "vote"
+      ],
+      "event_id": "evt_f0eff6a2c812d066",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:40:47.347360Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:47.347360Z",
+      "last_updated_at": "2026-09-11T16:40:47.347360Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Senate Republicans Post Revised CLARITY Act Text Five Days Before Cloture Vote",
+      "title_zh": "Senate Republicans Post Revised CLARITY Act Text Five Days Before Cloture Vote",
+      "topics": [
+        "cftc",
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+          "current_state_zh": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+          "detailed_summary_en": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+          "detailed_summary_zh": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+          "event_id": "evt_f0eff6a2c812d066",
+          "first_seen_at": "2026-09-11T16:40:47.347360Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T15:30:38Z",
+          "published_at": "2026-09-11T15:30:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/regulation/clarity-act-revised-text-five-days-before-cloture-vote"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:8f26b81eb86ecead"
+          ],
+          "time_precision": "published",
+          "title_en": "Senate Republicans Post Revised CLARITY Act Text Five Days Before Cloture Vote",
+          "title_zh": "Senate Republicans Post Revised CLARITY Act Text Five Days Before Cloture Vote",
+          "update_id": "upd_45462a432ef3734f",
+          "update_type": "initial",
+          "what_changed_en": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days.",
+          "what_changed_zh": "Senate Republicans released a revised CLARITY Act substitute that imposes CFTC registration and Bank Secrecy Act obligations on non-decentralized trading protocols, narrows the DeFi title to spot and cash digital commodity transactions, and clarifies credit union digital asset powers ahead of a cloture vote in five days."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+      "current_state_zh": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+      "entities": [
+        "after",
+        "blockstream",
+        "demand",
+        "exploit",
+        "liquid",
+        "ransom",
+        "rejects"
+      ],
+      "event_id": "evt_1a01c4348191bd64",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-11T16:40:47.386151Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:47.386151Z",
+      "last_updated_at": "2026-09-11T16:40:47.386151Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Blockstream Rejects Ransom Demand After Liquid Bitcoin Exploit",
+      "title_zh": "Blockstream Rejects Ransom Demand After Liquid Bitcoin Exploit",
+      "topics": [
+        "blockstream",
+        "liquid-network"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+          "current_state_zh": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+          "detailed_summary_en": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+          "detailed_summary_zh": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+          "event_id": "evt_1a01c4348191bd64",
+          "first_seen_at": "2026-09-11T16:40:47.386151Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T14:42:37Z",
+          "published_at": "2026-09-11T14:42:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:0057055c46c168ff"
+          ],
+          "time_precision": "published",
+          "title_en": "Blockstream Rejects Ransom Demand After Liquid Bitcoin Exploit",
+          "title_zh": "Blockstream Rejects Ransom Demand After Liquid Bitcoin Exploit",
+          "update_id": "upd_a47f7fd6062105f7",
+          "update_type": "initial",
+          "what_changed_en": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
+          "what_changed_zh": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+      "current_state_zh": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+      "entities": [
+        "circle",
+        "cosmos",
+        "noble",
+        "usdc"
+      ],
+      "event_id": "evt_5494774cfff92ff7",
+      "event_type": "other",
+      "first_seen_at": "2026-09-11T16:40:48.161107Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:48.161107Z",
+      "last_updated_at": "2026-09-11T16:40:48.161107Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Circle’s Noble shutdown leaves Cosmos racing to move $92 million in USDC",
+      "title_zh": "Circle’s Noble shutdown leaves Cosmos racing to move $92 million in USDC",
+      "topics": [
+        "cosmos",
+        "injective",
+        "noble",
+        "stablecoins",
+        "usdc"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+          "current_state_zh": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+          "detailed_summary_en": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+          "detailed_summary_zh": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+          "event_id": "evt_5494774cfff92ff7",
+          "first_seen_at": "2026-09-11T16:40:48.161107Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T15:00:14Z",
+          "published_at": "2026-09-11T15:00:14Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/circles-noble-shutdown-leaves-cosmos-racing-to-move-92-million-in-usdc/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:e256a197f6fe1ce1"
+          ],
+          "time_precision": "published",
+          "title_en": "Circle’s Noble shutdown leaves Cosmos racing to move $92 million in USDC",
+          "title_zh": "Circle’s Noble shutdown leaves Cosmos racing to move $92 million in USDC",
+          "update_id": "upd_dffa543a21282cab",
+          "update_type": "initial",
+          "what_changed_en": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline.",
+          "what_changed_zh": "Circle will stop minting USDC on Noble in October, forcing Cosmos to migrate roughly $92 million in stablecoin liquidity and integrations to Injective before a January redemption deadline."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+      "current_state_zh": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate"
+      ],
+      "event_id": "evt_27fefc9bd212b0c7",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:40:48.809594Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:48.809594Z",
+      "last_updated_at": "2026-09-11T16:40:48.809594Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act’s biggest Senate vote could happen before the bill is actually finished",
+      "title_zh": "CLARITY Act’s biggest Senate vote could happen before the bill is actually finished",
+      "topics": [
+        "cftc",
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+          "current_state_zh": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+          "detailed_summary_en": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+          "detailed_summary_zh": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+          "event_id": "evt_27fefc9bd212b0c7",
+          "first_seen_at": "2026-09-11T16:40:48.809594Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T09:20:53Z",
+          "published_at": "2026-09-11T09:20:53Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/clarity-acts-biggest-senate-vote-could-happen-before-the-bill-is-actually-finished/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:998ed21b878c7bec"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act’s biggest Senate vote could happen before the bill is actually finished",
+          "title_zh": "CLARITY Act’s biggest Senate vote could happen before the bill is actually finished",
+          "update_id": "upd_5ea532ac425da456",
+          "update_type": "initial",
+          "what_changed_en": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes.",
+          "what_changed_zh": "Republicans released revised CLARITY Act text adding a CFTC framework for identifying controlled protocols, setting up a Sept. 15 Senate cloture vote that needs 60 votes to open debate and amendments on unresolved disputes."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+      "current_state_zh": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+      "entities": [
+        "apple",
+        "fun",
+        "one",
+        "pump",
+        "pump-fun"
+      ],
+      "event_id": "evt_8333d111a74c4b4a",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-11T16:40:49.438540Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:49.438540Z",
+      "last_updated_at": "2026-09-11T16:40:49.438540Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "One day after launching stock pairs, Apple delists Pump Fun app",
+      "title_zh": "One day after launching stock pairs, Apple delists Pump Fun app",
+      "topics": [
+        "app-delisting",
+        "apple-app-store",
+        "memecoins",
+        "pump-fun",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+          "current_state_zh": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+          "detailed_summary_en": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+          "detailed_summary_zh": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+          "event_id": "evt_8333d111a74c4b4a",
+          "first_seen_at": "2026-09-11T16:40:49.438540Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T11:53:45Z",
+          "published_at": "2026-09-11T11:53:45Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/one-day-after-launching-stock-pairs-apple-delists-pump-fun-app/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:3d1d24827593f52e"
+          ],
+          "time_precision": "published",
+          "title_en": "One day after launching stock pairs, Apple delists Pump Fun app",
+          "title_zh": "One day after launching stock pairs, Apple delists Pump Fun app",
+          "update_id": "upd_3bc51ce37adeabbb",
+          "update_type": "initial",
+          "what_changed_en": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks.",
+          "what_changed_zh": "Apple delisted Pump Fun's iPhone app in several countries, including the US and India, one day after the memecoin platform launched Custom Pairs allowing memecoins quoted against tokenized stocks."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+      "current_state_zh": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+      "entities": [
+        "blockstream",
+        "hack",
+        "liquid",
+        "ransom",
+        "refuses",
+        "return",
+        "theft"
+      ],
+      "event_id": "evt_af9b8bddd31499a2",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-11T16:40:52.066681Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:52.066681Z",
+      "last_updated_at": "2026-09-11T16:40:52.066681Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'",
+      "title_zh": "Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'",
+      "topics": [
+        "blockstream",
+        "liquid-network",
+        "ransom",
+        "security-exploit"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+          "current_state_zh": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+          "detailed_summary_en": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+          "detailed_summary_zh": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+          "event_id": "evt_af9b8bddd31499a2",
+          "first_seen_at": "2026-09-11T16:40:52.066681Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T14:17:38Z",
+          "published_at": "2026-09-11T14:17:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377959/blockstream-refuses-ransom-for-return-of-47m-in-bitcoin-from-liquid-hack-it-is-theft"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:c21f16e29a451bd3"
+          ],
+          "time_precision": "published",
+          "title_en": "Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'",
+          "title_zh": "Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'",
+          "update_id": "upd_38daa24dee0318af",
+          "update_type": "initial",
+          "what_changed_en": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds.",
+          "what_changed_zh": "Blockstream has refused to pay a ransom for the return of approximately 598.5 BTC (about $47 million) still missing after the Liquid Network exploit, after hackers returned roughly 3,400 BTC, and says it will work with law enforcement and forensic specialists to trace the remaining funds."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+      "current_state_zh": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+      "entities": [
+        "are",
+        "inside",
+        "markets",
+        "prediction",
+        "prediction-markets",
+        "regulator",
+        "rife",
+        "says",
+        "trading",
+        "with"
+      ],
+      "event_id": "evt_374c7395cfb3fd9d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:40:52.299542Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:52.299542Z",
+      "last_updated_at": "2026-09-11T16:40:52.299542Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "EU Regulator Says Prediction Markets Are 'Rife With Inside Trading'",
+      "title_zh": "EU Regulator Says Prediction Markets Are 'Rife With Inside Trading'",
+      "topics": [
+        "crypto-regulation",
+        "esma",
+        "insider-trading",
+        "polymarket",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+          "current_state_zh": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+          "detailed_summary_en": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+          "detailed_summary_zh": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+          "event_id": "evt_374c7395cfb3fd9d",
+          "first_seen_at": "2026-09-11T16:40:52.299542Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T12:06:24Z",
+          "published_at": "2026-09-11T12:06:24Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/377947/eu-regulator-says-prediction-markets-are-rife-with-inside-trading"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:01390a7090759c29"
+          ],
+          "time_precision": "published",
+          "title_en": "EU Regulator Says Prediction Markets Are 'Rife With Inside Trading'",
+          "title_zh": "EU Regulator Says Prediction Markets Are 'Rife With Inside Trading'",
+          "update_id": "upd_cb5950a587b344ee",
+          "update_type": "initial",
+          "what_changed_en": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach.",
+          "what_changed_zh": "The EU's ESMA warned that prediction markets are 'rife with inside trading,' citing insider trading, manipulation and retail harm while noting the platforms have gained little EU traction due to binary options rules, in contrast to the more permissive U.S. approach."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+      "current_state_zh": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+      "entities": [
+        "anthropic",
+        "claude"
+      ],
+      "event_id": "evt_316a066abcd2e440",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-11T16:40:56.399403Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:40:56.399403Z",
+      "last_updated_at": "2026-09-11T16:40:56.399403Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Anthropic says Claude used for cyberattacks and surveillance",
+      "title_zh": "Anthropic says Claude used for cyberattacks and surveillance",
+      "topics": [
+        "ai-safety",
+        "anthropic",
+        "claude",
+        "cybersecurity",
+        "threat-intelligence"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+          "current_state_zh": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+          "detailed_summary_en": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+          "detailed_summary_zh": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+          "event_id": "evt_316a066abcd2e440",
+          "first_seen_at": "2026-09-11T16:40:56.399403Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T09:47:31Z",
+          "published_at": "2026-09-11T09:47:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/claude-ai-cyberattacks-surveillance-weapons-anthropic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:5a77cf97459963ef"
+          ],
+          "time_precision": "published",
+          "title_en": "Anthropic says Claude used for cyberattacks and surveillance",
+          "title_zh": "Anthropic says Claude used for cyberattacks and surveillance",
+          "update_id": "upd_be707db4e752f8d0",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
+          "what_changed_zh": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+      "current_state_zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+      "entities": [
+        "ahead",
+        "clarity",
+        "clarity-act",
+        "close",
+        "federal",
+        "federal-reserve",
+        "hike",
+        "lock",
+        "looms",
+        "rate",
+        "reserve",
+        "vote",
+        "week"
+      ],
+      "event_id": "evt_3ca929e83b171e88",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-11T16:41:00.504160Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-11T16:41:00.504160Z",
+      "last_updated_at": "2026-09-11T16:41:00.504160Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
+      "title_zh": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "federal-reserve",
+        "interest-rates",
+        "macro"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+          "current_state_zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+          "detailed_summary_en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+          "detailed_summary_zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+          "event_id": "evt_3ca929e83b171e88",
+          "first_seen_at": "2026-09-11T16:41:00.504160Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-11T16:15:00Z",
+          "published_at": "2026-09-11T16:15:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "investors.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.investors.com/research/investing-action-plan/federal-reserve-rate-hike-close-to-clarity-act-vote-salesforce-dreamforce/"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260911T161500Z::https://www.investors.com/research/investing-action-plan/federal-reserve-rate-hike-close-to-clarity-act-vote-salesforce-dreamforce/"
+          ],
+          "time_precision": "published",
+          "title_en": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
+          "title_zh": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
+          "update_id": "upd_e8bbea2a6ab7eab2",
+          "update_type": "initial",
+          "what_changed_en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+          "what_changed_zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -41813,6 +42963,101 @@
         "source_type": "rss",
         "title": "Senate Republicans unveil revised crypto bill ahead of key Clarity Act vote next week",
         "url": "https://www.theblock.co/news/regulation/2026-09-10-senate-republicans-unveil-revised-crypto-bill-ahead-of-key-clarity-act-vote-next-week-414180"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A confirmed exploit on the Liquid Network with 600 BTC in remaining ransom demand and Blockstream's public refusal is a material security incident affecting a widely-used Bitcoin sidechain, with direct implications for user funds and peg-out availability. The refusal to pay and ongoing recovery work make this high-value, though the exact total loss figure is not fully quantified here.",
+        "ai_score": 8.0,
+        "ai_summary": "Blockstream has refused a ransom demand for the remaining 600 BTC stolen in the Liquid Network exploit, as Liquid resumes transactions but keeps peg-outs disabled during recovery.",
+        "ai_tags": [
+          "liquid-network",
+          "blockstream",
+          "exploit",
+          "bitcoin",
+          "security"
+        ],
+        "author": "James Hunt",
+        "content": "Liquid has resumed transactions following the exploit, though peg-outs remain disabled as recovery work continues.",
+        "fetched_at": "2026-09-11T16:40:46.229914Z",
+        "id": "rss:www.theblock.co_rss.xml:a2ca560bac3a1413",
+        "metadata": {
+          "category": "crypto-protocols",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Crypto Ecosystems",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-11T11:21:17Z",
+        "source_type": "rss",
+        "title": "‘Return the bitcoin’: Blockstream refuses ransom demand for remaining 600 BTC from Liquid exploit",
+        "url": "https://www.theblock.co/news/ecosystems/2026-09-11-return-the-bitcoin-blockstream-refuses-ransom-demand-for-remaining-600-btc-from-liquid-exploit-414247"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A confirmed data breach at Trezor's email provider exposing hundreds of thousands of crypto owners' contact data, enabling targeted phishing and social-engineering attacks. While no private keys or funds are directly compromised, the scale of exposed personal data creates material security risk for a large user base and warrants immediate attention for hardware wallet users.",
+        "ai_score": 7.5,
+        "ai_summary": "Trezor confirmed that a breach at its email service provider exposed the contact data of hundreds of thousands of crypto owners, who are now being targeted by scammers.",
+        "ai_tags": [
+          "security",
+          "data-breach",
+          "hardware-wallet",
+          "phishing",
+          "trezor"
+        ],
+        "author": "techcrunch.com",
+        "content": null,
+        "fetched_at": "2026-09-11T16:41:00.504304Z",
+        "id": "gdelt:article:20260911T160000Z::https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/",
+        "metadata": {
+          "category": "crypto-protocols",
+          "domain": "techcrunch.com",
+          "event_retry_pending": true,
+          "language": "English",
+          "query": "(cryptocurrency OR bitcoin OR ethereum OR stablecoin OR blockchain)",
+          "source_category": "crypto-markets",
+          "sourcecountry": "United States"
+        },
+        "published_at": "2026-09-11T16:00:00Z",
+        "source_type": "gdelt",
+        "title": "Scammers target hundreds of thousands of crypto owners after Trezor confirms data breach of email provider",
+        "url": "https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The CLARITY Act nearing 60 Senate votes is a significant regulatory development with a clear transmission path to crypto market structure and access, though it remains a procedural update rather than an enacted law. The source is a news report citing the Coinbase CEO, a credible industry figure, but the claim is forward-looking and not yet confirmed by official Senate records.",
+        "ai_score": 7.5,
+        "ai_summary": "Coinbase CEO Brian Armstrong stated that the CLARITY Act, a digital asset market structure bill, is approaching 60 Senate votes needed to overcome a filibuster.",
+        "ai_tags": [
+          "crypto-regulation",
+          "CLARITY Act",
+          "US Senate",
+          "Coinbase",
+          "market-structure"
+        ],
+        "author": "Crypto Briefing",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNclRqS28yQTM0YUNFMVhrRTRUM1I4eG9GSG5xTzlXeS1sMzRMUzBmd3BKVWZRRllNa3U4YjZuR21FUjBIdlZiZFl2XzBGVDlPRlZ3Z0hPcG04Z1NMSzJORWFKSVh1THdSRWoyc2VSeXJqWEJITUJGTGVwNFlBTk1qUWFDZ2M3LXgwZFRib0lYVFhMSHNSZExmREhFNERvWm5reE5RN1hFRW4?oc=5\" target=\"_blank\">Coinbase CEO: CLARITY Act nearing 60 Senate votes for digital asset regulation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+        "fetched_at": "2026-09-11T16:40:44.187708Z",
+        "id": "google_news:article:bdafd4d368fcbb93",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "Crypto Briefing"
+        },
+        "published_at": "2026-09-11T14:39:09Z",
+        "source_type": "google_news",
+        "title": "Coinbase CEO: CLARITY Act nearing 60 Senate votes for digital asset regulation - Crypto Briefing",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNclRqS28yQTM0YUNFMVhrRTRUM1I4eG9GSG5xTzlXeS1sMzRMUzBmd3BKVWZRRllNa3U4YjZuR21FUjBIdlZiZFl2XzBGVDlPRlZ3Z0hPcG04Z1NMSzJORWFKSVh1THdSRWoyc2VSeXJqWEJITUJGTGVwNFlBTk1qUWFDZ2M3LXgwZFRib0lYVFhMSHNSZExmREhFNERvWm5reE5RN1hFRW4?oc=5"
       }
     }
   ],

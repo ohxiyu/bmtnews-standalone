@@ -1,6 +1,167 @@
 {
   "threads": [
     {
+      "thread_id": "evt_c3b1cbd96526ed2a",
+      "event_id": "evt_c3b1cbd96526ed2a",
+      "latest_date": "2026-09-12",
+      "latest_at": "2026-09-12T00:40:55.891072+08:00",
+      "first_date": "2026-09-11",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "policy",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "India starts tokenizing $620 billion corporate bond market with digital rupee settlement",
+      "title_en": "India starts tokenizing $620 billion corporate bond market with digital rupee settlement",
+      "summary_zh": "印度已启动 Demat 2.0 代币化公司债试点，首批三家发行人合计发行约1.07亿美元，第一阶段发行仍在进行，后续阶段将引入二级交易和零售投资者。",
+      "summary_en": "India has launched the Demat 2.0 tokenized corporate bond pilot, with three issuers raising about $107 million; first-phase issuances remain ongoing, and later phases are planned to add secondary trading and retail access.",
+      "latest_update_zh": "印度证券交易委员会（SEBI）与印度储备银行正式启动 Demat 2.0 代币化公司债试点；REC、Larsen & Toubro 和 IIFL 合计发行 102.5 亿卢比（约1.07亿美元），通过分布式账本与批发型 CBDC 结算。",
+      "latest_update_en": "SEBI and RBI formally launched the Demat 2.0 tokenized corporate bond pilot; REC, Larsen & Toubro and IIFL issued a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to wholesale CBDC settlement.",
+      "background_zh": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "background_en": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "latest_summary_zh": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
+      "latest_summary_en": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/11/india-starts-tokenizing-usd620-billion-corporate-bond-market-with-digital-rupee-settlement",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/india-launches-tokenized-bond-pilot-with-107m-issued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-09-11-indias-sebi-demat-2-0-pilot-debuts-with-over-100-million-in-tokenized-bonds-414252",
+          "title": "The Block",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_dacf8d366b34d78d",
+      "event_id": "evt_dacf8d366b34d78d",
+      "latest_date": "2026-09-12",
+      "latest_at": "2026-09-12T00:40:49.044823+08:00",
+      "first_date": "2026-09-10",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "title_en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "summary_zh": "Osmosis已通过紧急升级冻结22.65 allBTC；allBTC仍有约36%无支撑；治理提案拟填补40 BTC缺口。",
+      "summary_en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall.",
+      "latest_update_zh": "新披露：攻击发生于6月25日，攻击者利用两个漏洞凭空铸造40.650602 BTC的nBTC；74天后才发现；攻击者通过671 ETH至Tornado Cash套现约100万美元；治理提案拟没收冻结的22.65 allBTC、取消USDC.noble流动性重新部署并动用Community Pool填补40 BTC缺口。",
+      "latest_update_en": "Newly disclosed: exploit occurred June 25; attacker used two bugs to mint 40.650602 BTC of unbacked nBTC; detection took 74 days; attacker cashed out ~$1M via 671 ETH to Tornado Cash; governance proposal would seize frozen 22.65 allBTC, cancel USDC.noble liquidity re-deployment, and pull Community Pool allBTC to fill the 40 BTC shortfall.",
+      "background_zh": "allBTC 是 Osmosis 上的一种代币化比特币资产，其发行以链上持有的一篮子比特币变体作为支撑，其中包括由 Nomic 桥发行的 nBTC。Nomic 是一条为比特币提供去中心化托管方案的 Cosmos 区块链，其铸造的 nBTC 与 BTC 按 1:1 支撑，并通过 Cosmos 生态通用的跨链通信协议 IBC 在各链之间转移价值。桥转发逻辑中的双花意味着同一笔底层 BTC 被重复计算，因而在没有新比特币进入托管的情况下生成了看似有效的凭证。",
+      "background_en": "allBTC is a tokenized Bitcoin asset on Osmosis minted against a basket of Bitcoin variants held on the chain, including nBTC issued by the Nomic bridge. Nomic is a Cosmos blockchain that offers decentralized custody for Bitcoin and mints nBTC as a 1:1 BTC-backed token, moving value between chains via IBC, the Inter-Blockchain Communication protocol used across Cosmos. A double-spend in a bridge's forwarding logic means the same underlying BTC was effectively counted twice, so vouchers that looked valid were created without new Bitcoin entering custody.",
+      "latest_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+      "latest_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+      "discussion_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
+      "discussion_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
+      "market_impact_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
+      "market_impact_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/",
+          "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://github.com/nomic-io/nomic",
+          "title": "GitHub - nomic-io/nomic: Decentralized Custody Engine for Bitcoin · GitHub"
+        },
+        {
+          "url": "https://www.cryptotimes.io/2026/09/09/osmosis-freezes-22-65-btc-after-nomic-exploit-hits-alloyed-btc-backing/",
+          "title": "Osmosis Freezes 22.65 BTC After Nomic Exploit Hits Alloyed BTC Backing. About 36% of allBTC Now Has No Bitcoin Behind It."
+        },
+        {
+          "url": "https://www.tradingview.com/news/cryptobriefing:f57f4f3ba094b:0-osmosis-pauses-operations-after-nomic-chain-nbtc-exploit-freezes-22-65-btc/",
+          "title": "Osmosis pauses operations after Nomic Chain nBTC exploit freezes..."
+        }
+      ]
+    },
+    {
+      "thread_id": "evt_8c0cf5d1ff7fd2a0",
+      "event_id": "evt_8c0cf5d1ff7fd2a0",
+      "latest_date": "2026-09-12",
+      "latest_at": "2026-09-12T00:40:48.529007+08:00",
+      "first_date": "2026-09-09",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "market_structure",
+      "event_type_zh": "市场结构",
+      "event_type_en": "Market structure",
+      "title_zh": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+      "title_en": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+      "summary_zh": "BitMine 持有 593 万 ETH，其中 507 万 ETH 已质押，约占以太坊活跃质押量的 11.8%，但 validator 与签名密钥的控制权分布仍未披露。",
+      "summary_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
+      "latest_update_zh": "BitMine 已质押 507 万 ETH（约占其 593 万 ETH 持有量的 85%），相当于以太坊活跃质押量的约 11.8%；同时结束与 Ethereum Tower 的管理服务协议，并任命关联公司 American Validator 为 MAVAN Holdings 提供咨询。",
+      "latest_update_en": "BitMine has staked 5.07 million ETH (~85% of its 5.93 million ETH holdings), equal to roughly 11.8% of Ethereum's active stake, and ended its management-services agreement with Ethereum Tower while appointing affiliate American Validator to advise MAVAN Holdings.",
+      "background_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "background_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "latest_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+      "latest_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/business/2026-09-08-bitmine-nears-5-of-ethereum-supply-after-buying-28086-eth-413790",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/tradfi-and-fintech/bitmine-adds-28-086-eth-as-treasury-nears-5-of-supply",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/bitmines-staked-eth-equals-nearly-12-of-ethereums-active-stake-but-who-controls-it/",
+          "title": "CryptoSlate",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
       "thread_id": "evt_0e34fbe324b3b9e9",
       "event_id": "evt_0e34fbe324b3b9e9",
       "latest_date": "2026-09-11",
@@ -3201,6 +3362,116 @@
       "reference_links": []
     },
     {
+      "thread_id": "evt_c3b1cbd96526ed2a",
+      "event_id": "evt_c3b1cbd96526ed2a",
+      "latest_date": "2026-09-12",
+      "latest_at": "2026-09-12T00:40:55.891072+08:00",
+      "first_date": "2026-09-11",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "policy",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "India starts tokenizing $620 billion corporate bond market with digital rupee settlement",
+      "title_en": "India starts tokenizing $620 billion corporate bond market with digital rupee settlement",
+      "summary_zh": "印度已启动 Demat 2.0 代币化公司债试点，首批三家发行人合计发行约1.07亿美元，第一阶段发行仍在进行，后续阶段将引入二级交易和零售投资者。",
+      "summary_en": "India has launched the Demat 2.0 tokenized corporate bond pilot, with three issuers raising about $107 million; first-phase issuances remain ongoing, and later phases are planned to add secondary trading and retail access.",
+      "latest_update_zh": "印度证券交易委员会（SEBI）与印度储备银行正式启动 Demat 2.0 代币化公司债试点；REC、Larsen & Toubro 和 IIFL 合计发行 102.5 亿卢比（约1.07亿美元），通过分布式账本与批发型 CBDC 结算。",
+      "latest_update_en": "SEBI and RBI formally launched the Demat 2.0 tokenized corporate bond pilot; REC, Larsen & Toubro and IIFL issued a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to wholesale CBDC settlement.",
+      "background_zh": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "background_en": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "latest_summary_zh": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
+      "latest_summary_en": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/11/india-starts-tokenizing-usd620-billion-corporate-bond-market-with-digital-rupee-settlement",
+          "title": "CoinDesk",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/india-launches-tokenized-bond-pilot-with-107m-issued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/regulation/2026-09-11-indias-sebi-demat-2-0-pilot-debuts-with-over-100-million-in-tokenized-bonds-414252",
+          "title": "The Block",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_dacf8d366b34d78d",
+      "event_id": "evt_dacf8d366b34d78d",
+      "latest_date": "2026-09-12",
+      "latest_at": "2026-09-12T00:40:49.044823+08:00",
+      "first_date": "2026-09-10",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 2,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "title_en": "Osmosis freezes 22.65 BTC after Nomic forwarding bug compromises Bitcoin reserves",
+      "summary_zh": "Osmosis已通过紧急升级冻结22.65 allBTC；allBTC仍有约36%无支撑；治理提案拟填补40 BTC缺口。",
+      "summary_en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall.",
+      "latest_update_zh": "新披露：攻击发生于6月25日，攻击者利用两个漏洞凭空铸造40.650602 BTC的nBTC；74天后才发现；攻击者通过671 ETH至Tornado Cash套现约100万美元；治理提案拟没收冻结的22.65 allBTC、取消USDC.noble流动性重新部署并动用Community Pool填补40 BTC缺口。",
+      "latest_update_en": "Newly disclosed: exploit occurred June 25; attacker used two bugs to mint 40.650602 BTC of unbacked nBTC; detection took 74 days; attacker cashed out ~$1M via 671 ETH to Tornado Cash; governance proposal would seize frozen 22.65 allBTC, cancel USDC.noble liquidity re-deployment, and pull Community Pool allBTC to fill the 40 BTC shortfall.",
+      "background_zh": "allBTC 是 Osmosis 上的一种代币化比特币资产，其发行以链上持有的一篮子比特币变体作为支撑，其中包括由 Nomic 桥发行的 nBTC。Nomic 是一条为比特币提供去中心化托管方案的 Cosmos 区块链，其铸造的 nBTC 与 BTC 按 1:1 支撑，并通过 Cosmos 生态通用的跨链通信协议 IBC 在各链之间转移价值。桥转发逻辑中的双花意味着同一笔底层 BTC 被重复计算，因而在没有新比特币进入托管的情况下生成了看似有效的凭证。",
+      "background_en": "allBTC is a tokenized Bitcoin asset on Osmosis minted against a basket of Bitcoin variants held on the chain, including nBTC issued by the Nomic bridge. Nomic is a Cosmos blockchain that offers decentralized custody for Bitcoin and mints nBTC as a 1:1 BTC-backed token, moving value between chains via IBC, the Inter-Blockchain Communication protocol used across Cosmos. A double-spend in a bridge's forwarding logic means the same underlying BTC was effectively counted twice, so vouchers that looked valid were created without new Bitcoin entering custody.",
+      "latest_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+      "latest_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
+      "discussion_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
+      "discussion_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
+      "market_impact_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
+      "market_impact_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
+      "score": 8.0,
+      "source_links": [
+        {
+          "url": "https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/",
+          "title": "CryptoSlate",
+          "official": false
+        },
+        {
+          "url": "https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/",
+          "title": "Protos",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://github.com/nomic-io/nomic",
+          "title": "GitHub - nomic-io/nomic: Decentralized Custody Engine for Bitcoin · GitHub"
+        },
+        {
+          "url": "https://www.cryptotimes.io/2026/09/09/osmosis-freezes-22-65-btc-after-nomic-exploit-hits-alloyed-btc-backing/",
+          "title": "Osmosis Freezes 22.65 BTC After Nomic Exploit Hits Alloyed BTC Backing. About 36% of allBTC Now Has No Bitcoin Behind It."
+        },
+        {
+          "url": "https://www.tradingview.com/news/cryptobriefing:f57f4f3ba094b:0-osmosis-pauses-operations-after-nomic-chain-nbtc-exploit-freezes-22-65-btc/",
+          "title": "Osmosis pauses operations after Nomic Chain nBTC exploit freezes..."
+        }
+      ]
+    },
+    {
       "thread_id": "evt_3c730cd986001aac",
       "event_id": "evt_3c730cd986001aac",
       "latest_date": "2026-09-11",
@@ -3594,6 +3865,57 @@
         {
           "url": "https://thedefiant.io/news/hacks/term-finance-permanently-shuts-meta-vaults-after-exploit-peckshield-estimated-at-8-5-million",
           "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": []
+    },
+    {
+      "thread_id": "evt_8c0cf5d1ff7fd2a0",
+      "event_id": "evt_8c0cf5d1ff7fd2a0",
+      "latest_date": "2026-09-12",
+      "latest_at": "2026-09-12T00:40:48.529007+08:00",
+      "first_date": "2026-09-09",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "market_structure",
+      "event_type_zh": "市场结构",
+      "event_type_en": "Market structure",
+      "title_zh": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+      "title_en": "Bitmine nears 5% of Ethereum supply after buying 28,086 ETH",
+      "summary_zh": "BitMine 持有 593 万 ETH，其中 507 万 ETH 已质押，约占以太坊活跃质押量的 11.8%，但 validator 与签名密钥的控制权分布仍未披露。",
+      "summary_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
+      "latest_update_zh": "BitMine 已质押 507 万 ETH（约占其 593 万 ETH 持有量的 85%），相当于以太坊活跃质押量的约 11.8%；同时结束与 Ethereum Tower 的管理服务协议，并任命关联公司 American Validator 为 MAVAN Holdings 提供咨询。",
+      "latest_update_en": "BitMine has staked 5.07 million ETH (~85% of its 5.93 million ETH holdings), equal to roughly 11.8% of Ethereum's active stake, and ended its management-services agreement with Ethereum Tower while appointing affiliate American Validator to advise MAVAN Holdings.",
+      "background_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "background_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "latest_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+      "latest_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
+      "discussion_zh": "",
+      "discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://www.theblock.co/news/business/2026-09-08-bitmine-nears-5-of-ethereum-supply-after-buying-28086-eth-413790",
+          "title": "The Block",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/tradfi-and-fintech/bitmine-adds-28-086-eth-as-treasury-nears-5-of-supply",
+          "title": "The Defiant",
+          "official": false
+        },
+        {
+          "url": "https://cryptoslate.com/bitmines-staked-eth-equals-nearly-12-of-ethereums-active-stake-but-who-controls-it/",
+          "title": "CryptoSlate",
           "official": false
         }
       ],
