@@ -10,7 +10,7 @@
   "owner": "Codex / square-distribution",
   "branch": "agent/square-scheduler-release",
   "last_verified_commit": "43fb8a0697c4fa0a25d389384179c611cd60593c",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/81",
   "completed": [
     "确认9月12日14条计划已生成，但11:33前没有任何schedule运行",
     "手动恢复run34670696550成功发送1条，保留昨日7条sent；今日剩余13条",
@@ -19,7 +19,7 @@
   ],
   "unfinished": [
     "等待首次自动触发，核验queue_only和发帖结果",
-    "提交部署证据文档PR"
+    "部署证据已提交PR81，等待检查与合并"
   ],
   "validation": [
     "Worker typecheck通过，44项Worker测试通过",
