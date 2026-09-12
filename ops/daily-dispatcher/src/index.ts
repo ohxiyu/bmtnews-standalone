@@ -1,5 +1,6 @@
-import { checkReadiness, SCHEDULE_CRONS } from "./lib";
-import { runRecovery, runSchedule, responseStatus } from "./recovery";
+import { checkReadiness } from "./lib";
+import { runRecovery, responseStatus } from "./recovery";
+import { CONFIGURED_CRONS, runCombinedSchedule } from "./square";
 import { timingSafeEqual } from "node:crypto";
 export { RecoveryGate } from "./gate";
 import {
@@ -74,7 +75,8 @@ export default {
       publication_revision: "story-content-v1",
       status: "ok",
       primary_cron_utc: "30 0 * * *",
-      schedule_crons_utc: SCHEDULE_CRONS,
+      schedule_crons_utc: CONFIGURED_CRONS,
+      square_check_window_local: "09:00–23:30",
       schedule_timezone: env.EDITION_TIMEZONE,
       first_check_local: "08:30",
       last_check_local: "23:00",
@@ -90,6 +92,6 @@ export default {
     controller: ScheduledController,
     env: Env,
   ): Promise<void> {
-    await runSchedule(controller.cron, controller.scheduledTime, env);
+    await runCombinedSchedule(controller.cron, controller.scheduledTime, env);
   },
 } satisfies ExportedHandler<Env>;

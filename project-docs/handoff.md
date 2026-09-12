@@ -5,31 +5,28 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "Square持久化随机时间表：日报修订才同步，定时只检查到期队列",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/74",
+  "goal": "修复Square定时漏触发：复用Cloudflare队列检查",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/78",
   "owner": "Codex / square-distribution",
-  "branch": "agent/square-trigger-fix",
-  "last_verified_commit": "eed8b775a7157f1a5e405df8f2012c176575f411",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/75",
+  "branch": "agent/square-scheduler-recovery",
+  "last_verified_commit": "ae5786ff7bb0e256d5da92fd81a4b285208e7691",
+  "pr": "pending",
   "completed": [
-    "PR #70 已合并并完成真实登录与列表只读验收，证据在 PR 评论",
-    "按用户要求删除取消的 Issue #71、任务分支和未提交本地代码",
-    "PR73 已合并，用户已配置专用 Secret 并授权启用；SQUARE_ENABLED=true",
-    "查明19:22前 Square 工作流零触发；手动生产恢复 run34593750085，API确认首3条成功且有帖子ID",
-    "用户追加随机分钟与不重复读取日报，沿用PR75更新，替代旧小时额度方案",
-    "实现持久化正文/due_at、内容修订同步、撤下与已发保护、每5分钟标准库轻量检查、单条发送和至少5分钟间隔"
+    "确认9月12日14条计划已生成，但11:33前没有任何schedule运行",
+    "手动恢复run34670696550成功发送1条，保留昨日7条sent；今日剩余13条",
+    "新增Cloudflare共享5分钟触发、queue_only模式、在途任务保护；不改变日报检查频率"
   ],
   "unfinished": [
-    "PR75待更新后CI与授权合并；未触碰生产队列",
-    "合并后验证随机计划首次初始化、定时仅读队列、全期发送完成情况"
+    "提交PR；待用户授权合并和部署现有Worker",
+    "部署后验证自主触发、剩余队列推进和平台显示"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 成功；全量pytest 773 passed、1既有warning；随机队列专项25 passed；YAML解析、治理和diff check通过",
-    "生产首次分发run34593750085成功，3个帖子ID已持久化，详见发布记录"
+    "Worker typecheck通过，44项Worker测试通过",
+    "uv sync frozen dev成功；773项Python测试通过，1既有warning；治理、types check与Worker dry-run通过"
   ],
   "unverified": [
-    "随机计划与workflow_run兜底未上线；GitHub5分钟触发及时性及平台最终审核/展示未验证",
-    "Quick Post 生产内容写入仍未验收；本次不改变后台"
+    "新调度器未部署，未验证真实Cloudflare触发和现有token对Square workflow的权限",
+    "npm ci提示既有6项开发依赖漏洞，未做越界强制升级"
   ],
   "production": {
     "source_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
@@ -40,9 +37,9 @@
     "verified_at": "2026-09-11"
   },
   "blockers": [
-    "本补丁未获合并授权；GitHub 内部为何漏触发不可直接观测"
+    "合并/部署需要当前任务授权；本地测试不能替代生产定时验收"
   ],
-  "next_action": "更新PR75并等待授权合并，验证随机计划与轻量检查。保留square-queue；回退旧分发代码前先关闭开关。",
+  "next_action": "检查PR与CI；授权后合并并部署现有dispatcher，核验queue_only生产步骤及发帖；不要清空队列。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -50,7 +47,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-12-square-random-plan.md"
+  "evidence": "project-docs/releases/2026-09-12-square-scheduler-recovery.md"
 }
 ```
 
