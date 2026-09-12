@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 
 import worker from "../src/index";
 import { testing, SCHEDULE_CRONS } from "../src/lib";
+import { CONFIGURED_CRONS } from "../src/square";
 import { env } from "cloudflare:test";
 
 const ENV = {
@@ -74,7 +75,7 @@ describe("dispatcher behavior", () => {
       service: "bmtnews-daily-dispatcher",
       status: "ok",
       admin_oauth: "not_configured",
-      schedule_crons_utc: SCHEDULE_CRONS,
+      schedule_crons_utc: CONFIGURED_CRONS,
       schedule_timezone: "Asia/Shanghai",
       first_check_local: "08:30",
       last_check_local: "23:00",

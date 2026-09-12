@@ -266,12 +266,12 @@ export async function checkReadiness(env: Env): Promise<{
   };
 }
 
-export async function fetchWorkflowRuns(env: Env): Promise<WorkflowRun[]> {
+export async function fetchWorkflowRuns(env: Env, workflowName: string = env.GITHUB_WORKFLOW): Promise<WorkflowRun[]> {
   const repository = encodeURIComponent(env.GITHUB_REPOSITORY).replace(
     "%2F",
     "/",
   );
-  const workflow = encodeURIComponent(env.GITHUB_WORKFLOW);
+  const workflow = encodeURIComponent(workflowName);
   const response = await githubRequest(
     env,
     `/repos/${repository}/actions/workflows/${workflow}/runs?per_page=30`,

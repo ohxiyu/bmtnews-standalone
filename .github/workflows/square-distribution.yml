@@ -11,6 +11,10 @@ on:
     - cron: '0-30/5 15 * * *' # 23:00–23:30 Shanghai
   workflow_dispatch:
     inputs:
+      queue_only:
+        description: 'External scheduler: check persisted queue without forced edition sync'
+        type: boolean
+        default: false
       edition_date:
         description: 'Optional YYYY-MM-DD for explicit historical catch-up'
         type: string
@@ -63,11 +67,12 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           UPSTREAM_NAME: ${{ github.event.workflow_run.name }}
           EDITION_DATE: ${{ inputs.edition_date }}
+          QUEUE_ONLY: ${{ inputs.queue_only }}
         shell: bash
         run: |
           set -euo pipefail
           args=(--queue "$RUNNER_TEMP/square-state/queue.json" --date "$EDITION_DATE")
-          if [ "$EVENT_NAME" = workflow_dispatch ] ||
+          if { [ "$EVENT_NAME" = workflow_dispatch ] && [ "$QUEUE_ONLY" != true ]; } ||
              { [ "$EVENT_NAME" = workflow_run ] && [ "$UPSTREAM_NAME" != 'BMTNews X Distribution' ]; }; then
             args+=(--force-sync)
           fi

@@ -25,7 +25,7 @@ def configured_crons():
     )["triggers"]["crons"]
 
 
-def test_daily_schedule_has_exact_coverage_without_overlap_or_early_publication():
+def test_shared_schedule_has_exact_coverage_without_overlap_or_early_publication():
     actual = []
     for cron in configured_crons():
         minute, hour, day, month, weekday = cron.split()
@@ -34,14 +34,15 @@ def test_daily_schedule_has_exact_coverage_without_overlap_or_early_publication(
             for utc_minute in range(60):
                 if matches(utc_hour, hour) and matches(utc_minute, minute):
                     actual.append(((utc_hour + 8) % 24) * 60 + utc_minute)
-    expected = list(range(8 * 60 + 30, 12 * 60, 10))
-    expected += list(range(12 * 60, 23 * 60 + 1, 60))
+    expected = [8 * 60 + 30, 8 * 60 + 40, 8 * 60 + 50]
+    expected += list(range(9 * 60, 24 * 60, 5))
     assert sorted(actual) == expected
-    assert len(actual) == len(set(actual)) == 33
+    assert len(actual) == len(set(actual)) == 183
 
 
 def test_runtime_health_and_cron_routes_match_deployment_configuration():
-    source = (ROOT / "ops/daily-dispatcher/src/lib.ts").read_text()
-    match = re.search(r"export const SCHEDULE_CRONS = (\[.*?\]) as const;", source, re.S)
+    source = (ROOT / "ops/daily-dispatcher/src/square.ts").read_text()
+    cron = re.search(r'export const SQUARE_CRON = (".*?");', source)[1]
+    match = re.search(r"export const CONFIGURED_CRONS = (\[.*?\]);", source, re.S)
     assert match is not None
-    assert json.loads(match[1]) == configured_crons()
+    assert json.loads(match[1].replace("SQUARE_CRON", cron)) == configured_crons()
