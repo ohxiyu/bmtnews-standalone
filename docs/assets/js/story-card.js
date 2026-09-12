@@ -428,14 +428,18 @@ function buildLayout(context, story) {
 
 function drawHeader(context) {
   // Reuse the inline master path, without a network request or raster resampling.
-  const mark = document.querySelector('.site-brand .site-brand-mark path');
-  const markWidth = mark && typeof Path2D !== 'undefined' ? 30 : 0;
+  const marks = document.querySelectorAll('.site-brand .site-brand-mark path');
+  const markWidth = marks.length && typeof Path2D !== 'undefined' ? 30 : 0;
   if (markWidth) {
     context.save();
     context.translate(METRICS.left, 11);
     context.scale(24 / 512, 24 / 512);
-    context.fillStyle = COLORS.accent;
-    context.fill(new Path2D(mark.getAttribute('d')), 'evenodd');
+    marks.forEach((mark) => {
+      const fill = mark.getAttribute('fill');
+      if (fill === 'none') return;
+      context.fillStyle = !fill || fill === 'currentColor' ? COLORS.accent : fill;
+      context.fill(new Path2D(mark.getAttribute('d')), 'evenodd');
+    });
     context.restore();
   }
   setFont(context, 16, 750, false, 0.6);
