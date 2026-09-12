@@ -103,10 +103,11 @@
         "post_id": "365800351149432"
       },
       "695aad6971b6da2d86ba625da85953f6b0a1dc6386760686d9dd067537ad30bd": {
-        "status": "pending",
+        "status": "sent",
         "rank": 8,
         "text_hash": "5d002db5362e3f3d04ce851cd320b63ad96ed290c8df5262a1420e556fcaeb04",
-        "attempted_at": "2026-09-12T16:55:27.880237+08:00"
+        "attempted_at": "2026-09-12T16:55:27.880237+08:00",
+        "post_id": "365822485422807"
       }
     }
   },
@@ -114,12 +115,6 @@
     "2026-09-12": {
       "revision": "e3918481e46b106f21461d7378c853e62197fbe8f1931e4a884fcb47178a95a0",
       "jobs": [
-        {
-          "id": "695aad6971b6da2d86ba625da85953f6b0a1dc6386760686d9dd067537ad30bd",
-          "text": "Trezor 邮件服务商遭入侵，数十万加密用户数据泄露并被诈骗者盯上\n\nTrezor 确认其第三方邮件服务提供商遭到入侵，导致数十万名加密用户的联系方式数据泄露，这些用户目前正被钓鱼和社交工程攻击盯上。Trezor 警告称，一封标题为“Critical Security Alert: STM32 Entropy Vulnerability”的邮件并非来自该公司，并表示已关闭该恶意域名，同时正在调查攻击者是如何获得对 Trezor 合法域名的访问权限的。\n\n尽管没有私钥或资金被直接窃取，但泄露的联系方式数据为攻击者提供了素材，使其能够针对大量硬件钱包用户发起极具说服力的个性化钓鱼攻击。这也是 Trezor 短时间内第二起与第三方供应商相关的事件，使自托管服务商的第三方供应链风险再次受到审视。\n\n这些钓鱼邮件因发自 Trezor 的合法域名而更具欺骗性，这意味着常规的发件人身份验证机制不会将其标记为可疑。泄露的数据集包含姓名、电子邮箱和电话号码；8 月时 Trezor 还披露了其物流供应商 ShipMonk 的另一起入侵事件，泄露了姓名、收货地址、邮箱和电话等订单数据——这些数据集一旦被拼合，会让冒充攻击的可信度大幅提升。\n\n来源：https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/\nBMTNews · 2026-09-12 · https://bmt.news",
-          "rank": 8,
-          "due_at": "2026-09-12T16:55:00+08:00"
-        },
         {
           "id": "7cf374da28f99437440784c66b5d16107b0cd75bb91128f8bc5eddb3fd104d20",
           "text": "Osmosis 历时 74 天才发现 40 BTC 的 Nomic 漏洞\n\n6 月 25 日，攻击者组合利用两个独立漏洞，在 Osmosis 上凭空铸造了 40.650602 BTC 的无储备 nBTC，而这一事件整整 74 天未被察觉，直到 Nomic 协议暂停才促使 Osmosis 审查自身持仓。审查结果显示 Osmosis 的 allBTC 有 36% 没有资产支撑，随后触发了紧急升级，冻结攻击者账户中剩余的 allBTC，并提出了填补 40 BTC 缺口的治理提案。\n\n该事件暴露出一笔无储备铸造就能在不知不觉中污染一条主流 Cosmos 去中心化交易所上的比特币衍生品抵押基础，而 74 天的发现延迟说明桥与其最大下游交易场所之间几乎不存在监控与对账机制。此事还与近期一系列 Cosmos 相关的安全与披露争议叠加，加剧了外界对整个生态跨链桥安全性和事件透明度的担忧。\n\n攻击者仍通过以太坊上的 Tornado Cash 转移 671 ETH，套现约 100 万美元（按当时价格计算），而大部分赃款则以 allBTC 形式留在链上并被冻结。Osmosis 的补救提案则包括没收攻击者账户中冻结的 22.65 allBTC、取消一笔待执行的 USDC.noble 流动性再部署，并从社区资金池提取额外 allBTC 以恢复完全储备。\n\n来源：https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/\nBMTNews · 2026-09-12 · https://bmt.news",
