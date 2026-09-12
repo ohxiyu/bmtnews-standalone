@@ -93,4 +93,13 @@ def test_deployed_claim_requires_structured_evidence(tree):
     pointer = json.loads(match.group(1))
     pointer["states"] = {name: "complete" for name in governance.STATES}
     path.write_text(text[:match.start(1)] + json.dumps(pointer) + text[match.end(1):])
+    # The real handoff may already describe a verified deployment. Construct
+    # missing evidence in the isolated fixture, not by assuming production is pending.
+    evidence = tree / pointer["evidence"]
+    evidence.write_text("# Test release without deployment evidence\n")
     assert any("deployment evidence missing Source commit" in e for e in governance.check(tree))
+    evidence.write_text("\n".join(
+        f"{label}: fixture value" for label in
+        ("Source commit", "Worker version", "Deployment", "Verification", "Rollback")
+    ))
+    assert governance.check(tree) == []

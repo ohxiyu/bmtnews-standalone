@@ -9,46 +9,47 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/82",
   "owner": "Codex / brand-v2（本任务发布整合负责人）",
   "branch": "agent/brand-v2",
-  "last_verified_commit": "43fb8a0697c4fa0a25d389384179c611cd60593c",
+  "last_verified_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/83",
   "completed": [
     "核验远端 main 和开放 PR，认领 Issue #82；用户明确授权本任务合并上线",
     "SVG 母版统一外圆角 64、内凹 32、留白 12；黄色圆环与同心圆点",
-    "更新媒体、网站、PWA、favicon 和分享卡；v2 地址独立，旧 v1 文件保留"
+    "更新媒体、网站、PWA、favicon 和分享卡；v2 地址独立，旧 v1 文件保留",
+    "PR #83 全部检查通过并合并；Deploy Docs 与 Cloudflare 生产部署成功",
+    "主站首页、媒体页、manifest 和 v2 ZIP 实际验收完成；原开发分支已清理"
   ],
   "unfinished": [
-    "提交 PR 并核验最终 HEAD 的远端检查",
-    "检查通过后合并，等待 Pages 生产成功并验收公开版本",
-    "发布后通过文档 PR 回写最终五阶段证据"
+    "Logo 产品变更无未完成项；本次证据由 Issue #84 的纯文档 PR 回写",
+    "其他未合并发布记录 PR #68 #77 #81 仍归原任务负责人，不在本次范围"
   ],
   "validation": [
     "uv sync --frozen --extra dev --offline 成功；使用锁文件本机缓存",
     "母版生成及 sharp PNG/ICO/ZIP 导出成功；773 项 Python、37 项 Node 测试通过",
-    "治理与 diff 检查通过；桌面、390px 手机、深色、媒体页和分享长卡本地验收通过"
+    "治理与 diff 检查通过；桌面、390px 手机、深色、媒体页和分享长卡本地验收通过",
+    "生产资源 sha256-7e6b0e219d87；公开 ZIP SHA256 与仓库逐字节一致，详见发布记录"
   ],
   "unverified": [
-    "新 Logo 尚未生产发布；主站替换前资源为 sha256-f2e843a8988f",
     "操作系统已安装图标的刷新时间不能由网站保证",
-    "以下 production 为继承的旧快照；不代表调度任务尚未部署，相关 PR #81 #77 #68 由原负责人处理"
+    "独立调度 Worker 版本未在本任务核验；没有修改或部署该 Worker"
   ],
   "production": {
-    "source_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
-    "artifact_commit": "3413ae7b54e00c11fb99d15641c4674f6d41d77c",
-    "edition": "2026-09-11",
-    "generated_at": "2026-09-11T00:34:44.693913Z",
-    "worker_version": "Pages 3e5a820e-9491-410a-918d-b1588dd39872；这是 PR70 部署快照，今日日报已有后续产物",
-    "verified_at": "2026-09-11"
+    "source_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
+    "artifact_commit": "589ca7315fc3ae410e13c50bc8f6298829453f30",
+    "edition": "2026-09-12",
+    "generated_at": "2026-09-12T00:34:14.257428Z（日报数据）；网站构建 2026-09-12T17:05:16+00:00",
+    "worker_version": "Pages ef9ec162-fbf7-47b7-bb95-752ce1876c2f；独立 dispatcher not changed / unknown",
+    "verified_at": "2026-09-13 01:06 Asia/Shanghai"
   },
   "blockers": [
-    "无授权阻塞；仅允许本任务品牌变更，不合并其他发布记录 PR、不改调度或认证"
+    "无产品发布阻塞"
   ],
-  "next_action": "完成品牌测试和视觉验收，再检查 exact-head CI、合并并核验 Cloudflare 生产；使用后续文档 PR 更新证据。",
+  "next_action": "Logo 已上线，等待用户新任务。新任务先 fetch 并核验 Issue/PR，不把记录的日报日期当作实时最新状态，也不自动处理其他发布记录。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
-    "production_verified": "pending"
+    "pr_merged": "complete",
+    "deployed": "complete",
+    "production_verified": "complete"
   },
   "evidence": "project-docs/releases/2026-09-13-brand-v2.md"
 }
