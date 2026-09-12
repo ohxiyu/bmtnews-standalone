@@ -5,46 +5,45 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "修复Square定时漏触发：复用Cloudflare队列检查",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/78",
+  "goal": "记录PR79调度器部署与自动发送验收",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/80",
   "owner": "Codex / square-distribution",
-  "branch": "agent/square-scheduler-recovery",
-  "last_verified_commit": "ae5786ff7bb0e256d5da92fd81a4b285208e7691",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/79",
+  "branch": "agent/square-scheduler-release",
+  "last_verified_commit": "43fb8a0697c4fa0a25d389384179c611cd60593c",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/81",
   "completed": [
     "确认9月12日14条计划已生成，但11:33前没有任何schedule运行",
     "手动恢复run34670696550成功发送1条，保留昨日7条sent；今日剩余13条",
-    "新增Cloudflare共享5分钟触发、queue_only模式、在途任务保护；不改变日报检查频率"
+    "新增Cloudflare共享5分钟触发、queue_only模式、在途任务保护；不改变日报检查频率",
+    "PR79按用户本次授权合并；现有Cloudflare Worker已部署并验证health版本和Cron配置"
   ],
   "unfinished": [
-    "PR79已提交；待用户授权合并和部署现有Worker",
-    "部署后验证自主触发、剩余队列推进和平台显示"
+    "等待首次自动触发，核验queue_only和发帖结果",
+    "部署证据已提交PR81，等待检查与合并"
   ],
   "validation": [
     "Worker typecheck通过，44项Worker测试通过",
     "uv sync frozen dev成功；773项Python测试通过，1既有warning；治理、types check与Worker dry-run通过"
   ],
   "unverified": [
-    "新调度器未部署，未验证真实Cloudflare触发和现有token对Square workflow的权限",
-    "npm ci提示既有6项开发依赖漏洞，未做越界强制升级"
+    "等待首次Cloudflare自动触发及全期发送完成",
+    "币安平台最终审核展示未人工验收"
   ],
   "production": {
-    "source_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
-    "artifact_commit": "3413ae7b54e00c11fb99d15641c4674f6d41d77c",
-    "edition": "2026-09-11",
-    "generated_at": "2026-09-11T00:34:44.693913Z",
-    "worker_version": "Pages 3e5a820e-9491-410a-918d-b1588dd39872；这是 PR70 部署快照，今日日报已有后续产物",
-    "verified_at": "2026-09-11"
+    "artifact_commit": "not_applicable_worker_deployment",
+    "generated_at": "not_applicable_worker_deployment",
+    "source_commit": "43fb8a0697c4fa0a25d389384179c611cd60593c",
+    "worker_version": "341dd1ba-4355-42c9-93dc-4133295b53e7",
+    "edition": "2026-09-12",
+    "verified_at": "2026-09-12"
   },
-  "blockers": [
-    "合并/部署需要当前任务授权；本地测试不能替代生产定时验收"
-  ],
-  "next_action": "检查PR与CI；授权后合并并部署现有dispatcher，核验queue_only生产步骤及发帖；不要清空队列。",
+  "blockers": [],
+  "next_action": "核验真实自动触发并记录结果；不把部署成功等同于整期发送完成。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
+    "pr_merged": "complete",
+    "deployed": "complete",
     "production_verified": "pending"
   },
   "evidence": "project-docs/releases/2026-09-12-square-scheduler-recovery.md"

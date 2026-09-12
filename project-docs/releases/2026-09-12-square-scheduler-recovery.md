@@ -1,5 +1,21 @@
 # Square 定时漏触发修复
 
+## 授权上线记录
+
+用户本次明确授权合并并部署。PR79已合并；部署复用原Worker，使用keep-vars保留现有配置及Secrets，无新服务或套餐升级。
+
+Source commit: 43fb8a0697c4fa0a25d389384179c611cd60593c
+
+Worker version: 341dd1ba-4355-42c9-93dc-4133295b53e7
+
+Deployment: 2026-09-12上海时间11:43完成，原bmtnews-daily-dispatcher；health返回相同版本及3项Cron配置。
+
+Verification: 合并前再次773 Python tests、44 Worker tests通过，治理检查通过；真实自动触发验收结果待补充。
+
+[queue_only生产验证34671241758](https://github.com/ohxiyu/bmtnews-standalone/actions/runs/34671241758)成功：Read edition步骤skipped，sync=false，attempted=1，今日累计sent=2、remaining=12、attention=0。此运行由本次人工验收触发，不冒充Cloudflare自主定时证据。
+
+Rollback: 关闭SQUARE_ENABLED可暂停发送；通过PR回退dispatcher配置；不要清空square-queue，不更改gh-pages。
+
 Issue #78，owner Codex，branch agent/square-scheduler-recovery。PR77保留历史上线证据，不覆盖它的未合并工作；以后不能直接合并其旧任务指针。
 
 ## 原因与恢复
