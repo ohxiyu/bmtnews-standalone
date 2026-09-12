@@ -10,14 +10,14 @@
   "owner": "Codex / square-distribution",
   "branch": "agent/square-scheduler-recovery",
   "last_verified_commit": "ae5786ff7bb0e256d5da92fd81a4b285208e7691",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/79",
   "completed": [
     "确认9月12日14条计划已生成，但11:33前没有任何schedule运行",
     "手动恢复run34670696550成功发送1条，保留昨日7条sent；今日剩余13条",
     "新增Cloudflare共享5分钟触发、queue_only模式、在途任务保护；不改变日报检查频率"
   ],
   "unfinished": [
-    "提交PR；待用户授权合并和部署现有Worker",
+    "PR79已提交；待用户授权合并和部署现有Worker",
     "部署后验证自主触发、剩余队列推进和平台显示"
   ],
   "validation": [
