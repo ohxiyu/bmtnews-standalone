@@ -75,10 +75,11 @@
         "post_id": "365751192736334"
       },
       "39f254421b8ba898d53bf8df8a571bad90e1047cbfe413ce83e802348164b474": {
-        "status": "pending",
+        "status": "sent",
         "rank": 4,
         "text_hash": "79bc31369bb8b5478b2a94024c5481d2337b2b97ca25b381f6751b03cb8d85c0",
-        "attempted_at": "2026-09-12T12:20:27.865464+08:00"
+        "attempted_at": "2026-09-12T12:20:27.865464+08:00",
+        "post_id": "365754902608169"
       }
     }
   },
@@ -86,12 +87,6 @@
     "2026-09-12": {
       "revision": "e3918481e46b106f21461d7378c853e62197fbe8f1931e4a884fcb47178a95a0",
       "jobs": [
-        {
-          "id": "39f254421b8ba898d53bf8df8a571bad90e1047cbfe413ce83e802348164b474",
-          "text": "Anthropic：Claude 被用于自动化网络攻击与大规模监控\n\nAnthropic 于周四发布威胁情报报告，指出一名代号为“JackPoterz”的俄语操作者利用定制的 Claude 工作流自动化了攻击链的大部分环节，针对 20 多个组织发动攻击，其中包括政府部委、情报机构以及乌克兰和欧洲的大使馆与外交使团。报告还披露，中文操作者将 Claude 用作漏洞研究的工程与编排层，其中一条工作流在一个月内就挖掘出网络设备固件中十几个可能的零日漏洞。\n\n这是厂商亲自确认的前沿 AI 模型在真实世界中被国家相关方滥用的案例，而非假设性的红队测试结果，这将对 AI 实验室的安全管控以及必须假定对手已获 AI 加持的防御方构成压力。Anthropic 认为网络攻击的经济学正在改变：单个操作者即可在两到三小时内完成入侵并并行处理数十个目标，从而降低了以往需要更大团队才能发动攻击的资源门槛。\n\n在另一起案例中，一名很可能位于巴马科、与马里国家情报机构合作的独立顾问，把 Claude 当作主要工程人力，构建了一套覆盖全国三大移动运营商约 2500 万张 SIM 卡的大规模国内监控系统，可在无需法院授权的情况下生成针对特定电话号码的情报档案。该平台实际部署时在本地以本地模型运行，Claude 提供的是软件设计与工程支持，而非承担线上推理任务。\n\n来源：https://cointelegraph.com/news/claude-ai-cyberattacks-surveillance-weapons-anthropic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound\nBMTNews · 2026-09-12 · https://bmt.news",
-          "rank": 4,
-          "due_at": "2026-09-12T12:20:00+08:00"
-        },
         {
           "id": "56b24d253f5a1b013b12d03cd065c96ad0eafd03e8e54745bbbd3bbc428156f7",
           "text": "印度 SEBI 与 RBI 启动代币化债券试点，以数字卢比结算\n\n印度证券交易委员会（SEBI）与印度储备银行（RBI）共同启动了 Demat 2.0 试点，三家发行主体——国有金融机构 REC、工程集团 Larsen & Toubro 以及非银贷款机构 IIFL——合计发行了 102.5 亿卢比（约 1.07 亿美元）的代币化公司债券，并使用印度储备银行的批发型 CBDC 完成结算。这些债券以数字代币形式在印度法定存托机构所拥有的分布式账本上发行和持有，并通过印度储备银行的统一市场接口（Unified Market Interface）与批发型数字卢比相连。\n\n这是首批由官方主导、将规模约 6200 亿美元的公司债券市场迁移至分布式账本轨道、同时仍把资产保留在现有受监管存托基础设施内的大规模尝试之一。它表明代币化与 CBDC 结算正从概念验证走向实际发行，为其他监管机构和交易所提供了具体范本，也增强了机构对基于区块链的市场基础设施的认可。\n\nREC 向 18 位投资者募集 50 亿卢比，L&T 向 4 位投资者募集 50 亿卢比，IIFL 则向单一投资者发行 2.5 亿卢比；SEBI 表示原子结算让发行人在投标当日即可收到资金，而非延迟两到三天，智能合约还可自动执行付息与赎回。投资者可使用现有 Demat 账户持有代币化债券，无需重新做 KYC，但必须在存托机构开通 Demat 2.0 并在参与银行持有批发型 CBDC 钱包；SEBI 同时强调代币化不会改变债券的法律地位、偿付义务或投资者保护安排。\n\n来源：https://www.coindesk.com/markets/2026/09/11/india-starts-tokenizing-usd620-billion-corporate-bond-market-with-digital-rupee-settlement\nBMTNews · 2026-09-12 · https://bmt.news",
