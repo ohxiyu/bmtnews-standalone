@@ -54,10 +54,11 @@
     },
     "2026-09-12": {
       "0057055c46c168ff5b6079bb42cb65598cde5b2560d5bc7449a1f1e04b429860": {
-        "status": "pending",
+        "status": "sent",
         "rank": 1,
         "text_hash": "ede85d68a184a019ece37ba0a7733983944ffbe38c27d9434963e9b4c3dee290",
-        "attempted_at": "2026-09-12T11:33:51.001859+08:00"
+        "attempted_at": "2026-09-12T11:33:51.001859+08:00",
+        "post_id": "365743446372371"
       }
     }
   },
@@ -65,12 +66,6 @@
     "2026-09-12": {
       "revision": "e3918481e46b106f21461d7378c853e62197fbe8f1931e4a884fcb47178a95a0",
       "jobs": [
-        {
-          "id": "0057055c46c168ff5b6079bb42cb65598cde5b2560d5bc7449a1f1e04b429860",
-          "text": "Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵\n\nBlockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out（跨链赎回）仍处于关闭状态。\n\n这是比特币侧链上规模最大的已确认损失之一，支撑 Liquid 上 L-BTC 的储备一度降至仅 197 枚 BTC，令市场开始质疑许多交易所与交易者依赖的联邦式跨链桥的安全假设。Blockstream 拒绝支付赎金的做法，也为基础设施开发者在面对以威胁索要漏洞赏金的攻击者时如何应对，树立了一个公开先例。\n\n根本原因是 Liquid 节点缓存 range proof（范围证明）验证结果的方式存在缺陷，攻击者据此凭空铸造无背书支持的 L-BTC，并通过持有 peg-out 授权密钥的联邦成员 SideSwap 将其兑换为储备中的比特币；据报并未发生私钥被盗。Blockstream 在十小时内修补了桥节点，并于周三发布 Elements v23.3.4，同时另行警告有骗子用假冒更新网站针对节点运营者行骗。\n\n来源：https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit\nBMTNews · 2026-09-12 · https://bmt.news",
-          "rank": 1,
-          "due_at": "2026-09-12T09:22:00+08:00"
-        },
         {
           "id": "48ac8ccfb99fa9f7b287c7dbdc328da300fd46240d6ba12f2f70de9ab78453e7",
           "text": "纳斯达克拟向Kraken母公司Payward投资1亿美元，目标2027年推出代币化股票\n\n纳斯达克旗下投资部门Nasdaq Ventures已同意向加密货币交易所Kraken的母公司Payward投资1亿美元，双方同时宣布Payward将在其加密、股票、代币化股票、期货和期权等交易场所部署纳斯达克的市场监控技术。两家公司还表示将继续搭建计划中的纳斯达克股票代币（NET）所需的运营与商业系统，目前目标是在2027年第二季度推出。\n\n这笔交易加深了传统交易所基础设施与加密交易场所的融合，使一家美国主要交易所运营商同时介入代币化股票体系的交易层与监控层。如果2027年的时间表得以实现，在加密原生平台上部署纳斯达克背书的监控体系，可能成为代币化股票如何被监管和跨境分销的范本。\n\n公告描述的是一项投资协议，而非已完成的交易，且未披露交割日期、Payward的估值、纳斯达克的持股比例或治理权利。NET被设计为发行人发起的代币，旨在保留发行人的控制权以及标的股票的法律权利，不应与现有的第三方代币化股票产品等同看待；这些代币目前尚未进入流通。\n\n来源：https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1FCbkh2ZEx1d185WjlGMVdieVZDZTRzRTRoQzNNRzd0ZHY0dWFUN0ZmZ2hYRHRXU2JLbzgtYkFUYVhZR2ZaNk0xTHNnRVpmZ2c2RmxKVDNpaF9JU1prX2RzcG1pZ0R4YnB5N0l4d3IzZmMyQmxkLWRBc19vS0h5YUNtQWdvYmYzS3dMOW0wZ2N3MXlzWl9GSzVObjJFNG1jUWRVRk9XbDZFUFAxaVp3SG0wdHVUZGV5OERKeGFfZmpTdFhGNTdOZ3kxNnF3cWt6?oc=5\nBMTNews · 2026-09-12 · https://bmt.news",
