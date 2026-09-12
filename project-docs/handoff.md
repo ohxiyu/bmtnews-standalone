@@ -10,7 +10,7 @@
   "owner": "Codex / brand-v2（本任务发布整合负责人）",
   "branch": "agent/brand-v2",
   "last_verified_commit": "43fb8a0697c4fa0a25d389384179c611cd60593c",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/83",
   "completed": [
     "核验远端 main 和开放 PR，认领 Issue #82；用户明确授权本任务合并上线",
     "SVG 母版统一外圆角 64、内凹 32、留白 12；黄色圆环与同心圆点",
