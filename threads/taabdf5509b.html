@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Osmosis 历时 74 天才发现 40 BTC 的 Nomic 漏洞"
+permalink: /threads/taabdf5509b/
+interface_language: zh
+description: "6 月 25 日，攻击者组合利用两个独立漏洞，在 Osmosis 上凭空铸造了 40.650602 BTC 的无储备 nBTC，而这一事件整整 74 天未被察觉，直到 Nomic 协议暂停才促使 Osmosis 审查自身持仓。审查结果显示 Osmosis 的 allBTC 有 36% 没有资产支撑，随后触发了紧急升级，冻结攻击者账户中剩余的 allBTC，并"
+page_type: archive
+---
+
+<div class="archive-stats"><div class="archive-stat"><strong>2</strong><span>天</span></div><div class="archive-stat"><strong>2</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-12</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-12">2026-09-12</time><div class="archive-row-body"><h3><a href="https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/" target="_blank" rel="noopener noreferrer">Osmosis 历时 74 天才发现 40 BTC 的 Nomic 漏洞</a></h3><p class="archive-row-summary">6 月 25 日，攻击者组合利用两个独立漏洞，在 Osmosis 上凭空铸造了 40.650602 BTC 的无储备 nBTC，而这一事件整整 74 天未被察觉，直到 Nomic 协议暂停才促使 Osmosis 审查自身持仓。审查结果显示 Osmosis 的 allBTC 有 36% 没有资产支撑，随后触发了紧急升级，冻结攻击者账户中剩余的 allBTC，并提出了填补 40 BTC 缺口的治理提案。
+
+该事件暴露出一笔无储备铸造就能在不知不觉中污染一条主流 Cosmos 去中心化交易所上的比特币衍生品抵押基础，而 74 天的发现延迟说明桥与其最大下游交易场所之间几乎不存在监控与对账机制。此事还与近期一系列 Cosmos 相关的安全与披露争议叠加，加剧了外界对整个生态跨链桥安全性和事件透明度的担忧。
+
+攻击者仍通过以太坊上的 Tornado Cash 转移 671 ETH，套现约 100 万美元（按当时价格计算），而大部分赃款则以 allBTC 形式留在链上并被冻结。Osmosis 的补救提案则包括没收攻击者账户中冻结的 22.65 allBTC、取消一笔待执行的 USDC.noble 流动性再部署，并从社区资金池提取额外 allBTC 以恢复完全储备。</p><p class="archive-row-meta">Protos</p></div><span class="score-badge" data-tier="good">7.5</span></li><li class="archive-row"><time datetime="2026-09-11">2026-09-11</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/osmosis-freezes-22-65-btc-after-nomic-forwarding-bug-compromises-bitcoin-reserves/" target="_blank" rel="noopener noreferrer">Nomic 桥漏洞导致 allBTC 部分失去支撑，Osmosis 冻结 22.65 枚 BTC</a></h3><p class="archive-row-summary">Osmosis 已冻结 22.65 枚 BTC，原因是 Nomic 自定义转发逻辑中的缺陷让攻击者得以双花并铸造虚假的 nBTC 凭证，这些凭证随后通过 IBC 跨链到 Osmosis 并被计入 allBTC 的合法支撑资产。这批无效 nBTC 占 allBTC 支撑的 36.03%，因此 allBTC 的铸造与赎回已被暂停，等待治理层决定如何补足储备。
+
+这起事件表明，某条桥的转发逻辑漏洞可以传导到另一个协议的封装资产篮子中，使持有人整体暴露在储备缺口之下，而不是遭遇直接盗币。同时它把治理投票推到了用户追偿的核心位置，这一模式对 Cosmos 生态内所有封装比特币产品都具有参照意义。
+
+截至报道截止时，allBTC 流通量为 110.57 枚，篮子中持有 39.84 枚 nBTC；即使 22.65 枚被冻结的 BTC 全部追回，仍有约 17.19 枚 BTC 的缺口需要由社区池补足。链上研究员 Rarma 将主要铸造活动追溯至 6 月 25 日，并指出 7 月 17 日活动中产生的 22.65060846 枚 allBTC 在追踪发布时仍未移动，而官方公开披露发生在两个多月之后；Osmosis 负责管理 allBTC 合约，一个 3-of-6 的 moderator 子 DAO 可暂停池子或将某成分资产标记为受损，而 Nomic 的托管文档规定储备支出需要代表其签名集合 90% 以上投票权的签名。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.0</span></li></ul><p class="archive-back"><a href="/threads/">全部事件线</a> · <a href="/">返回首页</a></p>

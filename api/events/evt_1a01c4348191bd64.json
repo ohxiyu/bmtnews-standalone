@@ -52,14 +52,27 @@
       "current_state_en": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
       "detailed_summary_zh": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
       "detailed_summary_en": "Blockstream rejected a ransom demand after an exploit on the Liquid Bitcoin sidechain, with 3,400 BTC returned, about 598.5 BTC still outstanding, and peg-outs disabled as transactions resumed.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Liquid Network 是由 Blockstream 主导开发的比特币侧链，可实现比比特币主链更快、更私密的交易。用户通过联邦控制的钱包将比特币转入 Liquid（peg-in），并在侧链上获得等量的 Liquid Bitcoin（L-BTC）；peg-out 则销毁 L-BTC 并释放被锁定的比特币。L-BTC 的匿名金额由 range proof（范围证明）保护，这是 Elements 软件中使用的一种密码学证明，由 Liquid 节点验证，以确保无人凭空造币。",
+      "background_en": "The Liquid Network is a Bitcoin sidechain developed largely by Blockstream that enables faster and more confidential transactions than Bitcoin's base layer. Users move bitcoin onto Liquid through a federation-controlled wallet (peg-in) and receive an equal amount of Liquid Bitcoin, or L-BTC, on the sidechain; peg-out burns L-BTC and releases the locked bitcoin. Anonymous L-BTC amounts are protected by range proofs, a cryptographic proof used in the Elements software that Liquid nodes validate to ensure no one creates coins out of thin air.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "此次事件影响主要集中在 Liquid 相关领域：SideSwap 上的 L-BTC 流动性、支持 Liquid 充提的交易所柜台，以及因被盗而大幅缩水的联邦储备——peg-out 关闭意味着持有者当前无法将 L-BTC 兑回主链 BTC。更广泛的市场传导则通过市场对联邦式跨链桥与包装比特币设计情绪的变化实现，交易者正重新评估侧链形式比特币敞口背后的安全假设。",
+      "market_impact_en": "The incident is concentrated in Liquid-adjacent segments: L-BTC liquidity on SideSwap, exchange desks supporting Liquid deposits and withdrawals, and the depleted federation reserve that backs the peg, with peg-outs disabled meaning holders cannot currently redeem L-BTC for base-layer BTC. Broader transmission runs through sentiment toward federated bridges and wrapped-BTC designs, as traders reassess the security assumptions behind sidechain-based bitcoin exposure.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://news.bitcoin.com/crypto-news/blockstream-hunts-white-hats-after-4000-btc-leaves-liquid/",
+          "title": "Blockstream Hunts 'White Hats' After 4,000 BTC Leaves Liquid"
+        },
+        {
+          "url": "https://gizmodo.com/hackers-drain-320-million-from-bitcoins-liquid-network-keep-47-million-for-themselves-in-white-hat-operation-2000808262",
+          "title": "Hackers Drain $320 Million From Bitcoin’s Liquid Network, Keep $47..."
+        },
+        {
+          "url": "https://docs.liquid.net/docs/advanced-pegin-pegout",
+          "title": "Peg-in and Peg-out - docs.liquid.net"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:thedefiant.io_api_feed:0057055c46c168ff"

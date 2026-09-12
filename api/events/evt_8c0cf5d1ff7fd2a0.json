@@ -92,14 +92,27 @@
       "current_state_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
       "detailed_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
       "detailed_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "以太坊的权益证明系统将共识影响力赋予验证者，其签名密钥授权区块提议与证明，因此拥有为验证者提供资金的 ETH 本身并不能揭示谁能够履行这些职责。质押安排通常分离三种角色：ETH 所有者、节点运营商以及签名密钥的托管方，而以太坊将签名密钥与提款凭证分离的设计，旨在降低委托质押时的信任假设。分布式验证者技术更进一步，将单个验证者的签名密钥拆分到多台机器和多个运营商上，从而消除单点故障。",
+      "background_en": "Ethereum's proof-of-stake system assigns consensus influence to validators, whose signing keys authorize block proposals and attestations, so owning the ETH that funds a validator does not by itself reveal who can perform those duties. Staking arrangements commonly separate three roles — the ETH owner, the node operator, and whoever custodies the signing keys — and Ethereum's design of separating signing keys from withdrawal credentials is meant to reduce trust assumptions when staking is delegated. Distributed validator technology goes further by splitting a single validator's signing key across multiple machines and operators, removing single points of failure.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "其传导路径在于市场结构而非价格：它影响与 ETH 质押相关的资金流、机构托管与质押服务配置决策，以及市场参与者对以太坊最终确定性与抗审查风险的评估。若更多第三方 ETH 通过 MAVAN 迁移到与 BitMine 相关的基础设施上，将扩大运营商构成与密钥托管仍不透明的资金池，因此验证者群组与签名密钥的披露是这一事件传导至市场的主要渠道。",
+      "market_impact_en": "The transmission runs through market structure rather than price: it matters for ETH staking-related flows, for institutional custody and staking-service allocation decisions, and for how participants assess Ethereum's finality and censorship-resistance risk. Any further migration of third-party ETH onto BitMine-linked infrastructure through MAVAN would widen the pool whose operator mix and key custody remain opaque, making validator-cohort and signing-key disclosures the main channel through which this story reaches markets.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://ethereum.org/staking/dvt/",
+          "title": "Distributed validator technology | ethereum.org"
+        },
+        {
+          "url": "https://hackernoon.com/eip-7002-a-better-way-to-stake-on-ethereum",
+          "title": "EIP-7002: A Better Way To Stake On Ethereum | HackerNoon"
+        },
+        {
+          "url": "https://chainscorelabs.com/blog/tokenomics-design-mechanics-and-incentives/staking-and-security-economics/why-staking-concentration-is-the-achilles-heel-of-ethereum",
+          "title": "Ethereum Staking Concentration: The Looming Centralization Risk"
+        }
+      ],
       "confidence": 0.9,
       "story_ids": [
         "rss:cryptoslate.com_feed_:1fb9b3054e5005be"

@@ -101,14 +101,27 @@
       "current_state_en": "Osmosis has frozen 22.65 allBTC via emergency upgrade; allBTC remains ~36% unbacked; governance proposal seeks to fill the 40 BTC shortfall.",
       "detailed_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
       "detailed_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "nBTC 是通过 Nomic 一层区块链桥接的比特币，借助跨链通信协议 IBC（连接各 Cosmos 应用链的消息标准）得以在 Cosmos 各类应用中流通与使用。allBTC 则是生态内最大去中心化交易所 Osmosis 上使用的比特币代表资产，其价值来自桥所持有的底层 BTC 储备。Nomic 本身似乎已不再积极维护，其 X 账号自 2024 年起停止更新，GitHub 最后一次提交约在两年前，这使责任追究与资金追回变得更加复杂。",
+      "background_en": "nBTC is Bitcoin bridged through the Nomic Layer 1 blockchain, which makes it transferable and usable across Cosmos applications via the Inter-Blockchain Communication (IBC) protocol, the messaging standard that links Cosmos app chains. allBTC is the Bitcoin representation used on Osmosis, the ecosystem's largest decentralized exchange, and it derives its value from the underlying BTC backing held by the bridge. Nomic itself appears no longer actively maintained, with its X account silent since 2024 and its last GitHub commit about two years old, which complicates accountability and recovery.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "这一储备缺口直接影响到 Osmosis 上 allBTC 与 nBTC 的持有者及相关流动性池，因为在紧急冻结之前该衍生品有 36% 的支撑资产缺失，使以 BTC 计价的 Cosmos 流动性通过“储备支撑”这一渠道承压，而不仅是价格波动。事件中涉及以太坊的 671 ETH 流入 Tornado Cash，也将此事与更广泛的跨链桥攻击资金流联系在一起，进一步打击市场对 Cosmos 跨链资产及其上市场所的情绪。",
+      "market_impact_en": "The shortfall directly affects holders and liquidity pools of allBTC and nBTC on Osmosis, since 36% of the derivative's backing was missing until the emergency freeze, leaving BTC-denominated Cosmos liquidity exposed through the bridge-backing channel rather than through price alone. The Ethereum leg — 671 ETH routed to Tornado Cash — also ties the event to broader bridge-exploit flows, compounding sentiment pressure on Cosmos cross-chain assets and on the venues that list them.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://nipiq.com/entities/variants/nomic-nbtc",
+          "title": "Nomic NBTC - Bitcoin Variants | nipiQ"
+        },
+        {
+          "url": "https://cryptoslate.com/bitcoin-arrives-on-cosmos-with-nomic-nbtc-upgrade/",
+          "title": "Bitcoin arrives on Cosmos with Nomic nBTC upgrade"
+        },
+        {
+          "url": "https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe",
+          "title": "Developer Deep Dive — Cosmos IBC. Alongside the Tendermint high"
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:protos.com_feed_:e6a7a4cf53344add"

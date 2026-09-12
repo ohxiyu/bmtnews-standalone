@@ -69,14 +69,14 @@
       "summary_en": "India has launched the Demat 2.0 tokenized corporate bond pilot, with three issuers raising about $107 million; first-phase issuances remain ongoing, and later phases are planned to add secondary trading and retail access.",
       "latest_update_zh": "印度证券交易委员会（SEBI）与印度储备银行正式启动 Demat 2.0 代币化公司债试点；REC、Larsen & Toubro 和 IIFL 合计发行 102.5 亿卢比（约1.07亿美元），通过分布式账本与批发型 CBDC 结算。",
       "latest_update_en": "SEBI and RBI formally launched the Demat 2.0 tokenized corporate bond pilot; REC, Larsen & Toubro and IIFL issued a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to wholesale CBDC settlement.",
-      "background_zh": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
-      "background_en": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "background_zh": "Demat 账户是印度投资者用于电子化持有股票和债券的无纸化证券账户，SEBI 的 Demat 2.0 是在该体系之上，把所有权记录在法定存托机构拥有的分布式账本上，而非取代原有体系。批发型 CBDC 是仅面向金融机构的央行数字货币，在此用作发行人、投资者与银行之间的结算货币，而非零售支付工具。印度储备银行的统一市场接口（UMI）是一项新的金融市场基础设施，旨在实现资产代币化并以批发型 CBDC 即时结算；将其与区块链原生债券、存托机构持有的所有权记录以及受监管轨道内的 CBDC 结算相结合，正是 SEBI 所称的全球首创。",
+      "background_en": "Demat accounts are the dematerialized securities accounts Indian investors use to hold shares and bonds electronically, and SEBI's Demat 2.0 builds on that system by recording ownership on a distributed ledger owned by the statutory depositories rather than replacing it. A wholesale CBDC is a central bank digital currency restricted to financial institutions, used here as settlement money between issuers, investors, and banks rather than as a retail payment tool. The RBI's Unified Market Interface (UMI) is a new financial market infrastructure designed to tokenize assets and settle them instantly in wholesale CBDC; combining it with blockchain-native bonds, depository-held ownership records, and CBDC settlement within regulated rails is what SEBI describes as a global first.",
       "latest_summary_zh": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
       "latest_summary_en": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "直接受影响的更多是印度债券市场的清算与结算体系，而非可交易的加密资产，因为这些代币运行在存托机构自有账本上，并以许可制的批发型 CBDC 结算。其传导主要体现在情绪与叙事层面：一个 G20 经济体的监管机构把代币化债券与 CBDC 结算投入实际运行，会强化真实世界资产（RWA）代币化和 CBDC 采用这两大主题，从而影响加密市场参与者对相关基础设施与 RWA 类代币的定价逻辑，同时也提高了私营结算网络的竞争门槛。",
+      "discussion_en": "The direct exposure sits with Indian debt-market plumbing rather than with tradable crypto assets, since the tokens live on a depository-owned ledger and settle in a permissioned wholesale CBDC. The transmission runs mainly through sentiment and narrative: a G20-economy regulator putting tokenized bonds and CBDC settlement into live production reinforces the real-world-asset tokenization and CBDC adoption themes that shape how crypto market participants price infrastructure and RWA-related tokens, and it raises the competitive bar for private settlement networks.",
+      "market_impact_zh": "直接受影响的更多是印度债券市场的清算与结算体系，而非可交易的加密资产，因为这些代币运行在存托机构自有账本上，并以许可制的批发型 CBDC 结算。其传导主要体现在情绪与叙事层面：一个 G20 经济体的监管机构把代币化债券与 CBDC 结算投入实际运行，会强化真实世界资产（RWA）代币化和 CBDC 采用这两大主题，从而影响加密市场参与者对相关基础设施与 RWA 类代币的定价逻辑，同时也提高了私营结算网络的竞争门槛。",
+      "market_impact_en": "The direct exposure sits with Indian debt-market plumbing rather than with tradable crypto assets, since the tokens live on a depository-owned ledger and settle in a permissioned wholesale CBDC. The transmission runs mainly through sentiment and narrative: a G20-economy regulator putting tokenized bonds and CBDC settlement into live production reinforces the real-world-asset tokenization and CBDC adoption themes that shape how crypto market participants price infrastructure and RWA-related tokens, and it raises the competitive bar for private settlement networks.",
       "score": 8.0,
       "source_links": [
         {
@@ -95,7 +95,16 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.cryptopolitan.com/india-tokenized-corporate-bonds-sebi-pilot/",
+          "title": "India raises $107M in tokenized corporate bonds under SEBI's Demat 2.0 pilot - Cryptopolitan"
+        },
+        {
+          "url": "https://bfsi.economictimes.indiatimes.com/articles/rbi-unified-markets-interface-revolutionizing-financial-markets-with-umi/124562008",
+          "title": "RBI Unified Markets Interface: Revolutionizing Financial Markets with UMI, ETBFSI"
+        }
+      ]
     },
     {
       "thread_id": "evt_dacf8d366b34d78d",
@@ -124,10 +133,10 @@
       "background_en": "allBTC is a tokenized Bitcoin asset on Osmosis minted against a basket of Bitcoin variants held on the chain, including nBTC issued by the Nomic bridge. Nomic is a Cosmos blockchain that offers decentralized custody for Bitcoin and mints nBTC as a 1:1 BTC-backed token, moving value between chains via IBC, the Inter-Blockchain Communication protocol used across Cosmos. A double-spend in a bridge's forwarding logic means the same underlying BTC was effectively counted twice, so vouchers that looked valid were created without new Bitcoin entering custody.",
       "latest_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
       "latest_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
-      "discussion_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
-      "discussion_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
-      "market_impact_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
-      "market_impact_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
+      "discussion_zh": "这一储备缺口直接影响到 Osmosis 上 allBTC 与 nBTC 的持有者及相关流动性池，因为在紧急冻结之前该衍生品有 36% 的支撑资产缺失，使以 BTC 计价的 Cosmos 流动性通过“储备支撑”这一渠道承压，而不仅是价格波动。事件中涉及以太坊的 671 ETH 流入 Tornado Cash，也将此事与更广泛的跨链桥攻击资金流联系在一起，进一步打击市场对 Cosmos 跨链资产及其上市场所的情绪。",
+      "discussion_en": "The shortfall directly affects holders and liquidity pools of allBTC and nBTC on Osmosis, since 36% of the derivative's backing was missing until the emergency freeze, leaving BTC-denominated Cosmos liquidity exposed through the bridge-backing channel rather than through price alone. The Ethereum leg — 671 ETH routed to Tornado Cash — also ties the event to broader bridge-exploit flows, compounding sentiment pressure on Cosmos cross-chain assets and on the venues that list them.",
+      "market_impact_zh": "这一储备缺口直接影响到 Osmosis 上 allBTC 与 nBTC 的持有者及相关流动性池，因为在紧急冻结之前该衍生品有 36% 的支撑资产缺失，使以 BTC 计价的 Cosmos 流动性通过“储备支撑”这一渠道承压，而不仅是价格波动。事件中涉及以太坊的 671 ETH 流入 Tornado Cash，也将此事与更广泛的跨链桥攻击资金流联系在一起，进一步打击市场对 Cosmos 跨链资产及其上市场所的情绪。",
+      "market_impact_en": "The shortfall directly affects holders and liquidity pools of allBTC and nBTC on Osmosis, since 36% of the derivative's backing was missing until the emergency freeze, leaving BTC-denominated Cosmos liquidity exposed through the bridge-backing channel rather than through price alone. The Ethereum leg — 671 ETH routed to Tornado Cash — also ties the event to broader bridge-exploit flows, compounding sentiment pressure on Cosmos cross-chain assets and on the venues that list them.",
       "score": 8.0,
       "source_links": [
         {
@@ -153,6 +162,18 @@
         {
           "url": "https://www.tradingview.com/news/cryptobriefing:f57f4f3ba094b:0-osmosis-pauses-operations-after-nomic-chain-nbtc-exploit-freezes-22-65-btc/",
           "title": "Osmosis pauses operations after Nomic Chain nBTC exploit freezes..."
+        },
+        {
+          "url": "https://nipiq.com/entities/variants/nomic-nbtc",
+          "title": "Nomic NBTC - Bitcoin Variants | nipiQ"
+        },
+        {
+          "url": "https://cryptoslate.com/bitcoin-arrives-on-cosmos-with-nomic-nbtc-upgrade/",
+          "title": "Bitcoin arrives on Cosmos with Nomic nBTC upgrade"
+        },
+        {
+          "url": "https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe",
+          "title": "Developer Deep Dive — Cosmos IBC. Alongside the Tendermint high"
         }
       ]
     },
@@ -179,14 +200,14 @@
       "summary_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
       "latest_update_zh": "BitMine 已质押 507 万 ETH（约占其 593 万 ETH 持有量的 85%），相当于以太坊活跃质押量的约 11.8%；同时结束与 Ethereum Tower 的管理服务协议，并任命关联公司 American Validator 为 MAVAN Holdings 提供咨询。",
       "latest_update_en": "BitMine has staked 5.07 million ETH (~85% of its 5.93 million ETH holdings), equal to roughly 11.8% of Ethereum's active stake, and ended its management-services agreement with Ethereum Tower while appointing affiliate American Validator to advise MAVAN Holdings.",
-      "background_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
-      "background_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "background_zh": "以太坊的权益证明系统将共识影响力赋予验证者，其签名密钥授权区块提议与证明，因此拥有为验证者提供资金的 ETH 本身并不能揭示谁能够履行这些职责。质押安排通常分离三种角色：ETH 所有者、节点运营商以及签名密钥的托管方，而以太坊将签名密钥与提款凭证分离的设计，旨在降低委托质押时的信任假设。分布式验证者技术更进一步，将单个验证者的签名密钥拆分到多台机器和多个运营商上，从而消除单点故障。",
+      "background_en": "Ethereum's proof-of-stake system assigns consensus influence to validators, whose signing keys authorize block proposals and attestations, so owning the ETH that funds a validator does not by itself reveal who can perform those duties. Staking arrangements commonly separate three roles — the ETH owner, the node operator, and whoever custodies the signing keys — and Ethereum's design of separating signing keys from withdrawal credentials is meant to reduce trust assumptions when staking is delegated. Distributed validator technology goes further by splitting a single validator's signing key across multiple machines and operators, removing single points of failure.",
       "latest_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
       "latest_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "其传导路径在于市场结构而非价格：它影响与 ETH 质押相关的资金流、机构托管与质押服务配置决策，以及市场参与者对以太坊最终确定性与抗审查风险的评估。若更多第三方 ETH 通过 MAVAN 迁移到与 BitMine 相关的基础设施上，将扩大运营商构成与密钥托管仍不透明的资金池，因此验证者群组与签名密钥的披露是这一事件传导至市场的主要渠道。",
+      "discussion_en": "The transmission runs through market structure rather than price: it matters for ETH staking-related flows, for institutional custody and staking-service allocation decisions, and for how participants assess Ethereum's finality and censorship-resistance risk. Any further migration of third-party ETH onto BitMine-linked infrastructure through MAVAN would widen the pool whose operator mix and key custody remain opaque, making validator-cohort and signing-key disclosures the main channel through which this story reaches markets.",
+      "market_impact_zh": "其传导路径在于市场结构而非价格：它影响与 ETH 质押相关的资金流、机构托管与质押服务配置决策，以及市场参与者对以太坊最终确定性与抗审查风险的评估。若更多第三方 ETH 通过 MAVAN 迁移到与 BitMine 相关的基础设施上，将扩大运营商构成与密钥托管仍不透明的资金池，因此验证者群组与签名密钥的披露是这一事件传导至市场的主要渠道。",
+      "market_impact_en": "The transmission runs through market structure rather than price: it matters for ETH staking-related flows, for institutional custody and staking-service allocation decisions, and for how participants assess Ethereum's finality and censorship-resistance risk. Any further migration of third-party ETH onto BitMine-linked infrastructure through MAVAN would widen the pool whose operator mix and key custody remain opaque, making validator-cohort and signing-key disclosures the main channel through which this story reaches markets.",
       "score": 7.5,
       "source_links": [
         {
@@ -205,7 +226,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://ethereum.org/staking/dvt/",
+          "title": "Distributed validator technology | ethereum.org"
+        },
+        {
+          "url": "https://hackernoon.com/eip-7002-a-better-way-to-stake-on-ethereum",
+          "title": "EIP-7002: A Better Way To Stake On Ethereum | HackerNoon"
+        },
+        {
+          "url": "https://chainscorelabs.com/blog/tokenomics-design-mechanics-and-incentives/staking-and-security-economics/why-staking-concentration-is-the-achilles-heel-of-ethereum",
+          "title": "Ethereum Staking Concentration: The Looming Centralization Risk"
+        }
+      ]
     },
     {
       "thread_id": "evt_0e34fbe324b3b9e9",
@@ -3430,14 +3464,14 @@
       "summary_en": "India has launched the Demat 2.0 tokenized corporate bond pilot, with three issuers raising about $107 million; first-phase issuances remain ongoing, and later phases are planned to add secondary trading and retail access.",
       "latest_update_zh": "印度证券交易委员会（SEBI）与印度储备银行正式启动 Demat 2.0 代币化公司债试点；REC、Larsen & Toubro 和 IIFL 合计发行 102.5 亿卢比（约1.07亿美元），通过分布式账本与批发型 CBDC 结算。",
       "latest_update_en": "SEBI and RBI formally launched the Demat 2.0 tokenized corporate bond pilot; REC, Larsen & Toubro and IIFL issued a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to wholesale CBDC settlement.",
-      "background_zh": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
-      "background_en": "India has begun tokenizing its $620 billion corporate bond market using digital rupee settlement, marking a major state-backed step toward blockchain-based financial market infrastructure.",
+      "background_zh": "Demat 账户是印度投资者用于电子化持有股票和债券的无纸化证券账户，SEBI 的 Demat 2.0 是在该体系之上，把所有权记录在法定存托机构拥有的分布式账本上，而非取代原有体系。批发型 CBDC 是仅面向金融机构的央行数字货币，在此用作发行人、投资者与银行之间的结算货币，而非零售支付工具。印度储备银行的统一市场接口（UMI）是一项新的金融市场基础设施，旨在实现资产代币化并以批发型 CBDC 即时结算；将其与区块链原生债券、存托机构持有的所有权记录以及受监管轨道内的 CBDC 结算相结合，正是 SEBI 所称的全球首创。",
+      "background_en": "Demat accounts are the dematerialized securities accounts Indian investors use to hold shares and bonds electronically, and SEBI's Demat 2.0 builds on that system by recording ownership on a distributed ledger owned by the statutory depositories rather than replacing it. A wholesale CBDC is a central bank digital currency restricted to financial institutions, used here as settlement money between issuers, investors, and banks rather than as a retail payment tool. The RBI's Unified Market Interface (UMI) is a new financial market infrastructure designed to tokenize assets and settle them instantly in wholesale CBDC; combining it with blockchain-native bonds, depository-held ownership records, and CBDC settlement within regulated rails is what SEBI describes as a global first.",
       "latest_summary_zh": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
       "latest_summary_en": "India's SEBI and RBI launched the Demat 2.0 tokenized corporate bond pilot, with REC, Larsen & Toubro, and IIFL issuing a combined 10.25 billion rupees (~$107 million) on distributed ledger infrastructure linked to the RBI's wholesale CBDC.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "直接受影响的更多是印度债券市场的清算与结算体系，而非可交易的加密资产，因为这些代币运行在存托机构自有账本上，并以许可制的批发型 CBDC 结算。其传导主要体现在情绪与叙事层面：一个 G20 经济体的监管机构把代币化债券与 CBDC 结算投入实际运行，会强化真实世界资产（RWA）代币化和 CBDC 采用这两大主题，从而影响加密市场参与者对相关基础设施与 RWA 类代币的定价逻辑，同时也提高了私营结算网络的竞争门槛。",
+      "discussion_en": "The direct exposure sits with Indian debt-market plumbing rather than with tradable crypto assets, since the tokens live on a depository-owned ledger and settle in a permissioned wholesale CBDC. The transmission runs mainly through sentiment and narrative: a G20-economy regulator putting tokenized bonds and CBDC settlement into live production reinforces the real-world-asset tokenization and CBDC adoption themes that shape how crypto market participants price infrastructure and RWA-related tokens, and it raises the competitive bar for private settlement networks.",
+      "market_impact_zh": "直接受影响的更多是印度债券市场的清算与结算体系，而非可交易的加密资产，因为这些代币运行在存托机构自有账本上，并以许可制的批发型 CBDC 结算。其传导主要体现在情绪与叙事层面：一个 G20 经济体的监管机构把代币化债券与 CBDC 结算投入实际运行，会强化真实世界资产（RWA）代币化和 CBDC 采用这两大主题，从而影响加密市场参与者对相关基础设施与 RWA 类代币的定价逻辑，同时也提高了私营结算网络的竞争门槛。",
+      "market_impact_en": "The direct exposure sits with Indian debt-market plumbing rather than with tradable crypto assets, since the tokens live on a depository-owned ledger and settle in a permissioned wholesale CBDC. The transmission runs mainly through sentiment and narrative: a G20-economy regulator putting tokenized bonds and CBDC settlement into live production reinforces the real-world-asset tokenization and CBDC adoption themes that shape how crypto market participants price infrastructure and RWA-related tokens, and it raises the competitive bar for private settlement networks.",
       "score": 8.0,
       "source_links": [
         {
@@ -3456,7 +3490,16 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.cryptopolitan.com/india-tokenized-corporate-bonds-sebi-pilot/",
+          "title": "India raises $107M in tokenized corporate bonds under SEBI's Demat 2.0 pilot - Cryptopolitan"
+        },
+        {
+          "url": "https://bfsi.economictimes.indiatimes.com/articles/rbi-unified-markets-interface-revolutionizing-financial-markets-with-umi/124562008",
+          "title": "RBI Unified Markets Interface: Revolutionizing Financial Markets with UMI, ETBFSI"
+        }
+      ]
     },
     {
       "thread_id": "evt_dacf8d366b34d78d",
@@ -3485,10 +3528,10 @@
       "background_en": "allBTC is a tokenized Bitcoin asset on Osmosis minted against a basket of Bitcoin variants held on the chain, including nBTC issued by the Nomic bridge. Nomic is a Cosmos blockchain that offers decentralized custody for Bitcoin and mints nBTC as a 1:1 BTC-backed token, moving value between chains via IBC, the Inter-Blockchain Communication protocol used across Cosmos. A double-spend in a bridge's forwarding logic means the same underlying BTC was effectively counted twice, so vouchers that looked valid were created without new Bitcoin entering custody.",
       "latest_summary_zh": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
       "latest_summary_en": "An attacker exploited two bugs to mint over 40 BTC of unbacked nBTC on Osmosis on June 25, and the 74-day detection delay left Osmosis's allBTC 36% unbacked until a Nomic protocol halt triggered an emergency freeze.",
-      "discussion_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
-      "discussion_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
-      "market_impact_zh": "风险敞口集中在持有 allBTC 或 nBTC 的 Osmosis 流动性池与 Cosmos DeFi 头寸上，冻结使铸造和赎回通道关闭，受影响价值约 150 万美元。更广泛的传导渠道是跨链与封装比特币资产的情绪与流动性，因为未解决的储备缺口可能促使交易者重新定价整个 Cosmos 生态的桥接风险。",
-      "market_impact_en": "The exposure is concentrated in Osmosis liquidity pools and Cosmos DeFi positions holding allBTC or nBTC, where the freeze blocks entry and exit through minting and redemption and leaves the affected value at roughly $1.5M. The wider transmission channel is sentiment and liquidity around bridged and wrapped Bitcoin assets, since unresolved backing gaps can prompt traders to reprice bridge risk across the Cosmos ecosystem.",
+      "discussion_zh": "这一储备缺口直接影响到 Osmosis 上 allBTC 与 nBTC 的持有者及相关流动性池，因为在紧急冻结之前该衍生品有 36% 的支撑资产缺失，使以 BTC 计价的 Cosmos 流动性通过“储备支撑”这一渠道承压，而不仅是价格波动。事件中涉及以太坊的 671 ETH 流入 Tornado Cash，也将此事与更广泛的跨链桥攻击资金流联系在一起，进一步打击市场对 Cosmos 跨链资产及其上市场所的情绪。",
+      "discussion_en": "The shortfall directly affects holders and liquidity pools of allBTC and nBTC on Osmosis, since 36% of the derivative's backing was missing until the emergency freeze, leaving BTC-denominated Cosmos liquidity exposed through the bridge-backing channel rather than through price alone. The Ethereum leg — 671 ETH routed to Tornado Cash — also ties the event to broader bridge-exploit flows, compounding sentiment pressure on Cosmos cross-chain assets and on the venues that list them.",
+      "market_impact_zh": "这一储备缺口直接影响到 Osmosis 上 allBTC 与 nBTC 的持有者及相关流动性池，因为在紧急冻结之前该衍生品有 36% 的支撑资产缺失，使以 BTC 计价的 Cosmos 流动性通过“储备支撑”这一渠道承压，而不仅是价格波动。事件中涉及以太坊的 671 ETH 流入 Tornado Cash，也将此事与更广泛的跨链桥攻击资金流联系在一起，进一步打击市场对 Cosmos 跨链资产及其上市场所的情绪。",
+      "market_impact_en": "The shortfall directly affects holders and liquidity pools of allBTC and nBTC on Osmosis, since 36% of the derivative's backing was missing until the emergency freeze, leaving BTC-denominated Cosmos liquidity exposed through the bridge-backing channel rather than through price alone. The Ethereum leg — 671 ETH routed to Tornado Cash — also ties the event to broader bridge-exploit flows, compounding sentiment pressure on Cosmos cross-chain assets and on the venues that list them.",
       "score": 8.0,
       "source_links": [
         {
@@ -3514,6 +3557,18 @@
         {
           "url": "https://www.tradingview.com/news/cryptobriefing:f57f4f3ba094b:0-osmosis-pauses-operations-after-nomic-chain-nbtc-exploit-freezes-22-65-btc/",
           "title": "Osmosis pauses operations after Nomic Chain nBTC exploit freezes..."
+        },
+        {
+          "url": "https://nipiq.com/entities/variants/nomic-nbtc",
+          "title": "Nomic NBTC - Bitcoin Variants | nipiQ"
+        },
+        {
+          "url": "https://cryptoslate.com/bitcoin-arrives-on-cosmos-with-nomic-nbtc-upgrade/",
+          "title": "Bitcoin arrives on Cosmos with Nomic nBTC upgrade"
+        },
+        {
+          "url": "https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe",
+          "title": "Developer Deep Dive — Cosmos IBC. Alongside the Tendermint high"
         }
       ]
     },
@@ -3939,14 +3994,14 @@
       "summary_en": "BitMine holds 5.93 million ETH, with 5.07 million ETH staked, representing about 11.8% of Ethereum's active stake, while the distribution of validators and signing-key control remains undisclosed.",
       "latest_update_zh": "BitMine 已质押 507 万 ETH（约占其 593 万 ETH 持有量的 85%），相当于以太坊活跃质押量的约 11.8%；同时结束与 Ethereum Tower 的管理服务协议，并任命关联公司 American Validator 为 MAVAN Holdings 提供咨询。",
       "latest_update_en": "BitMine has staked 5.07 million ETH (~85% of its 5.93 million ETH holdings), equal to roughly 11.8% of Ethereum's active stake, and ended its management-services agreement with Ethereum Tower while appointing affiliate American Validator to advise MAVAN Holdings.",
-      "background_zh": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
-      "background_en": "Bitmine's purchase of 28,086 ETH brings its treasury to 5.93 million ETH, representing 4.9% of Ethereum's total supply.",
+      "background_zh": "以太坊的权益证明系统将共识影响力赋予验证者，其签名密钥授权区块提议与证明，因此拥有为验证者提供资金的 ETH 本身并不能揭示谁能够履行这些职责。质押安排通常分离三种角色：ETH 所有者、节点运营商以及签名密钥的托管方，而以太坊将签名密钥与提款凭证分离的设计，旨在降低委托质押时的信任假设。分布式验证者技术更进一步，将单个验证者的签名密钥拆分到多台机器和多个运营商上，从而消除单点故障。",
+      "background_en": "Ethereum's proof-of-stake system assigns consensus influence to validators, whose signing keys authorize block proposals and attestations, so owning the ETH that funds a validator does not by itself reveal who can perform those duties. Staking arrangements commonly separate three roles — the ETH owner, the node operator, and whoever custodies the signing keys — and Ethereum's design of separating signing keys from withdrawal credentials is meant to reduce trust assumptions when staking is delegated. Distributed validator technology goes further by splitting a single validator's signing key across multiple machines and operators, removing single points of failure.",
       "latest_summary_zh": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
       "latest_summary_en": "BitMine Immersion Technologies has staked 5.07 million ETH, roughly 11.8% of Ethereum's active stake, but has not disclosed how its validators or signing keys are distributed.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "其传导路径在于市场结构而非价格：它影响与 ETH 质押相关的资金流、机构托管与质押服务配置决策，以及市场参与者对以太坊最终确定性与抗审查风险的评估。若更多第三方 ETH 通过 MAVAN 迁移到与 BitMine 相关的基础设施上，将扩大运营商构成与密钥托管仍不透明的资金池，因此验证者群组与签名密钥的披露是这一事件传导至市场的主要渠道。",
+      "discussion_en": "The transmission runs through market structure rather than price: it matters for ETH staking-related flows, for institutional custody and staking-service allocation decisions, and for how participants assess Ethereum's finality and censorship-resistance risk. Any further migration of third-party ETH onto BitMine-linked infrastructure through MAVAN would widen the pool whose operator mix and key custody remain opaque, making validator-cohort and signing-key disclosures the main channel through which this story reaches markets.",
+      "market_impact_zh": "其传导路径在于市场结构而非价格：它影响与 ETH 质押相关的资金流、机构托管与质押服务配置决策，以及市场参与者对以太坊最终确定性与抗审查风险的评估。若更多第三方 ETH 通过 MAVAN 迁移到与 BitMine 相关的基础设施上，将扩大运营商构成与密钥托管仍不透明的资金池，因此验证者群组与签名密钥的披露是这一事件传导至市场的主要渠道。",
+      "market_impact_en": "The transmission runs through market structure rather than price: it matters for ETH staking-related flows, for institutional custody and staking-service allocation decisions, and for how participants assess Ethereum's finality and censorship-resistance risk. Any further migration of third-party ETH onto BitMine-linked infrastructure through MAVAN would widen the pool whose operator mix and key custody remain opaque, making validator-cohort and signing-key disclosures the main channel through which this story reaches markets.",
       "score": 7.5,
       "source_links": [
         {
@@ -3965,7 +4020,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://ethereum.org/staking/dvt/",
+          "title": "Distributed validator technology | ethereum.org"
+        },
+        {
+          "url": "https://hackernoon.com/eip-7002-a-better-way-to-stake-on-ethereum",
+          "title": "EIP-7002: A Better Way To Stake On Ethereum | HackerNoon"
+        },
+        {
+          "url": "https://chainscorelabs.com/blog/tokenomics-design-mechanics-and-incentives/staking-and-security-economics/why-staking-concentration-is-the-achilles-heel-of-ethereum",
+          "title": "Ethereum Staking Concentration: The Looming Centralization Risk"
+        }
+      ]
     },
     {
       "thread_id": "evt_03c682a1c0470349",

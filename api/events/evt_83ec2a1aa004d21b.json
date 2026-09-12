@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "event_id": "evt_83ec2a1aa004d21b",
+  "url": "https://bmt.news/events/evt_83ec2a1aa004d21b/",
+  "json": "https://bmt.news/api/events/evt_83ec2a1aa004d21b.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Trezor 邮件服务商遭入侵，数十万加密用户数据泄露并被诈骗者盯上",
+    "en": "Trezor email provider breach exposes hundreds of thousands of crypto owners to scammers"
+  },
+  "current_state": {
+    "zh": "Trezor 确认其第三方邮件服务提供商遭到入侵，导致数十万名加密用户的联系方式数据泄露，这些用户目前正被钓鱼和社交工程攻击盯上。Trezor 警告称，一封标题为“Critical Security Alert: STM32 Entropy Vulnerability”的邮件并非来自该公司，并表示已关闭该恶意域名，同时正在调查攻击者是如何获得对 Trezor 合法域名的访问权限的。\n\n尽管没有私钥或资金被直接窃取，但泄露的联系方式数据为攻击者提供了素材，使其能够针对大量硬件钱包用户发起极具说服力的个性化钓鱼攻击。这也是 Trezor 短时间内第二起与第三方供应商相关的事件，使自托管服务商的第三方供应链风险再次受到审视。\n\n这些钓鱼邮件因发自 Trezor 的合法域名而更具欺骗性，这意味着常规的发件人身份验证机制不会将其标记为可疑。泄露的数据集包含姓名、电子邮箱和电话号码；8 月时 Trezor 还披露了其物流供应商 ShipMonk 的另一起入侵事件，泄露了姓名、收货地址、邮箱和电话等订单数据——这些数据集一旦被拼合，会让冒充攻击的可信度大幅提升。",
+    "en": "Trezor confirmed that a breach at its third-party email service provider exposed the contact data of hundreds of thousands of crypto owners, who are now being targeted by phishing and social-engineering campaigns. Trezor warned that an email titled \"Critical Security Alert: STM32 Entropy Vulnerability\" did not come from the company, said it had taken down the malicious domain, and is investigating how attackers obtained access to a legitimate Trezor domain.\n\nAlthough no private keys or funds were directly compromised, the leaked contact data gives attackers the raw material for convincing, personalized phishing aimed at a large population of hardware wallet users. It is also Trezor's second vendor-related incident in quick succession, which puts third-party supply-chain risk for self-custody providers under renewed scrutiny.\n\nThe phishing messages gained credibility by being sent from a legitimate Trezor domain, meaning standard sender-authentication checks would not flag them. The exposed dataset includes names, email addresses and phone numbers, and in August Trezor disclosed a separate breach at its shipping and logistics provider ShipMonk that leaked order data such as full names, shipping addresses, emails and phone numbers — datasets that can be combined to make impersonation attacks far more persuasive."
+  },
+  "first_seen_at": "2026-09-11T16:41:00.504304+00:00",
+  "last_updated_at": "2026-09-11T16:41:00.504304+00:00",
+  "last_material_change_at": "2026-09-11T16:41:00.504304+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "trezor"
+  ],
+  "identifiers": [],
+  "topics": [
+    "data-breach",
+    "phishing",
+    "trezor"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_44c91a63438a6746",
+      "event_id": "evt_83ec2a1aa004d21b",
+      "occurred_at": "2026-09-11T16:00:00Z",
+      "published_at": "2026-09-11T16:00:00Z",
+      "first_seen_at": "2026-09-11T16:41:00.504304Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Trezor 邮件服务商遭入侵，数十万加密用户数据泄露并被诈骗者盯上",
+      "title_en": "Trezor email provider breach exposes hundreds of thousands of crypto owners to scammers",
+      "what_changed_zh": "Trezor 确认其第三方邮件服务提供商遭到入侵，导致数十万名加密用户的联系方式数据泄露，这些用户目前正被钓鱼和社交工程攻击盯上。Trezor 警告称，一封标题为“Critical Security Alert: STM32 Entropy Vulnerability”的邮件并非来自该公司，并表示已关闭该恶意域名，同时正在调查攻击者是如何获得对 Trezor 合法域名的访问权限的。\n\n尽管没有私钥或资金被直接窃取，但泄露的联系方式数据为攻击者提供了素材，使其能够针对大量硬件钱包用户发起极具说服力的个性化钓鱼攻击。这也是 Trezor 短时间内第二起与第三方供应商相关的事件，使自托管服务商的第三方供应链风险再次受到审视。\n\n这些钓鱼邮件因发自 Trezor 的合法域名而更具欺骗性，这意味着常规的发件人身份验证机制不会将其标记为可疑。泄露的数据集包含姓名、电子邮箱和电话号码；8 月时 Trezor 还披露了其物流供应商 ShipMonk 的另一起入侵事件，泄露了姓名、收货地址、邮箱和电话等订单数据——这些数据集一旦被拼合，会让冒充攻击的可信度大幅提升。",
+      "what_changed_en": "Trezor confirmed that a breach at its third-party email service provider exposed the contact data of hundreds of thousands of crypto owners, who are now being targeted by phishing and social-engineering campaigns. Trezor warned that an email titled \"Critical Security Alert: STM32 Entropy Vulnerability\" did not come from the company, said it had taken down the malicious domain, and is investigating how attackers obtained access to a legitimate Trezor domain.\n\nAlthough no private keys or funds were directly compromised, the leaked contact data gives attackers the raw material for convincing, personalized phishing aimed at a large population of hardware wallet users. It is also Trezor's second vendor-related incident in quick succession, which puts third-party supply-chain risk for self-custody providers under renewed scrutiny.\n\nThe phishing messages gained credibility by being sent from a legitimate Trezor domain, meaning standard sender-authentication checks would not flag them. The exposed dataset includes names, email addresses and phone numbers, and in August Trezor disclosed a separate breach at its shipping and logistics provider ShipMonk that leaked order data such as full names, shipping addresses, emails and phone numbers — datasets that can be combined to make impersonation attacks far more persuasive.",
+      "current_state_zh": "Trezor 确认其第三方邮件服务提供商遭到入侵，导致数十万名加密用户的联系方式数据泄露，这些用户目前正被钓鱼和社交工程攻击盯上。Trezor 警告称，一封标题为“Critical Security Alert: STM32 Entropy Vulnerability”的邮件并非来自该公司，并表示已关闭该恶意域名，同时正在调查攻击者是如何获得对 Trezor 合法域名的访问权限的。\n\n尽管没有私钥或资金被直接窃取，但泄露的联系方式数据为攻击者提供了素材，使其能够针对大量硬件钱包用户发起极具说服力的个性化钓鱼攻击。这也是 Trezor 短时间内第二起与第三方供应商相关的事件，使自托管服务商的第三方供应链风险再次受到审视。\n\n这些钓鱼邮件因发自 Trezor 的合法域名而更具欺骗性，这意味着常规的发件人身份验证机制不会将其标记为可疑。泄露的数据集包含姓名、电子邮箱和电话号码；8 月时 Trezor 还披露了其物流供应商 ShipMonk 的另一起入侵事件，泄露了姓名、收货地址、邮箱和电话等订单数据——这些数据集一旦被拼合，会让冒充攻击的可信度大幅提升。",
+      "current_state_en": "Trezor confirmed that a breach at its third-party email service provider exposed the contact data of hundreds of thousands of crypto owners, who are now being targeted by phishing and social-engineering campaigns. Trezor warned that an email titled \"Critical Security Alert: STM32 Entropy Vulnerability\" did not come from the company, said it had taken down the malicious domain, and is investigating how attackers obtained access to a legitimate Trezor domain.\n\nAlthough no private keys or funds were directly compromised, the leaked contact data gives attackers the raw material for convincing, personalized phishing aimed at a large population of hardware wallet users. It is also Trezor's second vendor-related incident in quick succession, which puts third-party supply-chain risk for self-custody providers under renewed scrutiny.\n\nThe phishing messages gained credibility by being sent from a legitimate Trezor domain, meaning standard sender-authentication checks would not flag them. The exposed dataset includes names, email addresses and phone numbers, and in August Trezor disclosed a separate breach at its shipping and logistics provider ShipMonk that leaked order data such as full names, shipping addresses, emails and phone numbers — datasets that can be combined to make impersonation attacks far more persuasive.",
+      "detailed_summary_zh": "Trezor 确认其第三方邮件服务提供商遭到入侵，导致数十万名加密用户的联系方式数据泄露，这些用户目前正被钓鱼和社交工程攻击盯上。Trezor 警告称，一封标题为“Critical Security Alert: STM32 Entropy Vulnerability”的邮件并非来自该公司，并表示已关闭该恶意域名，同时正在调查攻击者是如何获得对 Trezor 合法域名的访问权限的。\n\n尽管没有私钥或资金被直接窃取，但泄露的联系方式数据为攻击者提供了素材，使其能够针对大量硬件钱包用户发起极具说服力的个性化钓鱼攻击。这也是 Trezor 短时间内第二起与第三方供应商相关的事件，使自托管服务商的第三方供应链风险再次受到审视。\n\n这些钓鱼邮件因发自 Trezor 的合法域名而更具欺骗性，这意味着常规的发件人身份验证机制不会将其标记为可疑。泄露的数据集包含姓名、电子邮箱和电话号码；8 月时 Trezor 还披露了其物流供应商 ShipMonk 的另一起入侵事件，泄露了姓名、收货地址、邮箱和电话等订单数据——这些数据集一旦被拼合，会让冒充攻击的可信度大幅提升。",
+      "detailed_summary_en": "Trezor confirmed that a breach at its third-party email service provider exposed the contact data of hundreds of thousands of crypto owners, who are now being targeted by phishing and social-engineering campaigns. Trezor warned that an email titled \"Critical Security Alert: STM32 Entropy Vulnerability\" did not come from the company, said it had taken down the malicious domain, and is investigating how attackers obtained access to a legitimate Trezor domain.\n\nAlthough no private keys or funds were directly compromised, the leaked contact data gives attackers the raw material for convincing, personalized phishing aimed at a large population of hardware wallet users. It is also Trezor's second vendor-related incident in quick succession, which puts third-party supply-chain risk for self-custody providers under renewed scrutiny.\n\nThe phishing messages gained credibility by being sent from a legitimate Trezor domain, meaning standard sender-authentication checks would not flag them. The exposed dataset includes names, email addresses and phone numbers, and in August Trezor disclosed a separate breach at its shipping and logistics provider ShipMonk that leaked order data such as full names, shipping addresses, emails and phone numbers — datasets that can be combined to make impersonation attacks far more persuasive.",
+      "background_zh": "Trezor 是自 2013 年起为加密用户生产硬件钱包的品牌，这类实体设备将私钥离线保存，使私钥永远不会接触联网的电脑。正因为私钥本身保持在离线状态，整条链路中最薄弱的环节往往是人为因素，或掌握客户联系方式数据的第三方供应商。钓鱼攻击——诱使用户点击链接、泄露助记词或批准恶意交易——已成为加密犯罪中规模最大的类别之一，Chainalysis 和 CertiK 均报告 2025 年初的钓鱼损失创下历史新高。",
+      "background_en": "Trezor is a hardware wallet brand that has been making physical devices for crypto owners since 2013; these devices store private keys offline so that keys never touch an internet-connected computer. Because the keys themselves stay offline, the weakest point in the chain is usually human behavior or third-party vendors that hold customer contact data. Phishing — tricking users into clicking links, revealing seed phrases or approving malicious transactions — has become one of the largest categories of crypto crime, with Chainalysis and CertiK both reporting record-high phishing losses in early 2025.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "这里的传导路径来自安全与情绪层面，而非协议机制本身：泄露的联系方式数据助长了针对性的钓鱼攻击，可能导致自托管钱包资产被盗，而被盗资产通常会流向中心化交易所和 DEX 变现。硬件钱包厂商与自托管服务将面临对第三方供应商风险的更严格审视，头部品牌接连披露数据泄露事件，也可能削弱用户对硬件钱包这一细分领域的信心。",
+      "market_impact_en": "The transmission path here runs through security and sentiment rather than protocol mechanics: leaked contact data feeds targeted phishing that can drain self-custody wallets, and stolen assets are typically routed toward exchanges and DEXs for liquidation. Hardware wallet vendors and self-custody services face heightened scrutiny of third-party vendor risk, and repeated breach disclosures at a leading brand can weigh on user confidence in the hardware wallet segment.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://www.bleepingcomputer.com/news/security/trezor-warns-users-of-email-provider-breach-phishing-attacks/",
+          "title": "Trezor warns users of email provider breach, phishing attacks"
+        },
+        {
+          "url": "https://trezor.io/",
+          "title": "Trezor Hardware Wallet (Official) | Bitcoin & Crypto Security | Trezor"
+        },
+        {
+          "url": "https://bingx.com/en/learn/article/top-crypto-phishing-scams-to-know-and-how-to-spot-them",
+          "title": "Top Crypto Phishing Scams to Know and How to Spot Them in 2026"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "gdelt:article:20260911T160000Z::https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/"
+      ],
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/",
+          "label": "techcrunch.com",
+          "source_type": "gdelt",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

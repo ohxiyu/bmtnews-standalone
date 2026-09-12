@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-09-11T00:00:00Z</updated>
+  <updated>2026-09-12T00:00:00Z</updated>
+  <entry>
+    <title>Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵</title>
+    <link href="https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit"/>
+    <id>https://bmt.news/editions/2026-09-12/#rss:thedefiant.io_api_feed:0057055c46c168ff</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>Blockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out（跨链赎回）仍处于关闭状态。
+
+这是比特币侧链上规模最大的已确认损失之一，支撑 Liquid 上 L-BTC 的储备一度降至仅 197 枚 BTC，令市场开始质疑许多交易所与交易者依赖的联邦式跨链桥的安全假设。Blockstream 拒绝支付赎金的做法，也为基础设施开发者在面对以威胁索要漏洞赏金的攻击者时如何应对，树立了一个公开先例。
+
+根本原因是 Liquid 节点缓存 range proof（范围证明）验证结果的方式存在缺陷，攻击者据此凭空铸造无背书支持的 L-BTC，并通过持有 peg-out 授权密钥的联邦成员 SideSwap 将其兑换为储备中的比特币；据报并未发生私钥被盗。Blockstream 在十小时内修补了桥节点，并于周三发布 Elements v23.3.4，同时另行警告有骗子用假冒更新网站针对节点运营者行骗。</summary>
+  </entry>
+  <entry>
+    <title>纳斯达克拟向Kraken母公司Payward投资1亿美元，目标2027年推出代币化股票</title>
+    <link href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1FCbkh2ZEx1d185WjlGMVdieVZDZTRzRTRoQzNNRzd0ZHY0dWFUN0ZmZ2hYRHRXU2JLbzgtYkFUYVhZR2ZaNk0xTHNnRVpmZ2c2RmxKVDNpaF9JU1prX2RzcG1pZ0R4YnB5N0l4d3IzZmMyQmxkLWRBc19vS0h5YUNtQWdvYmYzS3dMOW0wZ2N3MXlzWl9GSzVObjJFNG1jUWRVRk9XbDZFUFAxaVp3SG0wdHVUZGV5OERKeGFfZmpTdFhGNTdOZ3kxNnF3cWt6?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-12/#google_news:article:9db98d3bfd708b55</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>纳斯达克旗下投资部门Nasdaq Ventures已同意向加密货币交易所Kraken的母公司Payward投资1亿美元，双方同时宣布Payward将在其加密、股票、代币化股票、期货和期权等交易场所部署纳斯达克的市场监控技术。两家公司还表示将继续搭建计划中的纳斯达克股票代币（NET）所需的运营与商业系统，目前目标是在2027年第二季度推出。
+
+这笔交易加深了传统交易所基础设施与加密交易场所的融合，使一家美国主要交易所运营商同时介入代币化股票体系的交易层与监控层。如果2027年的时间表得以实现，在加密原生平台上部署纳斯达克背书的监控体系，可能成为代币化股票如何被监管和跨境分销的范本。
+
+公告描述的是一项投资协议，而非已完成的交易，且未披露交割日期、Payward的估值、纳斯达克的持股比例或治理权利。NET被设计为发行人发起的代币，旨在保留发行人的控制权以及标的股票的法律权利，不应与现有的第三方代币化股票产品等同看待；这些代币目前尚未进入流通。</summary>
+  </entry>
+  <entry>
+    <title>Base 转向自研统一技术栈，减少对 Optimism 的依赖</title>
+    <link href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxQWTZqQ1N6T0NCSEhpRTRBZzh4OWFwZUhZNVBHaWlGOUxTaVdwMWF5eFhZSmNPTjQyWEVEUF9FamxWMW5rWV8ydWRvcnZlR0RuYndfS3B5eFN5a0xFMzlMS3Jrd2tjaXBBX0tkWGN5Y3dNRkZLVWFEX2c2c2twZkNnUE1SWF9TNEFRTFBhRHktQzZNSy1TRGNsTF8ta3ZEaEFjRGhDVHJEYWh1OFE3UFBSVjVRMGkwTnhEX3c1ektBOThTOFhlU2FzVjR3RS1MbVlQMi1FRHNnakR2TUNBOFJZWlNuUkk?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-12/#google_news:article:b6a2b56a1ebc79e2</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>2026 年 2 月 18 日，Base 宣布将从 Optimism 的 OP Stack 迁移到自研的统一软件架构，把全部依赖与未来的创新整合进单一代码库。Base 同时表示，在过渡期间仍会与 Optimism 合作获得支持，并继续兼容 OP Stack 标准。
+
+Base 是按锁仓量和用户活跃度衡量规模最大的以太坊 Layer 2 之一，因此它脱离 OP Stack 削弱了 Optimism 关于多条链共享同一代码库的“Superchain”叙事，也表明大型 L2 越来越希望掌握自身技术路线图的主导权。这一变化改变了 L2 基础设施提供商之间的竞争格局，并影响开发者和市场参与者对“加入 Optimism 生态”这一标签的价值判断。
+
+Base 将此举定位为把依赖集中到一处，而非与 Optimism 骤然切割；它计划把硬分叉频率从每年约三次提高到每年六次，同时降低对外部基础设施提供商的依赖。过渡期间 Base 保持与 OP Stack 标准的兼容，因此现有工具链和开发者预期不会立刻失效。</summary>
+  </entry>
+  <entry>
+    <title>Circle拟以4亿美元收购Tazapay，补上稳定币法币出金最后一环</title>
+    <link href="https://cryptoslate.com/why-circle-is-spending-400m-to-fix-the-last-mile-holding-stablecoins-back-from-real-world-payouts/"/>
+    <id>https://bmt.news/editions/2026-09-12/#rss:cryptoslate.com_feed_:f7d7ee25de3fb4ac</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>Circle于9月8日宣布以4亿美元等值的Circle A类股票收购跨境支付公司Tazapay，最终对价会根据Tazapay的债务、交易费用和现金进行交割调整。Tazapay拥有60多家银行与金融科技合作伙伴，法币出金通道覆盖100多个市场，为USDC发行方补上了此前缺失的本地牌照、银行接入与货币兑换能力。
+
+这笔交易瞄准的是稳定币支付的“最后一公里”：代币可以在链上几秒内完成结算，但如果收款方拿不到可用的本地货币，这笔支付依然是失败的。若交易完成，受监管的法币分发能力将被直接并入最大的合规稳定币发行方，从而在与竞品稳定币及卡组织通道的竞争中强化USDC在跨境B2B支付中的地位。
+
+Circle表示，截至2026年7月31日，Tazapay的年化支付处理规模超过250亿美元，其中约60%的交易量涉及稳定币；但这些均为公司自行披露的数据，且“稳定币占比”是泛指而非特指USDC。最终发行股数取决于交割前20个交易日内Circle股票的成交量加权平均收盘价；此外，Circle对Circle Payments Network（CPN）的治理说明称运营方不托管客户资金、也不成为交易当事方，因此在其拥有出金运营商后，CPN的中立性仍是一个未解问题。</summary>
+  </entry>
+  <entry>
+    <title>Trezor 邮件服务商遭入侵，数十万加密用户数据泄露并被诈骗者盯上</title>
+    <link href="https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/"/>
+    <id>https://bmt.news/editions/2026-09-12/#gdelt:article:20260911T160000Z::https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>Trezor 确认其第三方邮件服务提供商遭到入侵，导致数十万名加密用户的联系方式数据泄露，这些用户目前正被钓鱼和社交工程攻击盯上。Trezor 警告称，一封标题为“Critical Security Alert: STM32 Entropy Vulnerability”的邮件并非来自该公司，并表示已关闭该恶意域名，同时正在调查攻击者是如何获得对 Trezor 合法域名的访问权限的。
+
+尽管没有私钥或资金被直接窃取，但泄露的联系方式数据为攻击者提供了素材，使其能够针对大量硬件钱包用户发起极具说服力的个性化钓鱼攻击。这也是 Trezor 短时间内第二起与第三方供应商相关的事件，使自托管服务商的第三方供应链风险再次受到审视。
+
+这些钓鱼邮件因发自 Trezor 的合法域名而更具欺骗性，这意味着常规的发件人身份验证机制不会将其标记为可疑。泄露的数据集包含姓名、电子邮箱和电话号码；8 月时 Trezor 还披露了其物流供应商 ShipMonk 的另一起入侵事件，泄露了姓名、收货地址、邮箱和电话等订单数据——这些数据集一旦被拼合，会让冒充攻击的可信度大幅提升。</summary>
+  </entry>
+  <entry>
+    <title>Osmosis 历时 74 天才发现 40 BTC 的 Nomic 漏洞</title>
+    <link href="https://protos.com/osmosis-took-74-days-to-discover-40-btc-nomic-exploit/"/>
+    <id>https://bmt.news/editions/2026-09-12/#rss:protos.com_feed_:e6a7a4cf53344add</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>6 月 25 日，攻击者组合利用两个独立漏洞，在 Osmosis 上凭空铸造了 40.650602 BTC 的无储备 nBTC，而这一事件整整 74 天未被察觉，直到 Nomic 协议暂停才促使 Osmosis 审查自身持仓。审查结果显示 Osmosis 的 allBTC 有 36% 没有资产支撑，随后触发了紧急升级，冻结攻击者账户中剩余的 allBTC，并提出了填补 40 BTC 缺口的治理提案。
+
+该事件暴露出一笔无储备铸造就能在不知不觉中污染一条主流 Cosmos 去中心化交易所上的比特币衍生品抵押基础，而 74 天的发现延迟说明桥与其最大下游交易场所之间几乎不存在监控与对账机制。此事还与近期一系列 Cosmos 相关的安全与披露争议叠加，加剧了外界对整个生态跨链桥安全性和事件透明度的担忧。
+
+攻击者仍通过以太坊上的 Tornado Cash 转移 671 ETH，套现约 100 万美元（按当时价格计算），而大部分赃款则以 allBTC 形式留在链上并被冻结。Osmosis 的补救提案则包括没收攻击者账户中冻结的 22.65 allBTC、取消一笔待执行的 USDC.noble 流动性再部署，并从社区资金池提取额外 allBTC 以恢复完全储备。</summary>
+  </entry>
+  <entry>
+    <title>BitMine 质押 507 万枚 ETH，约占以太坊活跃质押 12%，验证者控制权未披露</title>
+    <link href="https://cryptoslate.com/bitmines-staked-eth-equals-nearly-12-of-ethereums-active-stake-but-who-controls-it/"/>
+    <id>https://bmt.news/editions/2026-09-12/#rss:cryptoslate.com_feed_:1fb9b3054e5005be</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>BitMine Immersion Technologies 披露截至 9 月 7 日已质押 507 万枚 ETH，约占其 593 万枚 ETH 持仓的 85%，按最新备案文件所用价格计算价值约 126 亿美元，相当于当时活跃保护以太坊的约 4303 万枚 ETH 中的约 11.8%。该公司并未披露这些资产在验证者运营商之间的分布，也未说明谁掌握用于提议区块和进行证明的签名密钥。
+
+对质押 ETH 的经济所有权并不等同于共识控制权，而两者之间的差距决定了单一实体能否威胁以太坊的最终确定性或抗审查性。随着 BitMine 追求持有以太坊总供应量 5% 的目标，并将 MAVAN 扩展到服务机构投资者、托管方和生态合作伙伴，更多第三方 ETH 可能被导入与其质押业务相关的基础设施。
+
+以太坊需要代表三分之二质押 ETH 的证明才能最终确定检查点，而控制至少三分之一的运营商可以通过拒绝投票来阻止最终确定性，BitMine 11.8% 的经济持仓单独来看远低于这些门槛。BitMine 于 9 月 3 日终止了与 Ethereum Tower 的管理服务协议，并于次日任命其关联公司 American Validator 为 MAVAN Holdings 提供顾问服务，费用相当于公司自质押 ETH 所产生奖励的 1.5%，但该协议并未将 American Validator 认定为整个验证者群的运营商，也未授予其签名权限。</summary>
+  </entry>
+  <entry>
+    <title>苹果在美印下架 Pump Fun iOS 应用，此前刚上线代币化股票交易对</title>
+    <link href="https://protos.com/one-day-after-launching-stock-pairs-apple-delists-pump-fun-app/"/>
+    <id>https://bmt.news/editions/2026-09-12/#rss:protos.com_feed_:3d1d24827593f52e</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>周四晚间，苹果将 Pump Fun 的 iPhone 应用从包括美国和印度在内的多国 App Store 下架，随即在社交媒体上引发热议。此次下架发生在该 Solana 模因币平台推出 &quot;Custom Pairs&quot;（自定义交易对）功能仅一天之后——该功能允许用户创建以代币化股票、黄金乃至封装 BTC 计价的模因币，平台当时宣传了 93 个此类交易对。
+
+应用商店分发是加密应用面向散户的主要入口，因此苹果的下架直接削弱了用户在美印两大市场访问 Solana 上交易量最高的模因币平台之一的能力。这也表明，即便代币化股票产品的法律地位尚无定论，它们仍可能遭遇平台层面的执法风险，这一风险不仅限于 Pump Fun，也波及其它股票代币发行方。
+
+Pump Fun 移动端团队的一名成员表示，该应用 &quot;在美国和印度 iOS App Store 暂时无法下载&quot;，已安装用户的资金安全无虞，而苹果方面尚未就下架作出任何说明。Google Play 上的安卓版本仍可下载，下载量已超过 50 万次；加拿大区商品页仍然在线，发行方登记为爱尔兰利默里克的 Maius Imperium Limited；此外，Custom Pairs 产生的收入中有 50% 会流向 PUMP 的回购销毁合约。</summary>
+  </entry>
+  <entry>
+    <title>币安 Anthropic pre-IPO 永续合约隐含估值达 2.1 万亿美元</title>
+    <link href="https://cryptoslate.com/binance-pre-ipo-contract-pushes-anthropic-to-a-2-1-trillion-implied-valuation/"/>
+    <id>https://bmt.news/editions/2026-09-12/#rss:cryptoslate.com_feed_:74850bb7fe935c97</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <summary>9月9日，币安针对 Anthropic 的 pre-IPO 永续合约（ANTHROPICUSDT）价格突破 2,100 美元，按币安估算的 10 亿股分母换算，隐含公司估值超过 2.1 万亿美元。这一隐含水平超过 Anthropic 5 月 28 日 H 轮融资 9,650 亿美元投后估值的两倍以上。
+
+这一现象显示，加密衍生品交易场所正在为尚无公开股票指数的私营 AI 公司制造“合成价格发现”，让杠杆交易者对 pre-IPO 股权给出报价。由于标记价格和股本分母均由交易所自行设定，而非来自任何股票市场，因此这更像是一次高信号的市场结构事件，而非 Anthropic 本身被系统性重估。
+
+币安允许 ANTHROPICUSDT 最高 20 倍杠杆，资金费率为每 8 小时收取 +0.005%，标记价格基于 10 秒均价计算，每秒最多变动 1%，在成交稀疏时会回溯更长时间窗口。该合约不附带任何股权或所有权，币安官方公告也说明 10 亿股的估算数字可能与实际总股本不同，并警告其并不认可由此得出的隐含估值。</summary>
+  </entry>
   <entry>
     <title>Liquid Network 在 3.2 亿美元漏洞事件后恢复出块</title>
     <link href="https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
@@ -343,104 +442,5 @@ Visa表示，其网络上的稳定币结算量已超过200亿美元的年化运�
 这将移除新用户的一大入门障碍，让仅持有稳定币的钱包可以正常交易，也让应用无需用户迁移至智能合约账户即可直接赞助 Gas 费用。同时，它降低了以太坊对 ECDSA 签名验证的依赖，为签名聚合与抗量子安全铺平了道路。
 
 EIP-8141 定义了一种新的 EIP-2718 交易类型，包含最多 64 个相互独立的“frames”（帧），每个帧都是一次普通的合约调用，用于验证、支付或执行，从而实现签名账户与支付账户的解耦。该提案还包含“默认代码”，使现有的外部账户（EOA）也能获得 Gas 赞助、代币支付、批量调用和原生私钥轮换等能力；提案自 1 月起仍是草案，尚未被正式纳入排期。</summary>
-  </entry>
-  <entry>
-    <title>Hacken报告：两把密钥泄露或危及910亿美元USDT</title>
-    <link href="https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:c7ac573a20f26251</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>安全公司Hacken发布技术审查发现，Tron上约913亿美元的USDT（约占流通总量的一半）仅由两个签名密钥保护。攻击者一旦突破这两个密钥，就能铸造无限量USDT，甚至夺取合约所有权，使Tether失去管理控制权。
-
-这凸显了稳定币基础设施的系统性风险：一旦被利用，攻击者可能无限铸造USDT，威胁稳定币的锚定以及用户和交易所的信任。同时，在以太坊、Avalanche和Celo上复用签名密钥，也可能扩大管理权限方面的脆弱性。
-
-Hacken未发现密钥实际被入侵或发生安全事件的证据，但警告称复用签名密钥可能扩大跨链管理风险。该审查发布之际，KPMG审计帮助Tether获得Bluechip评级上调；两密钥攻击还可能让攻击者转移USDT合约所有权，使Tether无法冻结资金。</summary>
-  </entry>
-  <entry>
-    <title>Harmony 提议关停区块链，以应对 AI 威胁将 ONE 迁移至以太坊</title>
-    <link href="https://www.coindesk.com/markets/2026/09/07/once-hyped-ethereum-rival-harmony-wants-to-shut-its-blockchain-over-ai-threats"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.coindesk.com_arc_outboundfeeds_rss_:f5c3bfd9a4143b7b</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>9月6日，Harmony 提议终止其独立网络，通过最终区块快照和自动空投将 ONE 转换为以太坊上的 ERC-20 代币。该方案距8月11日遭攻击、伪造约3.01万亿 ONE 后于8月21日完成的回滚不到三周。
-
-一个曾经备受关注的 Layer 1 主动选择关停，是非常罕见的结局，也凸显了 AI 和国家行为者带来的新型安全压力。这会影响 ONE 持有者、验证者、DApp 用户，并影响市场对小型区块链长期韧性的信心。
-
-智能合约、流动性池和多重签名金库不会自动迁移，因此用户被敦促在9月10日前退出相关合约；验证者可从太平洋时间当天上午7点起停止运行。该提案不具约束力，包含一个137万美元的补偿池，计划将未来 ONE 增发转用于 AI 视频项目，且未披露最终区块或空投日期。</summary>
-  </entry>
-  <entry>
-    <title>Coldcard 第三波攻击者转移了 45% 的被盗比特币</title>
-    <link href="https://cointelegraph.com/news/coldcard-third-wave-attacker-moves-bitcoin-stolen?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:cointelegraph.com_rss:c79508931f63a9c3</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Galaxy Research 表示，Coldcard 钱包第三波攻击背后的黑客已转移约 45% 的被盗比特币，自 9 月 2 日起通过 THORChain 或 CoinJoin 交易转移资金。在所有攻击波次中，82% 的被盗 BTC 仍留在原始攻击者地址，而 18% 已明显为洗钱目的而被转移。
-
-这一更新揭示了大额硬件钱包攻击者如何清洗赃款，有助于交易所和链上分析人员追踪被盗资产并识别更多受害者钱包。同时也提醒用户，自托管硬件设备仍是攻击目标，且被盗加密货币仍可在链上分析下被转移。
-
-Galaxy 称第三波攻击者创建了 293 个 2-of-2 多重签名保险库来存放受害者的代币，并按规模从大到小转移了其中 11 个最大保险库的资金。这笔转账帮助识别出一个此前未知的保险库，其中可能还存有另一名 Coldcard 受害者的资金，但该损失的原因尚未确认。</summary>
-  </entry>
-  <entry>
-    <title>星展银行与花旗完成首笔周末代币化存款美元跨境支付</title>
-    <link href="https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689"/>
-    <id>https://bmt.news/editions/2026-09-08/#rss:www.theblock.co_rss.xml:a8a39e1465a90b11</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>星展银行（DBS）与花旗银行（Citi）通过Swift基于区块链的账本，完成了新加坡与美国之间首笔周末跨境美元代币化存款结算。该交易在数分钟内完成，而非传统跨境转账通常需要的一至两个工作日。
-
-这一里程碑表明，大型传统银行正将代币化存款从试点推向实际应用，有望在受监管的银行体系内实现全天候跨境支付。这也显示出机构对区块链技术用于现实支付基础设施的接受度不断提升。
-
-该交易通过Swift数字账本（Swift Digital Ledger）上的代币化存款完成，绕开了传统银行营业时间的限制。渣打银行与汇丰银行于8月率先在Swift账本上完成了代币化跨境交易，Swift此后一直在筹备与包括花旗、星展在内的17家主要银行试点该服务。</summary>
-  </entry>
-  <entry>
-    <title>Bybit发现瞄准Claude Code用户的AI辅助macOS恶意软件</title>
-    <link href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMDdSaFZGOUVUSkVDVTlJSlBCbEdEdTJZUUNPQ0U0b19iVWV3VGV6MmllSnhTazd6UTFsMEpZSG9BdDBOUmpuUVFRSTQyS1dsOEt0YTlocGlBVkt2c2g5OWNIXzNtVC11VGttdkJacnFYUHYyVkRIai1BNWhDajZmeTB6Z0RVUmt6bDJsOWFZMWVlSVdXZ2lGNjFDc0drTWxFaFNPV2ZGQnRmc1NkdDlQTjgzNzIyMGdxWlBSZkNDY1BoYzBmTVF0R1VZTmFNekNlTXhPT2M2NVcxdW9PNXlVa19Ldkw?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-08/#google_news:article:00dcd87f37c755cc</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Bybit宣布其安全团队发现了一项针对搜索Claude Code（Anthropic的代理式编码工具）用户的AI辅助macOS恶意软件活动。这一发现表明，攻击者正在利用人工智能制作恶意软件来骗取开发者上钩。
-
-这很重要，因为它表明网络犯罪分子正积极瞄准快速发展的AI编码工具生态，这类工具的用户可能掌握宝贵的源代码、凭据及加密资产。同时，它也显示出大型加密货币交易所的安全研究已超越加密货币用户本身，延伸至更广泛的软件开发社区。
-
-该恶意软件专门针对macOS，并带有AI辅助特征，这意味着攻击者可能使用大型语言模型生成或优化了恶意代码。初步披露中未包含具体恶意软件家族、分发方式或受害者数量。</summary>
-  </entry>
-  <entry>
-    <title>Coinbase在加拿大为BTC、ETH和SOL推出受监管衍生品交易</title>
-    <link href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTFUwSE5JSF9oQjVoQjZQb3p2UjVYT2FZWFFSdlVERUN6N1BVT3BDSHpCa2x4dG1OYVBxMWNydXhTR0NfT0ZZc3BOMEktVG9sX2Z2OEtuS0RvTWJJZS00UjlEVW5VREZEQjA1NkQtWVJ6bmd4SkFSUXJzbjlPam12NG5PVDQ5eHM?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-08/#google_news:article:e7231a853fbedda5</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>Coinbase已在加拿大推出受监管的加密货币衍生品交易，为符合条件的用户提供比特币(BTC)、以太币(ETH)、Solana(SOL)等资产的永续合约及定期期货。此次上线涵盖23份期货合约，最高支持10倍杠杆。
-
-这标志着加拿大零售及机构客户可获得的受监管加密衍生品范围进一步扩大，也是Coinbase在现货交易之外推进&#x27;Everything Exchange&#x27;战略的重要一步。衍生品渠道拓宽有助于提升市场参与度，并为BTC、ETH和SOL交易者提供受监管的对冲工具。
-
-据报道，该衍生品系列包含23份期货合约，最高杠杆为10倍。这些产品仅面向符合条件的加拿大用户开放，并受加拿大受监管衍生品框架约束。</summary>
-  </entry>
-  <entry>
-    <title>Liquid 侧链暂停：联邦钱包流出 3,998 BTC</title>
-    <link href="https://thedefiant.io/news/security/liquid-sidechain-paused-after-3998-btc-leaves-federation-wallet"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:thedefiant.io_api_feed:0023433b27f57fec</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Blockstream 旗下 Liquid 侧链在几乎全部用于支持 L-BTC 的比特币储备（约 3,998 BTC）被提取至一个单一地址后，暂停了其桥接节点。收款方在交易中写入“我们是白帽黑客”。
-
-此事件影响重大，因为 L-BTC 是一种 1:1 比特币锚定资产，其锚定的安全性取决于联邦钱包的储备。如果被提取的比特币无法妥善保管并归还，Liquid 及同类侧链的信任可能受到动摇。
-
-该笔转账使联邦钱包中的比特币储备几乎归零，在资金归还前可能无法进行 peg-out（脱钩提现）。地址所有者的“我们是白帽黑客”信息暗示这是一次声明的救援行动，但尚未有官方确认发布。</summary>
-  </entry>
-  <entry>
-    <title>白帽黑客提取3.2亿美元比特币，Liquid网络暂停</title>
-    <link href="https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:www.theblock.co_rss.xml:d1e5d6fc899ed822</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Blockstream已暂停比特币侧链Liquid Network，此前据称白帽黑客提取了约3.2亿美元的比特币。多个交易所已暂停LBTC的充值提现，Blockstream正试图与相关人士取得联系。
-
-这是比特币侧链上规模最大的安全事件之一，引发了对比特币二层方案及LBTC等锚定资产安全性的担忧。网络暂停与交易所停提可能影响Liquid Network相关资产的用户与流动性，凸显了可信侧链模式中依然存在的风险。
-
-据报道，本次提取涉及在Liquid侧链上持有的约3.2亿美元比特币，但作案者仅被称为“所谓的”白帽黑客，其声称出于安全目的而行动的伦理主张尚未得到证实。在Blockstream联系相关方并调查期间，该网络仍处于暂停状态。</summary>
-  </entry>
-  <entry>
-    <title>Tether 支持的 Orionx 因审计发现 700 万美元托管缺口而关闭</title>
-    <link href="https://cointelegraph.com/news/orionx-shut-down-7-million-move-outside-wallets?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-07/#rss:cointelegraph.com_rss:2a55d9425dc08713</id>
-    <updated>2026-09-07T00:00:00Z</updated>
-    <summary>Tether 支持的智利加密货币交易所 Orionx 宣布永久关闭，此前法务审计发现超过 700 万美元的客户资产已转移到其未管理的钱包。该公司表示将尽力返还客户资产，目前提现已临时暂停。
-
-这一事件凸显了即使是风投支持的交易所也存在托管与偿付能力风险，而且距离 Tether 领投 Orionx 的 A 轮融资并进军拉美市场仅过去 15 个月。它可能削弱用户对中心化交易所的信任，并促使监管机构和投资者更严格地审视托管控制。
-
-法务审计将 Orionx 的内部记录与链上数据对比，发现其托管地址中的 Bitcoin、Ether、XRP 和 POL 均存在缺口。Orionx 已对联合创始人 Roberto Zibert 和 Joaquín Díaz 提起刑事诉讼，二人否认有不当行为；据称相关转账发生在 2018 年至 2021 年之间，部分流向其他加密平台。</summary>
   </entry>
 </feed>

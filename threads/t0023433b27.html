@@ -1,13 +1,17 @@
 ---
 layout: default
-title: "Liquid Network 在 3.2 亿美元漏洞事件后恢复出块"
+title: "Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵"
 permalink: /threads/t0023433b27/
 interface_language: zh
-description: "Liquid Network 在部署紧急软件更新后于周四恢复出块，但作为预防措施，交易与锚定（peg）操作仍然暂停，网络正在被持续监控以确认完全稳定。此次重启源于 9 月 6 日的事件：约 4,000 枚 BTC（价值约 3.2 亿美元）通过 Elements 软件中的一个漏洞从该网络的联合钱包中被提取。  Liquid 是规模最大、运行时间最长的比特币侧链"
+description: "Blockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out"
 page_type: archive
 ---
 
-<div class="archive-stats"><div class="archive-stat"><strong>4</strong><span>天</span></div><div class="archive-stat"><strong>5</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-11</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-11">2026-09-11</time><div class="archive-row-body"><h3><a href="https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener noreferrer">Liquid Network 在 3.2 亿美元漏洞事件后恢复出块</a></h3><p class="archive-row-summary">Liquid Network 在部署紧急软件更新后于周四恢复出块，但作为预防措施，交易与锚定（peg）操作仍然暂停，网络正在被持续监控以确认完全稳定。此次重启源于 9 月 6 日的事件：约 4,000 枚 BTC（价值约 3.2 亿美元）通过 Elements 软件中的一个漏洞从该网络的联合钱包中被提取。
+<div class="archive-stats"><div class="archive-stat"><strong>5</strong><span>天</span></div><div class="archive-stat"><strong>6</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-12</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-12">2026-09-12</time><div class="archive-row-body"><h3><a href="https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit" target="_blank" rel="noopener noreferrer">Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵</a></h3><p class="archive-row-summary">Blockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out（跨链赎回）仍处于关闭状态。
+
+这是比特币侧链上规模最大的已确认损失之一，支撑 Liquid 上 L-BTC 的储备一度降至仅 197 枚 BTC，令市场开始质疑许多交易所与交易者依赖的联邦式跨链桥的安全假设。Blockstream 拒绝支付赎金的做法，也为基础设施开发者在面对以威胁索要漏洞赏金的攻击者时如何应对，树立了一个公开先例。
+
+根本原因是 Liquid 节点缓存 range proof（范围证明）验证结果的方式存在缺陷，攻击者据此凭空铸造无背书支持的 L-BTC，并通过持有 peg-out 授权密钥的联邦成员 SideSwap 将其兑换为储备中的比特币；据报并未发生私钥被盗。Blockstream 在十小时内修补了桥节点，并于周三发布 Elements v23.3.4，同时另行警告有骗子用假冒更新网站针对节点运营者行骗。</p><p class="archive-row-meta">The Defiant</p></div><span class="score-badge" data-tier="good">8.5</span></li><li class="archive-row"><time datetime="2026-09-11">2026-09-11</time><div class="archive-row-body"><h3><a href="https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener noreferrer">Liquid Network 在 3.2 亿美元漏洞事件后恢复出块</a></h3><p class="archive-row-summary">Liquid Network 在部署紧急软件更新后于周四恢复出块，但作为预防措施，交易与锚定（peg）操作仍然暂停，网络正在被持续监控以确认完全稳定。此次重启源于 9 月 6 日的事件：约 4,000 枚 BTC（价值约 3.2 亿美元）通过 Elements 软件中的一个漏洞从该网络的联合钱包中被提取。
 
 Liquid 是规模最大、运行时间最长的比特币侧链之一，这次提取掏空了其联合钱包约 95% 的余额，暴露出联邦式跨链桥设计中高度集中的信任如何转化为系统性风险。事件直接波及 L-BTC 持有者、在 Liquid 上发行代币化资产与稳定币的机构，以及依赖其进行结算的交易所和做市商。
 

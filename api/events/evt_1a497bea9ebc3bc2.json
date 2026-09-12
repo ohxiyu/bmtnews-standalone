@@ -53,14 +53,27 @@
       "current_state_en": "Binance's pre-IPO Anthropic perpetual contract traded above $2,100, implying a valuation over $2.1 trillion based on Binance's estimated one-billion-share denominator, well above Anthropic's latest $965 billion financing valuation.",
       "detailed_summary_zh": "Binance's pre-IPO Anthropic perpetual contract traded above $2,100, implying a valuation over $2.1 trillion based on Binance's estimated one-billion-share denominator, well above Anthropic's latest $965 billion financing valuation.",
       "detailed_summary_en": "Binance's pre-IPO Anthropic perpetual contract traded above $2,100, implying a valuation over $2.1 trillion based on Binance's estimated one-billion-share denominator, well above Anthropic's latest $965 billion financing valuation.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "pre-IPO 永续合约是一种合成永续期货产品，用于追踪市场对某家私营公司在公开上市前估值的预期，交易者以杠杆方式对估值建仓，但不会获得任何股份。永续合约没有到期日，交易所通过多空之间的定期资金费支付使合约价格贴近参考价，当保证金不足时仓位会被强制平仓。Anthropic 是一家 AI 开发公司，已提交保密的 S-1 草案但尚未上市，因此目前不存在可供币安合约锚定的公开交易 Anthropic 股票指数。DefiLlama 数据显示，9月9日 14:45 UTC 该合约报 2,168.26 美元，未平仓合约为 2,610 万美元，24 小时成交量为 2,476 万美元；稍后的快照显示标记价格为 2,122.74 美元，未平仓合约 24 小时增长 6.1%，爆仓金额约 24.3 万美元。",
+      "background_en": "A pre-IPO perpetual contract is a synthetic perpetual futures product that tracks the market's expectation of a private company's valuation before it lists on a public exchange; traders take leveraged positions on that valuation without receiving any shares. Perpetual contracts have no expiry, so exchanges use periodic funding payments between longs and shorts to keep the contract price near its reference, and positions can be forcibly liquidated when margin falls short. Anthropic is an AI developer that has filed a confidential draft S-1 while remaining private, so no publicly traded Anthropic share index exists yet to anchor the Binance contract. DefiLlama showed the contract at $2,168.26 at 14:45 UTC on Sept. 9 with $26.1 million in open interest and $24.76 million in 24-hour volume, while a later snapshot put the mark at $2,122.74 with open interest up 6.1% and roughly $243,000 in liquidations.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径主要经由加密衍生品交易场所而非股票市场：ANTHROPICUSDT 的杠杆仓位占用 USDT 保证金，并在币安内部产生爆仓与资金费流动，由此形成的估值数字又会传导至与 AI 相关的加密叙事情绪。由于未平仓合约规模约 2,600 万美元，相对加密市场整体深度而言直接敞口有限，风险更多集中于该交易场所本身以及持有这些合成仓位的交易者。",
+      "market_impact_en": "The transmission path runs through crypto derivatives venues rather than equity markets: leveraged ANTHROPICUSDT positions tie up USDT collateral and generate liquidations and funding flows inside Binance, and the resulting headline number feeds sentiment around AI-linked crypto narratives. With open interest around $26 million, the direct footprint is small relative to overall crypto market depth, so the exposure is concentrated in the venue and in traders holding these synthetic positions.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.binance.com/en/support/faq/detail/87bf29a506b647159fc6ace70d38f252",
+          "title": "Pre-IPO Listing & Pricing Methodology | binane pre-ipo, binance..."
+        },
+        {
+          "url": "https://docs.evedex.com/key-features-and-components/trading-platform-and-matching-engine/pre-ipo-perpetual-contracts",
+          "title": "Pre-IPO Perpetual Contracts | Whitepaper | EVEDEX Docs"
+        },
+        {
+          "url": "https://docs.asterdex.com/trading/perpetuals/pre-ipo-perpetuals",
+          "title": "Pre-IPO Perpetuals | Aster"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:74850bb7fe935c97"

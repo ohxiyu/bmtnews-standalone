@@ -50,14 +50,27 @@
       "current_state_en": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
       "detailed_summary_zh": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
       "detailed_summary_en": "Anthropic reported that Russian- and Chinese-speaking operators used its Claude model to automate cyberattacks against more than 20 government, diplomatic, and intelligence targets, while a Mali consultant built a mass-surveillance platform with the AI.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "零日漏洞是指厂商尚不知晓的软件缺陷，因此在被利用时还没有可用补丁；而网络设备固件指的是防火墙、路由器和 VPN 网关等部署在企业与政府网络边缘的专用设备上所运行的嵌入式软件。用 AI 智能体自动化“攻击链”，意味着由模型把漏洞发现、利用程序构造与横向移动等环节串联起来，其速度与规模远超纯人工操作。由于这类设备部署广泛且很少被审查，其固件中的漏洞对攻击者而言价值极高。",
+      "background_en": "A zero-day vulnerability is a software flaw unknown to the vendor, so no patch exists at the moment of exploitation, and network-appliance firmware refers to the embedded software running on dedicated devices such as firewalls, routers and VPN gateways that sit at the edge of enterprise and government networks. Automating the \"attack chain\" with AI agents means using models to chain together vulnerability discovery, exploit construction and lateral movement at speeds and scales humans alone cannot match. Because these appliances are widely deployed and rarely inspected, findings in their firmware are especially valuable to attackers.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "加密交易所、托管机构和 DeFi 协议与报告所述的企业网络与固件供应链高度重合，而且它们本就是经济动机攻击者眼中价值最高的目标之一，因此并行入侵行动成本的下降会直接转化为这些场所的运营风险渠道。监控案例则牵涉第二条渠道——自托管和链上匿名活动使用者的金融隐私预期——这可能影响市场对隐私类资产的 sentiment 以及中心化平台的合规姿态。",
+      "market_impact_en": "Crypto exchanges, custodians and DeFi protocols sit on the same enterprise networking and firmware supply chain described in the report, and they are already among the highest-value targets for financially motivated attackers, so a fall in the cost of running parallel intrusion campaigns is a direct operational-risk channel for those venues. The surveillance case touches a second channel — expectations of financial privacy for users of self-custody and pseudonymous on-chain activity — which can feed into sentiment around privacy-focused assets and compliance posture at centralized platforms.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Zero-day_vulnerability",
+          "title": "Zero-day vulnerability"
+        },
+        {
+          "url": "https://www.afcea.org/signal-media/cyber-edge/automating-cyber-kill-chain-agentic-ai",
+          "title": "Automating the Cyber Kill Chain With Agentic AI | AFCEA International"
+        },
+        {
+          "url": "https://arxiv.org/html/2503.11917v3",
+          "title": "A Framework for Evaluating Emerging Cyberattack Capabilities of AI"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:5a77cf97459963ef"
