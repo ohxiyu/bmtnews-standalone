@@ -4,31 +4,36 @@
   "url": "https://bmt.news/events/evt_18fc53f138aba645/",
   "json": "https://bmt.news/api/events/evt_18fc53f138aba645.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "closed",
   "category": "crypto",
   "title": {
     "zh": "Liquid Network resumes block production after $320M exploit",
     "en": "Liquid Network resumes block production after $320M exploit"
   },
   "current_state": {
-    "zh": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery.",
-    "en": "The Liquid Network resumed block production after deploying emergency software updates following a $320 million Bitcoin withdrawal exploit, though transactions and peg operations remain suspended during recovery."
+    "zh": "Liquid Network 已恢复区块生产，SideSwap 重新开放 L-BTC 交易，但联邦锚定退出仍暂停；储备仅覆盖约85%的 L-BTC 供应，缺口约627 BTC，恢复仍在进行中。",
+    "en": "Liquid Network has resumed block production and SideSwap reopened L-BTC trading, but federation peg-outs remain suspended; reserves cover only ~85% of L-BTC supply, a ~627 BTC shortfall, and recovery is ongoing."
   },
   "first_seen_at": "2026-09-10T22:43:07.725464+00:00",
-  "last_updated_at": "2026-09-10T22:43:07.725464+00:00",
-  "last_material_change_at": "2026-09-10T22:43:07.725464+00:00",
+  "last_updated_at": "2026-09-12T04:55:43.358323+00:00",
+  "last_material_change_at": "2026-09-12T04:55:43.358323+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "l-btc",
     "liquid",
-    "liquid-network"
+    "liquid-network",
+    "reserves"
   ],
   "identifiers": [],
   "topics": [
     "bitcoin-sidechain",
     "blockchain-recovery",
+    "l-btc",
     "liquid-network",
+    "peg-out-suspension",
+    "reserves",
     "security-incident"
   ],
   "updates": [
@@ -78,6 +83,44 @@
         {
           "url": "https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_e4935ec08ab9160a",
+      "event_id": "evt_18fc53f138aba645",
+      "occurred_at": "2026-09-12T00:30:41Z",
+      "published_at": "2026-09-12T00:30:41Z",
+      "first_seen_at": "2026-09-12T04:55:43.358323Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "L-BTC resumes trading with reserves covering just 85% of supply",
+      "title_en": "L-BTC resumes trading with reserves covering just 85% of supply",
+      "what_changed_zh": "SideSwap 在 Liquid 恢复区块生产后重新开放了 L-BTC 市场，但联邦锚定退出仍暂停；9月10日数据显示储备仅覆盖约85.15%的L-BTC供应，缺口约627 BTC。",
+      "what_changed_en": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended; Sept. 10 data shows reserves cover only ~85.15% of L-BTC supply, a ~627 BTC shortfall.",
+      "current_state_zh": "Liquid Network 已恢复区块生产，SideSwap 重新开放 L-BTC 交易，但联邦锚定退出仍暂停；储备仅覆盖约85%的 L-BTC 供应，缺口约627 BTC，恢复仍在进行中。",
+      "current_state_en": "Liquid Network has resumed block production and SideSwap reopened L-BTC trading, but federation peg-outs remain suspended; reserves cover only ~85% of L-BTC supply, a ~627 BTC shortfall, and recovery is ongoing.",
+      "detailed_summary_zh": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
+      "detailed_summary_en": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:62c40af23e13e1cc"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }
