@@ -36,20 +36,24 @@ def build(font=None):
             x += glyph.width * scale
         word = svg(round(x, 3), 100, f'<path d="{pen.getCommands()}"/>')
         (ROOT / "brand/wordmark-path.svg").write_text(word)
-    mark = ET.parse(ROOT / "brand/mark.svg").find("s:path", NS).attrib["d"]
+    parts = {p.attrib["id"]: p.attrib["d"] for p in ET.parse(ROOT / "brand/mark.svg").findall("s:path", NS)}
     word = ET.parse(ROOT / "brand/wordmark-path.svg").find("s:path", NS).attrib["d"]
 
-    def symbol(color, transform=""):
-        return f'<path fill="{color}" fill-rule="evenodd" transform="{transform}" d="{mark}"/>'
+    def symbol(color, transform="", monochrome=False):
+        colors = {"body": color, "eye": "none" if monochrome else "#ffcc29",
+                  "pupil": color if monochrome else INK}
+        return ''.join(f'<path fill="{colors[name]}" fill-rule="evenodd" transform="{transform}" d="{path}"/>'
+                       for name, path in parts.items())
 
-    def lockup(mark_color, text_color):
-        return (symbol(mark_color, "translate(20 24) scale(.25)") +
+    def lockup(mark_color, text_color, monochrome=False):
+        return (symbol(mark_color, "translate(20 24) scale(.25)", monochrome) +
                 f'<path fill="{text_color}" transform="translate(176 34)" d="{word}"/>')
 
     for name, color in [("blue", BLUE), ("dark", DARK_BLUE), ("black", INK), ("white", "#ffffff")]:
-        (KIT / f"bmtnews-mark-{name}.svg").write_text(svg(512, 512, symbol(color)))
+        mono = name in {"black", "white"}
+        (KIT / f"bmtnews-mark-{name}.svg").write_text(svg(512, 512, symbol(color, monochrome=mono)))
         text = "#e8e6e1" if name == "dark" else (INK if name == "blue" else color)
-        (KIT / f"bmtnews-lockup-{name}.svg").write_text(svg(670, 176, lockup(color, text)))
+        (KIT / f"bmtnews-lockup-{name}.svg").write_text(svg(670, 176, lockup(color, text, mono)))
 
     app = svg(512, 512, f'<rect width="512" height="512" rx="108" fill="{BLUE}"/>' +
               symbol("#ffffff", "translate(66.56 66.56) scale(.74)"))
@@ -62,7 +66,7 @@ def build(font=None):
     (KIT / "bmtnews-maskable.svg").write_text(maskable)
     (KIT / "bmtnews-apple.svg").write_text(apple)
     for name, content in [("app-icon.svg", app), ("app-icon-maskable.svg", maskable),
-                          ("bmtnews-favicon-v1.svg", app)]:
+                          ("bmtnews-favicon-v2.svg", app)]:
         (IMAGES / name).write_text(content)
     social = svg(1200, 630, f'<rect width="1200" height="630" fill="{LIGHT}"/>' +
                  '<g transform="translate(100 180) scale(1.5)">' + lockup(BLUE, INK) + '</g>' +
@@ -82,12 +86,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.package:
         files = [(p, p.name) for p in sorted(KIT.iterdir()) if p.suffix in {".svg", ".png", ".md"}]
-        files += [(p, "icons/" + p.name) for p in sorted(IMAGES.glob("bmtnews-*v1.*"))]
+        files += [(p, "icons/" + p.name) for p in sorted(IMAGES.glob("bmtnews-*v2.*"))]
         files += [(ROOT / "docs/favicon.ico", "icons/favicon.ico")]
         files += [(p, "source/" + p.name) for p in sorted((ROOT / "brand").iterdir()) if p.is_file()]
-        with zipfile.ZipFile(KIT / "bmtnews-media-kit-v1.zip", "w", zipfile.ZIP_DEFLATED) as archive:
+        with zipfile.ZipFile(KIT / "bmtnews-media-kit-v2.zip", "w", zipfile.ZIP_DEFLATED) as archive:
             for path, name in files:
-                info = zipfile.ZipInfo(name, (2026, 9, 7, 0, 0, 0))
+                info = zipfile.ZipInfo(name, (2026, 9, 13, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o644 << 16
                 archive.writestr(info, path.read_bytes())

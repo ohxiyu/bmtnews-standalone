@@ -5,28 +5,31 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "修复Square定时漏触发：复用Cloudflare队列检查",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/78",
-  "owner": "Codex / square-distribution",
-  "branch": "agent/square-scheduler-recovery",
-  "last_verified_commit": "ae5786ff7bb0e256d5da92fd81a4b285208e7691",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/79",
+  "goal": "替换经用户确认的圆润 Logo，更新媒体包并合并上线",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/82",
+  "owner": "Codex / brand-v2（本任务发布整合负责人）",
+  "branch": "agent/brand-v2",
+  "last_verified_commit": "43fb8a0697c4fa0a25d389384179c611cd60593c",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/83",
   "completed": [
-    "确认9月12日14条计划已生成，但11:33前没有任何schedule运行",
-    "手动恢复run34670696550成功发送1条，保留昨日7条sent；今日剩余13条",
-    "新增Cloudflare共享5分钟触发、queue_only模式、在途任务保护；不改变日报检查频率"
+    "核验远端 main 和开放 PR，认领 Issue #82；用户明确授权本任务合并上线",
+    "SVG 母版统一外圆角 64、内凹 32、留白 12；黄色圆环与同心圆点",
+    "更新媒体、网站、PWA、favicon 和分享卡；v2 地址独立，旧 v1 文件保留"
   ],
   "unfinished": [
-    "PR79已提交；待用户授权合并和部署现有Worker",
-    "部署后验证自主触发、剩余队列推进和平台显示"
+    "提交 PR 并核验最终 HEAD 的远端检查",
+    "检查通过后合并，等待 Pages 生产成功并验收公开版本",
+    "发布后通过文档 PR 回写最终五阶段证据"
   ],
   "validation": [
-    "Worker typecheck通过，44项Worker测试通过",
-    "uv sync frozen dev成功；773项Python测试通过，1既有warning；治理、types check与Worker dry-run通过"
+    "uv sync --frozen --extra dev --offline 成功；使用锁文件本机缓存",
+    "母版生成及 sharp PNG/ICO/ZIP 导出成功；773 项 Python、37 项 Node 测试通过",
+    "治理与 diff 检查通过；桌面、390px 手机、深色、媒体页和分享长卡本地验收通过"
   ],
   "unverified": [
-    "新调度器未部署，未验证真实Cloudflare触发和现有token对Square workflow的权限",
-    "npm ci提示既有6项开发依赖漏洞，未做越界强制升级"
+    "新 Logo 尚未生产发布；主站替换前资源为 sha256-f2e843a8988f",
+    "操作系统已安装图标的刷新时间不能由网站保证",
+    "以下 production 为继承的旧快照；不代表调度任务尚未部署，相关 PR #81 #77 #68 由原负责人处理"
   ],
   "production": {
     "source_commit": "679ea58cefaa6ae94718ff3c938ad9872e08a2ff",
@@ -37,9 +40,9 @@
     "verified_at": "2026-09-11"
   },
   "blockers": [
-    "合并/部署需要当前任务授权；本地测试不能替代生产定时验收"
+    "无授权阻塞；仅允许本任务品牌变更，不合并其他发布记录 PR、不改调度或认证"
   ],
-  "next_action": "检查PR与CI；授权后合并并部署现有dispatcher，核验queue_only生产步骤及发帖；不要清空队列。",
+  "next_action": "完成品牌测试和视觉验收，再检查 exact-head CI、合并并核验 Cloudflare 生产；使用后续文档 PR 更新证据。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -47,7 +50,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-12-square-scheduler-recovery.md"
+  "evidence": "project-docs/releases/2026-09-13-brand-v2.md"
 }
 ```
 
