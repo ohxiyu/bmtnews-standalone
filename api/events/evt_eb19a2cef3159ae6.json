@@ -15,11 +15,11 @@
     "en": "Revolut has confirmed it was hit by a sophisticated impersonation scam using a legitimate government agency domain email, exposing identity, verification and Bitcoin transaction data of a limited number of customers; it blocked the email address and alerted the agency, law enforcement and regulators, said systems and customer funds were unaffected, but did not disclose the number affected or the impersonated agency."
   },
   "first_seen_at": "2026-09-12T15:42:55.560568+00:00",
-  "last_updated_at": "2026-09-12T18:34:38.398263+00:00",
+  "last_updated_at": "2026-09-12T22:27:59.541525+00:00",
   "last_material_change_at": "2026-09-12T18:34:38.398263+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 2,
+  "sources_count": 3,
   "entities": [
     "fake",
     "government",
@@ -103,12 +103,19 @@
       "references": [],
       "confidence": 0.96,
       "story_ids": [
-        "rss:decrypt.co_feed:16161750d1130185"
+        "rss:decrypt.co_feed:16161750d1130185",
+        "rss:www.theblock.co_rss.xml:ca3ff9c93ca5a01e"
       ],
       "sources": [
         {
           "url": "https://decrypt.co/378114/revolut-passports-bitcoin-activity-data-breach",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.theblock.co/news/business/2026-09-12-revolut-says-customer-kyc-bitcoin-transaction-data-exposed-after-fake-request-from-govt-domain-414516",
+          "label": "The Block",
           "source_type": "rss",
           "official": false
         }
