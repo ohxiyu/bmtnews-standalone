@@ -168,10 +168,11 @@
         "post_id": "366106557279914"
       },
       "eceb6a2cc35fbc837dca5fcd8af31d97f3fdb80eb0304160193df846759121c0": {
-        "status": "pending",
+        "status": "sent",
         "rank": 3,
         "text_hash": "1f80251e3ed0b583c727a2ca798f6941ad57b4590834f7aff4bf8ac7563db80f",
-        "attempted_at": "2026-09-13T12:21:18.739471+08:00"
+        "attempted_at": "2026-09-13T12:21:18.739471+08:00",
+        "post_id": "366109003701523"
       }
     }
   },
@@ -185,12 +186,6 @@
     "2026-09-13": {
       "revision": "78c868cbae18a8ca15a3eec7d97b821b3d2da6961ef729fa09d1bd81ae88ff17",
       "jobs": [
-        {
-          "id": "eceb6a2cc35fbc837dca5fcd8af31d97f3fdb80eb0304160193df846759121c0",
-          "text": "Blockstream拒绝Liquid攻击者近600 BTC赏金索求\n\n9月11日，Blockstream公开拒绝了Liquid攻击者提出的、要求由其自有资金支付近600枚比特币（约5000万美元）赏金的主张；此前该攻击者已归还9月6日漏洞中被盗约3996枚比特币中的3400枚。Blockstream表示，若剩余资金未主动归还，将改由执法机构、交易所、服务商和取证专家进行追索。\n\n这场对峙为加密协议如何处理漏洞谈判树立先例，在威慑与返还之间权衡：拒绝付款可能遏制未来攻击，但也可能让黑客失去主动归还资金的动机。这直接影响Liquid用户——该网络目前仅约85%由储备支撑，且peg-in与peg-out均处于停用状态。\n\n攻击者要求10%的赏金，并警告否则持币者可能面临约15%的资金缺口；SideSwap表示，发起攻击的钱包资金经跨链桥可追溯至Tornado Cash，且攻击者在成功铸造前已用70笔类似交易演练过该模式。\n\n来源：https://cryptoslate.com/blockstream-bets-600-bitcoin-by-rejecting-liquid-hackers-50-million-bounty-demand/\nBMTNews · 2026-09-13 · https://bmt.news",
-          "rank": 3,
-          "due_at": "2026-09-13T11:51:00+08:00"
-        },
         {
           "id": "608569398c4ac8663bed1562b42a3a2bb6f4c56af1b65c4ecb63224372e0e3ee",
           "text": "SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量\n\n在 Liquid 网络以受控模式恢复出块后，SideSwap 于 9 月 10 日重新开放了全部 L-BTC 市场，但 Liquid Federation 的 peg-in 与 peg-out 仍然处于暂停状态。UTC 22:55 的链上读数显示，L-BTC 流通量为 4,229.33 枚，而被引用的联邦储备地址持有 3,601.47 BTC，意味着覆盖率约为 85.15%，缺口约为 627.85 BTC。\n\nL-BTC 与 BTC 的 1:1 锚定是 Liquid 侧链的核心价值主张，而 peg-out 暂停后，市场价格已不再能保证按面值赎回，持有者无法确定能收回全部价值。这使个人用户资金、在 Liquid 上发行和结算资产的机构，以及托管 L-BTC 的交易所直接暴露于风险之中，也令联邦制侧链的信任模型受到更严格的审视。\n\n交易与赎回回答的是不同问题：SideSwap 运营的是一个类中心化限价订单簿（CLOB）的市场，以 L-BTC 为基础资产、以已注册的 Liquid 资产为计价资产，其市场文档中并未列出直接的 L-BTC/BTC 订单簿。在文章发布时，公开渠道尚无可复现的重启后 L-BTC/BTC 价格、买卖价差、深度或滑点数据，因此实际折价或溢价无法测算；而储备比率属于实时读数（SideSwap 自身公布的 9 月 10 日数据为 4,205 枚 L-BTC 对 3,597 BTC，对应约 85.5% 覆盖率与 608 BTC 缺口），并非已确定的损失估算。\n\n来源：https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/\nBMTNews · 2026-09-13 · https://bmt.news",
