@@ -49,14 +49,27 @@
       "current_state_en": "Bedrock Protocol suffered a $2M crypto exploit, marking another confirmed DeFi security breach with direct user fund losses.",
       "detailed_summary_zh": "Bedrock Protocol suffered a $2M crypto exploit, marking another confirmed DeFi security breach with direct user fund losses.",
       "detailed_summary_en": "Bedrock Protocol suffered a $2M crypto exploit, marking another confirmed DeFi security breach with direct user fund losses.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Bedrock 是构建在以太坊上的协议，其被追踪的产品包括流动性质押与再质押代币 uniBTC、uniETH 和 uniIOTX；较新的 Bedrock 2.0 版本则把比特币资金分配到机构级收益金库中，涵盖 delta 中性、DeFi 借贷以及真实世界资产（RWA）等策略。流动性质押代币代表用户存入的加密资产加上累积收益，因此是对协议所持有资金池资产的可赎回索取权。由于这类代币具有可组合性，常被广泛用作其他 DeFi 平台的抵押品，所以发行方协议一旦被攻击，损失可能超出其自身用户范围。",
+      "background_en": "Bedrock is a protocol built on Ethereum whose tracked products include the liquid staking and restaking tokens uniBTC, uniETH and uniIOTX, and its newer Bedrock 2.0 iteration routes Bitcoin capital across institutional-grade yield vaults spanning delta-neutral, DeFi lending and real-world-asset strategies. Liquid staking tokens represent a user's deposited crypto plus accumulated rewards, so they are redeemable claims on pooled assets held by the protocol. Because these tokens are composable, they are widely reused as collateral across other DeFi venues, which is why an exploit at the issuing protocol can propagate losses beyond its own users.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导渠道主要来自 Bedrock 的收益型代币 uniBTC、uniETH 和 uniIOTX：若持有者选择退出，这些代币可能面临赎回压力或二级市场折价；同时，比特币流动性质押与再质押板块可能受到情绪层面的冲击，但相对较小的损失规模有助于限制影响范围。",
+      "market_impact_en": "The transmission channel runs mainly through Bedrock's yield-bearing tokens, uniBTC, uniETH and uniIOTX, which could face redemption pressure or secondary-market discounts if holders exit, while the broader BTC liquid-staking and restaking sector may see a sentiment hit that is contained by the relatively small size of the loss.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://defillama.com/protocol/bedrock",
+          "title": "Bedrock TVL, Fees & Revenue"
+        },
+        {
+          "url": "https://www.bedrock.technology/",
+          "title": "Bedrock 2.0 — Intelligent Yield Engine for Bitcoin Capital"
+        },
+        {
+          "url": "https://beincrypto.com/balancer-exploit-security-breach-defi-losses/",
+          "title": "Balancer Hit by $128.6 Million Exploit in Latest DeFi Security Breach"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:3a475b1ab5433854"

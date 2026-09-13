@@ -23,14 +23,14 @@
       "summary_en": "Revolut has confirmed it was hit by a sophisticated impersonation scam using a legitimate government agency domain email, exposing identity, verification and Bitcoin transaction data of a limited number of customers; it blocked the email address and alerted the agency, law enforcement and regulators, said systems and customer funds were unaffected, but did not disclose the number affected or the impersonated agency.",
       "latest_update_zh": "Revolut 进一步确认该事件为利用合法政府机构域名邮箱实施的复杂冒充诈骗，并披露泄露数据还包括护照/驾照副本、验证自拍、联系方式、IBAN/钱包参考号、提现记录和完整比特币交易历史；受影响客户数量有限，公司已封锁该邮箱并通知该机构、执法部门和监管机构，系统与客户资金未受影响。",
       "latest_update_en": "Revolut further confirmed the incident was a sophisticated impersonation scam using a legitimate government agency domain email, and disclosed that exposed data also included passport/driver's license copies, verification selfies, contact details, IBAN/wallet reference numbers, withdrawal records and full Bitcoin transaction histories; a limited number of customers were affected, the company blocked the email address and alerted the agency, law enforcement and regulators, and said systems and customer funds were unaffected.",
-      "background_zh": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
-      "background_en": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
+      "background_zh": "作为提供类银行账户与加密交易服务的受监管金融科技公司，Revolut 必须依据“了解你的客户”（KYC）和反洗钱规则收集护照等身份文件，并用自拍照进行核验。这意味着单一服务商可能集中掌握大量身份文件，以及能把个人与其比特币持仓对应起来的交易历史。所谓“wrench attack”（扳手攻击），是指通过人身暴力或威胁来夺取受害者的加密资产，它绕开了密码学防护，直接针对人而非钱包，这类犯罪随着公众对“谁持有大量加密资产”的了解增加而不断上升。",
+      "background_en": "As a regulated fintech offering banking-style accounts and crypto trading, Revolut is required by know-your-customer (KYC) and anti-money-laundering rules to collect identity documents such as passports, and to verify them with a selfie. That means a single provider can hold a concentrated trove of identity documents plus the transaction history that maps a person to their Bitcoin holdings. A \"wrench attack\" refers to the use of physical force or intimidation to seize a victim's crypto assets, bypassing cryptography entirely by targeting the person instead of the wallet — a crime category that has grown alongside public knowledge of who holds large crypto positions.",
       "latest_summary_zh": "Revolut disclosed that it handed over customer passports, verification selfies, and full Bitcoin transaction histories to attackers who spoofed a legitimate government email domain, in what it called a sophisticated impersonation scam affecting a limited number of customers.",
       "latest_summary_en": "Revolut disclosed that it handed over customer passports, verification selfies, and full Bitcoin transaction histories to attackers who spoofed a legitimate government email domain, in what it called a sophisticated impersonation scam affecting a limited number of customers.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "链上调查员 ZachXBT 表示，此次泄露似乎针对的是高净值用户，进一步加剧了外界对“扳手攻击”的担忧；包括 Marc Zeller 在内的社交媒体批评者认为，这起事件说明 KYC 规则几乎没有带来实际好处，反而让许多用户陷入危险。",
+      "discussion_en": "Onchain investigator ZachXBT said the breach appeared to target high-net-worth users, fueling concern about wrench attacks; critics on social media, including Marc Zeller, argued the episode shows KYC rules have produced little upside while putting many users in harm's way.",
+      "market_impact_zh": "这条传导路径通过托管与身份数据而非资产供给发挥作用：泄露使 Revolut 的加密资产客户面临被针对性攻击的风险，也可能引发监管方对交易所和金融科技公司 KYC 数据处理方式的压力，并在 Revolut 可能上市前形成声誉层面的不确定性；由于资金与私钥均未受损，对比特币的供给、流动性或价格没有直接的机制性影响。",
+      "market_impact_en": "The transmission path runs through custody and identity data rather than asset supply: the leak exposes Revolut's crypto-holding customers to targeting, and it could trigger regulatory pressure on KYC data handling across exchanges and fintechs, with reputational overhang for Revolut ahead of a possible listing; since no funds or private keys were compromised, there is no direct mechanical effect on Bitcoin's supply, liquidity or price.",
       "score": 8.5,
       "source_links": [
         {
@@ -49,7 +49,16 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/",
+          "title": "Revolut confirms customer data breach through fake government requests | TechCrunch"
+        },
+        {
+          "url": "https://www.trmlabs.com/resources/blog/the-rise-of-wrench-attacks-and-crypto-related-violent-crime",
+          "title": "The Rise of Wrench Attacks and Crypto-related Violent Crime"
+        }
+      ]
     },
     {
       "thread_id": "evt_18fc53f138aba645",
@@ -78,10 +87,10 @@
       "background_en": "Liquid is an open-source Bitcoin sidechain launched by Blockstream in 2018 that enables faster, more confidential BTC transfers and the issuance of digital assets such as stablecoins, tokenized securities and bonds. Users hold L-BTC, which is pegged 1:1 to BTC and backed by real bitcoin locked in a wallet collectively managed by federated nodes called functionaries. Elements is the open-source codebase underpinning the network, and its Confidential Transactions feature uses range proofs to validate that transaction amounts are legitimate without revealing them publicly; a flaw in the caching of those verifications is what the attacker exploited.",
       "latest_summary_zh": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
       "latest_summary_en": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
-      "discussion_zh": "传导渠道主要是锚定信心：由于锚定操作与 PAK 授权提现均被暂停，L-BTC 兑换为 BTC 的赎回通道受限，这直接影响在 Liquid 上结算的交易所、发行方和流动性提供者，包括与 SideSwap 相关的退出路径。该事件还可能推动市场重新评估联邦式比特币二层与跨链桥设计中的托管风险，而 BTC/L-BTC 储备中尚未追回的约 598 枚 BTC 缺口仍是待解决的关键变量。",
-      "discussion_en": "The transmission channel is peg confidence: with peg operations and PAK-authorized peg-outs suspended, the redemption path connecting L-BTC to BTC is constrained, which bears on venues, issuers and liquidity providers that settle on Liquid, including SideSwap-linked exits. The incident also feeds into a broader reassessment of custody and federation risk across federated Bitcoin layer-2 and bridge designs, and the outstanding ~598 BTC shortfall in the BTC/L-BTC reserve is the key variable still being resolved.",
-      "market_impact_zh": "传导渠道主要是锚定信心：由于锚定操作与 PAK 授权提现均被暂停，L-BTC 兑换为 BTC 的赎回通道受限，这直接影响在 Liquid 上结算的交易所、发行方和流动性提供者，包括与 SideSwap 相关的退出路径。该事件还可能推动市场重新评估联邦式比特币二层与跨链桥设计中的托管风险，而 BTC/L-BTC 储备中尚未追回的约 598 枚 BTC 缺口仍是待解决的关键变量。",
-      "market_impact_en": "The transmission channel is peg confidence: with peg operations and PAK-authorized peg-outs suspended, the redemption path connecting L-BTC to BTC is constrained, which bears on venues, issuers and liquidity providers that settle on Liquid, including SideSwap-linked exits. The incident also feeds into a broader reassessment of custody and federation risk across federated Bitcoin layer-2 and bridge designs, and the outstanding ~598 BTC shortfall in the BTC/L-BTC reserve is the key variable still being resolved.",
+      "discussion_zh": "直接暴露风险的是 L-BTC 持有者与 SideSwap 等 Liquid 上的交易场所：在联邦 peg-out 暂停的情况下，L-BTC 交易的是一个仅由部分储备支撑的债权，而非可赎回为 BTC 的索取权；任何折价都会通过通常连接这两种资产的赎回套利渠道传导，而该渠道目前已被关闭。托管 L-BTC 或在 Liquid 上结算代币化资产的交易所与发行方，面临托管与流动性层面的不确定性；该事件也会加剧市场对联邦制侧链与跨链桥信任模型的审视，进而影响围绕 BTC 二层资产的普遍情绪。",
+      "discussion_en": "The direct exposure sits with L-BTC holders and Liquid venues such as SideSwap: with federation peg-outs suspended, L-BTC trades as a claim on a fractionally backed reserve rather than a redeemable claim on BTC, and any discount transmits through the redemption-arbitrage channel that normally links the two assets — a channel that is currently closed. Exchanges and issuers that custody L-BTC or settle tokenized assets on Liquid face custody and liquidity uncertainty, and the episode feeds broader scrutiny of federated sidechain and bridge trust models, which can weigh on sentiment toward BTC layer-2 assets.",
+      "market_impact_zh": "直接暴露风险的是 L-BTC 持有者与 SideSwap 等 Liquid 上的交易场所：在联邦 peg-out 暂停的情况下，L-BTC 交易的是一个仅由部分储备支撑的债权，而非可赎回为 BTC 的索取权；任何折价都会通过通常连接这两种资产的赎回套利渠道传导，而该渠道目前已被关闭。托管 L-BTC 或在 Liquid 上结算代币化资产的交易所与发行方，面临托管与流动性层面的不确定性；该事件也会加剧市场对联邦制侧链与跨链桥信任模型的审视，进而影响围绕 BTC 二层资产的普遍情绪。",
+      "market_impact_en": "The direct exposure sits with L-BTC holders and Liquid venues such as SideSwap: with federation peg-outs suspended, L-BTC trades as a claim on a fractionally backed reserve rather than a redeemable claim on BTC, and any discount transmits through the redemption-arbitrage channel that normally links the two assets — a channel that is currently closed. Exchanges and issuers that custody L-BTC or settle tokenized assets on Liquid face custody and liquidity uncertainty, and the episode feeds broader scrutiny of federated sidechain and bridge trust models, which can weigh on sentiment toward BTC layer-2 assets.",
       "score": 8.5,
       "source_links": [
         {
@@ -107,6 +116,14 @@
         {
           "url": "https://www.kucoin.com/news/flash/liquid-federation-discloses-4-000-btc-vulnerability-incident",
           "title": "Liquid Federation Discloses 4,000 BTC Vulnerability Incident | KuCoin"
+        },
+        {
+          "url": "https://docs.liquid.net/docs/advanced-pegin-pegout",
+          "title": "Peg-in and Peg-out - Documentation - The Liquid Network"
+        },
+        {
+          "url": "https://help.blockstream.com/hc/en-us/articles/900001551783-What-is-a-Liquid-peg-out",
+          "title": "What is a Liquid peg-out? – Blockstream Help Center"
         }
       ]
     },
@@ -664,10 +681,10 @@
       "background_en": "Payward is the parent company behind Kraken and a portfolio of products spanning trading, custody, payments, lending and onchain finance. Tokenized equities are blockchain-based digital representations of equity stakes that can carry shareholder rights such as voting and dividends, and they are designed to trade on blockchain infrastructure rather than only through centralized exchanges. Nasdaq filed a tokenization proposal with the US Securities and Exchange Commission about a year ago and has been positioning itself around 24/7 trading, while Kraken recently partnered with the London Stock Exchange to offer 24/5 trading of tokenized UK equity products starting in 2027. According to data compiled by RWA.xyz, the current distributed value of tokenized stocks is more than $2.9 billion, up 7.4% over the past month.",
       "latest_summary_zh": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
       "latest_summary_en": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
-      "discussion_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
-      "discussion_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
-      "market_impact_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
-      "market_impact_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
+      "discussion_zh": "这笔交易对加密市场的影响主要通过代币化/真实世界资产（RWA）叙事和市场结构预期传导：它提升了代币化股票产品的关注度，加大了对争夺7×24小时流动性场所的竞争压力，并可能吸引机构关注与 Kraken/Payward 相关的托管和结算基础设施。围绕代币化主题资产及交易所相关代币的情绪，可能对产品上线或监管批准等后续消息较为敏感。",
+      "discussion_en": "The deal transmits to crypto markets mainly through the tokenization/RWA narrative and market-structure expectations: it raises the profile of tokenized equity products, keeps pressure on venues competing for 24/7 liquidity, and could draw institutional attention toward custody and settlement infrastructure tied to Kraken/Payward. Sentiment around tokenization-themed assets and exchange-related tokens may be sensitive to follow-through news such as product launches or regulatory approvals.",
+      "market_impact_zh": "这笔交易对加密市场的影响主要通过代币化/真实世界资产（RWA）叙事和市场结构预期传导：它提升了代币化股票产品的关注度，加大了对争夺7×24小时流动性场所的竞争压力，并可能吸引机构关注与 Kraken/Payward 相关的托管和结算基础设施。围绕代币化主题资产及交易所相关代币的情绪，可能对产品上线或监管批准等后续消息较为敏感。",
+      "market_impact_en": "The deal transmits to crypto markets mainly through the tokenization/RWA narrative and market-structure expectations: it raises the profile of tokenized equity products, keeps pressure on venues competing for 24/7 liquidity, and could draw institutional attention toward custody and settlement infrastructure tied to Kraken/Payward. Sentiment around tokenization-themed assets and exchange-related tokens may be sensitive to follow-through news such as product launches or regulatory approvals.",
       "score": 8.5,
       "source_links": [
         {
@@ -713,6 +730,10 @@
         {
           "url": "https://www.nasdaq.com/products/fintech/surveillance",
           "title": "Nasdaq Surveillance"
+        },
+        {
+          "url": "https://www.thetradenews.com/nasdaq-expands-always-on-markets-strategy-through-level-markets-acquisition/",
+          "title": "Nasdaq expands always-on markets strategy through LeveL Markets ..."
         }
       ]
     },
@@ -2921,14 +2942,14 @@
       "summary_en": "Revolut has confirmed it was hit by a sophisticated impersonation scam using a legitimate government agency domain email, exposing identity, verification and Bitcoin transaction data of a limited number of customers; it blocked the email address and alerted the agency, law enforcement and regulators, said systems and customer funds were unaffected, but did not disclose the number affected or the impersonated agency.",
       "latest_update_zh": "Revolut 进一步确认该事件为利用合法政府机构域名邮箱实施的复杂冒充诈骗，并披露泄露数据还包括护照/驾照副本、验证自拍、联系方式、IBAN/钱包参考号、提现记录和完整比特币交易历史；受影响客户数量有限，公司已封锁该邮箱并通知该机构、执法部门和监管机构，系统与客户资金未受影响。",
       "latest_update_en": "Revolut further confirmed the incident was a sophisticated impersonation scam using a legitimate government agency domain email, and disclosed that exposed data also included passport/driver's license copies, verification selfies, contact details, IBAN/wallet reference numbers, withdrawal records and full Bitcoin transaction histories; a limited number of customers were affected, the company blocked the email address and alerted the agency, law enforcement and regulators, and said systems and customer funds were unaffected.",
-      "background_zh": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
-      "background_en": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
+      "background_zh": "作为提供类银行账户与加密交易服务的受监管金融科技公司，Revolut 必须依据“了解你的客户”（KYC）和反洗钱规则收集护照等身份文件，并用自拍照进行核验。这意味着单一服务商可能集中掌握大量身份文件，以及能把个人与其比特币持仓对应起来的交易历史。所谓“wrench attack”（扳手攻击），是指通过人身暴力或威胁来夺取受害者的加密资产，它绕开了密码学防护，直接针对人而非钱包，这类犯罪随着公众对“谁持有大量加密资产”的了解增加而不断上升。",
+      "background_en": "As a regulated fintech offering banking-style accounts and crypto trading, Revolut is required by know-your-customer (KYC) and anti-money-laundering rules to collect identity documents such as passports, and to verify them with a selfie. That means a single provider can hold a concentrated trove of identity documents plus the transaction history that maps a person to their Bitcoin holdings. A \"wrench attack\" refers to the use of physical force or intimidation to seize a victim's crypto assets, bypassing cryptography entirely by targeting the person instead of the wallet — a crime category that has grown alongside public knowledge of who holds large crypto positions.",
       "latest_summary_zh": "Revolut disclosed that it handed over customer passports, verification selfies, and full Bitcoin transaction histories to attackers who spoofed a legitimate government email domain, in what it called a sophisticated impersonation scam affecting a limited number of customers.",
       "latest_summary_en": "Revolut disclosed that it handed over customer passports, verification selfies, and full Bitcoin transaction histories to attackers who spoofed a legitimate government email domain, in what it called a sophisticated impersonation scam affecting a limited number of customers.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "链上调查员 ZachXBT 表示，此次泄露似乎针对的是高净值用户，进一步加剧了外界对“扳手攻击”的担忧；包括 Marc Zeller 在内的社交媒体批评者认为，这起事件说明 KYC 规则几乎没有带来实际好处，反而让许多用户陷入危险。",
+      "discussion_en": "Onchain investigator ZachXBT said the breach appeared to target high-net-worth users, fueling concern about wrench attacks; critics on social media, including Marc Zeller, argued the episode shows KYC rules have produced little upside while putting many users in harm's way.",
+      "market_impact_zh": "这条传导路径通过托管与身份数据而非资产供给发挥作用：泄露使 Revolut 的加密资产客户面临被针对性攻击的风险，也可能引发监管方对交易所和金融科技公司 KYC 数据处理方式的压力，并在 Revolut 可能上市前形成声誉层面的不确定性；由于资金与私钥均未受损，对比特币的供给、流动性或价格没有直接的机制性影响。",
+      "market_impact_en": "The transmission path runs through custody and identity data rather than asset supply: the leak exposes Revolut's crypto-holding customers to targeting, and it could trigger regulatory pressure on KYC data handling across exchanges and fintechs, with reputational overhang for Revolut ahead of a possible listing; since no funds or private keys were compromised, there is no direct mechanical effect on Bitcoin's supply, liquidity or price.",
       "score": 8.5,
       "source_links": [
         {
@@ -2947,7 +2968,16 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/",
+          "title": "Revolut confirms customer data breach through fake government requests | TechCrunch"
+        },
+        {
+          "url": "https://www.trmlabs.com/resources/blog/the-rise-of-wrench-attacks-and-crypto-related-violent-crime",
+          "title": "The Rise of Wrench Attacks and Crypto-related Violent Crime"
+        }
+      ]
     },
     {
       "thread_id": "evt_18fc53f138aba645",
@@ -2976,10 +3006,10 @@
       "background_en": "Liquid is an open-source Bitcoin sidechain launched by Blockstream in 2018 that enables faster, more confidential BTC transfers and the issuance of digital assets such as stablecoins, tokenized securities and bonds. Users hold L-BTC, which is pegged 1:1 to BTC and backed by real bitcoin locked in a wallet collectively managed by federated nodes called functionaries. Elements is the open-source codebase underpinning the network, and its Confidential Transactions feature uses range proofs to validate that transaction amounts are legitimate without revealing them publicly; a flaw in the caching of those verifications is what the attacker exploited.",
       "latest_summary_zh": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
       "latest_summary_en": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
-      "discussion_zh": "传导渠道主要是锚定信心：由于锚定操作与 PAK 授权提现均被暂停，L-BTC 兑换为 BTC 的赎回通道受限，这直接影响在 Liquid 上结算的交易所、发行方和流动性提供者，包括与 SideSwap 相关的退出路径。该事件还可能推动市场重新评估联邦式比特币二层与跨链桥设计中的托管风险，而 BTC/L-BTC 储备中尚未追回的约 598 枚 BTC 缺口仍是待解决的关键变量。",
-      "discussion_en": "The transmission channel is peg confidence: with peg operations and PAK-authorized peg-outs suspended, the redemption path connecting L-BTC to BTC is constrained, which bears on venues, issuers and liquidity providers that settle on Liquid, including SideSwap-linked exits. The incident also feeds into a broader reassessment of custody and federation risk across federated Bitcoin layer-2 and bridge designs, and the outstanding ~598 BTC shortfall in the BTC/L-BTC reserve is the key variable still being resolved.",
-      "market_impact_zh": "传导渠道主要是锚定信心：由于锚定操作与 PAK 授权提现均被暂停，L-BTC 兑换为 BTC 的赎回通道受限，这直接影响在 Liquid 上结算的交易所、发行方和流动性提供者，包括与 SideSwap 相关的退出路径。该事件还可能推动市场重新评估联邦式比特币二层与跨链桥设计中的托管风险，而 BTC/L-BTC 储备中尚未追回的约 598 枚 BTC 缺口仍是待解决的关键变量。",
-      "market_impact_en": "The transmission channel is peg confidence: with peg operations and PAK-authorized peg-outs suspended, the redemption path connecting L-BTC to BTC is constrained, which bears on venues, issuers and liquidity providers that settle on Liquid, including SideSwap-linked exits. The incident also feeds into a broader reassessment of custody and federation risk across federated Bitcoin layer-2 and bridge designs, and the outstanding ~598 BTC shortfall in the BTC/L-BTC reserve is the key variable still being resolved.",
+      "discussion_zh": "直接暴露风险的是 L-BTC 持有者与 SideSwap 等 Liquid 上的交易场所：在联邦 peg-out 暂停的情况下，L-BTC 交易的是一个仅由部分储备支撑的债权，而非可赎回为 BTC 的索取权；任何折价都会通过通常连接这两种资产的赎回套利渠道传导，而该渠道目前已被关闭。托管 L-BTC 或在 Liquid 上结算代币化资产的交易所与发行方，面临托管与流动性层面的不确定性；该事件也会加剧市场对联邦制侧链与跨链桥信任模型的审视，进而影响围绕 BTC 二层资产的普遍情绪。",
+      "discussion_en": "The direct exposure sits with L-BTC holders and Liquid venues such as SideSwap: with federation peg-outs suspended, L-BTC trades as a claim on a fractionally backed reserve rather than a redeemable claim on BTC, and any discount transmits through the redemption-arbitrage channel that normally links the two assets — a channel that is currently closed. Exchanges and issuers that custody L-BTC or settle tokenized assets on Liquid face custody and liquidity uncertainty, and the episode feeds broader scrutiny of federated sidechain and bridge trust models, which can weigh on sentiment toward BTC layer-2 assets.",
+      "market_impact_zh": "直接暴露风险的是 L-BTC 持有者与 SideSwap 等 Liquid 上的交易场所：在联邦 peg-out 暂停的情况下，L-BTC 交易的是一个仅由部分储备支撑的债权，而非可赎回为 BTC 的索取权；任何折价都会通过通常连接这两种资产的赎回套利渠道传导，而该渠道目前已被关闭。托管 L-BTC 或在 Liquid 上结算代币化资产的交易所与发行方，面临托管与流动性层面的不确定性；该事件也会加剧市场对联邦制侧链与跨链桥信任模型的审视，进而影响围绕 BTC 二层资产的普遍情绪。",
+      "market_impact_en": "The direct exposure sits with L-BTC holders and Liquid venues such as SideSwap: with federation peg-outs suspended, L-BTC trades as a claim on a fractionally backed reserve rather than a redeemable claim on BTC, and any discount transmits through the redemption-arbitrage channel that normally links the two assets — a channel that is currently closed. Exchanges and issuers that custody L-BTC or settle tokenized assets on Liquid face custody and liquidity uncertainty, and the episode feeds broader scrutiny of federated sidechain and bridge trust models, which can weigh on sentiment toward BTC layer-2 assets.",
       "score": 8.5,
       "source_links": [
         {
@@ -3005,6 +3035,14 @@
         {
           "url": "https://www.kucoin.com/news/flash/liquid-federation-discloses-4-000-btc-vulnerability-incident",
           "title": "Liquid Federation Discloses 4,000 BTC Vulnerability Incident | KuCoin"
+        },
+        {
+          "url": "https://docs.liquid.net/docs/advanced-pegin-pegout",
+          "title": "Peg-in and Peg-out - Documentation - The Liquid Network"
+        },
+        {
+          "url": "https://help.blockstream.com/hc/en-us/articles/900001551783-What-is-a-Liquid-peg-out",
+          "title": "What is a Liquid peg-out? – Blockstream Help Center"
         }
       ]
     },
@@ -3035,10 +3073,10 @@
       "background_en": "Payward is the parent company behind Kraken and a portfolio of products spanning trading, custody, payments, lending and onchain finance. Tokenized equities are blockchain-based digital representations of equity stakes that can carry shareholder rights such as voting and dividends, and they are designed to trade on blockchain infrastructure rather than only through centralized exchanges. Nasdaq filed a tokenization proposal with the US Securities and Exchange Commission about a year ago and has been positioning itself around 24/7 trading, while Kraken recently partnered with the London Stock Exchange to offer 24/5 trading of tokenized UK equity products starting in 2027. According to data compiled by RWA.xyz, the current distributed value of tokenized stocks is more than $2.9 billion, up 7.4% over the past month.",
       "latest_summary_zh": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
       "latest_summary_en": "Nasdaq's venture arm invested $100 million in Payward, Kraken's parent company, at a $21 billion valuation, with Kraken set to offer tokenized Nasdaq-listed stocks and adopt Nasdaq surveillance technology across its trading venues.",
-      "discussion_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
-      "discussion_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
-      "market_impact_zh": "这笔交易最直接的影响落在代币化股票和现实世界资产（RWA）板块：一家美国顶级交易所运营商如今通过主流加密交易场所提供其品牌代币化股票，这对Robinhood、Coinbase等平台推出的竞品代币化股票构成竞争压力。新增的1亿美元资金以及纳斯达克的监控技术栈，也会影响市场对机构采用与交易所市场结构合法性的情绪，这类叙事通常传导至与交易所相关的代币以及更广泛的加密风险偏好，而非某个单一资产的基本面。",
-      "market_impact_en": "The deal most directly touches the tokenized-equity and real-world-asset (RWA) segment: a top-tier US exchange operator is now supplying branded tokenized equities through a major crypto venue, which raises competitive pressure on rival tokenized-stock offerings from platforms such as Robinhood and Coinbase. The fresh $100 million in capital and Nasdaq's surveillance stack also feed into sentiment around institutional adoption and market-structure legitimacy for exchanges, a narrative that historically transmits to exchange-linked tokens and broader crypto risk appetite rather than to any single asset's fundamentals.",
+      "discussion_zh": "这笔交易对加密市场的影响主要通过代币化/真实世界资产（RWA）叙事和市场结构预期传导：它提升了代币化股票产品的关注度，加大了对争夺7×24小时流动性场所的竞争压力，并可能吸引机构关注与 Kraken/Payward 相关的托管和结算基础设施。围绕代币化主题资产及交易所相关代币的情绪，可能对产品上线或监管批准等后续消息较为敏感。",
+      "discussion_en": "The deal transmits to crypto markets mainly through the tokenization/RWA narrative and market-structure expectations: it raises the profile of tokenized equity products, keeps pressure on venues competing for 24/7 liquidity, and could draw institutional attention toward custody and settlement infrastructure tied to Kraken/Payward. Sentiment around tokenization-themed assets and exchange-related tokens may be sensitive to follow-through news such as product launches or regulatory approvals.",
+      "market_impact_zh": "这笔交易对加密市场的影响主要通过代币化/真实世界资产（RWA）叙事和市场结构预期传导：它提升了代币化股票产品的关注度，加大了对争夺7×24小时流动性场所的竞争压力，并可能吸引机构关注与 Kraken/Payward 相关的托管和结算基础设施。围绕代币化主题资产及交易所相关代币的情绪，可能对产品上线或监管批准等后续消息较为敏感。",
+      "market_impact_en": "The deal transmits to crypto markets mainly through the tokenization/RWA narrative and market-structure expectations: it raises the profile of tokenized equity products, keeps pressure on venues competing for 24/7 liquidity, and could draw institutional attention toward custody and settlement infrastructure tied to Kraken/Payward. Sentiment around tokenization-themed assets and exchange-related tokens may be sensitive to follow-through news such as product launches or regulatory approvals.",
       "score": 8.5,
       "source_links": [
         {
@@ -3084,6 +3122,10 @@
         {
           "url": "https://www.nasdaq.com/products/fintech/surveillance",
           "title": "Nasdaq Surveillance"
+        },
+        {
+          "url": "https://www.thetradenews.com/nasdaq-expands-always-on-markets-strategy-through-level-markets-acquisition/",
+          "title": "Nasdaq expands always-on markets strategy through LeveL Markets ..."
         }
       ]
     },

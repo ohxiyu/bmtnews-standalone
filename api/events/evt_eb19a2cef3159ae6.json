@@ -55,14 +55,27 @@
       "current_state_en": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
       "detailed_summary_zh": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
       "detailed_summary_en": "Revolut reportedly disclosed that it was tricked by a fake government information request, exposing customers' passport data and Bitcoin transaction activity to attackers.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "作为提供类银行账户与加密交易服务的受监管金融科技公司，Revolut 必须依据“了解你的客户”（KYC）和反洗钱规则收集护照等身份文件，并用自拍照进行核验。这意味着单一服务商可能集中掌握大量身份文件，以及能把个人与其比特币持仓对应起来的交易历史。所谓“wrench attack”（扳手攻击），是指通过人身暴力或威胁来夺取受害者的加密资产，它绕开了密码学防护，直接针对人而非钱包，这类犯罪随着公众对“谁持有大量加密资产”的了解增加而不断上升。",
+      "background_en": "As a regulated fintech offering banking-style accounts and crypto trading, Revolut is required by know-your-customer (KYC) and anti-money-laundering rules to collect identity documents such as passports, and to verify them with a selfie. That means a single provider can hold a concentrated trove of identity documents plus the transaction history that maps a person to their Bitcoin holdings. A \"wrench attack\" refers to the use of physical force or intimidation to seize a victim's crypto assets, bypassing cryptography entirely by targeting the person instead of the wallet — a crime category that has grown alongside public knowledge of who holds large crypto positions.",
+      "community_discussion_zh": "链上调查员 ZachXBT 表示，此次泄露似乎针对的是高净值用户，进一步加剧了外界对“扳手攻击”的担忧；包括 Marc Zeller 在内的社交媒体批评者认为，这起事件说明 KYC 规则几乎没有带来实际好处，反而让许多用户陷入危险。",
+      "community_discussion_en": "Onchain investigator ZachXBT said the breach appeared to target high-net-worth users, fueling concern about wrench attacks; critics on social media, including Marc Zeller, argued the episode shows KYC rules have produced little upside while putting many users in harm's way.",
+      "market_impact_zh": "这条传导路径通过托管与身份数据而非资产供给发挥作用：泄露使 Revolut 的加密资产客户面临被针对性攻击的风险，也可能引发监管方对交易所和金融科技公司 KYC 数据处理方式的压力，并在 Revolut 可能上市前形成声誉层面的不确定性；由于资金与私钥均未受损，对比特币的供给、流动性或价格没有直接的机制性影响。",
+      "market_impact_en": "The transmission path runs through custody and identity data rather than asset supply: the leak exposes Revolut's crypto-holding customers to targeting, and it could trigger regulatory pressure on KYC data handling across exchanges and fintechs, with reputational overhang for Revolut ahead of a possible listing; since no funds or private keys were compromised, there is no direct mechanical effect on Bitcoin's supply, liquidity or price.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/",
+          "title": "Revolut confirms customer data breach through fake government requests | TechCrunch"
+        },
+        {
+          "url": "https://decrypt.co/378114/revolut-passports-bitcoin-activity-data-breach",
+          "title": "Revolut Leaks Passports, Bitcoin Transaction Histories to Fake Government Request - Decrypt"
+        },
+        {
+          "url": "https://www.trmlabs.com/resources/blog/the-rise-of-wrench-attacks-and-crypto-related-violent-crime",
+          "title": "The Rise of Wrench Attacks and Crypto-related Violent Crime"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:ffb0edb40b0555bf"

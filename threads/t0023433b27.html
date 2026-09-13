@@ -1,13 +1,21 @@
 ---
 layout: default
-title: "Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵"
+title: "SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量"
 permalink: /threads/t0023433b27/
 interface_language: zh
-description: "Blockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out"
+description: "在 Liquid 网络以受控模式恢复出块后，SideSwap 于 9 月 10 日重新开放了全部 L-BTC 市场，但 Liquid Federation 的 peg-in 与 peg-out 仍然处于暂停状态。UTC 22:55 的链上读数显示，L-BTC 流通量为 4,229.33 枚，而被引用的联邦储备地址持有 3,601.47 BTC，意味着覆盖率约"
 page_type: archive
 ---
 
-<div class="archive-stats"><div class="archive-stat"><strong>5</strong><span>天</span></div><div class="archive-stat"><strong>6</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-12</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-12">2026-09-12</time><div class="archive-row-body"><h3><a href="https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit" target="_blank" rel="noopener noreferrer">Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵</a></h3><p class="archive-row-summary">Blockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out（跨链赎回）仍处于关闭状态。
+<div class="archive-stats"><div class="archive-stat"><strong>6</strong><span>天</span></div><div class="archive-stat"><strong>8</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-13</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-13">2026-09-13</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/" target="_blank" rel="noopener noreferrer">SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量</a></h3><p class="archive-row-summary">在 Liquid 网络以受控模式恢复出块后，SideSwap 于 9 月 10 日重新开放了全部 L-BTC 市场，但 Liquid Federation 的 peg-in 与 peg-out 仍然处于暂停状态。UTC 22:55 的链上读数显示，L-BTC 流通量为 4,229.33 枚，而被引用的联邦储备地址持有 3,601.47 BTC，意味着覆盖率约为 85.15%，缺口约为 627.85 BTC。
+
+L-BTC 与 BTC 的 1:1 锚定是 Liquid 侧链的核心价值主张，而 peg-out 暂停后，市场价格已不再能保证按面值赎回，持有者无法确定能收回全部价值。这使个人用户资金、在 Liquid 上发行和结算资产的机构，以及托管 L-BTC 的交易所直接暴露于风险之中，也令联邦制侧链的信任模型受到更严格的审视。
+
+交易与赎回回答的是不同问题：SideSwap 运营的是一个类中心化限价订单簿（CLOB）的市场，以 L-BTC 为基础资产、以已注册的 Liquid 资产为计价资产，其市场文档中并未列出直接的 L-BTC/BTC 订单簿。在文章发布时，公开渠道尚无可复现的重启后 L-BTC/BTC 价格、买卖价差、深度或滑点数据，因此实际折价或溢价无法测算；而储备比率属于实时读数（SideSwap 自身公布的 9 月 10 日数据为 4,205 枚 L-BTC 对 3,597 BTC，对应约 85.5% 覆盖率与 608 BTC 缺口），并非已确定的损失估算。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.5</span></li><li class="archive-row"><time datetime="2026-09-13">2026-09-13</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/blockstream-bets-600-bitcoin-by-rejecting-liquid-hackers-50-million-bounty-demand/" target="_blank" rel="noopener noreferrer">Blockstream拒绝Liquid攻击者近600 BTC赏金索求</a></h3><p class="archive-row-summary">9月11日，Blockstream公开拒绝了Liquid攻击者提出的、要求由其自有资金支付近600枚比特币（约5000万美元）赏金的主张；此前该攻击者已归还9月6日漏洞中被盗约3996枚比特币中的3400枚。Blockstream表示，若剩余资金未主动归还，将改由执法机构、交易所、服务商和取证专家进行追索。
+
+这场对峙为加密协议如何处理漏洞谈判树立先例，在威慑与返还之间权衡：拒绝付款可能遏制未来攻击，但也可能让黑客失去主动归还资金的动机。这直接影响Liquid用户——该网络目前仅约85%由储备支撑，且peg-in与peg-out均处于停用状态。
+
+攻击者要求10%的赏金，并警告否则持币者可能面临约15%的资金缺口；SideSwap表示，发起攻击的钱包资金经跨链桥可追溯至Tornado Cash，且攻击者在成功铸造前已用70笔类似交易演练过该模式。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">8.5</span></li><li class="archive-row"><time datetime="2026-09-12">2026-09-12</time><div class="archive-row-body"><h3><a href="https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit" target="_blank" rel="noopener noreferrer">Blockstream 拒绝支付赎金，Liquid 比特币被盗事件持续发酵</a></h3><p class="archive-row-summary">Blockstream 公开拒绝为攻击者仍持有的约 598.5 枚 BTC（约 4700 万美元）支付赎金；此前 Liquid Network 侧链于周日遭利用漏洞攻击，约 4000 枚 BTC（价值约 3.2 亿美元）被转出。攻击者已于周一两班归还 3400 枚 BTC（约 85%），Liquid 也在周四恢复出块与交易处理，但作为预防措施，peg-out（跨链赎回）仍处于关闭状态。
 
 这是比特币侧链上规模最大的已确认损失之一，支撑 Liquid 上 L-BTC 的储备一度降至仅 197 枚 BTC，令市场开始质疑许多交易所与交易者依赖的联邦式跨链桥的安全假设。Blockstream 拒绝支付赎金的做法，也为基础设施开发者在面对以威胁索要漏洞赏金的攻击者时如何应对，树立了一个公开先例。
 

@@ -105,14 +105,27 @@
       "current_state_en": "Liquid Network has resumed block production and SideSwap reopened L-BTC trading, but federation peg-outs remain suspended; reserves cover only ~85% of L-BTC supply, a ~627 BTC shortfall, and recovery is ongoing.",
       "detailed_summary_zh": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
       "detailed_summary_en": "SideSwap reopened L-BTC markets after Liquid resumed block production, but federation peg-outs remain suspended and reserves cover only about 85% of outstanding L-BTC, leaving a roughly 627 BTC shortfall.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Liquid 是一条由功能节点（functionaries）组成的联邦运营的开源比特币侧链：用户通过 peg-in 将 BTC 转入并生成 L-BTC，通过 peg-out 销毁 L-BTC，并由联邦多签钱包在获得确认后释放 BTC 回到比特币主链。由于联邦制侧链依赖一组既定的可信成员而非比特币自身的共识，1:1 锚定的完整性取决于联邦的密钥与控制流程。9 月 6 日的事件使约 3,400 BTC 从联邦钱包转出，9 月 7 日约有 3,400 BTC 被报告回流，随后出块以不含交易的受控模式重启。储备缺口、市场重开与仍未恢复的 peg-out 通道，是同一事件的三个不同环节。",
+      "background_en": "Liquid is an open-source Bitcoin sidechain operated by a federation of functionaries, where users move BTC onto the chain through a peg-in that creates L-BTC and back to Bitcoin through a peg-out that burns L-BTC and directs the federation's multisig wallet to release BTC after confirmations. Because a federated sidechain depends on a defined set of trusted members rather than Bitcoin's own consensus, the integrity of the 1:1 peg rests on the federation's keys and controls. The Sept. 6 incident moved roughly 3,400 BTC out of the federation wallet, with about 3,400 BTC reported as returning on Sept. 7, and block production was later restarted in a controlled mode without transactions. This reserve gap, the reopened venue and the still-closed peg-out route are three separate parts of the same event.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "直接暴露风险的是 L-BTC 持有者与 SideSwap 等 Liquid 上的交易场所：在联邦 peg-out 暂停的情况下，L-BTC 交易的是一个仅由部分储备支撑的债权，而非可赎回为 BTC 的索取权；任何折价都会通过通常连接这两种资产的赎回套利渠道传导，而该渠道目前已被关闭。托管 L-BTC 或在 Liquid 上结算代币化资产的交易所与发行方，面临托管与流动性层面的不确定性；该事件也会加剧市场对联邦制侧链与跨链桥信任模型的审视，进而影响围绕 BTC 二层资产的普遍情绪。",
+      "market_impact_en": "The direct exposure sits with L-BTC holders and Liquid venues such as SideSwap: with federation peg-outs suspended, L-BTC trades as a claim on a fractionally backed reserve rather than a redeemable claim on BTC, and any discount transmits through the redemption-arbitrage channel that normally links the two assets — a channel that is currently closed. Exchanges and issuers that custody L-BTC or settle tokenized assets on Liquid face custody and liquidity uncertainty, and the episode feeds broader scrutiny of federated sidechain and bridge trust models, which can weigh on sentiment toward BTC layer-2 assets.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://docs.liquid.net/docs/advanced-pegin-pegout",
+          "title": "Peg-in and Peg-out - Documentation - The Liquid Network"
+        },
+        {
+          "url": "https://help.blockstream.com/hc/en-us/articles/900001551783-What-is-a-Liquid-peg-out",
+          "title": "What is a Liquid peg-out? – Blockstream Help Center"
+        },
+        {
+          "url": "https://blockstream.com/liquid/",
+          "title": "The Liquid Network | Bitcoin layer-2 solution for digital asset issuance."
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:cryptoslate.com_feed_:62c40af23e13e1cc"

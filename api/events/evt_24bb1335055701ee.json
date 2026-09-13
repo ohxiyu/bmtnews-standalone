@@ -47,14 +47,27 @@
       "current_state_en": "Blockstream is refusing the Liquid attacker's demand for nearly 600 BTC (~$50M) after 3,400 BTC was returned from the September exploit, leaving Liquid about 85% reserve-backed with peg-ins and peg-outs disabled.",
       "detailed_summary_zh": "Blockstream is refusing the Liquid attacker's demand for nearly 600 BTC (~$50M) after 3,400 BTC was returned from the September exploit, leaving Liquid about 85% reserve-backed with peg-ins and peg-outs disabled.",
       "detailed_summary_en": "Blockstream is refusing the Liquid attacker's demand for nearly 600 BTC (~$50M) after 3,400 BTC was returned from the September exploit, leaving Liquid about 85% reserve-backed with peg-ins and peg-outs disabled.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 8.0,
-      "references": [],
+      "background_zh": "Liquid是比特币的二层侧链，允许BTC以L-BTC形式\"peg-in\"转入，并可\"peg-out\"转回主链，L-BTC本应是主链上锁定比特币的1:1代表。Blockstream负责开发Liquid Network，SideSwap则是用于BTC与L-BTC兑换的结算基础设施。在9月6日的漏洞中，攻击者得以凭空铸造无背书的L-BTC，打破了1:1储备假设，并从锚定池中抽走了真实BTC。",
+      "background_en": "Liquid is a Bitcoin layer-2 sidechain that lets BTC be moved onto it as L-BTC (a \"peg-in\") and back to the mainchain (a \"peg-out\"), with L-BTC designed as a 1:1 representation of bitcoin locked on the mainchain. Blockstream develops the Liquid Network, and SideSwap is settlement infrastructure used for swapping BTC for L-BTC. In the Sept. 6 exploit, a vulnerability let the attacker create unbacked L-BTC, breaking that 1:1 backing assumption and draining real BTC from the peg.",
+      "community_discussion_zh": "各方在激励问题上意见分歧：USDT0联合创始人Lorenzo Romagnoli认为Blockstream是\"百分之一中的百分之一\"最幸运的被黑协议，并警告拒绝支付可观赏金可能让未来的灰帽攻击者不再愿意归还资金。Samson Mow则反驳称，赏金金额不能按网络总价值计算——该数值混合了L-BTC、Tether及第三方资产——并坚持所有用户资产必须全额归还。",
+      "community_discussion_en": "Commentators split over incentives: USDT0 co-founder Lorenzo Romagnoli argued Blockstream is \"in the 1% of the 1%\" luckiest hacked protocols and warned that refusing a substantial bounty may discourage future grey-hat attackers from returning funds. Samson Mow countered that bounty amounts cannot be calculated from the network's total value, which mixes L-BTC, Tether and third-party assets, and insisted all users' assets must be returned in full.",
+      "market_impact_zh": "peg-in与peg-out停用冻结了L-BTC 1:1赎回BTC的主要通道，使Liquid持币者与发行方面临网络约85%储备支撑的风险敞口，而未解决的约600枚比特币缺口则通过L-BTC定价与跨链桥信任传导。该事件也会影响市场对比特币侧链及封装资产托管风险的信心。",
+      "market_impact_en": "The disabled peg-in/peg-out freezes the primary route for L-BTC to be redeemed 1:1 for BTC, exposing Liquid holders and issuers to the network's ~85% reserve backing, while the unresolved ~600 BTC gap transmits through L-BTC pricing and cross-chain bridge trust. The episode also feeds sentiment around Bitcoin sidechain and wrapped-asset custody risk.",
+      "importance_score": 8.5,
+      "references": [
+        {
+          "url": "https://help.blockstream.com/hc/en-us/articles/900001551783-What-is-a-Liquid-peg-out",
+          "title": "What is a Liquid peg-out? – Blockstream Help Center"
+        },
+        {
+          "url": "https://help.blockstream.com/hc/en-us/articles/900001387966-What-is-a-Liquid-peg-in",
+          "title": "What is a Liquid peg-in? – Blockstream Help Center"
+        },
+        {
+          "url": "https://sideswap.io/?ref=tftc.ghost.io",
+          "title": "SideSwap - Settlement infrastructure of the Liquid Network"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:ce8eefbb48c96cad"

@@ -49,14 +49,27 @@
       "current_state_en": "DBS and Citi completed a cross-border dollar payment between Singapore and the US in minutes using tokenized deposits on SWIFT's digital ledger, signaling growing bank adoption of blockchain-based settlement to reduce prefunding costs.",
       "detailed_summary_zh": "DBS and Citi completed a cross-border dollar payment between Singapore and the US in minutes using tokenized deposits on SWIFT's digital ledger, signaling growing bank adoption of blockchain-based settlement to reduce prefunding costs.",
       "detailed_summary_en": "DBS and Citi completed a cross-border dollar payment between Singapore and the US in minutes using tokenized deposits on SWIFT's digital ledger, signaling growing bank adoption of blockchain-based settlement to reduce prefunding costs.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "当前跨境支付依赖代理行体系：汇款银行要借助其他银行的账户和服务完成资金调拨，因此支付指令传递很快，但结算最长需要两个工作日，且周末通常无法完成。为避免延误，企业不得不提前调拨资金或在多个司法辖区留存闲置余额，占用营运资金——业内此类nostro闲置余额规模约达10万亿美元。代币化存款是由受监管商业银行发行、对法币存款拥有1:1求偿权的数字代币，与通常由非银行机构发行的稳定币有本质区别。SWIFT数字账本是银行正在测试的共享、不可篡改记账层，正是它使这笔支付得以在周末完成清算。",
+      "background_en": "Cross-border payments today run over correspondent banking: the sender's bank relies on accounts and services at other banks, so instructions travel fast but settlement can take up to two business days and generally pauses on weekends. To avoid delays, companies \"prefund\" by moving cash early or holding idle balances across multiple jurisdictions, tying up capital — the industry holds roughly $10 trillion in such nostro balances. Tokenized deposits are digital tokens issued by a regulated commercial bank representing a 1:1 claim on a fiat deposit, distinct from stablecoins, which are typically issued by non-bank firms. SWIFT's Digital Ledger is the shared, immutable record-keeping layer banks are testing for these transactions, and it is what let this payment clear on a weekend.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导渠道主要是支付通道与存款竞争，而非代币价格本身：若代币化存款实现规模化，将直接与稳定币争夺企业财资和结算余额，并减少对代理行当前所中介的短期资金与外汇流动性的需求。因此其对加密市场的影响是间接的，主要通过稳定币存量经济与代币化相关资产体现，而非这笔具体交易本身。",
+      "market_impact_en": "The transmission channel is payment rails and deposit competition rather than token prices: if tokenized deposits scale, they compete directly with stablecoins for corporate treasury and settlement balances, and they reduce demand for the short-term funding and FX liquidity that correspondent banks currently intermediate. Crypto-market exposure is therefore indirect, running through stablecoin float economics and tokenization-related assets rather than through this specific transaction.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.dbs.com/newsroom/DBS_and_Citi_partner_to_enable_instant_247_cross_border_USD_payments_with_tokenised_deposits",
+          "title": "DBS and Citi partner to enable instant 24/7 cross-border USD..."
+        },
+        {
+          "url": "https://chain.link/article/tokenized-deposits",
+          "title": "What Are Tokenized Deposits? | Chainlink"
+        },
+        {
+          "url": "https://plexo.institute/perspectives/the-prefunding-trap",
+          "title": "The Prefunding Trap | Plexo Institute"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:8fbe53b57a569621"
