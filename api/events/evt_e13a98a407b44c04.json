@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "event_id": "evt_e13a98a407b44c04",
+  "url": "https://bmt.news/events/evt_e13a98a407b44c04/",
+  "json": "https://bmt.news/api/events/evt_e13a98a407b44c04.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Critical Bitcoin Lightning bugs exposed nodes to fund theft and restart failure",
+    "en": "Critical Bitcoin Lightning bugs exposed nodes to fund theft and restart failure"
+  },
+  "current_state": {
+    "zh": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+    "en": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment."
+  },
+  "first_seen_at": "2026-09-13T16:33:03.725707+00:00",
+  "last_updated_at": "2026-09-13T16:33:03.725707+00:00",
+  "last_material_change_at": "2026-09-13T16:33:03.725707+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "critical",
+    "lightning"
+  ],
+  "identifiers": [],
+  "topics": [
+    "ldk",
+    "lightning-network",
+    "vulnerability"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_9f4a07d135ed5b19",
+      "event_id": "evt_e13a98a407b44c04",
+      "occurred_at": "2026-09-13T15:55:14Z",
+      "published_at": "2026-09-13T15:55:14Z",
+      "first_seen_at": "2026-09-13T16:33:03.725707Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Critical Bitcoin Lightning bugs exposed nodes to fund theft and restart failure",
+      "title_en": "Critical Bitcoin Lightning bugs exposed nodes to fund theft and restart failure",
+      "what_changed_zh": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+      "what_changed_en": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+      "current_state_zh": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+      "current_state_en": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+      "detailed_summary_zh": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+      "detailed_summary_en": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:a1b1725bd58b81e6"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/critical-bitcoin-lightning-bugs-exposed-nodes-to-fund-theft-and-restart-failure/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}
