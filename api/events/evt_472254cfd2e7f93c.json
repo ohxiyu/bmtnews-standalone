@@ -15,11 +15,11 @@
     "en": "ByteDance secured a $29.6 billion loan from nearly 30 banks to fund AI projects mainly outside China, increasing the facility from its initial $20 billion target."
   },
   "first_seen_at": "2026-09-04T22:27:22.258849+00:00",
-  "last_updated_at": "2026-09-04T22:27:22.258849+00:00",
+  "last_updated_at": "2026-09-14T10:02:32.734501+00:00",
   "last_material_change_at": "2026-09-04T22:27:22.258849+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "all",
     "billion",
@@ -65,12 +65,19 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:decrypt.co_feed:4b8eb34654a195dc"
+        "rss:decrypt.co_feed:4b8eb34654a195dc",
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:1ed1d0e8501ee419"
       ],
       "sources": [
         {
           "url": "https://decrypt.co/377489/tiktok-bytedance-loan-ai",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/14/tiktok-developer-bytedance-arranges-usd29-6-billion-loan-as-it-builds-ai-ambitions",
+          "label": "CoinDesk",
           "source_type": "rss",
           "official": false
         }
