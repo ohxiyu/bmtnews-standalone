@@ -5676,23 +5676,29 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "India Launches Pilot for Tokenized Corporate Bonds via REC",
-      "current_state_zh": "印度通过REC启动代币化公司债券试点",
+      "current_state_en": "India's SEBI/RBI \"Demat 2.0\" pilot is operational, with three issuers raising about $107 million in tokenized corporate bonds on the NSDL/CDSL permissioned ledger, atomic settlement via the wholesale digital rupee, and later phases planned for secondary trading and retail access.",
+      "current_state_zh": "印度SEBI与RBI的“Demat 2.0”试点已运行，三家发行人通过NSDL/CDSL许可账本发行代币化公司债券并合计融资约1.07亿美元；系统支持批发数字卢比原子结算，后续计划二级交易与零售准入。",
       "entities": [
+        "begins",
+        "billion",
+        "bond",
         "bonds",
         "corporate",
         "india",
+        "its",
         "launches",
+        "market",
         "pilot",
         "rec",
-        "tokenized"
+        "tokenized",
+        "tokenizing"
       ],
       "event_id": "evt_34621a32bef65af3",
       "event_type": "other",
       "first_seen_at": "2026-08-27T08:00:00+08:00",
       "identifiers": [],
-      "last_material_change_at": "2026-08-27T08:00:00+08:00",
-      "last_updated_at": "2026-08-27T08:00:00+08:00",
+      "last_material_change_at": "2026-09-14T18:08:08.889038Z",
+      "last_updated_at": "2026-09-14T18:08:08.889038Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -5700,9 +5706,12 @@
       "title_zh": "印度通过REC启动代币化公司债券试点",
       "topics": [
         "blockchain-securities",
+        "cbdc",
+        "corporate-bonds",
         "india",
         "pilot",
         "rec",
+        "sebi",
         "tokenized-bonds"
       ],
       "updates": [
@@ -5743,6 +5752,44 @@
           "update_type": "initial",
           "what_changed_en": "India Launches Pilot for Tokenized Corporate Bonds via REC",
           "what_changed_zh": "印度通过REC启动代币化公司债券试点"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "India's SEBI/RBI \"Demat 2.0\" pilot is operational, with three issuers raising about $107 million in tokenized corporate bonds on the NSDL/CDSL permissioned ledger, atomic settlement via the wholesale digital rupee, and later phases planned for secondary trading and retail access.",
+          "current_state_zh": "印度SEBI与RBI的“Demat 2.0”试点已运行，三家发行人通过NSDL/CDSL许可账本发行代币化公司债券并合计融资约1.07亿美元；系统支持批发数字卢比原子结算，后续计划二级交易与零售准入。",
+          "detailed_summary_en": "India's SEBI and RBI launched the 'Demat 2.0' pilot to issue and settle corporate bonds as digital tokens on a permissioned depository ledger with atomic settlement in the wholesale digital rupee, with three issuers raising roughly $107 million in the first phase.",
+          "detailed_summary_zh": "India's SEBI and RBI launched the 'Demat 2.0' pilot to issue and settle corporate bonds as digital tokens on a permissioned depository ledger with atomic settlement in the wholesale digital rupee, with three issuers raising roughly $107 million in the first phase.",
+          "event_id": "evt_34621a32bef65af3",
+          "first_seen_at": "2026-09-14T18:08:08.889038Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T11:01:05Z",
+          "published_at": "2026-09-14T11:01:05Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378120/india-begins-tokenizing-its-620-billion-corporate-bond-market"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:24f2cabbde3de4c4"
+          ],
+          "time_precision": "published",
+          "title_en": "India Begins Tokenizing Its $620 Billion Corporate Bond Market",
+          "title_zh": "India Begins Tokenizing Its $620 Billion Corporate Bond Market",
+          "update_id": "upd_b1b889f590e1b0c3",
+          "update_type": "confirmation",
+          "what_changed_en": "Disclosed the pilot name \"Demat 2.0\"; three issuers—REC, Larsen & Toubro and IIFL Finance—raised a combined 1,025 crore rupees (~$107 million), with REC first on Sept. 7 raising 500 crore rupees. The system links to the RBI's wholesale digital rupee via a Unified Market Interface for atomic settlement; later phases will add secondary trading and retail access.",
+          "what_changed_zh": "披露试点名称为“Demat 2.0”，REC、Larsen & Toubro与IIFL Finance三家发行人合计融资1,025 crore卢比（约1.07亿美元）；REC于9月7日率先发行500 crore卢比。系统通过统一市场接口链接RBI批发数字卢比实现原子结算，后续阶段将引入二级交易和零售参与。"
         }
       ]
     },
@@ -47541,6 +47588,1455 @@
           "what_changed_zh": "The UK FCA is reportedly considering bespoke rules and fund exemptions for tokenized gold as part of a broader push to expand tokenization in wholesale markets, working alongside the Bank of England and HM Treasury."
         }
       ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+      "current_state_zh": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+      "entities": [
+        "openai",
+        "rubygems",
+        "vulnerability"
+      ],
+      "event_id": "evt_85bcaae5a6f05078",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-14T18:07:59.532174Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:07:59.532174Z",
+      "last_updated_at": "2026-09-14T18:07:59.532174Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI bots knew about the RubyGems caching vulnerability",
+      "title_zh": "OpenAI bots knew about the RubyGems caching vulnerability",
+      "topics": [
+        "openai",
+        "rubygems",
+        "vulnerability"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+          "current_state_zh": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+          "detailed_summary_en": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+          "detailed_summary_zh": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+          "event_id": "evt_85bcaae5a6f05078",
+          "first_seen_at": "2026-09-14T18:07:59.532174Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T12:40:57Z",
+          "published_at": "2026-09-14T12:40:57Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49695876"
+            }
+          ],
+          "sources": [
+            {
+              "label": "gregnavis",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49695876"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI bots knew about the RubyGems caching vulnerability",
+          "title_zh": "OpenAI bots knew about the RubyGems caching vulnerability",
+          "update_id": "upd_ff2b9a409d073fb8",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs.",
+          "what_changed_zh": "OpenAI bots reportedly discovered and exploited a RubyGems caching vulnerability, raising concerns about autonomous agent security, legal liability, and the need for stronger sandboxing like Firecracker VMs."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+      "current_state_zh": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+      "entities": [
+        "app",
+        "cryptonomist",
+        "etfs",
+        "money",
+        "new",
+        "okx"
+      ],
+      "event_id": "evt_ca4351cf2f73ca98",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-14T18:07:59.694706Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:07:59.694706Z",
+      "last_updated_at": "2026-09-14T18:07:59.694706Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OKX adds 70+ tokenized US stocks and ETFs to New Money App - The Cryptonomist",
+      "title_zh": "OKX adds 70+ tokenized US stocks and ETFs to New Money App - The Cryptonomist",
+      "topics": [
+        "exchange-product",
+        "okx",
+        "tokenized-etfs",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+          "current_state_zh": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+          "detailed_summary_en": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+          "detailed_summary_zh": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+          "event_id": "evt_ca4351cf2f73ca98",
+          "first_seen_at": "2026-09-14T18:07:59.694706Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T10:47:28Z",
+          "published_at": "2026-09-14T10:47:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Cryptonomist",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5SaXVHTkxFajNTejljeVVxeUtXbE1TeTRDSzNycmx5eW5fWGhQcGN3Tzd6R1M2aHhXX005eElpaGt1T29sWi15VXNicVV0TzV6eTNRdnhrRFF6cDFHRmQ0b08zNGhxNV9kRkRzVUZCcw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:f274fb66ab0ae05b"
+          ],
+          "time_precision": "published",
+          "title_en": "OKX adds 70+ tokenized US stocks and ETFs to New Money App - The Cryptonomist",
+          "title_zh": "OKX adds 70+ tokenized US stocks and ETFs to New Money App - The Cryptonomist",
+          "update_id": "upd_2d329c6dc587e61c",
+          "update_type": "initial",
+          "what_changed_en": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets.",
+          "what_changed_zh": "OKX has integrated more than 70 tokenized US stocks and ETFs into its New Money App, expanding its offering of tokenized traditional financial assets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+      "current_state_zh": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+      "entities": [
+        "add",
+        "asset",
+        "binance",
+        "bncb",
+        "collateral",
+        "securities",
+        "tokenized",
+        "tokenized-securities",
+        "will"
+      ],
+      "event_id": "evt_67f8c3e58f59821e",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-14T18:07:59.694751Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:07:59.694751Z",
+      "last_updated_at": "2026-09-14T18:07:59.694751Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Will Add BNCB bStocks Tokenized Securities as Collateral Asset - 2026-09-14 - Binance",
+      "title_zh": "Binance Will Add BNCB bStocks Tokenized Securities as Collateral Asset - 2026-09-14 - Binance",
+      "topics": [
+        "binance",
+        "collateral",
+        "exchange-announcement",
+        "tokenized-securities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+          "current_state_zh": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+          "detailed_summary_en": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+          "detailed_summary_zh": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+          "event_id": "evt_67f8c3e58f59821e",
+          "first_seen_at": "2026-09-14T18:07:59.694751Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T09:34:24Z",
+          "published_at": "2026-09-14T09:34:24Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWmR0R20ycW9LMlFrc29IbmhuQXNIMnByX1k5SXVEQ1ktdDdvY3d2Q3NCNWcxUlVveTVsd2pnck5VaWxLcTQ0Yno4ZDd5YzdmSjFpX1h5V0xWUlIxT0VNYTBnUXZIRm12eVNOb05keldBck15dW9sT01CY2M3Y2ZHdzA5WVg1U3pPNnl5V0lyd3k?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:ca4a6f79052301b1"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Will Add BNCB bStocks Tokenized Securities as Collateral Asset - 2026-09-14 - Binance",
+          "title_zh": "Binance Will Add BNCB bStocks Tokenized Securities as Collateral Asset - 2026-09-14 - Binance",
+          "update_id": "upd_f0b5ceaad178266c",
+          "update_type": "initial",
+          "what_changed_en": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform.",
+          "what_changed_zh": "Binance announced it will accept BNCB bStocks tokenized securities as collateral assets on its platform."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Kraken has closed withdrawals for seven assets for UAE-resident clients, with remaining balances scheduled for liquidation Sept. 15–25 and proceeds currency unspecified.",
+      "current_state_zh": "Kraken 已关闭阿联酋居民客户的七项资产提现，剩余余额将于9月15日至25日清算，清算所得币种未确定。",
+      "entities": [
+        "cryptoslate",
+        "kraken",
+        "monday",
+        "seven",
+        "withdrawals"
+      ],
+      "event_id": "evt_2041192f114d10ed",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-14T18:07:59.694790Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:04.594674Z",
+      "last_updated_at": "2026-09-14T18:08:04.594674Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Seven assets enter Kraken liquidation window after withdrawals close Monday - CryptoSlate",
+      "title_zh": "Seven assets enter Kraken liquidation window after withdrawals close Monday - CryptoSlate",
+      "topics": [
+        "delisting",
+        "exchange-operations",
+        "kraken",
+        "liquidations",
+        "trading-access",
+        "uae-regulation",
+        "withdrawals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken closed withdrawals on Monday, pushing seven assets into a liquidation window and affecting user positions and fund access.",
+          "current_state_zh": "Kraken closed withdrawals on Monday, pushing seven assets into a liquidation window and affecting user positions and fund access.",
+          "detailed_summary_en": "Kraken closed withdrawals on Monday, pushing seven assets into a liquidation window and affecting user positions and fund access.",
+          "detailed_summary_zh": "Kraken closed withdrawals on Monday, pushing seven assets into a liquidation window and affecting user positions and fund access.",
+          "event_id": "evt_2041192f114d10ed",
+          "first_seen_at": "2026-09-14T18:07:59.694790Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T10:10:51Z",
+          "published_at": "2026-09-14T10:10:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORVd0T3hNS0lyVG54R1kzcXpndG5yQ0N0bHNFODlZQXBwZ0NlUy13cmFwWlN4QzlZU3pFMlZwZzUtMHBsQnZXT2NXZlhodmI0VmpRczdRajRkbjU5VEVmWWlWeEpzTUVvcUtOTTdraXFadkhuaFNLbXZlSlcxeTlrYnhleE1mWUhQVUZUS0lJYzRJdEhNeUhVRUg4VHBidVN6Mnc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:9edf506c4f679f37"
+          ],
+          "time_precision": "published",
+          "title_en": "Seven assets enter Kraken liquidation window after withdrawals close Monday - CryptoSlate",
+          "title_zh": "Seven assets enter Kraken liquidation window after withdrawals close Monday - CryptoSlate",
+          "update_id": "upd_cea36827b446aa2e",
+          "update_type": "initial",
+          "what_changed_en": "Kraken closed withdrawals on Monday, pushing seven assets into a liquidation window and affecting user positions and fund access.",
+          "what_changed_zh": "Kraken closed withdrawals on Monday, pushing seven assets into a liquidation window and affecting user positions and fund access."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Kraken has closed withdrawals for seven assets for UAE-resident clients, with remaining balances scheduled for liquidation Sept. 15–25 and proceeds currency unspecified.",
+          "current_state_zh": "Kraken 已关闭阿联酋居民客户的七项资产提现，剩余余额将于9月15日至25日清算，清算所得币种未确定。",
+          "detailed_summary_en": "Kraken will close withdrawals for seven crypto assets held by UAE-resident clients on Sept. 14 and liquidate remaining balances between Sept. 15–25, 2026, without guaranteeing the currency of proceeds.",
+          "detailed_summary_zh": "Kraken will close withdrawals for seven crypto assets held by UAE-resident clients on Sept. 14 and liquidate remaining balances between Sept. 15–25, 2026, without guaranteeing the currency of proceeds.",
+          "event_id": "evt_2041192f114d10ed",
+          "first_seen_at": "2026-09-14T18:08:04.594674Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T10:10:51Z",
+          "published_at": "2026-09-14T10:10:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/seven-assets-enter-kraken-liquidation-window-after-withdrawals-close-monday/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:7b7f62116e18c9b8"
+          ],
+          "time_precision": "published",
+          "title_en": "Seven assets enter Kraken liquidation window after withdrawals close Monday",
+          "title_zh": "Seven assets enter Kraken liquidation window after withdrawals close Monday",
+          "update_id": "upd_c968d0409f9da286",
+          "update_type": "confirmation",
+          "what_changed_en": "Kraken's withdrawal cutoff for seven assets (XMR, ZEC, DASH, USDD, DAI, USDS, USDE) for UAE-resident clients is Sept. 14 at 14:00 UTC, with liquidation scheduled Sept. 15–25 and no guaranteed proceeds currency.",
+          "what_changed_zh": "Kraken 针对阿联酋居民客户的七项资产（XMR、ZEC、DASH、USDD、DAI、USDS、USDE）提现于9月14日14:00 UTC关闭，清算窗口为9月15日至25日，且不保证清算所得币种。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+      "current_state_zh": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+      "entities": [
+        "attacks",
+        "billion",
+        "blocks",
+        "bybit",
+        "coordinated",
+        "deposit",
+        "deposit-attack",
+        "detects",
+        "dot",
+        "fake",
+        "losses",
+        "over",
+        "potential",
+        "preventing",
+        "yellow"
+      ],
+      "event_id": "evt_28893b5a9e8c009d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-14T18:07:59.694970Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:07:59.694970Z",
+      "last_updated_at": "2026-09-14T18:07:59.694970Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bybit Detects and Blocks Coordinated Fake Deposit Attacks, Preventing Over $1 Billion DOT in Potential Losses - Yellow.com",
+      "title_zh": "Bybit Detects and Blocks Coordinated Fake Deposit Attacks, Preventing Over $1 Billion DOT in Potential Losses - Yellow.com",
+      "topics": [
+        "bybit",
+        "deposit-attack",
+        "dot"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+          "current_state_zh": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+          "detailed_summary_en": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+          "detailed_summary_zh": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+          "event_id": "evt_28893b5a9e8c009d",
+          "first_seen_at": "2026-09-14T18:07:59.694970Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T13:13:52Z",
+          "published_at": "2026-09-14T13:13:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yellow.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZjk5MDlvMHJhTFpLakpJOHJOY21DemEyUVF1S2FJNUZpMDJ3OFhGMVM0VGJjeWEzVW9qR0FfbmwyUmRJMWNTQmx2THFzS1hoMzN0UDlmSFltUEtfN3pjZWZWbEp4NEhwWHY5Z1NXcnJwWWpQN1l4eUFEQ05VUmQtbUppZFRsUWRYVXVKRWR4YkJsbmlOR1ZkM3ZXU3BqaFZjWEtuYXhhakFCQ1hQcXN5SkNuTGhCVXZTdk5wR2t1cmZrZk4xTmFoYXdkZndYalllWjFhZ0dXbzVpZ2VpanNlUnVPRVI?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:57b2baad3a7c0500"
+          ],
+          "time_precision": "published",
+          "title_en": "Bybit Detects and Blocks Coordinated Fake Deposit Attacks, Preventing Over $1 Billion DOT in Potential Losses - Yellow.com",
+          "title_zh": "Bybit Detects and Blocks Coordinated Fake Deposit Attacks, Preventing Over $1 Billion DOT in Potential Losses - Yellow.com",
+          "update_id": "upd_6d1a730aec8f088a",
+          "update_type": "initial",
+          "what_changed_en": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
+          "what_changed_zh": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+      "current_state_zh": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+      "entities": [
+        "binance",
+        "coinfomania",
+        "exchange",
+        "instant",
+        "launches",
+        "trading",
+        "users"
+      ],
+      "event_id": "evt_1292a759086cdd8a",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-14T18:07:59.695302Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:07:59.695302Z",
+      "last_updated_at": "2026-09-14T18:07:59.695302Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Launches bStock Trading: Instant Exchange for Users - Coinfomania",
+      "title_zh": "Binance Launches bStock Trading: Instant Exchange for Users - Coinfomania",
+      "topics": [
+        "binance",
+        "exchange-announcements",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+          "current_state_zh": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+          "detailed_summary_en": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+          "detailed_summary_zh": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+          "event_id": "evt_1292a759086cdd8a",
+          "first_seen_at": "2026-09-14T18:07:59.695302Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T13:11:27Z",
+          "published_at": "2026-09-14T13:11:27Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Coinfomania",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONHp4QlBwaDV3YVdGcjFVV0hhMURZU25aa0tCcUNCaHIxdC1IaDlnQ1hxY2YyN3dxMk9ybmJPWi1QMlhNZmlnNllIMUNoTTV2NHBrS2llWVVqd2pKcFdkczNTbXNTdXlHTjRoVE9RNFY4aDBEcmRuOUlIdjBXZ3MwVjJSWHQ5dlJuR0I4?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:3ff027f72bea67fa"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Launches bStock Trading: Instant Exchange for Users - Coinfomania",
+          "title_zh": "Binance Launches bStock Trading: Instant Exchange for Users - Coinfomania",
+          "update_id": "upd_72a8942efe1e6c4a",
+          "update_type": "initial",
+          "what_changed_en": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange.",
+          "what_changed_zh": "Binance has launched bStock trading, enabling users to trade tokenized stock products directly on the exchange."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+      "current_state_zh": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+      "entities": [
+        "banks",
+        "clarity",
+        "clarity-act",
+        "senate"
+      ],
+      "event_id": "evt_60fe5290ec54b1ef",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:00.812468Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:00.812468Z",
+      "last_updated_at": "2026-09-14T18:08:00.812468Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Banks escalate stablecoin rewards fight as Senate prepares for a Clarity Act vote",
+      "title_zh": "Banks escalate stablecoin rewards fight as Senate prepares for a Clarity Act vote",
+      "topics": [
+        "clarity-act",
+        "stablecoins",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+          "current_state_zh": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+          "detailed_summary_en": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+          "detailed_summary_zh": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+          "event_id": "evt_60fe5290ec54b1ef",
+          "first_seen_at": "2026-09-14T18:08:00.812468Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T17:51:20Z",
+          "published_at": "2026-09-14T17:51:20Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/14/banks-escalate-stablecoin-rewards-fight-as-senate-prepares-for-a-clarity-act-vote"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:cb7ecedfd875b951"
+          ],
+          "time_precision": "published",
+          "title_en": "Banks escalate stablecoin rewards fight as Senate prepares for a Clarity Act vote",
+          "title_zh": "Banks escalate stablecoin rewards fight as Senate prepares for a Clarity Act vote",
+          "update_id": "upd_c24496253d478401",
+          "update_type": "initial",
+          "what_changed_en": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated.",
+          "what_changed_zh": "Banks are escalating their lobbying against stablecoin reward programs as the Senate prepares to vote on the Clarity Act, a bill that would define how stablecoins and related yield products are regulated."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+      "current_state_zh": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+      "entities": [
+        "fca",
+        "london",
+        "tokenized-gold"
+      ],
+      "event_id": "evt_1a97a55448b7eab8",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:01.210436Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:01.210436Z",
+      "last_updated_at": "2026-09-14T18:08:01.210436Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "FCA considers exempting tokenized gold from fund rules to defend London market",
+      "title_zh": "FCA considers exempting tokenized gold from fund rules to defend London market",
+      "topics": [
+        "fca",
+        "tokenized-gold",
+        "uk"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+          "current_state_zh": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+          "detailed_summary_en": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+          "detailed_summary_zh": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+          "event_id": "evt_1a97a55448b7eab8",
+          "first_seen_at": "2026-09-14T18:08:01.210436Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T11:58:28Z",
+          "published_at": "2026-09-14T11:58:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/14/fca-considers-exempting-tokenized-gold-from-fund-rules-to-defend-london-market"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:af649788d6af1ed2"
+          ],
+          "time_precision": "published",
+          "title_en": "FCA considers exempting tokenized gold from fund rules to defend London market",
+          "title_zh": "FCA considers exempting tokenized gold from fund rules to defend London market",
+          "update_id": "upd_e91dabd6a7b3296e",
+          "update_type": "initial",
+          "what_changed_en": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets.",
+          "what_changed_zh": "The UK's Financial Conduct Authority is weighing an exemption that would allow tokenized gold products to avoid fund regulations, aiming to keep London competitive as a hub for tokenized real-world assets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+      "current_state_zh": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+      "entities": [
+        "crypto-data",
+        "global",
+        "kaiko",
+        "series"
+      ],
+      "event_id": "evt_a56825041b72346e",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-14T18:08:01.808442Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:01.808442Z",
+      "last_updated_at": "2026-09-14T18:08:01.808442Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "S&P Global leads strategic investment in crypto data firm Kaiko, extending Series B to $110 million",
+      "title_zh": "S&P Global leads strategic investment in crypto data firm Kaiko, extending Series B to $110 million",
+      "topics": [
+        "crypto-data",
+        "funding",
+        "kaiko"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+          "current_state_zh": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+          "detailed_summary_en": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+          "detailed_summary_zh": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+          "event_id": "evt_a56825041b72346e",
+          "first_seen_at": "2026-09-14T18:08:01.808442Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T13:13:06Z",
+          "published_at": "2026-09-14T13:13:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/deals/2026-09-14-sp-global-leads-strategic-investment-in-crypto-data-firm-kaiko-extending-series-b-to-110-million-414618"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:73733942712ace50"
+          ],
+          "time_precision": "published",
+          "title_en": "S&P Global leads strategic investment in crypto data firm Kaiko, extending Series B to $110 million",
+          "title_zh": "S&P Global leads strategic investment in crypto data firm Kaiko, extending Series B to $110 million",
+          "update_id": "upd_9746181917626de8",
+          "update_type": "initial",
+          "what_changed_en": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital.",
+          "what_changed_zh": "S&P Global led a strategic investment in crypto data provider Kaiko, extending its Series B round to $110 million with participation from BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, and DRW Venture Capital."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+      "current_state_zh": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+      "entities": [],
+      "event_id": "evt_18445bc9ed62d37f",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-14T18:08:03.880328Z",
+      "identifiers": [
+        "bip-360"
+      ],
+      "last_material_change_at": "2026-09-14T18:08:03.880328Z",
+      "last_updated_at": "2026-09-14T18:08:03.880328Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin exchanges can reduce quantum exposure before a network upgrade",
+      "title_zh": "Bitcoin exchanges can reduce quantum exposure before a network upgrade",
+      "topics": [
+        "bip-360",
+        "coinbase",
+        "custody",
+        "quantum-computing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+          "current_state_zh": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+          "detailed_summary_en": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+          "detailed_summary_zh": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+          "event_id": "evt_18445bc9ed62d37f",
+          "first_seen_at": "2026-09-14T18:08:03.880328Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T16:50:59Z",
+          "published_at": "2026-09-14T16:50:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/bitcoins-quantum-plan-faces-a-1-6-million-btc-custody-test/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:8605724126d89ea0"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin exchanges can reduce quantum exposure before a network upgrade",
+          "title_zh": "Bitcoin exchanges can reduce quantum exposure before a network upgrade",
+          "update_id": "upd_593a279834703d2f",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved.",
+          "what_changed_zh": "Coinbase's post-quantum Bitcoin workshop with Stanford and Localhost Research ended without consensus on a quantum-safe approach, highlighting that exchanges and custodians can reduce public-key exposure now while draft BIP-360 and post-quantum signatures remain unresolved."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+      "current_state_zh": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "here",
+        "senate",
+        "tuesday"
+      ],
+      "event_id": "evt_8cb9b199cffd4491",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:03.970971Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:03.970971Z",
+      "last_updated_at": "2026-09-14T18:08:03.970971Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Here’s what’s new in the final CLARITY Act before Tuesday’s Senate vote",
+      "title_zh": "Here’s what’s new in the final CLARITY Act before Tuesday’s Senate vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "stablecoins",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+          "current_state_zh": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+          "detailed_summary_en": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+          "detailed_summary_zh": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+          "event_id": "evt_8cb9b199cffd4491",
+          "first_seen_at": "2026-09-14T18:08:03.970971Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T15:45:59Z",
+          "published_at": "2026-09-14T15:45:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/heres-whats-new-in-the-final-clarity-act-before-tuesdays-senate-vote/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:4a6bb87028437811"
+          ],
+          "time_precision": "published",
+          "title_en": "Here’s what’s new in the final CLARITY Act before Tuesday’s Senate vote",
+          "title_zh": "Here’s what’s new in the final CLARITY Act before Tuesday’s Senate vote",
+          "update_id": "upd_b977372c1c0e1fc0",
+          "update_type": "initial",
+          "what_changed_en": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote.",
+          "what_changed_zh": "Senate Republicans released a final CLARITY Act draft incorporating 126 Democratic-requested changes on ethics, stablecoin risk, developer protections, market conflicts, consumer safeguards, and AML rules, setting up a Tuesday cloture vote."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+      "current_state_zh": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+      "entities": [
+        "htx",
+        "trx",
+        "what"
+      ],
+      "event_id": "evt_248c4a4ceb42c0d8",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-14T18:08:04.801146Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:04.801146Z",
+      "last_updated_at": "2026-09-14T18:08:04.801146Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "What happened to HTX’s 700 million missing TRX?",
+      "title_zh": "What happened to HTX’s 700 million missing TRX?",
+      "topics": [
+        "exchange-transparency",
+        "htx",
+        "justin-sun",
+        "poloniex",
+        "proof-of-reserves"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+          "current_state_zh": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+          "detailed_summary_en": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+          "detailed_summary_zh": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+          "event_id": "evt_248c4a4ceb42c0d8",
+          "first_seen_at": "2026-09-14T18:08:04.801146Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T17:57:13Z",
+          "published_at": "2026-09-14T17:57:13Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/what-happened-to-htxs-700-million-missing-trx/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:594c10966b2e3600"
+          ],
+          "time_precision": "published",
+          "title_en": "What happened to HTX’s 700 million missing TRX?",
+          "title_zh": "What happened to HTX’s 700 million missing TRX?",
+          "update_id": "upd_6e601c042e9e3630",
+          "update_type": "initial",
+          "what_changed_en": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
+          "what_changed_zh": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+      "current_state_zh": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+      "entities": [
+        "data-leak",
+        "revolut",
+        "what"
+      ],
+      "event_id": "evt_d5f4ec8b51711725",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-14T18:08:05.056002Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:05.056002Z",
+      "last_updated_at": "2026-09-14T18:08:05.056002Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "What we know about the Revolut customer data leak",
+      "title_zh": "What we know about the Revolut customer data leak",
+      "topics": [
+        "data-leak",
+        "fintech",
+        "ransomware",
+        "revolut",
+        "security-breach"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+          "current_state_zh": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+          "detailed_summary_en": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+          "detailed_summary_zh": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+          "event_id": "evt_d5f4ec8b51711725",
+          "first_seen_at": "2026-09-14T18:08:05.056002Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T13:10:30Z",
+          "published_at": "2026-09-14T13:10:30Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/what-we-know-about-the-revolut-customer-data-leak/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:a4af7506ff1c0de4"
+          ],
+          "time_precision": "published",
+          "title_en": "What we know about the Revolut customer data leak",
+          "title_zh": "What we know about the Revolut customer data leak",
+          "update_id": "upd_b40fc45bcecd7224",
+          "update_type": "initial",
+          "what_changed_en": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
+          "what_changed_zh": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+      "current_state_zh": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+      "entities": [
+        "bernstein",
+        "clarity",
+        "clarity-act",
+        "definitely",
+        "has",
+        "market",
+        "not",
+        "priced",
+        "says",
+        "surprise"
+      ],
+      "event_id": "evt_1606d7945511fe69",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:07.532214Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:07.532214Z",
+      "last_updated_at": "2026-09-14T18:08:07.532214Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto Market Has 'Definitely Not Priced In' Clarity Act Surprise, Says Bernstein",
+      "title_zh": "Crypto Market Has 'Definitely Not Priced In' Clarity Act Surprise, Says Bernstein",
+      "topics": [
+        "bernstein",
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+          "current_state_zh": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+          "detailed_summary_en": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+          "detailed_summary_zh": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+          "event_id": "evt_1606d7945511fe69",
+          "first_seen_at": "2026-09-14T18:08:07.532214Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T17:25:06Z",
+          "published_at": "2026-09-14T17:25:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378155/crypto-not-priced-in-clarity-act-surprise-bernstein"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:16dda7eac10d1700"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto Market Has 'Definitely Not Priced In' Clarity Act Surprise, Says Bernstein",
+          "title_zh": "Crypto Market Has 'Definitely Not Priced In' Clarity Act Surprise, Says Bernstein",
+          "update_id": "upd_2d5c8b249a1f585b",
+          "update_type": "initial",
+          "what_changed_en": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote.",
+          "what_changed_zh": "Bernstein analysts say crypto markets have not priced in a positive surprise on the Clarity Act, as Republicans offer concessions on ethics and banking ahead of a Senate procedural vote."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+      "current_state_zh": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+      "entities": [
+        "backed",
+        "can",
+        "clarity",
+        "clarity-act",
+        "ethics",
+        "industry",
+        "pass",
+        "rules",
+        "thinks",
+        "tougher",
+        "trump",
+        "why"
+      ],
+      "event_id": "evt_1d5ed25249a829e1",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:08.312751Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:08.312751Z",
+      "last_updated_at": "2026-09-14T18:08:08.312751Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Why Trump Backed Tougher Ethics Rules in Clarity Act, and Why the Crypto Industry Thinks It Can Pass",
+      "title_zh": "Why Trump Backed Tougher Ethics Rules in Clarity Act, and Why the Crypto Industry Thinks It Can Pass",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "stablecoins",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+          "current_state_zh": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+          "detailed_summary_en": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+          "detailed_summary_zh": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+          "event_id": "evt_1d5ed25249a829e1",
+          "first_seen_at": "2026-09-14T18:08:08.312751Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T15:22:51Z",
+          "published_at": "2026-09-14T15:22:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378125/clarity-act-crypto-ethics-trump-key-vote"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:b22d10f72fbdfcc4"
+          ],
+          "time_precision": "published",
+          "title_en": "Why Trump Backed Tougher Ethics Rules in Clarity Act, and Why the Crypto Industry Thinks It Can Pass",
+          "title_zh": "Why Trump Backed Tougher Ethics Rules in Clarity Act, and Why the Crypto Industry Thinks It Can Pass",
+          "update_id": "upd_ceb4c6c71f8deabf",
+          "update_type": "initial",
+          "what_changed_en": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage.",
+          "what_changed_zh": "Senate Republicans released a revised Clarity Act with tougher ethics provisions endorsed by Trump ahead of Tuesday's cloture vote, sparking cautious optimism in the crypto industry about eventual passage."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+      "current_state_zh": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+      "entities": [
+        "agrees",
+        "clarity",
+        "clarity-act",
+        "ethics",
+        "minute",
+        "morning",
+        "odds",
+        "provisions",
+        "soar",
+        "trump"
+      ],
+      "event_id": "evt_fcf21cd16e6654c9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:08.630914Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:08.630914Z",
+      "last_updated_at": "2026-09-14T18:08:08.630914Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Morning Minute: Clarity Act Odds Soar as Trump Agrees to Ethics Provisions",
+      "title_zh": "Morning Minute: Clarity Act Odds Soar as Trump Agrees to Ethics Provisions",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "etf-flows"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+          "current_state_zh": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+          "detailed_summary_en": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+          "detailed_summary_zh": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+          "event_id": "evt_fcf21cd16e6654c9",
+          "first_seen_at": "2026-09-14T18:08:08.630914Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T14:37:21Z",
+          "published_at": "2026-09-14T14:37:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378122/morning-minute-clarity-act-odds-soar-trump-ethics"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:b97b641bf820f2fe"
+          ],
+          "time_precision": "published",
+          "title_en": "Morning Minute: Clarity Act Odds Soar as Trump Agrees to Ethics Provisions",
+          "title_zh": "Morning Minute: Clarity Act Odds Soar as Trump Agrees to Ethics Provisions",
+          "update_id": "upd_7b5e1c7520163f6c",
+          "update_type": "initial",
+          "what_changed_en": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k.",
+          "what_changed_zh": "Odds of the Clarity Act passing jumped to 31% after Trump agreed to ethics provisions, ahead of a Tuesday Senate vote on crypto market structure legislation, as crypto majors rebounded with BTC at $77.7k."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+      "current_state_zh": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+      "entities": [
+        "ags",
+        "clarity",
+        "clarity-act",
+        "senate",
+        "state-ags"
+      ],
+      "event_id": "evt_3740280ca07cde3c",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:09.207660Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:09.207660Z",
+      "last_updated_at": "2026-09-14T18:08:09.207660Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act faces state AGs opposition ahead of key Senate vote",
+      "title_zh": "CLARITY Act faces state AGs opposition ahead of key Senate vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "state-ags",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+          "current_state_zh": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+          "detailed_summary_en": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+          "detailed_summary_zh": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+          "event_id": "evt_3740280ca07cde3c",
+          "first_seen_at": "2026-09-14T18:08:09.207660Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T17:42:04Z",
+          "published_at": "2026-09-14T17:42:04Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/clarity-act-faces-new-opposition-ahead-of-key-senate-vote?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:40fd45d9bfd22f90"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act faces state AGs opposition ahead of key Senate vote",
+          "title_zh": "CLARITY Act faces state AGs opposition ahead of key Senate vote",
+          "update_id": "upd_137b490476c3cbe0",
+          "update_type": "initial",
+          "what_changed_en": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms.",
+          "what_changed_zh": "The CLARITY Act heads toward a key Senate procedural vote after Trump's ethics concession, but 18 state attorneys general led by New York's Letitia James are urging rejection, arguing the bill would weaken state oversight of crypto firms."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+      "current_state_zh": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+      "entities": [
+        "global",
+        "kaiko",
+        "series"
+      ],
+      "event_id": "evt_63f28597d7460869",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-14T18:08:09.266211Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:09.266211Z",
+      "last_updated_at": "2026-09-14T18:08:09.266211Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "S&P Global backs Kaiko as Series B reaches $110M",
+      "title_zh": "S&P Global backs Kaiko as Series B reaches $110M",
+      "topics": [
+        "funding",
+        "market-data"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+          "current_state_zh": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+          "detailed_summary_en": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+          "detailed_summary_zh": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+          "event_id": "evt_63f28597d7460869",
+          "first_seen_at": "2026-09-14T18:08:09.266211Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T16:17:52Z",
+          "published_at": "2026-09-14T16:17:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/sp-global-leads-110m-kaiko-funding-round-as-wall-street-eyes-tokenized-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:1010a4df9fd29631"
+          ],
+          "time_precision": "published",
+          "title_en": "S&P Global backs Kaiko as Series B reaches $110M",
+          "title_zh": "S&P Global backs Kaiko as Series B reaches $110M",
+          "update_id": "upd_ed94945fe7e98f6a",
+          "update_type": "initial",
+          "what_changed_en": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets.",
+          "what_changed_zh": "S&P Global led a strategic investment in crypto market data provider Kaiko, extending its Series B to $110 million with backing from major banks and exchanges to build data infrastructure for tokenized securities and onchain financial markets."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+      "current_state_zh": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+      "entities": [],
+      "event_id": "evt_f2753109d7c649f9",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-14T18:08:10.329110Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:10.329110Z",
+      "last_updated_at": "2026-09-14T18:08:10.329110Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "EU cyber rules put crypto wallet makers on 24-hour reporting clock",
+      "title_zh": "EU cyber rules put crypto wallet makers on 24-hour reporting clock",
+      "topics": [
+        "crypto-wallets",
+        "cyber-resilience-act",
+        "eu"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+          "current_state_zh": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+          "detailed_summary_en": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+          "detailed_summary_zh": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+          "event_id": "evt_f2753109d7c649f9",
+          "first_seen_at": "2026-09-14T18:08:10.329110Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T11:38:44Z",
+          "published_at": "2026-09-14T11:38:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/eu-cyber-rules-put-crypto-wallet-24-hour-reporting?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:f50f866ffaf5e954"
+          ],
+          "time_precision": "published",
+          "title_en": "EU cyber rules put crypto wallet makers on 24-hour reporting clock",
+          "title_zh": "EU cyber rules put crypto wallet makers on 24-hour reporting clock",
+          "update_id": "upd_e3e3ea58e0dbbbfd",
+          "update_type": "initial",
+          "what_changed_en": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance.",
+          "what_changed_zh": "The EU's Cyber Resilience Act now requires crypto wallet providers to report actively exploited vulnerabilities within 24 hours and submit full notifications within 72 hours, with fines of up to $17.3 million for noncompliance."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+      "current_state_zh": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "fed",
+        "five"
+      ],
+      "event_id": "evt_f4cebd76b6eaf6b6",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-14T18:08:10.382369Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-14T18:08:10.382369Z",
+      "last_updated_at": "2026-09-14T18:08:10.382369Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week",
+      "title_zh": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "federal-reserve",
+        "macro"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+          "current_state_zh": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+          "detailed_summary_en": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+          "detailed_summary_zh": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+          "event_id": "evt_f4cebd76b6eaf6b6",
+          "first_seen_at": "2026-09-14T18:08:10.382369Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-14T10:02:00Z",
+          "published_at": "2026-09-14T10:02:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/markets/clarity-act-vote-meets-fed-rate-hike-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:28e867ababcbfd60"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week",
+          "title_zh": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week",
+          "update_id": "upd_6a60fee94bf650fd",
+          "update_type": "initial",
+          "what_changed_en": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
+          "what_changed_zh": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -47763,7 +49259,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "A 'final' Senate draft of the Clarity Act with Trump accepting ethics provisions is a significant regulatory development with a clear transmission path to crypto market structure and industry access, though it remains a draft rather than enacted law.",
         "ai_score": 7.5,
@@ -47794,6 +49290,151 @@
         "source_type": "rss",
         "title": "Senate Republicans release ‘final’ Clarity Act draft as Trump accepts most ethics provisions",
         "url": "https://www.theblock.co/news/regulation/2026-09-14-senate-republicans-release-final-clarity-act-draft-414575"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A bipartisan coalition of 17 state attorneys general formally urging the Senate to reject the Clarity Act is a significant regulatory development with a clear transmission path to crypto market structure, as the bill's federal preemption provisions would reshape how digital assets are overseen across states. It is not a final legislative decision, so it falls short of the 9-10 range, but it is high-value given the direct stakes for market access and industry structure.",
+        "ai_score": 7.5,
+        "ai_summary": "Seventeen state attorneys general from both parties are pressing the Senate to reject the Clarity Act, citing concerns that its federal preemption of state authority would undermine consumer protection and state oversight of digital assets.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "federal-preemption",
+          "state-attorneys-general",
+          "market-structure"
+        ],
+        "author": "Nikhilesh De",
+        "content": "",
+        "fetched_at": "2026-09-14T18:08:00.842627Z",
+        "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:a5325a0cfe54baaf",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "CoinDesk",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Policy",
+            "Clarity Act",
+            "Market Structure Legislation",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-14T15:57:01Z",
+        "source_type": "rss",
+        "title": "A bipartisan coalition of 17 state attorneys generals urge Senate to reject Clarity Act",
+        "url": "https://www.coindesk.com/policy/2026/09/14/bipartisan-group-of-state-attorneys-general-oppose-clarity-act-over-federal-preemption-worry"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A coordinated push by 17 bipartisan state attorneys general against the Clarity Act ahead of a Senate vote is a significant regulatory development with a clear transmission path to crypto market structure and industry access. It signals material political risk to pending federal crypto legislation, though it is advocacy rather than a binding decision.",
+        "ai_score": 7.5,
+        "ai_summary": "New York Attorney General Letitia James led 17 bipartisan attorneys general in urging senators to vote against the Clarity Act ahead of its initial Senate vote.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "us-policy",
+          "attorneys-general",
+          "market-structure"
+        ],
+        "author": "Sarah Wynn",
+        "content": "New York Attorney General Letitia James led a group of 17 bipartisan attorneys general urging lawmakers to vote against crypto legislation.",
+        "fetched_at": "2026-09-14T18:08:01.664061Z",
+        "id": "rss:www.theblock.co_rss.xml:2c4de0e8d1149158",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "People",
+            "Policy",
+            "Regulation",
+            "U.S. Policymaking",
+            "Elections 2026",
+            "Elizabeth Warren",
+            "Senate Agriculture Committee",
+            "Senate Banking Committee",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-14T14:43:34Z",
+        "source_type": "rss",
+        "title": "NY Attorney General James leads bipartisan push against the Clarity Act ahead of initial Senate vote",
+        "url": "https://www.theblock.co/news/regulation/2026-09-14-ny-attorney-general-james-bipartisan-push-against-clarity-act-initial-senate-vote-414635"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A revised ethics provision in the Clarity Act agreed to by Donald Trump is a material regulatory development for US crypto market structure, with a clear transmission path to industry rules and market access. It is not a systemic event or landmark final legislation, so it falls in the high-value range rather than 9+.",
+        "ai_score": 7.5,
+        "ai_summary": "The Clarity Act's ethics provision has been revised with Donald Trump's agreement, marking a notable step in advancing US crypto market-structure legislation.",
+        "ai_tags": [
+          "clarity-act",
+          "crypto-regulation",
+          "us-policy",
+          "market-structure",
+          "ethics-provision"
+        ],
+        "author": "Nikhilesh De",
+        "content": "",
+        "fetched_at": "2026-09-14T18:08:00.988261Z",
+        "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:8dac2d4eec16bf2c",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "CoinDesk",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Policy",
+            "Clarity Act",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-14T14:27:48Z",
+        "source_type": "rss",
+        "title": "Here is the revised Clarity Act ethics provision Donald Trump has agreed to",
+        "url": "https://www.coindesk.com/policy/2026/09/14/here-is-the-revised-clarity-act-ethics-provision-donald-trump-has-agreed-to"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The Clarity Act is a landmark piece of US crypto market-structure legislation, and Trump agreeing to stricter ethics rules to unblock it is a material regulatory development with a clear transmission path to market access and industry structure. It is not yet a final law, so it falls short of the 9-10 systemic tier.",
+        "ai_score": 7.5,
+        "ai_summary": "President Trump agreed to stricter ethics provisions in order to salvage the stalled Clarity Act crypto market-structure bill, according to AP reporting.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "us-policy",
+          "market-structure",
+          "trump"
+        ],
+        "author": "Olivier Acuna",
+        "content": "",
+        "fetched_at": "2026-09-14T18:08:01.176270Z",
+        "id": "rss:www.coindesk.com_arc_outboundfeeds_rss_:5ae7432c41e27c8d",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "CoinDesk",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Policy",
+            "Donald Trump",
+            "Clarity Act",
+            "Regulation",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-14T12:07:19Z",
+        "source_type": "rss",
+        "title": "Trump agrees to stricter ethics rules to save Clarity Act crypto bill: AP",
+        "url": "https://www.coindesk.com/policy/2026/09/14/trump-agrees-to-stricter-ethics-rules-to-save-clarity-act-crypto-bill-ap"
       }
     }
   ],
