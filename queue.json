@@ -261,10 +261,11 @@
         "post_id": "366424783362413"
       },
       "8724275c3df20f404c06009b8a9c45401b3b07a2d0e1c2862fd6e13344aa5670": {
-        "status": "pending",
+        "status": "sent",
         "rank": 2,
         "text_hash": "e31340e1102e5b9a57085d7ee4e1b7ab18f757daeff51c7d0bb8aaff42307c59",
-        "attempted_at": "2026-09-14T10:41:13.217481+08:00"
+        "attempted_at": "2026-09-14T10:41:13.217481+08:00",
+        "post_id": "366438301350224"
       }
     }
   },
@@ -284,12 +285,6 @@
     "2026-09-14": {
       "revision": "f0005fae81a8d516e2876f7934501c8d3d4e75a8f570fdd02a5736072ab3acb9",
       "jobs": [
-        {
-          "id": "8724275c3df20f404c06009b8a9c45401b3b07a2d0e1c2862fd6e13344aa5670",
-          "text": "Cosmos Hub 已恢复出块，但 Ledger 用户仍无法访问 ATOM\n\nCosmos Hub 于 9 月 8 日 18:12 UTC 在区块高度 32,878,318 处停止出块，QuickNode 表示其节点已于 9 月 9 日 14:26 UTC 追平链头，并已在 9 月 12 日 00:24 UTC 将其自身事件标记为已解决。但 Ledger 于 9 月 8 日 19:41 CEST 单独开立了一起事件，其状态页在 9 月 13 日仍将 Cosmos（ATOM）列为重大故障，用户无法查看 ATOM 余额与交易历史，也无法通过 Ledger Wallet 提交 ATOM 交易。\n\n这一事件把网络层恢复与钱包层可用性区分开来：Cosmos Hub 已恢复出块，但一款被广泛使用的硬件钱包仍无法为其用户显示余额或广播 ATOM 交易。它凸显出即便底层链运行正常，单一钱包厂商的服务链路也可能实质性冻结用户动用资产的能力，也说明硬件钱包依赖给自托管带来的访问与流动性摩擦。\n\nLedger 未披露故障原因或预计恢复时间，其最近一次公开更新发布于 9 月 10 日 16:12 CEST。对于急需转移 ATOM 的用户，Ledger 的事件通告指向其替代方法指南，其中列出 Cosmostation 与 Keplr 作为兼容的第三方界面：用户只需在设备上打开 Cosmos 应用并选择 Keplr 的硬件钱包连接选项，即可通过另一界面访问同一链上账户，同时让 Ledger 设备仍留在交易签名流程中——这与把助记词导入软件钱包是两回事，后者是用户绝对不应做的操作。\n\n来源：https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/\nBMTNews · 2026-09-14 · https://bmt.news",
-          "rank": 2,
-          "due_at": "2026-09-14T10:40:00+08:00"
-        },
         {
           "id": "769806a51857febf4d8e2fe102fa9014ac8a54075268654993e460b137cb0c12",
           "text": "LDK v0.2.6 修复可致资金被盗与节点重启失败的严重漏洞\n\nLightning 开发套件（LDK）于 9 月 9 日发布 v0.2.6，修复了两个漏洞：其一是 splice（拼接）缺陷，恶意对等节点可借此把超额手续费分配到自己的输出地址；其二是支付合约缺陷，当两个支付合约共用同一 payment hash、其中一个已成功转发时，接收并立即拒绝一个伪造支付会导致已保存的 ChannelManager 状态无法加载。受影响的应用程序团队需要集成 v0.2.6 才能应用这些修复。\n\nLDK 会被直接编译进移动钱包、支付服务基础设施等下游应用中，因此这次修复既消除了节点资金面临的直接财务风险，也解决了可能导致节点无法正常重启的问题。由于补丁代码必须由各个集成方自行引入，最终安全效果取决于开发者是否及时发布更新版本，而不是依赖全网升级。\n\n该版本说明仅描述节点发起 splice 时存在少量资金风险，并未给出具体的金额上限，同时公告称尚未观测到任何实际损失或已被利用的应用；值得注意的是，仅仅拒绝那笔伪造支付本身并不能避免重启时的状态反序列化失败。\n\n来源：https://cryptoslate.com/critical-bitcoin-lightning-bugs-exposed-nodes-to-fund-theft-and-restart-failure/\nBMTNews · 2026-09-14 · https://bmt.news",
