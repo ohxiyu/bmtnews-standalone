@@ -19,7 +19,7 @@
   "last_material_change_at": "2026-09-14T18:08:09.207660+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "ags",
     "clarity",
@@ -62,12 +62,19 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:cointelegraph.com_rss:40fd45d9bfd22f90"
+        "rss:cointelegraph.com_rss:40fd45d9bfd22f90",
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:a5325a0cfe54baaf"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/clarity-act-faces-new-opposition-ahead-of-key-senate-vote?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/policy/2026/09/14/bipartisan-group-of-state-attorneys-general-oppose-clarity-act-over-federal-preemption-worry",
+          "label": "CoinDesk",
           "source_type": "rss",
           "official": false
         }
