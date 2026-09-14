@@ -282,10 +282,11 @@
         "post_id": "366492360853972"
       },
       "5bb9f0fdf9d5b2e55e7394a12456aa154ef091b67f639f1b03953f70482c499c": {
-        "status": "pending",
+        "status": "sent",
         "rank": 5,
         "text_hash": "8c203d3febdb23dce06a881b95cc359f36c77024ff524e0d84047d44908e81fa",
-        "attempted_at": "2026-09-14T16:16:16.651794+08:00"
+        "attempted_at": "2026-09-14T16:16:16.651794+08:00",
+        "post_id": "366520644109630"
       }
     }
   },
@@ -305,12 +306,6 @@
     "2026-09-14": {
       "revision": "f0005fae81a8d516e2876f7934501c8d3d4e75a8f570fdd02a5736072ab3acb9",
       "jobs": [
-        {
-          "id": "5bb9f0fdf9d5b2e55e7394a12456aa154ef091b67f639f1b03953f70482c499c",
-          "text": "Anthropic CEO Amodei 呼吁放缓AI发展速度以保障安全\n\nAnthropic CEO Dario Amodei 于周六发布博客文章，认为AI发展速度过快，可能“超出我们理解和控制系统能力的速度”，并援引了递归自我改进以及7月OpenAI与Hugging Face的智能体事件作为依据。OpenAI CEO Sam Altman对此表示认同，称应放缓AI发展节奏，并表示OpenAI今年不会寻求IPO，以便专注于安全，Elon Musk也在X上发帖称“Dario说得对”。\n\n两家领先前沿实验室的负责人以及一位最具影响力的AI投资者罕见地公开一致，认为有必要有意放缓前沿AI的发展步伐，这可能推动AI治理讨论转向协调一致的安全标准与独立评估。由于Amodei的提议针对前沿实验室、民主国家政府间的协调以及中国获取先进芯片的问题，因此牵涉的出口管制与监管议题远超任何一家公司的范畴。\n\nAmodei 提出了三项提议：给予独立评估者类似实验室内部员工级别的访问权限；民主国家的前沿AI公司就共同安全标准以及限制不受约束的AI进展进行协调；民主国家政府尝试在认真对待合规核查难度的前提下，与威权政府进行协调。他还警告称，未来6到12个月内，像7月事件中那样的失控智能体集群可能具备接管整个互联网的能力，而Anthropic表示其已单方面承诺落实独立评估者这一项。\n\n来源：https://cointelegraph.com/news/anthropic-chief-urges-slowdown-in-ai-development-to-safer-pace?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound\nBMTNews · 2026-09-14 · https://bmt.news",
-          "rank": 5,
-          "due_at": "2026-09-14T16:14:00+08:00"
-        },
         {
           "id": "8f3ea9d6ed7ec5e111ff591eb002260fcc22897e28e69ee834efe9dfbd030455",
           "text": "Homebrew 7.0.0 发布：新增漏洞检查、沙箱强化与原生 macOS 应用\n\n2026年9月13日，Homebrew 维护者 Mike McQuaid 宣布发布 Homebrew 7.0.0，这是自 6.0.0 以来的首个大版本更新，带来更快的安装与升级速度、更强的沙箱机制、原生 macOS 应用、内置的漏洞检查与安全公告数据库，同时终止对 macOS 10.15 的支持，并将 Intel Mac 移入 Tier 3。Intel 降级此前已提前公布，意味着 Homebrew 不再为 Intel 架构构建新的二进制包（bottle）。\n\nHomebrew 是绝大多数 macOS 开发者（以及在 Linux 和 WSL 上广泛使用）的默认包管理器，因此其在安装性能、沙箱边界和安全工具上的调整会波及极其庞大的开发者工具链。内置漏洞检查把供应链安全验证从可选的第三方工具变为默认流程；而 Intel 平台降级则标志着苹果从 Intel 硬件迁移过程中的一个具体节点。\n\nHomebrew 7 终止了对 macOS 10.15 Catalina 的支持——项目文档中列出的支持范围为 macOS Sonoma 14 及更新版本——并将运行 macOS 11 或更高版本的 Intel Mac 移至最低级别的 Tier 3，不再为其构建新的 bottle，且计划在 2027 年 9 月或之后彻底移除在 Intel 系统上运行 Homebrew 的能力。这一时间点与苹果“macOS Tahoe 26 是最后一个支持 Intel 硬件的 macOS 版本”的说法相呼应。\n\n来源：https://brew.sh/2026/09/13/homebrew-7.0.0/\nBMTNews · 2026-09-14 · https://bmt.news",
