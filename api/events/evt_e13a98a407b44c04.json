@@ -48,14 +48,27 @@
       "current_state_en": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
       "detailed_summary_zh": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
       "detailed_summary_en": "LDK v0.2.6 fixes critical bugs that could divert node funds via malicious splice peers and prevent saved channel state from loading after a rejected bogus payment.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "LDK（Lightning Development Kit）是一个基于 Rust 的闪电网络实现，以软件开发套件的形式提供并附带多个配套模块，允许开发者自行选择存储、钱包、网络和区块链监控组件。splice（拼接）允许通道参与方通过花费通道的 funding output 并将其替换为一笔新的资金交易来增加或减少通道资金，其手续费由双方按各自贡献的输入输出分担。ChannelManager 是 LDK 中负责管理通道与支付的组件，节点重启需要把已保存的状态反序列化读回内存——如果该状态在加载时被拒绝，应用就无法完成正常重启。",
+      "background_en": "LDK (Lightning Development Kit) is a Rust-based Lightning Network implementation packaged as a software development kit with supporting modules, allowing developers to choose their own storage, wallet, networking and blockchain-monitoring components. A splice lets a channel participant add or remove funds by spending the channel's funding output and replacing it with a new funding transaction, whose fees are shared between participants according to the inputs and outputs each contributes. ChannelManager is LDK's component for tracking channels and payments, and restarting a node requires deserializing that saved state back into memory — if the state is rejected during loading, the application cannot complete its normal restart.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "其传导路径是间接的、由开发者驱动的：LDK 只是钱包与支付服务所采用的多种闪电网络实现之一，因此任何实际被利用的情况都会体现为相关集成方的通道资金损失或运营中断，而不会演变为全市场事件，且目前并未报告任何损失。由于闪电网络的节点数量与路由容量使其成为与链上 BTC 并行的结算层，如果支付服务运营方长期存在状态加载失败的问题，原则上可能削弱闪电网络相关资金流转的路由可靠性与流动性可用性。",
+      "market_impact_en": "The transmission path is indirect and developer-driven: LDK is one of several Lightning implementations used by wallets and payment services, so any realized exploit would show up as channel-level fund loss or operational downtime for those integrators rather than as a market-wide event, and no losses have been reported. Because the Lightning Network's routed capacity and node count make it a settlement layer sitting alongside on-chain BTC, unresolved state-loading failures at payment-service operators could in principle degrade routing reliability and liquidity availability for Lightning-denominated flows.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://lightningdevkit.org/introduction/",
+          "title": "Introduction | Lightning Dev Kit Documentation"
+        },
+        {
+          "url": "https://github.com/lightningdevkit",
+          "title": "Lightning Dev Kit · GitHub"
+        },
+        {
+          "url": "https://www.fidelitydigitalassets.com/research-and-insights/introduction-channel-splicing-bitcoins-lightning-network",
+          "title": "Introduction to Channel Splicing on Bitcoin’s Lightning Network"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:a1b1725bd58b81e6"

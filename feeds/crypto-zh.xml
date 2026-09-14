@@ -4,7 +4,62 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-09-13T00:00:00Z</updated>
+  <updated>2026-09-14T00:00:00Z</updated>
+  <entry>
+    <title>BTCPay Server 警告：机器人正探测暴露的闪电节点重启期漏洞</title>
+    <link href="https://cryptoslate.com/malicious-bots-are-actively-probing-exposed-bitcoin-payment-servers-to-steal-master-administrative-keys/"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:81d3a48ce852b456</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>BTCPay Server 警告称，恶意机器人正在对运营者手动重新暴露到公网的闪电节点反复调用 LND 的密码修改接口，利用 LND 重启后钱包仍处于锁定状态的短暂窗口期。9 月 7 日发布的 2.4.4 版本修补了该攻击路径：为新 LND 钱包分配唯一的随机密码，对使用共享默认凭证的旧部署轮换密码，并通过 BTCPay 标准反向代理拦截未经认证的钱包初始化和解锁调用。
+
+一旦探测成功，攻击者可能在 BTCPay 内部解锁程序之前抢先提交旧的共享密码、将其替换，并申请可获得 LND 节点及所保护商户钱包控制权的管理员 macaroon，最终后果与 8 月的盗窃事件相同。任何使用自定义反向代理或公网暴露 LND 的自托管 BTCPay Server 运营者都处于直接风险之中，必须升级版本并重新审查网络规则。
+
+在重启后的时间窗口内，被利用的密码修改方式不需要 macaroon——而 macaroon 通常是 LND 用来授权管理操作的凭证；此外，旧的 BTCPay LND 钱包因使用共享默认密码而放大了风险。BTCPay 代理侧的防护无法保护运营者自行配置的基础设施，因此在移除公开的 LND 路由之前，自定义反向代理仍然脆弱；9 月 11 日合并的一项路由控制改动提供了受支持的远程访问方式，同时默认禁用 LND 与 Core Lightning 接口。BTCPay 尚未报告通过此次观测到的活动实现成功接管，也未将这批机器人归因于 8 月的攻击者。</summary>
+  </entry>
+  <entry>
+    <title>Cosmos Hub 已恢复出块，但 Ledger 用户仍无法访问 ATOM</title>
+    <link href="https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:b1978328ff40f332</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>Cosmos Hub 于 9 月 8 日 18:12 UTC 在区块高度 32,878,318 处停止出块，QuickNode 表示其节点已于 9 月 9 日 14:26 UTC 追平链头，并已在 9 月 12 日 00:24 UTC 将其自身事件标记为已解决。但 Ledger 于 9 月 8 日 19:41 CEST 单独开立了一起事件，其状态页在 9 月 13 日仍将 Cosmos（ATOM）列为重大故障，用户无法查看 ATOM 余额与交易历史，也无法通过 Ledger Wallet 提交 ATOM 交易。
+
+这一事件把网络层恢复与钱包层可用性区分开来：Cosmos Hub 已恢复出块，但一款被广泛使用的硬件钱包仍无法为其用户显示余额或广播 ATOM 交易。它凸显出即便底层链运行正常，单一钱包厂商的服务链路也可能实质性冻结用户动用资产的能力，也说明硬件钱包依赖给自托管带来的访问与流动性摩擦。
+
+Ledger 未披露故障原因或预计恢复时间，其最近一次公开更新发布于 9 月 10 日 16:12 CEST。对于急需转移 ATOM 的用户，Ledger 的事件通告指向其替代方法指南，其中列出 Cosmostation 与 Keplr 作为兼容的第三方界面：用户只需在设备上打开 Cosmos 应用并选择 Keplr 的硬件钱包连接选项，即可通过另一界面访问同一链上账户，同时让 Ledger 设备仍留在交易签名流程中——这与把助记词导入软件钱包是两回事，后者是用户绝对不应做的操作。</summary>
+  </entry>
+  <entry>
+    <title>LDK v0.2.6 修复可致资金被盗与节点重启失败的严重漏洞</title>
+    <link href="https://cryptoslate.com/critical-bitcoin-lightning-bugs-exposed-nodes-to-fund-theft-and-restart-failure/"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:a1b1725bd58b81e6</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>Lightning 开发套件（LDK）于 9 月 9 日发布 v0.2.6，修复了两个漏洞：其一是 splice（拼接）缺陷，恶意对等节点可借此把超额手续费分配到自己的输出地址；其二是支付合约缺陷，当两个支付合约共用同一 payment hash、其中一个已成功转发时，接收并立即拒绝一个伪造支付会导致已保存的 ChannelManager 状态无法加载。受影响的应用程序团队需要集成 v0.2.6 才能应用这些修复。
+
+LDK 会被直接编译进移动钱包、支付服务基础设施等下游应用中，因此这次修复既消除了节点资金面临的直接财务风险，也解决了可能导致节点无法正常重启的问题。由于补丁代码必须由各个集成方自行引入，最终安全效果取决于开发者是否及时发布更新版本，而不是依赖全网升级。
+
+该版本说明仅描述节点发起 splice 时存在少量资金风险，并未给出具体的金额上限，同时公告称尚未观测到任何实际损失或已被利用的应用；值得注意的是，仅仅拒绝那笔伪造支付本身并不能避免重启时的状态反序列化失败。</summary>
+  </entry>
+  <entry>
+    <title>Revolut 数据泄露：伪造政府邮件致客户护照与交易记录外泄</title>
+    <link href="https://cointelegraph.com/news/revolut-says-customer-data-exposed-through-fake-government-email?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cointelegraph.com_rss:283b1292cbd24844</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>Revolut 披露，有诈骗者利用一个真实的政府机构邮件域名提交了伪造的客户信息调取请求，该请求通过了公司的身份验证检查，导致部分客户的护照复印件、验证自拍和完整交易记录被泄露。这家金融科技公司表示已发现该骗局，封堵了相关地址，并通报了涉事政府机构、执法部门和金融监管机构，同时于上周五直接通知了数量有限的受影响客户。
+
+该事件表明，社会工程攻击无需任何技术入侵，就能击穿一家大型金融科技公司的身份验证控制，从而动摇用户对平台强制收集的 KYC 数据的信任。其重要性在于，Revolut 掌握着数千万用户的身份证件、自拍、IBAN 和交易数据，而部分外泄信息可被用于账户接管尝试、精准钓鱼以及对高净值人群的勒索。
+
+这些伪造请求看似来自一个真实政府机构的域名，意味着攻击者不必伪造发件地址，而是直接利用了该域名自带的信任度，而数据在被放出之后才被发现异常。Revolut 表示其系统与客户资金未受影响；加密侦探 ZachXBT 称该事件规模有限，针对的是高净值用户；据报道，泄露字段还包括联系方式、出生日期、职业、账户对账单、IBAN 以及与比特币相关的信息。</summary>
+  </entry>
+  <entry>
+    <title>Symbiosis 比特币跨链桥遭攻击后追回 15 BTC，向攻击者开出 20% 赏金</title>
+    <link href="https://www.theblock.co/news/defi/2026-09-13-symbiosis-says-it-recovered-15-btc-after-bitcoin-bridge-exploit-offers-attacker-20-bounty-414568"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:www.theblock.co_rss.xml:7f24d662a748fee5</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>跨链协议 Symbiosis 披露，攻击者于 9 月 11 日利用其比特币跨链桥的漏洞，据区块链安全公司 Blockaid 称铸造了约 461 亿枚无资产背书的 syBTC。Symbiosis 表示目前已追回约 15 BTC，并向攻击者开出 20% 的赏金，以换取其余资金的归还。
+
+这起事件再次提醒人们，跨链桥始终是 DeFi 中被攻击最频繁的类别，也迫使 Symbiosis 完全暂停其原生比特币跨链桥。其意义不在于损失金额的大小，而在于攻击模式本身：一条有缺陷的铸造路径让攻击者凭空创造出天量合成 BTC，但最终只能部分变现。
+
+尽管铸造了高达 461 亿枚 syBTC，攻击者实际仅套现约 33.6 万美元，说明流动性深度不足使其无法大规模兑换这些无背书的代币。据报道，Symbiosis 在攻击发生后关闭了比特币跨链桥，漏洞涉及其 BridgeV2 合约；而 20% 的赏金提议表明这是一次协商式追赃，而非纯技术层面的修复。</summary>
+  </entry>
   <entry>
     <title>纳斯达克向Kraken母公司Payward投资1亿美元，推进代币化股票</title>
     <link href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxObC0tOEU5ek1VazRIbmtqYzQ1NlVXeGtGbjNXUXpfaC0yRzVCN3FKSjJ4enI2eThEam01NEdpalZyYkZxOTgyQ1NNbFQzZEpwa2ZPZ2ZYTzZvUWdXVi1lOFNEWFF5R25LbWt3NUx2MVZQVUJtT3hyQTFaQXl4QWpoaEoyYm95U1dsdFhkX0VGSGp1TUVVbWNMR2NaVHdJMk9CZzdNRHJMYnZzaml1cjFqRWlZMncwSUkwMkt1dXZkVFlkeW_SAcgBQVVfeXFMT0hHbkRfSV9BSXczRUFEdUJOMXNUNHNSY1lMWi1PVnJLaWFUMHM5VnNzS1BmU0EtR29WMXpyWFFPN3hWWk41cm1DUHBMVDUyUlljYlZCeC1VUU5aODN1VnBWVnR1WmNjdktqSUJwZWk0NEpwTWFidS1SdTAtQ3RZY1pSd2VRUUVZTE5ISUdPRXhZZUowczlobkVuaXBWSGUtdHFWZ1pVTlQ3T3REY0ZBU2YzSVBvNTF1LW9aM3VKdDlxZUhoMmJyZi0?oc=5"/>
@@ -389,60 +444,5 @@ MetaMask 在约 190 个国家/地区的下载量超过 1 亿次，并已促成�
 这标志着机构采用区块链支付的又一进展，为主流企业提供了一条受监管的途径来发行品牌定制代币。如果得到采用，它可能使稳定币的用例大幅扩展，而不仅仅局限于交易和汇款，并巩固PayPal在新兴代币化经济中的地位。
 
 该平台面向企业而非个人消费者，使企业能够在PayPal现有稳定币基础设施之上创建和管理代币，并借助PayPal的监管合规框架和分发网络来发行自有代币。</summary>
-  </entry>
-  <entry>
-    <title>BitMart错过重组路线图期限，任命艾睿铂为财务顾问</title>
-    <link href="https://cointelegraph.com/news/bitmart-misses-roadmap-deadline-appoints-financial-adviser?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-10/#rss:cointelegraph.com_rss:10f42ddd95c55104</id>
-    <updated>2026-09-10T00:00:00Z</updated>
-    <summary>BitMart自设的9月9日截止日已过，却没有发布承诺的重组和业务恢复路线图；相反，它在周三任命Alvarez &amp; Marsal为财务顾问，以评估其资产、财务状况及可能的出路。该交易所还表示将在五个工作日内上线专门收集用户反馈的网页门户。
-
-对在BitMart存有资金的用户而言，这是一个重大事件，因为错过期限加上聘请重组顾问，表明该平台财务困境比此前声明所暗示的更为严重。由于仍无资产数字和提现时间表，此事也影响投资者对中心化交易所的信心。
-
-Alvarez &amp; Marsal将与BitMart的法律顾问合作，评估交易平台的资产、财务状况、利益相关者问题以及可能的出路，包括来自身份不明的第三方的提案。组织BitMart非正式债权人委员会的Echo Base称此次任命是“BitMart自7月以来最令人鼓舞的一步”，但也指出其没有公布储备头寸、资产清单、回收估计或提现时间表。</summary>
-  </entry>
-  <entry>
-    <title>黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分</title>
-    <link href="https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/"/>
-    <id>https://bmt.news/editions/2026-09-09/#gdelt:article:20260908T003000Z::https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>攻击者利用 Liquid Network 的 Elements 软件漏洞铸造了无锚定的 L-BTC，并从其储备中盗走约 4,000 BTC（约 3.2 亿美元）。约 3,400 BTC 已于 9 月 7 日归还，Blockstream 正在就追回剩余约 600 BTC 进行谈判；周一对桥接节点部署了补丁，并准备发布紧急更新。
-
-这是涉及比特币侧链的最大规模攻击事件之一，直接检验用户对联合锚定和封装比特币产品的信任。它表明即使没有私钥泄露或节点被入侵，交易验证漏洞仍可能危及用户资金。
-
-Liquid 的储备在暂停运营前从约 4,205 BTC 降至 197 BTC；Liquid 表示 USDT 和其他 Liquid 发行的资产未受漏洞影响，但暂停期间用户无法交易。验证失败发生在提现（peg-out）启动之前的交易层面，导致 SideSwap 节点和 Liquid 分布式 functionary 节点都接受了无锚定的 L-BTC，目前仍有约 600 BTC（约 4,700 万美元）尚未归还。</summary>
-  </entry>
-  <entry>
-    <title>Cronos 回滚抹去两小时交易，逆转 Tectonic 1.11 亿美元攻击</title>
-    <link href="https://decrypt.co/377686/cronos-erased-two-hours-transactions-defi-exploit"/>
-    <id>https://bmt.news/editions/2026-09-09/#rss:decrypt.co_feed:fef103daafdd50fd</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>Cronos 的验证者暂停了网络并回滚了 10,961 个区块，丢弃了 1 小时 54 分钟的交易，以逆转 Tectonic 攻击中约 1.112 亿美元的损失。约九小时后恢复出块，但已转出网络的 919 万美元仍未被追回。
-
-此次干预推翻了区块链的最终确定性——即交易一经确认便不可篡改的常规保证，影响了回滚窗口期内所有合法交易。它为验证者应对大型 DeFi 攻击开创了重要先例，也可能影响用户对 Cronos 及 Crypto.com 相关体系的信任。
-
-攻击者先在流动性较低的去中心化交易市场推高 TONIC 价格，随后以被高估的抵押品在九个市场借入约 1.204 亿美元。在 1 小时 54 分钟的窗口内，所有交易都被回滚，包括无关活动；交易恢复后，活跃应用上的未平仓头寸被重新定价。</summary>
-  </entry>
-  <entry>
-    <title>以太坊定2029年12月为量子抗性截止期限</title>
-    <link href="https://www.coindesk.com/tech/2026/09/08/ethereum-makes-quantum-resistance-a-top-priority-with-a-2029-deadline"/>
-    <id>https://bmt.news/editions/2026-09-09/#rss:www.coindesk.com_arc_outboundfeeds_rss_:73061c17e32007d0</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>9月7日，以太坊基金会Protocol集群表示，2029年12月实现量子抗性的截止日期不可妥协，这一决定将重塑后续升级。Glamsterdam之后的下一次升级Hegotá将优先保障FOCIL与Frame Transactions（EIP-8141）这两项核心内容。
-
-这标志着以太坊路线图的一项重大决策：它不再等待量子威胁更加明朗，而是围绕一个固定且紧迫的安全期限来规划。这一转变将使抗量子工作优先于可选功能，并可能决定未来几年哪些以太坊硬分叉能进入日程。
-
-开发者正在权衡将后量子认证（post-quantum attestations）从L*升级提前至K*，同时把强制执行证明推迟至L*，即以zkEVM时间线的延后来换取更快的抗量子加固，但该交换尚未获批。若要赶在2029年12月前全面就绪，平均约每7.2个月就要有一次硬分叉，基金会称这一节奏十分激进；若节奏延误，J*的“最低可行后量子里程碑”（MV-PQ）即为后备方案。</summary>
-  </entry>
-  <entry>
-    <title>Liquid Network遭比特币黑客攻击被盗3.2亿美元</title>
-    <link href="https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network"/>
-    <id>https://bmt.news/editions/2026-09-09/#gdelt:article:20260908T020000Z::https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>多个加密货币交易所用于转移比特币的结算层Liquid Network遭到黑客攻击，被盗3.2亿美元。据报道，该网络在2026年9月7日前后遭到攻击后已暂停所有交易。
-
-这是近期一系列重大安全事件中最新的一起，动摇了人们对数字资产安全的信心，也暴露出交易所依赖的结算基础设施所面临的风险。该事件可能促使业界更严格地审视侧链安全，并影响人们对交易所相关比特币托管和转账方式的信任。
-
-Liquid Network是一条比特币侧链，旨在让交易所之间进行更快、更保密的转账。CoinDesk报道称，黑客提出了附带条件的提议，并自称“好人”。</summary>
   </entry>
 </feed>

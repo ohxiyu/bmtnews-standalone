@@ -47,14 +47,27 @@
       "current_state_en": "BTCPay Server warns that malicious bots are actively probing exposed Lightning nodes for a restart-time weakness that could grant administrative control and enable theft of merchant wallets, with version 2.4.4 patching the issue but custom reverse proxies remaining at risk.",
       "detailed_summary_zh": "BTCPay Server warns that malicious bots are actively probing exposed Lightning nodes for a restart-time weakness that could grant administrative control and enable theft of merchant wallets, with version 2.4.4 patching the issue but custom reverse proxies remaining at risk.",
       "detailed_summary_en": "BTCPay Server warns that malicious bots are actively probing exposed Lightning nodes for a restart-time weakness that could grant administrative control and enable theft of merchant wallets, with version 2.4.4 patching the issue but custom reverse proxies remaining at risk.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "BTCPay Server 是一款自托管的开源比特币支付处理程序，让商户无需第三方网关即可直接接收 BTC，通常与 LND 配合运行——LND 是由 Lightning Labs 开发的闪电网络实现，支持快速、低手续费的链下支付。对 LND 的管理访问由 macaroon 控制，这是一种小型签名令牌，用于声明客户端可以对节点执行哪些操作。8 月 7 日，BTCPay 承认攻击者利用了影响 2.4.2 之前所有版本的漏洞，在未经认证的情况下获取 LND macaroon 文件并转移资金；此后该项目在其标准 Docker 部署中禁用了对 LND 的外部访问，提供上限为 3 BTC 的追回赏金，并联合交易所、区块链分析公司和执法机构追踪被盗比特币。",
+      "background_en": "BTCPay Server is a self-hosted, open-source Bitcoin payment processor that lets merchants accept BTC directly without a third-party gateway, and it commonly runs alongside LND, the Lightning Network implementation developed by Lightning Labs that enables fast, low-fee off-chain payments. Administrative access to LND is governed by macaroons, small signed tokens that assert which actions a client is allowed to perform on the node. On Aug. 7, BTCPay acknowledged that attackers had exploited a flaw affecting all versions before 2.4.2 to obtain LND macaroon files unauthenticated and move funds, after which the project disabled external access to LND in its standard Docker deployment, offered a recovery bounty capped at 3 BTC, and involved exchanges, analytics firms, and law enforcement in tracing the stolen bitcoin.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "这里的传导渠道是托管与基础设施风险，而非比特币协议本身：暴露的资产是自托管 LND 节点上闪电通道中的商户资金，持续探测可能促使部分自托管商户转向托管支付服务商或托管节点服务。在更广泛的市场层面，影响主要体现在比特币与闪电网络相关基础设施的情绪层面，因为广泛使用的商户工具链接连出现安全事件，可能削弱商户自行运营闪电节点的意愿。",
+      "market_impact_en": "The transmission channel here is custody and infrastructure risk rather than Bitcoin's protocol: merchant funds held in Lightning channels on self-hosted LND nodes are the exposed asset, and sustained probing could push some self-hosted merchants toward hosted payment processors or managed node services. In the broader market, the effect is sentiment-level for Bitcoin and Lightning-related infrastructure, as repeated incidents at a widely used merchant toolchain may weigh on merchant willingness to run Lightning nodes themselves.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.cryptonomist.ch/2026/08/08/btcpay-server-vulnerability/",
+          "title": "BTCPay Server Vulnerability: Critical Lightning Node Security Flaw"
+        },
+        {
+          "url": "https://www.tftc.io/btcpay-server-v2-4-2-lnd-macaroon-exploit-lightning-nodes-drained",
+          "title": "BTCPay Server v2.4.2 Patches Critical LND Exploit · TFTC"
+        },
+        {
+          "url": "https://github.com/lightningnetwork/lnd/blob/master/docs/macaroons.md",
+          "title": "lnd/docs/macaroons.md at master · lightningnetwork/lnd"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:81d3a48ce852b456"

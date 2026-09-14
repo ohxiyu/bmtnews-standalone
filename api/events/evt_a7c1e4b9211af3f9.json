@@ -51,14 +51,27 @@
       "current_state_en": "Cosmos Hub nodes are back at the chain tip, but Ledger Wallet still lists ATOM balances, history, and transactions as unavailable more than four days after the incident began, leaving users unable to view or send ATOM through the hardware wallet.",
       "detailed_summary_zh": "Cosmos Hub nodes are back at the chain tip, but Ledger Wallet still lists ATOM balances, history, and transactions as unavailable more than four days after the incident began, leaving users unable to view or send ATOM through the hardware wallet.",
       "detailed_summary_en": "Cosmos Hub nodes are back at the chain tip, but Ledger Wallet still lists ATOM balances, history, and transactions as unavailable more than four days after the incident began, leaving users unable to view or send ATOM through the hardware wallet.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Cosmos Hub 是 Cosmos 网络中最早也是规模最大的区块链，ATOM 是其原生代币；该链由验证人运行，用户通过提供账户余额与交易数据的 RPC 节点接入。Ledger 是一家成立于 2014 年的法国公司，其硬件钱包把私钥存储在离线的安全芯片中，因此交易必须在设备上签名。Ledger Wallet 应用依赖自身的后端服务链路来获取账户数据并转发交易，这正是为何一条已经追平链头的网络在钱包内仍可能显示不可用。Keplr 是 Cosmos 生态中常用的自托管多链钱包，可作为 Ledger 设备的前端界面。",
+      "background_en": "The Cosmos Hub is the first and largest blockchain in the Cosmos Network, and ATOM is its primary token; it is operated by validators and reached by users through RPC nodes that serve account balances and transaction data. Ledger is a French company founded in 2014 that makes hardware wallets storing private keys in an offline secure element, so transactions must be signed on the device. Ledger Wallet's app relies on its own backend service path to fetch account data and relay transactions, which is why a network that has caught up can still appear unavailable inside the wallet. Keplr is a self-custodial multichain wallet commonly used across the Cosmos ecosystem that can act as a front-end for a Ledger device.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导渠道在于访问权限而非链本身的安全性：持有 ATOM 的 Ledger 用户在事件未解决期间无法查看余额或广播转账，这可能妨碍其将 ATOM 充值到交易所或转入 DeFi 头寸。这种摩擦影响的是 ATOM 的现货流动性与自托管信心，而非 Cosmos Hub 的共识或出块，报道时 ATOM 24 小时跌幅约 0.50%，市值排名第 67 位。",
+      "market_impact_en": "The transmission channel is access rather than chain integrity: Ledger users holding ATOM cannot view balances or broadcast transfers, which can impede their ability to deposit ATOM to exchanges or move it into DeFi positions while the incident remains open. That friction touches ATOM spot liquidity and self-custody sentiment rather than the Cosmos Hub's consensus or block production, and ATOM was trading around -0.50% over 24 hours and ranked #67 by market cap at the time of reporting.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://docs.cosmos.network/hub/latest",
+          "title": "Introduction - Cosmos Docs"
+        },
+        {
+          "url": "https://grokipedia.com/page/Ledger_Hardware_Wallet",
+          "title": "Ledger Hardware Wallet"
+        },
+        {
+          "url": "https://grokipedia.com/page/Keplr_Wallet",
+          "title": "Keplr Wallet"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:b1978328ff40f332"

@@ -4,7 +4,62 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-13T00:00:00Z</updated>
+  <updated>2026-09-14T00:00:00Z</updated>
+  <entry>
+    <title>BTCPay Server warns bots are probing exposed Lightning nodes for a restart-time flaw</title>
+    <link href="https://cryptoslate.com/malicious-bots-are-actively-probing-exposed-bitcoin-payment-servers-to-steal-master-administrative-keys/"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:81d3a48ce852b456</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>BTCPay Server has warned that malicious bots are actively and repeatedly calling an LND password-change endpoint on Lightning nodes that operators manually re-exposed to the internet, exploiting a brief window right after LND restarts while the wallet is still locked. Version 2.4.4, released on Sept. 7, closes the path by assigning unique random passwords to new LND wallets, rotating passwords on older installations that used the shared default credential, and blocking unauthenticated wallet setup and unlock calls through BTCPay&#x27;s standard reverse proxy.
+
+If the probing succeeds, an attacker could submit the old shared password before BTCPay&#x27;s internal unlocker, replace it, and request an administrator macaroon that grants control over the LND node and the merchant wallets it secures — the same end result as the August theft. Anyone running a self-hosted BTCPay Server with a custom reverse proxy or publicly exposed LND is directly exposed and must patch and re-audit their network rules.
+
+The targeted password-change method does not require a macaroon during the post-restart interval, which normally is the credential LND uses to authorize administrative actions, and older BTCPay LND wallets compounded the risk by relying on a shared default password. BTCPay&#x27;s proxy-side protections cannot secure infrastructure operators configure themselves, so custom reverse proxies remain vulnerable until public LND routes are removed; a route-control change merged Sept. 11 provides a supported remote-access option with LND and Core Lightning interfaces disabled by default. BTCPay has not reported any successful takeover via this newly observed activity and has not linked the bots to the August attackers.</summary>
+  </entry>
+  <entry>
+    <title>Cosmos Hub is back online, but Ledger users still cannot access ATOM</title>
+    <link href="https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:b1978328ff40f332</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>Cosmos Hub stalled at block 32,878,318 at 18:12 UTC on Sept. 8, and QuickNode reported its nodes back at the chain tip by 14:26 UTC on Sept. 9, with its own incident resolved at 00:24 UTC on Sept. 12. Ledger, however, opened a separate incident at 19:41 CEST on Sept. 8 and its status page still listed Cosmos (ATOM) as a major outage on Sept. 13, leaving users unable to view ATOM balances or transaction history, and unable to submit ATOM transactions through Ledger Wallet.
+
+This separates network-layer recovery from wallet-layer availability: the Cosmos Hub is producing blocks again, yet a widely used hardware wallet still cannot display balances or broadcast ATOM transactions for its users. It highlights how a single wallet vendor&#x27;s service path can effectively freeze a user&#x27;s ability to move funds even when the underlying chain is healthy, and it underscores the access and liquidity friction that hardware-wallet dependency introduces into self-custody.
+
+Ledger has not disclosed a cause or an estimated restoration time, and its last public update was posted at 16:12 CEST on Sept. 10. For users who need to move ATOM urgently, Ledger&#x27;s incident notice points to its alternative-methods guide, listing Cosmostation and Keplr as compatible third-party interfaces that connect to a Ledger device by opening the Cosmos app and choosing the hardware-wallet connection option — a route that keeps the device in the transaction flow, which is fundamentally different from importing the recovery phrase into a software wallet, something users should never do.</summary>
+  </entry>
+  <entry>
+    <title>LDK v0.2.6 patches critical Lightning bugs enabling fund theft and restart failure</title>
+    <link href="https://cryptoslate.com/critical-bitcoin-lightning-bugs-exposed-nodes-to-fund-theft-and-restart-failure/"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:a1b1725bd58b81e6</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>The Lightning Development Kit (LDK) released v0.2.6 on Sept. 9, patching two bugs: a splice flaw that let a malicious peer trigger excess fee allocation paid out to that peer&#x27;s own output, and a payment-contract flaw where receiving and immediately rejecting a bogus payment sharing a payment hash with an already-forwarded contract could leave saved ChannelManager state unable to load. Affected application teams need to integrate v0.2.6 to apply the fixes.
+
+LDK is compiled directly into downstream applications such as mobile wallets and payment-service infrastructure, so the fixes address both direct financial risk to node funds and a condition that can block a normal node restart. Because the patched code must be pulled into each integrating application, the security outcome depends on developers shipping updated builds rather than on any network-wide upgrade.
+
+The release describes only a small amount of funds at risk when a node initiates a splice and does not specify a numerical ceiling, and the notice reports no observed losses or exploited applications; notably, simply rejecting the bogus payment does not by itself prevent the deserialization failure on restart.</summary>
+  </entry>
+  <entry>
+    <title>Revolut data breach: fake government email exposed customer passports and transaction histories</title>
+    <link href="https://cointelegraph.com/news/revolut-says-customer-data-exposed-through-fake-government-email?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:cointelegraph.com_rss:283b1292cbd24844</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>Revolut disclosed that a fraudster used a legitimate government agency email domain to submit fraudulent requests for customer information, which passed the company&#x27;s authentication checks, exposing copies of passports, verification selfies and full transaction histories. The fintech said it detected the scheme, blocked the address, alerted the government agency, law enforcement and financial regulators, and notified the limited number of affected customers on Friday.
+
+The incident shows how a social-engineering attack can defeat identity-verification controls at a major fintech without any technical intrusion, undermining confidence in the mandatory KYC data that platforms collect. It matters because Revolut holds identity documents, selfies, IBANs and transaction data for tens of millions of users, and some of that exposed data can be used for account-takeover attempts, targeted phishing and extortion against high-net-worth individuals.
+
+The fraudulent requests appeared to come from a real government agency&#x27;s domain, meaning the attacker did not need to spoof the address but exploited the trust the domain carries, and detection only happened after the data had already been released. Revolut said its systems and customer funds were unaffected, crypto sleuth ZachXBT characterised the incident as limited in size and aimed at high-net-worth users, and reported exposed fields also include contact details, birth dates, occupations, account statements, IBANs and Bitcoin-related information.</summary>
+  </entry>
+  <entry>
+    <title>Symbiosis Recovers 15 BTC After Bitcoin Bridge Exploit, Offers 20% Bounty</title>
+    <link href="https://www.theblock.co/news/defi/2026-09-13-symbiosis-says-it-recovered-15-btc-after-bitcoin-bridge-exploit-offers-attacker-20-bounty-414568"/>
+    <id>https://bmt.news/editions/2026-09-14/#rss:www.theblock.co_rss.xml:7f24d662a748fee5</id>
+    <updated>2026-09-14T00:00:00Z</updated>
+    <summary>Cross-chain protocol Symbiosis disclosed that an attacker exploited a vulnerability in its Bitcoin Bridge on Sept. 11, minting roughly 46.1 billion unbacked syBTC according to blockchain security firm Blockaid. Symbiosis said it has since recovered approximately 15 BTC and has offered the attacker a 20% bounty in exchange for returning the remaining funds.
+
+The incident is another reminder that cross-chain bridges remain the most consistently exploited category in DeFi, and it forced Symbiosis to halt its native Bitcoin bridge entirely. It matters less for the dollar size of the loss than for the pattern: a faulty minting path let an attacker create an astronomically large supply of synthetic BTC that was only partially monetizable.
+
+Despite the enormous 46.1 billion syBTC minted, the attacker realized only about $336,000 in proceeds, suggesting deep liquidity limits prevented large-scale conversion of the unbacked tokens. Symbiosis reportedly shut down the Bitcoin bridge after the exploit, which involved its BridgeV2 contract, and the 20% bounty offer signals a negotiated recovery effort rather than a pure technical fix.</summary>
+  </entry>
   <entry>
     <title>Nasdaq Invests $100M in Kraken Parent Payward for Tokenized Equities Push</title>
     <link href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxObC0tOEU5ek1VazRIbmtqYzQ1NlVXeGtGbjNXUXpfaC0yRzVCN3FKSjJ4enI2eThEam01NEdpalZyYkZxOTgyQ1NNbFQzZEpwa2ZPZ2ZYTzZvUWdXVi1lOFNEWFF5R25LbWt3NUx2MVZQVUJtT3hyQTFaQXl4QWpoaEoyYm95U1dsdFhkX0VGSGp1TUVVbWNMR2NaVHdJMk9CZzdNRHJMYnZzaml1cjFqRWlZMncwSUkwMkt1dXZkVFlkeW_SAcgBQVVfeXFMT0hHbkRfSV9BSXczRUFEdUJOMXNUNHNSY1lMWi1PVnJLaWFUMHM5VnNzS1BmU0EtR29WMXpyWFFPN3hWWk41cm1DUHBMVDUyUlljYlZCeC1VUU5aODN1VnBWVnR1WmNjdktqSUJwZWk0NEpwTWFidS1SdTAtQ3RZY1pSd2VRUUVZTE5ISUdPRXhZZUowczlobkVuaXBWSGUtdHFWZ1pVTlQ3T3REY0ZBU2YzSVBvNTF1LW9aM3VKdDlxZUhoMmJyZi0?oc=5"/>
@@ -389,60 +444,5 @@ Fasanara, a London-based asset manager with over $6 billion under management, wi
 This marks another step in institutional adoption of blockchain payments, giving mainstream companies a regulated route to create branded tokens. If adopted, it could significantly broaden stablecoin use cases beyond trading and remittances, while strengthening PayPal&#x27;s position in the emerging tokenization economy.
 
 The platform targets enterprises rather than individual consumers, enabling them to create and manage tokens on PayPal&#x27;s existing stablecoin rails. Businesses can leverage PayPal&#x27;s regulatory compliance framework and distribution network when issuing their own tokens.</summary>
-  </entry>
-  <entry>
-    <title>BitMart misses restructuring roadmap deadline, appoints Alvarez &amp; Marsal</title>
-    <link href="https://cointelegraph.com/news/bitmart-misses-roadmap-deadline-appoints-financial-adviser?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-10/#rss:cointelegraph.com_rss:10f42ddd95c55104</id>
-    <updated>2026-09-10T00:00:00Z</updated>
-    <summary>BitMart passed its self-imposed Sept. 9 deadline without publishing the restructuring and business resumption roadmap it had promised; on Wednesday it instead appointed Alvarez &amp; Marsal as financial adviser to evaluate its assets, financial position, and possible paths forward. The exchange also said it will launch a dedicated user-feedback web portal within five working days.
-
-This is a material development for users with funds on BitMart, because a missed deadline combined with a restructuring adviser appointment signals deeper financial distress than prior statements suggested. It also affects confidence in centralized exchanges, as asset figures and a withdrawal timetable still have not been provided.
-
-Alvarez &amp; Marsal will work with BitMart&#x27;s legal advisers to evaluate the exchange&#x27;s assets, financial position, stakeholder issues, and possible paths forward, including proposals from unidentified third parties. Echo Base, which organized an ad hoc committee of BitMart claimholders, called the appointment &#x27;the most encouraging step BitMart has taken since July,&#x27; while noting the absence of a reserve position, asset inventory, recovery estimate, or withdrawal timetable.</summary>
-  </entry>
-  <entry>
-    <title>Liquid Network hackers steal $320M in Bitcoin, return most after patch</title>
-    <link href="https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/"/>
-    <id>https://bmt.news/editions/2026-09-09/#gdelt:article:20260908T003000Z::https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>Attackers exploited a vulnerability in Liquid Network&#x27;s Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.
-
-This is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.
-
-Liquid&#x27;s reserve fell from about 4,205 BTC to 197 BTC before operations were halted; Liquid said USDT and other Liquid-issued tokens were unaffected by the vulnerability, though users could not transact during the pause. The validation failure occurred at the transaction level before the peg-out was initiated, so SideSwap&#x27;s node and Liquid&#x27;s distributed functionary nodes accepted the unbacked L-BTC, and roughly 600 BTC (~$47 million) remains outstanding.</summary>
-  </entry>
-  <entry>
-    <title>Cronos Rollback Reverses $111M Tectonic Exploit, Erases Two Hours of Transactions</title>
-    <link href="https://decrypt.co/377686/cronos-erased-two-hours-transactions-defi-exploit"/>
-    <id>https://bmt.news/editions/2026-09-09/#rss:decrypt.co_feed:fef103daafdd50fd</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>Validators on Cronos halted the network and rolled back 10,961 blocks, discarding 1 hour 54 minutes of transactions to reverse roughly $111.2 million taken in the Tectonic exploit. Block production resumed after about nine hours, but $9.19 million that had already left the network remains unrecovered.
-
-The intervention overrides blockchain finality—the usual guarantee that confirmed transactions are permanent—affecting every legitimate transaction made during the rollback window. It sets a notable precedent for how validators might respond to large DeFi exploits and could shape user trust in Cronos and Crypto.com-affiliated systems.
-
-The attacker inflated TONIC&#x27;s price on low-liquidity decentralized exchange markets, then borrowed approximately $120.4 million across nine markets against the inflated collateral. Every transaction in the 1-hour-54-minute window was reversed, including unrelated activity, and open positions on live apps were repriced when trading resumed.</summary>
-  </entry>
-  <entry>
-    <title>Ethereum sets December 2029 deadline for quantum resistance</title>
-    <link href="https://www.coindesk.com/tech/2026/09/08/ethereum-makes-quantum-resistance-a-top-priority-with-a-2029-deadline"/>
-    <id>https://bmt.news/editions/2026-09-09/#rss:www.coindesk.com_arc_outboundfeeds_rss_:73061c17e32007d0</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>On Sept. 7, the Ethereum Foundation&#x27;s Protocol cluster said the December 2029 quantum-resistance deadline is non-negotiable, reshaping upcoming upgrades. The next post-Glamsterdam upgrade, Hegotá, will protect two headliners, FOCIL and Frame Transactions (EIP-8141), for the post-quantum roadmap.
-
-This marks a major protocol-roadmap decision: Ethereum is planning from a fixed and aggressive security deadline rather than waiting for more certainty about a quantum threat. That shift prioritizes post-quantum engineering over optional features and could determine which Ethereum hard forks make the cut in the coming years.
-
-Developers are weighing moving post-quantum attestations forward from the L* upgrade to K*, while pushing mandatory execution proofs back to L*, trading zkEVM timeline progress for faster quantum hardening, although the swap has not been approved. Reaching full readiness by December 2029 would require hard forks roughly every 7.2 months on average, a cadence the Foundation calls aggressive; a minimum viable post-quantum milestone, MV-PQ, at J* is the fallback if that cadence slips.</summary>
-  </entry>
-  <entry>
-    <title>Liquid Network Bitcoin Hack Drains $320 Million</title>
-    <link href="https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network"/>
-    <id>https://bmt.news/editions/2026-09-09/#gdelt:article:20260908T020000Z::https://www.freemalaysiatoday.com/category/business/2026/09/08/bitcoin-hack-drains-us-320mil-from-crypto-network</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>The Liquid Network, a blockchain settlement layer used by several cryptocurrency exchanges to move Bitcoin, was hacked for $320 million. The network halted all transactions after the exploit, which was reported around September 7, 2026.
-
-This is one of the latest major breaches to shake confidence in digital-asset security, and it exposes risks in the settlement infrastructure exchanges depend on. The incident may lead to stricter scrutiny of sidechain security and affect trust in exchange-related Bitcoin custody and transfer methods.
-
-Liquid Network is a Bitcoin sidechain designed to allow faster and more confidential transfers between exchanges. CoinDesk reported that the hacker made a conditional offer, with the attackers claiming they were &#x27;the good guys.&#x27;</summary>
   </entry>
 </feed>

@@ -48,14 +48,31 @@
       "current_state_en": "Revolut exposed sensitive customer data, including passports and transaction histories, after a fraudster used a legitimate government agency email domain to submit fraudulent information requests that passed authentication checks.",
       "detailed_summary_zh": "Revolut exposed sensitive customer data, including passports and transaction histories, after a fraudster used a legitimate government agency email domain to submit fraudulent information requests that passed authentication checks.",
       "detailed_summary_en": "Revolut exposed sensitive customer data, including passports and transaction histories, after a fraudster used a legitimate government agency email domain to submit fraudulent information requests that passed authentication checks.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "Revolut 是一家总部位于英国的金融科技与银行类应用公司，拥有数千万零售客户和规模可观的加密交易业务；与其他受监管金融平台一样，它必须执行 KYC（了解你的客户）审查，要求用户上传护照并拍摄验证自拍。邮件伪造与域名冒充是长期存在的弱点：最初的电子邮件协议本身缺乏身份验证机制，虽然 SPF、DKIM 和 DMARC 增加了从外部伪造域名的难度，但无法杜绝利用一个真实发送邮件的域名进行滥用。社会工程攻击则不同，它依靠心理施压而非技术漏洞，诱使人员或自动化流程泄露机密信息、做出不利于自身的行为。",
+      "background_en": "Revolut is a UK-based fintech and banking app with tens of millions of retail customers and a sizeable crypto trading business, and like other regulated financial platforms it must perform know-your-customer (KYC) checks that require users to upload passports and take verification selfies. Email spoofing and domain impersonation are long-standing weaknesses: the original email protocols lack built-in authentication, and although SPF, DKIM and DMARC make spoofing from outside a domain harder, they do not eliminate abuse of a domain that genuinely sends the message. Social engineering, meanwhile, uses psychological pressure rather than technical exploits to persuade people or automated processes into disclosing confidential information or taking actions against their interests.",
+      "community_discussion_zh": "X 上的讨论普遍批评强制性的数据收集，一些用户认为 KYC 并未带来实质性的安全收益，反而让用户身陷风险；Marc Zeller 表示自己一觉醒来发现全部数据被 Revolut 泄露，并称这是对这一取舍的尖锐提醒。",
+      "community_discussion_en": "Discussion on X was largely critical of mandatory data collection, with some users arguing that KYC has delivered no meaningful security upside while placing users at risk; Marc Zeller said he woke up to all his data being leaked by Revolut and called it a sharp reminder of that trade-off.",
+      "market_impact_zh": "此处的传导渠道是运营与声誉层面，而非直接冲击加密资产价格：完成过 KYC 的 Revolut 加密客户可能面临精准钓鱼或账户接管尝试；同时，该事件会加剧监管机构对连接法币与数字资产的平台在身份数据保管方面的压力，并可能影响交易所与金融科技公司今后处理验证数据的方式。",
+      "market_impact_en": "The transmission channel here is operational and reputational rather than a direct hit to crypto prices: Revolut's crypto customers who completed KYC could face targeted phishing or account-takeover attempts, and the episode adds to the regulatory pressure on identity-data custody at platforms that bridge fiat and digital assets, which could influence how exchanges and fintechs handle verification data going forward.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://cybernews.com/news/revolut-customer-data-breach/",
+          "title": "Revolut customer data exposed in government email scam ..."
+        },
+        {
+          "url": "https://cybersecuritynews.com/revolut-data-breach/",
+          "title": "Revolut Data Breach Exposes Customers' Passport Copies and ..."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Email_domain_spoofing",
+          "title": "Email domain spoofing"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Social_engineering_attack",
+          "title": "Social engineering attack"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:283b1292cbd24844"

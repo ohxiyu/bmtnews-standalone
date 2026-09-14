@@ -49,10 +49,10 @@
       "current_state_en": "Homebrew 7.0.0 ships faster installs and upgrades, stronger sandboxing, a native macOS app, built-in vulnerability checks with an advisory database, drops macOS 10.15 support, and moves Intel Macs to Tier 3.",
       "detailed_summary_zh": "Homebrew 7.0.0 ships faster installs and upgrades, stronger sandboxing, a native macOS app, built-in vulnerability checks with an advisory database, drops macOS 10.15 support, and moves Intel Macs to Tier 3.",
       "detailed_summary_en": "Homebrew 7.0.0 ships faster installs and upgrades, stronger sandboxing, a native macOS app, built-in vulnerability checks with an advisory database, drops macOS 10.15 support, and moves Intel Macs to Tier 3.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "background_zh": "Homebrew 是一款免费开源的包管理器，最初由 Max Howell 编写，用于简化在 macOS、Linux 以及 Windows Subsystem for Linux 上安装软件的过程。它采用啤酒主题的命名方式：第三方仓库称为 “tap”，预编译的二进制包称为 “bottle”，而 Homebrew Cask 则将其扩展到图形界面应用。项目用“支持层级”（Support Tiers）来衡量各平台获得的维护与测试力度，Tier 3 是其中最低的一级，意味着仅尽力而为、保障程度较低。",
+      "background_en": "Homebrew is a free, open-source package manager, originally written by Max Howell, that simplifies installing software on macOS, Linux and Windows Subsystem for Linux. It follows a beer-themed naming convention: third-party repositories are called \"taps\" and prebuilt binary packages are called \"bottles\", while Homebrew Cask extends it to graphical applications. The project's support tiers rank platforms by how much maintenance and testing they receive; Tier 3 is the lowest level, meaning best-effort support with reduced guarantees.",
+      "community_discussion_zh": "该公告帖由维护者 Mike McQuaid 发布，整体反响积极，长期用户感谢项目让他们能把更多时间花在开发上、更少时间在包管理上。部分开发者表示如今更偏好用 Mise 管理工具链，理由是 Homebrew 的范围边界问题——安装新包时可能意外升级 Python 并破坏现有的 virtualenv；另一些人则用 Mise 的 Homebrew bootstrap 把 Homebrew 及其他包写进单个文件统一管理。Simon Willison 则提到他才知道 Homebrew 拥有自己的沙箱机制，在 macOS 上基于其自有的 sandbox-exec 封装实现。",
+      "community_discussion_en": "The announcement thread was posted by maintainer Mike McQuaid and drew broadly positive sentiment, with long-time users thanking the project for letting them spend more time developing and less time managing packages. Several developers said they now prefer Mise for toolchain management, citing scoping concerns where installing a new package can unexpectedly upgrade Python and break existing virtualenvs, while others use Mise's Homebrew bootstrap to declare Homebrew and other packages in a single file. Simon Willison noted he had only just learned that Homebrew has its own sandbox mechanism, built around its own sandbox-exec wrapper on macOS.",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
@@ -60,6 +60,18 @@
         {
           "url": "https://news.ycombinator.com/item?id=49681545",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://brew.sh/2026/09/13/homebrew-7.0.0/",
+          "title": "Homebrew: 7.0.0"
+        },
+        {
+          "url": "https://docs.brew.sh/Support-Tiers",
+          "title": "Homebrew Documentation: Support Tiers"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Homebrew_(package_manager)",
+          "title": "Homebrew (package manager)"
         }
       ],
       "confidence": 0.75,

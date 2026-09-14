@@ -50,14 +50,27 @@
       "current_state_en": "Symbiosis recovered 15 BTC after a Bitcoin bridge exploit in which roughly 46.1 billion syBTC were minted but the attacker realized only about $336,000, and the protocol is offering the attacker a 20% bounty.",
       "detailed_summary_zh": "Symbiosis recovered 15 BTC after a Bitcoin bridge exploit in which roughly 46.1 billion syBTC were minted but the attacker realized only about $336,000, and the protocol is offering the attacker a 20% bounty.",
       "detailed_summary_en": "Symbiosis recovered 15 BTC after a Bitcoin bridge exploit in which roughly 46.1 billion syBTC were minted but the attacker realized only about $336,000, and the protocol is offering the attacker a 20% bounty.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "跨链桥让用户能够在原本相互隔离的区块链之间转移资产——在本案中，就是把 BTC 以合成资产的形式带到其他网络。Symbiosis 发行的 syBTC 是比特币的跨链封装形式，其原生代币 SIS 用于治理该协议的 DAO 与金库。跨链桥之所以成为攻击目标，是因为它们通常持有大量汇集流动性，并依赖合约逻辑以及验证者或预言机假设；一旦这些环节存在缺陷，攻击者就能铸造出没有真实储备支撑的代币。",
+      "background_en": "Cross-chain bridges let users move assets between otherwise isolated blockchains — in this case, bringing BTC onto other networks as a synthetic representation. Symbiosis issues syBTC, a bridged form of Bitcoin, and the native SIS token governs its DAO and treasury. Bridges are attractive targets because they typically hold pooled liquidity and rely on contract logic and validator or oracle assumptions that, if flawed, can be exploited to mint tokens that are not backed by real reserves.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导渠道主要体现在跨链桥与合成 BTC 板块的情绪与传染效应上：syBTC 持有者面临赎回与资产背书的不确定性，而 Symbiosis 的治理代币 SIS 及其剩余跨链桥流动性则直接承受声誉受损与潜在提款压力。更广泛的跨链与封装 BTC 平台也可能因用户重新评估跨链风险而受到短期审视，但相对有限的已实现损失限制了对 BTC 现货市场的系统性外溢。",
+      "market_impact_en": "The transmission is mainly through sentiment and contagion within the bridge and synthetic-BTC segment: holders of syBTC face uncertainty about redemption and backing, while Symbiosis's governance token SIS and its remaining bridge liquidity are directly exposed to reputational damage and possible withdrawals. Broader cross-chain and wrapped-BTC venues may see short-term scrutiny from users reassessing bridge risk, though the modest realized loss limits systemic spillover to BTC spot markets.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.theblock.co/news/defi/2026-09-13-symbiosis-says-it-recovered-15-btc-after-bitcoin-bridge-exploit-offers-attacker-20-bounty-414568",
+          "title": "Symbiosis says it recovered 15 BTC after Bitcoin bridge exploit..."
+        },
+        {
+          "url": "https://www.cryptopolitan.com/symbiosis-halts-btc-bridge-after-exploit-spotlighting-cross-chain-risk/",
+          "title": "Symbiosis halts BTC bridge after exploit, spotlighting... - Cryptopolitan"
+        },
+        {
+          "url": "https://www.coingecko.com/en/coins/symbiosis-sybtc",
+          "title": "Symbiosis SyBTC Price: SYBTC/USD Live Price Chart... | CoinGecko"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.theblock.co_rss.xml:7f24d662a748fee5"
