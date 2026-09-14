@@ -254,10 +254,11 @@
     },
     "2026-09-14": {
       "fb7e643a5b5e9e0731dd1b32b99cf41ac29ee8dd383a1570b9df0bdc87aae3cf": {
-        "status": "pending",
+        "status": "sent",
         "rank": 1,
         "text_hash": "022f1164a09f40006844f86717d7bd5d6adb5878e2ea1142111ec7ed72c174f3",
-        "attempted_at": "2026-09-14T09:46:13.380182+08:00"
+        "attempted_at": "2026-09-14T09:46:13.380182+08:00",
+        "post_id": "366424783362413"
       }
     }
   },
@@ -277,12 +278,6 @@
     "2026-09-14": {
       "revision": "f0005fae81a8d516e2876f7934501c8d3d4e75a8f570fdd02a5736072ab3acb9",
       "jobs": [
-        {
-          "id": "fb7e643a5b5e9e0731dd1b32b99cf41ac29ee8dd383a1570b9df0bdc87aae3cf",
-          "text": "BTCPay Server 警告：机器人正探测暴露的闪电节点重启期漏洞\n\nBTCPay Server 警告称，恶意机器人正在对运营者手动重新暴露到公网的闪电节点反复调用 LND 的密码修改接口，利用 LND 重启后钱包仍处于锁定状态的短暂窗口期。9 月 7 日发布的 2.4.4 版本修补了该攻击路径：为新 LND 钱包分配唯一的随机密码，对使用共享默认凭证的旧部署轮换密码，并通过 BTCPay 标准反向代理拦截未经认证的钱包初始化和解锁调用。\n\n一旦探测成功，攻击者可能在 BTCPay 内部解锁程序之前抢先提交旧的共享密码、将其替换，并申请可获得 LND 节点及所保护商户钱包控制权的管理员 macaroon，最终后果与 8 月的盗窃事件相同。任何使用自定义反向代理或公网暴露 LND 的自托管 BTCPay Server 运营者都处于直接风险之中，必须升级版本并重新审查网络规则。\n\n在重启后的时间窗口内，被利用的密码修改方式不需要 macaroon——而 macaroon 通常是 LND 用来授权管理操作的凭证；此外，旧的 BTCPay LND 钱包因使用共享默认密码而放大了风险。BTCPay 代理侧的防护无法保护运营者自行配置的基础设施，因此在移除公开的 LND 路由之前，自定义反向代理仍然脆弱；9 月 11 日合并的一项路由控制改动提供了受支持的远程访问方式，同时默认禁用 LND 与 Core Lightning 接口。BTCPay 尚未报告通过此次观测到的活动实现成功接管，也未将这批机器人归因于 8 月的攻击者。\n\n来源：https://cryptoslate.com/malicious-bots-are-actively-probing-exposed-bitcoin-payment-servers-to-steal-master-administrative-keys/\nBMTNews · 2026-09-14 · https://bmt.news",
-          "rank": 1,
-          "due_at": "2026-09-14T09:43:00+08:00"
-        },
         {
           "id": "8724275c3df20f404c06009b8a9c45401b3b07a2d0e1c2862fd6e13344aa5670",
           "text": "Cosmos Hub 已恢复出块，但 Ledger 用户仍无法访问 ATOM\n\nCosmos Hub 于 9 月 8 日 18:12 UTC 在区块高度 32,878,318 处停止出块，QuickNode 表示其节点已于 9 月 9 日 14:26 UTC 追平链头，并已在 9 月 12 日 00:24 UTC 将其自身事件标记为已解决。但 Ledger 于 9 月 8 日 19:41 CEST 单独开立了一起事件，其状态页在 9 月 13 日仍将 Cosmos（ATOM）列为重大故障，用户无法查看 ATOM 余额与交易历史，也无法通过 Ledger Wallet 提交 ATOM 交易。\n\n这一事件把网络层恢复与钱包层可用性区分开来：Cosmos Hub 已恢复出块，但一款被广泛使用的硬件钱包仍无法为其用户显示余额或广播 ATOM 交易。它凸显出即便底层链运行正常，单一钱包厂商的服务链路也可能实质性冻结用户动用资产的能力，也说明硬件钱包依赖给自托管带来的访问与流动性摩擦。\n\nLedger 未披露故障原因或预计恢复时间，其最近一次公开更新发布于 9 月 10 日 16:12 CEST。对于急需转移 ATOM 的用户，Ledger 的事件通告指向其替代方法指南，其中列出 Cosmostation 与 Keplr 作为兼容的第三方界面：用户只需在设备上打开 Cosmos 应用并选择 Keplr 的硬件钱包连接选项，即可通过另一界面访问同一链上账户，同时让 Ledger 设备仍留在交易签名流程中——这与把助记词导入软件钱包是两回事，后者是用户绝对不应做的操作。\n\n来源：https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/\nBMTNews · 2026-09-14 · https://bmt.news",
