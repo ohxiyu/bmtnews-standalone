@@ -2,6 +2,566 @@
   "version": 2,
   "weeks": [
     {
+      "date": "2026-09-14",
+      "start": "2026-09-08",
+      "stats": {
+        "items": 94,
+        "days": 7,
+        "threads": 12,
+        "entities": 2
+      },
+      "zh": {
+        "throughline": {
+          "title": "跨链桥与托管的信任假设被集中检验：Liquid 被掏空 95% 储备，安全漏洞主导一周",
+          "summary": "本周由 Liquid Network 主导：攻击者利用 Elements 范围证明验证缓存漏洞铸造约 4,000 枚无背书 L-BTC，掏空联邦钱包约 95% 储备，归还 3,400 枚后仍欠约 598 枚 BTC。Blockstream 拒绝支付约 10% 赎金，SideSwap 恢复 L-BTC 交易但储备覆盖率仅约 85%。同期 Cronos 验证者回滚 1 小时 54 分钟交易以逆转 Tectonic 1.11 亿美元攻击，智利交易所 Orionx 挪用 700 万美元客户资产并清盘，Revolut 因伪造政府邮件泄露护照与完整比特币交易记录。联邦式跨链桥、交易所托管与链上最终性的信任假设在同一周被同时摆上台面。"
+        },
+        "items": [
+          {
+            "section": "continuing",
+            "title": "Liquid 侧链被掏空约 95% 储备，4,000 枚 BTC 漏洞后仍欠约 598 枚",
+            "change": "攻击者利用 Elements 范围证明验证缓存漏洞铸造无背书 L-BTC，9 月 6 日转出约 4,000 枚 BTC（约 3.2 亿美元），储备一度从 4,205 枚降至 197 枚 BTC。攻击者已归还 3,400 枚（约 2.7 亿美元），Blockstream 于 9 月 11 日公开拒绝支付 10% 赎金，剩余约 598 枚 BTC 未追回，peg-in 与 peg-out 仍暂停。",
+            "why_it_matters": "联邦式跨链桥的集中信任被证明可直接转化为系统性损失，L-BTC 与 BTC 的 1:1 锚定如今只有约 85% 的储备支撑，赎回能否按面值完成不再有保证。",
+            "date_start": "2026-09-08",
+            "date_end": "2026-09-11",
+            "score": 9.0,
+            "sources_count": 12,
+            "event_url": "/events/evt_79a9bd1c0f79b57c/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-08",
+                "title": "Liquid 黑客盗走 3.2 亿美元比特币后归还 2.7 亿",
+                "url": "https://decrypt.co/377600/liquid-hackers-return-270m-bitcoin",
+                "source": "Decrypt"
+              },
+              {
+                "date": "2026-09-09",
+                "title": "黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分",
+                "url": "https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/",
+                "source": "siliconangle.com"
+              },
+              {
+                "date": "2026-09-11",
+                "title": "Liquid Network 在 3.2 亿美元漏洞事件后恢复出块",
+                "url": "https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound",
+                "source": "Cointelegraph"
+              }
+            ]
+          },
+          {
+            "section": "continuing",
+            "title": "克雷研究所称纳维-斯托克斯难题「显然已被解决」，署名争议与验证规则接管议程",
+            "change": "OpenAI 称约 10,000 个智能体在 88 小时内生成带 Lean 4 形式化证明的纳维-斯托克斯反例，克雷研究所随后承认该难题「显然已被解决」但未提及 OpenAI。纽约大学数学家 Tristan Buckmaster 指控 OpenAI 抢先用其未发表成果，9 月 11 日 25 位菲尔兹奖得主联署警告 AI 公司与数学界严重错位。",
+            "why_it_matters": "这是首次有接近千禧年大奖难题的结果附带可机器检验的形式化证明，瓶颈因此从「发现证明」转向验证成本、署名规范与同行评审标准。",
+            "date_start": "2026-09-09",
+            "date_end": "2026-09-13",
+            "score": 8.5,
+            "sources_count": 6,
+            "event_url": "/events/evt_fde028f4447c7239/",
+            "entities": [
+              {
+                "slug": "openai",
+                "label": "OpenAI",
+                "url": "/entity/openai/"
+              }
+            ],
+            "evidence": [
+              {
+                "date": "2026-09-09",
+                "title": "OpenAI 宣称 AI 模型解决纳维-斯托克斯千禧难题",
+                "url": "https://openai.com/index/navier-stokes-solution/",
+                "source": "OpenAI Blog"
+              },
+              {
+                "date": "2026-09-11",
+                "title": "OpenAI 纳维-斯托克斯成果据称附带 Lean 4 形式化证明",
+                "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+                "source": "ibobev"
+              },
+              {
+                "date": "2026-09-13",
+                "title": "克雷研究所称纳维-斯托克斯千年难题“显然已被解决”",
+                "url": "https://www.claymath.org/news/navier-stokes-announcement/",
+                "source": "rvz"
+              }
+            ]
+          },
+          {
+            "section": "continuing",
+            "title": "纳斯达克以 210 亿美元估值入股 Kraken 母公司 Payward，锁定代币化股票分销",
+            "change": "Nasdaq Ventures 同意向 Payward 投资 1 亿美元，Kraken 将在其加密、股票、代币化股票、期货与期权各交易场所部署纳斯达克监控技术，并分销纳斯达克上市股票的代币化版本（NET），目标 2027 年第二季度推出。",
+            "why_it_matters": "一流交易所运营商首次同时切入代币化股票的交易层与监控层，若时间表兑现，将成为代币化股票如何被监管与跨境分销的范本。",
+            "date_start": "2026-09-11",
+            "date_end": "2026-09-13",
+            "score": 8.5,
+            "sources_count": 15,
+            "event_url": "/events/evt_3c730cd986001aac/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-13",
+                "title": "纳斯达克向Kraken母公司Payward投资1亿美元，推进代币化股票",
+                "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObC0tOEU5ek1VazRIbmtqYzQ1NlVXeGtGbjNXUXpfaC0yRzVCN3FKSjJ4enI2eThEam01NEdpalZyYkZxOTgyQ1NNbFQzZEpwa2ZPZ2ZYTzZvUWdXVi1lOFNEWFF5R25LbWt3NUx2MVZQVUJtT3hyQTFaQXl4QWpoaEoyYm95U1dsdFhkX0VGSGp1TUVVbWNMR2NaVHdJMk9CZzdNRHJMYnZzaml1cjFqRWlZMncwSUkwMkt1dXZkVFlkeW_SAcgBQVVfeXFMT0hHbkRfSV9BSXczRUFEdUJOMXNUNHNSY1lMWi1PVnJLaWFUMHM5VnNzS1BmU0EtR29WMXpyWFFPN3hWWk41cm1DUHBMVDUyUlljYlZCeC1VUU5aODN1VnBWVnR1WmNjdktqSUJwZWk0NEpwTWFidS1SdTAtQ3RZY1pSd2VRUUVZTE5ISUdPRXhZZUowczlobkVuaXBWSGUtdHFWZ1pVTlQ3T3REY0ZBU2YzSVBvNTF1LW9aM3VKdDlxZUhoMmJyZi0?oc=5",
+                "source": "Pulse 2.0"
+              },
+              {
+                "date": "2026-09-11",
+                "title": "纳斯达克以210亿美元估值向Kraken母公司Payward投资1亿美元",
+                "url": "https://www.coindesk.com/business/2026/09/10/nasdaq-invests-usd100-million-in-kraken-parent-company-payward-at-usd21-billion-valuation",
+                "source": "CoinDesk"
+              },
+              {
+                "date": "2026-09-12",
+                "title": "纳斯达克拟向Kraken母公司Payward投资1亿美元，目标2027年推出代币化股票",
+                "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1FCbkh2ZEx1d185WjlGMVdieVZDZTRzRTRoQzNNRzd0ZHY0dWFUN0ZmZ2hYRHRXU2JLbzgtYkFUYVhZR2ZaNk0xTHNnRVpmZ2c2RmxKVDNpaF9JU1prX2RzcG1pZ0R4YnB5N0l4d3IzZmMyQmxkLWRBc19vS0h5YUNtQWdvYmYzS3dMOW0wZ2N3MXlzWl9GSzVObjJFNG1jUWRVRk9XbDZFUFAxaVp3SG0wdHVUZGV5OERKeGFfZmpTdFhGNTdOZ3kxNnF3cWt6?oc=5",
+                "source": "blockhead.co"
+              }
+            ]
+          },
+          {
+            "section": "continuing",
+            "title": "银行与官方机构把代币化结算推入实盘：DBS-花旗周末跨境支付、美国银行 USBDC、印度 Demat 2.0",
+            "change": "星展与花旗通过 Swift 数字账本完成新加坡至美国首笔周末美元代币化存款跨境结算，数分钟到账；美国银行在 Stellar 上用自研稳定币 USBDC 完成实时跨境支付试点，测试铸造、赎回、冻结与追回；印度 SEBI 与 RBI 以批发型数字卢比结算 REC、L&T、IIFL 合计 102.5 亿卢比（约 1.07 亿美元）代币化公司债。",
+            "why_it_matters": "代币化与 CBDC 结算从概念验证进入受监管的真实发行，原子结算把发行人收款从两三天压缩到投标当日，为其他监管机构提供可复制范本。",
+            "date_start": "2026-09-08",
+            "date_end": "2026-09-12",
+            "score": 8.0,
+            "sources_count": 8,
+            "event_url": "/events/evt_6ee1360e2b34e86b/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-08",
+                "title": "星展银行与花旗完成首笔周末代币化存款美元跨境支付",
+                "url": "https://www.theblock.co/news/business/2026-09-07-dbs-citi-say-they-completed-first-weekend-usd-payment-between-singapore-and-us-via-tokenized-deposits-413689",
+                "source": "The Block"
+              },
+              {
+                "date": "2026-09-10",
+                "title": "美国银行在 Stellar 上完成 USBDC 稳定币实时跨境支付试点",
+                "url": "https://cointelegraph.com/news/us-bank-launches-usbdc-stablecoin-with-live-cross-border-payment?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound",
+                "source": "Cointelegraph"
+              },
+              {
+                "date": "2026-09-12",
+                "title": "印度 SEBI 与 RBI 启动代币化债券试点，以数字卢比结算",
+                "url": "https://www.coindesk.com/markets/2026/09/11/india-starts-tokenizing-usd620-billion-corporate-bond-market-with-digital-rupee-settlement",
+                "source": "CoinDesk"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Cronos 验证者回滚 10,961 个区块，逆转 Tectonic 1.11 亿美元攻击",
+            "change": "Cronos 验证者暂停网络并回滚 1 小时 54 分钟的交易，抹去 Tectonic 攻击中约 1.112 亿美元损失，约九小时后恢复出块；攻击者先推高 TONIC 价格再以被高估抵押品在九个市场借出约 1.204 亿美元，已转出网络的 919 万美元未追回。",
+            "why_it_matters": "这为验证者干预大型 DeFi 攻击开创先例，同时推翻了「确认即不可篡改」的常规保证，回滚窗口内所有无关合法交易一并被作废。",
+            "date_start": "2026-09-09",
+            "date_end": "2026-09-09",
+            "score": 8.5,
+            "sources_count": 2,
+            "event_url": "/events/evt_7cec54c7d44b7cd5/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-09",
+                "title": "Cronos 回滚抹去两小时交易，逆转 Tectonic 1.11 亿美元攻击",
+                "url": "https://decrypt.co/377686/cronos-erased-two-hours-transactions-defi-exploit",
+                "source": "Decrypt"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Tether 投资的智利交易所 Orionx 在 700 万美元客户资产流失后冻结提款并清盘",
+            "change": "法务审计发现逾 700 万美元客户资产被转至交易所控制之外的第三方钱包，Orionx 停止提款并进入清盘，CMF 表示无权命令退款；关停仍停留在五个阶段中的第一阶段，逾 10 万注册用户余额核对与返还计划均未完成。",
+            "why_it_matters": "即使有知名稳定币发行方投资背书，交易所托管与用户保护仍然脆弱，且监管机构缺乏强制返还的执法抓手。",
+            "date_start": "2026-09-08",
+            "date_end": "2026-09-09",
+            "score": 8.5,
+            "sources_count": 2,
+            "event_url": "/events/evt_a7c35ee758445c83/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-08",
+                "title": "Orionx涉嫌转移700万美元资产，停止提款并清盘",
+                "url": "https://thedefiant.io/news/cefi/orionx-halts-withdrawals-and-winds-down-after-alleged-7m-asset-transfers",
+                "source": "The Defiant"
+              },
+              {
+                "date": "2026-09-09",
+                "title": "Tether 支持的智利交易所 Orionx 在 700 万美元客户资产流失后冻结提款",
+                "url": "https://cryptoslate.com/tether-backed-crypto-exchange-freezes-withdrawals-after-7-million-leaves-custody/",
+                "source": "CryptoSlate"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Revolut 误信伪造政府请求，交出护照与完整比特币交易记录",
+            "change": "一封通过某政府机构域名邮件认证校验的诈骗邮件，使 Revolut 交出护照与驾照复印件、验证自拍照、IBAN 与钱包参考号以及完整比特币交易记录；公司称受影响客户「有限」但拒绝披露人数与被冒充机构，资金与系统未受影响。",
+            "why_it_matters": "泄露把真实身份、住址与链上交易记录直接关联，正是对加密持有者实施线下人身攻击所需的关键组合，也令 KYC 数据保管责任受到更严厉质疑。",
+            "date_start": "2026-09-13",
+            "date_end": "2026-09-13",
+            "score": 8.5,
+            "sources_count": 5,
+            "event_url": "/events/evt_eb19a2cef3159ae6/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-13",
+                "title": "Revolut 误信伪造政府请求，泄露护照与比特币交易数据",
+                "url": "https://www.coindesk.com/tech/2026/09/12/bitcoin-activity-passports-exposed-after-revolut-falls-for-fake-government-request",
+                "source": "CoinDesk"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Anthropic 披露 Claude 被用于自动化攻击与大规模监控，CEO 同时呼吁协调「放慢前沿」",
+            "change": "Anthropic 威胁情报报告称，代号 JackPoterz 的俄语操作者用定制 Claude 工作流攻击 20 多个政府部委、情报机构与驻欧使团，另有与马里情报机构合作的顾问借此构建覆盖约 2,500 万张 SIM 卡的监控系统；CEO Amodei 随后发文主张前沿实验室相互协调安全标准，并向 METR 等第三方开放内部级别访问。",
+            "why_it_matters": "这是厂商确认前沿模型被国家相关方实战滥用的案例，入侵所需资源从团队级降到单人级，同时把第三方核查与有限反垄断豁免推上治理议程。",
+            "date_start": "2026-09-12",
+            "date_end": "2026-09-13",
+            "score": 8.0,
+            "sources_count": 2,
+            "event_url": "/events/evt_316a066abcd2e440/",
+            "entities": [
+              {
+                "slug": "anthropic",
+                "label": "Anthropic",
+                "url": "/entity/anthropic/"
+              }
+            ],
+            "evidence": [
+              {
+                "date": "2026-09-12",
+                "title": "Anthropic：Claude 被用于自动化网络攻击与大规模监控",
+                "url": "https://cointelegraph.com/news/claude-ai-cyberattacks-surveillance-weapons-anthropic?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound",
+                "source": "Cointelegraph"
+              },
+              {
+                "date": "2026-09-13",
+                "title": "Anthropic CEO 达里奥·阿莫代伊呼吁协调「放慢前沿」",
+                "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+                "source": "apsec112"
+              }
+            ]
+          }
+        ],
+        "event_ranking": [
+          {
+            "id": "evt_c9054f6fe0489c31",
+            "title": "黑客窃取 Liquid Network 3.2 亿美元比特币，补丁后归还大部分",
+            "url": "/events/evt_c9054f6fe0489c31/",
+            "entries": 1,
+            "latest_date": "2026-09-09",
+            "score": 9.0
+          },
+          {
+            "id": "evt_79a9bd1c0f79b57c",
+            "title": "Liquid 黑客盗走 3.2 亿美元比特币后归还 2.7 亿",
+            "url": "/events/evt_79a9bd1c0f79b57c/",
+            "entries": 1,
+            "latest_date": "2026-09-08",
+            "score": 9.0
+          },
+          {
+            "id": "evt_18fc53f138aba645",
+            "title": "SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量",
+            "url": "/events/evt_18fc53f138aba645/",
+            "entries": 2,
+            "latest_date": "2026-09-13",
+            "score": 8.5
+          },
+          {
+            "id": "evt_3c730cd986001aac",
+            "title": "纳斯达克向Kraken母公司Payward投资1亿美元，推进代币化股票",
+            "url": "/events/evt_3c730cd986001aac/",
+            "entries": 2,
+            "latest_date": "2026-09-13",
+            "score": 8.5
+          },
+          {
+            "id": "evt_fde028f4447c7239",
+            "title": "OpenAI称1万个AI代理攻克纳维-斯托克斯难题，重燃AI安全担忧",
+            "url": "/events/evt_fde028f4447c7239/",
+            "entries": 2,
+            "latest_date": "2026-09-10",
+            "score": 8.5
+          }
+        ],
+        "entity_ranking": [
+          {
+            "slug": "anthropic",
+            "label": "Anthropic",
+            "mentions": 3,
+            "url": "/entity/anthropic/"
+          },
+          {
+            "slug": "openai",
+            "label": "OpenAI",
+            "mentions": 3,
+            "url": "/entity/openai/"
+          }
+        ]
+      },
+      "en": {
+        "throughline": {
+          "title": "L-BTC Trading Reopens on SideSwap With Reserves Covering Only 85%",
+          "summary": "SideSwap reopened all of its L-BTC markets on Sept. 10 after the Liquid Network resumed block production in a controlled mode, while Liquid Federation peg-ins and peg-outs remained suspended. Readings at 22:55 UTC showed 4,229.33 L-BTC outstanding against 3,601.47 BTC at the cited federation reserve address, implying roughly 85.15% coverage and a shortfall of about 627.85 BTC. L-BTC 与 BTC 的 1:1 锚定是 Liquid 侧链的核心价值主张，而 peg-out 暂停后，市场价格已不再能保证按面值赎回，持有者无法确定能收回全部价值。这使个人用户资金、在 Liquid 上发行和结算资产的机构，以及托管 L-BTC 的交易所直接暴露于风险之中，也令联邦制侧链的信任模型受到更严格的审视。"
+        },
+        "items": [
+          {
+            "section": "continuing",
+            "title": "L-BTC Trading Reopens on SideSwap With Reserves Covering Only 85%",
+            "change": "SideSwap reopened all of its L-BTC markets on Sept. 10 after the Liquid Network resumed block production in a controlled mode, while Liquid Federation peg-ins and peg-outs remained suspended. Readings at 22:55 UTC showed 4,229.33 L-BTC outstanding against 3,601.47 BTC at the cited federation reserve address, implying roughly 85.15% coverage and a shortfall of about 627.85 BTC.",
+            "why_it_matters": "L-BTC 与 BTC 的 1:1 锚定是 Liquid 侧链的核心价值主张，而 peg-out 暂停后，市场价格已不再能保证按面值赎回，持有者无法确定能收回全部价值。这使个人用户资金、在 Liquid 上发行和结算资产的机构，以及托管 L-BTC 的交易所直接暴露于风险之中，也令联邦制侧链的信任模型受到更严格的审视。",
+            "date_start": "2026-09-11",
+            "date_end": "2026-09-13",
+            "score": 8.5,
+            "sources_count": 4,
+            "event_url": "/en/events/evt_18fc53f138aba645/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-11",
+                "title": "Liquid Network resumes block production after $320M exploit",
+                "url": "https://cointelegraph.com/news/liquid-network-resumes-block-production-after-320m-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound",
+                "source": "Cointelegraph"
+              },
+              {
+                "date": "2026-09-13",
+                "title": "L-BTC Trading Reopens on SideSwap With Reserves Covering Only 85%",
+                "url": "https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/",
+                "source": "CryptoSlate"
+              }
+            ]
+          },
+          {
+            "section": "continuing",
+            "title": "Nasdaq Invests $100M in Kraken Parent Payward for Tokenized Equities Push",
+            "change": "Nasdaq will invest $100 million in Payward, the parent company of crypto exchange Kraken, in a deal that values Payward at roughly $21 billion. The partnership is aimed at advancing tokenized equities and always-on, around-the-clock trading markets.",
+            "why_it_matters": "This is one of the clearest signals yet that a top-tier traditional exchange operator sees tokenization and 24/7 market structure as strategic rather than experimental. It accelerates the convergence of crypto market infrastructure with mainstream equities trading, affecting exchanges, brokers, custodians and tokenization platforms alike.",
+            "date_start": "2026-09-11",
+            "date_end": "2026-09-13",
+            "score": 8.5,
+            "sources_count": 10,
+            "event_url": "/en/events/evt_3c730cd986001aac/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-11",
+                "title": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation",
+                "url": "https://www.coindesk.com/business/2026/09/10/nasdaq-invests-usd100-million-in-kraken-parent-company-payward-at-usd21-billion-valuation",
+                "source": "CoinDesk"
+              },
+              {
+                "date": "2026-09-13",
+                "title": "Nasdaq Invests $100M in Kraken Parent Payward for Tokenized Equities Push",
+                "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObC0tOEU5ek1VazRIbmtqYzQ1NlVXeGtGbjNXUXpfaC0yRzVCN3FKSjJ4enI2eThEam01NEdpalZyYkZxOTgyQ1NNbFQzZEpwa2ZPZ2ZYTzZvUWdXVi1lOFNEWFF5R25LbWt3NUx2MVZQVUJtT3hyQTFaQXl4QWpoaEoyYm95U1dsdFhkX0VGSGp1TUVVbWNMR2NaVHdJMk9CZzdNRHJMYnZzaml1cjFqRWlZMncwSUkwMkt1dXZkVFlkeW_SAcgBQVVfeXFMT0hHbkRfSV9BSXczRUFEdUJOMXNUNHNSY1lMWi1PVnJLaWFUMHM5VnNzS1BmU0EtR29WMXpyWFFPN3hWWk41cm1DUHBMVDUyUlljYlZCeC1VUU5aODN1VnBWVnR1WmNjdktqSUJwZWk0NEpwTWFidS1SdTAtQ3RZY1pSd2VRUUVZTE5ISUdPRXhZZUowczlobkVuaXBWSGUtdHFWZ1pVTlQ3T3REY0ZBU2YzSVBvNTF1LW9aM3VKdDlxZUhoMmJyZi0?oc=5",
+                "source": "Pulse 2.0"
+              }
+            ]
+          },
+          {
+            "section": "continuing",
+            "title": "OpenAI claims 10,000-agent model solved Navier-Stokes, reigniting AI safety fears",
+            "change": "OpenAI announced on September 8 that an internal model coordinated roughly 10,000 AI agents to solve the Navier-Stokes existence and smoothness problem in 88 hours, a result later formalized in the Lean proof assistant. The claimed proof—that smooth fluid motion can develop a singularity in finite time—remains unverified by independent mathematicians and the Clay Mathematics Institute.",
+            "why_it_matters": "The achievement demonstrates that frontier AI can carry out autonomous, large-scale mathematical research far beyond what public models can do, intensifying debates about economic concentration and the risks of recursive self-improvement. It also underscores the widening gap between private and public AI tools, which could shape the future of AI safety, comp",
+            "date_start": "2026-09-09",
+            "date_end": "2026-09-10",
+            "score": 8.5,
+            "sources_count": 4,
+            "event_url": "/en/events/evt_fde028f4447c7239/",
+            "entities": [
+              {
+                "slug": "openai",
+                "label": "OpenAI",
+                "url": "/en/entity/openai/"
+              }
+            ],
+            "evidence": [
+              {
+                "date": "2026-09-09",
+                "title": "OpenAI Claims AI-Generated Navier–Stokes Millennium Prize Solution",
+                "url": "https://openai.com/index/navier-stokes-solution/",
+                "source": "OpenAI Blog"
+              },
+              {
+                "date": "2026-09-10",
+                "title": "OpenAI claims 10,000-agent model solved Navier-Stokes, reigniting AI safety fears",
+                "url": "https://cryptoslate.com/openai-just-showed-why-one-of-its-former-researchers-thinks-ai-could-kill-everyone/",
+                "source": "CryptoSlate"
+              }
+            ]
+          },
+          {
+            "section": "continuing",
+            "title": "22-Year-Old Crypto Ringleader Pleads Guilty to $245M Racketeering Scheme",
+            "change": "Malone Lam, a 22-year-old ringleader, pleaded guilty to heading an international social engineering scheme that stole approximately $245 million in cryptocurrency. The guilty plea marks a major breakthrough in the high-profile crypto crime case.",
+            "why_it_matters": "This case underscores the growing scale and sophistication of social engineering attacks targeting cryptocurrency holders, and it demonstrates how law enforcement is using racketeering charges to pursue digital-asset criminals. The outcome could heighten scrutiny on security practices and contribute to stricter regulatory and legal precedents across the cryp",
+            "date_start": "2026-09-08",
+            "date_end": "2026-09-09",
+            "score": 8.5,
+            "sources_count": 2,
+            "event_url": "/en/events/evt_4c5db86454cbdba0/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-08",
+                "title": "Malone Lam Plea Hearing Over $245M Bitcoin Theft Set for Tuesday",
+                "url": "https://decrypt.co/377595/malone-lam-faces-plea-hearing-over-245m-bitcoin-theft",
+                "source": "Decrypt"
+              },
+              {
+                "date": "2026-09-09",
+                "title": "22-Year-Old Crypto Ringleader Pleads Guilty to $245M Racketeering Scheme",
+                "url": "https://www.theblock.co/news/regulation/2026-09-08-a-22-year-old-crypto-ringleader-pleads-guilty-to-245-million-racketeering-scheme-413911",
+                "source": "The Block"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Liquid Network hackers steal $320M in Bitcoin, return most after patch",
+            "change": "Attackers exploited a vulnerability in Liquid Network's Elements software to mint unbacked L-BTC and drained roughly 4,000 BTC (~$320 million) from its reserve. About 3,400 BTC were returned on Sept. 7, and Blockstream is negotiating to recover the remaining ~600 BTC after patching bridge nodes and preparing an emergency update.",
+            "why_it_matters": "This is one of the largest exploits involving a Bitcoin sidechain and directly tests how much trust users place in federated pegs and wrapped Bitcoin products. It shows that transaction-validation failures can jeopardize user funds even when no private keys or federation nodes are compromised.",
+            "date_start": "2026-09-09",
+            "date_end": "2026-09-09",
+            "score": 9.0,
+            "sources_count": 6,
+            "event_url": "/en/events/evt_c9054f6fe0489c31/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-09",
+                "title": "Liquid Network hackers steal $320M in Bitcoin, return most after patch",
+                "url": "https://siliconangle.com/2026/09/07/hackers-steal-320m-in-bitcoin-from-liquid-network-return-most-of-it-after-patch/",
+                "source": "siliconangle.com"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Liquid Hackers Return $270M in Bitcoin After $320M Theft",
+            "change": "Hackers who breached the Liquid exchange returned about $270 million in Bitcoin after initially stealing roughly $320 million, according to the report. The partial return leaves approximately $50 million in stolen crypto still unaccounted for.",
+            "why_it_matters": "A breach of this size at a cryptocurrency exchange reveals custodial risk and can seriously undermine user confidence in centralized platforms. Partial restitution limits the damage, but the unresolved remainder and the security failure itself may invite stricter regulatory scrutiny and push more users toward self-custody.",
+            "date_start": "2026-09-08",
+            "date_end": "2026-09-08",
+            "score": 9.0,
+            "sources_count": 3,
+            "event_url": "/en/events/evt_79a9bd1c0f79b57c/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-08",
+                "title": "Liquid Hackers Return $270M in Bitcoin After $320M Theft",
+                "url": "https://decrypt.co/377600/liquid-hackers-return-270m-bitcoin",
+                "source": "Decrypt"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Revolut hands passports and Bitcoin data to fake government request",
+            "change": "Revolut disclosed that it turned over sensitive customer data — including passport and driver's license copies, verification selfies, IBAN and wallet reference numbers, and full Bitcoin transaction histories — after receiving a fraudulent information request sent from a legitimate government agency's email domain. A Revolut spokesperson called it \"a sophisticated external impersonation scam,\" said a \"limited\" number of customers were affected, and stated that its systems and customer funds were unaffected, while de",
+            "why_it_matters": "The leak links real-world identities and residential addresses directly to onchain transaction histories, which is exactly the combination that enables physical targeting of crypto holders, and it intensifies scrutiny of how fintechs and exchanges store and release KYC data. Because Revolut is weighing an IPO and recently launched its EURR stablecoin, the in",
+            "date_start": "2026-09-13",
+            "date_end": "2026-09-13",
+            "score": 8.5,
+            "sources_count": 5,
+            "event_url": "/en/events/evt_eb19a2cef3159ae6/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-13",
+                "title": "Revolut hands passports and Bitcoin data to fake government request",
+                "url": "https://www.coindesk.com/tech/2026/09/12/bitcoin-activity-passports-exposed-after-revolut-falls-for-fake-government-request",
+                "source": "CoinDesk"
+              }
+            ]
+          },
+          {
+            "section": "remember",
+            "title": "Blockstream Refuses Ransom After Liquid Bitcoin Exploit",
+            "change": "Blockstream publicly refused to pay a ransom for roughly 598.5 BTC (about $47 million) still held by attackers after an exploit on the Liquid Network sidechain that drained around 4,000 BTC, worth roughly $320 million, on Sunday. The attackers returned 3,400 BTC (about 85%) on Monday, and Liquid resumed producing blocks and processing transactions on Thursday with peg-outs still disabled as a precaution.",
+            "why_it_matters": "This is one of the largest confirmed losses on a Bitcoin sidechain, and the reserve backing Liquid's L-BTC fell as low as 197 BTC, raising questions about the security assumptions of federated bridges that many exchanges and traders rely on for fast, confidential Bitcoin transfers. Blockstream's refusal to pay also sets a public precedent for how infrastruct",
+            "date_start": "2026-09-12",
+            "date_end": "2026-09-12",
+            "score": 8.5,
+            "sources_count": 4,
+            "event_url": "/en/events/evt_1a01c4348191bd64/",
+            "entities": [],
+            "evidence": [
+              {
+                "date": "2026-09-12",
+                "title": "Blockstream Refuses Ransom After Liquid Bitcoin Exploit",
+                "url": "https://thedefiant.io/news/security/blockstream-rejects-ransom-demand-after-liquid-bitcoin-exploit",
+                "source": "The Defiant"
+              }
+            ]
+          }
+        ],
+        "event_ranking": [
+          {
+            "id": "evt_c9054f6fe0489c31",
+            "title": "Liquid Network hackers steal $320M in Bitcoin, return most after patch",
+            "url": "/en/events/evt_c9054f6fe0489c31/",
+            "entries": 1,
+            "latest_date": "2026-09-09",
+            "score": 9.0
+          },
+          {
+            "id": "evt_79a9bd1c0f79b57c",
+            "title": "Liquid Hackers Return $270M in Bitcoin After $320M Theft",
+            "url": "/en/events/evt_79a9bd1c0f79b57c/",
+            "entries": 1,
+            "latest_date": "2026-09-08",
+            "score": 9.0
+          },
+          {
+            "id": "evt_18fc53f138aba645",
+            "title": "L-BTC Trading Reopens on SideSwap With Reserves Covering Only 85%",
+            "url": "/en/events/evt_18fc53f138aba645/",
+            "entries": 2,
+            "latest_date": "2026-09-13",
+            "score": 8.5
+          },
+          {
+            "id": "evt_3c730cd986001aac",
+            "title": "Nasdaq Invests $100M in Kraken Parent Payward for Tokenized Equities Push",
+            "url": "/en/events/evt_3c730cd986001aac/",
+            "entries": 2,
+            "latest_date": "2026-09-13",
+            "score": 8.5
+          },
+          {
+            "id": "evt_fde028f4447c7239",
+            "title": "OpenAI claims 10,000-agent model solved Navier-Stokes, reigniting AI safety fears",
+            "url": "/en/events/evt_fde028f4447c7239/",
+            "entries": 2,
+            "latest_date": "2026-09-10",
+            "score": 8.5
+          }
+        ],
+        "entity_ranking": [
+          {
+            "slug": "anthropic",
+            "label": "Anthropic",
+            "mentions": 3,
+            "url": "/en/entity/anthropic/"
+          },
+          {
+            "slug": "openai",
+            "label": "OpenAI",
+            "mentions": 3,
+            "url": "/en/entity/openai/"
+          }
+        ]
+      }
+    },
+    {
       "date": "2026-09-07",
       "start": "2026-09-01",
       "stats": {
