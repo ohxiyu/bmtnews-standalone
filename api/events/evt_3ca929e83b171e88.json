@@ -4,36 +4,45 @@
   "url": "https://bmt.news/events/evt_3ca929e83b171e88/",
   "json": "https://bmt.news/api/events/evt_3ca929e83b171e88.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
     "en": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead"
   },
   "current_state": {
-    "zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
-    "en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets."
+    "zh": "美联储本周三加息25个基点的概率为94.5%，市场普遍预期加息，同时特朗普与美联储主席沃什之间的政治紧张加剧。",
+    "en": "The Fed is now priced at 94.5% probability for a 25-basis-point hike on Wednesday, with political tension between Trump and Fed Chair Warsh intensifying."
   },
   "first_seen_at": "2026-09-11T16:41:00.504160+00:00",
-  "last_updated_at": "2026-09-11T16:41:00.504160+00:00",
-  "last_material_change_at": "2026-09-11T16:41:00.504160+00:00",
+  "last_updated_at": "2026-09-15T23:01:55.231287+00:00",
+  "last_material_change_at": "2026-09-15T23:01:55.231287+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "ahead",
+    "bets",
+    "bonds",
     "clarity",
     "clarity-act",
     "close",
+    "fed",
     "federal",
     "federal-reserve",
+    "here",
     "hike",
     "lock",
     "looms",
+    "means",
     "rate",
     "reserve",
+    "street",
+    "trump",
     "vote",
-    "week"
+    "wall",
+    "week",
+    "what"
   ],
   "identifiers": [],
   "topics": [
@@ -41,7 +50,8 @@
     "crypto-regulation",
     "federal-reserve",
     "interest-rates",
-    "macro"
+    "macro",
+    "trump"
   ],
   "updates": [
     {
@@ -91,6 +101,44 @@
           "url": "https://www.investors.com/research/investing-action-plan/federal-reserve-rate-hike-close-to-clarity-act-vote-salesforce-dreamforce/",
           "label": "investors.com",
           "source_type": "gdelt",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_445e1dd3bb46527e",
+      "event_id": "evt_3ca929e83b171e88",
+      "occurred_at": "2026-09-15T21:46:03Z",
+      "published_at": "2026-09-15T21:46:03Z",
+      "first_seen_at": "2026-09-15T23:01:55.231287Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Wall Street Bets on Fed Rate Hike: Here's What It Means for Bitcoin, Bonds and Trump",
+      "title_en": "Wall Street Bets on Fed Rate Hike: Here's What It Means for Bitcoin, Bonds and Trump",
+      "what_changed_zh": "CME FedWatch显示美联储周三加息25个基点的概率升至94.5%；华尔街银行预计2026年累计收紧50-75个基点；特朗普公开施压美联储主席沃什反对加息，10年期美债收益率触及5.04%，为2007年7月以来最高。",
+      "what_changed_en": "CME FedWatch shows 94.5% odds of a 25-basis-point hike Wednesday; Wall Street banks forecast 50-75 bps total tightening in 2026; Trump publicly pressures Fed Chair Warsh against hiking; 10-year Treasury yield hit 5.04%, highest since July 2007.",
+      "current_state_zh": "美联储本周三加息25个基点的概率为94.5%，市场普遍预期加息，同时特朗普与美联储主席沃什之间的政治紧张加剧。",
+      "current_state_en": "The Fed is now priced at 94.5% probability for a 25-basis-point hike on Wednesday, with political tension between Trump and Fed Chair Warsh intensifying.",
+      "detailed_summary_zh": "Wall Street expects the Federal Reserve to raise interest rates by 25 basis points on Wednesday, with CME FedWatch showing 94.5% odds, setting up a political clash with President Trump who has pressured Fed Chair Kevin Warsh against tightening.",
+      "detailed_summary_en": "Wall Street expects the Federal Reserve to raise interest rates by 25 basis points on Wednesday, with CME FedWatch showing 94.5% odds, setting up a political clash with President Trump who has pressured Fed Chair Kevin Warsh against tightening.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.92,
+      "story_ids": [
+        "rss:decrypt.co_feed:892822f0b84f8811"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/378306/wall-street-fed-rate-hike-bitcoin-bonds-trump",
+          "label": "Decrypt",
+          "source_type": "rss",
           "official": false
         }
       ]

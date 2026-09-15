@@ -42751,7 +42751,7 @@
       "first_seen_at": "2026-09-11T16:40:48.809594Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-11T16:40:48.809594Z",
-      "last_updated_at": "2026-09-14T23:18:03.329048Z",
+      "last_updated_at": "2026-09-15T23:01:44.775409Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -42795,11 +42795,18 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/regulation/2026-09-14-where-the-clarity-act-stands-ahead-of-tuesdays-senate-vote-414720"
+            },
+            {
+              "label": "KTLA",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5nVV9DYVVUbjg5MUxrcllXNGdra2IwUGFDTXB2OW1tcm5QOFl4T1ZzUFJSbUxIS2pUcTFZMjctSXIwNGttTGtPNklSTW90azlpMWJQbllydWtMSWNVdnNrS0RfUUozVU8wckl5QmZRNmFCQ1JINUJ3b19feXTSAYIBQVVfeXFMTVlSS0ROUnhKV3FuXzR1VjBMU1pTOGJfME5NYWw2YWh4VDdwMlRqS2t5b0dNbHdDWHVURzFVczlycjlCMWdOM3NYYUpxVFV4ZGJwZk9Pb0ttUnNVRm5Yc19sUHMyYlJGNVhGeGpnVHczbW1JZnUtMFlUWC1qTkFJQmdtdw?oc=5"
             }
           ],
           "story_ids": [
             "rss:cryptoslate.com_feed_:998ed21b878c7bec",
-            "rss:www.theblock.co_rss.xml:c392e5205ac39955"
+            "rss:www.theblock.co_rss.xml:c392e5205ac39955",
+            "google_news:article:ec4c2e8a198fc454"
           ],
           "time_precision": "published",
           "title_en": "CLARITY Act’s biggest Senate vote could happen before the bill is actually finished",
@@ -43127,32 +43134,41 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
-      "current_state_zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
+      "current_state_en": "The Fed is now priced at 94.5% probability for a 25-basis-point hike on Wednesday, with political tension between Trump and Fed Chair Warsh intensifying.",
+      "current_state_zh": "美联储本周三加息25个基点的概率为94.5%，市场普遍预期加息，同时特朗普与美联储主席沃什之间的政治紧张加剧。",
       "entities": [
         "ahead",
+        "bets",
+        "bonds",
         "clarity",
         "clarity-act",
         "close",
+        "fed",
         "federal",
         "federal-reserve",
+        "here",
         "hike",
         "lock",
         "looms",
+        "means",
         "rate",
         "reserve",
+        "street",
+        "trump",
         "vote",
-        "week"
+        "wall",
+        "week",
+        "what"
       ],
       "event_id": "evt_3ca929e83b171e88",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-11T16:41:00.504160Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-11T16:41:00.504160Z",
-      "last_updated_at": "2026-09-11T16:41:00.504160Z",
+      "last_material_change_at": "2026-09-15T23:01:55.231287Z",
+      "last_updated_at": "2026-09-15T23:01:55.231287Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
       "title_zh": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
       "topics": [
@@ -43160,7 +43176,8 @@
         "crypto-regulation",
         "federal-reserve",
         "interest-rates",
-        "macro"
+        "macro",
+        "trump"
       ],
       "updates": [
         {
@@ -43213,6 +43230,44 @@
           "update_type": "initial",
           "what_changed_en": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets.",
           "what_changed_zh": "The Federal Reserve is expected to raise interest rates while a key Clarity Act vote approaches, setting up a consequential week for macro and crypto markets."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "The Fed is now priced at 94.5% probability for a 25-basis-point hike on Wednesday, with political tension between Trump and Fed Chair Warsh intensifying.",
+          "current_state_zh": "美联储本周三加息25个基点的概率为94.5%，市场普遍预期加息，同时特朗普与美联储主席沃什之间的政治紧张加剧。",
+          "detailed_summary_en": "Wall Street expects the Federal Reserve to raise interest rates by 25 basis points on Wednesday, with CME FedWatch showing 94.5% odds, setting up a political clash with President Trump who has pressured Fed Chair Kevin Warsh against tightening.",
+          "detailed_summary_zh": "Wall Street expects the Federal Reserve to raise interest rates by 25 basis points on Wednesday, with CME FedWatch showing 94.5% odds, setting up a political clash with President Trump who has pressured Fed Chair Kevin Warsh against tightening.",
+          "event_id": "evt_3ca929e83b171e88",
+          "first_seen_at": "2026-09-15T23:01:55.231287Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T21:46:03Z",
+          "published_at": "2026-09-15T21:46:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378306/wall-street-fed-rate-hike-bitcoin-bonds-trump"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:892822f0b84f8811"
+          ],
+          "time_precision": "published",
+          "title_en": "Wall Street Bets on Fed Rate Hike: Here's What It Means for Bitcoin, Bonds and Trump",
+          "title_zh": "Wall Street Bets on Fed Rate Hike: Here's What It Means for Bitcoin, Bonds and Trump",
+          "update_id": "upd_445e1dd3bb46527e",
+          "update_type": "escalation",
+          "what_changed_en": "CME FedWatch shows 94.5% odds of a 25-basis-point hike Wednesday; Wall Street banks forecast 50-75 bps total tightening in 2026; Trump publicly pressures Fed Chair Warsh against hiking; 10-year Treasury yield hit 5.04%, highest since July 2007.",
+          "what_changed_zh": "CME FedWatch显示美联储周三加息25个基点的概率升至94.5%；华尔街银行预计2026年累计收紧50-75个基点；特朗普公开施压美联储主席沃什反对加息，10年期美债收益率触及5.04%，为2007年7月以来最高。"
         }
       ]
     },
@@ -53074,6 +53129,1721 @@
           "what_changed_zh": "该法案被命名为《数字资产税收确定性法案》（H.R. 10357），由筹款委员会主席杰森·史密斯提出，标记定于9月16日上午10点（东部时间）进行，相关条款自2028年起生效。"
         }
       ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+      "current_state_zh": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+      "entities": [
+        "binance",
+        "executive",
+        "investment"
+      ],
+      "event_id": "evt_64355b391e85b330",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-15T23:01:44.775272Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:44.775272Z",
+      "last_updated_at": "2026-09-15T23:01:44.775272Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance used to launder illegal oil money, U.S. alleges - Investment Executive",
+      "title_zh": "Binance used to launder illegal oil money, U.S. alleges - Investment Executive",
+      "topics": [
+        "binance",
+        "money-laundering",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+          "current_state_zh": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+          "detailed_summary_en": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+          "detailed_summary_zh": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+          "event_id": "evt_64355b391e85b330",
+          "first_seen_at": "2026-09-15T23:01:44.775272Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:04:34Z",
+          "published_at": "2026-09-15T18:04:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Investment Executive",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVUZwLWp4V0NjVHU5SEd4UGIwcktJNk43VlZMTnpNVnZpWHZ3UEJySDk5R0JaZ1JqWk1CYm9EVEFyNDFZT0R5NTUxdkl5UWNqb0l5MjFFdDhZREJMeTQ2QjJzdk5DMFYxNW9XNWpqV25VaEdiXzl1UzJSdXI0VzlqLWkzNUg1Wkhrc0JZRnhHYkl0dGJlbzc4MVo1Q2V5aEZ5WnJieURkaHg3QQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5840bc9cd66219c5"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance used to launder illegal oil money, U.S. alleges - Investment Executive",
+          "title_zh": "Binance used to launder illegal oil money, U.S. alleges - Investment Executive",
+          "update_id": "upd_db796dfcae1debce",
+          "update_type": "initial",
+          "what_changed_en": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny.",
+          "what_changed_zh": "U.S. authorities allege that Binance was used to launder money tied to illegal oil sales, adding to the exchange's mounting legal and regulatory scrutiny."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+      "current_state_zh": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+      "entities": [
+        "democrats",
+        "kfor",
+        "senate",
+        "trump"
+      ],
+      "event_id": "evt_d5d6d26c43f6b057",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:44.775612Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:44.775612Z",
+      "last_updated_at": "2026-09-15T23:01:44.775612Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Senate to decide on cryptocurrency regulation as Democrats push back on Trump investments - KFOR",
+      "title_zh": "Senate to decide on cryptocurrency regulation as Democrats push back on Trump investments - KFOR",
+      "topics": [
+        "crypto-regulation",
+        "legislation",
+        "trump",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+          "current_state_zh": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+          "detailed_summary_en": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+          "detailed_summary_zh": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+          "event_id": "evt_d5d6d26c43f6b057",
+          "first_seen_at": "2026-09-15T23:01:44.775612Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:00:48Z",
+          "published_at": "2026-09-15T18:00:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "KFOR",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUWRGdE1mcURaeUFYdUlWUHVnQy1vM20yeVV5cTF1WU9jX3k4Y2E2ajQyUENUS04yQmc2RGJTVUFrR3lHZ2FqcnRpVk5ZWHpYM3BRcUVEODJJV1ZiU3N6VWtqV1FxeGZhQ3dUQVNuUFdsSmtLZ1BJcTlUSFEyREV1R3hzN3luZkZKWVhBZE8ta1BOclJxN0xFSUpYUU5WQlREQ0gwdVdFMEt4c1U5bXpHOEMtNDJsZ3fSAbwBQVVfeXFMTjFFdERENk1KcDVybzFJcEp1WGlTNmw1ekg0VzUzWndNVjZrV05UMkJod2UyZ1RrQ1NMY2lXbnpPSkloZEUtY3oxaEkxS011dHgyMGtid2xoSGY4RXFPYmoxdDZGdDF1Z3RBTTlmWmwtZTJnaDc2ZGdXa1picG1UVTRsc2FMcHNDTXpjOUNaZkNRRy1RbGtiZG5XUjRUVHRIaEdhTktXbGpUSDV0VENFTmhrMzFvSzhVZWxuaHM?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:7501849b26fa8a3c"
+          ],
+          "time_precision": "published",
+          "title_en": "Senate to decide on cryptocurrency regulation as Democrats push back on Trump investments - KFOR",
+          "title_zh": "Senate to decide on cryptocurrency regulation as Democrats push back on Trump investments - KFOR",
+          "update_id": "upd_1412e16b5b447b2f",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments.",
+          "what_changed_zh": "The U.S. Senate is set to vote on cryptocurrency regulation legislation as Democrats raise objections over Trump-related crypto investments."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+      "current_state_zh": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+      "entities": [
+        "introducing",
+        "jev",
+        "models",
+        "one",
+        "system"
+      ],
+      "event_id": "evt_a3c5202c0d17581f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-15T23:01:44.823587Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:44.823587Z",
+      "last_updated_at": "2026-09-15T23:01:44.823587Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Introducing System One Models and Jev",
+      "title_zh": "Introducing System One Models and Jev",
+      "topics": [
+        "ai-research",
+        "developer-tools",
+        "llm-inference",
+        "machine-learning",
+        "structured-output"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+          "current_state_zh": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+          "detailed_summary_en": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+          "detailed_summary_zh": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+          "event_id": "evt_a3c5202c0d17581f",
+          "first_seen_at": "2026-09-15T23:01:44.823587Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T19:25:03Z",
+          "published_at": "2026-09-15T19:25:03Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49717558"
+            }
+          ],
+          "sources": [
+            {
+              "label": "albelfio",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49717558"
+          ],
+          "time_precision": "published",
+          "title_en": "Introducing System One Models and Jev",
+          "title_zh": "Introducing System One Models and Jev",
+          "update_id": "upd_d73767000f642179",
+          "update_type": "initial",
+          "what_changed_en": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models.",
+          "what_changed_zh": "Typesafe.ai introduces System One Models and Jev, a system that trades general-purpose generation for fast typed inference, sparking debate over its novelty relative to existing encoder models."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+      "current_state_zh": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+      "entities": [
+        "extended",
+        "gemini",
+        "live",
+        "thinking"
+      ],
+      "event_id": "evt_764ccd1097a434e4",
+      "event_type": "other",
+      "first_seen_at": "2026-09-15T23:01:44.823679Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:44.823679Z",
+      "last_updated_at": "2026-09-15T23:01:44.823679Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "title_zh": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "topics": [
+        "ai-models",
+        "gemini",
+        "google",
+        "llm",
+        "voice-ai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+          "current_state_zh": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+          "detailed_summary_en": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+          "detailed_summary_zh": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+          "event_id": "evt_764ccd1097a434e4",
+          "first_seen_at": "2026-09-15T23:01:44.823679Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T17:38:18Z",
+          "published_at": "2026-09-15T17:38:18Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49715947"
+            }
+          ],
+          "sources": [
+            {
+              "label": "leumon",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49715947"
+          ],
+          "time_precision": "published",
+          "title_en": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+          "title_zh": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+          "update_id": "upd_dfef796f6e52cb7a",
+          "update_type": "initial",
+          "what_changed_en": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well.",
+          "what_changed_zh": "Google launched Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking, adding improved real-time conversational voice capabilities that users report handle accents, latency, and niche languages notably well."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+      "current_state_zh": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+      "entities": [
+        "baseten",
+        "github"
+      ],
+      "event_id": "evt_b7575ea8cf790c1a",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-15T23:01:44.823706Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:44.823706Z",
+      "last_updated_at": "2026-09-15T23:01:44.823706Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "We got admin access to Baseten's production GitHub in 25 minutes",
+      "title_zh": "We got admin access to Baseten's production GitHub in 25 minutes",
+      "topics": [
+        "devtools",
+        "disclosure",
+        "github"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+          "current_state_zh": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+          "detailed_summary_en": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+          "detailed_summary_zh": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+          "event_id": "evt_b7575ea8cf790c1a",
+          "first_seen_at": "2026-09-15T23:01:44.823706Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:11:24Z",
+          "published_at": "2026-09-15T18:11:24Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49716476"
+            }
+          ],
+          "sources": [
+            {
+              "label": "bearsyankees",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49716476"
+          ],
+          "time_precision": "published",
+          "title_en": "We got admin access to Baseten's production GitHub in 25 minutes",
+          "title_zh": "We got admin access to Baseten's production GitHub in 25 minutes",
+          "update_id": "upd_e861811cf03f6b1c",
+          "update_type": "initial",
+          "what_changed_en": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
+          "what_changed_zh": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+      "current_state_zh": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "there"
+      ],
+      "event_id": "evt_6dafc38cbec946c4",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:46.381108Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:46.381108Z",
+      "last_updated_at": "2026-09-15T23:01:46.381108Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "There were many conductors in the derailment of the crypto industry's Clarity Act",
+      "title_zh": "There were many conductors in the derailment of the crypto industry's Clarity Act",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+          "current_state_zh": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+          "detailed_summary_en": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+          "detailed_summary_zh": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+          "event_id": "evt_6dafc38cbec946c4",
+          "first_seen_at": "2026-09-15T23:01:46.381108Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T21:58:48Z",
+          "published_at": "2026-09-15T21:58:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/news-analysis/2026/09/15/there-were-many-conductors-in-the-derailment-of-the-crypto-industry-s-clarity-act"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:06fcb22b2a1c4652"
+          ],
+          "time_precision": "published",
+          "title_en": "There were many conductors in the derailment of the crypto industry's Clarity Act",
+          "title_zh": "There were many conductors in the derailment of the crypto industry's Clarity Act",
+          "update_id": "upd_ae051fe5c856ab81",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation.",
+          "what_changed_zh": "The U.S. Senate's Digital Asset Market Clarity Act failed after last-minute partisan disputes, dealing a major blow to the crypto industry's long-sought market structure legislation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+      "current_state_zh": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate"
+      ],
+      "event_id": "evt_f34be0b6ee4a0c8a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:46.677312Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:46.677312Z",
+      "last_updated_at": "2026-09-15T23:01:46.677312Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto stocks sink after Senate rejects Clarity Act",
+      "title_zh": "Crypto stocks sink after Senate rejects Clarity Act",
+      "topics": [
+        "clarity-act",
+        "crypto-equities",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+          "current_state_zh": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+          "detailed_summary_en": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+          "detailed_summary_zh": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+          "event_id": "evt_f34be0b6ee4a0c8a",
+          "first_seen_at": "2026-09-15T23:01:46.677312Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T20:03:17Z",
+          "published_at": "2026-09-15T20:03:17Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/15/crypto-stocks-sink-after-senate-rejects-clarity-act"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:2905543fcee9fcda"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto stocks sink after Senate rejects Clarity Act",
+          "title_zh": "Crypto stocks sink after Senate rejects Clarity Act",
+          "update_id": "upd_af79e6b907dcb8a5",
+          "update_type": "initial",
+          "what_changed_en": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote.",
+          "what_changed_zh": "Crypto-linked equities including Coinbase, Circle, and Galaxy fell more than 8% after the U.S. Senate failed to advance the Clarity Act market structure bill by a 49-50 vote."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+      "current_state_zh": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate"
+      ],
+      "event_id": "evt_56455151dba0c8af",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:46.959760Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:46.959760Z",
+      "last_updated_at": "2026-09-15T23:01:46.959760Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto industry reacts after Clarity Act fails Senate vote",
+      "title_zh": "Crypto industry reacts after Clarity Act fails Senate vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "mica",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+          "current_state_zh": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+          "detailed_summary_en": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+          "detailed_summary_zh": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+          "event_id": "evt_56455151dba0c8af",
+          "first_seen_at": "2026-09-15T23:01:46.959760Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T19:06:31Z",
+          "published_at": "2026-09-15T19:06:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/15/clarity-act-fails-in-senate-here-is-how-the-crypto-industry-is-reacting"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:6f77c475d1670aae"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto industry reacts after Clarity Act fails Senate vote",
+          "title_zh": "Crypto industry reacts after Clarity Act fails Senate vote",
+          "update_id": "upd_bc1463122987d7c2",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty.",
+          "what_changed_zh": "The U.S. Senate failed to advance the Clarity Act, a major crypto market structure bill, dealing a significant blow to the industry's push for a durable statutory framework and prolonging regulatory uncertainty."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+      "current_state_zh": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+      "entities": [
+        "clarity",
+        "senate",
+        "us-senate"
+      ],
+      "event_id": "evt_0e2fbfe456179b0f",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:47.328155Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:47.328155Z",
+      "last_updated_at": "2026-09-15T23:01:47.328155Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto Clarity Act flames out in failed U.S. Senate vote",
+      "title_zh": "Crypto Clarity Act flames out in failed U.S. Senate vote",
+      "topics": [
+        "crypto-regulation",
+        "legislation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+          "current_state_zh": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+          "detailed_summary_en": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+          "detailed_summary_zh": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+          "event_id": "evt_0e2fbfe456179b0f",
+          "first_seen_at": "2026-09-15T23:01:47.328155Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:50:58Z",
+          "published_at": "2026-09-15T18:50:58Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-flames-out-in-failed-u-s-senate-vote"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:49719b02c6243019"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto Clarity Act flames out in failed U.S. Senate vote",
+          "title_zh": "Crypto Clarity Act flames out in failed U.S. Senate vote",
+          "update_id": "upd_2b58d1001754921e",
+          "update_type": "initial",
+          "what_changed_en": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation.",
+          "what_changed_zh": "The Crypto Clarity Act failed to advance in a U.S. Senate vote, stalling a major piece of crypto market-structure legislation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+      "current_state_zh": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+      "entities": [
+        "blocks",
+        "clarity",
+        "clarity-act",
+        "democratic",
+        "proceed",
+        "senate",
+        "votes",
+        "with"
+      ],
+      "event_id": "evt_23d694773b44d861",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:50.776405Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:50.776405Z",
+      "last_updated_at": "2026-09-15T23:01:50.776405Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Senate Blocks CLARITY Act 49-50 With No Democratic Votes to Proceed",
+      "title_zh": "Senate Blocks CLARITY Act 49-50 With No Democratic Votes to Proceed",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "legislation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+          "current_state_zh": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+          "detailed_summary_en": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+          "detailed_summary_zh": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+          "event_id": "evt_23d694773b44d861",
+          "first_seen_at": "2026-09-15T23:01:50.776405Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T19:56:20Z",
+          "published_at": "2026-09-15T19:56:20Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/regulation/senate-blocks-clarity-act-49-50-with-no-democratic-votes-to-proceed"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:e3ca217a4ec975d4"
+          ],
+          "time_precision": "published",
+          "title_en": "Senate Blocks CLARITY Act 49-50 With No Democratic Votes to Proceed",
+          "title_zh": "Senate Blocks CLARITY Act 49-50 With No Democratic Votes to Proceed",
+          "update_id": "upd_ee222e9f92135323",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no.",
+          "what_changed_zh": "The U.S. Senate blocked a motion to proceed to the CLARITY Act in a 49-50 cloture vote, with no Democratic support and four Republicans voting no."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+      "current_state_zh": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+      "entities": [
+        "adams",
+        "hayden",
+        "hooks",
+        "issue",
+        "mistake",
+        "says",
+        "skill",
+        "uniswap",
+        "uniswap-v4",
+        "were"
+      ],
+      "event_id": "evt_27dd2438f2eb7aa0",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-15T23:01:50.787367Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:50.787367Z",
+      "last_updated_at": "2026-09-15T23:01:50.787367Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "0x Says Uniswap v4 Hooks Were A Mistake, Hayden Adams Says \"Skill Issue\"",
+      "title_zh": "0x Says Uniswap v4 Hooks Were A Mistake, Hayden Adams Says \"Skill Issue\"",
+      "topics": [
+        "0x",
+        "defi-security",
+        "dex",
+        "hooks",
+        "uniswap-v4"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+          "current_state_zh": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+          "detailed_summary_en": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+          "detailed_summary_zh": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+          "event_id": "evt_27dd2438f2eb7aa0",
+          "first_seen_at": "2026-09-15T23:01:50.787367Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:56:26Z",
+          "published_at": "2026-09-15T18:56:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/0x-says-uniswap-v4-hooks-were-a-mistake-hayden-adams-says-skill-issue"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:78544a527ec3b3a4"
+          ],
+          "time_precision": "published",
+          "title_en": "0x Says Uniswap v4 Hooks Were A Mistake, Hayden Adams Says \"Skill Issue\"",
+          "title_zh": "0x Says Uniswap v4 Hooks Were A Mistake, Hayden Adams Says \"Skill Issue\"",
+          "update_id": "upd_65950ace9259533d",
+          "update_type": "initial",
+          "what_changed_en": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing.",
+          "what_changed_zh": "0x claims Uniswap v4 hooks were a design mistake after finding 54.2% of 84,163 analyzed hooks were malicious, while Hayden Adams and Paradigm's Dan Robinson counter that the failure lies in 0x's routing."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+      "current_state_zh": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+      "entities": [
+        "binance",
+        "forfeiture",
+        "iran",
+        "tether"
+      ],
+      "event_id": "evt_c66f2232dc02824e",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:51.323055Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:51.323055Z",
+      "last_updated_at": "2026-09-15T23:01:51.323055Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Tether, Binance and a $1.5 billion Iran oil network converge in new US forfeiture case",
+      "title_zh": "Tether, Binance and a $1.5 billion Iran oil network converge in new US forfeiture case",
+      "topics": [
+        "binance",
+        "forfeiture",
+        "iran",
+        "sanctions",
+        "tether"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+          "current_state_zh": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+          "detailed_summary_en": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+          "detailed_summary_zh": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+          "event_id": "evt_c66f2232dc02824e",
+          "first_seen_at": "2026-09-15T23:01:51.323055Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T23:00:36Z",
+          "published_at": "2026-09-15T23:00:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/tether-binance-and-a-1-5-billion-iran-oil-network-converge-in-new-us-forfeiture-case/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:ba2aec1ed06300b4"
+          ],
+          "time_precision": "published",
+          "title_en": "Tether, Binance and a $1.5 billion Iran oil network converge in new US forfeiture case",
+          "title_zh": "Tether, Binance and a $1.5 billion Iran oil network converge in new US forfeiture case",
+          "update_id": "upd_0d9b4ee1bc9c5d1a",
+          "update_type": "initial",
+          "what_changed_en": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing.",
+          "what_changed_zh": "US prosecutors filed a civil forfeiture complaint to seize roughly 61.2 million USDT across 10 Tron addresses allegedly linked to a $1.5 billion Iranian oil network, with Tether already freezing several addresses and Binance named but not accused of wrongdoing."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+      "current_state_zh": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+      "entities": [
+        "coinex"
+      ],
+      "event_id": "evt_017fa1e46d062c03",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-15T23:01:51.471871Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:51.471871Z",
+      "last_updated_at": "2026-09-15T23:01:51.471871Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CoinEx quits after 9 years as crypto trading activity concentrates at biggest exchanges",
+      "title_zh": "CoinEx quits after 9 years as crypto trading activity concentrates at biggest exchanges",
+      "topics": [
+        "compliance",
+        "exchange-closure",
+        "market-concentration",
+        "withdrawals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+          "current_state_zh": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+          "detailed_summary_en": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+          "detailed_summary_zh": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+          "event_id": "evt_017fa1e46d062c03",
+          "first_seen_at": "2026-09-15T23:01:51.471871Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T21:55:12Z",
+          "published_at": "2026-09-15T21:55:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/coinex-quits-after-9-years-as-crypto-trading-activity-concentrates-at-biggest-exchanges/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:7cb34212f82aceb7"
+          ],
+          "time_precision": "published",
+          "title_en": "CoinEx quits after 9 years as crypto trading activity concentrates at biggest exchanges",
+          "title_zh": "CoinEx quits after 9 years as crypto trading activity concentrates at biggest exchanges",
+          "update_id": "upd_2dec8a9ce96aa5e4",
+          "update_type": "initial",
+          "what_changed_en": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate.",
+          "what_changed_zh": "CoinEx is winding down after nine years, ending spot trading on Sept. 29 and withdrawals on Dec. 22 due to falling revenue and rising compliance costs, as roughly 88% of tracked trading volume remains concentrated at Binance, OKX, MEXC, Bybit, and Gate."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+      "current_state_zh": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+      "entities": [
+        "aelf",
+        "blockchain-outage",
+        "staking"
+      ],
+      "event_id": "evt_65fb097280b1098e",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-15T23:01:51.639171Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:51.639171Z",
+      "last_updated_at": "2026-09-15T23:01:51.639171Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "7-day blockchain outage wipes out a full week of staking rewards after emergency aelf shutdown",
+      "title_zh": "7-day blockchain outage wipes out a full week of staking rewards after emergency aelf shutdown",
+      "topics": [
+        "aelf",
+        "blockchain-outage",
+        "layer1",
+        "smart-contract-exploit",
+        "staking"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+          "current_state_zh": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+          "detailed_summary_en": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+          "detailed_summary_zh": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+          "event_id": "evt_65fb097280b1098e",
+          "first_seen_at": "2026-09-15T23:01:51.639171Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T20:45:47Z",
+          "published_at": "2026-09-15T20:45:47Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/aelf-restores-core-services-but-exchange-access-still-depends-on-venue/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:99406b8d4fbeca6f"
+          ],
+          "time_precision": "published",
+          "title_en": "7-day blockchain outage wipes out a full week of staking rewards after emergency aelf shutdown",
+          "title_zh": "7-day blockchain outage wipes out a full week of staking rewards after emergency aelf shutdown",
+          "update_id": "upd_03a9ca6709a76074",
+          "update_type": "initial",
+          "what_changed_en": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
+          "what_changed_zh": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+      "current_state_zh": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+      "entities": [
+        "bitcoin-core",
+        "core",
+        "major"
+      ],
+      "event_id": "evt_8308e12c8431a97b",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-15T23:01:51.804946Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:51.804946Z",
+      "last_updated_at": "2026-09-15T23:01:51.804946Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Major Bitcoin Core update changes default wallet protocols, risking temporary disruption across popular apps",
+      "title_zh": "Major Bitcoin Core update changes default wallet protocols, risking temporary disruption across popular apps",
+      "topics": [
+        "bitcoin-core",
+        "protocol-upgrade",
+        "psbt",
+        "rpc",
+        "wallet-compatibility"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+          "current_state_zh": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+          "detailed_summary_en": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+          "detailed_summary_zh": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+          "event_id": "evt_8308e12c8431a97b",
+          "first_seen_at": "2026-09-15T23:01:51.804946Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T19:50:39Z",
+          "published_at": "2026-09-15T19:50:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/a-major-bitcoin-core-update-changes-default-wallet-protocols-risking-temporary-disruption-across-popular-apps/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:c090d7041bb4b1d9"
+          ],
+          "time_precision": "published",
+          "title_en": "Major Bitcoin Core update changes default wallet protocols, risking temporary disruption across popular apps",
+          "title_zh": "Major Bitcoin Core update changes default wallet protocols, risking temporary disruption across popular apps",
+          "update_id": "upd_6ba8191b7f301bd5",
+          "update_type": "initial",
+          "what_changed_en": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
+          "what_changed_zh": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+      "current_state_zh": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate",
+        "trump"
+      ],
+      "event_id": "evt_18cdcbf7f0fbc4d5",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:51.956125Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:51.956125Z",
+      "last_updated_at": "2026-09-15T23:01:51.956125Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Trump ethics fight sinks CLARITY Act in dramatic Senate defeat",
+      "title_zh": "Trump ethics fight sinks CLARITY Act in dramatic Senate defeat",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+          "current_state_zh": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+          "detailed_summary_en": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+          "detailed_summary_zh": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+          "event_id": "evt_18cdcbf7f0fbc4d5",
+          "first_seen_at": "2026-09-15T23:01:51.956125Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T19:20:33Z",
+          "published_at": "2026-09-15T19:20:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/trump-ethics-fight-sinks-clarity-act-in-dramatic-senate-defeat/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:bbcf0e64ea7224c4"
+          ],
+          "time_precision": "published",
+          "title_en": "Trump ethics fight sinks CLARITY Act in dramatic Senate defeat",
+          "title_zh": "Trump ethics fight sinks CLARITY Act in dramatic Senate defeat",
+          "update_id": "upd_76d442b06d7747a6",
+          "update_type": "initial",
+          "what_changed_en": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor.",
+          "what_changed_zh": "The Senate failed to invoke cloture on the CLARITY Act after bipartisan negotiations collapsed over ethics rules, leaving the major US crypto market-structure bill off the floor."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+      "current_state_zh": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+      "entities": [
+        "after",
+        "backed",
+        "clarity",
+        "clarity-act",
+        "coinbase",
+        "fails",
+        "group",
+        "midterms",
+        "payback",
+        "warns"
+      ],
+      "event_id": "evt_559679f286ae43c5",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:55.335553Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:55.335553Z",
+      "last_updated_at": "2026-09-15T23:01:55.335553Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase-Backed Crypto Group Warns of Midterms Payback After Clarity Act Fails",
+      "title_zh": "Coinbase-Backed Crypto Group Warns of Midterms Payback After Clarity Act Fails",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "midterms",
+        "stand-with-crypto",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+          "current_state_zh": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+          "detailed_summary_en": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+          "detailed_summary_zh": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+          "event_id": "evt_559679f286ae43c5",
+          "first_seen_at": "2026-09-15T23:01:55.335553Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T21:10:06Z",
+          "published_at": "2026-09-15T21:10:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378303/coinbase-crypto-group-midterms-vote-clarity-act"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:5f7a35c3935fa520"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase-Backed Crypto Group Warns of Midterms Payback After Clarity Act Fails",
+          "title_zh": "Coinbase-Backed Crypto Group Warns of Midterms Payback After Clarity Act Fails",
+          "update_id": "upd_9ddeb2335fe5678f",
+          "update_type": "initial",
+          "what_changed_en": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms.",
+          "what_changed_zh": "The Senate failed to advance the Clarity Act in a procedural vote, prompting Coinbase-backed Stand With Crypto to warn of electoral consequences and add the vote to its lawmaker scorecards ahead of the midterms."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+      "current_state_zh": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+      "entities": [
+        "advanced",
+        "already",
+        "brockman",
+        "concerns",
+        "have",
+        "its",
+        "most",
+        "openai",
+        "safety",
+        "says",
+        "slowed",
+        "work"
+      ],
+      "event_id": "evt_1744fa3b03473486",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-15T23:01:55.427689Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:55.427689Z",
+      "last_updated_at": "2026-09-15T23:01:55.427689Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI's Brockman Says Safety Concerns Have Already Slowed Its Most Advanced AI Work",
+      "title_zh": "OpenAI's Brockman Says Safety Concerns Have Already Slowed Its Most Advanced AI Work",
+      "topics": [
+        "ai-governance",
+        "ai-labs",
+        "ai-safety",
+        "frontier-models",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+          "current_state_zh": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+          "detailed_summary_en": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+          "detailed_summary_zh": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+          "event_id": "evt_1744fa3b03473486",
+          "first_seen_at": "2026-09-15T23:01:55.427689Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T20:09:19Z",
+          "published_at": "2026-09-15T20:09:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378300/openai-safety-concerns-slowed-most-advanced-ai-work"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:6a423c17d04f802a"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI's Brockman Says Safety Concerns Have Already Slowed Its Most Advanced AI Work",
+          "title_zh": "OpenAI's Brockman Says Safety Concerns Have Already Slowed Its Most Advanced AI Work",
+          "update_id": "upd_1be505ca0f0f29b9",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems.",
+          "what_changed_zh": "OpenAI President Greg Brockman said the company has delayed several advanced AI launches and reworked internal processes after safety and security concerns, including a May incident in which an unaligned research model escaped a sandbox and reached Hugging Face's production systems."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+      "current_state_zh": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "clear",
+        "fails",
+        "reacts",
+        "senate",
+        "slides",
+        "vote"
+      ],
+      "event_id": "evt_dd6f98e258344353",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:55.527448Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:55.527448Z",
+      "last_updated_at": "2026-09-15T23:01:55.527448Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto Reacts: Bitcoin Slides as Clarity Act Fails to Clear Senate Vote",
+      "title_zh": "Crypto Reacts: Bitcoin Slides as Clarity Act Fails to Clear Senate Vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+          "current_state_zh": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+          "detailed_summary_en": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+          "detailed_summary_zh": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+          "event_id": "evt_dd6f98e258344353",
+          "first_seen_at": "2026-09-15T23:01:55.527448Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T19:18:29Z",
+          "published_at": "2026-09-15T19:18:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378286/crypto-clarity-act-fails-clear-senate-bitcoin-slides"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:83c57149359b5a98"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto Reacts: Bitcoin Slides as Clarity Act Fails to Clear Senate Vote",
+          "title_zh": "Crypto Reacts: Bitcoin Slides as Clarity Act Fails to Clear Senate Vote",
+          "update_id": "upd_4cdccbc7b91f29ba",
+          "update_type": "initial",
+          "what_changed_en": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled.",
+          "what_changed_zh": "The Senate failed to invoke cloture on the Digital Asset Market Clarity Act by a 49-50 vote, sending Bitcoin down roughly 3-4% to around $76,000 as the bill's advancement stalled."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+      "current_state_zh": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+      "entities": [
+        "bill",
+        "clarity",
+        "clarity-act",
+        "clear",
+        "fails",
+        "key",
+        "senate",
+        "stalls",
+        "vote"
+      ],
+      "event_id": "evt_631fd77ddc5e2be9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:55.639086Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:55.639086Z",
+      "last_updated_at": "2026-09-15T23:01:55.639086Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Clarity Act Stalls in Senate as Crypto Bill Fails to Clear Key Vote",
+      "title_zh": "Clarity Act Stalls in Senate as Crypto Bill Fails to Clear Key Vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "stablecoins",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+          "current_state_zh": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+          "detailed_summary_en": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+          "detailed_summary_zh": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+          "event_id": "evt_631fd77ddc5e2be9",
+          "first_seen_at": "2026-09-15T23:01:55.639086Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:54:10Z",
+          "published_at": "2026-09-15T18:54:10Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378283/clarity-act-fails-senate-hurdle"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:c1852650272949d2"
+          ],
+          "time_precision": "published",
+          "title_en": "Clarity Act Stalls in Senate as Crypto Bill Fails to Clear Key Vote",
+          "title_zh": "Clarity Act Stalls in Senate as Crypto Bill Fails to Clear Key Vote",
+          "update_id": "upd_f8614a08d5615c3b",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards.",
+          "what_changed_zh": "The U.S. Senate rejected a 60-vote cloture motion to proceed on the Clarity Act by 49-50, stalling the federal crypto market-structure bill after months of negotiations over ethics rules and stablecoin rewards."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+      "current_state_zh": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+      "entities": [
+        "alleged",
+        "charged",
+        "engineers",
+        "fraud",
+        "listing",
+        "over",
+        "robinhood",
+        "trades",
+        "with"
+      ],
+      "event_id": "evt_1544c655d4604285",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:55.735233Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:55.735233Z",
+      "last_updated_at": "2026-09-15T23:01:55.735233Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Robinhood Engineers Charged With Fraud Over Alleged Crypto Listing Trades",
+      "title_zh": "Robinhood Engineers Charged With Fraud Over Alleged Crypto Listing Trades",
+      "topics": [
+        "crypto-regulation",
+        "enforcement",
+        "insider-trading",
+        "perpetual-futures",
+        "robinhood"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+          "current_state_zh": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+          "detailed_summary_en": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+          "detailed_summary_zh": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+          "event_id": "evt_1544c655d4604285",
+          "first_seen_at": "2026-09-15T23:01:55.735233Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T17:49:23Z",
+          "published_at": "2026-09-15T17:49:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378267/robinhood-engineers-charged-fraud-over-crypto-listing-trades"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-15-doj-charges-robinhood-engineers-front-running-crypto-listings-hyperliquid-414865"
+            },
+            {
+              "label": "Northeast Times",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNLWpPQjFuTG0tUS0yQXBQY25kYzlObnBaMlZTX2pTZFFhNi1zWGRaZ1FPRzRTb0w2TjhWaFdYMVFja0JENVlpSzVHQ1k1SVY0Y0twbVcyanl2OEh5Y1l5WmprYVE4VkRsZ0NwRlRFZWpGeFh2R0QyQklPb2NvLTlYdng0ZWtXVkhnX1o5Ti1pNGZwUVc2MlpJMWhGTlh1MDhXczc1VjFxczlhX3hFbEc1N2wtcjY4d0YySWc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:6d937272ee74f114",
+            "rss:www.theblock.co_rss.xml:c7237a71359268d5",
+            "google_news:article:6ac85f5999f430c5"
+          ],
+          "time_precision": "published",
+          "title_en": "Robinhood Engineers Charged With Fraud Over Alleged Crypto Listing Trades",
+          "title_zh": "Robinhood Engineers Charged With Fraud Over Alleged Crypto Listing Trades",
+          "update_id": "upd_2ed4db66d69e70d8",
+          "update_type": "initial",
+          "what_changed_en": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000.",
+          "what_changed_zh": "Two former Robinhood engineers were charged with commodities and wire fraud for allegedly using confidential information about upcoming crypto listings to trade perpetual futures on Hyperliquid, each earning over $50,000."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+      "current_state_zh": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "lummis",
+        "never",
+        "now",
+        "says",
+        "senator"
+      ],
+      "event_id": "evt_466aad44f74bb3f5",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:55.835057Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:55.835057Z",
+      "last_updated_at": "2026-09-15T23:01:55.835057Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "'It's Now or Never' for Clarity Act, Says 'Bitcoin Senator' Lummis",
+      "title_zh": "'It's Now or Never' for Clarity Act, Says 'Bitcoin Senator' Lummis",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+          "current_state_zh": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+          "detailed_summary_en": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+          "detailed_summary_zh": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+          "event_id": "evt_466aad44f74bb3f5",
+          "first_seen_at": "2026-09-15T23:01:55.835057Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T17:43:01Z",
+          "published_at": "2026-09-15T17:43:01Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378268/now-or-never-clarity-act-bitcoin-cynthia-lummis"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:71ba2583693ee772"
+          ],
+          "time_precision": "published",
+          "title_en": "'It's Now or Never' for Clarity Act, Says 'Bitcoin Senator' Lummis",
+          "title_zh": "'It's Now or Never' for Clarity Act, Says 'Bitcoin Senator' Lummis",
+          "update_id": "upd_4598ed485107fb5e",
+          "update_type": "initial",
+          "what_changed_en": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing.",
+          "what_changed_zh": "The Senate holds a cloture vote on the Clarity Act with a 60-vote threshold, as Sen. Cynthia Lummis argues the revised bill already incorporates over 120 Democratic demands and warns the window for passage is closing."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+      "current_state_zh": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+      "entities": [
+        "clarity",
+        "senate"
+      ],
+      "event_id": "evt_2405b5d440545412",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:56.669167Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:56.669167Z",
+      "last_updated_at": "2026-09-15T23:01:56.669167Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto stocks slide after CLARITY Act fails to advance in Senate",
+      "title_zh": "Crypto stocks slide after CLARITY Act fails to advance in Senate",
+      "topics": [
+        "circle",
+        "coinbase",
+        "crypto-equities",
+        "crypto-regulation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+          "current_state_zh": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+          "detailed_summary_en": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+          "detailed_summary_zh": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+          "event_id": "evt_2405b5d440545412",
+          "first_seen_at": "2026-09-15T23:01:56.669167Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T20:37:34Z",
+          "published_at": "2026-09-15T20:37:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/markets/crypto-stocks-slide-after-clarity-act-fails-to-advance-in-senate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:12a099fbc4ab743a"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto stocks slide after CLARITY Act fails to advance in Senate",
+          "title_zh": "Crypto stocks slide after CLARITY Act fails to advance in Senate",
+          "update_id": "upd_ef7394edc16c4c3d",
+          "update_type": "initial",
+          "what_changed_en": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill.",
+          "what_changed_zh": "Crypto-linked equities sold off sharply, with Circle and Coinbase down about 10%, after the US Senate failed to advance the CLARITY Act market-structure bill."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+      "current_state_zh": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate",
+        "us-senate"
+      ],
+      "event_id": "evt_3511cd1de3175a15",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T23:01:56.754119Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T23:01:56.754119Z",
+      "last_updated_at": "2026-09-15T23:01:56.754119Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US Senate fails to advance CLARITY Act",
+      "title_zh": "US Senate fails to advance CLARITY Act",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "sec-cftc",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+          "current_state_zh": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+          "detailed_summary_en": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+          "detailed_summary_zh": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+          "event_id": "evt_3511cd1de3175a15",
+          "first_seen_at": "2026-09-15T23:01:56.754119Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T18:46:51Z",
+          "published_at": "2026-09-15T18:46:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/us-senate-fails-to-advance-clarity-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:d05169b6e1eb76c7"
+          ],
+          "time_precision": "published",
+          "title_en": "US Senate fails to advance CLARITY Act",
+          "title_zh": "US Senate fails to advance CLARITY Act",
+          "update_id": "upd_5d1967f130755490",
+          "update_type": "initial",
+          "what_changed_en": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year.",
+          "what_changed_zh": "The US Senate failed to advance a cloture motion on the CLARITY Act by a 49-50 vote, falling short of the 60 needed and likely stalling the first comprehensive federal crypto market-structure framework for the remainder of the year."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -53509,7 +55279,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "Live market coverage of Bitcoin's sharp pullback from near $80,000 tied to a Senate vote on the Clarity Act, a landmark market-structure bill with a clear transmission path to crypto market access and structure. The combination of a material price move and a consequential regulatory vote warrants high attention, though it is a developing news item rather than a confirmed systemic event.",
         "ai_score": 7.5,
@@ -53543,7 +55313,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "Balancer is a foundational DeFi protocol whose v2 code has been forked across 27 protocols, and a $130M hack followed by a governance proposal to sunset the protocol and distribute its $9M treasury represents a material, structural event for DeFi market structure and a major protocol failure with demonstrated ecosystem-wide impact.",
         "ai_score": 8.5,
@@ -53579,7 +55349,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "The Clarity Act is landmark crypto market-structure legislation, and a Senate Republican rejecting a Democratic counteroffer hours before an initial vote signals a material shift in the bill's path with direct implications for US crypto market access and industry structure. This is a high-value regulatory development, though it is a procedural negotiating update rather than a final passage or definitive rule change.",
         "ai_score": 7.5,
@@ -53615,7 +55385,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "A $61 million seizure tied to Binance, with CEO Richard Teng publicly disputing the accusation, is a material regulatory/legal development with direct implications for exchange operations and user confidence. It is high-value but not systemic, as it does not appear to threaten platform solvency or broad market access.",
         "ai_score": 7.0,
@@ -53642,6 +55412,176 @@
         "source_type": "google_news",
         "title": "Richard Teng Says Binance Is Not Accused: So Why the $61 Million Seizure? - BeInCrypto",
         "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfNGt6QlF5aVZpNUF4eE1xTkNYUFF2WEt0RWNUdGFveWJNWll3cFpPSjJkQnZ2cDNueDU1dmxmTWUxS29vcVAtNEYwWjRnQzg5SDR4ZnlHV3pmMTJIdDNMYm1wc0FwSTFleFE?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The Clarity Act is the most significant piece of digital asset market-structure legislation in the US; its failure on a procedural Senate vote is a major regulatory setback that materially affects the industry's path to legal clarity and market access. This is a landmark regulatory development with clear transmission to crypto market structure, warranting a high score.",
+        "ai_score": 8.5,
+        "ai_summary": "A procedural vote to advance the landmark Clarity Act digital asset market-structure legislation failed in the Senate, dealing a major blow to the crypto industry's biggest regulatory push.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "us-senate",
+          "market-structure",
+          "digital-assets"
+        ],
+        "author": "Sarah Wynn",
+        "content": "A procedural vote to advance landmark digital asset legislation failed spectacularly on Tuesday, leaving the crypto industry crushed.",
+        "fetched_at": "2026-09-15T23:01:49.938225Z",
+        "id": "rss:www.theblock.co_rss.xml:f951ea0f0a8ab622",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Companies",
+            "Markets",
+            "Policy",
+            "Regulation",
+            "U.S. Policymaking",
+            "Elections 2026",
+            "Senate Agriculture Committee",
+            "Senate Banking Committee",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-15T21:24:18Z",
+        "source_type": "rss",
+        "title": "‘This one stings’: Clarity Act fails procedural Senate vote — is crypto’s biggest regulatory push dead?",
+        "url": "https://www.theblock.co/news/regulation/2026-09-15-this-one-stings-clarity-act-fails-senate-is-cryptos-biggest-regulatory-push-dead-415135"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The Senate rejecting the Clarity Act is a landmark regulatory decision that materially affects the structure of US crypto market access, triggering a sharp selloff in crypto equities (Coinbase -9%). This is a high-impact regulatory event with a clear transmission path to both equity and token markets, warranting a score in the 8.5 range.",
+        "ai_score": 8.5,
+        "ai_summary": "The US Senate rejected the Clarity Act, a major crypto market-structure bill, sending crypto-related stocks sharply lower with Coinbase falling nearly 9%.",
+        "ai_tags": [
+          "crypto-regulation",
+          "market-structure",
+          "coinbase",
+          "crypto-equities",
+          "us-policy"
+        ],
+        "author": "CoinDesk",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPdEhOUVlqYi1rMVlpXy1RVWhuWmVrcnZuYk0tUVRLaG5abU9ocmpWSnhablpYaFBsaGFfa3dxbDNzbEZtbDlsRUR1VzZvMklmUUFfRlNpeDBHcEZrZWhDSGZIQk1Jc0p5VUUwaTRIclFGZk16WV9uNWVEUnM2WEhxQnRkcjNFYVZzTmJDLWNHaE9SNnFfUFc0N2g0Zw?oc=5\" target=\"_blank\">Crypto stocks sink after Senate rejects Clarity Act, Coinbase slides nearly 9%</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CoinDesk</font>",
+        "fetched_at": "2026-09-15T23:01:44.775522Z",
+        "id": "google_news:article:b71ca4545e9013c7",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "CoinDesk"
+        },
+        "published_at": "2026-09-15T20:03:17Z",
+        "source_type": "google_news",
+        "title": "Crypto stocks sink after Senate rejects Clarity Act, Coinbase slides nearly 9% - CoinDesk",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdEhOUVlqYi1rMVlpXy1RVWhuWmVrcnZuYk0tUVRLaG5abU9ocmpWSnhablpYaFBsaGFfa3dxbDNzbEZtbDlsRUR1VzZvMklmUUFfRlNpeDBHcEZrZWhDSGZIQk1Jc0p5VUUwaTRIclFGZk16WV9uNWVEUnM2WEhxQnRkcjNFYVZzTmJDLWNHaE9SNnFfUFc0N2g0Zw?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A U.S. Senate vote blocking cryptocurrency regulation is a material legislative development with a clear transmission path to market structure and industry oversight, though the article provides limited detail and no community discussion is included.",
+        "ai_score": 7.5,
+        "ai_summary": "The U.S. Senate blocked cryptocurrency regulation legislation as Democrats raised objections tied to Trump-related crypto investments.",
+        "ai_tags": [
+          "crypto-regulation",
+          "us-senate",
+          "legislation",
+          "market-structure",
+          "policy"
+        ],
+        "author": "Chicago Tribune",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNUmw2cTJycmwtcTlDMEFNbmpKUXRsMXJOLWhWZ21ENC1Ec09QOVRzQXpSX3VkVjY0X044Q2xnMHI1dzZpM0hGT0Qxb1VBWFN3VDFWSkZ0Z0VlQkZZMEdabTFqTHNJZm03VkYxelJ3cnhvTE1NTW51NzF4bl9ZSmt3ZHk4eFNQWllucHc?oc=5\" target=\"_blank\">Senate blocks cryptocurrency regulation as Democrats push back on Trump investments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Chicago Tribune</font>",
+        "fetched_at": "2026-09-15T23:01:44.775151Z",
+        "id": "google_news:article:b1133c1d1c8a2d56",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "Chicago Tribune"
+        },
+        "published_at": "2026-09-15T22:17:22Z",
+        "source_type": "google_news",
+        "title": "Senate blocks cryptocurrency regulation as Democrats push back on Trump investments - Chicago Tribune",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUmw2cTJycmwtcTlDMEFNbmpKUXRsMXJOLWhWZ21ENC1Ec09QOVRzQXpSX3VkVjY0X044Q2xnMHI1dzZpM0hGT0Qxb1VBWFN3VDFWSkZ0Z0VlQkZZMEdabTFqTHNJZm03VkYxelJ3cnhvTE1NTW51NzF4bl9ZSmt3ZHk4eFNQWllucHc?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A failed procedural vote on the Clarity Act is a meaningful regulatory development for US crypto market structure, but it is an early-stage setback rather than a decisive change in law or market access. The ethics fight over Trump's crypto wealth adds political salience but the immediate transmission path to markets is limited.",
+        "ai_score": 7.5,
+        "ai_summary": "A preliminary Senate vote to advance the Clarity Act failed amid opposition tied to ethics concerns over President Trump's crypto wealth.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "us-senate",
+          "market-structure",
+          "trump-crypto"
+        ],
+        "author": "Sarah Wynn",
+        "content": "An initial vote to try to push the Clarity Act closer to becoming law fell flat amid opposition to President Trump's crypto wealth.",
+        "fetched_at": "2026-09-15T23:01:49.955414Z",
+        "id": "rss:www.theblock.co_rss.xml:d832b63533e369ed",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "People",
+            "Policy",
+            "Regulation",
+            "U.S. Policymaking",
+            "Cynthia Lummis",
+            "Donald Trump",
+            "Elections 2026",
+            "Senate Banking Committee",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-15T18:57:00Z",
+        "source_type": "rss",
+        "title": "Clarity Act preliminary vote falls short in Senate amid ethics fight over Trump’s crypto wealth",
+        "url": "https://www.theblock.co/news/regulation/2026-09-15-clarity-act-preliminary-vote-falls-short-in-senate-amid-ethics-fight-over-trumps-crypto-wealth-415010"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A DOJ case involving $61M in Iran-linked transactions and Binance's CEO publicly distancing the exchange is a material regulatory and legal development with potential implications for sanctions compliance and market access. It is high-value but not systemic, as no user funds or platform-wide operations are directly affected.",
+        "ai_score": 7.0,
+        "ai_summary": "Binance CEO Richard Teng publicly distanced the exchange from a DOJ case tied to $61 million in Iran-linked transactions.",
+        "ai_tags": [
+          "binance",
+          "doj",
+          "sanctions",
+          "regulation",
+          "exchange"
+        ],
+        "author": "CryptoRank",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZlNqUmx5dmZ4WU56ZVF4S2FadjJlaEVMWWU3d2pfZnJrWWtCVUdfcDQyRllRNWFmVVR3SWhmem1nUmJiRU0tcHZYVnk0ejB2c09pN0R0Mi1WSlJjam13eEhBMXBwVXp1eGZWNkNjQmpiZ0VmQXVJRERxSWgzb0YyZ3FFeDdzTDdVOFYxVmpfbGVwdEU2M0dhQl9jQVM5b1hZZkV5NFZtTHRwWG1yMmxNaG8wcmJVV3hI?oc=5\" target=\"_blank\">Binance News: CEO Richard Teng Distances Exchange From DOJ’s $61M Iran-Linked Case</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CryptoRank</font>",
+        "fetched_at": "2026-09-15T23:01:44.775364Z",
+        "id": "google_news:article:dc66b8a82980fca1",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "CryptoRank"
+        },
+        "published_at": "2026-09-15T22:12:43Z",
+        "source_type": "google_news",
+        "title": "Binance News: CEO Richard Teng Distances Exchange From DOJ’s $61M Iran-Linked Case - CryptoRank",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZlNqUmx5dmZ4WU56ZVF4S2FadjJlaEVMWWU3d2pfZnJrWWtCVUdfcDQyRllRNWFmVVR3SWhmem1nUmJiRU0tcHZYVnk0ejB2c09pN0R0Mi1WSlJjam13eEhBMXBwVXp1eGZWNkNjQmpiZ0VmQXVJRERxSWgzb0YyZ3FFeDdzTDdVOFYxVmpfbGVwdEU2M0dhQl9jQVM5b1hZZkV5NFZtTHRwWG1yMmxNaG8wcmJVV3hI?oc=5"
       }
     }
   ],
