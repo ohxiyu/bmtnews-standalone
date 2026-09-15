@@ -361,10 +361,11 @@
         "post_id": "366858538717243"
       },
       "7b3b803efbdcb95ed2b40625d7d853d3b98085633943ff64e3ad09ac099c9881": {
-        "status": "pending",
+        "status": "sent",
         "rank": 7,
         "text_hash": "aef567d392a2069717ff2f26e325c12c40647ef110dcb3aca0d9bfdf37940a11",
-        "attempted_at": "2026-09-15T16:11:10.506295+08:00"
+        "attempted_at": "2026-09-15T16:11:10.506295+08:00",
+        "post_id": "366873284164959"
       }
     }
   },
@@ -390,12 +391,6 @@
     "2026-09-15": {
       "revision": "b58088a9803d4e8ad5561072c9c6bfa27087187a13deab12ca9d26a1e9b808b9",
       "jobs": [
-        {
-          "id": "7b3b803efbdcb95ed2b40625d7d853d3b98085633943ff64e3ad09ac099c9881",
-          "text": "Robinhood 将为股票代币增设股份赎回与投票权\n\nRobinhood 首席执行官 Vlad Tenev 与加密业务负责人 Johann Kerbrat 表示，公司计划为其股票代币产品加入一比一的股份赎回以及投票权，直接回应了外界批评其代币所附所有权功能有限的质疑。Tenev 将这些功能描述为尚在路上而非已经上线，他表示“第一步是扩大股票代币的采用规模”，而股份一比一赎回和为合格持有者提供投票权则列在路线图上。\n\n代币化股票此前通常只提供经济敞口而非真正的股份所有权，因此引入赎回与投票权将缩小股票代币与传统券商持仓之间的差距。若 Robinhood 真正落地这些功能，将抬高整个代币化股票赛道的市场结构门槛，对 Kraken 的 xStocks、Gemini 等竞争对手形成压力，并可能推动该行业从“价格跟踪型包装”走向真正意义上的链上所有权。\n\n这些功能尚未上线：Tenev 明确表示“还没有，但即将到来”，而投票权被描述为面向“合格”的股票代币持有者，意味着相关资格标准尚未公布。按照典型的代币化证券机制，赎回是指持有者将代币退回发行方、托管方处置底层资产并返还价值；而一比一的股份赎回则意味着以实物方式交付真实股票。\n\n来源：https://www.coindesk.com/business/2026/09/14/robinhood-plans-share-redemptions-voting-rights-for-stock-tokens-after-criticism\nBMTNews · 2026-09-15 · https://bmt.news",
-          "rank": 7,
-          "due_at": "2026-09-15T16:11:00+08:00"
-        },
         {
           "id": "39827cf1dd6f4804d61f1dc5a59245e4e162a5a0e59d9dfdbdba2a310936c635",
           "text": "Aave V4 的 Umbrella 提案：DAO 资金将优先吸收借贷坏账\n\n9 月 11 日，TokenLogic 提出了面向 Aave V4 的 Umbrella 方案：由 Aave DAO 通过“赤字抵消”（deficit offsets）率先吸收借贷损失，具体额度为 33 ETH、15,000 USDC 和 15,000 USDT，超出该层的赤字则由自愿承保人承担。这一坏账兜底机制初期仅适用于以太坊 Core Hub 上的 WETH、USDC 和 USDT 储备，承保目标规模分别为 800 ETH、400,000 USDC 和 400,000 USDT。\n\n该提案实质性地重塑了 Aave 的风险结构：把第一损失暴露转移给 DAO 资金库，并为承保人创造了“以收益换风险”的新角色，从而改变出借人、AAVE 持有者以及治理层对偿付风险的评估方式。若获通过，它可能成为大型 DeFi 借贷市场在 V4 的 Hub-and-Spoke 架构下分摊尾部风险的模板。\n\n保障范围按储备（reserve）而非按代币划分，因此存入其他 Hub 的 USDC 不在保护之列，分配给某一 Hub 资产的资金也无法弥补其他储备的赤字；承保人需面对 20 天冷却期加 2 天提款窗口，且在等待退出期间质押资产仍暴露于罚没（slashing）风险。TokenLogic 明确不建议初期为 USDG 和 frxUSD 提供通用型保障，理由是激励敏感的借贷活动存在不确定性，而 frxUSD 还存在发行人关联度高的集中化供应方结构。\n\n来源：https://cryptoslate.com/aave-v4-proposal-would-put-dao-funds-first-in-line-to-absorb-lending-losses/\nBMTNews · 2026-09-15 · https://bmt.news",
