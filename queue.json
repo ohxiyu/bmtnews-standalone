@@ -340,10 +340,11 @@
         "post_id": "366813103102810"
       },
       "7a1f72a76abd1a841d66a7d4a6bdd2d2fd92a1e7689672aa2545bd58bd7c46a4": {
-        "status": "pending",
+        "status": "sent",
         "rank": 4,
         "text_hash": "947b7c47dad975f019460d2e8749adb140388bb06ac0c5de1d6d4a23130e69cc",
-        "attempted_at": "2026-09-15T13:26:10.849948+08:00"
+        "attempted_at": "2026-09-15T13:26:10.849948+08:00",
+        "post_id": "366832735985687"
       }
     }
   },
@@ -369,12 +370,6 @@
     "2026-09-15": {
       "revision": "b58088a9803d4e8ad5561072c9c6bfa27087187a13deab12ca9d26a1e9b808b9",
       "jobs": [
-        {
-          "id": "7a1f72a76abd1a841d66a7d4a6bdd2d2fd92a1e7689672aa2545bd58bd7c46a4",
-          "text": "印度启动公司债券代币化试点，以数字卢比结算\n\n印度证券交易委员会（SEBI）与印度储备银行（RBI）联合推出名为“Demat 2.0”的试点，在由存托机构 NSDL 和 CDSL 运营的私有许可链账本上，将公司债券以原生数字代币形式发行。已有三家发行方落地：REC 于 9 月 7 日发行 500 亿卢比（被称为印度首只代币化公司债），Larsen & Toubro 发行 500 亿卢比，IIFL Finance 发行 25 亿卢比，合计 1,025 亿卢比（约 1.07 亿美元）。\n\n这是代币化现实世界资产（RWA）领域一个标志性的机构化里程碑：主权证券监管机构与央行直接面向规模达 6,200 亿美元的公司债市场进行真实发行，而非停留在沙盒试验阶段。若按计划扩展至二级交易与零售参与，该框架可能成为其他司法辖区把受监管证券接入分布式账本、并以央行货币结算的范本。\n\n该代币账本通过统一市场接口（Unified Market Interface）与印度储备银行的批发型数字卢比（e₹-W）相连，实现原子化券款对付（DvP）：债券与资金要么同时交割、要么都不交割，从而有望让发行方在招标当日就拿到资金而非数日后到账，并由智能合约自动执行付息与赎回。SEBI 强调债券的法律条款、信用评级、债券受托人、上市规则与投资者保护均保持不变，投资者可在现有 Demat 账户中持有代币且无需重新做 KYC；存托机构保留所有权记录并管理投资者的债券代币私钥，二级市场交易和零售准入安排在后续阶段。\n\n来源：https://decrypt.co/378120/india-begins-tokenizing-its-620-billion-corporate-bond-market\nBMTNews · 2026-09-15 · https://bmt.news",
-          "rank": 4,
-          "due_at": "2026-09-15T13:22:00+08:00"
-        },
         {
           "id": "6d60c17e6f26cc0183bb9bad1eee26510b91367bfd85e754ba509981244645aa",
           "text": "Circle 的 Arc 将于 9 月 16 日上线，11 家华尔街机构出任创始验证者\n\nCircle 计划于 9 月 16 日上线其 Layer-1 区块链 Arc 主网，并公布包括 BlackRock、DTCC、Visa、Mastercard 和 ICE 在内的 11 家外部机构与 Circle 一同担任创始验证者。目前已有超过 100 家机构与生态建设者参与 Arc 私有主网，而这些关系不止于验证：BlackRock 参与了 Circle 的 ARC 代币私募，并预计将在 Arc 上部署其 BUIDL 货币市场基金。\n\n这一结构把潜在客户直接放进了他们日后的依赖对象——网络基础设施之中，使网络运营者、投资者与终端用户三重身份集中在同一批华尔街机构身上。这是稳定币原生结算基础设施获得机构采用的重要一步，但同时也把共识权力集中于少数经过审核的机构，而各家的具体投票权重尚未公开。\n\nArc 以确定性终局性为核心：其 Malachite 共识引擎采用许可制权威证明（Proof-of-Authority）模型，由轮值验证者出块，且必须获得超过三分之二的验证者集合预先承诺同一区块才能最终确认，此后 Arc 称交易在共识层无法被重组或回滚。启动配置预计将在多个地区使用约 20 个通过 SOC 2 认证的验证者，但各家投票权尚未公布；同时 Arc 的披露文件明确表示，Arc Network Services LLC 及其许可制验证者均不对第三方应用的内容、合法性或功能负责。\n\n来源：https://cryptoslate.com/circles-arc-launch-ties-wall-street-firms-to-the-network-without-making-them-its-safety-net/\nBMTNews · 2026-09-15 · https://bmt.news",
