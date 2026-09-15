@@ -347,10 +347,11 @@
         "post_id": "366832735985687"
       },
       "6d60c17e6f26cc0183bb9bad1eee26510b91367bfd85e754ba509981244645aa": {
-        "status": "pending",
+        "status": "sent",
         "rank": 5,
         "text_hash": "362514c7b21d757e9919a8ba989d6167f47c46031078b4c062707521193f5f10",
-        "attempted_at": "2026-09-15T14:16:25.053910+08:00"
+        "attempted_at": "2026-09-15T14:16:25.053910+08:00",
+        "post_id": "366845081894488"
       }
     }
   },
@@ -376,12 +377,6 @@
     "2026-09-15": {
       "revision": "b58088a9803d4e8ad5561072c9c6bfa27087187a13deab12ca9d26a1e9b808b9",
       "jobs": [
-        {
-          "id": "6d60c17e6f26cc0183bb9bad1eee26510b91367bfd85e754ba509981244645aa",
-          "text": "Circle 的 Arc 将于 9 月 16 日上线，11 家华尔街机构出任创始验证者\n\nCircle 计划于 9 月 16 日上线其 Layer-1 区块链 Arc 主网，并公布包括 BlackRock、DTCC、Visa、Mastercard 和 ICE 在内的 11 家外部机构与 Circle 一同担任创始验证者。目前已有超过 100 家机构与生态建设者参与 Arc 私有主网，而这些关系不止于验证：BlackRock 参与了 Circle 的 ARC 代币私募，并预计将在 Arc 上部署其 BUIDL 货币市场基金。\n\n这一结构把潜在客户直接放进了他们日后的依赖对象——网络基础设施之中，使网络运营者、投资者与终端用户三重身份集中在同一批华尔街机构身上。这是稳定币原生结算基础设施获得机构采用的重要一步，但同时也把共识权力集中于少数经过审核的机构，而各家的具体投票权重尚未公开。\n\nArc 以确定性终局性为核心：其 Malachite 共识引擎采用许可制权威证明（Proof-of-Authority）模型，由轮值验证者出块，且必须获得超过三分之二的验证者集合预先承诺同一区块才能最终确认，此后 Arc 称交易在共识层无法被重组或回滚。启动配置预计将在多个地区使用约 20 个通过 SOC 2 认证的验证者，但各家投票权尚未公布；同时 Arc 的披露文件明确表示，Arc Network Services LLC 及其许可制验证者均不对第三方应用的内容、合法性或功能负责。\n\n来源：https://cryptoslate.com/circles-arc-launch-ties-wall-street-firms-to-the-network-without-making-them-its-safety-net/\nBMTNews · 2026-09-15 · https://bmt.news",
-          "rank": 5,
-          "due_at": "2026-09-15T14:12:00+08:00"
-        },
         {
           "id": "4d0721fd117c4a4170372342ae7295c02641e6d4483a278b0d45212b832313e4",
           "text": "Base 脱离 OP Stack，转向自主技术栈\n\n由 Coinbase 孵化的以太坊 Layer 2 网络 Base 宣布，将把代码库从 Optimism 的 OP Stack 中迁移出来，整合进由 Base 自主运营的代码仓库，从而结束自上线以来对外部依赖的依赖。此举紧随 Base 的 Azul 主网升级，该升级被官方称为 Base 首次独立的协议升级，也是迈向 Stage 2 去中心化的一步。\n\nBase 是规模最大、使用最广泛的 Layer 2 网络之一，它脱离共享的 OP Stack 代码库，削弱了“Superchain 成员链始终保持同步升级”的假设。这使 Base 能够单方面掌控自身路线图与发布节奏，同时也让外界重新审视 Optimism Collective 的共享基础设施与治理模式对合作伙伴究竟还能提供什么价值。\n\n通过掌控自有代码仓库，Base 的工程团队不再需要等待外部链联盟就协调硬分叉达成一致，有报道指出这让他们发布协议性能升级与定制补丁的速度大约提升了一倍。Base 依然是结算到以太坊上的 Layer 2，其 Azul 升级引入了多重证明（multiproof）机制以及全新的客户端技术栈。\n\n来源：https://news.google.com/rss/articles/CBMitAFBVV95cUxOUGpnNDc5dHV5dmgzWUJ2TGUzc2VRVEdMSkU3TG5JYkdTTUZlcGZuMzhsYmdNeXV6V25kcDhZaE1fX005ZUpOMzhEQ1JBQ1Jhb0NCeW1XVXNnTUQydHc1Rk8tblhTZE5jLWt4SjdRNnFfT3pPYzJOcG5ZYmVMcEFLaHVxNGVkdlVHNzhza094VUI4c1VpNmlZTkNmSzA3Q3luV3Zsc0dxSjdBWEVFTkNVWGV2YTc?oc=5\nBMTNews · 2026-09-15 · https://bmt.news",
