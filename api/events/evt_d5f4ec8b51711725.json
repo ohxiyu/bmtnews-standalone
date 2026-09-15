@@ -51,14 +51,27 @@
       "current_state_en": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
       "detailed_summary_zh": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
       "detailed_summary_en": "Attackers tricked Revolut into disclosing customer data and are allegedly leaking stolen details while demanding over 10,000 BTC (~$780M) in ransom, though Revolut has not confirmed the demand and some analysts doubt its legitimacy.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "Revolut 是一家总部位于英国的金融科技公司，为数千万客户提供类银行服务，其中包括加密货币交易；该公司在 2022 年 9 月曾发生一次数据泄露，约 50,150 名客户的信息被曝光。伪造真实政府域名是一种已知的邮件手法，原因在于这类地址往往被安全邮件网关默认为可信来源。以比特币支付的赎金会记录在公开区块链上，因此调查人员可借助链上分析工具追踪资金流向，尽管攻击者身份并不会因此直接暴露。",
+      "background_en": "Revolut is a UK-based fintech that offers banking-like services, including crypto trading, to tens of millions of customers, and it suffered an earlier breach in September 2022 that exposed data on roughly 50,150 customers. Spoofing legitimate government domains is a well-known email technique precisely because such addresses are often trusted by secure email gateways. Ransom payments made in bitcoin are recorded on a public blockchain, so investigators using chain-analysis tools can follow the funds even though the attacker's identity is not directly revealed.",
+      "community_discussion_zh": "社交媒体上的反应以质疑为主，Revolut 投资人兼加密分析师 Max Karpis 认为，1 万枚 BTC 的付款很容易被追踪，攻击者因此极难变现。链上调查员 ZachXBT 认为攻击者可能有意针对少数富裕的 Revolut 客户；受影响的客户 Felix Römer 也证实，自己的信息出现在已公布的泄露数据中。",
+      "community_discussion_en": "Social media reaction has been largely skeptical, with Revolut investor and crypto analyst Max Karpis arguing that a 10,000 BTC payment would be easily traced and therefore extremely difficult for the attackers to cash out. On-chain investigator ZachXBT suggested the attackers may have deliberately targeted a small number of wealthy Revolut customers, and one affected customer, Felix Römer, confirmed that his details appeared in the published leak.",
+      "market_impact_zh": "这一事件对市场的传导渠道主要是情绪与安全风险，而非流动性：若真支付 1 万枚 BTC，将是一笔极其显眼的链上转账，相关钱包会受到区块链分析机构的密集审视，但目前尚无支付被确认。此外，持币客户的交易记录与身份文件可能被泄露，增加了针对 BTC 等资产持有者的定向钓鱼与勒索风险，这属于用户安全层面的问题，而非直接的供给或价格驱动因素。",
+      "market_impact_en": "The market channel here is mainly sentiment and security risk rather than liquidity: a payment of 10,000 BTC would be a highly visible on-chain transfer and would draw intense blockchain-analytics scrutiny of any wallet involved, though no payment has been confirmed. Separately, the possible exposure of transaction histories and identity documents of crypto-holding customers raises the risk of targeted phishing and extortion against holders of BTC and other assets, which is a user-security issue rather than a direct supply or price driver.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/",
+          "title": "Revolut confirms customer data breach through fake... | TechCrunch"
+        },
+        {
+          "url": "https://thecybersecguru.com/news/revolut-data-breach-2026/",
+          "title": "Revolut Data Breach 2026: Passports, Selfies... | The CyberSec Guru"
+        },
+        {
+          "url": "https://www.chainalysis.com/glossary/crypto-ransomware/",
+          "title": "What Is Crypto Ransomware? Definition, Types, RaaS & Tracing"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:protos.com_feed_:a4af7506ff1c0de4"

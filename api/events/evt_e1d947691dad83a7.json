@@ -53,17 +53,29 @@
       "current_state_en": "Amazon and Perplexity face off in the U.S. Court of Appeals for the Ninth Circuit over whether AI agents can act on users' behalf on Amazon, a case with major implications for agentic commerce and platform access.",
       "detailed_summary_zh": "Amazon and Perplexity face off in the U.S. Court of Appeals for the Ninth Circuit over whether AI agents can act on users' behalf on Amazon, a case with major implications for agentic commerce and platform access.",
       "detailed_summary_en": "Amazon and Perplexity face off in the U.S. Court of Appeals for the Ninth Circuit over whether AI agents can act on users' behalf on Amazon, a case with major implications for agentic commerce and platform access.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "CFAA是1986年颁布的联邦反黑客法，将未经授权访问、复制或破坏计算机系统数据定为犯罪，加州CDAFA则是州层面的对应立法。代理式商务（agentic commerce）指的是一种新兴电商形态：半自主或完全自主的AI代理能够搜索商品、比较选项、做出购买决策并完成支付，几乎不需要人工实时介入。Perplexity的Comet是一款内置AI助手的浏览器，正是这一形态使该公司与亚马逊的访问控制发生了冲突。",
+      "background_en": "The CFAA is a federal anti-hacking statute enacted in 1986 that criminalizes unauthorized access to, and copying or damaging of, data on computer systems, and California's CDAFA is a state-level analogue. Agentic commerce describes an emerging form of e-commerce in which semi-autonomous or fully autonomous AI agents search for products, compare options, make purchasing decisions, and complete payments with little or no real-time human involvement. Perplexity's Comet is a browser with an integrated AI assistant, which is what brought the company into conflict with Amazon's access controls.",
+      "community_discussion_zh": "Hacker News上的评论者普遍质疑亚马逊的法律立场：有人将其类比为允许Firefox、Chrome或Safari查看用户凭据并代表用户访问亚马逊，并质疑亚马逊是否具备起诉资格。多位评论者认为这更像是商业威胁而非技术问题，指出“无头化”的亚马逊会侵蚀支撑其市场的广告收入；也有人警告，若服务阻止用户代理接入，用户就会弃用该服务，并指出ChatGPT式助手自身也在试图成为新的把关者。",
+      "community_discussion_en": "Hacker News commenters were broadly skeptical of Amazon's legal position, with one drawing an analogy to letting Firefox, Chrome, or Safari see credentials and access Amazon on a user's behalf, and questioning Amazon's standing. Several framed the dispute as a business threat rather than a technical one, arguing that a \"headless\" Amazon erodes the ad revenue that funds its marketplace, while another warned that users will abandon services whose agents are blocked and noted that ChatGPT-style assistants are themselves trying to become new gatekeepers.",
+      "market_impact_zh": "此上诉直接关系到谁可以充当中介来撮合电商流量与数据，这一渠道既影响上市电商平台的广告经济性，也间接影响正在成形的代理支付体系——包括自主代理完成结算时可能使用的API与稳定币支付通道。对“未经授权访问”责任作宽泛解释，会提高代理类与AI浏览器类商务工具的法律与集成风险；而作狭义解释，则会让更多第三方代理流量涌入现有平台。",
+      "market_impact_en": "The appeal feeds directly into the question of which intermediaries may broker e-commerce traffic and data, a channel that touches listed marketplaces' ad economics and, indirectly, the emerging agent-payment stack — including API- and stablecoin-based rails that autonomous agents would use to complete checkout. A broad reading of unauthorized-access liability would raise legal and integration risk for agent and AI-browser commerce tools, while a narrow reading would permit more third-party agent traffic into incumbent platforms.",
       "importance_score": 7.5,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49704008",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/United_States_Court_of_Appeals_for_the_Ninth_Circuit",
+          "title": "United States Court of Appeals for the Ninth Circuit"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Agentic_commerce",
+          "title": "Agentic commerce"
+        },
+        {
+          "url": "https://blogs.ischool.berkeley.edu/i205f12/2012/11/25/the-need-for-a-narrowly-tailored-computer-fraud-and-abuse-act/",
+          "title": "The need for a narrowly tailored Computer Fraud and Abuse Act"
         }
       ],
       "confidence": 0.75,

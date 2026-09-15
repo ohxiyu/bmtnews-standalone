@@ -51,14 +51,27 @@
       "current_state_en": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
       "detailed_summary_zh": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
       "detailed_summary_en": "Protos investigates roughly 700 million TRX (~$238M) that disappeared from HTX's proof-of-reserves, tracing much of it to a Justin Sun-owned Poloniex Super Representative address and Binance, while HTX also reduced disclosure for over $1B in other assets to an undisclosed custodian.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "TRX 是 TRON 区块链的原生代币，TRON 由 Justin Sun 创立，2018 年从以太坊上的 ERC-20 代币迁移到自有公链。TRON 通过委托权益证明（DPoS）选出 27 个超级代表，这些节点负责出块并治理网络，而 Sun 同样拥有的 Poloniex 就运营着其中一个超级代表。储备金证明（PoR）是一种独立鉴证机制，通常基于默克尔树，让用户能够验证交易所是否真的持有其声称代用户保管的资产，这一做法在 2022 年 FTX 崩盘后被广泛采用。HTX 即原名为火币（Huobi）的交易所，Sun 自 2023 年起与其关系密切。",
+      "background_en": "TRX is the native token of TRON, a proof-of-stake blockchain founded by Justin Sun that moved from being an Ethereum-based ERC-20 token to its own chain in 2018. TRON elects 27 Super Representatives through delegated proof-of-stake voting; these nodes produce blocks and govern the network, and Poloniex — which Sun also owns — operates one such Super Representative. Proof-of-reserves is an independent attestation, often built on Merkle trees, that lets users verify an exchange actually holds the assets it claims on their behalf, a practice that spread widely after the 2022 collapse of FTX. HTX is the exchange formerly known as Huobi, which Sun has been associated with since 2023.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该事件的传导渠道是交易所偿付能力与透明度风险，影响 TRX 以及 HTX 上线的资产：被追踪的代币既涉及中心化平台（HTX、Poloniex、Binance），也涉及链上 DeFi——披露显示有 9.22 亿 TRX 出借在 JustLend 上。欧盟与英国的制裁则带来对与 HTX 相关资金施加合规限制的可能性，这一渠道影响的是流动性、托管安排与交易对手准入，而不仅仅是市场情绪。",
+      "market_impact_en": "The story transmits through exchange solvency and transparency risk affecting TRX and assets listed on HTX, since the traced tokens touch centralized venues (HTX, Poloniex, Binance) as well as on-chain DeFi, where 922 million TRX is disclosed as lent on JustLend. Sanctions by the EU and the UK raise the prospect of compliance-driven restrictions on HTX-linked funds, a channel that shapes liquidity, custody and counterparty access rather than sentiment alone.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Tron_(cryptocurrency)",
+          "title": "Tron (cryptocurrency)"
+        },
+        {
+          "url": "https://developers.tron.network/docs/super-representatives",
+          "title": "Super Representatives | TRON Developer Hub"
+        },
+        {
+          "url": "https://milkroad.com/exchanges/proof-of-reserves/",
+          "title": "Crypto Exchanges with Proof of Reserves 2025"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:protos.com_feed_:594c10966b2e3600"

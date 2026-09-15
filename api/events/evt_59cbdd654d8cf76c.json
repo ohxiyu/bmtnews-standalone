@@ -47,14 +47,27 @@
       "current_state_en": "Aave V4 proposal from TokenLogic would have the DAO absorb bad-debt losses first, followed by volunteer underwriters, for WETH, USDC, and USDT Core Hub markets on Ethereum.",
       "detailed_summary_zh": "Aave V4 proposal from TokenLogic would have the DAO absorb bad-debt losses first, followed by volunteer underwriters, for WETH, USDC, and USDT Core Hub markets on Ethereum.",
       "detailed_summary_en": "Aave V4 proposal from TokenLogic would have the DAO absorb bad-debt losses first, followed by volunteer underwriters, for WETH, USDC, and USDT Core Hub markets on Ethereum.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Aave 是一个去中心化借贷协议，用户存入资产赚取收益，借款人则提供抵押品；当清算耗尽借款人抵押品后仍有债务未偿还时，就会产生坏账。DAO（去中心化自治组织）是通过链上治理控制协议资金库和参数的机构。Aave V4 引入了 Hub-and-Spoke 架构，Hub 负责持有流动性资产，Spoke 基于其创造债务，因此单一储备可能暴露于在其他地方发起的信贷额度。Umbrella 框架正是为这些储备提供坏账兜底而提出的风险管理层。",
+      "background_en": "Aave is a decentralized lending protocol where users supply assets to earn yield and borrowers post collateral; bad debt arises when a liquidation exhausts a borrower's collateral but still leaves debt unpaid. A DAO (decentralized autonomous organization) is the on-chain governance body that controls the protocol treasury and parameters. Aave V4 introduces a Hub-and-Spoke architecture, in which liquidity Hubs hold assets and Spokes create debt against them, so a single reserve can be exposed to credit lines originated elsewhere. The Umbrella framework is the proposed risk-management layer designed to backstop those reserves against bad debt.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 7.0,
-      "references": [],
+      "market_impact_zh": "该提案把市场关注引向 AAVE 代币，因为一旦三个 Core Hub 储备出现坏账，DAO 资金库将承担第一损失；同时它也改变了 Aave 以太坊 Core Hub 上 WETH、USDC 和 USDT 供应方相对于其他 Hub 的风险收益特征。任何传导主要经由围绕 DAO 偿付能力的市场情绪以及治理预期实现，且该机制目前仍属提案，尚未实际生效。",
+      "market_impact_en": "The proposal directs attention to the AAVE token, since DAO treasury funds would take first-loss exposure if bad debt materializes in the three Core Hub reserves, and it changes the risk-return profile for WETH, USDC and USDT suppliers on Aave's Ethereum Core Hub relative to other Hubs. Any transmission runs mainly through sentiment around DAO solvency and through governance expectations, and the mechanism remains a proposal rather than a live change.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://coinsbit.io/news/aave-v4-umbrella-plan-dao-first-to-absorb-lending-losses/",
+          "title": "Aave V4 Umbrella Plan Would Put DAO First to Absorb Lending Losses"
+        },
+        {
+          "url": "https://bitcoinethereumnews.com/tech/aave-v4-safety-net-proposed-for-three-core-markets/",
+          "title": "Aave V4 safety net proposed for three Core markets"
+        },
+        {
+          "url": "https://github.com/aave/aave-v3-core",
+          "title": "GitHub - aave/aave-v3-core: This repository contains the core smart..."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:5a5d2c52284e90da"

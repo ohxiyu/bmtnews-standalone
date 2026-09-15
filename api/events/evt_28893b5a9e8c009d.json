@@ -61,14 +61,27 @@
       "current_state_en": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
       "detailed_summary_zh": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
       "detailed_summary_en": "Bybit detected and blocked coordinated fake deposit attacks that could have resulted in over $1 billion in DOT losses.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "虚假充值攻击利用的是代币的非标准行为：如果代币智能合约返回异常数值，或悄悄失败而不回滚交易，交易所的充值扫描程序就可能为从未在链上真正结算的充值入账。DEPOSafe 等学术研究记录了实现不当的 ERC-20 合约叠加交易所验证缺陷如何使此类攻击规模化，CoinDesk 在 2020 年的一篇报道也曾指出约 10 亿美元的以太坊代币存在此类风险。DOT 是 Polkadot 网络的原生代币，用于质押、治理和支付手续费，并在中心化交易所有大量持有。",
+      "background_en": "A fake deposit attack exploits non-standard token behavior: if a token's smart contract returns an unexpected value or silently fails rather than reverting, an exchange's deposit scanner may credit a deposit that never actually settled on-chain. Academic work such as DEPOSafe documented how mis-implemented ERC-20 contracts combined with deficient exchange verification enabled these attacks at scale, and a 2020 CoinDesk report flagged roughly $1 billion of Ethereum tokens as vulnerable. DOT is the native token of the Polkadot network, used for staking, governance and transaction fees, and is widely held on centralized exchanges.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "最直接的暴露方是通过中心化交易所充提通道转移资金的 DOT 持有者，因为该攻击针对的是入账验证环节，而非链上共识或 DOT 供应量。由于没有实际资金损失，短期传导渠道更多是市场对交易所托管能力的信心与情绪，尤其是对合约行为非标准代币的处理能力，而不是 DOT 市场上被迫抛售或流动性抽离。",
+      "market_impact_en": "The most direct exposure sits with DOT holders who move funds through centralized exchange deposit and withdrawal rails, since the attack vector concerns credit-verification rather than on-chain consensus or DOT's supply. Because no funds were lost, the near-term channel is sentiment and operational confidence in exchange custody for tokens with non-standard contract behavior, rather than any forced selling or liquidity drain in DOT markets.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.tradingview.com/news/chainwire:29c74feb3094b:0-bybit-detects-and-blocks-coordinated-fake-deposit-attacks-preventing-over-1-billion-dot-in-potential-losses/",
+          "title": "Bybit Detects and Blocks Coordinated Fake Deposit Attacks..."
+        },
+        {
+          "url": "https://arxiv.org/pdf/2006.06419",
+          "title": "DEPOSafe: Demystifying the Fake Deposit"
+        },
+        {
+          "url": "https://www.coindesk.com/tech/2020/08/25/ethereum-tokens-worth-1b-vulnerable-to-fake-deposit-attack",
+          "title": "Ethereum Tokens Worth $1B Vulnerable to 'Fake Deposit Attack'"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:57b2baad3a7c0500"
