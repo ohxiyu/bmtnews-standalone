@@ -368,10 +368,11 @@
         "post_id": "366873284164959"
       },
       "39827cf1dd6f4804d61f1dc5a59245e4e162a5a0e59d9dfdbdba2a310936c635": {
-        "status": "pending",
+        "status": "sent",
         "rank": 8,
         "text_hash": "de58311af67beba25b230dd497812a48377daf16e35a8eb6614aff3ecbb12c01",
-        "attempted_at": "2026-09-15T17:06:14.834799+08:00"
+        "attempted_at": "2026-09-15T17:06:14.834799+08:00",
+        "post_id": "366886820094565"
       }
     }
   },
@@ -397,12 +398,6 @@
     "2026-09-15": {
       "revision": "b58088a9803d4e8ad5561072c9c6bfa27087187a13deab12ca9d26a1e9b808b9",
       "jobs": [
-        {
-          "id": "39827cf1dd6f4804d61f1dc5a59245e4e162a5a0e59d9dfdbdba2a310936c635",
-          "text": "Aave V4 的 Umbrella 提案：DAO 资金将优先吸收借贷坏账\n\n9 月 11 日，TokenLogic 提出了面向 Aave V4 的 Umbrella 方案：由 Aave DAO 通过“赤字抵消”（deficit offsets）率先吸收借贷损失，具体额度为 33 ETH、15,000 USDC 和 15,000 USDT，超出该层的赤字则由自愿承保人承担。这一坏账兜底机制初期仅适用于以太坊 Core Hub 上的 WETH、USDC 和 USDT 储备，承保目标规模分别为 800 ETH、400,000 USDC 和 400,000 USDT。\n\n该提案实质性地重塑了 Aave 的风险结构：把第一损失暴露转移给 DAO 资金库，并为承保人创造了“以收益换风险”的新角色，从而改变出借人、AAVE 持有者以及治理层对偿付风险的评估方式。若获通过，它可能成为大型 DeFi 借贷市场在 V4 的 Hub-and-Spoke 架构下分摊尾部风险的模板。\n\n保障范围按储备（reserve）而非按代币划分，因此存入其他 Hub 的 USDC 不在保护之列，分配给某一 Hub 资产的资金也无法弥补其他储备的赤字；承保人需面对 20 天冷却期加 2 天提款窗口，且在等待退出期间质押资产仍暴露于罚没（slashing）风险。TokenLogic 明确不建议初期为 USDG 和 frxUSD 提供通用型保障，理由是激励敏感的借贷活动存在不确定性，而 frxUSD 还存在发行人关联度高的集中化供应方结构。\n\n来源：https://cryptoslate.com/aave-v4-proposal-would-put-dao-funds-first-in-line-to-absorb-lending-losses/\nBMTNews · 2026-09-15 · https://bmt.news",
-          "rank": 8,
-          "due_at": "2026-09-15T17:06:00+08:00"
-        },
         {
           "id": "9fef2de13228a21fcb07e479dec57ac72643ac8644ccc1568af7fb56adb424d1",
           "text": "Balancer 提议关闭协议，将 900 万美元金库返还给 BAL 持有者\n\nBalancer 已提出一项治理提案，计划逐步关闭该协议：所有资金池将于 10 月 30 日切换为仅可提现模式，BAL 持有者则可自 2027 年 5 月起销毁代币，按比例换取约 900 万美元金库中的份额。\n\n这意味着 DeFi 领域运行时间最长的自动做市商之一正式走向全面关闭，BAL 从代表协议持续运营的治理代币，转变为对剩余金库资产的索取权，也为“垂死”DeFi 协议如何向持币者返还资金树立了先例。该提案直接决定 BAL 持有者能否收回价值，也反映出市场在严重漏洞事件后对治理代币的定价方式。\n\n赎回机制自愿参与：持有者销毁 BAL 以换取金库中相应比例的份额，但该流程要到 2027 年 5 月才启动；同时 BAL 仅 770 万美元的市值明显小于约 900 万美元的金库规模，因此每枚代币的实际回收价值取决于最终索赔结构。资金池将于 10 月 30 日转为仅可提现模式，即停止提供流动性和交易功能，用户仍可提出自己的资金。\n\n来源：https://thedefiant.io/news/defi/balancer-proposes-shutting-down-and-distributing-treasury-to-bal-holders\nBMTNews · 2026-09-15 · https://bmt.news",
