@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "event_id": "evt_0f81771227434d7f",
+  "url": "https://bmt.news/events/evt_0f81771227434d7f/",
+  "json": "https://bmt.news/api/events/evt_0f81771227434d7f.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+    "en": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address"
+  },
+  "current_state": {
+    "zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+    "en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address."
+  },
+  "first_seen_at": "2026-09-15T17:11:55.479979+00:00",
+  "last_updated_at": "2026-09-15T17:11:55.479979+00:00",
+  "last_material_change_at": "2026-09-15T17:11:55.479979+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 2,
+  "entities": [
+    "kelp",
+    "mev"
+  ],
+  "identifiers": [],
+  "topics": [
+    "mev",
+    "rseth",
+    "security-exploit"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_d0ec44a162f8fca4",
+      "event_id": "evt_0f81771227434d7f",
+      "occurred_at": "2026-09-15T15:21:26Z",
+      "published_at": "2026-09-15T15:21:26Z",
+      "first_seen_at": "2026-09-15T17:11:55.479979Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+      "title_en": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+      "what_changed_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "what_changed_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "current_state_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "current_state_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "detailed_summary_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "detailed_summary_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:2c30f3242ce3741a",
+        "rss:thedefiant.io_api_feed:afaa94ba1204986b"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/mev-bot-intercepts-77m-in-rseth-from-ethereum-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/hacks/mev-bot-front-runs-7-8-million-rseth-exploit-on-ethereum",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

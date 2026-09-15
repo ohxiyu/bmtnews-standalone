@@ -32280,8 +32280,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "CLARITY Act awaits Senate action after recess; Treasury Secretary Bessent publicly calls for passage, Galaxy odds of passage at 10%.",
-      "current_state_zh": "CLARITY法案等待参议院复会后行动；财政部长贝森特公开呼吁通过，Galaxy预测通过概率降至10%。",
+      "current_state_en": "Senate scheduled to vote today on a procedural motion to advance the Digital Asset Market Clarity Act, needing at least seven non-Republican votes to clear the 60-vote threshold.",
+      "current_state_zh": "参议院定于今日就推进《数字资产市场清晰法案》的程序性动议投票，需要至少7名非共和党参议员支持以跨过60票门槛。",
       "entities": [
         "bessent",
         "clarity",
@@ -32292,15 +32292,17 @@
         "explained",
         "secretary",
         "senate",
+        "senate-vote",
         "treasury",
-        "vote"
+        "vote",
+        "will"
       ],
       "event_id": "evt_d918c8d1e6c25a31",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-09T09:04:44.593538Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-10T16:36:00.201628Z",
-      "last_updated_at": "2026-09-10T16:36:00.201628Z",
+      "last_material_change_at": "2026-09-15T17:11:49.941583Z",
+      "last_updated_at": "2026-09-15T17:11:49.941583Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
@@ -32310,6 +32312,8 @@
         "clarity-act",
         "coinbase",
         "crypto-regulation",
+        "digital-asset-clarity-act",
+        "senate-vote",
         "treasury",
         "us-policy",
         "us-senate"
@@ -32390,6 +32394,44 @@
           "update_type": "escalation",
           "what_changed_en": "US Treasury Secretary Bessent publicly urged the Senate to pass the CLARITY Act upon returning from August recess, warning that failure would send a signal of declining American leadership in digital assets.",
           "what_changed_zh": "美国财政部长贝森特公开敦促参议院在结束八月休会后通过CLARITY法案，警告若不通过将发出美国数字资产领导力衰退的信号。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Senate scheduled to vote today on a procedural motion to advance the Digital Asset Market Clarity Act, needing at least seven non-Republican votes to clear the 60-vote threshold.",
+          "current_state_zh": "参议院定于今日就推进《数字资产市场清晰法案》的程序性动议投票，需要至少7名非共和党参议员支持以跨过60票门槛。",
+          "detailed_summary_en": "The U.S. Senate is set to vote on a procedural motion to advance the Digital Asset Market Clarity Act, a major crypto market structure bill, requiring at least seven non-Republican votes to clear the 60-vote threshold.",
+          "detailed_summary_zh": "The U.S. Senate is set to vote on a procedural motion to advance the Digital Asset Market Clarity Act, a major crypto market structure bill, requiring at least seven non-Republican votes to clear the 60-vote threshold.",
+          "event_id": "evt_d918c8d1e6c25a31",
+          "first_seen_at": "2026-09-15T17:11:49.941583Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T13:00:00Z",
+          "published_at": "2026-09-15T13:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/podcasts-and-videos/podcast/will-crypto-get-clarity-senate-votes-today"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:12d7670f8ea64478"
+          ],
+          "time_precision": "published",
+          "title_en": "Will crypto get clarity? Senate votes today",
+          "title_zh": "Will crypto get clarity? Senate votes today",
+          "update_id": "upd_0059d514733c6a3e",
+          "update_type": "escalation",
+          "what_changed_en": "The Senate is set to vote today, September 15, on a procedural motion to advance the Digital Asset Market Clarity Act, requiring at least seven non-Republican votes to reach the 60-vote threshold.",
+          "what_changed_zh": "参议院定于今日（9月15日）就《数字资产市场清晰法案》的程序性动议进行投票，需要至少7名非共和党参议员支持才能达到60票门槛以推进法案。"
         }
       ]
     },
@@ -47530,7 +47572,7 @@
       "first_seen_at": "2026-09-14T10:02:35.382719Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-14T10:02:35.382719Z",
-      "last_updated_at": "2026-09-14T10:02:35.382719Z",
+      "last_updated_at": "2026-09-15T17:11:40.471462Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -47568,10 +47610,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cryptoslate.com/trump-concession-sends-clarity-act-odds-above-32-before-make-or-break-senate-vote/"
+            },
+            {
+              "label": "ksat.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNmE5d0s3c3NPZ3o3ZnhvdDNwcG4tQkd3LVVDbC1wNDlRZU5jNlBWUHluSkVPYmFMVE5DY1FNd0Q2SWx6dFhHaVJCNXF2X0lIcllYWGc2d1paamtZXzZFMTZuSXlxRXVoamJQejEyT3J2STdxWDFmandqQlJSdWRPUXlLYlpLcjZMTnp3ckVQWGgtRFJJY0R4TEdPTDBaNDRJQmFab2RaR09TRHVEV0MxVU9BTVpCRk1jWUdtMGgtNkFQTWVXaFFJM1E5b3RqX0p3Wmc?oc=5"
             }
           ],
           "story_ids": [
-            "rss:cryptoslate.com_feed_:ecbddce01650d7f6"
+            "rss:cryptoslate.com_feed_:ecbddce01650d7f6",
+            "google_news:article:4aa2702caddbecbb"
           ],
           "time_precision": "published",
           "title_en": "Trump concession sends CLARITY Act odds above 32% before make-or-break Senate vote",
@@ -51589,6 +51638,1442 @@
           "what_changed_zh": "Solana activated a mainnet upgrade at epoch 1,035 that raises the maximum transaction size from 1,232 to 4,096 bytes and introduces a backward-compatible v1 transaction format, enabling zero-knowledge proofs and new onchain signature schemes."
         }
       ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+      "current_state_zh": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+      "entities": [
+        "capsule",
+        "show",
+        "single",
+        "sqlite",
+        "web-apps"
+      ],
+      "event_id": "evt_9b0287929695f05f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-15T17:11:40.057892Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:40.057892Z",
+      "last_updated_at": "2026-09-15T17:11:40.057892Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+      "title_zh": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+      "topics": [
+        "developer-tools",
+        "rust",
+        "sqlite",
+        "tauri",
+        "web-apps"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+          "current_state_zh": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+          "detailed_summary_en": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+          "detailed_summary_zh": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+          "event_id": "evt_9b0287929695f05f",
+          "first_seen_at": "2026-09-15T17:11:40.057892Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T13:31:40Z",
+          "published_at": "2026-09-15T13:31:40Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49712278"
+            }
+          ],
+          "sources": [
+            {
+              "label": "bashtian",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://withcapsule.app/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49712278"
+          ],
+          "time_precision": "published",
+          "title_en": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+          "title_zh": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+          "update_id": "upd_2d8dc69e722205dd",
+          "update_type": "initial",
+          "what_changed_en": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export.",
+          "what_changed_zh": "Capsule is a Rust/Tauri 2.0 tool that packs an HTML app and its data into a single SQLite file, supporting localStorage-style key/value storage, a MongoDB-inspired collections API, embedded assets, and CSV/JSON export."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+      "current_state_zh": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+      "entities": [
+        "democrats",
+        "hour",
+        "norwalk",
+        "senate",
+        "trump"
+      ],
+      "event_id": "evt_0c2a7cf440f38b2a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:40.471229Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:40.471229Z",
+      "last_updated_at": "2026-09-15T17:11:40.471229Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Senate is to vote on cryptocurrency regulation as Democrats push back on Trump investments - Norwalk Hour",
+      "title_zh": "Senate is to vote on cryptocurrency regulation as Democrats push back on Trump investments - Norwalk Hour",
+      "topics": [
+        "crypto-regulation",
+        "legislation",
+        "trump",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+          "current_state_zh": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+          "detailed_summary_en": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+          "detailed_summary_zh": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+          "event_id": "evt_0c2a7cf440f38b2a",
+          "first_seen_at": "2026-09-15T17:11:40.471229Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T13:07:48Z",
+          "published_at": "2026-09-15T13:07:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Norwalk Hour",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdkhZaHRLRTIzbnI5VEZLZ0VlZ1d4OFU0Vi1xVnFIQldhaXRtbnhBZmswZWd2MkEzMlktdDk3R2I2UXlPUnF1ek12Mng4X3FFTWRSX0tTdHc4c0N5bDJFN1RVdG1jVHBPX19ic3d0a1A5QjNaenM3ZXE2WUl5dW1WZTFfNVdKSUdsZGUxTkV1bklCaHZtX0pvOWhUbmwxcHEtT0JNYnNB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:f52c655a62ba3dcb"
+          ],
+          "time_precision": "published",
+          "title_en": "Senate is to vote on cryptocurrency regulation as Democrats push back on Trump investments - Norwalk Hour",
+          "title_zh": "Senate is to vote on cryptocurrency regulation as Democrats push back on Trump investments - Norwalk Hour",
+          "update_id": "upd_e6f63d7f5e83f8ec",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments.",
+          "what_changed_zh": "The U.S. Senate is set to vote on cryptocurrency regulation amid Democratic objections to Trump-related crypto investments."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+      "current_state_zh": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+      "entities": [
+        "bets",
+        "binance",
+        "build",
+        "coinmarketcap",
+        "ipo",
+        "lists",
+        "perps",
+        "pre",
+        "pre-ipo",
+        "spacex",
+        "valuation"
+      ],
+      "event_id": "evt_5e355acd5cc97705",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-15T17:11:40.471323Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:40.471323Z",
+      "last_updated_at": "2026-09-15T17:11:40.471323Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Lists SpaceX Pre-IPO Perps as $2T Valuation Bets Build - CoinMarketCap",
+      "title_zh": "Binance Lists SpaceX Pre-IPO Perps as $2T Valuation Bets Build - CoinMarketCap",
+      "topics": [
+        "binance",
+        "derivatives",
+        "perpetual-futures",
+        "pre-ipo",
+        "spacex"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+          "current_state_zh": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+          "detailed_summary_en": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+          "detailed_summary_zh": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+          "event_id": "evt_5e355acd5cc97705",
+          "first_seen_at": "2026-09-15T17:11:40.471323Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T11:44:51Z",
+          "published_at": "2026-09-15T11:44:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinMarketCap",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNV0xRTmUxekdBbDM2YWpJNjIwTU5QclJfXy13d2ZTbGxVUXhoQ3k1NktXdTliVUlxRHdmVXpBMlV1SDRoQVEyeDBvajRrcTE1d2Nxb09IMjBzYWRFbDNQaWJxQzVIakF3WjloZWJhMWxLdUw0SzZXcWJIa0kzcDBrMG9VWVVmTnF6MTRmRHdqRQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:e97829940071381c"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Lists SpaceX Pre-IPO Perps as $2T Valuation Bets Build - CoinMarketCap",
+          "title_zh": "Binance Lists SpaceX Pre-IPO Perps as $2T Valuation Bets Build - CoinMarketCap",
+          "update_id": "upd_f9fc680aa2eadec5",
+          "update_type": "initial",
+          "what_changed_en": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation.",
+          "what_changed_zh": "Binance has listed SpaceX pre-IPO perpetual futures contracts as traders build bets around a $2 trillion valuation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+      "current_state_zh": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+      "entities": [
+        "cryptorank",
+        "doj",
+        "forfeiture",
+        "from",
+        "iran",
+        "iranian",
+        "million",
+        "oil",
+        "sales",
+        "seeks"
+      ],
+      "event_id": "evt_f3e29d8ff366a716",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:40.471366Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:40.471366Z",
+      "last_updated_at": "2026-09-15T17:11:40.471366Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "DOJ Seeks Forfeiture of $61 Million in Crypto From Iranian Oil Sales - CryptoRank",
+      "title_zh": "DOJ Seeks Forfeiture of $61 Million in Crypto From Iranian Oil Sales - CryptoRank",
+      "topics": [
+        "crypto-regulation",
+        "doj",
+        "forfeiture",
+        "iran",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+          "current_state_zh": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+          "detailed_summary_en": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+          "detailed_summary_zh": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+          "event_id": "evt_f3e29d8ff366a716",
+          "first_seen_at": "2026-09-15T17:11:40.471366Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T15:16:25Z",
+          "published_at": "2026-09-15T15:16:25Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoRank",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbk1CTHc0cHdMSWhhRXBWb0FDQmU5X3FvSVQzZ0xvSlVOZkc1N3NoOUc4YXlvSldDLTRaa3Badk1MVnFUc2hrRzdkcVBHaXpTU0YteG0wUnpzQ18yb3FyZm5OTUpzaTJpcTVJcW44U0YxNC1jNk9IbHMtLUVwQkZDRE9RRGdOakRjWU5BV2xMbmxGUQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5c9740134655268e"
+          ],
+          "time_precision": "published",
+          "title_en": "DOJ Seeks Forfeiture of $61 Million in Crypto From Iranian Oil Sales - CryptoRank",
+          "title_zh": "DOJ Seeks Forfeiture of $61 Million in Crypto From Iranian Oil Sales - CryptoRank",
+          "update_id": "upd_87f9c6c61941c9d4",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets.",
+          "what_changed_zh": "The U.S. Department of Justice is seeking forfeiture of approximately $61 million in cryptocurrency linked to Iranian oil sales, underscoring heightened sanctions enforcement in digital assets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+      "current_state_zh": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+      "entities": [
+        "base",
+        "independent",
+        "infrastructure",
+        "moves",
+        "optimism",
+        "reducing",
+        "reliance",
+        "stack",
+        "tech",
+        "yellow"
+      ],
+      "event_id": "evt_4e04486620cd0717",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-15T17:11:40.472028Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:40.472028Z",
+      "last_updated_at": "2026-09-15T17:11:40.472028Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Base Moves to Independent Tech Stack, Reducing Reliance On Optimism Infrastructure - Yellow.com",
+      "title_zh": "Base Moves to Independent Tech Stack, Reducing Reliance On Optimism Infrastructure - Yellow.com",
+      "topics": [
+        "base",
+        "layer-2",
+        "op-stack",
+        "optimism",
+        "protocol-upgrade"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+          "current_state_zh": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+          "detailed_summary_en": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+          "detailed_summary_zh": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+          "event_id": "evt_4e04486620cd0717",
+          "first_seen_at": "2026-09-15T17:11:40.472028Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T05:51:28Z",
+          "published_at": "2026-09-15T05:51:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yellow.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNYlBTR0hkSlJ2OEtuR1Q0enBBcG1fal8waHphLXdKRkxoMTRHLXUwWXlmYzJINlFCQzYzeTQ4M3kzMU02UHZQNkZPTHpjdld1cEN6b3BseHJzSmFicXZIaVFsVGtTd1NUeFp3cHN6Q2cxSXV0YlRaTWtOTk1lVlBVbEUxWFY5MnZaNzlKYmRpeHByZDFieXR1dlRFNkRIUl9aLXhncGpJT29nN0cyaDZ2RF92WkU4aUhpMENIQ2lYSXRJbDY5V1Q5UlVHNklDUGhDYUROSkZuSmc0b2g1V096NmRaMkxDNkxhdXBqRHFodw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:35799c0f0e60e2ea"
+          ],
+          "time_precision": "published",
+          "title_en": "Base Moves to Independent Tech Stack, Reducing Reliance On Optimism Infrastructure - Yellow.com",
+          "title_zh": "Base Moves to Independent Tech Stack, Reducing Reliance On Optimism Infrastructure - Yellow.com",
+          "update_id": "upd_e3d626cdf9e2f730",
+          "update_type": "initial",
+          "what_changed_en": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem.",
+          "what_changed_zh": "Base is moving to an independent technology stack, reducing its reliance on Optimism's infrastructure and signaling a shift in the OP Stack ecosystem."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+      "current_state_zh": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate"
+      ],
+      "event_id": "evt_c1746f5f092a22b1",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:42.462096Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:42.462096Z",
+      "last_updated_at": "2026-09-15T17:11:42.462096Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto Clarity Act barrels toward disappointment barring last-minute Senate turnaround",
+      "title_zh": "Crypto Clarity Act barrels toward disappointment barring last-minute Senate turnaround",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+          "current_state_zh": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+          "detailed_summary_en": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+          "detailed_summary_zh": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+          "event_id": "evt_c1746f5f092a22b1",
+          "first_seen_at": "2026-09-15T17:11:42.462096Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T15:50:23Z",
+          "published_at": "2026-09-15T15:50:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/15/crypto-clarity-act-barrels-toward-disappointment-barring-last-minute-senate-turnaround"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:a71286954694d405"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto Clarity Act barrels toward disappointment barring last-minute Senate turnaround",
+          "title_zh": "Crypto Clarity Act barrels toward disappointment barring last-minute Senate turnaround",
+          "update_id": "upd_b8e3d3249d192e15",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight.",
+          "what_changed_zh": "The U.S. Senate's Digital Asset Market Clarity Act is heading toward a failed procedural vote on Tuesday, with Republicans and Democrats deadlocked over the market-structure bill and no compromise in sight."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+      "current_state_zh": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+      "entities": [
+        "central",
+        "digital-euro",
+        "european"
+      ],
+      "event_id": "evt_df26c84f98a4ca55",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:42.692963Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:42.692963Z",
+      "last_updated_at": "2026-09-15T17:11:42.692963Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "European Central Bank calls for merchants to participate in digital euro pilot",
+      "title_zh": "European Central Bank calls for merchants to participate in digital euro pilot",
+      "topics": [
+        "cbdc",
+        "digital-euro",
+        "ecb",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+          "current_state_zh": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+          "detailed_summary_en": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+          "detailed_summary_zh": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+          "event_id": "evt_df26c84f98a4ca55",
+          "first_seen_at": "2026-09-15T17:11:42.692963Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T14:15:06Z",
+          "published_at": "2026-09-15T14:15:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/15/european-central-bank-calls-for-merchants-to-participate-in-digital-euro-pilot"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:4a23aef8cee1b729"
+          ],
+          "time_precision": "published",
+          "title_en": "European Central Bank calls for merchants to participate in digital euro pilot",
+          "title_zh": "European Central Bank calls for merchants to participate in digital euro pilot",
+          "update_id": "upd_b931ee97ddbea4ce",
+          "update_type": "initial",
+          "what_changed_en": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance.",
+          "what_changed_zh": "The European Central Bank is inviting euro-zone e-commerce and mobile merchants to join a 12-month digital euro pilot starting in the second half of 2027, testing a beta CBDC ahead of a possible 2029 issuance."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+      "current_state_zh": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "democrats",
+        "republicans"
+      ],
+      "event_id": "evt_f58c510faeba945d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:43.194789Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:43.194789Z",
+      "last_updated_at": "2026-09-15T17:11:43.194789Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Clarity Act's odds of passing plunge as Republicans reject Democrats' counter-proposal",
+      "title_zh": "Clarity Act's odds of passing plunge as Republicans reject Democrats' counter-proposal",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "prediction-markets",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+          "current_state_zh": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+          "detailed_summary_en": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+          "detailed_summary_zh": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+          "event_id": "evt_f58c510faeba945d",
+          "first_seen_at": "2026-09-15T17:11:43.194789Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T14:13:44Z",
+          "published_at": "2026-09-15T14:13:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/15/clarity-act-s-odds-of-passing-plunge-as-republicans-reject-democrats-counter-proposal"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:00e01b6968e8659c"
+          ],
+          "time_precision": "published",
+          "title_en": "Clarity Act's odds of passing plunge as Republicans reject Democrats' counter-proposal",
+          "title_zh": "Clarity Act's odds of passing plunge as Republicans reject Democrats' counter-proposal",
+          "update_id": "upd_ec0b0114049815fc",
+          "update_type": "initial",
+          "what_changed_en": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill.",
+          "what_changed_zh": "The Clarity Act's odds of passing this year fell to roughly 14% on Polymarket after Senate Republicans rejected Democrats' counterproposal hours before a key procedural vote, stalling the crypto market-structure bill."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+      "current_state_zh": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+      "entities": [
+        "defi-bridge"
+      ],
+      "event_id": "evt_1a2b6a937845a2f3",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-15T17:11:43.555625Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:43.555625Z",
+      "last_updated_at": "2026-09-15T17:11:43.555625Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A hacker turned 25 cents of bitcoin into 46 billion fake BTC tokens on a DeFi bridge",
+      "title_zh": "A hacker turned 25 cents of bitcoin into 46 billion fake BTC tokens on a DeFi bridge",
+      "topics": [
+        "defi-bridge",
+        "smart-contract-security",
+        "symbiosis"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+          "current_state_zh": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+          "detailed_summary_en": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+          "detailed_summary_zh": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+          "event_id": "evt_1a2b6a937845a2f3",
+          "first_seen_at": "2026-09-15T17:11:43.555625Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T13:43:50Z",
+          "published_at": "2026-09-15T13:43:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/15/a-hacker-turned-25-cents-of-bitcoin-into-46-billion-fake-btc-tokens-on-a-defi-bridge"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:4543e2762a380e1d"
+          ],
+          "time_precision": "published",
+          "title_en": "A hacker turned 25 cents of bitcoin into 46 billion fake BTC tokens on a DeFi bridge",
+          "title_zh": "A hacker turned 25 cents of bitcoin into 46 billion fake BTC tokens on a DeFi bridge",
+          "update_id": "upd_89cae9b66b112c82",
+          "update_type": "initial",
+          "what_changed_en": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
+          "what_changed_zh": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+      "current_state_zh": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+      "entities": [
+        "before",
+        "below",
+        "clarity",
+        "clarity-act",
+        "cut",
+        "falls",
+        "hours",
+        "odds",
+        "senate",
+        "traders",
+        "vote"
+      ],
+      "event_id": "evt_cb4a26bd02f93dad",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:49.920571Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:49.920571Z",
+      "last_updated_at": "2026-09-15T17:11:49.920571Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin Falls Below $76,000 as Traders Cut CLARITY Act Odds Hours Before Senate Vote",
+      "title_zh": "Bitcoin Falls Below $76,000 as Traders Cut CLARITY Act Odds Hours Before Senate Vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "market-selloff",
+        "polymarket"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+          "current_state_zh": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+          "detailed_summary_en": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+          "detailed_summary_zh": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+          "event_id": "evt_cb4a26bd02f93dad",
+          "first_seen_at": "2026-09-15T17:11:49.920571Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T15:58:40Z",
+          "published_at": "2026-09-15T15:58:40Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/markets/bitcoin-falls-below-76000-clarity-act-odds-senate-vote-sep-15-2026"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:7554a56e328c4fda"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin Falls Below $76,000 as Traders Cut CLARITY Act Odds Hours Before Senate Vote",
+          "title_zh": "Bitcoin Falls Below $76,000 as Traders Cut CLARITY Act Odds Hours Before Senate Vote",
+          "update_id": "upd_c5f9fcf4d73f0ff8",
+          "update_type": "initial",
+          "what_changed_en": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting.",
+          "what_changed_zh": "Bitcoin fell below $76,000 as Polymarket odds of the CLARITY Act becoming law this year dropped from 29.5% to 12.5% hours before a Senate cloture vote, with 95 of the 124 largest non-stablecoin tokens declining as the Fed began a two-day meeting."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+      "current_state_zh": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+      "entities": [
+        "anniversary",
+        "close",
+        "coinex",
+        "exchange",
+        "ninth"
+      ],
+      "event_id": "evt_dec763d57c82b3ea",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-15T17:11:49.930076Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:49.930076Z",
+      "last_updated_at": "2026-09-15T17:11:49.930076Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CoinEx to Close Exchange on Ninth Anniversary",
+      "title_zh": "CoinEx to Close Exchange on Ninth Anniversary",
+      "topics": [
+        "cefi",
+        "coinex",
+        "exchange-closure",
+        "solvency",
+        "withdrawals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+          "current_state_zh": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+          "detailed_summary_en": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+          "detailed_summary_zh": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+          "event_id": "evt_dec763d57c82b3ea",
+          "first_seen_at": "2026-09-15T17:11:49.930076Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T15:55:59Z",
+          "published_at": "2026-09-15T15:55:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/cefi/coinex-to-close-exchange-on-ninth-anniversary"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:3a14cb9f51837466"
+          ],
+          "time_precision": "published",
+          "title_en": "CoinEx to Close Exchange on Ninth Anniversary",
+          "title_zh": "CoinEx to Close Exchange on Ninth Anniversary",
+          "update_id": "upd_04cfe842a2a015aa",
+          "update_type": "initial",
+          "what_changed_en": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
+          "what_changed_zh": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+      "current_state_zh": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+      "entities": [
+        "clarity",
+        "clarity-act",
+        "senate"
+      ],
+      "event_id": "evt_3d78b6e0382bbf5a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:51.172353Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:51.172353Z",
+      "last_updated_at": "2026-09-15T17:11:51.172353Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act chances sink below 20% as Senate’s path to 60 votes narrows",
+      "title_zh": "CLARITY Act chances sink below 20% as Senate’s path to 60 votes narrows",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "polymarket",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+          "current_state_zh": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+          "detailed_summary_en": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+          "detailed_summary_zh": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+          "event_id": "evt_3d78b6e0382bbf5a",
+          "first_seen_at": "2026-09-15T17:11:51.172353Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T14:01:33Z",
+          "published_at": "2026-09-15T14:01:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/clarity-act-chances-sink-below-20-as-senates-path-to-60-votes-narrows/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:b4ded0f9dad04c83"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act chances sink below 20% as Senate’s path to 60 votes narrows",
+          "title_zh": "CLARITY Act chances sink below 20% as Senate’s path to 60 votes narrows",
+          "update_id": "upd_522561e398847f75",
+          "update_type": "initial",
+          "what_changed_en": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle.",
+          "what_changed_zh": "The CLARITY Act's chances of enactment fell below 20% on Polymarket as Republican leaders struggle to secure the 60 Senate votes needed to advance the crypto market-structure bill, with ethics restrictions on officials' crypto interests remaining a key obstacle."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+      "current_state_zh": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+      "entities": [],
+      "event_id": "evt_30223b29305517d3",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-15T17:11:51.501211Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:51.501211Z",
+      "last_updated_at": "2026-09-15T17:11:51.501211Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A DeFi giant that once held $3 billion is now proposing to wind itself down",
+      "title_zh": "A DeFi giant that once held $3 billion is now proposing to wind itself down",
+      "topics": [
+        "balancer",
+        "protocol-shutdown"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+          "current_state_zh": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+          "detailed_summary_en": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+          "detailed_summary_zh": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+          "event_id": "evt_30223b29305517d3",
+          "first_seen_at": "2026-09-15T17:11:51.501211Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T12:30:43Z",
+          "published_at": "2026-09-15T12:30:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/a-defi-giant-that-once-held-3-billion-is-now-proposing-to-wind-itself-down/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:a44a0557e0fdbe0b"
+          ],
+          "time_precision": "published",
+          "title_en": "A DeFi giant that once held $3 billion is now proposing to wind itself down",
+          "title_zh": "A DeFi giant that once held $3 billion is now proposing to wind itself down",
+          "update_id": "upd_c515bce17c7112e5",
+          "update_type": "initial",
+          "what_changed_en": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts.",
+          "what_changed_zh": "Balancer DAO is voting on a proposal to wind down operations, ending new development and eventually distributing treasury to BAL holders, following a $128 million exploit and failed recovery efforts."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+      "current_state_zh": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+      "entities": [
+        "bitcoin-reserve",
+        "wednesday"
+      ],
+      "event_id": "evt_86047469a29c4357",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:52.017666Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:52.017666Z",
+      "last_updated_at": "2026-09-15T17:11:52.017666Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday",
+      "title_zh": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday",
+      "topics": [
+        "arma",
+        "bitcoin-reserve",
+        "crypto-policy",
+        "us-politics"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+          "current_state_zh": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+          "detailed_summary_en": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+          "detailed_summary_zh": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+          "event_id": "evt_86047469a29c4357",
+          "first_seen_at": "2026-09-15T17:11:52.017666Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T09:40:26Z",
+          "published_at": "2026-09-15T09:40:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/us-bitcoin-reserve-faces-crucial-bipartisan-test-wednesday/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:d788e533c3fde41f"
+          ],
+          "time_precision": "published",
+          "title_en": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday",
+          "title_zh": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday",
+          "update_id": "upd_dda53b3ac6467307",
+          "update_type": "initial",
+          "what_changed_en": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
+          "what_changed_zh": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+      "current_state_zh": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+      "entities": [
+        "binance",
+        "iran",
+        "iranian"
+      ],
+      "event_id": "evt_3a15e578d0ff778c",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:52.273798Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:52.273798Z",
+      "last_updated_at": "2026-09-15T17:11:52.273798Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US seizes $61M of Iranian crypto profits allegedly laundered through Binance",
+      "title_zh": "US seizes $61M of Iranian crypto profits allegedly laundered through Binance",
+      "topics": [
+        "binance",
+        "iran",
+        "money-laundering",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+          "current_state_zh": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+          "detailed_summary_en": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+          "detailed_summary_zh": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+          "event_id": "evt_3a15e578d0ff778c",
+          "first_seen_at": "2026-09-15T17:11:52.273798Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T13:41:59Z",
+          "published_at": "2026-09-15T13:41:59Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/us-seizes-61m-of-iranian-crypto-profits-allegedly-laundered-through-binance/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:65143842fe3ac1f0"
+          ],
+          "time_precision": "published",
+          "title_en": "US seizes $61M of Iranian crypto profits allegedly laundered through Binance",
+          "title_zh": "US seizes $61M of Iranian crypto profits allegedly laundered through Binance",
+          "update_id": "upd_06c07a8116e31498",
+          "update_type": "initial",
+          "what_changed_en": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme.",
+          "what_changed_zh": "The US filed a civil forfeiture complaint to seize $61 million in crypto allegedly linked to Iranian oil sales laundered through Binance by two Chinese companies, as part of a broader $1.5 billion illicit proceeds scheme."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+      "current_state_zh": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+      "entities": [
+        "alleged",
+        "forfeiture",
+        "iranian",
+        "linked",
+        "million",
+        "oil",
+        "scheme",
+        "seeks"
+      ],
+      "event_id": "evt_26a971e22434468b",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:54.469463Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:54.469463Z",
+      "last_updated_at": "2026-09-15T17:11:54.469463Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US Seeks Forfeiture of $61 Million in Crypto Linked to Alleged Iranian Oil Scheme",
+      "title_zh": "US Seeks Forfeiture of $61 Million in Crypto Linked to Alleged Iranian Oil Scheme",
+      "topics": [
+        "binance",
+        "crypto-regulation",
+        "forfeiture",
+        "money-laundering",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+          "current_state_zh": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+          "detailed_summary_en": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+          "detailed_summary_zh": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+          "event_id": "evt_26a971e22434468b",
+          "first_seen_at": "2026-09-15T17:11:54.469463Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T17:06:03Z",
+          "published_at": "2026-09-15T17:06:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378261/us-forfeiture-61-million-crypto-iranian-oil-scheme"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:f241e8ff48f86664"
+          ],
+          "time_precision": "published",
+          "title_en": "US Seeks Forfeiture of $61 Million in Crypto Linked to Alleged Iranian Oil Scheme",
+          "title_zh": "US Seeks Forfeiture of $61 Million in Crypto Linked to Alleged Iranian Oil Scheme",
+          "update_id": "upd_09057a806dedc832",
+          "update_type": "initial",
+          "what_changed_en": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC.",
+          "what_changed_zh": "U.S. prosecutors are seeking forfeiture of roughly $61 million in cryptocurrency allegedly tied to a network that laundered over $1.5 billion in Iranian oil proceeds through Binance accounts benefiting Iran's military and the IRGC."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+      "current_state_zh": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+      "entities": [
+        "before",
+        "clarity",
+        "clarity-act",
+        "democrats",
+        "goalposts",
+        "hours",
+        "key",
+        "move",
+        "senate",
+        "vote"
+      ],
+      "event_id": "evt_746bf4e9de6d52ef",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:54.663515Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:54.663515Z",
+      "last_updated_at": "2026-09-15T17:11:54.663515Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Democrats 'Move the Goalposts' on Clarity Act Hours Before Key Senate Vote",
+      "title_zh": "Democrats 'Move the Goalposts' on Clarity Act Hours Before Key Senate Vote",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "senate",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+          "current_state_zh": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+          "detailed_summary_en": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+          "detailed_summary_zh": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+          "event_id": "evt_746bf4e9de6d52ef",
+          "first_seen_at": "2026-09-15T17:11:54.663515Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T15:08:07Z",
+          "published_at": "2026-09-15T15:08:07Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378246/democrats-goalposts-clarity-act-key-senate-vote"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:607e55fda7a74c43"
+          ],
+          "time_precision": "published",
+          "title_en": "Democrats 'Move the Goalposts' on Clarity Act Hours Before Key Senate Vote",
+          "title_zh": "Democrats 'Move the Goalposts' on Clarity Act Hours Before Key Senate Vote",
+          "update_id": "upd_1f5b82d47913d836",
+          "update_type": "initial",
+          "what_changed_en": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations.",
+          "what_changed_zh": "The Clarity Act faces its first Senate cloture vote Tuesday, with Republicans accusing Democrats of moving the goalposts after a late counteroffer on ethics, developer protections, and the Ag title, while the White House signals little appetite for further negotiations."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "current_state_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+      "entities": [
+        "kelp",
+        "mev"
+      ],
+      "event_id": "evt_0f81771227434d7f",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-15T17:11:55.479979Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:55.479979Z",
+      "last_updated_at": "2026-09-15T17:11:55.479979Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+      "title_zh": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+      "topics": [
+        "mev",
+        "rseth",
+        "security-exploit"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+          "current_state_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+          "detailed_summary_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+          "detailed_summary_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+          "event_id": "evt_0f81771227434d7f",
+          "first_seen_at": "2026-09-15T17:11:55.479979Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T15:21:26Z",
+          "published_at": "2026-09-15T15:21:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/mev-bot-intercepts-77m-in-rseth-from-ethereum-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/hacks/mev-bot-front-runs-7-8-million-rseth-exploit-on-ethereum"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:2c30f3242ce3741a",
+            "rss:thedefiant.io_api_feed:afaa94ba1204986b"
+          ],
+          "time_precision": "published",
+          "title_en": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+          "title_zh": "ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address",
+          "update_id": "upd_d0ec44a162f8fca4",
+          "update_type": "initial",
+          "what_changed_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
+          "what_changed_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US House Ways and Means Committee's Digital Asset Tax Certainty Act (H.R. 10357) has been released and is set for a Sept 16 markup, including a $10 exception for certain fees paid in crypto, along with provisions covering stablecoins, mining, staking, and lending effective in 2028, but omitting a deferral for mining and staking rewards.",
+      "current_state_zh": "美国众议院筹款委员会的《数字资产税收确定性法案》（H.R. 10357）已发布，并定于9月16日进行标记；该法案包括对某些以加密货币支付的费用给予10美元豁免，以及涵盖稳定币、挖矿、质押和借贷的条款，自2028年起生效，但未包含挖矿和质押奖励的递延纳税条款。",
+      "entities": [
+        "break",
+        "crypto-tax",
+        "de-minimis",
+        "gets",
+        "house",
+        "long",
+        "markup",
+        "minimis",
+        "mining",
+        "sought",
+        "staking",
+        "tax",
+        "this",
+        "wednesday",
+        "week"
+      ],
+      "event_id": "evt_6dd97799a8cbba0a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-15T17:11:55.587051Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-15T17:11:55.587051Z",
+      "last_updated_at": "2026-09-15T17:11:55.587051Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US House crypto tax package omits mining, staking reward deferral",
+      "title_zh": "US House crypto tax package omits mining, staking reward deferral",
+      "topics": [
+        "crypto-tax",
+        "de-minimis",
+        "mining",
+        "stablecoins",
+        "staking",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US House Ways and Means Committee's 114-page crypto tax package would overhaul tax treatment of crypto fees, stablecoins, and lending but omits a provision to defer taxation of mining and staking rewards until sale.",
+          "current_state_zh": "The US House Ways and Means Committee's 114-page crypto tax package would overhaul tax treatment of crypto fees, stablecoins, and lending but omits a provision to defer taxation of mining and staking rewards until sale.",
+          "detailed_summary_en": "The US House Ways and Means Committee's 114-page crypto tax package would overhaul tax treatment of crypto fees, stablecoins, and lending but omits a provision to defer taxation of mining and staking rewards until sale.",
+          "detailed_summary_zh": "The US House Ways and Means Committee's 114-page crypto tax package would overhaul tax treatment of crypto fees, stablecoins, and lending but omits a provision to defer taxation of mining and staking rewards until sale.",
+          "event_id": "evt_6dd97799a8cbba0a",
+          "first_seen_at": "2026-09-15T17:11:55.587051Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T10:04:21Z",
+          "published_at": "2026-09-15T10:04:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/us-house-crypto-tax-bill-mining-staking-reward-deferral?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:d54ccc446df7ee0a"
+          ],
+          "time_precision": "published",
+          "title_en": "US House crypto tax package omits mining, staking reward deferral",
+          "title_zh": "US House crypto tax package omits mining, staking reward deferral",
+          "update_id": "upd_20ff3578d1f4c1f4",
+          "update_type": "initial",
+          "what_changed_en": "The US House Ways and Means Committee's 114-page crypto tax package would overhaul tax treatment of crypto fees, stablecoins, and lending but omits a provision to defer taxation of mining and staking rewards until sale.",
+          "what_changed_zh": "The US House Ways and Means Committee's 114-page crypto tax package would overhaul tax treatment of crypto fees, stablecoins, and lending but omits a provision to defer taxation of mining and staking rewards until sale."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The US House Ways and Means Committee's crypto tax bill has been released and is set for a Wednesday markup, including a $10 exception for certain fees paid in crypto, along with provisions covering stablecoins, mining, and staking.",
+          "current_state_zh": "美国众议院筹款委员会的加密货币税收法案已发布，并定于周三进行标记，其中包括对某些以加密货币支付的费用给予10美元豁免，以及涵盖稳定币、挖矿和质押的条款。",
+          "detailed_summary_en": "A House committee released a broad cryptocurrency tax bill ahead of a Wednesday markup, including a $10 exception for certain fees paid in crypto and provisions covering stablecoins, mining, and staking.",
+          "detailed_summary_zh": "A House committee released a broad cryptocurrency tax bill ahead of a Wednesday markup, including a $10 exception for certain fees paid in crypto and provisions covering stablecoins, mining, and staking.",
+          "event_id": "evt_6dd97799a8cbba0a",
+          "first_seen_at": "2026-09-15T17:11:47.508338Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T11:52:36Z",
+          "published_at": "2026-09-15T11:52:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-15-house-committee-crypto-tax-bill-414824"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:4cd53f79f613b46d"
+          ],
+          "time_precision": "published",
+          "title_en": "House committee releases sweeping crypto tax bill ahead of Wednesday markup",
+          "title_zh": "House committee releases sweeping crypto tax bill ahead of Wednesday markup",
+          "update_id": "upd_93c61f1661a5ce59",
+          "update_type": "confirmation",
+          "what_changed_en": "The House committee has released the crypto tax bill ahead of a Wednesday markup, including a $10 exception for certain fees paid in crypto.",
+          "what_changed_zh": "众议院委员会在周三标记前发布了加密货币税收法案，其中包括对某些以加密货币支付的费用给予10美元豁免。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "The US House Ways and Means Committee's Digital Asset Tax Certainty Act (H.R. 10357) has been released and is set for a Sept 16 markup, including a $10 exception for certain fees paid in crypto, along with provisions covering stablecoins, mining, staking, and lending effective in 2028, but omitting a deferral for mining and staking rewards.",
+          "current_state_zh": "美国众议院筹款委员会的《数字资产税收确定性法案》（H.R. 10357）已发布，并定于9月16日进行标记；该法案包括对某些以加密货币支付的费用给予10美元豁免，以及涵盖稳定币、挖矿、质押和借贷的条款，自2028年起生效，但未包含挖矿和质押奖励的递延纳税条款。",
+          "detailed_summary_en": "The House Ways and Means Committee is set to mark up the Digital Asset Tax Certainty Act, which would create a $10 de minimis exemption for crypto transaction fees and establish federal tax rules for stablecoins, staking, mining, and lending starting in 2028.",
+          "detailed_summary_zh": "The House Ways and Means Committee is set to mark up the Digital Asset Tax Certainty Act, which would create a $10 de minimis exemption for crypto transaction fees and establish federal tax rules for stablecoins, staking, mining, and lending starting in 2028.",
+          "event_id": "evt_6dd97799a8cbba0a",
+          "first_seen_at": "2026-09-15T17:11:54.564897Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-15T16:34:35Z",
+          "published_at": "2026-09-15T16:34:35Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378260/house-crypto-tax-bill-de-minimis-captail-gains"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:7e3dc81c1658c65b"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto's Long-Sought 'De Minimis' Tax Break Gets a House Markup This Week",
+          "title_zh": "Crypto's Long-Sought 'De Minimis' Tax Break Gets a House Markup This Week",
+          "update_id": "upd_78b3946aaf6316e7",
+          "update_type": "confirmation",
+          "what_changed_en": "The bill is named the Digital Asset Tax Certainty Act (H.R. 10357), introduced by Ways and Means Chairman Jason Smith, with markup scheduled for Sept 16 at 10 a.m. Eastern, and provisions effective starting in 2028.",
+          "what_changed_zh": "该法案被命名为《数字资产税收确定性法案》（H.R. 10357），由筹款委员会主席杰森·史密斯提出，标记定于9月16日上午10点（东部时间）进行，相关条款自2028年起生效。"
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -51955,7 +53440,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "The Clarity Act is the most significant pending U.S. crypto market-structure legislation, and a formal Democratic counteroffer signals active bipartisan negotiation that could materially reshape how digital assets are regulated and traded. While not yet a final law, movement at this stage is a high-value regulatory development with a clear transmission path to market structure and access.",
         "ai_score": 7.5,
@@ -51991,7 +53476,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "A substantive protocol-level change to Solana that materially increases transaction capacity and improves its competitive position versus Ethereum. This is an important infrastructure development for builders and users of a widely-used network, though it is an incremental upgrade rather than a paradigm shift.",
         "ai_score": 7.0,
@@ -52024,7 +53509,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "Live market coverage of Bitcoin's sharp pullback from near $80,000 tied to a Senate vote on the Clarity Act, a landmark market-structure bill with a clear transmission path to crypto market access and structure. The combination of a material price move and a consequential regulatory vote warrants high attention, though it is a developing news item rather than a confirmed systemic event.",
         "ai_score": 7.5,
@@ -52055,6 +53540,108 @@
         "source_type": "rss",
         "title": "Live updates: Bitcoin slides from nearly $80,000 as Senate votes on Clarity Act",
         "url": "https://www.coindesk.com/business/2026/09/15/live-updates-bitcoin-slides-from-nearly-usd80-000-as-senate-votes-on-clarity-act"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Balancer is a foundational DeFi protocol whose v2 code has been forked across 27 protocols, and a $130M hack followed by a governance proposal to sunset the protocol and distribute its $9M treasury represents a material, structural event for DeFi market structure and a major protocol failure with demonstrated ecosystem-wide impact.",
+        "ai_score": 8.5,
+        "ai_summary": "Balancer Labs CEO Marcus Hardt has proposed a phased sunset of the protocol after a $130M hack and failed efforts to restore profitability, with the remaining $9M treasury to be distributed pro-rata to BAL holders.",
+        "ai_tags": [
+          "defi",
+          "balancer",
+          "hacks",
+          "governance",
+          "protocol-shutdown"
+        ],
+        "author": "Jake Harrison",
+        "content": "DeFi stalwart Balancer mulls shutdown after $130M hack\nOnce a household name in the DeFi sector, decentralized exchange Balancer is considering calling it quits.\nIn a proposal posted to the project’s governance forum, Balancer Labs CEO Marcus Hardt suggests a “phased sunset of the protocol.”\nThe post explains that none of the efforts to return to profitability, employed in response to last year’s hack, “converted into sustained revenue growth.”\nUnder Hardt’s proposal, Balancer’s $9 million treasury would be distributed to BAL holders, pro-rata.\nRead more: Balancer exploit drains $129M in DeFi disaster\nThe problem\nLaunched just in time for 2020’s “DeFi summer,” Balancer innovated on the existing two-asset automated market maker model used by Uniswap and Bancor to introduce multi-asset pools and custom pool weighting.\nIt was a successful project in itself and was widely ‘forked,’ its popular v2 code has been used in 27 protocols across multiple blockchains, according to DeFiLlama data. Balancer’s total value-locked (TVL) peaked in November 2021 at over $3 billion, and now stands at just $58 million.\nThen on its third iteration, Balancer’s v3 protocol was hit by a devastating exploit in November last year, with losses totalling almost $130 million and causing a ripple effect across the sector.\nBoth before and since, the project experienced a handful of smaller security incidents. The latest came just last month, when its original v1 codebase was exploited for over $200,000.\nRead more: Osmosis took 74 days to discover 40-BTC Nomic exploit\nPreviously, in September 2023, Balancer lost approximately $1.2 million from “Boosted Pools” across its Ethereum and Optimism deployments. DeFiLlama’s database includes incidents from 2023 and 2020, totalling a further $1.3 million in losses.\nThe proposal\nHardt proposes an “orderly wind down,” which would include stripping back the DAO as much as possible and distributing treasury funds to BAL holders.\nThe wind down would see all pools moved to withdrawal-only mode on October 30, and the fate of DAO-owned assets beyond the treasury would be subject to a further vote.\nThe proposal brings forward a pending review of the recovery plan’s success, as Hardt feels that “waiting for the calendar would change the numbers, not the conclusion, and every month of waiting is spent from the treasury.”\nHe further detailed his reasoning in a post on X. The cost-reduction side of the recovery plan was a success, he claims, but protocol revenue failed to grow.\nHe “underestimated how much the exploit would continue to limit adoption,” which led to smaller sums deployed and hesitation from counterparties.\nHe also paid tribute to the Balancer team who kept v3 “safe,” “usable” and “alive,” during the “hardest year the protocol has had,” all as “smaller team and with less money.”\nShutdown season\nBalancer’s decision comes as many other well-known DeFi projects opt to close down, or take a substantial pivot.\nLast week, Harmony announced it would shut down its blockchain in response to “threats posed by state actors and AI agents.” It will move operations to Ethereum and plans a pivot to become “the remix economy for AI video.”\nPopular DEX aggregator Odos Protocol shut down in July and beleaguered “real-world asset” lending platform Goldfinch threw in the towel the month prior.\nOutside of DeFi, centralized exchange AscendEx announced its cessation of operations in early July, amidst concerns over liquidity to process pending user withdrawals.\nJust hours ago, CoinEx gave its users a three-month deadline to withdraw assets, warning it would charge a 5% monthly custody fee from December 22.\nGot a tip? Send us an email securely via Protos Leaks. For more informed news and investigations, follow us on X, Bluesky, and Google News, or subscribe to our YouTube channel.",
+        "fetched_at": "2026-09-15T17:11:52.396994Z",
+        "id": "rss:protos.com_feed_:187d61d7e61c0e70",
+        "metadata": {
+          "category": "crypto-protocols",
+          "event_retry_pending": true,
+          "feed_name": "Protos",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Crypto",
+            "Balancer",
+            "DeFi",
+            "Hack",
+            "shutdown"
+          ]
+        },
+        "published_at": "2026-09-15T10:59:00Z",
+        "source_type": "rss",
+        "title": "DeFi stalwart Balancer mulls shutdown after $130M hack",
+        "url": "https://protos.com/defi-stalwart-balancer-mulls-shutdown-after-130m-hack/"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The Clarity Act is landmark crypto market-structure legislation, and a Senate Republican rejecting a Democratic counteroffer hours before an initial vote signals a material shift in the bill's path with direct implications for US crypto market access and industry structure. This is a high-value regulatory development, though it is a procedural negotiating update rather than a final passage or definitive rule change.",
+        "ai_score": 7.5,
+        "ai_summary": "Senate Republicans led by Lummis rejected a Democratic counterproposal on the Clarity Act just hours before an initial procedural vote, leaving the crypto market-structure bill's path uncertain.",
+        "ai_tags": [
+          "crypto-regulation",
+          "clarity-act",
+          "us-senate",
+          "market-structure",
+          "policy"
+        ],
+        "author": "Sarah Wynn",
+        "content": "Hours ahead of an initial vote on the Clarity Act, Senate Republicans are pushing back against a counterproposal from fellow Democrats.",
+        "fetched_at": "2026-09-15T17:11:47.490426Z",
+        "id": "rss:www.theblock.co_rss.xml:b0eec2dd72ff25a4",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "People",
+            "Policy",
+            "Regulation",
+            "Cynthia Lummis",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-15T14:38:13Z",
+        "source_type": "rss",
+        "title": "Lead Senate Republican Lummis rejects Democratic counteroffer as Clarity Act vote nears",
+        "url": "https://www.theblock.co/news/regulation/2026-09-15-senate-republican-lummis-rejects-democratic-counteroffer-clarity-act-vote-414850"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A $61 million seizure tied to Binance, with CEO Richard Teng publicly disputing the accusation, is a material regulatory/legal development with direct implications for exchange operations and user confidence. It is high-value but not systemic, as it does not appear to threaten platform solvency or broad market access.",
+        "ai_score": 7.0,
+        "ai_summary": "Binance CEO Richard Teng denies accusations against the exchange while questions persist over a $61 million seizure of funds.",
+        "ai_tags": [
+          "binance",
+          "regulation",
+          "seizure",
+          "exchange",
+          "legal"
+        ],
+        "author": "BeInCrypto",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBfNGt6QlF5aVZpNUF4eE1xTkNYUFF2WEt0RWNUdGFveWJNWll3cFpPSjJkQnZ2cDNueDU1dmxmTWUxS29vcVAtNEYwWjRnQzg5SDR4ZnlHV3pmMTJIdDNMYm1wc0FwSTFleFE?oc=5\" target=\"_blank\">Richard Teng Says Binance Is Not Accused: So Why the $61 Million Seizure?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BeInCrypto</font>",
+        "fetched_at": "2026-09-15T17:11:40.471276Z",
+        "id": "google_news:article:818414957ea99243",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "BeInCrypto"
+        },
+        "published_at": "2026-09-15T13:14:00Z",
+        "source_type": "google_news",
+        "title": "Richard Teng Says Binance Is Not Accused: So Why the $61 Million Seizure? - BeInCrypto",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfNGt6QlF5aVZpNUF4eE1xTkNYUFF2WEt0RWNUdGFveWJNWll3cFpPSjJkQnZ2cDNueDU1dmxmTWUxS29vcVAtNEYwWjRnQzg5SDR4ZnlHV3pmMTJIdDNMYm1wc0FwSTFleFE?oc=5"
       }
     }
   ],
