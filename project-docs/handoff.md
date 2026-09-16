@@ -5,56 +5,59 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "07:00截止/07:26启动、AI节流；补齐脱敏诊断并修复实证去重故障",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/90",
-  "owner": "Codex / morning-ai-economy",
-  "branch": "agent/morning-ai-economy",
-  "last_verified_commit": "599b6d52ad64f78316e8d98ddc3cedbb84e03772",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/91",
+  "goal": "PR91合并部署、旧窗口重刊与线上去重验收",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/92",
+  "owner": "Codex / morning-ai-release",
+  "branch": "agent/morning-ai-release",
+  "last_verified_commit": "169d689fdca69be3e32f225dab23d2ebf1c37f7f",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/93",
   "completed": [
-    "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
-    "官方API名deepseek-flash；配置切换，不混用旧模型缓存",
-    "24条有界全覆盖比较、已验证结果缓存、失败工作流也保存成功分析缓存",
-    "402/401/403停止单次去重重试并给脱敏原因，保持质量与配额不变",
-    "首页只更新出刊文案与逾期判定，不改布局",
-    "脱敏复现JSON语法错误expected_comma；合法示例+格式错误反馈重试，继续严格拒绝无效结果",
-    "三个先前失败批次真实API复测35059029282通过：3批/3调用，无格式重试"
+    "用户本轮明确授权合并部署；PR91必需检查全部通过，合并169d689",
+    "部署Worker c07b2764-9cde-47e6-a66f-21da61a83e04，保留vars/Secrets/DO，显式cutoff7",
+    "health/ready通过，实际schedules API确认三组新cron；07:26启动、07:00截止",
+    "触发35059398372重刊2026-09-16，显式保留历史cutoff8",
+    "35059398372成功重刊；生产Pages 7d0100ec成功，首页/中英详情/API均14条，前三条不同事件且CoinEx仅1条",
+    "Crypto10/AI科技2/政策2；Telegram成功发送1条更新版，X因旧rank-only状态安全暂停，未清空记录",
+    "原任务分支和工作目录在核验祖先及干净状态后清理，代码保留main"
   ],
   "unfinished": [
-    "PR91等待授权合并与协调部署，未重刊今日旧日报",
-    "PR89为旧部署证据，不能覆盖最新交接；历史08:00窗口重刊须显式cutoff8"
+    "PR93为本次部署证据（仅文档，待合并）",
+    "今天X历史身份需人工核对后另行授权处理，不自动重发或重置",
+    "不覆盖PR89/81/77/68的分支；这些旧证据PR不能覆盖当前指针"
   ],
   "validation": [
-    "fetch/merge origin/main、uv sync --frozen --extra dev通过",
-    "823 pytest通过（1既有warning）；治理及diff检查通过",
-    "只读诊断35058489152、35058682859、35058796024复现格式失败；35059029282三个指定批次修复验证通过，共19次应用层模型调用",
-    "本任务原有48 Worker、56 Node测试、类型及dry-run通过；本轮未改Worker/UI"
+    "823pytest、48Worker测试、类型/dry-run/治理通过",
+    "GitHub test/analyze/governance/Pages全部通过后才合并PR91",
+    "Worker health/ready和schedules API线上核验通过",
+    "生产API generated_at=2026-09-16T05:27:38.865023Z；14个不同URL，前三event_id互异",
+    "首页/summary-zh/summary-en HTTP200且当日14条、类别10/2/2一致",
+    "日报去重48条、最终审计合并1条，2轮审计通过；新模型deepseek-flash真实调用成功，无截断/格式失败日志"
   ],
   "unverified": [
-    "未完整重放失败日报的所有历史输入：诊断只恢复缓存子集",
-    "DeepSeek新别名deepseek-flash、24项批次真实质量/费用及新调度尚未上线验收；诊断沿用main旧模型和12项批次",
-    "今日线上仍08:36旧版14条，重复尚未通过重刊消除"
+    "明日07:26自然触发和长期token节省比例未观察",
+    "Telegram手机端收件未人工确认；X本期因旧记录缺少身份暂停",
+    "部分RSS源404/403存在，但未阻断出刊；本次不扩大范围更改信息源"
   ],
   "production": {
-    "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
-    "artifact_commit": "d8830f2ee65a8ad1ef4f86f368294adcef57126a (collection updated artifact; edition unchanged)",
+    "source_commit": "169d689fdca69be3e32f225dab23d2ebf1c37f7f",
+    "artifact_commit": "4588cd99ff7d0d3cbddf778f81ab837e63909884",
     "edition": "2026-09-16",
-    "generated_at": "2026-09-16T00:36:20.538116Z (previous edition unchanged)",
-    "worker_version": "341dd1ba-4355-42c9-93dc-4133295b53e7; health still08:30",
-    "verified_at": "2026-09-16 13:19 Asia/Shanghai API refreshed; Worker version remains previous snapshot"
+    "generated_at": "2026-09-16T05:27:38.865023Z",
+    "worker_version": "c07b2764-9cde-47e6-a66f-21da61a83e04",
+    "verified_at": "2026-09-16 13:31 Asia/Shanghai API/HTML/Pages/Worker verified"
   },
   "blockers": [
-    "下一步合并/部署/重刊需要当前明确授权；本轮不清空任何发送记录"
+    "本期X旧序号记录与重排榜单不能安全映射；保留发送历史，需单独人工核对"
   ],
-  "next_action": "审阅PR91和脱敏诊断证据；获授权后协调合并与Worker部署，以cutoff8重刊2026-09-16并核验前三条不同事件及发送幂等，不无条件重试整期。",
+  "next_action": "审阅合并Issue92部署证据PR。下一期观察07:26自然启动、缓存复用；本期X如需恢复先核对已发内容再授权，不清空记录、不盲重发。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
-    "production_verified": "pending"
+    "pr_merged": "complete",
+    "deployed": "complete",
+    "production_verified": "complete"
   },
-  "evidence": "project-docs/releases/2026-09-16-morning-ai-economy.md"
+  "evidence": "project-docs/releases/2026-09-16-morning-ai-rollout.md"
 }
 ```
 
