@@ -10,7 +10,7 @@
   "owner": "Codex / x-top3-release",
   "branch": "agent/x-top3-release",
   "last_verified_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/89",
   "completed": [
     "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
     "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
