@@ -1,5 +1,7 @@
 """Bounded, read-only replay from cached public inputs; never publish or collect."""
 import asyncio
+import argparse
+import hashlib
 import json
 import subprocess
 from datetime import datetime
@@ -8,6 +10,7 @@ from pathlib import Path
 
 from src.ai.client import create_ai_client
 from src.ai.topic_dedup import duplicate_groups
+from src.ai.prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
 from src.models import Config, ContentItem
 from src.orchestrator import BMTNewsOrchestrator
 from src.threads import fingerprint, same_thread
@@ -69,7 +72,22 @@ def inputs():
 
 
 async def run():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--batch-id")
+    args = parser.parse_args()
     config, items, batches, cache = inputs()
+    if args.batch_id:
+        def batch_id(batch):
+            lines = [f"[{local}] {items[i].title[:300]}\n"
+                     f"    Published: {items[i].published_at.isoformat()}\n"
+                     f"    Tags: {', '.join(items[i].ai_tags or [])[:300]}\n"
+                     f"    Summary: {(items[i].ai_summary or '')[:1200]}"
+                     for local, i in enumerate(batch)]
+            user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
+            return hashlib.sha256((TOPIC_DEDUP_SYSTEM + user).encode()).hexdigest()[:16]
+        batches = [b for b in batches if batch_id(b) == args.batch_id]
+        if not batches:
+            raise SystemExit("No matching cached batch; no model call made")
     print(json.dumps({"mode": "cached_subset_not_exact_historical_replay", "items": len(items),
                       "batches": [len(b) for b in batches], "cache": cache, "call_limit": 12}))
     client = create_ai_client(config.ai)

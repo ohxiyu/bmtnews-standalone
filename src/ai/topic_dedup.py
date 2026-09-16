@@ -38,6 +38,18 @@ def validate_duplicates(payload, size):
     return payload["duplicates"]
 
 
+def response_shape(payload):
+    """Only types/counts; never values, arbitrary keys or model prose."""
+    def kind(value):
+        return {dict: "object", list: "array", str: "string", int: "integer",
+                float: "number", bool: "boolean", type(None): "null_or_parse_failure"}.get(type(value), "other")
+    result = {"root": kind(payload)}
+    if isinstance(payload, list):
+        result.update(length=len(payload), element_types=sorted({kind(v) for v in payload}),
+                      group_sizes=[len(v) for v in payload[:24] if isinstance(v, list)])
+    return result
+
+
 async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM, cache=None):
     groups = []
 
@@ -54,6 +66,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
         user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
         cached = cache.get_comparison(system, user) if cache is not None else None
         for attempt in range(2):
+            payload = None
             try:
                 payload = cached
                 if payload is None:
@@ -81,6 +94,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                     "reason": reason, "detail": detail, "status": status,
                     "attempt": attempt + 1, "batch_size": len(indices),
                     "batch_id": hashlib.sha256((system + user).encode()).hexdigest()[:16],
+                    "shape": response_shape(payload),
                 }, sort_keys=True))
                 if attempt == 1 or status in {401, 402, 403}:
                     raise RuntimeError(

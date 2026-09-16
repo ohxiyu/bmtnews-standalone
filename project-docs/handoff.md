@@ -43,8 +43,8 @@
   ],
   "next_action": "在agent分支运行最多12次调用的只读缓存诊断；按结果修复，更新PR91，不合并部署。",
   "states": {
-    "code": "in_progress",
-    "tests": "complete",
+    "code": "pending",
+    "tests": "pending",
     "pr_merged": "pending",
     "deployed": "pending",
     "production_verified": "pending"

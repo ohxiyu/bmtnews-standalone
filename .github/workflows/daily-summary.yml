@@ -10,6 +10,10 @@ on:
         description: Read-only cached dedup diagnosis, at most twelve model calls, no publication
         type: boolean
         default: false
+      diagnostic_batch:
+        description: Optional sanitized batch fingerprint for one-batch diagnosis
+        type: string
+        default: ''
       edition_date:
         description: Local edition date ending at 07:00 Asia/Shanghai (YYYY-MM-DD)
         type: string
@@ -69,7 +73,11 @@ jobs:
       - name: Bounded sanitized dedup diagnosis
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: uv run python -m scripts.diagnose_dedup
+          DIAGNOSTIC_BATCH: ${{ inputs.diagnostic_batch }}
+        run: |
+          args=()
+          if [ -n "$DIAGNOSTIC_BATCH" ]; then args+=(--batch-id "$DIAGNOSTIC_BATCH"); fi
+          uv run python -m scripts.diagnose_dedup "${args[@]}"
   daily-summary:
     if: ${{ !inputs.diagnostic_only }}
     runs-on: ubuntu-latest
