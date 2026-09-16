@@ -50,14 +50,27 @@
       "current_state_en": "Solana activated a mainnet upgrade at epoch 1,035 that raises the maximum transaction size from 1,232 to 4,096 bytes and introduces a backward-compatible v1 transaction format, enabling zero-knowledge proofs and new onchain signature schemes.",
       "detailed_summary_zh": "Solana activated a mainnet upgrade at epoch 1,035 that raises the maximum transaction size from 1,232 to 4,096 bytes and introduces a backward-compatible v1 transaction format, enabling zero-knowledge proofs and new onchain signature schemes.",
       "detailed_summary_en": "Solana activated a mainnet upgrade at epoch 1,035 that raises the maximum transaction size from 1,232 to 4,096 bytes and introduces a backward-compatible v1 transaction format, enabling zero-knowledge proofs and new onchain signature schemes.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Solana 是一条高吞吐量的 Layer 1 区块链，以很短的 slot 处理交易——其 slot 时间已于 8 月从 400 毫秒降至 350 毫秒，官方还提出了最终降至 200 毫秒的目标。历史上，每笔 Solana 交易被硬性限制在 1,232 字节，这一协议级上限迫使开发者压缩指令、签名与账户数据，或把工作拆分到多笔交易中。网络通过“版本化交易”逐步演进这一格式，先是引入带地址查找表的 v0，v1 则是该序列的下一步。Solana 近期还在调整其他协议参数，包括 8 月 28 日由验证者通过、将年度通缩率翻倍从而减少未来 SOL 发行的提案。",
+      "background_en": "Solana is a high-throughput Layer 1 that processes transactions in short slots — reduced from 400 milliseconds to 350ms in August, with a stated goal of eventually reaching 200ms. Historically each Solana transaction was hard-capped at 1,232 bytes, a protocol-level limit that forced developers to compress instructions, signatures and account data or split work across several transactions. The network introduced versioned transactions to evolve this format, first with v0 and its address lookup tables, and v1 is the next step in that series. Solana has also been adjusting other protocol parameters, including a validator-approved proposal on Aug. 28 to double the annual disinflation rate and reduce future SOL issuance.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "这是一项面向开发者的协议容量变更，不涉及 SOL 的供给、托管或流动性，因此其向市场传导的路径主要体现在围绕 Solana 相对于其他 Layer 1 竞争地位的情绪层面：更好的开发工具可能支撑更复杂的链上应用，这属于更长周期的生态叙事，而非即时的市场结构事件。",
+      "market_impact_en": "This is a developer-facing protocol capacity change with no effect on SOL supply, custody or liquidity, so its transmission path to markets runs mainly through sentiment around Solana's competitive position versus other Layer 1s: better tooling could support more sophisticated onchain applications, which is a longer-horizon ecosystem argument rather than an immediate market-structure event.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://solana.com/news/transaction-v1-and-the-alt-trade-off",
+          "title": "v1 Transactions and the ALT Trade-off | Solana Media"
+        },
+        {
+          "url": "https://solana.com/docs/core/transactions/versioned-transactions",
+          "title": "Versioned Transactions | Solana"
+        },
+        {
+          "url": "https://solana.com/upgrades/larger-transaction-sizes",
+          "title": "Larger Transaction Sizes | Solana Media"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:c9651d85ffb06e8f"
