@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from src.ai.topic_dedup import DedupResponseError, validate_duplicates
+from src.ai.topic_dedup import DedupResponseError, validate_duplicates, response_shape
 from test_ai_economy import Client, compare, stories
 
 
@@ -32,6 +32,13 @@ def test_logs_only_safe_context(caplog):
     assert '"batch_size": 2' in caplog.text
     assert '"attempt": 2' in caplog.text
     assert "SECRET" not in caplog.text
+
+
+def test_shape_reports_only_types_and_counts():
+    shape = response_shape([["SECRET", 1], "SECRET", {"SECRET": "SECRET"}])
+    assert shape == {"root": "array", "length": 3,
+                     "element_types": ["array", "object", "string"], "group_sizes": [2]}
+    assert "SECRET" not in str(shape)
 
 
 def test_diagnostic_has_no_publish_credentials_or_write_permissions():

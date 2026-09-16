@@ -50,6 +50,27 @@ def response_shape(payload):
     return result
 
 
+def response_syntax(response):
+    """Classify JSON syntax without exposing even a substring of the response."""
+    if not isinstance(response, str):
+        return {}
+    text = response.strip()
+    result = {"characters": len(text),
+              "template_placeholders": any(x in text for x in ("<primary_idx>", "<dup_idx>", "...")),
+              "fenced": text.startswith("```")}
+    try:
+        json.loads(text)
+        result["json"] = "valid"
+    except json.JSONDecodeError as exc:
+        codes = {"Expecting value": "expected_value",
+                 "Expecting property name enclosed in double quotes": "expected_quoted_key",
+                 "Expecting ',' delimiter": "expected_comma",
+                 "Expecting ':' delimiter": "expected_colon", "Extra data": "extra_data"}
+        result.update(json=codes.get(exc.msg, "other_syntax_error"),
+                      position=exc.pos, line=exc.lineno, column=exc.colno)
+    return result
+
+
 async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM, cache=None):
     groups = []
 
@@ -67,6 +88,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
         cached = cache.get_comparison(system, user) if cache is not None else None
         for attempt in range(2):
             payload = None
+            response = None
             try:
                 payload = cached
                 if payload is None:
@@ -95,6 +117,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                     "attempt": attempt + 1, "batch_size": len(indices),
                     "batch_id": hashlib.sha256((system + user).encode()).hexdigest()[:16],
                     "shape": response_shape(payload),
+                    "syntax": response_syntax(response),
                 }, sort_keys=True))
                 if attempt == 1 or status in {401, 402, 403}:
                     raise RuntimeError(
