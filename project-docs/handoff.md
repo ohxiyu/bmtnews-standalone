@@ -9,42 +9,47 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/90",
   "owner": "Codex / morning-ai-economy",
   "branch": "agent/morning-ai-economy",
-  "last_verified_commit": "1473b72df7ac2dc47736d32292acfc48fb5c119e",
+  "last_verified_commit": "599b6d52ad64f78316e8d98ddc3cedbb84e03772",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/91",
   "completed": [
     "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
     "官方API名deepseek-flash；配置切换，不混用旧模型缓存",
     "24条有界全覆盖比较、已验证结果缓存、失败工作流也保存成功分析缓存",
     "402/401/403停止单次去重重试并给脱敏原因，保持质量与配额不变",
-    "首页只更新出刊文案与逾期判定，不改布局"
+    "首页只更新出刊文案与逾期判定，不改布局",
+    "脱敏复现JSON语法错误expected_comma；合法示例+格式错误反馈重试，继续严格拒绝无效结果",
+    "三个先前失败批次真实API复测35059029282通过：3批/3调用，无格式重试"
   ],
   "unfinished": [
-    "受控只读诊断确认具体失败原因并补回归测试",
-    "PR91未合并/部署；今日旧日报重复未重刊"
+    "PR91等待授权合并与协调部署，未重刊今日旧日报",
+    "PR89为旧部署证据，不能覆盖最新交接；历史08:00窗口重刊须显式cutoff8"
   ],
   "validation": [
-    "fetch/merge main、uv sync frozen dev通过；809 pytest通过（1既有warning）",
-    "48 Worker测试、56 Node测试、类型检查、部署dry-run、治理及diff检查通过"
+    "fetch/merge origin/main、uv sync --frozen --extra dev通过",
+    "823 pytest通过（1既有warning）；治理及diff检查通过",
+    "只读诊断35058489152、35058682859、35058796024复现格式失败；35059029282三个指定批次修复验证通过，共19次应用层模型调用",
+    "本任务原有48 Worker、56 Node测试、类型及dry-run通过；本轮未改Worker/UI"
   ],
   "unverified": [
-    "真实失败schema/provider原因待诊断",
-    "新调度与模型未上线"
+    "未完整重放失败日报的所有历史输入：诊断只恢复缓存子集",
+    "DeepSeek新别名deepseek-flash、24项批次真实质量/费用及新调度尚未上线验收；诊断沿用main旧模型和12项批次",
+    "今日线上仍08:36旧版14条，重复尚未通过重刊消除"
   ],
   "production": {
     "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
-    "artifact_commit": "527f82e86a1c8769e8aaa5a2bee128736ce19c2f",
+    "artifact_commit": "d8830f2ee65a8ad1ef4f86f368294adcef57126a (collection updated artifact; edition unchanged)",
     "edition": "2026-09-16",
     "generated_at": "2026-09-16T00:36:20.538116Z (previous edition unchanged)",
     "worker_version": "341dd1ba-4355-42c9-93dc-4133295b53e7; health still08:30",
-    "verified_at": "2026-09-16 12:46 Asia/Shanghai; source/edition previous deployment evidence, Worker health refreshed"
+    "verified_at": "2026-09-16 13:19 Asia/Shanghai API refreshed; Worker version remains previous snapshot"
   },
   "blockers": [
-    "充值后main重跑35057456755仍在早期语义去重失败；旧异常隐藏根因，余额问题未经证实"
+    "下一步合并/部署/重刊需要当前明确授权；本轮不清空任何发送记录"
   ],
-  "next_action": "在agent分支运行最多12次调用的只读缓存诊断；按结果修复，更新PR91，不合并部署。",
+  "next_action": "审阅PR91和脱敏诊断证据；获授权后协调合并与Worker部署，以cutoff8重刊2026-09-16并核验前三条不同事件及发送幂等，不无条件重试整期。",
   "states": {
-    "code": "pending",
-    "tests": "pending",
+    "code": "complete",
+    "tests": "complete",
     "pr_merged": "pending",
     "deployed": "pending",
     "production_verified": "pending"
