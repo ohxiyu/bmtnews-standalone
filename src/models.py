@@ -533,7 +533,7 @@ class XDeliveryConfig(BaseModel):
     # "drip" posts the top stories one at a time across the day, driven by
     # the x-distribution workflow; the publish step then posts nothing.
     mode: Literal["digest", "drip"] = "digest"
-    drip_items: int = Field(default=4, ge=1, le=8)
+    drip_items: int = Field(default=3, ge=1, le=8)
     # Where a drip post sends the reader. "none" posts no link at all, which
     # is what X's ranking favours; "site" keeps readers in the briefing and
     # "source" credits the outlet directly.

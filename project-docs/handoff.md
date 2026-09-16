@@ -5,32 +5,27 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "替换经用户确认的圆润 Logo，更新媒体包并合并上线",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/82",
-  "owner": "Codex / brand-v2（本任务发布整合负责人）",
-  "branch": "agent/brand-v2",
-  "last_verified_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/83",
+  "goal": "X只推每日榜单前三条；诊断9月16日同事件重复入榜",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/86",
+  "owner": "Codex / x-top3-event-dedup",
+  "branch": "agent/x-top3-event-dedup",
+  "last_verified_commit": "6c1687c777620f11d0cb1145bc729414fa0beeb4",
+  "pr": "pending",
   "completed": [
-    "核验远端 main 和开放 PR，认领 Issue #82；用户明确授权本任务合并上线",
-    "SVG 母版统一外圆角 64、内凹 32、留白 12；黄色圆环与同心圆点",
-    "更新媒体、网站、PWA、favicon 和分享卡；v2 地址独立，旧 v1 文件保留",
-    "PR #83 全部检查通过并合并；Deploy Docs 与 Cloudflare 生产部署成功",
-    "主站首页、媒体页、manifest 和 v2 ZIP 实际验收完成；原开发分支已清理"
+    "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
+    "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
+    "补充生产配置前三条集成测试与旧已发记录保留测试"
   ],
   "unfinished": [
-    "Logo 产品变更无未完成项；本次证据由 Issue #84 的纯文档 PR 回写",
-    "其他未合并发布记录 PR #68 #77 #81 仍归原任务负责人，不在本次范围"
+    "提交PR，等待CI及合并授权",
+    "去重修复建议发布前跨组语义核查；本次按检查请求只诊断，未修改去重算法或重刊"
   ],
   "validation": [
-    "uv sync --frozen --extra dev --offline 成功；使用锁文件本机缓存",
-    "母版生成及 sharp PNG/ICO/ZIP 导出成功；773 项 Python、37 项 Node 测试通过",
-    "治理与 diff 检查通过；桌面、390px 手机、深色、媒体页和分享长卡本地验收通过",
-    "生产资源 sha256-7e6b0e219d87；公开 ZIP SHA256 与仓库逐字节一致，详见发布记录"
+    "X专项29 passed；全量775 passed、1既有warning；uv sync frozen dev、治理和diff检查通过"
   ],
   "unverified": [
-    "操作系统已安装图标的刷新时间不能由网站保证",
-    "独立调度 Worker 版本未在本任务核验；没有修改或部署该 Worker"
+    "未真实发送X；未修改生产队列",
+    "今日线上重复仍存在，未撤回已发消息或触发重刊"
   ],
   "production": {
     "source_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
@@ -41,17 +36,17 @@
     "verified_at": "2026-09-13 01:06 Asia/Shanghai"
   },
   "blockers": [
-    "无产品发布阻塞"
+    "无代码阻塞；合并上线需要当前授权"
   ],
-  "next_action": "Logo 已上线，等待用户新任务。新任务先 fetch 并核验 Issue/PR，不把记录的日报日期当作实时最新状态，也不自动处理其他发布记录。",
+  "next_action": "审核X前三条PR；另确认去重发布前核查方案及今日重刊授权。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "complete",
-    "deployed": "complete",
-    "production_verified": "complete"
+    "pr_merged": "pending",
+    "deployed": "pending",
+    "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-13-brand-v2.md"
+  "evidence": "project-docs/releases/2026-09-16-x-top3-dedup-diagnosis.md"
 }
 ```
 

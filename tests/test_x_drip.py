@@ -499,3 +499,35 @@ def test_sanitize_rejects_a_headline_only_post() -> None:
 
 def test_x_delivery_defaults_to_the_compact_limit() -> None:
     assert XDeliveryConfig().max_post_chars == 400
+
+
+def test_production_drip_posts_only_daily_top_three(monkeypatch, tmp_path):
+    import json
+    config = XDeliveryConfig.model_validate(json.loads(
+        (Path(__file__).resolve().parents[1] / "data/config.github.json").read_text()
+    )["x_delivery"])
+    assert config.mode == "drip"
+    assert config.drip_items == XDeliveryConfig().drip_items == 3
+    items = [make_item(f"第{i}条", summary=f"摘要{i}。") for i in range(1, 7)]
+    publisher = RecordingPublisher()
+    orchestrator = make_orchestrator(publisher, items)
+    orchestrator.config.x_delivery = config.model_copy(update={"compose": "template"})
+    path = tmp_path / "queue.json"
+    for _ in range(8):
+        run_slot(monkeypatch, orchestrator, items, path)
+    assert len(publisher.posts) == 3
+    for rank, post in enumerate(publisher.posts, 1):
+        assert f"第{rank}条" in post
+    assert load_queue_state(path).posted_ranks("zh") == [1, 2, 3]
+
+
+def test_reducing_limit_preserves_existing_sent_ranks(monkeypatch, tmp_path):
+    items = [make_item(f"第{i}条") for i in range(1, 7)]
+    publisher = RecordingPublisher()
+    orchestrator = make_orchestrator(publisher, items)
+    orchestrator.config.x_delivery.drip_items = 3
+    path = tmp_path / "queue.json"
+    save_queue_state(XQueueState(date="2026-08-09", posted={"zh": [1, 2, 3, 4]}), path)
+    run_slot(monkeypatch, orchestrator, items, path)
+    assert publisher.posts == []
+    assert load_queue_state(path).posted_ranks("zh") == [1, 2, 3, 4]
