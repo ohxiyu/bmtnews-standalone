@@ -10,7 +10,7 @@
   "owner": "Codex / morning-ai-release",
   "branch": "agent/morning-ai-release",
   "last_verified_commit": "169d689fdca69be3e32f225dab23d2ebf1c37f7f",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/93",
   "completed": [
     "用户本轮明确授权合并部署；PR91必需检查全部通过，合并169d689",
     "部署Worker c07b2764-9cde-47e6-a66f-21da61a83e04，保留vars/Secrets/DO，显式cutoff7",
@@ -21,7 +21,7 @@
     "原任务分支和工作目录在核验祖先及干净状态后清理，代码保留main"
   ],
   "unfinished": [
-    "提交本次证据PR（仅文档，待合并）",
+    "PR93为本次部署证据（仅文档，待合并）",
     "今天X历史身份需人工核对后另行授权处理，不自动重发或重置",
     "不覆盖PR89/81/77/68的分支；这些旧证据PR不能覆盖当前指针"
   ],
