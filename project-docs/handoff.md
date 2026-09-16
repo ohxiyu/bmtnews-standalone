@@ -5,11 +5,11 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "07:00截止/07:26启动、DeepSeek V4.1 Flash及安全节流",
+  "goal": "07:00截止/07:26启动、AI节流；补齐脱敏诊断并修复实证去重故障",
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/90",
   "owner": "Codex / morning-ai-economy",
   "branch": "agent/morning-ai-economy",
-  "last_verified_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+  "last_verified_commit": "1473b72df7ac2dc47736d32292acfc48fb5c119e",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/91",
   "completed": [
     "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
@@ -19,19 +19,16 @@
     "首页只更新出刊文案与逾期判定，不改布局"
   ],
   "unfinished": [
-    "提交PR并等待CI；未经本任务授权不合并部署",
-    "用户完成AI充值后才可验证真实模型调用；今日旧日报重复未重刊",
-    "PR89保留前次部署证据；合并它时不能用旧handoff覆盖本任务指针"
+    "受控只读诊断确认具体失败原因并补回归测试",
+    "PR91未合并/部署；今日旧日报重复未重刊"
   ],
   "validation": [
     "fetch/merge main、uv sync frozen dev通过；809 pytest通过（1既有warning）",
     "48 Worker测试、56 Node测试、类型检查、部署dry-run、治理及diff检查通过"
   ],
   "unverified": [
-    "真实token费用和模型24条判定质量未付费实测",
-    "未确认账户余额；用户判断是未充值，不将其伪装成API已核实",
-    "07:26自然触发、新窗口日报与X自动发送未线上验证",
-    "首页仅时间文案调整，行为测试通过；未做浏览器视觉截图验收"
+    "真实失败schema/provider原因待诊断",
+    "新调度与模型未上线"
   ],
   "production": {
     "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
@@ -42,11 +39,11 @@
     "verified_at": "2026-09-16 12:46 Asia/Shanghai; source/edition previous deployment evidence, Worker health refreshed"
   },
   "blockers": [
-    "线上模型余额需用户自行充值；本次不充值、不调用付费模型、不清空发送记录"
+    "充值后main重跑35057456755仍在早期语义去重失败；旧异常隐藏根因，余额问题未经证实"
   ],
-  "next_action": "PR检查通过后请用户授权合并与协调部署Worker/main，再验证健康端点、实际cron、日报数据及缓存指标；历史08:00刊期重刊要显式保留旧窗口。",
+  "next_action": "在agent分支运行最多12次调用的只读缓存诊断；按结果修复，更新PR91，不合并部署。",
   "states": {
-    "code": "complete",
+    "code": "in_progress",
     "tests": "complete",
     "pr_merged": "pending",
     "deployed": "pending",
