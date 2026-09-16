@@ -10,7 +10,7 @@
   "owner": "Codex / morning-ai-economy",
   "branch": "agent/morning-ai-economy",
   "last_verified_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/91",
   "completed": [
     "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
     "官方API名deepseek-flash；配置切换，不混用旧模型缓存",
