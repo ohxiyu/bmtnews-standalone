@@ -468,10 +468,11 @@
         "post_id": "367208774515440"
       },
       "6756d588b5d5918efa791967230772f12ffbc4462236659d49f6443159f1b5cf": {
-        "status": "pending",
+        "status": "sent",
         "rank": 6,
         "text_hash": "50c2ad68cd06775a1cf67b4ef1a353c9dd07f9130a4144ff6229ddc653abb314",
-        "attempted_at": "2026-09-16T16:21:25.960943+08:00"
+        "attempted_at": "2026-09-16T16:21:25.960943+08:00",
+        "post_id": "367229700134702"
       }
     }
   },
@@ -508,12 +509,6 @@
           "text": "Symbiosis 比特币跨链桥漏洞：330 聪铸出 461 亿枚假 syBTC\n\nSymbiosis 比特币跨链桥中的两个连锁软件漏洞，让攻击者仅用一笔 330 聪（约 0.25 美元）的存款，在约四分钟内通过 12 笔虚假存款在 BNB Chain、以太坊和 Rootstock 上铸造出约 461 亿枚无抵押的 syBTC。Symbiosis 于周二发布事后分析报告，初步估计损失为 9.97 BTC（约 77 万美元），承诺进行赔付，并已将该比特币跨链桥下线以进行重写和独立审计。\n\n此次攻击凭空生成了超过比特币 2100 万枚上限 2000 倍的无抵押代币，说明跨链桥至今仍是 DeFi 基础设施中受攻击最严重的一类，因为一个逻辑错误就能凭空创造没有真实资产支撑的资产。事件还暴露出“权限提升 + 记账逻辑错误”这一两段式失效模式，其他跨链桥运营方和审计机构今后都需要针对这种情况进行测试。\n\n第一个漏洞使桥在判断发送方时读取了比特币交易的错误字段，让攻击者同时被识别为经批准的存款人和桥管理员；第二个漏洞则把负的最低手续费当作加法处理，使一笔存款可以被记为攻击者指定的任意金额。由于铸造无抵押 syBTC 并不会产生赎回所需的真实资产，实际损失仅限于与 WBTC、cbBTC、BTCB 和 RBTC 配对的约 11.26 枚 syBTC 流动性，而攻击前 syBTC 的总供应量仅为 13.91 枚。\n\n来源：https://www.coindesk.com/tech/2026/09/15/a-hacker-turned-25-cents-of-bitcoin-into-46-billion-fake-btc-tokens-on-a-defi-bridge\nBMTNews · 2026-09-16 · https://bmt.news",
           "rank": 4,
           "due_at": "2026-09-16T17:32:00+08:00"
-        },
-        {
-          "id": "6756d588b5d5918efa791967230772f12ffbc4462236659d49f6443159f1b5cf",
-          "text": "MEV机器人抢先拦截770万美元rsETH漏洞利用，Kelp冻结相关地址\n\n攻击者利用一个连接以太坊Safe钱包的自定义模块，试图盗取约773万美元的rsETH（约2900枚），但被名为“Yoink”的MEV机器人抢先交易并截走资金。rsETH发行方Kelp随后将接收地址置于24小时暂停状态，该机器人已将2882.37枚rsETH转入单一地址。\n\n该事件表明，即使核心钱包合约本身安全，诸如自定义Safe模块这类扩展也可能成为最薄弱的一环；同时也显示MEV机器人正日益成为被盗资金的“意外拦截者”。这直接关系到rsETH持有者，以及依赖该流动性质押代币提供流动性和抵押品的DeFi集成方。\n\n据Blockaid分析，攻击者通过公开的keeper multicall，将一个自定义的Uniswap v4流动性模块导入其自建的hooked池，在此过程中将aEthrsETH解包为rsETH。同一笔交易中，Yoink向一个被标记为区块构建者的地址转出约18.93枚ETH（约4.6万美元）；Kelp则强调此次暂停仅是钱包层面的预防措施，其合约安全，rsETH仍保持100%足额支撑。\n\n来源：https://cointelegraph.com/news/mev-bot-intercepts-77m-in-rseth-from-ethereum-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound\nBMTNews · 2026-09-16 · https://bmt.news",
-          "rank": 6,
-          "due_at": "2026-09-16T16:21:00+08:00"
         },
         {
           "id": "f6bc0c92737fd2f12ff0024bcb7cbfd61bf496562a9a76b75f488b81cce862f5",
