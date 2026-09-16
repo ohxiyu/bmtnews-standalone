@@ -92,9 +92,11 @@ async def run():
                      for local, i in enumerate(batch)]
             user = legacy["TOPIC_DEDUP_USER"].format(items="\n\n".join(lines))
             return hashlib.sha256((legacy["TOPIC_DEDUP_SYSTEM"] + user).encode()).hexdigest()[:16]
-        batches = [b for b in batches if batch_id(b) == args.batch_id]
-        if not batches:
-            raise SystemExit("No matching cached batch; no model call made")
+        requested = set(args.batch_id.split(","))
+        selected = {batch_id(b): b for b in batches if batch_id(b) in requested}
+        if set(selected) != requested:
+            raise SystemExit("Missing requested cached batch; no model call made")
+        batches = list(selected.values())
     print(json.dumps({"mode": "cached_subset_not_exact_historical_replay", "items": len(items),
                       "batches": [len(b) for b in batches], "cache": cache, "call_limit": 12}))
     client = create_ai_client(config.ai)

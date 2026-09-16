@@ -11,7 +11,7 @@ on:
         type: boolean
         default: false
       diagnostic_batch:
-        description: Optional sanitized batch fingerprint for one-batch diagnosis
+        description: Optional comma-separated sanitized fingerprints for targeted diagnosis
         type: string
         default: ''
       edition_date:
