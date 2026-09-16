@@ -224,7 +224,7 @@ def test_daily_edition_combines_staging_and_final_fetch(
         analyzed_ids.extend(item.id for item in items)
         return items
 
-    async def no_topic_duplicates(items, *, log=True, daily_events=False):  # type: ignore[no-untyped-def]
+    async def no_topic_duplicates(items, *, log=True, daily_events=False, exhaustive=False):  # type: ignore[no-untyped-def]
         return items
 
     async def no_op(items):  # type: ignore[no-untyped-def]
@@ -305,6 +305,8 @@ def test_daily_edition_combines_staging_and_final_fetch(
     }
     assert report["metrics"]["primary_selected"] == 2
     assert report["metrics"]["primary_required"] == 3
+    assert report["metrics"]["ranking_audit_passes"] == 1
+    assert report["breakdowns"]["final_selected_groups"] == {"Crypto Markets": 2}
     assert report["metrics"]["telegram_messages_sent"] == 1
     assert report["metrics"]["telegram_message_chars"] == 1234
     assert telegram_calls == [("2026-07-29", 2, "zh")]
@@ -411,7 +413,7 @@ def test_daily_edition_uses_unpublished_36_hour_fallback_when_short(
         analyzed_ids.extend(item.id for item in items)
         return items
 
-    async def no_topic_duplicates(items, *, log=True, daily_events=False):  # type: ignore[no-untyped-def]
+    async def no_topic_duplicates(items, *, log=True, daily_events=False, exhaustive=False):  # type: ignore[no-untyped-def]
         return items
 
     async def no_op(items):  # type: ignore[no-untyped-def]

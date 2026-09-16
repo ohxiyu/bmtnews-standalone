@@ -1,6 +1,7 @@
 """Tests for drip-mode X distribution."""
 
 import asyncio
+import pytest
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -102,10 +103,12 @@ def test_queue_state_round_trip_and_reset(tmp_path: Path) -> None:
     assert fresh.posted_ranks("zh") == []
 
 
-def test_queue_state_is_fail_soft(tmp_path: Path) -> None:
+@pytest.mark.parametrize("payload", ["{oops", "{}", '{"version": 999, "date": "2026-09-16", "posted": {}}'])
+def test_queue_state_corruption_does_not_reset_sent_history(tmp_path: Path, payload) -> None:
     broken = tmp_path / "broken.json"
-    broken.write_text("{oops", encoding="utf-8")
-    assert load_queue_state(broken).date == ""
+    broken.write_text(payload, encoding="utf-8")
+    with pytest.raises(ValueError, match="refusing to reset"):
+        load_queue_state(broken)
     assert load_queue_state(tmp_path / "missing.json").date == ""
 
 
@@ -531,3 +534,26 @@ def test_reducing_limit_preserves_existing_sent_ranks(monkeypatch, tmp_path):
     run_slot(monkeypatch, orchestrator, items, path)
     assert publisher.posts == []
     assert load_queue_state(path).posted_ranks("zh") == [1, 2, 3, 4]
+
+
+def test_reordered_ranking_pauses_x_without_erasing_receipts(monkeypatch, tmp_path):
+    items = [make_item(f"story-{i}") for i in range(4)]
+    for i, story in enumerate(items):
+        story.url = f"https://example.com/{i}"
+    publisher = RecordingPublisher()
+    orchestrator = make_orchestrator(publisher, items)
+    path = tmp_path / "queue.json"
+    run_slot(monkeypatch, orchestrator, items, path)
+    before = path.read_text()
+    run_slot(monkeypatch, orchestrator, list(reversed(items)), path)
+    assert len(publisher.posts) == 1
+    assert path.read_text() == before
+    assert any(a.code == "x_selection_changed" for a in orchestrator.last_run_report.alerts)
+
+
+def test_legacy_rank_only_partial_day_pauses_but_new_day_can_start():
+    state = XQueueState(date="2026-09-16", posted={"zh": [1]})
+    assert not state.bind_selection(["a", "b", "c"])
+    assert state.posted_ranks("zh") == [1]
+    fresh = state_for_edition(state, "2026-09-17")
+    assert fresh.bind_selection(["b", "c", "d"])

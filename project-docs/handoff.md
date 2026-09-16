@@ -5,7 +5,7 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "X只推每日榜单前三条；诊断9月16日同事件重复入榜",
+  "goal": "X前三条与发布前跨组去重、配额补位和重排发送保护",
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/86",
   "owner": "Codex / x-top3-event-dedup",
   "branch": "agent/x-top3-event-dedup",
@@ -14,18 +14,22 @@
   "completed": [
     "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
     "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
-    "补充生产配置前三条集成测试与旧已发记录保留测试"
+    "补充生产配置前三条集成测试与旧已发记录保留测试",
+    "按用户追加请求补齐榜单跨组核查、补位再核查及有界短版兜底",
+    "低信号保底重新经过历史/事件/配额检查，不复活已被去重剔除的达标条目",
+    "X前三条绑定有序新闻身份；重排或旧rank-only已发队列暂停，损坏状态不再清零",
+    "检查评分排序和分类配额；修复编辑重复URL入口、最终排序与运行报告指标"
   ],
   "unfinished": [
-    "提交PR，等待CI及合并授权",
-    "去重修复建议发布前跨组语义核查；本次按检查请求只诊断，未修改去重算法或重刊"
+    "更新PR87并等待CI；未合并部署",
+    "授权上线后才能重刊今天内容；需人工核对旧X队列映射，不能清零或自动猜测"
   ],
   "validation": [
-    "X专项29 passed；全量775 passed、1既有warning；uv sync frozen dev、治理和diff检查通过"
+    "最终全量785 passed、1既有warning；fetch并合并main、uv sync frozen dev、治理和diff检查通过"
   ],
   "unverified": [
-    "未真实发送X；未修改生产队列",
-    "今日线上重复仍存在，未撤回已发消息或触发重刊"
+    "语义判断测试使用可控模拟模型；覆盖比较不代表模型判断永不出错",
+    "未真实调用模型、发送X或修改生产数据；今日线上重复尚未重刊"
   ],
   "production": {
     "source_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
@@ -38,7 +42,7 @@
   "blockers": [
     "无代码阻塞；合并上线需要当前授权"
   ],
-  "next_action": "审核X前三条PR；另确认去重发布前核查方案及今日重刊授权。",
+  "next_action": "审核PR87；授权合并后使用正规发布工作流重刊，先处理旧X队列身份核对，不把代码修复等同于线上内容已修复。",
   "states": {
     "code": "complete",
     "tests": "complete",
