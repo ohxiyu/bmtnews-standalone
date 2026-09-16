@@ -10,7 +10,7 @@
   "owner": "Codex / x-top3-event-dedup",
   "branch": "agent/x-top3-event-dedup",
   "last_verified_commit": "6c1687c777620f11d0cb1145bc729414fa0beeb4",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/87",
   "completed": [
     "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
     "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
