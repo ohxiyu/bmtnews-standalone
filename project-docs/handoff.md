@@ -5,12 +5,12 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "X前三条与发布前跨组去重、配额补位和重排发送保护",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/86",
-  "owner": "Codex / x-top3-event-dedup",
-  "branch": "agent/x-top3-event-dedup",
-  "last_verified_commit": "6c1687c777620f11d0cb1145bc729414fa0beeb4",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/87",
+  "goal": "记录PR87合并部署与重刊阻塞，继续诊断语义去重失败",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/88",
+  "owner": "Codex / x-top3-release",
+  "branch": "agent/x-top3-release",
+  "last_verified_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/89",
   "completed": [
     "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
     "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
@@ -18,39 +18,46 @@
     "按用户追加请求补齐榜单跨组核查、补位再核查及有界短版兜底",
     "低信号保底重新经过历史/事件/配额检查，不复活已被去重剔除的达标条目",
     "X前三条绑定有序新闻身份；重排或旧rank-only已发队列暂停，损坏状态不再清零",
-    "检查评分排序和分类配额；修复编辑重复URL入口、最终排序与运行报告指标"
+    "检查评分排序和分类配额；修复编辑重复URL入口、最终排序与运行报告指标",
+    "PR87在test/analyze等全部通过后合并；本地785测试及治理复测通过",
+    "main Cloudflare Pages部署成功：fb6f0ff7-5623-474f-bd77-afc6ecbfbfff",
+    "正式Daily Edition重刊及一次重试均失败；未写入gh-pages，X已发第1条记录保留"
   ],
   "unfinished": [
-    "更新PR87并等待CI；未合并部署",
-    "授权上线后才能重刊今天内容；需人工核对旧X队列映射，不能清零或自动猜测"
+    "诊断早期topic_dedup两次重试仍失败的底层原因；当前包装异常抹去了原因",
+    "修复并通过PR检查后重新发布2026-09-16，核验榜单跨组去重和配额",
+    "今日旧X队列缺少selection_keys，新代码将暂停剩余推送，禁止清空或猜测已发映射"
   ],
   "validation": [
-    "最终全量785 passed、1既有warning；fetch并合并main、uv sync frozen dev、治理和diff检查通过"
+    "uv sync --frozen --extra dev成功；785 passed，1既有warning；治理与diff检查通过",
+    "PR87 required checks成功；合并SHA bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+    "公开API仍为2026-09-16 00:36:20.538116Z的14条旧数据，前三条重复仍存在"
   ],
   "unverified": [
-    "语义判断测试使用可控模拟模型；覆盖比较不代表模型判断永不出错",
-    "未真实调用模型、发送X或修改生产数据；今日线上重复尚未重刊"
+    "未完成新榜单数据生产验收；不能把Pages部署成功当作数据重刊成功",
+    "无法从当前日志区分模型服务异常和响应结构校验异常；报告显示topic_dedup存在成功计量调用",
+    "新日期X自动发送尚未观察"
   ],
   "production": {
-    "source_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
-    "artifact_commit": "589ca7315fc3ae410e13c50bc8f6298829453f30",
-    "edition": "2026-09-12",
-    "generated_at": "2026-09-12T00:34:14.257428Z（日报数据）；网站构建 2026-09-12T17:05:16+00:00",
-    "worker_version": "Pages ef9ec162-fbf7-47b7-bb95-752ce1876c2f；独立 dispatcher not changed / unknown",
-    "verified_at": "2026-09-13 01:06 Asia/Shanghai"
+    "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+    "artifact_commit": "527f82e86a1c8769e8aaa5a2bee128736ce19c2f",
+    "edition": "2026-09-16",
+    "generated_at": "2026-09-16T00:36:20.538116Z (unchanged edition from previous source)",
+    "worker_version": "Pages fb6f0ff7-5623-474f-bd77-afc6ecbfbfff; dispatcher not changed / unknown",
+    "verified_at": "2026-09-16 12:36 Asia/Shanghai"
   },
   "blockers": [
-    "无代码阻塞；合并上线需要当前授权"
+    "Daily Edition run35055901908 attempts1/2: Semantic dedup unavailable; failure occurs in filter_items before ranking audit"
   ],
-  "next_action": "审核PR87；授权合并后使用正规发布工作流重刊，先处理旧X队列身份核对，不把代码修复等同于线上内容已修复。",
+  "next_action": "先补充不泄露模型原文或凭据的结构化失败原因与针对性测试，提交修复PR；不要绕过fail-closed或无依据反复重跑。修复上线后再通过正式Daily Edition重刊并验收，保留所有发送记录。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
+    "pr_merged": "complete",
+    "deployed": "complete",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-16-x-top3-dedup-diagnosis.md"
+  "evidence": "project-docs/releases/2026-09-16-pr87-deployment.md"
 }
 ```
 
