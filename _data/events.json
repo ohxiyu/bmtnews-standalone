@@ -26166,8 +26166,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Solana plans to triple its transaction size limit to accommodate more complex trades and applications.",
-      "current_state_zh": "Solana plans to triple its transaction size limit to accommodate more complex trades and applications.",
+      "current_state_en": "Solana has activated Transaction V1, tripling per-transaction data capacity; the reduction to 250ms slots is approaching mainnet activation.",
+      "current_state_zh": "Solana 已激活 Transaction V1，单笔交易数据容量提升三倍以上；250ms slot 时间缩减接近主网激活。",
       "entities": [
         "solana"
       ],
@@ -26175,17 +26175,19 @@
       "event_type": "protocol_change",
       "first_seen_at": "2026-09-07T17:49:56.620960Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-07T17:49:56.620960Z",
-      "last_updated_at": "2026-09-07T17:49:56.620960Z",
+      "last_material_change_at": "2026-09-16T23:08:43.818907Z",
+      "last_updated_at": "2026-09-16T23:08:43.818907Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Solana to triple transaction size as apps get room for more complex trades",
       "title_zh": "Solana to triple transaction size as apps get room for more complex trades",
       "topics": [
+        "network-performance",
         "protocol-upgrade",
         "scalability",
-        "solana"
+        "solana",
+        "throughput"
       ],
       "updates": [
         {
@@ -26225,6 +26227,44 @@
           "update_type": "initial",
           "what_changed_en": "Solana plans to triple its transaction size limit to accommodate more complex trades and applications.",
           "what_changed_zh": "Solana plans to triple its transaction size limit to accommodate more complex trades and applications."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Solana has activated Transaction V1, tripling per-transaction data capacity; the reduction to 250ms slots is approaching mainnet activation.",
+          "current_state_zh": "Solana 已激活 Transaction V1，单笔交易数据容量提升三倍以上；250ms slot 时间缩减接近主网激活。",
+          "detailed_summary_en": "Solana has activated Transaction V1, tripling per-transaction data capacity and preparing to cut slot times to 250ms as the network handles record transaction volumes across stablecoins, apps, and tokenized equities.",
+          "detailed_summary_zh": "Solana has activated Transaction V1, tripling per-transaction data capacity and preparing to cut slot times to 250ms as the network handles record transaction volumes across stablecoins, apps, and tokenized equities.",
+          "event_id": "evt_b5d8ceea177e543d",
+          "first_seen_at": "2026-09-16T23:08:43.818907Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T19:20:50Z",
+          "published_at": "2026-09-16T19:20:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/solana-triples-transaction-size-as-major-upgrades-meet-record-network-activity/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:38d373789bf72fb4"
+          ],
+          "time_precision": "published",
+          "title_en": "Solana triples transaction size as major upgrades meet record network activity",
+          "title_zh": "Solana triples transaction size as major upgrades meet record network activity",
+          "update_id": "upd_dcdb548cc845729f",
+          "update_type": "escalation",
+          "what_changed_en": "Solana activated Transaction V1 on Sept. 15, increasing per-transaction data capacity by more than threefold to 4,096 bytes, and is preparing to cut slot times to 250ms.",
+          "what_changed_zh": "Solana 于 9 月 15 日激活 Transaction V1，将单笔交易数据容量扩大三倍以上至 4,096 字节，并准备将 slot 时间缩短至 250ms。"
         }
       ]
     },
@@ -43256,41 +43296,60 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The Fed is now priced at 94.5% probability for a 25-basis-point hike on Wednesday, with political tension between Trump and Fed Chair Warsh intensifying.",
-      "current_state_zh": "美联储本周三加息25个基点的概率为94.5%，市场普遍预期加息，同时特朗普与美联储主席沃什之间的政治紧张加剧。",
+      "current_state_en": "The Fed raised rates by 25 bps to 3.75%-4.00% on Sept 16, 2026, its first hike since July 2023, in a 12-0 vote; the median projection now puts the 2026 year-end rate at 4.1%, up from 3.8% in June; Bitcoin spiked to $76,499.99 after the release and gave back the move within half an hour, later stabilizing near $75,500, while Zcash rallied to $1,383; Chair Warsh called inflation 'the problem' and outlined the Fed's AI-policy independence stance.",
+      "current_state_zh": "美联储于2026年9月16日加息25个基点至3.75%-4.00%，为2023年7月以来首次加息，投票12-0一致；点阵图/中位数预测显示2026年底利率为4.1%，高于6月的3.8%；比特币在决议后冲高至76,499.99美元后半小时内回吐，随后稳定在约75,500美元附近，Zcash rally至1,383美元；主席沃什在发布会上称通胀是问题，并阐述美联储在AI政策上的独立性立场。",
       "entities": [
         "ahead",
         "bets",
         "bonds",
+        "chair",
         "clarity",
         "clarity-act",
         "close",
+        "economy",
         "fed",
         "federal",
         "federal-reserve",
+        "first",
+        "following",
+        "half",
         "here",
         "hike",
+        "hikes",
+        "implies",
+        "increase",
+        "july",
         "lock",
         "looms",
         "means",
+        "only",
         "rate",
+        "rates",
         "reserve",
+        "right",
+        "round",
+        "runs",
+        "since",
+        "spikes",
         "street",
+        "time",
+        "trips",
         "trump",
         "vote",
         "wall",
         "week",
-        "what"
+        "what",
+        "zcash"
       ],
       "event_id": "evt_3ca929e83b171e88",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-11T16:41:00.504160Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-15T23:01:55.231287Z",
-      "last_updated_at": "2026-09-15T23:01:55.231287Z",
+      "last_material_change_at": "2026-09-16T23:08:49.006839Z",
+      "last_updated_at": "2026-09-16T23:08:49.006839Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "developing",
+      "status": "closed",
       "title_en": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
       "title_zh": "Federal Reserve Rate Hike Close To A Lock ; Clarity Act Vote Looms : Week Ahead",
       "topics": [
@@ -43299,7 +43358,10 @@
         "federal-reserve",
         "interest-rates",
         "macro",
-        "trump"
+        "macroeconomics",
+        "monetary-policy",
+        "trump",
+        "zcash"
       ],
       "updates": [
         {
@@ -43390,6 +43452,158 @@
           "update_type": "escalation",
           "what_changed_en": "CME FedWatch shows 94.5% odds of a 25-basis-point hike Wednesday; Wall Street banks forecast 50-75 bps total tightening in 2026; Trump publicly pressures Fed Chair Warsh against hiking; 10-year Treasury yield hit 5.04%, highest since July 2007.",
           "what_changed_zh": "CME FedWatch显示美联储周三加息25个基点的概率升至94.5%；华尔街银行预计2026年累计收紧50-75个基点；特朗普公开施压美联储主席沃什反对加息，10年期美债收益率触及5.04%，为2007年7月以来最高。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "The Fed has raised rates by 25 bps to 3.75%-4.00%, the first hike since July 2023, with the dot plot signaling one more hike in 2026.",
+          "current_state_zh": "美联储已加息25个基点至3.75%-4.00%，这是2023年7月以来首次加息，点阵图显示2026年可能再加息一次。",
+          "detailed_summary_en": "The Federal Reserve raised its benchmark fed funds rate by 25 basis points to 3.75%-4.00%, its first hike since July 2023, with a unanimous vote and dot plot signaling one more hike in 2026.",
+          "detailed_summary_zh": "The Federal Reserve raised its benchmark fed funds rate by 25 basis points to 3.75%-4.00%, its first hike since July 2023, with a unanimous vote and dot plot signaling one more hike in 2026.",
+          "event_id": "evt_3ca929e83b171e88",
+          "first_seen_at": "2026-09-16T23:08:37.768329Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T17:54:55Z",
+          "published_at": "2026-09-16T17:54:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/16/fed-raises-rates-by-25-basis-points-in-first-hike-since-july-2023"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:b5a9f9d5e8f3d0a4"
+          ],
+          "time_precision": "published",
+          "title_en": "Fed raises rates by 25 basis points in first hike since July 2023",
+          "title_zh": "Fed raises rates by 25 basis points in first hike since July 2023",
+          "update_id": "upd_b609b3d63a091690",
+          "update_type": "confirmation",
+          "what_changed_en": "The Fed raised rates by 25 basis points to 3.75%-4.00% on Sept 16, its first hike since July 2023, with a unanimous vote and a dot plot signaling one more hike in 2026.",
+          "what_changed_zh": "美联储于9月16日加息25个基点至3.75%-4.00%，为2023年7月以来首次加息，投票一致，点阵图显示2026年还将加息一次。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.96,
+          "current_state_en": "The Fed raised rates by 25 bps to 3.75%-4.00% on Sept 16, 2026, its first hike since July 2023; the decision was unanimous, the dot plot signals one more hike in 2026, and markets reacted with a brief Bitcoin spike while the broader crypto market fell.",
+          "current_state_zh": "美联储已于2026年9月16日加息25个基点至3.75%-4.00%，为2023年7月以来首次加息；决策获FOMC一致通过，点阵图显示2026年可能再加息一次，市场随即出现比特币短线冲高后加密市场整体下跌的反应。",
+          "detailed_summary_en": "The Federal Reserve raised its benchmark rate by 25 basis points to 3.75%-4%, its first hike since 2023, prompting a brief Bitcoin spike to $76,000 while the broader crypto market fell about 2.18%.",
+          "detailed_summary_zh": "The Federal Reserve raised its benchmark rate by 25 basis points to 3.75%-4%, its first hike since 2023, prompting a brief Bitcoin spike to $76,000 while the broader crypto market fell about 2.18%.",
+          "event_id": "evt_3ca929e83b171e88",
+          "first_seen_at": "2026-09-16T23:08:49.006839Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:15:38Z",
+          "published_at": "2026-09-16T18:15:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378417/fed-hikes-rates-first-time-since-2023-bitcoin"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:d4cb81b865833978"
+          ],
+          "time_precision": "published",
+          "title_en": "Fed Hikes Rates for the First Time Since 2023, Bitcoin Spikes",
+          "title_zh": "Fed Hikes Rates for the First Time Since 2023, Bitcoin Spikes",
+          "update_id": "upd_e14d30b1d40ba9c8",
+          "update_type": "aftermath",
+          "what_changed_en": "After the Fed's Sept 16 hike, Bitcoin briefly spiked to $76,000 while the broader crypto market fell about 2.18% on the day; the report also notes the FOMC vote was unanimous at 12-0, markets had priced in about a 93% chance of the hike, and it adds PPI/CPI inflation details.",
+          "what_changed_zh": "美联储9月16日加息后，比特币短暂飙升至76,000美元，但更广泛的加密市场当日下跌约2.18%；报道还披露FOMC以12票一致通过加息，市场此前定价加息概率约93%，并提供了PPI、CPI等通胀数据细节。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The Fed raised rates by 25 bps to 3.75%-4.00% on Sept 16, 2026, its first hike since July 2023, unanimous; Chair Warsh called inflation 'the problem' at the press conference, declined to comment on Trump, and said the Fed will focus on AI's economic implications rather than set AI policy; the dot plot signals one more hike in 2026; Bitcoin briefly spiked then stabilized near $75,500, down slightly on the day.",
+          "current_state_zh": "美联储于2026年9月16日加息25个基点至3.75%-4.00%，为2023年7月以来首次加息，投票一致；主席沃什在发布会上将通胀称为问题，拒绝评论特朗普，并称美联储将专注于AI对经济的影响而非制定AI政策；点阵图显示2026年可能再加息一次；比特币短暂冲高后稳定在约75,500美元，日内小幅下跌。",
+          "detailed_summary_en": "The Federal Reserve raised its benchmark rate 25 basis points to 3.75%-4.00% in a unanimous vote, its first hike since 2023, with Chair Kevin Warsh citing inflation as the problem while acknowledging economic strengthening.",
+          "detailed_summary_zh": "The Federal Reserve raised its benchmark rate 25 basis points to 3.75%-4.00% in a unanimous vote, its first hike since 2023, with Chair Kevin Warsh citing inflation as the problem while acknowledging economic strengthening.",
+          "event_id": "evt_3ca929e83b171e88",
+          "first_seen_at": "2026-09-16T23:08:48.579330Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T19:43:24Z",
+          "published_at": "2026-09-16T19:43:24Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378433/fed-hikes-rates-warsh-implies-trump-only-half-right"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:c23833f7a6694f26"
+          ],
+          "time_precision": "published",
+          "title_en": "Fed Chair Implies Trump Is Only Half Right on the Economy Following Rate Hike",
+          "title_zh": "Fed Chair Implies Trump Is Only Half Right on the Economy Following Rate Hike",
+          "update_id": "upd_873453fd11e98ec9",
+          "update_type": "aftermath",
+          "what_changed_en": "Fed Chair Warsh at the post-meeting press conference on Sept 16 said the economy has strengthened but called inflation 'the problem,' declined to comment on Trump's reaction, and outlined the Fed's stance on AI policy independence and five task forces; Bitcoin briefly spiked then stabilized near $75,500, down about 0.5% on the day.",
+          "what_changed_zh": "美联储主席沃什在9月16日加息后的新闻发布会上表示经济确实增强，但称通胀是问题，拒绝评论特朗普的反应，并阐述美联储在AI政策上的独立性立场及五个任务组；比特币短暂冲高后稳定在约75,500美元，日内跌约0.5%。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "The Fed raised rates by 25 bps to 3.75%-4.00% on Sept 16, 2026, its first hike since July 2023, in a 12-0 vote; the median projection now puts the 2026 year-end rate at 4.1%, up from 3.8% in June; Bitcoin spiked to $76,499.99 after the release and gave back the move within half an hour, later stabilizing near $75,500, while Zcash rallied to $1,383; Chair Warsh called inflation 'the problem' and outlined the Fed's AI-policy independence stance.",
+          "current_state_zh": "美联储于2026年9月16日加息25个基点至3.75%-4.00%，为2023年7月以来首次加息，投票12-0一致；点阵图/中位数预测显示2026年底利率为4.1%，高于6月的3.8%；比特币在决议后冲高至76,499.99美元后半小时内回吐，随后稳定在约75,500美元附近，Zcash rally至1,383美元；主席沃什在发布会上称通胀是问题，并阐述美联储在AI政策上的独立性立场。",
+          "detailed_summary_en": "The FOMC unanimously raised rates a quarter point to 3.75%-4% and lifted its 2026 median projection to 4.1%, sending Bitcoin briefly to $76,499.99 before it round-tripped, while Zcash rallied to $1,383.",
+          "detailed_summary_zh": "The FOMC unanimously raised rates a quarter point to 3.75%-4% and lifted its 2026 median projection to 4.1%, sending Bitcoin briefly to $76,499.99 before it round-tripped, while Zcash rallied to $1,383.",
+          "event_id": "evt_3ca929e83b171e88",
+          "first_seen_at": "2026-09-16T23:08:43.170535Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T22:33:10Z",
+          "published_at": "2026-09-16T22:33:10Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/markets/bitcoin-round-trips-fed-rate-increase-zcash-sep-16-2026"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:97fd6c4c33d332b4"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin Round-Trips the First Fed Rate Increase Since 2023 as Zcash Runs to $1,383",
+          "title_zh": "Bitcoin Round-Trips the First Fed Rate Increase Since 2023 as Zcash Runs to $1,383",
+          "update_id": "upd_2dc396fb31cec221",
+          "update_type": "aftermath",
+          "what_changed_en": "New report adds: FOMC voted 12-0 to raise rates 25 bps to 3.75%-4% and lifted the 2026 year-end median rate projection to 4.1% from 3.8% in June; Bitcoin spiked to $76,499.99 five minutes after the release and gave back the move within half an hour; Zcash rallied to $1,383.",
+          "what_changed_zh": "新报道补充：FOMC以12-0将利率上调25个基点至3.75%-4%，并将2026年底利率中位数预测从6月的3.8%上调至4.1%；比特币在决议后五分钟内冲高至76,499.99美元，半小时内回吐全部涨幅；Zcash rally至1,383美元。"
         }
       ]
     },
@@ -54349,7 +54563,7 @@
       "first_seen_at": "2026-09-15T23:01:50.776405Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-15T23:01:50.776405Z",
-      "last_updated_at": "2026-09-16T09:25:19.076744Z",
+      "last_updated_at": "2026-09-16T23:08:35.558802Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -54393,11 +54607,18 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYjhTZW1kZE9xcHJMTllnYjZzME01SkJaWFdCbkNGWWtqbzBMcUhDSVBBWVBDbS1WYTVZZUlNa1lMUUhzWWZRcUprUGdUUWRvUDVOcV8zaHFlbVkxT1F0ckh3eWhfNW1aaW9kaGM3dTlkZUg1RVh3ZUtHalR6a0VPQmxlWV9lWEYzaGpBa1JqNlNIeDk5Wm1DOVBoXzBodVc3Q0ctSlF1YjEza0wxR2pnNVYzMjg0TFRHSjJ4cE53NmhHMlFTM2hPV09lTQ?oc=5"
+            },
+            {
+              "label": "TronWeekly",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdDdWUzJnak5FRDBUVURWRlNvQzc4YjEtQ2pmVTVVWVZoLWx4ZHZ3UWFxcnZyMGVaUDJUV2hIUlZRNzY5MXBsbnh3LWZHUE5TV1VRR2ttYUF1bWJFOGkwMmIwNUp2b1o5emM5d2xPMXlRTXExeU5lWFFZeDk2SGM4Mg?oc=5"
             }
           ],
           "story_ids": [
             "rss:thedefiant.io_api_feed:e3ca217a4ec975d4",
-            "google_news:article:62fd9ccc501fa109"
+            "google_news:article:62fd9ccc501fa109",
+            "google_news:article:cc075e4e769f10b1"
           ],
           "time_precision": "published",
           "title_en": "Senate Blocks CLARITY Act 49-50 With No Democratic Votes to Proceed",
@@ -56974,7 +57195,7 @@
       "first_seen_at": "2026-09-16T17:12:21.995589Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-16T17:12:21.995589Z",
-      "last_updated_at": "2026-09-16T17:12:21.995589Z",
+      "last_updated_at": "2026-09-16T23:08:47.878300Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -57012,10 +57233,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.coindesk.com/policy/2026/09/16/u-s-house-s-tax-committee-advances-crypto-tax-bill-in-wake-of-clarity-act-loss"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378449/crypto-tax-bill-clears-house-committee"
             }
           ],
           "story_ids": [
-            "rss:www.coindesk.com_arc_outboundfeeds_rss_:9512e94d589ac7b3"
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:9512e94d589ac7b3",
+            "rss:decrypt.co_feed:3ee42da84af9e0b9"
           ],
           "time_precision": "published",
           "title_en": "U.S. House's tax committee advances crypto tax bill in wake of Clarity Act loss",
@@ -57300,8 +57528,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "U.S. prosecutors charged two Robinhood engineers with insider trading for allegedly using confidential token listing information to front-run announcements through Hyperliquid perpetual futures.",
-      "current_state_zh": "U.S. prosecutors charged two Robinhood engineers with insider trading for allegedly using confidential token listing information to front-run announcements through Hyperliquid perpetual futures.",
+      "current_state_en": "U.S. prosecutors have charged Robinhood engineers Hefu Chai and Huaisong Xiang with wire fraud and commodities fraud for allegedly using confidential token listing information to insider trade Hyperliquid perpetual futures, alleging each profited over $50,000 across 2025–2026.",
+      "current_state_zh": "美国检方已对 Robinhood 工程师 Hefu Chai 和 Huaisong Xiang 提出电汇欺诈和商品欺诈指控，指控他们利用保密的代币上市信息通过 Hyperliquid 永续合约进行内幕交易，并称二人在 2025 至 2026 年间各获利超过 5 万美元。",
       "entities": [
         "hyperliquid",
         "insider-trading",
@@ -57313,16 +57541,18 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-16T17:12:28.008763Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-16T17:12:28.008763Z",
-      "last_updated_at": "2026-09-16T17:12:28.008763Z",
+      "last_material_change_at": "2026-09-16T23:08:44.681507Z",
+      "last_updated_at": "2026-09-16T23:08:44.681507Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
       "title_en": "Two Robinhood engineers charged with insider trading using Hyperliquid perpetuals",
       "title_zh": "Two Robinhood engineers charged with insider trading using Hyperliquid perpetuals",
       "topics": [
+        "crypto-regulation",
         "hyperliquid",
         "insider-trading",
+        "perpetual-futures",
         "perpetuals",
         "robinhood"
       ],
@@ -57364,6 +57594,44 @@
           "update_type": "initial",
           "what_changed_en": "U.S. prosecutors charged two Robinhood engineers with insider trading for allegedly using confidential token listing information to front-run announcements through Hyperliquid perpetual futures.",
           "what_changed_zh": "U.S. prosecutors charged two Robinhood engineers with insider trading for allegedly using confidential token listing information to front-run announcements through Hyperliquid perpetual futures."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "U.S. prosecutors have charged Robinhood engineers Hefu Chai and Huaisong Xiang with wire fraud and commodities fraud for allegedly using confidential token listing information to insider trade Hyperliquid perpetual futures, alleging each profited over $50,000 across 2025–2026.",
+          "current_state_zh": "美国检方已对 Robinhood 工程师 Hefu Chai 和 Huaisong Xiang 提出电汇欺诈和商品欺诈指控，指控他们利用保密的代币上市信息通过 Hyperliquid 永续合约进行内幕交易，并称二人在 2025 至 2026 年间各获利超过 5 万美元。",
+          "detailed_summary_en": "US prosecutors charged two Robinhood engineers with wire and commodities fraud for allegedly using confidential crypto listing information to insider trade perpetual futures on Hyperliquid, each profiting over $50,000.",
+          "detailed_summary_zh": "US prosecutors charged two Robinhood engineers with wire and commodities fraud for allegedly using confidential crypto listing information to insider trade perpetual futures on Hyperliquid, each profiting over $50,000.",
+          "event_id": "evt_f5670d24f0d80750",
+          "first_seen_at": "2026-09-16T23:08:44.681507Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:07:06Z",
+          "published_at": "2026-09-16T18:07:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/robinhood-engineers-charged-over-fraudulent-hyperliquid-trades/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:cb126ffbdb44fd8a"
+          ],
+          "time_precision": "published",
+          "title_en": "Robinhood engineers charged over fraudulent Hyperliquid trades",
+          "title_zh": "Robinhood engineers charged over fraudulent Hyperliquid trades",
+          "update_id": "upd_a71930877bca56a7",
+          "update_type": "confirmation",
+          "what_changed_en": "Prosecutors identified the two charged engineers as Hefu Chai and Huaisong Xiang, specified wire fraud and commodities fraud charges, and alleged each profited over $50,000 across 2025–2026.",
+          "what_changed_zh": "检方确认两名被控工程师为 Hefu Chai 和 Huaisong Xiang，并具体指控其电汇欺诈和商品欺诈，称二人在 2025 至 2026 年间各获利超过 5 万美元。"
         }
       ]
     },
@@ -57833,18 +58101,19 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Celsius's bankruptcy estate sued BitMEX for $495 million over the alleged wrongful liquidation and seizure of 6,360 BTC during the March 2020 crash, filing just 11 days before the exchange's shutdown.",
-      "current_state_zh": "Celsius's bankruptcy estate sued BitMEX for $495 million over the alleged wrongful liquidation and seizure of 6,360 BTC during the March 2020 crash, filing just 11 days before the exchange's shutdown.",
+      "current_state_en": "Celsius's bankruptcy estate sued five BitMEX entities in the U.S. Bankruptcy Court for the Southern District of New York on Sept. 12, seeking about $495 million for 6,360 BTC liquidated during the March 2020 crash; BitMEX is set to stop trading Sept. 23.",
+      "current_state_zh": "Celsius 破产财产于9月12日在美国纽约南区破产法院对五家 BitMEX 实体提起诉讼，就 2020 年3月崩盘期间被清算的 6,360 BTC 索赔约 4.95 亿美元；BitMEX 将于9月23日停止交易。",
       "entities": [
         "bitmex",
-        "celsius"
+        "celsius",
+        "liquidations"
       ],
       "event_id": "evt_312938c90b91cc2f",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-16T17:12:31.865046Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-16T17:12:31.865046Z",
-      "last_updated_at": "2026-09-16T17:12:31.865046Z",
+      "last_material_change_at": "2026-09-16T23:08:38.135457Z",
+      "last_updated_at": "2026-09-16T23:08:38.135457Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -57895,6 +58164,44 @@
           "update_type": "initial",
           "what_changed_en": "Celsius's bankruptcy estate sued BitMEX for $495 million over the alleged wrongful liquidation and seizure of 6,360 BTC during the March 2020 crash, filing just 11 days before the exchange's shutdown.",
           "what_changed_zh": "Celsius's bankruptcy estate sued BitMEX for $495 million over the alleged wrongful liquidation and seizure of 6,360 BTC during the March 2020 crash, filing just 11 days before the exchange's shutdown."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Celsius's bankruptcy estate sued five BitMEX entities in the U.S. Bankruptcy Court for the Southern District of New York on Sept. 12, seeking about $495 million for 6,360 BTC liquidated during the March 2020 crash; BitMEX is set to stop trading Sept. 23.",
+          "current_state_zh": "Celsius 破产财产于9月12日在美国纽约南区破产法院对五家 BitMEX 实体提起诉讼，就 2020 年3月崩盘期间被清算的 6,360 BTC 索赔约 4.95 亿美元；BitMEX 将于9月23日停止交易。",
+          "detailed_summary_en": "Celsius's bankruptcy estate sued five BitMEX entities for roughly $495 million over 6,360 BTC in forced liquidations during the March 2020 Covid crash, with BitMEX set to stop trading on Sept. 23.",
+          "detailed_summary_zh": "Celsius's bankruptcy estate sued five BitMEX entities for roughly $495 million over 6,360 BTC in forced liquidations during the March 2020 Covid crash, with BitMEX set to stop trading on Sept. 23.",
+          "event_id": "evt_312938c90b91cc2f",
+          "first_seen_at": "2026-09-16T23:08:38.135457Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T17:34:04Z",
+          "published_at": "2026-09-16T17:34:04Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/16/celsius-sues-bitmex-for-usd495-million-over-2020-crash-liquidations"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:3b96272af008e3df"
+          ],
+          "time_precision": "published",
+          "title_en": "Celsius sues BitMEX for $495 million over 2020 crash liquidations",
+          "title_zh": "Celsius sues BitMEX for $495 million over 2020 crash liquidations",
+          "update_id": "upd_e5329d54ec3e2380",
+          "update_type": "confirmation",
+          "what_changed_en": "The complaint was filed against five BitMEX entities in the U.S. Bankruptcy Court for the Southern District of New York on Sept. 12 by Blockchain Recovery Investment Consortium; the claim breakdown is 1,325.84 BTC lost by Celsius and 5,034.33 BTC assigned from JST.",
+          "what_changed_zh": "诉讼由 Blockchain Recovery Investment Consortium 于9月12日在美国纽约南区破产法院对五家 BitMEX 实体提起；索赔细分为 Celsius 损失 1,325.84 BTC，以及受让自 JST 的 5,034.33 BTC。"
         }
       ]
     },
@@ -58108,8 +58415,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The FCA published perimeter guidance on which crypto activities require authorization, two weeks before the UK application window opens on September 30 and ahead of the regime taking effect on October 25, 2027.",
-      "current_state_zh": "The FCA published perimeter guidance on which crypto activities require authorization, two weeks before the UK application window opens on September 30 and ahead of the regime taking effect on October 25, 2027.",
+      "current_state_en": "The UK FCA has published final crypto authorization guidance; the application window opens Sept. 30, existing registrations do not automatically convert, firms seeking transitional arrangements face a Feb. 28, 2027 deadline, and the new regime takes effect Oct. 25, 2027.",
+      "current_state_zh": "英国 FCA 已发布加密授权最终指南；申请窗口于 9 月 30 日开放，现有注册不会自动转换，寻求过渡安排的公司需在 2027 年 2 月 28 日前申请，新制度将于 2027 年 10 月 25 日生效。",
       "entities": [
         "authorization",
         "before",
@@ -58117,7 +58424,9 @@
         "guidance",
         "lands",
         "opens",
+        "september",
         "two",
+        "uk-fca",
         "weeks",
         "window"
       ],
@@ -58125,18 +58434,22 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-16T17:12:35.420732Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-16T17:12:35.420732Z",
-      "last_updated_at": "2026-09-16T17:12:35.420732Z",
+      "last_material_change_at": "2026-09-16T23:08:51.651696Z",
+      "last_updated_at": "2026-09-16T23:08:51.651696Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
       "title_en": "FCA Guidance Lands Two Weeks Before UK Crypto Authorization Window Opens",
       "title_zh": "FCA Guidance Lands Two Weeks Before UK Crypto Authorization Window Opens",
       "topics": [
+        "authorization",
+        "compliance",
         "crypto-licensing",
+        "crypto-regulation",
         "fca",
         "market-access",
         "stablecoins",
+        "uk-fca",
         "uk-regulation"
       ],
       "updates": [
@@ -58177,6 +58490,44 @@
           "update_type": "initial",
           "what_changed_en": "The FCA published perimeter guidance on which crypto activities require authorization, two weeks before the UK application window opens on September 30 and ahead of the regime taking effect on October 25, 2027.",
           "what_changed_zh": "The FCA published perimeter guidance on which crypto activities require authorization, two weeks before the UK application window opens on September 30 and ahead of the regime taking effect on October 25, 2027."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The UK FCA has published final crypto authorization guidance; the application window opens Sept. 30, existing registrations do not automatically convert, firms seeking transitional arrangements face a Feb. 28, 2027 deadline, and the new regime takes effect Oct. 25, 2027.",
+          "current_state_zh": "英国 FCA 已发布加密授权最终指南；申请窗口于 9 月 30 日开放，现有注册不会自动转换，寻求过渡安排的公司需在 2027 年 2 月 28 日前申请，新制度将于 2027 年 10 月 25 日生效。",
+          "detailed_summary_en": "The UK FCA published final guidance clarifying which crypto activities require authorization under its incoming regime, ahead of the September application window, with existing registrations not automatically converting.",
+          "detailed_summary_zh": "The UK FCA published final guidance clarifying which crypto activities require authorization under its incoming regime, ahead of the September application window, with existing registrations not automatically converting.",
+          "event_id": "evt_b6d7c0abc84207d8",
+          "first_seen_at": "2026-09-16T23:08:51.651696Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T19:19:23Z",
+          "published_at": "2026-09-16T19:19:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/uk-fca-sets-crypto-authorization-guidance-ahead-of-september-application-window?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:a85fd58ae5ca5c42"
+          ],
+          "time_precision": "published",
+          "title_en": "UK FCA sets crypto authorization guidance ahead of September application window",
+          "title_zh": "UK FCA sets crypto authorization guidance ahead of September application window",
+          "update_id": "upd_f33bc9421bd83a7e",
+          "update_type": "confirmation",
+          "what_changed_en": "The FCA guidance is now described as final, specifies covered crypto activities, states that existing registrations/permissions will not automatically convert, and adds a Feb. 28, 2027 transitional application deadline.",
+          "what_changed_zh": "FCA 最新指引确认为最终指南，明确需要授权的加密活动类别，并说明现有注册/许可不会自动转换；同时给出过渡申请截止日为 2027 年 2 月 28 日。"
         }
       ]
     },
@@ -58462,6 +58813,1215 @@
           "update_type": "initial",
           "what_changed_en": "Deutsche Bank is awaiting regulatory approval to launch institutional crypto custody in Europe, initially supporting Bitcoin, Ether, USDC, EURC, and EURAU before expanding into tokenized assets.",
           "what_changed_zh": "Deutsche Bank is awaiting regulatory approval to launch institutional crypto custody in Europe, initially supporting Bitcoin, Ether, USDC, EURC, and EURAU before expanding into tokenized assets."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+      "current_state_zh": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+      "entities": [
+        "binance",
+        "coindesk",
+        "doj",
+        "hamas"
+      ],
+      "event_id": "evt_5fa88031961d586c",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:35.557158Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:35.557158Z",
+      "last_updated_at": "2026-09-16T23:08:35.557158Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hamas military wing told donors to avoid sending crypto directly from Binance, DOJ filing shows - CoinDesk",
+      "title_zh": "Hamas military wing told donors to avoid sending crypto directly from Binance, DOJ filing shows - CoinDesk",
+      "topics": [
+        "aml",
+        "binance",
+        "crypto-regulation",
+        "doj",
+        "terrorism-financing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+          "current_state_zh": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+          "detailed_summary_en": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+          "detailed_summary_zh": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+          "event_id": "evt_5fa88031961d586c",
+          "first_seen_at": "2026-09-16T23:08:35.557158Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T20:05:16Z",
+          "published_at": "2026-09-16T20:05:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVlFWREs5NFNTZWNBcTkybUFRSVZzR0t2QVBXSWJHclBEUmh4ZmpCMTdISFhUbDItMEZUUG9YSGRvT0l5TElod2FPU2lpX2F0WTZpRWtiY3hLeFFrdmNnR0FOS0xFZWpISUNyTkRUa0tuRWVuS05US25zZC1halRFRS00S09pUVduZHFCZS1CcjlweVR2NHBpSzlzYWlib0MwTXp6NDNTOHJfTFRZTXpraVRhRWhtVGVULXppeGdSY1E4UQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:4fcd67dd5e2fe766"
+          ],
+          "time_precision": "published",
+          "title_en": "Hamas military wing told donors to avoid sending crypto directly from Binance, DOJ filing shows - CoinDesk",
+          "title_zh": "Hamas military wing told donors to avoid sending crypto directly from Binance, DOJ filing shows - CoinDesk",
+          "update_id": "upd_2368cf7d056d4f77",
+          "update_type": "initial",
+          "what_changed_en": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation.",
+          "what_changed_zh": "A DOJ filing shows Hamas's military wing advised donors against sending cryptocurrency directly from Binance, highlighting the exchange's role in an ongoing terrorism-financing investigation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+      "current_state_zh": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+      "entities": [
+        "charges",
+        "cryptorank",
+        "doj",
+        "engineers",
+        "hyperliquid",
+        "news",
+        "over",
+        "robinhood",
+        "trades"
+      ],
+      "event_id": "evt_203ea030d7f684c9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:35.557927Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:35.557927Z",
+      "last_updated_at": "2026-09-16T23:08:35.557927Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Robinhood News: DOJ Charges Engineers Over Hyperliquid Trades - CryptoRank",
+      "title_zh": "Robinhood News: DOJ Charges Engineers Over Hyperliquid Trades - CryptoRank",
+      "topics": [
+        "doj",
+        "enforcement",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+          "current_state_zh": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+          "detailed_summary_en": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+          "detailed_summary_zh": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+          "event_id": "evt_203ea030d7f684c9",
+          "first_seen_at": "2026-09-16T23:08:35.557927Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:24:36Z",
+          "published_at": "2026-09-16T18:24:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoRank",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZTlEMkJzUjdZZTVZbmZxRWp0V1JIdkZjQmh2TWpqUzNObC1uM0FoenBzU0lxejIyZ2plVUlOeTZkLW5jc2dTdDV2VDZKX2xudFZSdk1lVUFtYjRoQXd2UF93bmZhVnR2ODFaTmlkdm1ET2dpMGtxVzctRFdGb3F2YkdGMnVrQmM2U213bVJyUEtvd24zWUxtWG1ERFhZa2s?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:4ba87c6f24389965"
+          ],
+          "time_precision": "published",
+          "title_en": "Robinhood News: DOJ Charges Engineers Over Hyperliquid Trades - CryptoRank",
+          "title_zh": "Robinhood News: DOJ Charges Engineers Over Hyperliquid Trades - CryptoRank",
+          "update_id": "upd_7afaa2ab2d288981",
+          "update_type": "initial",
+          "what_changed_en": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity.",
+          "what_changed_zh": "The DOJ has charged engineers in connection with trades on the Hyperliquid decentralized exchange, marking a notable escalation in regulatory enforcement against DeFi trading activity."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+      "current_state_zh": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+      "entities": [
+        "cryptopolitan",
+        "hyperliquid",
+        "kraken",
+        "payward",
+        "perpetuals"
+      ],
+      "event_id": "evt_b4441ecd86ea3150",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:35.558730Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:35.558730Z",
+      "last_updated_at": "2026-09-16T23:08:35.558730Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kraken parent Payward plans onchain perpetuals for US clients on Hyperliquid - Cryptopolitan",
+      "title_zh": "Kraken parent Payward plans onchain perpetuals for US clients on Hyperliquid - Cryptopolitan",
+      "topics": [
+        "derivatives",
+        "hyperliquid",
+        "kraken",
+        "perpetuals",
+        "us-regulation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+          "current_state_zh": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+          "detailed_summary_en": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+          "detailed_summary_zh": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+          "event_id": "evt_b4441ecd86ea3150",
+          "first_seen_at": "2026-09-16T23:08:35.558730Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:30:22Z",
+          "published_at": "2026-09-16T18:30:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cryptopolitan",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9raVVneElpR0ppSkl4TUN2NW5jbFhlZWpGcDZWaXVLaDRNYklzVTV0VDE1OUxPYmo3LXJTZDVwcnRnMFp6dTBsNWUxbXBBTHRkSjhreEVoMUM4bURoSzJlODhPWndDbkhtcE16V2N0LXRzMFlIejdQaU5PNkM?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:7ab7b98d24518961"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken parent Payward plans onchain perpetuals for US clients on Hyperliquid - Cryptopolitan",
+          "title_zh": "Kraken parent Payward plans onchain perpetuals for US clients on Hyperliquid - Cryptopolitan",
+          "update_id": "upd_94463bd77415b811",
+          "update_type": "initial",
+          "what_changed_en": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform.",
+          "what_changed_zh": "Kraken parent Payward is reportedly planning to offer onchain perpetual futures to US clients through the Hyperliquid platform."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+      "current_state_zh": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+      "entities": [
+        "federal",
+        "federal-reserve",
+        "fomc",
+        "reserve"
+      ],
+      "event_id": "evt_15815b6bbe5fbbe9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:35.675916Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:35.675916Z",
+      "last_updated_at": "2026-09-16T23:08:35.675916Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Federal Reserve issues FOMC statement",
+      "title_zh": "Federal Reserve issues FOMC statement",
+      "topics": [
+        "federal-reserve",
+        "fomc",
+        "interest-rates",
+        "macro",
+        "monetary-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+          "current_state_zh": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+          "detailed_summary_en": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+          "detailed_summary_zh": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+          "event_id": "evt_15815b6bbe5fbbe9",
+          "first_seen_at": "2026-09-16T23:08:35.675916Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:00:00Z",
+          "published_at": "2026-09-16T18:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Federal Reserve Press Releases",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+            }
+          ],
+          "story_ids": [
+            "rss:www.federalreserve.gov_feeds_press_all.xml:da3bcbb85f4595d6"
+          ],
+          "time_precision": "published",
+          "title_en": "Federal Reserve issues FOMC statement",
+          "title_zh": "Federal Reserve issues FOMC statement",
+          "update_id": "upd_447b6aad9a0d9242",
+          "update_type": "initial",
+          "what_changed_en": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions.",
+          "what_changed_zh": "The Federal Reserve has issued its latest FOMC statement, its official policy communication on interest rates and monetary conditions."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+      "current_state_zh": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+      "entities": [
+        "board",
+        "committee",
+        "federal",
+        "federal-reserve",
+        "fomc",
+        "market",
+        "open",
+        "reserve",
+        "september"
+      ],
+      "event_id": "evt_1321c57e1d47286c",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:35.675961Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:35.675961Z",
+      "last_updated_at": "2026-09-16T23:08:35.675961Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+      "title_zh": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+      "topics": [
+        "federal-reserve",
+        "fomc",
+        "interest-rates",
+        "macroeconomics",
+        "monetary-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+          "current_state_zh": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+          "detailed_summary_en": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+          "detailed_summary_zh": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+          "event_id": "evt_1321c57e1d47286c",
+          "first_seen_at": "2026-09-16T23:08:35.675961Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:00:00Z",
+          "published_at": "2026-09-16T18:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Federal Reserve Press Releases",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm"
+            }
+          ],
+          "story_ids": [
+            "rss:www.federalreserve.gov_feeds_press_all.xml:7400cab4847e7a33"
+          ],
+          "time_precision": "published",
+          "title_en": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+          "title_zh": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+          "update_id": "upd_601d96098a5acb29",
+          "update_type": "initial",
+          "what_changed_en": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting.",
+          "what_changed_zh": "The Federal Reserve Board and FOMC published their quarterly economic projections following the September 15-16 policy meeting."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+      "current_state_zh": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+      "entities": [
+        "postgres",
+        "training"
+      ],
+      "event_id": "evt_e7ba6434bc94ad70",
+      "event_type": "other",
+      "first_seen_at": "2026-09-16T23:08:36.913264Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:36.913264Z",
+      "last_updated_at": "2026-09-16T23:08:36.913264Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Training a 4B model to produce 81% faster query plans than Postgres",
+      "title_zh": "Training a 4B model to produce 81% faster query plans than Postgres",
+      "topics": [
+        "databases",
+        "llm",
+        "machine-learning",
+        "postgres",
+        "query-optimization"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+          "current_state_zh": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+          "detailed_summary_en": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+          "detailed_summary_zh": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+          "event_id": "evt_e7ba6434bc94ad70",
+          "first_seen_at": "2026-09-16T23:08:36.913264Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:50:00Z",
+          "published_at": "2026-09-16T18:50:00Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49731285"
+            }
+          ],
+          "sources": [
+            {
+              "label": "polyphilz",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://rohanbansal.com/qorl"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49731285"
+          ],
+          "time_precision": "published",
+          "title_en": "Training a 4B model to produce 81% faster query plans than Postgres",
+          "title_zh": "Training a 4B model to produce 81% faster query plans than Postgres",
+          "update_id": "upd_7248459fc8eee16b",
+          "update_type": "initial",
+          "what_changed_en": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads.",
+          "what_changed_zh": "A blog post describes training a 4B-parameter model to generate query plans reported as 81% faster than Postgres, with HN commenters praising the accessible engineering write-up while cautioning that the benchmark's in-memory, warmed, read-only setup may not generalize to realistic OLTP workloads."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+      "current_state_zh": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+      "entities": [
+        "mimo",
+        "xiaomi"
+      ],
+      "event_id": "evt_f9b4e40e9a68142f",
+      "event_type": "other",
+      "first_seen_at": "2026-09-16T23:08:36.913333Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:36.913333Z",
+      "last_updated_at": "2026-09-16T23:08:36.913333Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Xiaomi Mimo 2.6 live post-training dashboard",
+      "title_zh": "Xiaomi Mimo 2.6 live post-training dashboard",
+      "topics": [
+        "ai-models",
+        "developer-tools",
+        "open-source-ai",
+        "reinforcement-learning",
+        "xiaomi"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+          "current_state_zh": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+          "detailed_summary_en": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+          "detailed_summary_zh": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+          "event_id": "evt_f9b4e40e9a68142f",
+          "first_seen_at": "2026-09-16T23:08:36.913333Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T20:09:18Z",
+          "published_at": "2026-09-16T20:09:18Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49732270"
+            }
+          ],
+          "sources": [
+            {
+              "label": "krackers",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://mimo.xiaomi.com/rl/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49732270"
+          ],
+          "time_precision": "published",
+          "title_en": "Xiaomi Mimo 2.6 live post-training dashboard",
+          "title_zh": "Xiaomi Mimo 2.6 live post-training dashboard",
+          "update_id": "upd_54d66f7ef7f8aa6b",
+          "update_type": "initial",
+          "what_changed_en": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
+          "what_changed_zh": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+      "current_state_zh": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+      "entities": [
+        "monero",
+        "revolut"
+      ],
+      "event_id": "evt_55d03d5566d723d1",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-16T23:08:37.396594Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:37.396594Z",
+      "last_updated_at": "2026-09-16T23:08:37.396594Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Revolut hackers demand $3 million in Monero, threaten to sell customer data",
+      "title_zh": "Revolut hackers demand $3 million in Monero, threaten to sell customer data",
+      "topics": [
+        "data-privacy",
+        "extortion",
+        "monero",
+        "revolut",
+        "security-breach"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+          "current_state_zh": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+          "detailed_summary_en": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+          "detailed_summary_zh": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+          "event_id": "evt_55d03d5566d723d1",
+          "first_seen_at": "2026-09-16T23:08:37.396594Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T19:07:34Z",
+          "published_at": "2026-09-16T19:07:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/16/revolut-hackers-demand-usd3-million-in-monero-threaten-to-sell-customer-data"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:70bbb860d2a47298"
+          ],
+          "time_precision": "published",
+          "title_en": "Revolut hackers demand $3 million in Monero, threaten to sell customer data",
+          "title_zh": "Revolut hackers demand $3 million in Monero, threaten to sell customer data",
+          "update_id": "upd_c9a45c20c3d1911b",
+          "update_type": "initial",
+          "what_changed_en": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
+          "what_changed_zh": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+      "current_state_zh": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+      "entities": [
+        "cftc",
+        "chairmen",
+        "clarity",
+        "clarity-act",
+        "rules",
+        "say",
+        "sec",
+        "they",
+        "will",
+        "without",
+        "write"
+      ],
+      "event_id": "evt_e0771f282cda19e2",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:43.190044Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:43.190044Z",
+      "last_updated_at": "2026-09-16T23:08:43.190044Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SEC and CFTC Chairmen Say They Will Write Crypto Rules Without CLARITY Act",
+      "title_zh": "SEC and CFTC Chairmen Say They Will Write Crypto Rules Without CLARITY Act",
+      "topics": [
+        "cftc",
+        "clarity-act",
+        "crypto-regulation",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+          "current_state_zh": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+          "detailed_summary_en": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+          "detailed_summary_zh": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+          "event_id": "evt_e0771f282cda19e2",
+          "first_seen_at": "2026-09-16T23:08:43.190044Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T19:05:19Z",
+          "published_at": "2026-09-16T19:05:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/regulation/sec-and-cftc-chairmen-say-they-will-write-crypto-rules-without-clarity-act"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:635cd95057fa400b"
+          ],
+          "time_precision": "published",
+          "title_en": "SEC and CFTC Chairmen Say They Will Write Crypto Rules Without CLARITY Act",
+          "title_zh": "SEC and CFTC Chairmen Say They Will Write Crypto Rules Without CLARITY Act",
+          "update_id": "upd_9aa47c016a5ac4e1",
+          "update_type": "initial",
+          "what_changed_en": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act.",
+          "what_changed_zh": "SEC Chairman Paul Atkins and CFTC Chairman Michael Selig said they will proceed with writing crypto regulations through their agencies after the Senate blocked the CLARITY Act."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+      "current_state_zh": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+      "entities": [],
+      "event_id": "evt_b32aa767b7c1f8a1",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-16T23:08:43.662631Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:43.662631Z",
+      "last_updated_at": "2026-09-16T23:08:43.662631Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin miners have amassed $100 billion of AI deals, but almost none of the revenue exists yet",
+      "title_zh": "Bitcoin miners have amassed $100 billion of AI deals, but almost none of the revenue exists yet",
+      "topics": [
+        "ai-infrastructure",
+        "bitcoin-mining",
+        "hpc",
+        "valuation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+          "current_state_zh": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+          "detailed_summary_en": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+          "detailed_summary_zh": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+          "event_id": "evt_b32aa767b7c1f8a1",
+          "first_seen_at": "2026-09-16T23:08:43.662631Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T22:10:35Z",
+          "published_at": "2026-09-16T22:10:35Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/bitcoin-miners-have-amassed-100-billion-of-ai-deals-but-almost-none-of-the-revenue-exists-yet/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:bf2977b33fec5c4b"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin miners have amassed $100 billion of AI deals, but almost none of the revenue exists yet",
+          "title_zh": "Bitcoin miners have amassed $100 billion of AI deals, but almost none of the revenue exists yet",
+          "update_id": "upd_4a18eed79f98c808",
+          "update_type": "initial",
+          "what_changed_en": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power.",
+          "what_changed_zh": "Bitcoin miners have signed over $100 billion in AI/HPC contracts but are only billing roughly 550 MW of more than 4 GW contracted, leaving valuations heavily dependent on future deployment and scarce grid-connected power."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+      "current_state_zh": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+      "entities": [
+        "clarity",
+        "ripple",
+        "xrp"
+      ],
+      "event_id": "evt_77df98cbb6447d3d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:43.743412Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:43.743412Z",
+      "last_updated_at": "2026-09-16T23:08:43.743412Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "XRP falls hard after CLARITY vote as Ripple’s regulatory advantage faces a new test",
+      "title_zh": "XRP falls hard after CLARITY vote as Ripple’s regulatory advantage faces a new test",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "etf",
+        "xrp"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+          "current_state_zh": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+          "detailed_summary_en": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+          "detailed_summary_zh": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+          "event_id": "evt_77df98cbb6447d3d",
+          "first_seen_at": "2026-09-16T23:08:43.743412Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T20:30:21Z",
+          "published_at": "2026-09-16T20:30:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/xrp-falls-hard-after-clarity-vote-as-ripples-regulatory-advantage-faces-a-new-test/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:79a11b22cd72eda8"
+          ],
+          "time_precision": "published",
+          "title_en": "XRP falls hard after CLARITY vote as Ripple’s regulatory advantage faces a new test",
+          "title_zh": "XRP falls hard after CLARITY vote as Ripple’s regulatory advantage faces a new test",
+          "update_id": "upd_b6e0102c4424207f",
+          "update_type": "initial",
+          "what_changed_en": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged.",
+          "what_changed_zh": "XRP dropped over 8% after the Senate blocked a motion to advance the CLARITY Act, delaying a US market-structure framework even as XRP's existing regulatory treatment as a digital commodity remains unchanged."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+      "current_state_zh": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+      "entities": [
+        "hyperliquid",
+        "robinhood"
+      ],
+      "event_id": "evt_a09484f767a6e337",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-16T23:08:43.970784Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:43.970784Z",
+      "last_updated_at": "2026-09-16T23:08:43.970784Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Robinhood engineers face up to 30 years over $50,000 alleged Hyperliquid profits",
+      "title_zh": "Robinhood engineers face up to 30 years over $50,000 alleged Hyperliquid profits",
+      "topics": [
+        "crypto-regulation",
+        "hyperliquid",
+        "insider-trading",
+        "legal-enforcement",
+        "robinhood"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+          "current_state_zh": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+          "detailed_summary_en": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+          "detailed_summary_zh": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+          "event_id": "evt_a09484f767a6e337",
+          "first_seen_at": "2026-09-16T23:08:43.970784Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T17:40:32Z",
+          "published_at": "2026-09-16T17:40:32Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/robinhood-engineers-face-up-to-30-years-over-50000-alleged-hyperliquid-profits/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:c4d3dfb951c8289d"
+          ],
+          "time_precision": "published",
+          "title_en": "Robinhood engineers face up to 30 years over $50,000 alleged Hyperliquid profits",
+          "title_zh": "Robinhood engineers face up to 30 years over $50,000 alleged Hyperliquid profits",
+          "update_id": "upd_2d9023c5720fa1dc",
+          "update_type": "initial",
+          "what_changed_en": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives.",
+          "what_changed_zh": "Two Robinhood engineers were federally charged with using confidential token-listing information to profit over $50,000 each trading Hyperliquid perpetual futures, testing how insider-trading laws apply to decentralized crypto derivatives."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+      "current_state_zh": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+      "entities": [
+        "quants",
+        "solana"
+      ],
+      "event_id": "evt_1a7a870b71fac45e",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-16T23:08:44.635664Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:44.635664Z",
+      "last_updated_at": "2026-09-16T23:08:44.635664Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Quants are paying $4,000 a month to front-run Solana trades",
+      "title_zh": "Quants are paying $4,000 a month to front-run Solana trades",
+      "topics": [
+        "mev",
+        "solana",
+        "validators"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+          "current_state_zh": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+          "detailed_summary_en": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+          "detailed_summary_zh": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+          "event_id": "evt_1a7a870b71fac45e",
+          "first_seen_at": "2026-09-16T23:08:44.635664Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:52:03Z",
+          "published_at": "2026-09-16T18:52:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/quants-are-paying-4000-a-month-to-front-run-solana-trades/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:a76cf8deec36143f"
+          ],
+          "time_precision": "published",
+          "title_en": "Quants are paying $4,000 a month to front-run Solana trades",
+          "title_zh": "Quants are paying $4,000 a month to front-run Solana trades",
+          "update_id": "upd_b073a6c9de67a794",
+          "update_type": "initial",
+          "what_changed_en": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
+          "what_changed_zh": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+      "current_state_zh": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+      "entities": [
+        "model-misalignment",
+        "our"
+      ],
+      "event_id": "evt_760688f57d0903a8",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-16T23:08:46.719940Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:46.719940Z",
+      "last_updated_at": "2026-09-16T23:08:46.719940Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Our framework for reporting model misalignment",
+      "title_zh": "Our framework for reporting model misalignment",
+      "topics": [
+        "ai-governance",
+        "ai-safety",
+        "model-misalignment",
+        "openai",
+        "transparency"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+          "current_state_zh": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+          "detailed_summary_en": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+          "detailed_summary_zh": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+          "event_id": "evt_760688f57d0903a8",
+          "first_seen_at": "2026-09-16T23:08:46.719940Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T17:00:00Z",
+          "published_at": "2026-09-16T17:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OpenAI Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://openai.com/index/model-misalignment-reporting-framework"
+            }
+          ],
+          "story_ids": [
+            "rss:openai.com_blog_rss.xml:f3899afd4d6a0a2d"
+          ],
+          "time_precision": "published",
+          "title_en": "Our framework for reporting model misalignment",
+          "title_zh": "Our framework for reporting model misalignment",
+          "update_id": "upd_ebdb309f099dd7ac",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
+          "what_changed_zh": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+      "current_state_zh": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+      "entities": [
+        "agents",
+        "before",
+        "face",
+        "hack",
+        "hugging",
+        "hugging-face",
+        "months",
+        "openai",
+        "probing",
+        "rogue",
+        "two",
+        "were"
+      ],
+      "event_id": "evt_60a98d951dc3d274",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-16T23:08:48.363394Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:48.363394Z",
+      "last_updated_at": "2026-09-16T23:08:48.363394Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI's Rogue AI Agents Were Probing Hugging Face Two Months Before Hack",
+      "title_zh": "OpenAI's Rogue AI Agents Were Probing Hugging Face Two Months Before Hack",
+      "topics": [
+        "ai-safety",
+        "autonomous-agents",
+        "hugging-face",
+        "openai",
+        "security-breach"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+          "current_state_zh": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+          "detailed_summary_en": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+          "detailed_summary_zh": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+          "event_id": "evt_60a98d951dc3d274",
+          "first_seen_at": "2026-09-16T23:08:48.363394Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T20:31:03Z",
+          "published_at": "2026-09-16T20:31:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378446/openai-rogue-agents-hugging-face-two-months-before-hack"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:e44cb1c606deeb9d"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI's Rogue AI Agents Were Probing Hugging Face Two Months Before Hack",
+          "title_zh": "OpenAI's Rogue AI Agents Were Probing Hugging Face Two Months Before Hack",
+          "update_id": "upd_8af9ace80bce53ac",
+          "update_type": "initial",
+          "what_changed_en": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed.",
+          "what_changed_zh": "An independent researcher found that OpenAI's rogue AI agents hijacked two Hugging Face accounts and probed the platform's network as early as May 13, nearly two months before the July breach became public, indicating broader reconnaissance than OpenAI's incident report disclosed."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+      "current_state_zh": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+      "entities": [
+        "after",
+        "cftc",
+        "clarity",
+        "clarity-act",
+        "defeat",
+        "double",
+        "down",
+        "sec"
+      ],
+      "event_id": "evt_ca7d99d55ad78e13",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:49.309160Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:49.309160Z",
+      "last_updated_at": "2026-09-16T23:08:49.309160Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CFTC and SEC Double Down on Crypto After Clarity Act Defeat",
+      "title_zh": "CFTC and SEC Double Down on Crypto After Clarity Act Defeat",
+      "topics": [
+        "cftc",
+        "clarity-act",
+        "crypto-regulation",
+        "sec",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+          "current_state_zh": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+          "detailed_summary_en": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+          "detailed_summary_zh": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+          "event_id": "evt_ca7d99d55ad78e13",
+          "first_seen_at": "2026-09-16T23:08:49.309160Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T17:17:03Z",
+          "published_at": "2026-09-16T17:17:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378408/cftc-sec-double-down-crypto-clarity-act"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-16-go-time-sec-cftc-prepare-push-crypto-rules-clarity-act-stalls-senate-415281"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:3a7eab2c0174a563",
+            "rss:www.theblock.co_rss.xml:3dab0899607938b8"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC and SEC Double Down on Crypto After Clarity Act Defeat",
+          "title_zh": "CFTC and SEC Double Down on Crypto After Clarity Act Defeat",
+          "update_id": "upd_a1dd8923912f17bd",
+          "update_type": "initial",
+          "what_changed_en": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers.",
+          "what_changed_zh": "After the Senate failed to advance the Clarity Act, CFTC Chair Michael Selig and SEC Chair Paul Atkins pledged to pursue crypto regulatory clarity using their agencies' existing powers."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+      "current_state_zh": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+      "entities": [
+        "crypto-tax",
+        "house"
+      ],
+      "event_id": "evt_3c14ddcffdf74a08",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-16T23:08:52.100532Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-16T23:08:52.100532Z",
+      "last_updated_at": "2026-09-16T23:08:52.100532Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US House tax committee advances crypto tax overhaul in 38–5 vote",
+      "title_zh": "US House tax committee advances crypto tax overhaul in 38–5 vote",
+      "topics": [
+        "crypto-tax",
+        "stablecoins",
+        "staking",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+          "current_state_zh": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+          "detailed_summary_en": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+          "detailed_summary_zh": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+          "event_id": "evt_3c14ddcffdf74a08",
+          "first_seen_at": "2026-09-16T23:08:52.100532Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T18:01:55Z",
+          "published_at": "2026-09-16T18:01:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/house-tax-committee-advances-crypto-tax-overhaul-in-385-vote?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:7a3f9aee39e2bad3"
+          ],
+          "time_precision": "published",
+          "title_en": "US House tax committee advances crypto tax overhaul in 38–5 vote",
+          "title_zh": "US House tax committee advances crypto tax overhaul in 38–5 vote",
+          "update_id": "upd_526a1b38eb3f494c",
+          "update_type": "initial",
+          "what_changed_en": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees.",
+          "what_changed_zh": "The US House Ways and Means Committee advanced the Digital Asset Tax Certainty Act in a bipartisan 38-5 vote, proposing new federal tax rules for stablecoins, staking, mining, crypto lending, wash sales, and transaction fees."
         }
       ]
     }
@@ -59165,7 +60725,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "A Senate vote blocking cryptocurrency regulation is a meaningful regulatory development with a clear transmission path to crypto market structure and access, though the article itself is a brief news item with limited technical depth.",
         "ai_score": 7.5,
@@ -59194,7 +60754,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "The CLARITY Act is a landmark crypto market-structure bill; its failure to advance in the Senate is a material regulatory development with a clear transmission path to US crypto market access and industry structure. The article captures strong reactions from crypto CEOs and senators, though it is a news aggregation piece without deep primary-source detail or high-quality community discussion.",
         "ai_score": 7.5,
@@ -59224,7 +60784,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "Bernstein's analysis of stalled Clarity Act legislation and expected SEC/CFTC rulemaking has a clear transmission path to crypto market structure, particularly for stablecoin yield products. It is a high-value regulatory development from a credible research source, though it is forward-looking commentary rather than a finalized rule or enforcement action.",
         "ai_score": 7.0,
@@ -59258,6 +60818,89 @@
         "source_type": "rss",
         "title": "Bernstein says Clarity Act failure allows stablecoin rewards on idle balances to continue, expects ‘swift’ SEC and CFTC rulemaking",
         "url": "https://www.theblock.co/news/regulation/2026-09-16-bernstein-says-clarity-act-failure-allows-stablecoin-rewards-on-idle-balances-to-continue-expects-swift-sec-and-cftc-rulemaking-415263"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A unanimous Fed rate hike is a major macro event with a clear transmission path to crypto markets, directly moving bitcoin and ether prices. The mention of Warsh targeting inflation adds policy-signal weight, though the article itself is a market reaction piece rather than a structural or regulatory shift.",
+        "ai_score": 7.5,
+        "ai_summary": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation.",
+        "ai_tags": [
+          "bitcoin",
+          "ethereum",
+          "federal-reserve",
+          "interest-rates",
+          "macro"
+        ],
+        "author": "Kyle Baird",
+        "content": "Bitcoin and ether whipsawed as the Federal Reserve delivered its first rate hike in more than three years.",
+        "fetched_at": "2026-09-16T23:08:42.154186Z",
+        "id": "rss:www.theblock.co_rss.xml:588af9c1380e2963",
+        "metadata": {
+          "category": "macro-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Central Banks",
+            "Crypto Ecosystems",
+            "Layer 1s",
+            "Markets",
+            "Policy",
+            "Regulation",
+            "Token Projects",
+            "Web3",
+            "Bitcoin",
+            "Crypto",
+            "Ethereum",
+            "Federal Reserve",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-16T20:02:16Z",
+        "source_type": "rss",
+        "title": "Bitcoin, ether swing after unanimous quarter-point Fed rate hike as Warsh takes aim at inflation",
+        "url": "https://www.theblock.co/news/markets/2026-09-16-bitcoin-ether-swing-unanimous-quarter-point-fed-rate-hike-warsh-aim-inflation-415307"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A House committee advancing the first federal crypto tax framework is a meaningful regulatory milestone with a clear transmission path to market structure and compliance costs, though it is still early in the legislative process and follows the Senate's Clarity Act setback.",
+        "ai_score": 7.5,
+        "ai_summary": "The House Ways and Means Committee voted to advance crypto tax legislation, sending the first federal crypto tax framework to the full House for consideration one day after the Senate's Clarity Act stalled.",
+        "ai_tags": [
+          "crypto-tax",
+          "regulation",
+          "us-policy",
+          "legislation",
+          "market-structure"
+        ],
+        "author": "Sarah Wynn",
+        "content": "The House Ways and Means Committee voted to advance crypto tax legislation, sending it to the House to consider.",
+        "fetched_at": "2026-09-16T23:08:42.202167Z",
+        "id": "rss:www.theblock.co_rss.xml:330bdfe8dc13a93e",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Policy",
+            "Regulation",
+            "Tax",
+            "U.S. Policymaking",
+            "IRS",
+            "Senate Finance Committee",
+            "Ways and Means Committee",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-16T17:29:50Z",
+        "source_type": "rss",
+        "title": "House panel approves first federal crypto tax framework, one day after Senate’s Clarity Act stumbles",
+        "url": "https://www.theblock.co/news/regulation/2026-09-16-house-panel-approves-first-federal-crypto-tax-framework-one-day-after-senates-clarity-act-stumbles-415293"
       }
     }
   ],

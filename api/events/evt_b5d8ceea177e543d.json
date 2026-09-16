@@ -4,30 +4,32 @@
   "url": "https://bmt.news/events/evt_b5d8ceea177e543d/",
   "json": "https://bmt.news/api/events/evt_b5d8ceea177e543d.json",
   "type": "protocol_change",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Solana to triple transaction size as apps get room for more complex trades",
     "en": "Solana to triple transaction size as apps get room for more complex trades"
   },
   "current_state": {
-    "zh": "Solana plans to triple its transaction size limit to accommodate more complex trades and applications.",
-    "en": "Solana plans to triple its transaction size limit to accommodate more complex trades and applications."
+    "zh": "Solana 已激活 Transaction V1，单笔交易数据容量提升三倍以上；250ms slot 时间缩减接近主网激活。",
+    "en": "Solana has activated Transaction V1, tripling per-transaction data capacity; the reduction to 250ms slots is approaching mainnet activation."
   },
   "first_seen_at": "2026-09-07T17:49:56.620960+00:00",
-  "last_updated_at": "2026-09-07T17:49:56.620960+00:00",
-  "last_material_change_at": "2026-09-07T17:49:56.620960+00:00",
+  "last_updated_at": "2026-09-16T23:08:43.818907+00:00",
+  "last_material_change_at": "2026-09-16T23:08:43.818907+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "solana"
   ],
   "identifiers": [],
   "topics": [
+    "network-performance",
     "protocol-upgrade",
     "scalability",
-    "solana"
+    "solana",
+    "throughput"
   ],
   "updates": [
     {
@@ -63,6 +65,44 @@
         {
           "url": "https://www.coindesk.com/tech/2026/09/07/solana-to-triple-transaction-size-as-apps-get-room-for-more-complex-trades",
           "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_dcdb548cc845729f",
+      "event_id": "evt_b5d8ceea177e543d",
+      "occurred_at": "2026-09-16T19:20:50Z",
+      "published_at": "2026-09-16T19:20:50Z",
+      "first_seen_at": "2026-09-16T23:08:43.818907Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Solana triples transaction size as major upgrades meet record network activity",
+      "title_en": "Solana triples transaction size as major upgrades meet record network activity",
+      "what_changed_zh": "Solana 于 9 月 15 日激活 Transaction V1，将单笔交易数据容量扩大三倍以上至 4,096 字节，并准备将 slot 时间缩短至 250ms。",
+      "what_changed_en": "Solana activated Transaction V1 on Sept. 15, increasing per-transaction data capacity by more than threefold to 4,096 bytes, and is preparing to cut slot times to 250ms.",
+      "current_state_zh": "Solana 已激活 Transaction V1，单笔交易数据容量提升三倍以上；250ms slot 时间缩减接近主网激活。",
+      "current_state_en": "Solana has activated Transaction V1, tripling per-transaction data capacity; the reduction to 250ms slots is approaching mainnet activation.",
+      "detailed_summary_zh": "Solana has activated Transaction V1, tripling per-transaction data capacity and preparing to cut slot times to 250ms as the network handles record transaction volumes across stablecoins, apps, and tokenized equities.",
+      "detailed_summary_en": "Solana has activated Transaction V1, tripling per-transaction data capacity and preparing to cut slot times to 250ms as the network handles record transaction volumes across stablecoins, apps, and tokenized equities.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:38d373789bf72fb4"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/solana-triples-transaction-size-as-major-upgrades-meet-record-network-activity/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }
