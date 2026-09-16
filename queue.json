@@ -517,10 +517,11 @@
         "post_id": "367304662110692"
       },
       "45e988c726e7178ce3c2283c3d2b9cda10fcfa58b5eb3f5fa35d1f811a2531c5": {
-        "status": "pending",
+        "status": "sent",
         "rank": 13,
         "text_hash": "06757d5292a1d1f6e6d7a1c2d078d86fe6a30189fe2fe59e2749d86fb681e3f1",
-        "attempted_at": "2026-09-16T21:36:08.352477+08:00"
+        "attempted_at": "2026-09-16T21:36:08.352477+08:00",
+        "post_id": "367307041702638"
       }
     }
   },
@@ -557,12 +558,6 @@
           "text": "币安上线SpaceX上市前永续合约，市场押注2万亿美元估值\n\n币安于2026年5月21日上线了与SpaceX挂钩的上市前永续合约，合约代码为SPCXUSDT，这是该交易所上线的首个Pre-IPO期货产品。该合约让交易者可以在SpaceX预期登陆纳斯达克之前，对其整体股权估值建立头寸，市场参与者正围绕约2万亿美元的估值叙事进行押注。\n\n这是一项市场结构层面的创新，将加密衍生品从加密资产扩展到私人公司敞口，让散户交易者获得此前仅面向风投和机构投资者的上市前估值的合成敞口。这也标志着加密交易所与传统私募市场金融之间的融合正在加深，可能促使竞争对手推出类似的上市前合约产品线。\n\n该合约是一种永续期货，挂钩的是公司整体股权估值而非预估的上市前股价，以稳定币结算，且不授予任何实际的SpaceX股权或所有权。币安表示，一旦能够为标的资产推导出稳定的标记价格，可能会将该合约迁移至其标准的传统金融（TradFi）永续合约框架中。\n\n来源：https://news.google.com/rss/articles/CBMijwFBVV95cUxNV0xRTmUxekdBbDM2YWpJNjIwTU5QclJfXy13d2ZTbGxVUXhoQ3k1NktXdTliVUlxRHdmVXpBMlV1SDRoQVEyeDBvajRrcTE1d2Nxb09IMjBzYWRFbDNQaWJxQzVIakF3WjloZWJhMWxLdUw0SzZXcWJIa0kzcDBrMG9VWVVmTnF6MTRmRHdqRQ?oc=5\nBMTNews · 2026-09-16 · https://bmt.news",
           "rank": 8,
           "due_at": "2026-09-16T22:27:00+08:00"
-        },
-        {
-          "id": "45e988c726e7178ce3c2283c3d2b9cda10fcfa58b5eb3f5fa35d1f811a2531c5",
-          "text": "Strix 智能体借泄露令牌拿到 Baseten 生产环境 GitHub 管理员权限\n\n安全公司 Strix 披露，其 AI 渗透测试智能体在 Harbor 容器镜像仓库中一张公开可访问的 Baseten 镜像的 Docker 构建历史里，发现了一个仍然有效的 \"basetenbot\" GitHub 个人访问令牌。该令牌对 Baseten 的主产品仓库、用于驱动其集群的 GitOps 仓库以及 Homebrew tap 拥有管理员和推送权限，另外还对若干私有仓库（包括按客户划分的仓库）拥有读写权限。Baseten 已确认该问题，将 Harbor 项目改为私有、轮换了该令牌，并表示日志显示该凭据从未被利用，也没有客户数据泄露。\n\n这一事件表明，只要有一个密钥泄漏进 CI/CD 构建产物，就可能暴露一家 AI 基础设施厂商的整套生产工具链，包括部署其集群的 GitOps 流水线以及按客户划分的仓库。它同时是\"智能体化渗透测试\"的早期真实案例：一个自动化智能体发现并上报了一条长期躺在公开镜像仓库中无人注意的凭据链，这也引发了业界关于还有多少同类暴露尚未被发现的讨论。\n\n根据披露的时间线，Strix 于 7 月 13 日晚 11:10 上报了仍有效的令牌、公开的 Harbor 项目以及相关仓库权限；Baseten 次日早晨将 Harbor 项目转为私有，但 Strix 指出该令牌仍然可用，随后 Baseten 安全团队将该问题确认为严重级别，并于 7 月 14 日下午 4:34 完成令牌轮换，同时要求 Strix 安全删除其已拉取的镜像。该令牌是从 Docker 构建历史中恢复的，而非来自源代码；Strix 的渗透测试工具为开源项目，其 GitHub 仓库已获得数万颗星，并可与兼容 SKILL.md 的编码智能体集成。\n\n来源：https://www.strix.ai/blog/baseten-harbor-github-pat-takeover\nBMTNews · 2026-09-16 · https://bmt.news",
-          "rank": 13,
-          "due_at": "2026-09-16T21:28:00+08:00"
         },
         {
           "id": "f57c33e42327349ec7f447c87fd5c69788cfc7a483263c227fd45abf0a3aee91",
