@@ -87,14 +87,27 @@
       "current_state_en": "Solana has activated Transaction V1, tripling per-transaction data capacity; the reduction to 250ms slots is approaching mainnet activation.",
       "detailed_summary_zh": "Solana has activated Transaction V1, tripling per-transaction data capacity and preparing to cut slot times to 250ms as the network handles record transaction volumes across stablecoins, apps, and tokenized equities.",
       "detailed_summary_en": "Solana has activated Transaction V1, tripling per-transaction data capacity and preparing to cut slot times to 250ms as the network handles record transaction volumes across stablecoins, apps, and tokenized equities.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Solana 以固定长度的插槽来处理网络活动，每个插槽内由被调度的验证者有机会产出一个区块；最初的目标是每个插槽 400 毫秒，经过多次下调后已先后降至 350 毫秒和 300 毫秒。Solana 上的交易具有原子性——只要任何一部分失败，整笔交易就会失败——因此把更多操作打包进单笔交易，可以降低多步骤操作只完成一部分的风险。Anza 是专注于 Solana 的研发实验室，负责维护 Agave 验证者客户端；而当前性能路线图的最后一步是降到 200 毫秒插槽，该阶段已在开发网和测试网上运行，但尚未安排主网时间。",
+      "background_en": "Solana processes activity in fixed-length slots, during which a scheduled validator has the opportunity to produce a block; the original target was 400 milliseconds per slot, and successive reductions have taken it to 350ms and then 300ms. Transactions on Solana are atomic — if any part fails, the whole transaction fails — which is why bundling more operations into one transaction reduces the risk of partially completed multi-step actions. Anza is the Solana-focused research and development lab that maintains the Agave validator client, and the network's current performance roadmap ends with a final step down to 200ms slots, already live on devnet and testnet but not yet scheduled for mainnet.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "Solana 的容量与延迟表现直接影响 SOL 的竞争定位，以及驱动手续费销毁、质押需求和 DeFi 交易量的链上活动；更快、更大的交易对稳定币转账、DEX 交易和代币化股票等高频场景最为关键，而更紧的插槽窗口则抬高了验证者的硬件与带宽门槛，进而可能影响质押集中度和委托行为。支持 V1 格式滞后的钱包、交易所和 RPC 服务商，可能随着该格式普及而面临确认可靠性下降的问题。",
+      "market_impact_en": "Solana's capacity and latency profile feeds directly into the competitive positioning of SOL and the on-chain activity that drives fee burn, staking demand, and DeFi volume; faster, larger transactions are most relevant to high-frequency segments such as stablecoin transfers, DEX trading, and tokenized equities, while tighter slot windows raise the hardware and bandwidth bar for validators, which can influence staking concentration and delegation behavior. Wallet, exchange, and RPC providers that lag in supporting the V1 format could see degraded confirmation reliability as adoption spreads.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://solana.com/docs/core/transactions/versioned-transactions",
+          "title": "Versioned Transactions | Solana"
+        },
+        {
+          "url": "https://www.kucoin.com/blog/solana-transaction-v1-4096-byte-upgrade",
+          "title": "What Is Solana Transaction V1? 4,096-Byte Mainnet Upgrade..."
+        },
+        {
+          "url": "https://www.helius.dev/blog/solana-slots-blocks-and-epochs",
+          "title": "Understanding Slots, Blocks, and Epochs on Solana"
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:cryptoslate.com_feed_:38d373789bf72fb4"

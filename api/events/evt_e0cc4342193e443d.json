@@ -48,14 +48,27 @@
       "current_state_en": "Bitcoin Core 32 has entered final testing with changes to transaction fee estimation and block processing, plus a fix for a wallet flaw that could allow an authenticated user to execute commands on a node.",
       "detailed_summary_zh": "Bitcoin Core 32 has entered final testing with changes to transaction fee estimation and block processing, plus a fix for a wallet flaw that could allow an authenticated user to execute commands on a node.",
       "detailed_summary_en": "Bitcoin Core 32 has entered final testing with changes to transaction fee estimation and block processing, plus a fix for a wallet flaw that could allow an authenticated user to execute commands on a node.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Bitcoin Core 是比特币的开源参考实现：它负责验证区块链、支撑点对点网络，并内置钱包功能。运行它的节点执行共识规则，其他比特币软件都被期望与其保持兼容，因此涉及验证或手续费逻辑的改动会被视为重要的基础设施新闻。手续费估算是钱包用来选择可能使交易被确认的费率的机制，而 PSBT（部分签名比特币交易）则是钱包与签名设备之间传输未签名或部分签名交易的标准格式。",
+      "background_en": "Bitcoin Core is the open-source reference implementation of Bitcoin: it validates the blockchain, supports the peer-to-peer network and includes a wallet. Nodes running it enforce the consensus rules that all other Bitcoin software is expected to remain compatible with, which is why changes to validation or fee logic are treated as significant infrastructure news. Fee estimation is the mechanism wallets use to pick a fee that is likely to get a transaction confirmed, while PSBT (Partially Signed Bitcoin Transaction) is the standard format for moving an unsigned or partly signed transaction between a wallet and a signing device.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "这里的传导渠道是运营层面而非价格层面：直接暴露的是运行 Bitcoin Core 钱包的节点运营者，以及处理 PSBT 的钱包与硬件签名厂商。手续费估算的改动可能改变钱包为用户设定费率的方式，而钱包漏洞的修复则降低了拥有已认证访问权限者滥用被攻陷节点的风险。任何连带影响会体现在费率市场行为以及全网节点实际运行的软件版本上，而非直接重新定价 BTC。",
+      "market_impact_en": "The transmission channel here is operational rather than price-based: node operators running Bitcoin Core wallets, and wallet or hardware-signing vendors handling PSBTs, are the segments directly exposed, since fee-estimation changes can alter how wallets set fees for users and the wallet fix reduces the risk of a compromised node being abused by someone with authenticated access. Any knock-on effect would show up in fee-market behaviour and in the software versions the network's node population actually runs, not in a direct repricing of BTC.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes",
+          "title": "Bitcoin’s most-used software is getting a major update. Here’s what..."
+        },
+        {
+          "url": "https://bitcoin.org/en/bitcoin-core/",
+          "title": "Bitcoin Core"
+        },
+        {
+          "url": "https://bitcoindev.info/docs/development/bitcoin-core-internals",
+          "title": "Bitcoin Core Internals | BitcoinDev"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:54db303e2b4b2447"

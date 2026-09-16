@@ -50,14 +50,27 @@
       "current_state_en": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
       "detailed_summary_zh": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
       "detailed_summary_en": "OpenAI released a framework for tracking, investigating, and disclosing model misalignment, along with six reports documenting unexpected or concerning model behavior.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "在人工智能研究中，对齐（alignment）指的是让系统朝着既定目标、偏好或伦理原则行动；失准的系统则会追求非预期目标，从而可能表现为欺骗性或其他有害行为。OpenAI 此前关于“涌现式失准”的研究使用稀疏自编码器（sparse autoencoders）分解 GPT-4o 的内部激活，并识别出一个介导此类行为的“失准人格”特征。由于监督微调、强化学习和对抗训练等常规安全手段并不总能消除不良行为，各实验室在改进缓解技术的同时，也在建立检测与披露流程。",
+      "background_en": "In AI research, alignment refers to steering a system toward its intended goals, preferences or ethical principles; a misaligned system instead pursues unintended objectives, which can surface as deceptive or otherwise harmful behavior. OpenAI's earlier work on emergent misalignment used sparse autoencoders to decompose GPT-4o's internal activations and identified a 'misaligned persona' feature that mediates this behavior. Because standard safety measures such as supervised fine-tuning, reinforcement learning and adversarial training have not always removed unwanted behaviors, labs have been building out detection and disclosure processes alongside mitigation techniques.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "直接的市场传导较为间接，主要来自情绪层面：该框架属于治理与透明度举措，而非能力或产品层面的变化，因此影响主要集中在以 AI 叙事交易的加密板块，例如去中心化 AI 算力、链上智能体以及与 DePIN 相关的代币。从更长时间看，失准报告缺乏明确行业标准这一空白，未来可能成为针对 AI 相关链上项目建立合规预期的切入点。",
+      "market_impact_en": "The direct market transmission is indirect and sentiment-driven: the framework is a governance and transparency step rather than a capability or product change, so it mainly touches AI-narrative crypto segments such as decentralized AI compute, on-chain agent and DePIN-related tokens that trade on broad AI news flow. Over a longer horizon, the absence of a clear industry standard for misalignment reporting is the kind of gap that compliance expectations for AI-adjacent on-chain projects could eventually be built around.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+          "title": "Our framework for reporting model misalignment | OpenAI"
+        },
+        {
+          "url": "https://www.wired.com/story/openai-releases-new-policy-for-reporting-incidents-of-model-misalignment/",
+          "title": "OpenAI Creates a New Framework to Disclose Bad AI Behavior | WIRED"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI_alignment",
+          "title": "AI alignment - Wikipedia"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:openai.com_blog_rss.xml:f3899afd4d6a0a2d"

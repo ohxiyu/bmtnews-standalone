@@ -50,17 +50,25 @@
       "current_state_en": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
       "detailed_summary_zh": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
       "detailed_summary_en": "Xiaomi released a live post-training dashboard for its MiMo 2.6 model, drawing strong practitioner praise on Hacker News for capability and cost relative to frontier proprietary models.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 7.0,
+      "background_zh": "MiMo 是小米自研的大语言模型系列，公开资料显示 MiMo-V2-Pro 于 2026 年 3 月 18 日发布，总参数量超过 1 万亿、激活参数约 420 亿，并支持 100 万 token 的上下文窗口。后训练指预训练之后的阶段，通过强化学习（如基于奖励的 RLHF/RLVR）以及从更强的教师模型蒸馏，来提升指令遵循、推理和编程能力。将这类训练曲线公开直播，通常用于展示技术透明度与训练基础设施实力。",
+      "background_en": "MiMo is Xiaomi's in-house large language model family; public references describe MiMo-V2-Pro as launching on 18 March 2026 with over 1 trillion total parameters, roughly 42 billion active parameters and a 1-million-token context window. Post-training is the stage after pretraining in which a model is refined through reinforcement learning (such as reward-based RLHF/RLVR) and by distillation from a stronger teacher model to improve instruction following, reasoning and coding. Streaming those training curves to the public is typically done to signal transparency and training-infrastructure capability.",
+      "community_discussion_zh": "Hacker News 上的整体情绪偏正面。一位工程师称日常软件开发主要使用 MiMo-V2.5，赞其成本极低，而智能水平接近去年底到今年初的 Anthropic 模型，只是偶尔出现幻觉循环，用“停止再继续”即可解决；另一位把更新版本形容为“能力不错但健忘的资深工程师”，多任务处理较弱。也有人对实时蒸馏表示好奇，并调侃这种公开可见的开源权重进展对 OpenAI 和 Anthropic 的 IPO 叙事而言像一颗定时炸弹。",
+      "community_discussion_en": "Sentiment on Hacker News is broadly positive. One engineer reports using MiMo-V2.5 for most day-to-day software work, praising an extremely low cost that delivers intelligence comparable to Anthropic models from late last year and early this year, with only occasional hallucination loops fixed by stop-and-continue; another describes a newer version as a capable but forgetful senior engineer who is weak at multitasking. Others flag interest in real-time distillation and joke that visible open-weight progress is a time bomb for OpenAI and Anthropic IPO narratives.",
+      "market_impact_zh": "小米 MiMo 的定价与 API 档位与其他低价中国编程模型处于同一竞争区间，推理价格的持续下探会影响支撑 AI 算力需求叙事的单位 token 经济性。该事件与链上资产或托管没有直接关联，但去中心化算力与训练网络等 AI 叙事类加密代币，往往会随开源权重模型的同类情绪一起波动。",
+      "market_impact_en": "Xiaomi's MiMo tiers sit alongside other low-cost Chinese coding models, so continued downward pressure on inference pricing feeds into the token-economics narrative that underpins AI-compute demand stories. There is no direct on-chain or custody linkage, but AI-narrative crypto tokens such as decentralized compute and training networks often trade on the same open-weight model sentiment.",
+      "importance_score": 7.5,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49732270",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Xiaomi_MiMo",
+          "title": "Xiaomi MiMo - Wikipedia"
+        },
+        {
+          "url": "https://platform.xiaomimimo.com/",
+          "title": "Xiaomi MiMo API Open Platform"
         }
       ],
       "confidence": 0.75,

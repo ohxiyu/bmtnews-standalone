@@ -48,14 +48,27 @@
       "current_state_en": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
       "detailed_summary_zh": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
       "detailed_summary_en": "An investigation alleges that Solana validators, including Everstake, sell $4,000/month private feeds of pending transactions to quants who use them to front-run and sandwich-attack ordinary DeFi traders.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "最大可提取价值（MEV）是指通过在一个区块内重排、插入或审查交易而获得的利润，三明治攻击是其中常见的一种形式：机器人在受害者交易之前买入代币推高价格，并在交易之后立刻卖出以获取差价。大多数区块链会在公共内存池中公开待处理交易，任何人都能看到；但Solana将交易直接路由给负责下一个时隙的领导者验证者，这一设计本意是通过把提前可见性限制在单一主体来抑制MEV。本次调查指称，这种可见性实际上被私下出售，从而把MEV机会集中在能够直接向验证者付费的人手中。",
+      "background_en": "Maximal extractable value (MEV) is the profit that can be captured by reordering, inserting, or censoring transactions within a block, and sandwich attacks are a common form in which a bot buys a token just before a victim's swap to push the price up and sells immediately after to capture the difference. Most blockchains expose pending transactions in a public mempool where anyone can see them, but Solana routes transactions straight to the leader validator for the next slot — a design intended to limit MEV by restricting early visibility to one party. This investigation alleges that visibility is instead being sold privately, concentrating MEV opportunities among those who can pay validators directly.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "所指称的安排集中在Solana（SOL）的质押与DeFi活动上：它可能影响质押者在Everstake与其他验证者之间的委托选择，影响那些以散户兑换交易为MEV来源的Solana去中心化交易所的活动，并影响市场对验证者责任与网络公平性的整体情绪。其对价格的传导是间接的，主要通过质押资金流向、DEX流动性以及被点名运营方的声誉风险，而非代币供应或协议规则的直接变化。",
+      "market_impact_en": "The alleged arrangement concentrates on Solana (SOL) staking and DeFi activity: it could influence delegation decisions among stakers choosing between Everstake and other validators, affect activity on Solana DEXs where retail swaps are the source of the MEV being extracted, and feed into broader sentiment about validator accountability and network fairness. Any transmission to prices is indirect and routed through staking flows, DEX liquidity, and reputational risk for named operators rather than through a direct change in token supply or protocol rules.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://solanacompass.com/news/corvus-labs-investigation-finds-39-solana-validators-using-everstakes-private-orderflow-service-with-4000month-priority-tpu-access",
+          "title": "Blockspace Everstake: Solana Validator Private... | Solana Compass"
+        },
+        {
+          "url": "https://solanacompass.com/learn/accelerate-25/scale-or-die-at-accelerate-2025-the-state-of-solana-mev",
+          "title": "Solana MEV Exposed: Sandwich Attacks, Arbitrage, and Validator Behavior Analysis | Solana Compass"
+        },
+        {
+          "url": "https://solana.com/docs/defi/mev-protection",
+          "title": "MEV Protection with Jito DontFront | Solana"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:protos.com_feed_:a76cf8deec36143f"

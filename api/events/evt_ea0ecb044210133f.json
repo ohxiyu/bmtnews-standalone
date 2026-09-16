@@ -55,14 +55,27 @@
       "current_state_en": "Circle launched its Arc Layer 1 payments blockchain mainnet with USDC as the gas token and founding validators including BlackRock, DTCC, ICE, Mastercard, Visa, and Standard Chartered.",
       "detailed_summary_zh": "Circle launched its Arc Layer 1 payments blockchain mainnet with USDC as the gas token and founding validators including BlackRock, DTCC, ICE, Mastercard, Visa, and Standard Chartered.",
       "detailed_summary_en": "Circle launched its Arc Layer 1 payments blockchain mainnet with USDC as the gas token and founding validators including BlackRock, DTCC, ICE, Mastercard, Visa, and Standard Chartered.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Arc 是由稳定币 USDC 的发行方 Circle 构建的 Layer 1 区块链，专门面向稳定币原生金融活动，而非通用智能合约场景。与用以太坊或 Solana 上波动的原生代币支付 Gas 不同，Arc 直接让 USDC 成为 Gas 资产，使交易手续费与可转账余额使用同一种代币。其许可制验证者模式意味着只有获批准的机构才能验证区块，这一设计以部分去中心化为代价换取治理清晰度和监管可预期性，而这正是银行在将资金管理或结算流程上链前所要求的。Arc 测试网于 2025 年 10 月上线，参与方包括贝莱德、高盛、万事达卡和 Visa，不到一年处理了超过 7 亿笔交易。",
+      "background_en": "Arc is a Layer 1 blockchain built by Circle, the issuer of the USDC stablecoin, specifically for stablecoin-native financial activity rather than general-purpose smart contract use. Unlike Ethereum or Solana, where gas is paid in a volatile native token, Arc makes USDC itself the gas asset, so transaction fees and the transferable balance are the same token. Its permissioned validator model means only approved institutions validate blocks — a design that trades some decentralization for governance clarity and regulatory predictability, which banks require before putting treasury or settlement flows on-chain. Arc's testnet launched in October 2025 with participants including BlackRock, Goldman Sachs, Mastercard and Visa, and processed more than 700 million transactions in under a year.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "此次上线将一部分稳定币结算需求导向一条 USDC 同时充当 Gas 资产与结算资产的链，可能进一步加深 USDC 相对于 USDT 等稳定币的流动性护城河。机构验证者阵容和首日银行通道为受监管资金提供了合规入口，可能把资金管理和抵押品流引导至 BUIDL、USYC 等代币化资产；同时，验证权集中于少数许可机构手中以及 100 亿枚 ARC 的创世铸造，对持有 ARC 相关敞口的参与者而言仍是悬而未决的问题。",
+      "market_impact_en": "The launch shifts a meaningful share of stablecoin settlement demand toward a chain where USDC is both the gas asset and the settlement asset, potentially deepening USDC's liquidity moat relative to USDT and other stablecoins. The institutional validator cohort and day-one bank access give regulated capital a compliant on-ramp, which could draw treasury and collateral flows into tokenized assets like BUIDL and USYC, while the concentration of validation among a small permissioned set and the 10 billion ARC genesis mint remain open questions for holders of ARC-related exposure.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.circle.com/blog/introducing-arc-an-open-layer-1-blockchain-purpose-built-for-stablecoin-finance",
+          "title": "Introducing Arc: An L1 Blockchain for Stablecoin Finance | Circle"
+        },
+        {
+          "url": "https://www.arc.io/blog/building-with-usdc-on-arc-one-token-two-interfaces",
+          "title": "Building with USDC on Arc: Two Interfaces for One Token"
+        },
+        {
+          "url": "https://coinbureau.com/education/what-is-arc-circle-stablechain",
+          "title": "What Is Circle Arc Blockchain: Learn How Circle’s Layer-1 Stablechain Works - Coin Bureau"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:9fa2c0ac2ff7973c"
