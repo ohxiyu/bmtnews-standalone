@@ -5,44 +5,48 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "X前三条与发布前跨组去重、配额补位和重排发送保护",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/86",
-  "owner": "Codex / x-top3-event-dedup",
-  "branch": "agent/x-top3-event-dedup",
-  "last_verified_commit": "6c1687c777620f11d0cb1145bc729414fa0beeb4",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/87",
+  "goal": "07:00截止/07:26启动、AI节流；补齐脱敏诊断并修复实证去重故障",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/90",
+  "owner": "Codex / morning-ai-economy",
+  "branch": "agent/morning-ai-economy",
+  "last_verified_commit": "599b6d52ad64f78316e8d98ddc3cedbb84e03772",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/91",
   "completed": [
-    "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
-    "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
-    "补充生产配置前三条集成测试与旧已发记录保留测试",
-    "按用户追加请求补齐榜单跨组核查、补位再核查及有界短版兜底",
-    "低信号保底重新经过历史/事件/配额检查，不复活已被去重剔除的达标条目",
-    "X前三条绑定有序新闻身份；重排或旧rank-only已发队列暂停，损坏状态不再清零",
-    "检查评分排序和分类配额；修复编辑重复URL入口、最终排序与运行报告指标"
+    "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
+    "官方API名deepseek-flash；配置切换，不混用旧模型缓存",
+    "24条有界全覆盖比较、已验证结果缓存、失败工作流也保存成功分析缓存",
+    "402/401/403停止单次去重重试并给脱敏原因，保持质量与配额不变",
+    "首页只更新出刊文案与逾期判定，不改布局",
+    "脱敏复现JSON语法错误expected_comma；合法示例+格式错误反馈重试，继续严格拒绝无效结果",
+    "三个先前失败批次真实API复测35059029282通过：3批/3调用，无格式重试"
   ],
   "unfinished": [
-    "更新PR87并等待CI；未合并部署",
-    "授权上线后才能重刊今天内容；需人工核对旧X队列映射，不能清零或自动猜测"
+    "PR91等待授权合并与协调部署，未重刊今日旧日报",
+    "PR89为旧部署证据，不能覆盖最新交接；历史08:00窗口重刊须显式cutoff8"
   ],
   "validation": [
-    "最终全量785 passed、1既有warning；fetch并合并main、uv sync frozen dev、治理和diff检查通过"
+    "fetch/merge origin/main、uv sync --frozen --extra dev通过",
+    "823 pytest通过（1既有warning）；治理及diff检查通过",
+    "只读诊断35058489152、35058682859、35058796024复现格式失败；35059029282三个指定批次修复验证通过，共19次应用层模型调用",
+    "本任务原有48 Worker、56 Node测试、类型及dry-run通过；本轮未改Worker/UI"
   ],
   "unverified": [
-    "语义判断测试使用可控模拟模型；覆盖比较不代表模型判断永不出错",
-    "未真实调用模型、发送X或修改生产数据；今日线上重复尚未重刊"
+    "未完整重放失败日报的所有历史输入：诊断只恢复缓存子集",
+    "DeepSeek新别名deepseek-flash、24项批次真实质量/费用及新调度尚未上线验收；诊断沿用main旧模型和12项批次",
+    "今日线上仍08:36旧版14条，重复尚未通过重刊消除"
   ],
   "production": {
-    "source_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
-    "artifact_commit": "589ca7315fc3ae410e13c50bc8f6298829453f30",
-    "edition": "2026-09-12",
-    "generated_at": "2026-09-12T00:34:14.257428Z（日报数据）；网站构建 2026-09-12T17:05:16+00:00",
-    "worker_version": "Pages ef9ec162-fbf7-47b7-bb95-752ce1876c2f；独立 dispatcher not changed / unknown",
-    "verified_at": "2026-09-13 01:06 Asia/Shanghai"
+    "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+    "artifact_commit": "d8830f2ee65a8ad1ef4f86f368294adcef57126a (collection updated artifact; edition unchanged)",
+    "edition": "2026-09-16",
+    "generated_at": "2026-09-16T00:36:20.538116Z (previous edition unchanged)",
+    "worker_version": "341dd1ba-4355-42c9-93dc-4133295b53e7; health still08:30",
+    "verified_at": "2026-09-16 13:19 Asia/Shanghai API refreshed; Worker version remains previous snapshot"
   },
   "blockers": [
-    "无代码阻塞；合并上线需要当前授权"
+    "下一步合并/部署/重刊需要当前明确授权；本轮不清空任何发送记录"
   ],
-  "next_action": "审核PR87；授权合并后使用正规发布工作流重刊，先处理旧X队列身份核对，不把代码修复等同于线上内容已修复。",
+  "next_action": "审阅PR91和脱敏诊断证据；获授权后协调合并与Worker部署，以cutoff8重刊2026-09-16并核验前三条不同事件及发送幂等，不无条件重试整期。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -50,7 +54,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-16-x-top3-dedup-diagnosis.md"
+  "evidence": "project-docs/releases/2026-09-16-morning-ai-economy.md"
 }
 ```
 

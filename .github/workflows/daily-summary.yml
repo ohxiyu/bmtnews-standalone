@@ -6,8 +6,16 @@ run-name: >-
 on:
   workflow_dispatch:
     inputs:
+      diagnostic_only:
+        description: Read-only cached dedup diagnosis, at most twelve model calls, no publication
+        type: boolean
+        default: false
+      diagnostic_batch:
+        description: Optional comma-separated sanitized fingerprints for targeted diagnosis
+        type: string
+        default: ''
       edition_date:
-        description: Local edition date ending at 08:00 Asia/Shanghai (YYYY-MM-DD)
+        description: Local edition date ending at 07:00 Asia/Shanghai (YYYY-MM-DD)
         type: string
         required: false
         default: ''
@@ -16,6 +24,11 @@ on:
         type: string
         required: false
         default: manual
+      cutoff_hour:
+        description: Use 7 for new editions; 8 only for explicitly authorized legacy edition rebuilds
+        type: choice
+        options: ['7', '8']
+        default: '7'
       force_publish:
         description: Rebuild an already published fixed window
         type: boolean
@@ -27,7 +40,46 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  dedup-diagnostic:
+    if: ${{ inputs.diagnostic_only }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Require isolated agent branch (no main workflow_run delivery)
+        env:
+          TASK_REF: ${{ github.ref }}
+        run: '[[ "$TASK_REF" == refs/heads/agent/* ]]'
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: '0.11.32'
+      - run: uv sync --frozen
+      - uses: actions/cache/restore@v5
+        with:
+          path: |
+            data/staging-items.json
+            data/analysis-cache.json
+          key: diagnostic-read-only-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-bmtnews-pipeline-v2-
+      - name: Read public state
+        run: |
+          git fetch --depth=1 origin main:refs/remotes/origin/main gh-pages:refs/remotes/origin/gh-pages
+      - name: Bounded sanitized dedup diagnosis
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DIAGNOSTIC_BATCH: ${{ inputs.diagnostic_batch }}
+        run: |
+          args=()
+          if [ -n "$DIAGNOSTIC_BATCH" ]; then args+=(--batch-id "$DIAGNOSTIC_BATCH"); fi
+          uv run python -m scripts.diagnose_dedup "${args[@]}"
   daily-summary:
+    if: ${{ !inputs.diagnostic_only }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -62,7 +114,7 @@ jobs:
           done
 
       - name: Restore staged source items
-        uses: actions/cache@v5
+        uses: actions/cache/restore@v5
         with:
           path: |
             data/staging-items.json
@@ -122,9 +174,10 @@ jobs:
           X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          EDITION_CUTOFF_HOUR: ${{ inputs.cutoff_hour || '7' }}
         shell: bash
         run: |
-          args=(--mode publish --hours 24 --cutoff-hour 8)
+          args=(--mode publish --hours 24 --cutoff-hour "$EDITION_CUTOFF_HOUR")
           if [ -n "${{ inputs.edition_date }}" ]; then
             args+=(--edition-date "${{ inputs.edition_date }}")
           fi
@@ -136,6 +189,15 @@ jobs:
       - name: Publish run report
         if: ${{ always() }}
         run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Preserve successful AI work even after publication failure
+        if: ${{ always() }}
+        uses: actions/cache/save@v5
+        with:
+          path: |
+            data/staging-items.json
+            data/analysis-cache.json
+          key: ${{ runner.os }}-bmtnews-pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Keep machine-readable cost and health report
         if: ${{ always() }}

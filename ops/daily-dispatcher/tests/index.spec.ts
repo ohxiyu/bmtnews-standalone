@@ -11,7 +11,7 @@ const ENV = {
   GITHUB_WORKFLOW: "daily-summary.yml",
   GITHUB_REF: "main",
   EDITION_TIMEZONE: "Asia/Shanghai",
-  EDITION_CUTOFF_HOUR: "8",
+  EDITION_CUTOFF_HOUR: "7",
   PUBLIC_SITE_URL: "https://bmt.news",
   GITHUB_DISPATCH_TOKEN: "test-token",
 } satisfies Env;
@@ -22,6 +22,14 @@ afterEach(() => {
 });
 
 describe("edition scheduling", () => {
+  it("maps 07:26 to the preceding UTC day and the correct local edition", () => {
+    const context = testing.editionContextFor(
+      Date.parse("2026-09-16T23:26:00Z"), "Asia/Shanghai", 7,
+    );
+    expect(context.date).toBe("2026-09-17");
+    expect(context.cutoffUtc.toISOString()).toBe("2026-09-16T23:00:00.000Z");
+    expect(testing.stageForCron("26 23 * * *")).toBe("primary");
+  });
   it("routes all extended schedule groups and accepts queued legacy events", () => {
     expect(SCHEDULE_CRONS.map(testing.stageForCron)).toEqual([
       "primary", "morning-check", "morning-check", "hourly-check",
@@ -77,7 +85,8 @@ describe("dispatcher behavior", () => {
       admin_oauth: "not_configured",
       schedule_crons_utc: CONFIGURED_CRONS,
       schedule_timezone: "Asia/Shanghai",
-      first_check_local: "08:30",
+      edition_cutoff_hour: 7,
+      first_check_local: "07:26",
       last_check_local: "23:00",
     });
     expect(notFound.status).toBe(404);

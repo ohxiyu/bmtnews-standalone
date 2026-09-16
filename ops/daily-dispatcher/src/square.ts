@@ -1,14 +1,14 @@
-import { ACTIVE_STATUSES, fetchWorkflowRuns, githubRequest } from "./lib";
+import { ACTIVE_STATUSES, fetchWorkflowRuns, githubRequest, SCHEDULE_CRONS } from "./lib";
 import { runSchedule } from "./recovery";
 
-export const SQUARE_CRON = "*/5 1-15 * * *";
-export const CONFIGURED_CRONS = ["30 0 * * *", "40,50 0 * * *", SQUARE_CRON];
+export const SQUARE_CRON = "*/5 0-15 * * *";
+export const CONFIGURED_CRONS = [SCHEDULE_CRONS[0], SCHEDULE_CRONS[1], SQUARE_CRON];
 
 // Share one timer, but preserve the existing publication probe frequency.
 export function publicationCron(time: number): string | null {
   const date = new Date(time);
   const hour = date.getUTCHours(), minute = date.getUTCMinutes();
-  if (hour >= 1 && hour <= 3 && minute % 10 === 0) return "*/10 1-3 * * *";
+  if (hour >= 0 && hour <= 3 && minute % 10 === 0) return "*/10 0-3 * * *";
   if (hour >= 4 && hour <= 15 && minute === 0) return "0 4-15 * * *";
   return null;
 }
@@ -28,7 +28,7 @@ export async function dispatchSquare(env: Env, now: number): Promise<string> {
 }
 
 export async function runCombinedSchedule(cron: string, scheduledTime: number, env: Env): Promise<void> {
-  if (cron !== SQUARE_CRON) return runSchedule(cron, scheduledTime, env);
+  if (cron !== SQUARE_CRON && cron !== "*/5 1-15 * * *") return runSchedule(cron, scheduledTime, env);
   const now = Math.max(scheduledTime, Date.now());
   // Publication failure must not prevent distribution, and vice versa.
   const publication = publicationCron(now);

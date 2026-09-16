@@ -20,7 +20,7 @@ def client_fixture(monkeypatch, *, finish_reason="stop"):
     monkeypatch.setenv("TEST_AI_KEY", "test-only")
     monkeypatch.setattr("src.ai.client.AsyncOpenAI", lambda **kwargs: SimpleNamespace(
         chat=SimpleNamespace(completions=SimpleNamespace(create=create))))
-    client = OpenAIClient(AIConfig(provider="deepseek", model="deepseek-v4-flash",
+    client = OpenAIClient(AIConfig(provider="deepseek", model="deepseek-flash",
                                   api_key_env="TEST_AI_KEY", economy_mode=True))
     reset_usage()
     return client, calls

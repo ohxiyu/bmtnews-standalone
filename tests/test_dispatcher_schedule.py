@@ -34,10 +34,10 @@ def test_shared_schedule_has_exact_coverage_without_overlap_or_early_publication
             for utc_minute in range(60):
                 if matches(utc_hour, hour) and matches(utc_minute, minute):
                     actual.append(((utc_hour + 8) % 24) * 60 + utc_minute)
-    expected = [8 * 60 + 30, 8 * 60 + 40, 8 * 60 + 50]
-    expected += list(range(9 * 60, 24 * 60, 5))
+    expected = [7 * 60 + minute for minute in (26, 36, 46, 56)]
+    expected += list(range(8 * 60, 24 * 60, 5))
     assert sorted(actual) == expected
-    assert len(actual) == len(set(actual)) == 183
+    assert len(actual) == len(set(actual)) == 196
 
 
 def test_runtime_health_and_cron_routes_match_deployment_configuration():
@@ -45,4 +45,9 @@ def test_runtime_health_and_cron_routes_match_deployment_configuration():
     cron = re.search(r'export const SQUARE_CRON = (".*?");', source)[1]
     match = re.search(r"export const CONFIGURED_CRONS = (\[.*?\]);", source, re.S)
     assert match is not None
-    assert json.loads(match[1].replace("SQUARE_CRON", cron)) == configured_crons()
+    lib = (ROOT / "ops/daily-dispatcher/src/lib.ts").read_text()
+    schedules = json.loads(re.search(r"export const SCHEDULE_CRONS = (\[.*?\]) as const", lib, re.S)[1])
+    resolved = match[1].replace("SQUARE_CRON", cron)
+    for index in (0, 1):
+        resolved = resolved.replace(f"SCHEDULE_CRONS[{index}]", json.dumps(schedules[index]))
+    assert json.loads(resolved) == configured_crons()

@@ -6,8 +6,8 @@ from pathlib import Path
 from src import schedule_watchdog
 
 
-# 08:47 in Asia/Shanghai: the 08:00 edition has reached its fallback time.
-NOW = datetime(2026, 7, 27, 0, 47, tzinfo=timezone.utc)
+# 07:43 Shanghai falls on the preceding UTC date.
+NOW = datetime(2026, 7, 26, 23, 43, tzinfo=timezone.utc)
 
 
 def _run(
@@ -40,7 +40,7 @@ def test_success_after_current_cutoff_is_healthy() -> None:
 
     assert decision.state == "healthy"
     assert decision.should_dispatch is False
-    assert decision.edition_cutoff.isoformat() == "2026-07-27T08:00:00+08:00"
+    assert decision.edition_cutoff.isoformat() == "2026-07-27T07:00:00+08:00"
 
 
 def test_previous_edition_success_requests_recovery_dispatch() -> None:
@@ -64,7 +64,7 @@ def test_late_retry_still_requests_current_edition() -> None:
 
     assert decision.state == "missing"
     assert decision.should_dispatch is True
-    assert decision.edition_cutoff.isoformat() == "2026-07-27T08:00:00+08:00"
+    assert decision.edition_cutoff.isoformat() == "2026-07-27T07:00:00+08:00"
 
 
 def test_missing_success_does_not_duplicate_current_active_run() -> None:
@@ -105,7 +105,7 @@ def test_runs_from_other_branches_do_not_satisfy_main() -> None:
 
 def test_before_grace_period_still_checks_previous_edition() -> None:
     before_grace = datetime(
-        2026, 7, 27, 0, 20, tzinfo=timezone.utc
+        2026, 7, 26, 23, 20, tzinfo=timezone.utc
     )
     previous_success = datetime(
         2026, 7, 26, 1, 0, tzinfo=timezone.utc
@@ -117,7 +117,7 @@ def test_before_grace_period_still_checks_previous_edition() -> None:
     )
 
     assert decision.state == "healthy"
-    assert decision.edition_cutoff.isoformat() == "2026-07-26T08:00:00+08:00"
+    assert decision.edition_cutoff.isoformat() == "2026-07-26T07:00:00+08:00"
 
 
 def test_main_dispatches_recovery_and_fails_for_notification(
@@ -271,8 +271,8 @@ def test_watchdog_workflow_has_schedule_aware_arguments() -> None:
         / "schedule-watchdog.yml"
     ).read_text(encoding="utf-8")
 
-    assert "cron: '47 0 * * *'" in workflow
-    assert "cron: '17 1-7 * * *'" in workflow
+    assert "cron: '43 23 * * *'" in workflow
+    assert "cron: '17 0-7 * * *'" in workflow
     assert "timezone:" not in workflow
     assert "cron: '47 8 * * *'" not in workflow
     assert "43 * * * *" not in workflow
@@ -280,8 +280,8 @@ def test_watchdog_workflow_has_schedule_aware_arguments() -> None:
     assert "timeout-minutes: 5" in workflow
     assert "actions/setup-python" not in workflow
     assert "--timezone Asia/Shanghai" in workflow
-    assert "--cutoff-hour 8" in workflow
-    assert "--grace-minutes 47" in workflow
+    assert "--cutoff-hour 7" in workflow
+    assert "--grace-minutes 43" in workflow
     assert "--threshold-hours" not in workflow
 
 
@@ -293,10 +293,10 @@ def test_feed_collection_has_independent_daily_recovery() -> None:
         / "feed-collection.yml"
     ).read_text(encoding="utf-8")
 
-    assert "cron: '37 8 * * *'" in workflow
+    assert "cron: '37 7 * * *'" in workflow
     assert "actions: write" in workflow
     assert "recover-daily:" in workflow
     assert "needs: collect" in workflow
-    assert "--grace-minutes 30" in workflow
+    assert "--grace-minutes 26" in workflow
     assert "--trigger-source feed-collection" in workflow
     assert "--success-on-recovery" in workflow

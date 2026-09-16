@@ -15,7 +15,7 @@ def prompt_stage(system: str) -> str:
 
 
 SIMPLE_BUDGETS = {
-    # Dedup returns indices for at most 12 stories, not a reasoning essay.
+    # Dedup returns indices for at most 24 stories, not a reasoning essay.
     # DeepSeek's implicit thinking can consume the entire output budget.
     "topic_dedup": 1536,
     "daily_event_dedup": 1536,

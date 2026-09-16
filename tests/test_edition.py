@@ -169,7 +169,7 @@ def test_daily_edition_combines_staging_and_final_fetch(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    now = datetime(2026, 7, 29, 8, 30, tzinfo=SHANGHAI)
+    now = datetime(2026, 7, 29, 7, 26, tzinfo=SHANGHAI)
     staged = make_item(
         "staged",
         datetime(2026, 7, 28, 12, 0, tzinfo=SHANGHAI),
@@ -177,12 +177,12 @@ def test_daily_edition_combines_staging_and_final_fetch(
     )
     fresh = make_item(
         "fresh",
-        datetime(2026, 7, 29, 7, 0, tzinfo=SHANGHAI),
+        datetime(2026, 7, 29, 6, 59, tzinfo=SHANGHAI),
         score=9.0,
     )
     next_edition = make_item(
         "next",
-        datetime(2026, 7, 29, 8, 5, tzinfo=SHANGHAI),
+        datetime(2026, 7, 29, 7, 0, tzinfo=SHANGHAI),
         score=10.0,
     )
     staging_path = tmp_path / "data" / "staging-items.json"
@@ -276,8 +276,8 @@ def test_daily_edition_combines_staging_and_final_fetch(
     post = (
         tmp_path / "docs" / "_posts" / "2026-07-29-summary-zh.md"
     ).read_text(encoding="utf-8")
-    assert 'window_start: "2026-07-28T08:00:00+08:00"' in post
-    assert 'window_end: "2026-07-29T08:00:00+08:00"' in post
+    assert 'window_start: "2026-07-28T07:00:00+08:00"' in post
+    assert 'window_end: "2026-07-29T07:00:00+08:00"' in post
     assert "fetched_count: 2" in post
     assert "selected_count: 2" in post
     assert 'fragment_url: "/editions/2026-07-29/zh.html"' in post
@@ -294,9 +294,9 @@ def test_daily_edition_combines_staging_and_final_fetch(
     assert report["kind"] == "daily_publish"
     assert report["metrics"]["staging_items_before"] == 1
     assert report["metrics"]["staging_only_candidates"] == 1
-    assert report["metrics"]["cutoff_lag_minutes"] == 30
-    assert report["window_start"] == "2026-07-28T08:00:00+08:00"
-    assert report["window_end"] == "2026-07-29T08:00:00+08:00"
+    assert report["metrics"]["cutoff_lag_minutes"] == 26
+    assert report["window_start"] == "2026-07-28T07:00:00+08:00"
+    assert report["window_end"] == "2026-07-29T07:00:00+08:00"
     assert report["breakdowns"]["candidate_sources"] == {
         "rss/unknown": 2
     }
@@ -336,10 +336,10 @@ def test_daily_edition_uses_unpublished_36_hour_fallback_when_short(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    now = datetime(2026, 7, 29, 8, 30, tzinfo=SHANGHAI)
+    now = datetime(2026, 7, 29, 7, 26, tzinfo=SHANGHAI)
     normal = make_item(
         "normal",
-        datetime(2026, 7, 29, 7, 0, tzinfo=SHANGHAI),
+        datetime(2026, 7, 29, 6, 59, tzinfo=SHANGHAI),
         score=8.0,
     )
     supplemental = make_item(
@@ -443,7 +443,7 @@ def test_daily_edition_uses_unpublished_36_hour_fallback_when_short(
         tmp_path / "docs" / "_data" / "bmtnews_state.json",
     )
     report = load_run_report(tmp_path / "data" / "run-report.json")
-    assert requested_since == [datetime(2026, 7, 27, 12, 0, tzinfo=timezone.utc)]
+    assert requested_since == [datetime(2026, 7, 27, 11, 0, tzinfo=timezone.utc)]
     assert analyzed_ids == ["normal", "supplemental"]
     assert [item.id for item in state.items] == ["supplemental", "normal"]
     assert report["metrics"]["edition_candidates"] == 1
@@ -475,7 +475,9 @@ def test_workflows_stage_twice_and_publish_once() -> None:
     assert "Collect sources and increment event timelines" in collection
     assert "Deploy incremental event pages" in collection
     assert "\n  schedule:" not in publication
-    assert "args=(--mode publish --hours 24 --cutoff-hour 8)" in publication
+    assert 'args=(--mode publish --hours 24 --cutoff-hour "$EDITION_CUTOFF_HOUR")' in publication
+    assert "EDITION_CUTOFF_HOUR: ${{ inputs.cutoff_hour || '7' }}" in publication
+    assert "options: ['7', '8']" in publication
     assert "edition_date:" in publication
     assert 'args+=(--edition-date "${{ inputs.edition_date }}")' in publication
     assert "force_publish:" in publication

@@ -4,7 +4,7 @@
 
 ## 日期与候选
 
-- 业务时区 Asia/Shanghai。日报窗口为 [前日 08:00，当日 08:00)，08:30 启动。补跑显式指定 edition_date，不把执行时间当新闻发生时间。
+- 业务时区 Asia/Shanghai。日报窗口为 [前日 07:00，当日 07:00)，07:26 启动。补跑显式指定 edition_date，不把执行时间当新闻发生时间。
 - published_at 是来源发布时间，采集时间、分析时间、新闻发生时间和 generated_at 不可混用。缺失事实不能猜测。
 - candidates、analyzed、above_threshold、displayed 是不同阶段计数，重刊不能当作新一期。参见 [调度手册](daily-dispatcher.md)。
 - Crypto 目标至少 9 条、AI 科技最多 3 条、政策最多 2 条；质量不足如实报告，不降门槛凑数。人工编辑精选单独标记，不能伪造 AI 评分。

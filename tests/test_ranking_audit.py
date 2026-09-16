@@ -34,7 +34,7 @@ def test_coinex_cross_cluster_duplicates_are_actually_compared(tmp_path, monkeyp
         async def complete(self, **kw):
             titles = re.findall(r"\[\d+\] (.*)", kw["user"])
             calls.append(titles)
-            assert len(titles) <= 12
+            assert len(titles) <= 24
             group = [i for i, title in enumerate(titles) if any(s in title for s in ("Close Exchange", "Shuts Down", "shut down"))]
             return json.dumps({"duplicates": [group] if len(group) > 1 else []})
     monkeypatch.setattr("src.orchestrator.same_thread", lambda *a: False)
