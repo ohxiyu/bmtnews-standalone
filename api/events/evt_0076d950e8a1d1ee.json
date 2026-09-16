@@ -4,29 +4,31 @@
   "url": "https://bmt.news/events/evt_0076d950e8a1d1ee/",
   "json": "https://bmt.news/api/events/evt_0076d950e8a1d1ee.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "closed",
   "category": "crypto",
   "title": {
     "zh": "Revolut tricked into handing hackers the passports and Bitcoin histories of wealthy customers",
     "en": "Revolut tricked into handing hackers the passports and Bitcoin histories of wealthy customers"
   },
   "current_state": {
-    "zh": "Revolut disclosed wealthy customers' passports, verification selfies, addresses, and Bitcoin transaction histories after being tricked by a fraudulent government data request.",
-    "en": "Revolut disclosed wealthy customers' passports, verification selfies, addresses, and Bitcoin transaction histories after being tricked by a fraudulent government data request."
+    "zh": "意大利当局正在调查一起与Revolut数据泄露相关的政府电子邮件泄露事件，黑客涉嫌利用被入侵的认证电子邮件账户获取Revolut客户数据。",
+    "en": "Italian authorities are investigating a government email breach linked to the Revolut data leak, in which hackers allegedly used a compromised certified email account to obtain Revolut customer data."
   },
   "first_seen_at": "2026-09-12T15:42:57.141708+00:00",
-  "last_updated_at": "2026-09-12T15:42:57.141708+00:00",
-  "last_material_change_at": "2026-09-12T15:42:57.141708+00:00",
+  "last_updated_at": "2026-09-16T17:12:37.106223+00:00",
+  "last_material_change_at": "2026-09-16T17:12:37.106223+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "italy",
     "revolut"
   ],
   "identifiers": [],
   "topics": [
     "custody",
     "data-breach",
+    "italy",
     "privacy",
     "revolut"
   ],
@@ -64,6 +66,44 @@
         {
           "url": "https://cryptoslate.com/revolut-tricked-into-handing-hackers-the-passports-and-bitcoin-histories-of-wealthy-customers/",
           "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_73347b50ba2ba8e6",
+      "event_id": "evt_0076d950e8a1d1ee",
+      "occurred_at": "2026-09-16T09:58:48Z",
+      "published_at": "2026-09-16T09:58:48Z",
+      "first_seen_at": "2026-09-16T17:12:37.106223Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Italy investigates government email breach linked to Revolut data leak",
+      "title_en": "Italy investigates government email breach linked to Revolut data leak",
+      "what_changed_zh": "意大利邮政警察正在调查一起政府电子邮件泄露事件，黑客涉嫌利用该泄露获取Revolut客户数据；意大利CERT-AGID报告自2026年初以来已处理超过650起涉及滥用或非法PEC账户的案件。",
+      "what_changed_en": "Italian cybercrime police are investigating a government email breach that hackers allegedly used to obtain Revolut customer data; Italy’s CERT-AGID reported over 650 cases of abused or illicit PEC accounts since the start of 2026.",
+      "current_state_zh": "意大利当局正在调查一起与Revolut数据泄露相关的政府电子邮件泄露事件，黑客涉嫌利用被入侵的认证电子邮件账户获取Revolut客户数据。",
+      "current_state_en": "Italian authorities are investigating a government email breach linked to the Revolut data leak, in which hackers allegedly used a compromised certified email account to obtain Revolut customer data.",
+      "detailed_summary_zh": "Italian cybercrime police are investigating a government email breach that hackers allegedly used to obtain Revolut customer data, with over 650 cases of abused certified email accounts reported.",
+      "detailed_summary_en": "Italian cybercrime police are investigating a government email breach that hackers allegedly used to obtain Revolut customer data, with over 650 cases of abused certified email accounts reported.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:c0a05c700babe35b"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/italy-government-email-breach-revolut-data-leak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }

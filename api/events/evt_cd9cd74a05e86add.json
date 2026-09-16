@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "event_id": "evt_cd9cd74a05e86add",
+  "url": "https://bmt.news/events/evt_cd9cd74a05e86add/",
+  "json": "https://bmt.news/api/events/evt_cd9cd74a05e86add.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Malicious Uniswap v4 hooks are baiting DeFi traders with fake swap quotes",
+    "en": "Malicious Uniswap v4 hooks are baiting DeFi traders with fake swap quotes"
+  },
+  "current_state": {
+    "zh": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+    "en": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious."
+  },
+  "first_seen_at": "2026-09-16T17:12:32.182060+00:00",
+  "last_updated_at": "2026-09-16T17:12:32.182060+00:00",
+  "last_material_change_at": "2026-09-16T17:12:32.182060+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "malicious",
+    "uniswap",
+    "uniswap-v4"
+  ],
+  "identifiers": [],
+  "topics": [
+    "defi-security",
+    "liquidity-aggregation",
+    "mev",
+    "smart-contracts",
+    "uniswap-v4"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_1ac2b9ae2903a9b6",
+      "event_id": "evt_cd9cd74a05e86add",
+      "occurred_at": "2026-09-16T11:10:27Z",
+      "published_at": "2026-09-16T11:10:27Z",
+      "first_seen_at": "2026-09-16T17:12:32.182060Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Malicious Uniswap v4 hooks are baiting DeFi traders with fake swap quotes",
+      "title_en": "Malicious Uniswap v4 hooks are baiting DeFi traders with fake swap quotes",
+      "what_changed_zh": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+      "what_changed_en": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+      "current_state_zh": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+      "current_state_en": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+      "detailed_summary_zh": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+      "detailed_summary_en": "0x reports a sharp rise in malicious Uniswap v4 hooks that quote attractive prices to win aggregator routing but settle swaps at far worse rates, with over half of 84,163 sampled hooks flagged as malicious.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:4fc6bf0b2d90dc76"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/malicious-uniswap-v4-hooks-are-baiting-defi-traders-with-fake-swap-quotes/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

@@ -4,35 +4,39 @@
   "url": "https://bmt.news/events/evt_00fd672f5ad8caea/",
   "json": "https://bmt.news/api/events/evt_00fd672f5ad8caea.json",
   "type": "other",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Hyperliquid 与 Kraken 母公司洽谈进军美国永续合约市场",
     "en": "Hyperliquid in Talks With Kraken Parent for US Perps Market Entry"
   },
   "current_state": {
-    "zh": "Hyperliquid 与 Kraken 母公司洽谈进军美国永续合约市场",
-    "en": "Hyperliquid in Talks With Kraken Parent for US Perps Market Entry"
+    "zh": "Kraken 母公司计划向美国交易者提供需许可的 Hyperliquid 永续合约，Bitnomial 负责部署、管理、清算和结算，NinjaTrader Clearing 承载获批客户账户。",
+    "en": "Kraken parent plans permissioned Hyperliquid perpetual futures for US traders, with Bitnomial deploying, administering, clearing, and settling the markets and NinjaTrader Clearing carrying approved customer accounts."
   },
   "first_seen_at": "2026-09-01T08:00:00+08:00",
-  "last_updated_at": "2026-09-01T08:00:00+08:00",
-  "last_material_change_at": "2026-09-01T08:00:00+08:00",
+  "last_updated_at": "2026-09-16T17:12:30.465458+00:00",
+  "last_material_change_at": "2026-09-16T17:12:30.465458+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "entry",
     "hyperliquid",
     "kraken",
     "market",
     "parent",
+    "permissioned",
     "perps",
+    "plans",
     "talks",
+    "traders",
     "with"
   ],
   "identifiers": [],
   "topics": [
     "bitnomial",
+    "defi-derivatives",
     "hyperliquid",
     "kraken",
     "perpetual-futures",
@@ -81,6 +85,44 @@
         {
           "url": "https://decrypt.co/376963/hyperliquid-crypto-perps-us-kraken-parent",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_5d69b1cb66386ece",
+      "event_id": "evt_00fd672f5ad8caea",
+      "occurred_at": "2026-09-16T13:09:34Z",
+      "published_at": "2026-09-16T13:09:34Z",
+      "first_seen_at": "2026-09-16T17:12:30.465458Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Kraken Parent Plans Permissioned Hyperliquid Perps for US Traders",
+      "title_en": "Kraken Parent Plans Permissioned Hyperliquid Perps for US Traders",
+      "what_changed_zh": "Kraken 母公司计划向美国交易者提供需许可的 Hyperliquid 永续合约，由 Bitnomial 部署、管理、清算和结算拟议市场，NinjaTrader Clearing 承载获批客户账户。",
+      "what_changed_en": "Kraken parent plans to offer permissioned Hyperliquid perpetual futures to US traders, with Bitnomial deploying, administering, clearing, and settling the proposed markets and NinjaTrader Clearing carrying approved customer accounts.",
+      "current_state_zh": "Kraken 母公司计划向美国交易者提供需许可的 Hyperliquid 永续合约，Bitnomial 负责部署、管理、清算和结算，NinjaTrader Clearing 承载获批客户账户。",
+      "current_state_en": "Kraken parent plans permissioned Hyperliquid perpetual futures for US traders, with Bitnomial deploying, administering, clearing, and settling the markets and NinjaTrader Clearing carrying approved customer accounts.",
+      "detailed_summary_zh": "Kraken's parent company plans to offer permissioned Hyperliquid perpetual futures to US traders, with Bitnomial deploying, administering, clearing, and settling the markets and NinjaTrader Clearing carrying approved customer accounts.",
+      "detailed_summary_en": "Kraken's parent company plans to offer permissioned Hyperliquid perpetual futures to US traders, with Bitnomial deploying, administering, clearing, and settling the markets and NinjaTrader Clearing carrying approved customer accounts.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:b0a143b581e6e967"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/defi/kraken-parent-plans-permissioned-hyperliquid-perps-for-us-traders",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }

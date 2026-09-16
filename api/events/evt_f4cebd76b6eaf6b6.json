@@ -4,32 +4,34 @@
   "url": "https://bmt.news/events/evt_f4cebd76b6eaf6b6/",
   "json": "https://bmt.news/api/events/evt_f4cebd76b6eaf6b6.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "closed",
   "category": "policy",
   "title": {
     "zh": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week",
     "en": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week"
   },
   "current_state": {
-    "zh": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400.",
-    "en": "Bitcoin traders brace for volatility as the Senate votes on advancing the CLARITY Act and the Fed is expected to hike rates by 0.25%, with BTC trading below its 50-week moving average near $77,400."
+    "zh": "CLARITY Act未能推进后，比特币跌破75,000美元，市场关注70,000美元200日移动均线作为美联储决议前的关键支撑测试。",
+    "en": "After the CLARITY Act failed to advance, Bitcoin dropped below $75,000, with the $70,000 200-day moving average serving as a key test before the Fed's rate decision."
   },
   "first_seen_at": "2026-09-14T18:08:10.382369+00:00",
-  "last_updated_at": "2026-09-14T18:08:10.382369+00:00",
-  "last_material_change_at": "2026-09-14T18:08:10.382369+00:00",
+  "last_updated_at": "2026-09-16T17:12:32.037755+00:00",
+  "last_material_change_at": "2026-09-16T17:12:32.037755+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "clarity",
     "clarity-act",
     "fed",
-    "five"
+    "five",
+    "warsh"
   ],
   "identifiers": [],
   "topics": [
     "clarity-act",
     "crypto-regulation",
+    "fed",
     "federal-reserve",
     "macro"
   ],
@@ -67,6 +69,44 @@
         {
           "url": "https://cointelegraph.com/markets/clarity-act-vote-meets-fed-rate-hike-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_79883a4fbc8c28b3",
+      "event_id": "evt_f4cebd76b6eaf6b6",
+      "occurred_at": "2026-09-16T12:15:50Z",
+      "published_at": "2026-09-16T12:15:50Z",
+      "first_seen_at": "2026-09-16T17:12:32.037755Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Bitcoin absorbs initial pre-Fed sell-off, leaving $70K as a critical test for Warsh’s Fed decision",
+      "title_en": "Bitcoin absorbs initial pre-Fed sell-off, leaving $70K as a critical test for Warsh’s Fed decision",
+      "what_changed_zh": "参议院以49-50未能推进CLARITY Act，比特币跌破75,000美元，现测试70,000美元200日移动均线，等待美联储利率决议。",
+      "what_changed_en": "The Senate failed 49-50 to advance the CLARITY Act, Bitcoin fell below $75,000 and is now testing the $70,000 200-day moving average ahead of the Fed's rate decision.",
+      "current_state_zh": "CLARITY Act未能推进后，比特币跌破75,000美元，市场关注70,000美元200日移动均线作为美联储决议前的关键支撑测试。",
+      "current_state_en": "After the CLARITY Act failed to advance, Bitcoin dropped below $75,000, with the $70,000 200-day moving average serving as a key test before the Fed's rate decision.",
+      "detailed_summary_zh": "Bitcoin fell below $75,000 after the Senate failed 49-50 to advance the CLARITY Act, with the $70,000 200-day moving average now serving as a key test ahead of the Fed's rate decision.",
+      "detailed_summary_en": "Bitcoin fell below $75,000 after the Senate failed 49-50 to advance the CLARITY Act, with the $70,000 200-day moving average now serving as a key test ahead of the Fed's rate decision.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:858d962d8a62d14a"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/bitcoin-absorbs-initial-pre-fed-sell-off-leaving-70k-as-key-structural-test-for-warshs-decision/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }
