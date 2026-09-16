@@ -25,7 +25,7 @@ it.each(["queued", "in_progress", "waiting", "pending", "requested"])("does not 
   expect(fetcher).toHaveBeenCalledOnce();
 });
 
-it.each(["00:59", "15:31", "23:59"])("does not dispatch outside window %s", async time => {
+it.each(["00:00", "00:59", "15:31", "23:26", "23:59"])("does not dispatch outside window %s", async time => {
   const fetcher = vi.fn(); vi.stubGlobal("fetch", fetcher);
   expect(await dispatchSquare(env, Date.parse(`2026-09-12T${time}:00Z`))).toBe("outside_window");
   expect(fetcher).not.toHaveBeenCalled();
@@ -40,16 +40,16 @@ it("fails closed on GitHub API failure", async () => {
 
 it("preserves original publication cadence while adding Square ticks", () => {
   const actual = [];
-  for (let hour = 1; hour <= 15; hour++) {
+  for (let hour = 0; hour <= 15; hour++) {
     for (let minute = 0; minute < 60; minute += 5) {
       if (publicationCron(Date.UTC(2026, 8, 12, hour, minute))) actual.push((hour + 8) * 60 + minute);
     }
   }
   const expected = [];
-  for (let minute = 9 * 60; minute < 12 * 60; minute += 10) expected.push(minute);
+  for (let minute = 8 * 60; minute < 12 * 60; minute += 10) expected.push(minute);
   for (let hour = 12; hour <= 23; hour++) expected.push(hour * 60);
   expect(actual).toEqual(expected);
-  expect(publicationCron(Date.parse("2026-09-12T03:30:00Z"))).toBe("*/10 1-3 * * *");
+  expect(publicationCron(Date.parse("2026-09-12T03:30:00Z"))).toBe("*/10 0-3 * * *");
   expect(publicationCron(now)).toBeNull();
   expect(publicationCron(Date.parse("2026-09-12T04:00:00Z"))).toBe("0 4-15 * * *");
   expect(publicationCron(Date.parse("2026-09-12T04:10:00Z"))).toBeNull();

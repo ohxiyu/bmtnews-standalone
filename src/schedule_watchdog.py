@@ -18,8 +18,8 @@ from zoneinfo import ZoneInfo
 DEFAULT_WORKFLOW = "daily-summary.yml"
 DEFAULT_REF = "main"
 DEFAULT_TIMEZONE = "Asia/Shanghai"
-DEFAULT_CUTOFF_HOUR = 8
-DEFAULT_GRACE_MINUTES = 47
+DEFAULT_CUTOFF_HOUR = 7
+DEFAULT_GRACE_MINUTES = 43
 ACTIVE_STATUSES = frozenset(
     {"queued", "in_progress", "waiting", "pending", "requested"}
 )

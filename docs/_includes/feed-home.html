@@ -19,10 +19,10 @@
       </div>
       {% if include.language == "zh" %}
         <h2 data-today-edition-title>今日版准备中</h2>
-        <p data-before-cutoff="今日版预计 08:30 发布。上一期仍保留在下方，避免将昨天的排行误认为今日内容。" data-after-cutoff="今日版已超过预计发布时间，系统正在补采、去重并恢复发布；上一期仍保留在下方供参考。">今日版预计 08:30 发布。上一期仍保留在下方，避免将昨天的排行误认为今日内容。</p>
+        <p data-before-cutoff="今日版从 07:26 开始生成，完成后自动发布。上一期仍保留在下方，避免将昨天的排行误认为今日内容。" data-after-cutoff="今日版已超过预计发布时间，系统正在补采、去重并恢复发布；上一期仍保留在下方供参考。">今日版从 07:26 开始生成，完成后自动发布。上一期仍保留在下方，避免将昨天的排行误认为今日内容。</p>
       {% else %}
         <h2 data-today-edition-title>Today's edition is being prepared</h2>
-        <p data-before-cutoff="Today's edition is expected at 08:30 Asia/Shanghai. The previous edition remains below for reference." data-after-cutoff="Today's edition is later than expected. Collection, deduplication, and publishing recovery are in progress; the previous edition remains below for reference.">Today's edition is expected at 08:30 Asia/Shanghai. The previous edition remains below for reference.</p>
+        <p data-before-cutoff="Today's edition starts generating at 07:26 Asia/Shanghai and is published when ready. The previous edition remains below for reference." data-after-cutoff="Today's edition is later than expected. Collection, deduplication, and publishing recovery are in progress; the previous edition remains below for reference.">Today's edition starts generating at 07:26 Asia/Shanghai and is published when ready. The previous edition remains below for reference.</p>
       {% endif %}
     </section>
     <script>
@@ -38,7 +38,7 @@
         var today = parts.year + '-' + parts.month + '-' + parts.day;
         if (status.getAttribute('data-latest-edition-date') >= today) return;
         var afterCutoff = Number(parts.hour) > 8 ||
-          (Number(parts.hour) === 8 && Number(parts.minute) >= 30);
+          (Number(parts.hour) === 8 && Number(parts.minute) >= 11);
         var copy = status.querySelector('p');
         var title = status.querySelector('[data-today-edition-title]');
         var language = status.closest('[data-language]').getAttribute('data-language');

@@ -24,7 +24,7 @@ def test_bounded_batches_cover_cross_block_pairs():
         async def complete(self, **kwargs):
             import re
             ids = [int(value) for value in re.findall(r"\[\d+\] Story (\d+)", kwargs["user"])]
-            assert len(ids) <= 12
+            assert len(ids) <= 24
             from itertools import combinations
             seen.update(combinations(ids, 2))
             return json.dumps({"duplicates": [[0, len(ids)-1]]})

@@ -711,7 +711,7 @@ Online setup requires no local service:
    channel value may be `@channelname`, a plain username, a `t.me` URL, or the
    channel's `-100…` numeric ID.
 4. Run **BMTNews Daily Edition** manually with `force_publish` enabled to verify
-   the first channel message. Normal 08:30 publications send automatically.
+   the first channel message. Normal 07:26 publication runs send automatically after generation completes.
 
 The token is used only to call the official
 [`sendMessage`](https://core.telegram.org/bots/api#sendmessage) endpoint and is

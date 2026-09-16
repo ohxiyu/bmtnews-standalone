@@ -1,10 +1,10 @@
-const PRIMARY_CRON = "30 0 * * *";
+const PRIMARY_CRON = "26 23 * * *";
 const FINAL_CRON = "10 1 * * *";
-// UTC: Shanghai 08:30, 08:40/08:50, 09:00–11:50, 12:00–23:00.
+// UTC: Shanghai 07:26, 07:36/07:46/07:56, 08:00–11:50, 12:00–23:00.
 export const SCHEDULE_CRONS = [
-  "30 0 * * *",
-  "40,50 0 * * *",
-  "*/10 1-3 * * *",
+  "26 23 * * *",
+  "36,46,56 23 * * *",
+  "*/10 0-3 * * *",
   "0 4-15 * * *"
 ] as const;
 const PERMISSION_PROBE_REF =
@@ -92,6 +92,9 @@ function stageForCron(cron: string): TriggerStage {
     [SCHEDULE_CRONS[2]]: "morning-check",
     [SCHEDULE_CRONS[3]]: "hourly-check",
     // Accept already-queued legacy events while Cron configuration propagates.
+    "30 0 * * *": "morning-check",
+    "40,50 0 * * *": "morning-check",
+    "*/10 1-3 * * *": "morning-check",
     "40 0 * * *": "retry-1",
     "55 0 * * *": "retry-2",
     [FINAL_CRON]: "final",

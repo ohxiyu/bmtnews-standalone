@@ -45,7 +45,7 @@ class EditionWindow:
 def edition_window_for(
     moment: datetime,
     timezone_name: str,
-    cutoff_hour: int = 8,
+    cutoff_hour: int = 7,
 ) -> EditionWindow:
     """Return the latest completed ``[previous cutoff, cutoff)`` window."""
     if not 0 <= cutoff_hour <= 23:
@@ -67,7 +67,7 @@ def edition_window_for(
 def edition_window_for_date(
     edition_date: date_type | str,
     timezone_name: str,
-    cutoff_hour: int = 8,
+    cutoff_hour: int = 7,
 ) -> EditionWindow:
     """Return the fixed window ending on an explicit local edition date."""
     if not 0 <= cutoff_hour <= 23:

@@ -69,6 +69,18 @@ function fixture(options: {
 }
 
 describe("production-aware recovery", () => {
+  it("dispatches the local edition exactly at 07:26 but not a millisecond early", async () => {
+    const f = fixture();
+    const due = Date.parse(f.date + "T07:26:00+08:00");
+    expect((await runRecovery(env, due - 1, "test")).status).toBe("not_due");
+    expect(f.requests).toHaveLength(0);
+    const result = await runRecovery(env, due, "test");
+    expect(result.status).toBe("daily_dispatched");
+    expect(result.edition_date).toBe(f.date);
+    expect(await f.posts()[0]?.json()).toEqual({
+      ref: "main", inputs: {edition_date: f.date, trigger_source: "test"},
+    });
+  });
   it("accepts matching story revisions in both rendered languages", async () => {
     const f = fixture({raw: true, public: true, homepage: true, versioned: true});
     expect((await runRecovery(env, f.now, "test")).status).toBe("healthy");
@@ -181,11 +193,11 @@ describe("production-aware recovery", () => {
     expect(f.posts()).toHaveLength(0);
   });
 
-  it("does not publish before 08:30 Shanghai and alerts at 09:15", async () => {
+  it("does not publish before 07:26 Shanghai and alerts at 08:11", async () => {
     const f = fixture();
-    expect((await runRecovery(env, f.now - 30 * 60_000, "test")).status).toBe("not_due");
+    expect((await runRecovery(env, f.now - 85 * 60_000, "test")).status).toBe("not_due");
     expect(f.requests).toHaveLength(0);
-    const result = await runRecovery(env, f.now + 25 * 60_000, "test");
+    const result = await runRecovery(env, f.now - 39 * 60_000, "test");
     expect(responseStatus(result)).toBe(503);
   });
 

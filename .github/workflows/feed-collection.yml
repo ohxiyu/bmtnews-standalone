@@ -3,13 +3,13 @@ name: BMTNews Feed Collection
 on:
   schedule:
     # Coverage runs roughly every four hours; the final fetch happens in
-    # daily-summary.yml at the 08:30 cutoff. High-churn sources (exchange
+    # daily-summary.yml at 07:26 after the 07:00 cutoff. High-churn sources (exchange
     # Telegram channels) overflow their fetch limits with fewer runs.
     - cron: '30 0,4,12,16,20 * * *'
       timezone: 'Asia/Shanghai'
     # Independent post-cutoff path. Its recovery job dispatches the daily
     # edition even when Cloudflare and the standalone watchdog miss a trigger.
-    - cron: '37 8 * * *'
+    - cron: '37 7 * * *'
       timezone: 'Asia/Shanghai'
   workflow_dispatch:
 
@@ -49,7 +49,7 @@ jobs:
           done
 
       - name: Restore staged source items
-        uses: actions/cache@v5
+        uses: actions/cache/restore@v5
         with:
           path: |
             data/staging-items.json
@@ -104,6 +104,15 @@ jobs:
       - name: Publish run report
         if: ${{ always() }}
         run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Preserve successful AI work even after publication failure
+        if: ${{ always() }}
+        uses: actions/cache/save@v5
+        with:
+          path: |
+            data/staging-items.json
+            data/analysis-cache.json
+          key: ${{ runner.os }}-bmtnews-pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Keep machine-readable cost and health report
         if: ${{ always() }}
@@ -168,7 +177,7 @@ jobs:
           --workflow daily-summary.yml
           --ref main
           --timezone Asia/Shanghai
-          --cutoff-hour 8
-          --grace-minutes 30
+          --cutoff-hour 7
+          --grace-minutes 26
           --trigger-source feed-collection
           --success-on-recovery

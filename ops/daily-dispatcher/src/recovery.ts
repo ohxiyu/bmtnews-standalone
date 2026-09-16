@@ -145,10 +145,10 @@ export async function runRecovery(
   const elapsed = now - context.cutoffUtc.getTime();
   const result: RecoveryResult = {
     status: "not_due", edition_date: context.date,
-    checked_at: new Date(now).toISOString(), overdue: elapsed >= 75 * 60_000,
+    checked_at: new Date(now).toISOString(), overdue: elapsed >= 71 * 60_000,
   };
-  // Cron starts at 08:30; external and backup checks cannot publish before it.
-  if (elapsed < 30 * 60_000) return result;
+  // Cron starts at 07:26; all entry points share this lower bound.
+  if (elapsed < 26 * 60_000) return result;
   const gate = env.RECOVERY_GATE.getByName(context.date);
   const owner = await gate.claim(now);
   if (!owner) return { ...result, status: "check_in_progress" };

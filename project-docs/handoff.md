@@ -5,44 +5,46 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "X前三条与发布前跨组去重、配额补位和重排发送保护",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/86",
-  "owner": "Codex / x-top3-event-dedup",
-  "branch": "agent/x-top3-event-dedup",
-  "last_verified_commit": "6c1687c777620f11d0cb1145bc729414fa0beeb4",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/87",
+  "goal": "07:00截止/07:26启动、DeepSeek V4.1 Flash及安全节流",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/90",
+  "owner": "Codex / morning-ai-economy",
+  "branch": "agent/morning-ai-economy",
+  "last_verified_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+  "pr": "pending",
   "completed": [
-    "确认生产drip_items=4覆盖digest模式max_items=3，改生产配置和模型默认值为3",
-    "诊断今日CoinEx关停三篇重复：预筛same_thread两两false，三个event_id不同",
-    "补充生产配置前三条集成测试与旧已发记录保留测试",
-    "按用户追加请求补齐榜单跨组核查、补位再核查及有界短版兜底",
-    "低信号保底重新经过历史/事件/配额检查，不复活已被去重剔除的达标条目",
-    "X前三条绑定有序新闻身份；重排或旧rank-only已发队列暂停，损坏状态不再清零",
-    "检查评分排序和分类配额；修复编辑重复URL入口、最终排序与运行报告指标"
+    "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
+    "官方API名deepseek-flash；配置切换，不混用旧模型缓存",
+    "24条有界全覆盖比较、已验证结果缓存、失败工作流也保存成功分析缓存",
+    "402/401/403停止单次去重重试并给脱敏原因，保持质量与配额不变",
+    "首页只更新出刊文案与逾期判定，不改布局"
   ],
   "unfinished": [
-    "更新PR87并等待CI；未合并部署",
-    "授权上线后才能重刊今天内容；需人工核对旧X队列映射，不能清零或自动猜测"
+    "提交PR并等待CI；未经本任务授权不合并部署",
+    "用户完成AI充值后才可验证真实模型调用；今日旧日报重复未重刊",
+    "PR89保留前次部署证据；合并它时不能用旧handoff覆盖本任务指针"
   ],
   "validation": [
-    "最终全量785 passed、1既有warning；fetch并合并main、uv sync frozen dev、治理和diff检查通过"
+    "fetch/merge main、uv sync frozen dev通过；809 pytest通过（1既有warning）",
+    "48 Worker测试、56 Node测试、类型检查、部署dry-run、治理及diff检查通过"
   ],
   "unverified": [
-    "语义判断测试使用可控模拟模型；覆盖比较不代表模型判断永不出错",
-    "未真实调用模型、发送X或修改生产数据；今日线上重复尚未重刊"
+    "真实token费用和模型24条判定质量未付费实测",
+    "未确认账户余额；用户判断是未充值，不将其伪装成API已核实",
+    "07:26自然触发、新窗口日报与X自动发送未线上验证",
+    "首页仅时间文案调整，行为测试通过；未做浏览器视觉截图验收"
   ],
   "production": {
-    "source_commit": "fc45dba69350a6bdc53752944058a6807d9f4881",
-    "artifact_commit": "589ca7315fc3ae410e13c50bc8f6298829453f30",
-    "edition": "2026-09-12",
-    "generated_at": "2026-09-12T00:34:14.257428Z（日报数据）；网站构建 2026-09-12T17:05:16+00:00",
-    "worker_version": "Pages ef9ec162-fbf7-47b7-bb95-752ce1876c2f；独立 dispatcher not changed / unknown",
-    "verified_at": "2026-09-13 01:06 Asia/Shanghai"
+    "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
+    "artifact_commit": "527f82e86a1c8769e8aaa5a2bee128736ce19c2f",
+    "edition": "2026-09-16",
+    "generated_at": "2026-09-16T00:36:20.538116Z (previous edition unchanged)",
+    "worker_version": "341dd1ba-4355-42c9-93dc-4133295b53e7; health still08:30",
+    "verified_at": "2026-09-16 12:46 Asia/Shanghai; source/edition previous deployment evidence, Worker health refreshed"
   },
   "blockers": [
-    "无代码阻塞；合并上线需要当前授权"
+    "线上模型余额需用户自行充值；本次不充值、不调用付费模型、不清空发送记录"
   ],
-  "next_action": "审核PR87；授权合并后使用正规发布工作流重刊，先处理旧X队列身份核对，不把代码修复等同于线上内容已修复。",
+  "next_action": "PR检查通过后请用户授权合并与协调部署Worker/main，再验证健康端点、实际cron、日报数据及缓存指标；历史08:00刊期重刊要显式保留旧窗口。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -50,7 +52,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-16-x-top3-dedup-diagnosis.md"
+  "evidence": "project-docs/releases/2026-09-16-morning-ai-economy.md"
 }
 ```
 

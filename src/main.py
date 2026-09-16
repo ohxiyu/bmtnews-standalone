@@ -66,7 +66,7 @@ def main():
     parser.add_argument(
         "--cutoff-hour",
         type=int,
-        default=8,
+        default=7,
         help="Daily edition cutoff hour in filtering.daily_timezone",
     )
     parser.add_argument(

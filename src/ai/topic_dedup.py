@@ -6,7 +6,7 @@ from .prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
 from .utils import parse_json_response
 
 
-async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM):
+async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM, cache=None):
     groups = []
 
     async def compare(indices):
@@ -19,13 +19,14 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                 f"    Tags: {', '.join(item.ai_tags or [])[:300]}\n"
                 f"    Summary: {(item.ai_summary or '')[:1200]}"
             )
+        user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
+        cached = cache.get_comparison(system, user) if cache is not None else None
         for attempt in range(2):
             try:
-                response = await client.complete(
-                    system=system,
-                    user=TOPIC_DEDUP_USER.format(items="\n\n".join(lines)),
-                )
-                payload = parse_json_response(response)
+                payload = cached
+                if payload is None:
+                    response = await client.complete(system=system, user=user)
+                    payload = parse_json_response(response)
                 if not isinstance(payload, dict) or not isinstance(payload.get("duplicates"), list):
                     raise ValueError("invalid dedup response")
                 validated = []
@@ -39,19 +40,34 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                         raise ValueError("duplicate group repeats an index")
                     validated.append(sorted({indices[index] for index in group}))
                 groups.extend(validated)
+                if cache is not None and cached is None:
+                    cache.store_comparison(system, user, {"duplicates": payload["duplicates"]})
                 return
-            except Exception:
-                if attempt == 1:
+            except Exception as exc:
+                cached = None
+                # Never log raw provider/model text: it can contain secrets or
+                # untrusted input. Permanent account errors cannot heal on retry.
+                status = getattr(exc, "status_code", None)
+                reason = {402: "insufficient_balance", 401: "authentication_failed",
+                          403: "permission_denied", 429: "rate_limited"}.get(status)
+                reason = reason or ("invalid_response" if isinstance(exc, ValueError)
+                                    else "provider_error")
+                if attempt == 1 or status in {401, 402, 403}:
                     raise RuntimeError(
-                        "Semantic dedup unavailable: refusing to publish unchecked content"
+                        "Semantic dedup unavailable: refusing to publish unchecked content "
+                        f"(reason={reason})"
                     ) from None
 
     for cluster in clusters:
         if len(cluster) < 2:
             continue
-        # Six-item blocks, compared in pairs, cover every pair even when a
-        # transitive local topic cluster is large. No prompt exceeds 12 items.
-        blocks = [cluster[start:start + 6] for start in range(0, len(cluster), 6)]
+        # One normal 14-story ranking fits in a single comparison instead of
+        # three overlapping calls. Larger clusters still cover EVERY pair.
+        # Input excerpts are unchanged; no prompt exceeds 24 items.
+        if len(cluster) <= 24:
+            await compare(cluster)
+            continue
+        blocks = [cluster[start:start + 12] for start in range(0, len(cluster), 12)]
         batches = [blocks[0]] if len(blocks) == 1 else [a + b for a, b in combinations(blocks, 2)]
         for batch in batches:
             await compare(batch)

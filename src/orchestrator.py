@@ -305,6 +305,8 @@ class BMTNewsOrchestrator:
         cache = getattr(self, "_analysis_cache", None)
         if cache is not None:
             cache.save()
+            report.set_metric("comparison_cache_hits", cache.comparison_hits)
+            report.set_metric("comparison_cache_misses", cache.comparison_misses)
         report.finish()
         return save_run_report(report)
 
@@ -677,7 +679,7 @@ class BMTNewsOrchestrator:
         force_hours: int | None = None,
         *,
         staging_path: Path = DEFAULT_STAGING_PATH,
-        cutoff_hour: int = 8,
+        cutoff_hour: int = 7,
         edition_date: date_type | None = None,
         now: datetime | None = None,
         force_publish: bool = False,
@@ -2715,6 +2717,7 @@ class BMTNewsOrchestrator:
         duplicate_groups = await compare_duplicates(
             create_ai_client(self.config.ai), items, list(clusters.values()),
             system=DAILY_EVENT_DEDUP_SYSTEM if daily_events else TOPIC_DEDUP_SYSTEM,
+            cache=self._result_cache(),
         )
         if daily_events:
             duplicate_groups = [

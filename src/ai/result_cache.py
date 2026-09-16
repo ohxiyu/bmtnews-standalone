@@ -53,6 +53,8 @@ class AnalysisResultCache:
         self.entries: dict[str, dict[str, Any]] = {}
         self.hits = 0
         self.misses = 0
+        self.comparison_hits = 0
+        self.comparison_misses = 0
         self._dirty = False
         self._load()
 
@@ -97,7 +99,10 @@ class AnalysisResultCache:
         return hashlib.sha256(material.encode("utf-8")).hexdigest()
 
     def _get(self, item: ContentItem, stage: str) -> dict[str, Any] | None:
-        entry = self.entries.get(self._key(item, stage))
+        return self._get_key(self._key(item, stage))
+
+    def _get_key(self, key: str) -> dict[str, Any] | None:
+        entry = self.entries.get(key)
         if not isinstance(entry, dict):
             self.misses += 1
             return None
@@ -111,12 +116,32 @@ class AnalysisResultCache:
         if _utc_now() - stored_at > self.ttl or not isinstance(
             entry.get("value"), dict
         ):
-            self.entries.pop(self._key(item, stage), None)
+            self.entries.pop(key, None)
             self._dirty = True
             self.misses += 1
             return None
         self.hits += 1
         return entry["value"]
+
+    def _comparison_key(self, system: str, user: str) -> str:
+        material = json.dumps(["comparison-v1", self.model, self.prompt_revision,
+                               system, user], ensure_ascii=False)
+        return hashlib.sha256(material.encode()).hexdigest()
+
+    def get_comparison(self, system: str, user: str) -> dict[str, Any] | None:
+        value = self._get_key(self._comparison_key(system, user))
+        if value is None:
+            self.comparison_misses += 1
+        else:
+            self.comparison_hits += 1
+        return value
+
+    def store_comparison(self, system: str, user: str, value: dict[str, Any]) -> None:
+        """Caller must validate indices before storing; hits are revalidated."""
+        self.entries[self._comparison_key(system, user)] = {
+            "stored_at": _utc_now().isoformat(), "value": value,
+        }
+        self._dirty = True
 
     def restore_analysis(self, item: ContentItem) -> bool:
         value = self._get(item, "analysis")

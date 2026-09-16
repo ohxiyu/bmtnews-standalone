@@ -66,6 +66,8 @@ _DAILY_METRIC_LABELS = (
     ("analyzed_this_run", "本次评估（含缓存）"),
     ("analysis_cache_misses", "新增 AI 分析"),
     ("analysis_cache_hits", "分析缓存命中"),
+    ("comparison_cache_hits", "去重比较缓存命中"),
+    ("comparison_cache_misses", "去重比较缓存未命中"),
     ("enrichment_cache_hits", "补充缓存命中"),
     ("fallback_analyzed", "保底补充分析"),
     ("above_threshold", "分数达标"),
