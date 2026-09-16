@@ -72,6 +72,8 @@ _DAILY_METRIC_LABELS = (
     ("below_threshold", "低于分数门槛"),
     ("topic_duplicates_removed", "主题去重删除"),
     ("qualified_after_topic_dedup", "去重后合格"),
+    ("ranking_audit_removed", "最终榜单跨组去重"),
+    ("ranking_audit_passes", "最终榜单核查轮次"),
     ("category_reclassified", "AI 内容分类调整"),
     ("category_limit_deferred", "分类限额暂缓"),
     ("source_limit_deferred", "来源限额暂缓"),

@@ -1004,6 +1004,10 @@ class BMTNewsOrchestrator:
                 qualified_items,
                 log=False,
             )
+            qualified_items, balanced_result = await self._audit_daily_ranking(
+                qualified_items, balanced_result,
+            )
+            audited_selection = tuple(id(item) for item in balanced_result.items)
             minimum_display = filtering_config.minimum_display_items
             if (
                 minimum_display is not None
@@ -1104,17 +1108,33 @@ class BMTNewsOrchestrator:
                     fill_to_minimum=True,
                 )
 
+            # Borrowed/fallback candidates must not bypass the final audit.
+            if tuple(id(item) for item in balanced_result.items) != audited_selection:
+                qualified_items, balanced_result = await self._audit_daily_ranking(
+                    qualified_items, balanced_result,
+                )
             important_items = balanced_result.items
             low_signal_minimum = filtering_config.low_signal_minimum_items
             if (
                 not important_items
                 and analyzed_items
+                and threshold_count == 0
                 and low_signal_minimum is not None
             ):
                 important_items = self._rescue_low_signal_items(
                     analyzed_items,
                     limit=low_signal_minimum,
                 )
+                # Low-signal rescue is not a bypass for history, quotas or
+                # same-event checks. Do not resurrect previously rejected news.
+                rescue = await self.filter_items(
+                    important_items, threshold=0, apply_balance=False,
+                    dedup_context=daily_state.dedup_history,
+                )
+                _, balanced_result = await self._audit_daily_ranking(
+                    rescue.items, self.apply_balanced_digest(rescue.items, log=False),
+                )
+                important_items = balanced_result.items
                 if important_items:
                     run_report.set_metric(
                         "low_signal_rescued",
@@ -1173,18 +1193,18 @@ class BMTNewsOrchestrator:
             )
             run_report.set_metric(
                 "balanced_digest_removed",
-                len(qualified_items) - len(important_items),
+                max(0, len(qualified_items) - len(important_items)),
             )
             minimum_qualified = filtering_config.minimum_qualified_items
             if (
                 minimum_qualified is not None
-                and threshold_count < minimum_qualified
+                and len(qualified_items) < minimum_qualified
             ):
                 run_report.add_alert(
                     "warning",
                     "qualified_content_shortage",
-                    f"达到 {filtering_config.ai_score_threshold:g} 分的内容只有 "
-                    f"{threshold_count}/{minimum_qualified} 条；未降低评分阈值。",
+                    f"达到 {filtering_config.ai_score_threshold:g} 分且去重后的内容只有 "
+                    f"{len(qualified_items)}/{minimum_qualified} 条；低信号保底另行标注。",
                 )
             if (
                 minimum_display is not None
@@ -1194,7 +1214,7 @@ class BMTNewsOrchestrator:
                     "warning",
                     "short_edition",
                     f"本期最终只有 {len(important_items)}/{minimum_display} 条；"
-                    "已发布短版，未复用历史内容或降低评分阈值。",
+                    "已发布短版，未复用历史内容；低信号保底另行标注。",
                 )
             group_labels = {
                 key: group.name or key
@@ -1279,6 +1299,7 @@ class BMTNewsOrchestrator:
                     if _deduplication_url_key(str(pick.url)) in existing_urls:
                         continue
                     picks.append(pick)
+                    existing_urls.add(_deduplication_url_key(str(pick.url)))
                 if picks:
                     important_items = [*picks, *important_items]
                     run_report.set_metric("editorial_items", len(picks))
@@ -1300,6 +1321,14 @@ class BMTNewsOrchestrator:
                 run_report=run_report,
             )
             important_items = self._distinct_daily_events(important_items)
+            important_items = [
+                *[item for item in important_items if item.source_type == SourceType.EDITORIAL],
+                *sorted(
+                    (item for item in important_items if item.source_type != SourceType.EDITORIAL),
+                    key=lambda item: item.ai_score or 0, reverse=True,
+                ),
+            ]
+            run_report.set_breakdown("final_selected_groups", self._group_breakdown(important_items))
 
             # Link continuing coverage to its thread before anything renders.
             self._apply_threads(important_items, edition_date=window.date)
@@ -1472,6 +1501,13 @@ class BMTNewsOrchestrator:
                 return
 
             state = state_for_edition(load_queue_state(path), date_str)
+            keys = [item_identity(item) for item in items[:config.drip_items]]
+            if not state.bind_selection(keys):
+                run_report.add_alert(
+                    "warning", "x_selection_changed",
+                    "榜单已重排或旧队列缺少新闻身份；暂停本期X推送，需人工核对，不清空已发记录。",
+                )
+                return
             for language in config.languages:
                 if kickoff_only and state.posted_ranks(language):
                     run_report.add_alert(
@@ -2610,6 +2646,7 @@ class BMTNewsOrchestrator:
         *,
         log: bool = True,
         daily_events: bool = False,
+        exhaustive: bool = False,
     ) -> List[ContentItem]:
         """Merge items covering the same topic using AI semantic deduplication.
 
@@ -2652,7 +2689,7 @@ class BMTNewsOrchestrator:
 
         for left in range(len(items)):
             for right in range(left + 1, len(items)):
-                if same_thread(prints[left], prints[right]):
+                if exhaustive or same_thread(prints[left], prints[right]):
                     union(left, right)
         group_sizes: Dict[int, int] = defaultdict(int)
         for index in range(len(items)):
@@ -2725,6 +2762,47 @@ class BMTNewsOrchestrator:
         dropped_ids = {id(items[index]) for index in drop_indices}
         self._set_timing("topic_dedup", started)
         return [item for item in original_items if id(item) not in dropped_ids]
+
+    async def _audit_daily_ranking(
+        self, pool: List[ContentItem], selection: BalancedDigestResult,
+    ) -> tuple[List[ContentItem], BalancedDigestResult]:
+        """Audit every selected pair, then recheck any quota-safe refill.
+
+        At most three passes; the last pass keeps only checked survivors.
+        Never infer duplicates merely from an entity name or a local cluster.
+        """
+        pool = list(pool)
+        removed = 0
+        passes = 0
+        for attempt in range(3):
+            before = selection.items
+            if len(before) <= 1:
+                break
+            if len(before) > 24:
+                raise RuntimeError("Daily ranking audit exceeds 24-item safety bound")
+            passes += 1
+            checked = self._distinct_daily_events(
+                await self.merge_topic_duplicates(
+                    before, daily_events=True, exhaustive=True,
+                )
+            )
+            survivors = {id(item) for item in checked}
+            dropped = {id(item) for item in before} - survivors
+            if not dropped:
+                break
+            removed += len(dropped)
+            pool = [item for item in pool if id(item) not in dropped]
+            # Each refill is checked on the next pass. At the budget boundary
+            # publish a short, checked edition rather than unchecked backfill.
+            selection = self.apply_balanced_digest(
+                checked if attempt == 2 else pool,
+                log=False, allow_primary_borrowing=True, fill_to_minimum=True,
+            )
+        if self.last_run_report is not None:
+            report = self.last_run_report
+            report.set_metric("ranking_audit_removed", report.metrics.get("ranking_audit_removed", 0) + removed)
+            report.set_metric("ranking_audit_passes", report.metrics.get("ranking_audit_passes", 0) + passes)
+        return pool, selection
 
     async def filter_items(
         self,

@@ -15,6 +15,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
             item = items[index]
             lines.append(
                 f"[{local}] {item.title[:300]}\n"
+                f"    Published: {item.published_at.isoformat()}\n"
                 f"    Tags: {', '.join(item.ai_tags or [])[:300]}\n"
                 f"    Summary: {(item.ai_summary or '')[:1200]}"
             )
@@ -34,6 +35,8 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                         for index in group
                     ):
                         raise ValueError("invalid duplicate indices")
+                    if len(set(group)) != len(group):
+                        raise ValueError("duplicate group repeats an index")
                     validated.append(sorted({indices[index] for index in group}))
                 groups.extend(validated)
                 return
@@ -44,6 +47,8 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                     ) from None
 
     for cluster in clusters:
+        if len(cluster) < 2:
+            continue
         # Six-item blocks, compared in pairs, cover every pair even when a
         # transitive local topic cluster is large. No prompt exceeds 12 items.
         blocks = [cluster[start:start + 6] for start in range(0, len(cluster), 6)]
