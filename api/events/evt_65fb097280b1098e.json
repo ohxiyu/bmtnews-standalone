@@ -51,14 +51,27 @@
       "current_state_en": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
       "detailed_summary_zh": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
       "detailed_summary_en": "aelf restored public nodes, wallet transfers, trading, and its staking interface after malicious smart-contract activity forced an emergency shutdown that halted block production for roughly a week, erasing a full week of staking rewards while exchange access remains inconsistent across venues.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "aelf 是一条围绕 AELF MainChain 主链及其侧链 dAppChain（尤其是 tDVV）构建的 Layer 1 区块链，定位为 AI 增强的云原生网络，其智能合约主要以 C# 编写。由于区块生产是奖励累积的前提，区块生产中断意味着协议在受影响期间不会产生任何网络质押奖励，而恢复 TMRW DAO 质押界面并不能回溯性地补发奖励。本次事件最初源于恶意智能合约活动，但调查范围扩展到了节点与基础设施组件，因此项目方选择了受控停机恢复，而非简单的合约补丁。",
+      "background_en": "aelf is a Layer 1 blockchain built around its AELF MainChain plus side-chain dAppChains, notably tDVV, and it positions itself as an AI-enhanced, cloud-native network whose smart contracts are primarily written in C#. Because block production drives reward accrual, a halt in block production means the protocol generates no network staking rewards for the affected period, and restoring the TMRW DAO staking interface does not create rewards retroactively. The incident began as malicious smart-contract activity but the investigation extended to node and infrastructure components, which is why the shutdown was a controlled recovery rather than a simple contract patch.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 7.0,
-      "references": [],
+      "market_impact_zh": "传导渠道主要体现在 ELF 代币及其交易场所层面的准入：各交易所充提时间表不一致，可能使流动性在不同平台之间割裂，并在已开放与仍关闭的场所之间形成价格错位；同时，整整一周质押奖励的缺失也移除了持币者原本可获得的一部分收益。根因报告与独立审查尚未公布，使 ELF 的情绪面仍背负未解决的安全悬置，其市值排名约在第 327 位。",
+      "market_impact_en": "The transmission runs primarily through the ELF token and its venue-level access: differing exchange deposit/withdrawal schedules can fragment liquidity across platforms and create price dislocations between venues that are open and those still closed, while the lost week of staking rewards removes a yield component that holders were receiving. The unpublished root-cause and independent review keeps an unresolved security overhang on sentiment for ELF, which sits around rank #327 by market cap.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://aelf.com/",
+          "title": "aelf: Layer 1 AI Blockchain"
+        },
+        {
+          "url": "https://github.com/AElfProject/AElf",
+          "title": "GitHub - AElfProject/AElf: An AI-enhanced cloud-native layer-1 blockchain network. · GitHub"
+        },
+        {
+          "url": "https://docs.aelf.com/about-aelf/wallet/",
+          "title": "Wallet | aelf Docs"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:99406b8d4fbeca6f"

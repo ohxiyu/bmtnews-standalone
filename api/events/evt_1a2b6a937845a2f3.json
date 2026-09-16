@@ -47,14 +47,27 @@
       "current_state_en": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
       "detailed_summary_zh": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
       "detailed_summary_en": "Two software flaws in Symbiosis' Bitcoin Bridge let an attacker mint roughly 46.1 billion unbacked syBTC from a 330-satoshi deposit, with the protocol estimating real losses at 9.97 BTC and taking the bridge offline for a rewrite and audit.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "跨链桥是一种让用户把某个代币从其原生区块链转移到不支持该代币的另一个网络的服务，通常的做法是把原始资产存放在资金池中，并在目标链上发行对应的代表物。Symbiosis的比特币跨链桥发行的syBTC就是一种旨在代表系统所持比特币的代币，使以BTC计价的价值可以在EVM网络以及Rootstock等比特币侧链上使用；而“聪”（satoshi）是比特币的最小单位，等于一亿分之一枚BTC。这次攻击的关键在于两个记账假设：桥在判断“是谁汇的钱”时读取的是比特币交易的哪一部分，以及协议的最低手续费逻辑如何处理被压到零以下的手续费——当一笔负数手续费从存款金额中被减去时，存款不是缩小而是变大。根据其官方文档，Symbiosis比特币跨链桥采用非托管模式，在比特币一侧不使用封装代币。",
+      "background_en": "A cross-chain bridge is a service that lets users move a token from the blockchain where it natively exists to another network that does not support it, typically by holding the original asset in a pool and issuing a representation of it on the destination chain. Symbiosis' Bitcoin Bridge issues syBTC, a token intended to represent bitcoin held by the system, so that BTC-denominated value can be used across EVM networks and Bitcoin sidechains such as Rootstock; a satoshi is the smallest unit of bitcoin, equal to one hundred-millionth of a BTC. The attack turned on two accounting assumptions: which part of a bitcoin transaction the bridge reads to decide who sent the money, and how the protocol's minimum-fee logic handles a fee value pushed below zero — if a negative fee is subtracted from a deposit amount, the deposit grows instead of shrinking. Symbiosis' Bitcoin Bridge is non-custodial and does not use wrapped tokens on the Bitcoin side, per its own documentation.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "直接风险敞口仅限于Symbiosis的流动性提供者以及在与syBTC配对的资金池中持有比特币锚定资产的用户——即WBTC、cbBTC、BTCB和RBTC，9.97枚BTC的损失正是这些资金池受损的一侧，而协议约800万美元的锁仓总值也框定了损失在其自身账本内扩散的范围。跨链桥下线后，以BTC计价的价值进入EVM链和Rootstock的一条通路被切断；由于铸出的syBTC从未有真实比特币支撑，这一事件影响的是跨链桥代币和合成比特币代币的市场情绪与风险定价，而不是现货比特币的供应量或持有者余额。",
+      "market_impact_en": "Direct exposure is confined to Symbiosis liquidity providers and users holding BTC-pegged assets in pools paired against syBTC — WBTC, cbBTC, BTCB and RBTC — with the 9.97 BTC loss representing the damaged side of those pools, and the protocol's roughly $8 million TVL bounding how far losses could spread through its own books. When the bridge is offline it removes one route by which BTC-denominated value enters EVM chains and Rootstock, and the incident feeds into sentiment and risk repricing for cross-chain bridge and synthetic-BTC tokens rather than changing spot bitcoin supply or holder balances, since the minted syBTC was never backed by real coins.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://symbiosis.finance/bridge-btc",
+          "title": "Bitcoin Bridge — Bridge to and from BTC | Symbiosis"
+        },
+        {
+          "url": "https://finance.biggo.com/news/570d3995-084e-4fea-b185-b6478df57325",
+          "title": "Symbiosis Bitcoin Bridge Exploit Mints 46 Billion syBTC, Team Recovers 15 BTC — BigGo Finance"
+        },
+        {
+          "url": "https://defillama.com/hacks",
+          "title": "DeFi Hacks & Exploits Database - DefiLlama"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:4543e2762a380e1d"

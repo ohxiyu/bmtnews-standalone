@@ -53,14 +53,23 @@
       "current_state_en": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
       "detailed_summary_zh": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
       "detailed_summary_en": "CoinEx is closing its exchange on its ninth anniversary, ending withdrawals on Dec. 22, while on-chain data attributes $422.7 million across 3.2 million addresses to the platform and its reserve page shows no current audit rows.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "储备金证明（Proof of Reserves）审计是一种透明度实践：交易所公布数据（通常由第三方验证），证明其持有的加密资产至少等于欠用户的资产；审计基本只有两种结果——资产超过负债则为有偿付能力，否则即为无偿付能力。Arkham Intelligence 是一个链上分析平台，可对钱包背后的个人与公司进行去匿名化识别，因此能够将某个金额归属到某家交易所实体。中心化交易所直接托管用户资金，因此关停或冻结提现会让客户暴露于交易所自身的资产负债表风险，而非任何链上故障。",
+      "background_en": "Proof-of-Reserves audits are a transparency practice in which an exchange publishes data, often verified by a third party, showing that the crypto it holds at least matches what it owes users; the audit has essentially two outcomes — solvent if assets exceed liabilities, insolvent if they do not. Arkham Intelligence is a blockchain analytics platform that deanonymizes the people and companies behind wallets, which is how a dollar figure can be attributed to an exchange entity. Centralized exchanges custody user funds directly, so a shutdown or withdrawal freeze exposes customers to the exchange's balance sheet rather than to any on-chain failure.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径主要通过托管与市场情绪：CoinEx 用户面临硬性提现截止期限，若出现资金缺口，将冲击其平台代币以及此前多次引发避险行情的中心化交易所偿付能力叙事。链上归属的 4.227 亿美元也代表可能迁移至其他平台或自托管的流动性，这一流动影响的是 CoinEx 上线代币的现货深度，而非某单一主流大市值资产。",
+      "market_impact_en": "The transmission runs primarily through custody and sentiment: CoinEx users face a hard deadline to withdraw, and any shortfall would hit its native token and the broader CEX-solvency narrative that has driven risk-off moves before. The $422.7 million attributed on-chain also represents liquidity that could migrate to other venues or self-custody, a flow that touches spot depth on CoinEx-listed tokens rather than any single large-cap asset.",
       "importance_score": 8.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://intel.arkm.com/?ref=whales.market",
+          "title": "Intel Platform | Arkham"
+        },
+        {
+          "url": "https://www.ledger.com/academy/crypto-proof-of-reserves-audit",
+          "title": "Crypto Proof of Reserves - A Guide | Ledger"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:thedefiant.io_api_feed:3a14cb9f51837466"

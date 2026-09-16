@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Bitcoin Core v32.0rc1 将四个 RPC 默认切换至 PSBTv2，开启兼容性测试窗口"
+permalink: /threads/t7d90b85de5/
+interface_language: zh
+description: "Bitcoin Core v32.0rc1 已于 9 月 14 日以带验证签名的标签发布，现行发布日程将 10 月 10 日列为 v32.0 正式标签的目标日期，从而形成约 26 天的兼容性测试窗口。该预发布版本把四个 RPC 的默认输出改为 PSBTv2，将 estimatesmartfee 的默认路径改为同时结合区块策略估算器与内存池估算器，并重写了 H"
+page_type: archive
+---
+
+<div class="archive-stats"><div class="archive-stat"><strong>2</strong><span>天</span></div><div class="archive-stat"><strong>2</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-16</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-16">2026-09-16</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/a-major-bitcoin-core-update-changes-default-wallet-protocols-risking-temporary-disruption-across-popular-apps/" target="_blank" rel="noopener noreferrer">Bitcoin Core v32.0rc1 将四个 RPC 默认切换至 PSBTv2，开启兼容性测试窗口</a></h3><p class="archive-row-summary">Bitcoin Core v32.0rc1 已于 9 月 14 日以带验证签名的标签发布，现行发布日程将 10 月 10 日列为 v32.0 正式标签的目标日期，从而形成约 26 天的兼容性测试窗口。该预发布版本把四个 RPC 的默认输出改为 PSBTv2，将 estimatesmartfee 的默认路径改为同时结合区块策略估算器与内存池估算器，并重写了 HTTP 服务器，引入新的请求头、连接数与缓存控制限制。
+
+尽管这是预发布软件而非共识规则变更，但默认 RPC 行为的改变可能悄无声息地破坏钱包解析器、PSBT 签名器、费用追加（fee-bump）工具，以及那些仍按 PSBTv0 假设工作或依赖旧版本可容忍参数与已弃用字段的服务。因此节点运营者和钱包服务商在计划中的正式标签发布前，只有这段集中的窗口来发现并修复集成层面的回归问题。
+
+最大的性能改动是区块连接期间对交易输出的并行预取，默认使用 8 个 worker，最高支持 16 个，并可关闭。重建后的小型交易索引占用磁盘空间不到原来的一半，但旧版本无法读取新格式，因此降级会再次触发长达数小时的索引重建；HTTP 重写则新增 8,192 字节的请求头上限、更严格的畸形请求头处理，以及默认最多 16 个 RPC 连接的上限。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">7.5</span></li><li class="archive-row"><time datetime="2026-09-05">2026-09-05</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/hidden-solana-upgrade-bug-can-freeze-network-readers-and-silently-disable-fee-limits/" target="_blank" rel="noopener noreferrer">Solana v1升级存隐患：可冻结RPC读取并静默禁用费用上限</a></h3><p class="archive-row-summary">Solana的v1交易格式将最大交易负载从1,232字节提高到4,096字节，但未选择接入的RPC读取方可能被冻结，依赖ComputeBudget指令的索引器和赞助方则可能静默失效费用上限。截至9月4日，该格式已在测试网和开发网生效，但尚未在主网激活。
+
+RPC客户端、索引器、中继器和费用赞助方如果没有及时更新，可能在第一条v1交易出现后遭遇硬性故障，或者执行错误的资源与费用限额。这使得主网激活前的窗口期成为Solana几乎所有基础设施运营方的兼容性截止时间。
+
+使用getTransaction、getBlock或blockSubscribe时，客户端必须传入maxSupportedTransactionVersion: 1，否则v1请求会返回-32015错误，包含v1交易的整个区块无法读取，订阅也会在受影响槽位停止前进。v1将计算单元、已加载账户数据与优先费放入transactionConfig对象而非ComputeBudget指令，过时的索引器会静默把每个v1交易的预算记为0；Geyser/gRPC用户需重新生成protobuf并在读取版本标志前检查字段7。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">7.5</span></li></ul><p class="archive-back"><a href="/threads/">全部事件线</a> · <a href="/">返回首页</a></p>

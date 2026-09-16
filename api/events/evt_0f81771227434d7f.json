@@ -48,14 +48,27 @@
       "current_state_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
       "detailed_summary_zh": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
       "detailed_summary_en": "An attacker exploiting a custom Safe module to extract ~$7.7M in rsETH was front-run by the MEV bot 'Yoink,' which captured the funds before Kelp temporarily froze the receiving address.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "rsETH 是 Kelp DAO 发行的流动性再质押代币（LRT），代表通过 EigenLayer 式再质押的 ETH，同时可在 DeFi 中使用。Safe 是广泛使用的智能合约钱包，其模块化设计允许用户挂载按既定规则执行交易的自定义模块，因此模块本身成为高权限攻击目标。Uniswap v4 的 hook 是可选的插件，可让流动性池自定义行为，但如果某个模块能被指向攻击者控制的池子，也可能被滥用。MEV 机器人（搜索者）会监控内存池中的有利可图交易，并向区块构建者付费以让自己的交易在区块中被优先排序。",
+      "background_en": "rsETH is a Liquid Restaked Token issued by Kelp DAO, representing ETH that has been restaked through EigenLayer-style restaking while remaining usable in DeFi. Safe is a widely used smart-contract wallet whose modular design lets users attach custom modules that execute transactions under defined rules, making the module itself a privileged target. Uniswap v4 hooks are optional plugins that let pools customize behavior, but they can also be weaponized if a module can be pointed at an attacker-controlled pool. MEV bots, or searchers, monitor the mempool for profitable transactions and pay block builders to have their own transaction ordered first in a block.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该事件影响 rsETH 及再质押/LRT 板块：地址级别的 24 小时冻结，加上对自定义 Safe 模块风险的担忧，可能对 rsETH 及同类流动性再质押代币的二级市场流动性和赎回信心造成压力。由于损失规模不足 800 万美元，对更广泛 ETH 市场的溢出效应有限，但它强化了市场对再质押体系中薄弱环节仍在于 DeFi 集成层而非核心协议合约的看法。",
+      "market_impact_en": "The incident affects rsETH and the restaking/LRT segment: a 24-hour address-level freeze and questions about custom Safe module risk can weigh on secondary-market liquidity and redemption confidence for rsETH and comparable liquid restaking tokens. Spillover to broader ETH markets is limited by the sub-$8 million size, though it reinforces perceptions that DeFi integrations, rather than core protocol contracts, remain the weakest link in the restaking stack.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.coingecko.com/en/coins/kelp-dao-restaked-eth",
+          "title": "Kelp DAO Restaked ETH Price: RSETH/USD Live Price Chart ..."
+        },
+        {
+          "url": "https://developers.uniswap.org/docs/protocols/v4/concepts/hooks",
+          "title": "Uniswap v4 Hooks | Uniswap Developers"
+        },
+        {
+          "url": "https://www.bybit.com/en/wiki/article/front-running-in-crypto-mev-bots-protection/",
+          "title": "Front Running in Crypto: MEV Bots & Protection | Bybit Wiki"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:2c30f3242ce3741a",

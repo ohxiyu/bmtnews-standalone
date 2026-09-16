@@ -51,14 +51,27 @@
       "current_state_en": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
       "detailed_summary_zh": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
       "detailed_summary_en": "Bitcoin Core v32.0rc1 defaults four RPCs to PSBTv2 and changes fee estimation behavior, creating a concentrated compatibility testing window for node operators, wallet providers, and services ahead of the planned Oct. 10 final release.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Bitcoin Core 是比特币协议的参考实现，其 RPC 接口允许外部程序控制节点，包括从钱包中花费资金、读取私有数据以及影响共识验证。PSBT 由 BIP 174 定义、并由 BIP 370 扩展为 PSBTv2，是一种标准化的部分签名交易格式，用于在钱包、硬件签名设备与服务之间传递交易。Bitcoin Core 的费用估算器则通过记录历史确认数据统计，给出使交易在目标区块数内确认所需的合理费率。",
+      "background_en": "Bitcoin Core is the reference implementation of the Bitcoin protocol, and its RPC interface lets external programs control the node, including spending from wallets, reading private data and influencing consensus verification. PSBT, defined in BIP 174 and extended to PSBTv2 by BIP 370, is a standardized partially signed transaction format used to pass transactions between wallets, hardware signers and services. Bitcoin Core's fee estimator works by recording statistics about past confirmations and reporting a fee rate likely to confirm a transaction within a target number of blocks.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径在于运营可靠性而非供给或共识：依赖 Bitcoin Core RPC 后端的交易所、托管钱包与支付处理商，若未充分测试 PSBTv2 默认值与新的 HTTP 限制就升级，可能出现短暂的充值、提现或费用估算异常。此类影响属于平台层面且时间有限；同时由于 v32.0rc1 仅为预发布版本，多数运营者预计会在正式标签发布前继续使用 31.1 基线版本。",
+      "market_impact_en": "The transmission path runs through operational reliability rather than supply or consensus: exchanges, custodial wallets and payment processors that drive Bitcoin Core RPC backends could see temporary deposit, withdrawal or fee-estimation disruptions if they upgrade without testing PSBTv2 defaults and the new HTTP limits. Any such disruption would be venue-level and short-lived, and because v32.0rc1 is a prerelease, most operators are expected to stay on the 31.1 baseline until the final tag.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://developer.bitcoin.org/reference/rpc/",
+          "title": "RPC API Reference — Bitcoin"
+        },
+        {
+          "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/JSON-RPC-interface.md",
+          "title": "bitcoin/doc/JSON-RPC-interface.md at master · bitcoin/bitcoin"
+        },
+        {
+          "url": "https://d-central.tech/everything-you-need-to-know-about-partially-signed-bitcoin-transactions/",
+          "title": "Partially Signed Bitcoin Transactions (PSBT): The... - D-Central"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:c090d7041bb4b1d9"

@@ -48,10 +48,10 @@
       "current_state_en": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
       "detailed_summary_zh": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
       "detailed_summary_en": "Strix.ai reports that its AI pen-testing agent found an exposed Baseten GitHub admin token granting access to production, GitOps, and customer repositories, prompting Baseten to rotate the token and make the affected project private.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "background_zh": "GitHub 个人访问令牌（PAT）相当于用于 API 和 Git 操作的密码，一旦权限范围较广的 PAT 泄露，攻击者便可读取和修改代码、CI 配置以及部署工具链。Docker 镜像按层构建，构建过程中被复制或引用的密钥（例如通过 ARG、ENV 或复制文件）可能残留在镜像历史中，因此拉取并检查镜像就可能发现凭据——此前已有报告记录过数千个 Docker Hub 镜像大规模泄露凭据的同类情况。Baseten 是一家 C 轮公司，提供企业用于部署和运行私有模型的 AI 推理平台，因此其部署相关仓库在运营上高度敏感。",
+      "background_en": "A GitHub personal access token (PAT) is a credential that acts like a password for API and Git operations, and a leaked PAT with broad scopes lets an attacker read and modify code, CI configuration, and deployment tooling. Docker images are built in layers, and secrets that are copied or referenced during a build (for example via ARG, ENV, or copied files) can persist inside the image history, so pulling and inspecting an image can reveal credentials — a pattern previously documented at scale across thousands of Docker Hub images. Baseten is a Series C company offering an AI inference platform that enterprises use to deploy and run proprietary models, which makes its deployment repositories operationally sensitive.",
+      "community_discussion_zh": "Hacker News 讨论帖（196 分、106 条评论）情绪分歧明显：有人称赞 Baseten 响应迅速、处置流程记录清晰，但也有不少人批评 Strix.ai 实际上是把真实厂商当作营销素材，并且在更克制的披露方式已足够的情况下点名了受害方。还有人质疑此类探测的合法性，将其比作撬开邻居家门，同时也承认这个故事确实让他们对 Strix 的工具产生了评估兴趣。",
+      "community_discussion_en": "The Hacker News thread (196 points, 106 comments) shows mixed sentiment: commenters credit Baseten for a fast, well-documented remediation, but several criticize Strix.ai for effectively using a real vendor as a marketing campaign and for naming the victim when a simpler disclosure would have sufficed. Others question the legality of the probing, compare it to breaking into a neighbor's house, and note that the story nonetheless makes them curious enough to evaluate Strix's tooling.",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
@@ -59,6 +59,18 @@
         {
           "url": "https://news.ycombinator.com/item?id=49716476",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://www.baseten.co/",
+          "title": "Inference Platform: Deploy AI models in production | Baseten"
+        },
+        {
+          "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+          "title": "Managing your personal access tokens - GitHub Docs"
+        },
+        {
+          "url": "https://nhimg.org/massive-docker-hub-leak-10000-images-expose-secrets-and-auth-keys",
+          "title": "Massive Docker Hub Leak: 10,000+ Images Expose Secrets and Auth..."
         }
       ],
       "confidence": 0.75,
