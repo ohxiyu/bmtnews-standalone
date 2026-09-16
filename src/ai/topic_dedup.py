@@ -85,6 +85,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                 f"    Summary: {(item.ai_summary or '')[:1200]}"
             )
         user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
+        request_user = user
         cached = cache.get_comparison(system, user) if cache is not None else None
         for attempt in range(2):
             payload = None
@@ -92,7 +93,7 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
             try:
                 payload = cached
                 if payload is None:
-                    response = await client.complete(system=system, user=user)
+                    response = await client.complete(system=system, user=request_user)
                     payload = parse_json_response(response)
                 validated = []
                 for group in validate_duplicates(payload, len(indices)):
@@ -119,6 +120,18 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                     "shape": response_shape(payload),
                     "syntax": response_syntax(response),
                 }, sort_keys=True))
+                if type(exc) is DedupResponseError:
+                    # Correct the formatting instruction, never infer or repair
+                    # semantic decisions. Do not echo untrusted model output.
+                    syntax = response_syntax(response).get("json", "schema_error")
+                    request_user = user + (
+                        "\nThe previous response failed validation: "
+                        f"{detail}; JSON syntax: {syntax}. "
+                        'Re-evaluate the same items and return only an object with key "duplicates", '
+                        "using complete arrays of valid integer indices (or an empty array). "
+                        "Close all inner arrays and the outer array before the final object brace. "
+                        "No placeholders or prose."
+                    )
                 if attempt == 1 or status in {401, 402, 403}:
                     raise RuntimeError(
                         "Semantic dedup unavailable: refusing to publish unchecked content "

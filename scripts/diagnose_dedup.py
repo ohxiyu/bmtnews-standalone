@@ -1,6 +1,7 @@
 """Bounded, read-only replay from cached public inputs; never publish or collect."""
 import asyncio
 import argparse
+import ast
 import hashlib
 import json
 import subprocess
@@ -10,7 +11,6 @@ from pathlib import Path
 
 from src.ai.client import create_ai_client
 from src.ai.topic_dedup import duplicate_groups
-from src.ai.prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
 from src.models import Config, ContentItem
 from src.orchestrator import BMTNewsOrchestrator
 from src.threads import fingerprint, same_thread
@@ -77,14 +77,21 @@ async def run():
     args = parser.parse_args()
     config, items, batches, cache = inputs()
     if args.batch_id:
+        # Identify historical batches with the unchanged production prompt;
+        # replay them through the candidate fix's current prompt/validator.
+        tree = ast.parse(subprocess.check_output(
+            ["git", "show", "origin/main:src/ai/prompts.py"], text=True))
+        legacy = {n.targets[0].id: ast.literal_eval(n.value) for n in tree.body
+                  if isinstance(n, ast.Assign) and isinstance(n.targets[0], ast.Name)
+                  and n.targets[0].id in {"TOPIC_DEDUP_SYSTEM", "TOPIC_DEDUP_USER"}}
         def batch_id(batch):
             lines = [f"[{local}] {items[i].title[:300]}\n"
                      f"    Published: {items[i].published_at.isoformat()}\n"
                      f"    Tags: {', '.join(items[i].ai_tags or [])[:300]}\n"
                      f"    Summary: {(items[i].ai_summary or '')[:1200]}"
                      for local, i in enumerate(batch)]
-            user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
-            return hashlib.sha256((TOPIC_DEDUP_SYSTEM + user).encode()).hexdigest()[:16]
+            user = legacy["TOPIC_DEDUP_USER"].format(items="\n\n".join(lines))
+            return hashlib.sha256((legacy["TOPIC_DEDUP_SYSTEM"] + user).encode()).hexdigest()[:16]
         batches = [b for b in batches if batch_id(b) == args.batch_id]
         if not batches:
             raise SystemExit("No matching cached batch; no model call made")

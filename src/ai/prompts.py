@@ -14,14 +14,13 @@ TOPIC_DEDUP_USER = """The following news items have already been sorted by impor
 
 {items}
 
-Return a JSON object listing only the groups that contain duplicates (2+ items). Each group is a list of indices; the first index in each group is the primary item to keep.
-
-Respond with valid JSON only:
-{{
-  "duplicates": [[<primary_idx>, <dup_idx>, ...], ...]
-}}
-
-If there are no duplicates at all, return: {{"duplicates": []}}"""
+Return only one valid JSON object with the key "duplicates" and an array of groups.
+Each group must contain at least two distinct zero-based integer indices from the items above.
+The first index in each group is the primary item to keep. Do not list unique items.
+Example syntax only (do not copy these indices): {{"duplicates": [[0, 1], [2, 3]]}}
+Close every inner group array, then the outer duplicates array, then the object.
+Do not use placeholders, ellipses, trailing commas, comments, or prose.
+If there are no duplicates, return exactly: {{"duplicates": []}}"""
 
 
 EVENT_RELATION_SYSTEM = """You classify whether a new news story changes one existing real-world event.
