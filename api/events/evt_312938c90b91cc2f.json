@@ -11,25 +11,30 @@
     "en": "Celsius sues BitMEX for $495 million just 11 days before exchange shutdown"
   },
   "current_state": {
-    "zh": "Celsius 破产财产于9月12日在美国纽约南区破产法院对五家 BitMEX 实体提起诉讼，就 2020 年3月崩盘期间被清算的 6,360 BTC 索赔约 4.95 亿美元；BitMEX 将于9月23日停止交易。",
-    "en": "Celsius's bankruptcy estate sued five BitMEX entities in the U.S. Bankruptcy Court for the Southern District of New York on Sept. 12, seeking about $495 million for 6,360 BTC liquidated during the March 2020 crash; BitMEX is set to stop trading Sept. 23."
+    "zh": "Celsius 破产财产于9月12日在美国纽约南区破产法院对五家 BitMEX 实体提起诉讼，就 2020 年3月崩盘期间被清算的 BTC 索赔；最新报道补充了 XBTM20 杠杆衍生品交易细节及 Mashinsky 否认交易的公开表态。BitMEX 将于9月23日停止交易。",
+    "en": "Celsius's bankruptcy estate sued five BitMEX entities in the U.S. Bankruptcy Court for the Southern District of New York on Sept. 12 over BTC liquidated during the March 2020 crash; new reporting adds details about the XBTM20 leveraged derivative and Mashinsky's public denial of trading. BitMEX is set to stop trading Sept. 23."
   },
   "first_seen_at": "2026-09-16T17:12:31.865046+00:00",
-  "last_updated_at": "2026-09-17T09:35:06.660412+00:00",
-  "last_material_change_at": "2026-09-16T23:08:38.135457+00:00",
+  "last_updated_at": "2026-09-17T17:11:52.638229+00:00",
+  "last_material_change_at": "2026-09-17T17:11:52.638229+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 3,
+  "updates_count": 3,
+  "sources_count": 4,
   "entities": [
+    "alex",
     "bitmex",
     "celsius",
-    "liquidations"
+    "liquidations",
+    "mashinsky"
   ],
   "identifiers": [],
   "topics": [
     "bankruptcy",
     "bitmex",
     "celsius",
+    "crypto-exchanges",
+    "lawsuit",
+    "liquidation",
     "liquidations",
     "litigation"
   ],
@@ -112,6 +117,44 @@
         {
           "url": "https://cointelegraph.com/news/celsius-estate-bitmex-6360-btc-liquidation-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_383869ebbd303a33",
+      "event_id": "evt_312938c90b91cc2f",
+      "occurred_at": "2026-09-17T11:21:32Z",
+      "published_at": "2026-09-17T11:21:32Z",
+      "first_seen_at": "2026-09-17T17:11:52.638229Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Celsius sues BitMEX over trades Alex Mashinsky said never happened",
+      "title_en": "Celsius sues BitMEX over trades Alex Mashinsky said never happened",
+      "what_changed_zh": "新报道进一步披露 Celsius 在 BitMEX 上交易的是杠杆衍生品 XBTM20，并指出 Alex Mashinsky 在清算后一天公开声称 Celsius 不做交易，与债务人的指控相矛盾。",
+      "what_changed_en": "The new report further details that Celsius traded the leveraged derivative XBTM20 on BitMEX and that Alex Mashinsky publicly claimed one day after the liquidation that Celsius did not trade, contradicting the debtors' allegations.",
+      "current_state_zh": "Celsius 破产财产于9月12日在美国纽约南区破产法院对五家 BitMEX 实体提起诉讼，就 2020 年3月崩盘期间被清算的 BTC 索赔；最新报道补充了 XBTM20 杠杆衍生品交易细节及 Mashinsky 否认交易的公开表态。BitMEX 将于9月23日停止交易。",
+      "current_state_en": "Celsius's bankruptcy estate sued five BitMEX entities in the U.S. Bankruptcy Court for the Southern District of New York on Sept. 12 over BTC liquidated during the March 2020 crash; new reporting adds details about the XBTM20 leveraged derivative and Mashinsky's public denial of trading. BitMEX is set to stop trading Sept. 23.",
+      "detailed_summary_zh": "Celsius Network debtors sued BitMEX for over $100 million over alleged wrongful liquidation and seizure of Celsius BTC during the March 2020 COVID crash, contradicting CEO Alex Mashinsky's public claim that Celsius did not trade.",
+      "detailed_summary_en": "Celsius Network debtors sued BitMEX for over $100 million over alleged wrongful liquidation and seizure of Celsius BTC during the March 2020 COVID crash, contradicting CEO Alex Mashinsky's public claim that Celsius did not trade.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:protos.com_feed_:4edb07466a91447c"
+      ],
+      "sources": [
+        {
+          "url": "https://protos.com/celsius-sues-bitmex-over-trades-alex-mashinsky-said-never-happened/",
+          "label": "Protos",
           "source_type": "rss",
           "official": false
         }

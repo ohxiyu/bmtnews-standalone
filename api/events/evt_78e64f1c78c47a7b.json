@@ -4,30 +4,33 @@
   "url": "https://bmt.news/events/evt_78e64f1c78c47a7b/",
   "json": "https://bmt.news/api/events/evt_78e64f1c78c47a7b.json",
   "type": "legal_case",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "South Korean police charge 26 Polymarket users for illegal gambling: report",
     "en": "South Korean police charge 26 Polymarket users for illegal gambling: report"
   },
   "current_state": {
-    "zh": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
-    "en": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform."
+    "zh": "韩国警方正在调查26名Polymarket用户涉嫌非法赌博，其中18人已被移送检方，涉案下注总额约1270万美元，案件仍在进行中。",
+    "en": "South Korean police are investigating 26 Polymarket users for illegal gambling; 18 have been referred to prosecutors, with total wagers of about $12.7 million, and the case remains ongoing."
   },
   "first_seen_at": "2026-09-17T09:34:58.293208+00:00",
-  "last_updated_at": "2026-09-17T09:34:58.293208+00:00",
-  "last_material_change_at": "2026-09-17T09:34:58.293208+00:00",
+  "last_updated_at": "2026-09-17T17:12:01.044002+00:00",
+  "last_material_change_at": "2026-09-17T17:12:01.044002+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "korea",
     "korean",
     "polymarket",
+    "report",
     "south",
     "south-korea"
   ],
   "identifiers": [],
   "topics": [
+    "gambling-enforcement",
     "gambling-law",
     "polymarket",
     "prediction-markets",
@@ -67,6 +70,44 @@
         {
           "url": "https://www.theblock.co/news/regulation/2026-09-17-south-korean-police-charge-polymarket-users-415333",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_3a028ad6ff8bdc51",
+      "event_id": "evt_78e64f1c78c47a7b",
+      "occurred_at": "2026-09-17T09:37:32Z",
+      "published_at": "2026-09-17T09:37:32Z",
+      "first_seen_at": "2026-09-17T17:12:01.044002Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Polymarket users referred to prosecutors in South Korea: Report",
+      "title_en": "Polymarket users referred to prosecutors in South Korea: Report",
+      "what_changed_zh": "韩国警方已将26名Polymarket用户中的18人移送检方，案件涉及非法赌博调查；这些用户合计下注约1270万美元，单人最高下注约410万美元。",
+      "what_changed_en": "South Korean police referred 18 of 26 Polymarket users to prosecutors in the illegal gambling probe; the users collectively wagered about $12.7 million, with the largest single user wagering about $4.1 million.",
+      "current_state_zh": "韩国警方正在调查26名Polymarket用户涉嫌非法赌博，其中18人已被移送检方，涉案下注总额约1270万美元，案件仍在进行中。",
+      "current_state_en": "South Korean police are investigating 26 Polymarket users for illegal gambling; 18 have been referred to prosecutors, with total wagers of about $12.7 million, and the case remains ongoing.",
+      "detailed_summary_zh": "South Korean police referred 18 Polymarket users to prosecutors in an illegal gambling probe involving 26 people who collectively wagered about $12.7 million.",
+      "detailed_summary_en": "South Korean police referred 18 Polymarket users to prosecutors in an illegal gambling probe involving 26 people who collectively wagered about $12.7 million.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:ed6e20ddde57c772"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/south-korea-polymarket-users-prosecutors-gambling-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }

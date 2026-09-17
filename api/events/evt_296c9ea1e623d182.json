@@ -4,36 +4,49 @@
   "url": "https://bmt.news/events/evt_296c9ea1e623d182/",
   "json": "https://bmt.news/api/events/evt_296c9ea1e623d182.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Crypto Industry Points to SEC and CFTC After CLARITY Setback",
     "en": "Crypto Industry Points to SEC and CFTC After CLARITY Setback"
   },
   "current_state": {
-    "zh": "After the Senate blocked the CLARITY Act, crypto trade groups and executives are urging the SEC and CFTC to advance crypto regulation through agency rulemaking, noting that rules are less durable than legislation since future chairs can rewrite them.",
-    "en": "After the Senate blocked the CLARITY Act, crypto trade groups and executives are urging the SEC and CFTC to advance crypto regulation through agency rulemaking, noting that rules are less durable than legislation since future chairs can rewrite them."
+    "zh": "在《CLARITY 法案》于参议院受阻后，SEC 已通过为期五年的“创新豁免”允许代币化 NMS 股票在许可型自动做市商上交易；同时 CFTC 工作人员将 Introducing Broker 豁免扩大至被动软件。",
+    "en": "After the CLARITY Act stalled in the Senate, the SEC has granted a five-year 'Innovation Exemption' allowing tokenized NMS stocks to trade on permissioned automated market makers, while CFTC staff extended introducing-broker relief to passive software."
   },
   "first_seen_at": "2026-09-16T17:12:30.450751+00:00",
-  "last_updated_at": "2026-09-16T17:12:30.450751+00:00",
-  "last_material_change_at": "2026-09-16T17:12:30.450751+00:00",
+  "last_updated_at": "2026-09-17T17:11:56.141564+00:00",
+  "last_material_change_at": "2026-09-17T17:11:56.141564+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
     "after",
     "cftc",
     "clarity",
+    "clears",
     "industry",
+    "onchain",
+    "path",
     "points",
+    "relief",
     "sec",
-    "setback"
+    "setback",
+    "software",
+    "stocks",
+    "stumbles",
+    "tokenized",
+    "tokenized-stocks",
+    "trade",
+    "widens"
   ],
   "identifiers": [],
   "topics": [
+    "amm",
     "cftc",
     "crypto-regulation",
     "sec",
+    "tokenized-stocks",
     "us-policy"
   ],
   "updates": [
@@ -69,6 +82,82 @@
       "sources": [
         {
           "url": "https://thedefiant.io/news/regulation/crypto-industry-points-to-sec-and-cftc-after-clarity-setback",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_1cefa82f36e54fe7",
+      "event_id": "evt_296c9ea1e623d182",
+      "occurred_at": "2026-09-17T14:52:03Z",
+      "published_at": "2026-09-17T14:52:03Z",
+      "first_seen_at": "2026-09-17T17:11:56.141564Z",
+      "time_precision": "published",
+      "update_type": "response",
+      "material_change": true,
+      "title_zh": "SEC Clears a Path for Tokenized Stocks After Clarity Act Stumbles",
+      "title_en": "SEC Clears a Path for Tokenized Stocks After Clarity Act Stumbles",
+      "what_changed_zh": "SEC 推出为期五年的“创新豁免”，允许符合条件的代币化证券交易场所在无需注册为全国性证券交易所的情况下，通过自动做市商在无需许可的区块链上交易真实的代币化美股，此举发生在《CLARITY 法案》在参议院受阻之后。",
+      "what_changed_en": "The SEC introduced a five-year 'Innovation Exemption' allowing qualifying Tokenized Securities Venues to trade genuine tokenized U.S. stocks via automated market makers on permissionless blockchains without registering as national exchanges, following the Senate stall of the CLARITY Act.",
+      "current_state_zh": "在《CLARITY 法案》于参议院受阻后，SEC 已通过“创新豁免”立即为代币化美股交易开辟合规路径，该豁免最长持续五年，作为通向永久性规则制定的临时桥梁。",
+      "current_state_en": "After the CLARITY Act stalled in the Senate, the SEC has immediately opened a compliance pathway for tokenized U.S. stock trading through its 'Innovation Exemption,' lasting up to five years as a temporary bridge toward permanent rulemaking.",
+      "detailed_summary_zh": "The SEC introduced an immediate, five-year 'Innovation Exemption' allowing qualifying Tokenized Securities Venues to trade genuine tokenized U.S. stocks via automated market makers on permissionless blockchains without registering as national exchanges, following the Clarity Act's Senate stall.",
+      "detailed_summary_en": "The SEC introduced an immediate, five-year 'Innovation Exemption' allowing qualifying Tokenized Securities Venues to trade genuine tokenized U.S. stocks via automated market makers on permissionless blockchains without registering as national exchanges, following the Clarity Act's Senate stall.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 9.0,
+      "references": [],
+      "confidence": 0.93,
+      "story_ids": [
+        "rss:decrypt.co_feed:7ad69d0b6caacb73"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/378492/sec-innovation-exemption-tokenized-stocks-clarity-act",
+          "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_6becd8779e1ea780",
+      "event_id": "evt_296c9ea1e623d182",
+      "occurred_at": "2026-09-17T17:11:49Z",
+      "published_at": "2026-09-17T17:11:49Z",
+      "first_seen_at": "2026-09-17T17:11:49.652043Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "SEC Clears Tokenized Stocks To Trade Onchain As CFTC Widens Software Relief",
+      "title_en": "SEC Clears Tokenized Stocks To Trade Onchain As CFTC Widens Software Relief",
+      "what_changed_zh": "CFTC 工作人员将 Introducing Broker 豁免扩大至被动软件，同时 SEC 的五年期代币化美股豁免明确适用于许可型自动做市商（而非无需许可区块链）。",
+      "what_changed_en": "CFTC staff extended introducing-broker relief to passive software, and the SEC's five-year tokenized U.S. stock exemption was specified as applying to permissioned automated market makers (rather than permissionless blockchains).",
+      "current_state_zh": "在《CLARITY 法案》于参议院受阻后，SEC 已通过为期五年的“创新豁免”允许代币化 NMS 股票在许可型自动做市商上交易；同时 CFTC 工作人员将 Introducing Broker 豁免扩大至被动软件。",
+      "current_state_en": "After the CLARITY Act stalled in the Senate, the SEC has granted a five-year 'Innovation Exemption' allowing tokenized NMS stocks to trade on permissioned automated market makers, while CFTC staff extended introducing-broker relief to passive software.",
+      "detailed_summary_zh": "The SEC granted a five-year conditional exemption allowing tokenized National Market System stocks to trade on permissioned automated market makers, while CFTC staff extended introducing-broker relief to passive software.",
+      "detailed_summary_en": "The SEC granted a five-year conditional exemption allowing tokenized National Market System stocks to trade on permissioned automated market makers, while CFTC staff extended introducing-broker relief to passive software.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:4d46e36ea8637220"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/regulation/sec-innovation-exemption-tokenized-stocks-cftc-software-relief",
           "label": "The Defiant",
           "source_type": "rss",
           "official": false

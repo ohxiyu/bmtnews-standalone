@@ -4,29 +4,31 @@
   "url": "https://bmt.news/events/evt_cc2ee6ed697c7f69/",
   "json": "https://bmt.news/api/events/evt_cc2ee6ed697c7f69.json",
   "type": "legal_case",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "Why a new SEC plan could ease a legal headache for tokenized securities",
     "en": "Why a new SEC plan could ease a legal headache for tokenized securities"
   },
   "current_state": {
-    "zh": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt.",
-    "en": "A new SEC plan could remove legal obstacles to holding tokenized securities, potentially easing compliance burdens and unlocking broader institutional adoption of on-chain equities and debt."
+    "zh": "SEC已发布为期5年的创新豁免，允许代币化证券交易场所无需注册为交易所即可运营。",
+    "en": "The SEC has issued a 5-year innovation exemption allowing tokenized securities venues to list and trade without exchange registration."
   },
   "first_seen_at": "2026-09-10T22:42:59.603645+00:00",
-  "last_updated_at": "2026-09-10T22:42:59.603645+00:00",
-  "last_material_change_at": "2026-09-10T22:42:59.603645+00:00",
+  "last_updated_at": "2026-09-17T17:11:44.918804+00:00",
+  "last_material_change_at": "2026-09-17T17:11:44.918804+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "exemption",
     "sec",
     "tokenized-securities",
     "why"
   ],
   "identifiers": [],
   "topics": [
+    "exemption",
     "sec",
     "tokenized-securities"
   ],
@@ -63,6 +65,44 @@
       "sources": [
         {
           "url": "https://www.coindesk.com/business/2026/09/10/why-a-new-sec-plan-could-end-the-legal-headaches-of-holding-tokenized-securities",
+          "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_8d9aa93a8ec8a105",
+      "event_id": "evt_cc2ee6ed697c7f69",
+      "occurred_at": "2026-09-17T13:00:00Z",
+      "published_at": "2026-09-17T13:00:00Z",
+      "first_seen_at": "2026-09-17T17:11:44.918804Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "SEC rolls out long-awaited 'innovation exemption' for tokenized securities venues",
+      "title_en": "SEC rolls out long-awaited 'innovation exemption' for tokenized securities venues",
+      "what_changed_zh": "SEC正式发布为期5年的创新豁免，允许代币化证券交易场所无需注册为交易所即可上市和交易代币化证券。",
+      "what_changed_en": "The SEC issued a blanket 5-year innovation exemption permitting tokenized securities venues to list and trade tokenized securities without registering as exchanges.",
+      "current_state_zh": "SEC已发布为期5年的创新豁免，允许代币化证券交易场所无需注册为交易所即可运营。",
+      "current_state_en": "The SEC has issued a 5-year innovation exemption allowing tokenized securities venues to list and trade without exchange registration.",
+      "detailed_summary_zh": "The U.S. SEC issued a blanket 5-year innovation exemption permitting tokenized securities venues to list and trade tokenized securities without registering as exchanges.",
+      "detailed_summary_en": "The U.S. SEC issued a blanket 5-year innovation exemption permitting tokenized securities venues to list and trade tokenized securities without registering as exchanges.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 9.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:66b281b504b9ac07"
+      ],
+      "sources": [
+        {
+          "url": "https://www.coindesk.com/policy/2026/09/17/sec-rolls-out-long-awaited-innovation-exemption-for-tokenized-securities-venues",
           "label": "CoinDesk",
           "source_type": "rss",
           "official": false

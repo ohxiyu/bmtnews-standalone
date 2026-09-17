@@ -4,28 +4,37 @@
   "url": "https://bmt.news/events/evt_55d03d5566d723d1/",
   "json": "https://bmt.news/api/events/evt_55d03d5566d723d1.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Revolut hackers demand $3 million in Monero, threaten to sell customer data",
     "en": "Revolut hackers demand $3 million in Monero, threaten to sell customer data"
   },
   "current_state": {
-    "zh": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories.",
-    "en": "Hackers calling themselves 'iamnotavillain' are demanding $3 million in Monero within 24 hours from Revolut, threatening to sell stolen customer data from at least 680 accounts that reportedly includes identity documents and transaction histories."
+    "zh": "名为“iamnotavillain”的团体要求 Revolut 在24小时内支付 6,000 XMR（约300万美元），否则将出售至少680个账户的客户身份文件和交易记录；Revolut 回应称未收到直接联系或勒索要求，受影响客户数量有限，资金和系统未受影响，报道称数据源自被入侵的意大利政府邮件系统且攻击者事前通过链上分析筛选了高净值客户。",
+    "en": "A group calling itself 'iamnotavillain' has given Revolut 24 hours to pay 6,000 XMR (~$3 million) or it will sell customer identity documents and transaction records from at least 680 accounts; Revolut responded that it has received no direct contact or demand, called the number of affected customers 'limited,' said funds and systems were untouched, and the report says the data came via a compromised Italian government email system after attackers used blockchain analysis to target high-net-worth users."
   },
   "first_seen_at": "2026-09-16T23:08:37.396594+00:00",
-  "last_updated_at": "2026-09-16T23:08:37.396594+00:00",
-  "last_material_change_at": "2026-09-16T23:08:37.396594+00:00",
+  "last_updated_at": "2026-09-17T17:11:56.649444+00:00",
+  "last_material_change_at": "2026-09-17T17:11:56.649444+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "customer",
+    "data",
+    "demand",
+    "hackers",
     "monero",
-    "revolut"
+    "ransom",
+    "report",
+    "revolut",
+    "sell",
+    "threaten"
   ],
   "identifiers": [],
   "topics": [
+    "data-breach",
     "data-privacy",
     "extortion",
     "monero",
@@ -79,6 +88,44 @@
         {
           "url": "https://www.coindesk.com/markets/2026/09/16/revolut-hackers-demand-usd3-million-in-monero-threaten-to-sell-customer-data",
           "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_35e54fac08e4b910",
+      "event_id": "evt_55d03d5566d723d1",
+      "occurred_at": "2026-09-17T12:53:01Z",
+      "published_at": "2026-09-17T12:53:01Z",
+      "first_seen_at": "2026-09-17T17:11:56.649444Z",
+      "time_precision": "published",
+      "update_type": "response",
+      "material_change": true,
+      "title_zh": "Revolut Hackers Demand $3M Monero Ransom, Threaten to Sell Customer Data: Report",
+      "title_en": "Revolut Hackers Demand $3M Monero Ransom, Threaten to Sell Customer Data: Report",
+      "what_changed_zh": "Revolut 表示未收到该团体任何直接联系或勒索要求，并称受影响客户数量“有限”、资金和系统未受影响；报道补充称数据通过入侵意大利政府邮件系统、以真实域名和有效认证伪装的信息请求在数月内获取，攻击者先用链上分析筛选高净值用户，并已向 FT 展示文件录屏。",
+      "what_changed_en": "Revolut said it has not received any direct contact or demand from the group, called the number of affected customers 'limited,' and said funds and systems were untouched; the report adds that data was obtained via a compromised Italian government email system using genuine domains and valid authentication over months, with attackers using blockchain analysis to target high-net-worth users and showing the FT a screen recording of files.",
+      "current_state_zh": "名为“iamnotavillain”的团体要求 Revolut 在24小时内支付 6,000 XMR（约300万美元），否则将出售至少680个账户的客户身份文件和交易记录；Revolut 回应称未收到直接联系或勒索要求，受影响客户数量有限，资金和系统未受影响，报道称数据源自被入侵的意大利政府邮件系统且攻击者事前通过链上分析筛选了高净值客户。",
+      "current_state_en": "A group calling itself 'iamnotavillain' has given Revolut 24 hours to pay 6,000 XMR (~$3 million) or it will sell customer identity documents and transaction records from at least 680 accounts; Revolut responded that it has received no direct contact or demand, called the number of affected customers 'limited,' said funds and systems were untouched, and the report says the data came via a compromised Italian government email system after attackers used blockchain analysis to target high-net-worth users.",
+      "detailed_summary_zh": "A group calling itself iamnotavillain has given Revolut 24 hours to pay 6,000 XMR (~$3M) or it will sell hundreds of customers' identity documents and transaction records, while Revolut says it has received no direct contact or demand.",
+      "detailed_summary_en": "A group calling itself iamnotavillain has given Revolut 24 hours to pay 6,000 XMR (~$3M) or it will sell hundreds of customers' identity documents and transaction records, while Revolut says it has received no direct contact or demand.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:decrypt.co_feed:e3971044961c50ee"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/378472/revolut-hackers-demand-3m-monero-ransom-threaten-to-sell-customer-data-report",
+          "label": "Decrypt",
           "source_type": "rss",
           "official": false
         }
