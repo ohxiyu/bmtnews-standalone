@@ -79,14 +79,14 @@
       "summary_en": "Bybit's TradFi stock perpetual options (NVIDIA, SpaceX/SPCX) are now live with 24/7 trading, fractional lots, USDT settlement, and Unified Trading Account portfolio margin; more tickers are planned.",
       "latest_update_zh": "Bybit 已于 2026 年 9 月 17 日正式上线 NVIDIA 和 SpaceX 的永续期权，支持 24/7 交易、碎股、统一交易账户组合保证金及完整策略支持。",
       "latest_update_en": "Bybit officially launched perpetual options on NVIDIA and SpaceX on September 17, 2026, with 24/7 trading, fractional lots, Unified Trading Account portfolio margin, and full strategy support.",
-      "background_zh": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
-      "background_en": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+      "background_zh": "传统的场内期权都带有到期日，而到期日是期权定价与对冲的核心。永续期权则完全取消了到期日（因此也被称为“无到期日期权”），通常依靠类似资金费的机制把合约价格锚定在标的之上——这是加密衍生品交易所在永续合约兴起后普及开来的做法。Bybit 的统一交易账户让用户可以在同一个账户内、以共享保证金交易现货、杠杆、USDT/USDC 永续合约与期权，正是这一结构使多产品期权策略在此成为可行。英伟达是一家公开上市的 AI 芯片公司，而 SpaceX 是一家未上市的私营火箭与卫星公司，两者在参考价格的可得性上存在根本差异。",
+      "background_en": "Standard listed options carry an expiry date, which is central to how they are priced and hedged. Perpetual options remove that expiry entirely — they are sometimes called expirationless options — and typically rely on a funding-style mechanism to keep the contract price anchored to the underlying, an approach crypto derivatives venues popularized after perpetual futures took off. Bybit's Unified Trading Account lets a user trade spot, margin, USDT/USDC perpetuals and options from a single account with shared collateral, which is what makes a multi-product options strategy feasible here. NVIDIA is a publicly listed AI chipmaker, whereas SpaceX is a privately held rocket and satellite company with no public shares, so the two underlyings differ fundamentally in how a reference price can be observed.",
       "latest_summary_zh": "Bybit has launched perpetual options on NVIDIA and SpaceX with 24/7 trading, fractional lots, and portfolio margin support via its Unified Trading Account.",
       "latest_summary_en": "Bybit has launched perpetual options on NVIDIA and SpaceX with 24/7 trading, fractional lots, and portfolio margin support via its Unified Trading Account.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "其传导渠道是产品与市场结构，而非协议机制：通过提供对标股票与私营公司的 7×24 小时杠杆期权，Bybit 把传统市场休市时段的流动性与成交量引向加密交易场所，并与代币化股票及其他合成敞口类产品形成竞争。受到影响的市场环节包括离岸衍生品交易所、其保证金与抵押品体系，以及希望在股票市场交易时段之外对 AI 与航天主题敞口进行对冲的交易者。",
+      "discussion_en": "The transmission channel is product and market structure rather than protocol mechanics: by offering 24/7 leveraged options on equity and private-company names, Bybit shifts liquidity and trading volume toward crypto venues during hours when traditional markets are closed, and competes with tokenized-equity and other synthetic exposure products. The affected segments are offshore derivatives exchanges, their margin and collateral systems, and traders seeking hedges on AI- and space-themed exposure outside of equity market hours.",
+      "market_impact_zh": "其传导渠道是产品与市场结构，而非协议机制：通过提供对标股票与私营公司的 7×24 小时杠杆期权，Bybit 把传统市场休市时段的流动性与成交量引向加密交易场所，并与代币化股票及其他合成敞口类产品形成竞争。受到影响的市场环节包括离岸衍生品交易所、其保证金与抵押品体系，以及希望在股票市场交易时段之外对 AI 与航天主题敞口进行对冲的交易者。",
+      "market_impact_en": "The transmission channel is product and market structure rather than protocol mechanics: by offering 24/7 leveraged options on equity and private-company names, Bybit shifts liquidity and trading volume toward crypto venues during hours when traditional markets are closed, and competes with tokenized-equity and other synthetic exposure products. The affected segments are offshore derivatives exchanges, their margin and collateral systems, and traders seeking hedges on AI- and space-themed exposure outside of equity market hours.",
       "score": 7.0,
       "source_links": [
         {
@@ -100,7 +100,24 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://grokipedia.com/page/Perpetual_futures_and_options_in_cryptocurrency_trading",
+          "title": "Perpetual futures and options in cryptocurrency trading"
+        },
+        {
+          "url": "https://upstox.com/learning-center/futures-and-options/how-perpetual-options-are-picking-up-pace/",
+          "title": "Perpetual Option - What it Means, How it Works, Example"
+        },
+        {
+          "url": "https://www.bybit.com/en/promo/events/unified-trading-account",
+          "title": "Bybit Unified Trading Account"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Portfolio_margin",
+          "title": "Portfolio margin"
+        }
+      ]
     },
     {
       "thread_id": "evt_78e64f1c78c47a7b",
@@ -171,14 +188,14 @@
       "summary_en": "S&P Global has agreed to acquire OpenZeppelin; OpenZeppelin will operate as a separate business unit, with Demian Brener remaining CEO and reporting to Yann Le Pallec, and financial terms were not disclosed.",
       "latest_update_zh": "收购后 OpenZeppelin 将作为 S&P Global 旗下独立业务部门继续运营，联合创始人兼 CEO Demian Brener 留任并直接向 S&P Global Ratings 总裁 Yann Le Pallec 汇报；交易财务条款未披露。",
       "latest_update_en": "After the acquisition, OpenZeppelin will continue operating as a separate S&P Global business unit, with co-founder and CEO Demian Brener remaining in charge and reporting to S&P Global Ratings President Yann Le Pallec; financial terms were not disclosed.",
-      "background_zh": "S&P Global has agreed to acquire blockchain security platform OpenZeppelin to expand its digital asset risk assessment and onchain capabilities.",
-      "background_en": "S&P Global has agreed to acquire blockchain security platform OpenZeppelin to expand its digital asset risk assessment and onchain capabilities.",
+      "background_zh": "智能合约是部署在以太坊、Solana、Cardano等区块链上的程序，当预设条件满足时会自动执行交易；由于其部署后通常不可更改，代码缺陷可能导致不可逆的损失。OpenZeppelin发布了使用最广泛的开源智能合约库，并提供安全审计服务，自2017年以来已完成900多次审计。其合约库、合约向导以及Ethernaut等安全教育工具，已成为构建代币化资产和DeFi协议开发者的实际标准。",
+      "background_en": "Smart contracts are programs on blockchains such as Ethereum, Solana, and Cardano that automatically execute transactions when preset conditions are met; once deployed they are often immutable, so a coding flaw can lead to irreversible losses. OpenZeppelin publishes the most widely used open-source smart contract libraries and also performs security audits, having completed more than 900 audits since 2017. Its libraries, contract wizard, and educational tools such as Ethernaut are a de facto standard for developers building tokenized assets and DeFi protocols.",
       "latest_summary_zh": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin to expand its risk assessment capabilities into the code underpinning tokenized financial products.",
       "latest_summary_en": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin to expand its risk assessment capabilities into the code underpinning tokenized financial products.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "这笔交易将传统金融的信誉与风险评估基础设施引入链上代码，可能提升机构配置代币化货币市场基金、代币化存款和稳定币结算通道的信心，从而利好这些细分赛道的需求，而非某一特定代币。它还强化了主流评级与数据服务商同使用OpenZeppelin库的DeFi协议之间的联系，使安全状况成为机构参与和代币化主题情绪中更为显性的变量。",
+      "discussion_en": "The deal channels traditional financial credibility and risk-assessment infrastructure into onchain code, which could raise the comfort level of institutions allocating to tokenized money market funds, tokenized deposits, and stablecoin rails, supporting demand for those segments rather than for any single token. It also tightens the link between mainstream ratings and data providers and the DeFi protocols using OpenZeppelin's libraries, making security posture a more visible input for institutional participation and sentiment around tokenization themes.",
+      "market_impact_zh": "这笔交易将传统金融的信誉与风险评估基础设施引入链上代码，可能提升机构配置代币化货币市场基金、代币化存款和稳定币结算通道的信心，从而利好这些细分赛道的需求，而非某一特定代币。它还强化了主流评级与数据服务商同使用OpenZeppelin库的DeFi协议之间的联系，使安全状况成为机构参与和代币化主题情绪中更为显性的变量。",
+      "market_impact_en": "The deal channels traditional financial credibility and risk-assessment infrastructure into onchain code, which could raise the comfort level of institutions allocating to tokenized money market funds, tokenized deposits, and stablecoin rails, supporting demand for those segments rather than for any single token. It also tightens the link between mainstream ratings and data providers and the DeFi protocols using OpenZeppelin's libraries, making security posture a more visible input for institutional participation and sentiment around tokenization themes.",
       "score": 7.5,
       "source_links": [
         {
@@ -192,7 +209,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.openzeppelin.com/",
+          "title": "OpenZeppelin | The Security Standard for Onchain Finance"
+        },
+        {
+          "url": "https://www.mckinsey.com/industries/financial-services/our-insights/from-ripples-to-waves-the-transformational-power-of-tokenizing-assets",
+          "title": "Tokenized financial assets: From pilot to scale | McKinsey"
+        },
+        {
+          "url": "https://www.openzeppelin.com/security-audits",
+          "title": "OpenZeppelin | Smart Contract Security Audits"
+        }
+      ]
     },
     {
       "thread_id": "evt_55d03d5566d723d1",
@@ -389,8 +419,8 @@
       "latest_summary_en": "Revolut is facing a $3 million Monero ransom demand from attackers claiming responsibility for a customer data breach, with threats to sell stolen data if unpaid.",
       "discussion_zh": "链上调查员 ZachXBT 表示，此次泄露似乎针对的是高净值用户，进一步加剧了外界对“扳手攻击”的担忧；包括 Marc Zeller 在内的社交媒体批评者认为，这起事件说明 KYC 规则几乎没有带来实际好处，反而让许多用户陷入危险。",
       "discussion_en": "Onchain investigator ZachXBT said the breach appeared to target high-net-worth users, fueling concern about wrench attacks; critics on social media, including Marc Zeller, argued the episode shows KYC rules have produced little upside while putting many users in harm's way.",
-      "market_impact_zh": "这条传导路径通过托管与身份数据而非资产供给发挥作用：泄露使 Revolut 的加密资产客户面临被针对性攻击的风险，也可能引发监管方对交易所和金融科技公司 KYC 数据处理方式的压力，并在 Revolut 可能上市前形成声誉层面的不确定性；由于资金与私钥均未受损，对比特币的供给、流动性或价格没有直接的机制性影响。",
-      "market_impact_en": "The transmission path runs through custody and identity data rather than asset supply: the leak exposes Revolut's crypto-holding customers to targeting, and it could trigger regulatory pressure on KYC data handling across exchanges and fintechs, with reputational overhang for Revolut ahead of a possible listing; since no funds or private keys were compromised, there is no direct mechanical effect on Bitcoin's supply, liquidity or price.",
+      "market_impact_zh": "传导路径主要是声誉与监管层面而非价格驱动：赎金索求本身不会推动 XMR 行情，但门罗币反复与敲诈勒索挂钩，会强化促使交易所下架隐私币的合规压力，从而影响 XMR 的流动性与可获取性。对 Revolut 而言，风险敞口来自用户信任以及监管机构对其数据处理和加密相关服务的潜在审查，情绪还会外溢至整个金融科技与加密的衔接领域。",
+      "market_impact_en": "The transmission path is mainly reputational and regulatory rather than price-driven: the demand itself does not move XMR markets, but recurring association of Monero with extortion reinforces the compliance pressure that has led exchanges to delist privacy coins, which affects XMR liquidity and access. For Revolut, exposure runs through user trust and potential regulatory scrutiny of its data-handling and crypto-adjacent services, with sentiment spillover to the broader fintech–crypto interface.",
       "score": 8.5,
       "source_links": [
         {
@@ -422,6 +452,14 @@
         {
           "url": "https://www.trmlabs.com/resources/blog/the-rise-of-wrench-attacks-and-crypto-related-violent-crime",
           "title": "The Rise of Wrench Attacks and Crypto-related Violent Crime"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Monero_(cryptocurrency)",
+          "title": "Monero (cryptocurrency)"
+        },
+        {
+          "url": "https://trezor.io/blog/news/security-incident-at-brevo-our-third-party-email-provider",
+          "title": "Security incident at Brevo, our third-party email provider | Trezor"
         }
       ]
     },
@@ -4445,8 +4483,8 @@
       "latest_summary_en": "Revolut is facing a $3 million Monero ransom demand from attackers claiming responsibility for a customer data breach, with threats to sell stolen data if unpaid.",
       "discussion_zh": "链上调查员 ZachXBT 表示，此次泄露似乎针对的是高净值用户，进一步加剧了外界对“扳手攻击”的担忧；包括 Marc Zeller 在内的社交媒体批评者认为，这起事件说明 KYC 规则几乎没有带来实际好处，反而让许多用户陷入危险。",
       "discussion_en": "Onchain investigator ZachXBT said the breach appeared to target high-net-worth users, fueling concern about wrench attacks; critics on social media, including Marc Zeller, argued the episode shows KYC rules have produced little upside while putting many users in harm's way.",
-      "market_impact_zh": "这条传导路径通过托管与身份数据而非资产供给发挥作用：泄露使 Revolut 的加密资产客户面临被针对性攻击的风险，也可能引发监管方对交易所和金融科技公司 KYC 数据处理方式的压力，并在 Revolut 可能上市前形成声誉层面的不确定性；由于资金与私钥均未受损，对比特币的供给、流动性或价格没有直接的机制性影响。",
-      "market_impact_en": "The transmission path runs through custody and identity data rather than asset supply: the leak exposes Revolut's crypto-holding customers to targeting, and it could trigger regulatory pressure on KYC data handling across exchanges and fintechs, with reputational overhang for Revolut ahead of a possible listing; since no funds or private keys were compromised, there is no direct mechanical effect on Bitcoin's supply, liquidity or price.",
+      "market_impact_zh": "传导路径主要是声誉与监管层面而非价格驱动：赎金索求本身不会推动 XMR 行情，但门罗币反复与敲诈勒索挂钩，会强化促使交易所下架隐私币的合规压力，从而影响 XMR 的流动性与可获取性。对 Revolut 而言，风险敞口来自用户信任以及监管机构对其数据处理和加密相关服务的潜在审查，情绪还会外溢至整个金融科技与加密的衔接领域。",
+      "market_impact_en": "The transmission path is mainly reputational and regulatory rather than price-driven: the demand itself does not move XMR markets, but recurring association of Monero with extortion reinforces the compliance pressure that has led exchanges to delist privacy coins, which affects XMR liquidity and access. For Revolut, exposure runs through user trust and potential regulatory scrutiny of its data-handling and crypto-adjacent services, with sentiment spillover to the broader fintech–crypto interface.",
       "score": 8.5,
       "source_links": [
         {
@@ -4478,6 +4516,14 @@
         {
           "url": "https://www.trmlabs.com/resources/blog/the-rise-of-wrench-attacks-and-crypto-related-violent-crime",
           "title": "The Rise of Wrench Attacks and Crypto-related Violent Crime"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Monero_(cryptocurrency)",
+          "title": "Monero (cryptocurrency)"
+        },
+        {
+          "url": "https://trezor.io/blog/news/security-incident-at-brevo-our-third-party-email-provider",
+          "title": "Security incident at Brevo, our third-party email provider | Trezor"
         }
       ]
     },
@@ -6374,14 +6420,14 @@
       "summary_en": "S&P Global has agreed to acquire OpenZeppelin; OpenZeppelin will operate as a separate business unit, with Demian Brener remaining CEO and reporting to Yann Le Pallec, and financial terms were not disclosed.",
       "latest_update_zh": "收购后 OpenZeppelin 将作为 S&P Global 旗下独立业务部门继续运营，联合创始人兼 CEO Demian Brener 留任并直接向 S&P Global Ratings 总裁 Yann Le Pallec 汇报；交易财务条款未披露。",
       "latest_update_en": "After the acquisition, OpenZeppelin will continue operating as a separate S&P Global business unit, with co-founder and CEO Demian Brener remaining in charge and reporting to S&P Global Ratings President Yann Le Pallec; financial terms were not disclosed.",
-      "background_zh": "S&P Global has agreed to acquire blockchain security platform OpenZeppelin to expand its digital asset risk assessment and onchain capabilities.",
-      "background_en": "S&P Global has agreed to acquire blockchain security platform OpenZeppelin to expand its digital asset risk assessment and onchain capabilities.",
+      "background_zh": "智能合约是部署在以太坊、Solana、Cardano等区块链上的程序，当预设条件满足时会自动执行交易；由于其部署后通常不可更改，代码缺陷可能导致不可逆的损失。OpenZeppelin发布了使用最广泛的开源智能合约库，并提供安全审计服务，自2017年以来已完成900多次审计。其合约库、合约向导以及Ethernaut等安全教育工具，已成为构建代币化资产和DeFi协议开发者的实际标准。",
+      "background_en": "Smart contracts are programs on blockchains such as Ethereum, Solana, and Cardano that automatically execute transactions when preset conditions are met; once deployed they are often immutable, so a coding flaw can lead to irreversible losses. OpenZeppelin publishes the most widely used open-source smart contract libraries and also performs security audits, having completed more than 900 audits since 2017. Its libraries, contract wizard, and educational tools such as Ethernaut are a de facto standard for developers building tokenized assets and DeFi protocols.",
       "latest_summary_zh": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin to expand its risk assessment capabilities into the code underpinning tokenized financial products.",
       "latest_summary_en": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin to expand its risk assessment capabilities into the code underpinning tokenized financial products.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "这笔交易将传统金融的信誉与风险评估基础设施引入链上代码，可能提升机构配置代币化货币市场基金、代币化存款和稳定币结算通道的信心，从而利好这些细分赛道的需求，而非某一特定代币。它还强化了主流评级与数据服务商同使用OpenZeppelin库的DeFi协议之间的联系，使安全状况成为机构参与和代币化主题情绪中更为显性的变量。",
+      "discussion_en": "The deal channels traditional financial credibility and risk-assessment infrastructure into onchain code, which could raise the comfort level of institutions allocating to tokenized money market funds, tokenized deposits, and stablecoin rails, supporting demand for those segments rather than for any single token. It also tightens the link between mainstream ratings and data providers and the DeFi protocols using OpenZeppelin's libraries, making security posture a more visible input for institutional participation and sentiment around tokenization themes.",
+      "market_impact_zh": "这笔交易将传统金融的信誉与风险评估基础设施引入链上代码，可能提升机构配置代币化货币市场基金、代币化存款和稳定币结算通道的信心，从而利好这些细分赛道的需求，而非某一特定代币。它还强化了主流评级与数据服务商同使用OpenZeppelin库的DeFi协议之间的联系，使安全状况成为机构参与和代币化主题情绪中更为显性的变量。",
+      "market_impact_en": "The deal channels traditional financial credibility and risk-assessment infrastructure into onchain code, which could raise the comfort level of institutions allocating to tokenized money market funds, tokenized deposits, and stablecoin rails, supporting demand for those segments rather than for any single token. It also tightens the link between mainstream ratings and data providers and the DeFi protocols using OpenZeppelin's libraries, making security posture a more visible input for institutional participation and sentiment around tokenization themes.",
       "score": 7.5,
       "source_links": [
         {
@@ -6395,7 +6441,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.openzeppelin.com/",
+          "title": "OpenZeppelin | The Security Standard for Onchain Finance"
+        },
+        {
+          "url": "https://www.mckinsey.com/industries/financial-services/our-insights/from-ripples-to-waves-the-transformational-power-of-tokenizing-assets",
+          "title": "Tokenized financial assets: From pilot to scale | McKinsey"
+        },
+        {
+          "url": "https://www.openzeppelin.com/security-audits",
+          "title": "OpenZeppelin | Smart Contract Security Audits"
+        }
+      ]
     },
     {
       "thread_id": "evt_55d03d5566d723d1",
@@ -7690,14 +7749,14 @@
       "summary_en": "Bybit's TradFi stock perpetual options (NVIDIA, SpaceX/SPCX) are now live with 24/7 trading, fractional lots, USDT settlement, and Unified Trading Account portfolio margin; more tickers are planned.",
       "latest_update_zh": "Bybit 已于 2026 年 9 月 17 日正式上线 NVIDIA 和 SpaceX 的永续期权，支持 24/7 交易、碎股、统一交易账户组合保证金及完整策略支持。",
       "latest_update_en": "Bybit officially launched perpetual options on NVIDIA and SpaceX on September 17, 2026, with 24/7 trading, fractional lots, Unified Trading Account portfolio margin, and full strategy support.",
-      "background_zh": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
-      "background_en": "Bybit announced an industry-first launch of TradFi perpetual options on stock perpetuals such as SPCX and NVDA, offering 24/7 USDT-settled trading with fractional lots starting September 17, 2026.",
+      "background_zh": "传统的场内期权都带有到期日，而到期日是期权定价与对冲的核心。永续期权则完全取消了到期日（因此也被称为“无到期日期权”），通常依靠类似资金费的机制把合约价格锚定在标的之上——这是加密衍生品交易所在永续合约兴起后普及开来的做法。Bybit 的统一交易账户让用户可以在同一个账户内、以共享保证金交易现货、杠杆、USDT/USDC 永续合约与期权，正是这一结构使多产品期权策略在此成为可行。英伟达是一家公开上市的 AI 芯片公司，而 SpaceX 是一家未上市的私营火箭与卫星公司，两者在参考价格的可得性上存在根本差异。",
+      "background_en": "Standard listed options carry an expiry date, which is central to how they are priced and hedged. Perpetual options remove that expiry entirely — they are sometimes called expirationless options — and typically rely on a funding-style mechanism to keep the contract price anchored to the underlying, an approach crypto derivatives venues popularized after perpetual futures took off. Bybit's Unified Trading Account lets a user trade spot, margin, USDT/USDC perpetuals and options from a single account with shared collateral, which is what makes a multi-product options strategy feasible here. NVIDIA is a publicly listed AI chipmaker, whereas SpaceX is a privately held rocket and satellite company with no public shares, so the two underlyings differ fundamentally in how a reference price can be observed.",
       "latest_summary_zh": "Bybit has launched perpetual options on NVIDIA and SpaceX with 24/7 trading, fractional lots, and portfolio margin support via its Unified Trading Account.",
       "latest_summary_en": "Bybit has launched perpetual options on NVIDIA and SpaceX with 24/7 trading, fractional lots, and portfolio margin support via its Unified Trading Account.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "其传导渠道是产品与市场结构，而非协议机制：通过提供对标股票与私营公司的 7×24 小时杠杆期权，Bybit 把传统市场休市时段的流动性与成交量引向加密交易场所，并与代币化股票及其他合成敞口类产品形成竞争。受到影响的市场环节包括离岸衍生品交易所、其保证金与抵押品体系，以及希望在股票市场交易时段之外对 AI 与航天主题敞口进行对冲的交易者。",
+      "discussion_en": "The transmission channel is product and market structure rather than protocol mechanics: by offering 24/7 leveraged options on equity and private-company names, Bybit shifts liquidity and trading volume toward crypto venues during hours when traditional markets are closed, and competes with tokenized-equity and other synthetic exposure products. The affected segments are offshore derivatives exchanges, their margin and collateral systems, and traders seeking hedges on AI- and space-themed exposure outside of equity market hours.",
+      "market_impact_zh": "其传导渠道是产品与市场结构，而非协议机制：通过提供对标股票与私营公司的 7×24 小时杠杆期权，Bybit 把传统市场休市时段的流动性与成交量引向加密交易场所，并与代币化股票及其他合成敞口类产品形成竞争。受到影响的市场环节包括离岸衍生品交易所、其保证金与抵押品体系，以及希望在股票市场交易时段之外对 AI 与航天主题敞口进行对冲的交易者。",
+      "market_impact_en": "The transmission channel is product and market structure rather than protocol mechanics: by offering 24/7 leveraged options on equity and private-company names, Bybit shifts liquidity and trading volume toward crypto venues during hours when traditional markets are closed, and competes with tokenized-equity and other synthetic exposure products. The affected segments are offshore derivatives exchanges, their margin and collateral systems, and traders seeking hedges on AI- and space-themed exposure outside of equity market hours.",
       "score": 7.0,
       "source_links": [
         {
@@ -7711,7 +7770,24 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://grokipedia.com/page/Perpetual_futures_and_options_in_cryptocurrency_trading",
+          "title": "Perpetual futures and options in cryptocurrency trading"
+        },
+        {
+          "url": "https://upstox.com/learning-center/futures-and-options/how-perpetual-options-are-picking-up-pace/",
+          "title": "Perpetual Option - What it Means, How it Works, Example"
+        },
+        {
+          "url": "https://www.bybit.com/en/promo/events/unified-trading-account",
+          "title": "Bybit Unified Trading Account"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Portfolio_margin",
+          "title": "Portfolio margin"
+        }
+      ]
     },
     {
       "thread_id": "evt_f4cebd76b6eaf6b6",

@@ -48,14 +48,27 @@
       "current_state_en": "Ethereum's Glamsterdam upgrade cleared a key rehearsal milestone, with Nethermind passing all 2,302 performance tests and the test network raising its block gas limit toward 200 million ahead of a proposed October 6 Sepolia deployment.",
       "detailed_summary_zh": "Ethereum's Glamsterdam upgrade cleared a key rehearsal milestone, with Nethermind passing all 2,302 performance tests and the test network raising its block gas limit toward 200 million ahead of a proposed October 6 Sepolia deployment.",
       "detailed_summary_en": "Ethereum's Glamsterdam upgrade cleared a key rehearsal milestone, with Nethermind passing all 2,302 performance tests and the test network raising its block gas limit toward 200 million ahead of a proposed October 6 Sepolia deployment.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Gas 衡量交易所需的计算工作量，而每个以太坊区块都有 Gas 上限，限制了它能容纳的活动量。提高该上限可以提升吞吐量，但会让区块更难、更昂贵地被校验，因此 Glamsterdam 将其与区块级访问列表（EIP-7928）配套推出：访问列表会预先记录区块将要触及的所有账户与存储位置，让客户端在执行开始前就知道需要加载哪些状态依赖。Glamsterdam 是继 Pectra 之后以太坊的下一个重要协议升级，目标是为网络下一代扩容扫清道路。",
+      "background_en": "Gas measures the computing work a transaction requires, and each Ethereum block has a gas limit that caps how much activity it can contain. Raising that limit increases throughput but makes blocks harder and more expensive to verify, which is why Glamsterdam pairs it with block-level access lists (EIP-7928), which record upfront every account and storage slot a block will touch so clients know which state dependencies to load before execution begins. Glamsterdam is Ethereum's next major protocol upgrade after Pectra, aimed at clearing the path for the network's next generation of scaling.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "以太坊吞吐量升级会影响 ETH 的手续费销毁动态，以及把数据回传主网的 Layer 2 rollup 的经济模型，因为更大的区块空间和更低的拥堵会减少活动高峰期的基础手续费尖峰。但本次进展仅局限于 devnet 和尚在拟议中的测试网部署，因此目前尚未改变主网的供应、质押或流动性状况。",
+      "market_impact_en": "Ethereum throughput upgrades feed into ETH's fee-burn dynamics and the economics of layer-2 rollups that post data back to mainnet, since more block space and lower congestion reduce base-fee spikes during activity surges. This particular milestone is confined to a devnet and a proposed testnet deployment, so it does not yet alter mainnet supply, staking, or liquidity conditions.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://ethereum.org/roadmap/glamsterdam/",
+          "title": "Glamsterdam | ethereum.org"
+        },
+        {
+          "url": "https://eips.ethereum.org/EIPS/eip-7928",
+          "title": "EIP-7928: Block-Level Access Lists"
+        },
+        {
+          "url": "https://www.binance.com/en/ethereum-upgrade",
+          "title": "What is the Ethereum Glamsterdam Upgrade? | Binance"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:www.coindesk.com_arc_outboundfeeds_rss_:679cdac0ef4fd208",

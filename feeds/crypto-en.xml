@@ -4,7 +4,106 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-17T00:00:00Z</updated>
+  <updated>2026-09-18T00:00:00Z</updated>
+  <entry>
+    <title>S&amp;P Global to Acquire Smart Contract Security Firm OpenZeppelin</title>
+    <link href="https://decrypt.co/378505/sp-global-acquire-crypto-openzeppelin"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:decrypt.co_feed:486bc6e552a10ba4</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>S&amp;P Global announced on Thursday that it has agreed to acquire smart contract security firm OpenZeppelin, which was founded in 2015 and whose open-source code libraries have underpinned more than $37 trillion in value transferred through stablecoins, tokenized funds, and DeFi protocols. Financial terms were not disclosed, and S&amp;P Global said the deal is not expected to materially affect its financial results.
+
+A traditional ratings and market-data giant absorbing a core piece of blockchain security infrastructure signals that onchain technical risk is being folded into mainstream financial due diligence, which matters for banks and asset managers now pushing tokenized products. It also gives S&amp;P Global a direct role in setting security assessments and benchmarks for code that sits beneath tokenized financial products.
+
+OpenZeppelin will keep operating under its own name as a separate S&amp;P Global business unit, with co-founder and CEO Demian Brener remaining in charge and reporting to S&amp;P Global Ratings president Yann Le Pallec. The acquisition extends S&amp;P Global&#x27;s digital assets push, which already includes the S&amp;P Digital Markets 50 Index and an earlier market-data investment in Kaiko.</summary>
+  </entry>
+  <entry>
+    <title>Circle&#x27;s Arc Stablecoin Layer-1 Opens to the Public</title>
+    <link href="https://decrypt.co/resources/what-is-arc-the-stablecoin-blockchain-from-usdc-issuer-circle"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:decrypt.co_feed:be55331fc77bf89d</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>Circle&#x27;s USDC-focused layer-1 blockchain, Arc, opened to the public on September 16, 2026, following a public testnet that launched in October 2025 and processed more than 700 million transactions in under a year. More than 100 institutional and ecosystem partners were on the network on its first day of public operation, and Circle CEO Jeremy Allaire called it &quot;the single most significant launch in Circle&#x27;s history since USDC itself.&quot;
+
+This is the first time a major stablecoin issuer has launched its own base-layer settlement network, moving Circle from token issuer toward controlling the infrastructure where its stablecoin is used. If institutions adopt Arc for payments and settlement, it could shift a portion of stablecoin transaction flow away from general-purpose chains such as Ethereum and Solana and toward purpose-built, compliance-oriented rails.
+
+Arc uses USDC as native gas and can also accept other stablecoins via a paymaster system, with a fee model built on Ethereum&#x27;s EIP-1559 architecture but replacing block-level adjustments with a weighted moving average of network demand, with fees directed to an on-chain Arc Treasury. Consensus runs on Malachite, a Tendermint-based Byzantine Fault Tolerant engine with a permissioned validator set under proof of authority, and Circle says a possible transition to Proof-of-Stake could come in 2027; USDC had roughly $74 billion in circulation in September 2026.</summary>
+  </entry>
+  <entry>
+    <title>Revolut hit with $3M Monero ransom demand over customer data breach</title>
+    <link href="https://protos.com/revolut-faces-3m-ransom-demand-after-data-breach-report/"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:protos.com_feed_:2266bb03f6c85714</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>A group calling itself &quot;iamnotavillain&quot; has publicly demanded $3 million in Monero (XMR) from fintech Revolut, threatening to sell stolen customer data to other criminals if it is not paid. The ransom site launched this week, but Reuters reports Revolut has so far had no contact with or demands from the attackers, and negotiations have not begun.
+
+It marks one of the most prominent ransomware-style extortion attempts against a major digital bank, and the choice of Monero underscores how privacy coins remain the preferred settlement channel for extortion. The breach also highlights the growing social-engineering risk facing crypto-adjacent financial platforms, where a single spoofed government email can expose customer records.
+
+Attackers reportedly gained access by using a legitimate Italian government email domain to impersonate law enforcement and bypass Revolut&#x27;s security checks; Reuters cites a source saying roughly 680 customers were affected and that Revolut&#x27;s core infrastructure, databases and customer accounts were not impacted. Earlier reports from Coin Bureau claimed a 10,000 BTC demand (worth over $760 million at current prices), and it is unclear whether that claim involved the same group.</summary>
+  </entry>
+  <entry>
+    <title>Ethereum&#x27;s Glamsterdam Upgrade Clears Rehearsal Toward 200M Gas Blocks</title>
+    <link href="https://www.coindesk.com/tech/2026/09/17/ethereum-s-upcoming-glamsterdam-upgrade-clears-rehearsal-for-a-big-jump-in-capacity"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:www.coindesk.com_arc_outboundfeeds_rss_:679cdac0ef4fd208</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>Ethereum&#x27;s Glamsterdam upgrade continued confirming blocks on its Devnet-11 test network under new block-building rules, and Nethermind&#x27;s execution client passed all 2,302 performance tests, processing 570.7 billion gas in three minutes and 15 seconds (roughly 2.9 billion gas per second). About an hour after going live on the testnet, the block gas limit was raised from 60 million to 200 million, ahead of a proposed October 6 deployment on the Sepolia public test network.
+
+Glamsterdam introduces block-level access lists that let clients fetch data and check unrelated transactions in parallel instead of sequentially, which could let Ethereum fit far more payments, token swaps and other activity into each block and soften fee spikes when the chain is congested. It also moves the builder-validator handoff and its payments into Ethereum&#x27;s own protocol rules, reducing dependence on external relay services.
+
+The 200 million gas limit is a test setting only and is not yet a commitment for Ethereum&#x27;s main network, and Devnet-11 was designed as a controlled rehearsal without deliberate attacks; the October 6 Sepolia date still requires formal confirmation. Glamsterdam also extends the window for spreading block data across the network from about two seconds to nine seconds, giving validators more time to receive and check the larger blocks it is designed to support, while the Nethermind benchmark measured client execution speed rather than the performance of the full network.</summary>
+  </entry>
+  <entry>
+    <title>Kraken Parent Payward Prepares US Onchain Perpetual Futures Launch</title>
+    <link href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPbDFFMDBIMF85bmFxeE1BVndqRTE3bTZSMGh0UTBWTHJwVU90d2REZmNqbFlsYngzeG9IWG50b1M1UVRiMVZ0ZGFhTDd5WFBRNXRDNFZzaENwTUdLZzN1N1ZKNlFzWks1TF95bHMxNWhjZnlIdF9xUFNBaF9nb09FVHNXYXk4MFNmVkF4UzZ1aWQtbk5pTGc?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-18/#google_news:article:f60ae1a43d4204ff</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>Payward, the parent company of crypto exchange Kraken, is preparing to offer onchain perpetual futures to US traders through Bitnomial Exchange, its CFTC-regulated venue, pending regulatory approval. The offering would bring a fully onchain perpetuals product into the US regulated derivatives framework for the first time at this scale.
+
+US traders have long been largely restricted to offshore venues for perpetual futures, so a CFTC-regulated onchain perps product could pull a portion of that demand onshore and intensify competition with existing US-listed derivatives, including Coinbase Derivatives&#x27; perpetual-style futures and CME crypto contracts. It also signals that regulated, institution-grade onchain derivatives infrastructure is becoming viable rather than experimental.
+
+Onchain perpetuals are cash-settled contracts with no expiry date in which order placement, matching, settlement, collateral custody and liquidation all occur on a blockchain, which changes the custody and transparency profile relative to centralized offshore venues. The launch is described as pending approval, so the exact timing, contract specifications, available collateral assets and leverage limits have not been finalized.</summary>
+  </entry>
+  <entry>
+    <title>Chainalysis: state hackers drive 420% surge in onchain malware</title>
+    <link href="https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:cointelegraph.com_rss:a7009d88506349d1</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>Chainalysis reported a 420% year-over-year rise in the number of times attackers wrote malware instructions or infrastructure data onto public blockchains, with state-linked actors accounting for roughly two-thirds of new activity each quarter. The firm attributed previously unattributed activity across Tron, Aptos and BNB Smart Chain to UNC5342, a North Korea-linked group tracked by Google Threat Intelligence, and identified suspected Iran-linked actors writing command-and-control routing data into Bitcoin transactions.
+
+Using public blockchains as malware infrastructure gives campaigns a durability that conventional domain takedowns and server seizures cannot easily disrupt, because the pointers remain readable on an immutable ledger. It also drags major public chains into a security and compliance spotlight, raising questions for exchanges, analytics vendors and regulators about how abuse of these networks is monitored.
+
+Chainalysis recorded a 440% increase in malicious blockchain writes since July 2025, a date it links to high-capacity open-source Chinese AI models becoming capable of producing malicious code with limited safeguards, though research lead Eric Jardine described this as a &quot;clear point-in-time association&quot; rather than proof of causation. The Iran assessment relied on malware family, decoding method, timing and server infrastructure tied to previously reported Iranian operations, and in that campaign attacker-controlled wallets sent small payments to a well-known Bitcoin address with historical ties to Satoshi Nakamoto that had no connection to the attackers and served only as a permanent public location for updated directions.</summary>
+  </entry>
+  <entry>
+    <title>GalaChain exploit turns 74 signatures from failed transactions into $3M drain</title>
+    <link href="https://cryptoslate.com/hacker-turned-55-days-of-failed-transactions-into-a-3-million-master-key-that-drained-galachain-wallets/"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:cryptoslate.com_feed_:cf526503e8e4add0</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>GalaChain disclosed in a Sept. 14 postmortem that an attacker used 74 replayable signatures harvested from failed transactions — some dating back 55 days — to drain roughly 2 billion GALA (about $3 million) plus dozens of other tokens from nine wallets on Aug. 18. The chain paused its bridge during the attack and has since patched both the signature-scope-confusion flaw and the replay-key rollback weakness.
+
+The attack shows that a cryptographically valid signature is not the same as an authorized economic action, and that audits reviewing signature verification, replay protection, and execution separately can miss flaws that only appear when those systems interact. It also raises a governance question for chain operators: whether human-triggered emergency controls and valid-signature-based systems can react fast enough once exploitation is automated.
+
+GalaChain&#x27;s verifier previously accepted EIP-712 type definitions supplied with the request instead of deriving them from the invoked operation, so a signature covering one field set could be presented while a different method executed — one on-chain example shows a TransferToken call moving about 1.64 billion GALA while the supplied EIP-712 structure described an AddLiquidity operation. Because unique transaction keys could roll back when a transaction failed, the signature stayed visible on the public ledger while its replay key remained available; 57 of the 60 historical source transactions linked to the exploit contained at least one failed inner operation, and investigators reported no evidence that private keys, seed phrases, or passwords were compromised.</summary>
+  </entry>
+  <entry>
+    <title>Ondo succession crisis deepens as founder&#x27;s half-sister seeks conservatorship</title>
+    <link href="https://www.coindesk.com/business/2026/09/17/the-ondo-finance-succession-crisis-gets-messier-as-kathleen-allman-s-daughter-alleges-dementia-alcoholism-and-reckless-spending"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:www.coindesk.com_arc_outboundfeeds_rss_:092a2c26f8fd235d</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>On Sept. 16, Dr. Lani Clinton — half-sister of the late Ondo Finance founder Nathan Allman — and Ondo investor David Chen petitioned a Hawaiian court for a limited conservatorship over their 77-year-old mother Kathleen Allman&#x27;s share of the founder&#x27;s estate, alleging cognitive impairment, alcoholism and reckless financial spending. Kathleen Allman denies the claims and accuses the petitioners of forum-shopping after failing to remove her from Ondo&#x27;s board, arguing that Chen is funding the Hawaii petition, shares counsel with acting CEO Ian De Bode, and relied on sealed materials from the Delaware case.
+
+The disputed estate includes a &quot;controlling equity interest in Ondo Finance&quot; plus a &quot;very large holding of ONDO tokens,&quot; so the outcome of this family litigation determines who effectively controls one of the largest real-world-asset tokenization protocols and its governance token. The conservatorship fight also runs parallel to Kathleen Allman&#x27;s suit accusing acting CEO Ian De Bode of a &quot;brazen usurpation of corporate control&quot; and of plotting an approximately $11 million compensation package within a week of the founder&#x27;s death.
+
+According to the litigation, De Bode&#x27;s package comprised a $900,000 annual salary and bonus, a $1 million signing bonus, 26 million restricted token units valued at more than $9 million, and awards covering 846,000 shares that would have raised his stake from 0.33% to 8% — roughly a 24-fold increase — with vesting set to begin May 25, the day after Allman died. Kathleen Allman had appointed herself and her other child, Tahnee Towill, to Ondo&#x27;s board and named herself chair and interim CEO, but De Bode remains acting CEO and a board member under a Sept. 3 court order, and a Delaware court has already rejected his argument that Kathy and Towill were unfit to serve as directors.</summary>
+  </entry>
+  <entry>
+    <title>Bybit Launches Perpetual Options on NVIDIA and SpaceX</title>
+    <link href="https://telegram.me/Bybit_Announcements/9720"/>
+    <id>https://bmt.news/editions/2026-09-18/#telegram:Bybit_Announcements:9720</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>Bybit announced the launch of perpetual options (calls and puts) on NVIDIA and SpaceX, tradable 24/7. The contracts support fractional lots, are powered by the Bybit Unified Trading Account (UTA) with portfolio margin, and support full multi-leg strategy construction, with more tickers promised soon.
+
+This pushes crypto-native derivatives design — perpetual, expiry-less contracts traded around the clock — onto non-crypto underlyings, including a private company that has no publicly listed shares. It widens the competitive overlap between offshore crypto exchanges and traditional brokerages, and gives traders continuous exposure to names that normally trade only during equity market hours.
+
+Perpetual options have no expiry or exercise date, so the position can be held indefinitely rather than rolled or settled at a fixed maturity. Fractional lots lower the minimum ticket size, while portfolio margin is a risk-based margining method that assesses total portfolio risk instead of margining each leg separately, which can reduce margin requirements on hedged structures.</summary>
+  </entry>
   <entry>
     <title>Circle Launches Arc Mainnet With BlackRock, DTCC and Visa as Validators</title>
     <link href="https://decrypt.co/378374/circle-launches-arc-mainnet-with-blackrock-dtcc-and-visa-as-validators"/>
@@ -345,104 +444,5 @@ The targeted password-change method does not require a macaroon during the post-
 This separates network-layer recovery from wallet-layer availability: the Cosmos Hub is producing blocks again, yet a widely used hardware wallet still cannot display balances or broadcast ATOM transactions for its users. It highlights how a single wallet vendor&#x27;s service path can effectively freeze a user&#x27;s ability to move funds even when the underlying chain is healthy, and it underscores the access and liquidity friction that hardware-wallet dependency introduces into self-custody.
 
 Ledger has not disclosed a cause or an estimated restoration time, and its last public update was posted at 16:12 CEST on Sept. 10. For users who need to move ATOM urgently, Ledger&#x27;s incident notice points to its alternative-methods guide, listing Cosmostation and Keplr as compatible third-party interfaces that connect to a Ledger device by opening the Cosmos app and choosing the hardware-wallet connection option — a route that keeps the device in the transaction flow, which is fundamentally different from importing the recovery phrase into a software wallet, something users should never do.</summary>
-  </entry>
-  <entry>
-    <title>LDK v0.2.6 patches critical Lightning bugs enabling fund theft and restart failure</title>
-    <link href="https://cryptoslate.com/critical-bitcoin-lightning-bugs-exposed-nodes-to-fund-theft-and-restart-failure/"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:a1b1725bd58b81e6</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>The Lightning Development Kit (LDK) released v0.2.6 on Sept. 9, patching two bugs: a splice flaw that let a malicious peer trigger excess fee allocation paid out to that peer&#x27;s own output, and a payment-contract flaw where receiving and immediately rejecting a bogus payment sharing a payment hash with an already-forwarded contract could leave saved ChannelManager state unable to load. Affected application teams need to integrate v0.2.6 to apply the fixes.
-
-LDK is compiled directly into downstream applications such as mobile wallets and payment-service infrastructure, so the fixes address both direct financial risk to node funds and a condition that can block a normal node restart. Because the patched code must be pulled into each integrating application, the security outcome depends on developers shipping updated builds rather than on any network-wide upgrade.
-
-The release describes only a small amount of funds at risk when a node initiates a splice and does not specify a numerical ceiling, and the notice reports no observed losses or exploited applications; notably, simply rejecting the bogus payment does not by itself prevent the deserialization failure on restart.</summary>
-  </entry>
-  <entry>
-    <title>Revolut data breach: fake government email exposed customer passports and transaction histories</title>
-    <link href="https://cointelegraph.com/news/revolut-says-customer-data-exposed-through-fake-government-email?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:cointelegraph.com_rss:283b1292cbd24844</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>Revolut disclosed that a fraudster used a legitimate government agency email domain to submit fraudulent requests for customer information, which passed the company&#x27;s authentication checks, exposing copies of passports, verification selfies and full transaction histories. The fintech said it detected the scheme, blocked the address, alerted the government agency, law enforcement and financial regulators, and notified the limited number of affected customers on Friday.
-
-The incident shows how a social-engineering attack can defeat identity-verification controls at a major fintech without any technical intrusion, undermining confidence in the mandatory KYC data that platforms collect. It matters because Revolut holds identity documents, selfies, IBANs and transaction data for tens of millions of users, and some of that exposed data can be used for account-takeover attempts, targeted phishing and extortion against high-net-worth individuals.
-
-The fraudulent requests appeared to come from a real government agency&#x27;s domain, meaning the attacker did not need to spoof the address but exploited the trust the domain carries, and detection only happened after the data had already been released. Revolut said its systems and customer funds were unaffected, crypto sleuth ZachXBT characterised the incident as limited in size and aimed at high-net-worth users, and reported exposed fields also include contact details, birth dates, occupations, account statements, IBANs and Bitcoin-related information.</summary>
-  </entry>
-  <entry>
-    <title>Symbiosis Recovers 15 BTC After Bitcoin Bridge Exploit, Offers 20% Bounty</title>
-    <link href="https://www.theblock.co/news/defi/2026-09-13-symbiosis-says-it-recovered-15-btc-after-bitcoin-bridge-exploit-offers-attacker-20-bounty-414568"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:www.theblock.co_rss.xml:7f24d662a748fee5</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>Cross-chain protocol Symbiosis disclosed that an attacker exploited a vulnerability in its Bitcoin Bridge on Sept. 11, minting roughly 46.1 billion unbacked syBTC according to blockchain security firm Blockaid. Symbiosis said it has since recovered approximately 15 BTC and has offered the attacker a 20% bounty in exchange for returning the remaining funds.
-
-The incident is another reminder that cross-chain bridges remain the most consistently exploited category in DeFi, and it forced Symbiosis to halt its native Bitcoin bridge entirely. It matters less for the dollar size of the loss than for the pattern: a faulty minting path let an attacker create an astronomically large supply of synthetic BTC that was only partially monetizable.
-
-Despite the enormous 46.1 billion syBTC minted, the attacker realized only about $336,000 in proceeds, suggesting deep liquidity limits prevented large-scale conversion of the unbacked tokens. Symbiosis reportedly shut down the Bitcoin bridge after the exploit, which involved its BridgeV2 contract, and the 20% bounty offer signals a negotiated recovery effort rather than a pure technical fix.</summary>
-  </entry>
-  <entry>
-    <title>Nasdaq Invests $100M in Kraken Parent Payward for Tokenized Equities Push</title>
-    <link href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxObC0tOEU5ek1VazRIbmtqYzQ1NlVXeGtGbjNXUXpfaC0yRzVCN3FKSjJ4enI2eThEam01NEdpalZyYkZxOTgyQ1NNbFQzZEpwa2ZPZ2ZYTzZvUWdXVi1lOFNEWFF5R25LbWt3NUx2MVZQVUJtT3hyQTFaQXl4QWpoaEoyYm95U1dsdFhkX0VGSGp1TUVVbWNMR2NaVHdJMk9CZzdNRHJMYnZzaml1cjFqRWlZMncwSUkwMkt1dXZkVFlkeW_SAcgBQVVfeXFMT0hHbkRfSV9BSXczRUFEdUJOMXNUNHNSY1lMWi1PVnJLaWFUMHM5VnNzS1BmU0EtR29WMXpyWFFPN3hWWk41cm1DUHBMVDUyUlljYlZCeC1VUU5aODN1VnBWVnR1WmNjdktqSUJwZWk0NEpwTWFidS1SdTAtQ3RZY1pSd2VRUUVZTE5ISUdPRXhZZUowczlobkVuaXBWSGUtdHFWZ1pVTlQ3T3REY0ZBU2YzSVBvNTF1LW9aM3VKdDlxZUhoMmJyZi0?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-13/#google_news:article:9ebc71055edee373</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>Nasdaq will invest $100 million in Payward, the parent company of crypto exchange Kraken, in a deal that values Payward at roughly $21 billion. The partnership is aimed at advancing tokenized equities and always-on, around-the-clock trading markets.
-
-This is one of the clearest signals yet that a top-tier traditional exchange operator sees tokenization and 24/7 market structure as strategic rather than experimental. It accelerates the convergence of crypto market infrastructure with mainstream equities trading, affecting exchanges, brokers, custodians and tokenization platforms alike.
-
-The investment is a strategic stake rather than an acquisition, and Payward remains the parent of Kraken alongside its other businesses spanning custody, payments, lending and onchain finance. Tokenized equities — digital tokens representing shares in companies or ETFs — are the specific product area the two firms intend to develop.</summary>
-  </entry>
-  <entry>
-    <title>Revolut hands passports and Bitcoin data to fake government request</title>
-    <link href="https://www.coindesk.com/tech/2026/09/12/bitcoin-activity-passports-exposed-after-revolut-falls-for-fake-government-request"/>
-    <id>https://bmt.news/editions/2026-09-13/#rss:www.coindesk.com_arc_outboundfeeds_rss_:ffb0edb40b0555bf</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>Revolut disclosed that it turned over sensitive customer data — including passport and driver&#x27;s license copies, verification selfies, IBAN and wallet reference numbers, and full Bitcoin transaction histories — after receiving a fraudulent information request sent from a legitimate government agency&#x27;s email domain. A Revolut spokesperson called it &quot;a sophisticated external impersonation scam,&quot; said a &quot;limited&quot; number of customers were affected, and stated that its systems and customer funds were unaffected, while declining to say how many users were hit or which agency was impersonated.
-
-The leak links real-world identities and residential addresses directly to onchain transaction histories, which is exactly the combination that enables physical targeting of crypto holders, and it intensifies scrutiny of how fintechs and exchanges store and release KYC data. Because Revolut is weighing an IPO and recently launched its EURR stablecoin, the incident carries both regulatory and reputational weight for a major crypto-adjacent firm.
-
-The fraudulent email passed the agency domain&#x27;s authentication checks, which is why Revolut treated it as genuine; the company said no biometric facial telemetry, passwords, PINs or private keys were exposed, so no funds were directly lost. Revolut blocked the email address and notified the impersonated agency, law enforcement and regulators, but has not explained why it released records without confirming the request through a second channel.</summary>
-  </entry>
-  <entry>
-    <title>Blockstream rejects Liquid attacker&#x27;s ~600 BTC bounty demand</title>
-    <link href="https://cryptoslate.com/blockstream-bets-600-bitcoin-by-rejecting-liquid-hackers-50-million-bounty-demand/"/>
-    <id>https://bmt.news/editions/2026-09-13/#rss:cryptoslate.com_feed_:ce8eefbb48c96cad</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>On Sept. 11, Blockstream publicly rejected the Liquid attacker&#x27;s demand for a bounty of nearly 600 BTC (~$50 million) paid from Blockstream&#x27;s own funds, after the attacker returned 3,400 of the roughly 3,996 BTC withdrawn in the Sept. 6 exploit. Blockstream said it would instead pursue the remaining funds through law enforcement, exchanges, service providers and forensic specialists if they are not voluntarily returned.
-
-The standoff sets a precedent for how crypto protocols handle exploit negotiations, weighing deterrence against restitution: refusing to pay may deter future attacks but could remove any incentive for hackers to return funds voluntarily. It directly affects Liquid users, whose network is only about 85% reserve-backed with peg-ins and peg-outs disabled.
-
-The attacker demanded a 10% bounty and warned that holders could otherwise face a roughly 15% shortfall; SideSwap said the wallet funding the attack traced through a cross-chain bridge to Tornado Cash, and that the attacker rehearsed the pattern with 70 similar transactions before the successful mint.</summary>
-  </entry>
-  <entry>
-    <title>L-BTC Trading Reopens on SideSwap With Reserves Covering Only 85%</title>
-    <link href="https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/"/>
-    <id>https://bmt.news/editions/2026-09-13/#rss:cryptoslate.com_feed_:62c40af23e13e1cc</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>SideSwap reopened all of its L-BTC markets on Sept. 10 after the Liquid Network resumed block production in a controlled mode, while Liquid Federation peg-ins and peg-outs remained suspended. Readings at 22:55 UTC showed 4,229.33 L-BTC outstanding against 3,601.47 BTC at the cited federation reserve address, implying roughly 85.15% coverage and a shortfall of about 627.85 BTC.
-
-L-BTC 与 BTC 的 1:1 锚定是 Liquid 侧链的核心价值主张，而 peg-out 暂停后，市场价格已不再能保证按面值赎回，持有者无法确定能收回全部价值。这使个人用户资金、在 Liquid 上发行和结算资产的机构，以及托管 L-BTC 的交易所直接暴露于风险之中，也令联邦制侧链的信任模型受到更严格的审视。
-
-Trading and redemption answer different questions: SideSwap operates a central-limit-order-book-style venue with L-BTC as the base asset and registered Liquid assets as quotes, and its documentation does not identify a direct L-BTC/BTC order book. No reproducible post-restart L-BTC/BTC price, bid-ask spread, depth or slippage data was public at publication time, so the actual discount or premium could not be measured, and the reserve ratio is a live reading (SideSwap&#x27;s own Sept. 10 figures of 4,205 L-BTC and 3,597 BTC implied about 85.5% coverage and a 608 BTC gap) rather than a settled loss estimate.</summary>
-  </entry>
-  <entry>
-    <title>BitMEX to Close September 23; Users Told to Verify Withdrawable Balances</title>
-    <link href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1YaDVwZm1xQUFjbGo4c3N1dThtSTBNanVJV2pWOXJ3UmJTODhFMDRkMGh1YlBFcGJzOHlpbHRCaXp5aGJvQmRfRDhka2hOSUN6VlFrNU8xTkJPbHpLc2VqS3p0c3A2aFVibmRFQlVrNFVPOHAx?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-13/#google_news:article:390f4c7b0d78fa4e</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>BitMEX, operated by HDR Global Trading, announced on July 23, 2026 that its exchange will shut down on 23 September 2026 at 04:00 UTC, with all new account registrations stopped immediately. A CryptoTicker guide now walks users through how to check whether any remaining balance on the platform is still withdrawable before that hard deadline.
-
-BitMEX is one of the oldest and most influential crypto derivatives venues, so its wind-down forces traders to move funds, positions and collateral off the platform before a fixed cut-off date. It also removes a long-standing source of leverage and liquidity from the bitcoin and altcoin derivatives market, redistributing activity to rival exchanges.
-
-BitMEX states that withdrawals remain open and that user assets stay safe and under user control, but processing depends on account status, available balance, security controls such as 2FA, and the specific asset selected. Users in restricted jurisdictions, including sanctioned or embargoed countries, may face additional withdrawal limits.</summary>
-  </entry>
-  <entry>
-    <title>Binance Revives Tokenized Stock Trading via Ondo Finance Partnership</title>
-    <link href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNcGdlUnZMLUhFVDhaYVc5emVOLXZFZUM2NWdQek5EU010SVZaNXRrRXBfMzA4a0NaYVZTTHhPSDBMenhLbVpiX3lRMW42VmZZTV9VMzNnMmtLMUstcmtwelByVXl1RjJZRWNOMXl6TUp2TC1IemxxSjRmczRZRGw4UjM2c1dqNW9vOXJhVDIwTVJ6aXN0dHN3elRNbDI0anBpQUFQdFdhODhLN0Y2?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-13/#google_news:article:4f89c2542cda779a</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>Binance has reintroduced tokenized U.S. stock and ETF trading through a partnership with Ondo Finance, adding 10 tokenized equities to its Binance Alpha platform and Binance Wallet starting March 3, 2026. This is Binance&#x27;s first tokenized stock offering since it discontinued a similar product in 2021 following regulatory warnings.
-
-The move marks the return of tokenized equities to the world&#x27;s largest crypto exchange, a significant step in extending real-world asset (RWA) products from Treasuries and private credit into mainstream listed securities. It also signals that major exchanges see regulatory conditions as more workable for tokenized stock distribution than they did in 2021.
-
-Ondo&#x27;s tokenized equities, marketed as part of its &#x27;Ondo Stocks&#x27; line, are blockchain-based assets designed to provide economic exposure linked to publicly traded securities rather than direct shareholder ownership. The initial rollout covers 10 tokenized U.S. stocks and ETFs distributed through Binance Alpha and Binance Wallet rather than the main spot order book.</summary>
   </entry>
 </feed>

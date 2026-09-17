@@ -55,14 +55,27 @@
       "current_state_en": "Circle's USDC-focused layer-1 blockchain Arc opened to the public on September 16, 2026, offering USDC gas, a built-in FX engine, and opt-in privacy to support institutional stablecoin applications.",
       "detailed_summary_zh": "Circle's USDC-focused layer-1 blockchain Arc opened to the public on September 16, 2026, offering USDC gas, a built-in FX engine, and opt-in privacy to support institutional stablecoin applications.",
       "detailed_summary_en": "Circle's USDC-focused layer-1 blockchain Arc opened to the public on September 16, 2026, offering USDC gas, a built-in FX engine, and opt-in privacy to support institutional stablecoin applications.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "layer-1 区块链是独立处理并最终确认交易的基础协议，与搭建在既有链之上的 layer-2 网络不同，比特币、以太坊和 Solana 都是 layer-1 的例子。稳定币是通过储备资产或算法机制，使代币价值锚定某一参照资产（通常是美元）的加密货币。Circle 认为大多数现有链并非为稳定币支付而设计，并列举了手续费波动、存在链重组风险的概然性结算、商业交易隐私控制不足以及跨链流动性碎片化等问题。在美国总统特朗普于 2025 年 7 月签署 GENIUS 法案成为法律后，市场对该领域的关注进一步升温；Circle 既有的 CCTP 与 Gateway 互操作服务用于跨链转移 USDC，而 Arc 则定位为面向稳定币优化的流动性枢纽。",
+      "background_en": "A layer-1 blockchain is the base protocol of a network that independently processes and finalizes transactions, unlike layer-2 networks that sit on top of an existing chain — Bitcoin, Ethereum and Solana are examples of layer-1s. Stablecoins are tokens designed to hold a steady value against a reference asset, usually the US dollar, through reserve assets or algorithmic mechanisms. Circle argues that most existing chains were not designed for stablecoin payments, citing fee volatility, probabilistic settlement with reorganization risk, weak privacy controls for commercial transactions, and fragmented liquidity across chains. Interest in the sector grew after U.S. President Donald Trump signed the GENIUS Act into law in July 2025; Circle's existing CCTP and Gateway interoperability services are meant to move USDC across chains while Arc acts as a stablecoin-optimized liquidity hub.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "主要的传导渠道是稳定币流动性与托管：由大型发行方支持的专用结算层可能把 USDC 交易流量从通用公链上分流，通过链上 Arc Treasury 改变手续费收入的归属，并重塑其他稳定币发行方与争夺机构支付流量的区块链网络的竞争格局。机构结算需求是最直接受影响的细分领域，因为其公布的合作伙伴与许可制验证者设计面向的是受监管的金融用例，而非散户交易活动。",
+      "market_impact_en": "The main transmission channel is stablecoin liquidity and custody: a purpose-built settlement layer backed by a major issuer can redirect USDC transaction flow away from general-purpose chains, change where fee revenue accrues through the on-chain Arc Treasury, and reshape the competitive position of other stablecoin issuers and blockchain networks courting institutional payment volume. Institutional settlement demand is the segment most directly exposed, since the named partners and permissioned validator design target regulated financial use cases rather than retail trading activity.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Layer-1_blockchain",
+          "title": "Layer-1 blockchain"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Stablecoin",
+          "title": "Stablecoin"
+        },
+        {
+          "url": "https://www.investopedia.com/what-are-layer-1-and-layer-2-blockchain-scaling-solutions-7104877",
+          "title": "Blockchain Scaling Unveiled: Layer 1 vs. Layer 2 Solutions"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:be55331fc77bf89d"

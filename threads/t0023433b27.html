@@ -1,13 +1,17 @@
 ---
 layout: default
-title: "SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量"
+title: "GalaChain 漏洞利用 74 个失败交易签名盗走约 300 万美元资产"
 permalink: /threads/t0023433b27/
 interface_language: zh
-description: "在 Liquid 网络以受控模式恢复出块后，SideSwap 于 9 月 10 日重新开放了全部 L-BTC 市场，但 Liquid Federation 的 peg-in 与 peg-out 仍然处于暂停状态。UTC 22:55 的链上读数显示，L-BTC 流通量为 4,229.33 枚，而被引用的联邦储备地址持有 3,601.47 BTC，意味着覆盖率约"
+description: "GalaChain 在 9 月 14 日发布的事后复盘报告中披露，攻击者利用从失败交易中收集到的 74 个可重放签名（最早可追溯至 55 天前），于 8 月 18 日从九个钱包中盗走约 20 亿枚 GALA（约 300 万美元）以及数十种其他代币。攻击期间该链暂停了跨链桥，并已修补签名范围混淆漏洞和重放密钥回滚缺陷。  这起攻击表明，密码学上有效的签名并不等"
 page_type: archive
 ---
 
-<div class="archive-stats"><div class="archive-stat"><strong>6</strong><span>天</span></div><div class="archive-stat"><strong>8</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-13</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-13">2026-09-13</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/" target="_blank" rel="noopener noreferrer">SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量</a></h3><p class="archive-row-summary">在 Liquid 网络以受控模式恢复出块后，SideSwap 于 9 月 10 日重新开放了全部 L-BTC 市场，但 Liquid Federation 的 peg-in 与 peg-out 仍然处于暂停状态。UTC 22:55 的链上读数显示，L-BTC 流通量为 4,229.33 枚，而被引用的联邦储备地址持有 3,601.47 BTC，意味着覆盖率约为 85.15%，缺口约为 627.85 BTC。
+<div class="archive-stats"><div class="archive-stat"><strong>7</strong><span>天</span></div><div class="archive-stat"><strong>9</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-18</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-18">2026-09-18</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/hacker-turned-55-days-of-failed-transactions-into-a-3-million-master-key-that-drained-galachain-wallets/" target="_blank" rel="noopener noreferrer">GalaChain 漏洞利用 74 个失败交易签名盗走约 300 万美元资产</a></h3><p class="archive-row-summary">GalaChain 在 9 月 14 日发布的事后复盘报告中披露，攻击者利用从失败交易中收集到的 74 个可重放签名（最早可追溯至 55 天前），于 8 月 18 日从九个钱包中盗走约 20 亿枚 GALA（约 300 万美元）以及数十种其他代币。攻击期间该链暂停了跨链桥，并已修补签名范围混淆漏洞和重放密钥回滚缺陷。
+
+这起攻击表明，密码学上有效的签名并不等于用户已授权某项经济活动，而分别审查签名验证、重放保护和交易执行的审计流程，可能漏掉只在系统交互时才暴露的缺陷。它同时向链运营方提出治理层面的问题：当攻击已经实现自动化时，依赖人工触发的应急控制与基于有效签名的系统是否还能足够快地响应。
+
+GalaChain 的验证器此前接受请求中自带的 EIP-712 类型定义，而不是从被调用的操作中推导类型，因此可以提交覆盖某组字段的签名，却让另一个方法带着签名者从未承诺的额外信息执行——链上一个案例显示，一笔 TransferToken 调用转移了约 16.4 亿枚 GALA，而用于验证的 EIP-712 结构描述的却是 AddLiquidity 操作。由于交易失败时唯一交易键会随之回滚，签名仍留在公开账本上而重放键依然可用；与本次漏洞相关的 60 笔历史源交易中有 57 笔包含至少一个失败的内部操作，调查人员称没有证据表明受影响用户的私钥、助记词或密码遭到泄露。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">7.5</span></li><li class="archive-row"><time datetime="2026-09-13">2026-09-13</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/l-btc-resumes-trading-with-reserves-covering-just-85-of-supply/" target="_blank" rel="noopener noreferrer">SideSwap 恢复 L-BTC 交易，但储备仅覆盖约 85% 供应量</a></h3><p class="archive-row-summary">在 Liquid 网络以受控模式恢复出块后，SideSwap 于 9 月 10 日重新开放了全部 L-BTC 市场，但 Liquid Federation 的 peg-in 与 peg-out 仍然处于暂停状态。UTC 22:55 的链上读数显示，L-BTC 流通量为 4,229.33 枚，而被引用的联邦储备地址持有 3,601.47 BTC，意味着覆盖率约为 85.15%，缺口约为 627.85 BTC。
 
 L-BTC 与 BTC 的 1:1 锚定是 Liquid 侧链的核心价值主张，而 peg-out 暂停后，市场价格已不再能保证按面值赎回，持有者无法确定能收回全部价值。这使个人用户资金、在 Liquid 上发行和结算资产的机构，以及托管 L-BTC 的交易所直接暴露于风险之中，也令联邦制侧链的信任模型受到更严格的审视。
 

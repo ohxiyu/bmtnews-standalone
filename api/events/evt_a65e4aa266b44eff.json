@@ -96,14 +96,31 @@
       "current_state_en": "Bybit's TradFi stock perpetual options (NVIDIA, SpaceX/SPCX) are now live with 24/7 trading, fractional lots, USDT settlement, and Unified Trading Account portfolio margin; more tickers are planned.",
       "detailed_summary_zh": "Bybit has launched perpetual options on NVIDIA and SpaceX with 24/7 trading, fractional lots, and portfolio margin support via its Unified Trading Account.",
       "detailed_summary_en": "Bybit has launched perpetual options on NVIDIA and SpaceX with 24/7 trading, fractional lots, and portfolio margin support via its Unified Trading Account.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "传统的场内期权都带有到期日，而到期日是期权定价与对冲的核心。永续期权则完全取消了到期日（因此也被称为“无到期日期权”），通常依靠类似资金费的机制把合约价格锚定在标的之上——这是加密衍生品交易所在永续合约兴起后普及开来的做法。Bybit 的统一交易账户让用户可以在同一个账户内、以共享保证金交易现货、杠杆、USDT/USDC 永续合约与期权，正是这一结构使多产品期权策略在此成为可行。英伟达是一家公开上市的 AI 芯片公司，而 SpaceX 是一家未上市的私营火箭与卫星公司，两者在参考价格的可得性上存在根本差异。",
+      "background_en": "Standard listed options carry an expiry date, which is central to how they are priced and hedged. Perpetual options remove that expiry entirely — they are sometimes called expirationless options — and typically rely on a funding-style mechanism to keep the contract price anchored to the underlying, an approach crypto derivatives venues popularized after perpetual futures took off. Bybit's Unified Trading Account lets a user trade spot, margin, USDT/USDC perpetuals and options from a single account with shared collateral, which is what makes a multi-product options strategy feasible here. NVIDIA is a publicly listed AI chipmaker, whereas SpaceX is a privately held rocket and satellite company with no public shares, so the two underlyings differ fundamentally in how a reference price can be observed.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "其传导渠道是产品与市场结构，而非协议机制：通过提供对标股票与私营公司的 7×24 小时杠杆期权，Bybit 把传统市场休市时段的流动性与成交量引向加密交易场所，并与代币化股票及其他合成敞口类产品形成竞争。受到影响的市场环节包括离岸衍生品交易所、其保证金与抵押品体系，以及希望在股票市场交易时段之外对 AI 与航天主题敞口进行对冲的交易者。",
+      "market_impact_en": "The transmission channel is product and market structure rather than protocol mechanics: by offering 24/7 leveraged options on equity and private-company names, Bybit shifts liquidity and trading volume toward crypto venues during hours when traditional markets are closed, and competes with tokenized-equity and other synthetic exposure products. The affected segments are offshore derivatives exchanges, their margin and collateral systems, and traders seeking hedges on AI- and space-themed exposure outside of equity market hours.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://grokipedia.com/page/Perpetual_futures_and_options_in_cryptocurrency_trading",
+          "title": "Perpetual futures and options in cryptocurrency trading"
+        },
+        {
+          "url": "https://upstox.com/learning-center/futures-and-options/how-perpetual-options-are-picking-up-pace/",
+          "title": "Perpetual Option - What it Means, How it Works, Example"
+        },
+        {
+          "url": "https://www.bybit.com/en/promo/events/unified-trading-account",
+          "title": "Bybit Unified Trading Account"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Portfolio_margin",
+          "title": "Portfolio margin"
+        }
+      ],
       "confidence": 0.98,
       "story_ids": [
         "telegram:Bybit_Announcements:9720"

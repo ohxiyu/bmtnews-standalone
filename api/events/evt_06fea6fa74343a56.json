@@ -48,14 +48,27 @@
       "current_state_en": "An attacker harvested 74 signatures from failed GalaChain transactions and used them to drain roughly 2 billion GALA (~$3 million) plus dozens of other tokens from nine wallets, exposing a gap between signature verification and replay protection that had survived multiple security reviews.",
       "detailed_summary_zh": "An attacker harvested 74 signatures from failed GalaChain transactions and used them to drain roughly 2 billion GALA (~$3 million) plus dozens of other tokens from nine wallets, exposing a gap between signature verification and replay protection that had survived multiple security reviews.",
       "detailed_summary_en": "An attacker harvested 74 signatures from failed GalaChain transactions and used them to drain roughly 2 billion GALA (~$3 million) plus dozens of other tokens from nine wallets, exposing a gap between signature verification and replay protection that had survived multiple security reviews.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "GalaChain 是由 Gala Games 开发的区块链，GALA 是其游戏与娱乐生态中使用的代币。EIP-712 是一项以太坊签名标准，用于对结构化、可读的数据进行签名，钱包会在用户批准操作前展示这些内容。签名重放攻击指攻击者重新提交此前已获批准的签名，使系统再次执行同一授权——2022 年 Wintermute 约 2000 万枚 OP 代币被盗事件正是此类手法。本次事件中的重放并非来自伪造签名或窃取密钥，而是来自失败交易已经公开在链上的真实签名。",
+      "background_en": "GalaChain is the blockchain developed by Gala Games, and GALA is the token used across its gaming and entertainment ecosystem. EIP-712 is an Ethereum standard for signing structured, human-readable data, which wallets display to users before they approve an action. A signature replay attack occurs when an attacker resubmits a previously approved signature so the system executes the same authorization again — the pattern behind the 2022 theft of roughly 20 million OP tokens from Wintermute. Here the reuse came not from forging signatures or stealing keys, but from authentic signatures that had already been published on-chain by failed transactions.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "直接风险敞口集中在 GALA 及 GalaChain 上发行的其他代币，其持有者和链上流动性池承受了被抽走的余额，而跨链桥暂停则暂时切断了 GalaChain 与其他网络之间转移价值的主要通道。除 GALA 本身外，该披露还会影响交易所、跨链桥运营方和其他 L1 团队对其自身代码中签名验证与重放保护风险的定价，复盘讨论也指向更多控制措施前移到结算前检查，而这会在速率限制、提现延迟和运营方自由裁量权方面带来新的权衡。",
+      "market_impact_en": "The direct exposure is concentrated in GALA and other tokens issued on GalaChain, whose holders and on-chain liquidity pools absorbed the drained balances, while the bridge pause temporarily cut the main path moving value between GalaChain and other networks. Beyond GALA itself, the disclosure feeds into how exchanges, bridge operators, and other L1 teams price signature-verification and replay-protection risk in their own code, and postmortem commentary points to a shift toward pre-settlement checks that carry tradeoffs in rate limits, withdrawal delays, and operator discretion.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://news.gala.com/gala/galachain-security-incident-18-august-2026/",
+          "title": "GalaChain Security Incident - 18 August 2026 | Gala News"
+        },
+        {
+          "url": "https://cryptoslate.com/hacker-turned-55-days-of-failed-transactions-into-a-3-million-master-key-that-drained-galachain-wallets/",
+          "title": "GalaChain’s 2 billion GALA exploit began with failed transactions"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/galachain-hacker-exploited-failed-transactions-to-steal-3m-in-55-days",
+          "title": "GalaChain Hacker Exploited Failed Transactions to Steal... | KuCoin"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:cf526503e8e4add0"
