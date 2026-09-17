@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_eb19a2cef3159ae6/",
   "json": "https://bmt.news/api/events/evt_eb19a2cef3159ae6.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Bitcoin activity, passports exposed after Revolut falls for fake government request",
     "en": "Bitcoin activity, passports exposed after Revolut falls for fake government request"
   },
   "current_state": {
-    "zh": "Revolut 已确认遭遇利用合法政府机构域名邮箱发起的复杂冒充诈骗，有限数量客户的身份、验证及比特币交易数据被泄露；公司已封锁相关邮箱并通知该机构、执法部门和监管机构，称系统与客户资金未受影响，但未披露受影响人数及被冒充机构。",
-    "en": "Revolut has confirmed it was hit by a sophisticated impersonation scam using a legitimate government agency domain email, exposing identity, verification and Bitcoin transaction data of a limited number of customers; it blocked the email address and alerted the agency, law enforcement and regulators, said systems and customer funds were unaffected, but did not disclose the number affected or the impersonated agency."
+    "zh": "Revolut 数据泄露事件出现赎金要求：名为“iamnotavillain”的攻击者索要300万美元门罗币并威胁出售被盗数据，但双方尚未谈判，Revolut 称未与攻击者联系或收到要求；路透社消息称约680名客户受影响。",
+    "en": "A ransom demand has emerged in the Revolut data breach: attackers calling themselves \"iamnotavillain\" are demanding $3 million in Monero and threatening to sell stolen data, but no negotiations have begun and Revolut says it has had no contact or demands from the attackers; a Reuters source said about 680 customers were affected."
   },
   "first_seen_at": "2026-09-12T15:42:55.560568+00:00",
-  "last_updated_at": "2026-09-12T22:27:59.541525+00:00",
-  "last_material_change_at": "2026-09-12T18:34:38.398263+00:00",
+  "last_updated_at": "2026-09-17T17:11:52.568812+00:00",
+  "last_material_change_at": "2026-09-17T17:11:52.568812+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 3,
+  "updates_count": 3,
+  "sources_count": 4,
   "entities": [
     "fake",
     "government",
@@ -33,7 +33,10 @@
   "identifiers": [],
   "topics": [
     "data-privacy",
+    "fintech",
     "kyc",
+    "monero",
+    "ransomware",
     "revolut",
     "security-breach"
   ],
@@ -129,6 +132,44 @@
         {
           "url": "https://www.theblock.co/news/business/2026-09-12-revolut-says-customer-kyc-bitcoin-transaction-data-exposed-after-fake-request-from-govt-domain-414516",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_423c0db779856d9f",
+      "event_id": "evt_eb19a2cef3159ae6",
+      "occurred_at": "2026-09-17T13:10:53Z",
+      "published_at": "2026-09-17T13:10:53Z",
+      "first_seen_at": "2026-09-17T17:11:52.568812Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Revolut faces $3M ransom demand after data breach, report",
+      "title_en": "Revolut faces $3M ransom demand after data breach, report",
+      "what_changed_zh": "攻击者“iamnotavillain”声称对Revolut数据泄露负责，索要300万美元门罗币赎金，威胁若不支付将出售被盗客户数据；谈判尚未开始，Revolut称未收到任何要求；路透社称约680名客户受影响。",
+      "what_changed_en": "Attackers \"iamnotavillain\" claimed responsibility for the Revolut data breach and demanded $3 million in Monero ransom, threatening to sell stolen customer data if unpaid; negotiations have not begun, Revolut said it has received no demands; Reuters reported about 680 customers affected.",
+      "current_state_zh": "Revolut 数据泄露事件出现赎金要求：名为“iamnotavillain”的攻击者索要300万美元门罗币并威胁出售被盗数据，但双方尚未谈判，Revolut 称未与攻击者联系或收到要求；路透社消息称约680名客户受影响。",
+      "current_state_en": "A ransom demand has emerged in the Revolut data breach: attackers calling themselves \"iamnotavillain\" are demanding $3 million in Monero and threatening to sell stolen data, but no negotiations have begun and Revolut says it has had no contact or demands from the attackers; a Reuters source said about 680 customers were affected.",
+      "detailed_summary_zh": "Revolut is facing a $3 million Monero ransom demand from attackers claiming responsibility for a customer data breach, with threats to sell stolen data if unpaid.",
+      "detailed_summary_en": "Revolut is facing a $3 million Monero ransom demand from attackers claiming responsibility for a customer data breach, with threats to sell stolen data if unpaid.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:protos.com_feed_:2266bb03f6c85714"
+      ],
+      "sources": [
+        {
+          "url": "https://protos.com/revolut-faces-3m-ransom-demand-after-data-breach-report/",
+          "label": "Protos",
           "source_type": "rss",
           "official": false
         }

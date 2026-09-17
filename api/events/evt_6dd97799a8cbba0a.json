@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_6dd97799a8cbba0a/",
   "json": "https://bmt.news/api/events/evt_6dd97799a8cbba0a.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "US House crypto tax package omits mining, staking reward deferral",
     "en": "US House crypto tax package omits mining, staking reward deferral"
   },
   "current_state": {
-    "zh": "美国众议院筹款委员会的《数字资产税收确定性法案》（H.R. 10357）已发布，并定于9月16日进行标记；该法案包括对某些以加密货币支付的费用给予10美元豁免，以及涵盖稳定币、挖矿、质押和借贷的条款，自2028年起生效，但未包含挖矿和质押奖励的递延纳税条款。",
-    "en": "The US House Ways and Means Committee's Digital Asset Tax Certainty Act (H.R. 10357) has been released and is set for a Sept 16 markup, including a $10 exception for certain fees paid in crypto, along with provisions covering stablecoins, mining, staking, and lending effective in 2028, but omitting a deferral for mining and staking rewards."
+    "zh": "《数字资产税收确定性法案》（H.R. 10357）已获众议院筹款委员会以38-5批准并采纳替代案，正向众议院全体会议推进；法案仍包括10美元合格费用豁免及稳定币、借贷、质押和挖矿条款，但未满足行业扩大日常支付豁免和递延/调整质押与挖矿奖励纳税时点的要求。",
+    "en": "The Digital Asset Tax Certainty Act (H.R. 10357) has been approved by the House Ways and Means Committee 38-5 with a substitute adopted, advancing to the full House; the bill still includes a $10 qualifying-fee exception and provisions covering stablecoins, lending, staking and mining, but does not satisfy industry requests for broader de minimis relief and deferral or timing changes for staking and mining reward taxation."
   },
   "first_seen_at": "2026-09-15T17:11:55.587051+00:00",
-  "last_updated_at": "2026-09-15T17:11:55.587051+00:00",
-  "last_material_change_at": "2026-09-15T17:11:55.587051+00:00",
+  "last_updated_at": "2026-09-17T22:58:24.683144+00:00",
+  "last_material_change_at": "2026-09-17T22:58:24.683144+00:00",
   "confidence": 0.75,
-  "updates_count": 3,
-  "sources_count": 3,
+  "updates_count": 4,
+  "sources_count": 4,
   "entities": [
     "break",
     "crypto-tax",
@@ -40,10 +40,12 @@
   "identifiers": [],
   "topics": [
     "crypto-tax",
+    "crypto-taxation",
     "de-minimis",
     "mining",
     "stablecoins",
     "staking",
+    "us-congress",
     "us-policy"
   ],
   "updates": [
@@ -156,6 +158,44 @@
         {
           "url": "https://decrypt.co/378260/house-crypto-tax-bill-de-minimis-captail-gains",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_03ec65f5b7ac942a",
+      "event_id": "evt_6dd97799a8cbba0a",
+      "occurred_at": "2026-09-17T17:30:26Z",
+      "published_at": "2026-09-17T17:30:26Z",
+      "first_seen_at": "2026-09-17T22:58:24.683144Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Crypto’s first big tax win comes with a catch for stakers and everyday payments",
+      "title_en": "Crypto’s first big tax win comes with a catch for stakers and everyday payments",
+      "what_changed_zh": "众议院筹款委员会于9月16日以38票对5票批准了H.R. 10357《数字资产税收确定性法案》，并采纳了主席杰森·史密斯的替代案，将该法案推进至众议院全体会议；行业团体继续寻求扩大日常支付豁免并调整质押和挖矿奖励的纳税时点。",
+      "what_changed_en": "The House Ways and Means Committee approved H.R. 10357, the Digital Asset Tax Certainty Act, by 38-5 on Sept. 16, adopting Chairman Jason Smith’s substitute and sending the bill to the full House; industry groups continue to seek broader everyday-payment relief and changes to when staking and mining rewards become taxable.",
+      "current_state_zh": "《数字资产税收确定性法案》（H.R. 10357）已获众议院筹款委员会以38-5批准并采纳替代案，正向众议院全体会议推进；法案仍包括10美元合格费用豁免及稳定币、借贷、质押和挖矿条款，但未满足行业扩大日常支付豁免和递延/调整质押与挖矿奖励纳税时点的要求。",
+      "current_state_en": "The Digital Asset Tax Certainty Act (H.R. 10357) has been approved by the House Ways and Means Committee 38-5 with a substitute adopted, advancing to the full House; the bill still includes a $10 qualifying-fee exception and provisions covering stablecoins, lending, staking and mining, but does not satisfy industry requests for broader de minimis relief and deferral or timing changes for staking and mining reward taxation.",
+      "detailed_summary_zh": "The House Ways and Means Committee approved H.R. 10357, the Digital Asset Tax Certainty Act, by 38-5, advancing the broadest federal crypto tax framework while industry groups push for broader relief on staking, mining, and everyday payments.",
+      "detailed_summary_en": "The House Ways and Means Committee approved H.R. 10357, the Digital Asset Tax Certainty Act, by 38-5, advancing the broadest federal crypto tax framework while industry groups push for broader relief on staking, mining, and everyday payments.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.96,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:4c8cadabcb65c3bd"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/cryptos-first-big-tax-win-comes-with-a-catch-for-stakers-and-everyday-payments/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }
