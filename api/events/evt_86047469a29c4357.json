@@ -4,24 +4,25 @@
   "url": "https://bmt.news/events/evt_86047469a29c4357/",
   "json": "https://bmt.news/api/events/evt_86047469a29c4357.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday",
     "en": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday"
   },
   "current_state": {
-    "zh": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee.",
-    "en": "The House Financial Services Committee will mark up the American Reserve Modernization Act (ARMA), which would establish a federal Bitcoin reserve in statute, but the bill has only one Democratic cosponsor who does not sit on the committee."
+    "zh": "《美国储备现代化法案》(ARMA, H.R. 8957) 已以 28-21 的投票结果通过众议院金融服务委员会，下一步需经众议院和参议院全体表决后才能递交总统签署。",
+    "en": "The American Reserve Modernization Act (ARMA, H.R. 8957) passed the House Financial Services Committee 28-21 and must now pass the full House and Senate before reaching the president's desk."
   },
   "first_seen_at": "2026-09-15T17:11:52.017666+00:00",
-  "last_updated_at": "2026-09-15T17:11:52.017666+00:00",
-  "last_material_change_at": "2026-09-15T17:11:52.017666+00:00",
+  "last_updated_at": "2026-09-17T01:39:57.155909+00:00",
+  "last_material_change_at": "2026-09-17T01:39:57.155909+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "bitcoin-reserve",
+    "trump",
     "wednesday"
   ],
   "identifiers": [],
@@ -29,7 +30,10 @@
     "arma",
     "bitcoin-reserve",
     "crypto-policy",
-    "us-politics"
+    "legislation",
+    "treasury",
+    "us-politics",
+    "us-regulation"
   ],
   "updates": [
     {
@@ -65,6 +69,44 @@
         {
           "url": "https://cryptoslate.com/us-bitcoin-reserve-faces-crucial-bipartisan-test-wednesday/",
           "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_e793da57e29e298d",
+      "event_id": "evt_86047469a29c4357",
+      "occurred_at": "2026-09-17T00:23:44Z",
+      "published_at": "2026-09-17T00:23:44Z",
+      "first_seen_at": "2026-09-17T01:39:57.155909Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "US lawmakers advance bill to lock Trump’s Bitcoin reserve into law",
+      "title_en": "US lawmakers advance bill to lock Trump’s Bitcoin reserve into law",
+      "what_changed_zh": "美国众议院金融服务委员会以 28-21 的投票结果通过了《2026 年美国储备现代化法案》(H.R. 8957)，该法案将把特朗普的战略比特币储备编入法律，并要求联邦没收的比特币至少持有 20 年。",
+      "what_changed_en": "The House Financial Services Committee passed the American Reserve Modernization Act of 2026 (H.R. 8957) by a 28-21 vote, advancing the bill to codify Trump's strategic Bitcoin reserve and require federally forfeited Bitcoin to be held at least 20 years.",
+      "current_state_zh": "《美国储备现代化法案》(ARMA, H.R. 8957) 已以 28-21 的投票结果通过众议院金融服务委员会，下一步需经众议院和参议院全体表决后才能递交总统签署。",
+      "current_state_en": "The American Reserve Modernization Act (ARMA, H.R. 8957) passed the House Financial Services Committee 28-21 and must now pass the full House and Senate before reaching the president's desk.",
+      "detailed_summary_zh": "The American Reserve Modernization Act of 2026 (H.R. 8957) passed the House Financial Services Committee 28-21, aiming to codify Trump's strategic Bitcoin reserve and lock federally forfeited Bitcoin for 20 years.",
+      "detailed_summary_en": "The American Reserve Modernization Act of 2026 (H.R. 8957) passed the House Financial Services Committee 28-21, aiming to codify Trump's strategic Bitcoin reserve and lock federally forfeited Bitcoin for 20 years.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:876dc2f15d7b9821"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/us-bitcoin-reserve-bill-passes-house-committee?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }
