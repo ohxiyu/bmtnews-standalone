@@ -4,31 +4,36 @@
   "url": "https://bmt.news/events/evt_99060c00ae9bcffa/",
   "json": "https://bmt.news/api/events/evt_99060c00ae9bcffa.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "closed",
   "category": "policy",
   "title": {
     "zh": "Bitcoin, ether swing after unanimous quarter-point Fed rate hike as Warsh takes aim at inflation",
     "en": "Bitcoin, ether swing after unanimous quarter-point Fed rate hike as Warsh takes aim at inflation"
   },
   "current_state": {
-    "zh": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation.",
-    "en": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation."
+    "zh": "美联储于9月16日加息25个基点至3.75%-4.00%，主席沃什发表鹰派言论后，高盛预计10月将再次加息，交易员定价超过50%的加息概率。",
+    "en": "After the Fed hiked 25 basis points to 3.75%-4.00% on Sept 16 and Chair Warsh struck a hawkish tone, Goldman Sachs now expects another hike in October, with traders pricing just over 50% chance."
   },
   "first_seen_at": "2026-09-16T23:08:42.154186+00:00",
-  "last_updated_at": "2026-09-16T23:08:42.154186+00:00",
-  "last_material_change_at": "2026-09-16T23:08:42.154186+00:00",
+  "last_updated_at": "2026-09-17T09:34:58.122380+00:00",
+  "last_material_change_at": "2026-09-17T09:34:58.122380+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "fed",
+    "goldman",
+    "october",
     "warsh"
   ],
   "identifiers": [],
   "topics": [
+    "fed",
     "federal-reserve",
+    "goldman-sachs",
     "interest-rates",
-    "macro"
+    "macro",
+    "monetary-policy"
   ],
   "updates": [
     {
@@ -64,6 +69,44 @@
         {
           "url": "https://www.theblock.co/news/markets/2026-09-16-bitcoin-ether-swing-unanimous-quarter-point-fed-rate-hike-warsh-aim-inflation-415307",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_1697e448cc03bec0",
+      "event_id": "evt_99060c00ae9bcffa",
+      "occurred_at": "2026-09-17T04:17:55Z",
+      "published_at": "2026-09-17T04:17:55Z",
+      "first_seen_at": "2026-09-17T09:34:58.122380Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Goldman pivots, now forecasts Fed rate hike in October",
+      "title_en": "Goldman pivots, now forecasts Fed rate hike in October",
+      "what_changed_zh": "高盛改变预测，现在预计美联储将在10月再次加息，逆转此前预测。",
+      "what_changed_en": "Goldman Sachs now expects another Fed rate hike in October, reversing its prior forecast.",
+      "current_state_zh": "美联储于9月16日加息25个基点至3.75%-4.00%，主席沃什发表鹰派言论后，高盛预计10月将再次加息，交易员定价超过50%的加息概率。",
+      "current_state_en": "After the Fed hiked 25 basis points to 3.75%-4.00% on Sept 16 and Chair Warsh struck a hawkish tone, Goldman Sachs now expects another hike in October, with traders pricing just over 50% chance.",
+      "detailed_summary_zh": "Goldman Sachs now expects the Federal Reserve to raise interest rates again in October, reversing its prior call for a September hike followed by a pause, after the Fed hiked rates to 3.75%-4.00% and Chair Kevin Warsh struck a hawkish tone.",
+      "detailed_summary_en": "Goldman Sachs now expects the Federal Reserve to raise interest rates again in October, reversing its prior call for a September hike followed by a pause, after the Fed hiked rates to 3.75%-4.00% and Chair Kevin Warsh struck a hawkish tone.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:5ed6b3d8af08d156"
+      ],
+      "sources": [
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/17/goldman-expects-another-fed-rate-hike-in-october",
+          "label": "CoinDesk",
           "source_type": "rss",
           "official": false
         }

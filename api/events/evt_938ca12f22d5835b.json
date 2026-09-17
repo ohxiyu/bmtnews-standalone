@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "event_id": "evt_938ca12f22d5835b",
+  "url": "https://bmt.news/events/evt_938ca12f22d5835b/",
+  "json": "https://bmt.news/api/events/evt_938ca12f22d5835b.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+    "en": "Keys Not Included: recovering the signing keys for US driver's license barcodes"
+  },
+  "current_state": {
+    "zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+    "en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme."
+  },
+  "first_seen_at": "2026-09-17T09:34:53.818566+00:00",
+  "last_updated_at": "2026-09-17T09:34:53.818566+00:00",
+  "last_material_change_at": "2026-09-17T09:34:53.818566+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "included",
+    "keys",
+    "not"
+  ],
+  "identifiers": [],
+  "topics": [
+    "cryptography",
+    "identity-verification",
+    "privacy",
+    "reverse-engineering"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_49c6bab52e84aa0b",
+      "event_id": "evt_938ca12f22d5835b",
+      "occurred_at": "2026-09-17T03:03:23Z",
+      "published_at": "2026-09-17T03:03:23Z",
+      "first_seen_at": "2026-09-17T09:34:53.818566Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+      "title_en": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+      "what_changed_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "what_changed_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "current_state_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "current_state_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "detailed_summary_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "detailed_summary_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49735930",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49735930"
+      ],
+      "sources": [
+        {
+          "url": "https://ryan.science/blog/keys-not-included",
+          "label": "Ryan5453",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

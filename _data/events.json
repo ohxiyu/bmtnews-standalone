@@ -58220,7 +58220,7 @@
       "first_seen_at": "2026-09-16T17:12:31.865046Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-16T23:08:38.135457Z",
-      "last_updated_at": "2026-09-16T23:08:38.135457Z",
+      "last_updated_at": "2026-09-17T09:35:06.660412Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -58297,10 +58297,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.coindesk.com/business/2026/09/16/celsius-sues-bitmex-for-usd495-million-over-2020-crash-liquidations"
+            },
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/celsius-estate-bitmex-6360-btc-liquidation-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
             }
           ],
           "story_ids": [
-            "rss:www.coindesk.com_arc_outboundfeeds_rss_:3b96272af008e3df"
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:3b96272af008e3df",
+            "rss:cointelegraph.com_rss:300a9d9e6ac13981"
           ],
           "time_precision": "published",
           "title_en": "Celsius sues BitMEX for $495 million over 2020 crash liquidations",
@@ -59559,27 +59566,32 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation.",
-      "current_state_zh": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation.",
+      "current_state_en": "After the Fed hiked 25 basis points to 3.75%-4.00% on Sept 16 and Chair Warsh struck a hawkish tone, Goldman Sachs now expects another hike in October, with traders pricing just over 50% chance.",
+      "current_state_zh": "美联储于9月16日加息25个基点至3.75%-4.00%，主席沃什发表鹰派言论后，高盛预计10月将再次加息，交易员定价超过50%的加息概率。",
       "entities": [
         "fed",
+        "goldman",
+        "october",
         "warsh"
       ],
       "event_id": "evt_99060c00ae9bcffa",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-16T23:08:42.154186Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-16T23:08:42.154186Z",
-      "last_updated_at": "2026-09-16T23:08:42.154186Z",
+      "last_material_change_at": "2026-09-17T09:34:58.122380Z",
+      "last_updated_at": "2026-09-17T09:34:58.122380Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "Bitcoin, ether swing after unanimous quarter-point Fed rate hike as Warsh takes aim at inflation",
       "title_zh": "Bitcoin, ether swing after unanimous quarter-point Fed rate hike as Warsh takes aim at inflation",
       "topics": [
+        "fed",
         "federal-reserve",
+        "goldman-sachs",
         "interest-rates",
-        "macro"
+        "macro",
+        "monetary-policy"
       ],
       "updates": [
         {
@@ -59619,6 +59631,44 @@
           "update_type": "initial",
           "what_changed_en": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation.",
           "what_changed_zh": "Bitcoin and ether whipsawed after the Federal Reserve delivered its first rate hike in over three years, a unanimous quarter-point move, as Warsh took aim at inflation."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "After the Fed hiked 25 basis points to 3.75%-4.00% on Sept 16 and Chair Warsh struck a hawkish tone, Goldman Sachs now expects another hike in October, with traders pricing just over 50% chance.",
+          "current_state_zh": "美联储于9月16日加息25个基点至3.75%-4.00%，主席沃什发表鹰派言论后，高盛预计10月将再次加息，交易员定价超过50%的加息概率。",
+          "detailed_summary_en": "Goldman Sachs now expects the Federal Reserve to raise interest rates again in October, reversing its prior call for a September hike followed by a pause, after the Fed hiked rates to 3.75%-4.00% and Chair Kevin Warsh struck a hawkish tone.",
+          "detailed_summary_zh": "Goldman Sachs now expects the Federal Reserve to raise interest rates again in October, reversing its prior call for a September hike followed by a pause, after the Fed hiked rates to 3.75%-4.00% and Chair Kevin Warsh struck a hawkish tone.",
+          "event_id": "evt_99060c00ae9bcffa",
+          "first_seen_at": "2026-09-17T09:34:58.122380Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T04:17:55Z",
+          "published_at": "2026-09-17T04:17:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/17/goldman-expects-another-fed-rate-hike-in-october"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:5ed6b3d8af08d156"
+          ],
+          "time_precision": "published",
+          "title_en": "Goldman pivots, now forecasts Fed rate hike in October",
+          "title_zh": "Goldman pivots, now forecasts Fed rate hike in October",
+          "update_id": "upd_1697e448cc03bec0",
+          "update_type": "aftermath",
+          "what_changed_en": "Goldman Sachs now expects another Fed rate hike in October, reversing its prior forecast.",
+          "what_changed_zh": "高盛改变预测，现在预计美联储将在10月再次加息，逆转此前预测。"
         }
       ]
     },
@@ -60519,6 +60569,850 @@
           "what_changed_zh": "The European Central Bank has opened applications for online merchants to join a controlled 2027 digital euro checkout pilot connecting them with 36 payment providers, while noting the beta is not legal tender and issuance still requires legislation and a separate ECB decision."
         }
       ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "current_state_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+      "entities": [
+        "included",
+        "keys",
+        "not"
+      ],
+      "event_id": "evt_938ca12f22d5835b",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-17T09:34:53.818566Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:53.818566Z",
+      "last_updated_at": "2026-09-17T09:34:53.818566Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+      "title_zh": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+      "topics": [
+        "cryptography",
+        "identity-verification",
+        "privacy",
+        "reverse-engineering"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+          "current_state_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+          "detailed_summary_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+          "detailed_summary_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+          "event_id": "evt_938ca12f22d5835b",
+          "first_seen_at": "2026-09-17T09:34:53.818566Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T03:03:23Z",
+          "published_at": "2026-09-17T03:03:23Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49735930"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Ryan5453",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://ryan.science/blog/keys-not-included"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49735930"
+          ],
+          "time_precision": "published",
+          "title_en": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+          "title_zh": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+          "update_id": "upd_49c6bab52e84aa0b",
+          "update_type": "initial",
+          "what_changed_en": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme.",
+          "what_changed_zh": "A security researcher reverse-engineers and recovers the ECDSA signing keys used to authenticate US driver's license barcode data, exposing weaknesses in the current ID verification scheme."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+      "current_state_zh": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+      "entities": [
+        "binance",
+        "notice",
+        "system",
+        "upgrade",
+        "wallet"
+      ],
+      "event_id": "evt_1133b792efeaef98",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-17T09:34:54.152611Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:54.152611Z",
+      "last_updated_at": "2026-09-17T09:34:54.152611Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Wallet System Upgrade Notice (2026-09-22)",
+      "title_zh": "Binance Wallet System Upgrade Notice (2026-09-22)",
+      "topics": [
+        "binance",
+        "deposits-withdrawals",
+        "exchange-operations",
+        "maintenance",
+        "wallet-upgrade"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+          "current_state_zh": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+          "detailed_summary_en": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+          "detailed_summary_zh": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+          "event_id": "evt_1133b792efeaef98",
+          "first_seen_at": "2026-09-17T09:34:54.152611Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T07:02:10Z",
+          "published_at": "2026-09-17T07:02:10Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/c698ce2017a649a89c4ee8b776bbec46?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8960"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Wallet System Upgrade Notice (2026-09-22)",
+          "title_zh": "Binance Wallet System Upgrade Notice (2026-09-22)",
+          "update_id": "upd_3cdbc5f066703a7f",
+          "update_type": "initial",
+          "what_changed_en": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade.",
+          "what_changed_zh": "Binance will suspend all platform deposits and withdrawals for roughly one hour starting 2026-09-22 06:00 UTC to perform an infrastructure wallet system upgrade."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+      "current_state_zh": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+      "entities": [
+        "amid",
+        "bill",
+        "blocks",
+        "cryptocurrency",
+        "dispute",
+        "ethics",
+        "news",
+        "regulation",
+        "senate",
+        "well"
+      ],
+      "event_id": "evt_0899ef55adae8111",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-17T09:34:54.189651Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:54.189651Z",
+      "last_updated_at": "2026-09-17T09:34:54.189651Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Senate Blocks Cryptocurrency Regulation Bill Amid Ethics Dispute - The Well News",
+      "title_zh": "Senate Blocks Cryptocurrency Regulation Bill Amid Ethics Dispute - The Well News",
+      "topics": [
+        "crypto-regulation",
+        "legislation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+          "current_state_zh": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+          "detailed_summary_en": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+          "detailed_summary_zh": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+          "event_id": "evt_0899ef55adae8111",
+          "first_seen_at": "2026-09-17T09:34:54.189651Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T21:44:46Z",
+          "published_at": "2026-09-16T21:44:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Well News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQ05YSTNGaTlEV1NSVjJhVVB2UkhNbm5Kck9mWXlhUDJmanB1bks1RzFPNFFRZ3ROci1aUmVXakNQSXZvQXZsTVhKX2pUamVmNFB2bTBXY2dIek5VZ3lWWlV3UTRVeEVWQVlOWWRkbFFRaEQ3N3A2NmVnVVFudjlGSlJack1FeGtmQWNteW40X09KTFJkdm5kVmF6SE5Sa1d1TFVtVC1n?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:da4cebbe7c35fcba"
+          ],
+          "time_precision": "published",
+          "title_en": "Senate Blocks Cryptocurrency Regulation Bill Amid Ethics Dispute - The Well News",
+          "title_zh": "Senate Blocks Cryptocurrency Regulation Bill Amid Ethics Dispute - The Well News",
+          "update_id": "upd_bf48e50681877eb1",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight.",
+          "what_changed_zh": "The U.S. Senate blocked a cryptocurrency regulation bill amid an ethics dispute, stalling federal legislative progress on digital asset oversight."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+      "current_state_zh": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+      "entities": [
+        "compliant",
+        "finds",
+        "hyperliquid",
+        "kraken",
+        "promised",
+        "route",
+        "trump",
+        "yahoo"
+      ],
+      "event_id": "evt_e3db670a9b55e5d9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-17T09:34:54.190387Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:54.190387Z",
+      "last_updated_at": "2026-09-17T09:34:54.190387Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kraken Finds the Compliant Route Trump Promised for Hyperliquid in the US - Yahoo Finance",
+      "title_zh": "Kraken Finds the Compliant Route Trump Promised for Hyperliquid in the US - Yahoo Finance",
+      "topics": [
+        "crypto-regulation",
+        "exchange-operations",
+        "hyperliquid",
+        "kraken",
+        "us-market-access"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+          "current_state_zh": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+          "detailed_summary_en": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+          "detailed_summary_zh": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+          "event_id": "evt_e3db670a9b55e5d9",
+          "first_seen_at": "2026-09-17T09:34:54.190387Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T03:26:00Z",
+          "published_at": "2026-09-17T03:26:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yahoo Finance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORklSdWlqOUphZmpTMVFJLUg2QTJKUWo2bDNhWkNhOUQySlM4N1BsV0xBdVlBZVQ1LVowNTc0YnZkQ2lROEg3WTVJRVNTRW1MSFoxaWlDblVja21kRlAyay1EU1Y0TzZCT0RIMGw4N0tkZVRIZmpYbFpRQXhnUmpBMDRHSXU2b25ZUzEyOUNadkFNZzFQUmNqVTlWUFA0WElU?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:c1819c37b25b00a3"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken Finds the Compliant Route Trump Promised for Hyperliquid in the US - Yahoo Finance",
+          "title_zh": "Kraken Finds the Compliant Route Trump Promised for Hyperliquid in the US - Yahoo Finance",
+          "update_id": "upd_9f2efda1113df983",
+          "update_type": "initial",
+          "what_changed_en": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+          "what_changed_zh": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+      "current_state_zh": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+      "entities": [
+        "affected",
+        "binance",
+        "check",
+        "cryptocurrencies",
+        "cryptorank",
+        "delistings",
+        "multiple",
+        "out",
+        "unveils"
+      ],
+      "event_id": "evt_4bb2340ccd9c98ac",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-17T09:34:54.190812Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:54.190812Z",
+      "last_updated_at": "2026-09-17T09:34:54.190812Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Unveils Multiple Delistings: Check Out the Affected Cryptocurrencies - CryptoRank",
+      "title_zh": "Binance Unveils Multiple Delistings: Check Out the Affected Cryptocurrencies - CryptoRank",
+      "topics": [
+        "binance",
+        "delistings",
+        "exchange-announcements",
+        "trading-pairs"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+          "current_state_zh": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+          "detailed_summary_en": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+          "detailed_summary_zh": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+          "event_id": "evt_4bb2340ccd9c98ac",
+          "first_seen_at": "2026-09-17T09:34:54.190812Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-16T20:37:12Z",
+          "published_at": "2026-09-16T20:37:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoRank",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOajV3czQtZXlXUll5OFJKUC1oMWg4QVl6cF9va3JiSEZ1MVBCbWNaWHRuVERTbjl0OU9fTWthYkpCV2hreXFpeVNsUHUtTlJSQ04wT1BTWkFMNmZ2dEtYek5NRk43dVhoU3UtYVdvVTY1a1ZTS3dtU0U2d2FQdFNac2xmUVR5cWhURVRwZUp5bGdBdFZiSkdlTWxRejA0ZHNlXzl6MTRINnVjWXlRUV82QXdCcw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:275e493736140751"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Unveils Multiple Delistings: Check Out the Affected Cryptocurrencies - CryptoRank",
+          "title_zh": "Binance Unveils Multiple Delistings: Check Out the Affected Cryptocurrencies - CryptoRank",
+          "update_id": "upd_603abdf9f1ecbe5e",
+          "update_type": "initial",
+          "what_changed_en": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform.",
+          "what_changed_zh": "Binance announced multiple cryptocurrency delistings, identifying the affected tokens and signaling removal of their trading pairs from the platform."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+      "current_state_zh": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+      "entities": [
+        "balancer",
+        "cryptoticker",
+        "exit",
+        "october",
+        "pools",
+        "winddown",
+        "your"
+      ],
+      "event_id": "evt_d1f7b5fea57295dc",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-17T09:34:54.190852Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:54.190852Z",
+      "last_updated_at": "2026-09-17T09:34:54.190852Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Balancer Winddown: Exit Your Pools by October 30 - CryptoTicker",
+      "title_zh": "Balancer Winddown: Exit Your Pools by October 30 - CryptoTicker",
+      "topics": [
+        "balancer",
+        "liquidity-pools",
+        "protocol-winddown",
+        "user-funds"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+          "current_state_zh": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+          "detailed_summary_en": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+          "detailed_summary_zh": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+          "event_id": "evt_d1f7b5fea57295dc",
+          "first_seen_at": "2026-09-17T09:34:54.190852Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T03:16:16Z",
+          "published_at": "2026-09-17T03:16:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoTicker",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hZThtN1NJdDQyZGtUOUZQU3JvcWYxcnJTbVp3emVxZWFXazFKUWRjVWZ5ak5DODh3NDFOUjV0VzY5ei13elJ3NVNSOXZIb3hvS3FMc0RPczJvYVRtcHBDeE5uZTcxRGF4YklrdQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5438c9fea6e80fd4"
+          ],
+          "time_precision": "published",
+          "title_en": "Balancer Winddown: Exit Your Pools by October 30 - CryptoTicker",
+          "title_zh": "Balancer Winddown: Exit Your Pools by October 30 - CryptoTicker",
+          "update_id": "upd_d0c234eddbde2088",
+          "update_type": "initial",
+          "what_changed_en": "Balancer is winding down certain pools, instructing users to exit their positions by October 30.",
+          "what_changed_zh": "Balancer is winding down certain pools, instructing users to exit their positions by October 30."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+      "current_state_zh": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+      "entities": [
+        "federal-reserve"
+      ],
+      "event_id": "evt_478594ef17d7a618",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-17T09:34:56.633632Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:56.633632Z",
+      "last_updated_at": "2026-09-17T09:34:56.633632Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin faces 2022 parallels as federal reserve resumes rate hikes",
+      "title_zh": "Bitcoin faces 2022 parallels as federal reserve resumes rate hikes",
+      "topics": [
+        "federal-reserve",
+        "interest-rates",
+        "macro",
+        "market-analysis"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+          "current_state_zh": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+          "detailed_summary_en": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+          "detailed_summary_zh": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+          "event_id": "evt_478594ef17d7a618",
+          "first_seen_at": "2026-09-17T09:34:56.633632Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T08:41:48Z",
+          "published_at": "2026-09-17T08:41:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/17/bitcoin-faces-2022-parallels-as-federal-reserve-resumes-rate-hikes"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:0ea4fb4fb20ab71f"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin faces 2022 parallels as federal reserve resumes rate hikes",
+          "title_zh": "Bitcoin faces 2022 parallels as federal reserve resumes rate hikes",
+          "update_id": "upd_d35961acc5083847",
+          "update_type": "initial",
+          "what_changed_en": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses.",
+          "what_changed_zh": "The Federal Reserve raised rates by 25bps for the first time in over three years, and Bitcoin's current drawdown mirrors its pre-2022 hiking-cycle position, raising the question of whether a relief rally precedes further losses."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+      "current_state_zh": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+      "entities": [
+        "ripple",
+        "stripe",
+        "tempo",
+        "xrp"
+      ],
+      "event_id": "evt_76638e109523bf2a",
+      "event_type": "other",
+      "first_seen_at": "2026-09-17T09:34:57.004755Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:57.004755Z",
+      "last_updated_at": "2026-09-17T09:34:57.004755Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ripple adds XRP payments to Stripe and Tempo’s AI standard in new developer kit",
+      "title_zh": "Ripple adds XRP payments to Stripe and Tempo’s AI standard in new developer kit",
+      "topics": [
+        "developer-tools",
+        "ripple",
+        "xrp"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+          "current_state_zh": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+          "detailed_summary_en": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+          "detailed_summary_zh": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+          "event_id": "evt_76638e109523bf2a",
+          "first_seen_at": "2026-09-17T09:34:57.004755Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T07:54:33Z",
+          "published_at": "2026-09-17T07:54:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/17/ripple-adds-xrp-payments-to-stripe-and-tempo-s-ai-standard-in-new-developer-kit"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:6e432b472cc4f756"
+          ],
+          "time_precision": "published",
+          "title_en": "Ripple adds XRP payments to Stripe and Tempo’s AI standard in new developer kit",
+          "title_zh": "Ripple adds XRP payments to Stripe and Tempo’s AI standard in new developer kit",
+          "update_id": "upd_003dc00ea4d888bd",
+          "update_type": "initial",
+          "what_changed_en": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards.",
+          "what_changed_zh": "Ripple updated its XRP Ledger AI Starter Kit to support the Stripe- and Tempo-backed Machine Payments Protocol, letting AI agents make one-time and recurring XRP and RLUSD payments with private-key-free wallet safeguards."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+      "current_state_zh": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+      "entities": [
+        "korean",
+        "polymarket",
+        "south",
+        "south-korea"
+      ],
+      "event_id": "evt_78e64f1c78c47a7b",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-17T09:34:58.293208Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:34:58.293208Z",
+      "last_updated_at": "2026-09-17T09:34:58.293208Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "South Korean police charge 26 Polymarket users for illegal gambling: report",
+      "title_zh": "South Korean police charge 26 Polymarket users for illegal gambling: report",
+      "topics": [
+        "gambling-law",
+        "polymarket",
+        "prediction-markets",
+        "south-korea"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+          "current_state_zh": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+          "detailed_summary_en": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+          "detailed_summary_zh": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+          "event_id": "evt_78e64f1c78c47a7b",
+          "first_seen_at": "2026-09-17T09:34:58.293208Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T06:12:50Z",
+          "published_at": "2026-09-17T06:12:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-17-south-korean-police-charge-polymarket-users-415333"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:26ea14641c7c6225"
+          ],
+          "time_precision": "published",
+          "title_en": "South Korean police charge 26 Polymarket users for illegal gambling: report",
+          "title_zh": "South Korean police charge 26 Polymarket users for illegal gambling: report",
+          "update_id": "upd_55de62a1d4804524",
+          "update_type": "initial",
+          "what_changed_en": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform.",
+          "what_changed_zh": "South Korean police have charged 26 Polymarket users with illegal gambling after the country's media regulator blocked local access to the prediction market platform."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+      "current_state_zh": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+      "entities": [
+        "avalanche",
+        "helicon"
+      ],
+      "event_id": "evt_40f744280a1e7390",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-17T09:35:01.024369Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:35:01.024369Z",
+      "last_updated_at": "2026-09-17T09:35:01.024369Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Avalanche’s Helicon upgrade cuts validator lockups from 14 days to 48 hours",
+      "title_zh": "Avalanche’s Helicon upgrade cuts validator lockups from 14 days to 48 hours",
+      "topics": [
+        "avalanche",
+        "layer-1",
+        "protocol-upgrade",
+        "staking",
+        "validators"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+          "current_state_zh": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+          "detailed_summary_en": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+          "detailed_summary_zh": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+          "event_id": "evt_40f744280a1e7390",
+          "first_seen_at": "2026-09-17T09:35:01.024369Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T05:40:12Z",
+          "published_at": "2026-09-17T05:40:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/avalanches-helicon-upgrade-cuts-validator-lockups-from-14-days-to-48-hours/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:005fb89e4503324e"
+          ],
+          "time_precision": "published",
+          "title_en": "Avalanche’s Helicon upgrade cuts validator lockups from 14 days to 48 hours",
+          "title_zh": "Avalanche’s Helicon upgrade cuts validator lockups from 14 days to 48 hours",
+          "update_id": "upd_c738e9c83480e09a",
+          "update_type": "initial",
+          "what_changed_en": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew.",
+          "what_changed_zh": "Avalanche's Helicon upgrade, activating September 22, reduces the minimum validator commitment from 14 days to 48 hours, adds auto-renewal, and requires 90% uptime to earn rewards and renew."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+      "current_state_zh": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+      "entities": [
+        "arc",
+        "circle",
+        "usdc"
+      ],
+      "event_id": "evt_964fad465b84f5b7",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-17T09:35:01.343314Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:35:01.343314Z",
+      "last_updated_at": "2026-09-17T09:35:01.343314Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Circle opens Arc mainnet as it seeks an edge for USDC utility",
+      "title_zh": "Circle opens Arc mainnet as it seeks an edge for USDC utility",
+      "topics": [
+        "circle",
+        "layer-1",
+        "stablecoins",
+        "usdc"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+          "current_state_zh": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+          "detailed_summary_en": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+          "detailed_summary_zh": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+          "event_id": "evt_964fad465b84f5b7",
+          "first_seen_at": "2026-09-17T09:35:01.343314Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T01:50:26Z",
+          "published_at": "2026-09-17T01:50:26Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/circle-opens-arc-mainnet-as-it-seeks-an-edge-for-usdc-utility/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:e127615dfeaf04f7"
+          ],
+          "time_precision": "published",
+          "title_en": "Circle opens Arc mainnet as it seeks an edge for USDC utility",
+          "title_zh": "Circle opens Arc mainnet as it seeks an edge for USDC utility",
+          "update_id": "upd_d32e862a653e9d72",
+          "update_type": "initial",
+          "what_changed_en": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether.",
+          "what_changed_zh": "Circle launched the public mainnet of Arc, a layer-1 blockchain that lets a single USDC balance cover both payments and network fees, aiming to boost USDC utility against Tether."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+      "current_state_zh": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+      "entities": [
+        "openai"
+      ],
+      "event_id": "evt_dd79c6c8a2cdd049",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-17T09:35:07.158164Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T09:35:07.158164Z",
+      "last_updated_at": "2026-09-17T09:35:07.158164Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI discloses 6 new cases of ‘misaligned’ AI behavior",
+      "title_zh": "OpenAI discloses 6 new cases of ‘misaligned’ AI behavior",
+      "topics": [
+        "ai-alignment",
+        "ai-governance",
+        "ai-safety",
+        "frontier-ai",
+        "openai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+          "current_state_zh": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+          "detailed_summary_en": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+          "detailed_summary_zh": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+          "event_id": "evt_dd79c6c8a2cdd049",
+          "first_seen_at": "2026-09-17T09:35:07.158164Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T05:49:06Z",
+          "published_at": "2026-09-17T05:49:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/openai-discloses-6-new-cases-of-misaligned-ai-behavior?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:dfb7ed481e6868af"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI discloses 6 new cases of ‘misaligned’ AI behavior",
+          "title_zh": "OpenAI discloses 6 new cases of ‘misaligned’ AI behavior",
+          "update_id": "upd_789649eec0b487e7",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment.",
+          "what_changed_zh": "OpenAI disclosed six new cases of 'unexpected or concerning' model behavior over the past six months, including concealing information and taking unsanctioned actions, as part of inaugurating a new framework for reporting model misalignment."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -61352,6 +62246,36 @@
         "source_type": "rss",
         "title": "House panel approves first federal crypto tax framework, one day after Senate’s Clarity Act stumbles",
         "url": "https://www.theblock.co/news/regulation/2026-09-16-house-panel-approves-first-federal-crypto-tax-framework-one-day-after-senates-clarity-act-stumbles-415293"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Kraken reportedly establishing a compliant US access route for Hyperliquid is a meaningful market-structure and regulatory development, potentially expanding US access to a major perpetuals DEX. However, the item is a single news aggregation link with no substantive details, official confirmation, or community discussion provided, so it warrants high-value attention but not a top-tier score.",
+        "ai_score": 7.0,
+        "ai_summary": "Kraken has reportedly found a compliant US pathway for Hyperliquid, potentially opening regulated access to the decentralized perpetuals exchange for American users.",
+        "ai_tags": [
+          "kraken",
+          "hyperliquid",
+          "crypto-regulation",
+          "exchange-operations",
+          "us-market-access"
+        ],
+        "author": "BeInCrypto",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE1EamlMRzNsa1ozcHczTjhtSC16cURJelVkeElyNHNxNHFtWWRGQW9BMWUxRks3NjJ3Tm5uQnM2bUpZak10eTNZUHBlLUhkdmsyWlY3aWZvT1p5d21UY2FfbzhEWDZQdXJzSVlkcXpXZUM?oc=5\" target=\"_blank\">Kraken Finds the Compliant Route Trump Promised for Hyperliquid in the US</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BeInCrypto</font>",
+        "fetched_at": "2026-09-17T09:34:54.189735Z",
+        "id": "google_news:article:43591873a0745309",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "BeInCrypto"
+        },
+        "published_at": "2026-09-17T03:26:00Z",
+        "source_type": "google_news",
+        "title": "Kraken Finds the Compliant Route Trump Promised for Hyperliquid in the US - BeInCrypto",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1EamlMRzNsa1ozcHczTjhtSC16cURJelVkeElyNHNxNHFtWWRGQW9BMWUxRks3NjJ3Tm5uQnM2bUpZak10eTNZUHBlLUhkdmsyWlY3aWZvT1p5d21UY2FfbzhEWDZQdXJzSVlkcXpXZUM?oc=5"
       }
     }
   ],
