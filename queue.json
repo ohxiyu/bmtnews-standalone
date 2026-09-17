@@ -610,10 +610,11 @@
         "post_id": "367625131595981"
       },
       "c0c1bbbaefa81aa1e44822d22dd92f46cec9dec82a706d670f6f9904c66f97ec": {
-        "status": "pending",
+        "status": "sent",
         "rank": 11,
         "text_hash": "a908147b98b0d94702cbf0345d4e9941d065e4ceea4369bad5d0d61b646f24f2",
-        "attempted_at": "2026-09-17T19:40:35.699452+08:00"
+        "attempted_at": "2026-09-17T19:40:35.699452+08:00",
+        "post_id": "367632539395250"
       }
     }
   },
@@ -651,12 +652,6 @@
     "2026-09-17": {
       "revision": "a339bd1a739dc40b4c071ac5ccd2ffc031a205822fcff8543fa0bcbbd2cd3b12",
       "jobs": [
-        {
-          "id": "c0c1bbbaefa81aa1e44822d22dd92f46cec9dec82a706d670f6f9904c66f97ec",
-          "text": "Aave Labs 提议在 Avalanche 上以 Tether USA₮ 构建代币化资产信贷市场\n\nAave Labs 提议在 Avalanche 上建立一个 Aave V4 RWA Hub，让机构能够以代币化资产作为抵押品借入 Tether 的 USA₮ 稳定币。该 Hub 本身以及 USA₮ 的上线都需要提交 Aave DAO 治理投票，目前尚未公布上线时间。\n\n这将推动 DeFi 最大借贷协议进一步深入机构级真实世界资产信贷领域，把代币化国债、私募信贷和房地产与受监管的美元稳定币结合。若获批准，也意味着 Tether 的 USA₮ 从单纯的支付用途扩展到链上抵押借贷场景，是其应用范围的重要扩张。\n\n该 Hub 被定位为 Aave V4 的部署，意味着它依赖尚未发布的 V4 架构，而非现有的 V3 代码库；据报道其抵押品类型包括代币化国债、私募信贷和房地产。USA₮ 是 Tether 面向美国机构使用、以美元资产背书并符合联邦监管取向的稳定币，也是该市场的美元流动性来源。\n\n来源：https://thedefiant.io/news/defi/aave-avalanche-rwa-hub-usat-tokenized-collateral\nBMTNews · 2026-09-17 · https://bmt.news",
-          "rank": 11,
-          "due_at": "2026-09-17T19:37:00+08:00"
-        },
         {
           "id": "a8abd55bcdb41a8a01792e54c08e5ec161729dbe90f98f941ffbb03269fc245e",
           "text": "Bitcoin Core 32 进入最终测试：验证加速、费率调整与安全修复\n\n比特币参考实现的下一个重要版本 Bitcoin Core 32 已进入最终测试阶段，预计于 10 月正式发布。该版本调整了节点估算交易手续费和处理区块的方式，并修复了一个钱包漏洞——该漏洞可能允许已通过身份验证的用户在节点上执行命令；此外，四个用于创建部分签名交易的命令将默认改用较新的 PSBT 第二版格式。\n\nBitcoin Core 是市值最大的加密货币的参考实现，因此这一涉及手续费估算、区块验证和钱包安全的候选版本，会直接影响运行该网络最广泛部署软件的节点运营者、矿工和钱包开发者。由于这些改动计划在 10 月落地，运营者在此之前有一段窗口期来测试兼容性，以应对稳定版在全网扩散。\n\n该钱包修复针对的漏洞可能允许已通过身份验证的用户在节点上执行命令；同时该版本让四个部分签名交易命令默认使用 PSBT 第二版格式，这种格式通常在钱包软件与硬件签名设备之间传递。Bitcoin Core 的手续费估算来自对未确认交易的观察以及它们被确认所需的时间，因此估算质量取决于节点是否已运行并收集了一段时间的数据。\n\n来源：https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes\nBMTNews · 2026-09-17 · https://bmt.news",
