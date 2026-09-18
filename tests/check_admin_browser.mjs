@@ -39,6 +39,13 @@ for(const viewport of [{width:390,height:844},{width:1280,height:900}]) {
  await page.reload();await page.waitForFunction(()=>!document.getElementById('body').disabled);
  assert.match(await page.locator('#body').inputValue(),/第二段/);
  if(!baseline)await page.waitForFunction(()=>document.getElementById('position').value==='1');
+ if(!baseline){
+  await page.locator('#date').fill('2026-09-17');await page.locator('#date').blur();
+  await page.waitForFunction(()=>JSON.parse(sessionStorage.getItem('bmt-quick-post-draft-v1')).position===null);
+  await page.reload();await page.waitForFunction(()=>!document.getElementById('body').disabled);
+  assert.equal(await page.locator('#date').inputValue(),'2026-09-17');
+  assert.equal(await page.locator('#position').inputValue(),'');
+ }
  failSave=true;await page.locator('#publish').click();await page.getByRole('status').filter({hasText:'版本冲突'}).waitFor();
  assert.match(await page.locator('#body').inputValue(),/第二段/);
  failSave=false;await page.locator('#save-draft').click();await page.locator('#entries .entry').waitFor();

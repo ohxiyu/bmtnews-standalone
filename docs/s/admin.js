@@ -92,7 +92,7 @@ async function save(enabled) {
 }
 $('date').value=today();
 loadPositions();
-$('date').addEventListener('change',()=>loadPositions());
+$('date').addEventListener('change',()=>{loadPositions();remember();});
 $('position').addEventListener('change',remember);
 fillLegacy();
 $('legacy-new').onclick=()=>{if(!busy)fillLegacy();};
