@@ -11,27 +11,34 @@
     "en": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks"
   },
   "current_state": {
-    "zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
-    "en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule."
+    "zh": "Zcash 开发者一致同意在 11 月 5 日激活 NU7 主网升级，将出块时间从 75 秒缩短至 25 秒，同时通过 ZIP 218 保持每日发行量不变，并集成网络可持续机制（2026 年开始费用银行，2031 年 2 月发放补充奖励），减半计划保持不变。",
+    "en": "Zcash developers unanimously agreed to activate the NU7 mainnet upgrade on Nov. 5, cutting block times from 75 to 25 seconds while keeping daily issuance unchanged via ZIP 218, and integrating the Network Sustainability Mechanism (fee banking starting 2026, supplemental rewards in Feb. 2031), with halvings preserved."
   },
   "first_seen_at": "2026-09-18T09:07:10.086276+00:00",
-  "last_updated_at": "2026-09-18T09:07:10.086276+00:00",
-  "last_material_change_at": "2026-09-18T09:07:10.086276+00:00",
+  "last_updated_at": "2026-09-18T22:43:52.654525+00:00",
+  "last_material_change_at": "2026-09-18T22:43:52.654525+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "devs",
+    "faster",
     "mainnet",
+    "make",
     "november",
     "nu7",
+    "running",
+    "want",
     "zcash"
   ],
   "identifiers": [],
   "topics": [
     "mainnet",
+    "mining",
     "privacy",
     "protocol-upgrade",
-    "zcash"
+    "zcash",
+    "zero-knowledge-proofs"
   ],
   "updates": [
     {
@@ -67,6 +74,44 @@
         {
           "url": "https://cointelegraph.com/news/zcash-nu7-november-mainnet-activation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_410801c5ee218817",
+      "event_id": "evt_4d4b10880ad0715c",
+      "occurred_at": "2026-09-18T19:16:03Z",
+      "published_at": "2026-09-18T19:16:03Z",
+      "first_seen_at": "2026-09-18T22:43:52.654525Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Zcash Is Running—Devs Want to Make It Faster",
+      "title_en": "Zcash Is Running—Devs Want to Make It Faster",
+      "what_changed_zh": "开发者透露 NU7 测试网将于 10 月 6 日上线，主网激活高度将于 10 月 20 日确定，规范于 9 月 30 日前发布；ZIP 218 将每块奖励除以约三倍以保持每日发行量不变；98.9% 的持币者投票支持保留减半机制；网络可持续机制将从 2026 年开始将约 60% 的交易费用存入，并于 2031 年 2 月开始作为补充挖矿奖励发放。",
+      "what_changed_en": "Developers revealed NU7 testnet on Oct. 6, mainnet activation height set on Oct. 20, specs due by Sept. 30; ZIP 218 divides per-block reward by ~3 to keep daily issuance unchanged; 98.9% of coinholders voted to keep halvings; Network Sustainability Mechanism will bank ~60% of transaction fees starting 2026, flowing back as supplemental mining rewards in Feb. 2031.",
+      "current_state_zh": "Zcash 开发者一致同意在 11 月 5 日激活 NU7 主网升级，将出块时间从 75 秒缩短至 25 秒，同时通过 ZIP 218 保持每日发行量不变，并集成网络可持续机制（2026 年开始费用银行，2031 年 2 月发放补充奖励），减半计划保持不变。",
+      "current_state_en": "Zcash developers unanimously agreed to activate the NU7 mainnet upgrade on Nov. 5, cutting block times from 75 to 25 seconds while keeping daily issuance unchanged via ZIP 218, and integrating the Network Sustainability Mechanism (fee banking starting 2026, supplemental rewards in Feb. 2031), with halvings preserved.",
+      "detailed_summary_zh": "Zcash developers plan to activate the NU7 upgrade on Nov. 5, tripling block speed from 75 to 25 seconds while keeping daily ZEC issuance unchanged and adding a 2026 fee-banking mechanism to fund miners after 2031.",
+      "detailed_summary_en": "Zcash developers plan to activate the NU7 upgrade on Nov. 5, tripling block speed from 75 to 25 seconds while keeping daily ZEC issuance unchanged and adding a 2026 fee-banking mechanism to fund miners after 2031.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:decrypt.co_feed:28d1dfe3c5a4ea86"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/378667/zcash-upgrade-make-private-payments-3x-faster",
+          "label": "Decrypt",
           "source_type": "rss",
           "official": false
         }

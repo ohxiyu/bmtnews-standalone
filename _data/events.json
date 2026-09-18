@@ -58866,8 +58866,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The UK FCA has published final crypto authorization guidance; the application window opens Sept. 30, existing registrations do not automatically convert, firms seeking transitional arrangements face a Feb. 28, 2027 deadline, and the new regime takes effect Oct. 25, 2027.",
-      "current_state_zh": "英国 FCA 已发布加密授权最终指南；申请窗口于 9 月 30 日开放，现有注册不会自动转换，寻求过渡安排的公司需在 2027 年 2 月 28 日前申请，新制度将于 2027 年 10 月 25 日生效。",
+      "current_state_en": "The UK FCA has published final crypto authorization perimeter guidance, including territorial boundary rules for when offshore platform, custody, and staking services require UK authorization; the application window opens Sept. 30, 2026, transitional applications close Feb. 28, 2027, the new regime takes effect Oct. 25, 2027, and existing registrations/permissions do not automatically convert.",
+      "current_state_zh": "英国 FCA 已发布最终加密授权 perimeter 指引，其中包括海外平台/托管/质押服务何时需要英国授权的属地边界规则；申请窗口于 2026 年 9 月 30 日开放，过渡申请截止日为 2027 年 2 月 28 日，新制度于 2027 年 10 月 25 日生效，现有注册/许可不会自动转换。",
       "entities": [
         "authorization",
         "before",
@@ -58885,8 +58885,8 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-16T17:12:35.420732Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-16T23:08:51.651696Z",
-      "last_updated_at": "2026-09-16T23:08:51.651696Z",
+      "last_material_change_at": "2026-09-18T22:43:49.293131Z",
+      "last_updated_at": "2026-09-18T22:43:49.293131Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -58899,6 +58899,7 @@
         "crypto-regulation",
         "fca",
         "market-access",
+        "offshore-platforms",
         "stablecoins",
         "uk-fca",
         "uk-regulation"
@@ -58992,6 +58993,44 @@
           "update_type": "confirmation",
           "what_changed_en": "The FCA guidance is now described as final, specifies covered crypto activities, states that existing registrations/permissions will not automatically convert, and adds a Feb. 28, 2027 transitional application deadline.",
           "what_changed_zh": "FCA 最新指引确认为最终指南，明确需要授权的加密活动类别，并说明现有注册/许可不会自动转换；同时给出过渡申请截止日为 2027 年 2 月 28 日。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The UK FCA has published final crypto authorization perimeter guidance, including territorial boundary rules for when offshore platform, custody, and staking services require UK authorization; the application window opens Sept. 30, 2026, transitional applications close Feb. 28, 2027, the new regime takes effect Oct. 25, 2027, and existing registrations/permissions do not automatically convert.",
+          "current_state_zh": "英国 FCA 已发布最终加密授权 perimeter 指引，其中包括海外平台/托管/质押服务何时需要英国授权的属地边界规则；申请窗口于 2026 年 9 月 30 日开放，过渡申请截止日为 2027 年 2 月 28 日，新制度于 2027 年 10 月 25 日生效，现有注册/许可不会自动转换。",
+          "detailed_summary_en": "The FCA published final guidance clarifying when overseas crypto platforms, custody, and staking providers must obtain UK authorization, with applications opening Sept. 30, 2026 and rules effective Oct. 25, 2027.",
+          "detailed_summary_zh": "The FCA published final guidance clarifying when overseas crypto platforms, custody, and staking providers must obtain UK authorization, with applications opening Sept. 30, 2026 and rules effective Oct. 25, 2027.",
+          "event_id": "evt_b6d7c0abc84207d8",
+          "first_seen_at": "2026-09-18T22:43:49.293131Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T18:45:35Z",
+          "published_at": "2026-09-18T18:45:35Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/fca-draws-the-uk-boundary-for-offshore-crypto-platforms-ahead-of-2027-rules/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:14b2a02ce5ae94c4"
+          ],
+          "time_precision": "published",
+          "title_en": "FCA draws the UK boundary for offshore crypto platforms ahead of 2027 rules",
+          "title_zh": "FCA draws the UK boundary for offshore crypto platforms ahead of 2027 rules",
+          "update_id": "upd_7c93c55087cd63fc",
+          "update_type": "confirmation",
+          "what_changed_en": "Added territorial boundary rules from the FCA's final perimeter guidance for offshore crypto platforms: overseas platforms, custody, and staking providers serving UK consumers may fall within the authorization perimeter, with details on the 'UK consumer' definition, Section 418 deeming provisions, and agent/principal trading conditions.",
+          "what_changed_zh": "新增了FCA最终 perimeter 指引中针对海外加密平台的属地边界规则：为英国消费者服务的海外平台、托管和质押服务可能被纳入授权范围，并解释了‘英国消费者’定义、第418条视为条款及代理/自营交易等具体条件。"
         }
       ]
     },
@@ -63517,12 +63556,17 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The SEC has introduced a new 'innovation exemption' that opens the door to tokenized stocks, potentially enabling on-chain trading of equity securities.",
-      "current_state_zh": "The SEC has introduced a new 'innovation exemption' that opens the door to tokenized stocks, potentially enabling on-chain trading of equity securities.",
+      "current_state_en": "The SEC has approved the Innovation Exemption, enabling qualifying venues to trade tokenized US stocks on public blockchains without national exchange registration, effective immediately for five years, with an issuer 30-day objection right and limited to real tokenized stocks carrying full rights.",
+      "current_state_zh": "SEC 已批准创新豁免，允许符合条件的场所在公共区块链上交易代币化美国股票而无需注册为国家交易所，该豁免立即生效、为期五年，包含发行人30天异议权，且仅适用于具有完整权利的真正代币化股票。",
       "entities": [
+        "approves",
         "door",
         "exemption",
+        "forward",
         "innovation",
+        "minute",
+        "morning",
+        "moving",
         "new",
         "opens",
         "sec",
@@ -63536,14 +63580,16 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-17T22:58:14.543645Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-17T22:58:14.543645Z",
-      "last_updated_at": "2026-09-17T22:58:14.543645Z",
+      "last_material_change_at": "2026-09-18T16:37:40.027105Z",
+      "last_updated_at": "2026-09-18T16:37:40.027105Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
       "title_en": "SEC Opens Door To Tokenized Stocks With New ‘Innovation Exemption’ - TradingView",
       "title_zh": "SEC Opens Door To Tokenized Stocks With New ‘Innovation Exemption’ - TradingView",
       "topics": [
+        "cftc",
+        "crypto-regulation",
         "sec",
         "tokenized-stocks"
       ],
@@ -63605,6 +63651,44 @@
           "update_type": "initial",
           "what_changed_en": "The SEC has introduced a new 'innovation exemption' that opens the door to tokenized stocks, potentially enabling on-chain trading of equity securities.",
           "what_changed_zh": "The SEC has introduced a new 'innovation exemption' that opens the door to tokenized stocks, potentially enabling on-chain trading of equity securities."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "The SEC has approved the Innovation Exemption, enabling qualifying venues to trade tokenized US stocks on public blockchains without national exchange registration, effective immediately for five years, with an issuer 30-day objection right and limited to real tokenized stocks carrying full rights.",
+          "current_state_zh": "SEC 已批准创新豁免，允许符合条件的场所在公共区块链上交易代币化美国股票而无需注册为国家交易所，该豁免立即生效、为期五年，包含发行人30天异议权，且仅适用于具有完整权利的真正代币化股票。",
+          "detailed_summary_en": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
+          "detailed_summary_zh": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
+          "event_id": "evt_850acbfb4d581e34",
+          "first_seen_at": "2026-09-18T16:37:40.027105Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T12:34:50Z",
+          "published_at": "2026-09-18T12:34:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378619/morning-minute-sec-approves-innovation-exemption-moving-tokenized-stocks-forward"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:d4674779d0bf6372"
+          ],
+          "time_precision": "published",
+          "title_en": "Morning Minute: SEC Approves ‘Innovation Exemption’ Moving Tokenized Stocks Forward",
+          "title_zh": "Morning Minute: SEC Approves ‘Innovation Exemption’ Moving Tokenized Stocks Forward",
+          "update_id": "upd_16ae56c85fb990a4",
+          "update_type": "confirmation",
+          "what_changed_en": "The SEC approved the 'Innovation Exemption,' effective immediately for five years, allowing qualifying Tokenized Securities Venues to trade tokenized US stocks on public blockchains without registering as national exchanges; issuers have 30 days to object to unaffiliated tokenization of their shares.",
+          "what_changed_zh": "SEC 批准了‘创新豁免’，立即生效，为期五年，允许符合条件的代币化证券交易场所无需注册为国家交易所即可在公共区块链上交易代币化美国股票；发行人有30天时间反对未经关联方对其股票进行代币化。"
         }
       ]
     },
@@ -66235,7 +66319,7 @@
       "first_seen_at": "2026-09-18T09:07:09.927861Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-18T09:07:09.927861Z",
-      "last_updated_at": "2026-09-18T09:07:09.927861Z",
+      "last_updated_at": "2026-09-18T16:37:23.089044Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -66261,7 +66345,7 @@
           "detailed_summary_zh": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
           "event_id": "evt_4e1cb9e840c1b05e",
           "first_seen_at": "2026-09-18T09:07:09.927861Z",
-          "importance_score": 7.0,
+          "importance_score": 7.5,
           "market_impact_en": "",
           "market_impact_zh": "",
           "material_change": true,
@@ -66274,10 +66358,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cointelegraph.com/news/binance-cites-speculation-report-ecb-chief-mica-intervention?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "BitKE",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOelRQZHdZUG0zVXFBd2Jab1NkQmdSRkxSa19vUWQ3Nk94TjFzcmptVWJfLVlKT3B3M21oX1ExZGhYak9mQVhPQzVzclNDd3c5MmpObFNsNmFuRU1ydVRkd0ZrejVTUUZibjdfSGxlRWJyQnJyOE1JUUJzNVZDSHFLZXh5aVB2bU1wVFpFZmo0dw?oc=5"
             }
           ],
           "story_ids": [
-            "rss:cointelegraph.com_rss:e148295114124889"
+            "rss:cointelegraph.com_rss:e148295114124889",
+            "google_news:article:5b478889c1457bb0"
           ],
           "time_precision": "published",
           "title_en": "Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment",
@@ -66292,20 +66383,25 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
-      "current_state_zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+      "current_state_en": "Zcash developers unanimously agreed to activate the NU7 mainnet upgrade on Nov. 5, cutting block times from 75 to 25 seconds while keeping daily issuance unchanged via ZIP 218, and integrating the Network Sustainability Mechanism (fee banking starting 2026, supplemental rewards in Feb. 2031), with halvings preserved.",
+      "current_state_zh": "Zcash 开发者一致同意在 11 月 5 日激活 NU7 主网升级，将出块时间从 75 秒缩短至 25 秒，同时通过 ZIP 218 保持每日发行量不变，并集成网络可持续机制（2026 年开始费用银行，2031 年 2 月发放补充奖励），减半计划保持不变。",
       "entities": [
+        "devs",
+        "faster",
         "mainnet",
+        "make",
         "november",
         "nu7",
+        "running",
+        "want",
         "zcash"
       ],
       "event_id": "evt_4d4b10880ad0715c",
       "event_type": "protocol_change",
       "first_seen_at": "2026-09-18T09:07:10.086276Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-18T09:07:10.086276Z",
-      "last_updated_at": "2026-09-18T09:07:10.086276Z",
+      "last_material_change_at": "2026-09-18T22:43:52.654525Z",
+      "last_updated_at": "2026-09-18T22:43:52.654525Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -66313,9 +66409,11 @@
       "title_zh": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
       "topics": [
         "mainnet",
+        "mining",
         "privacy",
         "protocol-upgrade",
-        "zcash"
+        "zcash",
+        "zero-knowledge-proofs"
       ],
       "updates": [
         {
@@ -66355,6 +66453,44 @@
           "update_type": "initial",
           "what_changed_en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
           "what_changed_zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Zcash developers unanimously agreed to activate the NU7 mainnet upgrade on Nov. 5, cutting block times from 75 to 25 seconds while keeping daily issuance unchanged via ZIP 218, and integrating the Network Sustainability Mechanism (fee banking starting 2026, supplemental rewards in Feb. 2031), with halvings preserved.",
+          "current_state_zh": "Zcash 开发者一致同意在 11 月 5 日激活 NU7 主网升级，将出块时间从 75 秒缩短至 25 秒，同时通过 ZIP 218 保持每日发行量不变，并集成网络可持续机制（2026 年开始费用银行，2031 年 2 月发放补充奖励），减半计划保持不变。",
+          "detailed_summary_en": "Zcash developers plan to activate the NU7 upgrade on Nov. 5, tripling block speed from 75 to 25 seconds while keeping daily ZEC issuance unchanged and adding a 2026 fee-banking mechanism to fund miners after 2031.",
+          "detailed_summary_zh": "Zcash developers plan to activate the NU7 upgrade on Nov. 5, tripling block speed from 75 to 25 seconds while keeping daily ZEC issuance unchanged and adding a 2026 fee-banking mechanism to fund miners after 2031.",
+          "event_id": "evt_4d4b10880ad0715c",
+          "first_seen_at": "2026-09-18T22:43:52.654525Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T19:16:03Z",
+          "published_at": "2026-09-18T19:16:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378667/zcash-upgrade-make-private-payments-3x-faster"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:28d1dfe3c5a4ea86"
+          ],
+          "time_precision": "published",
+          "title_en": "Zcash Is Running—Devs Want to Make It Faster",
+          "title_zh": "Zcash Is Running—Devs Want to Make It Faster",
+          "update_id": "upd_410801c5ee218817",
+          "update_type": "confirmation",
+          "what_changed_en": "Developers revealed NU7 testnet on Oct. 6, mainnet activation height set on Oct. 20, specs due by Sept. 30; ZIP 218 divides per-block reward by ~3 to keep daily issuance unchanged; 98.9% of coinholders voted to keep halvings; Network Sustainability Mechanism will bank ~60% of transaction fees starting 2026, flowing back as supplemental mining rewards in Feb. 2031.",
+          "what_changed_zh": "开发者透露 NU7 测试网将于 10 月 6 日上线，主网激活高度将于 10 月 20 日确定，规范于 9 月 30 日前发布；ZIP 218 将每块奖励除以约三倍以保持每日发行量不变；98.9% 的持币者投票支持保留减半机制；网络可持续机制将从 2026 年开始将约 60% 的交易费用存入，并于 2031 年 2 月开始作为补充挖矿奖励发放。"
         }
       ]
     },
@@ -66986,22 +67122,27 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
-      "current_state_zh": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+      "current_state_en": "The CFTC's crypto asset market rulemaking is with White House OIRA as RIN 3038-AF80 at the prerule stage, not yet a proposed rule, filed Sept. 17, two days after the Senate blocked the CLARITY Act.",
+      "current_state_zh": "CFTC 的加密资产市场规则制定已提交白宫 OIRA，编号 RIN 3038-AF80，处于 pre-rule（预规则）阶段，尚未成为拟议规则；提交时间为9月17日，即参议院阻止 CLARITY Act 两天后。",
       "entities": [
         "cftc",
         "congress",
+        "files",
         "house",
+        "market",
+        "prerule",
         "rulemaking",
+        "stage",
         "white",
-        "white-house"
+        "white-house",
+        "with"
       ],
       "event_id": "evt_ddffb643d96920ea",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-18T16:37:30.669527Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-18T16:37:30.669527Z",
-      "last_updated_at": "2026-09-18T16:37:30.669527Z",
+      "last_material_change_at": "2026-09-18T22:43:48.272712Z",
+      "last_updated_at": "2026-09-18T22:43:48.272712Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -67009,7 +67150,9 @@
       "title_zh": "CFTC files crypto asset rulemaking with White House, pressing ahead without Congress",
       "topics": [
         "cftc",
+        "clarity-act",
         "crypto-regulation",
+        "oira",
         "rulemaking",
         "white-house"
       ],
@@ -67051,6 +67194,44 @@
           "update_type": "initial",
           "what_changed_en": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
           "what_changed_zh": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "The CFTC's crypto asset market rulemaking is with White House OIRA as RIN 3038-AF80 at the prerule stage, not yet a proposed rule, filed Sept. 17, two days after the Senate blocked the CLARITY Act.",
+          "current_state_zh": "CFTC 的加密资产市场规则制定已提交白宫 OIRA，编号 RIN 3038-AF80，处于 pre-rule（预规则）阶段，尚未成为拟议规则；提交时间为9月17日，即参议院阻止 CLARITY Act 两天后。",
+          "detailed_summary_en": "The CFTC filed a prerule-stage crypto market rulemaking (RIN 3038-AF80) with the White House OIRA on Sept. 17, two days after the Senate blocked the CLARITY Act.",
+          "detailed_summary_zh": "The CFTC filed a prerule-stage crypto market rulemaking (RIN 3038-AF80) with the White House OIRA on Sept. 17, two days after the Senate blocked the CLARITY Act.",
+          "event_id": "evt_ddffb643d96920ea",
+          "first_seen_at": "2026-09-18T22:43:48.272712Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T20:22:13Z",
+          "published_at": "2026-09-18T20:22:13Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/regulation/cftc-files-crypto-market-rulemaking-with-white-house-at-prerule-stage"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:46cb5d0719be43fc"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC Files Crypto Market Rulemaking With White House at Prerule Stage",
+          "title_zh": "CFTC Files Crypto Market Rulemaking With White House at Prerule Stage",
+          "update_id": "upd_61cc8a74b5d4717b",
+          "update_type": "confirmation",
+          "what_changed_en": "The rulemaking is identified as RIN 3038-AF80 and was filed with White House OIRA on Sept. 17 at the prerule stage, not as a proposed rule, two days after the Senate blocked the CLARITY Act.",
+          "what_changed_zh": "该规则制定已明确为 RIN 3038-AF80，并于9月17日提交白宫 OIRA，目前处于 pre-rule（预规则）阶段，而非拟议规则；此事发生在参议院阻止 CLARITY Act 两天后。"
         }
       ]
     },
@@ -67738,6 +67919,1117 @@
           "update_type": "initial",
           "what_changed_en": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
           "what_changed_zh": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+      "current_state_zh": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+      "entities": [
+        "administration",
+        "coordination",
+        "enhancing",
+        "h-1b",
+        "integrity",
+        "interagency",
+        "nonimmigrant",
+        "program",
+        "visa"
+      ],
+      "event_id": "evt_920724b1923b6ccb",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:42.137441Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.137441Z",
+      "last_updated_at": "2026-09-18T22:43:42.137441Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program",
+      "title_zh": "Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program",
+      "topics": [
+        "executive-order",
+        "h-1b",
+        "immigration-policy",
+        "labor-market",
+        "tech-talent"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+          "current_state_zh": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+          "detailed_summary_en": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+          "detailed_summary_zh": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+          "event_id": "evt_920724b1923b6ccb",
+          "first_seen_at": "2026-09-18T22:43:42.137441Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T22:02:43Z",
+          "published_at": "2026-09-18T22:02:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "White House Presidential Actions",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program/"
+            }
+          ],
+          "story_ids": [
+            "rss:www.whitehouse.gov_presidential-actions_feed_:2b38fb4ae58f20bb"
+          ],
+          "time_precision": "published",
+          "title_en": "Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program",
+          "title_zh": "Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program",
+          "update_id": "upd_0183a28a5efb22ad",
+          "update_type": "initial",
+          "what_changed_en": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose.",
+          "what_changed_zh": "The White House issued an executive order aimed at enhancing program integrity and interagency coordination in the administration of the H-1B nonimmigrant visa program, citing concerns that the program has strayed from its original purpose."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+      "current_state_zh": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+      "entities": [
+        "certain",
+        "entry",
+        "nonimmigrant",
+        "restriction",
+        "workers"
+      ],
+      "event_id": "evt_8cc6d786a9521f4d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:42.137501Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.137501Z",
+      "last_updated_at": "2026-09-18T22:43:42.137501Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Restriction on Entry of Certain Nonimmigrant Workers",
+      "title_zh": "Restriction on Entry of Certain Nonimmigrant Workers",
+      "topics": [
+        "h-1b",
+        "immigration",
+        "labor-market",
+        "tech-talent"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+          "current_state_zh": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+          "detailed_summary_en": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+          "detailed_summary_zh": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+          "event_id": "evt_8cc6d786a9521f4d",
+          "first_seen_at": "2026-09-18T22:43:42.137501Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T21:42:13Z",
+          "published_at": "2026-09-18T21:42:13Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "White House Presidential Actions",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/09/restriction-on-entry-of-certain-nonimmigrant-workers-faad/"
+            }
+          ],
+          "story_ids": [
+            "rss:www.whitehouse.gov_presidential-actions_feed_:7e6d3058c4a4da1c"
+          ],
+          "time_precision": "published",
+          "title_en": "Restriction on Entry of Certain Nonimmigrant Workers",
+          "title_zh": "Restriction on Entry of Certain Nonimmigrant Workers",
+          "update_id": "upd_12942bce639033a3",
+          "update_type": "initial",
+          "what_changed_en": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program.",
+          "what_changed_zh": "The White House issued a proclamation extending restrictions on the entry of certain nonimmigrant workers, citing continued abuses of the H-1B visa program."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+      "current_state_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+      "entities": [
+        "debug",
+        "emission",
+        "enables",
+        "fault",
+        "fault-injection",
+        "guided",
+        "injection",
+        "laser",
+        "photon",
+        "rp2350",
+        "secure"
+      ],
+      "event_id": "evt_f0717fee30ec083d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T22:43:42.456363Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.456363Z",
+      "last_updated_at": "2026-09-18T22:43:42.456363Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
+      "title_zh": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
+      "topics": [
+        "embedded-security",
+        "fault-injection",
+        "hardware-security",
+        "rp2350",
+        "secure-enclave"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+          "current_state_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+          "detailed_summary_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+          "detailed_summary_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+          "event_id": "evt_f0717fee30ec083d",
+          "first_seen_at": "2026-09-18T22:43:42.456363Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T16:54:18Z",
+          "published_at": "2026-09-18T16:54:18Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49757050"
+            }
+          ],
+          "sources": [
+            {
+              "label": "synack",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49757050"
+          ],
+          "time_precision": "published",
+          "title_en": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
+          "title_zh": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
+          "update_id": "upd_1b3e114ae7ede593",
+          "update_type": "initial",
+          "what_changed_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
+          "what_changed_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+      "current_state_zh": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+      "entities": [
+        "altcoin",
+        "buzz",
+        "cftc",
+        "coinbase",
+        "perpetuals"
+      ],
+      "event_id": "evt_d16b4972a8dc9050",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:42.489398Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.489398Z",
+      "last_updated_at": "2026-09-18T22:43:42.489398Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase files US single-stock perpetuals with the CFTC - Altcoin Buzz",
+      "title_zh": "Coinbase files US single-stock perpetuals with the CFTC - Altcoin Buzz",
+      "topics": [
+        "cfc",
+        "coinbase",
+        "derivatives",
+        "perpetuals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+          "current_state_zh": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+          "detailed_summary_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+          "detailed_summary_zh": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+          "event_id": "evt_d16b4972a8dc9050",
+          "first_seen_at": "2026-09-18T22:43:42.489398Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T18:02:48Z",
+          "published_at": "2026-09-18T18:02:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Altcoin Buzz",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ1E4dE4tbm9OdFdPSUp1Y0prUWVxcjE3cjRWOVVNQ3JRY1NKUl93c1dGdE5yVWJUc01MZFp3RnNxdmE3VmZlaWhuUzU2X0xHVVplQWpCWUhVTjA5djVIdVdsdFd5MktDbUtSOWJTYnBLTUhyRm1tZHpiSjBiWXNhZDVzTmd3OWFCZTZLUVZpYmMyWnYwU3Rj?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5df8e7243de31226"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase files US single-stock perpetuals with the CFTC - Altcoin Buzz",
+          "title_zh": "Coinbase files US single-stock perpetuals with the CFTC - Altcoin Buzz",
+          "update_id": "upd_6dbb2f354a7398b5",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives.",
+          "what_changed_zh": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures, signaling a push into regulated equity derivatives."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+      "current_state_zh": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+      "entities": [
+        "coinbase",
+        "perpetual-futures",
+        "tradingview"
+      ],
+      "event_id": "evt_2feda7be43f7a154",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:42.489453Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.489453Z",
+      "last_updated_at": "2026-09-18T22:43:42.489453Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase files to bring single-stock perpetual futures to US market - TradingView",
+      "title_zh": "Coinbase files to bring single-stock perpetual futures to US market - TradingView",
+      "topics": [
+        "coinbase",
+        "derivatives",
+        "perpetual-futures",
+        "us-regulation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+          "current_state_zh": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+          "detailed_summary_en": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+          "detailed_summary_zh": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+          "event_id": "evt_2feda7be43f7a154",
+          "first_seen_at": "2026-09-18T22:43:42.489453Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T19:53:54Z",
+          "published_at": "2026-09-18T19:53:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "TradingView",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZmdOR2t1c2gxdUNDZlZtVGZld0tVYjMxZ2VZUmdjTUQxRWU1aS1YZW9GdjNZZXFZcF92djZDSWpqUWk2RkgxSkxBcTc1OTJVaGx0OGhkZlpYSTlaZnVvM25JTkJuNnBjZnc5QnRmclRyamEyalRWak05cWpSQWdjdFpEWkdBRDhRRDB5VDkxY1NXWVNpbG93djlma0M4ejk3SC1Ka3hadmNUdE1QemRhc0xNaVM2ZXltVjVyMFNpTHhvVjNEVHlBM3RBVQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:448e9982e7345752"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase files to bring single-stock perpetual futures to US market - TradingView",
+          "title_zh": "Coinbase files to bring single-stock perpetual futures to US market - TradingView",
+          "update_id": "upd_b3ae2525009fe791",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings.",
+          "what_changed_zh": "Coinbase has filed to bring single-stock perpetual futures to the US market, signaling a potential expansion of its derivatives offerings."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures; the filing remains pending CFTC approval.",
+      "current_state_zh": "Coinbase 已向 CFTC 提交申请，拟推出美国单只股票永续期货；申请仍待 CFTC 批准。",
+      "entities": [
+        "approval",
+        "cftc",
+        "coinbase",
+        "defiant",
+        "futures",
+        "perpetual",
+        "perpetual-futures",
+        "seeks",
+        "single",
+        "stock"
+      ],
+      "event_id": "evt_a86e3791c1b10be0",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:42.489547Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:48.293910Z",
+      "last_updated_at": "2026-09-18T22:43:48.293910Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures - The Defiant",
+      "title_zh": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures - The Defiant",
+      "topics": [
+        "cfc",
+        "cftc",
+        "coinbase",
+        "derivatives",
+        "perpetual-futures"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase is pursuing CFTC approval to offer US single-stock perpetual futures, potentially expanding regulated derivatives access for American traders.",
+          "current_state_zh": "Coinbase is pursuing CFTC approval to offer US single-stock perpetual futures, potentially expanding regulated derivatives access for American traders.",
+          "detailed_summary_en": "Coinbase is pursuing CFTC approval to offer US single-stock perpetual futures, potentially expanding regulated derivatives access for American traders.",
+          "detailed_summary_zh": "Coinbase is pursuing CFTC approval to offer US single-stock perpetual futures, potentially expanding regulated derivatives access for American traders.",
+          "event_id": "evt_a86e3791c1b10be0",
+          "first_seen_at": "2026-09-18T22:43:42.489547Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:09:51Z",
+          "published_at": "2026-09-18T13:09:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWkdXeUJScFNfR2xiOGFmVFFrb3JJRGdzWGN5R1JmenUxeDBvenpSdENXZzNEYnlWUlZZYjlKRF8zSnNUSkFTRU56QUxTOFd4VFI3NGZ2azh4Z09yMS1CbUFIdWJmY0F2b205dGkxUWJ5V202d1dZR3ViVnAybHZJU1dRbVVjTllZOGpqTVhORVFUMzc5eV9SQWxpT2dLN1VucDBHXzJ6MjlwZF8wM0FqZ3RYcktwS1k?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:8e774310e40a62b1"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures - The Defiant",
+          "title_zh": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures - The Defiant",
+          "update_id": "upd_f18cc93466b41b07",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase is pursuing CFTC approval to offer US single-stock perpetual futures, potentially expanding regulated derivatives access for American traders.",
+          "what_changed_zh": "Coinbase is pursuing CFTC approval to offer US single-stock perpetual futures, potentially expanding regulated derivatives access for American traders."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures; the filing remains pending CFTC approval.",
+          "current_state_zh": "Coinbase 已向 CFTC 提交申请，拟推出美国单只股票永续期货；申请仍待 CFTC 批准。",
+          "detailed_summary_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures that would trade 24/5 on Coinbase Derivatives with hourly funding and Nodal Clear clearing, pending regulatory approval.",
+          "detailed_summary_zh": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures that would trade 24/5 on Coinbase Derivatives with hourly funding and Nodal Clear clearing, pending regulatory approval.",
+          "event_id": "evt_a86e3791c1b10be0",
+          "first_seen_at": "2026-09-18T22:43:48.293910Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T17:01:54Z",
+          "published_at": "2026-09-18T17:01:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/coinbase-seeks-cftc-approval-for-us-single-stock-perpetual-futures"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:d4f69067e96a95e7"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures",
+          "title_zh": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures",
+          "update_id": "upd_ef916f94133e844d",
+          "update_type": "escalation",
+          "what_changed_en": "Coinbase has filed with the CFTC to offer US single-stock perpetual futures that would trade 24/5 on Coinbase Derivatives with hourly funding and Nodal Clear clearing, pending regulatory approval.",
+          "what_changed_zh": "Coinbase 已向 CFTC 提交申请，拟提供美国单只股票永续期货，该产品将在 Coinbase Derivatives 上 24/5 交易，采用每小时资金费率，并通过 Nodal Clear 清算，目前申请仍待监管批准。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+      "current_state_zh": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+      "entities": [
+        "binance",
+        "community",
+        "insights",
+        "market",
+        "openzeppelin",
+        "sentiment",
+        "sp-global",
+        "square"
+      ],
+      "event_id": "evt_20b6b07410f3c813",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-18T22:43:42.490112Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.490112Z",
+      "last_updated_at": "2026-09-18T22:43:42.490112Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "#spglobaltoacquireopenzeppelin Community Insights & Market Sentiment | Binance Square - Binance",
+      "title_zh": "#spglobaltoacquireopenzeppelin Community Insights & Market Sentiment | Binance Square - Binance",
+      "topics": [
+        "acquisition",
+        "crypto-infrastructure",
+        "openzeppelin",
+        "sp-global"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+          "current_state_zh": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+          "detailed_summary_en": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+          "detailed_summary_zh": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+          "event_id": "evt_20b6b07410f3c813",
+          "first_seen_at": "2026-09-18T22:43:42.490112Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:00:10Z",
+          "published_at": "2026-09-18T13:00:10Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ULWRydHIzTlhTQjBLZEdHTjY4NzhvN0tKN014RGNJUm9KUWNLTm9aVVJyZlIwaWhWRHBnenM1Z0diR1pnT2FUelBZM0MzU2lUUWZ0SW1FTEMxeFZHTHo3amZvajkyQlFZX25Fbk94S2JfT2dNU0dRSGlIMjNzdjA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:67eef9254a371e97"
+          ],
+          "time_precision": "published",
+          "title_en": "#spglobaltoacquireopenzeppelin Community Insights & Market Sentiment | Binance Square - Binance",
+          "title_zh": "#spglobaltoacquireopenzeppelin Community Insights & Market Sentiment | Binance Square - Binance",
+          "update_id": "upd_c55c51eed9912408",
+          "update_type": "initial",
+          "what_changed_en": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure.",
+          "what_changed_zh": "S&P Global is acquiring OpenZeppelin, the widely used smart-contract security and development tooling firm, in a notable TradFi consolidation of crypto infrastructure."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+      "current_state_zh": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+      "entities": [
+        "api",
+        "coindesk",
+        "exchange-api",
+        "funds-stolen",
+        "hack",
+        "haruko"
+      ],
+      "event_id": "evt_aee9a31353deec6c",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T22:43:42.490228Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:42.490228Z",
+      "last_updated_at": "2026-09-18T22:43:42.490228Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Haruko hack hits 15 crypto clients, with exchange API details, trading data and funds stolen - CoinDesk",
+      "title_zh": "Haruko hack hits 15 crypto clients, with exchange API details, trading data and funds stolen - CoinDesk",
+      "topics": [
+        "crypto-trading",
+        "exchange-api",
+        "funds-stolen",
+        "hack"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+          "current_state_zh": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+          "detailed_summary_en": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+          "detailed_summary_zh": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+          "event_id": "evt_aee9a31353deec6c",
+          "first_seen_at": "2026-09-18T22:43:42.490228Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T18:41:57Z",
+          "published_at": "2026-09-18T18:41:57Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTV9qaG5DbW9HU2Z1M0JtZXBkMjJTc29KZ0tsSUlTNUoxd216QzhGN3JVY3I1c245eGZ3REV3NDJheC1fRUsxQzF4RHRWOVdHbm95dTg4UTlKZnYzR1JLekN1dzJtakZxX19DZ2ZRa3F0X0Q2Y25zSjZnQ0M0SV9zdHRZMW1PTWxpU1dfZmdPUVVYU3NZZUpWamFtVkpHQXVudTBoVWlQSXBuVTRLWXF2V2hDRjRGUUd3Wmw4WUdvWllZanp6ZF9j?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:9ab2e1934142e2ae"
+          ],
+          "time_precision": "published",
+          "title_en": "Haruko hack hits 15 crypto clients, with exchange API details, trading data and funds stolen - CoinDesk",
+          "title_zh": "Haruko hack hits 15 crypto clients, with exchange API details, trading data and funds stolen - CoinDesk",
+          "update_id": "upd_615b09a4186178c2",
+          "update_type": "initial",
+          "what_changed_en": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
+          "what_changed_zh": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+      "current_state_zh": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+      "entities": [
+        "cents",
+        "faces",
+        "junior",
+        "neutrl",
+        "nusd",
+        "opens",
+        "redemptions",
+        "strata",
+        "tranche",
+        "wipeout"
+      ],
+      "event_id": "evt_05f2e9704ecd9b46",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-18T22:43:48.282180Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:48.282180Z",
+      "last_updated_at": "2026-09-18T22:43:48.282180Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior Tranche Faces Wipeout",
+      "title_zh": "Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior Tranche Faces Wipeout",
+      "topics": [
+        "protocol-failure",
+        "redemptions",
+        "tranche"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+          "current_state_zh": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+          "detailed_summary_en": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+          "detailed_summary_zh": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+          "event_id": "evt_05f2e9704ecd9b46",
+          "first_seen_at": "2026-09-18T22:43:48.282180Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T17:26:22Z",
+          "published_at": "2026-09-18T17:26:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:76ea787000d213a7"
+          ],
+          "time_precision": "published",
+          "title_en": "Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior Tranche Faces Wipeout",
+          "title_zh": "Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior Tranche Faces Wipeout",
+          "update_id": "upd_79cf4973b408dc23",
+          "update_type": "initial",
+          "what_changed_en": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
+          "what_changed_zh": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+      "current_state_zh": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+      "entities": [
+        "bot",
+        "deploying",
+        "drainers",
+        "fake",
+        "into",
+        "own",
+        "their",
+        "tricked",
+        "tutorials",
+        "victims"
+      ],
+      "event_id": "evt_0833614213038a91",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T22:43:48.305141Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:48.305141Z",
+      "last_updated_at": "2026-09-18T22:43:48.305141Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Fake AI Bot Tutorials Tricked 224 Victims Into Deploying Their Own Drainers",
+      "title_zh": "Fake AI Bot Tutorials Tricked 224 Victims Into Deploying Their Own Drainers",
+      "topics": [
+        "on-chain-forensics",
+        "scams"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+          "current_state_zh": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+          "detailed_summary_en": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+          "detailed_summary_zh": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+          "event_id": "evt_0833614213038a91",
+          "first_seen_at": "2026-09-18T22:43:48.305141Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T17:00:08Z",
+          "published_at": "2026-09-18T17:00:08Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/security/fake-ai-bot-tutorials-tricked-224-victims-into-deploying-their-own-drainers"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:bb2a5953e3673813"
+          ],
+          "time_precision": "published",
+          "title_en": "Fake AI Bot Tutorials Tricked 224 Victims Into Deploying Their Own Drainers",
+          "title_zh": "Fake AI Bot Tutorials Tricked 224 Victims Into Deploying Their Own Drainers",
+          "update_id": "upd_418e9b74b337451b",
+          "update_type": "initial",
+          "what_changed_en": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August.",
+          "what_changed_zh": "TRM Labs traced 274.60 ETH to six operator addresses after fake AI bot tutorials tricked 224 victims into signing and funding malicious drainer contracts between February and August."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+      "current_state_zh": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+      "entities": [
+        "blockchain-halt"
+      ],
+      "event_id": "evt_c6825f2c974ab72c",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T22:43:49.442762Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:49.442762Z",
+      "last_updated_at": "2026-09-18T22:43:49.442762Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "3-year-old bug triggers $1.3 million drain and forces 10-day blockchain halt",
+      "title_zh": "3-year-old bug triggers $1.3 million drain and forces 10-day blockchain halt",
+      "topics": [
+        "blockchain-halt",
+        "protocol-security",
+        "radix",
+        "smart-contract-vulnerability"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+          "current_state_zh": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+          "detailed_summary_en": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+          "detailed_summary_zh": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+          "event_id": "evt_c6825f2c974ab72c",
+          "first_seen_at": "2026-09-18T22:43:49.442762Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T17:50:45Z",
+          "published_at": "2026-09-18T17:50:45Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/3-year-old-bug-triggers-1-3-million-drain-and-forces-10-day-blockchain-halt/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:7226e0f4ab5716b3"
+          ],
+          "time_precision": "published",
+          "title_en": "3-year-old bug triggers $1.3 million drain and forces 10-day blockchain halt",
+          "title_zh": "3-year-old bug triggers $1.3 million drain and forces 10-day blockchain halt",
+          "update_id": "upd_a0df493ffb32ae73",
+          "update_type": "initial",
+          "what_changed_en": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days.",
+          "what_changed_zh": "A three-year-old Radix Engine bug, introduced in a 2023 code refactor and missed by an external audit, enabled a roughly $1.3 million vault drain and forced validators to halt the Radix blockchain for 10 days."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+      "current_state_zh": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+      "entities": [
+        "iran",
+        "iranian",
+        "irgc",
+        "sanctions"
+      ],
+      "event_id": "evt_c1e59afa38ee008a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:49.587411Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:49.587411Z",
+      "last_updated_at": "2026-09-18T22:43:49.587411Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US sanctions Iranian crypto exchange and its software developer over alleged IRGC Bitcoin transfers",
+      "title_zh": "US sanctions Iranian crypto exchange and its software developer over alleged IRGC Bitcoin transfers",
+      "topics": [
+        "crypto-regulation",
+        "iran",
+        "irgc",
+        "ofac",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+          "current_state_zh": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+          "detailed_summary_en": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+          "detailed_summary_zh": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+          "event_id": "evt_c1e59afa38ee008a",
+          "first_seen_at": "2026-09-18T22:43:49.587411Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T16:40:47Z",
+          "published_at": "2026-09-18T16:40:47Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/us-sanctions-iranian-crypto-exchange-and-its-software-developer-over-alleged-irgc-bitcoin-transfers/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:e42233dcddae0a8e"
+          ],
+          "time_precision": "published",
+          "title_en": "US sanctions Iranian crypto exchange and its software developer over alleged IRGC Bitcoin transfers",
+          "title_zh": "US sanctions Iranian crypto exchange and its software developer over alleged IRGC Bitcoin transfers",
+          "update_id": "upd_c48691209b3e426a",
+          "update_type": "initial",
+          "what_changed_en": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars.",
+          "what_changed_zh": "The US Treasury's OFAC sanctioned Iranian crypto exchange BitBank, its software developer, and three Zanjani-linked individuals over alleged IRGC-linked Bitcoin transfers worth hundreds of millions of dollars."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+      "current_state_zh": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+      "entities": [
+        "htx",
+        "inc",
+        "sanctions",
+        "tron",
+        "trx"
+      ],
+      "event_id": "evt_7dba35cb1e4edf18",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T22:43:50.365228Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:50.365228Z",
+      "last_updated_at": "2026-09-18T22:43:50.365228Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "TRON Inc.’s TRX came from HTX after UK sanctions",
+      "title_zh": "TRON Inc.’s TRX came from HTX after UK sanctions",
+      "topics": [
+        "crypto-regulation",
+        "htx",
+        "on-chain-analysis",
+        "sanctions",
+        "tron"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+          "current_state_zh": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+          "detailed_summary_en": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+          "detailed_summary_zh": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+          "event_id": "evt_7dba35cb1e4edf18",
+          "first_seen_at": "2026-09-18T22:43:50.365228Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T18:01:47Z",
+          "published_at": "2026-09-18T18:01:47Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/tron-inc-s-trx-came-from-htx-after-uk-sanctions/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:34a2de9c2509ecab"
+          ],
+          "time_precision": "published",
+          "title_en": "TRON Inc.’s TRX came from HTX after UK sanctions",
+          "title_zh": "TRON Inc.’s TRX came from HTX after UK sanctions",
+          "update_id": "upd_1d0481ad5b75b010",
+          "update_type": "initial",
+          "what_changed_en": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet.",
+          "what_changed_zh": "Protos traced TRON Inc.'s daily TRX treasury purchases to an HTX-labeled wallet until shortly after UK sanctions on Huobi Global, after which the firm switched to receiving TRX from an HTX-funded wallet."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+      "current_state_zh": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+      "entities": [
+        "coinbase",
+        "perpetual-futures"
+      ],
+      "event_id": "evt_eb14c85a7036249c",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-18T22:43:53.488527Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:53.488527Z",
+      "last_updated_at": "2026-09-18T22:43:53.488527Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase files to bring single-stock perpetual futures to US market",
+      "title_zh": "Coinbase files to bring single-stock perpetual futures to US market",
+      "topics": [
+        "cftc",
+        "coinbase",
+        "derivatives",
+        "perpetual-futures",
+        "us-equities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+          "current_state_zh": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+          "detailed_summary_en": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+          "detailed_summary_zh": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+          "event_id": "evt_eb14c85a7036249c",
+          "first_seen_at": "2026-09-18T22:43:53.488527Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T19:53:54Z",
+          "published_at": "2026-09-18T19:53:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/coinbase-files-to-bring-single-stock-perpetual-futures-to-us-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:56de34686576062d"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase files to bring single-stock perpetual futures to US market",
+          "title_zh": "Coinbase files to bring single-stock perpetual futures to US market",
+          "update_id": "upd_68773d21502cf53c",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares.",
+          "what_changed_zh": "Coinbase Derivatives has filed with the CFTC to list single-stock perpetual futures in the US, seeking approval for 24/5 non-expiring contracts that would give US traders exposure to individual stocks without owning the underlying shares."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+      "current_state_zh": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+      "entities": [
+        "binance"
+      ],
+      "event_id": "evt_3944d20b413e3243",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-18T22:43:53.530435Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T22:43:53.530435Z",
+      "last_updated_at": "2026-09-18T22:43:53.530435Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance launches 24/7 FX perps with weekend pricing system",
+      "title_zh": "Binance launches 24/7 FX perps with weekend pricing system",
+      "topics": [
+        "binance",
+        "derivatives",
+        "forex",
+        "perpetual-futures"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+          "current_state_zh": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+          "detailed_summary_en": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+          "detailed_summary_zh": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+          "event_id": "evt_3944d20b413e3243",
+          "first_seen_at": "2026-09-18T22:43:53.530435Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T19:06:30Z",
+          "published_at": "2026-09-18T19:06:30Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:c35997bd18cefb5a"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance launches 24/7 FX perps with weekend pricing system",
+          "title_zh": "Binance launches 24/7 FX perps with weekend pricing system",
+          "update_id": "upd_82786d9192105cee",
+          "update_type": "initial",
+          "what_changed_en": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
+          "what_changed_zh": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage."
         }
       ]
     }
@@ -68576,39 +69868,7 @@
       }
     },
     {
-      "attempts": 1,
-      "item": {
-        "ai_reason": "The SEC's Innovation Exemption allowing qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges is a landmark regulatory development that materially reshapes market access and industry structure, especially following the Senate's failure to pass the Clarity Act. Combined with the CFTC no-action letter easing broker rules, this represents a significant shift in US regulatory posture toward tokenized securities. The newsletter format limits depth, but the substance is high-impact.",
-        "ai_score": 8.5,
-        "ai_summary": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
-        "ai_tags": [
-          "SEC",
-          "tokenized-stocks",
-          "crypto-regulation",
-          "CFTC",
-          "market-structure"
-        ],
-        "author": "Tyler Warner",
-        "content": "Morning Minute is a daily newsletter written by Tyler Warner. The analysis and opinions expressed are his own and do not necessarily reflect those of Decrypt. And check out our daily news show 'FOMO HOUR' covering all of the top stories and market action.\nGM!\nToday’s top news:\n- Crypto majors are green with HYPE leading, alts soaring; BTC at $78k\n- SEC announces innovation exemption for tokenized stocks; alts soar 10-20%\n- CFTC issued no-action letter, easing broker rules\n- Hyperliquid soared to $90+ and new ATH and introduced protocol lending/borrowing\n- Onchain leaders post 10-30% gains following alts\n🏛️ The SEC Just Did What the Clarity Act Couldn’t\nTwo days after the Senate blocked the Clarity Act 49 to 50, the SEC approved an Innovation Exemption letting qualifying venues trade tokenized US stocks on public blockchains without registering as national exchanges. SEC Chair Atkins said that since Congress was unsuccessful, the Commission is taking a significant step within its statutory authority.\nPlatforms called Tokenized Securities Venues can run tokenized equities through automated market makers and liquidity pools on permissionless chains. Firms providing that liquidity get separate relief from dealer registration. There’s no application queue—a firm that meets the requirements notifies the SEC and starts operating. It took effect immediately and runs five years.\nThere are two key limitations to be aware of. The exemption covers only real tokenized stocks carrying full rights including dividends and voting, which excludes the price-tracking synthetics that have driven offshore volume. And an unaffiliated party can tokenize a company’s stock, but the issuer gets 30 days to object and effectively stop there shares from being tokenized and traded. So companies do retain some power here.\nThat second provision lands directly on the fight AMC’s Adam Aron picked two weeks ago when he called Robinhood’s stock tokens contemptible and vile and threatened to involve the SEC. He now has the mechanism he was asking for. Robinhood and Coinbase had already announced redemption and voting rights were coming, which happens to be exactly what the exemption requires.\nThis came on the same day that S&P Global acquired Open Zeppelin. S&P Global Ratings framed it as bringing trusted data, benchmarks, and transparent risk assessment to markets moving onchain. In practice: if tokenized funds and stablecoins become real institutional instruments, someone has to assess whether the contract holding the assets is sound, not just whether the issuer is.\nSo the clear takeaway is this—everything in traditional finance is coming onchain. Stocks, commodities, and all other types of assets will become tokenized and traded on blockchains globally, permissionlessly and 24/7. It’s just a matter of time. And this move from the SEC was a huge step forward in making that happen sooner than later…\n🌎 Macro Crypto and Markets\n- Crypto majors are very green with HYPE leading; BTC +2.2% at $78k; ETH +3% at $2,500; SOL +6% at $106; HYPE +13% at $90.53; ZEC +8% at $1,460\n- Top alt movers include UNI (+26%), ARB (+25%) and NEAR (+22%)\n- Oil +1% at $101; Gold +0.6% at $4,420\n- Stock futures are fairly flat after yesterday’s bounce; DOW -0.05%, Nasdaq +0.3%\n- The SEC held a roundtable on 24-hour trading an hour after approving tokenized securities, with Atkins saying tokenization could deliver real-time inventory management\n- The CFTC issued a no-action letter letting passive software providers connect users to regulated derivatives without registering as introducing brokers, extending relief first granted to Phantom in March\n- S&P Global agreed to acquire OpenZeppelin, the smart contract security firm whose libraries underpin more than $37 trillion in value transferred, in its second digital-asset deal in four days\n- NYSE parent ICE is evaluating Avalanche as the settlement layer for an in-development alternative trading system, with ICE's Michael Blaugrund saying it meets many of the requirements and the teams are closely engaged\n- Coinbase partnered with Stablecore to put custody, trading, staking, and stablecoin payments inside community bank and credit union apps, reaching a footprint of more than 3,000 US institutions\n- Vitalik Buterin rejected the idea that AI hacking dooms cybersecurity, arguing formal verification favors defenders and noting roughly 90% of his net worth sits in crypto as an implicit bet on that\nCorporate Treasuries & ETFs\n- The Bitcoin ETFs saw $159M in net inflows on Thursday; the ETH ETFs saw $39M in outflows\nMeme Coin Tracker\n- Meme leaders were green; DOGE +6%, SHIB +7%, PEPE +7%, PENGU +6%, TRUMP +5%, SPX +4%\n- Robinhood chain leaders were very green after the SEX exemption; Pons +10% to $480M; AI +30% at $360M; Cashcat +3% at $204M; Boner +35%, Orbio +80%, Index +30% and Moo +35% led top movers\n- Solana top movers were led by Paid +30%, Raycat (+40%), MCAT +80% and Tilcayo (+45x); Stonk eco rallied as Stonk +25% to $220M, Purr +47% and Nearkat +120%\n💰 Token, Airdrop & Protocol Tracker\n- Hyperliquid announced native lending and borrowing went live on its platform, letting users collateralize HYPE and BTC to borrow stablecoins\n- Hyperliquid led onchain protocols in revenue with $1.94M followed by Pump.fun with $1.89M; Pons fell to 15th with $460k\n- Stonkfun had it highest revenue day since Sunday with $900k\n🚚 What is happening in NFTs?\n- NFT leaders were mostly flat; Punks +1% at 29.7 ETH, BAYC even at 6.85 ETH, Pudgy -1% at 3.38 ETH\n- Rare Friends (+40%) and Stonkbrokers (+11%) led top movers\n- Zksnarks raised $37M in their public auction which closed at 1.5 ZEC, with trading going live today\n- FWA launched its v2 on Wednesday, leading to a 50% jump in the FWA token to $17M",
-        "fetched_at": "2026-09-18T16:37:40.027105Z",
-        "id": "rss:decrypt.co_feed:d4674779d0bf6372",
-        "metadata": {
-          "category": "crypto-regulation",
-          "event_retry_pending": true,
-          "feed_name": "Decrypt",
-          "source_category": "crypto-markets",
-          "tags": [
-            "Opinion"
-          ]
-        },
-        "published_at": "2026-09-18T12:34:50Z",
-        "source_type": "rss",
-        "title": "Morning Minute: SEC Approves ‘Innovation Exemption’ Moving Tokenized Stocks Forward",
-        "url": "https://decrypt.co/378619/morning-minute-sec-approves-innovation-exemption-moving-tokenized-stocks-forward"
-      }
-    },
-    {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "A Grayscale ETF planning a 3-for-1 split after a $233M inflow surge and nearing $890M in assets is a significant market-structure and institutional adoption development for a privacy-focused asset, with clear implications for ETF accessibility and Zcash demand. Not systemic or paradigm-shifting, but high-value for market participants.",
         "ai_score": 7.5,
@@ -68643,31 +69903,62 @@
     {
       "attempts": 1,
       "item": {
-        "ai_reason": "A WSJ report revealing that direct ECB presidential intervention blocked Binance's MiCA license is a material regulatory development with clear transmission to market access and exchange operations in the EU. It signals heightened political scrutiny of the largest global exchange and could reshape competitive dynamics and compliance strategy across the industry, though it is a report rather than a final legal ruling.",
+        "ai_reason": "Coinbase filing to list single-stock perpetual futures on major equities like Apple, Tesla, and Nvidia represents a significant market-structure development, expanding derivatives beyond crypto and potentially attracting new institutional and retail participation. It is a material product/regulatory filing from a top-tier exchange, though not yet approved or live, so it falls short of a systemic or groundbreaking event.",
         "ai_score": 7.5,
-        "ai_summary": "The Wall Street Journal reports that intervention by the ECB President derailed Binance's MiCA licensing in the EU, highlighting top-level political pressure on the exchange's European market access.",
+        "ai_summary": "Coinbase has filed to list single-stock perpetual futures tied to Apple, Tesla, and Nvidia, signaling a push to expand its derivatives offerings into equity-linked products.",
         "ai_tags": [
-          "binance",
-          "mica",
-          "ecb",
-          "crypto-regulation",
-          "europe"
+          "coinbase",
+          "perpetual-futures",
+          "derivatives",
+          "equities",
+          "market-structure"
         ],
-        "author": "BitKE",
-        "content": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOelRQZHdZUG0zVXFBd2Jab1NkQmdSRkxSa19vUWQ3Nk94TjFzcmptVWJfLVlKT3B3M21oX1ExZGhYak9mQVhPQzVzclNDd3c5MmpObFNsNmFuRU1ydVRkd0ZrejVTUUZibjdfSGxlRWJyQnJyOE1JUUJzNVZDSHFLZXh5aVB2bU1wVFpFZmo0dw?oc=5\" target=\"_blank\">REALITY CHECK | The European Central Bank (ECB) President Intervention Derailed Binance MiCA License, Reveals The Wall Street Journal</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BitKE</font>",
-        "fetched_at": "2026-09-18T16:37:23.089044Z",
-        "id": "google_news:article:5b478889c1457bb0",
+        "author": "Decrypt Staff",
+        "content": "Coin Prices\nBTC\n$81,145.00\n6.25%ETH\n$2,621.50\n7.21%BNB\n$762.56\n3.79%XRP\n$1.40\n7.88%USDC\n$0.999803\n0.02%SOL\n$112.91\n11.46%TRX\n$0.338357\n1.15%ZEC\n$1,505.15\n2.22%FIGR_HELOC\n$1.034\n1.24%HYPE\n$92.01\n9.71%DOGE\n$0.088148\n8.28%XMR\n$565.68\n9.84%WBT\n$83.25\n5.84%USDS\n$1.00\n0.04%RAIN\n$0.01344522\n5.04%LINK\n$12.29\n8.38%ADA\n$0.224916\n11.98%LEO\n$8.91\n-0.04%XLM\n$0.192522\n4.86%UNI\n$8.72\n14.17%BCH\n$263.14\n13.08%NEAR\n$3.73\n22.34%USDE\n$0.999828\n0.05%LTC\n$57.75\n7.13%CC\n$0.111514\n10.81%USD1\n$0.999688\n0.06%GRAM\n$1.38\n3.22%AVAX\n$8.19\n8.12%HBAR\n$0.07908\n6.55%SUI\n$0.814255\n10.98%USDG\n$0.999944\n0.00%SHIB\n$0.00000547\n7.30%M\n$1.30\n9.77%CRO\n$0.059517\n3.94%TAO\n$248.86\n8.43%PYUSD\n$1.00\n0.07%XAUT\n$4,376.90\n0.70%USYC\n$1.14\n0.03%OKB\n$116.50\n3.71%RLUSD\n$0.999983\n-0.00%BUIDL\n$1.00\n0.00%USDY\n$1.14\n-0.10%AAVE\n$137.71\n7.46%ASTER\n$0.773014\n4.54%MNT\n$0.626241\n10.32%PUMP\n$0.00434481\n8.16%ONDO\n$0.395454\n6.68%DOT\n$1.13\n5.92%PAXG\n$4,371.74\n0.63%WLFI\n$0.058977\n1.52%MORPHO\n$2.44\n10.96%BTW\n$0.62594\n-11.58%ENA\n$0.166574\n9.16%SKY\n$0.069288\n17.30%PEPE\n$0.00000384\n6.50%ICP\n$2.86\n9.27%HTX\n$0.0000017\n2.05%WLD\n$0.423921\n12.15%USDD\n$0.998539\n0.04%ARB\n$0.217067\n23.73%EURSAFO\n$1.16\n0.12%U\n$0.999952\n0.05%BGB\n$1.99\n3.08%USDGO\n$0.999847\n-0.05%USDF\n$0.996087\n0.06%VVV\n$27.47\n9.27%BFUSD\n$0.999468\n0.03%ETC\n$8.14\n9.21%LIT\n$4.81\n2.82%POL\n$0.105906\n8.19%GT\n$9.95\n6.22%KAS\n$0.03717495\n10.86%AKE\n$0.04517675\n112.84%KCS\n$7.16\n1.99%BCAP\n$106.54\n0.00%PI\n$0.085141\n4.68%JST\n$0.112602\n-1.89%QNT\n$63.30\n3.91%ATOM\n$1.72\n9.97%ALGO\n$0.097558\n8.56%JUP\n$0.263711\n11.83%CAKE\n$2.45\n0.70%NEXO\n$0.841774\n3.54%RENDER\n$1.54\n9.01%DASH\n$61.77\n1.99%EUTBL\n$1.22\n0.11%JAAA\n$1.05\n0.01%FIL\n$0.92749\n12.50%USTB\n$11.22\n0.01%GHO\n$0.999094\n0.06%ETHFI\n$0.716853\n15.90%VET\n$0.00785056\n6.84%AERO\n$0.673146\n15.76%STABLE\n$0.02477738\n5.97%INJ\n$6.55\n16.01%APT\n$0.717745\n21.56%BDX\n$0.075526\n-0.39%FLR\n$0.00665194\n3.95%TRUMP\n$2.08\n6.97%XDC\n$0.0280756\n4.53%USD0\n$0.998865\n-0.01%STX\n$0.28719\n15.84%CRV\n$0.339549\n4.14%币安人生\n$0.512979\n7.15%YLDS\n$0.999829\n0.01%PENGU\n$0.00788442\n9.35%TUSD\n$0.999279\n0.04%USDTB\n$0.999809\n0.07%A7A5\n$0.01209951\n2.26%PYTH\n$0.060097\n7.90%EURC\n$1.15\n0.18%SPX\n$0.501387\n8.64%RAY\n$1.72\n18.17%PENDLE\n$2.62\n11.79%PONS\n$0.66132\n1.42%PIEVERSE\n$1.60\n30.34%VIRTUAL\n$0.657973\n8.14%HASH\n$0.00737921\n2.35%FET\n$0.184178\n8.90%FF\n$0.12724\n-2.62%NIGHT\n$0.02388856\n11.48%ZRO\n$1.11\n8.38%TIA\n$0.40316\n15.67%JTRSY\n$1.12\n0.01%BSV\n$17.30\n5.61%KAU\n$141.04\n0.70%UB\n$0.134143\n-0.30%BTT\n$0.00000033\n3.68%LDO\n$0.392307\n10.23%SUN\n$0.01700362\n1.95%OUSG\n$116.61\n0.01%SOFID\n$0.99903\n-0.02%FDUSD\n$0.999477\n0.15%SEI\n$0.04795797\n9.72%STRK\n$0.0437767\n54.61%APXUSD\n$0.981343\n0.32%XTZ\n$0.288484\n14.95%GNO\n$118.34\n4.43%DCR\n$17.70\n7.36%USDAI\n$1.00\n0.06%AI\n$0.307656\n-4.65%OHM\n$20.13\n0.63%USELESS\n$0.294782\n12.82%MON\n$0.02477059\n7.54%LUNC\n$0.00005237\n4.65%DRV\n$0.281315\n10.98%REUSD\n$1.10\n0.05%OP\n$0.116328\n15.98%BONK\n$0.00000303\n11.72%KITE\n$0.110897\n5.10%ENS\n$6.25\n10.08%CFX\n$0.04944371\n7.66%BR\n$0.87221\n31.75%XPL\n$0.093027\n7.83%APEPE\n$0.00000122\n1.26%SYRUP\n$0.219011\n6.27%FLOKI\n$0.00002582\n7.40%KAG\n$65.85\n0.93%PRL\n$0.949315\n28.49%JTO\n$0.452512\n2.06%AR\n$3.59\n37.19%NFT\n$0.00000024\n-0.71%AUSD\n$0.999606\n0.03%GRASS\n$0.34474\n4.08%USX\n$0.999563\n0.05%KOGE\n$68.26\n1.07%TWT\n$0.545834\n3.93%CASHCAT\n$0.229684\n15.58%GRT\n$0.02049995\n9.25%龙虾\n$0.22343\n-0.75%TIBBIR\n$0.21851\n9.10%FRAX\n$0.992376\n0.12%CRVUSD\n$0.999325\n0.01%EIGEN\n$0.231677\n15.79%WIF\n$0.211692\n14.36%THETA\n$0.209079\n11.88%COMP\n$20.85\n6.93%IOTA\n$0.04446445\n9.39%STONK\n$0.246098\n6.15%EDGE\n$0.581606\n-7.64%PC0000031\n$1.00\n0.00%GRX\n$21.16\n0.05%JASMY\n$0.00405457\n5.41%EURCV\n$1.15\n0.14%NPC\n$0.02376605\n8.44%KAIA\n$0.0298486\n4.24%CVX\n$2.00\n5.02%USAT\n$0.99946\n0.06%B\n$0.181397\n1.11%ZBCN\n$0.00180981\n3.18%SAFO\n$1.021\n0.03%AXS\n$1.021\n8.10%RUNE\n$0.540877\n8.05%APYUSD\n$1.37\n0.78%RAIL\n$2.94\n38.03%CARDS\n$0.184531\n38.52%2Z\n$0.04929401\n5.07%BTSE\n$1.053\n0.49%COCO\n$0.169084\n1.09%BORG\n$0.172145\n6.08%USTBL\n$1.096\n0.01%MX\n$1.82\n1.47%XCN\n$0.00423282\n6.43%H\n$0.082589\n-5.80%AKT\n$0.55183\n7.27%ULTIMA\n$1,934.96\n2.59%PC0000033\n$1.00\n0.00%NEO\n$2.30\n8.64%FARTCOIN\n$0.161936\n12.09%XEC\n$0.00000806\n9.60%VSN\n$0.04266912\n2.24%ANTFUN\n$0.084805\n-2.07%CHZ\n$0.01507959\n4.88%TEL\n$0.00160091\n12.46%KMNO\n$0.02824923\n1.30%STRCX\n$106.98\n1.65%SHFL\n$0.326153\n4.69%MANA\n$0.078313\n5.47%A\n$0.09132\n17.73%ZAMA\n$0.059931\n21.12%TRAC\n$0.338622\n4.09%ZEN\n$8.18\n12.11%GUSD\n$0.998374\n0.06%SFP\n$0.295142\n5.53%GOMINING\n$0.360019\n5.44%DGAI\n$0.960178\n3.84%MET\n$0.259976\n15.61%BP\n$0.569495\n6.43%MINA\n$0.10737\n11.24%APE\n$0.13801\n6.63%1INCH\n$0.096911\n6.88%JPYC\n$0.00634984\n-5.57%SKR\n$0.01915765\n-0.22%PC0000097\n$1.00\n0.00%HOOD\n$0.130141\n150.72%AWE\n$0.067578\n5.06%SNX\n$0.224741\n7.11%SENT\n$0.01780572\n12.02%ZANO\n$8.26\n32.78%JPYSC\n$0.0063744\n-0.55%RLB\n$0.081239\n1.25%EGLD\n$4.13\n6.18%CASH\n$0.999573\n0.06%AVUSD\n$0.999122\n0.10%OZO\n$0.130406\n-0.34%S\n$0.0319892\n19.93%BC\n$0.03864819\n2.87%BLORB\n$0.12322\n7.21%",
+        "fetched_at": "2026-09-18T22:43:52.557461Z",
+        "id": "rss:decrypt.co_feed:3a170597d83e287a",
         "metadata": {
-          "category": "crypto-regulation",
+          "category": "exchange-announcements",
           "event_retry_pending": true,
-          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
-          "source_category": "exchange-announcements",
-          "source_name": "BitKE"
+          "feed_name": "Decrypt",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Business"
+          ]
         },
-        "published_at": "2026-09-18T10:00:27Z",
-        "source_type": "google_news",
-        "title": "REALITY CHECK | The European Central Bank (ECB) President Intervention Derailed Binance MiCA License, Reveals The Wall Street Journal - BitKE",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOelRQZHdZUG0zVXFBd2Jab1NkQmdSRkxSa19vUWQ3Nk94TjFzcmptVWJfLVlKT3B3M21oX1ExZGhYak9mQVhPQzVzclNDd3c5MmpObFNsNmFuRU1ydVRkd0ZrejVTUUZibjdfSGxlRWJyQnJyOE1JUUJzNVZDSHFLZXh5aVB2bU1wVFpFZmo0dw?oc=5"
+        "published_at": "2026-09-18T21:01:30Z",
+        "source_type": "rss",
+        "title": "Coinbase Files to List Single-Stock Perps on Apple, Tesla and Nvidia",
+        "url": "https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Chainalysis report on state-sponsored blockchain dead drop attacks rising 420%, detailing North Korean use of Tron, Aptos, and BNB Smart Chain as redundant command paths and Iranian actors encoding routing data in Bitcoin transactions. This is a significant security and threat-intelligence development with clear implications for blockchain infrastructure and national security, though it lacks a specific exploit or immediate user-fund impact.",
+        "ai_score": 7.5,
+        "ai_summary": "Chainalysis reports a 420% surge in blockchain dead drop attacks, with North Korean hackers using Tron, Aptos, and BNB Smart Chain as redundant command channels and Iranian actors embedding routing data in Bitcoin transactions.",
+        "ai_tags": [
+          "security",
+          "chainalysis",
+          "north-korea",
+          "blockchain-forensics",
+          "state-sponsored-hacking"
+        ],
+        "author": "The Defiant Team",
+        "content": "Chainalysis says North Korean operators use Tron, Aptos and BNB Smart Chain as redundant command paths, while suspected Iranian actors encode routing data in Bitcoin transactions.",
+        "fetched_at": "2026-09-18T22:43:48.315069Z",
+        "id": "rss:thedefiant.io_api_feed:99aa27d52de20db9",
+        "metadata": {
+          "category": "crypto-protocols",
+          "event_retry_pending": true,
+          "feed_name": "The Defiant",
+          "tags": []
+        },
+        "published_at": "2026-09-18T16:59:38Z",
+        "source_type": "rss",
+        "title": "Blockchain Dead Drop Attacks Jump 420% as State Hackers Expand",
+        "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand"
       }
     }
   ],
