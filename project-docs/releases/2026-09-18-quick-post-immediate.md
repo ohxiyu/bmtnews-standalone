@@ -1,6 +1,7 @@
 # Quick Post 实时读取与刊期位置
 
 Issue: [#94](https://github.com/ohxiyu/bmtnews-standalone/issues/94)
+PR: [#95](https://github.com/ohxiyu/bmtnews-standalone/pull/95)
 Owner: Codex / quick-post-immediate
 Branch: agent/quick-post-immediate
 

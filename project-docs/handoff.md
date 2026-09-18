@@ -10,14 +10,14 @@
   "owner": "Codex / quick-post-immediate",
   "branch": "agent/quick-post-immediate",
   "last_verified_commit": "4e64fda1d4f2f76f8ec78e0121a7b87dd798e3cb",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/95",
   "completed": [
     "从最新 origin/main 接手续作；当前电脑没有原未提交文件",
     "实时公开读取、固定路径图片读取、刊期内插入位置与历史加载",
     "保留 Access、CSRF、SHA 冲突与幂等保护"
   ],
   "unfinished": [
-    "创建 PR 并确认远程 CI",
+    "PR95 等待远程 CI 与审阅",
     "合并及生产部署尚未执行"
   ],
   "validation": [
