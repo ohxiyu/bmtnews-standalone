@@ -11,33 +11,41 @@
     "en": "State hackers drive 420% surge in onchain malware, Chainalysis finds"
   },
   "current_state": {
-    "zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
-    "en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain."
+    "zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 作为冗余路径，伊朗关联行为者则利用比特币交易（包括向中本聪相关地址发送的交易）嵌入命令与控制路由信息。",
+    "en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity; the newly attributed North Korea-linked UNC5342 group uses Tron, Aptos, and BNB Smart Chain as redundant routes, while Iran-linked actors embed command-and-control routing data in Bitcoin transactions, including those sent to a Satoshi Nakamoto-associated address."
   },
   "first_seen_at": "2026-09-17T17:12:00.088571+00:00",
-  "last_updated_at": "2026-09-18T01:25:39.548268+00:00",
-  "last_material_change_at": "2026-09-18T01:25:39.548268+00:00",
+  "last_updated_at": "2026-09-18T23:26:47.660163+00:00",
+  "last_material_change_at": "2026-09-18T23:26:47.660163+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 2,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
     "asia",
+    "attacks",
     "chainalysis",
     "coinex",
+    "dead",
+    "drop",
+    "expand",
     "express",
+    "hackers",
     "korea",
     "malware",
     "north",
     "north-korea",
-    "state"
+    "state",
+    "surge"
   ],
   "identifiers": [],
   "topics": [
+    "blockchain-forensics",
     "chainalysis",
     "malware",
     "north-korea",
     "onchain-analysis",
-    "onchain-threats"
+    "onchain-threats",
+    "state-sponsored-hacking"
   ],
   "updates": [
     {
@@ -124,6 +132,57 @@
         {
           "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_5ab6c286222362ca",
+      "event_id": "evt_6a38061ef4d7656a",
+      "occurred_at": "2026-09-18T16:59:38Z",
+      "published_at": "2026-09-18T16:59:38Z",
+      "first_seen_at": "2026-09-18T23:26:47.660163Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Chainalysis：区块链“死信箱”攻击激增420%，国家背景黑客扩大部署",
+      "title_en": "Chainalysis: Blockchain Dead Drop Attacks Surge 420% as State Hackers Expand",
+      "what_changed_zh": "Chainalysis 报告补充了伊朗关联行为者将命令与控制路由信息嵌入发送至中本聪相关比特币地址的交易中，并指出高容量开源权重中国 AI 模型出现后恶意区块链写入从每天 2.06 次升至 11.1 次（增长 440%）。",
+      "what_changed_en": "Chainalysis report added that suspected Iran-linked actors embed command-and-control routing data inside Bitcoin transactions sent to a Satoshi Nakamoto-associated address, and that malicious blockchain writes rose from 2.06 to 11.1 per day (a 440% increase) after the emergence of high-capacity open-weight Chinese AI models.",
+      "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 作为冗余路径，伊朗关联行为者则利用比特币交易（包括向中本聪相关地址发送的交易）嵌入命令与控制路由信息。",
+      "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity; the newly attributed North Korea-linked UNC5342 group uses Tron, Aptos, and BNB Smart Chain as redundant routes, while Iran-linked actors embed command-and-control routing data in Bitcoin transactions, including those sent to a Satoshi Nakamoto-associated address.",
+      "detailed_summary_zh": "Chainalysis 报告称，过去 12 个月内区块链“死信箱”（dead drop）攻击增长了 420%，到 2026 年第二季度，与朝鲜和伊朗有关联的操作者约占新观测活动总量的三分之二。与朝鲜有关联的团伙 UNC5342 使用 Tron 和 Aptos 作为冗余路径，将已感染设备引向存储在 BNB Smart Chain 上的恶意软件指令；而疑似伊朗行为者则把命令与控制路由信息嵌入发送至历史上与中本聪相关地址的比特币交易中。\n\n这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。\n\nChainalysis 表示，在高容量开源权重的中国 AI 模型出现后，恶意区块链写入从每天 2.06 次升至每天 11.1 次，不到一年增长 440%；不过该公司也提醒，其测量并不能锁定某一个具体模型，也无法证明增幅完全由 AI 造成。该恶意软件会优先查询 Tron，若该路径失败则回退至 Aptos，因此要瓦解该行动需要同时在三条链上采取行动。",
+      "detailed_summary_en": "Chainalysis reported that blockchain dead drop attacks rose 420% over the past 12 months, with North Korea- and Iran-linked operators accounting for roughly two-thirds of newly observed activity by the second quarter of 2026. The North Korea-linked group UNC5342 uses Tron and Aptos as redundant routes pointing infected devices to malware instructions stored on BNB Smart Chain, while suspected Iranian actors embedded command-and-control routing data inside Bitcoin transactions sent to an address historically associated with Satoshi Nakamoto.\n\nThis marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.\n\nChainalysis said malicious blockchain writes rose from 2.06 per day to 11.1 per day after the emergence of high-capacity open-weight Chinese AI models, a 440% increase in under a year, though the firm cautioned its measurement does not identify a single model or prove that AI alone caused the rise. The malware queries Tron first and falls back to Aptos if that route fails, and disrupting the operation would require action across all three chains at once.",
+      "background_zh": "所谓区块链“死信箱”，是一种将恶意软件指令、载荷或命令与控制地址存储在公共区块链交易和智能合约中的手法，已感染的设备可以反复读取这些公开记录以获取更新后的指令，而无需再次感染。由于数据存在于公共账本上，攻击者只需发布一笔新交易即可轮换链下服务器，且这些内容无法像被查封的域名或服务器那样被移除。该手法由 2023 年在 EVM 兼容网络上出现的 EtherHiding 活动演变而来，当时托管服务商开始关停恶意基础设施。Google Threat Intelligence 于 2025 年 2 月开始追踪 UNC5342，该团伙当时在针对加密货币与技术开发者的虚假招聘活动中使用了基于区块链的投递方式。",
+      "background_en": "A blockchain dead drop is a technique in which malware instructions, payloads or command-and-control addresses are stored inside public blockchain transactions and smart contracts, so infected devices can repeatedly read those public records for updated instructions without being reinfected. Because the data lives on a public ledger, attackers can rotate their off-chain servers by posting a new transaction, and the content cannot be removed the way a seized domain or server can. The approach evolved from EtherHiding campaigns that appeared on EVM-compatible networks in 2023 after hosting providers began shutting down malicious infrastructure. Google Threat Intelligence began tracking UNC5342 in February 2025, when it used blockchain-based delivery in fake-job campaigns targeting cryptocurrency and technology developers.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "其直接传导渠道是安全与合规，而非任何代币的供给：被点名承载恶意写入的网络是 Tron、BNB Smart Chain、Aptos 和比特币，因此这些链上的交易所、托管方和 RPC 服务商将面临更高的监控与筛查成本，因为对钱包、合约和 RPC 流量的监测正成为防御必需。由于彻底封锁某条网络也会切断同一基础设施上的合法钱包与 DeFi 服务，市场层面的影响更可能是链级风险溢价与合规开支持续上升，而非某一次可明确识别的价格事件。",
+      "market_impact_en": "The immediate channel is security and compliance rather than any token's supply: Tron, BNB Smart Chain, Aptos and Bitcoin are the networks actually named as carrying malicious writes, so exchanges, custodians and RPC providers on those chains face higher monitoring and screening costs as wallet, contract and RPC-traffic surveillance becomes a defensive necessity. Because fully blocking a network would also cut off legitimate wallets and DeFi services on the same infrastructure, the likely market effect is a gradual rise in chain-level risk premia and compliance overhead rather than a single identifiable price event.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/",
+          "title": "EtherHiding & Blockchain Dead Drops: On-Chain... - Chainalysis"
+        },
+        {
+          "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand",
+          "title": "Blockchain Dead Drop Attacks Jump 420% as State Hackers Expand | The Defiant"
+        },
+        {
+          "url": "https://www.cryptopolitan.com/north-korea-iran-malware-on-blockchains/",
+          "title": "North Korea and Iran drive 5.2x jump in malware hidden on public blockchains - Cryptopolitan"
+        }
+      ],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:99aa27d52de20db9"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }

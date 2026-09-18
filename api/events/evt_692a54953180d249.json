@@ -51,14 +51,27 @@
       "current_state_en": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
       "detailed_summary_zh": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
       "detailed_summary_en": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "HyperCore 是 Hyperliquid 区块链的订单簿与保证金层，永续合约、现货市场与组合保证金均在此结算，而通用智能合约则由 HyperEVM 承载。借贷协议通常允许用户存入加密货币作为抵押品并借出稳定币，LTV 比率决定可借额度，清算阈值则标志仓位可被强制平仓的时点。USDC 与 USDT 分别由 Circle 和 Tether 发行、锚定美元，是链上信贷最主要的记账单位。Hyperliquid 创始人 Jeff Yan 将借贷原语与衍生品保证金分离的做法，类比为亚马逊拆分出 AWS，使同一底层系统能够服务多种产品。",
+      "background_en": "HyperCore is the order-book and margin layer of the Hyperliquid blockchain where perpetuals, spot markets and portfolio margin are settled, while HyperEVM handles general smart contracts. Lending protocols typically let users deposit crypto as collateral and borrow stablecoins against it, with the LTV ratio determining how much can be borrowed and the liquidation threshold marking when the position can be closed. USDC and USDT are dollar-pegged stablecoins issued by Circle and Tether respectively, and they are the dominant units of account for on-chain credit. Hyperliquid's founder, Jeff Yan, compared separating the lending primitive from derivatives margin to Amazon spinning out AWS so one underlying system can serve multiple products.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该新市场在 HyperCore 上为 HYPE 与比特币新增了直接的抵押渠道，同时加深了本就支撑组合保证金的稳定币池，因此借贷利用率如今会影响 HYPE 的资金与借款需求，以及该网络约 67.7 亿美元的 USDC 存量。Kraken 母公司 Payward 计划通过 Hyperliquid 的 HIP-3 框架为美国客户提供链上永续合约，为同一生态开辟了并行的监管与分销通道。",
+      "market_impact_en": "The new market adds a direct collateral channel for HYPE and Bitcoin on HyperCore while deepening the stablecoin pools that already support portfolio margin, so lending utilization now influences funding and borrow demand for HYPE and the network's roughly $6.77 billion USDC supply. Kraken parent Payward's plan to offer on-chain perpetual futures to US clients via Hyperliquid's HIP-3 framework adds a parallel regulatory and distribution channel into the same ecosystem.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://hyperpc.app/blog/what-is-hypercore",
+          "title": "How HyperCore Powers Performance Across Hyperliquid - HypeRPC"
+        },
+        {
+          "url": "https://financefeeds.com/what-is-loan-to-value-ltv-in-crypto-lending/",
+          "title": "What Is LTV in Crypto Lending? Formula and Liquidation"
+        },
+        {
+          "url": "https://coinbureau.com/analysis/usdc-vs-usdt",
+          "title": "USDC vs USDT: Safety, Fees and Best Uses in 2026"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:5ef1d6ed055d8cdd"

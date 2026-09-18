@@ -53,14 +53,27 @@
       "current_state_en": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
       "detailed_summary_zh": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
       "detailed_summary_en": "A hack targeting crypto trading infrastructure provider Haruko compromised 15 clients, resulting in the theft of exchange API credentials, trading data, and funds.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Haruko 成立于 2019 年，总部位于英国，为机构客户提供投资组合管理、交易捕获以及连接服务，处于基金自有系统与其所交易的众多加密货币交易所之间。交易所 API 密钥是允许软件代表用户读取账户数据或下单的凭证，因此成为高价值攻击目标：只读密钥会限制攻击者的操作范围，而具备交易权限的密钥则可能直接转移资金。由于基金很少手动连接交易所，这类供应商层级是加密市场基础设施中常见且往往被忽视的失效点。",
+      "background_en": "Haruko was founded in 2019 and is headquartered in the United Kingdom, offering institutional clients portfolio management, trade capture and connectivity that sits between a fund's own systems and the many crypto exchanges it trades on. Exchange API keys are credentials that let software read account data or place trades on a user's behalf, which is why they are a high-value target: read-only keys limit what an attacker can do, while trading-enabled keys can move funds. Because funds rarely connect to exchanges manually, this kind of vendor layer is a common and often under-examined point of failure in crypto market infrastructure.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "其直接影响渠道是运营与交易对手风险，而非代币定价：受影响基金可能暂时失去交易接入能力，并需轮换交易所 API 凭证，被盗余额对这些客户而言属于小规模的局部损失。更广泛的冲击则通过市场对机构加密基础设施及第三方托管/工具供应商的情绪传导，可能影响交易对手在引入交易技术时对供应商风险的评估。",
+      "market_impact_en": "The direct transmission channel is operational and counterparty risk rather than token pricing: affected funds may face temporary loss of trading access and must rotate exchange API credentials, and any stolen balances represent a small, localized drawdown for those clients. Broader fallout would run through sentiment toward institutional crypto infrastructure and third-party custody/tooling providers, which could weigh on how counterparties assess vendor risk when onboarding trading technology.",
       "importance_score": 8.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.coindesk.com/business/2026/09/18/crypto-tech-provider-haruko-hit-by-cyberattack-affecting-15-clients-some-funds-lost",
+          "title": "Haruko hack hits 15 crypto clients, with exchange API details, trading data and funds stolen"
+        },
+        {
+          "url": "https://coinedition.com/crypto-live-news/haruko-breach-exposes-api-data-and-trading-records-of-15/",
+          "title": "Haruko Breach Exposes API Data and Trading Records of 15 Crypto Clients"
+        },
+        {
+          "url": "https://www.haruko.io/platforms/trade-capture/",
+          "title": "Trade Capture System - Institutional Crypto Trading - Haruko"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:9ab2e1934142e2ae"

@@ -1,6 +1,78 @@
 {
   "threads": [
     {
+      "thread_id": "evt_6a38061ef4d7656a",
+      "event_id": "evt_6a38061ef4d7656a",
+      "latest_date": "2026-09-19",
+      "latest_at": "2026-09-19T07:26:47.660163+08:00",
+      "first_date": "2026-09-18",
+      "days": 2,
+      "entries": 3,
+      "updates_count": 3,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
+      "title_en": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
+      "summary_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 作为冗余路径，伊朗关联行为者则利用比特币交易（包括向中本聪相关地址发送的交易）嵌入命令与控制路由信息。",
+      "summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity; the newly attributed North Korea-linked UNC5342 group uses Tron, Aptos, and BNB Smart Chain as redundant routes, while Iran-linked actors embed command-and-control routing data in Bitcoin transactions, including those sent to a Satoshi Nakamoto-associated address.",
+      "latest_update_zh": "Chainalysis 报告补充了伊朗关联行为者将命令与控制路由信息嵌入发送至中本聪相关比特币地址的交易中，并指出高容量开源权重中国 AI 模型出现后恶意区块链写入从每天 2.06 次升至 11.1 次（增长 440%）。",
+      "latest_update_en": "Chainalysis report added that suspected Iran-linked actors embed command-and-control routing data inside Bitcoin transactions sent to a Satoshi Nakamoto-associated address, and that malicious blockchain writes rose from 2.06 to 11.1 per day (a 440% increase) after the emergence of high-capacity open-weight Chinese AI models.",
+      "background_zh": "链上恶意软件指的是一种技术手法：攻击者把指令、服务器地址或载荷存放在公共区块链上，使被感染的设备无需依赖可被下线的域名即可获取这些内容。最知名的变体是 EtherHiding，朝鲜黑客曾在 2025 年利用它在以太坊和 BNB Smart Chain 的智能合约中植入窃取加密货币的代码。UNC5342 是一个与朝鲜相关的威胁组织，也被称为 Famous Chollima 和 DeceptiveDevelopment。Chainalysis 是一家区块链分析公司，为交易所、政府和金融机构追踪非法链上活动。",
+      "background_en": "Onchain malware refers to a technique in which attackers store instructions, server addresses or payloads on a public blockchain so that compromised devices can retrieve them without relying on a domain that can be taken offline. The best-known variant is EtherHiding, which North Korean hackers used in 2025 to place crypto-stealing code inside smart contracts on Ethereum and BNB Smart Chain. UNC5342 is a North Korea-linked threat group also tracked as Famous Chollima and DeceptiveDevelopment. Chainalysis is a blockchain analytics firm that tracks illicit onchain activity for exchanges, governments and financial institutions.",
+      "latest_summary_zh": "Chainalysis 报告称，过去 12 个月内区块链“死信箱”（dead drop）攻击增长了 420%，到 2026 年第二季度，与朝鲜和伊朗有关联的操作者约占新观测活动总量的三分之二。与朝鲜有关联的团伙 UNC5342 使用 Tron 和 Aptos 作为冗余路径，将已感染设备引向存储在 BNB Smart Chain 上的恶意软件指令；而疑似伊朗行为者则把命令与控制路由信息嵌入发送至历史上与中本聪相关地址的比特币交易中。\n\n这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。\n\nChainalysis 表示，在高容量开源权重的中国 AI 模型出现后，恶意区块链写入从每天 2.06 次升至每天 11.1 次，不到一年增长 440%；不过该公司也提醒，其测量并不能锁定某一个具体模型，也无法证明增幅完全由 AI 造成。该恶意软件会优先查询 Tron，若该路径失败则回退至 Aptos，因此要瓦解该行动需要同时在三条链上采取行动。",
+      "latest_summary_en": "Chainalysis reported that blockchain dead drop attacks rose 420% over the past 12 months, with North Korea- and Iran-linked operators accounting for roughly two-thirds of newly observed activity by the second quarter of 2026. The North Korea-linked group UNC5342 uses Tron and Aptos as redundant routes pointing infected devices to malware instructions stored on BNB Smart Chain, while suspected Iranian actors embedded command-and-control routing data inside Bitcoin transactions sent to an address historically associated with Satoshi Nakamoto.\n\nThis marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.\n\nChainalysis said malicious blockchain writes rose from 2.06 per day to 11.1 per day after the emergence of high-capacity open-weight Chinese AI models, a 440% increase in under a year, though the firm cautioned its measurement does not identify a single model or prove that AI alone caused the rise. The malware queries Tron first and falls back to Aptos if that route fails, and disrupting the operation would require action across all three chains at once.",
+      "discussion_zh": "这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。",
+      "discussion_en": "This marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.",
+      "market_impact_zh": "其直接传导渠道是安全与合规，而非任何代币的供给：被点名承载恶意写入的网络是 Tron、BNB Smart Chain、Aptos 和比特币，因此这些链上的交易所、托管方和 RPC 服务商将面临更高的监控与筛查成本，因为对钱包、合约和 RPC 流量的监测正成为防御必需。由于彻底封锁某条网络也会切断同一基础设施上的合法钱包与 DeFi 服务，市场层面的影响更可能是链级风险溢价与合规开支持续上升，而非某一次可明确识别的价格事件。",
+      "market_impact_en": "The immediate channel is security and compliance rather than any token's supply: Tron, BNB Smart Chain, Aptos and Bitcoin are the networks actually named as carrying malicious writes, so exchanges, custodians and RPC providers on those chains face higher monitoring and screening costs as wallet, contract and RPC-traffic surveillance becomes a defensive necessity. Because fully blocking a network would also cut off legitimate wallets and DeFi services on the same infrastructure, the likely market effect is a gradual rise in chain-level risk premia and compliance overhead rather than a single identifiable price event.",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis",
+          "title": "North Korea, Iran Linked to Surge in Blockchain Malware Activity"
+        },
+        {
+          "url": "https://cryptobriefing.com/chainalysis-onchain-malware-state-hackers-surge/",
+          "title": "Chainalysis reports 420% surge in onchain malware linked to state hackers"
+        },
+        {
+          "url": "https://therecord.media/north-korean-hackers-using-blockchain-hiding-malware?trk=public_post_comment-text",
+          "title": "North Korean hackers seen using blockchain to hide crypto-stealing..."
+        },
+        {
+          "url": "https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/",
+          "title": "EtherHiding & Blockchain Dead Drops: On-Chain... - Chainalysis"
+        },
+        {
+          "url": "https://www.cryptopolitan.com/north-korea-iran-malware-on-blockchains/",
+          "title": "North Korea and Iran drive 5.2x jump in malware hidden on public blockchains - Cryptopolitan"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_4d4b10880ad0715c",
       "event_id": "evt_4d4b10880ad0715c",
       "latest_date": "2026-09-19",
@@ -45,6 +117,70 @@
         }
       ],
       "reference_links": []
+    },
+    {
+      "thread_id": "evt_5b421e16299d26d3",
+      "event_id": "evt_5b421e16299d26d3",
+      "latest_date": "2026-09-19",
+      "latest_at": "2026-09-19T06:43:52.557461+08:00",
+      "first_date": "2026-09-04",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "Coinbase (COIN) Stock Jumps 10% After Filing for US Single-Stock Perps - The Crypto Times",
+      "title_en": "Coinbase (COIN) Stock Jumps 10% After Filing for US Single-Stock Perps - The Crypto Times",
+      "summary_zh": "Coinbase Derivatives 已向 CFTC 提交个股永续合约申请，标的包括苹果、特斯拉、英伟达等；产品尚未获批或上线。此前 Coinbase 股价因该申请消息上涨 10%。",
+      "summary_en": "Coinbase Derivatives has filed with the CFTC for single-stock perpetual futures on Apple, Tesla, Nvidia, and others; products are not yet approved or live. Earlier, Coinbase stock jumped 10% on the filing news.",
+      "latest_update_zh": "Coinbase Derivatives 已向 CFTC 提交申请，拟上线苹果、特斯拉、英伟达等个股的现金结算永续合约，将境内永续合约布局从股指扩展至单一证券。产品尚未获批或上线。",
+      "latest_update_en": "Coinbase Derivatives has filed with the CFTC for cash-settled perpetual futures on individual stocks including Apple, Tesla, and Nvidia, extending its domestic perpetual futures push from equity indexes to single securities. Products are not yet approved or live.",
+      "background_zh": "永续合约是一种没有到期日、追踪标的资产的衍生品，最早由经济学家罗伯特·席勒于 1992 年提出，后来在加密交易所中广泛流行；其功能与差价合约类似，但通过资金费率机制使价格贴近标的。在美国，期货市场由商品期货交易委员会（CFTC）监管，而 Coinbase Derivatives 正是受 CFTC 监管的交易所，因此上线新合约必须先提交申请。离岸平台多年来已提供股票挂钩的永续产品，但美国挂牌的个股永续合约此前并非标准的受监管产品。",
+      "background_en": "Perpetual futures are derivative contracts that track an underlying asset without an expiration date, first proposed by economist Robert Shiller in 1992 and later popularized by crypto exchanges; they function similarly to contracts for difference but use a funding-rate mechanism to keep the price anchored. In the U.S., futures markets are regulated by the CFTC, and Coinbase Derivatives operates as a CFTC-regulated exchange, which is why the company must file before listing new contracts. Offshore venues have offered equity-linked perpetuals for years, but U.S.-listed single-stock perpetuals have not been a standard regulated product.",
+      "latest_summary_zh": "据《华尔街日报》报道，Coinbase Derivatives 已向美国商品期货交易委员会（CFTC）提交申请，拟上线与苹果、特斯拉、英伟达等美国上市个股及 ETF 挂钩的现金结算永续合约。此次申请将该交易所的境内永续合约布局从股票指数扩展到单一证券。\n\n若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。\n\n拟议合约采用现金结算且为永续结构，即没有到期日，而是通过定期资金费率机制来锚定标的股价。该申请建立在 Coinbase 现有的衍生产品线之上——其平台已提供加密期货、Mag7+Crypto 指数产品以及 7×24 小时的比特币和以太坊期货交易——但相关个股产品目前尚未获批，也未正式上线。",
+      "latest_summary_en": "Coinbase Derivatives has filed with the U.S. Commodity Futures Trading Commission (CFTC) to list cash-settled perpetual futures tied to individual U.S.-listed stocks and ETFs, including Apple, Tesla and Nvidia, according to a Wall Street Journal report. The filing extends Coinbase's domestic perpetual-futures push from equity indexes to single securities.\n\nIf approved, this would mark one of the first U.S.-regulated venues offering perpetual futures on individual equities, blurring the line between crypto-native derivatives and traditional stock trading. It signals that major crypto exchanges are competing for equity-linked flow, which could reshape market structure and pull new institutional and retail participants onto 24/7 venues.\n\nThe proposed contracts are cash-settled and perpetual, meaning they carry no expiry date and instead rely on periodic funding payments to track the underlying stock price. The filing follows Coinbase's existing broad derivatives lineup, which already includes crypto futures, a Mag7+Crypto index product, and 24/7 bitcoin and ether futures trading, and the products are not yet approved or live.",
+      "discussion_zh": "若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。",
+      "discussion_en": "If approved, this would mark one of the first U.S.-regulated venues offering perpetual futures on individual equities, blurring the line between crypto-native derivatives and traditional stock trading. It signals that major crypto exchanges are competing for equity-linked flow, which could reshape market structure and pull new institutional and retail participants onto 24/7 venues.",
+      "market_impact_zh": "该申请指向一条潜在通道：股票挂钩的需求可能被引导至加密原生、7×24 小时交易的场所，从而影响 Coinbase 的衍生品收入结构，并对已经融合股票与加密交易的币安、Crypto.com 等竞争者形成压力。若获批，它还将为在岸个股永续合约树立监管先例，可能改变流动性与对冲活动在传统交易所与加密平台之间的分布。",
+      "market_impact_en": "The filing points to a potential channel through which equity-linked demand could be routed onto crypto-native, 24/7 trading venues, exposing Coinbase's derivatives revenue mix and pressuring competitors such as Binance and Crypto.com that already blend stock and crypto trading. Approval would also set a regulatory precedent for onshore single-stock perpetuals, which could affect how liquidity and hedging activity are distributed between traditional exchanges and crypto platforms.",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZDhOdXcyalMwcE1XMjRkYkc3UUN1QjRwR1lCUXotSE1zUWJnc3ZqdXNVdEZFZFpacFJRUGpkTUJiZklHUkEzaS0zZHprVGxTM2FNc3lHNk4tYUdMdmhuQ2p6NnppR3NGVURhbDVkNmh0c1dZTHpyb3l2elZrMmFMY1BYcmhLc3h4aHlyWERMd3NOb1FsV25TNDNVUmhiRU9BSlpFeVFn?oc=5",
+          "title": "The Crypto Times",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcThiZ3RpOXR0RHgyV2JRcHFtV1pKaWFWRkVtUGp4TTlJNE5Gb3BUQmphVnpKVjk1OUFpNldfV1pEOHZKam5VekhRaFJBaTU0RGtPRDJacm5GMjluUWp1endMYkd3eWFCaGdSTmlOYlZMUWRpZFA1UTZSS2VJOHVLZF94VEVhbHVMSzYxOW5zS2E2REJfQVJoNWFzb2lpcTdnMEwzWEhHbHZBZzlzLXc?oc=5",
+          "title": "Coin Gabbar",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia",
+          "title": "Decrypt",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://www.cryptotimes.io/2026/09/18/coinbase-files-to-expand-u-s-derivatives-into-single-stock-perpetuals/",
+          "title": "Coinbase Files to Expand U.S. Derivatives Into Single-Stock Perpetuals"
+        },
+        {
+          "url": "https://thedefiant.io/converge/tradfi-and-fintech/coinbase-seeks-cftc-approval-for-us-single-stock-perpetual-futures",
+          "title": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures | The Defiant"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Perpetual_futures",
+          "title": "Perpetual futures - Wikipedia"
+        }
+      ]
     },
     {
       "thread_id": "evt_b6d7c0abc84207d8",
@@ -229,10 +365,10 @@
       "background_en": "Tokenization means issuing a blockchain-based digital representation of an asset, such as a US-listed share, so it can be traded and settled on-chain; the question the SEC addressed is narrower than \"should stocks be tokens\" and concerns how already-regulated securities can trade through blockchain infrastructure without the venue being treated as an unregistered exchange. Currently, trading of a regulated US stock must occur on a registered exchange under the Securities Exchange Act, which is why crypto firms have offered tokenized equities primarily to non-US users — for example, Kraken's xStocks platform for European customers. The CLARITY Act was the market-structure bill meant to establish statutory rules for digital assets and clarify which agency regulates what; its failure pushed the emphasis onto what regulators can do under existing law. Automated market makers are smart-contract pools that price trades algorithmically instead of through a traditional order book.",
       "latest_summary_zh": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
       "latest_summary_en": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
-      "discussion_zh": "最直接的传导路径在于代币化股票与市场基础设施相关敞口：已在布局代币化股票业务的交易场所和券商（如 Robinhood、Kraken 的 xStocks）、链上结算与托管服务商，以及与真实世界资产和代币化叙事相关的代币，都可能因此获得美国合规路径。从方向上看，这一消息有利于代币化股票流动性从离岸场所向受美国监管的场所迁移，但五年到期条款、交易代码与成交量上限、发行人否决权以及盘外流动性约束，才是决定实际资金流规模的关键变量。",
-      "discussion_en": "The immediate transmission runs through tokenized-equity and market-infrastructure exposure: venues and brokers already building tokenized-stock businesses (Robinhood, Kraken's xStocks), on-chain settlement and custody providers, and tokens tied to real-world-asset and tokenization narratives, all of which gain a potential US regulatory path. Directionally, the news supports a shift of tokenized-equity liquidity from offshore venues toward US-supervised ones, but the five-year sunset, symbol and volume caps, issuer vetoes and off-hours liquidity constraints are the concrete variables that determine how much of that flow actually materializes.",
-      "market_impact_zh": "最直接的传导路径在于代币化股票与市场基础设施相关敞口：已在布局代币化股票业务的交易场所和券商（如 Robinhood、Kraken 的 xStocks）、链上结算与托管服务商，以及与真实世界资产和代币化叙事相关的代币，都可能因此获得美国合规路径。从方向上看，这一消息有利于代币化股票流动性从离岸场所向受美国监管的场所迁移，但五年到期条款、交易代码与成交量上限、发行人否决权以及盘外流动性约束，才是决定实际资金流规模的关键变量。",
-      "market_impact_en": "The immediate transmission runs through tokenized-equity and market-infrastructure exposure: venues and brokers already building tokenized-stock businesses (Robinhood, Kraken's xStocks), on-chain settlement and custody providers, and tokens tied to real-world-asset and tokenization narratives, all of which gain a potential US regulatory path. Directionally, the news supports a shift of tokenized-equity liquidity from offshore venues toward US-supervised ones, but the five-year sunset, symbol and volume caps, issuer vetoes and off-hours liquidity constraints are the concrete variables that determine how much of that flow actually materializes.",
+      "discussion_zh": "最直接的传导渠道是情绪与流动性流入与链上交易场所和 DeFi 基础设施相关的代币，HYPE、UNI、ARB 和 NEAR 领涨，同时 BTC 报78,000美元、ETH 报2,500美元。若代币化股票未来能在无许可链上通过自动做市商和流动性池运行，资金与订单流将逐步向 DEX 代币、托管服务商以及与交易所关联的标的倾斜；而 ICE 评估将 Avalanche 作为结算层，则把传统股票市场基础设施直接与一层网络资产连接起来。",
+      "discussion_en": "The immediate transmission channel is sentiment and liquidity into tokens tied to onchain trading venues and DeFi infrastructure, with HYPE, UNI, ARB and NEAR leading the rally alongside BTC at $78k and ETH at $2,500. Over time, enabling tokenized equities to run through automated market makers and liquidity pools on permissionless chains would pull capital and order flow toward DEX tokens, custody providers, and exchange-linked names, while the ICE evaluation of Avalanche as a settlement layer connects legacy equity-market infrastructure directly to layer-1 assets.",
+      "market_impact_zh": "最直接的传导渠道是情绪与流动性流入与链上交易场所和 DeFi 基础设施相关的代币，HYPE、UNI、ARB 和 NEAR 领涨，同时 BTC 报78,000美元、ETH 报2,500美元。若代币化股票未来能在无许可链上通过自动做市商和流动性池运行，资金与订单流将逐步向 DEX 代币、托管服务商以及与交易所关联的标的倾斜；而 ICE 评估将 Avalanche 作为结算层，则把传统股票市场基础设施直接与一层网络资产连接起来。",
+      "market_impact_en": "The immediate transmission channel is sentiment and liquidity into tokens tied to onchain trading venues and DeFi infrastructure, with HYPE, UNI, ARB and NEAR leading the rally alongside BTC at $78k and ETH at $2,500. Over time, enabling tokenized equities to run through automated market makers and liquidity pools on permissionless chains would pull capital and order flow toward DEX tokens, custody providers, and exchange-linked names, while the ICE evaluation of Avalanche as a settlement layer connects legacy equity-market infrastructure directly to layer-1 assets.",
       "score": 8.5,
       "source_links": [
         {
@@ -263,6 +399,18 @@
         {
           "url": "https://coincodex.com/article/92171/sec-unveils-innovation-exemption-for-on-chain-trading-of-tokenized-stocks/",
           "title": "SEC Unveils Innovation Exemption for On-Chain... | CoinCodex"
+        },
+        {
+          "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
+          "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading ..."
+        },
+        {
+          "url": "https://www.coindesk.com/policy/2026/09/17/sec-rolls-out-long-awaited-innovation-exemption-for-tokenized-securities-venues",
+          "title": "SEC rolls out 'innovation exemption' for tokenized securities ..."
+        },
+        {
+          "url": "https://www.pymnts.com/legal/2026/cftc-frees-non-custodial-software-developers-from-broker-rules/",
+          "title": "CFTC Frees Non-Custodial Software Developers From Some Rules"
         }
       ]
     },
@@ -345,14 +493,14 @@
       "summary_en": "Binance's MiCA application in Greece is stalled following reported high-level ECB intervention by President Lagarde, despite prior regulatory completeness.",
       "latest_update_zh": "欧洲央行行长克里斯蒂娜·拉加德亲自干预阻止币安欧盟MiCA牌照，导致希腊搁置此前监管机构认为已完成的申请，据《华尔街日报》。",
       "latest_update_en": "ECB President Christine Lagarde personally intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
-      "background_zh": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
-      "background_en": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+      "background_zh": "MiCA（《加密资产市场法规》）是欧盟针对加密资产及其服务提供商的综合性监管规则：企业须在某一成员国取得该国主管机构颁发的牌照，之后即可凭该牌照在整个欧盟范围内通行。MiCA 的完整要求已于 2024 年底生效，过渡性的“祖父条款”宽限期于 2025 年 7 月 1 日到期，此后未持牌企业必须停止向欧盟客户提供服务。欧洲央行并非一般意义上的加密资产监管机构，其介入源于货币政策职责、对数字欧元项目的监管角色以及对加密资产金融稳定风险的监测，因此报道所述的干预显得非同寻常。",
+      "background_en": "MiCA (Markets in Crypto-Assets) is the EU's comprehensive rulebook for crypto assets and service providers; firms must be licensed by a national competent authority in one member state, and that license can then be passported across the entire bloc. Full MiCA requirements took effect at the end of 2024, with a transitional grandfathering period that expired on 1 July 2025, after which unlicensed firms must stop serving EU customers. The ECB is not a general crypto regulator — its involvement stems from its monetary policy mandate, its oversight of the digital euro project, and its monitoring of financial stability risks from crypto — which is why the reported intervention is unusual.",
       "latest_summary_zh": "ECB President Christine Lagarde intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
       "latest_summary_en": "ECB President Christine Lagarde intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "最直接的传导渠道是市场准入与流动性：在币安无法凭 MiCA 牌照通行的情况下，欧盟居民用户以及欧元计价的现货与衍生品交易流量将转向已获牌的交易所，使原本集中于币安的流动性出现分割，并改变欧盟受监管交易所之间的交易量份额。第二个渠道是监管先例：报道所称欧洲央行对成员国监管机构施加非正式压力的做法，会提高其他有申请在途的大型交易所所面临的牌照风险溢价，并可能影响交易所在欧盟的实体架构与托管安排。",
+      "discussion_en": "The immediate channel is market access and liquidity: with Binance unable to passport a MiCA license, EU-resident users and euro-denominated spot and derivatives flow toward already-licensed venues, fragmenting liquidity that previously concentrated on Binance and shifting volume share among EU-regulated exchanges. A second channel is regulatory precedent — the reported use of informal ECB pressure on a national regulator raises licensing risk premiums for other large exchanges with pending applications and could influence how venues structure their EU entities and custody arrangements.",
+      "market_impact_zh": "最直接的传导渠道是市场准入与流动性：在币安无法凭 MiCA 牌照通行的情况下，欧盟居民用户以及欧元计价的现货与衍生品交易流量将转向已获牌的交易所，使原本集中于币安的流动性出现分割，并改变欧盟受监管交易所之间的交易量份额。第二个渠道是监管先例：报道所称欧洲央行对成员国监管机构施加非正式压力的做法，会提高其他有申请在途的大型交易所所面临的牌照风险溢价，并可能影响交易所在欧盟的实体架构与托管安排。",
+      "market_impact_en": "The immediate channel is market access and liquidity: with Binance unable to passport a MiCA license, EU-resident users and euro-denominated spot and derivatives flow toward already-licensed venues, fragmenting liquidity that previously concentrated on Binance and shifting volume share among EU-regulated exchanges. A second channel is regulatory precedent — the reported use of informal ECB pressure on a national regulator raises licensing risk premiums for other large exchanges with pending applications and could influence how venues structure their EU entities and custody arrangements.",
       "score": 8.5,
       "source_links": [
         {
@@ -366,7 +514,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets",
+          "title": "Markets in Crypto-Assets - Wikipedia"
+        },
+        {
+          "url": "https://finance.ec.europa.eu/digital-finance/crypto-assets_en",
+          "title": "Crypto-assets - Finance - European Commission"
+        },
+        {
+          "url": "https://decrypt.co/371990/swagger-json",
+          "title": "Binance Withdraws MiCA License Application in Greece... - Decrypt"
+        }
+      ]
     },
     {
       "thread_id": "evt_c539b5ae46d9140f",
@@ -418,65 +579,6 @@
         }
       ],
       "reference_links": []
-    },
-    {
-      "thread_id": "evt_6a38061ef4d7656a",
-      "event_id": "evt_6a38061ef4d7656a",
-      "latest_date": "2026-09-18",
-      "latest_at": "2026-09-18T09:25:39.548268+08:00",
-      "first_date": "2026-09-18",
-      "days": 1,
-      "entries": 2,
-      "updates_count": 2,
-      "sources_count": 2,
-      "category": "crypto",
-      "status": "developing",
-      "status_zh": "进展中",
-      "status_en": "Developing",
-      "event_type": "security_incident",
-      "event_type_zh": "安全事件",
-      "event_type_en": "Security incident",
-      "title_zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
-      "title_en": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
-      "summary_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
-      "summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain.",
-      "latest_update_zh": "Chainalysis 将此前未归因的活动归因于朝鲜关联的 UNC5342 组织，并指出国家支持的黑客约占新增链上恶意软件活动的三分之二。",
-      "latest_update_en": "Chainalysis attributed previously unattributed activity to North Korea-linked group UNC5342 and said state-linked hackers account for roughly two-thirds of new onchain malware activity.",
-      "background_zh": "链上恶意软件指的是一种技术手法：攻击者把指令、服务器地址或载荷存放在公共区块链上，使被感染的设备无需依赖可被下线的域名即可获取这些内容。最知名的变体是 EtherHiding，朝鲜黑客曾在 2025 年利用它在以太坊和 BNB Smart Chain 的智能合约中植入窃取加密货币的代码。UNC5342 是一个与朝鲜相关的威胁组织，也被称为 Famous Chollima 和 DeceptiveDevelopment。Chainalysis 是一家区块链分析公司，为交易所、政府和金融机构追踪非法链上活动。",
-      "background_en": "Onchain malware refers to a technique in which attackers store instructions, server addresses or payloads on a public blockchain so that compromised devices can retrieve them without relying on a domain that can be taken offline. The best-known variant is EtherHiding, which North Korean hackers used in 2025 to place crypto-stealing code inside smart contracts on Ethereum and BNB Smart Chain. UNC5342 is a North Korea-linked threat group also tracked as Famous Chollima and DeceptiveDevelopment. Chainalysis is a blockchain analytics firm that tracks illicit onchain activity for exchanges, governments and financial institutions.",
-      "latest_summary_zh": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
-      "latest_summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
-      "discussion_zh": "其传导路径主要不是供给或流动性冲击，而是合规与声誉层面：Tron、BNB Smart Chain 和 Aptos 被点名为易被滥用的托管场所，这可能招致交易所更严格的监控、反洗钱审查和监管关注，从而影响 TRX、BNB 和 APT 的市场情绪。Tron 的角色尤为关键，因为其承载了相当大比例的稳定币转账量，若围绕该网络的筛查收紧，可能影响资金在交易所之间的进出与流动方式。",
-      "discussion_en": "The transmission path runs mainly through compliance and reputation rather than any direct supply or liquidity shock: Tron, BNB Smart Chain and Aptos are named as abuse-prone hosting venues, which can invite additional exchange monitoring, AML scrutiny and regulatory attention that touches TRX, BNB and APT sentiment. Tron's role also matters because it carries a large share of stablecoin transfer volume, so any tightening of screening around that network can affect how liquidity moves on and off exchanges.",
-      "market_impact_zh": "其传导路径主要不是供给或流动性冲击，而是合规与声誉层面：Tron、BNB Smart Chain 和 Aptos 被点名为易被滥用的托管场所，这可能招致交易所更严格的监控、反洗钱审查和监管关注，从而影响 TRX、BNB 和 APT 的市场情绪。Tron 的角色尤为关键，因为其承载了相当大比例的稳定币转账量，若围绕该网络的筛查收紧，可能影响资金在交易所之间的进出与流动方式。",
-      "market_impact_en": "The transmission path runs mainly through compliance and reputation rather than any direct supply or liquidity shock: Tron, BNB Smart Chain and Aptos are named as abuse-prone hosting venues, which can invite additional exchange monitoring, AML scrutiny and regulatory attention that touches TRX, BNB and APT sentiment. Tron's role also matters because it carries a large share of stablecoin transfer volume, so any tightening of screening around that network can affect how liquidity moves on and off exchanges.",
-      "score": 7.5,
-      "source_links": [
-        {
-          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "title": "Cointelegraph",
-          "official": false
-        },
-        {
-          "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "title": "Cointelegraph",
-          "official": false
-        }
-      ],
-      "reference_links": [
-        {
-          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis",
-          "title": "North Korea, Iran Linked to Surge in Blockchain Malware Activity"
-        },
-        {
-          "url": "https://cryptobriefing.com/chainalysis-onchain-malware-state-hackers-surge/",
-          "title": "Chainalysis reports 420% surge in onchain malware linked to state hackers"
-        },
-        {
-          "url": "https://therecord.media/north-korean-hackers-using-blockchain-hiding-malware?trk=public_post_comment-text",
-          "title": "North Korean hackers seen using blockchain to hide crypto-stealing..."
-        }
-      ]
     },
     {
       "thread_id": "evt_6dd97799a8cbba0a",
@@ -4900,10 +5002,10 @@
       "background_en": "Tokenization means issuing a blockchain-based digital representation of an asset, such as a US-listed share, so it can be traded and settled on-chain; the question the SEC addressed is narrower than \"should stocks be tokens\" and concerns how already-regulated securities can trade through blockchain infrastructure without the venue being treated as an unregistered exchange. Currently, trading of a regulated US stock must occur on a registered exchange under the Securities Exchange Act, which is why crypto firms have offered tokenized equities primarily to non-US users — for example, Kraken's xStocks platform for European customers. The CLARITY Act was the market-structure bill meant to establish statutory rules for digital assets and clarify which agency regulates what; its failure pushed the emphasis onto what regulators can do under existing law. Automated market makers are smart-contract pools that price trades algorithmically instead of through a traditional order book.",
       "latest_summary_zh": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
       "latest_summary_en": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
-      "discussion_zh": "最直接的传导路径在于代币化股票与市场基础设施相关敞口：已在布局代币化股票业务的交易场所和券商（如 Robinhood、Kraken 的 xStocks）、链上结算与托管服务商，以及与真实世界资产和代币化叙事相关的代币，都可能因此获得美国合规路径。从方向上看，这一消息有利于代币化股票流动性从离岸场所向受美国监管的场所迁移，但五年到期条款、交易代码与成交量上限、发行人否决权以及盘外流动性约束，才是决定实际资金流规模的关键变量。",
-      "discussion_en": "The immediate transmission runs through tokenized-equity and market-infrastructure exposure: venues and brokers already building tokenized-stock businesses (Robinhood, Kraken's xStocks), on-chain settlement and custody providers, and tokens tied to real-world-asset and tokenization narratives, all of which gain a potential US regulatory path. Directionally, the news supports a shift of tokenized-equity liquidity from offshore venues toward US-supervised ones, but the five-year sunset, symbol and volume caps, issuer vetoes and off-hours liquidity constraints are the concrete variables that determine how much of that flow actually materializes.",
-      "market_impact_zh": "最直接的传导路径在于代币化股票与市场基础设施相关敞口：已在布局代币化股票业务的交易场所和券商（如 Robinhood、Kraken 的 xStocks）、链上结算与托管服务商，以及与真实世界资产和代币化叙事相关的代币，都可能因此获得美国合规路径。从方向上看，这一消息有利于代币化股票流动性从离岸场所向受美国监管的场所迁移，但五年到期条款、交易代码与成交量上限、发行人否决权以及盘外流动性约束，才是决定实际资金流规模的关键变量。",
-      "market_impact_en": "The immediate transmission runs through tokenized-equity and market-infrastructure exposure: venues and brokers already building tokenized-stock businesses (Robinhood, Kraken's xStocks), on-chain settlement and custody providers, and tokens tied to real-world-asset and tokenization narratives, all of which gain a potential US regulatory path. Directionally, the news supports a shift of tokenized-equity liquidity from offshore venues toward US-supervised ones, but the five-year sunset, symbol and volume caps, issuer vetoes and off-hours liquidity constraints are the concrete variables that determine how much of that flow actually materializes.",
+      "discussion_zh": "最直接的传导渠道是情绪与流动性流入与链上交易场所和 DeFi 基础设施相关的代币，HYPE、UNI、ARB 和 NEAR 领涨，同时 BTC 报78,000美元、ETH 报2,500美元。若代币化股票未来能在无许可链上通过自动做市商和流动性池运行，资金与订单流将逐步向 DEX 代币、托管服务商以及与交易所关联的标的倾斜；而 ICE 评估将 Avalanche 作为结算层，则把传统股票市场基础设施直接与一层网络资产连接起来。",
+      "discussion_en": "The immediate transmission channel is sentiment and liquidity into tokens tied to onchain trading venues and DeFi infrastructure, with HYPE, UNI, ARB and NEAR leading the rally alongside BTC at $78k and ETH at $2,500. Over time, enabling tokenized equities to run through automated market makers and liquidity pools on permissionless chains would pull capital and order flow toward DEX tokens, custody providers, and exchange-linked names, while the ICE evaluation of Avalanche as a settlement layer connects legacy equity-market infrastructure directly to layer-1 assets.",
+      "market_impact_zh": "最直接的传导渠道是情绪与流动性流入与链上交易场所和 DeFi 基础设施相关的代币，HYPE、UNI、ARB 和 NEAR 领涨，同时 BTC 报78,000美元、ETH 报2,500美元。若代币化股票未来能在无许可链上通过自动做市商和流动性池运行，资金与订单流将逐步向 DEX 代币、托管服务商以及与交易所关联的标的倾斜；而 ICE 评估将 Avalanche 作为结算层，则把传统股票市场基础设施直接与一层网络资产连接起来。",
+      "market_impact_en": "The immediate transmission channel is sentiment and liquidity into tokens tied to onchain trading venues and DeFi infrastructure, with HYPE, UNI, ARB and NEAR leading the rally alongside BTC at $78k and ETH at $2,500. Over time, enabling tokenized equities to run through automated market makers and liquidity pools on permissionless chains would pull capital and order flow toward DEX tokens, custody providers, and exchange-linked names, while the ICE evaluation of Avalanche as a settlement layer connects legacy equity-market infrastructure directly to layer-1 assets.",
       "score": 8.5,
       "source_links": [
         {
@@ -4934,6 +5036,18 @@
         {
           "url": "https://coincodex.com/article/92171/sec-unveils-innovation-exemption-for-on-chain-trading-of-tokenized-stocks/",
           "title": "SEC Unveils Innovation Exemption for On-Chain... | CoinCodex"
+        },
+        {
+          "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
+          "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading ..."
+        },
+        {
+          "url": "https://www.coindesk.com/policy/2026/09/17/sec-rolls-out-long-awaited-innovation-exemption-for-tokenized-securities-venues",
+          "title": "SEC rolls out 'innovation exemption' for tokenized securities ..."
+        },
+        {
+          "url": "https://www.pymnts.com/legal/2026/cftc-frees-non-custodial-software-developers-from-broker-rules/",
+          "title": "CFTC Frees Non-Custodial Software Developers From Some Rules"
         }
       ]
     },
@@ -4960,14 +5074,14 @@
       "summary_en": "Binance's MiCA application in Greece is stalled following reported high-level ECB intervention by President Lagarde, despite prior regulatory completeness.",
       "latest_update_zh": "欧洲央行行长克里斯蒂娜·拉加德亲自干预阻止币安欧盟MiCA牌照，导致希腊搁置此前监管机构认为已完成的申请，据《华尔街日报》。",
       "latest_update_en": "ECB President Christine Lagarde personally intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
-      "background_zh": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
-      "background_en": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+      "background_zh": "MiCA（《加密资产市场法规》）是欧盟针对加密资产及其服务提供商的综合性监管规则：企业须在某一成员国取得该国主管机构颁发的牌照，之后即可凭该牌照在整个欧盟范围内通行。MiCA 的完整要求已于 2024 年底生效，过渡性的“祖父条款”宽限期于 2025 年 7 月 1 日到期，此后未持牌企业必须停止向欧盟客户提供服务。欧洲央行并非一般意义上的加密资产监管机构，其介入源于货币政策职责、对数字欧元项目的监管角色以及对加密资产金融稳定风险的监测，因此报道所述的干预显得非同寻常。",
+      "background_en": "MiCA (Markets in Crypto-Assets) is the EU's comprehensive rulebook for crypto assets and service providers; firms must be licensed by a national competent authority in one member state, and that license can then be passported across the entire bloc. Full MiCA requirements took effect at the end of 2024, with a transitional grandfathering period that expired on 1 July 2025, after which unlicensed firms must stop serving EU customers. The ECB is not a general crypto regulator — its involvement stems from its monetary policy mandate, its oversight of the digital euro project, and its monitoring of financial stability risks from crypto — which is why the reported intervention is unusual.",
       "latest_summary_zh": "ECB President Christine Lagarde intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
       "latest_summary_en": "ECB President Christine Lagarde intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "最直接的传导渠道是市场准入与流动性：在币安无法凭 MiCA 牌照通行的情况下，欧盟居民用户以及欧元计价的现货与衍生品交易流量将转向已获牌的交易所，使原本集中于币安的流动性出现分割，并改变欧盟受监管交易所之间的交易量份额。第二个渠道是监管先例：报道所称欧洲央行对成员国监管机构施加非正式压力的做法，会提高其他有申请在途的大型交易所所面临的牌照风险溢价，并可能影响交易所在欧盟的实体架构与托管安排。",
+      "discussion_en": "The immediate channel is market access and liquidity: with Binance unable to passport a MiCA license, EU-resident users and euro-denominated spot and derivatives flow toward already-licensed venues, fragmenting liquidity that previously concentrated on Binance and shifting volume share among EU-regulated exchanges. A second channel is regulatory precedent — the reported use of informal ECB pressure on a national regulator raises licensing risk premiums for other large exchanges with pending applications and could influence how venues structure their EU entities and custody arrangements.",
+      "market_impact_zh": "最直接的传导渠道是市场准入与流动性：在币安无法凭 MiCA 牌照通行的情况下，欧盟居民用户以及欧元计价的现货与衍生品交易流量将转向已获牌的交易所，使原本集中于币安的流动性出现分割，并改变欧盟受监管交易所之间的交易量份额。第二个渠道是监管先例：报道所称欧洲央行对成员国监管机构施加非正式压力的做法，会提高其他有申请在途的大型交易所所面临的牌照风险溢价，并可能影响交易所在欧盟的实体架构与托管安排。",
+      "market_impact_en": "The immediate channel is market access and liquidity: with Binance unable to passport a MiCA license, EU-resident users and euro-denominated spot and derivatives flow toward already-licensed venues, fragmenting liquidity that previously concentrated on Binance and shifting volume share among EU-regulated exchanges. A second channel is regulatory precedent — the reported use of informal ECB pressure on a national regulator raises licensing risk premiums for other large exchanges with pending applications and could influence how venues structure their EU entities and custody arrangements.",
       "score": 8.5,
       "source_links": [
         {
@@ -4981,7 +5095,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets",
+          "title": "Markets in Crypto-Assets - Wikipedia"
+        },
+        {
+          "url": "https://finance.ec.europa.eu/digital-finance/crypto-assets_en",
+          "title": "Crypto-assets - Finance - European Commission"
+        },
+        {
+          "url": "https://decrypt.co/371990/swagger-json",
+          "title": "Binance Withdraws MiCA License Application in Greece... - Decrypt"
+        }
+      ]
     },
     {
       "thread_id": "evt_eb19a2cef3159ae6",
@@ -6838,6 +6965,142 @@
       ]
     },
     {
+      "thread_id": "evt_6a38061ef4d7656a",
+      "event_id": "evt_6a38061ef4d7656a",
+      "latest_date": "2026-09-19",
+      "latest_at": "2026-09-19T07:26:47.660163+08:00",
+      "first_date": "2026-09-18",
+      "days": 2,
+      "entries": 3,
+      "updates_count": 3,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "developing",
+      "status_zh": "进展中",
+      "status_en": "Developing",
+      "event_type": "security_incident",
+      "event_type_zh": "安全事件",
+      "event_type_en": "Security incident",
+      "title_zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
+      "title_en": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
+      "summary_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 作为冗余路径，伊朗关联行为者则利用比特币交易（包括向中本聪相关地址发送的交易）嵌入命令与控制路由信息。",
+      "summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity; the newly attributed North Korea-linked UNC5342 group uses Tron, Aptos, and BNB Smart Chain as redundant routes, while Iran-linked actors embed command-and-control routing data in Bitcoin transactions, including those sent to a Satoshi Nakamoto-associated address.",
+      "latest_update_zh": "Chainalysis 报告补充了伊朗关联行为者将命令与控制路由信息嵌入发送至中本聪相关比特币地址的交易中，并指出高容量开源权重中国 AI 模型出现后恶意区块链写入从每天 2.06 次升至 11.1 次（增长 440%）。",
+      "latest_update_en": "Chainalysis report added that suspected Iran-linked actors embed command-and-control routing data inside Bitcoin transactions sent to a Satoshi Nakamoto-associated address, and that malicious blockchain writes rose from 2.06 to 11.1 per day (a 440% increase) after the emergence of high-capacity open-weight Chinese AI models.",
+      "background_zh": "链上恶意软件指的是一种技术手法：攻击者把指令、服务器地址或载荷存放在公共区块链上，使被感染的设备无需依赖可被下线的域名即可获取这些内容。最知名的变体是 EtherHiding，朝鲜黑客曾在 2025 年利用它在以太坊和 BNB Smart Chain 的智能合约中植入窃取加密货币的代码。UNC5342 是一个与朝鲜相关的威胁组织，也被称为 Famous Chollima 和 DeceptiveDevelopment。Chainalysis 是一家区块链分析公司，为交易所、政府和金融机构追踪非法链上活动。",
+      "background_en": "Onchain malware refers to a technique in which attackers store instructions, server addresses or payloads on a public blockchain so that compromised devices can retrieve them without relying on a domain that can be taken offline. The best-known variant is EtherHiding, which North Korean hackers used in 2025 to place crypto-stealing code inside smart contracts on Ethereum and BNB Smart Chain. UNC5342 is a North Korea-linked threat group also tracked as Famous Chollima and DeceptiveDevelopment. Chainalysis is a blockchain analytics firm that tracks illicit onchain activity for exchanges, governments and financial institutions.",
+      "latest_summary_zh": "Chainalysis 报告称，过去 12 个月内区块链“死信箱”（dead drop）攻击增长了 420%，到 2026 年第二季度，与朝鲜和伊朗有关联的操作者约占新观测活动总量的三分之二。与朝鲜有关联的团伙 UNC5342 使用 Tron 和 Aptos 作为冗余路径，将已感染设备引向存储在 BNB Smart Chain 上的恶意软件指令；而疑似伊朗行为者则把命令与控制路由信息嵌入发送至历史上与中本聪相关地址的比特币交易中。\n\n这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。\n\nChainalysis 表示，在高容量开源权重的中国 AI 模型出现后，恶意区块链写入从每天 2.06 次升至每天 11.1 次，不到一年增长 440%；不过该公司也提醒，其测量并不能锁定某一个具体模型，也无法证明增幅完全由 AI 造成。该恶意软件会优先查询 Tron，若该路径失败则回退至 Aptos，因此要瓦解该行动需要同时在三条链上采取行动。",
+      "latest_summary_en": "Chainalysis reported that blockchain dead drop attacks rose 420% over the past 12 months, with North Korea- and Iran-linked operators accounting for roughly two-thirds of newly observed activity by the second quarter of 2026. The North Korea-linked group UNC5342 uses Tron and Aptos as redundant routes pointing infected devices to malware instructions stored on BNB Smart Chain, while suspected Iranian actors embedded command-and-control routing data inside Bitcoin transactions sent to an address historically associated with Satoshi Nakamoto.\n\nThis marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.\n\nChainalysis said malicious blockchain writes rose from 2.06 per day to 11.1 per day after the emergence of high-capacity open-weight Chinese AI models, a 440% increase in under a year, though the firm cautioned its measurement does not identify a single model or prove that AI alone caused the rise. The malware queries Tron first and falls back to Aptos if that route fails, and disrupting the operation would require action across all three chains at once.",
+      "discussion_zh": "这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。",
+      "discussion_en": "This marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.",
+      "market_impact_zh": "其直接传导渠道是安全与合规，而非任何代币的供给：被点名承载恶意写入的网络是 Tron、BNB Smart Chain、Aptos 和比特币，因此这些链上的交易所、托管方和 RPC 服务商将面临更高的监控与筛查成本，因为对钱包、合约和 RPC 流量的监测正成为防御必需。由于彻底封锁某条网络也会切断同一基础设施上的合法钱包与 DeFi 服务，市场层面的影响更可能是链级风险溢价与合规开支持续上升，而非某一次可明确识别的价格事件。",
+      "market_impact_en": "The immediate channel is security and compliance rather than any token's supply: Tron, BNB Smart Chain, Aptos and Bitcoin are the networks actually named as carrying malicious writes, so exchanges, custodians and RPC providers on those chains face higher monitoring and screening costs as wallet, contract and RPC-traffic surveillance becomes a defensive necessity. Because fully blocking a network would also cut off legitimate wallets and DeFi services on the same infrastructure, the likely market effect is a gradual rise in chain-level risk premia and compliance overhead rather than a single identifiable price event.",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Cointelegraph",
+          "official": false
+        },
+        {
+          "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand",
+          "title": "The Defiant",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis",
+          "title": "North Korea, Iran Linked to Surge in Blockchain Malware Activity"
+        },
+        {
+          "url": "https://cryptobriefing.com/chainalysis-onchain-malware-state-hackers-surge/",
+          "title": "Chainalysis reports 420% surge in onchain malware linked to state hackers"
+        },
+        {
+          "url": "https://therecord.media/north-korean-hackers-using-blockchain-hiding-malware?trk=public_post_comment-text",
+          "title": "North Korean hackers seen using blockchain to hide crypto-stealing..."
+        },
+        {
+          "url": "https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/",
+          "title": "EtherHiding & Blockchain Dead Drops: On-Chain... - Chainalysis"
+        },
+        {
+          "url": "https://www.cryptopolitan.com/north-korea-iran-malware-on-blockchains/",
+          "title": "North Korea and Iran drive 5.2x jump in malware hidden on public blockchains - Cryptopolitan"
+        }
+      ]
+    },
+    {
+      "thread_id": "evt_5b421e16299d26d3",
+      "event_id": "evt_5b421e16299d26d3",
+      "latest_date": "2026-09-19",
+      "latest_at": "2026-09-19T06:43:52.557461+08:00",
+      "first_date": "2026-09-04",
+      "days": 2,
+      "entries": 2,
+      "updates_count": 2,
+      "sources_count": 3,
+      "category": "crypto",
+      "status": "monitoring",
+      "status_zh": "持续观察",
+      "status_en": "Monitoring",
+      "event_type": "regulatory_action",
+      "event_type_zh": "监管行动",
+      "event_type_en": "Regulatory action",
+      "title_zh": "Coinbase (COIN) Stock Jumps 10% After Filing for US Single-Stock Perps - The Crypto Times",
+      "title_en": "Coinbase (COIN) Stock Jumps 10% After Filing for US Single-Stock Perps - The Crypto Times",
+      "summary_zh": "Coinbase Derivatives 已向 CFTC 提交个股永续合约申请，标的包括苹果、特斯拉、英伟达等；产品尚未获批或上线。此前 Coinbase 股价因该申请消息上涨 10%。",
+      "summary_en": "Coinbase Derivatives has filed with the CFTC for single-stock perpetual futures on Apple, Tesla, Nvidia, and others; products are not yet approved or live. Earlier, Coinbase stock jumped 10% on the filing news.",
+      "latest_update_zh": "Coinbase Derivatives 已向 CFTC 提交申请，拟上线苹果、特斯拉、英伟达等个股的现金结算永续合约，将境内永续合约布局从股指扩展至单一证券。产品尚未获批或上线。",
+      "latest_update_en": "Coinbase Derivatives has filed with the CFTC for cash-settled perpetual futures on individual stocks including Apple, Tesla, and Nvidia, extending its domestic perpetual futures push from equity indexes to single securities. Products are not yet approved or live.",
+      "background_zh": "永续合约是一种没有到期日、追踪标的资产的衍生品，最早由经济学家罗伯特·席勒于 1992 年提出，后来在加密交易所中广泛流行；其功能与差价合约类似，但通过资金费率机制使价格贴近标的。在美国，期货市场由商品期货交易委员会（CFTC）监管，而 Coinbase Derivatives 正是受 CFTC 监管的交易所，因此上线新合约必须先提交申请。离岸平台多年来已提供股票挂钩的永续产品，但美国挂牌的个股永续合约此前并非标准的受监管产品。",
+      "background_en": "Perpetual futures are derivative contracts that track an underlying asset without an expiration date, first proposed by economist Robert Shiller in 1992 and later popularized by crypto exchanges; they function similarly to contracts for difference but use a funding-rate mechanism to keep the price anchored. In the U.S., futures markets are regulated by the CFTC, and Coinbase Derivatives operates as a CFTC-regulated exchange, which is why the company must file before listing new contracts. Offshore venues have offered equity-linked perpetuals for years, but U.S.-listed single-stock perpetuals have not been a standard regulated product.",
+      "latest_summary_zh": "据《华尔街日报》报道，Coinbase Derivatives 已向美国商品期货交易委员会（CFTC）提交申请，拟上线与苹果、特斯拉、英伟达等美国上市个股及 ETF 挂钩的现金结算永续合约。此次申请将该交易所的境内永续合约布局从股票指数扩展到单一证券。\n\n若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。\n\n拟议合约采用现金结算且为永续结构，即没有到期日，而是通过定期资金费率机制来锚定标的股价。该申请建立在 Coinbase 现有的衍生产品线之上——其平台已提供加密期货、Mag7+Crypto 指数产品以及 7×24 小时的比特币和以太坊期货交易——但相关个股产品目前尚未获批，也未正式上线。",
+      "latest_summary_en": "Coinbase Derivatives has filed with the U.S. Commodity Futures Trading Commission (CFTC) to list cash-settled perpetual futures tied to individual U.S.-listed stocks and ETFs, including Apple, Tesla and Nvidia, according to a Wall Street Journal report. The filing extends Coinbase's domestic perpetual-futures push from equity indexes to single securities.\n\nIf approved, this would mark one of the first U.S.-regulated venues offering perpetual futures on individual equities, blurring the line between crypto-native derivatives and traditional stock trading. It signals that major crypto exchanges are competing for equity-linked flow, which could reshape market structure and pull new institutional and retail participants onto 24/7 venues.\n\nThe proposed contracts are cash-settled and perpetual, meaning they carry no expiry date and instead rely on periodic funding payments to track the underlying stock price. The filing follows Coinbase's existing broad derivatives lineup, which already includes crypto futures, a Mag7+Crypto index product, and 24/7 bitcoin and ether futures trading, and the products are not yet approved or live.",
+      "discussion_zh": "若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。",
+      "discussion_en": "If approved, this would mark one of the first U.S.-regulated venues offering perpetual futures on individual equities, blurring the line between crypto-native derivatives and traditional stock trading. It signals that major crypto exchanges are competing for equity-linked flow, which could reshape market structure and pull new institutional and retail participants onto 24/7 venues.",
+      "market_impact_zh": "该申请指向一条潜在通道：股票挂钩的需求可能被引导至加密原生、7×24 小时交易的场所，从而影响 Coinbase 的衍生品收入结构，并对已经融合股票与加密交易的币安、Crypto.com 等竞争者形成压力。若获批，它还将为在岸个股永续合约树立监管先例，可能改变流动性与对冲活动在传统交易所与加密平台之间的分布。",
+      "market_impact_en": "The filing points to a potential channel through which equity-linked demand could be routed onto crypto-native, 24/7 trading venues, exposing Coinbase's derivatives revenue mix and pressuring competitors such as Binance and Crypto.com that already blend stock and crypto trading. Approval would also set a regulatory precedent for onshore single-stock perpetuals, which could affect how liquidity and hedging activity are distributed between traditional exchanges and crypto platforms.",
+      "score": 7.5,
+      "source_links": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZDhOdXcyalMwcE1XMjRkYkc3UUN1QjRwR1lCUXotSE1zUWJnc3ZqdXNVdEZFZFpacFJRUGpkTUJiZklHUkEzaS0zZHprVGxTM2FNc3lHNk4tYUdMdmhuQ2p6NnppR3NGVURhbDVkNmh0c1dZTHpyb3l2elZrMmFMY1BYcmhLc3h4aHlyWERMd3NOb1FsV25TNDNVUmhiRU9BSlpFeVFn?oc=5",
+          "title": "The Crypto Times",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcThiZ3RpOXR0RHgyV2JRcHFtV1pKaWFWRkVtUGp4TTlJNE5Gb3BUQmphVnpKVjk1OUFpNldfV1pEOHZKam5VekhRaFJBaTU0RGtPRDJacm5GMjluUWp1endMYkd3eWFCaGdSTmlOYlZMUWRpZFA1UTZSS2VJOHVLZF94VEVhbHVMSzYxOW5zS2E2REJfQVJoNWFzb2lpcTdnMEwzWEhHbHZBZzlzLXc?oc=5",
+          "title": "Coin Gabbar",
+          "official": false
+        },
+        {
+          "url": "https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia",
+          "title": "Decrypt",
+          "official": false
+        }
+      ],
+      "reference_links": [
+        {
+          "url": "https://www.cryptotimes.io/2026/09/18/coinbase-files-to-expand-u-s-derivatives-into-single-stock-perpetuals/",
+          "title": "Coinbase Files to Expand U.S. Derivatives Into Single-Stock Perpetuals"
+        },
+        {
+          "url": "https://thedefiant.io/converge/tradfi-and-fintech/coinbase-seeks-cftc-approval-for-us-single-stock-perpetual-futures",
+          "title": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures | The Defiant"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Perpetual_futures",
+          "title": "Perpetual futures - Wikipedia"
+        }
+      ]
+    },
+    {
       "thread_id": "evt_ddffb643d96920ea",
       "event_id": "evt_ddffb643d96920ea",
       "latest_date": "2026-09-19",
@@ -7188,65 +7451,6 @@
         }
       ],
       "reference_links": []
-    },
-    {
-      "thread_id": "evt_6a38061ef4d7656a",
-      "event_id": "evt_6a38061ef4d7656a",
-      "latest_date": "2026-09-18",
-      "latest_at": "2026-09-18T09:25:39.548268+08:00",
-      "first_date": "2026-09-18",
-      "days": 1,
-      "entries": 2,
-      "updates_count": 2,
-      "sources_count": 2,
-      "category": "crypto",
-      "status": "developing",
-      "status_zh": "进展中",
-      "status_en": "Developing",
-      "event_type": "security_incident",
-      "event_type_zh": "安全事件",
-      "event_type_en": "Security incident",
-      "title_zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
-      "title_en": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
-      "summary_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
-      "summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain.",
-      "latest_update_zh": "Chainalysis 将此前未归因的活动归因于朝鲜关联的 UNC5342 组织，并指出国家支持的黑客约占新增链上恶意软件活动的三分之二。",
-      "latest_update_en": "Chainalysis attributed previously unattributed activity to North Korea-linked group UNC5342 and said state-linked hackers account for roughly two-thirds of new onchain malware activity.",
-      "background_zh": "链上恶意软件指的是一种技术手法：攻击者把指令、服务器地址或载荷存放在公共区块链上，使被感染的设备无需依赖可被下线的域名即可获取这些内容。最知名的变体是 EtherHiding，朝鲜黑客曾在 2025 年利用它在以太坊和 BNB Smart Chain 的智能合约中植入窃取加密货币的代码。UNC5342 是一个与朝鲜相关的威胁组织，也被称为 Famous Chollima 和 DeceptiveDevelopment。Chainalysis 是一家区块链分析公司，为交易所、政府和金融机构追踪非法链上活动。",
-      "background_en": "Onchain malware refers to a technique in which attackers store instructions, server addresses or payloads on a public blockchain so that compromised devices can retrieve them without relying on a domain that can be taken offline. The best-known variant is EtherHiding, which North Korean hackers used in 2025 to place crypto-stealing code inside smart contracts on Ethereum and BNB Smart Chain. UNC5342 is a North Korea-linked threat group also tracked as Famous Chollima and DeceptiveDevelopment. Chainalysis is a blockchain analytics firm that tracks illicit onchain activity for exchanges, governments and financial institutions.",
-      "latest_summary_zh": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
-      "latest_summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
-      "discussion_zh": "其传导路径主要不是供给或流动性冲击，而是合规与声誉层面：Tron、BNB Smart Chain 和 Aptos 被点名为易被滥用的托管场所，这可能招致交易所更严格的监控、反洗钱审查和监管关注，从而影响 TRX、BNB 和 APT 的市场情绪。Tron 的角色尤为关键，因为其承载了相当大比例的稳定币转账量，若围绕该网络的筛查收紧，可能影响资金在交易所之间的进出与流动方式。",
-      "discussion_en": "The transmission path runs mainly through compliance and reputation rather than any direct supply or liquidity shock: Tron, BNB Smart Chain and Aptos are named as abuse-prone hosting venues, which can invite additional exchange monitoring, AML scrutiny and regulatory attention that touches TRX, BNB and APT sentiment. Tron's role also matters because it carries a large share of stablecoin transfer volume, so any tightening of screening around that network can affect how liquidity moves on and off exchanges.",
-      "market_impact_zh": "其传导路径主要不是供给或流动性冲击，而是合规与声誉层面：Tron、BNB Smart Chain 和 Aptos 被点名为易被滥用的托管场所，这可能招致交易所更严格的监控、反洗钱审查和监管关注，从而影响 TRX、BNB 和 APT 的市场情绪。Tron 的角色尤为关键，因为其承载了相当大比例的稳定币转账量，若围绕该网络的筛查收紧，可能影响资金在交易所之间的进出与流动方式。",
-      "market_impact_en": "The transmission path runs mainly through compliance and reputation rather than any direct supply or liquidity shock: Tron, BNB Smart Chain and Aptos are named as abuse-prone hosting venues, which can invite additional exchange monitoring, AML scrutiny and regulatory attention that touches TRX, BNB and APT sentiment. Tron's role also matters because it carries a large share of stablecoin transfer volume, so any tightening of screening around that network can affect how liquidity moves on and off exchanges.",
-      "score": 7.5,
-      "source_links": [
-        {
-          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "title": "Cointelegraph",
-          "official": false
-        },
-        {
-          "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "title": "Cointelegraph",
-          "official": false
-        }
-      ],
-      "reference_links": [
-        {
-          "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis",
-          "title": "North Korea, Iran Linked to Surge in Blockchain Malware Activity"
-        },
-        {
-          "url": "https://cryptobriefing.com/chainalysis-onchain-malware-state-hackers-surge/",
-          "title": "Chainalysis reports 420% surge in onchain malware linked to state hackers"
-        },
-        {
-          "url": "https://therecord.media/north-korean-hackers-using-blockchain-hiding-malware?trk=public_post_comment-text",
-          "title": "North Korean hackers seen using blockchain to hide crypto-stealing..."
-        }
-      ]
     },
     {
       "thread_id": "evt_5c76c1bcd54d6566",

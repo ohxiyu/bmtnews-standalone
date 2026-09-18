@@ -4,7 +4,117 @@
   <link href="https://bmt.news/feeds/crypto-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-en.xml</id>
-  <updated>2026-09-18T00:00:00Z</updated>
+  <updated>2026-09-19T00:00:00Z</updated>
+  <entry>
+    <title>Haruko Cyberattack Exposes API Keys and Trading Data of 15 Crypto Clients</title>
+    <link href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPTV9qaG5DbW9HU2Z1M0JtZXBkMjJTc29KZ0tsSUlTNUoxd216QzhGN3JVY3I1c245eGZ3REV3NDJheC1fRUsxQzF4RHRWOVdHbm95dTg4UTlKZnYzR1JLekN1dzJtakZxX19DZ2ZRa3F0X0Q2Y25zSjZnQ0M0SV9zdHRZMW1PTWxpU1dfZmdPUVVYU3NZZUpWamFtVkpHQXVudTBoVWlQSXBuVTRLWXF2V2hDRjRGUUd3Wmw4WUdvWllZanp6ZF9j?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-19/#google_news:article:9ab2e1934142e2ae</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Haruko, a UK-based provider of institutional crypto portfolio management and trade-capture technology, was hit by a cyberattack this week that affected 15 of its clients, exposing their read-only exchange API credentials and trading data. A small amount of client funds was also stolen, with some of Haruko&#x27;s smaller hedge-fund clients reported to have lost assets.
+
+The incident shows how a single middle-layer software vendor can become a systemic access point for dozens of institutional trading desks, since compromised API credentials and trading data create follow-on risk for the affected funds and their counterparties. It is likely to accelerate scrutiny of third-party vendor security and credential hygiene across institutional crypto trading, a segment that has grown quickly alongside spot ETF and prime-brokerage activity.
+
+According to CoinDesk, the exposed exchange API details were read-only, which normally restricts an attacker to viewing balances and trade history rather than initiating transfers or orders — yet reports still describe a small amount of client funds being stolen. Haruko&#x27;s platform maintains fully managed integrations into hundreds of trading venues, so a credential compromise at this layer can touch many exchange accounts at once.</summary>
+  </entry>
+  <entry>
+    <title>Radix Engine bug drains $1.3M and halts chain for 10 days</title>
+    <link href="https://cryptoslate.com/3-year-old-bug-triggers-1-3-million-drain-and-forces-10-day-blockchain-halt/"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:cryptoslate.com_feed_:7226e0f4ab5716b3</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>The Radix Foundation disclosed on Sept. 17 that a flaw introduced during a June 2023 refactor of the Radix Engine — the layer that executes transactions and enforces asset ownership — was exploited on Aug. 31, allowing an attacker to drain roughly $1.26 million in bridged assets across 26 transactions. Validators then deliberately took enough stake offline to halt consensus for more than 10 days, with user transactions resuming Sept. 11 after a protocol fix added checks preventing a restricted vault reference from being used for an ordinary withdrawal.
+
+This is a material protocol-level security failure: the flaw sat in the execution layer for more than three years, survived a 2024 external audit by Zellic, and according to investigators could have been used against any vault on the network, meaning the $1.3 million loss understated the real exposure. It also highlights how a routine maintenance change can create systemic risk and force a network to sacrifice liveness — a decision that carries its own costs for users and applications.
+
+The attacker withdrew about 458,915 USDC, 72,420 USDT, 61.08 ETH, 6.35 wrapped Bitcoin, 536.16 SOL and 32.91 BNB, sending the assets through Hyperlane to Ethereum, BNB Chain and Solana before selling them for ETH; no private keys were compromised and Hyperlane itself operated as designed. The bug changed how the engine handled vault references, allowing a transaction to point at another user&#x27;s vault and call ordinary withdrawal functions without enforcing the ownership boundary, and secondary losses occurred when distorted pool prices let another account extract millions of XRD.</summary>
+  </entry>
+  <entry>
+    <title>Coinbase Files with CFTC for Single-Stock Perps on Apple, Tesla, Nvidia</title>
+    <link href="https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:decrypt.co_feed:3a170597d83e287a</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Coinbase Derivatives has filed with the U.S. Commodity Futures Trading Commission (CFTC) to list cash-settled perpetual futures tied to individual U.S.-listed stocks and ETFs, including Apple, Tesla and Nvidia, according to a Wall Street Journal report. The filing extends Coinbase&#x27;s domestic perpetual-futures push from equity indexes to single securities.
+
+If approved, this would mark one of the first U.S.-regulated venues offering perpetual futures on individual equities, blurring the line between crypto-native derivatives and traditional stock trading. It signals that major crypto exchanges are competing for equity-linked flow, which could reshape market structure and pull new institutional and retail participants onto 24/7 venues.
+
+The proposed contracts are cash-settled and perpetual, meaning they carry no expiry date and instead rely on periodic funding payments to track the underlying stock price. The filing follows Coinbase&#x27;s existing broad derivatives lineup, which already includes crypto futures, a Mag7+Crypto index product, and 24/7 bitcoin and ether futures trading, and the products are not yet approved or live.</summary>
+  </entry>
+  <entry>
+    <title>Binance Launches 24/7 FX Perpetual Futures With Weekend EWMA Pricing</title>
+    <link href="https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:cointelegraph.com_rss:c35997bd18cefb5a</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Binance announced it will launch 24/7 foreign exchange perpetual futures, beginning with a USDBRLUSDT contract that goes live on Sept. 21, settles in USDT and offers up to 100x leverage. The contract uses a dual-mode pricing system: a weighted index from third-party data providers during regular FX trading hours, and an orderbook-based exponentially weighted moving average (EWMA) on weekends and public holidays.
+
+The launch pushes the world&#x27;s largest crypto exchange into foreign exchange, the largest financial market by turnover, which the Bank for International Settlements pegged at $9.6 trillion in average daily OTC volume in April 2025. It follows similar 24/7 FX perpetual products from Bybit and Kraken, signaling that crypto derivatives venues are competing to capture FX exposure and off-hours price discovery that traditional FX markets cannot serve.
+
+The weekend mechanism deliberately avoids external price feeds and instead derives prices from Binance&#x27;s own orderbook via an EWMA, a design already applied to Binance&#x27;s commodity-based TradFi perpetual contracts, which means off-hours margin requirements and liquidation levels can be driven by thinner internal liquidity rather than a reference FX rate. The contract settles in USDT, has a tick size of 0.0001 and a minimum notional value of 5 USDT according to Binance&#x27;s futures announcement.</summary>
+  </entry>
+  <entry>
+    <title>Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior Tranche Wiped Out</title>
+    <link href="https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:thedefiant.io_api_feed:76ea787000d213a7</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Neutrl has opened NUSD redemptions at roughly 51 cents on the dollar, while Strata scheduled a 48-hour valuation update that writes its junior tranche token jrNUSD to zero and settles senior tranche withdrawals in sNUSD at revised share values. Strata&#x27;s disclosure states the problem was not a smart contract exploit, hack, or code vulnerability.
+
+This is a material loss event for depositors in a structured DeFi product, showing that a junior tranche designed as a first-loss buffer can be insufficient to protect senior capital when losses are large. It highlights the risk that tranching structures layered on top of a single yield strategy can transmit losses straight through to retail depositors in stablecoin-like tokens.
+
+Strata&#x27;s srNUSD and jrNUSD tranches are exposed to the sNUSD held by the strategy contract, and under Strata&#x27;s loss allocation jrNUSD absorbs losses before srNUSD; at a 0.51 NUSD reference value, the loss exceeds the junior protection, which is why senior holders are also settling at reduced values. jrNUSD and srNUSD are permissionless tokens that trade on DEXs, and users must manually claim NUSD/sNUSD after redeeming.</summary>
+  </entry>
+  <entry>
+    <title>Chainalysis: Blockchain Dead Drop Attacks Surge 420% as State Hackers Expand</title>
+    <link href="https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:thedefiant.io_api_feed:99aa27d52de20db9</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Chainalysis reported that blockchain dead drop attacks rose 420% over the past 12 months, with North Korea- and Iran-linked operators accounting for roughly two-thirds of newly observed activity by the second quarter of 2026. The North Korea-linked group UNC5342 uses Tron and Aptos as redundant routes pointing infected devices to malware instructions stored on BNB Smart Chain, while suspected Iranian actors embedded command-and-control routing data inside Bitcoin transactions sent to an address historically associated with Satoshi Nakamoto.
+
+This marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.
+
+Chainalysis said malicious blockchain writes rose from 2.06 per day to 11.1 per day after the emergence of high-capacity open-weight Chinese AI models, a 440% increase in under a year, though the firm cautioned its measurement does not identify a single model or prove that AI alone caused the rise. The malware queries Tron first and falls back to Aptos if that route fails, and disrupting the operation would require action across all three chains at once.</summary>
+  </entry>
+  <entry>
+    <title>Bitcoin Surges Past $80K as Dovish Fed Dot Plot Fuels $445M Short Squeeze</title>
+    <link href="https://decrypt.co/378630/bitcoin-blasts-short-squeeze-crypto-liquidations"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:decrypt.co_feed:104a188f7873de3f</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Bitcoin jumped 5.88% in 24 hours to $80,846, opening at $76,355 and hitting an intraday high of $80,857, after the Federal Reserve raised rates by 25 basis points while its dot plot projected a median policy rate of just 4.1% through the end of 2027. The move liquidated more than $445 million in crypto short positions, over $230 million of which were Bitcoin shorts.
+
+The episode shows how directly crypto derivatives now price in Federal Reserve policy signals: a single dovish projection triggered a cascading short squeeze that erased the panic selling that followed the Clarity Act&#x27;s failed Senate vote days earlier. It highlights that leveraged positioning, not spot demand alone, is driving large single-day moves in Bitcoin, which remains nearly 20% below its previous all-time high.
+
+Technical readings back the move but warn it is stretched: the ADX sits at 40.6, well above the 25 trend-confirmation threshold, with DI+ above DI-, and the 50-day EMA has crossed above the 200-day EMA, forming a golden cross that began last Saturday. RSI is at 63.3 — bullish but climbing toward the 70 overbought zone — while the Squeeze Momentum Indicator has stayed on for 11 consecutive bars, with an 8.06% contraction reading suggesting volatility may still be compressed and a larger release could lie ahead.</summary>
+  </entry>
+  <entry>
+    <title>Grayscale&#x27;s Zcash ETF Plans 3-for-1 Split After $233M Inflow Surge</title>
+    <link href="https://www.theblock.co/news/markets/2026-09-18-grayscales-zcash-etf-plans-3-for-1-split-233-million-inflow-surge-415520"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:www.theblock.co_rss.xml:875ce9e2edaa8f9b</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Grayscale&#x27;s Zcash ETF (ZCSH) is planning a 3-for-1 share split after a $233 million inflow surge pushed the fund&#x27;s assets to nearly $890 million. The move follows a sharp rally in ZEC that has also driven mining competition on the Zcash network to record highs.
+
+A share split lowers the per-share price of ZCSH, making the ETF easier to buy in smaller amounts and potentially broadening its retail investor base. It also signals that institutional-style, exchange-traded exposure to a privacy-focused asset has grown large enough to warrant routine market-structure housekeeping, a notable step for a category long treated as niche by regulated venues.
+
+A 3-for-1 split triples the number of shares outstanding while dividing the price per share by three, leaving the fund&#x27;s total assets and each holder&#x27;s overall value unchanged. ZCSH is structured as an exchange-traded product that is not registered under the Investment Company Act of 1940, so it does not carry the same regulatory protections as 1940 Act-registered ETFs and mutual funds.</summary>
+  </entry>
+  <entry>
+    <title>Hyperliquid launches native lending on HyperCore as HYPE tops $90</title>
+    <link href="https://cryptoslate.com/hyperliquid-opens-native-lending-as-hype-hits-new-ath-above-90/"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:cryptoslate.com_feed_:5ef1d6ed055d8cdd</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>On Sept. 18, Hyperliquid rolled out native manual borrowing, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT directly through HyperCore. Roughly $269 million was borrowed on the first day, while HYPE rallied about 15% on the week to an intraday high near $91.06, surpassing its prior record of about $89.60.
+
+The launch extends Hyperliquid from a derivatives and spot exchange into credit, collateral and yield generation, letting users move between trading and borrowing without leaving the platform. Immediate day-one scale of $269 million suggests the lending primitive can become a meaningful source of stablecoin liquidity and HYPE demand within a single ecosystem rather than a standalone side product.
+
+HYPE carries a 65% loan-to-value ratio versus 50% for Bitcoin, with liquidation thresholds of 82.5% and 75% respectively. Borrowers can tap more than $400 million of already-supplied liquidity because the same pools support portfolio-margin activity; stablecoin suppliers earn variable interest based on utilization, and portfolio-margin users can earn yield on idle stablecoin balances.</summary>
+  </entry>
+  <entry>
+    <title>S&amp;P Global to Acquire Smart-Contract Security Firm OpenZeppelin</title>
+    <link href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1ULWRydHIzTlhTQjBLZEdHTjY4NzhvN0tKN014RGNJUm9KUWNLTm9aVVJyZlIwaWhWRHBnenM1Z0diR1pnT2FUelBZM0MzU2lUUWZ0SW1FTEMxeFZHTHo3amZvajkyQlFZX25Fbk94S2JfT2dNU0dRSGlIMjNzdjA?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-19/#google_news:article:67eef9254a371e97</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>On Sept. 17, S&amp;P Global announced an agreement to acquire smart-contract security and development-tooling company OpenZeppelin, with financial terms undisclosed and the deal still subject to closing conditions. OpenZeppelin would keep its name, its leadership under CEO Demian Brener, and its open-source code, operating as a separate business unit reporting to Yann Le Pallec, president of S&amp;P Global Ratings.
+
+OpenZeppelin Contracts is the most widely used smart-contract library in the industry, so a major financial-data and ratings group absorbing it marks one of the clearest examples yet of traditional finance buying into core crypto infrastructure rather than only trading or custody. It hands S&amp;P direct exposure to the security layer beneath stablecoins and tokenized assets, at a time when S&amp;P is broadening its digital-asset push after leading an investment in crypto-data provider Kaiko.
+
+OpenZeppelin says more than $37 trillion in value has been transferred through its Contracts software since 2015, and the current repository uses the permissive MIT License, with the company stating that released versions will remain open source permanently and cannot be withdrawn. The announcement makes continuity promises about audits, engineering work, ecosystem programs and open-source code, but its existing terms of service still permit changes to paid or hosted plans including pricing, features, quotas and usage limits, with protections and notice depending on the change type.</summary>
+  </entry>
   <entry>
     <title>S&amp;P Global to Acquire Smart Contract Security Firm OpenZeppelin</title>
     <link href="https://decrypt.co/378505/sp-global-acquire-crypto-openzeppelin"/>
@@ -334,115 +444,5 @@ Of the 700 million TRX moved out of the &quot;HTX-Cold 6&quot; address in May, P
 The structure places prospective customers inside the very infrastructure they may later depend on, merging the roles of network operator, investor and end user in a single cohort of Wall Street firms. It marks a substantial step in institutional adoption of stablecoin-native settlement infrastructure, while concentrating consensus power among a small set of vetted institutions whose individual voting weights remain undisclosed.
 
 Arc is built around deterministic finality: its Malachite consensus engine uses a permissioned Proof-of-Authority model in which a rotating validator proposes a block and more than two-thirds of the validator set must pre-commit to the same block before it is finalized, after which Arc says transactions cannot be reorganized or reversed at the consensus layer. Launch configuration is expected to use roughly 20 SOC 2-certified validators across multiple regions, though individual voting power has not been published, and Arc&#x27;s disclosures state that neither Arc Network Services LLC nor its permissioned validators is responsible for the content, legality or functionality of third-party applications.</summary>
-  </entry>
-  <entry>
-    <title>Base Splits From OP Stack With Independent, In-House Tech Stack</title>
-    <link href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOUGpnNDc5dHV5dmgzWUJ2TGUzc2VRVEdMSkU3TG5JYkdTTUZlcGZuMzhsYmdNeXV6V25kcDhZaE1fX005ZUpOMzhEQ1JBQ1Jhb0NCeW1XVXNnTUQydHc1Rk8tblhTZE5jLWt4SjdRNnFfT3pPYzJOcG5ZYmVMcEFLaHVxNGVkdlVHNzhza094VUI4c1VpNmlZTkNmSzA3Q3luV3Zsc0dxSjdBWEVFTkNVWGV2YTc?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-15/#google_news:article:a7cf3cf00e3be2c3</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Coinbase-incubated Ethereum Layer 2 network Base announced it is consolidating its codebase away from Optimism&#x27;s OP Stack into a Base-operated repository, ending its reliance on external dependencies that had powered the chain since launch. The move follows Base&#x27;s Azul mainnet upgrade, which the network described as its first independent protocol upgrade and a step toward Stage 2 decentralization.
-
-Base is one of the largest and most used Layer 2 networks, and its departure from the shared OP Stack codebase weakens the assumption that the Superchain&#x27;s member chains will always upgrade in lockstep. It gives Base unilateral control over its roadmap and release cadence, while raising questions about what the Optimism Collective&#x27;s shared infrastructure and governance model still deliver to partners.
-
-By controlling its own repository, Base&#x27;s engineers no longer have to wait for an external collective of chains to agree on coordinated hard forks, which reporting suggests lets them ship protocol performance upgrades and custom patches roughly twice as fast. Base remains an Ethereum Layer 2 settling to Ethereum, and the Azul upgrade introduced a multiproof system alongside a new client stack.</summary>
-  </entry>
-  <entry>
-    <title>Robinhood to Add Share Redemptions and Voting Rights to Stock Tokens</title>
-    <link href="https://www.coindesk.com/business/2026/09/14/robinhood-plans-share-redemptions-voting-rights-for-stock-tokens-after-criticism"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:www.coindesk.com_arc_outboundfeeds_rss_:327bc28bb5acc3d4</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Robinhood CEO Vlad Tenev and crypto head Johann Kerbrat said the company plans to add one-for-one share redemptions and voting rights to its tokenized stock products, a direct response to criticism that the tokens offered limited ownership features. Tenev framed the features as forthcoming rather than live, writing that &quot;step one is to scale adoption of Stock Tokens&quot; with redemptions for shares 1:1 and voting for eligible holders on the roadmap.
-
-Tokenized equities have generally delivered only economic exposure rather than actual share ownership, so adding redemption and voting rights would narrow the gap between a stock token and a conventional brokerage position. If Robinhood ships these features, it raises the market-structure bar for rival tokenized-equity venues such as Kraken&#x27;s xStocks and Gemini and could push the sector toward genuine on-chain ownership rather than price-tracking wrappers.
-
-The features are not live: Tenev explicitly said &quot;not yet, but they&#x27;re coming,&quot; and voting is described as applying to &quot;eligible&quot; Stock Token holders, implying eligibility criteria that have not yet been published. In standard tokenized-securities mechanics, redemption means a holder returns tokens to the issuer, the custodian unwinds the underlying position and value is returned, whereas a 1:1 share redemption would be an in-kind delivery of the actual equity.</summary>
-  </entry>
-  <entry>
-    <title>Aave V4 Umbrella Proposal Puts DAO First to Absorb Lending Bad Debt</title>
-    <link href="https://cryptoslate.com/aave-v4-proposal-would-put-dao-funds-first-in-line-to-absorb-lending-losses/"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:cryptoslate.com_feed_:5a5d2c52284e90da</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>On Sept. 11, TokenLogic proposed the Umbrella plan for Aave V4, under which Aave&#x27;s DAO would absorb lending losses first through &quot;deficit offsets&quot; of 33 ETH, 15,000 USDC and 15,000 USDT, with volunteer underwriters covering deficits beyond that layer. The initial bad-debt backstop would apply only to the Core Ethereum Hub&#x27;s WETH, USDC and USDT reserves, with underwriting targets of 800 ETH, 400,000 USDC and 400,000 USDT.
-
-The proposal materially reshapes Aave&#x27;s risk structure by shifting first-loss exposure onto the DAO treasury and creating a new yield-for-risk role for underwriters, which changes how lenders, AAVE holders and the protocol&#x27;s governance assess solvency risk. If adopted, it could become a template for how large DeFi lending markets socialize tail risk in V4&#x27;s Hub-and-Spoke architecture.
-
-Coverage is defined per reserve rather than per token, so USDC supplied to another Hub would not be protected, and capital allocated to one Hub asset cannot clear another reserve&#x27;s deficit; underwriters face a 20-day cooldown plus a two-day withdrawal window, and their staked assets remain exposed to slashing while waiting to exit. TokenLogic explicitly declines to recommend initial general-purpose coverage for USDG and frxUSD, citing uncertain incentive-sensitive lending activity and, for frxUSD, a concentrated issuer-linked supplier base.</summary>
-  </entry>
-  <entry>
-    <title>Balancer Proposes Shutdown, $9M Treasury Payout to BAL Holders</title>
-    <link href="https://thedefiant.io/news/defi/balancer-proposes-shutting-down-and-distributing-treasury-to-bal-holders"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:thedefiant.io_api_feed:9fef2de13228a21f</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Balancer has put forward a governance proposal to wind down the protocol, moving all pools into withdrawals-only mode on Oct. 30 and allowing BAL holders to burn their tokens for a pro-rata share of the roughly $9 million treasury starting May 2027.
-
-This is a full, formal wind-down of one of DeFi&#x27;s longest-running automated market makers, converting a governance token into a claim on residual treasury assets rather than a perpetual protocol token, and it sets a precedent for how dying DeFi protocols return capital to holders. It directly determines whether BAL holders can recover value and signals how the market prices governance tokens after a severe exploit.
-
-The redemption mechanism is voluntary: holders burn BAL in exchange for a pro-rata slice of the treasury, but the process does not begin until May 2027, and BAL&#x27;s market cap of just $7.7 million is far smaller than the roughly $9 million treasury, so the implied per-token recovery depends on the final claim structure. Pools become withdrawals-only on Oct. 30, meaning liquidity provision and swaps stop while users can still pull funds out.</summary>
-  </entry>
-  <entry>
-    <title>S&amp;P Global Leads Kaiko Series B to $110M for Tokenized Market Data</title>
-    <link href="https://cointelegraph.com/news/sp-global-leads-110m-kaiko-funding-round-as-wall-street-eyes-tokenized-markets?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:cointelegraph.com_rss:1010a4df9fd29631</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>S&amp;P Global led a strategic investment in Paris-based crypto market data provider Kaiko, extending its Series B round to $110 million, with additional participation from BNP Paribas, Bpifrance, Broadridge, Canton Foundation, Coinbase Ventures, DRW Venture Capital, Nasdaq Ventures, Royal Bank of Canada, Stellar and Susquehanna Private Equity Investments. Kaiko said the capital will fund its core digital asset market data business and its expansion into onchain financial infrastructure, including data services for tokenized Treasury bills, money market funds, equities and bonds.
-
-The presence of S&amp;P Global, BNP Paribas, Nasdaq Ventures, RBC and other traditional institutions marks a significant institutional endorsement of crypto market data infrastructure as a foundational layer for tokenized securities. The investors will also join a Kaiko-led industry working group on data and infrastructure for tokenized financial products, positioning the company at the intersection of traditional market data standards and onchain markets.
-
-Kaiko CEO Ambre Soubiran said the investors cover several key areas of digital asset markets—pricing, trading, capital allocation and blockchain development—and will serve as partners in building institutional onchain finance infrastructure. The raise follows a run of expansion moves: the acquisition of MiCA-regulated onchain infrastructure provider Cometh in May, US digital asset data provider Amberdata in June, and a February partnership with Bloomberg to bring licensed financial data onchain.</summary>
-  </entry>
-  <entry>
-    <title>Bybit Blocks Coordinated Fake Deposit Attacks, Averting $1B+ in DOT Losses</title>
-    <link href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZjk5MDlvMHJhTFpLakpJOHJOY21DemEyUVF1S2FJNUZpMDJ3OFhGMVM0VGJjeWEzVW9qR0FfbmwyUmRJMWNTQmx2THFzS1hoMzN0UDlmSFltUEtfN3pjZWZWbEp4NEhwWHY5Z1NXcnJwWWpQN1l4eUFEQ05VUmQtbUppZFRsUWRYVXVKRWR4YkJsbmlOR1ZkM3ZXU3BqaFZjWEtuYXhhakFCQ1hQcXN5SkNuTGhCVXZTdk5wR2t1cmZrZk4xTmFoYXdkZndYalllWjFhZ0dXbzVpZ2VpanNlUnVPRVI?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-15/#google_news:article:57b2baad3a7c0500</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Bybit said it detected and blocked a coordinated wave of fake deposit attacks that targeted multiple blockchain networks, preventing potential losses exceeding $1 billion worth of DOT. The exchange described the attempts as using increasingly sophisticated techniques aimed at exploiting weaknesses in its deposit scanning systems.
-
-Fake deposit attacks strike the verification layer of exchange infrastructure — the part users implicitly trust to credit their balances correctly — so a successful hit at this scale would have ranked among the largest losses in exchange history. The episode also signals that centralized exchange deposit pipelines remain a live attack surface that attackers can industrialize across chains and tokens.
-
-According to Bybit, the campaign spanned multiple blockchain networks and was coordinated rather than opportunistic, suggesting the attackers had mapped deposit-scanning logic in advance. The headline figure refers to the notional value of DOT that could have been fraudulently credited, not funds actually lost, since Bybit says the attempts were stopped before settlement.</summary>
-  </entry>
-  <entry>
-    <title>Binance Launches bStock Trading, Bringing Tokenized US Equities On-Exchange</title>
-    <link href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxONHp4QlBwaDV3YVdGcjFVV0hhMURZU25aa0tCcUNCaHIxdC1IaDlnQ1hxY2YyN3dxMk9ybmJPWi1QMlhNZmlnNllIMUNoTTV2NHBrS2llWVVqd2pKcFdkczNTbXNTdXlHTjRoVE9RNFY4aDBEcmRuOUlIdjBXZ3MwVjJSWHQ5dlJuR0I4?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-15/#google_news:article:3ff027f72bea67fa</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Binance has launched bStock trading, allowing eligible international users to buy and sell tokenized stock products directly on Binance Spot, 24/7, just like any other crypto asset. According to Binance&#x27;s own materials, the offering covers more than 7,000 US-listed stocks and ETFs.
-
-This pushes the world&#x27;s largest crypto exchange further into traditional equity market structure, putting it in direct competition with tokenized-equity venues such as Kraken&#x27;s xStocks and blurring the line between a crypto venue and a brokerage. It also widens access to US equity exposure for non-US users while raising fresh questions about how securities regulators will treat tokenized shares sold offshore.
-
-Each bStock is backed 1:1 by a real US share held at a regulated custodian, and the tokens trade continuously on Binance Spot rather than only during US market hours. Availability is limited to eligible international users, and the product spans both individual US-listed stocks and ETFs.</summary>
-  </entry>
-  <entry>
-    <title>Revolut customer data leak: attackers demand 10,000 BTC ransom</title>
-    <link href="https://protos.com/what-we-know-about-the-revolut-customer-data-leak/"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:protos.com_feed_:a4af7506ff1c0de4</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>UK-based fintech Revolut confirmed that attackers used a legitimate government-agency email domain to submit fraudulent requests for customer information, and those attackers are now publishing leaked identity documents while allegedly demanding 10,000 BTC (roughly $780 million) to stop further releases. Revolut has not confirmed the ransom demand and has not authenticated the material circulating online.
-
-The alleged 10,000 BTC demand is one of the largest crypto-denominated ransom figures ever attached to a fintech breach, and it shows how a simple email-impersonation trick can defeat the verification checks of a bank that holds both fiat and crypto assets. For the crypto sector, the possible exposure of transaction histories belonging to high-profile holders — including former Mt. Gox CEO Mark Karpelès — raises concern about targeted attacks on wealthy on-chain users.
-
-Potentially exposed data includes names, dates of birth, addresses, email addresses and phone numbers, plus copies of passports and driving licences, while customer notifications also referenced account statements, IBANs, withdrawal records and full transaction histories including BTC activity. Revolut says the number of affected customers was &quot;very limited&quot; and that its systems and customer funds were unaffected, while the 10,000 BTC figure remains unverified and some observers, including analyst Max Karpis, doubt the demand is genuine because such a payment would be traceable on-chain.</summary>
-  </entry>
-  <entry>
-    <title>BTCPay Server warns bots are probing exposed Lightning nodes for a restart-time flaw</title>
-    <link href="https://cryptoslate.com/malicious-bots-are-actively-probing-exposed-bitcoin-payment-servers-to-steal-master-administrative-keys/"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:81d3a48ce852b456</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>BTCPay Server has warned that malicious bots are actively and repeatedly calling an LND password-change endpoint on Lightning nodes that operators manually re-exposed to the internet, exploiting a brief window right after LND restarts while the wallet is still locked. Version 2.4.4, released on Sept. 7, closes the path by assigning unique random passwords to new LND wallets, rotating passwords on older installations that used the shared default credential, and blocking unauthenticated wallet setup and unlock calls through BTCPay&#x27;s standard reverse proxy.
-
-If the probing succeeds, an attacker could submit the old shared password before BTCPay&#x27;s internal unlocker, replace it, and request an administrator macaroon that grants control over the LND node and the merchant wallets it secures — the same end result as the August theft. Anyone running a self-hosted BTCPay Server with a custom reverse proxy or publicly exposed LND is directly exposed and must patch and re-audit their network rules.
-
-The targeted password-change method does not require a macaroon during the post-restart interval, which normally is the credential LND uses to authorize administrative actions, and older BTCPay LND wallets compounded the risk by relying on a shared default password. BTCPay&#x27;s proxy-side protections cannot secure infrastructure operators configure themselves, so custom reverse proxies remain vulnerable until public LND routes are removed; a route-control change merged Sept. 11 provides a supported remote-access option with LND and Core Lightning interfaces disabled by default. BTCPay has not reported any successful takeover via this newly observed activity and has not linked the bots to the August attackers.</summary>
-  </entry>
-  <entry>
-    <title>Cosmos Hub is back online, but Ledger users still cannot access ATOM</title>
-    <link href="https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:b1978328ff40f332</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>Cosmos Hub stalled at block 32,878,318 at 18:12 UTC on Sept. 8, and QuickNode reported its nodes back at the chain tip by 14:26 UTC on Sept. 9, with its own incident resolved at 00:24 UTC on Sept. 12. Ledger, however, opened a separate incident at 19:41 CEST on Sept. 8 and its status page still listed Cosmos (ATOM) as a major outage on Sept. 13, leaving users unable to view ATOM balances or transaction history, and unable to submit ATOM transactions through Ledger Wallet.
-
-This separates network-layer recovery from wallet-layer availability: the Cosmos Hub is producing blocks again, yet a widely used hardware wallet still cannot display balances or broadcast ATOM transactions for its users. It highlights how a single wallet vendor&#x27;s service path can effectively freeze a user&#x27;s ability to move funds even when the underlying chain is healthy, and it underscores the access and liquidity friction that hardware-wallet dependency introduces into self-custody.
-
-Ledger has not disclosed a cause or an estimated restoration time, and its last public update was posted at 16:12 CEST on Sept. 10. For users who need to move ATOM urgently, Ledger&#x27;s incident notice points to its alternative-methods guide, listing Cosmostation and Keplr as compatible third-party interfaces that connect to a Ledger device by opening the Cosmos app and choosing the hardware-wallet connection option — a route that keeps the device in the transaction flow, which is fundamentally different from importing the recovery phrase into a software wallet, something users should never do.</summary>
   </entry>
 </feed>

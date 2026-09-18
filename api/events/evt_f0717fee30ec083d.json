@@ -59,17 +59,29 @@
       "current_state_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
       "detailed_summary_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
       "detailed_summary_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 7.0,
+      "background_zh": "光子发射显微镜（PEM）可以探测晶体管开关时发出的微弱红外光，帮助研究者绘制出芯片上哪些区域正在工作；激光故障注入（LFI）则在这些位置发射聚焦激光脉冲，在特定时刻翻转比特或破坏逻辑。RP2350 是 Raspberry Pi 推出的双核 Arm Cortex-M33 微控制器，其“安全调试”模式是一条受控通道，允许调试器访问安全内存映射资源并检查运行于 Secure 状态的内核，正常情况下必须提供正确密钥才能解锁。Raspberry Pi 官方也发文回应，承认 Donjon 团队证明只要拥有成套专业显微镜与激光设备，就能重新启用该调试接口，而这正是公司此前试图使其无法做到的事情。",
+      "background_en": "Photon emission microscopy (PEM) detects the faint infrared light that transistors emit when they switch, letting researchers map which parts of a chip are active; laser fault injection (LFI) then fires a focused laser pulse at those spots to flip bits or corrupt logic at a chosen moment. The RP2350 is Raspberry Pi's dual Arm Cortex-M33 microcontroller, and its \"secure debug\" mode is a controlled channel that allows a debugger to access secure memory-mapped resources and inspect a core running in the Secure state — normally locked out unless the correct key is supplied. Raspberry Pi's own response post acknowledged that the Donjon team showed the debug interface could be re-enabled with a lab full of specialised equipment, something the company had been trying to make impossible.",
+      "community_discussion_zh": "评论者普遍赞赏该研究的技术细节，但对 25 万美元的设备成本提出异议，指出类似攻击在家庭实验室中花费不到 2.5 万美元即可复现——有人提到在复现此前的 MPC5566 攻击时，用 50 美元的 PicoEMP 替代了 5000 美元的 ChipShouter。也有人把 RP2350 的安全隔离区视为 YubiKey 的替代方案，并将这一成果描述为“开锁者与造锁者”之间不可避免的军备竞赛的一部分，还有评论直言该攻击“不太实用，但很漂亮”。",
+      "community_discussion_en": "Commenters broadly praised the level of technical detail while pushing back on the $250,000 price tag, noting that similar attacks have been replicated at home for under $25,000 — one cited replacing a $5,000 ChipShouter with a $50 PicoEMP when reproducing a prior MPC5566 attack. Others framed the RP2350's secure enclave as a Yubikey alternative and described the result as part of an inevitable arms race between safe-crackers and safe-builders, while some simply noted the attack is \"not super practical, but neat\".",
+      "market_impact_zh": "最直接的传导渠道是围绕硬件钱包供应链的情绪与信任：任何依赖 RP2350 安全隔离区的钱包或密钥存储产品，如今都面对一条已被公开记录的物理提取路径，这可能促使厂商在选型时更倾向专用安全元件。由于利用该攻击需要实际持有设备、对样品进行破坏性处理并配备约 25 万美元的实验室设备，现有设备用户的近期风险仍局限于定向的、需要接触实物的攻击场景，而非远程或大规模风险。",
+      "market_impact_en": "The most direct transmission channel is sentiment and trust around hardware-wallet supply chains: any wallet or key-storage product relying on the RP2350's secure enclave now carries a publicly documented physical-extraction path, which may shift vendor evaluations toward dedicated secure elements. Because exploitation demands physical possession, destructive sample preparation, and roughly $250,000 in lab gear, the near-term exposure for users of existing devices remains tied to targeted, in-person attack scenarios rather than remote or large-scale risk.",
+      "importance_score": 7.5,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49757050",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/",
+          "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350..."
+        },
+        {
+          "url": "https://www.raspberrypi.com/news/everything-is-better-with-lasers/",
+          "title": "Exploring Ledger Donjon's security research into our RP2350 chip."
+        },
+        {
+          "url": "https://tches.iacr.org/index.php/TCHES/article/view/13261",
+          "title": "Faulting an 8 nm FinFET technology SoC using Photon Emission..."
         }
       ],
       "confidence": 0.75,

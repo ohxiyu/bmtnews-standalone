@@ -56,14 +56,27 @@
       "current_state_en": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
       "detailed_summary_zh": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
       "detailed_summary_en": "Neutrl opened NUSD redemptions at 51 cents while Strata's junior tranche (jrNUSD) was written to zero and senior tranche withdrawals settle in sNUSD at revised share values.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Neutrl 发行的是 NUSD，一种被描述为由 OTC 套利、资金费率捕获等市场中性与策略支持、且完全抵押的合成美元。Strata 是一个风险分层协议，把对某一生息资产的敞口拆分为优先级份额（追求更稳定的收益）与次级份额（承担首损，以换取杠杆化上行收益及来自优先级一侧的风险溢价）。在 Neutrl 的 NUSD 市场中，存款人铸造 srNUSD 或 jrNUSD，而策略合约持有的是该底层头寸的生息形态 sNUSD。",
+      "background_en": "Neutrl issues NUSD, a synthetic dollar described as fully collateralized and backed by market-neutral strategies such as OTC arbitrage and funding rate capture. Strata is a risk-tranching protocol that splits exposure to an underlying yield-bearing asset into a senior tranche (which targets a steadier return) and a junior tranche (which takes first losses in exchange for leveraged upside and a risk premium paid by the senior side). In the Neutrl NUSD market, depositors mint srNUSD or jrNUSD, and the strategy contract holds sNUSD, the yield-bearing form of the underlying position.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径主要经由 Neutrl/Strata 的代币体系：0.51 美元的赎回价与归零的次级份额意味着 srNUSD、jrNUSD 及 sNUSD 持有人面临硬性减记，并可能外溢至这些代币的 DEX 流动性，以及将其作为抵押品或借贷资产的场所。随着交易者重新评估分层结构设计与次级缓冲的真实吸损能力，更广泛的稳定币与结构化收益市场情绪也可能受到影响。",
+      "market_impact_en": "The transmission runs mainly through the Neutrl/Strata token complex: a 51-cent redemption value and a zeroed junior tranche imply a hard haircut for srNUSD, jrNUSD and sNUSD holders, which can spill into DEX liquidity for those tokens and into lending or collateral markets that accepted them. Broader stablecoin and structured-yield sentiment may be affected as traders reassess tranching designs and the real loss-absorbing capacity of junior buffers.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout",
+          "title": "Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior..."
+        },
+        {
+          "url": "https://docs.strata.markets/markets/neutrl-nusd",
+          "title": "Neutrl NUSD | Strata"
+        },
+        {
+          "url": "https://defillama.com/research/spotlight/tranching-in-defi-can-the-junior-buffer-actually-survive-an-exploit",
+          "title": "Tranching in DeFi: Can the Junior Buffer actually survive an exploit?"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:thedefiant.io_api_feed:76ea787000d213a7"

@@ -49,17 +49,29 @@
       "current_state_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
       "detailed_summary_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
       "detailed_summary_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "libheif 是一个开源的 HEIF/AVIF 图像编解码库，这类容器格式被许多手机相机与浏览器使用；解码器中的堆溢出可以让攻击者覆盖内存，并有可能在解析该文件的进程中执行代码。ASLR（地址空间布局随机化）是操作系统的一项防御机制，通过随机化内存地址让攻击者无法可靠地跳转到注入的代码，绕过它通常是把“崩溃”变成“可靠代码执行”过程中最难的一步。SAML、OIDC 等单点登录（SSO）体系让一个身份提供方为众多下游服务授予访问权限，因此其中的配置错误可能生成看似合法的令牌，静默解锁 GitHub、Slack 或邮箱等已接入的应用。社区讨论指出，OpenAI 自有的帮助论坛 community.openai.com 正是账号接管路径的入口。",
+      "background_en": "libheif is an open-source library that decodes and encodes HEIF/AVIF images, the container formats used by many phone cameras and browsers; a heap overflow in such a decoder can let an attacker overwrite memory and potentially execute code in the process that parses the file. ASLR (address space layout randomization) is an operating-system defense that randomizes memory addresses so an attacker cannot reliably jump to injected code, and bypassing it is typically the hardest step in turning a crash into reliable code execution. Single sign-on (SSO) systems such as SAML and OIDC let one identity provider grant access to many downstream services, so a misconfiguration there can produce tokens that look legitimate and silently unlock connected apps like GitHub, Slack or email. Community reporting notes that OpenAI's own help forum, community.openai.com, was the entry point for the account-takeover angle.",
+      "community_discussion_zh": "评论者深入分析了 libheif 的补丁本身，指出根因在于图像叠加图层的边界检查，并认为 HEIF 的合成、旋转与缩略图等特性，对一个只需要上传照片的论坛而言制造了毫无必要的大攻击面。还有人关注自主智能体这一角度，提到大模型被置于针对一个伪装成 CTF 目标的 Discourse 实例的“目标循环”中，也有不少人惊讶于尽管入侵事件屡有发生，Anthropic 或 OpenAI 的模型权重至今没有一次泄露。",
+      "community_discussion_en": "Commenters dug into the libheif patch itself, observing that the root cause was bounds checking for image overlays and arguing that HEIF's compositing, rotation and thumbnail features create a needlessly large attack surface for a forum that only needs photo uploads. Others highlighted the autonomous-agent angle, noting an LLM was placed in a \"goal loop\" against a Discourse instance disguised as a CTF target, and several expressed surprise that no Anthropic or OpenAI model weights have leaked despite repeated breaches.",
+      "market_impact_zh": "此事对加密资产没有直接敞口，可能的传导路径是市场情绪：一家头部人工智能实验室被高调攻破，会强化“AI 安全风险”这一叙事，从而对 AI 与智能体主题的代币板块以及数字资产市场的整体风险偏好形成压力。其影响是间接的，且难以及时验证，主要通过叙事与仓位传导，而非流动性、托管或供给机制。",
+      "market_impact_en": "There is no direct exposure of crypto assets here; the plausible transmission is sentiment, as a high-profile breach at a leading AI lab reinforces a security-risk narrative that can weigh on the AI- and agent-themed token segment and on general risk appetite in digital-asset markets. Any effect would be indirect and unverifiable in real time, flowing through narrative and positioning rather than through liquidity, custody or supply mechanics.",
       "importance_score": 8.0,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49749656",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://byteiota.com/openai-breached-via-libheif-bug-what-developers-must-fix/",
+          "title": "OpenAI Breached via libheif Bug: What Developers Must Fix | byteiota"
+        },
+        {
+          "url": "https://www.sentinelone.com/vulnerability-database/cve-2026-32741/",
+          "title": "CVE-2026-32741: libheif Buffer Overflow Vulnerability"
+        },
+        {
+          "url": "https://github.com/ToddGBenson/mykronos/issues/649",
+          "title": "libheif: libheif: Heap buffer overflow vulnerability in image decoding · Issue #649 · ToddGBenson/mykronos"
         }
       ],
       "confidence": 0.75,

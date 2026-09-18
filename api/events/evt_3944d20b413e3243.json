@@ -48,14 +48,27 @@
       "current_state_en": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
       "detailed_summary_zh": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
       "detailed_summary_en": "Binance is launching 24/7 foreign exchange perpetual futures, starting with a USDBRL/USDT contract on Sept. 21 that uses a weighted index during FX hours and an orderbook-based EWMA pricing mechanism on weekends and holidays, with up to 100x leverage.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "永续合约是没有到期日的衍生品，通过多空双方定期互相支付的资金费率与现货价格保持锚定，主流平台通常每八小时结算一次。传统即期外汇是场外、由做市商撮合的市场，从周五晚间至周日休市，因此周末没有连续的交易场所报价。加密交易所开始将外汇敞口打包为USDT结算的永续合约，使加密交易者无需持有或交割标的货币即可建立汇率头寸。",
+      "background_en": "Perpetual futures are derivative contracts with no expiry date; they stay anchored to spot prices through a periodic funding rate that longs or shorts pay each other, typically every eight hours on major platforms. Traditional spot FX is an over-the-counter, dealer-intermediated market that closes from Friday evening to Sunday, so there is no continuous exchange-traded pricing over the weekend. Crypto exchanges have begun wrapping FX exposure into USDT-settled perpetuals, letting crypto traders take currency positions without holding or settling the underlying currencies.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "其传导渠道是市场结构与流动性：以USDT结算的外汇永续合约强化了稳定币作为保证金抵押品的用途，并把传统货币流动引入加密订单簿，同时将周末的USDBRL价格发现集中于币安自身的盘口。盘外流动性稀薄可能放大资金费率波动与杠杆仓位的连锁强平，而加密平台外汇衍生品成交量的上升也可能反过来影响稳定币需求与交易所手续费收入。",
+      "market_impact_en": "The transmission channel is market structure and liquidity: USDT-settled FX perpetuals deepen the use of stablecoins as margin collateral and route traditional currency flow into crypto orderbooks, while concentrating weekend USDBRL price discovery on Binance's own book. Thin off-hours liquidity on that book can amplify funding-rate swings and liquidation cascades for leveraged positions, and rising FX derivatives volume on crypto venues may also feed back into stablecoin demand and exchange fee revenue.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.binance.com/en/support/announcement/detail/533eb2f3998a43e3a34df310998bee48",
+          "title": "Binance Futures Will Launch USDBRLUSDT USD... | Binance Support"
+        },
+        {
+          "url": "https://coinmarketcap.com/academy/article/binance-weekend-pricing-tradfi-futures",
+          "title": "Binance Updates Weekend Pricing on Commodity TradFi Futures"
+        },
+        {
+          "url": "https://cryptobriefing.com/perpetual-futures-funding-rate-cost-longs/",
+          "title": "Perpetual futures quietly drain 10% per year from long positions, The..."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:c35997bd18cefb5a"

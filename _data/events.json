@@ -17997,26 +17997,31 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Coinbase stock jumped 10% after the exchange filed for approval to offer US single-stock perpetual futures.",
-      "current_state_zh": "Coinbase stock jumped 10% after the exchange filed for approval to offer US single-stock perpetual futures.",
+      "current_state_en": "Coinbase Derivatives has filed with the CFTC for single-stock perpetual futures on Apple, Tesla, Nvidia, and others; products are not yet approved or live. Earlier, Coinbase stock jumped 10% on the filing news.",
+      "current_state_zh": "Coinbase Derivatives 已向 CFTC 提交个股永续合约申请，标的包括苹果、特斯拉、英伟达等；产品尚未获批或上线。此前 Coinbase 股价因该申请消息上涨 10%。",
       "entities": [
         "after",
+        "apple",
+        "cftc",
         "coin",
         "coinbase",
+        "files",
         "filing",
         "jumps",
+        "nvidia",
         "perps",
         "single",
         "single-stock-perps",
         "stock",
+        "tesla",
         "times"
       ],
       "event_id": "evt_5b421e16299d26d3",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-04T08:58:13.576540Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-04T08:58:13.576540Z",
-      "last_updated_at": "2026-09-04T08:58:13.576570Z",
+      "last_material_change_at": "2026-09-18T22:43:52.557461Z",
+      "last_updated_at": "2026-09-18T22:43:52.557461Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -18027,6 +18032,7 @@
         "crypto-regulation",
         "derivatives",
         "equities",
+        "perpetual-futures",
         "single-stock-perps"
       ],
       "updates": [
@@ -18074,6 +18080,57 @@
           "update_type": "initial",
           "what_changed_en": "Coinbase stock jumped 10% after the exchange filed for approval to offer US single-stock perpetual futures.",
           "what_changed_zh": "Coinbase stock jumped 10% after the exchange filed for approval to offer US single-stock perpetual futures."
+        },
+        {
+          "background_en": "Perpetual futures are derivative contracts that track an underlying asset without an expiration date, first proposed by economist Robert Shiller in 1992 and later popularized by crypto exchanges; they function similarly to contracts for difference but use a funding-rate mechanism to keep the price anchored. In the U.S., futures markets are regulated by the CFTC, and Coinbase Derivatives operates as a CFTC-regulated exchange, which is why the company must file before listing new contracts. Offshore venues have offered equity-linked perpetuals for years, but U.S.-listed single-stock perpetuals have not been a standard regulated product.",
+          "background_zh": "永续合约是一种没有到期日、追踪标的资产的衍生品，最早由经济学家罗伯特·席勒于 1992 年提出，后来在加密交易所中广泛流行；其功能与差价合约类似，但通过资金费率机制使价格贴近标的。在美国，期货市场由商品期货交易委员会（CFTC）监管，而 Coinbase Derivatives 正是受 CFTC 监管的交易所，因此上线新合约必须先提交申请。离岸平台多年来已提供股票挂钩的永续产品，但美国挂牌的个股永续合约此前并非标准的受监管产品。",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Coinbase Derivatives has filed with the CFTC for single-stock perpetual futures on Apple, Tesla, Nvidia, and others; products are not yet approved or live. Earlier, Coinbase stock jumped 10% on the filing news.",
+          "current_state_zh": "Coinbase Derivatives 已向 CFTC 提交个股永续合约申请，标的包括苹果、特斯拉、英伟达等；产品尚未获批或上线。此前 Coinbase 股价因该申请消息上涨 10%。",
+          "detailed_summary_en": "Coinbase Derivatives has filed with the U.S. Commodity Futures Trading Commission (CFTC) to list cash-settled perpetual futures tied to individual U.S.-listed stocks and ETFs, including Apple, Tesla and Nvidia, according to a Wall Street Journal report. The filing extends Coinbase's domestic perpetual-futures push from equity indexes to single securities.\n\nIf approved, this would mark one of the first U.S.-regulated venues offering perpetual futures on individual equities, blurring the line between crypto-native derivatives and traditional stock trading. It signals that major crypto exchanges are competing for equity-linked flow, which could reshape market structure and pull new institutional and retail participants onto 24/7 venues.\n\nThe proposed contracts are cash-settled and perpetual, meaning they carry no expiry date and instead rely on periodic funding payments to track the underlying stock price. The filing follows Coinbase's existing broad derivatives lineup, which already includes crypto futures, a Mag7+Crypto index product, and 24/7 bitcoin and ether futures trading, and the products are not yet approved or live.",
+          "detailed_summary_zh": "据《华尔街日报》报道，Coinbase Derivatives 已向美国商品期货交易委员会（CFTC）提交申请，拟上线与苹果、特斯拉、英伟达等美国上市个股及 ETF 挂钩的现金结算永续合约。此次申请将该交易所的境内永续合约布局从股票指数扩展到单一证券。\n\n若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。\n\n拟议合约采用现金结算且为永续结构，即没有到期日，而是通过定期资金费率机制来锚定标的股价。该申请建立在 Coinbase 现有的衍生产品线之上——其平台已提供加密期货、Mag7+Crypto 指数产品以及 7×24 小时的比特币和以太坊期货交易——但相关个股产品目前尚未获批，也未正式上线。",
+          "event_id": "evt_5b421e16299d26d3",
+          "first_seen_at": "2026-09-18T22:43:52.557461Z",
+          "importance_score": 7.5,
+          "market_impact_en": "The filing points to a potential channel through which equity-linked demand could be routed onto crypto-native, 24/7 trading venues, exposing Coinbase's derivatives revenue mix and pressuring competitors such as Binance and Crypto.com that already blend stock and crypto trading. Approval would also set a regulatory precedent for onshore single-stock perpetuals, which could affect how liquidity and hedging activity are distributed between traditional exchanges and crypto platforms.",
+          "market_impact_zh": "该申请指向一条潜在通道：股票挂钩的需求可能被引导至加密原生、7×24 小时交易的场所，从而影响 Coinbase 的衍生品收入结构，并对已经融合股票与加密交易的币安、Crypto.com 等竞争者形成压力。若获批，它还将为在岸个股永续合约树立监管先例，可能改变流动性与对冲活动在传统交易所与加密平台之间的分布。",
+          "material_change": true,
+          "occurred_at": "2026-09-18T21:01:30Z",
+          "published_at": "2026-09-18T21:01:30Z",
+          "references": [
+            {
+              "title": "Coinbase Files to Expand U.S. Derivatives Into Single-Stock Perpetuals",
+              "url": "https://www.cryptotimes.io/2026/09/18/coinbase-files-to-expand-u-s-derivatives-into-single-stock-perpetuals/"
+            },
+            {
+              "title": "Coinbase Seeks CFTC Approval for US Single-Stock Perpetual Futures | The Defiant",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/coinbase-seeks-cftc-approval-for-us-single-stock-perpetual-futures"
+            },
+            {
+              "title": "Perpetual futures - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Perpetual_futures"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:3a170597d83e287a"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Files with CFTC for Single-Stock Perps on Apple, Tesla, Nvidia",
+          "title_zh": "Coinbase 向 CFTC 提交申请，拟上线苹果、特斯拉、英伟达个股永续合约",
+          "update_id": "upd_756143bed8b90a4e",
+          "update_type": "confirmation",
+          "what_changed_en": "Coinbase Derivatives has filed with the CFTC for cash-settled perpetual futures on individual stocks including Apple, Tesla, and Nvidia, extending its domestic perpetual futures push from equity indexes to single securities. Products are not yet approved or live.",
+          "what_changed_zh": "Coinbase Derivatives 已向 CFTC 提交申请，拟上线苹果、特斯拉、英伟达等个股的现金结算永续合约，将境内永续合约布局从股指扩展至单一证券。产品尚未获批或上线。"
         }
       ]
     },
@@ -63430,36 +63487,44 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain.",
-      "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
+      "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity; the newly attributed North Korea-linked UNC5342 group uses Tron, Aptos, and BNB Smart Chain as redundant routes, while Iran-linked actors embed command-and-control routing data in Bitcoin transactions, including those sent to a Satoshi Nakamoto-associated address.",
+      "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 作为冗余路径，伊朗关联行为者则利用比特币交易（包括向中本聪相关地址发送的交易）嵌入命令与控制路由信息。",
       "entities": [
         "asia",
+        "attacks",
         "chainalysis",
         "coinex",
+        "dead",
+        "drop",
+        "expand",
         "express",
+        "hackers",
         "korea",
         "malware",
         "north",
         "north-korea",
-        "state"
+        "state",
+        "surge"
       ],
       "event_id": "evt_6a38061ef4d7656a",
       "event_type": "security_incident",
       "first_seen_at": "2026-09-17T17:12:00.088571Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-18T01:25:39.548268Z",
-      "last_updated_at": "2026-09-18T01:25:39.548268Z",
+      "last_material_change_at": "2026-09-18T23:26:47.660163Z",
+      "last_updated_at": "2026-09-18T23:26:47.660163Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
       "title_en": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
       "title_zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
       "topics": [
+        "blockchain-forensics",
         "chainalysis",
         "malware",
         "north-korea",
         "onchain-analysis",
-        "onchain-threats"
+        "onchain-threats",
+        "state-sponsored-hacking"
       ],
       "updates": [
         {
@@ -63550,6 +63615,57 @@
           "update_type": "escalation",
           "what_changed_en": "Chainalysis attributed previously unattributed activity to North Korea-linked group UNC5342 and said state-linked hackers account for roughly two-thirds of new onchain malware activity.",
           "what_changed_zh": "Chainalysis 将此前未归因的活动归因于朝鲜关联的 UNC5342 组织，并指出国家支持的黑客约占新增链上恶意软件活动的三分之二。"
+        },
+        {
+          "background_en": "A blockchain dead drop is a technique in which malware instructions, payloads or command-and-control addresses are stored inside public blockchain transactions and smart contracts, so infected devices can repeatedly read those public records for updated instructions without being reinfected. Because the data lives on a public ledger, attackers can rotate their off-chain servers by posting a new transaction, and the content cannot be removed the way a seized domain or server can. The approach evolved from EtherHiding campaigns that appeared on EVM-compatible networks in 2023 after hosting providers began shutting down malicious infrastructure. Google Threat Intelligence began tracking UNC5342 in February 2025, when it used blockchain-based delivery in fake-job campaigns targeting cryptocurrency and technology developers.",
+          "background_zh": "所谓区块链“死信箱”，是一种将恶意软件指令、载荷或命令与控制地址存储在公共区块链交易和智能合约中的手法，已感染的设备可以反复读取这些公开记录以获取更新后的指令，而无需再次感染。由于数据存在于公共账本上，攻击者只需发布一笔新交易即可轮换链下服务器，且这些内容无法像被查封的域名或服务器那样被移除。该手法由 2023 年在 EVM 兼容网络上出现的 EtherHiding 活动演变而来，当时托管服务商开始关停恶意基础设施。Google Threat Intelligence 于 2025 年 2 月开始追踪 UNC5342，该团伙当时在针对加密货币与技术开发者的虚假招聘活动中使用了基于区块链的投递方式。",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity; the newly attributed North Korea-linked UNC5342 group uses Tron, Aptos, and BNB Smart Chain as redundant routes, while Iran-linked actors embed command-and-control routing data in Bitcoin transactions, including those sent to a Satoshi Nakamoto-associated address.",
+          "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 作为冗余路径，伊朗关联行为者则利用比特币交易（包括向中本聪相关地址发送的交易）嵌入命令与控制路由信息。",
+          "detailed_summary_en": "Chainalysis reported that blockchain dead drop attacks rose 420% over the past 12 months, with North Korea- and Iran-linked operators accounting for roughly two-thirds of newly observed activity by the second quarter of 2026. The North Korea-linked group UNC5342 uses Tron and Aptos as redundant routes pointing infected devices to malware instructions stored on BNB Smart Chain, while suspected Iranian actors embedded command-and-control routing data inside Bitcoin transactions sent to an address historically associated with Satoshi Nakamoto.\n\nThis marks a shift from domain-based command-and-control to public blockchain infrastructure that conventional takedowns cannot easily disable, meaning defenders would have to coordinate action across multiple chains simultaneously. It raises the security and compliance burden for crypto exchanges, wallet providers and enterprises whose legitimate traffic shares the same networks that attackers are abusing.\n\nChainalysis said malicious blockchain writes rose from 2.06 per day to 11.1 per day after the emergence of high-capacity open-weight Chinese AI models, a 440% increase in under a year, though the firm cautioned its measurement does not identify a single model or prove that AI alone caused the rise. The malware queries Tron first and falls back to Aptos if that route fails, and disrupting the operation would require action across all three chains at once.",
+          "detailed_summary_zh": "Chainalysis 报告称，过去 12 个月内区块链“死信箱”（dead drop）攻击增长了 420%，到 2026 年第二季度，与朝鲜和伊朗有关联的操作者约占新观测活动总量的三分之二。与朝鲜有关联的团伙 UNC5342 使用 Tron 和 Aptos 作为冗余路径，将已感染设备引向存储在 BNB Smart Chain 上的恶意软件指令；而疑似伊朗行为者则把命令与控制路由信息嵌入发送至历史上与中本聪相关地址的比特币交易中。\n\n这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。\n\nChainalysis 表示，在高容量开源权重的中国 AI 模型出现后，恶意区块链写入从每天 2.06 次升至每天 11.1 次，不到一年增长 440%；不过该公司也提醒，其测量并不能锁定某一个具体模型，也无法证明增幅完全由 AI 造成。该恶意软件会优先查询 Tron，若该路径失败则回退至 Aptos，因此要瓦解该行动需要同时在三条链上采取行动。",
+          "event_id": "evt_6a38061ef4d7656a",
+          "first_seen_at": "2026-09-18T23:26:47.660163Z",
+          "importance_score": 7.5,
+          "market_impact_en": "The immediate channel is security and compliance rather than any token's supply: Tron, BNB Smart Chain, Aptos and Bitcoin are the networks actually named as carrying malicious writes, so exchanges, custodians and RPC providers on those chains face higher monitoring and screening costs as wallet, contract and RPC-traffic surveillance becomes a defensive necessity. Because fully blocking a network would also cut off legitimate wallets and DeFi services on the same infrastructure, the likely market effect is a gradual rise in chain-level risk premia and compliance overhead rather than a single identifiable price event.",
+          "market_impact_zh": "其直接传导渠道是安全与合规，而非任何代币的供给：被点名承载恶意写入的网络是 Tron、BNB Smart Chain、Aptos 和比特币，因此这些链上的交易所、托管方和 RPC 服务商将面临更高的监控与筛查成本，因为对钱包、合约和 RPC 流量的监测正成为防御必需。由于彻底封锁某条网络也会切断同一基础设施上的合法钱包与 DeFi 服务，市场层面的影响更可能是链级风险溢价与合规开支持续上升，而非某一次可明确识别的价格事件。",
+          "material_change": true,
+          "occurred_at": "2026-09-18T16:59:38Z",
+          "published_at": "2026-09-18T16:59:38Z",
+          "references": [
+            {
+              "title": "EtherHiding & Blockchain Dead Drops: On-Chain... - Chainalysis",
+              "url": "https://www.chainalysis.com/blog/etherhiding-blockchain-dead-drops/"
+            },
+            {
+              "title": "Blockchain Dead Drop Attacks Jump 420% as State Hackers Expand | The Defiant",
+              "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand"
+            },
+            {
+              "title": "North Korea and Iran drive 5.2x jump in malware hidden on public blockchains - Cryptopolitan",
+              "url": "https://www.cryptopolitan.com/north-korea-iran-malware-on-blockchains/"
+            }
+          ],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:99aa27d52de20db9"
+          ],
+          "time_precision": "published",
+          "title_en": "Chainalysis: Blockchain Dead Drop Attacks Surge 420% as State Hackers Expand",
+          "title_zh": "Chainalysis：区块链“死信箱”攻击激增420%，国家背景黑客扩大部署",
+          "update_id": "upd_5ab6c286222362ca",
+          "update_type": "escalation",
+          "what_changed_en": "Chainalysis report added that suspected Iran-linked actors embed command-and-control routing data inside Bitcoin transactions sent to a Satoshi Nakamoto-associated address, and that malicious blockchain writes rose from 2.06 to 11.1 per day (a 440% increase) after the emergence of high-capacity open-weight Chinese AI models.",
+          "what_changed_zh": "Chainalysis 报告补充了伊朗关联行为者将命令与控制路由信息嵌入发送至中本聪相关比特币地址的交易中，并指出高容量开源权重中国 AI 模型出现后恶意区块链写入从每天 2.06 次升至 11.1 次（增长 440%）。"
         }
       ]
     },
@@ -63653,8 +63769,8 @@
           "what_changed_zh": "The SEC has introduced a new 'innovation exemption' that opens the door to tokenized stocks, potentially enabling on-chain trading of equity securities."
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Tokenized stocks are blockchain-based representations of equity, and in the US, venues that match buyers and sellers of securities normally must register as national securities exchanges — a costly, slow process. The Clarity Act was a market-structure bill meant to divide oversight of digital assets between the SEC and the CFTC, and its failure left Congress without a legislative fix. The SEC's exemption is instead an administrative action under existing authority, while the CFTC's no-action letter is a staff position that signals it will not pursue enforcement against passive software providers that do not take custody or control user funds.",
+          "background_zh": "代币化股票是以区块链形式表示的股权，而在美国，撮合证券买卖双方的交易场所通常必须注册为全国性证券交易所——这一过程成本高、耗时长。《Clarity Act》是一项市场结构法案，旨在划分 SEC 与 CFTC 对数字资产的监管权限，其未能通过意味着国会暂时无法提供立法层面的解决方案。SEC 的这项豁免改为在现有法定权限下采取的行政行动，而 CFTC 的不采取行动函则是工作人员层面的立场，表明其不会对不托管或不控制用户资金的被动型软件提供商采取执法行动。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.95,
@@ -63665,12 +63781,25 @@
           "event_id": "evt_850acbfb4d581e34",
           "first_seen_at": "2026-09-18T16:37:40.027105Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The immediate transmission channel is sentiment and liquidity into tokens tied to onchain trading venues and DeFi infrastructure, with HYPE, UNI, ARB and NEAR leading the rally alongside BTC at $78k and ETH at $2,500. Over time, enabling tokenized equities to run through automated market makers and liquidity pools on permissionless chains would pull capital and order flow toward DEX tokens, custody providers, and exchange-linked names, while the ICE evaluation of Avalanche as a settlement layer connects legacy equity-market infrastructure directly to layer-1 assets.",
+          "market_impact_zh": "最直接的传导渠道是情绪与流动性流入与链上交易场所和 DeFi 基础设施相关的代币，HYPE、UNI、ARB 和 NEAR 领涨，同时 BTC 报78,000美元、ETH 报2,500美元。若代币化股票未来能在无许可链上通过自动做市商和流动性池运行，资金与订单流将逐步向 DEX 代币、托管服务商以及与交易所关联的标的倾斜；而 ICE 评估将 Avalanche 作为结算层，则把传统股票市场基础设施直接与一层网络资产连接起来。",
           "material_change": true,
           "occurred_at": "2026-09-18T12:34:50Z",
           "published_at": "2026-09-18T12:34:50Z",
-          "references": [],
+          "references": [
+            {
+              "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading ...",
+              "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment"
+            },
+            {
+              "title": "SEC rolls out 'innovation exemption' for tokenized securities ...",
+              "url": "https://www.coindesk.com/policy/2026/09/17/sec-rolls-out-long-awaited-innovation-exemption-for-tokenized-securities-venues"
+            },
+            {
+              "title": "CFTC Frees Non-Custodial Software Developers From Some Rules",
+              "url": "https://www.pymnts.com/legal/2026/cftc-frees-non-custodial-software-developers-from-broker-rules/"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",
@@ -65703,10 +65832,10 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "background_en": "libheif is an open-source library that decodes and encodes HEIF/AVIF images, the container formats used by many phone cameras and browsers; a heap overflow in such a decoder can let an attacker overwrite memory and potentially execute code in the process that parses the file. ASLR (address space layout randomization) is an operating-system defense that randomizes memory addresses so an attacker cannot reliably jump to injected code, and bypassing it is typically the hardest step in turning a crash into reliable code execution. Single sign-on (SSO) systems such as SAML and OIDC let one identity provider grant access to many downstream services, so a misconfiguration there can produce tokens that look legitimate and silently unlock connected apps like GitHub, Slack or email. Community reporting notes that OpenAI's own help forum, community.openai.com, was the entry point for the account-takeover angle.",
+          "background_zh": "libheif 是一个开源的 HEIF/AVIF 图像编解码库，这类容器格式被许多手机相机与浏览器使用；解码器中的堆溢出可以让攻击者覆盖内存，并有可能在解析该文件的进程中执行代码。ASLR（地址空间布局随机化）是操作系统的一项防御机制，通过随机化内存地址让攻击者无法可靠地跳转到注入的代码，绕过它通常是把“崩溃”变成“可靠代码执行”过程中最难的一步。SAML、OIDC 等单点登录（SSO）体系让一个身份提供方为众多下游服务授予访问权限，因此其中的配置错误可能生成看似合法的令牌，静默解锁 GitHub、Slack 或邮箱等已接入的应用。社区讨论指出，OpenAI 自有的帮助论坛 community.openai.com 正是账号接管路径的入口。",
+          "community_discussion_en": "Commenters dug into the libheif patch itself, observing that the root cause was bounds checking for image overlays and arguing that HEIF's compositing, rotation and thumbnail features create a needlessly large attack surface for a forum that only needs photo uploads. Others highlighted the autonomous-agent angle, noting an LLM was placed in a \"goal loop\" against a Discourse instance disguised as a CTF target, and several expressed surprise that no Anthropic or OpenAI model weights have leaked despite repeated breaches.",
+          "community_discussion_zh": "评论者深入分析了 libheif 的补丁本身，指出根因在于图像叠加图层的边界检查，并认为 HEIF 的合成、旋转与缩略图等特性，对一个只需要上传照片的论坛而言制造了毫无必要的大攻击面。还有人关注自主智能体这一角度，提到大模型被置于针对一个伪装成 CTF 目标的 Discourse 实例的“目标循环”中，也有不少人惊讶于尽管入侵事件屡有发生，Anthropic 或 OpenAI 的模型权重至今没有一次泄露。",
           "confidence": 0.75,
           "current_state_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
           "current_state_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
@@ -65715,8 +65844,8 @@
           "event_id": "evt_d77bbd2cc5c229e1",
           "first_seen_at": "2026-09-18T09:07:01.243499Z",
           "importance_score": 8.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "There is no direct exposure of crypto assets here; the plausible transmission is sentiment, as a high-profile breach at a leading AI lab reinforces a security-risk narrative that can weigh on the AI- and agent-themed token segment and on general risk appetite in digital-asset markets. Any effect would be indirect and unverifiable in real time, flowing through narrative and positioning rather than through liquidity, custody or supply mechanics.",
+          "market_impact_zh": "此事对加密资产没有直接敞口，可能的传导路径是市场情绪：一家头部人工智能实验室被高调攻破，会强化“AI 安全风险”这一叙事，从而对 AI 与智能体主题的代币板块以及数字资产市场的整体风险偏好形成压力。其影响是间接的，且难以及时验证，主要通过叙事与仓位传导，而非流动性、托管或供给机制。",
           "material_change": true,
           "occurred_at": "2026-09-18T02:47:24Z",
           "published_at": "2026-09-18T02:47:24Z",
@@ -65724,6 +65853,18 @@
             {
               "title": "Community discussion",
               "url": "https://news.ycombinator.com/item?id=49749656"
+            },
+            {
+              "title": "OpenAI Breached via libheif Bug: What Developers Must Fix | byteiota",
+              "url": "https://byteiota.com/openai-breached-via-libheif-bug-what-developers-must-fix/"
+            },
+            {
+              "title": "CVE-2026-32741: libheif Buffer Overflow Vulnerability",
+              "url": "https://www.sentinelone.com/vulnerability-database/cve-2026-32741/"
+            },
+            {
+              "title": "libheif: libheif: Heap buffer overflow vulnerability in image decoding · Issue #649 · ToddGBenson/mykronos",
+              "url": "https://github.com/ToddGBenson/mykronos/issues/649"
             }
           ],
           "sources": [
@@ -66727,8 +66868,8 @@
           "what_changed_zh": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval."
         },
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "MiCA (Markets in Crypto-Assets) is the EU's comprehensive rulebook for crypto assets and service providers; firms must be licensed by a national competent authority in one member state, and that license can then be passported across the entire bloc. Full MiCA requirements took effect at the end of 2024, with a transitional grandfathering period that expired on 1 July 2025, after which unlicensed firms must stop serving EU customers. The ECB is not a general crypto regulator — its involvement stems from its monetary policy mandate, its oversight of the digital euro project, and its monitoring of financial stability risks from crypto — which is why the reported intervention is unusual.",
+          "background_zh": "MiCA（《加密资产市场法规》）是欧盟针对加密资产及其服务提供商的综合性监管规则：企业须在某一成员国取得该国主管机构颁发的牌照，之后即可凭该牌照在整个欧盟范围内通行。MiCA 的完整要求已于 2024 年底生效，过渡性的“祖父条款”宽限期于 2025 年 7 月 1 日到期，此后未持牌企业必须停止向欧盟客户提供服务。欧洲央行并非一般意义上的加密资产监管机构，其介入源于货币政策职责、对数字欧元项目的监管角色以及对加密资产金融稳定风险的监测，因此报道所述的干预显得非同寻常。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.92,
@@ -66739,12 +66880,25 @@
           "event_id": "evt_bb7a5ae2fdaa62e9",
           "first_seen_at": "2026-09-18T16:37:25.849090Z",
           "importance_score": 8.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The immediate channel is market access and liquidity: with Binance unable to passport a MiCA license, EU-resident users and euro-denominated spot and derivatives flow toward already-licensed venues, fragmenting liquidity that previously concentrated on Binance and shifting volume share among EU-regulated exchanges. A second channel is regulatory precedent — the reported use of informal ECB pressure on a national regulator raises licensing risk premiums for other large exchanges with pending applications and could influence how venues structure their EU entities and custody arrangements.",
+          "market_impact_zh": "最直接的传导渠道是市场准入与流动性：在币安无法凭 MiCA 牌照通行的情况下，欧盟居民用户以及欧元计价的现货与衍生品交易流量将转向已获牌的交易所，使原本集中于币安的流动性出现分割，并改变欧盟受监管交易所之间的交易量份额。第二个渠道是监管先例：报道所称欧洲央行对成员国监管机构施加非正式压力的做法，会提高其他有申请在途的大型交易所所面临的牌照风险溢价，并可能影响交易所在欧盟的实体架构与托管安排。",
           "material_change": true,
           "occurred_at": "2026-09-18T12:57:06Z",
           "published_at": "2026-09-18T12:57:06Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Markets in Crypto-Assets - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets"
+            },
+            {
+              "title": "Crypto-assets - Finance - European Commission",
+              "url": "https://finance.ec.europa.eu/digital-finance/crypto-assets_en"
+            },
+            {
+              "title": "Binance Withdraws MiCA License Application in Greece... - Decrypt",
+              "url": "https://decrypt.co/371990/swagger-json"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -67478,8 +67632,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "HyperCore is the order-book and margin layer of the Hyperliquid blockchain where perpetuals, spot markets and portfolio margin are settled, while HyperEVM handles general smart contracts. Lending protocols typically let users deposit crypto as collateral and borrow stablecoins against it, with the LTV ratio determining how much can be borrowed and the liquidation threshold marking when the position can be closed. USDC and USDT are dollar-pegged stablecoins issued by Circle and Tether respectively, and they are the dominant units of account for on-chain credit. Hyperliquid's founder, Jeff Yan, compared separating the lending primitive from derivatives margin to Amazon spinning out AWS so one underlying system can serve multiple products.",
+          "background_zh": "HyperCore 是 Hyperliquid 区块链的订单簿与保证金层，永续合约、现货市场与组合保证金均在此结算，而通用智能合约则由 HyperEVM 承载。借贷协议通常允许用户存入加密货币作为抵押品并借出稳定币，LTV 比率决定可借额度，清算阈值则标志仓位可被强制平仓的时点。USDC 与 USDT 分别由 Circle 和 Tether 发行、锚定美元，是链上信贷最主要的记账单位。Hyperliquid 创始人 Jeff Yan 将借贷原语与衍生品保证金分离的做法，类比为亚马逊拆分出 AWS，使同一底层系统能够服务多种产品。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -67490,12 +67644,25 @@
           "event_id": "evt_692a54953180d249",
           "first_seen_at": "2026-09-18T16:37:33.376236Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The new market adds a direct collateral channel for HYPE and Bitcoin on HyperCore while deepening the stablecoin pools that already support portfolio margin, so lending utilization now influences funding and borrow demand for HYPE and the network's roughly $6.77 billion USDC supply. Kraken parent Payward's plan to offer on-chain perpetual futures to US clients via Hyperliquid's HIP-3 framework adds a parallel regulatory and distribution channel into the same ecosystem.",
+          "market_impact_zh": "该新市场在 HyperCore 上为 HYPE 与比特币新增了直接的抵押渠道，同时加深了本就支撑组合保证金的稳定币池，因此借贷利用率如今会影响 HYPE 的资金与借款需求，以及该网络约 67.7 亿美元的 USDC 存量。Kraken 母公司 Payward 计划通过 Hyperliquid 的 HIP-3 框架为美国客户提供链上永续合约，为同一生态开辟了并行的监管与分销通道。",
           "material_change": true,
           "occurred_at": "2026-09-18T14:40:05Z",
           "published_at": "2026-09-18T14:40:05Z",
-          "references": [],
+          "references": [
+            {
+              "title": "How HyperCore Powers Performance Across Hyperliquid - HypeRPC",
+              "url": "https://hyperpc.app/blog/what-is-hypercore"
+            },
+            {
+              "title": "What Is LTV in Crypto Lending? Formula and Liquidation",
+              "url": "https://financefeeds.com/what-is-loan-to-value-ltv-in-crypto-lending/"
+            },
+            {
+              "title": "USDC vs USDT: Safety, Fees and Best Uses in 2026",
+              "url": "https://coinbureau.com/analysis/usdc-vs-usdt"
+            }
+          ],
           "sources": [
             {
               "label": "CryptoSlate",
@@ -67807,8 +67974,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "The Fed's dot plot is a quarterly chart in which each FOMC official marks their projected path for the federal funds rate; lower dots indicate a more dovish, less aggressive tightening outlook, which typically lifts risk assets. A short position bets an asset's price will fall, and traders open shorts using leverage and collateral; if price rises sharply, their collateral is liquidated through forced buying, which pushes prices higher still and triggers cascading liquidations known as a short squeeze. In crypto this effect is amplified because most volume trades on perpetual futures with high leverage. The Clarity Act, a US market-structure bill intended to give crypto firms a durable statutory framework, failed a Senate procedural vote earlier in the week, sending Bitcoin below $75,000 before the Fed-driven rebound.",
+          "background_zh": "美联储点阵图是一张季度更新的图表，每位FOMC成员在其中标出自己对联邦基金利率路径的预测；点位越低代表政策立场越鸽派、紧缩力度越小，通常利好风险资产。空头头寸押注资产价格下跌，交易者通常以保证金加杠杆开空；若价格快速上涨，其保证金被强制买入平仓，反而进一步推高价格，形成连锁清算，即所谓“空头挤压”。在加密市场，由于大部分成交量集中在高杠杆永续合约上，这一效应会被放大。Clarity Act是一项旨在为加密企业提供长期法定监管框架的美国市场结构法案，本周早些时候未通过参议院程序性投票，比特币因此一度跌破75,000美元，随后才因美联储决议反弹。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -67819,12 +67986,25 @@
           "event_id": "evt_60100fcc1b04439f",
           "first_seen_at": "2026-09-18T16:37:39.793459Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission ran through derivatives: a dovish Fed repricing forced buy-backs of leveraged shorts, and the roughly $445 million in liquidations (over half of it Bitcoin) fed the spot move higher across major venues. Exposure is concentrated in perpetual futures and margin markets for Bitcoin and other large-cap tokens, where funding rates and open interest now reflect a rebuilt long bias, leaving them sensitive to any shift in rate expectations or reversal in macro sentiment.",
+          "market_impact_zh": "传导渠道主要在衍生品端：美联储立场转鸽促使空头被迫回补，约4.45亿美元的清算（其中过半为比特币）进一步推动各大交易平台的现货价格上行。风险敞口集中在比特币及其他大市值代币的永续合约与保证金市场，资金费率与未平仓合约目前反映出多头仓位重新累积，使其对利率预期变化或宏观情绪反转更为敏感。",
           "material_change": true,
           "occurred_at": "2026-09-18T15:22:49Z",
           "published_at": "2026-09-18T15:22:49Z",
-          "references": [],
+          "references": [
+            {
+              "title": "What Is a Short Squeeze? How It Happens in Crypto (2026)",
+              "url": "https://dexly.trade/learn/what-is-a-short-squeeze"
+            },
+            {
+              "title": "The Federal Reserve’s Latest Dot Plot, Explained – And... | Bankrate",
+              "url": "https://www.bankrate.com/banking/federal-reserve/how-to-read-fed-dot-plot-explained/"
+            },
+            {
+              "title": "Crypto industry reacts after Clarity Act fails Senate vote",
+              "url": "https://www.coindesk.com/policy/2026/09/15/clarity-act-fails-in-senate-here-is-how-the-crypto-industry-is-reacting"
+            }
+          ],
           "sources": [
             {
               "label": "Decrypt",
@@ -68105,10 +68285,10 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "background_en": "Photon emission microscopy (PEM) detects the faint infrared light that transistors emit when they switch, letting researchers map which parts of a chip are active; laser fault injection (LFI) then fires a focused laser pulse at those spots to flip bits or corrupt logic at a chosen moment. The RP2350 is Raspberry Pi's dual Arm Cortex-M33 microcontroller, and its \"secure debug\" mode is a controlled channel that allows a debugger to access secure memory-mapped resources and inspect a core running in the Secure state — normally locked out unless the correct key is supplied. Raspberry Pi's own response post acknowledged that the Donjon team showed the debug interface could be re-enabled with a lab full of specialised equipment, something the company had been trying to make impossible.",
+          "background_zh": "光子发射显微镜（PEM）可以探测晶体管开关时发出的微弱红外光，帮助研究者绘制出芯片上哪些区域正在工作；激光故障注入（LFI）则在这些位置发射聚焦激光脉冲，在特定时刻翻转比特或破坏逻辑。RP2350 是 Raspberry Pi 推出的双核 Arm Cortex-M33 微控制器，其“安全调试”模式是一条受控通道，允许调试器访问安全内存映射资源并检查运行于 Secure 状态的内核，正常情况下必须提供正确密钥才能解锁。Raspberry Pi 官方也发文回应，承认 Donjon 团队证明只要拥有成套专业显微镜与激光设备，就能重新启用该调试接口，而这正是公司此前试图使其无法做到的事情。",
+          "community_discussion_en": "Commenters broadly praised the level of technical detail while pushing back on the $250,000 price tag, noting that similar attacks have been replicated at home for under $25,000 — one cited replacing a $5,000 ChipShouter with a $50 PicoEMP when reproducing a prior MPC5566 attack. Others framed the RP2350's secure enclave as a Yubikey alternative and described the result as part of an inevitable arms race between safe-crackers and safe-builders, while some simply noted the attack is \"not super practical, but neat\".",
+          "community_discussion_zh": "评论者普遍赞赏该研究的技术细节，但对 25 万美元的设备成本提出异议，指出类似攻击在家庭实验室中花费不到 2.5 万美元即可复现——有人提到在复现此前的 MPC5566 攻击时，用 50 美元的 PicoEMP 替代了 5000 美元的 ChipShouter。也有人把 RP2350 的安全隔离区视为 YubiKey 的替代方案，并将这一成果描述为“开锁者与造锁者”之间不可避免的军备竞赛的一部分，还有评论直言该攻击“不太实用，但很漂亮”。",
           "confidence": 0.75,
           "current_state_en": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
           "current_state_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
@@ -68116,9 +68296,9 @@
           "detailed_summary_zh": "Researchers demonstrate a photon-emission-guided laser fault injection attack that bypasses the RP2350 microcontroller's secure debug protections, requiring physical access and roughly $250,000 in laboratory equipment.",
           "event_id": "evt_f0717fee30ec083d",
           "first_seen_at": "2026-09-18T22:43:42.456363Z",
-          "importance_score": 7.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "importance_score": 7.5,
+          "market_impact_en": "The most direct transmission channel is sentiment and trust around hardware-wallet supply chains: any wallet or key-storage product relying on the RP2350's secure enclave now carries a publicly documented physical-extraction path, which may shift vendor evaluations toward dedicated secure elements. Because exploitation demands physical possession, destructive sample preparation, and roughly $250,000 in lab gear, the near-term exposure for users of existing devices remains tied to targeted, in-person attack scenarios rather than remote or large-scale risk.",
+          "market_impact_zh": "最直接的传导渠道是围绕硬件钱包供应链的情绪与信任：任何依赖 RP2350 安全隔离区的钱包或密钥存储产品，如今都面对一条已被公开记录的物理提取路径，这可能促使厂商在选型时更倾向专用安全元件。由于利用该攻击需要实际持有设备、对样品进行破坏性处理并配备约 25 万美元的实验室设备，现有设备用户的近期风险仍局限于定向的、需要接触实物的攻击场景，而非远程或大规模风险。",
           "material_change": true,
           "occurred_at": "2026-09-18T16:54:18Z",
           "published_at": "2026-09-18T16:54:18Z",
@@ -68126,6 +68306,18 @@
             {
               "title": "Community discussion",
               "url": "https://news.ycombinator.com/item?id=49757050"
+            },
+            {
+              "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350...",
+              "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/"
+            },
+            {
+              "title": "Exploring Ledger Donjon's security research into our RP2350 chip.",
+              "url": "https://www.raspberrypi.com/news/everything-is-better-with-lasers/"
+            },
+            {
+              "title": "Faulting an 8 nm FinFET technology SoC using Photon Emission...",
+              "url": "https://tches.iacr.org/index.php/TCHES/article/view/13261"
             }
           ],
           "sources": [
@@ -68435,8 +68627,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "OpenZeppelin is best known for OpenZeppelin Contracts, a library of reusable, audited Solidity components that developers import when building tokens, access-control systems and other on-chain logic; because deployed smart contracts are typically immutable, a vulnerability in that code can lead to irreversible losses, which is why the library is treated as a de facto security standard. The firm also runs a security-audit business, having completed more than 900 audits since 2017 across languages such as Solidity, Rust and Cairo. S&P Global is the parent of S&P Global Ratings, the largest of the \"Big Three\" credit-rating agencies alongside Moody's and Fitch, and its core business is financial information, benchmarks and analytics. The acquisition fits a broader pattern of traditional finance firms buying crypto infrastructure as markets move toward tokenization and 24/7 trading.",
+          "background_zh": "OpenZeppelin最著名的是OpenZeppelin Contracts——一套经过审计、可复用的Solidity组件库，开发者在构建代币、权限控制系统及其他链上逻辑时会直接引入；由于已部署的智能合约通常不可更改，代码中的漏洞可能造成不可逆的损失，因此该库被视为事实上的安全标准。公司同时经营安全审计业务，自2017年以来已完成900多次审计，覆盖Solidity、Rust、Cairo等语言。标普全球是标普全球评级的母公司，后者与穆迪、惠誉并称三大信用评级机构，标普全球的核心业务是金融信息、基准指数与分析服务。这笔收购契合了传统金融机构在市场走向代币化和7×24小时交易之际买入加密基础设施的整体趋势。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -68447,12 +68639,25 @@
           "event_id": "evt_20b6b07410f3c813",
           "first_seen_at": "2026-09-18T22:43:42.490112Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission channel here is market structure rather than price: OpenZeppelin Contracts underpins a large share of DeFi, stablecoin and tokenized-asset code, so a ratings-agency parent could reshape how institutional risk assessment, audit standards and compliance expectations reach those protocols. It also reinforces the tokenization and real-world-asset narrative that S&P is positioning around, which tends to affect sentiment toward infrastructure and RWA-related assets more than any single token.",
+          "market_impact_zh": "这里的传导渠道是市场结构而非价格：OpenZeppelin Contracts支撑着大量DeFi、稳定币和代币化资产代码，由评级机构母公司持有后，可能改变机构风险评估、审计标准与合规要求传导至这些协议的方式。同时，这也强化了标普正在布局的代币化与真实世界资产叙事，其影响更多体现在基础设施类与RWA相关资产的市场情绪上，而非某一具体代币。",
           "material_change": true,
           "occurred_at": "2026-09-18T13:00:10Z",
           "published_at": "2026-09-18T13:00:10Z",
-          "references": [],
+          "references": [
+            {
+              "title": "OpenZeppelin | The Security Standard for Onchain Finance",
+              "url": "https://www.openzeppelin.com/"
+            },
+            {
+              "title": "OpenZeppelin | Smart Contract Security Audits",
+              "url": "https://www.openzeppelin.com/security-audits"
+            },
+            {
+              "title": "S&P Global Ratings",
+              "url": "https://en.wikipedia.org/wiki/S&P_Global_Ratings"
+            }
+          ],
           "sources": [
             {
               "label": "Binance",
@@ -68506,8 +68711,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Haruko was founded in 2019 and is headquartered in the United Kingdom, offering institutional clients portfolio management, trade capture and connectivity that sits between a fund's own systems and the many crypto exchanges it trades on. Exchange API keys are credentials that let software read account data or place trades on a user's behalf, which is why they are a high-value target: read-only keys limit what an attacker can do, while trading-enabled keys can move funds. Because funds rarely connect to exchanges manually, this kind of vendor layer is a common and often under-examined point of failure in crypto market infrastructure.",
+          "background_zh": "Haruko 成立于 2019 年，总部位于英国，为机构客户提供投资组合管理、交易捕获以及连接服务，处于基金自有系统与其所交易的众多加密货币交易所之间。交易所 API 密钥是允许软件代表用户读取账户数据或下单的凭证，因此成为高价值攻击目标：只读密钥会限制攻击者的操作范围，而具备交易权限的密钥则可能直接转移资金。由于基金很少手动连接交易所，这类供应商层级是加密市场基础设施中常见且往往被忽视的失效点。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -68518,12 +68723,25 @@
           "event_id": "evt_aee9a31353deec6c",
           "first_seen_at": "2026-09-18T22:43:42.490228Z",
           "importance_score": 8.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The direct transmission channel is operational and counterparty risk rather than token pricing: affected funds may face temporary loss of trading access and must rotate exchange API credentials, and any stolen balances represent a small, localized drawdown for those clients. Broader fallout would run through sentiment toward institutional crypto infrastructure and third-party custody/tooling providers, which could weigh on how counterparties assess vendor risk when onboarding trading technology.",
+          "market_impact_zh": "其直接影响渠道是运营与交易对手风险，而非代币定价：受影响基金可能暂时失去交易接入能力，并需轮换交易所 API 凭证，被盗余额对这些客户而言属于小规模的局部损失。更广泛的冲击则通过市场对机构加密基础设施及第三方托管/工具供应商的情绪传导，可能影响交易对手在引入交易技术时对供应商风险的评估。",
           "material_change": true,
           "occurred_at": "2026-09-18T18:41:57Z",
           "published_at": "2026-09-18T18:41:57Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Haruko hack hits 15 crypto clients, with exchange API details, trading data and funds stolen",
+              "url": "https://www.coindesk.com/business/2026/09/18/crypto-tech-provider-haruko-hit-by-cyberattack-affecting-15-clients-some-funds-lost"
+            },
+            {
+              "title": "Haruko Breach Exposes API Data and Trading Records of 15 Crypto Clients",
+              "url": "https://coinedition.com/crypto-live-news/haruko-breach-exposes-api-data-and-trading-records-of-15/"
+            },
+            {
+              "title": "Trade Capture System - Institutional Crypto Trading - Haruko",
+              "url": "https://www.haruko.io/platforms/trade-capture/"
+            }
+          ],
           "sources": [
             {
               "label": "CoinDesk",
@@ -68580,8 +68798,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Neutrl issues NUSD, a synthetic dollar described as fully collateralized and backed by market-neutral strategies such as OTC arbitrage and funding rate capture. Strata is a risk-tranching protocol that splits exposure to an underlying yield-bearing asset into a senior tranche (which targets a steadier return) and a junior tranche (which takes first losses in exchange for leveraged upside and a risk premium paid by the senior side). In the Neutrl NUSD market, depositors mint srNUSD or jrNUSD, and the strategy contract holds sNUSD, the yield-bearing form of the underlying position.",
+          "background_zh": "Neutrl 发行的是 NUSD，一种被描述为由 OTC 套利、资金费率捕获等市场中性与策略支持、且完全抵押的合成美元。Strata 是一个风险分层协议，把对某一生息资产的敞口拆分为优先级份额（追求更稳定的收益）与次级份额（承担首损，以换取杠杆化上行收益及来自优先级一侧的风险溢价）。在 Neutrl 的 NUSD 市场中，存款人铸造 srNUSD 或 jrNUSD，而策略合约持有的是该底层头寸的生息形态 sNUSD。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -68592,12 +68810,25 @@
           "event_id": "evt_05f2e9704ecd9b46",
           "first_seen_at": "2026-09-18T22:43:48.282180Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission runs mainly through the Neutrl/Strata token complex: a 51-cent redemption value and a zeroed junior tranche imply a hard haircut for srNUSD, jrNUSD and sNUSD holders, which can spill into DEX liquidity for those tokens and into lending or collateral markets that accepted them. Broader stablecoin and structured-yield sentiment may be affected as traders reassess tranching designs and the real loss-absorbing capacity of junior buffers.",
+          "market_impact_zh": "传导路径主要经由 Neutrl/Strata 的代币体系：0.51 美元的赎回价与归零的次级份额意味着 srNUSD、jrNUSD 及 sNUSD 持有人面临硬性减记，并可能外溢至这些代币的 DEX 流动性，以及将其作为抵押品或借贷资产的场所。随着交易者重新评估分层结构设计与次级缓冲的真实吸损能力，更广泛的稳定币与结构化收益市场情绪也可能受到影响。",
           "material_change": true,
           "occurred_at": "2026-09-18T17:26:22Z",
           "published_at": "2026-09-18T17:26:22Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Neutrl Opens NUSD Redemptions at 51 Cents as Strata Junior...",
+              "url": "https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout"
+            },
+            {
+              "title": "Neutrl NUSD | Strata",
+              "url": "https://docs.strata.markets/markets/neutrl-nusd"
+            },
+            {
+              "title": "Tranching in DeFi: Can the Junior Buffer actually survive an exploit?",
+              "url": "https://defillama.com/research/spotlight/tranching-in-defi-can-the-junior-buffer-actually-survive-an-exploit"
+            }
+          ],
           "sources": [
             {
               "label": "The Defiant",
@@ -68719,8 +68950,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Radix is a layer-1 network whose Radix Engine executes transactions and enforces asset ownership, with vaults acting as the on-chain containers that hold tokens for users, applications and liquidity pools. Because the engine is the shared execution layer for everything built on Radix, a flaw there affects all applications at once rather than a single contract. A blockchain halt occurs when validators can no longer reach consensus on new blocks — here it was a deliberate safety pause rather than a crash, and it freezes transfers, bridges and contract activity network-wide until a fix is deployed.",
+          "background_zh": "Radix 是一条一层网络，其 Radix Engine 负责执行交易并强制执行资产所有权，而金库（vault）则是为用户、应用和流动性池持有代币的链上容器。由于该引擎是 Radix 上所有应用的共享执行层，其中的缺陷会同时影响所有应用，而不只是单个合约。区块链停摆发生在验证者无法就新区块达成共识之时——本次是主动的安全暂停而非崩溃，它会在修复部署前冻结全网转账、跨链桥和合约活动。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -68731,12 +68962,25 @@
           "event_id": "evt_c6825f2c974ab72c",
           "first_seen_at": "2026-09-18T22:43:49.442762Z",
           "importance_score": 8.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission runs mainly through Radix's own on-chain liquidity and sentiment: bridged stablecoin and blue-chip holdings were removed from one side of trading pairs, distorting pool prices so a separate account could extract millions of XRD, while the 10-day halt froze transfers and bridge activity for RDX holders and applications on the network. Assets moved through Hyperlane to Ethereum, BNB Chain and Solana were subsequently sold for ETH, linking the incident to liquidity conditions on those venues.",
+          "market_impact_zh": "传导路径主要集中在 Radix 自身的链上流动性与市场情绪：跨链而来的稳定币及主流资产从交易对的一侧被抽走，导致池子价格扭曲，另一个账户因此得以提取数百万 XRD；而 10 天的停摆则冻结了 RDX 持有者与网络上各应用的转账和跨链桥活动。经 Hyperlane 转移到以太坊、BNB Chain 和 Solana 的资产随后被换成 ETH，从而将该事件与这些场所的流动性状况联系起来。",
           "material_change": true,
           "occurred_at": "2026-09-18T17:50:45Z",
           "published_at": "2026-09-18T17:50:45Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Radix Engine Toolkit | Radix Documentation",
+              "url": "https://docs.radixdlt.com/docs/radix-engine-toolkit/"
+            },
+            {
+              "title": "Chain Halt Risk: How Developers Mitigate It in Production",
+              "url": "https://cryptoapis.io/blog/634-chain-halt-risk-how-developers-mitigate-it-in-production"
+            },
+            {
+              "title": "Yearn Finance DAI Vault 'Has Suffered an Exploit'; $11M Drained",
+              "url": "https://www.coindesk.com/tech/2021/02/04/yearn-finance-dai-vault-has-suffered-an-exploit-11m-drained"
+            }
+          ],
           "sources": [
             {
               "label": "CryptoSlate",
@@ -68994,8 +69238,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Perpetual futures are derivative contracts with no expiry date; they stay anchored to spot prices through a periodic funding rate that longs or shorts pay each other, typically every eight hours on major platforms. Traditional spot FX is an over-the-counter, dealer-intermediated market that closes from Friday evening to Sunday, so there is no continuous exchange-traded pricing over the weekend. Crypto exchanges have begun wrapping FX exposure into USDT-settled perpetuals, letting crypto traders take currency positions without holding or settling the underlying currencies.",
+          "background_zh": "永续合约是没有到期日的衍生品，通过多空双方定期互相支付的资金费率与现货价格保持锚定，主流平台通常每八小时结算一次。传统即期外汇是场外、由做市商撮合的市场，从周五晚间至周日休市，因此周末没有连续的交易场所报价。加密交易所开始将外汇敞口打包为USDT结算的永续合约，使加密交易者无需持有或交割标的货币即可建立汇率头寸。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -69006,12 +69250,25 @@
           "event_id": "evt_3944d20b413e3243",
           "first_seen_at": "2026-09-18T22:43:53.530435Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission channel is market structure and liquidity: USDT-settled FX perpetuals deepen the use of stablecoins as margin collateral and route traditional currency flow into crypto orderbooks, while concentrating weekend USDBRL price discovery on Binance's own book. Thin off-hours liquidity on that book can amplify funding-rate swings and liquidation cascades for leveraged positions, and rising FX derivatives volume on crypto venues may also feed back into stablecoin demand and exchange fee revenue.",
+          "market_impact_zh": "其传导渠道是市场结构与流动性：以USDT结算的外汇永续合约强化了稳定币作为保证金抵押品的用途，并把传统货币流动引入加密订单簿，同时将周末的USDBRL价格发现集中于币安自身的盘口。盘外流动性稀薄可能放大资金费率波动与杠杆仓位的连锁强平，而加密平台外汇衍生品成交量的上升也可能反过来影响稳定币需求与交易所手续费收入。",
           "material_change": true,
           "occurred_at": "2026-09-18T19:06:30Z",
           "published_at": "2026-09-18T19:06:30Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Binance Futures Will Launch USDBRLUSDT USD... | Binance Support",
+              "url": "https://www.binance.com/en/support/announcement/detail/533eb2f3998a43e3a34df310998bee48"
+            },
+            {
+              "title": "Binance Updates Weekend Pricing on Commodity TradFi Futures",
+              "url": "https://coinmarketcap.com/academy/article/binance-weekend-pricing-tradfi-futures"
+            },
+            {
+              "title": "Perpetual futures quietly drain 10% per year from long positions, The...",
+              "url": "https://cryptobriefing.com/perpetual-futures-funding-rate-cost-longs/"
+            }
+          ],
           "sources": [
             {
               "label": "Cointelegraph",
@@ -69868,7 +70125,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "A Grayscale ETF planning a 3-for-1 split after a $233M inflow surge and nearing $890M in assets is a significant market-structure and institutional adoption development for a privacy-focused asset, with clear implications for ETF accessibility and Zcash demand. Not systemic or paradigm-shifting, but high-value for market participants.",
         "ai_score": 7.5,
@@ -69882,83 +70139,48 @@
         ],
         "author": "Kyle Baird",
         "content": "The Grayscale Zcash ETF (ZCSH) nears $890 million in assets as ZEC’s rally pushes mining competition to record highs.",
-        "fetched_at": "2026-09-18T16:37:30.606452Z",
+        "fetched_at": "2026-09-18T23:26:45.156794Z",
         "id": "rss:www.theblock.co_rss.xml:875ce9e2edaa8f9b",
         "metadata": {
+          "background": "Zcash (ZEC) is a privacy-focused cryptocurrency that uses zero-knowledge proofs, known as zk-SNARKs, to allow shielded transactions in which sender, recipient and amount can be hidden. Grayscale, the largest digital asset manager, converted its long-running Zcash Trust into an exchange-traded fund under the ticker ZCSH, giving brokerage-account investors direct price exposure to ZEC. Share splits are a common administrative step for funds and stocks whose unit price has risen sharply, since a lower nominal price can improve accessibility and trading granularity. Zcash, like Bitcoin, is secured by proof-of-work mining, and the recent price rally has made its mining economics unusually attractive relative to Bitcoin.",
+          "background_en": "Zcash (ZEC) is a privacy-focused cryptocurrency that uses zero-knowledge proofs, known as zk-SNARKs, to allow shielded transactions in which sender, recipient and amount can be hidden. Grayscale, the largest digital asset manager, converted its long-running Zcash Trust into an exchange-traded fund under the ticker ZCSH, giving brokerage-account investors direct price exposure to ZEC. Share splits are a common administrative step for funds and stocks whose unit price has risen sharply, since a lower nominal price can improve accessibility and trading granularity. Zcash, like Bitcoin, is secured by proof-of-work mining, and the recent price rally has made its mining economics unusually attractive relative to Bitcoin.",
+          "background_zh": "Zcash（ZEC）是一种以隐私为核心的加密货币，使用名为 zk-SNARKs 的零知识证明来支持“屏蔽交易”，可以隐藏发送方、接收方和金额。管理规模最大的数字资产管理公司 Grayscale 将其长期运营的 Zcash Trust 转换为交易所交易基金，代码为 ZCSH，使券商账户投资者可以直接获得 ZEC 的价格敞口。对于单位价格大幅上涨的基金和股票而言，份额拆分是一种常见的行政操作，因为更低的名义价格有助于改善可及性和交易粒度。与比特币类似，Zcash 依靠工作量证明挖矿来维护网络安全，近期价格上涨使其挖矿经济性相对于比特币显得格外有吸引力。",
           "category": "crypto-markets",
+          "community_discussion": "",
+          "detailed_summary": "Grayscale's Zcash ETF (ZCSH) is planning a 3-for-1 share split after a $233 million inflow surge pushed the fund's assets to nearly $890 million. The move follows a sharp rally in ZEC that has also driven mining competition on the Zcash network to record highs.\n\nA share split lowers the per-share price of ZCSH, making the ETF easier to buy in smaller amounts and potentially broadening its retail investor base. It also signals that institutional-style, exchange-traded exposure to a privacy-focused asset has grown large enough to warrant routine market-structure housekeeping, a notable step for a category long treated as niche by regulated venues.\n\nA 3-for-1 split triples the number of shares outstanding while dividing the price per share by three, leaving the fund's total assets and each holder's overall value unchanged. ZCSH is structured as an exchange-traded product that is not registered under the Investment Company Act of 1940, so it does not carry the same regulatory protections as 1940 Act-registered ETFs and mutual funds.",
+          "detailed_summary_en": "Grayscale's Zcash ETF (ZCSH) is planning a 3-for-1 share split after a $233 million inflow surge pushed the fund's assets to nearly $890 million. The move follows a sharp rally in ZEC that has also driven mining competition on the Zcash network to record highs.\n\nA share split lowers the per-share price of ZCSH, making the ETF easier to buy in smaller amounts and potentially broadening its retail investor base. It also signals that institutional-style, exchange-traded exposure to a privacy-focused asset has grown large enough to warrant routine market-structure housekeeping, a notable step for a category long treated as niche by regulated venues.\n\nA 3-for-1 split triples the number of shares outstanding while dividing the price per share by three, leaving the fund's total assets and each holder's overall value unchanged. ZCSH is structured as an exchange-traded product that is not registered under the Investment Company Act of 1940, so it does not carry the same regulatory protections as 1940 Act-registered ETFs and mutual funds.",
+          "detailed_summary_zh": "Grayscale 旗下的 Zcash ETF（代码 ZCSH）计划实施 1 拆 3 的份额拆分，此前该基金在资金流入激增 2.33 亿美元后，资产规模已接近 8.9 亿美元。此举发生在 ZEC 价格大幅上涨、并把 Zcash 网络的挖矿竞争推向历史高位之后。\n\n份额拆分将降低 ZCSH 的每份价格，使投资者能以更小金额买入，从而有可能扩大其散户投资者基础。这也表明，面向隐私类资产的机构化交易所交易敞口已成长到需要进行常规市场结构维护的规模，对一个长期被受监管场所视为小众的资产类别而言是值得关注的一步。\n\n1 拆 3 的拆分会使流通份额数量增加两倍、每份价格降至原来的三分之一，基金总资产和每位持有人的整体价值不变。ZCSH 属于交易所交易产品，并未根据 1940 年《投资公司法》注册，因此不享有与 1940 法案注册的 ETF 和共同基金同等的监管保护。",
+          "enrichment_status": "complete",
           "event_retry_pending": true,
           "feed_name": "The Block",
+          "market_impact_en": "The transmission runs mainly through ETF share creation and redemption: Grayscale's authorized participants must source ZEC to meet ZCSH demand, linking fund flows to spot market liquidity for the token. A split alters share count and per-share price rather than the fund's underlying ZEC holdings, so the more consequential market variable is whether inflows continue, while rising hashrate and competition feed back into miner margins and the economics of proof-of-work mining more broadly.",
+          "market_impact_zh": "传导主要通过 ETF 的份额创设与赎回进行：Grayscale 的授权参与者需要买入 ZEC 以满足 ZCSH 的需求，从而把基金资金流与 ZEC 现货市场的流动性联系起来。拆分改变的是份额数量和每份价格，而非基金持有的 ZEC 数量，因此更具实质影响的市场变量是资金流入能否持续；与此同时，算力上升与竞争加剧会反过来影响矿工利润以及更广泛的工作量证明挖矿经济性。",
+          "sources": [
+            {
+              "title": "The Zcash ETF | Grayscale",
+              "url": "https://www.thezcashetf.com/"
+            },
+            {
+              "title": "ZCSH ETF Stock Price & Overview",
+              "url": "https://stockanalysis.com/etf/zcsh/"
+            },
+            {
+              "title": "Miners chase Zcash as ZEC rally makes it 4X more profitable ...",
+              "url": "https://www.cryptopolitan.com/miners-zcash-more-profitable-than-bitcoin/"
+            }
+          ],
           "tags": [
             "Companies",
             "Markets",
             "News"
-          ]
+          ],
+          "title_en": "Grayscale's Zcash ETF Plans 3-for-1 Split After $233M Inflow Surge",
+          "title_zh": "Grayscale 旗下 Zcash ETF 在 2.33 亿美元流入后拟 1 拆 3"
         },
         "published_at": "2026-09-18T15:09:09Z",
         "source_type": "rss",
         "title": "Grayscale’s Zcash ETF plans 3-for-1 split after $233 million inflow surge",
         "url": "https://www.theblock.co/news/markets/2026-09-18-grayscales-zcash-etf-plans-3-for-1-split-233-million-inflow-surge-415520"
-      }
-    },
-    {
-      "attempts": 1,
-      "item": {
-        "ai_reason": "Coinbase filing to list single-stock perpetual futures on major equities like Apple, Tesla, and Nvidia represents a significant market-structure development, expanding derivatives beyond crypto and potentially attracting new institutional and retail participation. It is a material product/regulatory filing from a top-tier exchange, though not yet approved or live, so it falls short of a systemic or groundbreaking event.",
-        "ai_score": 7.5,
-        "ai_summary": "Coinbase has filed to list single-stock perpetual futures tied to Apple, Tesla, and Nvidia, signaling a push to expand its derivatives offerings into equity-linked products.",
-        "ai_tags": [
-          "coinbase",
-          "perpetual-futures",
-          "derivatives",
-          "equities",
-          "market-structure"
-        ],
-        "author": "Decrypt Staff",
-        "content": "Coin Prices\nBTC\n$81,145.00\n6.25%ETH\n$2,621.50\n7.21%BNB\n$762.56\n3.79%XRP\n$1.40\n7.88%USDC\n$0.999803\n0.02%SOL\n$112.91\n11.46%TRX\n$0.338357\n1.15%ZEC\n$1,505.15\n2.22%FIGR_HELOC\n$1.034\n1.24%HYPE\n$92.01\n9.71%DOGE\n$0.088148\n8.28%XMR\n$565.68\n9.84%WBT\n$83.25\n5.84%USDS\n$1.00\n0.04%RAIN\n$0.01344522\n5.04%LINK\n$12.29\n8.38%ADA\n$0.224916\n11.98%LEO\n$8.91\n-0.04%XLM\n$0.192522\n4.86%UNI\n$8.72\n14.17%BCH\n$263.14\n13.08%NEAR\n$3.73\n22.34%USDE\n$0.999828\n0.05%LTC\n$57.75\n7.13%CC\n$0.111514\n10.81%USD1\n$0.999688\n0.06%GRAM\n$1.38\n3.22%AVAX\n$8.19\n8.12%HBAR\n$0.07908\n6.55%SUI\n$0.814255\n10.98%USDG\n$0.999944\n0.00%SHIB\n$0.00000547\n7.30%M\n$1.30\n9.77%CRO\n$0.059517\n3.94%TAO\n$248.86\n8.43%PYUSD\n$1.00\n0.07%XAUT\n$4,376.90\n0.70%USYC\n$1.14\n0.03%OKB\n$116.50\n3.71%RLUSD\n$0.999983\n-0.00%BUIDL\n$1.00\n0.00%USDY\n$1.14\n-0.10%AAVE\n$137.71\n7.46%ASTER\n$0.773014\n4.54%MNT\n$0.626241\n10.32%PUMP\n$0.00434481\n8.16%ONDO\n$0.395454\n6.68%DOT\n$1.13\n5.92%PAXG\n$4,371.74\n0.63%WLFI\n$0.058977\n1.52%MORPHO\n$2.44\n10.96%BTW\n$0.62594\n-11.58%ENA\n$0.166574\n9.16%SKY\n$0.069288\n17.30%PEPE\n$0.00000384\n6.50%ICP\n$2.86\n9.27%HTX\n$0.0000017\n2.05%WLD\n$0.423921\n12.15%USDD\n$0.998539\n0.04%ARB\n$0.217067\n23.73%EURSAFO\n$1.16\n0.12%U\n$0.999952\n0.05%BGB\n$1.99\n3.08%USDGO\n$0.999847\n-0.05%USDF\n$0.996087\n0.06%VVV\n$27.47\n9.27%BFUSD\n$0.999468\n0.03%ETC\n$8.14\n9.21%LIT\n$4.81\n2.82%POL\n$0.105906\n8.19%GT\n$9.95\n6.22%KAS\n$0.03717495\n10.86%AKE\n$0.04517675\n112.84%KCS\n$7.16\n1.99%BCAP\n$106.54\n0.00%PI\n$0.085141\n4.68%JST\n$0.112602\n-1.89%QNT\n$63.30\n3.91%ATOM\n$1.72\n9.97%ALGO\n$0.097558\n8.56%JUP\n$0.263711\n11.83%CAKE\n$2.45\n0.70%NEXO\n$0.841774\n3.54%RENDER\n$1.54\n9.01%DASH\n$61.77\n1.99%EUTBL\n$1.22\n0.11%JAAA\n$1.05\n0.01%FIL\n$0.92749\n12.50%USTB\n$11.22\n0.01%GHO\n$0.999094\n0.06%ETHFI\n$0.716853\n15.90%VET\n$0.00785056\n6.84%AERO\n$0.673146\n15.76%STABLE\n$0.02477738\n5.97%INJ\n$6.55\n16.01%APT\n$0.717745\n21.56%BDX\n$0.075526\n-0.39%FLR\n$0.00665194\n3.95%TRUMP\n$2.08\n6.97%XDC\n$0.0280756\n4.53%USD0\n$0.998865\n-0.01%STX\n$0.28719\n15.84%CRV\n$0.339549\n4.14%币安人生\n$0.512979\n7.15%YLDS\n$0.999829\n0.01%PENGU\n$0.00788442\n9.35%TUSD\n$0.999279\n0.04%USDTB\n$0.999809\n0.07%A7A5\n$0.01209951\n2.26%PYTH\n$0.060097\n7.90%EURC\n$1.15\n0.18%SPX\n$0.501387\n8.64%RAY\n$1.72\n18.17%PENDLE\n$2.62\n11.79%PONS\n$0.66132\n1.42%PIEVERSE\n$1.60\n30.34%VIRTUAL\n$0.657973\n8.14%HASH\n$0.00737921\n2.35%FET\n$0.184178\n8.90%FF\n$0.12724\n-2.62%NIGHT\n$0.02388856\n11.48%ZRO\n$1.11\n8.38%TIA\n$0.40316\n15.67%JTRSY\n$1.12\n0.01%BSV\n$17.30\n5.61%KAU\n$141.04\n0.70%UB\n$0.134143\n-0.30%BTT\n$0.00000033\n3.68%LDO\n$0.392307\n10.23%SUN\n$0.01700362\n1.95%OUSG\n$116.61\n0.01%SOFID\n$0.99903\n-0.02%FDUSD\n$0.999477\n0.15%SEI\n$0.04795797\n9.72%STRK\n$0.0437767\n54.61%APXUSD\n$0.981343\n0.32%XTZ\n$0.288484\n14.95%GNO\n$118.34\n4.43%DCR\n$17.70\n7.36%USDAI\n$1.00\n0.06%AI\n$0.307656\n-4.65%OHM\n$20.13\n0.63%USELESS\n$0.294782\n12.82%MON\n$0.02477059\n7.54%LUNC\n$0.00005237\n4.65%DRV\n$0.281315\n10.98%REUSD\n$1.10\n0.05%OP\n$0.116328\n15.98%BONK\n$0.00000303\n11.72%KITE\n$0.110897\n5.10%ENS\n$6.25\n10.08%CFX\n$0.04944371\n7.66%BR\n$0.87221\n31.75%XPL\n$0.093027\n7.83%APEPE\n$0.00000122\n1.26%SYRUP\n$0.219011\n6.27%FLOKI\n$0.00002582\n7.40%KAG\n$65.85\n0.93%PRL\n$0.949315\n28.49%JTO\n$0.452512\n2.06%AR\n$3.59\n37.19%NFT\n$0.00000024\n-0.71%AUSD\n$0.999606\n0.03%GRASS\n$0.34474\n4.08%USX\n$0.999563\n0.05%KOGE\n$68.26\n1.07%TWT\n$0.545834\n3.93%CASHCAT\n$0.229684\n15.58%GRT\n$0.02049995\n9.25%龙虾\n$0.22343\n-0.75%TIBBIR\n$0.21851\n9.10%FRAX\n$0.992376\n0.12%CRVUSD\n$0.999325\n0.01%EIGEN\n$0.231677\n15.79%WIF\n$0.211692\n14.36%THETA\n$0.209079\n11.88%COMP\n$20.85\n6.93%IOTA\n$0.04446445\n9.39%STONK\n$0.246098\n6.15%EDGE\n$0.581606\n-7.64%PC0000031\n$1.00\n0.00%GRX\n$21.16\n0.05%JASMY\n$0.00405457\n5.41%EURCV\n$1.15\n0.14%NPC\n$0.02376605\n8.44%KAIA\n$0.0298486\n4.24%CVX\n$2.00\n5.02%USAT\n$0.99946\n0.06%B\n$0.181397\n1.11%ZBCN\n$0.00180981\n3.18%SAFO\n$1.021\n0.03%AXS\n$1.021\n8.10%RUNE\n$0.540877\n8.05%APYUSD\n$1.37\n0.78%RAIL\n$2.94\n38.03%CARDS\n$0.184531\n38.52%2Z\n$0.04929401\n5.07%BTSE\n$1.053\n0.49%COCO\n$0.169084\n1.09%BORG\n$0.172145\n6.08%USTBL\n$1.096\n0.01%MX\n$1.82\n1.47%XCN\n$0.00423282\n6.43%H\n$0.082589\n-5.80%AKT\n$0.55183\n7.27%ULTIMA\n$1,934.96\n2.59%PC0000033\n$1.00\n0.00%NEO\n$2.30\n8.64%FARTCOIN\n$0.161936\n12.09%XEC\n$0.00000806\n9.60%VSN\n$0.04266912\n2.24%ANTFUN\n$0.084805\n-2.07%CHZ\n$0.01507959\n4.88%TEL\n$0.00160091\n12.46%KMNO\n$0.02824923\n1.30%STRCX\n$106.98\n1.65%SHFL\n$0.326153\n4.69%MANA\n$0.078313\n5.47%A\n$0.09132\n17.73%ZAMA\n$0.059931\n21.12%TRAC\n$0.338622\n4.09%ZEN\n$8.18\n12.11%GUSD\n$0.998374\n0.06%SFP\n$0.295142\n5.53%GOMINING\n$0.360019\n5.44%DGAI\n$0.960178\n3.84%MET\n$0.259976\n15.61%BP\n$0.569495\n6.43%MINA\n$0.10737\n11.24%APE\n$0.13801\n6.63%1INCH\n$0.096911\n6.88%JPYC\n$0.00634984\n-5.57%SKR\n$0.01915765\n-0.22%PC0000097\n$1.00\n0.00%HOOD\n$0.130141\n150.72%AWE\n$0.067578\n5.06%SNX\n$0.224741\n7.11%SENT\n$0.01780572\n12.02%ZANO\n$8.26\n32.78%JPYSC\n$0.0063744\n-0.55%RLB\n$0.081239\n1.25%EGLD\n$4.13\n6.18%CASH\n$0.999573\n0.06%AVUSD\n$0.999122\n0.10%OZO\n$0.130406\n-0.34%S\n$0.0319892\n19.93%BC\n$0.03864819\n2.87%BLORB\n$0.12322\n7.21%",
-        "fetched_at": "2026-09-18T22:43:52.557461Z",
-        "id": "rss:decrypt.co_feed:3a170597d83e287a",
-        "metadata": {
-          "category": "exchange-announcements",
-          "event_retry_pending": true,
-          "feed_name": "Decrypt",
-          "source_category": "crypto-markets",
-          "tags": [
-            "Business"
-          ]
-        },
-        "published_at": "2026-09-18T21:01:30Z",
-        "source_type": "rss",
-        "title": "Coinbase Files to List Single-Stock Perps on Apple, Tesla and Nvidia",
-        "url": "https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia"
-      }
-    },
-    {
-      "attempts": 1,
-      "item": {
-        "ai_reason": "Chainalysis report on state-sponsored blockchain dead drop attacks rising 420%, detailing North Korean use of Tron, Aptos, and BNB Smart Chain as redundant command paths and Iranian actors encoding routing data in Bitcoin transactions. This is a significant security and threat-intelligence development with clear implications for blockchain infrastructure and national security, though it lacks a specific exploit or immediate user-fund impact.",
-        "ai_score": 7.5,
-        "ai_summary": "Chainalysis reports a 420% surge in blockchain dead drop attacks, with North Korean hackers using Tron, Aptos, and BNB Smart Chain as redundant command channels and Iranian actors embedding routing data in Bitcoin transactions.",
-        "ai_tags": [
-          "security",
-          "chainalysis",
-          "north-korea",
-          "blockchain-forensics",
-          "state-sponsored-hacking"
-        ],
-        "author": "The Defiant Team",
-        "content": "Chainalysis says North Korean operators use Tron, Aptos and BNB Smart Chain as redundant command paths, while suspected Iranian actors encode routing data in Bitcoin transactions.",
-        "fetched_at": "2026-09-18T22:43:48.315069Z",
-        "id": "rss:thedefiant.io_api_feed:99aa27d52de20db9",
-        "metadata": {
-          "category": "crypto-protocols",
-          "event_retry_pending": true,
-          "feed_name": "The Defiant",
-          "tags": []
-        },
-        "published_at": "2026-09-18T16:59:38Z",
-        "source_type": "rss",
-        "title": "Blockchain Dead Drop Attacks Jump 420% as State Hackers Expand",
-        "url": "https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand"
       }
     }
   ],

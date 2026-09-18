@@ -4,7 +4,117 @@
   <link href="https://bmt.news/feeds/crypto-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
-  <updated>2026-09-18T00:00:00Z</updated>
+  <updated>2026-09-19T00:00:00Z</updated>
+  <entry>
+    <title>Haruko 遭网络攻击，15 家加密客户的 API 密钥与交易数据泄露</title>
+    <link href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPTV9qaG5DbW9HU2Z1M0JtZXBkMjJTc29KZ0tsSUlTNUoxd216QzhGN3JVY3I1c245eGZ3REV3NDJheC1fRUsxQzF4RHRWOVdHbm95dTg4UTlKZnYzR1JLekN1dzJtakZxX19DZ2ZRa3F0X0Q2Y25zSjZnQ0M0SV9zdHRZMW1PTWxpU1dfZmdPUVVYU3NZZUpWamFtVkpHQXVudTBoVWlQSXBuVTRLWXF2V2hDRjRGUUd3Wmw4WUdvWllZanp6ZF9j?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-19/#google_news:article:9ab2e1934142e2ae</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>总部位于英国、为机构提供加密货币投资组合管理与交易捕获技术的 Haruko 本周遭到网络攻击，共有 15 家客户受影响，其只读交易平台 API 凭证和交易数据被泄露。此外还有少量客户资金被盗，据报道部分规模较小的对冲基金客户出现资产损失。
+
+这一事件表明，单一中间层软件供应商可能成为数十家机构交易台的系统性入口，因为被泄露的 API 凭证和交易数据会给受影响基金及其交易对手带来后续风险。它可能会促使机构加密交易领域加快对第三方供应商安全与凭证管理的审查，而该领域近期随着现货 ETF 和主经纪商业务的发展而迅速扩张。
+
+据 CoinDesk 报道，被泄露的交易平台 API 信息属于只读权限，通常只允许攻击者查看余额与交易历史，而无法发起转账或下单，但报道仍提到有少量客户资金被盗。Haruko 的平台与数百家交易场所建立了全托管的集成连接，因此这一层级的凭证泄露可能同时波及大量交易所账户。</summary>
+  </entry>
+  <entry>
+    <title>Radix Engine 旧漏洞致 130 万美元被盗，区块链停摆 10 天</title>
+    <link href="https://cryptoslate.com/3-year-old-bug-triggers-1-3-million-drain-and-forces-10-day-blockchain-halt/"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:cryptoslate.com_feed_:7226e0f4ab5716b3</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Radix 基金会于 9 月 17 日披露，2023 年 6 月对 Radix Engine（负责执行交易并强制执行资产所有权的软件层）的一次重构引入了一个漏洞，该漏洞于 8 月 31 日被利用，攻击者通过 26 笔交易盗走约 126 万美元的跨链资产。随后验证者主动将足够多的质押下线，使共识停止运行超过 10 天；在协议修复加入校验、阻止受限金库引用被用于普通提款后，用户交易于 9 月 11 日恢复。
+
+这是一起实质性的协议级安全失败：该缺陷在执行层潜伏了三年多，还躲过了 Zellic 在 2024 年进行的外部审计，并且调查人员认为它可以被用于攻击网络上的任何金库，这意味着 130 万美元的损失低估了真实风险敞口。它还凸显了一次常规维护性改动如何制造系统性风险，并迫使网络牺牲活性——这一决定本身也会给用户和应用带来代价。
+
+攻击者取走了约 458,915 USDC、72,420 USDT、61.08 ETH、6.35 wrapped Bitcoin、536.16 SOL 和 32.91 BNB，并通过 Hyperlane 将这些资产转移到以太坊、BNB Chain 和 Solana 后换成 ETH；没有私钥被泄露，Hyperlane 本身按设计正常运行。该漏洞改变了引擎处理金库引用的方式，使一笔交易能够指向他人的金库并调用普通提款函数，而未强制执行所有权边界；此外，池子价格被扭曲后，另一个账户从受影响池中提取了数百万 XRD，造成二次损失。</summary>
+  </entry>
+  <entry>
+    <title>Coinbase 向 CFTC 提交申请，拟上线苹果、特斯拉、英伟达个股永续合约</title>
+    <link href="https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:decrypt.co_feed:3a170597d83e287a</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>据《华尔街日报》报道，Coinbase Derivatives 已向美国商品期货交易委员会（CFTC）提交申请，拟上线与苹果、特斯拉、英伟达等美国上市个股及 ETF 挂钩的现金结算永续合约。此次申请将该交易所的境内永续合约布局从股票指数扩展到单一证券。
+
+若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。
+
+拟议合约采用现金结算且为永续结构，即没有到期日，而是通过定期资金费率机制来锚定标的股价。该申请建立在 Coinbase 现有的衍生产品线之上——其平台已提供加密期货、Mag7+Crypto 指数产品以及 7×24 小时的比特币和以太坊期货交易——但相关个股产品目前尚未获批，也未正式上线。</summary>
+  </entry>
+  <entry>
+    <title>币安推出24/7外汇永续合约，采用周末EWMA定价机制</title>
+    <link href="https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:cointelegraph.com_rss:c35997bd18cefb5a</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>币安宣布推出7×24小时外汇永续合约，首个产品为USDBRLUSDT合约，将于9月21日上线，以USDT结算并提供最高100倍杠杆。该合约采用双模式定价：在正常外汇交易时段跟踪第三方数据供应商提供的加权指数，在周末及公共假日则改用基于订单簿的指数加权移动平均（EWMA）定价。
+
+此举使全球最大加密货币交易所切入外汇这一按成交额计算全球最大的金融市场——国际清算银行数据显示，2025年4月全球场外外汇日均成交额约为9.6万亿美元。此前Bybit和Kraken已推出类似的7×24小时外汇永续产品，说明加密衍生品平台正竞相争夺传统外汇市场无法覆盖的汇率敞口与盘外价格发现需求。
+
+周末定价刻意不依赖外部价格源，而是通过EWMA从币安自身订单簿推导价格，这一设计此前已用于币安基于大宗商品的TradFi永续合约，意味着盘外时段的保证金要求与强平价位可能由更薄的内部流动性而非参考汇率决定。根据币安合约公告，该合约以USDT结算，最小变动价位为0.0001，最小名义价值为5 USDT。</summary>
+  </entry>
+  <entry>
+    <title>Neutrl 开放 NUSD 赎回价格仅为 0.51 美元，Strata 次级份额被清零</title>
+    <link href="https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:thedefiant.io_api_feed:76ea787000d213a7</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Neutrl 已按约 0.51 美元兑 1 美元的价格开放 NUSD 赎回；与此同时，Strata 安排了为期 48 小时的估值更新，将其次级份额代币 jrNUSD 的估值直接归零，并以调整后的份额价值用 sNUSD 结算优先级份额的提现。Strata 的披露文件称，问题并非智能合约漏洞利用、黑客攻击或代码缺陷。
+
+对于这一结构化 DeFi 产品的存款人而言，这是一次实质性亏损事件，说明当损失规模较大时，作为首损缓冲的次级份额并不足以保护优先级资金。它凸显了一个风险：把分层结构叠加在单一收益策略之上，可能让损失直接传导给持有类稳定币代币的普通存款人。
+
+Strata 的 srNUSD 与 jrNUSD 份额均暴露于策略合约所持有的 sNUSD；按照 Strata 的损失分摊规则，jrNUSD 在 srNUSD 之前承受损失。在 0.51 美元 NUSD 参考价值下，损失已超过次级份额的保护额度，这正是优先级持有人也以缩水价值结算的原因。jrNUSD 与 srNUSD 均为无需许可的代币，可在 DEX 上交易，用户在赎回后还需手动领取 NUSD/sNUSD。</summary>
+  </entry>
+  <entry>
+    <title>Chainalysis：区块链“死信箱”攻击激增420%，国家背景黑客扩大部署</title>
+    <link href="https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:thedefiant.io_api_feed:99aa27d52de20db9</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Chainalysis 报告称，过去 12 个月内区块链“死信箱”（dead drop）攻击增长了 420%，到 2026 年第二季度，与朝鲜和伊朗有关联的操作者约占新观测活动总量的三分之二。与朝鲜有关联的团伙 UNC5342 使用 Tron 和 Aptos 作为冗余路径，将已感染设备引向存储在 BNB Smart Chain 上的恶意软件指令；而疑似伊朗行为者则把命令与控制路由信息嵌入发送至历史上与中本聪相关地址的比特币交易中。
+
+这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。
+
+Chainalysis 表示，在高容量开源权重的中国 AI 模型出现后，恶意区块链写入从每天 2.06 次升至每天 11.1 次，不到一年增长 440%；不过该公司也提醒，其测量并不能锁定某一个具体模型，也无法证明增幅完全由 AI 造成。该恶意软件会优先查询 Tron，若该路径失败则回退至 Aptos，因此要瓦解该行动需要同时在三条链上采取行动。</summary>
+  </entry>
+  <entry>
+    <title>比特币突破8万美元，美联储鸽派点阵图引爆4.45亿美元空头挤压</title>
+    <link href="https://decrypt.co/378630/bitcoin-blasts-short-squeeze-crypto-liquidations"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:decrypt.co_feed:104a188f7873de3f</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>比特币在24小时内上涨5.88%至80,846美元，开盘报76,355美元，盘中最高触及80,857美元。此前美联储加息25个基点，但其点阵图显示到2027年底政策利率中值仅为4.1%。这轮上涨清算了超过4.45亿美元的加密空头头寸，其中比特币空头就超过2.3亿美元。
+
+这一事件表明加密衍生品如今对美联储政策信号的反应极为直接：仅凭一份偏鸽的预测便引发了连锁空头挤压，抹平了此前Clarity Act在参议院表决失败后引发的恐慌性抛售。这说明推动比特币单日大幅波动的不仅是现货需求，杠杆头寸同样关键，而比特币目前仍较此前历史高点低近20%。
+
+技术指标支持这轮涨势，但也提示涨速过快：ADX为40.6，远高于25的趋势确认门槛，且DI+高于DI-；50日EMA已上穿200日EMA，自上周六起形成黄金交叉。RSI为63.3，处于看涨区间但正快速逼近70的超买警戒线；挤压动能指标已连续11根K线保持开启，8.06%的收缩读数显示波动率仍被压缩，更大级别的释放可能还在后面。</summary>
+  </entry>
+  <entry>
+    <title>Grayscale 旗下 Zcash ETF 在 2.33 亿美元流入后拟 1 拆 3</title>
+    <link href="https://www.theblock.co/news/markets/2026-09-18-grayscales-zcash-etf-plans-3-for-1-split-233-million-inflow-surge-415520"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:www.theblock.co_rss.xml:875ce9e2edaa8f9b</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>Grayscale 旗下的 Zcash ETF（代码 ZCSH）计划实施 1 拆 3 的份额拆分，此前该基金在资金流入激增 2.33 亿美元后，资产规模已接近 8.9 亿美元。此举发生在 ZEC 价格大幅上涨、并把 Zcash 网络的挖矿竞争推向历史高位之后。
+
+份额拆分将降低 ZCSH 的每份价格，使投资者能以更小金额买入，从而有可能扩大其散户投资者基础。这也表明，面向隐私类资产的机构化交易所交易敞口已成长到需要进行常规市场结构维护的规模，对一个长期被受监管场所视为小众的资产类别而言是值得关注的一步。
+
+1 拆 3 的拆分会使流通份额数量增加两倍、每份价格降至原来的三分之一，基金总资产和每位持有人的整体价值不变。ZCSH 属于交易所交易产品，并未根据 1940 年《投资公司法》注册，因此不享有与 1940 法案注册的 ETF 和共同基金同等的监管保护。</summary>
+  </entry>
+  <entry>
+    <title>Hyperliquid 在 HyperCore 上线原生借贷，HYPE 突破 90 美元创新高</title>
+    <link href="https://cryptoslate.com/hyperliquid-opens-native-lending-as-hype-hits-new-ath-above-90/"/>
+    <id>https://bmt.news/editions/2026-09-19/#rss:cryptoslate.com_feed_:5ef1d6ed055d8cdd</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>9 月 18 日，Hyperliquid 推出原生手动借贷功能，用户可质押 HYPE 或比特币作为抵押品，直接通过 HyperCore 借入 USDC 或 USDT。上线首日借贷规模约 2.69 亿美元；同期 HYPE 一周内上涨约 15%，盘中最高触及约 91.06 美元，超过此前约 89.60 美元的纪录。
+
+此次上线让 Hyperliquid 从衍生品与现货交易所扩展至信贷、抵押与收益生成领域，用户无需离开平台即可在交易与借贷之间切换。首日即达 2.69 亿美元的规模，说明该借贷原语有望成为该生态内重要的稳定币流动性来源与 HYPE 需求来源，而非孤立的附属产品。
+
+HYPE 的贷款价值比（LTV）为 65%，比特币为 50%，对应的清算阈值分别为 82.5% 与 75%。由于同一批资金池此前已支持组合保证金业务，借款方可动用超过 4 亿美元的既有流动性；稳定币供给方按资金利用率获得浮动利息，组合保证金用户还能就闲置稳定币余额赚取收益。</summary>
+  </entry>
+  <entry>
+    <title>标普全球拟收购智能合约安全公司OpenZeppelin</title>
+    <link href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1ULWRydHIzTlhTQjBLZEdHTjY4NzhvN0tKN014RGNJUm9KUWNLTm9aVVJyZlIwaWhWRHBnenM1Z0diR1pnT2FUelBZM0MzU2lUUWZ0SW1FTEMxeFZHTHo3amZvajkyQlFZX25Fbk94S2JfT2dNU0dRSGlIMjNzdjA?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-19/#google_news:article:67eef9254a371e97</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>9月17日，标普全球宣布达成协议收购智能合约安全与开发工具公司OpenZeppelin，交易财务条款未披露，且仍需满足交割条件。收购完成后，OpenZeppelin将保留其名称、由首席执行官Demian Brener领导的团队以及开源代码，作为独立业务部门运营，并向标普全球评级总裁Yann Le Pallec汇报。
+
+OpenZeppelin Contracts是行业内使用最广泛的智能合约库，因此由一家大型金融数据与评级集团将其收入囊中，是传统金融不再局限于交易和托管、而是直接买入加密核心基础设施的最明显案例之一。这也让标普直接切入稳定币与代币化资产底层的安全层，此前标普还领投了加密数据服务商Kaiko，正在加速拓展数字资产业务。
+
+OpenZeppelin表示，自2015年以来，通过其Contracts软件转移的价值已超过37万亿美元；当前代码库采用宽松的MIT许可证，公司声明已发布的版本将永久保持开源且不可撤回。此次公告对审计、工程工作、生态项目及开源代码作出了延续性承诺，但其现有服务条款仍允许对付费或托管方案进行调整，包括定价、功能、配额与使用限制，具体保护措施和通知方式视变更类型而定。</summary>
+  </entry>
   <entry>
     <title>标普全球收购智能合约安全公司OpenZeppelin</title>
     <link href="https://decrypt.co/378505/sp-global-acquire-crypto-openzeppelin"/>
@@ -334,115 +444,5 @@ Strategy是持有比特币最多的上市公司，其把可自由支配的现金
 这一结构把潜在客户直接放进了他们日后的依赖对象——网络基础设施之中，使网络运营者、投资者与终端用户三重身份集中在同一批华尔街机构身上。这是稳定币原生结算基础设施获得机构采用的重要一步，但同时也把共识权力集中于少数经过审核的机构，而各家的具体投票权重尚未公开。
 
 Arc 以确定性终局性为核心：其 Malachite 共识引擎采用许可制权威证明（Proof-of-Authority）模型，由轮值验证者出块，且必须获得超过三分之二的验证者集合预先承诺同一区块才能最终确认，此后 Arc 称交易在共识层无法被重组或回滚。启动配置预计将在多个地区使用约 20 个通过 SOC 2 认证的验证者，但各家投票权尚未公布；同时 Arc 的披露文件明确表示，Arc Network Services LLC 及其许可制验证者均不对第三方应用的内容、合法性或功能负责。</summary>
-  </entry>
-  <entry>
-    <title>Base 脱离 OP Stack，转向自主技术栈</title>
-    <link href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOUGpnNDc5dHV5dmgzWUJ2TGUzc2VRVEdMSkU3TG5JYkdTTUZlcGZuMzhsYmdNeXV6V25kcDhZaE1fX005ZUpOMzhEQ1JBQ1Jhb0NCeW1XVXNnTUQydHc1Rk8tblhTZE5jLWt4SjdRNnFfT3pPYzJOcG5ZYmVMcEFLaHVxNGVkdlVHNzhza094VUI4c1VpNmlZTkNmSzA3Q3luV3Zsc0dxSjdBWEVFTkNVWGV2YTc?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-15/#google_news:article:a7cf3cf00e3be2c3</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>由 Coinbase 孵化的以太坊 Layer 2 网络 Base 宣布，将把代码库从 Optimism 的 OP Stack 中迁移出来，整合进由 Base 自主运营的代码仓库，从而结束自上线以来对外部依赖的依赖。此举紧随 Base 的 Azul 主网升级，该升级被官方称为 Base 首次独立的协议升级，也是迈向 Stage 2 去中心化的一步。
-
-Base 是规模最大、使用最广泛的 Layer 2 网络之一，它脱离共享的 OP Stack 代码库，削弱了“Superchain 成员链始终保持同步升级”的假设。这使 Base 能够单方面掌控自身路线图与发布节奏，同时也让外界重新审视 Optimism Collective 的共享基础设施与治理模式对合作伙伴究竟还能提供什么价值。
-
-通过掌控自有代码仓库，Base 的工程团队不再需要等待外部链联盟就协调硬分叉达成一致，有报道指出这让他们发布协议性能升级与定制补丁的速度大约提升了一倍。Base 依然是结算到以太坊上的 Layer 2，其 Azul 升级引入了多重证明（multiproof）机制以及全新的客户端技术栈。</summary>
-  </entry>
-  <entry>
-    <title>Robinhood 将为股票代币增设股份赎回与投票权</title>
-    <link href="https://www.coindesk.com/business/2026/09/14/robinhood-plans-share-redemptions-voting-rights-for-stock-tokens-after-criticism"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:www.coindesk.com_arc_outboundfeeds_rss_:327bc28bb5acc3d4</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Robinhood 首席执行官 Vlad Tenev 与加密业务负责人 Johann Kerbrat 表示，公司计划为其股票代币产品加入一比一的股份赎回以及投票权，直接回应了外界批评其代币所附所有权功能有限的质疑。Tenev 将这些功能描述为尚在路上而非已经上线，他表示“第一步是扩大股票代币的采用规模”，而股份一比一赎回和为合格持有者提供投票权则列在路线图上。
-
-代币化股票此前通常只提供经济敞口而非真正的股份所有权，因此引入赎回与投票权将缩小股票代币与传统券商持仓之间的差距。若 Robinhood 真正落地这些功能，将抬高整个代币化股票赛道的市场结构门槛，对 Kraken 的 xStocks、Gemini 等竞争对手形成压力，并可能推动该行业从“价格跟踪型包装”走向真正意义上的链上所有权。
-
-这些功能尚未上线：Tenev 明确表示“还没有，但即将到来”，而投票权被描述为面向“合格”的股票代币持有者，意味着相关资格标准尚未公布。按照典型的代币化证券机制，赎回是指持有者将代币退回发行方、托管方处置底层资产并返还价值；而一比一的股份赎回则意味着以实物方式交付真实股票。</summary>
-  </entry>
-  <entry>
-    <title>Aave V4 的 Umbrella 提案：DAO 资金将优先吸收借贷坏账</title>
-    <link href="https://cryptoslate.com/aave-v4-proposal-would-put-dao-funds-first-in-line-to-absorb-lending-losses/"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:cryptoslate.com_feed_:5a5d2c52284e90da</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>9 月 11 日，TokenLogic 提出了面向 Aave V4 的 Umbrella 方案：由 Aave DAO 通过“赤字抵消”（deficit offsets）率先吸收借贷损失，具体额度为 33 ETH、15,000 USDC 和 15,000 USDT，超出该层的赤字则由自愿承保人承担。这一坏账兜底机制初期仅适用于以太坊 Core Hub 上的 WETH、USDC 和 USDT 储备，承保目标规模分别为 800 ETH、400,000 USDC 和 400,000 USDT。
-
-该提案实质性地重塑了 Aave 的风险结构：把第一损失暴露转移给 DAO 资金库，并为承保人创造了“以收益换风险”的新角色，从而改变出借人、AAVE 持有者以及治理层对偿付风险的评估方式。若获通过，它可能成为大型 DeFi 借贷市场在 V4 的 Hub-and-Spoke 架构下分摊尾部风险的模板。
-
-保障范围按储备（reserve）而非按代币划分，因此存入其他 Hub 的 USDC 不在保护之列，分配给某一 Hub 资产的资金也无法弥补其他储备的赤字；承保人需面对 20 天冷却期加 2 天提款窗口，且在等待退出期间质押资产仍暴露于罚没（slashing）风险。TokenLogic 明确不建议初期为 USDG 和 frxUSD 提供通用型保障，理由是激励敏感的借贷活动存在不确定性，而 frxUSD 还存在发行人关联度高的集中化供应方结构。</summary>
-  </entry>
-  <entry>
-    <title>Balancer 提议关闭协议，将 900 万美元金库返还给 BAL 持有者</title>
-    <link href="https://thedefiant.io/news/defi/balancer-proposes-shutting-down-and-distributing-treasury-to-bal-holders"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:thedefiant.io_api_feed:9fef2de13228a21f</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Balancer 已提出一项治理提案，计划逐步关闭该协议：所有资金池将于 10 月 30 日切换为仅可提现模式，BAL 持有者则可自 2027 年 5 月起销毁代币，按比例换取约 900 万美元金库中的份额。
-
-这意味着 DeFi 领域运行时间最长的自动做市商之一正式走向全面关闭，BAL 从代表协议持续运营的治理代币，转变为对剩余金库资产的索取权，也为“垂死”DeFi 协议如何向持币者返还资金树立了先例。该提案直接决定 BAL 持有者能否收回价值，也反映出市场在严重漏洞事件后对治理代币的定价方式。
-
-赎回机制自愿参与：持有者销毁 BAL 以换取金库中相应比例的份额，但该流程要到 2027 年 5 月才启动；同时 BAL 仅 770 万美元的市值明显小于约 900 万美元的金库规模，因此每枚代币的实际回收价值取决于最终索赔结构。资金池将于 10 月 30 日转为仅可提现模式，即停止提供流动性和交易功能，用户仍可提出自己的资金。</summary>
-  </entry>
-  <entry>
-    <title>标普全球领投Kaiko，B轮融资增至1.1亿美元，瞄准代币化市场数据</title>
-    <link href="https://cointelegraph.com/news/sp-global-leads-110m-kaiko-funding-round-as-wall-street-eyes-tokenized-markets?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:cointelegraph.com_rss:1010a4df9fd29631</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>标普全球（S&amp;P Global）领投了对总部位于巴黎的加密市场数据提供商 Kaiko 的战略投资，使其 B 轮融资规模扩大至 1.1 亿美元，参投方还包括法国巴黎银行、Bpifrance、Broadridge、Canton Foundation、Coinbase Ventures、DRW Venture Capital、Nasdaq Ventures、加拿大皇家银行、Stellar 以及 Susquehanna Private Equity Investments。Kaiko 表示，本轮资金将用于支持其核心数字资产市场数据业务，并推进链上金融基础设施建设，其中包括面向代币化美国国债、货币市场基金、股票和债券的数据服务。
-
-标普全球、法国巴黎银行、Nasdaq Ventures、加拿大皇家银行等传统金融机构的参与，标志着机构对加密市场数据基础设施作为代币化证券底层支撑的高度认可。参投方还将加入由 Kaiko 主导的行业工作组，共同制定代币化金融产品的数据与基础设施标准，这使该公司处于传统市场数据标准与链上市场的交汇点。
-
-Kaiko 首席执行官 Ambre Soubiran 表示，这些投资者覆盖了数字资产市场的多个关键领域——定价、交易、资本配置和区块链开发，并将作为合作伙伴共同建设机构级链上金融基础设施。本轮融资之前，Kaiko 已连续推进多项扩张动作：5 月收购受 MiCA 监管的链上基础设施提供商 Cometh，6 月收购美国数字资产数据提供商 Amberdata，并于 2 月与彭博（Bloomberg）合作将持牌金融数据引入链上。</summary>
-  </entry>
-  <entry>
-    <title>Bybit 拦截协同式虚假充值攻击，避免逾 10 亿美元 DOT 潜在损失</title>
-    <link href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZjk5MDlvMHJhTFpLakpJOHJOY21DemEyUVF1S2FJNUZpMDJ3OFhGMVM0VGJjeWEzVW9qR0FfbmwyUmRJMWNTQmx2THFzS1hoMzN0UDlmSFltUEtfN3pjZWZWbEp4NEhwWHY5Z1NXcnJwWWpQN1l4eUFEQ05VUmQtbUppZFRsUWRYVXVKRWR4YkJsbmlOR1ZkM3ZXU3BqaFZjWEtuYXhhakFCQ1hQcXN5SkNuTGhCVXZTdk5wR2t1cmZrZk4xTmFoYXdkZndYalllWjFhZ0dXbzVpZ2VpanNlUnVPRVI?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-15/#google_news:article:57b2baad3a7c0500</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>Bybit 表示已检测并拦截了一波针对多条区块链网络的协同式虚假充值攻击，避免了价值超过 10 亿美元 DOT 的潜在损失。该交易所称，这些攻击采用了日益复杂的手法，意在利用其充值扫描系统的薄弱环节。
-
-虚假充值攻击打击的是交易所基础设施的验证层，也就是用户默认信赖、负责正确入账的那一环，因此若这一规模攻击得手，将成为交易所有史以来最大的损失事件之一。该事件也说明中心化交易所的充值流程仍是活跃的攻击面，攻击者可以跨链、跨币种将其产业化复制。
-
-据 Bybit 称，此次攻击横跨多条区块链网络，且具有协同性而非偶发性质，说明攻击者事先已摸清充值扫描的逻辑。公告中的数字指的是可能被虚假入账的 DOT 名义价值，而非实际损失的资金，因为 Bybit 表示这些尝试在结算前就已被阻止。</summary>
-  </entry>
-  <entry>
-    <title>币安推出 bStock 交易，将代币化美股搬上交易所</title>
-    <link href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxONHp4QlBwaDV3YVdGcjFVV0hhMURZU25aa0tCcUNCaHIxdC1IaDlnQ1hxY2YyN3dxMk9ybmJPWi1QMlhNZmlnNllIMUNoTTV2NHBrS2llWVVqd2pKcFdkczNTbXNTdXlHTjRoVE9RNFY4aDBEcmRuOUlIdjBXZ3MwVjJSWHQ5dlJuR0I4?oc=5"/>
-    <id>https://bmt.news/editions/2026-09-15/#google_news:article:3ff027f72bea67fa</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>币安已正式上线 bStock（代币化股票）交易，符合条件的国际用户可以直接在币安现货市场像买卖其他加密资产一样，全年无休地买入和卖出代币化股票产品。根据币安官方资料，该产品覆盖超过 7000 只美国上市股票和 ETF。
-
-这标志着全球最大加密交易所进一步切入传统股票市场结构，直接与 Kraken 的 xStocks 等代币化股票平台竞争，使加密交易平台与券商之间的界限更加模糊。同时，它让非美国用户更容易获得美股敞口，也让证券监管机构如何界定离岸销售的代币化股票成为新的焦点。
-
-每一枚 bStock 都由托管于受监管托管机构的真实美股 1:1 支撑，代币在币安现货市场连续交易，而不局限于美国股市的开盘时段。该产品仅面向符合条件的国际用户开放，覆盖范围同时包括美股个股和 ETF。</summary>
-  </entry>
-  <entry>
-    <title>Revolut 客户数据泄露：攻击者索要 1 万枚 BTC 赎金</title>
-    <link href="https://protos.com/what-we-know-about-the-revolut-customer-data-leak/"/>
-    <id>https://bmt.news/editions/2026-09-15/#rss:protos.com_feed_:a4af7506ff1c0de4</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>英国金融科技公司 Revolut 确认，攻击者利用一个真实的政府机构域名邮箱提交欺诈性信息调取请求，从而骗取了客户数据；攻击者随后开始公开泄露身份证件，并据称索要 1 万枚 BTC（约 7.8 亿美元）以停止继续泄露。Revolut 尚未确认这一赎金要求，也未证实网上流传材料的真实性。
-
-据称 1 万枚 BTC 的赎金要求是金融科技领域迄今与加密货币挂钩的最大金额之一，也说明一个简单的邮箱冒充手法就能绕过同时托管法币与加密资产的银行的安全校验。对加密行业而言，知名持币者（包括前 Mt. Gox 首席执行官 Mark Karpelès）的交易记录可能被泄露，引发了对高净值链上用户遭定向攻击的担忧。
-
-可能泄露的数据包括姓名、出生日期、住址、电子邮箱和电话号码，以及护照与驾照复印件；客户通知还提到账户对账单、IBAN、提现记录和包含 BTC 交易的完整交易历史。Revolut 表示受影响客户数量“非常有限”，其系统与客户资金未受影响；而 1 万枚 BTC 的赎金数字尚未得到证实，包括分析师 Max Karpis 在内的一些观察者怀疑该要求并非真实，因为在链上支付很容易被追踪。</summary>
-  </entry>
-  <entry>
-    <title>BTCPay Server 警告：机器人正探测暴露的闪电节点重启期漏洞</title>
-    <link href="https://cryptoslate.com/malicious-bots-are-actively-probing-exposed-bitcoin-payment-servers-to-steal-master-administrative-keys/"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:81d3a48ce852b456</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>BTCPay Server 警告称，恶意机器人正在对运营者手动重新暴露到公网的闪电节点反复调用 LND 的密码修改接口，利用 LND 重启后钱包仍处于锁定状态的短暂窗口期。9 月 7 日发布的 2.4.4 版本修补了该攻击路径：为新 LND 钱包分配唯一的随机密码，对使用共享默认凭证的旧部署轮换密码，并通过 BTCPay 标准反向代理拦截未经认证的钱包初始化和解锁调用。
-
-一旦探测成功，攻击者可能在 BTCPay 内部解锁程序之前抢先提交旧的共享密码、将其替换，并申请可获得 LND 节点及所保护商户钱包控制权的管理员 macaroon，最终后果与 8 月的盗窃事件相同。任何使用自定义反向代理或公网暴露 LND 的自托管 BTCPay Server 运营者都处于直接风险之中，必须升级版本并重新审查网络规则。
-
-在重启后的时间窗口内，被利用的密码修改方式不需要 macaroon——而 macaroon 通常是 LND 用来授权管理操作的凭证；此外，旧的 BTCPay LND 钱包因使用共享默认密码而放大了风险。BTCPay 代理侧的防护无法保护运营者自行配置的基础设施，因此在移除公开的 LND 路由之前，自定义反向代理仍然脆弱；9 月 11 日合并的一项路由控制改动提供了受支持的远程访问方式，同时默认禁用 LND 与 Core Lightning 接口。BTCPay 尚未报告通过此次观测到的活动实现成功接管，也未将这批机器人归因于 8 月的攻击者。</summary>
-  </entry>
-  <entry>
-    <title>Cosmos Hub 已恢复出块，但 Ledger 用户仍无法访问 ATOM</title>
-    <link href="https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/"/>
-    <id>https://bmt.news/editions/2026-09-14/#rss:cryptoslate.com_feed_:b1978328ff40f332</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>Cosmos Hub 于 9 月 8 日 18:12 UTC 在区块高度 32,878,318 处停止出块，QuickNode 表示其节点已于 9 月 9 日 14:26 UTC 追平链头，并已在 9 月 12 日 00:24 UTC 将其自身事件标记为已解决。但 Ledger 于 9 月 8 日 19:41 CEST 单独开立了一起事件，其状态页在 9 月 13 日仍将 Cosmos（ATOM）列为重大故障，用户无法查看 ATOM 余额与交易历史，也无法通过 Ledger Wallet 提交 ATOM 交易。
-
-这一事件把网络层恢复与钱包层可用性区分开来：Cosmos Hub 已恢复出块，但一款被广泛使用的硬件钱包仍无法为其用户显示余额或广播 ATOM 交易。它凸显出即便底层链运行正常，单一钱包厂商的服务链路也可能实质性冻结用户动用资产的能力，也说明硬件钱包依赖给自托管带来的访问与流动性摩擦。
-
-Ledger 未披露故障原因或预计恢复时间，其最近一次公开更新发布于 9 月 10 日 16:12 CEST。对于急需转移 ATOM 的用户，Ledger 的事件通告指向其替代方法指南，其中列出 Cosmostation 与 Keplr 作为兼容的第三方界面：用户只需在设备上打开 Cosmos 应用并选择 Keplr 的硬件钱包连接选项，即可通过另一界面访问同一链上账户，同时让 Ledger 设备仍留在交易签名流程中——这与把助记词导入软件钱包是两回事，后者是用户绝对不应做的操作。</summary>
   </entry>
 </feed>
