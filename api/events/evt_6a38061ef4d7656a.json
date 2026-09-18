@@ -4,25 +4,31 @@
   "url": "https://bmt.news/events/evt_6a38061ef4d7656a/",
   "json": "https://bmt.news/api/events/evt_6a38061ef4d7656a.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
     "en": "State hackers drive 420% surge in onchain malware, Chainalysis finds"
   },
   "current_state": {
-    "zh": "Chainalysis reports a 420% annual increase in onchain malware activity, with North Korea- and Iran-linked hackers using Tron, Aptos, and BNB Chain transactions to host and route malware infrastructure.",
-    "en": "Chainalysis reports a 420% annual increase in onchain malware activity, with North Korea- and Iran-linked hackers using Tron, Aptos, and BNB Chain transactions to host and route malware infrastructure."
+    "zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
+    "en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain."
   },
   "first_seen_at": "2026-09-17T17:12:00.088571+00:00",
-  "last_updated_at": "2026-09-17T17:12:00.088571+00:00",
-  "last_material_change_at": "2026-09-17T17:12:00.088571+00:00",
+  "last_updated_at": "2026-09-18T01:25:39.548268+00:00",
+  "last_material_change_at": "2026-09-18T01:25:39.548268+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "asia",
     "chainalysis",
+    "coinex",
+    "express",
+    "korea",
     "malware",
+    "north",
+    "north-korea",
     "state"
   ],
   "identifiers": [],
@@ -30,7 +36,8 @@
     "chainalysis",
     "malware",
     "north-korea",
-    "onchain-analysis"
+    "onchain-analysis",
+    "onchain-threats"
   ],
   "updates": [
     {
@@ -78,6 +85,44 @@
       "sources": [
         {
           "url": "https://cointelegraph.com/news/onchain-malware-writes-surge-420-north-korea-iran-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_1a1f2b9f7d8b45da",
+      "event_id": "evt_6a38061ef4d7656a",
+      "occurred_at": "2026-09-17T23:49:23Z",
+      "published_at": "2026-09-17T23:49:23Z",
+      "first_seen_at": "2026-09-18T01:25:39.548268Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "North Korea drives onchain malware surge, CoinEx shuts: Asia Express",
+      "title_en": "North Korea drives onchain malware surge, CoinEx shuts: Asia Express",
+      "what_changed_zh": "Chainalysis 将此前未归因的活动归因于朝鲜关联的 UNC5342 组织，并指出国家支持的黑客约占新增链上恶意软件活动的三分之二。",
+      "what_changed_en": "Chainalysis attributed previously unattributed activity to North Korea-linked group UNC5342 and said state-linked hackers account for roughly two-thirds of new onchain malware activity.",
+      "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
+      "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain.",
+      "detailed_summary_zh": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
+      "detailed_summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:9063811c3af700f1"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
           "source_type": "rss",
           "official": false

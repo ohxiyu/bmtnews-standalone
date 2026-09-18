@@ -63391,29 +63391,36 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Chainalysis reports a 420% annual increase in onchain malware activity, with North Korea- and Iran-linked hackers using Tron, Aptos, and BNB Chain transactions to host and route malware infrastructure.",
-      "current_state_zh": "Chainalysis reports a 420% annual increase in onchain malware activity, with North Korea- and Iran-linked hackers using Tron, Aptos, and BNB Chain transactions to host and route malware infrastructure.",
+      "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain.",
+      "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
       "entities": [
+        "asia",
         "chainalysis",
+        "coinex",
+        "express",
+        "korea",
         "malware",
+        "north",
+        "north-korea",
         "state"
       ],
       "event_id": "evt_6a38061ef4d7656a",
       "event_type": "security_incident",
       "first_seen_at": "2026-09-17T17:12:00.088571Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-17T17:12:00.088571Z",
-      "last_updated_at": "2026-09-17T17:12:00.088571Z",
+      "last_material_change_at": "2026-09-18T01:25:39.548268Z",
+      "last_updated_at": "2026-09-18T01:25:39.548268Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
       "title_zh": "State hackers drive 420% surge in onchain malware, Chainalysis finds",
       "topics": [
         "chainalysis",
         "malware",
         "north-korea",
-        "onchain-analysis"
+        "onchain-analysis",
+        "onchain-threats"
       ],
       "updates": [
         {
@@ -63466,6 +63473,44 @@
           "update_type": "initial",
           "what_changed_en": "Chainalysis reports a 420% annual increase in onchain malware activity, with North Korea- and Iran-linked hackers using Tron, Aptos, and BNB Chain transactions to host and route malware infrastructure.",
           "what_changed_zh": "Chainalysis reports a 420% annual increase in onchain malware activity, with North Korea- and Iran-linked hackers using Tron, Aptos, and BNB Chain transactions to host and route malware infrastructure."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korea- and Iran-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed North Korea-linked UNC5342 group operating across Tron, Aptos and BNB Smart Chain.",
+          "current_state_zh": "Chainalysis 报告链上恶意软件活动同比增长 420%，朝鲜和伊朗关联黑客约占新增活动的三分之二；其中新归因的朝鲜关联组织 UNC5342 使用 Tron、Aptos 和 BNB Smart Chain 进行活动。",
+          "detailed_summary_en": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
+          "detailed_summary_zh": "Chainalysis reports a 420% year-over-year surge in onchain malware, with North Korean and Iranian state-linked hackers responsible for roughly two-thirds of new activity, including the newly attributed UNC5342 group operating across Tron, Aptos, and BNB Smart Chain.",
+          "event_id": "evt_6a38061ef4d7656a",
+          "first_seen_at": "2026-09-18T01:25:39.548268Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T23:49:23Z",
+          "published_at": "2026-09-17T23:49:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:9063811c3af700f1"
+          ],
+          "time_precision": "published",
+          "title_en": "North Korea drives onchain malware surge, CoinEx shuts: Asia Express",
+          "title_zh": "North Korea drives onchain malware surge, CoinEx shuts: Asia Express",
+          "update_id": "upd_1a1f2b9f7d8b45da",
+          "update_type": "escalation",
+          "what_changed_en": "Chainalysis attributed previously unattributed activity to North Korea-linked group UNC5342 and said state-linked hackers account for roughly two-thirds of new onchain malware activity.",
+          "what_changed_zh": "Chainalysis 将此前未归因的活动归因于朝鲜关联的 UNC5342 组织，并指出国家支持的黑客约占新增链上恶意软件活动的三分之二。"
         }
       ]
     },
@@ -63635,6 +63680,82 @@
           "update_type": "initial",
           "what_changed_en": "The SEC has opened the door for onchain stock trading, but existing tokens may not meet the new regulatory requirements.",
           "what_changed_zh": "The SEC has opened the door for onchain stock trading, but existing tokens may not meet the new regulatory requirements."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+      "current_state_zh": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+      "entities": [
+        "circle",
+        "coinbase",
+        "five",
+        "gain",
+        "lane",
+        "opens",
+        "sec",
+        "stock",
+        "stocks",
+        "tokenized",
+        "year"
+      ],
+      "event_id": "evt_9a5eb15b9b54dd2d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-17T22:58:14.544482Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-17T22:58:14.544482Z",
+      "last_updated_at": "2026-09-17T22:58:14.544482Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase and Circle Stocks Gain 5% as SEC Opens a Five-Year Tokenized-Stock Lane - ts2.tech",
+      "title_zh": "Coinbase and Circle Stocks Gain 5% as SEC Opens a Five-Year Tokenized-Stock Lane - ts2.tech",
+      "topics": [
+        "circle",
+        "coinbase",
+        "sec",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+          "current_state_zh": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+          "detailed_summary_en": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+          "detailed_summary_zh": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+          "event_id": "evt_9a5eb15b9b54dd2d",
+          "first_seen_at": "2026-09-17T22:58:14.544482Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T19:44:45Z",
+          "published_at": "2026-09-17T19:44:45Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "ts2.tech",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVGltbEViWXV2RGI1UXljOXhtWklwM3ZBQTVMbDZRODhaTmtNMkZnbGpnbnZQWHNRNDFWSWJGTTg2amhFeGlUYkRLNG1NZVFSQjdaTlVETDZYTWhPanlqS0hGWnlCNzJCa1hFNjhxTzZpN3hUR0tzNkJMX1dGamZzZWdCbW1aT1VSYWNHb1lndGdOMllDb2RnckFUMjBjX25tdEE?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:bd2d71b3de716a88"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase and Circle Stocks Gain 5% as SEC Opens a Five-Year Tokenized-Stock Lane - ts2.tech",
+          "title_zh": "Coinbase and Circle Stocks Gain 5% as SEC Opens a Five-Year Tokenized-Stock Lane - ts2.tech",
+          "update_id": "upd_549cf94876b4c0ca",
+          "update_type": "initial",
+          "what_changed_en": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
+          "what_changed_zh": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%."
         }
       ]
     },
@@ -64758,6 +64879,300 @@
           "what_changed_zh": "2026年9月16日，已故 Ondo Finance 创始人 Nathan Allman 同母异父的姐姐、杜克大学医学教授 Lani Clinton 与 Ondo 早期投资人 David Chen 向夏威夷法院提交申请，要求对77岁的 Kathleen Allman 所继承的创始人遗产份额设立有限监护（limited conservatorship），理由是其存在认知障碍、酗酒和不当财务支出。Kathleen Allman 否认上述指控，并指对方因未能将她逐出 Ondo 董事会而“挑选法院”（forum-shopping），称 Chen 为夏威夷申请提供资金、与代理 CEO Ian De Bode 共用律师，并引用了特拉华州案件中的密封材料。\n\n争议遗产既包含“对 Ondo Finance 的控股性股权”，也包含“数量非常庞大的 ONDO 代币”，因此这场家族诉讼的结果实际上决定了这家头部现实世界资产（RWA）代币化协议及其治理代币由谁掌控。与此同时，Kathleen Allman 还起诉代理 CEO Ian De Bode “公然篡夺公司控制权”，并指控他在创始人去世一周内便谋划了一份约1100万美元的薪酬方案。\n\n根据诉讼文件，De Bode 的薪酬方案包括90万美元年薪加奖金、100万美元签约奖金、价值逾900万美元的2600万枚受限代币单位，以及可将持股从0.33%提升至8%（约24倍）的84.6万股奖励，归属期自5月25日——即 Allman 去世次日——开始。Kathleen Allman 曾任命自己和另一个孩子 Tahnee Towill 进入 Ondo 董事会，并自任董事长兼临时 CEO，但根据9月3日的法院命令，De Bode 仍是代理 CEO 兼董事会成员；特拉华州法院也已驳回他关于 Kathy 与 Towill 不适合担任董事的主张。"
         }
       ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+      "current_state_zh": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+      "entities": [
+        "bonsai",
+        "compression",
+        "footprint",
+        "lossless",
+        "near",
+        "smaller"
+      ],
+      "event_id": "evt_cba864e82f383570",
+      "event_type": "other",
+      "first_seen_at": "2026-09-18T01:25:27.425593Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T01:25:27.425593Z",
+      "last_updated_at": "2026-09-18T01:25:27.425593Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+      "title_zh": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+      "topics": [
+        "llamacpp",
+        "llm-quantization",
+        "model-compression",
+        "open-weights",
+        "ternary-weights"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+          "current_state_zh": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+          "detailed_summary_en": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+          "detailed_summary_zh": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+          "event_id": "evt_cba864e82f383570",
+          "first_seen_at": "2026-09-18T01:25:27.425593Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T21:13:31Z",
+          "published_at": "2026-09-17T21:13:31Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49746618"
+            }
+          ],
+          "sources": [
+            {
+              "label": "JonSchneider",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://prismml.com/news/bonsai-2-27b"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49746618"
+          ],
+          "time_precision": "published",
+          "title_en": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+          "title_zh": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+          "update_id": "upd_ce83a3836a54d830",
+          "update_type": "initial",
+          "what_changed_en": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork.",
+          "what_changed_zh": "PrismML released Ternary Bonsai 2 27B, a ternary-weight LLM using 1.76 effective bits per weight that claims near-lossless compression in a 9x smaller footprint, distributed as GGUFs requiring a custom llama.cpp fork."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+      "current_state_zh": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+      "entities": [
+        "australia",
+        "circle",
+        "coinbase",
+        "sec",
+        "yahoo"
+      ],
+      "event_id": "evt_ab7cd573741b4bf2",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T01:25:28.653372Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T01:25:28.653372Z",
+      "last_updated_at": "2026-09-18T01:25:28.653372Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase, Circle recover as SEC opens tokenized stock path - Yahoo Finance Australia",
+      "title_zh": "Coinbase, Circle recover as SEC opens tokenized stock path - Yahoo Finance Australia",
+      "topics": [
+        "circle",
+        "coinbase",
+        "crypto-regulation",
+        "sec",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+          "current_state_zh": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+          "detailed_summary_en": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+          "detailed_summary_zh": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+          "event_id": "evt_ab7cd573741b4bf2",
+          "first_seen_at": "2026-09-18T01:25:28.653372Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T17:51:55Z",
+          "published_at": "2026-09-17T17:51:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yahoo Finance Australia",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNQmk3M1EteElhMlRoa3NPZkJlVF84QnE3amV5MTRVVnJsQmV1bDgtNFpQMkIxTmxjLVhUcTRjZy1HNFNkZEZOb2Y3M1pmWENrMEh3YmxQSDl6U1NPckpucFR6cklSSG9nOHd2bnhrZnA0ZWtXTmhHdnFBN1NmRVdPM2VDaV9PaUpEV1E?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:802c3a4700a2ec09"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase, Circle recover as SEC opens tokenized stock path - Yahoo Finance Australia",
+          "title_zh": "Coinbase, Circle recover as SEC opens tokenized stock path - Yahoo Finance Australia",
+          "update_id": "upd_1a08d30c55e3ad23",
+          "update_type": "initial",
+          "what_changed_en": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+          "what_changed_zh": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+      "current_state_zh": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+      "entities": [
+        "adds",
+        "button",
+        "cashtags",
+        "coinbase",
+        "gemini",
+        "kraken",
+        "trade",
+        "with"
+      ],
+      "event_id": "evt_1e3f6b72e689dd30",
+      "event_type": "other",
+      "first_seen_at": "2026-09-18T01:25:32.342231Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T01:25:32.342231Z",
+      "last_updated_at": "2026-09-18T01:25:32.342231Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "X Adds US 'Trade' Button to Cashtags With Coinbase, Kraken and Gemini",
+      "title_zh": "X Adds US 'Trade' Button to Cashtags With Coinbase, Kraken and Gemini",
+      "topics": [
+        "coinbase",
+        "crypto-trading",
+        "gemini",
+        "kraken",
+        "x"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+          "current_state_zh": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+          "detailed_summary_en": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+          "detailed_summary_zh": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+          "event_id": "evt_1e3f6b72e689dd30",
+          "first_seen_at": "2026-09-18T01:25:32.342231Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T19:16:27Z",
+          "published_at": "2026-09-17T19:16:27Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/tradfi-and-fintech/x-adds-us-trade-button-to-cashtags-with-coinbase-kraken-and-gemini"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:deb1337adba4a7ce"
+          ],
+          "time_precision": "published",
+          "title_en": "X Adds US 'Trade' Button to Cashtags With Coinbase, Kraken and Gemini",
+          "title_zh": "X Adds US 'Trade' Button to Cashtags With Coinbase, Kraken and Gemini",
+          "update_id": "upd_5d3343a680c38ebf",
+          "update_type": "initial",
+          "what_changed_en": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly.",
+          "what_changed_zh": "X has launched a US 'Trade' button on cashtags that routes users to partner brokerages Coinbase, Kraken, and Gemini to complete crypto transactions directly."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+      "current_state_zh": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+      "entities": [
+        "acquire",
+        "global",
+        "onchain",
+        "onchain-risk",
+        "openzeppelin",
+        "push",
+        "risk"
+      ],
+      "event_id": "evt_a6924becd01f4575",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T01:25:32.375337Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T01:25:32.375337Z",
+      "last_updated_at": "2026-09-18T01:25:32.375337Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "S&P Global to Acquire OpenZeppelin in Onchain Risk Push",
+      "title_zh": "S&P Global to Acquire OpenZeppelin in Onchain Risk Push",
+      "topics": [
+        "acquisitions",
+        "onchain-risk",
+        "smart-contract-security",
+        "tradfi"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+          "current_state_zh": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+          "detailed_summary_en": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+          "detailed_summary_zh": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+          "event_id": "evt_a6924becd01f4575",
+          "first_seen_at": "2026-09-18T01:25:32.375337Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T17:25:00Z",
+          "published_at": "2026-09-17T17:25:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/s-p-global-to-acquire-openzeppelin-in-onchain-risk-push"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:643c2494f37d0643"
+          ],
+          "time_precision": "published",
+          "title_en": "S&P Global to Acquire OpenZeppelin in Onchain Risk Push",
+          "title_zh": "S&P Global to Acquire OpenZeppelin in Onchain Risk Push",
+          "update_id": "upd_b6aed4ea157c2f57",
+          "update_type": "initial",
+          "what_changed_en": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk.",
+          "what_changed_zh": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -65591,36 +66006,6 @@
         "source_type": "rss",
         "title": "House panel approves first federal crypto tax framework, one day after Senate’s Clarity Act stumbles",
         "url": "https://www.theblock.co/news/regulation/2026-09-16-house-panel-approves-first-federal-crypto-tax-framework-one-day-after-senates-clarity-act-stumbles-415293"
-      }
-    },
-    {
-      "attempts": 2,
-      "item": {
-        "ai_reason": "The SEC opening a five-year regulatory lane for tokenized stocks is a material regulatory development with a clear transmission path to crypto market structure and equity tokenization, driving a 5% gain in Coinbase and Circle shares. It is high-value and worth immediate attention, though the article is a brief market-reaction piece with limited technical or procedural detail.",
-        "ai_score": 7.5,
-        "ai_summary": "The SEC has opened a five-year regulatory pathway for tokenized stocks, sending Coinbase and Circle shares up 5%.",
-        "ai_tags": [
-          "SEC",
-          "tokenized-stocks",
-          "Coinbase",
-          "Circle",
-          "regulation"
-        ],
-        "author": "ts2.tech",
-        "content": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNVGltbEViWXV2RGI1UXljOXhtWklwM3ZBQTVMbDZRODhaTmtNMkZnbGpnbnZQWHNRNDFWSWJGTTg2amhFeGlUYkRLNG1NZVFSQjdaTlVETDZYTWhPanlqS0hGWnlCNzJCa1hFNjhxTzZpN3hUR0tzNkJMX1dGamZzZWdCbW1aT1VSYWNHb1lndGdOMllDb2RnckFUMjBjX25tdEE?oc=5\" target=\"_blank\">Coinbase and Circle Stocks Gain 5% as SEC Opens a Five-Year Tokenized-Stock Lane</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ts2.tech</font>",
-        "fetched_at": "2026-09-17T22:58:14.544482Z",
-        "id": "google_news:article:bd2d71b3de716a88",
-        "metadata": {
-          "category": "crypto-regulation",
-          "event_retry_pending": true,
-          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
-          "source_category": "exchange-announcements",
-          "source_name": "ts2.tech"
-        },
-        "published_at": "2026-09-17T19:44:45Z",
-        "source_type": "google_news",
-        "title": "Coinbase and Circle Stocks Gain 5% as SEC Opens a Five-Year Tokenized-Stock Lane - ts2.tech",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVGltbEViWXV2RGI1UXljOXhtWklwM3ZBQTVMbDZRODhaTmtNMkZnbGpnbnZQWHNRNDFWSWJGTTg2amhFeGlUYkRLNG1NZVFSQjdaTlVETDZYTWhPanlqS0hGWnlCNzJCa1hFNjhxTzZpN3hUR0tzNkJMX1dGamZzZWdCbW1aT1VSYWNHb1lndGdOMllDb2RnckFUMjBjX25tdEE?oc=5"
       }
     }
   ],
