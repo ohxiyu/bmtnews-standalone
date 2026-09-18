@@ -38,7 +38,7 @@
     "verified_at": "2026-09-18 read-only public API check"
   },
   "blockers": [],
-  "next_action": "完成验证并创建 PR；合并和生产部署需本任务授权，不能发布虚构测试新闻。",
+  "next_action": "审阅 PR95 和最新 CI；合并和生产部署需本任务授权，不能发布虚构测试新闻。",
   "states": {
     "code": "complete",
     "tests": "complete",

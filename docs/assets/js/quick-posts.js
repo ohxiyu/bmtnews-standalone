@@ -45,15 +45,20 @@
     document.querySelectorAll('[data-quick-post]').forEach(node => node.remove());
     status.textContent = en ? 'Loading Quick Post…' : '正在核对 Quick Post…';
     try {
-      const wanted = knownDates.split(',').filter(Boolean);
-      const queries = ['']; // Includes today's posts even before today's daily edition exists.
+      const today = new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit'}).format(new Date());
+      const yesterday = new Date(Date.parse(today) - 86400000).toISOString().slice(0, 10);
+      const wanted = [...new Set([today, yesterday, ...knownDates.split(',').filter(Boolean)])];
+      const queries = []; // Include recent posts even before today's daily edition exists.
       for (let i = 0; i < wanted.length; i += 10) queries.push('?' + wanted.slice(i, i + 10).map(day => 'date=' + encodeURIComponent(day)).join('&'));
       const rows = [];
+      let revision;
       for (const query of queries) {
         const response = await fetch('/api/quick-posts.json' + query, {cache: 'no-store', signal: AbortSignal.timeout(15000)});
         if (!response.ok) throw Error('unavailable');
         const payload = await response.json();
         if (!Array.isArray(payload.items) || !payload.revision) throw Error('unverified');
+        if (revision && revision !== payload.revision) throw Error('registry changed during history read');
+        revision = payload.revision;
         rows.push(...payload.items);
       }
       if (run !== version) return;
