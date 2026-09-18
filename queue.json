@@ -682,10 +682,11 @@
         "post_id": "367915132527700"
       },
       "020c437d1b75daedbe98f9e654f63808b9e9868710277548e21655306efbd073": {
-        "status": "pending",
+        "status": "sent",
         "rank": 7,
         "text_hash": "774c5bad7e21099eef8d1cc357e05f0a7fce27e41a4c6c1e08f0cbec7595d502",
-        "attempted_at": "2026-09-18T15:20:23.480466+08:00"
+        "attempted_at": "2026-09-18T15:20:23.480466+08:00",
+        "post_id": "367922487111416"
       }
     }
   },
@@ -729,12 +730,6 @@
     "2026-09-18": {
       "revision": "6f9a3f3b8a8ce546d98f73aef0dca7797b64b8d81803d4234f6226827cec829c",
       "jobs": [
-        {
-          "id": "020c437d1b75daedbe98f9e654f63808b9e9868710277548e21655306efbd073",
-          "text": "以太坊 Glamsterdam 升级通过演练，迈向 2 亿 Gas 区块\n\n以太坊 Glamsterdam 升级在新的区块构建规则下于 Devnet-11 测试网持续出块，Nethermind 执行客户端通过了全部 2,302 项性能测试，在 3 分 15 秒内处理了 5,707 亿 Gas（约每秒 29 亿 Gas）。测试网上线约一小时后，区块 Gas 上限从 6,000 万提高到 2 亿，为拟定的 10 月 6 日 Sepolia 公共测试网部署做准备。\n\nGlamsterdam 引入的区块级访问列表让客户端可以并行地预取数据、同时校验互不相关的交易，而不再按顺序处理，这有望让以太坊在每个区块中容纳更多支付、代币兑换等活动，并在网络拥堵时缓手续费尖峰。该升级还把构建者与验证者之间的交接及其支付纳入以太坊自身的协议规则，从而减少对外部中继服务的依赖。\n\n2 亿 Gas 上限目前仅是测试设置，尚未成为以太坊主网的承诺，而 Devnet-11 被设计为不包含故意攻击的受控演练；10 月 6 日的 Sepolia 部署日期仍需正式确认。Glamsterdam 还将区块数据在网络中传播的时间窗口从约 2 秒延长到 9 秒，使验证者有更充裕的时间接收并校验该升级所支持的大区块；此外，Nethermind 的基准测试衡量的是客户端执行速度，而非整个网络的性能。\n\n来源：https://www.coindesk.com/tech/2026/09/17/ethereum-s-upcoming-glamsterdam-upgrade-clears-rehearsal-for-a-big-jump-in-capacity\nBMTNews · 2026-09-18 · https://bmt.news",
-          "rank": 7,
-          "due_at": "2026-09-18T15:20:00+08:00"
-        },
         {
           "id": "3da140010572d43234a893ad99c43f2ff83ad7dab66444957cb59fed7b50ddb4",
           "text": "Kraken 母公司 Payward 筹备在美国推出链上永续合约\n\n加密货币交易所 Kraken 的母公司 Payward 正准备通过其受美国商品期货交易委员会（CFTC）监管的 Bitnomial Exchange，向美国交易者提供链上永续合约，目前仍待监管批准。该产品将首次在此规模上把完全链上化的永续合约纳入美国受监管衍生品框架。\n\n美国交易者长期以来在永续合约方面基本只能依赖离岸平台，因此一款受 CFTC 监管的链上永续产品可能将部分需求吸引回美国境内，并加剧与 Coinbase Derivatives 的永续式期货以及 CME 加密合约等现有美国上市衍生品的竞争。这也表明受监管、机构级的链上衍生品基础设施正从实验阶段走向可行。\n\n链上永续合约是无到期日的现金结算合约，其下单、撮合、结算、抵押品托管与强平全部在区块链上完成，因此其托管方式与透明度特征与中心化离岸平台不同。该产品被描述为“待批准”状态，因此具体上线时间、合约规格、可用抵押资产以及杠杆上限尚未最终确定。\n\n来源：https://news.google.com/rss/articles/CBMilgFBVV95cUxPbDFFMDBIMF85bmFxeE1BVndqRTE3bTZSMGh0UTBWTHJwVU90d2REZmNqbFlsYngzeG9IWG50b1M1UVRiMVZ0ZGFhTDd5WFBRNXRDNFZzaENwTUdLZzN1N1ZKNlFzWks1TF95bHMxNWhjZnlIdF9xUFNBaF9nb09FVHNXYXk4MFNmVkF4UzZ1aWQtbk5pTGc?oc=5\nBMTNews · 2026-09-18 · https://bmt.news",
