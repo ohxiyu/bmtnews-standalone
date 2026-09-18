@@ -51,15 +51,15 @@ jobs:
         env:
           TASK_REF: ${{ github.ref }}
         run: '[[ "$TASK_REF" == refs/heads/agent/* ]]'
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - uses: astral-sh/setup-uv@v7
         with:
           version: '0.11.32'
       - run: uv sync --frozen
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: |
             data/staging-items.json
@@ -90,7 +90,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Restore published daily state and archive
         shell: bash
@@ -114,7 +114,7 @@ jobs:
           done
 
       - name: Restore staged source items
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: |
             data/staging-items.json
@@ -138,7 +138,7 @@ jobs:
           fi
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -192,7 +192,7 @@ jobs:
 
       - name: Preserve successful AI work even after publication failure
         if: ${{ always() }}
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: |
             data/staging-items.json
@@ -201,7 +201,7 @@ jobs:
 
       - name: Keep machine-readable cost and health report
         if: ${{ always() }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: run-report-${{ github.run_id }}-${{ github.run_attempt }}
           path: data/run-report.json
