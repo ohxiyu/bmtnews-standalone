@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "event_id": "evt_d77bbd2cc5c229e1",
+  "url": "https://bmt.news/events/evt_d77bbd2cc5c229e1/",
+  "json": "https://bmt.news/api/events/evt_d77bbd2cc5c229e1.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+    "en": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos"
+  },
+  "current_state": {
+    "zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+    "en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours."
+  },
+  "first_seen_at": "2026-09-18T09:07:01.243499+00:00",
+  "last_updated_at": "2026-09-18T09:07:01.243499+00:00",
+  "last_material_change_at": "2026-09-18T09:07:01.243499+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "openai",
+    "sso"
+  ],
+  "identifiers": [],
+  "topics": [
+    "libheif",
+    "openai",
+    "sso",
+    "vulnerability"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_bdea3215d3652f4f",
+      "event_id": "evt_d77bbd2cc5c229e1",
+      "occurred_at": "2026-09-18T02:47:24Z",
+      "published_at": "2026-09-18T02:47:24Z",
+      "first_seen_at": "2026-09-18T09:07:01.243499Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+      "title_en": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+      "what_changed_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "what_changed_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "current_state_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "current_state_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "detailed_summary_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "detailed_summary_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49749656",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49749656"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hacktron.ai/blog/hacking-openai",
+          "label": "Handy-Man",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

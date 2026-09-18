@@ -4,31 +4,38 @@
   "url": "https://bmt.news/events/evt_c539b5ae46d9140f/",
   "json": "https://bmt.news/api/events/evt_c539b5ae46d9140f.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
     "en": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC"
   },
   "current_state": {
-    "zh": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC.",
-    "en": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC."
+    "zh": "美国财政部已制裁伊朗加密交易所BitBank，并进一步制裁与BitBank相关的Pishtaz Simorgh Electronic Trade Company及三名Dot One高管；制裁依据第13902号行政令，属于“经济弃儿行动”的一部分。",
+    "en": "The U.S. Treasury has sanctioned Iranian crypto exchange BitBank and further designated BitBank-related Pishtaz Simorgh Electronic Trade Company and three Dot One executives under Executive Order 13902 as part of Operation Economic Outcast."
   },
   "first_seen_at": "2026-09-17T22:58:21.436533+00:00",
-  "last_updated_at": "2026-09-17T22:58:21.436533+00:00",
-  "last_material_change_at": "2026-09-17T22:58:21.436533+00:00",
+  "last_updated_at": "2026-09-18T09:07:10.209647+00:00",
+  "last_material_change_at": "2026-09-18T09:07:09.508568+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 3,
   "entities": [
+    "behind",
     "bitbank",
+    "exchange",
+    "hormuz",
     "iran",
     "iranian",
     "irgc",
-    "sanctions"
+    "sanctions",
+    "ships",
+    "tolls",
+    "treasury"
   ],
   "identifiers": [],
   "topics": [
+    "crypto-regulation",
     "iran",
     "ofac",
     "sanctions"
@@ -57,16 +64,61 @@
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
-      "importance_score": 7.0,
+      "importance_score": 7.5,
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:www.theblock.co_rss.xml:78f096818ec7e834"
+        "rss:www.theblock.co_rss.xml:78f096818ec7e834",
+        "rss:cointelegraph.com_rss:2e53291f701ef0d8"
       ],
       "sources": [
         {
           "url": "https://www.theblock.co/news/regulation/2026-09-17-us-sanctions-iranian-crypto-exchange-bitbank-alleged-bitcoin-transfers-to-irgc-415462",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/us-sanctions-irans-bitbank-saying-it-processes-hormuz-safe-bitcoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_fb8d6fbcb8b8b87b",
+      "event_id": "evt_c539b5ae46d9140f",
+      "occurred_at": "2026-09-18T09:01:55Z",
+      "published_at": "2026-09-18T09:01:55Z",
+      "first_seen_at": "2026-09-18T09:07:09.508568Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Treasury Sanctions Crypto Exchange Behind Iran's Bitcoin Tolls on Hormuz Ships",
+      "title_en": "Treasury Sanctions Crypto Exchange Behind Iran's Bitcoin Tolls on Hormuz Ships",
+      "what_changed_zh": "OFAC还指定了与BitBank相关的另外五名个人和实体，并披露BitBank由Babak Zanjani控制，在6月至7月间转移了数亿美元比特币给IRGC，且Hormuz Safe自6月以来通过BitBank处理通行费支付。",
+      "what_changed_en": "OFAC also designated five additional individuals and entities tied to BitBank, and disclosed that BitBank is controlled by Babak Zanjani, moved hundreds of millions in Bitcoin to the IRGC between June and July, and that Hormuz Safe has routed toll payments through BitBank since June.",
+      "current_state_zh": "美国财政部已制裁伊朗加密交易所BitBank，并进一步制裁与BitBank相关的Pishtaz Simorgh Electronic Trade Company及三名Dot One高管；制裁依据第13902号行政令，属于“经济弃儿行动”的一部分。",
+      "current_state_en": "The U.S. Treasury has sanctioned Iranian crypto exchange BitBank and further designated BitBank-related Pishtaz Simorgh Electronic Trade Company and three Dot One executives under Executive Order 13902 as part of Operation Economic Outcast.",
+      "detailed_summary_zh": "The U.S. Treasury's OFAC sanctioned BitBank, an Iranian exchange controlled by Babak Zanjani, for allegedly moving hundreds of millions in Bitcoin to the IRGC and processing Hormuz toll payments collected in Bitcoin from shipping companies.",
+      "detailed_summary_en": "The U.S. Treasury's OFAC sanctioned BitBank, an Iranian exchange controlled by Babak Zanjani, for allegedly moving hundreds of millions in Bitcoin to the IRGC and processing Hormuz toll payments collected in Bitcoin from shipping companies.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:decrypt.co_feed:010ca0e887e96e8c"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/378604/treasury-sanctions-crypto-exchange-behind-irans-bitcoin-tolls-on-hormuz-ships",
+          "label": "Decrypt",
           "source_type": "rss",
           "official": false
         }

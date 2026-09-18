@@ -64206,27 +64206,34 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC.",
-      "current_state_zh": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC.",
+      "current_state_en": "The U.S. Treasury has sanctioned Iranian crypto exchange BitBank and further designated BitBank-related Pishtaz Simorgh Electronic Trade Company and three Dot One executives under Executive Order 13902 as part of Operation Economic Outcast.",
+      "current_state_zh": "美国财政部已制裁伊朗加密交易所BitBank，并进一步制裁与BitBank相关的Pishtaz Simorgh Electronic Trade Company及三名Dot One高管；制裁依据第13902号行政令，属于“经济弃儿行动”的一部分。",
       "entities": [
+        "behind",
         "bitbank",
+        "exchange",
+        "hormuz",
         "iran",
         "iranian",
         "irgc",
-        "sanctions"
+        "sanctions",
+        "ships",
+        "tolls",
+        "treasury"
       ],
       "event_id": "evt_c539b5ae46d9140f",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-17T22:58:21.436533Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-17T22:58:21.436533Z",
-      "last_updated_at": "2026-09-17T22:58:21.436533Z",
+      "last_material_change_at": "2026-09-18T09:07:09.508568Z",
+      "last_updated_at": "2026-09-18T09:07:10.209647Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
       "title_zh": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
       "topics": [
+        "crypto-regulation",
         "iran",
         "ofac",
         "sanctions"
@@ -64244,7 +64251,7 @@
           "detailed_summary_zh": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC.",
           "event_id": "evt_c539b5ae46d9140f",
           "first_seen_at": "2026-09-17T22:58:21.436533Z",
-          "importance_score": 7.0,
+          "importance_score": 7.5,
           "market_impact_en": "",
           "market_impact_zh": "",
           "material_change": true,
@@ -64257,10 +64264,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.theblock.co/news/regulation/2026-09-17-us-sanctions-iranian-crypto-exchange-bitbank-alleged-bitcoin-transfers-to-irgc-415462"
+            },
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/us-sanctions-irans-bitbank-saying-it-processes-hormuz-safe-bitcoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
             }
           ],
           "story_ids": [
-            "rss:www.theblock.co_rss.xml:78f096818ec7e834"
+            "rss:www.theblock.co_rss.xml:78f096818ec7e834",
+            "rss:cointelegraph.com_rss:2e53291f701ef0d8"
           ],
           "time_precision": "published",
           "title_en": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
@@ -64269,6 +64283,44 @@
           "update_type": "initial",
           "what_changed_en": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC.",
           "what_changed_zh": "The U.S. Treasury sanctioned Iranian crypto exchange BitBank for allegedly processing bitcoin payments collected by the previously sanctioned Hormuz Safe platform on behalf of the IRGC."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "The U.S. Treasury has sanctioned Iranian crypto exchange BitBank and further designated BitBank-related Pishtaz Simorgh Electronic Trade Company and three Dot One executives under Executive Order 13902 as part of Operation Economic Outcast.",
+          "current_state_zh": "美国财政部已制裁伊朗加密交易所BitBank，并进一步制裁与BitBank相关的Pishtaz Simorgh Electronic Trade Company及三名Dot One高管；制裁依据第13902号行政令，属于“经济弃儿行动”的一部分。",
+          "detailed_summary_en": "The U.S. Treasury's OFAC sanctioned BitBank, an Iranian exchange controlled by Babak Zanjani, for allegedly moving hundreds of millions in Bitcoin to the IRGC and processing Hormuz toll payments collected in Bitcoin from shipping companies.",
+          "detailed_summary_zh": "The U.S. Treasury's OFAC sanctioned BitBank, an Iranian exchange controlled by Babak Zanjani, for allegedly moving hundreds of millions in Bitcoin to the IRGC and processing Hormuz toll payments collected in Bitcoin from shipping companies.",
+          "event_id": "evt_c539b5ae46d9140f",
+          "first_seen_at": "2026-09-18T09:07:09.508568Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T09:01:55Z",
+          "published_at": "2026-09-18T09:01:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378604/treasury-sanctions-crypto-exchange-behind-irans-bitcoin-tolls-on-hormuz-ships"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:010ca0e887e96e8c"
+          ],
+          "time_precision": "published",
+          "title_en": "Treasury Sanctions Crypto Exchange Behind Iran's Bitcoin Tolls on Hormuz Ships",
+          "title_zh": "Treasury Sanctions Crypto Exchange Behind Iran's Bitcoin Tolls on Hormuz Ships",
+          "update_id": "upd_fb8d6fbcb8b8b87b",
+          "update_type": "escalation",
+          "what_changed_en": "OFAC also designated five additional individuals and entities tied to BitBank, and disclosed that BitBank is controlled by Babak Zanjani, moved hundreds of millions in Bitcoin to the IRGC between June and July, and that Hormuz Safe has routed toll payments through BitBank since June.",
+          "what_changed_zh": "OFAC还指定了与BitBank相关的另外五名个人和实体，并披露BitBank由Babak Zanjani控制，在6月至7月间转移了数亿美元比特币给IRGC，且Hormuz Safe自6月以来通过BitBank处理通行费支付。"
         }
       ]
     },
@@ -65173,6 +65225,1130 @@
           "what_changed_zh": "S&P Global is acquiring smart contract security firm OpenZeppelin, which will retain its name and audit team, as the ratings agency expands from financial risk assessments into onchain technology risk."
         }
       ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+      "current_state_zh": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+      "entities": [
+        "after",
+        "bid",
+        "binance",
+        "faces",
+        "foundation",
+        "fresh",
+        "intervention",
+        "lagarde",
+        "license",
+        "reported",
+        "scrutiny"
+      ],
+      "event_id": "evt_cc03791b273587d9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:01.082850Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.082850Z",
+      "last_updated_at": "2026-09-18T09:07:01.082850Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance’s EU Crypto License Bid Faces Fresh Scrutiny After Reported Lagarde Intervention - Bitcoin Foundation",
+      "title_zh": "Binance’s EU Crypto License Bid Faces Fresh Scrutiny After Reported Lagarde Intervention - Bitcoin Foundation",
+      "topics": [
+        "binance",
+        "crypto-licensing",
+        "eu-regulation",
+        "lagarde",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+          "current_state_zh": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+          "detailed_summary_en": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+          "detailed_summary_zh": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+          "event_id": "evt_cc03791b273587d9",
+          "first_seen_at": "2026-09-18T09:07:01.082850Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T07:48:36Z",
+          "published_at": "2026-09-18T07:48:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Bitcoin Foundation",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxONDZ2TXRFQWt5UXQ5X283NkZ6Y2M5MHI5dlAzcnBLVDBqVXlZUm12Tm1LNlAtNEtTU1hVNWw5bEpndTJiYTFjWE5JT3VnY2Zockk2UWRoRUZWLWJYRDljRTNFZnhNcWcwUlpZZGJ0cTlzcnUwMlBhdFp5QWl6UWZHN0tSZHBBbTlJY3lOeTN6cmRBb0otTzQ4UGlwZnVMaTB4YkQwUDRiaGFVclF1djVFME4wTzFXVVNfeDBzSmZIQllreFZBUV9BQXROLVNubkV2UzBIN0dUVQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:18a6066b6ad8602a"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance’s EU Crypto License Bid Faces Fresh Scrutiny After Reported Lagarde Intervention - Bitcoin Foundation",
+          "title_zh": "Binance’s EU Crypto License Bid Faces Fresh Scrutiny After Reported Lagarde Intervention - Bitcoin Foundation",
+          "update_id": "upd_f829573ed343012d",
+          "update_type": "initial",
+          "what_changed_en": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde.",
+          "what_changed_zh": "Binance's bid for an EU crypto license is facing renewed scrutiny following a reported intervention by ECB President Christine Lagarde."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+      "current_state_zh": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+      "entities": [
+        "coindesk",
+        "sec",
+        "street",
+        "wall"
+      ],
+      "event_id": "evt_1e0de4db84fa9a29",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:01.083682Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.083682Z",
+      "last_updated_at": "2026-09-18T09:07:01.083682Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Wall Street gets five years to test U.S. stocks on blockchain, with the SEC's blessing - CoinDesk",
+      "title_zh": "Wall Street gets five years to test U.S. stocks on blockchain, with the SEC's blessing - CoinDesk",
+      "topics": [
+        "equities",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+          "current_state_zh": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+          "detailed_summary_en": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+          "detailed_summary_zh": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+          "event_id": "evt_1e0de4db84fa9a29",
+          "first_seen_at": "2026-09-18T09:07:01.083682Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T21:47:22Z",
+          "published_at": "2026-09-17T21:47:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWENRNzktaFJNQnF4VS1qYjNjdWlac3o5amRuYmVuc3NrcWY0MTlBU2lsOVN2LXg1Y3BMV1pJeXhaaktDUEpLa1FyUHFpM3NDY1NDX00ycnRLdHN1M1dnalY4WnNNOEtOVUd2eV90VGprTGNJYXZscUZPelQ4eWgxWS1tUmwzWV8xMXhIQjREeGZUVXhiT3ZBM21fYzRNX0FkNmFhSElVSVNFc2M5dkZTN1NtM3Z1SncyQXlDTFVmamlGdGc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:7faceb653e8fa27c"
+          ],
+          "time_precision": "published",
+          "title_en": "Wall Street gets five years to test U.S. stocks on blockchain, with the SEC's blessing - CoinDesk",
+          "title_zh": "Wall Street gets five years to test U.S. stocks on blockchain, with the SEC's blessing - CoinDesk",
+          "update_id": "upd_eecfd2d8687cad2f",
+          "update_type": "initial",
+          "what_changed_en": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities.",
+          "what_changed_zh": "The SEC has approved a five-year pilot program allowing Wall Street firms to test trading U.S. stocks on blockchain infrastructure, a major step toward mainstream tokenization of traditional securities."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+      "current_state_zh": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+      "entities": [
+        "binance",
+        "christine",
+        "dreams",
+        "lagarde",
+        "moment",
+        "nixes",
+        "onesafe",
+        "pivotal"
+      ],
+      "event_id": "evt_bad572f2a97d3a9a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:01.084633Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.084633Z",
+      "last_updated_at": "2026-09-18T09:07:01.084633Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Christine Lagarde Nixes Binance's EU Dreams at a Pivotal Moment - OneSafe.io",
+      "title_zh": "Christine Lagarde Nixes Binance's EU Dreams at a Pivotal Moment - OneSafe.io",
+      "topics": [
+        "binance",
+        "eu-regulation",
+        "exchange-access",
+        "lagarde",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+          "current_state_zh": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+          "detailed_summary_en": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+          "detailed_summary_zh": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+          "event_id": "evt_bad572f2a97d3a9a",
+          "first_seen_at": "2026-09-18T09:07:01.084633Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T07:47:33Z",
+          "published_at": "2026-09-18T07:47:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OneSafe.io",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE04V3hGMEw4Nk9kOFpaMmRxejdoY3NTZzhpTFJmVFYtZVdfSG5OdldVMVl0OWtmcVdTSF9GWnVUNVR0Q0UyWk5WVWNIX2pIcXBRYWdRaUdIWGZ6ZjNaaUh0U2hwWEMwMWpmVGlyY3JudTdzZw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:0648378f952b29ce"
+          ],
+          "time_precision": "published",
+          "title_en": "Christine Lagarde Nixes Binance's EU Dreams at a Pivotal Moment - OneSafe.io",
+          "title_zh": "Christine Lagarde Nixes Binance's EU Dreams at a Pivotal Moment - OneSafe.io",
+          "update_id": "upd_2da8cd5d233cf9c4",
+          "update_type": "initial",
+          "what_changed_en": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion.",
+          "what_changed_zh": "ECB President Christine Lagarde publicly dismissed Binance's prospects in the EU at a pivotal regulatory moment, signaling continued resistance to the exchange's European expansion."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+      "current_state_zh": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+      "entities": [
+        "binance",
+        "block",
+        "ecb",
+        "expansion",
+        "intervened",
+        "lagarde",
+        "personally",
+        "wsj"
+      ],
+      "event_id": "evt_662effb9c6d7b34a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:01.084839Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.084839Z",
+      "last_updated_at": "2026-09-18T09:07:01.084839Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "WSJ: ECB's Lagarde Personally Intervened to Block Binance's EU Expansion - bloomingbit",
+      "title_zh": "WSJ: ECB's Lagarde Personally Intervened to Block Binance's EU Expansion - bloomingbit",
+      "topics": [
+        "binance",
+        "ecb",
+        "eu-regulation",
+        "market-access"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+          "current_state_zh": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+          "detailed_summary_en": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+          "detailed_summary_zh": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+          "event_id": "evt_662effb9c6d7b34a",
+          "first_seen_at": "2026-09-18T09:07:01.084839Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T01:28:09Z",
+          "published_at": "2026-09-18T01:28:09Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "bloomingbit",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03S09Bbk1jU1hvaFhyMElVdEdYNkV4QUk3MHkzb0lvdXFyUy1NdTVQa1pYZC1NTlBTS0cySU5sWExmNWx1Znp0ajI4eTYyMGpGbjF4TA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:a9a1a1f6072e6941"
+          ],
+          "time_precision": "published",
+          "title_en": "WSJ: ECB's Lagarde Personally Intervened to Block Binance's EU Expansion - bloomingbit",
+          "title_zh": "WSJ: ECB's Lagarde Personally Intervened to Block Binance's EU Expansion - bloomingbit",
+          "update_id": "upd_6a532a86cb49f4d1",
+          "update_type": "initial",
+          "what_changed_en": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union.",
+          "what_changed_zh": "The WSJ reports that ECB President Christine Lagarde personally intervened to block Binance's expansion into the European Union."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+      "current_state_zh": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+      "entities": [
+        "flash",
+        "omni",
+        "qwen"
+      ],
+      "event_id": "evt_4fa8d8bd02fa7f30",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-18T09:07:01.243457Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.243457Z",
+      "last_updated_at": "2026-09-18T09:07:01.243457Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Qwen 3.8 Omni Flash",
+      "title_zh": "Qwen 3.8 Omni Flash",
+      "topics": [
+        "ai-pricing",
+        "alibaba",
+        "model-release",
+        "multimodal-ai",
+        "qwen"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+          "current_state_zh": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+          "detailed_summary_en": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+          "detailed_summary_zh": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+          "event_id": "evt_4fa8d8bd02fa7f30",
+          "first_seen_at": "2026-09-18T09:07:01.243457Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-17T23:05:48Z",
+          "published_at": "2026-09-17T23:05:48Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49747925"
+            }
+          ],
+          "sources": [
+            {
+              "label": "jjcm",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49747925"
+          ],
+          "time_precision": "published",
+          "title_en": "Qwen 3.8 Omni Flash",
+          "title_zh": "Qwen 3.8 Omni Flash",
+          "update_id": "upd_57b174f985a85fa3",
+          "update_type": "initial",
+          "what_changed_en": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost.",
+          "what_changed_zh": "Alibaba released Qwen 3.8 Omni Flash, a multimodal model claiming audio-visual performance close to or exceeding Gemini 3.8 Flash at a fraction of the token cost."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "current_state_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+      "entities": [
+        "openai",
+        "sso"
+      ],
+      "event_id": "evt_d77bbd2cc5c229e1",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T09:07:01.243499Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.243499Z",
+      "last_updated_at": "2026-09-18T09:07:01.243499Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+      "title_zh": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+      "topics": [
+        "libheif",
+        "openai",
+        "sso",
+        "vulnerability"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+          "current_state_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+          "detailed_summary_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+          "detailed_summary_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+          "event_id": "evt_d77bbd2cc5c229e1",
+          "first_seen_at": "2026-09-18T09:07:01.243499Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T02:47:24Z",
+          "published_at": "2026-09-18T02:47:24Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49749656"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Handy-Man",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.hacktron.ai/blog/hacking-openai"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49749656"
+          ],
+          "time_precision": "published",
+          "title_en": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+          "title_zh": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+          "update_id": "upd_bdea3215d3652f4f",
+          "update_type": "initial",
+          "what_changed_en": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours.",
+          "what_changed_zh": "Researchers chained a libheif heap overflow with an SSO misconfiguration to gain remote code execution and access OpenAI's internal repositories within 72 hours."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+      "current_state_zh": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+      "entities": [
+        "binance",
+        "layerzero",
+        "merge",
+        "stargate",
+        "stargate-finance",
+        "stg",
+        "support",
+        "token",
+        "will",
+        "zro"
+      ],
+      "event_id": "evt_ffc56c84a6a61c89",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-18T09:07:01.464153Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.464153Z",
+      "last_updated_at": "2026-09-18T09:07:01.464153Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Will Support the Stargate Finance (STG) Token Merge to LayerZero (ZRO)",
+      "title_zh": "Binance Will Support the Stargate Finance (STG) Token Merge to LayerZero (ZRO)",
+      "topics": [
+        "binance",
+        "exchange-listing",
+        "layerzero",
+        "stargate-finance",
+        "token-migration"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+          "current_state_zh": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+          "detailed_summary_en": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+          "detailed_summary_zh": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+          "event_id": "evt_ffc56c84a6a61c89",
+          "first_seen_at": "2026-09-18T09:07:01.464153Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T08:31:50Z",
+          "published_at": "2026-09-18T08:31:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/detail/0c1e8975f48d42c4b856c113926c5fdd?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8967"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Will Support the Stargate Finance (STG) Token Merge to LayerZero (ZRO)",
+          "title_zh": "Binance Will Support the Stargate Finance (STG) Token Merge to LayerZero (ZRO)",
+          "update_id": "upd_06ecc1ffa4207ae6",
+          "update_type": "initial",
+          "what_changed_en": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform.",
+          "what_changed_zh": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+      "current_state_zh": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+      "entities": [
+        "hyperliquid",
+        "manual"
+      ],
+      "event_id": "evt_a4e9e06f5ef0c883",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-18T09:07:01.734966Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:01.734966Z",
+      "last_updated_at": "2026-09-18T09:07:01.734966Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Manual borrows are live on Hyperliquid",
+      "title_zh": "Manual borrows are live on Hyperliquid",
+      "topics": [
+        "collateral",
+        "defi-lending",
+        "exchange-operations",
+        "hyperliquid",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+          "current_state_zh": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+          "detailed_summary_en": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+          "detailed_summary_zh": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+          "event_id": "evt_a4e9e06f5ef0c883",
+          "first_seen_at": "2026-09-18T09:07:01.734966Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T06:46:01Z",
+          "published_at": "2026-09-18T06:46:01Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "hyperliquid_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/manual-borrows"
+            }
+          ],
+          "story_ids": [
+            "telegram:hyperliquid_announcements:589"
+          ],
+          "time_precision": "published",
+          "title_en": "Manual borrows are live on Hyperliquid",
+          "title_zh": "Manual borrows are live on Hyperliquid",
+          "update_id": "upd_dfb790f750dee2d8",
+          "update_type": "initial",
+          "what_changed_en": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed.",
+          "what_changed_zh": "Hyperliquid has launched manual borrows, allowing users to supply HYPE and BTC as collateral to borrow USDC/USDT at utilization-based interest rates, with $269M in assets already borrowed."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+      "current_state_zh": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+      "entities": [
+        "hormuz",
+        "iran",
+        "strait"
+      ],
+      "event_id": "evt_93e7394aa7a078fc",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:02.146652Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:02.146652Z",
+      "last_updated_at": "2026-09-18T09:07:02.146652Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Iran’s Strait of Hormuz toll booth ran through a bitcoin exchange, U.S. says",
+      "title_zh": "Iran’s Strait of Hormuz toll booth ran through a bitcoin exchange, U.S. says",
+      "topics": [
+        "exchange-operations",
+        "iran",
+        "sanctions"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+          "current_state_zh": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+          "detailed_summary_en": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+          "detailed_summary_zh": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+          "event_id": "evt_93e7394aa7a078fc",
+          "first_seen_at": "2026-09-18T09:07:02.146652Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T06:52:23Z",
+          "published_at": "2026-09-18T06:52:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/18/iran-s-strait-of-hormuz-toll-booth-ran-through-a-bitcoin-exchange-u-s-says"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:08dd2824ccde40bf"
+          ],
+          "time_precision": "published",
+          "title_en": "Iran’s Strait of Hormuz toll booth ran through a bitcoin exchange, U.S. says",
+          "title_zh": "Iran’s Strait of Hormuz toll booth ran through a bitcoin exchange, U.S. says",
+          "update_id": "upd_6e32748f7ec395ea",
+          "update_type": "initial",
+          "what_changed_en": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz.",
+          "what_changed_zh": "The U.S. Treasury sanctioned Tehran-based crypto exchange BitBank and its developer, alleging it moved hundreds of millions of dollars in Bitcoin to Iran's Revolutionary Guards and processed fees for ships paying for safe passage through the Strait of Hormuz."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+      "current_state_zh": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+      "entities": [
+        "glamsterdam"
+      ],
+      "event_id": "evt_606b48228f302527",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-18T09:07:03.350802Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:03.350802Z",
+      "last_updated_at": "2026-09-18T09:07:03.350802Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ethereum confirms Glamsterdam dates, but warns 'fake' builders could stall the chain",
+      "title_zh": "Ethereum confirms Glamsterdam dates, but warns 'fake' builders could stall the chain",
+      "topics": [
+        "glamsterdam",
+        "mev",
+        "protocol-upgrade",
+        "testnet"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+          "current_state_zh": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+          "detailed_summary_en": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+          "detailed_summary_zh": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+          "event_id": "evt_606b48228f302527",
+          "first_seen_at": "2026-09-18T09:07:03.350802Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T05:23:29Z",
+          "published_at": "2026-09-18T05:23:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/18/ethereum-confirms-glamsterdam-dates-but-warns-fake-builders-could-stall-the-chain"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:d9dc4c12b986b3ba"
+          ],
+          "time_precision": "published",
+          "title_en": "Ethereum confirms Glamsterdam dates, but warns 'fake' builders could stall the chain",
+          "title_zh": "Ethereum confirms Glamsterdam dates, but warns 'fake' builders could stall the chain",
+          "update_id": "upd_d1d9fe5bcdb8dd68",
+          "update_type": "initial",
+          "what_changed_en": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads.",
+          "what_changed_zh": "Ethereum developers confirmed Glamsterdam testnet dates while warning that attackers could exploit free test ether and disposable builder identities to disrupt Sepolia block auctions by withholding transaction payloads."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+      "current_state_zh": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+      "entities": [
+        "bank-of-japan",
+        "interest-rates",
+        "japan"
+      ],
+      "event_id": "evt_84ffea9475008e32",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:04.007726Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:04.007726Z",
+      "last_updated_at": "2026-09-18T09:07:04.007726Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bank of Japan raises interest rates by 25 basis points. Bitcoin tops $77,000",
+      "title_zh": "Bank of Japan raises interest rates by 25 basis points. Bitcoin tops $77,000",
+      "topics": [
+        "bank-of-japan",
+        "interest-rates",
+        "macro",
+        "yen"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+          "current_state_zh": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+          "detailed_summary_en": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+          "detailed_summary_zh": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+          "event_id": "evt_84ffea9475008e32",
+          "first_seen_at": "2026-09-18T09:07:04.007726Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T03:03:38Z",
+          "published_at": "2026-09-18T03:03:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/17/boj-rate-hike"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:851a751df2f55407"
+          ],
+          "time_precision": "published",
+          "title_en": "Bank of Japan raises interest rates by 25 basis points. Bitcoin tops $77,000",
+          "title_zh": "Bank of Japan raises interest rates by 25 basis points. Bitcoin tops $77,000",
+          "update_id": "upd_444d9660ba4918a8",
+          "update_type": "initial",
+          "what_changed_en": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response.",
+          "what_changed_zh": "The Bank of Japan raised its benchmark interest rate by 25 basis points to 1.25%, the highest in 31 years, amid sticky inflation and a weak yen, with bitcoin rising above $77,000 and the yen falling in response."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+      "current_state_zh": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+      "entities": [
+        "global",
+        "openzeppelin",
+        "street",
+        "wall",
+        "web3"
+      ],
+      "event_id": "evt_385f5a5e33c20be3",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T09:07:06.598632Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:06.598632Z",
+      "last_updated_at": "2026-09-18T09:07:06.598632Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Wall Street gains direct oversight of Web3 security as S&P Global buys OpenZeppelin",
+      "title_zh": "Wall Street gains direct oversight of Web3 security as S&P Global buys OpenZeppelin",
+      "topics": [
+        "acquisition",
+        "smart-contracts",
+        "web3-infrastructure"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+          "current_state_zh": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+          "detailed_summary_en": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+          "detailed_summary_zh": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+          "event_id": "evt_385f5a5e33c20be3",
+          "first_seen_at": "2026-09-18T09:07:06.598632Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T07:30:56Z",
+          "published_at": "2026-09-18T07:30:56Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/wall-street-gains-direct-oversight-of-web3-security-as-sp-global-buys-openzeppelin/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:ddab827da621a881"
+          ],
+          "time_precision": "published",
+          "title_en": "Wall Street gains direct oversight of Web3 security as S&P Global buys OpenZeppelin",
+          "title_zh": "Wall Street gains direct oversight of Web3 security as S&P Global buys OpenZeppelin",
+          "update_id": "upd_5f6b66f5bf827f99",
+          "update_type": "initial",
+          "what_changed_en": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments.",
+          "what_changed_zh": "S&P Global has agreed to acquire smart contract security firm OpenZeppelin, bringing the widely used Web3 security provider under the umbrella of the ratings agency group while preserving its name, leadership, and open-source commitments."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+      "current_state_zh": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+      "entities": [
+        "ai-crypto",
+        "fake"
+      ],
+      "event_id": "evt_4d22117e97787458",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T09:07:06.671938Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:06.671938Z",
+      "last_updated_at": "2026-09-18T09:07:06.671938Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Fake AI crypto software is secretly replacing browser wallet extensions",
+      "title_zh": "Fake AI crypto software is secretly replacing browser wallet extensions",
+      "topics": [
+        "ai-crypto",
+        "malware",
+        "phishing",
+        "wallet-security"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+          "current_state_zh": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+          "detailed_summary_en": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+          "detailed_summary_zh": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+          "event_id": "evt_4d22117e97787458",
+          "first_seen_at": "2026-09-18T09:07:06.671938Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T05:10:30Z",
+          "published_at": "2026-09-18T05:10:30Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/hp-says-fake-ai-trading-bot-swapped-crypto-wallet-extensions-for-credential-stealing-copies/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:c446eed9999c919f"
+          ],
+          "time_precision": "published",
+          "title_en": "Fake AI crypto software is secretly replacing browser wallet extensions",
+          "title_zh": "Fake AI crypto software is secretly replacing browser wallet extensions",
+          "update_id": "upd_e3c25130e11e3d96",
+          "update_type": "initial",
+          "what_changed_en": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials.",
+          "what_changed_zh": "HP Wolf Security reported a fake AI crypto-trading assistant that installs Needle Stealer malware, which replaces seven browser wallet extensions on infected Windows machines to steal credentials."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+      "current_state_zh": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+      "entities": [
+        "binance",
+        "europe",
+        "lagarde",
+        "mica"
+      ],
+      "event_id": "evt_4e1cb9e840c1b05e",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T09:07:09.927861Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:09.927861Z",
+      "last_updated_at": "2026-09-18T09:07:09.927861Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment",
+      "title_zh": "Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment",
+      "topics": [
+        "binance",
+        "ecb",
+        "eu-regulation",
+        "exchange-licensing",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+          "current_state_zh": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+          "detailed_summary_en": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+          "detailed_summary_zh": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+          "event_id": "evt_4e1cb9e840c1b05e",
+          "first_seen_at": "2026-09-18T09:07:09.927861Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T08:50:38Z",
+          "published_at": "2026-09-18T08:50:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/binance-cites-speculation-report-ecb-chief-mica-intervention?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:e148295114124889"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment",
+          "title_zh": "Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment",
+          "update_id": "upd_4f316397e1732567",
+          "update_type": "initial",
+          "what_changed_en": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
+          "what_changed_zh": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+      "current_state_zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+      "entities": [
+        "mainnet",
+        "november",
+        "nu7",
+        "zcash"
+      ],
+      "event_id": "evt_4d4b10880ad0715c",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-18T09:07:10.086276Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:10.086276Z",
+      "last_updated_at": "2026-09-18T09:07:10.086276Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
+      "title_zh": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
+      "topics": [
+        "mainnet",
+        "privacy",
+        "protocol-upgrade",
+        "zcash"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+          "current_state_zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+          "detailed_summary_en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+          "detailed_summary_zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+          "event_id": "evt_4d4b10880ad0715c",
+          "first_seen_at": "2026-09-18T09:07:10.086276Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T04:51:29Z",
+          "published_at": "2026-09-18T04:51:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/zcash-nu7-november-mainnet-activation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:6d96bbf0ffead12f"
+          ],
+          "time_precision": "published",
+          "title_en": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
+          "title_zh": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
+          "update_id": "upd_c574b07ce2cf8c39",
+          "update_type": "initial",
+          "what_changed_en": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule.",
+          "what_changed_zh": "Zcash developers have reached unanimous agreement to target November 5 for the NU7 mainnet upgrade, which will cut block times to 25 seconds, disable version 4 transactions, and integrate the Network Sustainability Mechanism while preserving the halving schedule."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+      "current_state_zh": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+      "entities": [
+        "money",
+        "world"
+      ],
+      "event_id": "evt_e3df36016b343c53",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-18T09:07:10.166841Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:10.166841Z",
+      "last_updated_at": "2026-09-18T09:07:10.166841Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "World launches self-custodial ‘super app’ World Money",
+      "title_zh": "World launches self-custodial ‘super app’ World Money",
+      "topics": [
+        "self-custody",
+        "stablecoins",
+        "stripe",
+        "worldcoin"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+          "current_state_zh": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+          "detailed_summary_en": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+          "detailed_summary_zh": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+          "event_id": "evt_e3df36016b343c53",
+          "first_seen_at": "2026-09-18T09:07:10.166841Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T03:40:28Z",
+          "published_at": "2026-09-18T03:40:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/world-launches-self-custodial-super-app-world-money?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:7252ded8d49ee6a4"
+          ],
+          "time_precision": "published",
+          "title_en": "World launches self-custodial ‘super app’ World Money",
+          "title_zh": "World launches self-custodial ‘super app’ World Money",
+          "update_id": "upd_04bbf7dca55fbd64",
+          "update_type": "initial",
+          "what_changed_en": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
+          "what_changed_zh": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -66006,6 +67182,42 @@
         "source_type": "rss",
         "title": "House panel approves first federal crypto tax framework, one day after Senate’s Clarity Act stumbles",
         "url": "https://www.theblock.co/news/regulation/2026-09-16-house-panel-approves-first-federal-crypto-tax-framework-one-day-after-senates-clarity-act-stumbles-415293"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "S&P Global, a major traditional financial data and ratings institution, acquiring OpenZeppelin and investing in Kaiko signals significant institutional infrastructure buildout for tokenized finance and 24/7 markets. This is a material market-structure and institutional adoption development with a clear transmission path to crypto, though it is not a systemic event or security incident.",
+        "ai_score": 7.5,
+        "ai_summary": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+        "ai_tags": [
+          "institutional-adoption",
+          "tokenization",
+          "smart-contract-security",
+          "market-infrastructure",
+          "crypto-data"
+        ],
+        "author": "Oluwapelumi Adejumo",
+        "content": "Quick Take\n- S&P Global is buying OpenZeppelin days after leading an investment in crypto-data provider Kaiko.\n- The moves broaden S&P’s position across market data, benchmarks and technology risk as financial markets push toward 24/7 trading.\n- The strategy depends on tokenized finance expanding enough to create sustained institutional demand for those services.\nS&P Global agreed to acquire smart contract security firm OpenZeppelin, expanding its digital asset business into the technology underpinning tokenized finance.\nOn Sept. 17, the financial data and ratings company said that OpenZeppelin will continue operating under its own name as a separate business unit. Chief Executive Demian Brener will remain in charge and report to S&P Global Ratings President Yann Le Pallec.\nFinancial terms were not disclosed, and the transaction remains subject to closing conditions.\nThe deal gives S&P direct exposure to the security layer behind stablecoins, tokenized funds, and decentralized-finance applications. OpenZeppelin’s open-source contracts have supported more than $37 trillion in transferred value, while the company has completed more than 900 security engagements and identified over 10,000 vulnerabilities before production.\nThe acquisition follows a broader push by S&P into digital assets as round-the-clock markets create demand for the data, benchmarks and risk infrastructure needed to support institutional capital on blockchain networks.\nS&P adds smart-contract risk to its institutional toolkit\nAs more financial products move onto blockchains, institutions face an additional layer of risk around the software that issues, transfers and manages those assets.\nS&P said OpenZeppelin will expand its capabilities in what it described as the “on-chain technology-risk layer,” including security assessments and benchmarks for digital assets.\nThat adds another dimension to S&P’s existing financial-risk business. Tokenized funds and stablecoins remain exposed to risks around issuers, collateral and liquidity, while their operation can also depend on smart contracts, permissions and blockchain infrastructure that introduce technical vulnerabilities.\nLe Pallec said:\n“Our digital assets strategy centers on bringing trusted data, benchmarks and transparent risk assessment to markets as they move onchain.”\nOpenZeppelin has built its business around that technical layer. Its Contracts library is widely used across blockchain applications, while its security teams review smart contracts and other systems before deployment.\nThe company said its libraries will remain free, open source, and publicly maintained after the acquisition, including future versions. Its audit, engineering and security work will also continue under the existing team.\nThat preserves the developer model behind OpenZeppelin’s adoption while giving the company access to S&P’s institutional relationships, research resources and distribution.\nBrener said the combination could help OpenZeppelin reach more financial institutions as banks, asset managers and issuers increase their use of blockchain infrastructure.\nS&P said the acquisition is not expected to materially affect its financial results, emphasizing near-term expansion of capabilities rather than adding a large new revenue stream.\nS&P builds infrastructure for markets that never close\nThe OpenZeppelin deal follows a series of investments and product launches aimed at markets that increasingly operate around the clock.\nThree days earlier, S&P Global led a strategic investment in crypto-data provider Kaiko, extending the company’s Series B funding to $110 million. DRW, Susquehanna, Royal Bank of Canada, Nasdaq, BNP Paribas and other financial firms also participated as 24/7 blockchain markets increase demand for continuous pricing, valuation and risk data.\nKaiko already provides market data and infrastructure to more than 250 financial firms, institutions and regulators. Its systems connect to more than 150 exchanges and support trading, valuation and risk management across markets that do not close at the end of the traditional business day.\nS&P and Kaiko have also been extending traditional financial benchmarks onto those rails.\nIn March, the companies brought the iBoxx US Treasuries Index on-chain, embedding index data, licensing and permissioning into blockchain infrastructure. Earlier this month, they combined their digital-asset benchmark businesses into the S&P Kaiko Digital Asset Indices, a suite designed specifically for 24/7 markets.\nThe expansion began before the Kaiko investment.\nS&P Dow Jones Indices helped develop the S&P Digital Markets 50 Index, which combines 35 US-listed companies tied to the crypto ecosystem with 15 cryptocurrencies. Dinari subsequently worked with Chainlink to make a tokenized version of the benchmark verifiable on-chain, with Chainlink supplying real-time pricing and performance data.\nThat effort put S&P’s benchmark business directly into an emerging market structure where indices, assets and the data used to value them can all operate on blockchain rails.\nS&P has also developed stablecoin stability assessments, issued a credit rating for DeFi protocol Sky, and licensed the S&P 500 for tokenized products, extending its traditional businesses into digital markets.\nThe OpenZeppelin acquisition adds another piece to that buildout.\nKaiko supplies crypto-native pricing and market data, S&P provides benchmarks and financial-risk analysis, and OpenZeppelin brings smart-contract expertise for moving assets between investors and financial applications.\nThe combination could become more commercially significant as trading expands outside traditional exchange hours. Always-on markets require prices, collateral valuations, benchmarks, and risk controls to keep operating overnight and through weekends, while tokenized assets add software and smart contract risks alongside conventional financial ones.\nFor S&P, that creates an opportunity to extend services it already sells to banks and asset managers into a market where the infrastructure itself is becoming part of the risk assessment.\nIf more securities and funds migrate onto blockchains, institutions may increasingly need the same provider to understand both the asset they hold and the technology that determines how it moves.",
+        "fetched_at": "2026-09-18T09:07:06.826971Z",
+        "id": "rss:cryptoslate.com_feed_:f4afcafe68f76527",
+        "metadata": {
+          "category": "crypto-markets",
+          "event_retry_pending": true,
+          "feed_name": "CryptoSlate",
+          "tags": [
+            "Adoption",
+            "Featured",
+            "Market",
+            "Taxes",
+            "Technology",
+            "TradFi"
+          ]
+        },
+        "published_at": "2026-09-18T01:30:37Z",
+        "source_type": "rss",
+        "title": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
+        "url": "https://cryptoslate.com/from-kaiko-to-openzeppelin-sp-global-is-quietly-preparing-for-markets-that-never-close/"
       }
     }
   ],
