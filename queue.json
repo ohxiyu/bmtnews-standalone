@@ -703,10 +703,11 @@
         "post_id": "367963068729394"
       },
       "9f467d82b0263057fe77833b29ea9d4ac9991604d62d8f0281c91d7e5f24a50b": {
-        "status": "pending",
+        "status": "sent",
         "rank": 10,
         "text_hash": "fda584dc3ee33297dd81d491ff42d60b8b66f9fbe08f7a05fb928e2436b6d2e7",
-        "attempted_at": "2026-09-18T18:35:19.845868+08:00"
+        "attempted_at": "2026-09-18T18:35:19.845868+08:00",
+        "post_id": "367970395028228"
       }
     }
   },
@@ -750,12 +751,6 @@
     "2026-09-18": {
       "revision": "6f9a3f3b8a8ce546d98f73aef0dca7797b64b8d81803d4234f6226827cec829c",
       "jobs": [
-        {
-          "id": "9f467d82b0263057fe77833b29ea9d4ac9991604d62d8f0281c91d7e5f24a50b",
-          "text": "GalaChain 漏洞利用 74 个失败交易签名盗走约 300 万美元资产\n\nGalaChain 在 9 月 14 日发布的事后复盘报告中披露，攻击者利用从失败交易中收集到的 74 个可重放签名（最早可追溯至 55 天前），于 8 月 18 日从九个钱包中盗走约 20 亿枚 GALA（约 300 万美元）以及数十种其他代币。攻击期间该链暂停了跨链桥，并已修补签名范围混淆漏洞和重放密钥回滚缺陷。\n\n这起攻击表明，密码学上有效的签名并不等于用户已授权某项经济活动，而分别审查签名验证、重放保护和交易执行的审计流程，可能漏掉只在系统交互时才暴露的缺陷。它同时向链运营方提出治理层面的问题：当攻击已经实现自动化时，依赖人工触发的应急控制与基于有效签名的系统是否还能足够快地响应。\n\nGalaChain 的验证器此前接受请求中自带的 EIP-712 类型定义，而不是从被调用的操作中推导类型，因此可以提交覆盖某组字段的签名，却让另一个方法带着签名者从未承诺的额外信息执行——链上一个案例显示，一笔 TransferToken 调用转移了约 16.4 亿枚 GALA，而用于验证的 EIP-712 结构描述的却是 AddLiquidity 操作。由于交易失败时唯一交易键会随之回滚，签名仍留在公开账本上而重放键依然可用；与本次漏洞相关的 60 笔历史源交易中有 57 笔包含至少一个失败的内部操作，调查人员称没有证据表明受影响用户的私钥、助记词或密码遭到泄露。\n\n来源：https://cryptoslate.com/hacker-turned-55-days-of-failed-transactions-into-a-3-million-master-key-that-drained-galachain-wallets/\nBMTNews · 2026-09-18 · https://bmt.news",
-          "rank": 10,
-          "due_at": "2026-09-18T18:34:00+08:00"
-        },
         {
           "id": "94859d9d21cdbcbd94ecc04f7df101ae6c8ee8c6d389fcaf66e340fefa835c6d",
           "text": "Anthropic 提出衡量前沿实验室内部 AI 发展速度的指标体系\n\nAnthropic 发布了一套衡量前沿实验室内部 AI 发展速度的测量框架，覆盖 AI 主导的研发、智能体监督以及安全算力分配等方面。这不是又一个公开排行榜式的基准测试，而是聚焦于真正训练前沿模型的实验室内部的度量方法。\n\n前沿实验室的能力进展对外界而言基本不可见，因此一套共同的测量语言可以为政策制定者、审计方和同行实验室提供判断发展是在加速还是放缓的共同依据。这直接关系到当前 AI 安全与治理辩论的核心问题：实验室能否可信地自我报告其发展速度。\n\n该框架提出的测量指标是实验室内部信号，而非公开的基准测试分数——例如研发在多大程度上由 AI 主导、有多少监督工作被交给 AI 智能体、以及算力在能力研究与安全研究之间如何分配。这类指标比静态测试分数更难被“刷分”，但同样依赖实验室自愿披露竞争对手无法看到的内部数据。\n\n来源：https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5\nBMTNews · 2026-09-18 · https://bmt.news",
