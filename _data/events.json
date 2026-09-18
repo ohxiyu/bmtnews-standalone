@@ -65685,7 +65685,7 @@
       "first_seen_at": "2026-09-18T09:07:01.464153Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-18T09:07:01.464153Z",
-      "last_updated_at": "2026-09-18T09:07:01.464153Z",
+      "last_updated_at": "2026-09-18T16:37:23.089397Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -65724,10 +65724,17 @@
               "official": false,
               "source_type": "telegram",
               "url": "https://www.binance.com/en/support/announcement/detail/0c1e8975f48d42c4b856c113926c5fdd?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            },
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOHFjY3pLLVJXYzdpdV9odWphWTlpT1ZlLWp1blFFU3hfa29EUVkwOVVhazJ6LW8zOExlU09YMFNSNGdrUldlTTVGdWpudXVIZk5lOFRMSktFZmN3ck5LakZXVmlyMndCcDhuajFKVTBEUHo1eG1ZSGIxN0dKcFhzblA3MnBOdm1sdy1xdEJ0WlU?oc=5"
             }
           ],
           "story_ids": [
-            "telegram:binance_announcements:8967"
+            "telegram:binance_announcements:8967",
+            "google_news:article:ebc79a1542257825"
           ],
           "time_precision": "published",
           "title_en": "Binance Will Support the Stargate Finance (STG) Token Merge to LayerZero (ZRO)",
@@ -66145,6 +66152,74 @@
       ]
     },
     {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+      "current_state_zh": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+      "entities": [
+        "from",
+        "global",
+        "kaiko",
+        "openzeppelin"
+      ],
+      "event_id": "evt_c6faf09a72162f34",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T09:07:06.826971Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T09:07:06.826971Z",
+      "last_updated_at": "2026-09-18T09:07:06.826971Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
+      "title_zh": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
+      "topics": [
+        "crypto-data",
+        "market-infrastructure",
+        "smart-contract-security"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+          "current_state_zh": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+          "detailed_summary_en": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+          "detailed_summary_zh": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+          "event_id": "evt_c6faf09a72162f34",
+          "first_seen_at": "2026-09-18T09:07:06.826971Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T01:30:37Z",
+          "published_at": "2026-09-18T01:30:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/from-kaiko-to-openzeppelin-sp-global-is-quietly-preparing-for-markets-that-never-close/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:f4afcafe68f76527"
+          ],
+          "time_precision": "published",
+          "title_en": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
+          "title_zh": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
+          "update_id": "upd_c881e2bed4c09b4f",
+          "update_type": "initial",
+          "what_changed_en": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+          "what_changed_zh": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance."
+        }
+      ]
+    },
+    {
       "category": "policy",
       "confidence": 0.75,
       "current_state_en": "Binance declined to comment on a WSJ report that ECB President Christine Lagarde intervened to block its Greek MiCA license bid, while reaffirming its commitment to securing European authorization.",
@@ -66347,6 +66422,1322 @@
           "update_type": "initial",
           "what_changed_en": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding.",
           "what_changed_zh": "World launched World Money, a self-custodial 'super app' rolling out in over 150 countries that combines stablecoin payments, digital asset rewards, trading, Mini Apps, and Stripe-powered funding."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+      "current_state_zh": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+      "entities": [
+        "binance",
+        "christine",
+        "coindesk",
+        "ecb",
+        "lagarde",
+        "mica",
+        "president",
+        "wsj"
+      ],
+      "event_id": "evt_424146db81c80f8d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:23.088844Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:23.088844Z",
+      "last_updated_at": "2026-09-18T16:37:23.090654Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ - CoinDesk",
+      "title_zh": "ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ - CoinDesk",
+      "topics": [
+        "binance",
+        "ecb",
+        "eu-regulation",
+        "exchange-licensing",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+          "current_state_zh": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+          "detailed_summary_en": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+          "detailed_summary_zh": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+          "event_id": "evt_424146db81c80f8d",
+          "first_seen_at": "2026-09-18T16:37:23.088844Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:12:46Z",
+          "published_at": "2026-09-18T13:12:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMjhMUE1zcm4wcWw2aUNqNVBVdmRDWFJtOVdFc1B6V1ZSeXFnSURhV0t4dkM4S1RaaGQxMFJHWld6a0tTRWFCVGFLdXR0UGZnbHJiVEwtNXpCanBzNzVDc016OFBWcEFLSE5mNWJnckJHMlY5S0pwQU9xUGFPaEtzOUt2WWFVM2d5N2VpQjUyM3lRSFBRVHcxWFgxZ1ZMX0xfNUZ3WHFWMGFDWGZld0pvcXozWmRmQTc1VkNpOTZhcy1BUQ?oc=5"
+            },
+            {
+              "label": "Bitcoin News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcXdlQjNDTjhPM3pFTUNlSjBwU1JkVHpuZDRnb0VVajl4dGduS0JvR0daNGNnVHhlSEd2elMzVFl1VE5PTkp5OFFIZDNZQXRlQ0hBbDVUSmRBdlVjMkpkeVA4QVdRSTBSZnZYc2pBcV91b0JrV0ZuX2hIZXNRMUVhSkhNODh3Zi1OM184SzA4QXIwT1BNekU0ag?oc=5"
+            },
+            {
+              "label": "Finextra Research",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQU1M4OXJNUzZzbzhZM21oWVNXNlBqQ1dwQUx6a2RPN0pZVEFYX0xDdk5tLTQxUGpXTUlSU0hKODg2NUxMOVY5a1A5QnFnYnBUc2VHOGVsZUFfQVN0eml2bzducGZsNVBLMGhrT0U1bU0wTUNXWU5GSEZDWllKbU5YeVVzZHp1ZE1lM3RIb0E5bTFyVy1MMTJ6cVNtLU5ZVU1kY04w?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:40506355efdf01bd",
+            "google_news:article:f38600ae2a05025c",
+            "google_news:article:b482b9e76e4b104b"
+          ],
+          "time_precision": "published",
+          "title_en": "ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ - CoinDesk",
+          "title_zh": "ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ - CoinDesk",
+          "update_id": "upd_794bb69d4d1ac2d1",
+          "update_type": "initial",
+          "what_changed_en": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report.",
+          "what_changed_zh": "ECB President Christine Lagarde personally intervened to block Binance's MiCA license in the EU, according to a WSJ report."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Binance's MiCA application in Greece is stalled following reported high-level ECB intervention by President Lagarde, despite prior regulatory completeness.",
+      "current_state_zh": "币安在希腊的MiCA申请在据报欧洲央行行长拉加德高层干预后陷入停滞，尽管此前监管机构认为申请已完整。",
+      "entities": [
+        "application",
+        "binance",
+        "christine",
+        "concerns",
+        "cryptonomist",
+        "ecb",
+        "faces",
+        "greece",
+        "lagarde",
+        "mica",
+        "president",
+        "wsj"
+      ],
+      "event_id": "evt_bb7a5ae2fdaa62e9",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:23.089584Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:25.849090Z",
+      "last_updated_at": "2026-09-18T16:37:25.849090Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "Binance MiCA Application Faces ECB Concerns in Greece - The Cryptonomist",
+      "title_zh": "Binance MiCA Application Faces ECB Concerns in Greece - The Cryptonomist",
+      "topics": [
+        "binance",
+        "crypto-regulation",
+        "ecb",
+        "eu",
+        "europe",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+          "current_state_zh": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+          "detailed_summary_en": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+          "detailed_summary_zh": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+          "event_id": "evt_bb7a5ae2fdaa62e9",
+          "first_seen_at": "2026-09-18T16:37:23.089584Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T05:58:19Z",
+          "published_at": "2026-09-18T05:58:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Cryptonomist",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9VekM4cFRGcnlwcnpWVTVlV1lXd09sOFF1VWNMbUxGdVB0X3JReXQyN1o3dVotaTJPc3dVSmNBYVlDYVVSLWxaS0tQcnRkSjBxNUdpcVpQR0haY1FZRTd2a2gzTkZPQ3QxdUMzal83NVVZTF96OWhjeFJB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:a1e9914128d49e61"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance MiCA Application Faces ECB Concerns in Greece - The Cryptonomist",
+          "title_zh": "Binance MiCA Application Faces ECB Concerns in Greece - The Cryptonomist",
+          "update_id": "upd_22bff5cde3995695",
+          "update_type": "initial",
+          "what_changed_en": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval.",
+          "what_changed_zh": "Binance's MiCA application in Greece is reportedly drawing concerns from the European Central Bank, potentially complicating the exchange's ability to secure EU-wide regulatory approval."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "Binance's MiCA application in Greece is stalled following reported high-level ECB intervention by President Lagarde, despite prior regulatory completeness.",
+          "current_state_zh": "币安在希腊的MiCA申请在据报欧洲央行行长拉加德高层干预后陷入停滞，尽管此前监管机构认为申请已完整。",
+          "detailed_summary_en": "ECB President Christine Lagarde intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
+          "detailed_summary_zh": "ECB President Christine Lagarde intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
+          "event_id": "evt_bb7a5ae2fdaa62e9",
+          "first_seen_at": "2026-09-18T16:37:25.849090Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T12:57:06Z",
+          "published_at": "2026-09-18T12:57:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:54b2214b66f8bb65"
+          ],
+          "time_precision": "published",
+          "title_en": "ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ",
+          "title_zh": "ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ",
+          "update_id": "upd_8ce3a44a504078dd",
+          "update_type": "escalation",
+          "what_changed_en": "ECB President Christine Lagarde personally intervened to block Binance's EU MiCA license, leading Greece to stall an application regulators had previously deemed complete, according to the WSJ.",
+          "what_changed_zh": "欧洲央行行长克里斯蒂娜·拉加德亲自干预阻止币安欧盟MiCA牌照，导致希腊搁置此前监管机构认为已完成的申请，据《华尔街日报》。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+      "current_state_zh": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+      "entities": [
+        "coinbase",
+        "news"
+      ],
+      "event_id": "evt_32290cd546c646d8",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:23.089757Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:23.089757Z",
+      "last_updated_at": "2026-09-18T16:37:23.089757Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase seeks US approval for 50-plus single-stock perpetuals - Crypto News",
+      "title_zh": "Coinbase seeks US approval for 50-plus single-stock perpetuals - Crypto News",
+      "topics": [
+        "coinbase",
+        "crypto-regulation",
+        "derivatives",
+        "perpetual-futures"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+          "current_state_zh": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+          "detailed_summary_en": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+          "detailed_summary_zh": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+          "event_id": "evt_32290cd546c646d8",
+          "first_seen_at": "2026-09-18T16:37:23.089757Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T15:58:52Z",
+          "published_at": "2026-09-18T15:58:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Crypto News",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE84Y1Y2QmFYY2w0MWN2UVdiLW1KOHdaRFRkRGNpeDVMSkRlU0JmcXBpZWppWGRRd2RaVWUybURBMVJEZFZpV1A3RXVPSml2bEQwN1lEZmhzSTRXVkhMemFWZHhIME1vM2JaRzg3RmZwWmxFbUZTSzl1R1NlTQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:3ffd5f7605a6a50a"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase seeks US approval for 50-plus single-stock perpetuals - Crypto News",
+          "title_zh": "Coinbase seeks US approval for 50-plus single-stock perpetuals - Crypto News",
+          "update_id": "upd_e9ac13611968a24c",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products.",
+          "what_changed_zh": "Coinbase is pursuing US regulatory approval to list more than 50 single-stock perpetual futures contracts, signaling a major expansion of its derivatives offerings into equity-linked products."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+      "current_state_zh": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+      "entities": [
+        "binance",
+        "lagarde",
+        "mica"
+      ],
+      "event_id": "evt_75008f53aa34f2fc",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:23.089797Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:23.089797Z",
+      "last_updated_at": "2026-09-18T16:37:23.089797Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Lagarde personally blocked Binance's EU MiCA license, report says - altcoinbuzz.io",
+      "title_zh": "Lagarde personally blocked Binance's EU MiCA license, report says - altcoinbuzz.io",
+      "topics": [
+        "binance",
+        "eu-regulation",
+        "exchange-licensing",
+        "lagarde",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+          "current_state_zh": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+          "detailed_summary_en": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+          "detailed_summary_zh": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+          "event_id": "evt_75008f53aa34f2fc",
+          "first_seen_at": "2026-09-18T16:37:23.089797Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:07:33Z",
+          "published_at": "2026-09-18T13:07:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "altcoinbuzz.io",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOXhVZy1UYmRzMXNQRjZGY2l2ZWRFOVhCUEw2RWtUZVdzREdPWDRJTFl2Z053ejZaZjZTaGZmX090Rzd3Ui05THN2MjRKSGxhVVpMcEZPYWg5TVZGLUxldHBsTV9STjZWclcxbEhDR2dkWVVhazlKX2NDcGVpMGJRVEY5U1ZqMzJzOHVpX3V6SXRtUkVUT2c?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:3f1af8deaa1214a7"
+          ],
+          "time_precision": "published",
+          "title_en": "Lagarde personally blocked Binance's EU MiCA license, report says - altcoinbuzz.io",
+          "title_zh": "Lagarde personally blocked Binance's EU MiCA license, report says - altcoinbuzz.io",
+          "update_id": "upd_693707858a10661f",
+          "update_type": "initial",
+          "what_changed_en": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union.",
+          "what_changed_zh": "A report claims ECB President Christine Lagarde personally intervened to block Binance's MiCA licensing in the European Union."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+      "current_state_zh": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+      "entities": [
+        "dai",
+        "kraken",
+        "panews",
+        "uae",
+        "usde",
+        "xmr",
+        "zec"
+      ],
+      "event_id": "evt_a1c47360346e09a3",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:23.090227Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:23.090227Z",
+      "last_updated_at": "2026-09-18T16:37:23.090227Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kraken force-liquidates seven assets for UAE users, including DAI, XMR, ZEC and USDe - PANews",
+      "title_zh": "Kraken force-liquidates seven assets for UAE users, including DAI, XMR, ZEC and USDe - PANews",
+      "topics": [
+        "delisting",
+        "exchange-operations",
+        "forced-liquidation",
+        "kraken",
+        "uae-regulation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+          "current_state_zh": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+          "detailed_summary_en": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+          "detailed_summary_zh": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+          "event_id": "evt_a1c47360346e09a3",
+          "first_seen_at": "2026-09-18T16:37:23.090227Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T07:56:00Z",
+          "published_at": "2026-09-18T07:56:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "PANews",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1bEFyeGdFaGVnV1BLdV8ybGRZRDBzOGdtRHJLaVYxTzM5SmNhODI3dEc5TU5fNUFmN3JFODNmZUFxdFVDQmpIQjJpZ3ZBdVF2cEZmN0RCdnJ2TXlGUlo3T2ZtWFZjcjZFSTFqTGpFWTZuTEU1NENuVEhLQTFqTDQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5018ea110d8e8dd4"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken force-liquidates seven assets for UAE users, including DAI, XMR, ZEC and USDe - PANews",
+          "title_zh": "Kraken force-liquidates seven assets for UAE users, including DAI, XMR, ZEC and USDe - PANews",
+          "update_id": "upd_67eac5c04a6ca48c",
+          "update_type": "initial",
+          "what_changed_en": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent.",
+          "what_changed_zh": "Kraken forcibly liquidated seven assets, including DAI, XMR, ZEC, and USDe, for its UAE-based users, closing positions without user consent."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+      "current_state_zh": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+      "entities": [
+        "agents",
+        "coding",
+        "coding-agents",
+        "design",
+        "empirical",
+        "harness",
+        "study"
+      ],
+      "event_id": "evt_1688668ec0724398",
+      "event_type": "other",
+      "first_seen_at": "2026-09-18T16:37:23.099128Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:23.099128Z",
+      "last_updated_at": "2026-09-18T16:37:23.099128Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "An Empirical Study of Harness Design for Coding Agents",
+      "title_zh": "An Empirical Study of Harness Design for Coding Agents",
+      "topics": [
+        "coding-agents",
+        "developer-tools",
+        "research",
+        "software-engineering"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+          "current_state_zh": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+          "detailed_summary_en": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+          "detailed_summary_zh": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+          "event_id": "evt_1688668ec0724398",
+          "first_seen_at": "2026-09-18T16:37:23.099128Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:06:30Z",
+          "published_at": "2026-09-18T13:06:30Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49753878"
+            }
+          ],
+          "sources": [
+            {
+              "label": "wek",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://arxiv.org/abs/2609.20804"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49753878"
+          ],
+          "time_precision": "published",
+          "title_en": "An Empirical Study of Harness Design for Coding Agents",
+          "title_zh": "An Empirical Study of Harness Design for Coding Agents",
+          "update_id": "upd_ec04e22a21a85b28",
+          "update_type": "initial",
+          "what_changed_en": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures.",
+          "what_changed_zh": "An empirical study examining how agent harness design choices affect coding agent performance, sparking technical debate on Hacker News about minimal versus complex agent architectures."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+      "current_state_zh": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+      "entities": [
+        "cyberattack",
+        "haruko"
+      ],
+      "event_id": "evt_a610dd04dcfcdadf",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T16:37:24.923492Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:24.923492Z",
+      "last_updated_at": "2026-09-18T16:37:24.923492Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost",
+      "title_zh": "Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost",
+      "topics": [
+        "api",
+        "crypto-infrastructure",
+        "cyberattack",
+        "institutional"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+          "current_state_zh": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+          "detailed_summary_en": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+          "detailed_summary_zh": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+          "event_id": "evt_a610dd04dcfcdadf",
+          "first_seen_at": "2026-09-18T16:37:24.923492Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T15:06:31Z",
+          "published_at": "2026-09-18T15:06:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/18/crypto-tech-provider-haruko-hit-by-cyberattack-affecting-15-clients-some-funds-lost"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:ad84b425b6d34990"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost",
+          "title_zh": "Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost",
+          "update_id": "upd_3a0cc48a809a6044",
+          "update_type": "initial",
+          "what_changed_en": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds.",
+          "what_changed_zh": "Crypto technology provider Haruko suffered a targeted cyberattack affecting 15 institutional clients, exposing read-only exchange API details and trading data, with some smaller hedge funds potentially losing funds."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+      "current_state_zh": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+      "entities": [
+        "cftc",
+        "congress",
+        "house",
+        "rulemaking",
+        "white",
+        "white-house"
+      ],
+      "event_id": "evt_ddffb643d96920ea",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:30.669527Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:30.669527Z",
+      "last_updated_at": "2026-09-18T16:37:30.669527Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CFTC files crypto asset rulemaking with White House, pressing ahead without Congress",
+      "title_zh": "CFTC files crypto asset rulemaking with White House, pressing ahead without Congress",
+      "topics": [
+        "cftc",
+        "crypto-regulation",
+        "rulemaking",
+        "white-house"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+          "current_state_zh": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+          "detailed_summary_en": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+          "detailed_summary_zh": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+          "event_id": "evt_ddffb643d96920ea",
+          "first_seen_at": "2026-09-18T16:37:30.669527Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:33:40Z",
+          "published_at": "2026-09-18T13:33:40Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-18-cftc-files-crypto-asset-rulemaking-with-white-house-pressing-ahead-without-congress-415510"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:6745bb5aa7c4755d"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC files crypto asset rulemaking with White House, pressing ahead without Congress",
+          "title_zh": "CFTC files crypto asset rulemaking with White House, pressing ahead without Congress",
+          "update_id": "upd_c9c21e53816eb98d",
+          "update_type": "initial",
+          "what_changed_en": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action.",
+          "what_changed_zh": "The CFTC has submitted its crypto asset rulemaking to the White House for review, advancing the regulatory process without waiting for congressional action."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+      "current_state_zh": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+      "entities": [
+        "against",
+        "base",
+        "borrowing",
+        "coinbase",
+        "morpho",
+        "opens",
+        "stocks",
+        "tokenized",
+        "tokenized-stocks"
+      ],
+      "event_id": "evt_f2f495c2aee90d54",
+      "event_type": "other",
+      "first_seen_at": "2026-09-18T16:37:32.401713Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:32.401713Z",
+      "last_updated_at": "2026-09-18T16:37:32.401713Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Morpho Opens Borrowing Against Coinbase's Tokenized Stocks",
+      "title_zh": "Morpho Opens Borrowing Against Coinbase's Tokenized Stocks",
+      "topics": [
+        "base",
+        "coinbase",
+        "morpho",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+          "current_state_zh": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+          "detailed_summary_en": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+          "detailed_summary_zh": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+          "event_id": "evt_f2f495c2aee90d54",
+          "first_seen_at": "2026-09-18T16:37:32.401713Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T14:24:02Z",
+          "published_at": "2026-09-18T14:24:02Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/morpho-coinbase-tokenized-stocks-borrowing-base"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:00c8c30d6b2468f8"
+          ],
+          "time_precision": "published",
+          "title_en": "Morpho Opens Borrowing Against Coinbase's Tokenized Stocks",
+          "title_zh": "Morpho Opens Borrowing Against Coinbase's Tokenized Stocks",
+          "update_id": "upd_cd43242dcfaf5c12",
+          "update_type": "initial",
+          "what_changed_en": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base.",
+          "what_changed_zh": "Morpho now allows holders of five Coinbase tokenized stock tokens to pledge them as collateral for USDC loans on Base."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+      "current_state_zh": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+      "entities": [
+        "accounts",
+        "fund",
+        "million",
+        "moonpay",
+        "opens",
+        "tokenized",
+        "treasury",
+        "wisdomtree"
+      ],
+      "event_id": "evt_01e596ac65f19c94",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-18T16:37:32.416074Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:32.416074Z",
+      "last_updated_at": "2026-09-18T16:37:32.416074Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "WisdomTree Opens Tokenized Treasury Fund To MoonPay's 35 Million Accounts",
+      "title_zh": "WisdomTree Opens Tokenized Treasury Fund To MoonPay's 35 Million Accounts",
+      "topics": [
+        "rwa",
+        "stablecoins",
+        "tokenized-treasuries"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+          "current_state_zh": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+          "detailed_summary_en": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+          "detailed_summary_zh": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+          "event_id": "evt_01e596ac65f19c94",
+          "first_seen_at": "2026-09-18T16:37:32.416074Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T13:38:51Z",
+          "published_at": "2026-09-18T13:38:51Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/tradfi-and-fintech/wisdomtree-moonpay-wtgxx-tokenized-treasury-stablecoin-reserves"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:c83104ca8013527c"
+          ],
+          "time_precision": "published",
+          "title_en": "WisdomTree Opens Tokenized Treasury Fund To MoonPay's 35 Million Accounts",
+          "title_zh": "WisdomTree Opens Tokenized Treasury Fund To MoonPay's 35 Million Accounts",
+          "update_id": "upd_3fe2e8ab067ce103",
+          "update_type": "initial",
+          "what_changed_en": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves.",
+          "what_changed_zh": "WisdomTree is opening its $1.23 billion tokenized Treasury fund WTGXX to MoonPay's 35 million accounts, with MoonPay holding the fund against its stablecoin reserves."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+      "current_state_zh": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+      "entities": [
+        "xrpl"
+      ],
+      "event_id": "evt_914ac0487a1385a1",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T16:37:33.218489Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:33.218489Z",
+      "last_updated_at": "2026-09-18T16:37:33.218489Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "XRPL tries to mathematically prove its new lending market cannot be drained",
+      "title_zh": "XRPL tries to mathematically prove its new lending market cannot be drained",
+      "topics": [
+        "defi-lending",
+        "formal-verification",
+        "lean4",
+        "protocol-security",
+        "xrpl"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+          "current_state_zh": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+          "detailed_summary_en": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+          "detailed_summary_zh": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+          "event_id": "evt_914ac0487a1385a1",
+          "first_seen_at": "2026-09-18T16:37:33.218489Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T15:35:12Z",
+          "published_at": "2026-09-18T15:35:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/xrpl-tries-to-mathematically-prove-its-new-lending-market-cannot-be-drained/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:11f65c9e2001c7df"
+          ],
+          "time_precision": "published",
+          "title_en": "XRPL tries to mathematically prove its new lending market cannot be drained",
+          "title_zh": "XRPL tries to mathematically prove its new lending market cannot be drained",
+          "update_id": "upd_bb28a9cc1893eebf",
+          "update_type": "initial",
+          "what_changed_en": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1.",
+          "what_changed_zh": "Common Prefix is using Lean 4 formal verification to prove that XRPL's forthcoming native lending protocol cannot enter unsafe accounting states, as xrpld 3.4.0 ships with LendingProtocolV1_1."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+      "current_state_zh": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+      "entities": [
+        "ath",
+        "hype",
+        "hyperliquid"
+      ],
+      "event_id": "evt_692a54953180d249",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-18T16:37:33.376236Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:33.376236Z",
+      "last_updated_at": "2026-09-18T16:37:33.376236Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hyperliquid opens native lending as HYPE hits new ATH above $90",
+      "title_zh": "Hyperliquid opens native lending as HYPE hits new ATH above $90",
+      "topics": [
+        "collateral",
+        "defi-lending",
+        "hype",
+        "hyperliquid",
+        "protocol-upgrade"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+          "current_state_zh": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+          "detailed_summary_en": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+          "detailed_summary_zh": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+          "event_id": "evt_692a54953180d249",
+          "first_seen_at": "2026-09-18T16:37:33.376236Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T14:40:05Z",
+          "published_at": "2026-09-18T14:40:05Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/hyperliquid-opens-native-lending-as-hype-hits-new-ath-above-90/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:5ef1d6ed055d8cdd"
+          ],
+          "time_precision": "published",
+          "title_en": "Hyperliquid opens native lending as HYPE hits new ATH above $90",
+          "title_zh": "Hyperliquid opens native lending as HYPE hits new ATH above $90",
+          "update_id": "upd_17ff8a88e5891690",
+          "update_type": "initial",
+          "what_changed_en": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90.",
+          "what_changed_zh": "Hyperliquid launched native manual borrowing on HyperCore, allowing users to pledge HYPE or Bitcoin as collateral to borrow USDC or USDT, with $269 million borrowed on the first day as HYPE reached a new all-time high above $90."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional exemption for qualifying platforms to trade certain tokenized stocks, the CFTC broadened no-action relief for passive software providers, and the CFTC has now submitted a crypto market rules proposal to OMB for review, with a CFTC vote and public comment still needed before it can take effect.",
+      "current_state_zh": "在参议院未能推进CLARITY法案后，SEC为合格平台提供了五年期条件性豁免以进行特定代币化股票交易，CFTC扩大了针对被动软件提供商的无行动救济，并且CFTC现已向OMB提交加密市场规则提案等待审查，之后还需CFTC投票和公开征求意见才能生效。",
+      "entities": [
+        "cftc",
+        "clarity",
+        "clarity-act",
+        "congress",
+        "house",
+        "sec",
+        "white"
+      ],
+      "event_id": "evt_c5625b867bd222db",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:34.379419Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:34.379419Z",
+      "last_updated_at": "2026-09-18T16:37:40.419721Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "SEC and CFTC bypass Congress to open crypto access after CLARITY fails  – with a catch",
+      "title_zh": "SEC and CFTC bypass Congress to open crypto access after CLARITY fails  – with a catch",
+      "topics": [
+        "cftc",
+        "clarity-act",
+        "crypto-regulation",
+        "sec",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional path for permissioned venues to trade tokenized US stocks via automated market makers, while the CFTC broadened no-action relief for software providers connecting users to regulated derivatives markets.",
+          "current_state_zh": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional path for permissioned venues to trade tokenized US stocks via automated market makers, while the CFTC broadened no-action relief for software providers connecting users to regulated derivatives markets.",
+          "detailed_summary_en": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional path for permissioned venues to trade tokenized US stocks via automated market makers, while the CFTC broadened no-action relief for software providers connecting users to regulated derivatives markets.",
+          "detailed_summary_zh": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional path for permissioned venues to trade tokenized US stocks via automated market makers, while the CFTC broadened no-action relief for software providers connecting users to regulated derivatives markets.",
+          "event_id": "evt_c5625b867bd222db",
+          "first_seen_at": "2026-09-18T16:37:34.379419Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T12:46:01Z",
+          "published_at": "2026-09-18T12:46:01Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/sec-and-cftc-bypass-congress-after-clarity-failed-to-open-crypto-access-with-a-catch/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:c8244a60e65fab16"
+          ],
+          "time_precision": "published",
+          "title_en": "SEC and CFTC bypass Congress to open crypto access after CLARITY fails  – with a catch",
+          "title_zh": "SEC and CFTC bypass Congress to open crypto access after CLARITY fails  – with a catch",
+          "update_id": "upd_4bf551436cbb0383",
+          "update_type": "initial",
+          "what_changed_en": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional path for permissioned venues to trade tokenized US stocks via automated market makers, while the CFTC broadened no-action relief for software providers connecting users to regulated derivatives markets.",
+          "what_changed_zh": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional path for permissioned venues to trade tokenized US stocks via automated market makers, while the CFTC broadened no-action relief for software providers connecting users to regulated derivatives markets."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "After the Senate failed to advance the CLARITY Act, the SEC created a five-year conditional exemption for qualifying platforms to trade certain tokenized stocks, the CFTC broadened no-action relief for passive software providers, and the CFTC has now submitted a crypto market rules proposal to OMB for review, with a CFTC vote and public comment still needed before it can take effect.",
+          "current_state_zh": "在参议院未能推进CLARITY法案后，SEC为合格平台提供了五年期条件性豁免以进行特定代币化股票交易，CFTC扩大了针对被动软件提供商的无行动救济，并且CFTC现已向OMB提交加密市场规则提案等待审查，之后还需CFTC投票和公开征求意见才能生效。",
+          "detailed_summary_en": "The CFTC sent a crypto market proposal to the White House for review after the CLARITY Act failed in the Senate, while the SEC introduced a five-year conditional exemption for qualifying tokenized-stock platforms and the CFTC issued no-action relief for certain passive software providers.",
+          "detailed_summary_zh": "The CFTC sent a crypto market proposal to the White House for review after the CLARITY Act failed in the Senate, while the SEC introduced a five-year conditional exemption for qualifying tokenized-stock platforms and the CFTC issued no-action relief for certain passive software providers.",
+          "event_id": "evt_c5625b867bd222db",
+          "first_seen_at": "2026-09-18T16:37:24.605839Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T15:16:37Z",
+          "published_at": "2026-09-18T15:16:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act"
+            },
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/cftc-submits-crypto-market-regulation-plan-for-white-house-review?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378638/cftc-crypto-rules-white-house-congress-clarity-act"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:77f9d8a1a7d9a46e",
+            "rss:cointelegraph.com_rss:b01d410db449166d",
+            "rss:decrypt.co_feed:d677980e13160b1e"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act",
+          "title_zh": "CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act",
+          "update_id": "upd_0f950c0fe30a6dd3",
+          "update_type": "escalation",
+          "what_changed_en": "The CFTC submitted a new crypto market rules proposal to the White House Office of Management and Budget (OMB) on Thursday; after OMB review, it will return to the CFTC for a vote and public comment.",
+          "what_changed_zh": "CFTC于周四向白宫管理和预算办公室（OMB）提交了一份新的加密市场规则提案，该提案在OMB审查后将返回CFTC进行投票和公开征求意见。"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+      "current_state_zh": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+      "entities": [
+        "iran",
+        "korea",
+        "malware",
+        "north",
+        "north-korea"
+      ],
+      "event_id": "evt_c7bf836080928fb5",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-18T16:37:35.451004Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:35.451004Z",
+      "last_updated_at": "2026-09-18T16:37:35.451004Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Blockchain malware activity jumps 440% as AI lowers the barrier for North Korea and Iran-linked hackers",
+      "title_zh": "Blockchain malware activity jumps 440% as AI lowers the barrier for North Korea and Iran-linked hackers",
+      "topics": [
+        "chainalysis",
+        "malware",
+        "north-korea"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+          "current_state_zh": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+          "detailed_summary_en": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+          "detailed_summary_zh": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+          "event_id": "evt_c7bf836080928fb5",
+          "first_seen_at": "2026-09-18T16:37:35.451004Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T10:50:46Z",
+          "published_at": "2026-09-18T10:50:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/blockchain-malware-activity-jumps-440-as-ai-lowers-the-barrier-for-hackers/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:f613f8f5866f1dcb"
+          ],
+          "time_precision": "published",
+          "title_en": "Blockchain malware activity jumps 440% as AI lowers the barrier for North Korea and Iran-linked hackers",
+          "title_zh": "Blockchain malware activity jumps 440% as AI lowers the barrier for North Korea and Iran-linked hackers",
+          "update_id": "upd_a555f3a37020e018",
+          "update_type": "initial",
+          "what_changed_en": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier.",
+          "what_changed_zh": "Chainalysis reports blockchain-based malware command-and-control activity surged 440%, with North Korea and Iran-linked hackers accounting for roughly two-thirds of newly observed blockchain dead-drop activity as AI lowers the technical barrier."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+      "current_state_zh": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+      "entities": [
+        "clarity",
+        "clarity-act"
+      ],
+      "event_id": "evt_dc643be10340d5d7",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-18T16:37:35.616981Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:35.616981Z",
+      "last_updated_at": "2026-09-18T16:37:35.616981Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Act needs 3 more senators and a race against the clock for a 2026 revival",
+      "title_zh": "CLARITY Act needs 3 more senators and a race against the clock for a 2026 revival",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-senate"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+          "current_state_zh": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+          "detailed_summary_en": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+          "detailed_summary_zh": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+          "event_id": "evt_dc643be10340d5d7",
+          "first_seen_at": "2026-09-18T16:37:35.616981Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T09:20:55Z",
+          "published_at": "2026-09-18T09:20:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/clarity-act-needs-3-more-senators-and-a-race-against-the-clock-for-a-2026-revival/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:043c6bc737c1edc3"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Act needs 3 more senators and a race against the clock for a 2026 revival",
+          "title_zh": "CLARITY Act needs 3 more senators and a race against the clock for a 2026 revival",
+          "update_id": "upd_1269252a5e429a9d",
+          "update_type": "initial",
+          "what_changed_en": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill.",
+          "what_changed_zh": "The CLARITY Act's Senate revival faces a tight legislative calendar and vote math, needing 60 votes twice plus identical House approval despite seven Democratic senators pushing to restart the crypto market-structure bill."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+      "current_state_zh": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+      "entities": [
+        "blasts",
+        "fresh",
+        "past",
+        "short",
+        "squeeze"
+      ],
+      "event_id": "evt_60100fcc1b04439f",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-18T16:37:39.793459Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:39.793459Z",
+      "last_updated_at": "2026-09-18T16:37:39.793459Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin Blasts Past $80K and a Fresh Short Squeeze Is On",
+      "title_zh": "Bitcoin Blasts Past $80K and a Fresh Short Squeeze Is On",
+      "topics": [
+        "federal-reserve",
+        "liquidations",
+        "macro"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+          "current_state_zh": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+          "detailed_summary_en": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+          "detailed_summary_zh": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+          "event_id": "evt_60100fcc1b04439f",
+          "first_seen_at": "2026-09-18T16:37:39.793459Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T15:22:49Z",
+          "published_at": "2026-09-18T15:22:49Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378630/bitcoin-blasts-short-squeeze-crypto-liquidations"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:104a188f7873de3f"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin Blasts Past $80K and a Fresh Short Squeeze Is On",
+          "title_zh": "Bitcoin Blasts Past $80K and a Fresh Short Squeeze Is On",
+          "update_id": "upd_8dd2d007da4764f7",
+          "update_type": "initial",
+          "what_changed_en": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts.",
+          "what_changed_zh": "Bitcoin jumped 5.88% to $80,846 after the Fed's rate hike was paired with a dovish dot plot, triggering over $445 million in crypto liquidations including $230 million in Bitcoin shorts."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+      "current_state_zh": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+      "entities": [
+        "asked",
+        "history",
+        "human",
+        "labor",
+        "largest",
+        "microsoft",
+        "scraping",
+        "staff",
+        "theft",
+        "was"
+      ],
+      "event_id": "evt_efb6d32832ac336b",
+      "event_type": "other",
+      "first_seen_at": "2026-09-18T16:37:39.902671Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-18T16:37:39.902671Z",
+      "last_updated_at": "2026-09-18T16:37:39.902671Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Microsoft Staff Asked If AI Scraping Was 'Largest Theft of Labor in Human History'",
+      "title_zh": "Microsoft Staff Asked If AI Scraping Was 'Largest Theft of Labor in Human History'",
+      "topics": [
+        "ai-labs",
+        "copyright",
+        "litigation",
+        "microsoft",
+        "training-data"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+          "current_state_zh": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+          "detailed_summary_en": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+          "detailed_summary_zh": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+          "event_id": "evt_efb6d32832ac336b",
+          "first_seen_at": "2026-09-18T16:37:39.902671Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-18T12:52:03Z",
+          "published_at": "2026-09-18T12:52:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378622/microsoft-staff-asked-if-ai-scraping-was-largest-theft-of-labor-in-human-history"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:d42ede259cbabe2a"
+          ],
+          "time_precision": "published",
+          "title_en": "Microsoft Staff Asked If AI Scraping Was 'Largest Theft of Labor in Human History'",
+          "title_zh": "Microsoft Staff Asked If AI Scraping Was 'Largest Theft of Labor in Human History'",
+          "update_id": "upd_a4177cd6f43c6b56",
+          "update_type": "initial",
+          "what_changed_en": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed.",
+          "what_changed_zh": "Unsealed filings in the New York Times' copyright suit against OpenAI and Microsoft show Microsoft employees internally debated whether AI scraping of news articles amounted to 'the largest theft of labor in human history' and could trigger a model-degrading 'doom loop,' while Satya Nadella testified that paywalled content should be licensed."
         }
       ]
     }
@@ -67187,37 +68578,96 @@
     {
       "attempts": 1,
       "item": {
-        "ai_reason": "S&P Global, a major traditional financial data and ratings institution, acquiring OpenZeppelin and investing in Kaiko signals significant institutional infrastructure buildout for tokenized finance and 24/7 markets. This is a material market-structure and institutional adoption development with a clear transmission path to crypto, though it is not a systemic event or security incident.",
-        "ai_score": 7.5,
-        "ai_summary": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, days after leading an investment in crypto-data provider Kaiko, expanding its digital asset footprint across market data, benchmarks, and technology risk for tokenized finance.",
+        "ai_reason": "The SEC's Innovation Exemption allowing qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges is a landmark regulatory development that materially reshapes market access and industry structure, especially following the Senate's failure to pass the Clarity Act. Combined with the CFTC no-action letter easing broker rules, this represents a significant shift in US regulatory posture toward tokenized securities. The newsletter format limits depth, but the substance is high-impact.",
+        "ai_score": 8.5,
+        "ai_summary": "The SEC approved an 'Innovation Exemption' permitting qualifying venues to trade tokenized US stocks on public blockchains without registering as national exchanges, while the CFTC issued a no-action letter easing broker rules, driving a broad altcoin rally.",
         "ai_tags": [
-          "institutional-adoption",
-          "tokenization",
-          "smart-contract-security",
-          "market-infrastructure",
-          "crypto-data"
+          "SEC",
+          "tokenized-stocks",
+          "crypto-regulation",
+          "CFTC",
+          "market-structure"
         ],
-        "author": "Oluwapelumi Adejumo",
-        "content": "Quick Take\n- S&P Global is buying OpenZeppelin days after leading an investment in crypto-data provider Kaiko.\n- The moves broaden S&P’s position across market data, benchmarks and technology risk as financial markets push toward 24/7 trading.\n- The strategy depends on tokenized finance expanding enough to create sustained institutional demand for those services.\nS&P Global agreed to acquire smart contract security firm OpenZeppelin, expanding its digital asset business into the technology underpinning tokenized finance.\nOn Sept. 17, the financial data and ratings company said that OpenZeppelin will continue operating under its own name as a separate business unit. Chief Executive Demian Brener will remain in charge and report to S&P Global Ratings President Yann Le Pallec.\nFinancial terms were not disclosed, and the transaction remains subject to closing conditions.\nThe deal gives S&P direct exposure to the security layer behind stablecoins, tokenized funds, and decentralized-finance applications. OpenZeppelin’s open-source contracts have supported more than $37 trillion in transferred value, while the company has completed more than 900 security engagements and identified over 10,000 vulnerabilities before production.\nThe acquisition follows a broader push by S&P into digital assets as round-the-clock markets create demand for the data, benchmarks and risk infrastructure needed to support institutional capital on blockchain networks.\nS&P adds smart-contract risk to its institutional toolkit\nAs more financial products move onto blockchains, institutions face an additional layer of risk around the software that issues, transfers and manages those assets.\nS&P said OpenZeppelin will expand its capabilities in what it described as the “on-chain technology-risk layer,” including security assessments and benchmarks for digital assets.\nThat adds another dimension to S&P’s existing financial-risk business. Tokenized funds and stablecoins remain exposed to risks around issuers, collateral and liquidity, while their operation can also depend on smart contracts, permissions and blockchain infrastructure that introduce technical vulnerabilities.\nLe Pallec said:\n“Our digital assets strategy centers on bringing trusted data, benchmarks and transparent risk assessment to markets as they move onchain.”\nOpenZeppelin has built its business around that technical layer. Its Contracts library is widely used across blockchain applications, while its security teams review smart contracts and other systems before deployment.\nThe company said its libraries will remain free, open source, and publicly maintained after the acquisition, including future versions. Its audit, engineering and security work will also continue under the existing team.\nThat preserves the developer model behind OpenZeppelin’s adoption while giving the company access to S&P’s institutional relationships, research resources and distribution.\nBrener said the combination could help OpenZeppelin reach more financial institutions as banks, asset managers and issuers increase their use of blockchain infrastructure.\nS&P said the acquisition is not expected to materially affect its financial results, emphasizing near-term expansion of capabilities rather than adding a large new revenue stream.\nS&P builds infrastructure for markets that never close\nThe OpenZeppelin deal follows a series of investments and product launches aimed at markets that increasingly operate around the clock.\nThree days earlier, S&P Global led a strategic investment in crypto-data provider Kaiko, extending the company’s Series B funding to $110 million. DRW, Susquehanna, Royal Bank of Canada, Nasdaq, BNP Paribas and other financial firms also participated as 24/7 blockchain markets increase demand for continuous pricing, valuation and risk data.\nKaiko already provides market data and infrastructure to more than 250 financial firms, institutions and regulators. Its systems connect to more than 150 exchanges and support trading, valuation and risk management across markets that do not close at the end of the traditional business day.\nS&P and Kaiko have also been extending traditional financial benchmarks onto those rails.\nIn March, the companies brought the iBoxx US Treasuries Index on-chain, embedding index data, licensing and permissioning into blockchain infrastructure. Earlier this month, they combined their digital-asset benchmark businesses into the S&P Kaiko Digital Asset Indices, a suite designed specifically for 24/7 markets.\nThe expansion began before the Kaiko investment.\nS&P Dow Jones Indices helped develop the S&P Digital Markets 50 Index, which combines 35 US-listed companies tied to the crypto ecosystem with 15 cryptocurrencies. Dinari subsequently worked with Chainlink to make a tokenized version of the benchmark verifiable on-chain, with Chainlink supplying real-time pricing and performance data.\nThat effort put S&P’s benchmark business directly into an emerging market structure where indices, assets and the data used to value them can all operate on blockchain rails.\nS&P has also developed stablecoin stability assessments, issued a credit rating for DeFi protocol Sky, and licensed the S&P 500 for tokenized products, extending its traditional businesses into digital markets.\nThe OpenZeppelin acquisition adds another piece to that buildout.\nKaiko supplies crypto-native pricing and market data, S&P provides benchmarks and financial-risk analysis, and OpenZeppelin brings smart-contract expertise for moving assets between investors and financial applications.\nThe combination could become more commercially significant as trading expands outside traditional exchange hours. Always-on markets require prices, collateral valuations, benchmarks, and risk controls to keep operating overnight and through weekends, while tokenized assets add software and smart contract risks alongside conventional financial ones.\nFor S&P, that creates an opportunity to extend services it already sells to banks and asset managers into a market where the infrastructure itself is becoming part of the risk assessment.\nIf more securities and funds migrate onto blockchains, institutions may increasingly need the same provider to understand both the asset they hold and the technology that determines how it moves.",
-        "fetched_at": "2026-09-18T09:07:06.826971Z",
-        "id": "rss:cryptoslate.com_feed_:f4afcafe68f76527",
+        "author": "Tyler Warner",
+        "content": "Morning Minute is a daily newsletter written by Tyler Warner. The analysis and opinions expressed are his own and do not necessarily reflect those of Decrypt. And check out our daily news show 'FOMO HOUR' covering all of the top stories and market action.\nGM!\nToday’s top news:\n- Crypto majors are green with HYPE leading, alts soaring; BTC at $78k\n- SEC announces innovation exemption for tokenized stocks; alts soar 10-20%\n- CFTC issued no-action letter, easing broker rules\n- Hyperliquid soared to $90+ and new ATH and introduced protocol lending/borrowing\n- Onchain leaders post 10-30% gains following alts\n🏛️ The SEC Just Did What the Clarity Act Couldn’t\nTwo days after the Senate blocked the Clarity Act 49 to 50, the SEC approved an Innovation Exemption letting qualifying venues trade tokenized US stocks on public blockchains without registering as national exchanges. SEC Chair Atkins said that since Congress was unsuccessful, the Commission is taking a significant step within its statutory authority.\nPlatforms called Tokenized Securities Venues can run tokenized equities through automated market makers and liquidity pools on permissionless chains. Firms providing that liquidity get separate relief from dealer registration. There’s no application queue—a firm that meets the requirements notifies the SEC and starts operating. It took effect immediately and runs five years.\nThere are two key limitations to be aware of. The exemption covers only real tokenized stocks carrying full rights including dividends and voting, which excludes the price-tracking synthetics that have driven offshore volume. And an unaffiliated party can tokenize a company’s stock, but the issuer gets 30 days to object and effectively stop there shares from being tokenized and traded. So companies do retain some power here.\nThat second provision lands directly on the fight AMC’s Adam Aron picked two weeks ago when he called Robinhood’s stock tokens contemptible and vile and threatened to involve the SEC. He now has the mechanism he was asking for. Robinhood and Coinbase had already announced redemption and voting rights were coming, which happens to be exactly what the exemption requires.\nThis came on the same day that S&P Global acquired Open Zeppelin. S&P Global Ratings framed it as bringing trusted data, benchmarks, and transparent risk assessment to markets moving onchain. In practice: if tokenized funds and stablecoins become real institutional instruments, someone has to assess whether the contract holding the assets is sound, not just whether the issuer is.\nSo the clear takeaway is this—everything in traditional finance is coming onchain. Stocks, commodities, and all other types of assets will become tokenized and traded on blockchains globally, permissionlessly and 24/7. It’s just a matter of time. And this move from the SEC was a huge step forward in making that happen sooner than later…\n🌎 Macro Crypto and Markets\n- Crypto majors are very green with HYPE leading; BTC +2.2% at $78k; ETH +3% at $2,500; SOL +6% at $106; HYPE +13% at $90.53; ZEC +8% at $1,460\n- Top alt movers include UNI (+26%), ARB (+25%) and NEAR (+22%)\n- Oil +1% at $101; Gold +0.6% at $4,420\n- Stock futures are fairly flat after yesterday’s bounce; DOW -0.05%, Nasdaq +0.3%\n- The SEC held a roundtable on 24-hour trading an hour after approving tokenized securities, with Atkins saying tokenization could deliver real-time inventory management\n- The CFTC issued a no-action letter letting passive software providers connect users to regulated derivatives without registering as introducing brokers, extending relief first granted to Phantom in March\n- S&P Global agreed to acquire OpenZeppelin, the smart contract security firm whose libraries underpin more than $37 trillion in value transferred, in its second digital-asset deal in four days\n- NYSE parent ICE is evaluating Avalanche as the settlement layer for an in-development alternative trading system, with ICE's Michael Blaugrund saying it meets many of the requirements and the teams are closely engaged\n- Coinbase partnered with Stablecore to put custody, trading, staking, and stablecoin payments inside community bank and credit union apps, reaching a footprint of more than 3,000 US institutions\n- Vitalik Buterin rejected the idea that AI hacking dooms cybersecurity, arguing formal verification favors defenders and noting roughly 90% of his net worth sits in crypto as an implicit bet on that\nCorporate Treasuries & ETFs\n- The Bitcoin ETFs saw $159M in net inflows on Thursday; the ETH ETFs saw $39M in outflows\nMeme Coin Tracker\n- Meme leaders were green; DOGE +6%, SHIB +7%, PEPE +7%, PENGU +6%, TRUMP +5%, SPX +4%\n- Robinhood chain leaders were very green after the SEX exemption; Pons +10% to $480M; AI +30% at $360M; Cashcat +3% at $204M; Boner +35%, Orbio +80%, Index +30% and Moo +35% led top movers\n- Solana top movers were led by Paid +30%, Raycat (+40%), MCAT +80% and Tilcayo (+45x); Stonk eco rallied as Stonk +25% to $220M, Purr +47% and Nearkat +120%\n💰 Token, Airdrop & Protocol Tracker\n- Hyperliquid announced native lending and borrowing went live on its platform, letting users collateralize HYPE and BTC to borrow stablecoins\n- Hyperliquid led onchain protocols in revenue with $1.94M followed by Pump.fun with $1.89M; Pons fell to 15th with $460k\n- Stonkfun had it highest revenue day since Sunday with $900k\n🚚 What is happening in NFTs?\n- NFT leaders were mostly flat; Punks +1% at 29.7 ETH, BAYC even at 6.85 ETH, Pudgy -1% at 3.38 ETH\n- Rare Friends (+40%) and Stonkbrokers (+11%) led top movers\n- Zksnarks raised $37M in their public auction which closed at 1.5 ZEC, with trading going live today\n- FWA launched its v2 on Wednesday, leading to a 50% jump in the FWA token to $17M",
+        "fetched_at": "2026-09-18T16:37:40.027105Z",
+        "id": "rss:decrypt.co_feed:d4674779d0bf6372",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "feed_name": "Decrypt",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Opinion"
+          ]
+        },
+        "published_at": "2026-09-18T12:34:50Z",
+        "source_type": "rss",
+        "title": "Morning Minute: SEC Approves ‘Innovation Exemption’ Moving Tokenized Stocks Forward",
+        "url": "https://decrypt.co/378619/morning-minute-sec-approves-innovation-exemption-moving-tokenized-stocks-forward"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A Grayscale ETF planning a 3-for-1 split after a $233M inflow surge and nearing $890M in assets is a significant market-structure and institutional adoption development for a privacy-focused asset, with clear implications for ETF accessibility and Zcash demand. Not systemic or paradigm-shifting, but high-value for market participants.",
+        "ai_score": 7.5,
+        "ai_summary": "Grayscale's Zcash ETF (ZCSH) is planning a 3-for-1 share split after a $233 million inflow surge pushed assets to nearly $890 million amid ZEC's rally and record mining competition.",
+        "ai_tags": [
+          "zcash",
+          "grayscale",
+          "etf",
+          "institutional-adoption",
+          "crypto-markets"
+        ],
+        "author": "Kyle Baird",
+        "content": "The Grayscale Zcash ETF (ZCSH) nears $890 million in assets as ZEC’s rally pushes mining competition to record highs.",
+        "fetched_at": "2026-09-18T16:37:30.606452Z",
+        "id": "rss:www.theblock.co_rss.xml:875ce9e2edaa8f9b",
         "metadata": {
           "category": "crypto-markets",
           "event_retry_pending": true,
-          "feed_name": "CryptoSlate",
+          "feed_name": "The Block",
           "tags": [
-            "Adoption",
-            "Featured",
-            "Market",
-            "Taxes",
-            "Technology",
-            "TradFi"
+            "Companies",
+            "Markets",
+            "News"
           ]
         },
-        "published_at": "2026-09-18T01:30:37Z",
+        "published_at": "2026-09-18T15:09:09Z",
         "source_type": "rss",
-        "title": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
-        "url": "https://cryptoslate.com/from-kaiko-to-openzeppelin-sp-global-is-quietly-preparing-for-markets-that-never-close/"
+        "title": "Grayscale’s Zcash ETF plans 3-for-1 split after $233 million inflow surge",
+        "url": "https://www.theblock.co/news/markets/2026-09-18-grayscales-zcash-etf-plans-3-for-1-split-233-million-inflow-surge-415520"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A WSJ report revealing that direct ECB presidential intervention blocked Binance's MiCA license is a material regulatory development with clear transmission to market access and exchange operations in the EU. It signals heightened political scrutiny of the largest global exchange and could reshape competitive dynamics and compliance strategy across the industry, though it is a report rather than a final legal ruling.",
+        "ai_score": 7.5,
+        "ai_summary": "The Wall Street Journal reports that intervention by the ECB President derailed Binance's MiCA licensing in the EU, highlighting top-level political pressure on the exchange's European market access.",
+        "ai_tags": [
+          "binance",
+          "mica",
+          "ecb",
+          "crypto-regulation",
+          "europe"
+        ],
+        "author": "BitKE",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOelRQZHdZUG0zVXFBd2Jab1NkQmdSRkxSa19vUWQ3Nk94TjFzcmptVWJfLVlKT3B3M21oX1ExZGhYak9mQVhPQzVzclNDd3c5MmpObFNsNmFuRU1ydVRkd0ZrejVTUUZibjdfSGxlRWJyQnJyOE1JUUJzNVZDSHFLZXh5aVB2bU1wVFpFZmo0dw?oc=5\" target=\"_blank\">REALITY CHECK | The European Central Bank (ECB) President Intervention Derailed Binance MiCA License, Reveals The Wall Street Journal</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BitKE</font>",
+        "fetched_at": "2026-09-18T16:37:23.089044Z",
+        "id": "google_news:article:5b478889c1457bb0",
+        "metadata": {
+          "category": "crypto-regulation",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_category": "exchange-announcements",
+          "source_name": "BitKE"
+        },
+        "published_at": "2026-09-18T10:00:27Z",
+        "source_type": "google_news",
+        "title": "REALITY CHECK | The European Central Bank (ECB) President Intervention Derailed Binance MiCA License, Reveals The Wall Street Journal - BitKE",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOelRQZHdZUG0zVXFBd2Jab1NkQmdSRkxSa19vUWQ3Nk94TjFzcmptVWJfLVlKT3B3M21oX1ExZGhYak9mQVhPQzVzclNDd3c5MmpObFNsNmFuRU1ydVRkd0ZrejVTUUZibjdfSGxlRWJyQnJyOE1JUUJzNVZDSHFLZXh5aVB2bU1wVFpFZmo0dw?oc=5"
       }
     }
   ],

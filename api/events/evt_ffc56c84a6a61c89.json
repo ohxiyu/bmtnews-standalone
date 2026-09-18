@@ -15,11 +15,11 @@
     "en": "Binance announced it will support the Stargate Finance (STG) token merge into LayerZero (ZRO), handling the conversion for users on its platform."
   },
   "first_seen_at": "2026-09-18T09:07:01.464153+00:00",
-  "last_updated_at": "2026-09-18T09:07:01.464153+00:00",
+  "last_updated_at": "2026-09-18T16:37:23.089397+00:00",
   "last_material_change_at": "2026-09-18T09:07:01.464153+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "binance",
     "layerzero",
@@ -68,13 +68,20 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "telegram:binance_announcements:8967"
+        "telegram:binance_announcements:8967",
+        "google_news:article:ebc79a1542257825"
       ],
       "sources": [
         {
           "url": "https://www.binance.com/en/support/announcement/detail/0c1e8975f48d42c4b856c113926c5fdd?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot",
           "label": "binance_announcements",
           "source_type": "telegram",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOHFjY3pLLVJXYzdpdV9odWphWTlpT1ZlLWp1blFFU3hfa29EUVkwOVVhazJ6LW8zOExlU09YMFNSNGdrUldlTTVGdWpudXVIZk5lOFRMSktFZmN3ck5LakZXVmlyMndCcDhuajFKVTBEUHo1eG1ZSGIxN0dKcFhzblA3MnBOdm1sdy1xdEJ0WlU?oc=5",
+          "label": "Binance",
+          "source_type": "google_news",
           "official": false
         }
       ]
