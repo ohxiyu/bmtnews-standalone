@@ -101,7 +101,8 @@ export async function verifyAdmin(request, env) {
 async function github(env, path, init = {}) {
   if (!env.ADMIN_GITHUB_TOKEN) throw new AdminError(503, 'write_not_configured', '后台写入权限尚未配置。');
   const response = await fetchTimed('https://api.github.com/repos/' + ADMIN_REPO + '/' + path, {
-    ...init, headers: {'Authorization': 'Bearer ' + env.ADMIN_GITHUB_TOKEN,
+    ...init, cache: 'no-store', headers: {'Authorization': 'Bearer ' + env.ADMIN_GITHUB_TOKEN,
+      'Cache-Control': 'no-cache',
       'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28',
       'User-Agent': 'BMTNews-Admin', 'Content-Type': 'application/json'}
   });
@@ -154,12 +155,15 @@ export function validateQuickPost(input) {
     throw new AdminError(400, 'invalid_date', '请选择有效的刊期日期。');
   }
   const image = input.image || '';
+  if (input.position != null && (!Number.isInteger(input.position) || input.position < 0 || input.position > 1000)) {
+    throw new AdminError(400, 'invalid_position', '请选择有效的信息流位置。');
+  }
   if (typeof image !== 'string' || (image && !/^\/assets\/uploads\/quick-[a-f0-9]{64}\.(png|jpg|webp)$/.test(image))) {
     throw new AdminError(400, 'invalid_image', '请使用后台上传的图片。');
   }
   return {type: 'quick_post', id: input.id, body: input.body.trim(), url: httpLink(input.url),
     category: input.category || '', date, enabled: input.enabled, pin: input.pin,
-    breaking: input.breaking, image};
+    breaking: input.breaking, image, position: input.position ?? null};
 }
 async function handleAdmin(request, env) {
   try {
@@ -206,14 +210,16 @@ async function handleAdmin(request, env) {
       const row = {...post, created_at: existing?.created_at || new Date().toISOString(),
         updated_at: new Date().toISOString(), request_hash: hash};
       const items = existing ? current.data.items.map(item => item === existing ? row : item) : [...current.data.items, row];
-      return adminJson({...await saveEditorial(env, current, items), id: post.id});
+      return adminJson({...await saveEditorial(env, current, items), id: post.id,
+        message: '已保存；Quick Post 实时读取已启用，上线核验结果见列表。'});
     }
     if (path === '/api/admin/entry-state') {
       const current = await readEditorial(env);
       requireRevision(input.sha, current.sha);
       if (!Number.isInteger(input.index) || input.index < 0 || input.index >= current.data.items.length ||
           typeof input.enabled !== 'boolean') throw new AdminError(400, 'invalid_entry', '无效的编辑条目。');
-      const items = current.data.items.map((item, index) => index === input.index ? {...item, enabled: input.enabled, request_hash: undefined} : item);
+      const items = current.data.items.map((item, index) => index === input.index ? {...item, enabled: input.enabled,
+        ...(item.type === 'quick_post' ? {updated_at: new Date().toISOString()} : {}), request_hash: undefined} : item);
       return adminJson(await saveEditorial(env, current, items));
     }
     if (path === '/api/admin/legacy') {
@@ -295,7 +301,7 @@ async function handleAdmin(request, env) {
         const existing = await github(env, 'contents/' + file + '?ref=main');
         if ((existing.content || '').replace(/\s/g,'') !== input.data) throw error;
       }
-      return adminJson({path:file.slice(4), status:'saved', message:'图片已保存，等待部署。'});
+      return adminJson({path:file.slice(4), status:'saved', message:'图片已保存，可通过原路径实时读取。'});
     }
     if (path === '/api/admin/sources') {
       const allowed = ['operation','source_type','source_key','name','endpoint','category','enabled','reason'];
@@ -315,6 +321,49 @@ async function handleAdmin(request, env) {
     if (!known) console.error(JSON.stringify({event:'admin_request_failed'}));
     return adminJson({error:{code:known ? error.code : 'internal_error',
       message:known ? error.message : '服务暂时不可用，草稿未清除，请稍后重试。'}}, known ? error.status : 500);
+  }
+}
+
+export function publicQuickPosts(data, today, dates = []) {
+  const yesterday = new Date(Date.parse(today) - 86400000).toISOString().slice(0, 10);
+  const allowed = new Set(dates.length ? dates : [today, yesterday]);
+  const seen = new Set();
+  return data.items.flatMap(row => {
+    if (row?.type !== 'quick_post' || row.enabled !== true || !allowed.has(row.date) || row.date > today || seen.has(row.id)) return [];
+    try {
+      const clean = validateQuickPost({...row, pin: row.pin === true, breaking: row.breaking === true});
+      seen.add(clean.id);
+      const {type, enabled, ...post} = clean;
+      return [{...post, created_at: String(row.created_at || ''), updated_at: String(row.updated_at || '')}];
+    } catch { return []; }
+  }).sort((a, b) => b.date.localeCompare(a.date) || Number(b.pin) - Number(a.pin) ||
+    b.created_at.localeCompare(a.created_at) || b.id.localeCompare(a.id));
+}
+
+async function handleLiveQuickPosts(request, env) {
+  const headers = {'Cache-Control': 'no-store', 'CDN-Cache-Control': 'no-store',
+    'X-Content-Type-Options': 'nosniff', 'X-BMTNews-Cache': 'BYPASS'};
+  if (!['GET', 'HEAD'].includes(request.method)) return new Response(null, {status: 405, headers: {...headers, Allow: 'GET, HEAD'}});
+  try {
+    const url = new URL(request.url);
+    if (url.pathname === '/api/quick-posts.json') {
+      const today = new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit'}).format(new Date());
+      const dates = url.searchParams.getAll('date');
+      if (dates.length > 10 || dates.some(day => !/^20\d{2}-\d{2}-\d{2}$/.test(day) || !Number.isFinite(Date.parse(day)) || new Date(day).toISOString().slice(0,10) !== day)) {
+        return Response.json({error: {code: 'invalid_date', message: 'Use up to ten valid edition dates.'}}, {status: 400, headers});
+      }
+      const current = await readEditorial(env);
+      const payload = {version: 1, date: today, revision: current.sha, items: publicQuickPosts(current.data, today, dates)};
+      return new Response(request.method === 'HEAD' ? null : JSON.stringify(payload), {headers: {...headers, 'Content-Type': 'application/json; charset=utf-8'}});
+    }
+    const file = await github(env, 'contents/docs' + url.pathname + '?ref=main');
+    const bytes = decodeBase64(file.content || '');
+    const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(b => b.toString(16).padStart(2,'0')).join('');
+    if (!url.pathname.includes('quick-' + hash + '.') || bytes.length > 1024 * 1024) throw new Error('image mismatch');
+    const mime = {png: 'image/png', jpg: 'image/jpeg', webp: 'image/webp'}[url.pathname.split('.').pop()];
+    return new Response(request.method === 'HEAD' ? null : bytes, {headers: {...headers, 'Content-Type': mime}});
+  } catch {
+    return Response.json({error: {code: 'quick_posts_unavailable', message: 'Quick Post is temporarily unavailable. Retry later.'}}, {status: 503, headers});
   }
 }
 
@@ -624,6 +673,10 @@ function cachedResponse(response, status, policy) {
 
 export async function handleRequest(request, env, ctx) {
   if (isAdminPath(new URL(request.url).pathname)) return handleAdmin(request, env);
+  const livePath = new URL(request.url).pathname;
+  if (livePath === '/api/quick-posts.json' || /^\/assets\/uploads\/quick-[a-f0-9]{64}\.(png|jpg|webp)$/.test(livePath)) {
+    return handleLiveQuickPosts(request, env);
+  }
   const policy = cachePolicy(request);
   const cache = globalThis.caches?.default;
   if (!policy || !cache) return handleOriginRequest(request, env);

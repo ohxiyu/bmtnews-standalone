@@ -23,9 +23,30 @@ function fillLegacy(entry={},index=-1) {
  $('legacy-enabled').checked=entry.enabled!==false;$('legacy-official').checked=!!entry.official;
 }
 function today() { return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()); }
-function value(enabled) { return {id,body:$('body').value,url:$('url').value,date:$('date').value,category:$('category').value,breaking:$('breaking').checked,pin:$('pin').checked,image,enabled,sha}; }
+function value(enabled) { return {id,body:$('body').value,url:$('url').value,date:$('date').value,position:$('position').value===''?null:Number($('position').value),category:$('category').value,breaking:$('breaking').checked,pin:$('pin').checked,image,enabled,sha}; }
 function remember() { dirty = true; try { sessionStorage.setItem(key,JSON.stringify(value(false))); } catch {} }
-function fill(post) { id=post.id||crypto.randomUUID(); image=post.image||''; fields.forEach(f=>{if(['breaking','pin'].includes(f)) $(f).checked=!!post[f]; else $(f).value=post[f]|| (f==='date'?today():'');}); $('image').value=''; $('image-state').textContent=image?'已选择配图':''; $('remove-image').hidden=!image; }
+function fill(post) { id=post.id||crypto.randomUUID(); image=post.image||''; fields.forEach(f=>{if(['breaking','pin'].includes(f)) $(f).checked=!!post[f]; else $(f).value=post[f]|| (f==='date'?today():'');}); $('image').value=''; $('image-state').textContent=image?'已选择配图':''; $('remove-image').hidden=!image; loadPositions(post.position??null); }
+let positionRequest=0;
+async function loadPositions(selected=null) {
+ if(selected===0)selected=null;
+ const run=++positionRequest, day=$('date').value;
+ const option=(value,text)=>{const node=document.createElement('option');node.value=value;node.textContent=text;return node;};
+ $('position').replaceChildren(option('','刊期正文最前'));
+ // Preserve an existing position even when the edition request fails.
+ if(selected!==null){$('position').append(option(String(selected),'第 '+selected+' 条之后'));$('position').value=String(selected);}
+ $('position-state').textContent='正在加载刊期位置…';
+ try {
+  const response=await fetch('/editions/'+encodeURIComponent(day)+'/edition.json',{cache:'no-store'});
+  if(!response.ok)throw Error('unavailable');
+  const edition=await response.json();if(!Array.isArray(edition.items))throw Error('invalid');
+  if(run!==positionRequest)return;
+  const options=[option('','刊期正文最前')];
+  edition.items.forEach((item,index)=>options.push(option(String(index+1),'第 '+(index+1)+' 条之后 · '+(item.title?.zh||item.title?.en||'新闻').slice(0,50))));
+  if(selected!==null&&selected>edition.items.length)options.push(option(String(selected),'原位置 '+selected+'（当前将放在末尾）'));
+  $('position').replaceChildren(...options);$('position').value=selected===null?'':String(selected);
+  $('position-state').textContent='选择新闻之间的位置；同位置按置顶、创建时间排序。';
+ }catch{if(run===positionRequest)$('position-state').textContent='刊期位置暂不可用；保留原位置。新内容可放在最前，刷新后重试。';}
+}
 function status(message) { $('status').textContent=message; }
 function lock(on) {
  busy=on;
@@ -40,20 +61,24 @@ async function api(path, data) {
 async function refresh() {
  const state=await api('state'); sha=state.sha; items=state.items;
  let published=[];
- try { const r=await fetch('/api/quick-posts.json?publication_check=admin',{cache:'no-store'}); if(r.ok) published=(await r.json()).items||[]; } catch {}
+ let verified=false;
+ try { const dates=[...new Set(items.filter(e=>e.type==='quick_post').map(e=>e.date))];
+  for(let offset=0;offset<dates.length;offset+=10){const query=dates.slice(offset,offset+10).map(day=>'date='+encodeURIComponent(day)).join('&');const r=await fetch('/api/quick-posts.json?'+query,{cache:'no-store'});if(!r.ok)throw Error('unavailable');const payload=await r.json();if(!payload.revision||!Array.isArray(payload.items))throw Error('unverified');published.push(...payload.items);}
+  verified=true;
+ } catch {published=[];}
  $('entries').replaceChildren();
  items.slice().reverse().forEach((entry, reversed)=>{
    const index=items.length-1-reversed, node=document.createElement('article'); node.className='entry';
    const meta=document.createElement('small');
    const live=entry.type==='quick_post' && published.some(p=>p.id===entry.id && p.updated_at===entry.updated_at);
    meta.textContent=[entry.type==='quick_post'?'Quick Post':entry.type,entry.date||entry.starts||'未指定日期',
-     entry.enabled===false?'草稿 / 停用':live?'已上线':'已保存（待核实上线）'].join(' · ');
+     entry.enabled===false?'草稿 / 停用':live?'已上线':entry.date>today()?'待刊期到达':verified?'已保存（未出现在公开流）':'已保存（待核实上线）'].join(' · ');
    const content=document.createElement('p');content.textContent=entry.body||entry.title_zh||entry.url||'编辑记录';
    const actions=document.createElement('div');actions.className='actions';
    if(entry.type==='quick_post') { const edit=document.createElement('button'); edit.textContent='编辑';edit.onclick=()=>{if(busy)return;if(dirty&&!confirm('替换当前未提交草稿？'))return;fill(entry);remember();$('body').focus();};actions.append(edit); }
    else { const edit=document.createElement('button');edit.textContent='编辑';edit.onclick=()=>{if(busy)return;fillLegacy(entry,index);$('legacy-panel').open=true;$('legacy-panel').scrollIntoView({behavior:'smooth'});};actions.append(edit); }
    const toggle=document.createElement('button');toggle.textContent=entry.enabled===false?'启用':'停用';
-   toggle.onclick=async()=>{if(busy||!confirm(toggle.textContent+'这条记录？'))return;lock(true);try{await api('entry-state',{sha,index,enabled:entry.enabled===false});await refresh();status('已保存状态，等待自动发布。');}catch(e){status(e.message);}finally{lock(false);}};
+   toggle.onclick=async()=>{if(busy||!confirm(toggle.textContent+'这条记录？'))return;lock(true);try{await api('entry-state',{sha,index,enabled:entry.enabled===false});await refresh();status(entry.type==='quick_post'?'状态已保存，实时核验结果见列表。':'已保存状态，等待自动发布。');}catch(e){status(e.message);}finally{lock(false);}};
    actions.append(toggle);node.append(meta,content,actions);$('entries').append(node);
  });
  $('body').disabled=false;lock(false);
@@ -66,6 +91,9 @@ async function save(enabled) {
  catch(e){status(e.message);}finally{lock(false);}
 }
 $('date').value=today();
+loadPositions();
+$('date').addEventListener('change',()=>loadPositions());
+$('position').addEventListener('change',remember);
 fillLegacy();
 $('legacy-new').onclick=()=>{if(!busy)fillLegacy();};
 $('legacy-form').onsubmit=async e=>{
@@ -91,7 +119,7 @@ $('image').onchange=async()=>{
  if(file.size>1024*1024||!['image/png','image/jpeg','image/webp'].includes(file.type)){status('请选择不超过 1 MB 的 PNG、JPEG 或 WebP 图片。');$('image').value='';return;}
  lock(true);status('上传图片…');
  try {const data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',')[1]);reader.onerror=reject;reader.readAsDataURL(file);});
- const result=await api('image',{mime:file.type,data});image=result.path;$('image-state').textContent='配图已保存，随发布部署';$('remove-image').hidden=false;remember();status('配图已保存，请继续保存正文。');}
+ const result=await api('image',{mime:file.type,data});image=result.path;$('image-state').textContent='配图已保存，可立即读取';$('remove-image').hidden=false;remember();status('配图已保存，请继续保存正文。');}
  catch(e){status(e.message);}finally{lock(false);}
 };
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});

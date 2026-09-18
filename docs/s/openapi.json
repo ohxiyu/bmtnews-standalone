@@ -62,7 +62,7 @@
     "/api/admin/posts": {
       "post": {
         "operationId": "adminPosts",
-        "description": "Create or update an idempotent body-only Quick Post. Requires current sha; identical id and payload retries do not duplicate.",
+        "description": "Create or update an idempotent Quick Post. Requires current sha; identical id and payload retries do not duplicate. Quick Post and uploaded images are readable from the live public routes after the Git write. Check the public revision and item updated_at; saving is not itself a verified public read. Optional position is the number of daily stories before this post; null/0 means first, ties sort by pin then created_at and id descending.",
         "responses": {
           "200": {
             "description": "Saved or queued. Not proof of live publication.",
@@ -117,6 +117,7 @@
                     "type": "string",
                     "maxLength": 10000
                   },
+                  "position": {"type":["integer","null"],"minimum":0,"maximum":1000},
                   "url": {
                     "type": "string",
                     "description": "Optional original-source URL, empty when absent."
