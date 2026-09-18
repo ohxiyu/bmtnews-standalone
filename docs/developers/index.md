@@ -19,7 +19,10 @@ polling, and retain the original publisher URL when presenting a story.
 - [`GET /api/quick-posts.json`](https://bmt.news/api/quick-posts.json) returns enabled manual
   Quick Posts for today and yesterday in Asia/Shanghai. These are separate
   from the AI-ranked edition, with body text but no fabricated title or score.
-  Git saves become visible after asynchronous deployment; drafts are excluded.
+  Reads the current Git registry with no-store; drafts and future dates are excluded.
+  Repeat `date=YYYY-MM-DD` (up to ten dates) for historical editions. `position`
+  counts daily stories before the post; null/0 means first. Upstream failures return
+  503 instead of old generated data. `revision` identifies the live registry.
 - [`GET /api/latest.json`](https://bmt.news/api/latest.json) returns the newest complete edition.
 - [`GET /api/editions.json`](https://bmt.news/api/editions.json) lists available edition dates.
 - `GET /editions/{date}/edition.json` returns one dated edition, where `date`

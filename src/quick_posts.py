@@ -46,12 +46,16 @@ def public_posts(payload: object, today: date) -> list[dict]:
         if not re.fullmatch(r"/assets/uploads/quick-[a-f0-9]{64}\.(png|jpg|webp)", image):
             image = ""
         seen.add(identity)
+        position = row.get("position")
+        if type(position) is not int or not 0 <= position <= 1000:
+            position = None
         result.append({
             "id": identity, "body": body.strip(), "url": url, "image": image,
             "date": day.isoformat(), "category": str(row.get("category") or ""),
             "pin": row.get("pin") is True, "breaking": row.get("breaking") is True,
             "created_at": str(row.get("created_at") or ""),
             "updated_at": str(row.get("updated_at") or ""),
+            "position": position,
         })
     return sorted(result, key=lambda row: (row["date"], row["pin"], row["created_at"], row["id"]), reverse=True)
 

@@ -39,9 +39,12 @@
     "/api/quick-posts.json": {
       "get": {
         "summary": "Read the manual Quick Post stream",
-        "description": "Returns enabled manual posts for today and yesterday in Asia/Shanghai. Separate from AI-ranked daily editions; no AI score or invented title. Publication is asynchronous.",
+        "description": "Reads the current Git registry at request time with no-store. Defaults to today and yesterday in Asia/Shanghai; repeated date parameters select historical editions. Future dates and drafts are never public. An upstream failure returns 503, never stale generated data. Separate from AI-ranked stories; position is the number of daily stories before the post (0 or null means first, values beyond the current story count mean last). Ties sort by pin, created_at and id descending.",
+        "parameters": [{"name":"date","in":"query","description":"Optional edition dates; repeat the parameter up to ten times. Future posts are excluded.","required":false,"style":"form","explode":true,"schema":{"type":"array","maxItems":10,"items":{"type":"string","format":"date"}}}],
         "operationId": "getQuickPosts",
         "responses": {
+          "503": {"description": "Current registry unavailable; retry later."},
+          "400": {"description": "Invalid date or too many edition dates."},
           "200": {
             "description": "Published manual updates; drafts and internal metadata are excluded.",
             "content": {
@@ -54,6 +57,7 @@
                     "items"
                   ],
                   "properties": {
+                    "revision": {"type":"string","description":"Git blob SHA of the live registry."},
                     "version": {
                       "type": "integer",
                       "const": 1
@@ -80,6 +84,7 @@
                           "updated_at"
                         ],
                         "properties": {
+                          "position": {"type":["integer","null"],"minimum":0,"maximum":1000},
                           "id": {
                             "type": "string",
                             "pattern": "^[a-f0-9-]{36}$"
