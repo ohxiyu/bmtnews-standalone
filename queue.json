@@ -789,10 +789,11 @@
         "post_id": "368286224363491"
       },
       "76ea787000d213a7dbfe2b46cb4af51ef8e5565fd275ccde017eeca2b02cd601": {
-        "status": "pending",
+        "status": "sent",
         "rank": 8,
         "text_hash": "c08d866747e5080a3fc28c622e50f3e01c8c901c6cfa7ded19501b758d885b18",
-        "attempted_at": "2026-09-19T17:10:22.991787+08:00"
+        "attempted_at": "2026-09-19T17:10:22.991787+08:00",
+        "post_id": "368303412443245"
       }
     }
   },
@@ -842,12 +843,6 @@
     "2026-09-19": {
       "revision": "abecb7a91060ddc3c315265b12e4910642d0003bad5f3a20a1811aff5dfdac2b",
       "jobs": [
-        {
-          "id": "76ea787000d213a7dbfe2b46cb4af51ef8e5565fd275ccde017eeca2b02cd601",
-          "text": "Neutrl 开放 NUSD 赎回价格仅为 0.51 美元，Strata 次级份额被清零\n\nNeutrl 已按约 0.51 美元兑 1 美元的价格开放 NUSD 赎回；与此同时，Strata 安排了为期 48 小时的估值更新，将其次级份额代币 jrNUSD 的估值直接归零，并以调整后的份额价值用 sNUSD 结算优先级份额的提现。Strata 的披露文件称，问题并非智能合约漏洞利用、黑客攻击或代码缺陷。\n\n对于这一结构化 DeFi 产品的存款人而言，这是一次实质性亏损事件，说明当损失规模较大时，作为首损缓冲的次级份额并不足以保护优先级资金。它凸显了一个风险：把分层结构叠加在单一收益策略之上，可能让损失直接传导给持有类稳定币代币的普通存款人。\n\nStrata 的 srNUSD 与 jrNUSD 份额均暴露于策略合约所持有的 sNUSD；按照 Strata 的损失分摊规则，jrNUSD 在 srNUSD 之前承受损失。在 0.51 美元 NUSD 参考价值下，损失已超过次级份额的保护额度，这正是优先级持有人也以缩水价值结算的原因。jrNUSD 与 srNUSD 均为无需许可的代币，可在 DEX 上交易，用户在赎回后还需手动领取 NUSD/sNUSD。\n\n来源：https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout\nBMTNews · 2026-09-19 · https://bmt.news",
-          "rank": 8,
-          "due_at": "2026-09-19T17:10:00+08:00"
-        },
         {
           "id": "99aa27d52de20db9895b7641f4ad5017cb14ca305c824728745fbbbf01d2eed1",
           "text": "Chainalysis：区块链“死信箱”攻击激增420%，国家背景黑客扩大部署\n\nChainalysis 报告称，过去 12 个月内区块链“死信箱”（dead drop）攻击增长了 420%，到 2026 年第二季度，与朝鲜和伊朗有关联的操作者约占新观测活动总量的三分之二。与朝鲜有关联的团伙 UNC5342 使用 Tron 和 Aptos 作为冗余路径，将已感染设备引向存储在 BNB Smart Chain 上的恶意软件指令；而疑似伊朗行为者则把命令与控制路由信息嵌入发送至历史上与中本聪相关地址的比特币交易中。\n\n这标志着攻击者的命令与控制手段从传统域名转向公共区块链基础设施，而传统执法下架手段难以将其关闭，意味着防御方必须同时在多条链上协调行动。对于加密交易所、钱包服务商以及企业而言，其合法流量与攻击者滥用的是同一批网络，安全与合规负担因此显著上升。\n\nChainalysis 表示，在高容量开源权重的中国 AI 模型出现后，恶意区块链写入从每天 2.06 次升至每天 11.1 次，不到一年增长 440%；不过该公司也提醒，其测量并不能锁定某一个具体模型，也无法证明增幅完全由 AI 造成。该恶意软件会优先查询 Tron，若该路径失败则回退至 Aptos，因此要瓦解该行动需要同时在三条链上采取行动。\n\n来源：https://thedefiant.io/news/security/blockchain-dead-drop-attacks-jump-420-as-state-hackers-expand\nBMTNews · 2026-09-19 · https://bmt.news",
