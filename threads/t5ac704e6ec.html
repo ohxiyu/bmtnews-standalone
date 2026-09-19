@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Solana 第三次提速：目标出块时间降至 250 毫秒"
+permalink: /threads/t5ac704e6ec/
+interface_language: zh
+description: "Solana 将其目标出块时间（slot time）从 300 毫秒下调至 250 毫秒，出块节奏加快约 17%，这是该网络自 8 月以来的第三次提速。此次调整是 SIMD-0525 提案四个规划阶段中的第三步，该提案已把 slot 时间从创世时的 400 毫秒依次降至 350 毫秒、300 毫秒，再到如今的 250 毫秒。  更短的 slot 缩短了区块链"
+page_type: archive
+---
+
+<div class="archive-stats"><div class="archive-stat"><strong>2</strong><span>天</span></div><div class="archive-stat"><strong>2</strong><span>条</span></div><div class="archive-stat"><strong>2026-09-20</strong><span>最近报道</span></div></div><h2>时间线</h2><ul class="archive-list"><li class="archive-row"><time datetime="2026-09-20">2026-09-20</time><div class="archive-row-body"><h3><a href="https://decrypt.co/378674/solana-heartbeat-quickens-speed-upgrade" target="_blank" rel="noopener noreferrer">Solana 第三次提速：目标出块时间降至 250 毫秒</a></h3><p class="archive-row-summary">Solana 将其目标出块时间（slot time）从 300 毫秒下调至 250 毫秒，出块节奏加快约 17%，这是该网络自 8 月以来的第三次提速。此次调整是 SIMD-0525 提案四个规划阶段中的第三步，该提案已把 slot 时间从创世时的 400 毫秒依次降至 350 毫秒、300 毫秒，再到如今的 250 毫秒。
+
+更短的 slot 缩短了区块链结算与传统交易所那种近乎即时确认之间的差距，主要惠及对延迟敏感的应用，例如预言机和自动做市商。其意义在于，Solana 正是靠执行速度的新鲜度来争夺高频交易和 DeFi 活动，尽管网络的原始交易吞吐量并未改变。
+
+这并非容量升级：每个更短的 slot 被分配的计算量和数据量也按比例减少，因此网络是以更小、更频繁的片段承载同样的总负载。由于一个 epoch 固定为 432,000 个 slot，slot 时间压缩使预期 epoch 时长从约 36 小时缩短至约 30 小时，从而也悄然加快了质押奖励和验证者排期；最后一步降至 200 毫秒尚未确定主网激活日期，且只有在区块跳票率（block-skip rate）保持稳定的前提下才会推进。</p><p class="archive-row-meta">Decrypt</p></div><span class="score-badge" data-tier="good">7.0</span></li><li class="archive-row"><time datetime="2026-09-17">2026-09-17</time><div class="archive-row-body"><h3><a href="https://cryptoslate.com/solana-triples-transaction-size-as-major-upgrades-meet-record-network-activity/" target="_blank" rel="noopener noreferrer">Solana 激活 Transaction V1，交易数据容量提升三倍并迈向 250 毫秒插槽</a></h3><p class="archive-row-summary">Solana 于 9 月 15 日激活了全新的 Transaction V1 交易格式，将单笔交易的最大序列化大小从 1,232 字节提升至 4,096 字节，增幅超过三倍；与此同时，由 Anza 开发的 Agave 验证者客户端正把网络插槽时间从 300 毫秒缩短至 250 毫秒，预计在 9 月 18 日约 05:01 UTC（epoch 1037 开始）生效。这两项升级正值网络处理创纪录的交易量、以及稳定币、应用和代币化股票活动持续升温之际。
+
+更大的交易容量与更短的插槽相结合，既拓展了开发者能在单笔原子交易中构建的功能，也提升了网络的响应速度，从而强化了 Solana 在高吞吐 Layer 1 赛道中相对于以太坊等链的竞争地位。与此同时，这也抬高了验证者、钱包和交易所的运营门槛：更紧的插槽窗口要求更可靠的出块与区块传播，而各类服务也需要随着新格式普及而具备解析能力。
+
+V1 通过 SIMD-0385 引入，可直接引用最多 64 个账户，把计算单元限制和费用信息移入交易消息本身而非依赖单独指令，并取消了地址查找表（ALT）；旧版和 v0 交易仍然可用，因此迁移并非强制。该升级本身不会让交易更快或更便宜，而更短的插槽也不会自动让容量翻倍，因为随着插槽时间缩短，每个插槽允许的工作量也会相应调整。</p><p class="archive-row-meta">CryptoSlate</p></div><span class="score-badge" data-tier="good">7.5</span></li></ul><p class="archive-back"><a href="/threads/">全部事件线</a> · <a href="/">返回首页</a></p>

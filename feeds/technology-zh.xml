@@ -4,7 +4,18 @@
   <link href="https://bmt.news/feeds/technology-zh.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-zh.xml</id>
-  <updated>2026-09-19T00:00:00Z</updated>
+  <updated>2026-09-20T00:00:00Z</updated>
+  <entry>
+    <title>PlanetScale 发布 Postgres 全文搜索扩展 TIN</title>
+    <link href="https://planetscale.com/blog/introducing-tin"/>
+    <id>https://bmt.news/editions/2026-09-20/#hackernews:story:49766611</id>
+    <updated>2026-09-20T00:00:00Z</updated>
+    <summary>PlanetScale 发布了 TIN（Text INdex），这是面向 PlanetScale Postgres 的全文搜索扩展，提供专为搜索设计的倒排索引类型、BM25 相关性排序以及 TINQL 查询语言。这是 PlanetScale 为其 Postgres 产品推出的首个搜索能力，公司称该功能是客户呼声最高的需求之一。
+
+这让 PlanetScale 加入了一场数据库厂商竞相把搜索能力直接内置到 Postgres 的竞赛，赛道上的玩家已包括 ParadeDB 的 pg_search、Timescale 的 pg_textsearch，以及 Neon 和 Databricks 的搜索功能。如果这些方案逐渐成熟，如今在 Postgres 之外单独运行 Elasticsearch 之类搜索引擎的团队，或许可以少维护一个系统组件。
+
+根据 PlanetScale 的文档和社区反馈，TIN 的性能表现仅在其云服务上可用：相关的开源本地扩展（github.com/planetscale/lead）主要用于测试 TINQL 语法，性能特征与云端版本并不一致。基准测试数据由厂商自己提供而非独立第三方评测，因此团队应结合自身实际负载进行验证。</summary>
+  </entry>
   <entry>
     <title>Hacktron 串联 libheif 堆溢出与 SSO 配置错误攻破 OpenAI 内部仓库</title>
     <link href="https://www.hacktron.ai/blog/hacking-openai"/>
@@ -433,16 +444,5 @@ Spectrum 是两级液体推进火箭，设计可将约 1,000 千克有效载荷�
 被积极利用的 Chrome 零日漏洞可能让大量浏览器用户面临攻击风险，尤其是因为许多人会推迟浏览器更新，而 V8 漏洞影响范围广泛，波及各类基于 Chromium 的浏览器。据报道，这是 2026 年第六个 Chrome 零日漏洞，凸显了此类披露已变得多么频繁。
 
 该漏洞由安全研究员 Salvatore Gulizia 于 8 月 4 日报告并获得 1000 美元漏洞赏金。谷歌尚未公布攻击者、受害者或利用漏洞的完整影响，且在大多数用户及受影响的第三方项目完成修复前，暂缓披露部分细节。</summary>
-  </entry>
-  <entry>
-    <title>Chromium 沙盒 RCE 漏洞正被积极利用，影响所有主要浏览器</title>
-    <link href="https://nvd.nist.gov/vuln/detail/cve-2026-85046"/>
-    <id>https://bmt.news/editions/2026-09-05/#hackernews:story:49570669</id>
-    <updated>2026-09-05T00:00:00Z</updated>
-    <summary>V8 中的一个类型混淆漏洞（编号 CVE-2026-85046）正在野外被积极利用，影响 152.0.7977.82 之前版本的 Chromium 内核浏览器。攻击者可通过特制 HTML 页面在浏览器沙盒内远程执行任意代码。
-
-由于 Chrome、Edge、Brave 以及大多数主流浏览器都共享 Chromium 内核，该漏洞使数十亿用户暴露在真实且已遭利用的攻击之下。它也凸显了整个互联网依赖单一渲染引擎的脆弱性，消费者和企业都需要尽快打补丁。
-
-该漏洞是 V8（Chrome 的 JavaScript 和 WebAssembly 引擎）中的类型混淆问题，CVSS 评分为 8.8（高危）。Google 已在 Chrome 152.0.7977.82 中修复，并据报道支付了 1000 美元漏洞赏金；由于许多衍生浏览器滞后于上游版本，用户也应及时更新这些浏览器。</summary>
   </entry>
 </feed>

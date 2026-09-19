@@ -56,14 +56,27 @@
       "current_state_en": "Solana reduced its target slot time from 300 milliseconds to 250 milliseconds, marking a nearly 17% speedup in block production and the network's third such optimization since August.",
       "detailed_summary_zh": "Solana reduced its target slot time from 300 milliseconds to 250 milliseconds, marking a nearly 17% speedup in block production and the network's third such optimization since August.",
       "detailed_summary_en": "Solana reduced its target slot time from 300 milliseconds to 250 milliseconds, marking a nearly 17% speedup in block production and the network's third such optimization since August.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "slot 是分配给某个验证者（validator，即帮助运行网络并获得报酬的计算机）用于构建并发布区块的短暂时间窗口，而区块就是一批已确认交易；这个窗口一缩短，整条链的“心跳”就会加快。验证者会连续四个 slot 持有领袖角色（leader，即临时构建区块的权利）再交接出去，因此在每个 slot 250 毫秒下，这一控制窗口从 1.2 秒缩短至 1 秒。SIMD-0525 是 Solana 提出并批准网络变更的正式流程，而同样旨在缩小结算与即时确认之间差距的思路也推动了 Alpenglow——一项正在测试的独立共识改造，目标是把交易最终性（finality）从 12.8 秒的等待缩短到接近即时。",
+      "background_en": "A slot is the short window handed to one validator—a computer that helps run the network and gets paid for it—to build and publish a block, which is a batch of confirmed transactions; shrink that window and the whole chain's heartbeat quickens. Validators keep the leader role, the temporary right to build blocks, for four consecutive slots before handing it off, so at 250ms per slot that control window shrinks from 1.2 seconds to one second. SIMD-0525 is Solana's formal process for proposing and approving network changes, and the same instinct to narrow the gap between settlement and instant confirmation also drives Alpenglow, a separate consensus overhaul being tested to cut transaction finality from a 12.8-second wait to something closer to instant.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "其传导路径在于 Solana 的 DeFi 基础设施，而非代币供给或监管：更新鲜的价格喂价和更紧的执行窗口，可能使链上预言机与自动做市商相对中心化交易所更具竞争力，从而影响流动性与交易量在以 SOL 计价的 DeFi 场所之间的分布。epoch 压缩也会改变质押奖励累积和验证者排期的时间节奏，这是质押服务商与委托者需要关注的变量。",
+      "market_impact_en": "The transmission runs through Solana's DeFi infrastructure rather than through supply or regulation: fresher price feeds and tighter execution windows can make on-chain oracles and automated market makers more competitive with centralized venues, which is a factor in how liquidity and trading volume may be distributed across SOL-denominated DeFi venues. Compressed epochs also shift the timing of staking reward accrual and validator scheduling, a consideration for staking service providers and delegators.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://solana.com/upgrades/reduced-slot-times",
+          "title": "Reduced Slot Times | Solana Media"
+        },
+        {
+          "url": "https://cryptodaily.co.uk/2026/09/solana-250ms-slot-time-simd-0525",
+          "title": "Solana Moves to 250ms Slots, Holds Capacity Steady"
+        },
+        {
+          "url": "https://beincrypto.com/solana-block-time-half-200ms/",
+          "title": "Solana Aims to Cut Block Time in Half, and You Can Watch It Live"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:46fe64d423609d33"

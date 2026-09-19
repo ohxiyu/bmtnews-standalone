@@ -4,7 +4,18 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-09-19T00:00:00Z</updated>
+  <updated>2026-09-20T00:00:00Z</updated>
+  <entry>
+    <title>PlanetScale launches TIN full-text search extension for Postgres</title>
+    <link href="https://planetscale.com/blog/introducing-tin"/>
+    <id>https://bmt.news/editions/2026-09-20/#hackernews:story:49766611</id>
+    <updated>2026-09-20T00:00:00Z</updated>
+    <summary>PlanetScale announced TIN (Text INdex), a full-text search extension for PlanetScale Postgres that adds a dedicated inverted index type, BM25 relevance ranking, and the TINQL query language. It is the first search capability PlanetScale has shipped for its Postgres product, and the company says it was among the most-requested features from customers.
+
+It puts PlanetScale into a fast-growing race among database vendors to bundle search directly into Postgres, a segment that already includes ParadeDB&#x27;s pg_search, Timescale&#x27;s pg_textsearch, and search features from Neon and Databricks. If these offerings mature, teams that today run a separate search engine such as Elasticsearch alongside Postgres may need one less moving part in their stack.
+
+Per PlanetScale&#x27;s documentation and community reports, TIN&#x27;s performance characteristics are only available on PlanetScale&#x27;s cloud service: the related open-source local extension (github.com/planetscale/lead) is intended mainly for testing TINQL syntax and does not match the cloud version&#x27;s performance. Benchmark claims come from the vendor rather than independent testing, so results should be validated against a team&#x27;s own workload.</summary>
+  </entry>
   <entry>
     <title>Hacktron chains libheif heap overflow and SSO flaw to breach OpenAI repos</title>
     <link href="https://www.hacktron.ai/blog/hacking-openai"/>
@@ -433,16 +444,5 @@ Spectrum is a two-stage, liquid-propellant rocket designed to deliver about 1,00
 Actively exploited Chrome zero-days can expose large numbers of browser users to attacks, especially because many people delay browser updates and V8 bugs can have wide-ranging impact across Chromium-based browsers. This is reportedly the sixth Chrome zero-day of 2026, underscoring how frequent such disclosures have become.
 
 The bug was reported by security researcher Salvatore Gulizia on August 4 and earned a $1,000 bug bounty. Google has not disclosed the attackers, victims, or the exploit&#x27;s full impact, and it is withholding some details until most users and affected third-party projects have installed the patch.</summary>
-  </entry>
-  <entry>
-    <title>Actively Exploited Chromium Sandbox RCE Affects All Major Browsers</title>
-    <link href="https://nvd.nist.gov/vuln/detail/cve-2026-85046"/>
-    <id>https://bmt.news/editions/2026-09-05/#hackernews:story:49570669</id>
-    <updated>2026-09-05T00:00:00Z</updated>
-    <summary>A type-confusion vulnerability in V8, tracked as CVE-2026-85046, is being actively exploited in the wild and affects Chromium-based browsers prior to version 152.0.7977.82. A crafted HTML page can let a remote attacker run arbitrary code inside the browser sandbox.
-
-Since Chrome, Edge, Brave, and most other major browsers share the Chromium engine, the flaw exposes billions of users to a credible, actively exploited attack. It highlights the fragility of relying on a single rendering engine across the web and makes urgent patching essential for both consumers and enterprises.
-
-The bug is a type confusion in V8, Chrome&#x27;s JavaScript and WebAssembly engine, and carries a CVSS score of 8.8 (High). Google fixed it in Chrome 152.0.7977.82 and reportedly paid a $1,000 bug bounty; users should also update Chromium derivatives because many browsers lag upstream releases.</summary>
   </entry>
 </feed>

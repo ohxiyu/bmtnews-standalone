@@ -51,10 +51,10 @@
       "current_state_en": "PlanetScale introduced Tin, a full-text search capability for Postgres offered exclusively on its cloud platform, prompting Hacker News debate about its performance, cloud lock-in, and comparison to existing Postgres FTS and rival extensions.",
       "detailed_summary_zh": "PlanetScale introduced Tin, a full-text search capability for Postgres offered exclusively on its cloud platform, prompting Hacker News debate about its performance, cloud lock-in, and comparison to existing Postgres FTS and rival extensions.",
       "detailed_summary_en": "PlanetScale introduced Tin, a full-text search capability for Postgres offered exclusively on its cloud platform, prompting Hacker News debate about its performance, cloud lock-in, and comparison to existing Postgres FTS and rival extensions.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "background_zh": "Postgres 本身已内置全文搜索，通过 tsvector、tsquery 和 ts_rank 等函数实现，并支持函数索引与查询优化，但不少开发者认为其相关性排序质量和索引体积不如专用搜索引擎。TIN 这类扩展正是瞄准这一差距，引入倒排索引和 BM25 打分算法——即 Lucene 推广、Elasticsearch 与 SQLite FTS5 采用的排序算法——从而让相关性排序更接近专用搜索引擎，同时数据仍留在 Postgres 内部。",
+      "background_en": "Postgres already ships built-in full-text search through the tsvector, tsquery and ts_rank functions, which support functional indexing and query optimization, but many developers find its ranking quality and index sizes limiting compared with dedicated search engines. TIN-style extensions target that gap by adding an inverted index and BM25 scoring — the ranking algorithm popularized by Lucene and used by Elasticsearch and SQLite's FTS5 — so relevance ordering behaves more like a purpose-built search engine while the data stays inside Postgres.",
+      "community_discussion_zh": "Hacker News 上的评论意见分化：质疑者认为 Postgres 已内置相当成熟的全文搜索（tsvector/tsquery/ts_rank），不明白为何要采用一个非核心、仅限云端的扩展，并提到 ts_query 索引体积过大的糟糕体验；也有人把这一波厂商搜索功能视为 AI 时代编码效率提升的体现。多位评论者指出本地版本只用于语法测试，且同类方案早已存在（ParadeDB pg_search、Timescale pg_textsearch、Neon/Databricks 的 Lakebase Search），还有人提到 SQLite FTS 开箱即支持 Lucene 风格查询，是 Postgres 尚未企及的参照。",
+      "community_discussion_en": "Hacker News commenters were split: skeptics asked why they should adopt a non-core, cloud-only extension when Postgres already has sophisticated built-in full-text search (tsvector/tsquery/ts_rank) and pointed to weak experiences with ts_query's large indexes, while others read the wave of vendor search features as a sign of AI-era coding productivity. Several noted the local version is syntax-only and that comparable alternatives already exist (ParadeDB pg_search, Timescale pg_textsearch, Neon/Databricks Lakebase Search), and one commenter highlighted SQLite FTS's Lucene-style queries as a benchmark Postgres has yet to match.",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.0,
@@ -62,6 +62,18 @@
         {
           "url": "https://news.ycombinator.com/item?id=49766611",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://planetscale.com/blog/introducing-tin",
+          "title": "Introducing TIN: full-text search for Postgres — PlanetScale"
+        },
+        {
+          "url": "https://planetscale.com/docs/postgres/search",
+          "title": "TIN: PlanetScale Postgres Search - PlanetScale"
+        },
+        {
+          "url": "https://www.postgresql.org/docs/current/textsearch.html",
+          "title": "PostgreSQL: Documentation: 18: Chapter 12. Full Text Search"
         }
       ],
       "confidence": 0.75,

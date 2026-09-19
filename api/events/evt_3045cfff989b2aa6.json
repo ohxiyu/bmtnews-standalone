@@ -59,14 +59,27 @@
       "current_state_en": "Slow Fog and OKX security researchers confirmed that the FomoPeek app contains kernel-level spy code, raising serious concerns about user data and wallet security.",
       "detailed_summary_zh": "Slow Fog and OKX security researchers confirmed that the FomoPeek app contains kernel-level spy code, raising serious concerns about user data and wallet security.",
       "detailed_summary_en": "Slow Fog and OKX security researchers confirmed that the FomoPeek app contains kernel-level spy code, raising serious concerns about user data and wallet security.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "内核是操作系统的核心，负责调度对内存、存储、网络接口和输入设备的全部访问，因此运行在内核层的代码可以绕过通常用于隔离移动应用之间的沙箱机制。慢雾是一家以钱包与智能合约安全事件响应和威胁情报著称的区块链安全公司，而OKX是全球最大的加密货币交易所之一，拥有自己的安全研究能力。移动应用仍是针对加密货币的恶意软件常见的传播渠道，因为用户经常侧载应用或安装未经严格应用商店审核的小众工具。",
+      "background_en": "The kernel is the core of an operating system that mediates all access to memory, storage, network interfaces and input devices; code running at kernel level therefore bypasses the sandboxing that normally isolates one mobile app from another. SlowMist is a blockchain security firm known for wallet and smart-contract incident response and threat intelligence, while OKX is one of the largest global crypto exchanges and maintains its own security research capability. Mobile apps remain a common distribution channel for crypto-targeted malware, because users frequently sideload apps or install niche tools that never go through a rigorous app-store review.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "此处的传导渠道是用户侧托管风险，而非协议层或价格层面的敞口：与受感染应用交互过的钱包可能被攻击者盗空，从而造成受影响地址的被动资金外流；更广泛的影响则是对第三方加密移动应用以及通过交易所和Web3活动推广的应用分发渠道造成信心与信任冲击。该发现似乎并不构成对任何主流平台的系统性风险，因此其市场波及范围很可能仅限于受影响应用的用户所持有的资产。",
+      "market_impact_en": "The transmission channel here is user-side custody risk rather than protocol-level or price-level exposure: wallets that interacted with the compromised app could be drained by attackers, creating potential forced outflows from affected addresses, while the broader effect is a sentiment and trust hit to third-party crypto mobile apps and to app-distribution channels promoted through exchanges and Web3 campaigns. The finding does not appear systemic to any major venue, so its market footprint is likely limited to the assets held by users of the affected app.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://cryptonews.net/news/security/32633096/",
+          "title": "Slow Fog warns devs over malicious axios malware campaign"
+        },
+        {
+          "url": "https://www.linux.org/threads/kernel-level-spyware.42500/",
+          "title": "Kernel level spyware | Linux.org"
+        },
+        {
+          "url": "https://www.okx.com/",
+          "title": "Buy Bitcoin, Crypto & Stocks | Crypto Exchange | OKX"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:65095a6ab16bb18d"
