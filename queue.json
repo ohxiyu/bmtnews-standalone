@@ -768,10 +768,11 @@
         "post_id": "368230919136615"
       },
       "b3615add02cfa21d129feb2c27b526ccf0cfc3c2a48d488fded6d60a5470698a": {
-        "status": "pending",
+        "status": "sent",
         "rank": 5,
         "text_hash": "c194c6c2e6d103014078ebc76a5ef0a3b462b3fdc361b5e4beabb6c25f99f11f",
-        "attempted_at": "2026-09-19T13:55:18.872438+08:00"
+        "attempted_at": "2026-09-19T13:55:18.872438+08:00",
+        "post_id": "368255474263400"
       }
     }
   },
@@ -821,12 +822,6 @@
     "2026-09-19": {
       "revision": "abecb7a91060ddc3c315265b12e4910642d0003bad5f3a20a1811aff5dfdac2b",
       "jobs": [
-        {
-          "id": "b3615add02cfa21d129feb2c27b526ccf0cfc3c2a48d488fded6d60a5470698a",
-          "text": "Hacktron 串联 libheif 堆溢出与 SSO 配置错误攻破 OpenAI 内部仓库\n\nHacktron AI 的安全研究人员发布了一份技术报告，披露他们通过串联 libheif 中的一个堆缓冲区溢出漏洞与一处 SSO 配置错误，实现了远程代码执行，并在不到 72 小时内接触到 OpenAI 的内部代码仓库。报告还称，直到大约两个月前，任何登录 community.openai.com 的用户或 OpenAI 员工都可能遭遇 ChatGPT 与 Codex 账号被接管，并且在早先模型均失败的情况下，他们借助 Claude Opus 5 在约三小时内绕过了 ASLR。\n\n这是一次罕见的公开演示：一个被广泛使用的图像解码库中的内存安全漏洞，加上身份层的配置错误，就足以串联成对一家人工智能实验室内部代码仓库的完整入侵，而这类资产正是知识产权高度集中的地方。它还显示出大模型辅助的自动化正在缩短从发现漏洞到写出可用利用程序的时间，从而提高了整个软件供应链在补丁管理与身份治理上的门槛。\n\n该溢出漏洞编号为 CVE-2026-32741，影响 libheif 1.21.2 及更早版本：构造一个包含恶意 “mski” 蒙版图像的 HEIF 文件，即可在 MaskImageCodec::decode_mask_image() 中触发堆缓冲区溢出；相应的补丁主要针对图像叠加图层的边界检查。社区分析指出，HEIF 支持多图像合成、旋转、裁剪、Alpha 通道和缩略图等特性，使其攻击面远大于传统的 JPEG 解码器，而照片上传功能恰恰会引入这类代码路径。\n\n来源：https://www.hacktron.ai/blog/hacking-openai\nBMTNews · 2026-09-19 · https://bmt.news",
-          "rank": 5,
-          "due_at": "2026-09-19T13:54:00+08:00"
-        },
         {
           "id": "5e42e3b920ebd3317db6c18727698362c541ddeb139e09848f40d6d19b4e11fa",
           "text": "Coinbase 向 CFTC 提交申请，拟上线苹果、特斯拉、英伟达个股永续合约\n\n据《华尔街日报》报道，Coinbase Derivatives 已向美国商品期货交易委员会（CFTC）提交申请，拟上线与苹果、特斯拉、英伟达等美国上市个股及 ETF 挂钩的现金结算永续合约。此次申请将该交易所的境内永续合约布局从股票指数扩展到单一证券。\n\n若获批，这将成为美国受监管平台上最早的一批个股永续合约产品之一，模糊加密原生衍生品与传统股票交易的边界。它表明头部加密交易所正在争夺股票挂钩的流量，可能重塑市场结构，并把新的机构与散户参与者吸引到 7×24 小时交易的场所。\n\n拟议合约采用现金结算且为永续结构，即没有到期日，而是通过定期资金费率机制来锚定标的股价。该申请建立在 Coinbase 现有的衍生产品线之上——其平台已提供加密期货、Mag7+Crypto 指数产品以及 7×24 小时的比特币和以太坊期货交易——但相关个股产品目前尚未获批，也未正式上线。\n\n来源：https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia\nBMTNews · 2026-09-19 · https://bmt.news",
