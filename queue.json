@@ -782,10 +782,11 @@
         "post_id": "368264086030265"
       },
       "56e16646a3392324ba523661a3bc19a0ad75629d03ee9a90da909d8b79209f54": {
-        "status": "pending",
+        "status": "sent",
         "rank": 7,
         "text_hash": "446cc73743ff1ce8467a350bc8e29e2915e06999d492c0e856b317907e962f66",
-        "attempted_at": "2026-09-19T16:00:26.677320+08:00"
+        "attempted_at": "2026-09-19T16:00:26.677320+08:00",
+        "post_id": "368286224363491"
       }
     }
   },
@@ -835,12 +836,6 @@
     "2026-09-19": {
       "revision": "abecb7a91060ddc3c315265b12e4910642d0003bad5f3a20a1811aff5dfdac2b",
       "jobs": [
-        {
-          "id": "56e16646a3392324ba523661a3bc19a0ad75629d03ee9a90da909d8b79209f54",
-          "text": "币安推出24/7外汇永续合约，采用周末EWMA定价机制\n\n币安宣布推出7×24小时外汇永续合约，首个产品为USDBRLUSDT合约，将于9月21日上线，以USDT结算并提供最高100倍杠杆。该合约采用双模式定价：在正常外汇交易时段跟踪第三方数据供应商提供的加权指数，在周末及公共假日则改用基于订单簿的指数加权移动平均（EWMA）定价。\n\n此举使全球最大加密货币交易所切入外汇这一按成交额计算全球最大的金融市场——国际清算银行数据显示，2025年4月全球场外外汇日均成交额约为9.6万亿美元。此前Bybit和Kraken已推出类似的7×24小时外汇永续产品，说明加密衍生品平台正竞相争夺传统外汇市场无法覆盖的汇率敞口与盘外价格发现需求。\n\n周末定价刻意不依赖外部价格源，而是通过EWMA从币安自身订单簿推导价格，这一设计此前已用于币安基于大宗商品的TradFi永续合约，意味着盘外时段的保证金要求与强平价位可能由更薄的内部流动性而非参考汇率决定。根据币安合约公告，该合约以USDT结算，最小变动价位为0.0001，最小名义价值为5 USDT。\n\n来源：https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound\nBMTNews · 2026-09-19 · https://bmt.news",
-          "rank": 7,
-          "due_at": "2026-09-19T15:57:00+08:00"
-        },
         {
           "id": "76ea787000d213a7dbfe2b46cb4af51ef8e5565fd275ccde017eeca2b02cd601",
           "text": "Neutrl 开放 NUSD 赎回价格仅为 0.51 美元，Strata 次级份额被清零\n\nNeutrl 已按约 0.51 美元兑 1 美元的价格开放 NUSD 赎回；与此同时，Strata 安排了为期 48 小时的估值更新，将其次级份额代币 jrNUSD 的估值直接归零，并以调整后的份额价值用 sNUSD 结算优先级份额的提现。Strata 的披露文件称，问题并非智能合约漏洞利用、黑客攻击或代码缺陷。\n\n对于这一结构化 DeFi 产品的存款人而言，这是一次实质性亏损事件，说明当损失规模较大时，作为首损缓冲的次级份额并不足以保护优先级资金。它凸显了一个风险：把分层结构叠加在单一收益策略之上，可能让损失直接传导给持有类稳定币代币的普通存款人。\n\nStrata 的 srNUSD 与 jrNUSD 份额均暴露于策略合约所持有的 sNUSD；按照 Strata 的损失分摊规则，jrNUSD 在 srNUSD 之前承受损失。在 0.51 美元 NUSD 参考价值下，损失已超过次级份额的保护额度，这正是优先级持有人也以缩水价值结算的原因。jrNUSD 与 srNUSD 均为无需许可的代币，可在 DEX 上交易，用户在赎回后还需手动领取 NUSD/sNUSD。\n\n来源：https://thedefiant.io/news/defi/neutrl-opens-nusd-redemptions-at-51-cents-as-strata-junior-tranche-faces-wipeout\nBMTNews · 2026-09-19 · https://bmt.news",
