@@ -15,11 +15,11 @@
     "en": "Coinbase Derivatives has filed with the CFTC for single-stock perpetual futures on Apple, Tesla, Nvidia, and others; products are not yet approved or live. Earlier, Coinbase stock jumped 10% on the filing news."
   },
   "first_seen_at": "2026-09-04T08:58:13.576540+00:00",
-  "last_updated_at": "2026-09-18T22:43:52.557461+00:00",
+  "last_updated_at": "2026-09-19T01:30:47.880666+00:00",
   "last_material_change_at": "2026-09-18T22:43:52.557461+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 3,
+  "sources_count": 4,
   "entities": [
     "after",
     "apple",
@@ -132,13 +132,20 @@
       ],
       "confidence": 0.9,
       "story_ids": [
-        "rss:decrypt.co_feed:3a170597d83e287a"
+        "rss:decrypt.co_feed:3a170597d83e287a",
+        "google_news:article:62ee8e51e5c111fd"
       ],
       "sources": [
         {
           "url": "https://decrypt.co/378681/coinbase-single-stock-perps-apple-tesla-nvidia",
           "label": "Decrypt",
           "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAtNURnLW1TWU0wSWpJcElGTDRZcWI2dUVzMzFONFhDdDVZZ1hrU3ZWcFVLS1J0Z2ZQb3FMcEJGWFpkZUF2aWwtN3c5NVA1REl3MnBxdDN3OHdwUmUwYkFRN2JMSDlpbDJuWHAtNVljV191RXI4WnVNMnY5VULSAYQBQVVfeXFMTjdZMDVwUUJ1eGFZcHUtTjN2ZkhMYWVHQldoUmZDZnIzckRYdldaekhTRDJWRUxJck5LcmtOWXItZ2tiNFA3cnhZWVYyeC1PX3ZWY3I4UG91NVY5dlFGMFg4eG01UE9uZlVLUUh1RFI3OGctVWF3SFhNMFg5QUE0Q1ZtQU4z?oc=5",
+          "label": "Decrypt",
+          "source_type": "google_news",
           "official": false
         }
       ]
