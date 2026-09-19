@@ -754,10 +754,11 @@
         "post_id": "368212527716328"
       },
       "9cd4c5e502fd810d9885bc33982a399ff8ab4545afa1b8d87e9d8ae6d61229f6": {
-        "status": "pending",
+        "status": "sent",
         "rank": 3,
         "text_hash": "09bff01ada26a1c28a7e3bc5dd4150eb7b89dc821e4b42c4c5b231ab34b5daf8",
-        "attempted_at": "2026-09-19T12:05:23.961883+08:00"
+        "attempted_at": "2026-09-19T12:05:23.961883+08:00",
+        "post_id": "368228461120376"
       }
     }
   },
@@ -807,12 +808,6 @@
     "2026-09-19": {
       "revision": "abecb7a91060ddc3c315265b12e4910642d0003bad5f3a20a1811aff5dfdac2b",
       "jobs": [
-        {
-          "id": "9cd4c5e502fd810d9885bc33982a399ff8ab4545afa1b8d87e9d8ae6d61229f6",
-          "text": "Haruko 遭网络攻击，15 家加密客户的 API 密钥与交易数据泄露\n\n总部位于英国、为机构提供加密货币投资组合管理与交易捕获技术的 Haruko 本周遭到网络攻击，共有 15 家客户受影响，其只读交易平台 API 凭证和交易数据被泄露。此外还有少量客户资金被盗，据报道部分规模较小的对冲基金客户出现资产损失。\n\n这一事件表明，单一中间层软件供应商可能成为数十家机构交易台的系统性入口，因为被泄露的 API 凭证和交易数据会给受影响基金及其交易对手带来后续风险。它可能会促使机构加密交易领域加快对第三方供应商安全与凭证管理的审查，而该领域近期随着现货 ETF 和主经纪商业务的发展而迅速扩张。\n\n据 CoinDesk 报道，被泄露的交易平台 API 信息属于只读权限，通常只允许攻击者查看余额与交易历史，而无法发起转账或下单，但报道仍提到有少量客户资金被盗。Haruko 的平台与数百家交易场所建立了全托管的集成连接，因此这一层级的凭证泄露可能同时波及大量交易所账户。\n\n来源：https://news.google.com/rss/articles/CBMixwFBVV95cUxPTV9qaG5DbW9HU2Z1M0JtZXBkMjJTc29KZ0tsSUlTNUoxd216QzhGN3JVY3I1c245eGZ3REV3NDJheC1fRUsxQzF4RHRWOVdHbm95dTg4UTlKZnYzR1JLekN1dzJtakZxX19DZ2ZRa3F0X0Q2Y25zSjZnQ0M0SV9zdHRZMW1PTWxpU1dfZmdPUVVYU3NZZUpWamFtVkpHQXVudTBoVWlQSXBuVTRLWXF2V2hDRjRGUUd3Wmw4WUdvWllZanp6ZF9j?oc=5\nBMTNews · 2026-09-19 · https://bmt.news",
-          "rank": 3,
-          "due_at": "2026-09-19T12:04:00+08:00"
-        },
         {
           "id": "992a6d91c3bbdb4972f0b0fb534e21b281dc7db3551da558423f87498616280a",
           "text": "Radix Engine 旧漏洞致 130 万美元被盗，区块链停摆 10 天\n\nRadix 基金会于 9 月 17 日披露，2023 年 6 月对 Radix Engine（负责执行交易并强制执行资产所有权的软件层）的一次重构引入了一个漏洞，该漏洞于 8 月 31 日被利用，攻击者通过 26 笔交易盗走约 126 万美元的跨链资产。随后验证者主动将足够多的质押下线，使共识停止运行超过 10 天；在协议修复加入校验、阻止受限金库引用被用于普通提款后，用户交易于 9 月 11 日恢复。\n\n这是一起实质性的协议级安全失败：该缺陷在执行层潜伏了三年多，还躲过了 Zellic 在 2024 年进行的外部审计，并且调查人员认为它可以被用于攻击网络上的任何金库，这意味着 130 万美元的损失低估了真实风险敞口。它还凸显了一次常规维护性改动如何制造系统性风险，并迫使网络牺牲活性——这一决定本身也会给用户和应用带来代价。\n\n攻击者取走了约 458,915 USDC、72,420 USDT、61.08 ETH、6.35 wrapped Bitcoin、536.16 SOL 和 32.91 BNB，并通过 Hyperlane 将这些资产转移到以太坊、BNB Chain 和 Solana 后换成 ETH；没有私钥被泄露，Hyperlane 本身按设计正常运行。该漏洞改变了引擎处理金库引用的方式，使一笔交易能够指向他人的金库并调用普通提款函数，而未强制执行所有权边界；此外，池子价格被扭曲后，另一个账户从受影响池中提取了数百万 XRD，造成二次损失。\n\n来源：https://cryptoslate.com/3-year-old-bug-triggers-1-3-million-drain-and-forces-10-day-blockchain-halt/\nBMTNews · 2026-09-19 · https://bmt.news",
