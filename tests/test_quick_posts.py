@@ -78,4 +78,5 @@ def test_all_publication_workflows_regenerate_stream():
         text = (root / f".github/workflows/{name}.yml").read_text()
         assert "uv run python -m src.quick_posts" in text
     page = (root / "docs/_includes/feed-home.html").read_text()
-    assert "site.data.quick_posts.html" in page
+    assert 'data-quick-post-status' in page
+    assert "site.data.quick_posts.html" not in page

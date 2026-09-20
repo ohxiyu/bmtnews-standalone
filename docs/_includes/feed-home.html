@@ -4,7 +4,9 @@
 
 <section class="continuous-feed" data-language="{{ include.language }}">
   {% include edition-header.html language=include.language %}
-  {{ site.data.quick_posts.html }}
+  <div data-quick-post-status role="status" aria-live="polite"></div>
+  <div data-quick-post-unplaced></div>
+  <noscript>Quick Post 需要启用 JavaScript 查看实时内容。<a href="/api/quick-posts.json">Quick Post API</a></noscript>
 
   {% if latest_post %}
     <section

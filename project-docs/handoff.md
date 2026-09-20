@@ -5,48 +5,40 @@
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "07:00截止/07:26启动、AI节流；补齐脱敏诊断并修复实证去重故障",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/90",
-  "owner": "Codex / morning-ai-economy",
-  "branch": "agent/morning-ai-economy",
-  "last_verified_commit": "599b6d52ad64f78316e8d98ddc3cedbb84e03772",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/91",
+  "goal": "Quick Post 可选刊期位置并实时发布、编辑、停用",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/94",
+  "owner": "Codex / quick-post-immediate",
+  "branch": "agent/quick-post-immediate",
+  "last_verified_commit": "4e64fda1d4f2f76f8ec78e0121a7b87dd798e3cb",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/95",
   "completed": [
-    "用户确认07:00截止、07:26启动；同步主调度、共享恢复门槛、备用采集及Watchdog",
-    "官方API名deepseek-flash；配置切换，不混用旧模型缓存",
-    "24条有界全覆盖比较、已验证结果缓存、失败工作流也保存成功分析缓存",
-    "402/401/403停止单次去重重试并给脱敏原因，保持质量与配额不变",
-    "首页只更新出刊文案与逾期判定，不改布局",
-    "脱敏复现JSON语法错误expected_comma；合法示例+格式错误反馈重试，继续严格拒绝无效结果",
-    "三个先前失败批次真实API复测35059029282通过：3批/3调用，无格式重试"
+    "从最新 origin/main 接手续作；当前电脑没有原未提交文件",
+    "实时公开读取、固定路径图片读取、刊期内插入位置与历史加载",
+    "保留 Access、CSRF、SHA 冲突与幂等保护"
   ],
   "unfinished": [
-    "PR91等待授权合并与协调部署，未重刊今日旧日报",
-    "PR89为旧部署证据，不能覆盖最新交接；历史08:00窗口重刊须显式cutoff8"
+    "PR95 等待远程 CI 与审阅",
+    "合并及生产部署尚未执行"
   ],
   "validation": [
-    "fetch/merge origin/main、uv sync --frozen --extra dev通过",
-    "823 pytest通过（1既有warning）；治理及diff检查通过",
-    "只读诊断35058489152、35058682859、35058796024复现格式失败；35059029282三个指定批次修复验证通过，共19次应用层模型调用",
-    "本任务原有48 Worker、56 Node测试、类型及dry-run通过；本轮未改Worker/UI"
+    "uv sync --frozen --extra dev、823 pytest、治理与 diff 检查通过",
+    "33 Worker 与 28 分享/PWA/调度 Node 测试通过",
+    "390/1280 浏览器模拟验证位置、历史加载、停用、失败与重试；后台草稿恢复与冲突保护通过",
+    "真实首页只读加载后本地注入预览，390/1280 正文、排行数量与溢出检查通过；未写生产"
   ],
   "unverified": [
-    "未完整重放失败日报的所有历史输入：诊断只恢复缓存子集",
-    "DeepSeek新别名deepseek-flash、24项批次真实质量/费用及新调度尚未上线验收；诊断沿用main旧模型和12项批次",
-    "今日线上仍08:36旧版14条，重复尚未通过重刊消除"
+    "真实生产 Access 会话发布、图片与停用尚未验收"
   ],
   "production": {
-    "source_commit": "bd6f5c307b14c9f26d5cd5fc157b168c6118d8b7",
-    "artifact_commit": "d8830f2ee65a8ad1ef4f86f368294adcef57126a (collection updated artifact; edition unchanged)",
-    "edition": "2026-09-16",
-    "generated_at": "2026-09-16T00:36:20.538116Z (previous edition unchanged)",
-    "worker_version": "341dd1ba-4355-42c9-93dc-4133295b53e7; health still08:30",
-    "verified_at": "2026-09-16 13:19 Asia/Shanghai API refreshed; Worker version remains previous snapshot"
+    "source_commit": "unknown; current source baseline 4e64fda1d4f2f76f8ec78e0121a7b87dd798e3cb",
+    "artifact_commit": "unknown; not modified",
+    "edition": "2026-09-18 (public edition index)",
+    "generated_at": "2026-09-17T23:28:47.562942Z (edition index)",
+    "worker_version": "unknown; not deployed",
+    "verified_at": "2026-09-18 read-only public API check"
   },
-  "blockers": [
-    "下一步合并/部署/重刊需要当前明确授权；本轮不清空任何发送记录"
-  ],
-  "next_action": "审阅PR91和脱敏诊断证据；获授权后协调合并与Worker部署，以cutoff8重刊2026-09-16并核验前三条不同事件及发送幂等，不无条件重试整期。",
+  "blockers": [],
+  "next_action": "审阅 PR95 和最新 CI；合并和生产部署需本任务授权，不能发布虚构测试新闻。",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -54,7 +46,7 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-16-morning-ai-economy.md"
+  "evidence": "project-docs/releases/2026-09-18-quick-post-immediate.md"
 }
 ```
 

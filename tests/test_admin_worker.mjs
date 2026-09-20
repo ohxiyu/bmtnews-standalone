@@ -157,3 +157,49 @@ test('unknown admin API and missing writer token are explicit failures',async()=
  const r=await worker.handleRequest(new Request('https://bmt.news/api/admin/state',{headers:{'Cf-Access-Jwt-Assertion':await token()}}),{...env,ADMIN_GITHUB_TOKEN:''});
  assert.equal(r.status,503);
 });
+
+test('live public stream sees publish edit disable immediately without assets or cache', async()=>{
+ const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ globalThis.caches={default:{match:()=>{throw Error('must bypass cache');}}};
+ const live=async()=>{
+  const response=await worker.handleRequest(new Request('https://bmt.news/api/quick-posts.json'),env);
+  assert.equal(response.status,200);assert.equal(response.headers.get('Cache-Control'),'no-store');
+  return response.json();
+ };
+ await request('/api/admin/posts',post({date,position:2}));
+ let payload=await live();assert.equal(payload.items[0].position,2);assert.equal(payload.revision,sha);
+ assert.equal(payload.items[0].request_hash,undefined);assert.equal(payload.items[0].enabled,undefined);
+ await request('/api/admin/posts',post({date,position:1,body:'edited'}));
+ payload=await live();assert.equal(payload.items[0].body,'edited');assert.equal(payload.items[0].position,1);
+ await request('/api/admin/entry-state',{sha,index:1,enabled:false});
+ assert.deepEqual((await live()).items,[]);
+});
+
+test('explicit history dates are supported but future and drafts never become public', async()=>{
+ registry.items=[post({type:'quick_post',date:'2020-01-01',position:0}),post({type:'quick_post',id:'b'.repeat(36),date:'2099-01-01'}),post({type:'quick_post',id:'c'.repeat(36),enabled:false,date:'2020-01-01'})];
+ const response=await worker.handleRequest(new Request('https://bmt.news/api/quick-posts.json?date=2020-01-01&date=2099-01-01'),env);
+ assert.equal((await response.json()).items.length,1);
+ assert.equal((await worker.handleRequest(new Request('https://bmt.news/api/quick-posts.json?date=2026-02-30'),env)).status,400);
+});
+
+test('live read errors fail explicitly instead of returning stale generated data', async()=>{
+ globalThis.fetch=async()=>new Response(null,{status:403});
+ const response=await worker.handleRequest(new Request('https://bmt.news/api/quick-posts.json'),env);
+ assert.equal(response.status,503);assert.equal(response.headers.get('Cache-Control'),'no-store');
+ assert.equal((await response.json()).error.code,'quick_posts_unavailable');
+});
+
+test('positions reject negative fractional oversized and non-number values', async()=>{
+ for(const position of [-1,1.5,1001,'2',true])assert.equal((await request('/api/admin/posts',post({position}))).status,400);
+ for(const position of [null,0,1,1000])assert.equal((await request('/api/admin/posts',post({position}))).status,200);
+});
+
+test('uploaded image is readable immediately and content hash is verified', async()=>{
+ const bytes=Buffer.from([137,80,78,71,13,10,26,10]);
+ const hash=Buffer.from(await crypto.subtle.digest('SHA-256',bytes)).toString('hex');
+ globalThis.fetch=async(url,init)=>{assert.equal(init.cache,'no-store');return Response.json({content:bytes.toString('base64')});};
+ const response=await worker.handleRequest(new Request('https://bmt.news/assets/uploads/quick-'+hash+'.png'),env);
+ assert.equal(response.status,200);assert.equal(response.headers.get('Content-Type'),'image/png');
+ assert.deepEqual(Buffer.from(await response.arrayBuffer()),bytes);
+ assert.equal((await worker.handleRequest(new Request('https://bmt.news/assets/uploads/quick-'+'a'.repeat(64)+'.png'),env)).status,503);
+});

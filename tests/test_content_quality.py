@@ -117,9 +117,18 @@ def test_enrichment_degradation_is_visible(monkeypatch):
     assert story.metadata["enrichment_status"] == "translation_only"
 
 
-def test_corrections_only_apply_to_affected_edition():
-    plan = load_editorial_plan(date(2026, 9, 8))
+def test_corrections_only_apply_to_affected_edition(tmp_path):
+    # The live registry is editable from Quick Post; it is not a test fixture.
+    path = tmp_path / "editorial.json"
+    rows = [{"type": "suppress", "url": f"https://example.com/{index}",
+             "date": "2026-09-08"} for index in range(7)]
+    rows.append({"type": "editorial", "url": "https://example.com/correction",
+                 "date": "2026-09-08", "title_zh": "更正", "summary_zh": "第三波更正内容"})
+    rows.append({"type": "suppress", "url": "https://example.com/disabled",
+                 "date": "2026-09-08", "enabled": False})
+    path.write_text(json.dumps({"items": rows}), encoding="utf-8")
+    plan = load_editorial_plan(date(2026, 9, 8), path)
     assert len(plan.suppressed_urls) == 7
     assert len(plan.editorial) == 1
     assert "第三波" in plan.editorial[0].summary_zh
-    assert load_editorial_plan(date(2026, 9, 9)).is_empty
+    assert load_editorial_plan(date(2026, 9, 9), path).is_empty
