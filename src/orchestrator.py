@@ -60,6 +60,7 @@ from .daily_feed import (
     save_daily_feed_state,
 )
 from .edition import (
+    EditionWindow,
     DEFAULT_STAGING_PATH,
     edition_window_for,
     edition_window_for_date,
@@ -985,7 +986,7 @@ class BMTNewsOrchestrator:
 
             total_candidates_considered = before_history_filter
             analyzed_items = (
-                await self._analyze_content(candidates)
+                await self._analyze_content(candidates, edition_window=window)
                 if candidates
                 else []
             )
@@ -1063,7 +1064,7 @@ class BMTNewsOrchestrator:
                     - len(supplemental_candidates),
                 )
                 fallback_analyzed = (
-                    await self._analyze_content(supplemental_candidates)
+                    await self._analyze_content(supplemental_candidates, edition_window=window)
                     if supplemental_candidates
                     else []
                 )
@@ -3229,7 +3230,9 @@ class BMTNewsOrchestrator:
         )
         self._set_timing("enrichment", started)
 
-    async def _analyze_content(self, items: List[ContentItem]) -> List[ContentItem]:
+    async def _analyze_content(
+        self, items: List[ContentItem], *, edition_window: EditionWindow | None = None,
+    ) -> List[ContentItem]:
         """Reuse valid results before paying for prefiltering unseen inputs."""
         started = time.perf_counter()
         cache = self._result_cache()
@@ -3255,7 +3258,10 @@ class BMTNewsOrchestrator:
             for key, value in {"analysis_cache_hits": len(cached), "analysis_cache_misses": len(misses)}.items():
                 self.last_run_report.set_metric(key, self.last_run_report.metrics.get(key, 0) + value)
         if misses:
-            await ContentAnalyzer(ai_client, allowed_categories=self._analysis_categories()).analyze_batch(misses)
+            await ContentAnalyzer(
+                ai_client, allowed_categories=self._analysis_categories(),
+                edition_window=edition_window,
+            ).analyze_batch(misses)
             if cache:
                 for item in misses:
                     cache.store_analysis(item)

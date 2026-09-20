@@ -3,6 +3,7 @@
 import asyncio
 import json
 import re
+from datetime import timedelta
 from typing import Iterable, List, Optional
 from pydantic import BaseModel, Field, ValidationError
 from tenacity import retry, stop_after_attempt, wait_exponential
@@ -12,6 +13,7 @@ from .client import AIClient
 from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER
 from .utils import parse_json_response
 from ..models import ContentItem
+from ..edition import EditionWindow, edition_window_for
 
 DEFAULT_THROTTLE_SEC = 0.0
 
@@ -34,8 +36,10 @@ class ContentAnalyzer:
         ai_client: AIClient,
         *,
         allowed_categories: Optional[Iterable[str]] = None,
+        edition_window: Optional[EditionWindow] = None,
     ):
         self.client = ai_client
+        self.edition_window = edition_window
         self.allowed_categories = tuple(
             dict.fromkeys(
                 category.strip()
@@ -177,9 +181,37 @@ class ContentAnalyzer:
             discussion_section=discussion_section
         )
 
+        # Apply only to requests already needed on cache misses. Preserve the
+        # existing cache/prompt fingerprints: no paid historical rescoring.
+        # Collection runs use the fixed edition containing publication, never
+        # wall-clock time (which would misdate retries and historical runs).
+        window = self.edition_window or edition_window_for(
+            item.published_at + timedelta(days=1), "Asia/Shanghai",
+        )
+        freshness = (
+            f"Publication: {item.published_at.isoformat()}. "
+            f"News window: [{window.start.isoformat()}, {window.end.isoformat()}). "
+            "Score 0 for a recap of events before this window without a concrete "
+            "in-window development. Recent publication, popularity or importance "
+            "does not make an old event new. Resolve relative dates against publication; "
+            "do not invent event dates. For a genuine new development, score and "
+            "summarize that development, not the old background. Explain in reason."
+        )
+
+        # Replace the verbose secondary considerations, rather than adding a
+        # second pass or expanding the input budget. Scoring anchors stay intact.
+        before, rest = CONTENT_ANALYSIS_SYSTEM.split("Consider:\n", 1)
+        _, calibration = rest.split("Scoring granularity and calibration:", 1)
+        system_prompt = (
+            before + freshness
+            + "\nJudge evidenced impact and novelty; popularity and official marketing "
+            "alone do not establish value. AI/technology need no crypto connection.\n\n"
+            + "Scoring granularity and calibration:" + calibration
+        )
+
         # Get AI completion
         response = await self.client.complete(
-            system=CONTENT_ANALYSIS_SYSTEM,
+            system=system_prompt,
             user=user_prompt,
         )
 
