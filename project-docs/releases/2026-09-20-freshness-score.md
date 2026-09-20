@@ -38,6 +38,8 @@ Python 代码由现有 Actions 从 main checkout，合并后下一次正常生�
 
 ## 2026-09-20 授权上线证据
 
+证据文档 PR: [#99](https://github.com/ohxiyu/bmtnews-standalone/pull/99)，待审阅，不影响已合并应用代码。
+
 Source commit: c0f37bef06f40b0a8d69a356bedc147d9374c669，PR98 于 03:39:04Z 合并。
 
 Worker version: not changed；Pages 6bb5c964-f15b-4ddd-a0c2-8125a8fe485d，dispatcher 未修改。
