@@ -35,3 +35,23 @@ Python 代码由现有 Actions 从 main checkout，合并后下一次正常生�
 回滚采用 revert 应用 PR，经检查合并，不回退或覆盖生产状态文件。
 
 原 Quick Post 上线记录在 PR96；该分支不属于本任务，不修改或合并它。
+
+## 2026-09-20 授权上线证据
+
+证据文档 PR: [#99](https://github.com/ohxiyu/bmtnews-standalone/pull/99)，待审阅，不影响已合并应用代码。
+
+Source commit: c0f37bef06f40b0a8d69a356bedc147d9374c669，PR98 于 03:39:04Z 合并。
+
+Worker version: not changed；Pages 6bb5c964-f15b-4ddd-a0c2-8125a8fe485d，dispatcher 未修改。
+
+Deployment: 生产 main 源码已更新，Actions 每次 checkout 后使用；本任务无常驻 Python
+服务可部署，不需要 Pages 发布。首次正常生产执行尚未观察，不将合并等同运行成功。
+[CI 35486990809](https://github.com/ohxiyu/bmtnews-standalone/actions/runs/35486990809)
+测试与治理通过，CodeQL 和 Cloudflare Preview 同样通过。没有手动 dispatch 付费任务。
+
+Verification: 2026-09-20T03:39:04Z 合并后 fetch 确认 origin/main 含窗口与零分规则；
+核对 daily-summary.yml 的 checkout 与既有运行路径。826 项全量测试通过，合并前
+再次执行 12 项窗口与新回归测试通过。模型实际效果、首次新版本生产运行仍待观察。
+
+Rollback: 已知源码基线 55f21307ae41b134de2aa732523fde6f85474a22；经授权 revert PR98
+并经 PR 检查合并。不得回滚生产内容状态或为回滚清空 AI 缓存。
