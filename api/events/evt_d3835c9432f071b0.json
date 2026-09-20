@@ -51,10 +51,10 @@
       "current_state_en": "Qwen released Qwen-Image-2.1, a compact 7B open-weight image generation model with native transparency and markedly improved text rendering, though under a more restrictive license than earlier Qwen releases.",
       "detailed_summary_zh": "Qwen released Qwen-Image-2.1, a compact 7B open-weight image generation model with native transparency and markedly improved text rendering, though under a more restrictive license than earlier Qwen releases.",
       "detailed_summary_en": "Qwen released Qwen-Image-2.1, a compact 7B open-weight image generation model with native transparency and markedly improved text rendering, though under a more restrictive license than earlier Qwen releases.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
+      "background_zh": "开源权重图像模型会公开发布训练好的参数，任何人都可以下载并在本地运行，这与 GPT-Image-2、Ideogram 等只能通过托管服务调用的闭源 API 形成对比。此类模型大多采用扩散 Transformer（DiT）架构：文本编码器把提示词转成条件信号，再由一叠 Transformer 层逐步从随机噪声中去噪生成图像。其中有两项能力在技术上格外困难：一是准确渲染小字号文字，因为模型必须学会字形结构而不只是形状；二是输出 alpha 透明通道，因为常规训练管线只产生压平后的 RGB 图像，抠图通常要依赖单独的后处理步骤。Qwen 的前代产品 Qwen-Image 是 2025 年 8 月发布的 20B MMDiT 模型，而专攻透明生成的 Qwen-Image-Layered 则于 2025 年 12 月亮相。",
+      "background_en": "Open-weight image models publish their trained parameters so anyone can download and run them locally, as opposed to proprietary APIs such as GPT-Image-2 or Ideogram that are only accessible through a hosted service. Most of these models are diffusion transformers (DiT): a text encoder converts the prompt into conditioning signals, and a stack of transformer layers iteratively denoises random noise into an image. Two capabilities are technically hard: rendering accurate small text, because the model must learn glyph structure rather than just shapes, and emitting an alpha (transparency) channel, because typical training pipelines produce flattened RGB images only, so background removal is usually a separate post-processing step. Qwen's predecessor Qwen-Image was a 20B MMDiT model released in August 2025, and Qwen-Image-Layered, a dedicated transparency model, arrived in December 2025.",
+      "community_discussion_zh": "评论者总体上肯定其实用价值：它比 20B 的 Qwen-Image 1 小得多，一位运营提示词生成 UI 设计网站的开发者称，其小字号文字保真度明显优于当前开源权重市场上的其他模型。两大反复出现的担忧是：许可证比此前采用 Apache 许可的 Qwen 模型严格得多；以及提示词遵循能力偏弱——有用户要求生成某个城市中的玻璃质感 3D 文字，结果只得到白底上破碎的文字——同时也有人认为，本地图像生成目前已比本地代码生成走得更远。",
+      "community_discussion_en": "Commenters were broadly positive on the model's practical value: it is far smaller than the 20B Qwen-Image 1, and one developer running a prompt-to-UI design site called its small-text fidelity much better than anything else currently on the open-weight market. The two recurring concerns were the much more restrictive license compared with Apache-licensed earlier Qwen models, and weak prompt adherence — one user asking for glass 3D text in a specific city got broken text on a plain white background — while others noted that local image generation now feels further ahead than local code generation.",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.0,
@@ -62,6 +62,18 @@
         {
           "url": "https://news.ycombinator.com/item?id=49775499",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+          "title": "GitHub - QwenLM/Qwen-Image-2.1: Qwen's most powerful open ..."
+        },
+        {
+          "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+          "title": "Qwen-Image-2.1: Compact, Efficient, and Unified Image Creation"
+        },
+        {
+          "url": "https://blog.comfy.org/p/qwen-image-21-in-comfyui-open-weight",
+          "title": "Qwen-Image-2.1 in ComfyUI: Open-Weight Image Generation and..."
         }
       ],
       "confidence": 0.75,

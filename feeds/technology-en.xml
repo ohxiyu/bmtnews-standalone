@@ -4,7 +4,40 @@
   <link href="https://bmt.news/feeds/technology-en.xml" rel="self"/>
   <link href="https://bmt.news/"/>
   <id>https://bmt.news/feeds/technology-en.xml</id>
-  <updated>2026-09-20T00:00:00Z</updated>
+  <updated>2026-09-21T00:00:00Z</updated>
+  <entry>
+    <title>RSA-896 Factored via AI-Orchestrated Fleet of 2048 GPUs</title>
+    <link href="https://saweis.net/posts/rsa-896.html"/>
+    <id>https://bmt.news/editions/2026-09-21/#hackernews:story:49771966</id>
+    <updated>2026-09-21T00:00:00Z</updated>
+    <summary>Stephen A. Weis announced on September 19, 2026 that he had factored RSA-896, the 896-bit (270-decimal-digit) RSA challenge number, by having Claude port the CADO-NFS number field sieve implementation to run on GPUs and then orchestrate a fleet of up to 2048 GPUs over roughly ten days. The total work amounted to about 30 GPU-years, run on scavenged idle capacity rather than a dedicated allocation.
+
+Factoring a 270-digit RSA modulus with existing algorithms substantially advances the public factoring record and shows that AI agents can act as practical porting and orchestration layers for high-performance computing workloads. It does not threaten deployed 2048-bit RSA keys, so its significance lies more in the demonstrated AI-assisted HPC workflow and the implied scale of idle GPU capacity than in any break of real-world cryptography.
+
+The run used the existing number field sieve algorithms rather than a new cryptanalytic method, and Weis attributed the result first to the people who built the number field sieve and CADO-NFS over several decades and to the teams behind earlier records. The 896-bit scale remains far below the 2048-bit RSA keys still used in deployed systems, which the number field sieve cannot reach with anything like this amount of compute.</summary>
+  </entry>
+  <entry>
+    <title>Anthropic Publishes Metrics to Measure AI Development Pace Inside Frontier Labs</title>
+    <link href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5"/>
+    <id>https://bmt.news/editions/2026-09-21/#rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en:c2dfdfc9815dc43a</id>
+    <updated>2026-09-21T00:00:00Z</updated>
+    <summary>Anthropic released a research and methodology piece outlining measurements for understanding how quickly AI development is advancing inside frontier labs. The publication focuses on internal lab measurement frameworks rather than announcing a new model or product.
+
+A shared way to measure development pace inside frontier labs could improve AI safety governance by letting researchers, policymakers, and the public evaluate claims about progress and risk more concretely. It also reflects a broader industry shift toward pacing and measuring AI advancement rather than racing solely on capability benchmarks.
+
+The methodology addresses internal R&amp;D signals, such as how labs track and report their own progress, rather than only external evaluation scores, which may help distinguish genuine safety progress from surface-level benchmark gains. As a methodology contribution, it does not itself deploy a new AI capability or change any existing model access.</summary>
+  </entry>
+  <entry>
+    <title>Qwen-Image-2.1: 7B open-weight image model with native transparency</title>
+    <link href="https://qwen.ai/blog?id=qwen-image-2.1"/>
+    <id>https://bmt.news/editions/2026-09-21/#hackernews:story:49775499</id>
+    <updated>2026-09-21T00:00:00Z</updated>
+    <summary>Qwen open-sourced Qwen-Image-2.1, a unified text-to-image generation and image-editing model whose visual generation component uses only 7B parameters across 32 Single-Stream DiT layers, down from the 20B MMDiT model of Qwen-Image 1.0. The release adds native RGBA transparency, direct 2048×2048 output, and editing across up to 10 input reference images, with markedly improved small-text rendering compared with other open-weight options.
+
+By cutting the parameter count to roughly a third of its predecessor, Qwen-Image-2.1 lowers the VRAM and latency barrier for self-hosted and local image generation, making high-quality generation practical on more modest GPUs. Its text-rendering strength targets design, UI and marketing workflows where legible typography has been the main weakness of open-weight models — but the more restrictive license than the Apache terms used by earlier Qwen releases could limit commercial and downstream adoption.
+
+The model runs natively in ComfyUI and supports unified generation, transparent-layer editing and subject extraction from photographs within a single set of weights. Two caveats stand out: the LICENSE file in the QwenLM/Qwen-Image-2.1 repository is considerably more restrictive than the Apache licensing used across many earlier Qwen models, and early community testing reports inconsistent prompt adherence, requiring seed trial-and-error for compositional requests.</summary>
+  </entry>
   <entry>
     <title>PlanetScale launches TIN full-text search extension for Postgres</title>
     <link href="https://planetscale.com/blog/introducing-tin"/>
@@ -411,38 +444,5 @@ The essay appears to address both the upside and the potential downsides of agen
 The shutdown removes one of the few long-running, non-commercial, encrypted communication platforms that activists, journalists, and dissidents have relied on. It also signals that privacy-enhancing services can become the target of legal and political pressure when their users commit violent acts, which has chilling implications for digital rights and free expression.
 
 A/I, also known as Autistici/Inventati, is an anti-commercial, collectively run project best known for free encrypted email and internet services. Commenters note that the legal theory appears to treat A/I&#x27;s user vetting plus tool provision as material support, a claim they dispute.</summary>
-  </entry>
-  <entry>
-    <title>AI Proves Fermat&#x27;s Last Theorem in 11 Days, Writing Longest Proof Ever</title>
-    <link href="https://decrypt.co/377491/ai-solved-350-year-old-math-problem"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:decrypt.co_feed:1bbd15abd636205c</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Anthropic announced that its Claude AI independently produced a formal proof of Fermat&#x27;s Last Theorem in only 11 days, generating roughly 13 million lines of code that can be machine-checked line by line. The proof, validated by mathematician Kevin Buzzard, is reportedly the longest mathematical proof ever constructed, and beat an ongoing human-led project at Imperial College London.
-
-This marks a breakthrough in AI-driven formal verification, showing that AI can independently formalize major theorems that trained human teams are still struggling to finish. It could reshape how mathematicians validate proofs and accelerate the use of AI as a research collaborator in mathematics and computer science.
-
-The effort used dozens of Claude agents working in parallel with a coordination tool called Prove2Me, built by Tianyi Peng&#x27;s team at Columbia, to synchronize the agents around a live to-do list. False starts account for about 7 percent of the final proof&#x27;s lines, and the formalization work is connected to Lean, a proof assistant language computers can check.</summary>
-  </entry>
-  <entry>
-    <title>German startup Isar Aerospace reaches orbit from European soil</title>
-    <link href="https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket"/>
-    <id>https://bmt.news/editions/2026-09-06/#hackernews:story:49580369</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Isar Aerospace&#x27;s Spectrum rocket successfully reached orbit on its second test launch from Andøya Spaceport in Norway. This is the first time a private European company has achieved orbit from European soil.
-
-This milestone breaks Europe&#x27;s traditional reliance on institutional and multinational heavy-lift launch systems, showing that commercial NewSpace companies can credibly compete in orbital launch. For the EU, privately owned and operated launch capability strengthens strategic autonomy in space amid rising geopolitical friction.
-
-Spectrum is a two-stage, liquid-propellant rocket designed to deliver about 1,000 kilograms to low Earth orbit. Isar Aerospace manufactures roughly 80% of the vehicle itself near Munich, and the successful flight followed a first attempt that ended shortly after liftoff.</summary>
-  </entry>
-  <entry>
-    <title>Google Patches Chrome Zero-Day CVE-2026-85046 Exploited in the Wild</title>
-    <link href="https://decrypt.co/377501/google-chrome-zero-day-exploited"/>
-    <id>https://bmt.news/editions/2026-09-06/#rss:decrypt.co_feed:28dc26bc566b81bc</id>
-    <updated>2026-09-06T00:00:00Z</updated>
-    <summary>Google confirmed that Chrome vulnerability CVE-2026-85046, a high-severity type-confusion bug in the V8 JavaScript engine, was already being exploited in the wild. The company released the fix in Chrome 152.0.7977.82 and 152.0.7977.83 for Windows and Mac, and 152.0.7977.82 for Linux, alongside a total of 12 security fixes.
-
-Actively exploited Chrome zero-days can expose large numbers of browser users to attacks, especially because many people delay browser updates and V8 bugs can have wide-ranging impact across Chromium-based browsers. This is reportedly the sixth Chrome zero-day of 2026, underscoring how frequent such disclosures have become.
-
-The bug was reported by security researcher Salvatore Gulizia on August 4 and earned a $1,000 bug bounty. Google has not disclosed the attackers, victims, or the exploit&#x27;s full impact, and it is withholding some details until most users and affected third-party projects have installed the patch.</summary>
   </entry>
 </feed>

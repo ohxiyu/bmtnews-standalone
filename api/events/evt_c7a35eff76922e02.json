@@ -57,14 +57,27 @@
       "current_state_en": "FomoPeek, an iPhone app, was discovered carrying an iOS exploit kit that steals cryptocurrency wallet keys from users' devices.",
       "detailed_summary_zh": "FomoPeek, an iPhone app, was discovered carrying an iOS exploit kit that steals cryptocurrency wallet keys from users' devices.",
       "detailed_summary_en": "FomoPeek, an iPhone app, was discovered carrying an iOS exploit kit that steals cryptocurrency wallet keys from users' devices.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "iOS 漏洞利用套件是一组打包好的漏洞与利用代码，可让攻击者突破 iOS 沙盒——即通常阻止某个应用读取其他应用数据或访问更广泛文件系统的隔离层。手机上的加密钱包为实现自托管，会在本地保存私钥或助记词，因此任何能逃出沙盒的代码都可能复制这些秘密信息，使攻击者远程盗走资金。巨鲸追踪类应用是天然的诱饵，因为它们会要求用户关联或粘贴钱包地址，从而让用户有合理理由在同时存放钱包软件的设备上安装并长期运行该应用。",
+      "background_en": "An iOS exploit kit is a packaged collection of vulnerabilities and exploitation code that lets an attacker break out of the iOS sandbox — the isolation layer that normally prevents one app from reading another app's data or the wider file system. Crypto wallets on phones store private keys or seed phrases locally for self-custody, so anything that escapes the sandbox can potentially copy those secrets and let an attacker drain funds remotely. Whale-tracking apps are a natural lure because they ask users to link or paste wallet addresses, giving them a plausible reason to install and keep the app running on a device that also holds wallet software.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "风险传导路径是 Solana、以太坊和 TRON 移动钱包自托管私钥被窃取，因此直接受影响的是个人的热钱包持有者，而非交易所或协议储备。一款经确认可窃取密钥的消费级应用可能推动市场情绪转向硬件钱包与离线隔离式托管，并加剧对加密类移动应用商店审核机制的审视。",
+      "market_impact_en": "The exposure runs through self-custody key exfiltration on Solana, Ethereum and TRON mobile wallets, so the immediate risk sits with individual hot-wallet holders rather than exchange or protocol reserves. A confirmed consumer-app-based key stealer can shift sentiment toward hardware and air-gapped custody and intensify scrutiny of mobile app store review for crypto apps.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://cryptoadventure.com/fomopeek-ios-app-malware-exposes-crypto-keys-as-users-report-wallet-drains/",
+          "title": "FomoPeek iOS App Malware Exposes Crypto Keys as Users Report Wallet Drains"
+        },
+        {
+          "url": "https://paragraph.com/@onchaindiary/fomopeek-app-malware-explained",
+          "title": "FomoPeek Malware: How a Read-Only Whale Tracker Stole iOS Private Keys"
+        },
+        {
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/coruna-powerful-ios-exploit-kit",
+          "title": "Coruna: The Mysterious Journey of a Powerful iOS Exploit Kit"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:403481e9a073b269"

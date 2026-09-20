@@ -64851,6 +64851,18 @@
             {
               "title": "AI PM at a Frontier AI Lab: OpenAI, Anthropic, Mistral, and Cohere vs....",
               "url": "https://www.institutepm.com/knowledge-hub/ai-pm-at-frontier-labs"
+            },
+            {
+              "title": "Frontier AI Labs (Overview) | Longterm Wiki",
+              "url": "https://www.longtermwiki.com/wiki/E820"
+            },
+            {
+              "title": "Anthropic's Amodei Urges Slower Pace for AI Development",
+              "url": "https://www.coininsider.org/news/anthropics-amodei-calls-to-slow-ai-development-altman-and-musk-agree/"
+            },
+            {
+              "title": "Announcing MLCommons AI Safety v0.5 Proof of... - MLCommons",
+              "url": "https://mlcommons.org/2024/04/mlc-aisafety-v0-5-poc/"
             }
           ],
           "sources": [
@@ -71281,10 +71293,10 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "background_en": "The general number field sieve (NFS) is the most efficient known classical algorithm for factoring large integers, with sub-exponential but still extremely steep runtime growth. CADO-NFS (Crible Algébrique: Distribution, Optimisation - Number Field Sieve) is a complete open-source C/C++ implementation of NFS for factoring integers and computing discrete logarithms, developed by the French research institute INRIA. RSA Laboratories ran the RSA Factoring Challenge from 1991, offering cash prizes for factoring semiprimes of increasing size up to 2048 bits; the contest formally ended in 2007, but several of the numbers, including RSA-896, remained unfactored, with RSA-768 standing as the last major public record. RSA-896 is a 270-decimal-digit semiprime and had been listed as an open challenge for well over a decade.",
+          "background_zh": "通用数域筛法（NFS）是已知最有效的经典大整数分解算法，其运行时间增长为亚指数级，但仍然极其陡峭。CADO-NFS（Crible Algébrique: Distribution, Optimisation - Number Field Sieve）是由法国研究机构INRIA开发的、完整的开源C/C++数域筛法实现，用于整数分解和有限域离散对数计算。RSA实验室从1991年起举办“RSA分解挑战”，为分解规模逐级增大的半素数（最大到2048位）提供现金奖励；该竞赛在2007年正式结束，但包括RSA-896在内的若干数字一直未被分解，其中RSA-768是最后一项重大公开记录。RSA-896是一个270位十进制数字的半素数，被列为公开挑战已超过十年。",
+          "community_discussion_en": "Commenters focused on the economics of idle compute rather than the cryptography: one argued that if a GPU cluster is already reserved and paid for, using spare cycles on math puzzles is effectively free, though mining crypto would be more financially rational, while others read the story as bearish for Anthropic (spare capacity being spent on puzzles) and for data-center buildout narratives if idle compute can be diverted from LLM training.",
+          "community_discussion_zh": "评论区的关注点集中在闲置算力的经济学，而非密码学本身：有人认为，既然GPU集群已经预留并付费，把空闲周期用来解数学题实际上等于免费，尽管用来挖加密货币在财务上更划算；也有人把这条消息解读为对Anthropic偏空（闲置产能被用来做题），以及对数据中心扩张叙事偏空——如果闲置算力可以被从大模型训练中挪作他用的话。",
           "confidence": 0.75,
           "current_state_en": "A researcher used Claude to port CADO-NFS to GPUs and orchestrated up to 2048 GPUs over ten days (~30 GPU-years) to factor the 896-bit RSA-896 number with existing number field sieve algorithms.",
           "current_state_zh": "A researcher used Claude to port CADO-NFS to GPUs and orchestrated up to 2048 GPUs over ten days (~30 GPU-years) to factor the 896-bit RSA-896 number with existing number field sieve algorithms.",
@@ -71293,8 +71305,8 @@
           "event_id": "evt_594fe5ef76dc4a0a",
           "first_seen_at": "2026-09-20T09:23:41.862639Z",
           "importance_score": 8.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "Bitcoin and Ethereum rely on elliptic-curve cryptography (ECDSA over secp256k1) rather than RSA, so this result carries little direct cryptographic exposure for major crypto assets; the more plausible transmission channel is sentiment in GPU compute markets, where visible evidence of large volumes of scavengeable idle data-center capacity feeds into the supply-and-demand narrative surrounding decentralized GPU compute networks and AI compute tokens.",
+          "market_impact_zh": "比特币和以太坊依赖的是椭圆曲线密码学（基于secp256k1的ECDSA），而非RSA，因此这一结果对主流加密资产几乎没有直接的密码学敞口；更可能的传导渠道是GPU算力市场的情绪面——大量可被“捡漏”利用的闲置数据中心算力被公开验证，会影响到围绕去中心化GPU算力网络和AI算力代币的供需叙事。",
           "material_change": true,
           "occurred_at": "2026-09-20T02:19:33Z",
           "published_at": "2026-09-20T02:19:33Z",
@@ -71302,6 +71314,18 @@
             {
               "title": "Community discussion",
               "url": "https://news.ycombinator.com/item?id=49771966"
+            },
+            {
+              "title": "RSA numbers - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/RSA_numbers"
+            },
+            {
+              "title": "RSA Factoring Challenge - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"
+            },
+            {
+              "title": "CADO-NFS",
+              "url": "https://cado-nfs.gitlabpages.inria.fr/"
             }
           ],
           "sources": [
@@ -71355,10 +71379,10 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
-          "community_discussion_en": "",
-          "community_discussion_zh": "",
+          "background_en": "Open-weight image models publish their trained parameters so anyone can download and run them locally, as opposed to proprietary APIs such as GPT-Image-2 or Ideogram that are only accessible through a hosted service. Most of these models are diffusion transformers (DiT): a text encoder converts the prompt into conditioning signals, and a stack of transformer layers iteratively denoises random noise into an image. Two capabilities are technically hard: rendering accurate small text, because the model must learn glyph structure rather than just shapes, and emitting an alpha (transparency) channel, because typical training pipelines produce flattened RGB images only, so background removal is usually a separate post-processing step. Qwen's predecessor Qwen-Image was a 20B MMDiT model released in August 2025, and Qwen-Image-Layered, a dedicated transparency model, arrived in December 2025.",
+          "background_zh": "开源权重图像模型会公开发布训练好的参数，任何人都可以下载并在本地运行，这与 GPT-Image-2、Ideogram 等只能通过托管服务调用的闭源 API 形成对比。此类模型大多采用扩散 Transformer（DiT）架构：文本编码器把提示词转成条件信号，再由一叠 Transformer 层逐步从随机噪声中去噪生成图像。其中有两项能力在技术上格外困难：一是准确渲染小字号文字，因为模型必须学会字形结构而不只是形状；二是输出 alpha 透明通道，因为常规训练管线只产生压平后的 RGB 图像，抠图通常要依赖单独的后处理步骤。Qwen 的前代产品 Qwen-Image 是 2025 年 8 月发布的 20B MMDiT 模型，而专攻透明生成的 Qwen-Image-Layered 则于 2025 年 12 月亮相。",
+          "community_discussion_en": "Commenters were broadly positive on the model's practical value: it is far smaller than the 20B Qwen-Image 1, and one developer running a prompt-to-UI design site called its small-text fidelity much better than anything else currently on the open-weight market. The two recurring concerns were the much more restrictive license compared with Apache-licensed earlier Qwen models, and weak prompt adherence — one user asking for glass 3D text in a specific city got broken text on a plain white background — while others noted that local image generation now feels further ahead than local code generation.",
+          "community_discussion_zh": "评论者总体上肯定其实用价值：它比 20B 的 Qwen-Image 1 小得多，一位运营提示词生成 UI 设计网站的开发者称，其小字号文字保真度明显优于当前开源权重市场上的其他模型。两大反复出现的担忧是：许可证比此前采用 Apache 许可的 Qwen 模型严格得多；以及提示词遵循能力偏弱——有用户要求生成某个城市中的玻璃质感 3D 文字，结果只得到白底上破碎的文字——同时也有人认为，本地图像生成目前已比本地代码生成走得更远。",
           "confidence": 0.75,
           "current_state_en": "Qwen released Qwen-Image-2.1, a compact 7B open-weight image generation model with native transparency and markedly improved text rendering, though under a more restrictive license than earlier Qwen releases.",
           "current_state_zh": "Qwen released Qwen-Image-2.1, a compact 7B open-weight image generation model with native transparency and markedly improved text rendering, though under a more restrictive license than earlier Qwen releases.",
@@ -71376,6 +71400,18 @@
             {
               "title": "Community discussion",
               "url": "https://news.ycombinator.com/item?id=49775499"
+            },
+            {
+              "title": "GitHub - QwenLM/Qwen-Image-2.1: Qwen's most powerful open ...",
+              "url": "https://github.com/QwenLM/Qwen-Image-2.1"
+            },
+            {
+              "title": "Qwen-Image-2.1: Compact, Efficient, and Unified Image Creation",
+              "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+            },
+            {
+              "title": "Qwen-Image-2.1 in ComfyUI: Open-Weight Image Generation and...",
+              "url": "https://blog.comfy.org/p/qwen-image-21-in-comfyui-open-weight"
             }
           ],
           "sources": [
@@ -71425,8 +71461,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "A pre-IPO perpetual is a cash-settled derivative that tracks the anticipated public valuation of a company that is still private; because there is no listed share price, the contract has no external spot oracle to anchor to. Tokenized stocks are blockchain-based instruments designed to mirror the economic exposure of real equities without transferring ownership. OpenAI and Anthropic are private AI developers that have not yet listed, so exposure to them has traditionally required private-market access rather than a public exchange.",
+          "background_zh": "上市前永续合约是一种现金结算的衍生品，追踪的是仍处于私有状态的公司在上市后可能达到的估值；由于不存在公开挂牌的股价，这类合约没有可锚定的外部现货价格来源。代币化股票则是基于区块链的工具，旨在复制真实股票的经济敞口，但并不转移所有权。OpenAI和Anthropic都是尚未上市的私营AI公司，因此过去想要获得其敞口通常只能通过私募市场，而非公开交易所。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -71437,12 +71473,25 @@
           "event_id": "evt_4dc75e7cb1ee5520",
           "first_seen_at": "2026-09-20T16:21:54.597297Z",
           "importance_score": 7.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission runs through derivatives liquidity and sentiment rather than spot supply: pre-IPO perps let EEA traders express leveraged views on AI-lab valuations without any tokenized equity changing hands, which can concentrate speculative flow into OKX's EEA derivatives book and intensify competition among venues building synthetic pre-IPO exposure. Because the contracts reference unlisted companies, pricing depends on venue-determined valuation and funding mechanics rather than an observable spot market, a structure that can widen price dislocations around funding resets or IPO-related news.",
+          "market_impact_zh": "传导路径主要通过衍生品流动性与市场情绪，而非现货供给：上市前永续合约让EEA交易者可以在没有任何代币化股票实际易手的情况下，对AI实验室估值表达杠杆化观点，这会把投机资金集中到OKX的欧洲经济区衍生品盘口，并加剧各平台在合成式上市前敞口产品上的竞争。由于合约参照的是未上市公司，定价依赖交易平台设定的估值与资金费率机制而非可观测的现货市场，因此在资金费率结算或IPO相关消息出现时，价格错位可能被放大。",
           "material_change": true,
           "occurred_at": "2026-09-20T14:02:46Z",
           "published_at": "2026-09-20T14:02:46Z",
-          "references": [],
+          "references": [
+            {
+              "title": "OKX X-Perps Guide",
+              "url": "https://www.okx.com/help/x-perps-guide"
+            },
+            {
+              "title": "OKX Launches X-Perps in Europe: MiFID Regulated Crypto ...",
+              "url": "https://www.businesswire.com/news/home/20260415510125/en/OKX-Launches-X-Perps-in-Europe-MiFID-Regulated-Crypto-Derivatives-with-up-to-10x-Leverage"
+            },
+            {
+              "title": "Pre-IPO Perpetuals: Front-Running Wall Street",
+              "url": "https://crypto.com/eea/research/pre-ipo-perps-may-2026"
+            }
+          ],
           "sources": [
             {
               "label": "OKXAnnouncements",
@@ -71493,8 +71542,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Tokenized stocks are blockchain-based tokens that represent an ownership or economic interest in a publicly listed equity, designed to settle and transfer faster than conventional book-entry shares. For years, US platforms offering them have operated in a grey zone because a venue that matches buy and sell orders in securities can fall under the Exchange Act's registration regime. The SEC's \"Innovation Exemption\" is a targeted, time-limited accommodation that lets certain tokenized-securities venues and liquidity providers operate without being classified as exchanges, and the accompanying request for comment signals that permanent rules are still being drafted.",
+          "background_zh": "代币化股票是把公开上市股票的所有权或经济权益映射到区块链上的代币，设计目标是在结算和转让上比传统簿记股票更快。多年来，提供此类产品的美国平台一直处于灰色地带，因为撮合证券买卖订单的场所可能落入《证券交易法》的注册监管范围。SEC 的“创新豁免”是一项有针对性的、限期性的监管宽免，允许特定的代币化证券交易场所和流动性提供商在不被归类为交易所的前提下运营；同时配套的征求意见程序表明，长期规则仍在制定之中。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -71505,12 +71554,25 @@
           "event_id": "evt_c3d2ba9cbc37a78f",
           "first_seen_at": "2026-09-20T16:21:54.617518Z",
           "importance_score": 8.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission channel runs through market structure rather than token supply: relief for tokenized-securities venues lowers the legal risk for platforms like Coinbase (COIN equity exposure) and for the Base network where its tokenized stocks settle, while expanding the addressable venue set for liquidity providers and stablecoin-settled equity trading. A narrower, conditional exemption limits how broad the near-term effect can be, but it re-rates the competitive position of compliant tokenization platforms relative to offshore or synthetic alternatives.",
+          "market_impact_zh": "传导路径主要来自市场结构而非代币供给：对代币化证券交易场所的宽免降低了 Coinbase（对应 COIN 股票敞口）以及承载其代币化股票结算的 Base 网络的合规风险，同时为流动性提供商和以稳定币结算的股票交易拓宽了可参与的场所范围。由于豁免范围较窄且附有条件，短期内的影响广度仍然有限，但它相对离岸或合成型替代方案，重新提升了合规代币化平台的竞争地位。",
           "material_change": true,
           "occurred_at": "2026-09-20T14:29:40Z",
           "published_at": "2026-09-20T14:29:40Z",
-          "references": [],
+          "references": [
+            {
+              "title": "SEC.gov | SEC Issues “Innovation Exemption” to Facilitate the Trading of Tokenized NMS Stock and Request for Comment",
+              "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment"
+            },
+            {
+              "title": "SEC clears path for tokenized stocks, bringing the market closer to 24/7 trading",
+              "url": "https://www.cnbc.com/2026/09/17/sec-clears-path-for-tokenized-stocks-bringing-24/7-trading-closer.html"
+            },
+            {
+              "title": "Coinbase Tokenize",
+              "url": "https://www.coinbase.com/tokenize"
+            }
+          ],
           "sources": [
             {
               "label": "Crypto News",
@@ -71633,8 +71695,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Pre-IPO investing means buying a stake in a company before it lists on a stock exchange, a market traditionally intermediated by venture funds and specialized secondary platforms. Tokenization turns such an asset into a blockchain-based token, and the broader real-world-asset (RWA) sector applies the same approach to stocks, real estate and private markets. Binance Wallet is the exchange's self-custody wallet, and PancakeSwap is the largest decentralized exchange on the BNB Chain, which is why the campaigns are being hosted there rather than on Binance's centralized order book.",
+          "background_zh": "Pre-IPO 投资指的是在公司登陆证券交易所之前买入其股份，这一市场传统上由风投基金和专业二级交易平台作为中介。代币化则是把这类资产转化为基于区块链的代币，而更广泛的现实世界资产（RWA）赛道正是把同样的方法用于股票、房地产和私募市场。币安钱包是币安的自托管钱包，PancakeSwap 则是 BNB Chain 上规模最大的去中心化交易所，因此这些活动由 PancakeSwap 承接，而非在币安的中心化订单簿上进行。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -71645,12 +71707,25 @@
           "event_id": "evt_4a6658f47f2a5a9a",
           "first_seen_at": "2026-09-20T16:21:54.618318Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The direct transmission path runs through BNB Chain, where PancakeSwap-hosted subscriptions could add on-chain volume and demand for BNB-denominated liquidity, while the more diffuse effect is sentiment around exchange-issued tokenized products competing for the RWA narrative. The product also draws scrutiny from securities regulators, since tokenized private-company exposure raises questions about what the token legally represents.",
+          "market_impact_zh": "最直接的传导路径是 BNB Chain：由 PancakeSwap 承接的认购活动可能带来链上交易量，并增加对以 BNB 计价流动性的需求；更间接的影响则体现在市场对交易所发行代币化产品、争夺 RWA 叙事的情绪上。与此同时，该产品也会受到证券监管机构的关注，因为代币化的私募公司敞口会引发“该代币在法律上代表什么”的疑问。",
           "material_change": true,
           "occurred_at": "2026-09-20T12:03:51Z",
           "published_at": "2026-09-20T12:03:51Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Binance Wallet launches Pre-Access campaigns for tokenized ...",
+              "url": "https://cryptobriefing.com/binance-pre-access-pre-ipo-subscriptions/"
+            },
+            {
+              "title": "Binance Wallet Launches Pre-Access Campaigns for Tokenized ...",
+              "url": "https://coinalertnews.com/news/2026/09/20/binance-pre-access-pancakeswap-launch"
+            },
+            {
+              "title": "Binance Wallet Launches Pre-Access for Tokenized Pre-IPO Exposure",
+              "url": "https://www.coinarticle.com/article/binance-wallet-pre-access-tokenized-pre-ipo"
+            }
+          ],
           "sources": [
             {
               "label": "Crypto News",
@@ -71930,8 +72005,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "An iOS exploit kit is a packaged collection of vulnerabilities and exploitation code that lets an attacker break out of the iOS sandbox — the isolation layer that normally prevents one app from reading another app's data or the wider file system. Crypto wallets on phones store private keys or seed phrases locally for self-custody, so anything that escapes the sandbox can potentially copy those secrets and let an attacker drain funds remotely. Whale-tracking apps are a natural lure because they ask users to link or paste wallet addresses, giving them a plausible reason to install and keep the app running on a device that also holds wallet software.",
+          "background_zh": "iOS 漏洞利用套件是一组打包好的漏洞与利用代码，可让攻击者突破 iOS 沙盒——即通常阻止某个应用读取其他应用数据或访问更广泛文件系统的隔离层。手机上的加密钱包为实现自托管，会在本地保存私钥或助记词，因此任何能逃出沙盒的代码都可能复制这些秘密信息，使攻击者远程盗走资金。巨鲸追踪类应用是天然的诱饵，因为它们会要求用户关联或粘贴钱包地址，从而让用户有合理理由在同时存放钱包软件的设备上安装并长期运行该应用。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -71942,12 +72017,25 @@
           "event_id": "evt_c7a35eff76922e02",
           "first_seen_at": "2026-09-20T18:57:23.244422Z",
           "importance_score": 7.0,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The exposure runs through self-custody key exfiltration on Solana, Ethereum and TRON mobile wallets, so the immediate risk sits with individual hot-wallet holders rather than exchange or protocol reserves. A confirmed consumer-app-based key stealer can shift sentiment toward hardware and air-gapped custody and intensify scrutiny of mobile app store review for crypto apps.",
+          "market_impact_zh": "风险传导路径是 Solana、以太坊和 TRON 移动钱包自托管私钥被窃取，因此直接受影响的是个人的热钱包持有者，而非交易所或协议储备。一款经确认可窃取密钥的消费级应用可能推动市场情绪转向硬件钱包与离线隔离式托管，并加剧对加密类移动应用商店审核机制的审视。",
           "material_change": true,
           "occurred_at": "2026-09-20T18:06:00Z",
           "published_at": "2026-09-20T18:06:00Z",
-          "references": [],
+          "references": [
+            {
+              "title": "FomoPeek iOS App Malware Exposes Crypto Keys as Users Report Wallet Drains",
+              "url": "https://cryptoadventure.com/fomopeek-ios-app-malware-exposes-crypto-keys-as-users-report-wallet-drains/"
+            },
+            {
+              "title": "FomoPeek Malware: How a Read-Only Whale Tracker Stole iOS Private Keys",
+              "url": "https://paragraph.com/@onchaindiary/fomopeek-app-malware-explained"
+            },
+            {
+              "title": "Coruna: The Mysterious Journey of a Powerful iOS Exploit Kit",
+              "url": "https://cloud.google.com/blog/topics/threat-intelligence/coruna-powerful-ios-exploit-kit"
+            }
+          ],
           "sources": [
             {
               "label": "finance.biggo.com",
@@ -72006,8 +72094,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "Binance is the world's largest cryptocurrency exchange by trading volume and users, and it spent years operating across jurisdictions without clear local licences before settling major US enforcement actions in 2023, including a DOJ guilty plea over Bank Secrecy Act and money-transmitting violations. The UAE became central to its rehabilitation strategy: in 2025 Mubadala, the UAE's sovereign wealth fund, bought a $2 billion stake, and in December 2025 the Financial Services Regulatory Authority of ADGM in Abu Dhabi authorised Binance.com under a comprehensive framework, making it the first crypto exchange with a global licence under that regime.",
+          "background_zh": "按交易量和用户数计算，币安是全球最大的加密货币交易所。在 2023 年与美国监管机构达成重大和解（包括就违反《银行保密法》和未注册为货币传输业务向美国司法部认罪）之前，它曾多年在多个司法辖区缺乏明确本地牌照的情况下运营。阿联酋随后成为其重建信誉战略的核心：2025 年阿联酋主权财富基金 Mubadala 入股 20 亿美元；2025 年 12 月，阿布扎比国际金融中心 ADGM 的金融服务监管局（FSRA）依据一套全面监管框架正式批准币安全球平台 Binance.com，使其成为首个在该框架下获得全球牌照的加密交易所。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -72018,12 +72106,25 @@
           "event_id": "evt_d8ae999be9e6a399",
           "first_seen_at": "2026-09-20T22:36:11.867640Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The transmission channel here is regulatory and reputational rather than balance-sheet: Binance's UAE licensing status and its institutional standing with sovereign-linked partners are the exposed points, with possible spillover to sentiment around exchange tokens and to how market participants price jurisdictional risk for large offshore venues. There is no reported impact on customer assets or platform access, so any market reaction would run through confidence and licensing headlines rather than through liquidity, custody, or supply.",
+          "market_impact_zh": "这里的传导渠道是监管与声誉层面，而非资产负债表层面：真正暴露的是币安在阿联酋的牌照地位，以及它与主权背景合作方之间的机构信任，并可能外溢至交易平台代币的市场情绪，以及市场参与者对大型离岸交易所司法辖区风险的定价方式。由于没有客户资产或平台访问受影响的报道，任何市场反应都将通过信心和牌照相关新闻传导，而不是通过流动性、托管或代币供给。",
           "material_change": true,
           "occurred_at": "2026-09-20T10:43:21Z",
           "published_at": "2026-09-20T10:43:21Z",
-          "references": [],
+          "references": [
+            {
+              "title": "Binance - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Binance"
+            },
+            {
+              "title": "Binance Becomes First Crypto Exchange To Secure a Global License Under ADGM Framework, Setting a New Standard in Digital-Asset Regulation",
+              "url": "https://www.adgm.com/media/announcements/binance-becomes-first-crypto-exchange-to-secure-a-global-license-under-adgm-framework-setting-a-new-standard-in-digital-asset-regulation"
+            },
+            {
+              "title": "Criminal Division | United States v. Binance Holdings Limited, d/b/a Binance.com | United States Department of Justice",
+              "url": "https://www.justice.gov/criminal/case/united-states-v-binance-holdings-limited-dba-binancecom"
+            }
+          ],
           "sources": [
             {
               "label": "Springfield News-Sun",
@@ -72085,8 +72186,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "MiCA (Markets in Crypto-Assets Regulation, EU Regulation 2023/1114) is the EU's unified rulebook for crypto-assets, covering token issuance, trading venues, custody and stablecoins, and it replaced a patchwork of national regimes. Firms must be authorized as crypto-asset service providers in one member state, after which they can passport those rights across the EU, making the choice of licensing jurisdiction strategically important. A transition period allowed firms already operating under national law to continue temporarily, which is why the timing of pending applications became so sensitive.",
+          "background_zh": "MiCA（《加密资产市场条例》，欧盟第2023/1114号条例）是欧盟针对加密资产的统一监管框架，涵盖代币发行、交易平台、托管与稳定币，取代了此前各国各自为政的监管格局。企业需在某一成员国取得加密资产服务提供商牌照，之后即可凭“通行证”在整个欧盟开展业务，因此选择哪个司法辖区申牌具有战略意义。法规设有过渡期，允许此前依据各国法律运营的企业暂时继续经营，这也正是待批申请的时间节点变得格外敏感的原因。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -72097,12 +72198,25 @@
           "event_id": "evt_dea9b05248ea323f",
           "first_seen_at": "2026-09-20T22:36:11.867816Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The story transmits to crypto markets mainly through EU market-access and liquidity channels: if Binance cannot secure a MiCA passport, European spot and derivatives liquidity could migrate toward already-licensed venues and competing exchanges, while the accompanying scrutiny of dollar stablecoins touches EUR- and USD-denominated stablecoin segments under MiCA. It also affects sentiment around other exchanges' pending EU applications, since it signals that political considerations can override an otherwise completed review.",
+          "market_impact_zh": "该消息主要通过欧盟市场准入与流动性渠道传导至加密市场：若币安无法取得MiCA通行牌照，欧洲的现货与衍生品流动性可能向已获牌照的交易所和竞争对手迁移；同时报道中对美元稳定币的关注也波及MiCA框架下以欧元和美元计价的稳定币板块。此外，它还影响市场对其他交易所待批欧盟申请的预期情绪，因为这意味着政治考量可能凌驾于已完成的技术审查之上。",
           "material_change": true,
           "occurred_at": "2026-09-20T19:15:29Z",
           "published_at": "2026-09-20T19:15:29Z",
-          "references": [],
+          "references": [
+            {
+              "title": "ECB President Christine Lagarde blocked Binance’s EU MiCA ...",
+              "url": "https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj"
+            },
+            {
+              "title": "Binance pulls MiCA license bid in Greece, will reapply... - Cryptopolitan",
+              "url": "https://www.cryptopolitan.com/binance-pulls-mica-licence-greece/"
+            },
+            {
+              "title": "Markets in Crypto-Assets - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets"
+            }
+          ],
           "sources": [
             {
               "label": "Crowdfund Insider",
@@ -72155,8 +72269,8 @@
       ],
       "updates": [
         {
-          "background_en": "",
-          "background_zh": "",
+          "background_en": "ZetaChain was built with the Cosmos SDK and Tendermint consensus and included an Ethereum Virtual Machine-compatible execution layer called zEVM, positioning itself as a base layer for omnichain smart contracts and cross-chain messaging between otherwise separate networks. Anuma is the same team's private AI chat product, which builds an encrypted memory of a user's conversations that stays on the user's device and travels across different AI models. Solana is a high-throughput Layer 1, and SPL is its native token standard, so migrating ZETA means issuing the asset on Solana and retiring it on its original chain.",
+          "background_zh": "ZetaChain 基于 Cosmos SDK 和 Tendermint 共识构建，并包含一个兼容以太坊虚拟机的执行层 zEVM，定位为支持全链（omnichain）智能合约和跨链消息传递的基础层。Anuma 是同一团队的私密 AI 聊天产品，它会为用户对话建立加密记忆，数据保存在用户设备上并可跨不同 AI 模型使用。Solana 是一条高吞吐量的 Layer 1，SPL 是其原生代币标准，因此 ZETA 迁移意味着在 Solana 上发行该资产并在原链上将其退出。",
           "community_discussion_en": "",
           "community_discussion_zh": "",
           "confidence": 0.75,
@@ -72167,12 +72281,25 @@
           "event_id": "evt_449bb103ad24ccbc",
           "first_seen_at": "2026-09-20T22:36:14.638427Z",
           "importance_score": 7.5,
-          "market_impact_en": "",
-          "market_impact_zh": "",
+          "market_impact_en": "The vote puts the ZETA asset on a path toward a chain migration and the retirement of its original network, which affects spot liquidity and redemption mechanics on exchanges that list ZETA, and shifts validator and bridge-related activity away from the ZetaChain ecosystem. A successful migration would also add another Solana SPL asset to that ecosystem's token universe, while the wind-down itself feeds broader sentiment about the sustainability of smaller Layer 1 networks.",
+          "market_impact_zh": "该投票使 ZETA 资产进入链迁移通道，其原链将逐步退出，这会影响上线 ZETA 的交易所的现货流动性与兑换机制，并使验证者及跨链桥相关活动从 ZetaChain 生态中流出。若迁移顺利完成，Solana 生态的代币版图中将新增一枚 SPL 资产，而此次关停本身也会强化市场对小型 Layer 1 网络可持续性的讨论情绪。",
           "material_change": true,
           "occurred_at": "2026-09-20T20:11:49Z",
           "published_at": "2026-09-20T20:11:49Z",
-          "references": [],
+          "references": [
+            {
+              "title": "ZetaChain votes to shut down Layer 1 network and move... | The Block",
+              "url": "https://www.theblock.co/news/defi/2026-09-20-zetachain-votes-to-shut-down-layer-1-network-and-move-zeta-to-solana-415878"
+            },
+            {
+              "title": "ZetaChain Governance Vote Passes 99.4%: ZETA Migrates to ...",
+              "url": "https://solanacompass.com/news/zetachain-proposal-68-passes-with-994-support-zeta-to-migrate-to-solana-spl"
+            },
+            {
+              "title": "ZetaChain proposes shutting down its L1, migrating ZETA token ...",
+              "url": "https://cryptobriefing.com/zetachain-shutdown-zeta-migration-solana/"
+            }
+          ],
           "sources": [
             {
               "label": "The Block",
@@ -72191,6 +72318,179 @@
           "update_type": "initial",
           "what_changed_en": "ZetaChain token holders voted to shut down the project's Layer 1 network and move the ZETA asset to Solana, with the team pivoting to its private AI app Anuma, though the migration requires one more vote.",
           "what_changed_zh": "ZetaChain token holders voted to shut down the project's Layer 1 network and move the ZETA asset to Solana, with the team pivoting to its private AI app Anuma, though the migration requires one more vote."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A newly launched exchange-traded fund now offers investors regulated exposure to TRON (TRX), the native asset of the TRON blockchain, through an ordinary brokerage account rather than a crypto exchange. The product extends the altcoin ETF wave beyond Bitcoin and Ethereum to a top-20 digital asset.\n\nIt marks a market-structure shift: TRX becomes reachable to investors who cannot or will not open a crypto exchange account, potentially widening the holder base and deepening institutional familiarity with the asset. It also strengthens the precedent that altcoins beyond BTC and ETH can obtain US-listed, regulated wrappers, which matters for the dozens of other pending crypto ETF filings.\n\nTRON is a delegated proof-of-stake, smart-contract-capable blockchain whose TRX token can be frozen to obtain Tron Power, giving holders governance weight and energy or bandwidth resources. The asset has also drawn heavy regulatory and law-enforcement scrutiny, with The Wall Street Journal reporting in 2025 that TRON was the channel for more than half of illegal crypto activity in 2024 and the UN Office on Drugs and Crime describing it as a preferred choice for money launderers in Asia.",
+      "current_state_zh": "一只新推出的交易所交易基金（ETF）现可通过普通券商账户，为投资者提供对 TRON 区块链原生资产 TRX 的受监管敞口，而无需使用加密货币交易所。该产品把山寨币 ETF 的浪潮从比特币和以太坊扩展到了一只市值排名前二十的数字资产。\n\n这标志着市场结构的转变：TRX 现在可以被那些无法或不愿开设加密货币交易所账户的投资者所接触，有望扩大持有者基础并加深机构对该资产的熟悉度。这也强化了“除 BTC 和 ETH 之外的山寨币同样能获得美国上市受监管包装”的先例，对数十份仍在排队中的加密 ETF 申请意义重大。\n\nTRON 是一条采用委托权益证明（DPoS）机制、支持智能合约的区块链，其 TRX 代币可被冻结以获取 Tron Power，从而使持有者获得治理权重以及能量或带宽资源。该资产同时也面临严厉的监管与执法审视：据《华尔街日报》2025 年报道，2024 年超过一半的非法加密活动通过 TRON 进行，联合国毒品和犯罪问题办公室也将其称为亚洲洗钱者的首选渠道之一。",
+      "entities": [
+        "brokerage",
+        "etf",
+        "exposure",
+        "gives",
+        "investors",
+        "new",
+        "regulated",
+        "traditional",
+        "tron"
+      ],
+      "event_id": "evt_b1213d540f8cd665",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-20T23:27:21.730541Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-20T23:27:21.730541Z",
+      "last_updated_at": "2026-09-20T23:27:21.730541Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "New ETF Gives Regulated TRON Exposure to Traditional Brokerage Investors",
+      "title_zh": "全新 ETF 为传统券商投资者提供受监管的 TRON 敞口",
+      "topics": [
+        "altcoins",
+        "etf",
+        "tron"
+      ],
+      "updates": [
+        {
+          "background_en": "An exchange-traded fund is a listed vehicle whose shares trade on a stock exchange and are created or redeemed by authorized participants, letting investors gain exposure to an underlying asset without holding it directly. Crypto ETFs became a mainstream US product after spot Bitcoin and Ethereum funds were approved, and issuers have since pushed a large backlog of applications covering altcoins such as TRX. TRON itself launched in 2017 under the TRON Foundation in Singapore, founded by Justin Sun, and migrated from an Ethereum-based ERC-20 token to its own blockchain in 2018.",
+          "background_zh": "交易所交易基金（ETF）是一种上市工具，其份额在证券交易所交易，并由授权参与者进行申购与赎回，使投资者无需直接持有标的资产即可获得敞口。在现货比特币和以太坊基金获批后，加密 ETF 成为美国的主流产品，发行方此后提交了大量覆盖 TRX 等山寨币的申请。TRON 本身于 2017 年由 Justin Sun 创立、在新加坡 TRON 基金会管理下推出，并在 2018 年从基于以太坊的 ERC-20 代币迁移到自有区块链。",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A newly launched exchange-traded fund now offers investors regulated exposure to TRON (TRX), the native asset of the TRON blockchain, through an ordinary brokerage account rather than a crypto exchange. The product extends the altcoin ETF wave beyond Bitcoin and Ethereum to a top-20 digital asset.\n\nIt marks a market-structure shift: TRX becomes reachable to investors who cannot or will not open a crypto exchange account, potentially widening the holder base and deepening institutional familiarity with the asset. It also strengthens the precedent that altcoins beyond BTC and ETH can obtain US-listed, regulated wrappers, which matters for the dozens of other pending crypto ETF filings.\n\nTRON is a delegated proof-of-stake, smart-contract-capable blockchain whose TRX token can be frozen to obtain Tron Power, giving holders governance weight and energy or bandwidth resources. The asset has also drawn heavy regulatory and law-enforcement scrutiny, with The Wall Street Journal reporting in 2025 that TRON was the channel for more than half of illegal crypto activity in 2024 and the UN Office on Drugs and Crime describing it as a preferred choice for money launderers in Asia.",
+          "current_state_zh": "一只新推出的交易所交易基金（ETF）现可通过普通券商账户，为投资者提供对 TRON 区块链原生资产 TRX 的受监管敞口，而无需使用加密货币交易所。该产品把山寨币 ETF 的浪潮从比特币和以太坊扩展到了一只市值排名前二十的数字资产。\n\n这标志着市场结构的转变：TRX 现在可以被那些无法或不愿开设加密货币交易所账户的投资者所接触，有望扩大持有者基础并加深机构对该资产的熟悉度。这也强化了“除 BTC 和 ETH 之外的山寨币同样能获得美国上市受监管包装”的先例，对数十份仍在排队中的加密 ETF 申请意义重大。\n\nTRON 是一条采用委托权益证明（DPoS）机制、支持智能合约的区块链，其 TRX 代币可被冻结以获取 Tron Power，从而使持有者获得治理权重以及能量或带宽资源。该资产同时也面临严厉的监管与执法审视：据《华尔街日报》2025 年报道，2024 年超过一半的非法加密活动通过 TRON 进行，联合国毒品和犯罪问题办公室也将其称为亚洲洗钱者的首选渠道之一。",
+          "detailed_summary_en": "A newly launched exchange-traded fund now offers investors regulated exposure to TRON (TRX), the native asset of the TRON blockchain, through an ordinary brokerage account rather than a crypto exchange. The product extends the altcoin ETF wave beyond Bitcoin and Ethereum to a top-20 digital asset.\n\nIt marks a market-structure shift: TRX becomes reachable to investors who cannot or will not open a crypto exchange account, potentially widening the holder base and deepening institutional familiarity with the asset. It also strengthens the precedent that altcoins beyond BTC and ETH can obtain US-listed, regulated wrappers, which matters for the dozens of other pending crypto ETF filings.\n\nTRON is a delegated proof-of-stake, smart-contract-capable blockchain whose TRX token can be frozen to obtain Tron Power, giving holders governance weight and energy or bandwidth resources. The asset has also drawn heavy regulatory and law-enforcement scrutiny, with The Wall Street Journal reporting in 2025 that TRON was the channel for more than half of illegal crypto activity in 2024 and the UN Office on Drugs and Crime describing it as a preferred choice for money launderers in Asia.",
+          "detailed_summary_zh": "一只新推出的交易所交易基金（ETF）现可通过普通券商账户，为投资者提供对 TRON 区块链原生资产 TRX 的受监管敞口，而无需使用加密货币交易所。该产品把山寨币 ETF 的浪潮从比特币和以太坊扩展到了一只市值排名前二十的数字资产。\n\n这标志着市场结构的转变：TRX 现在可以被那些无法或不愿开设加密货币交易所账户的投资者所接触，有望扩大持有者基础并加深机构对该资产的熟悉度。这也强化了“除 BTC 和 ETH 之外的山寨币同样能获得美国上市受监管包装”的先例，对数十份仍在排队中的加密 ETF 申请意义重大。\n\nTRON 是一条采用委托权益证明（DPoS）机制、支持智能合约的区块链，其 TRX 代币可被冻结以获取 Tron Power，从而使持有者获得治理权重以及能量或带宽资源。该资产同时也面临严厉的监管与执法审视：据《华尔街日报》2025 年报道，2024 年超过一半的非法加密活动通过 TRON 进行，联合国毒品和犯罪问题办公室也将其称为亚洲洗钱者的首选渠道之一。",
+          "event_id": "evt_b1213d540f8cd665",
+          "first_seen_at": "2026-09-20T23:27:21.730541Z",
+          "importance_score": 7.0,
+          "market_impact_en": "The transmission channel is access and liquidity: a US-listed wrapper lets brokerage-based capital reach TRX through authorized-participant creation and redemption, which can affect spot depth and the spread between exchange-traded and offshore TRX pricing. It also feeds sentiment across the altcoin segment, since each successful listing lowers the perceived regulatory bar for other pending crypto ETF applications.",
+          "market_impact_zh": "传导渠道在于准入与流动性：美国上市的包装工具让券商渠道的资金可通过授权参与者的申购赎回机制触达 TRX，可能影响现货深度以及场内与离岸 TRX 定价之间的价差。这同时也会影响整个山寨币板块的情绪，因为每一次成功上市都会降低市场对其他待批加密 ETF 申请所面临的监管门槛预期。",
+          "material_change": true,
+          "occurred_at": "2026-09-20T20:45:00Z",
+          "published_at": "2026-09-20T20:45:00Z",
+          "references": [
+            {
+              "title": "Tron (cryptocurrency)",
+              "url": "https://en.wikipedia.org/wiki/Tron_(cryptocurrency)"
+            },
+            {
+              "title": "TRON price today, TRX to USD live price, marketcap... | CoinMarketCap",
+              "url": "https://coinmarketcap.com/currencies/tron/"
+            },
+            {
+              "title": "Altcoin",
+              "url": "https://en.wikipedia.org/wiki/Altcoin"
+            }
+          ],
+          "sources": [
+            {
+              "label": "aol.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://www.aol.com/articles/investors-now-invest-surging-tron-194700000.html"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260920T204500Z::https://www.aol.com/articles/investors-now-invest-surging-tron-194700000.html"
+          ],
+          "time_precision": "published",
+          "title_en": "New ETF Gives Regulated TRON Exposure to Traditional Brokerage Investors",
+          "title_zh": "全新 ETF 为传统券商投资者提供受监管的 TRON 敞口",
+          "update_id": "upd_ba7c540eba1eb506",
+          "update_type": "initial",
+          "what_changed_en": "A newly launched exchange-traded fund now offers investors regulated exposure to TRON (TRX), the native asset of the TRON blockchain, through an ordinary brokerage account rather than a crypto exchange. The product extends the altcoin ETF wave beyond Bitcoin and Ethereum to a top-20 digital asset.\n\nIt marks a market-structure shift: TRX becomes reachable to investors who cannot or will not open a crypto exchange account, potentially widening the holder base and deepening institutional familiarity with the asset. It also strengthens the precedent that altcoins beyond BTC and ETH can obtain US-listed, regulated wrappers, which matters for the dozens of other pending crypto ETF filings.\n\nTRON is a delegated proof-of-stake, smart-contract-capable blockchain whose TRX token can be frozen to obtain Tron Power, giving holders governance weight and energy or bandwidth resources. The asset has also drawn heavy regulatory and law-enforcement scrutiny, with The Wall Street Journal reporting in 2025 that TRON was the channel for more than half of illegal crypto activity in 2024 and the UN Office on Drugs and Crime describing it as a preferred choice for money launderers in Asia.",
+          "what_changed_zh": "一只新推出的交易所交易基金（ETF）现可通过普通券商账户，为投资者提供对 TRON 区块链原生资产 TRX 的受监管敞口，而无需使用加密货币交易所。该产品把山寨币 ETF 的浪潮从比特币和以太坊扩展到了一只市值排名前二十的数字资产。\n\n这标志着市场结构的转变：TRX 现在可以被那些无法或不愿开设加密货币交易所账户的投资者所接触，有望扩大持有者基础并加深机构对该资产的熟悉度。这也强化了“除 BTC 和 ETH 之外的山寨币同样能获得美国上市受监管包装”的先例，对数十份仍在排队中的加密 ETF 申请意义重大。\n\nTRON 是一条采用委托权益证明（DPoS）机制、支持智能合约的区块链，其 TRX 代币可被冻结以获取 Tron Power，从而使持有者获得治理权重以及能量或带宽资源。该资产同时也面临严厉的监管与执法审视：据《华尔街日报》2025 年报道，2024 年超过一半的非法加密活动通过 TRON 进行，联合国毒品和犯罪问题办公室也将其称为亚洲洗钱者的首选渠道之一。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+      "current_state_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+      "entities": [
+        "accounts",
+        "bug",
+        "existing",
+        "identity",
+        "into",
+        "let",
+        "polymarket",
+        "reportedly",
+        "thieves"
+      ],
+      "event_id": "evt_8083034763a6cb04",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-20T23:27:21.730703Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-20T23:27:21.730703Z",
+      "last_updated_at": "2026-09-20T23:27:21.730703Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Polymarket Bug Reportedly Let Identity Thieves Into Existing Accounts",
+      "title_zh": "Polymarket 漏洞据报让身份窃贼登入现有账户",
+      "topics": [
+        "account-takeover",
+        "identity-theft",
+        "polymarket",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "Polymarket is an American cryptocurrency-based prediction market where users place bets on future outcomes spanning sports matches, economic indicators, weather patterns, awards, and political or legislative results. Account takeover, or ATO, happens when an attacker gains unauthorized control of an account — frequently not by \"hacking\" anything but simply by logging in with stolen or forged credentials. Because prediction market accounts are tied to balances and open positions, a compromised account can be used to move funds or place unauthorized trades.",
+          "background_zh": "Polymarket 是一家美国加密预测市场平台，用户可就未来事件的结果下注，范围涵盖体育赛事、经济指标、天气、奖项以及政治与立法结果等。账户接管（account takeover，简称 ATO）指攻击者未经授权取得账户控制权，其常见方式并非“攻破”系统，而是直接使用窃取或伪造的凭证登录。由于预测市场账户与余额和未平仓头寸绑定，被接管的账户可能被用于转移资金或进行未授权交易。",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+          "current_state_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+          "detailed_summary_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+          "detailed_summary_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+          "event_id": "evt_8083034763a6cb04",
+          "first_seen_at": "2026-09-20T23:27:21.730703Z",
+          "importance_score": 7.5,
+          "market_impact_en": "The transmission channel runs through user trust and platform-level liquidity: a confirmed authentication flaw at Polymarket could affect deposits and trading activity on that venue and invite closer scrutiny of identity and custody practices across prediction markets, with exposure concentrated in that segment rather than in majors like bitcoin or ether.",
+          "market_impact_zh": "传导路径主要体现在用户信任与平台层面的流动性：若 Polymarket 的身份验证漏洞被确认，可能影响该平台的入金与交易活跃度，并促使外界更严格审视整个预测市场板块的身份核验与托管实践；风险敞口集中于该细分领域，而非比特币、以太坊等主流资产。",
+          "material_change": true,
+          "occurred_at": "2026-09-20T19:15:00Z",
+          "published_at": "2026-09-20T19:15:00Z",
+          "references": [
+            {
+              "title": "Polymarket - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Polymarket"
+            },
+            {
+              "title": "What is account takeover? | Cloudflare",
+              "url": "https://www.cloudflare.com/learning/access-management/account-takeover/"
+            },
+            {
+              "title": "Account Takeover Attack (ATO) | Types, Detection & Protection | Imperva",
+              "url": "https://www.imperva.com/learn/application-security/account-takeover-ato/"
+            }
+          ],
+          "sources": [
+            {
+              "label": "gizmodo.com",
+              "official": false,
+              "source_type": "gdelt",
+              "url": "https://gizmodo.com/polymarket-bug-reportedly-let-identity-thieves-into-existing-accounts-2000814520"
+            }
+          ],
+          "story_ids": [
+            "gdelt:article:20260920T191500Z::https://gizmodo.com/polymarket-bug-reportedly-let-identity-thieves-into-existing-accounts-2000814520"
+          ],
+          "time_precision": "published",
+          "title_en": "Polymarket Bug Reportedly Let Identity Thieves Into Existing Accounts",
+          "title_zh": "Polymarket 漏洞据报让身份窃贼登入现有账户",
+          "update_id": "upd_3416a79a6e4becb7",
+          "update_type": "initial",
+          "what_changed_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+          "what_changed_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。"
         }
       ]
     }

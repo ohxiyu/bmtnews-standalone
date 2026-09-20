@@ -47,14 +47,27 @@
       "current_state_en": "OKX Europe is rolling out pre-IPO perpetual derivatives offering European traders up to 10x leveraged exposure to OpenAI and Anthropic before their IPOs.",
       "detailed_summary_zh": "OKX Europe is rolling out pre-IPO perpetual derivatives offering European traders up to 10x leveraged exposure to OpenAI and Anthropic before their IPOs.",
       "detailed_summary_en": "OKX Europe is rolling out pre-IPO perpetual derivatives offering European traders up to 10x leveraged exposure to OpenAI and Anthropic before their IPOs.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "上市前永续合约是一种现金结算的衍生品，追踪的是仍处于私有状态的公司在上市后可能达到的估值；由于不存在公开挂牌的股价，这类合约没有可锚定的外部现货价格来源。代币化股票则是基于区块链的工具，旨在复制真实股票的经济敞口，但并不转移所有权。OpenAI和Anthropic都是尚未上市的私营AI公司，因此过去想要获得其敞口通常只能通过私募市场，而非公开交易所。",
+      "background_en": "A pre-IPO perpetual is a cash-settled derivative that tracks the anticipated public valuation of a company that is still private; because there is no listed share price, the contract has no external spot oracle to anchor to. Tokenized stocks are blockchain-based instruments designed to mirror the economic exposure of real equities without transferring ownership. OpenAI and Anthropic are private AI developers that have not yet listed, so exposure to them has traditionally required private-market access rather than a public exchange.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径主要通过衍生品流动性与市场情绪，而非现货供给：上市前永续合约让EEA交易者可以在没有任何代币化股票实际易手的情况下，对AI实验室估值表达杠杆化观点，这会把投机资金集中到OKX的欧洲经济区衍生品盘口，并加剧各平台在合成式上市前敞口产品上的竞争。由于合约参照的是未上市公司，定价依赖交易平台设定的估值与资金费率机制而非可观测的现货市场，因此在资金费率结算或IPO相关消息出现时，价格错位可能被放大。",
+      "market_impact_en": "The transmission runs through derivatives liquidity and sentiment rather than spot supply: pre-IPO perps let EEA traders express leveraged views on AI-lab valuations without any tokenized equity changing hands, which can concentrate speculative flow into OKX's EEA derivatives book and intensify competition among venues building synthetic pre-IPO exposure. Because the contracts reference unlisted companies, pricing depends on venue-determined valuation and funding mechanics rather than an observable spot market, a structure that can widen price dislocations around funding resets or IPO-related news.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.okx.com/help/x-perps-guide",
+          "title": "OKX X-Perps Guide"
+        },
+        {
+          "url": "https://www.businesswire.com/news/home/20260415510125/en/OKX-Launches-X-Perps-in-Europe-MiFID-Regulated-Crypto-Derivatives-with-up-to-10x-Leverage",
+          "title": "OKX Launches X-Perps in Europe: MiFID Regulated Crypto ..."
+        },
+        {
+          "url": "https://crypto.com/eea/research/pre-ipo-perps-may-2026",
+          "title": "Pre-IPO Perpetuals: Front-Running Wall Street"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "telegram:OKXAnnouncements:7216"

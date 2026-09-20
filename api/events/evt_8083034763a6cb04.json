@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "event_id": "evt_8083034763a6cb04",
+  "url": "https://bmt.news/events/evt_8083034763a6cb04/",
+  "json": "https://bmt.news/api/events/evt_8083034763a6cb04.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Polymarket 漏洞据报让身份窃贼登入现有账户",
+    "en": "Polymarket Bug Reportedly Let Identity Thieves Into Existing Accounts"
+  },
+  "current_state": {
+    "zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+    "en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract."
+  },
+  "first_seen_at": "2026-09-20T23:27:21.730703+00:00",
+  "last_updated_at": "2026-09-20T23:27:21.730703+00:00",
+  "last_material_change_at": "2026-09-20T23:27:21.730703+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "accounts",
+    "bug",
+    "existing",
+    "identity",
+    "into",
+    "let",
+    "polymarket",
+    "reportedly",
+    "thieves"
+  ],
+  "identifiers": [],
+  "topics": [
+    "account-takeover",
+    "identity-theft",
+    "polymarket",
+    "prediction-markets"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_3416a79a6e4becb7",
+      "event_id": "evt_8083034763a6cb04",
+      "occurred_at": "2026-09-20T19:15:00Z",
+      "published_at": "2026-09-20T19:15:00Z",
+      "first_seen_at": "2026-09-20T23:27:21.730703Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Polymarket 漏洞据报让身份窃贼登入现有账户",
+      "title_en": "Polymarket Bug Reportedly Let Identity Thieves Into Existing Accounts",
+      "what_changed_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+      "what_changed_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+      "current_state_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+      "current_state_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+      "detailed_summary_zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
+      "detailed_summary_en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract.",
+      "background_zh": "Polymarket 是一家美国加密预测市场平台，用户可就未来事件的结果下注，范围涵盖体育赛事、经济指标、天气、奖项以及政治与立法结果等。账户接管（account takeover，简称 ATO）指攻击者未经授权取得账户控制权，其常见方式并非“攻破”系统，而是直接使用窃取或伪造的凭证登录。由于预测市场账户与余额和未平仓头寸绑定，被接管的账户可能被用于转移资金或进行未授权交易。",
+      "background_en": "Polymarket is an American cryptocurrency-based prediction market where users place bets on future outcomes spanning sports matches, economic indicators, weather patterns, awards, and political or legislative results. Account takeover, or ATO, happens when an attacker gains unauthorized control of an account — frequently not by \"hacking\" anything but simply by logging in with stolen or forged credentials. Because prediction market accounts are tied to balances and open positions, a compromised account can be used to move funds or place unauthorized trades.",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "传导路径主要体现在用户信任与平台层面的流动性：若 Polymarket 的身份验证漏洞被确认，可能影响该平台的入金与交易活跃度，并促使外界更严格审视整个预测市场板块的身份核验与托管实践；风险敞口集中于该细分领域，而非比特币、以太坊等主流资产。",
+      "market_impact_en": "The transmission channel runs through user trust and platform-level liquidity: a confirmed authentication flaw at Polymarket could affect deposits and trading activity on that venue and invite closer scrutiny of identity and custody practices across prediction markets, with exposure concentrated in that segment rather than in majors like bitcoin or ether.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Polymarket",
+          "title": "Polymarket - Wikipedia"
+        },
+        {
+          "url": "https://www.cloudflare.com/learning/access-management/account-takeover/",
+          "title": "What is account takeover? | Cloudflare"
+        },
+        {
+          "url": "https://www.imperva.com/learn/application-security/account-takeover-ato/",
+          "title": "Account Takeover Attack (ATO) | Types, Detection & Protection | Imperva"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "gdelt:article:20260920T191500Z::https://gizmodo.com/polymarket-bug-reportedly-let-identity-thieves-into-existing-accounts-2000814520"
+      ],
+      "sources": [
+        {
+          "url": "https://gizmodo.com/polymarket-bug-reportedly-let-identity-thieves-into-existing-accounts-2000814520",
+          "label": "gizmodo.com",
+          "source_type": "gdelt",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

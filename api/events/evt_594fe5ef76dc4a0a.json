@@ -50,17 +50,29 @@
       "current_state_en": "A researcher used Claude to port CADO-NFS to GPUs and orchestrated up to 2048 GPUs over ten days (~30 GPU-years) to factor the 896-bit RSA-896 number with existing number field sieve algorithms.",
       "detailed_summary_zh": "A researcher used Claude to port CADO-NFS to GPUs and orchestrated up to 2048 GPUs over ten days (~30 GPU-years) to factor the 896-bit RSA-896 number with existing number field sieve algorithms.",
       "detailed_summary_en": "A researcher used Claude to port CADO-NFS to GPUs and orchestrated up to 2048 GPUs over ten days (~30 GPU-years) to factor the 896-bit RSA-896 number with existing number field sieve algorithms.",
-      "background_zh": "",
-      "background_en": "",
-      "community_discussion_zh": "",
-      "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "background_zh": "通用数域筛法（NFS）是已知最有效的经典大整数分解算法，其运行时间增长为亚指数级，但仍然极其陡峭。CADO-NFS（Crible Algébrique: Distribution, Optimisation - Number Field Sieve）是由法国研究机构INRIA开发的、完整的开源C/C++数域筛法实现，用于整数分解和有限域离散对数计算。RSA实验室从1991年起举办“RSA分解挑战”，为分解规模逐级增大的半素数（最大到2048位）提供现金奖励；该竞赛在2007年正式结束，但包括RSA-896在内的若干数字一直未被分解，其中RSA-768是最后一项重大公开记录。RSA-896是一个270位十进制数字的半素数，被列为公开挑战已超过十年。",
+      "background_en": "The general number field sieve (NFS) is the most efficient known classical algorithm for factoring large integers, with sub-exponential but still extremely steep runtime growth. CADO-NFS (Crible Algébrique: Distribution, Optimisation - Number Field Sieve) is a complete open-source C/C++ implementation of NFS for factoring integers and computing discrete logarithms, developed by the French research institute INRIA. RSA Laboratories ran the RSA Factoring Challenge from 1991, offering cash prizes for factoring semiprimes of increasing size up to 2048 bits; the contest formally ended in 2007, but several of the numbers, including RSA-896, remained unfactored, with RSA-768 standing as the last major public record. RSA-896 is a 270-decimal-digit semiprime and had been listed as an open challenge for well over a decade.",
+      "community_discussion_zh": "评论区的关注点集中在闲置算力的经济学，而非密码学本身：有人认为，既然GPU集群已经预留并付费，把空闲周期用来解数学题实际上等于免费，尽管用来挖加密货币在财务上更划算；也有人把这条消息解读为对Anthropic偏空（闲置产能被用来做题），以及对数据中心扩张叙事偏空——如果闲置算力可以被从大模型训练中挪作他用的话。",
+      "community_discussion_en": "Commenters focused on the economics of idle compute rather than the cryptography: one argued that if a GPU cluster is already reserved and paid for, using spare cycles on math puzzles is effectively free, though mining crypto would be more financially rational, while others read the story as bearish for Anthropic (spare capacity being spent on puzzles) and for data-center buildout narratives if idle compute can be diverted from LLM training.",
+      "market_impact_zh": "比特币和以太坊依赖的是椭圆曲线密码学（基于secp256k1的ECDSA），而非RSA，因此这一结果对主流加密资产几乎没有直接的密码学敞口；更可能的传导渠道是GPU算力市场的情绪面——大量可被“捡漏”利用的闲置数据中心算力被公开验证，会影响到围绕去中心化GPU算力网络和AI算力代币的供需叙事。",
+      "market_impact_en": "Bitcoin and Ethereum rely on elliptic-curve cryptography (ECDSA over secp256k1) rather than RSA, so this result carries little direct cryptographic exposure for major crypto assets; the more plausible transmission channel is sentiment in GPU compute markets, where visible evidence of large volumes of scavengeable idle data-center capacity feeds into the supply-and-demand narrative surrounding decentralized GPU compute networks and AI compute tokens.",
       "importance_score": 8.0,
       "references": [
         {
           "url": "https://news.ycombinator.com/item?id=49771966",
           "title": "Community discussion"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/RSA_numbers",
+          "title": "RSA numbers - Wikipedia"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/RSA_Factoring_Challenge",
+          "title": "RSA Factoring Challenge - Wikipedia"
+        },
+        {
+          "url": "https://cado-nfs.gitlabpages.inria.fr/",
+          "title": "CADO-NFS"
         }
       ],
       "confidence": 0.75,
