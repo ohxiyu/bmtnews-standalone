@@ -896,10 +896,11 @@
         "post_id": "368693100636357"
       },
       "4cf0dc5cea144b4fe89fe19c267a0853a3918a8047f156a080197c1f04d4a334": {
-        "status": "pending",
+        "status": "sent",
         "rank": 9,
         "text_hash": "14245a4b9b433d5a0120e5b1c14eed66b28cd1e63ad790704f8fe0b7c3155910",
-        "attempted_at": "2026-09-20T21:11:01.571218+08:00"
+        "attempted_at": "2026-09-20T21:11:01.571218+08:00",
+        "post_id": "368716447524599"
       }
     }
   },
@@ -962,12 +963,6 @@
     "2026-09-20": {
       "revision": "130389fa42020625a88811ef72f010a5a690e1a9a0f61078a7ae100f4a32dbd2",
       "jobs": [
-        {
-          "id": "4cf0dc5cea144b4fe89fe19c267a0853a3918a8047f156a080197c1f04d4a334",
-          "text": "Coinbase 因涉嫌不当锁定用户账户被起诉，托管账户访问权成焦点\n\n据 CoinMarketCap 报道，Coinbase 遭到起诉，被指“不当且不合理地”将客户锁定在账户之外。诉讼的核心是用户无法访问其存放在平台上的资金，而非发生黑客攻击或客户资产损失。\n\n由于托管型交易所对客户账户拥有法律上的控制权并可以单方面限制访问，这起针对账户锁定的诉讼实际上是在检验中心化平台对用户资金拥有多大自由裁量权。案件发生在美国对交易所实务审查不断加码的背景下，其结果可能影响其他平台如何设计并公示账户冻结与申诉流程。\n\n在 Coinbase 等大型交易所，账户锁定通常由自动化风控与合规系统触发，例如异常登录行为、身份验证（KYC）审核、反洗钱检查或制裁名单筛查，争议往往集中在这些审核解除的速度和透明度上。本案的诉求针对的是锁定行为本身是否合理，将其界定为资金访问问题，而非安全保护功能。\n\n来源：https://news.google.com/rss/articles/CBMivgFBVV95cUxNMUdZT3RrS1ZYbzAtbmZQTVplRG5KRHVrUHV2ZzdSdE5iclh2bU9pbGVwb1B5VERXNUNSNWNMaVFqN0w0MndHdl9rYl9Wd0xVclJ6MjdJanJLR3RFX1lYNWNVOHplWkdoT1ZKM2N4WGxmS3pQdUhvei1KOUV6ekR2WHQ2alkxeWo0NG9fMFR2b2tROWdXc2ZKOWhibGtkNUtYcVNuVUt3ZFJmNlNRbWEwMElUa1FnakxxYWwzOGVR?oc=5\nBMTNews · 2026-09-20 · https://bmt.news",
-          "rank": 9,
-          "due_at": "2026-09-20T21:07:00+08:00"
-        },
         {
           "id": "664ff934106327adc5ecca26ddac842f3a0c17963e0019a897c7435cae5d929d",
           "text": "PlanetScale 发布 Postgres 全文搜索扩展 TIN\n\nPlanetScale 发布了 TIN（Text INdex），这是面向 PlanetScale Postgres 的全文搜索扩展，提供专为搜索设计的倒排索引类型、BM25 相关性排序以及 TINQL 查询语言。这是 PlanetScale 为其 Postgres 产品推出的首个搜索能力，公司称该功能是客户呼声最高的需求之一。\n\n这让 PlanetScale 加入了一场数据库厂商竞相把搜索能力直接内置到 Postgres 的竞赛，赛道上的玩家已包括 ParadeDB 的 pg_search、Timescale 的 pg_textsearch，以及 Neon 和 Databricks 的搜索功能。如果这些方案逐渐成熟，如今在 Postgres 之外单独运行 Elasticsearch 之类搜索引擎的团队，或许可以少维护一个系统组件。\n\n根据 PlanetScale 的文档和社区反馈，TIN 的性能表现仅在其云服务上可用：相关的开源本地扩展（github.com/planetscale/lead）主要用于测试 TINQL 语法，性能特征与云端版本并不一致。基准测试数据由厂商自己提供而非独立第三方评测，因此团队应结合自身实际负载进行验证。\n\n来源：https://planetscale.com/blog/introducing-tin\nBMTNews · 2026-09-20 · https://bmt.news",
