@@ -10,7 +10,7 @@
   "owner": "Codex / quick-post-immediate",
   "branch": "agent/quick-post-rollout",
   "last_verified_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/95",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/96",
   "completed": [
     "从最新 origin/main 接手续作；当前电脑没有原未提交文件",
     "实时公开读取、固定路径图片读取、刊期内插入位置与历史加载",

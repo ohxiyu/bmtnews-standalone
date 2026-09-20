@@ -51,6 +51,8 @@ Access 登录与 CSRF 校验、SHA 乐观并发和相同 payload 幂等保持。
 
 ## 2026-09-20 授权合并上线
 
+上线证据文档 PR: [#96](https://github.com/ohxiyu/bmtnews-standalone/pull/96)，不包含应用变更，尚未合并。
+
 用户明确要求“合并上线”。以 ohxiyu 账号核验仓库 ADMIN 权限，fetch 后合并
 origin/main 显示已最新；重新运行完整 pytest 与治理检查通过。PR95 的所有远程
 检查通过后，以精确 head 25ef797ef25950c3bb15f2217131bdcc4fa47349 执行合并。
