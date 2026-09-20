@@ -882,10 +882,11 @@
         "post_id": "368646243533562"
       },
       "76e2ac9f05163b54ea7d36b22a5d6964d353fff7a76a01627c062eb58aadb977": {
-        "status": "pending",
+        "status": "sent",
         "rank": 7,
         "text_hash": "78ffb3d8ae5edebe8c7a2b74df27e037c74177eff5404dc6d46e0fdc070046cb",
-        "attempted_at": "2026-09-20T18:06:00.233614+08:00"
+        "attempted_at": "2026-09-20T18:06:00.233614+08:00",
+        "post_id": "368670977988576"
       }
     }
   },
@@ -948,12 +949,6 @@
     "2026-09-20": {
       "revision": "130389fa42020625a88811ef72f010a5a690e1a9a0f61078a7ae100f4a32dbd2",
       "jobs": [
-        {
-          "id": "76e2ac9f05163b54ea7d36b22a5d6964d353fff7a76a01627c062eb58aadb977",
-          "text": "Bastion 获 OCC 有条件批准国家信托银行牌照\n\n稳定币基础设施提供商 Bastion 表示，美国货币监理署（OCC）已向其拟设的 Bastion Platforms National Trust Company 授予国家信托银行牌照的初步有条件批准。该牌照在 Bastion 已持有的州级牌照（包括 2025 年 2 月获得的纽约信托牌照）之外增加了 OCC 的联邦监管，该实体将在单一联邦监管机构下提供稳定币托管与钱包、支付基础设施以及白标发行服务。\n\n这是稳定币基础设施领域的重要监管里程碑，因为它使单一联邦监管实体能够同时打包托管、钱包、支付与白标发行，而不必逐州拼凑牌照。此前 Circle 和 BitGo 已获得最终批准、Ripple 也拿到有条件批准，表明国家信托银行牌照已成为加密行业进入美国银行体系的主要通道。\n\n该批准是初步的且有条件，而且这家拟设信托银行不能吸收存款或发放贷款，因此并非传统商业银行，短期系统性影响有限。OCC 规则要求此类牌照必须在固定期限内开业，Paxos 早前的有条件批准就因未在 18 个月的运营期限内达标而在 2023 年 3 月失效，因此落地时间表是关键变量。\n\n来源：https://cointelegraph.com/news/bastion-wins-conditional-occ-approval-for-national-trust-bank-charter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound\nBMTNews · 2026-09-20 · https://bmt.news",
-          "rank": 7,
-          "due_at": "2026-09-20T18:03:00+08:00"
-        },
         {
           "id": "e3da410eb2caf0b6ac25ea1f77b4d9501abc816ab57851e11b97f0910e8f8951",
           "text": "Solana 第三次提速：目标出块时间降至 250 毫秒\n\nSolana 将其目标出块时间（slot time）从 300 毫秒下调至 250 毫秒，出块节奏加快约 17%，这是该网络自 8 月以来的第三次提速。此次调整是 SIMD-0525 提案四个规划阶段中的第三步，该提案已把 slot 时间从创世时的 400 毫秒依次降至 350 毫秒、300 毫秒，再到如今的 250 毫秒。\n\n更短的 slot 缩短了区块链结算与传统交易所那种近乎即时确认之间的差距，主要惠及对延迟敏感的应用，例如预言机和自动做市商。其意义在于，Solana 正是靠执行速度的新鲜度来争夺高频交易和 DeFi 活动，尽管网络的原始交易吞吐量并未改变。\n\n这并非容量升级：每个更短的 slot 被分配的计算量和数据量也按比例减少，因此网络是以更小、更频繁的片段承载同样的总负载。由于一个 epoch 固定为 432,000 个 slot，slot 时间压缩使预期 epoch 时长从约 36 小时缩短至约 30 小时，从而也悄然加快了质押奖励和验证者排期；最后一步降至 200 毫秒尚未确定主网激活日期，且只有在区块跳票率（block-skip rate）保持稳定的前提下才会推进。\n\n来源：https://decrypt.co/378674/solana-heartbeat-quickens-speed-upgrade\nBMTNews · 2026-09-20 · https://bmt.news",
