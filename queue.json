@@ -889,10 +889,11 @@
         "post_id": "368670977988576"
       },
       "e3da410eb2caf0b6ac25ea1f77b4d9501abc816ab57851e11b97f0910e8f8951": {
-        "status": "pending",
+        "status": "sent",
         "rank": 8,
         "text_hash": "2e0af94aff25373edd14089aacd858ce000e42c65f6b951dd4207d0ed9809897",
-        "attempted_at": "2026-09-20T19:36:01.459398+08:00"
+        "attempted_at": "2026-09-20T19:36:01.459398+08:00",
+        "post_id": "368693100636357"
       }
     }
   },
@@ -955,12 +956,6 @@
     "2026-09-20": {
       "revision": "130389fa42020625a88811ef72f010a5a690e1a9a0f61078a7ae100f4a32dbd2",
       "jobs": [
-        {
-          "id": "e3da410eb2caf0b6ac25ea1f77b4d9501abc816ab57851e11b97f0910e8f8951",
-          "text": "Solana 第三次提速：目标出块时间降至 250 毫秒\n\nSolana 将其目标出块时间（slot time）从 300 毫秒下调至 250 毫秒，出块节奏加快约 17%，这是该网络自 8 月以来的第三次提速。此次调整是 SIMD-0525 提案四个规划阶段中的第三步，该提案已把 slot 时间从创世时的 400 毫秒依次降至 350 毫秒、300 毫秒，再到如今的 250 毫秒。\n\n更短的 slot 缩短了区块链结算与传统交易所那种近乎即时确认之间的差距，主要惠及对延迟敏感的应用，例如预言机和自动做市商。其意义在于，Solana 正是靠执行速度的新鲜度来争夺高频交易和 DeFi 活动，尽管网络的原始交易吞吐量并未改变。\n\n这并非容量升级：每个更短的 slot 被分配的计算量和数据量也按比例减少，因此网络是以更小、更频繁的片段承载同样的总负载。由于一个 epoch 固定为 432,000 个 slot，slot 时间压缩使预期 epoch 时长从约 36 小时缩短至约 30 小时，从而也悄然加快了质押奖励和验证者排期；最后一步降至 200 毫秒尚未确定主网激活日期，且只有在区块跳票率（block-skip rate）保持稳定的前提下才会推进。\n\n来源：https://decrypt.co/378674/solana-heartbeat-quickens-speed-upgrade\nBMTNews · 2026-09-20 · https://bmt.news",
-          "rank": 8,
-          "due_at": "2026-09-20T19:35:00+08:00"
-        },
         {
           "id": "4cf0dc5cea144b4fe89fe19c267a0853a3918a8047f156a080197c1f04d4a334",
           "text": "Coinbase 因涉嫌不当锁定用户账户被起诉，托管账户访问权成焦点\n\n据 CoinMarketCap 报道，Coinbase 遭到起诉，被指“不当且不合理地”将客户锁定在账户之外。诉讼的核心是用户无法访问其存放在平台上的资金，而非发生黑客攻击或客户资产损失。\n\n由于托管型交易所对客户账户拥有法律上的控制权并可以单方面限制访问，这起针对账户锁定的诉讼实际上是在检验中心化平台对用户资金拥有多大自由裁量权。案件发生在美国对交易所实务审查不断加码的背景下，其结果可能影响其他平台如何设计并公示账户冻结与申诉流程。\n\n在 Coinbase 等大型交易所，账户锁定通常由自动化风控与合规系统触发，例如异常登录行为、身份验证（KYC）审核、反洗钱检查或制裁名单筛查，争议往往集中在这些审核解除的速度和透明度上。本案的诉求针对的是锁定行为本身是否合理，将其界定为资金访问问题，而非安全保护功能。\n\n来源：https://news.google.com/rss/articles/CBMivgFBVV95cUxNMUdZT3RrS1ZYbzAtbmZQTVplRG5KRHVrUHV2ZzdSdE5iclh2bU9pbGVwb1B5VERXNUNSNWNMaVFqN0w0MndHdl9rYl9Wd0xVclJ6MjdJanJLR3RFX1lYNWNVOHplWkdoT1ZKM2N4WGxmS3pQdUhvei1KOUV6ekR2WHQ2alkxeWo0NG9fMFR2b2tROWdXc2ZKOWhibGtkNUtYcVNuVUt3ZFJmNlNRbWEwMElUa1FnakxxYWwzOGVR?oc=5\nBMTNews · 2026-09-20 · https://bmt.news",
