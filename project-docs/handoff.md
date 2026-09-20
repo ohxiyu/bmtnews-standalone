@@ -8,8 +8,8 @@
   "goal": "Quick Post 可选刊期位置并实时发布、编辑、停用",
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/94",
   "owner": "Codex / quick-post-immediate",
-  "branch": "agent/quick-post-immediate",
-  "last_verified_commit": "4e64fda1d4f2f76f8ec78e0121a7b87dd798e3cb",
+  "branch": "agent/quick-post-rollout",
+  "last_verified_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/95",
   "completed": [
     "从最新 origin/main 接手续作；当前电脑没有原未提交文件",
@@ -17,8 +17,7 @@
     "保留 Access、CSRF、SHA 冲突与幂等保护"
   ],
   "unfinished": [
-    "PR95 等待远程 CI 与审阅",
-    "合并及生产部署尚未执行"
+    "真实生产 Access 会话发布、图片与停用闭环留待用户实际内容验收"
   ],
   "validation": [
     "uv sync --frozen --extra dev、823 pytest、治理与 diff 检查通过",
@@ -30,20 +29,20 @@
     "真实生产 Access 会话发布、图片与停用尚未验收"
   ],
   "production": {
-    "source_commit": "unknown; current source baseline 4e64fda1d4f2f76f8ec78e0121a7b87dd798e3cb",
-    "artifact_commit": "unknown; not modified",
-    "edition": "2026-09-18 (public edition index)",
-    "generated_at": "2026-09-17T23:28:47.562942Z (edition index)",
-    "worker_version": "unknown; not deployed",
-    "verified_at": "2026-09-18 read-only public API check"
+    "source_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
+    "artifact_commit": "dc4913618fd67422970dbcd54e6192d1c165287b",
+    "edition": "2026-09-20 (Quick Post API Shanghai date)",
+    "generated_at": "not applicable; Quick Post reads registry live",
+    "worker_version": "Pages deployment 6bb5c964-f15b-4ddd-a0c2-8125a8fe485d; public revision/no-store verified",
+    "verified_at": "2026-09-20T02:32:31Z public API check"
   },
   "blockers": [],
-  "next_action": "审阅 PR95 和最新 CI；合并和生产部署需本任务授权，不能发布虚构测试新闻。",
+  "next_action": "PR95 已获用户授权合并部署；审阅上线证据文档 PR，使用用户实际内容验收后台发布、图片与停用，不发布虚构测试新闻。",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
+    "pr_merged": "complete",
+    "deployed": "complete",
     "production_verified": "pending"
   },
   "evidence": "project-docs/releases/2026-09-18-quick-post-immediate.md"

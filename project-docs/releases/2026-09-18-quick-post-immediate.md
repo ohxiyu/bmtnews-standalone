@@ -48,3 +48,32 @@ Access 登录与 CSRF 校验、SHA 乐观并发和相同 payload 幂等保持。
 
 原 handoff 的 morning-ai-economy 状态属于历史快照；其发布记录仍保留，本次按
 用户指定转入 Issue94，不覆盖其他未合并发布证据 PR 的分支。
+
+## 2026-09-20 授权合并上线
+
+用户明确要求“合并上线”。以 ohxiyu 账号核验仓库 ADMIN 权限，fetch 后合并
+origin/main 显示已最新；重新运行完整 pytest 与治理检查通过。PR95 的所有远程
+检查通过后，以精确 head 25ef797ef25950c3bb15f2217131bdcc4fa47349 执行合并。
+
+Source commit: 55f21307ae41b134de2aa732523fde6f85474a22。
+
+- Artifact commit: dc4913618fd67422970dbcd54e6192d1c165287b，由 Actions 生成，未手改 gh-pages。
+
+Deployment: Cloudflare Pages 6bb5c964-f15b-4ddd-a0c2-8125a8fe485d，检查 success；
+  [Deploy Docs 35484112566](https://github.com/ohxiyu/bmtnews-standalone/actions/runs/35484112566) success。
+
+Worker version: 上述 Pages deployment 内的 Worker；通过新的 revision 字段与 BYPASS/no-store 响应确认运行时已更新。
+
+Verification: 2026-09-20T02:32:31Z，https://bmt.news/api/quick-posts.json
+  与 date=2026-09-18 查询均 HTTP 200，revision=110ce636a3a4eed9845fa17d9defb61513c74161，items=[]；
+  Cache-Control/CDN-Cache-Control=no-store、X-Bmtnews-Cache=BYPASS。
+  公开 quick-posts.js 字节哈希与合并源码一致。普通首页有既有 300 秒边缘缓存，
+  新查询参数页面已返回 sha256-9155692ac121 及 quick-posts.js。
+  2026-09-20T02:36:28Z 普通首页 / 也已返回相同新指纹与实时脚本。
+  新页面在 390/1280 浏览器检查均无脚本错误、无横向溢出、页面可滚动。
+- Remaining gaps: 后台 /s/admin.js 未登录时跳转 Access（并非源文件哈希失败）；
+  未建立生产认证会话，未创建虚构新闻、图片或停用真实内容。生产读链路验证与
+  后台真实写入闭环分开，production_verified 保持 pending。
+
+Rollback: 已知代码基线 4e64fda1d4f2f76f8ec78e0121a7b87dd798e3cb；若需回退，
+  经授权创建 revert PR95 的 PR，经检查合并后使用相同 Actions 发布路径，保留 editorial 数据与图片。
