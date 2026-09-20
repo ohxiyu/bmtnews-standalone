@@ -220,7 +220,7 @@ def test_daily_edition_combines_staging_and_final_fetch(
     async def fetch_all_sources(since):  # type: ignore[no-untyped-def]
         return [fresh, next_edition]
 
-    async def analyze_content(items):  # type: ignore[no-untyped-def]
+    async def analyze_content(items, *, edition_window=None):  # type: ignore[no-untyped-def]
         analyzed_ids.extend(item.id for item in items)
         return items
 
@@ -409,7 +409,7 @@ def test_daily_edition_uses_unpublished_36_hour_fallback_when_short(
         requested_since.append(since)
         return [normal]
 
-    async def analyze_content(items):  # type: ignore[no-untyped-def]
+    async def analyze_content(items, *, edition_window=None):  # type: ignore[no-untyped-def]
         analyzed_ids.extend(item.id for item in items)
         return items
 
