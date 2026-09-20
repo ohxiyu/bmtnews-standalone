@@ -10,7 +10,7 @@
   "owner": "Codex / freshness-score",
   "branch": "agent/freshness-score",
   "last_verified_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/98",
   "completed": ["现有单次评分传入窗口和零分规则", "保留评分缓存，不新增 AI 请求或重试"],
   "unfinished": ["PR 检查，授权合并后等待正常生产调度"],
   "validation": ["uv sync --frozen --extra dev 成功", "826 项 pytest 全量通过；测试未调用真实 AI"],

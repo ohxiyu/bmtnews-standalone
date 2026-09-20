@@ -2,6 +2,7 @@
 
 Issue: [#97](https://github.com/ohxiyu/bmtnews-standalone/issues/97)
 Owner: Codex / freshness-score；用户授权修改、合并上线。
+PR: [#98](https://github.com/ohxiyu/bmtnews-standalone/pull/98)
 
 ## 最小改动与成本边界
 
