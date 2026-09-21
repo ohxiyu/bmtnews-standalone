@@ -10,7 +10,7 @@
   "owner": "Codex / jev-release-record",
   "branch": "agent/jev-release-record",
   "last_verified_commit": "d487eafa0e526c21e1455c8466661514e8030e58",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/103",
   "completed": [
     "PR101 已合并，CI/CodeQL 全部通过",
     "正式采集35571940795成功：35候选中30条Jev成功、5条故障回退，新增3事件",
@@ -18,7 +18,7 @@
     "3个公开事件JSON与gh-pages产物逐项一致"
   ],
   "unfinished": [
-    "提交本次上线证据 PR"
+    "上线证据 PR103 等待检查与合并"
   ],
   "validation": [
     "853项pytest通过；后续47项相关回归通过",
@@ -40,7 +40,7 @@
     "verified_at": "2026-09-21T07:19:00Z; production event JSON matches generated artifact"
   },
   "blockers": [],
-  "next_action": "提交并合并本次上线证据；正式配置已经启用，无需等待观察期",
+  "next_action": "合并上线证据 PR103；正式配置已经启用，无需等待观察期",
   "states": {
     "code": "complete",
     "tests": "complete",
