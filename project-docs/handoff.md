@@ -1,52 +1,55 @@
 # 当前交接
 
-本次执行 Issue100；历史及其他任务分支保持独立。
+本次记录 Issue102 / PR101 的已授权上线；其他任务 PR 不在范围。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "Jev 正式参与评分、初筛、去重与生成核验",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/100",
-  "owner": "Codex / jev-production",
-  "branch": "agent/jev-production",
-  "last_verified_commit": "c0f37bef06f40b0a8d69a356bedc147d9374c669",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/101",
+  "goal": "记录 Jev 正式上线与生产验收",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/102",
+  "owner": "Codex / jev-release-record",
+  "branch": "agent/jev-release-record",
+  "last_verified_commit": "d487eafa0e526c21e1455c8466661514e8030e58",
+  "pr": "pending",
   "completed": [
-    "Jev 正式流程接入完成，生产配置开启",
-    "Actions Secret 已保存",
-    "真实评分/去重/来源核验三项成功"
+    "PR101 已合并，CI/CodeQL 全部通过",
+    "正式采集35571940795成功：35候选中30条Jev成功、5条故障回退，新增3事件",
+    "Cloudflare部署8cf521b9-ba10-40e6-984d-df56ce96e511成功",
+    "3个公开事件JSON与gh-pages产物逐项一致"
   ],
   "unfinished": [
-    "CI 检查",
-    "PR 合并、生产工作流及线上验收"
+    "提交本次上线证据 PR"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 成功",
-    "27 项新增 Jev 测试通过",
-    "57 项既有相关回归通过",
-    "853 项全量 pytest 通过；治理及 diff 检查通过",
-    "真实 Jev 三项接口检查通过"
+    "853项pytest通过；后续47项相关回归通过",
+    "CI35571725648及CodeQL35571725677成功",
+    "真实Jev评分、去重、来源核验接口检查通过",
+    "生产Jev成功调用30次，输入47011/output5937 tokens"
   ],
   "unverified": [
-    "真实 Jev 调用与生产内容"
+    "本次采集不触发日报阶段：完整日报去重与生成核验等待正常日报运行",
+    "5条评分服务失败已使用原有模型，未缓存为Jev成功；具体上游原因未保留",
+    "未证明实际新闻准确率或长期成本改善"
   ],
   "production": {
-    "source_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
-    "artifact_commit": "dc4913618fd67422970dbcd54e6192d1c165287b; unchanged",
-    "edition": "2026-09-20; unchanged",
-    "generated_at": "2026-09-19T23:27:53.312768Z; unchanged",
-    "worker_version": "not changed; Pages 6bb5c964-f15b-4ddd-a0c2-8125a8fe485d",
-    "verified_at": "2026-09-20; source inspection only for this change"
+    "source_commit": "d487eafa0e526c21e1455c8466661514e8030e58",
+    "artifact_commit": "f288eb943d8f9f525f580ea5cdb5c7ea88593794",
+    "edition": "2026-09-21; existing morning edition retained",
+    "generated_at": "2026-09-20T23:28:51.024061Z; PWA build 2026-09-21T07:15:33+00:00",
+    "worker_version": "not changed; Cloudflare Pages deployment 8cf521b9-ba10-40e6-984d-df56ce96e511, independent dispatcher not changed / unknown",
+    "verified_at": "2026-09-21T07:19:00Z; production event JSON matches generated artifact"
   },
   "blockers": [],
-  "next_action": "完成 CI 后按明确授权合并，运行正式采集并验证生产使用 Jev",
+  "next_action": "提交并合并本次上线证据；正式配置已经启用，无需等待观察期",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
-    "production_verified": "pending"
+    "pr_merged": "complete",
+    "deployed": "complete",
+    "production_verified": "complete"
   },
   "evidence": "project-docs/releases/2026-09-21-jev.md"
 }
 ```
+
+五阶段状态指应用 PR101；当前证据 PR 的状态以 GitHub 为准。
