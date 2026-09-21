@@ -2,545 +2,288 @@
   "version": 1,
   "content_revision_version": 1,
   "date": "2026-09-21",
-  "generated_at": "2026-09-20T23:28:51.024061Z",
+  "generated_at": "2026-09-21T09:45:45.531282Z",
   "site": "https://bmt.news",
   "window": {
     "start": "2026-09-19T23:00:00Z",
     "end": "2026-09-20T23:00:00Z"
   },
   "stats": {
-    "candidates": 159,
+    "candidates": 182,
     "analyzed": 140,
-    "displayed": 12,
+    "displayed": 7,
     "high_priority": 0
   },
   "overview": {
-    "zh": "监管层同时为代币化证券与私营公司敞口放行，而安全事件与治理关停提醒扩张的代价。 安全风险：FomoPeek 应用内置 iOS 漏洞利用套件窃取钱包凭据，Polymarket 身份验证漏洞则被指可登入既有账户。",
-    "en": "Regulators open tokenized-securities and private-company exposure while security breaches and a chain shutdown show the costs of expansion. Governance precedent：ZetaChain's Proposal 68 passed with 99.4% support and 58% turnout to shut down its L1, migrating ZETA 1:1 to a Solana SPL token pending one more vote. Security risk：The FomoPeek app carried an iOS exploit kit to steal wallet credentials, while a Polymarket identity flaw reportedly allowed logins into existing accounts."
+    "zh": "基础设施与合规漏洞同日暴露：私钥之外的软件缺陷、Solana提速压力与监管边界重塑并行。 安全漏洞：Liquid 于9月6日因软件批准不合格提款流失近4000枚比特币，私钥并未被盗。 网络性能：Solana 250ms slot 已于9月18日 epoch 1037 生效，早期样本每 slot 约266ms。 监管动向：Kalshi 寻求 CFTC 批准股票永续合约，Visa 则着手关闭 meme 币信用卡奖励漏洞。",
+    "en": "Software and compliance gaps surface alongside network strain, as crypto's infrastructure and rulebook are tested at once. Security gap：Liquid lost almost 4,000 Bitcoin on Sept. 6 after its software approved an invalid withdrawal without stolen keys. Network strain：Solana's 250ms slot time took effect Sept. 18 at epoch 1037; an early sample showed about 266ms per slot. Regulatory push：Kalshi seeks CFTC approval for stock perpetuals while Visa moves to close a meme coin credit card rewards loophole."
   },
   "market": {
-    "btc_usd": 81218.0,
-    "btc_change_24h": 0.03405283601649115,
-    "eth_usd": 2641.67,
-    "eth_change_24h": 0.47450911244445926,
-    "fear_greed": 71,
+    "btc_usd": 84931.0,
+    "btc_change_24h": 5.4938802095495625,
+    "eth_usd": 2740.24,
+    "eth_change_24h": 6.043156486165489,
+    "fear_greed": 70,
     "fear_greed_label": "Greed"
   },
   "items": [
     {
       "rank": 1,
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBGdjB5bEhTZDEtaU02aFJWMmxyM2dkYjVhWUIyWWM5UERkQXBWTHFoanJNUlpFZGlJcVZYU3FrZDVrdUY2VGw2YUhSUF8xTkloZE9lbklIdVotMF9aeDBidU1HMW5kWE1EY1g0R180cWUtc1RtSFR2ZHpR?oc=5",
+      "url": "https://cryptoslate.com/who-pays-when-bitcoin-disappears-without-anyone-stealing-the-keys/",
       "title": {
-        "zh": "SEC 发布“创新豁免”，为代币化股票交易和 Coinbase 铺路",
-        "en": "SEC Grants 'Innovation Exemption' for Tokenized Stock Trading, Opening Coinbase Path"
+        "zh": "为什么保管好私钥并不总能阻止加密货币被盗",
+        "en": "Why keeping your private keys safe won’t always stop crypto theft"
       },
       "summary": {
-        "zh": "美国证券交易委员会（SEC）发布了一项临时性、附条件的“创新豁免”（Innovation Exemption），使被指定的“代币化证券交易场所”（TSV）不再被纳入《1934 年证券交易法》中“交易所”的定义范围，从而为相关平台撮合代币化 NMS 股票交易扫清障碍。该命令同时附带公开征求意见程序，媒体解读认为这为 Coinbase 已在 Base 网络上线的代币化股票产品打开了合规通道。\n\n这项豁免直接触及代币化股票最大的结构性障碍——撮合代币化股票交易的场所可能被要求注册为全国性证券交易所——并使股票市场向 7×24 小时交易更近一步。其影响覆盖交易所、经纪自营商、流动性提供商和各类代币化平台，同时让 Coinbase 在与其他合成型、债务型或衍生品包装型产品的竞争中，获得更清晰的近期产品落地空间。\n\n该豁免明确是临时性和附条件的，仅适用于满足特定要求、被认定为合格的 TSV，而并非对代币化股票交易的全面合法化。Coinbase 自 2026 年 8 月起在 Base 上线的代币化股票被设计为附带分红权和投票权，即对底层股票的直接优先求偿权，而非合成式的价格敞口。",
-        "en": "The SEC issued a temporary, conditional \"Innovation Exemption\" that relieves designated Tokenized Securities Venues (TSVs) from the Securities Exchange Act of 1934's definition of \"exchange,\" clearing the way for platforms to facilitate trading of tokenized NMS stock. The order was accompanied by a request for public comment, and reports frame it as opening a regulatory path for Coinbase's tokenized-equity products, which are already live on Base.\n\nThe exemption directly addresses the single biggest structural obstacle to tokenized equities — the risk that a venue matching tokenized share trades must register as a national securities exchange — and pushes the market closer to 24/7 stock trading. It affects exchanges, broker-dealers, liquidity providers and tokenization platforms, and gives Coinbase a clearer near-term product runway in a segment where it has been competing with synthetic or derivative-wrapped alternatives.\n\nThe relief is explicitly temporary and conditional, applying only to qualifying TSVs that meet stated requirements, rather than a blanket legalization of tokenized equity trading. Coinbase's tokenized stocks, live on Base since August 2026, are structured to carry dividends and voting rights — a direct senior claim on the underlying share rather than synthetic price exposure."
+        "zh": "9月6日，Liquid 因软件批准了一笔本不应合格的提款而流失近 4,000 枚比特币，尽管授权该提款的私钥并未被盗；据 TRM Labs 还原，攻击者利用软件缺陷创建了没有比特币背书的 L-BTC，并将其兑换成真实比特币。加密货币保险可能承保损失，但不保证客户获得全额赔偿，且若以美元而非比特币计算赔付，即使成功还款也可能让客户仍遭受短缺。",
+        "en": "On Sept. 6, Liquid lost almost 4,000 Bitcoin through a withdrawal its software approved even though the private keys used to authorize it had not been stolen; according to TRM Labs' reconstruction, attackers exploited a software flaw to create L-BTC without backing Bitcoin and exchanged those tokens for real coins. Crypto insurance can cover losses without guaranteeing customers full reimbursement, and even successful repayment can leave customers short if compensation is calculated in dollars instead of Bitcoin."
       },
       "content_revision": {
-        "zh": "5e3ec226d82f7cbb0d95d1f4d5adf4d3a82954bf02699471af39bfcb854db190",
-        "en": "90a5f18fbe0fe9df171adc0e29843e3f3853b9e1f2d669453a391c19346b4106"
+        "zh": "3e85227fddcfbba607e52aa7a43062d9fa7ca595442ea24e655956d0144d879d",
+        "en": "6aff83153196d6c4c8f5bdf5ed5b7ac4d5af80788d80641ee7e35c8faa46e49f"
       },
-      "score": 8.0,
-      "category": "crypto-regulation",
-      "top_category": "policy",
+      "score": 7.7,
+      "category": "crypto-markets",
+      "top_category": "crypto",
       "source": {
-        "type": "google_news",
-        "label": "Crypto News"
+        "type": "rss",
+        "label": "CryptoSlate"
       },
-      "tags": [
-        "SEC",
-        "tokenized-stocks",
-        "tokenization",
-        "Coinbase",
-        "crypto-regulation"
-      ],
+      "tags": [],
       "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "te352d74570",
-        "day": 7,
-        "url": "https://bmt.news/threads/te352d74570/"
+        "id": "tefe7722e40",
+        "day": 1,
+        "url": "https://bmt.news/threads/tefe7722e40/"
       },
       "event": {
-        "event_id": "evt_c3d2ba9cbc37a78f",
-        "update_id": "upd_9483c3d028ffa478",
-        "url": "https://bmt.news/events/evt_c3d2ba9cbc37a78f/#upd_9483c3d028ffa478",
-        "json": "https://bmt.news/api/events/evt_c3d2ba9cbc37a78f.json"
+        "event_id": "evt_59f36c4891b9fd25",
+        "update_id": "upd_e03b1df0045812fa",
+        "url": "https://bmt.news/events/evt_59f36c4891b9fd25/#upd_e03b1df0045812fa",
+        "json": "https://bmt.news/api/events/evt_59f36c4891b9fd25.json"
       }
     },
     {
       "rank": 2,
-      "url": "https://saweis.net/posts/rsa-896.html",
+      "url": "https://cryptoslate.com/solanas-250ms-slots-turn-validator-coordination-into-the-networks-next-security-test/",
       "title": {
-        "zh": "借助AI编排的2048块GPU集群，RSA-896被成功分解",
-        "en": "RSA-896 Factored via AI-Orchestrated Fleet of 2048 GPUs"
+        "zh": "为什么 Solana 新的 250ms 提速实际上可能引发网络不稳定",
+        "en": "Why Solana’s new 250ms speed boost could actually trigger network instability"
       },
       "summary": {
-        "zh": "Stephen A. Weis于2026年9月19日宣布，他已成功分解896位（270位十进制数字）的RSA挑战数RSA-896：他让Claude将数域筛法实现CADO-NFS移植到GPU上运行，随后由Claude编排一个最多达2048块GPU的集群，历时约十天完成。总计算量约为30个GPU年，而且使用的是被“捡漏”利用的闲置算力，而非专门预留的机器。\n\n用现有算法分解一个270位的RSA模数，显著推进了公开的因子分解记录，并表明AI智能体可以作为高性能计算任务中实用的代码移植与调度编排层。这一成果并不威胁实际部署的2048位RSA密钥，因此其意义更多在于所展示的AI辅助高性能计算工作流，以及背后所隐含的闲置GPU算力规模，而非对现实密码体系的攻破。\n\n这次计算使用的是已有的数域筛法算法，而非某种新的密码分析突破；Weis本人也首先把功劳归于几十年来构建数域筛法和CADO-NFS的人们，以及创造此前记录的团队。896位的规模仍远低于实际系统中仍在使用的2048位RSA密钥，而数域筛法在如此量级的算力下根本无法触及这一规模。",
-        "en": "Stephen A. Weis announced on September 19, 2026 that he had factored RSA-896, the 896-bit (270-decimal-digit) RSA challenge number, by having Claude port the CADO-NFS number field sieve implementation to run on GPUs and then orchestrate a fleet of up to 2048 GPUs over roughly ten days. The total work amounted to about 30 GPU-years, run on scavenged idle capacity rather than a dedicated allocation.\n\nFactoring a 270-digit RSA modulus with existing algorithms substantially advances the public factoring record and shows that AI agents can act as practical porting and orchestration layers for high-performance computing workloads. It does not threaten deployed 2048-bit RSA keys, so its significance lies more in the demonstrated AI-assisted HPC workflow and the implied scale of idle GPU capacity than in any break of real-world cryptography.\n\nThe run used the existing number field sieve algorithms rather than a new cryptanalytic method, and Weis attributed the result first to the people who built the number field sieve and CADO-NFS over several decades and to the teams behind earlier records. The 896-bit scale remains far below the 2048-bit RSA keys still used in deployed systems, which the number field sieve cannot reach with anything like this amount of compute."
+        "zh": "Solana 的 250ms slot time 已在 9 月 18 日 epoch 1037 生效；根据 Solana 工程 changelog 和 Solana Compass 报告，过渡时间约为 05:06 UTC。9 月 20 日一份覆盖 60 个一分钟窗口的早期样本观察到每个已产出 slot 约 266ms，epoch 1037 约跳过 0.05% 的计划 slot；报道称更重要的考验是 Solana 考虑有条件转向 200ms 时，leader 交接、交易转发、修复和多种验证者客户端能否保持可靠。",
+        "en": "Solana’s 250ms slot time became effective at epoch 1037 on Sept. 18, according to the Solana engineering changelog and a Solana Compass report that placed the transition at about 05:06 UTC; an early Sept. 20 sample covering 60 one-minute windows observed about 266ms per produced slot, and epoch 1037 skipped about 0.05% of scheduled slots. The source says the more important test is whether leader handoffs, transaction forwarding, repair and multiple validator clients remain reliable as Solana considers a conditional move to 200ms."
       },
       "content_revision": {
-        "zh": "5bf6fc62e77ea2ec187eeb06686ce856064cbecf4ce19223888a4b6865faac24",
-        "en": "76b3fd117c1d003ecc1727f0661f529201daa7f32596f5b7f22c64bd5d4fcecb"
+        "zh": "487d6d3099ad220433e32a4086ee40e11c77d345e938dd099808ac3aadfa9747",
+        "en": "4c31ce82d4ab7618148d1e2f6c55f3d9785c697449bee9b52a9e59393f61440f"
       },
-      "score": 8.0,
-      "category": "tech-community",
-      "top_category": "technology",
-      "source": {
-        "type": "hackernews",
-        "label": "madars"
-      },
-      "tags": [
-        "cryptography",
-        "RSA-factoring",
-        "GPU-computing",
-        "AI-agents",
-        "number-theory"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "td5b5a69654",
-        "day": 1,
-        "url": "https://bmt.news/threads/td5b5a69654/"
-      },
-      "event": {
-        "event_id": "evt_594fe5ef76dc4a0a",
-        "update_id": "upd_654bd25de0d02bfa",
-        "url": "https://bmt.news/events/evt_594fe5ef76dc4a0a/#upd_654bd25de0d02bfa",
-        "json": "https://bmt.news/api/events/evt_594fe5ef76dc4a0a.json"
-      }
-    },
-    {
-      "rank": 3,
-      "url": "https://www.theblock.co/news/defi/2026-09-20-zetachain-votes-to-shut-down-layer-1-network-and-move-zeta-to-solana-415878",
-      "title": {
-        "zh": "ZetaChain 社区投票关停 L1 网络，ZETA 将迁移至 Solana",
-        "en": "ZetaChain holders vote to shut down L1, migrate ZETA to Solana"
-      },
-      "summary": {
-        "zh": "9 月 20 日，ZetaChain 代币持有者以 99.4% 的支持率和 58% 的投票率通过了第 68 号提案，批准关停该项目的 Layer 1 区块链，并将 ZETA 代币按 1:1 比例迁移为 Solana 上的原生 SPL 代币。团队将转而专注其私密 AI 应用 Anuma，但迁移本身仍需再进行一次治理投票才能执行。\n\n一条活跃运行的 Layer 1 网络由代币持有者投票主动关停，这在业内十分罕见，因此构成了一个影响深远的治理先例，直接关系到 ZETA 持有者、验证者以及在该链上构建的应用。这也反映出一种更广泛的趋势：基础设施团队放弃独立公链、转向 AI 产品，并将资产部署到 Solana 这类成熟的高吞吐量网络上。\n\n第 68 号提案以 99.4% 的支持率和 58% 的投票率获得通过，ZETA 将按 1:1 兑换为 Solana 的 SPL 代币，同时 L1 网络逐步关停；团队旗下拥有 30 万以上用户的私密 AI 应用 Anuma 也将一并迁移。有报道指出，今年早些时候的安全问题已迫使该项目停用了部分核心服务，而该项目大约三年前的初始融资额为 2700 万美元。",
-        "en": "ZetaChain token holders passed Proposal 68 on September 20 with 99.4% support and 58% turnout, approving the shutdown of the project's Layer 1 blockchain and a 1:1 migration of the ZETA token to Solana as a native SPL token. The team will pivot to its private AI app Anuma, but the migration itself still requires one more governance vote before it can be executed.\n\nIt is rare for a live Layer 1 network to be voluntarily wound down by a token-holder vote, making this a consequential governance precedent with direct consequences for ZETA holders, validators and applications built on the chain. It also illustrates a broader pattern of infrastructure teams abandoning independent chains in favour of AI products and deploying on established high-throughput networks like Solana.\n\nProposal 68 passed with 99.4% support and 58% turnout, converting ZETA 1:1 into a Solana SPL token while the L1 winds down; the team's private AI app Anuma, cited as having 300K+ users, migrates alongside it. Reports note that security issues earlier in the year had already forced the project to disable core services, and the original raise was $27 million roughly three years before this vote."
-      },
-      "content_revision": {
-        "zh": "2046ff4786aea70a951e4e50e2450769a12a743a27c0e0623213a9ac9cdcfdd6",
-        "en": "d6b42236ae8f6418e170eb56f0a523133b9044c5e94bec692c3a5c0500eb1823"
-      },
-      "score": 7.5,
+      "score": 7.4,
       "category": "crypto-protocols",
       "top_category": "crypto",
       "source": {
         "type": "rss",
-        "label": "The Block"
+        "label": "CryptoSlate"
       },
-      "tags": [
-        "zetachain",
-        "solana",
-        "layer1",
-        "governance",
-        "protocol-migration"
-      ],
+      "tags": [],
       "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "tb4ca27affe",
+        "id": "ta69393b35d",
         "day": 1,
-        "url": "https://bmt.news/threads/tb4ca27affe/"
+        "url": "https://bmt.news/threads/ta69393b35d/"
       },
       "event": {
-        "event_id": "evt_449bb103ad24ccbc",
-        "update_id": "upd_995935881b8d14db",
-        "url": "https://bmt.news/events/evt_449bb103ad24ccbc/#upd_995935881b8d14db",
-        "json": "https://bmt.news/api/events/evt_449bb103ad24ccbc.json"
+        "event_id": "evt_9967983a25fc9652",
+        "update_id": "upd_6cb0e68e41bcfe2f",
+        "url": "https://bmt.news/events/evt_9967983a25fc9652/#upd_6cb0e68e41bcfe2f",
+        "json": "https://bmt.news/api/events/evt_9967983a25fc9652.json"
+      }
+    },
+    {
+      "rank": 3,
+      "url": "https://cointelegraph.com/news/anthropic-tabs-accenture-as-embedded-evaluator-to-help-with-ai-slowdown-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": {
+        "zh": "Anthropic 聘请埃森哲作为嵌入式评估方，以协助其人工智能放缓提案",
+        "en": "Anthropic taps Accenture as embedded evaluator to help with AI slowdown proposal"
+      },
+      "summary": {
+        "zh": "Anthropic 表示，已选择埃森哲作为其首个嵌入式评估方，以协助放缓人工智能发展步伐——这是其 CEO 达里奥·阿莫代伊于 9 月 12 日提出的三步提案的内容。该合作是非排他性的，如何实施的细节仍在制定中；Anthropic 与埃森哲各自预计将在未来五年内向该项目投入至少 10 亿美元。",
+        "en": "Anthropic said it has chosen Accenture as its first embedded evaluator to help slow the pace of AI development as proposed by CEO Dario Amodei on Sept. 12. The partnership is non-exclusive and details of how it will work are still being worked out; Anthropic and Accenture each expect to invest at least $1 billion in the project over the next five years."
+      },
+      "content_revision": {
+        "zh": "642849429621e7a945ba60bb8bd96edefc9a3925dcf7e61f1c410824fc5310cd",
+        "en": "1aed7ded8c5c121144847adcfcd2309e0620c2ba9ad46f2c93c05d2f124ed3e4"
+      },
+      "score": 7.2,
+      "category": "ai-labs",
+      "top_category": "technology",
+      "source": {
+        "type": "rss",
+        "label": "Cointelegraph"
+      },
+      "tags": [],
+      "sources_count": 1,
+      "editorial": false,
+      "thread": {
+        "id": "tef2a18b408",
+        "day": 1,
+        "url": "https://bmt.news/threads/tef2a18b408/"
+      },
+      "event": {
+        "event_id": "evt_b0c4e015c38e95d8",
+        "update_id": "upd_d87f480d330493a5",
+        "url": "https://bmt.news/events/evt_b0c4e015c38e95d8/#upd_d87f480d330493a5",
+        "json": "https://bmt.news/api/events/evt_b0c4e015c38e95d8.json"
       }
     },
     {
       "rank": 4,
-      "url": "https://gizmodo.com/polymarket-bug-reportedly-let-identity-thieves-into-existing-accounts-2000814520",
+      "url": "https://cryptoslate.com/charles-hoskinson-says-cardano-no-longer-comes-first-its-treasury-vote-explains-why/",
       "title": {
-        "zh": "Polymarket 漏洞据报让身份窃贼登入现有账户",
-        "en": "Polymarket Bug Reportedly Let Identity Thieves Into Existing Accounts"
+        "zh": "Charles Hoskinson称Cardano不再优先——其国库投票说明了原因",
+        "en": "Charles Hoskinson says Cardano no longer comes first – its treasury vote explains why"
       },
       "summary": {
-        "zh": "据 Gizmodo 报道，Polymarket 的身份验证环节存在一处安全漏洞，使攻击者得以登入已有用户的账户。该问题被描述为账户接管式的访问，而非针对平台智能合约或市场结算逻辑的攻击。\n\nPolymarket 是全球规模最大的预测市场，账户被接管意味着用户的余额与未平仓头寸可能直接暴露在风险中，并动摇用户对平台身份核验与账户找回机制的信心。这也凸显了加密平台在 KYC 身份层与链上资产托管层之间存在的安全缝隙。\n\n据报的攻击路径属于身份层的弱点，使攻击者能够登入既有账户，这是典型的账户接管（ATO）模式，而非智能合约或预言机层面的失效，因此风险集中在账户与托管层而非撮合逻辑。漏洞针对的是已经存在的账户，这意味着受害者未必需要创建新账户或与恶意合约进行交互。",
-        "en": "A reported security flaw in Polymarket's identity and authentication flow allowed attackers to gain access to existing user accounts, according to a Gizmodo report. The issue is described as account-takeover-style access rather than an exploit of the platform's smart contracts or market settlement logic.\n\nPolymarket is the world's largest prediction market, so account takeover there exposes user balances and open positions directly and undermines confidence in how the platform verifies identity and recovers accounts. It also highlights the security seam that exists on crypto platforms where a KYC/identity layer sits on top of on-chain asset custody.\n\nThe reported attack path is an identity-layer weakness that lets someone log into an existing account, the classic pattern of an account takeover (ATO) rather than a smart-contract or oracle failure, so the risk concentrates in the account and custody layer instead of the trading engine. The reported flaw concerns access to accounts that already existed, meaning affected users would not necessarily have created anything new or interacted with a malicious contract."
+        "zh": "Cardano的DRep代表让Input Output为Pogun提出的1229万ADA国库请求到期而未获批准；Koios摘要显示DRep投票权64.33%反对、35.67%赞成，宪法委员会则记录七票赞成（100%委员会批准）。Charles Hoskinson在2026年9月18日广播中称Input Output将按技术和商业契合度选择网络、不再自动优先Cardano，但称Pogun仍将登陆Cardano；该提案曾提议返还20%收益直至偿付、之后对Cardano相关产品永久返还5%，正式提案将偿付与295万美元挂钩，相关日期仍属前瞻性目标。",
+        "en": "Cardano DReps let Input Output's 12.29 million ADA treasury request for Pogun expire without ratification; Koios recorded 64.33% of delegated representative voting power against and 35.67% in favor, while the Constitutional Committee recorded seven yes votes (100% committee approval). In a Sept. 18, 2026 broadcast, Charles Hoskinson said Input Output will choose the best network for each product rather than automatically prioritizing Cardano, while saying Pogun is still headed to Cardano; the proposal had offered 20% of earnings until repayment, then a perpetual 5% on Cardano-related products, with repayment tied to $2.95 million, and stated dates remain forward-looking targets."
       },
       "content_revision": {
-        "zh": "495dfd530f2f8ba132d943812a54d96bc1202773e8589c33e3bb789adf511985",
-        "en": "4fcf120b507029b2ccffa54505f61a173aba5f60d6b97c124de9980a537355fa"
+        "zh": "3abd4d782bcbb0eb6c9c77cf2f22c0fbf4701c85118928f6fc7d2b000c7fb20c",
+        "en": "d23cfdac28a050fc04f8e98bd39b604e879f3712d5e916f59eb218d81ec745bc"
       },
-      "score": 7.5,
-      "category": "crypto-markets",
+      "score": 7.0,
+      "category": "crypto-protocols",
       "top_category": "crypto",
       "source": {
-        "type": "gdelt",
-        "label": "gizmodo.com"
+        "type": "rss",
+        "label": "CryptoSlate"
       },
-      "tags": [
-        "polymarket",
-        "security",
-        "account-takeover",
-        "prediction-markets",
-        "identity-theft"
-      ],
+      "tags": [],
       "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "tf8c488b67f",
+        "id": "ta5bf4a3ab6",
         "day": 1,
-        "url": "https://bmt.news/threads/tf8c488b67f/"
+        "url": "https://bmt.news/threads/ta5bf4a3ab6/"
       },
       "event": {
-        "event_id": "evt_8083034763a6cb04",
-        "update_id": "upd_3416a79a6e4becb7",
-        "url": "https://bmt.news/events/evt_8083034763a6cb04/#upd_3416a79a6e4becb7",
-        "json": "https://bmt.news/api/events/evt_8083034763a6cb04.json"
+        "event_id": "evt_fab8bdecc238ca9d",
+        "update_id": "upd_c308a2715698d22a",
+        "url": "https://bmt.news/events/evt_fab8bdecc238ca9d/#upd_c308a2715698d22a",
+        "json": "https://bmt.news/api/events/evt_fab8bdecc238ca9d.json"
       }
     },
     {
       "rank": 5,
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA0NkdOQlU3ZUt2MmV2Ri1xOWpMZzFkYW9PR1N5amxla2pZTHFqd2MwYkVQbmJ4REtyZkVLZ2h2cnl4cElnbklyOFVDdzNzZ0FwTzZwN3gxemZKR0U5b1d3NU1wXzduS3VjbXlHV2EyRzN2eHdf?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE54Sk14WDFqa2h3T1lYSGlzWlRUR2lUZElsZnYxcHluQnBPMlF2Q2swNFpUQ2x4M0xNSFJnOGZ6UlJPdWlNLTdQazBETlBrN2ZhVXZoY1VaS1hwdWc3STRORmhPZWVqY1lTWDFuZk54WVpUbUNudE4w?oc=5",
       "title": {
-        "zh": "币安钱包推出 Pre-Access，开放代币化 Pre-IPO 投资通道",
-        "en": "Binance Wallet Launches Pre-Access for Tokenized Pre-IPO Exposure"
+        "zh": "Kalshi 寻求 CFTC 批准股票永续合约",
+        "en": "Kalshi seeks CFTC approval for stock perpetuals"
       },
       "summary": {
-        "zh": "2026年9月20日，币安钱包（Binance Wallet）推出了名为“Pre-Access”的活动机制，这是一个基于认购的产品通道，首批活动由 PancakeSwap 承接，并通过自托管的币安钱包账户参与。该产品让符合条件的用户以间接、代币化的方式获得尚未上市公司的敞口。\n\nPre-IPO 阶段的私募股权敞口历来只对机构和合格投资者开放，而通过主流交易所钱包分发，会显著扩大潜在零售参与群体。这也让币安正式进入竞争激烈的现实世界资产（RWA）与代币化赛道——各大交易所正争相把私募市场和传统资产搬上链。\n\n该敞口是间接且代币化的，并非真实股权，因此持有者通常不具备投票权、分红权等股东权利，而且在缺乏公开市场的情况下估值可能不透明。分发通过自托管钱包与 PancakeSwap 承接的活动进行，这意味着参与取决于资格条件，同时并不保证相关公司未来一定上市或出现流动性事件。",
-        "en": "On September 20, 2026, Binance Wallet launched \"Pre-Access\" campaigns, a subscription-based channel whose first campaigns are hosted by PancakeSwap and are available through self-custodied Binance Wallet accounts. The product gives eligible users indirect, tokenized exposure to private companies before they reach public markets.\n\nPre-IPO access to private companies has historically been restricted to institutional and accredited investors, so routing it through a mainstream exchange wallet materially widens the potential retail audience. It also puts Binance squarely into the competitive real-world-asset and tokenization race, where exchanges are racing to put private-market and traditional assets on-chain.\n\nThe exposure is indirect and tokenized rather than actual equity, so holders generally do not receive shareholder rights such as voting or dividends, and pricing may be opaque given the absence of a public market. Distribution runs through self-custody wallets and PancakeSwap-hosted campaigns, which means access depends on eligibility criteria and there is no guarantee of a future IPO or liquidity event."
+        "zh": "根据 Crypto News，Kalshi 寻求 CFTC 批准股票永续合约。",
+        "en": "According to Crypto News, Kalshi seeks CFTC approval for stock perpetuals."
       },
       "content_revision": {
-        "zh": "7af823c99f9c21aa6e28bb1c342d50328617bca639ce51304018a7f8a733a915",
-        "en": "3ba25c6b3a624c6db883c99a58c5345a88d93dd715d6c0054a96079c9c7be58f"
+        "zh": "25866741aac856ad1de8804462380410ad1dea6dbcf0b5619926d3857409600d",
+        "en": "058092a2d26a490f50f0d844370d8ec19e3570862a5d1ea9de1e8ef7407c7521"
       },
-      "score": 7.5,
+      "score": 7.0,
       "category": "exchange-announcements",
       "top_category": "crypto",
       "source": {
         "type": "google_news",
         "label": "Crypto News"
       },
-      "tags": [
-        "Binance",
-        "tokenization",
-        "pre-IPO",
-        "RWA",
-        "exchange-product"
-      ],
-      "sources_count": 1,
+      "tags": [],
+      "sources_count": 2,
       "editorial": false,
       "thread": {
-        "id": "t0fb5ea4daf",
-        "day": 4,
-        "url": "https://bmt.news/threads/t0fb5ea4daf/"
+        "id": "t0029fb5092",
+        "day": 9,
+        "url": "https://bmt.news/threads/t0029fb5092/"
       },
       "event": {
-        "event_id": "evt_4a6658f47f2a5a9a",
-        "update_id": "upd_9a28a84e0d0eb973",
-        "url": "https://bmt.news/events/evt_4a6658f47f2a5a9a/#upd_9a28a84e0d0eb973",
-        "json": "https://bmt.news/api/events/evt_4a6658f47f2a5a9a.json"
+        "event_id": "evt_4e4f1f495573674e",
+        "update_id": "upd_2ec0ead8aa85fca6",
+        "url": "https://bmt.news/events/evt_4e4f1f495573674e/#upd_2ec0ead8aa85fca6",
+        "json": "https://bmt.news/api/events/evt_4e4f1f495573674e.json"
       }
     },
     {
       "rank": 6,
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPVF9WLV9pV0dFbmh1djVUUEppcjlzYmhRb3ZPYmJDZFdEOXFsVkxjUzc5YzZvQ1BnMVhrVjhtNWEwcmQ0SVc5MGxhdVNrMlZmVzhTQ1IxTm9HcE1hY3BNbmVEbGVDWFlHckxDQkxweHNyNUxnLXV0NC0zd1ByUy1lRF8zdHpqLXJvcmZLUWVoQ01BXzhEenI5ckJBSE8tdFdDT2tRd1RNdEV4bWthY2wweTltcXZFSWIyajN2c1ExX3hxbWxYWXlLZXRhc3BESXdYMkd3bkkwcDZySEdic3BnajBkbGJFMjJCNzZ0bVlhUi0?oc=5",
+      "url": "https://decrypt.co/378697/visa-close-meme-coin-credit-card-rewards-loophole",
       "title": {
-        "zh": "两名币安员工在阿联酋被拘留，警方正在调查",
-        "en": "Two Binance Employees Detained in UAE Amid Police Inquiries"
+        "zh": "Visa 着手关闭 Meme 币信用卡奖励漏洞",
+        "en": "Visa Moves to Close Meme Coin Credit Card Rewards Loophole"
       },
       "summary": {
-        "zh": "据 springfieldnewssun.com 报道，两名币安（Binance）员工在阿联酋被拘留，当地警方正在展开调查。报道未显示用户资金、客户资产或平台可用性受到影响。\n\n此次拘留发生的地点，正是币安在 2023 年之后重建监管信誉时最倚重的司法辖区：它在此持有 ADGM 全球牌照，阿布扎比主权基金 Mubadala 也在 2025 年入股 20 亿美元。因此，交易所与阿联酋当局之间的任何摩擦，都会同时牵动其牌照地位，以及它用来重建监管机构和机构合作伙伴信任的合规叙事。\n\n警方调查被描述为仍在进行中，被拘留员工的身份和具体指控均未公开，因此目前尚不清楚此事涉及交易所的公司行为、个人行为还是无关事项。目前没有客户资金或交易服务受影响的报道。",
-        "en": "Two Binance employees have reportedly been detained in the United Arab Emirates while local police carry out inquiries, according to a report carried by springfieldnewssun.com. The report does not indicate that user funds, customer assets, or platform availability have been affected.\n\nThe detentions land in the jurisdiction Binance has leaned on most heavily for its post-2023 regulatory reset, where it holds an ADGM global licence and where Abu Dhabi sovereign fund Mubadala took a $2 billion stake in 2025. Any friction between the exchange and UAE authorities therefore touches both its licensing posture and the credibility of the compliance story it has used to rebuild trust with regulators and institutional partners.\n\nPolice inquiries are described as ongoing and neither the identities of the detained employees nor the specific allegations have been made public, so it remains unclear whether the matter concerns the exchange's corporate activities, individual conduct, or an unrelated issue. No customer funds or trading services have been reported as affected."
+        "zh": "据 Crypto In America 获悉，JP Morgan 在一场围绕加密货币购买信用卡奖励的单独争议中取得较小胜利；据一位知情人士称，Visa 正着手关闭 Crossmint 支持的结账流程中的一个疑似漏洞，该漏洞允许信用卡购买的 meme 币按面向数字媒体的商户代码处理。此前 Chase 告诉 The Block，一笔 Visa 交易被错误分类、不应获得奖励，纽约州总检察长办公室也告诉 The Block 其知悉并正在审查此事；meme 币购买仍将继续，但必须按加密交易处理并受 Visa 规则约束，支付处理商有一个预计下周结束的宽限期。",
+        "en": "According to Crypto In America, JP Morgan has scored a narrower victory in a separate fight over credit card rewards on crypto purchases; according to a source familiar with the matter, Visa is moving to close an apparent loophole in Crossmint-powered checkouts that allowed meme coin purchases made with credit cards to be processed under a merchant code intended for digital media. Earlier, Chase told The Block that one Visa transaction was misclassified and should not have earned rewards, and the New York attorney general's office also told The Block it was aware of and reviewing the matter; meme coin purchases will continue but must be processed as crypto transactions under Visa's rules, and processors have a grace period expected to end next week."
       },
       "content_revision": {
-        "zh": "10539e5fb9c1d183e39159fbbfdcb899ef8053754a77f140a0fbf2be748eab7d",
-        "en": "3b01571a63929bcba39579d7a7a85263cc895d1a49a0a93ac74ea1d3c59e0494"
+        "zh": "607d419b7018d61ce2e27c2758e6929354c0d9003087a86f078e140d7293b8cc",
+        "en": "dccde80545d4649fd22c263a934d12b3152f6e0dac7c3959cce613a51828f904"
       },
-      "score": 7.5,
-      "category": "exchange-operations",
-      "top_category": "crypto",
+      "score": 7.0,
+      "category": "crypto-regulation",
+      "top_category": "policy",
       "source": {
-        "type": "google_news",
-        "label": "springfieldnewssun.com"
+        "type": "rss",
+        "label": "Decrypt"
       },
-      "tags": [
-        "binance",
-        "uae",
-        "exchange-operations",
-        "legal",
-        "law-enforcement"
-      ],
+      "tags": [],
       "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "t87be9f98cd",
+        "id": "t391031018e",
         "day": 1,
-        "url": "https://bmt.news/threads/t87be9f98cd/"
+        "url": "https://bmt.news/threads/t391031018e/"
       },
       "event": {
-        "event_id": "evt_d8ae999be9e6a399",
-        "update_id": "upd_99ef40551c011d23",
-        "url": "https://bmt.news/events/evt_d8ae999be9e6a399/#upd_99ef40551c011d23",
-        "json": "https://bmt.news/api/events/evt_d8ae999be9e6a399.json"
+        "event_id": "evt_fa4618f8fc917ce6",
+        "update_id": "upd_5564b336708a8821",
+        "url": "https://bmt.news/events/evt_fa4618f8fc917ce6/#upd_5564b336708a8821",
+        "json": "https://bmt.news/api/events/evt_fa4618f8fc917ce6.json"
       }
     },
     {
       "rank": 7,
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSXpFQjhWZlF5aHdqT0t3OUYyMlNwVk5CNnJhaEdEQW5jM3k3SkZmNDRZM1R1OTB4RGJqNEJJajVXZkRRRElKUGpRb1Y0WkJIZWRKTmRyVWRVQ2haMjBfemEwZ091N0ExWmlxWFNNVlJ4STk0ZDVxYmNVYy02S3doOEF0SzlrNWF1NUxsYXgtNEh4MDBtbmQ1Z0xiZDNyMzh6bzEydjBLUFZ2TzZ4NlhaN1dDYzJwSWZkOEQ5MkpfRDNJVzVpVWxBS3ZTU3VUTnZZOXBucGZmVQ?oc=5",
+      "url": "https://www.coindesk.com/business/2026/09/20/coinbase-robinhood-circle-could-be-early-winners-of-sec-s-tokenized-stock-push-analysts-say",
       "title": {
-        "zh": "WSJ：拉加德施压希腊，阻止币安即将获批的MiCA牌照",
-        "en": "WSJ: Lagarde Pressured Greece to Block Binance's MiCA License Bid"
+        "zh": "分析师称，Coinbase、Robinhood、Circle 或成 SEC 推动代币化股票的早期赢家",
+        "en": "Coinbase, Robinhood, Circle could be early winners of SEC's tokenized-stock push, analysts say"
       },
       "summary": {
-        "zh": "《华尔街日报》报道称，欧洲央行行长克里斯蒂娜·拉加德亲自出面干预，要求希腊当局推迟币安几乎已走完全程的MiCA牌照申请；随后币安于6月24日在未获正式决定的情况下撤回了在希腊的申请。Crowdfund Insider等媒体转述了这一报道，并将币安在美国的刑事案底以及对美元稳定币的担忧列为干预理由。\n\n这是央行行长罕见地直接介入成员国加密牌照审批的案例，说明MiCA的批准过程可能受到远超法规文本技术要求之外的监管与政治压力影响。由于一张MiCA牌照即可在全欧盟范围内“通行”，这一结果直接决定币安能否以欧盟受监管主体身份服务整个约4.5亿人口的共同市场。\n\n币安此前特意选择雅典而非外界猜测的马耳他或拉脱维亚作为其欧盟枢纽，并在撤回希腊申请后表示将在欧洲其他司法辖区重新申请。据报道，反对意见主要集中于币安2023年在美国的认罪及数十亿美元和解，以及对美元锚定稳定币在欧洲市场主导地位的担忧。",
-        "en": "The Wall Street Journal reported that European Central Bank President Christine Lagarde personally intervened to urge Greek authorities to stall Binance's near-complete MiCA license application, a decision that was ultimately followed by Binance withdrawing its Greek bid on June 24 after no formal decision was issued. Crowdfund Insider and other outlets amplified the report, which cites Binance's US criminal record and concerns over dollar-denominated stablecoins as reasons behind the intervention.\n\nThis is a rare instance of a central bank president directly weighing in on a national crypto licensing decision, showing that MiCA approvals can be shaped by supervisory and political pressure well beyond the regulation's written technical criteria. Because a single MiCA authorization grants passporting rights across the entire EU, the outcome directly determines whether Binance can serve the bloc's roughly 450 million consumers from an EU-regulated base.\n\nBinance had deliberately chosen Athens as its EU hub over previously speculated jurisdictions such as Malta or Latvia, and it said it would reapply elsewhere in Europe after pulling the Greek filing. The reported objections centered on Binance's 2023 US guilty plea and multibillion-dollar settlement as well as unease about the dominance of dollar-pegged stablecoins in the European market."
+        "zh": "高盛和 Citizens 分析师表示，SEC 的五年创新豁免可能让符合条件的代币化美国股票通过公共区块链上的自动做市商交易，从而使 Coinbase、Robinhood 和 Circle 受益。但 Robinhood 需增加股东权利等特征以使股票代币合规，而交易上限、发行人退出和技术限制预计会保护传统交易所免受重大竞争。",
+        "en": "Goldman Sachs and Citizens analysts said the SEC's five-year innovation exemption could benefit Coinbase, Robinhood and Circle by allowing qualifying tokenized U.S. stocks to trade through automated market makers on public blockchains. They noted Robinhood must add shareholder rights and other features to make its stock tokens compliant, while trading caps, issuer opt-outs and technical limits are expected to protect traditional exchanges from significant competition."
       },
       "content_revision": {
-        "zh": "a9c50a4cb22fc1a3d3ce1739893e2a090f8fe013a01f6130b54f60be38ea16e7",
-        "en": "54da5b198edc31be779064758f4a669ad426c652d6af28ed2e295816b21b3bf0"
+        "zh": "67eb284341d2ad14f698d7bc2f37559d62d3a5c5ebdd60a0985f061ba5ab4602",
+        "en": "a5f61734b1db03be74bc8b93c1fda9aa2c70cd73f3a5e778b538eafd29174641"
       },
-      "score": 7.5,
+      "score": 7.0,
       "category": "crypto-regulation",
       "top_category": "policy",
       "source": {
-        "type": "google_news",
-        "label": "Crowdfund Insider"
-      },
-      "tags": [
-        "Binance",
-        "MiCA",
-        "ECB",
-        "regulation",
-        "Greece"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t2118ab583b",
-        "day": 2,
-        "url": "https://bmt.news/threads/t2118ab583b/"
-      },
-      "event": {
-        "event_id": "evt_dea9b05248ea323f",
-        "update_id": "upd_86e72c913e869fd2",
-        "url": "https://bmt.news/events/evt_dea9b05248ea323f/#upd_86e72c913e869fd2",
-        "json": "https://bmt.news/api/events/evt_dea9b05248ea323f.json"
-      }
-    },
-    {
-      "rank": 8,
-      "url": "https://www.aol.com/articles/investors-now-invest-surging-tron-194700000.html",
-      "title": {
-        "zh": "全新 ETF 为传统券商投资者提供受监管的 TRON 敞口",
-        "en": "New ETF Gives Regulated TRON Exposure to Traditional Brokerage Investors"
-      },
-      "summary": {
-        "zh": "一只新推出的交易所交易基金（ETF）现可通过普通券商账户，为投资者提供对 TRON 区块链原生资产 TRX 的受监管敞口，而无需使用加密货币交易所。该产品把山寨币 ETF 的浪潮从比特币和以太坊扩展到了一只市值排名前二十的数字资产。\n\n这标志着市场结构的转变：TRX 现在可以被那些无法或不愿开设加密货币交易所账户的投资者所接触，有望扩大持有者基础并加深机构对该资产的熟悉度。这也强化了“除 BTC 和 ETH 之外的山寨币同样能获得美国上市受监管包装”的先例，对数十份仍在排队中的加密 ETF 申请意义重大。\n\nTRON 是一条采用委托权益证明（DPoS）机制、支持智能合约的区块链，其 TRX 代币可被冻结以获取 Tron Power，从而使持有者获得治理权重以及能量或带宽资源。该资产同时也面临严厉的监管与执法审视：据《华尔街日报》2025 年报道，2024 年超过一半的非法加密活动通过 TRON 进行，联合国毒品和犯罪问题办公室也将其称为亚洲洗钱者的首选渠道之一。",
-        "en": "A newly launched exchange-traded fund now offers investors regulated exposure to TRON (TRX), the native asset of the TRON blockchain, through an ordinary brokerage account rather than a crypto exchange. The product extends the altcoin ETF wave beyond Bitcoin and Ethereum to a top-20 digital asset.\n\nIt marks a market-structure shift: TRX becomes reachable to investors who cannot or will not open a crypto exchange account, potentially widening the holder base and deepening institutional familiarity with the asset. It also strengthens the precedent that altcoins beyond BTC and ETH can obtain US-listed, regulated wrappers, which matters for the dozens of other pending crypto ETF filings.\n\nTRON is a delegated proof-of-stake, smart-contract-capable blockchain whose TRX token can be frozen to obtain Tron Power, giving holders governance weight and energy or bandwidth resources. The asset has also drawn heavy regulatory and law-enforcement scrutiny, with The Wall Street Journal reporting in 2025 that TRON was the channel for more than half of illegal crypto activity in 2024 and the UN Office on Drugs and Crime describing it as a preferred choice for money launderers in Asia."
-      },
-      "content_revision": {
-        "zh": "832800b6102789c1960ba0f52619f8105a3e5b326af063f55c398a46e405c628",
-        "en": "3a10f46ed9e498b13d16c31482dc0b859efc656ab7ade7d2adba75bfe674e300"
-      },
-      "score": 7.0,
-      "category": "crypto-markets",
-      "top_category": "crypto",
-      "source": {
-        "type": "gdelt",
-        "label": "aol.com"
-      },
-      "tags": [
-        "TRON",
-        "ETF",
-        "crypto-markets",
-        "institutional-adoption",
-        "altcoins"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t2537836be3",
-        "day": 5,
-        "url": "https://bmt.news/threads/t2537836be3/"
-      },
-      "event": {
-        "event_id": "evt_b1213d540f8cd665",
-        "update_id": "upd_ba7c540eba1eb506",
-        "url": "https://bmt.news/events/evt_b1213d540f8cd665/#upd_ba7c540eba1eb506",
-        "json": "https://bmt.news/api/events/evt_b1213d540f8cd665.json"
-      }
-    },
-    {
-      "rank": 9,
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0xcVhOTEVUX285STJ3MXgtS09TUEduTE9QYWpoODhRV3FPVDhOS1V0eXlGLVRPWWVoYXFBR2Y0OEdjVWd3MlVkTDN2Vzl6Q1o4MVRxM1lmd2ZrMXJrVkh3eUctazhMYkNWaUlDOXJFMTA0SkdCeEE?oc=5",
-      "title": {
-        "zh": "FomoPeek iPhone 应用内置 iOS 漏洞利用套件，窃取加密钱包密钥",
-        "en": "FomoPeek iPhone App Shipped iOS Exploit Kit to Steal Crypto Wallet Keys"
-      },
-      "summary": {
-        "zh": "安全研究人员发现，一款名为 FomoPeek 的 iPhone 应用内置了恶意代码，能够绕过 iOS 的安全限制，从受影响设备中提取加密货币钱包凭据；该应用对外宣传为面向 Solana、以太坊和 TRON 的只读巨鲸追踪工具。SlowMist 已于 9 月 19 日就该应用发布资产盗取警告，并有用户报告随后发生钱包被盗。\n\n这表明移动应用分发渠道可以被改造成专门针对加密资产自托管私钥的完整 iOS 漏洞利用套件的投递载体，使攻击面从交易所和协议转向普通用户的手机。由于该套件可复用、只需包装成一款普通消费级应用，同样的手法可以被转卖并重新打包，用于攻击其他持币人群。\n\n据披露，该恶意框架实现了八种攻击方法，并会根据机型与系统版本自动选择利用方式，因此犯罪买家几乎可以把预制漏洞包封装进任意应用外壳中。它与此前公开的 iOS 漏洞利用套件属于同一产品类别，例如包含 23 个漏洞的 Coruna 套件以及 DarkSword Safari 攻击链；目前 FomoPeek 尚未公布经确认的总体损失金额。",
-        "en": "Security researchers found that FomoPeek, an iPhone app marketed as a read-only whale-tracking tool for Solana, Ethereum and TRON wallets, contained malicious code capable of escaping iOS security restrictions and extracting cryptocurrency wallet credentials from affected devices. SlowMist issued an asset-theft warning about the app on September 19, and users have reported follow-on wallet drains.\n\nThis shows that mobile app distribution channels can be turned into a delivery vehicle for full iOS exploit kits aimed specifically at crypto self-custody keys, shifting the attack surface from exchanges and protocols to individual users' phones. Because the kit is reusable and wrapped in an ordinary consumer app, the same technique can be resold and repackaged against other wallet-holding audiences.\n\nThe malicious framework reportedly implements eight methods and performs model- and version-aware selection of exploits, so a criminal buyer can wrap prebuilt exploit packs in essentially any app shell. It sits in the same product category as previously disclosed iOS exploit kits such as the 23-exploit Coruna kit and the DarkSword Safari chain, while no confirmed aggregate loss figure has been published for FomoPeek."
-      },
-      "content_revision": {
-        "zh": "49ac4e0c8b968b93405d3dc2afbb91075940dd1d0cd94676dca5bbf78c83d0d5",
-        "en": "99e0afc4f8d749ffaa1f6d063a2df2a599d55f97bf4c9ee3e010ee4473b20c52"
-      },
-      "score": 7.0,
-      "category": "crypto-protocols",
-      "top_category": "crypto",
-      "source": {
-        "type": "google_news",
-        "label": "finance.biggo.com"
-      },
-      "tags": [
-        "security",
-        "malware",
-        "iOS",
-        "wallet-security",
-        "exploit"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t8b40971396",
-        "day": 2,
-        "url": "https://bmt.news/threads/t8b40971396/"
-      },
-      "event": {
-        "event_id": "evt_c7a35eff76922e02",
-        "update_id": "upd_4bffa198de5578c7",
-        "url": "https://bmt.news/events/evt_c7a35eff76922e02/#upd_4bffa198de5578c7",
-        "json": "https://bmt.news/api/events/evt_c7a35eff76922e02.json"
-      }
-    },
-    {
-      "rank": 10,
-      "url": "https://my.okx.com/en-eu/help/pre-ipo-stocks-terms-and-conditions?channelid=ACE505900",
-      "title": {
-        "zh": "OKX欧洲推出OpenAI与Anthropic上市前永续合约",
-        "en": "OKX Europe Rolls Out Pre-IPO Perps on OpenAI and Anthropic"
-      },
-      "summary": {
-        "zh": "OKX欧洲推出了上市前的X-Perps杠杆永续衍生品，使符合条件的欧洲经济区（EEA）交易者可以在OpenAI和Anthropic完成IPO之前建立头寸，杠杆最高可达10倍。\n\n这为散户提供了一条受监管、可参与的渠道，去押注两家最受关注的私营AI实验室上市前的估值表现，而这一领域过去基本只对风险投资和机构投资者开放。同时也表明加密衍生品平台正通过把私营公司估值包装成7×24小时可交易的合约，进一步切入类股票的市场结构。\n\n该产品被明确界定为杠杆衍生品与代币化股票敞口，并不提供对股票的直接所有权，其运营主体OKX Europe Markets Limited受马耳他金融服务管理局（MFSA）授权与监管。X-Perps以美元计价保证金，可使用USDC、USDG或USD等美元等价货币结算，并设有资金费率机制以及明确的到期日。",
-        "en": "OKX Europe has launched pre-IPO X-Perps — leveraged perpetual derivatives — that let eligible traders in the European Economic Area take positions on OpenAI and Anthropic before either company completes an IPO, with leverage of up to 10x.\n\nThis creates a retail-accessible, regulated route to pre-IPO exposure in two of the most closely watched private AI labs, a segment historically reserved for venture capital and institutional investors. It also shows crypto derivatives venues pushing further into equity-like market structure by wrapping private-company valuations into 24/7 tradable contracts.\n\nThe product is explicitly framed as leveraged derivatives and tokenized stock exposure that confers no direct ownership of shares, and OKX Europe Markets Limited is authorised and regulated by the MFSA. X-Perps are USD-margined instruments settled in USD-equivalent currencies such as USDC, USDG or USD, and they use a funding-fee mechanism with a defined expiration date."
-      },
-      "content_revision": {
-        "zh": "b56614097374aa64e27273f8effcf9b64b66be442b070db0a9b2b1f4132f02b0",
-        "en": "a5bb254d5efa135d3e61294108a72f1d5c672833e936177443e33839fb61eeb8"
-      },
-      "score": 7.0,
-      "category": "exchange-announcements",
-      "top_category": "crypto",
-      "source": {
-        "type": "telegram",
-        "label": "OKXAnnouncements"
-      },
-      "tags": [
-        "OKX",
-        "pre-IPO derivatives",
-        "perpetual futures",
-        "OpenAI",
-        "Anthropic"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t727527b7fa",
-        "day": 7,
-        "url": "https://bmt.news/threads/t727527b7fa/"
-      },
-      "event": {
-        "event_id": "evt_4dc75e7cb1ee5520",
-        "update_id": "upd_5ae33fcd6bbd9b2b",
-        "url": "https://bmt.news/events/evt_4dc75e7cb1ee5520/#upd_5ae33fcd6bbd9b2b",
-        "json": "https://bmt.news/api/events/evt_4dc75e7cb1ee5520.json"
-      }
-    },
-    {
-      "rank": 11,
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
-      "title": {
-        "zh": "Anthropic发布衡量前沿实验室AI发展速度的指标",
-        "en": "Anthropic Publishes Metrics to Measure AI Development Pace Inside Frontier Labs"
-      },
-      "summary": {
-        "zh": "Anthropic 发布了一份研究与方法论文章，概述了用于理解前沿实验室内部 AI 发展速度的衡量指标。该发布侧重于实验室内部的测量框架，而不是宣布新模型或新产品。\n\n一套衡量前沿实验室内部发展速度的共同方法，可能通过让研究者、政策制定者和公众更具体地评估进展与风险主张，从而改善 AI 安全治理。它也反映出行业正从单纯追逐能力基准，转向更重视节奏把控与进展测量。\n\n该方法论关注实验室内部的研发信号，例如实验室如何追踪和报告自身进展，而不仅仅是外部评估分数，这可能有助于区分真正的安全进展与表面上的基准提升。作为方法论贡献，它本身并未部署新的 AI 能力，也没有改变任何现有模型的访问权限。",
-        "en": "Anthropic released a research and methodology piece outlining measurements for understanding how quickly AI development is advancing inside frontier labs. The publication focuses on internal lab measurement frameworks rather than announcing a new model or product.\n\nA shared way to measure development pace inside frontier labs could improve AI safety governance by letting researchers, policymakers, and the public evaluate claims about progress and risk more concretely. It also reflects a broader industry shift toward pacing and measuring AI advancement rather than racing solely on capability benchmarks.\n\nThe methodology addresses internal R&D signals, such as how labs track and report their own progress, rather than only external evaluation scores, which may help distinguish genuine safety progress from surface-level benchmark gains. As a methodology contribution, it does not itself deploy a new AI capability or change any existing model access."
-      },
-      "content_revision": {
-        "zh": "3d200ac53f6c7cd5a80f6fabc5d5f66624f2274b140f985310e9e580dcb14018",
-        "en": "a90e846212b1f80d9c0f9aa22a8e04ff8a5e01e5de2fedbe5494d59c3209df20"
-      },
-      "score": 7.0,
-      "category": "ai-labs",
-      "top_category": "technology",
-      "source": {
         "type": "rss",
-        "label": "Anthropic News"
+        "label": "CoinDesk"
       },
-      "tags": [
-        "AI development",
-        "frontier labs",
-        "AI measurement",
-        "AI safety",
-        "Anthropic"
-      ],
+      "tags": [],
       "sources_count": 1,
       "editorial": false,
       "thread": {
-        "id": "t07d751bbff",
-        "day": 5,
-        "url": "https://bmt.news/threads/t07d751bbff/"
+        "id": "t0029fb5092",
+        "day": 9,
+        "url": "https://bmt.news/threads/t0029fb5092/"
       },
       "event": {
-        "event_id": "evt_352dbfec2c53f52b",
-        "update_id": "upd_bbc5fc60abb18ed5",
-        "url": "https://bmt.news/events/evt_352dbfec2c53f52b/#upd_bbc5fc60abb18ed5",
-        "json": "https://bmt.news/api/events/evt_352dbfec2c53f52b.json"
-      }
-    },
-    {
-      "rank": 12,
-      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
-      "title": {
-        "zh": "Qwen-Image-2.1：7B 开源权重图像模型，原生支持透明通道",
-        "en": "Qwen-Image-2.1: 7B open-weight image model with native transparency"
-      },
-      "summary": {
-        "zh": "Qwen 开源了 Qwen-Image-2.1，这是一个统一的文生图与图像编辑模型，其视觉生成部分仅使用 7B 参数、32 层 Single-Stream DiT，相比 Qwen-Image 1.0 的 20B MMDiT 大幅缩小。该版本新增原生 RGBA 透明通道支持、直接输出 2048×2048 分辨率，并可基于最多 10 张输入参考图进行编辑，同时小字号文字渲染能力相比其他开源权重模型明显提升。\n\nQwen-Image-2.1 将参数量压缩到前代的大约三分之一，显著降低了自托管与本地图像生成的显存和时延门槛，使较普通的 GPU 也能跑出高质量结果。其文字渲染优势直指设计、UI 与营销等对字体可读性要求高的场景，而这正是开源权重模型长期以来的主要短板；但相比此前 Qwen 系列常用的 Apache 许可，本次更严格的许可证可能限制商业与下游生态的采用。\n\n该模型已在 ComfyUI 中原生支持，并在同一套权重内实现统一生成、透明图层编辑以及从照片中抠取主体。需要留意两点：QwenLM/Qwen-Image-2.1 仓库中的 LICENSE 文件比此前许多 Qwen 模型采用的 Apache 许可严格得多；同时早期社区测试显示其提示词遵循度不稳定，面对复杂构图需求往往需要反复更换随机种子试错。",
-        "en": "Qwen open-sourced Qwen-Image-2.1, a unified text-to-image generation and image-editing model whose visual generation component uses only 7B parameters across 32 Single-Stream DiT layers, down from the 20B MMDiT model of Qwen-Image 1.0. The release adds native RGBA transparency, direct 2048×2048 output, and editing across up to 10 input reference images, with markedly improved small-text rendering compared with other open-weight options.\n\nBy cutting the parameter count to roughly a third of its predecessor, Qwen-Image-2.1 lowers the VRAM and latency barrier for self-hosted and local image generation, making high-quality generation practical on more modest GPUs. Its text-rendering strength targets design, UI and marketing workflows where legible typography has been the main weakness of open-weight models — but the more restrictive license than the Apache terms used by earlier Qwen releases could limit commercial and downstream adoption.\n\nThe model runs natively in ComfyUI and supports unified generation, transparent-layer editing and subject extraction from photographs within a single set of weights. Two caveats stand out: the LICENSE file in the QwenLM/Qwen-Image-2.1 repository is considerably more restrictive than the Apache licensing used across many earlier Qwen models, and early community testing reports inconsistent prompt adherence, requiring seed trial-and-error for compositional requests."
-      },
-      "content_revision": {
-        "zh": "a8f3a53fef431417202813e517e689dafa239b70ea6e1dc30d47225b83833fd4",
-        "en": "aba898c4b9178c8bde0e9d932e50ac6051b490bc03c92414193de0c3a6ad80c7"
-      },
-      "score": 7.0,
-      "category": "ai-labs",
-      "top_category": "technology",
-      "source": {
-        "type": "hackernews",
-        "label": "jmillikin"
-      },
-      "tags": [
-        "qwen",
-        "image-generation",
-        "open-weights",
-        "model-release",
-        "text-rendering"
-      ],
-      "sources_count": 1,
-      "editorial": false,
-      "thread": {
-        "id": "t58292849ad",
-        "day": 1,
-        "url": "https://bmt.news/threads/t58292849ad/"
-      },
-      "event": {
-        "event_id": "evt_d3835c9432f071b0",
-        "update_id": "upd_39da0279c5804d90",
-        "url": "https://bmt.news/events/evt_d3835c9432f071b0/#upd_39da0279c5804d90",
-        "json": "https://bmt.news/api/events/evt_d3835c9432f071b0.json"
+        "event_id": "evt_ab7cd573741b4bf2",
+        "update_id": "upd_84599b36b4f64389",
+        "url": "https://bmt.news/events/evt_ab7cd573741b4bf2/#upd_84599b36b4f64389",
+        "json": "https://bmt.news/api/events/evt_ab7cd573741b4bf2.json"
       }
     }
   ]

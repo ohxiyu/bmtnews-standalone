@@ -65282,12 +65282,13 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
-      "current_state_zh": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
+      "current_state_en": "The SEC's tokenized-stock framework is now being assessed by analysts, with Coinbase, Robinhood, and Circle identified as potential beneficiaries subject to conditions like shareholder rights and AMM-based trading.",
+      "current_state_zh": "SEC的代币化股票框架已进入分析师评估阶段，Coinbase、Robinhood和Circle被认定为潜在受益者，但需满足股东权利和AMM交易等条件。",
       "entities": [
         "australia",
         "circle",
         "coinbase",
+        "robinhood",
         "sec",
         "yahoo"
       ],
@@ -65295,11 +65296,11 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-18T01:25:28.653372Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-18T01:25:28.653372Z",
-      "last_updated_at": "2026-09-18T01:25:28.653372Z",
+      "last_material_change_at": "2026-09-20T23:27:13.284861Z",
+      "last_updated_at": "2026-09-20T23:27:13.284861Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "Coinbase, Circle recover as SEC opens tokenized stock path - Yahoo Finance Australia",
       "title_zh": "Coinbase, Circle recover as SEC opens tokenized stock path - Yahoo Finance Australia",
       "topics": [
@@ -65347,6 +65348,44 @@
           "update_type": "initial",
           "what_changed_en": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading.",
           "what_changed_zh": "The SEC's move to open a regulatory path for tokenized stocks lifted shares of Coinbase and Circle, signaling potential mainstream adoption of blockchain-based equity trading."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The SEC's tokenized-stock framework is now being assessed by analysts, with Coinbase, Robinhood, and Circle identified as potential beneficiaries subject to conditions like shareholder rights and AMM-based trading.",
+          "current_state_zh": "SEC的代币化股票框架已进入分析师评估阶段，Coinbase、Robinhood和Circle被认定为潜在受益者，但需满足股东权利和AMM交易等条件。",
+          "detailed_summary_en": "Goldman Sachs and Citizens analysts said the SEC's five-year innovation exemption could benefit Coinbase, Robinhood and Circle by allowing qualifying tokenized U.S. stocks to trade through automated market makers on public blockchains. They noted Robinhood must add shareholder rights and other features to make its stock tokens compliant, while trading caps, issuer opt-outs and technical limits are expected to protect traditional exchanges from significant competition.",
+          "detailed_summary_zh": "高盛和 Citizens 分析师表示，SEC 的五年创新豁免可能让符合条件的代币化美国股票通过公共区块链上的自动做市商交易，从而使 Coinbase、Robinhood 和 Circle 受益。但 Robinhood 需增加股东权利等特征以使股票代币合规，而交易上限、发行人退出和技术限制预计会保护传统交易所免受重大竞争。",
+          "event_id": "evt_ab7cd573741b4bf2",
+          "first_seen_at": "2026-09-20T23:27:13.284861Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-20T12:00:00Z",
+          "published_at": "2026-09-20T12:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/20/coinbase-robinhood-circle-could-be-early-winners-of-sec-s-tokenized-stock-push-analysts-say"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:edff8b1133e3ced7"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase, Robinhood, Circle could be early winners of SEC's tokenized-stock push, analysts say",
+          "title_zh": "分析师称，Coinbase、Robinhood、Circle 或成 SEC 推动代币化股票的早期赢家",
+          "update_id": "upd_84599b36b4f64389",
+          "update_type": "aftermath",
+          "what_changed_en": "Analysts indicated the SEC's five-year innovation exemption could benefit Coinbase, Robinhood, and Circle, detailing compliance requirements, trading caps, and issuer opt-outs.",
+          "what_changed_zh": "分析师指出SEC的五年创新豁免可能使Coinbase、Robinhood和Circle受益，并详述了合规要求、交易上限和发行人退出等限制。"
         }
       ]
     },
@@ -72773,6 +72812,323 @@
           "update_type": "initial",
           "what_changed_en": "A multinational advisory from Japan, Germany, Australia and the US attributes a North Korean fake-recruiter malware campaign to hacking group WaterPlum, which infected at least 30,000 devices in over 100 countries and stole at least $10.7 million in crypto from developers and Web3 workers.",
           "what_changed_zh": "A multinational advisory from Japan, Germany, Australia and the US attributes a North Korean fake-recruiter malware campaign to hacking group WaterPlum, which infected at least 30,000 devices in over 100 countries and stole at least $10.7 million in crypto from developers and Web3 workers."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Cardano DReps let Input Output's 12.29 million ADA treasury request for Pogun expire without ratification; Koios recorded 64.33% of delegated representative voting power against and 35.67% in favor, while the Constitutional Committee recorded seven yes votes (100% committee approval). In a Sept. 18, 2026 broadcast, Charles Hoskinson said Input Output will choose the best network for each product rather than automatically prioritizing Cardano, while saying Pogun is still headed to Cardano; the proposal had offered 20% of earnings until repayment, then a perpetual 5% on Cardano-related products, with repayment tied to $2.95 million, and stated dates remain forward-looking targets.",
+      "current_state_zh": "Cardano的DRep代表让Input Output为Pogun提出的1229万ADA国库请求到期而未获批准；Koios摘要显示DRep投票权64.33%反对、35.67%赞成，宪法委员会则记录七票赞成（100%委员会批准）。Charles Hoskinson在2026年9月18日广播中称Input Output将按技术和商业契合度选择网络、不再自动优先Cardano，但称Pogun仍将登陆Cardano；该提案曾提议返还20%收益直至偿付、之后对Cardano相关产品永久返还5%，正式提案将偿付与295万美元挂钩，相关日期仍属前瞻性目标。",
+      "entities": [
+        "cardano",
+        "charles",
+        "hoskinson"
+      ],
+      "event_id": "evt_fab8bdecc238ca9d",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-21T09:42:08.620452Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-21T09:42:08.620452Z",
+      "last_updated_at": "2026-09-21T09:42:08.620452Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Charles Hoskinson says Cardano no longer comes first – its treasury vote explains why",
+      "title_zh": "Charles Hoskinson称Cardano不再优先——其国库投票说明了原因",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Cardano DReps let Input Output's 12.29 million ADA treasury request for Pogun expire without ratification; Koios recorded 64.33% of delegated representative voting power against and 35.67% in favor, while the Constitutional Committee recorded seven yes votes (100% committee approval). In a Sept. 18, 2026 broadcast, Charles Hoskinson said Input Output will choose the best network for each product rather than automatically prioritizing Cardano, while saying Pogun is still headed to Cardano; the proposal had offered 20% of earnings until repayment, then a perpetual 5% on Cardano-related products, with repayment tied to $2.95 million, and stated dates remain forward-looking targets.",
+          "current_state_zh": "Cardano的DRep代表让Input Output为Pogun提出的1229万ADA国库请求到期而未获批准；Koios摘要显示DRep投票权64.33%反对、35.67%赞成，宪法委员会则记录七票赞成（100%委员会批准）。Charles Hoskinson在2026年9月18日广播中称Input Output将按技术和商业契合度选择网络、不再自动优先Cardano，但称Pogun仍将登陆Cardano；该提案曾提议返还20%收益直至偿付、之后对Cardano相关产品永久返还5%，正式提案将偿付与295万美元挂钩，相关日期仍属前瞻性目标。",
+          "detailed_summary_en": "Cardano DReps let Input Output's 12.29 million ADA treasury request for Pogun expire without ratification; Koios recorded 64.33% of delegated representative voting power against and 35.67% in favor, while the Constitutional Committee recorded seven yes votes (100% committee approval). In a Sept. 18, 2026 broadcast, Charles Hoskinson said Input Output will choose the best network for each product rather than automatically prioritizing Cardano, while saying Pogun is still headed to Cardano; the proposal had offered 20% of earnings until repayment, then a perpetual 5% on Cardano-related products, with repayment tied to $2.95 million, and stated dates remain forward-looking targets.",
+          "detailed_summary_zh": "Cardano的DRep代表让Input Output为Pogun提出的1229万ADA国库请求到期而未获批准；Koios摘要显示DRep投票权64.33%反对、35.67%赞成，宪法委员会则记录七票赞成（100%委员会批准）。Charles Hoskinson在2026年9月18日广播中称Input Output将按技术和商业契合度选择网络、不再自动优先Cardano，但称Pogun仍将登陆Cardano；该提案曾提议返还20%收益直至偿付、之后对Cardano相关产品永久返还5%，正式提案将偿付与295万美元挂钩，相关日期仍属前瞻性目标。",
+          "event_id": "evt_fab8bdecc238ca9d",
+          "first_seen_at": "2026-09-21T09:42:08.620452Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-20T21:30:57Z",
+          "published_at": "2026-09-20T21:30:57Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/charles-hoskinson-says-cardano-no-longer-comes-first-its-treasury-vote-explains-why/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:064825b58269d8c2"
+          ],
+          "time_precision": "published",
+          "title_en": "Charles Hoskinson says Cardano no longer comes first – its treasury vote explains why",
+          "title_zh": "Charles Hoskinson称Cardano不再优先——其国库投票说明了原因",
+          "update_id": "upd_c308a2715698d22a",
+          "update_type": "initial",
+          "what_changed_en": "Cardano DReps let Input Output's 12.29 million ADA treasury request for Pogun expire without ratification; Koios recorded 64.33% of delegated representative voting power against and 35.67% in favor, while the Constitutional Committee recorded seven yes votes (100% committee approval). In a Sept. 18, 2026 broadcast, Charles Hoskinson said Input Output will choose the best network for each product rather than automatically prioritizing Cardano, while saying Pogun is still headed to Cardano; the proposal had offered 20% of earnings until repayment, then a perpetual 5% on Cardano-related products, with repayment tied to $2.95 million, and stated dates remain forward-looking targets.",
+          "what_changed_zh": "Cardano的DRep代表让Input Output为Pogun提出的1229万ADA国库请求到期而未获批准；Koios摘要显示DRep投票权64.33%反对、35.67%赞成，宪法委员会则记录七票赞成（100%委员会批准）。Charles Hoskinson在2026年9月18日广播中称Input Output将按技术和商业契合度选择网络、不再自动优先Cardano，但称Pogun仍将登陆Cardano；该提案曾提议返还20%收益直至偿付、之后对Cardano相关产品永久返还5%，正式提案将偿付与295万美元挂钩，相关日期仍属前瞻性目标。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "On Sept. 6, Liquid lost almost 4,000 Bitcoin through a withdrawal its software approved even though the private keys used to authorize it had not been stolen; according to TRM Labs' reconstruction, attackers exploited a software flaw to create L-BTC without backing Bitcoin and exchanged those tokens for real coins. Crypto insurance can cover losses without guaranteeing customers full reimbursement, and even successful repayment can leave customers short if compensation is calculated in dollars instead of Bitcoin.",
+      "current_state_zh": "9月6日，Liquid 因软件批准了一笔本不应合格的提款而流失近 4,000 枚比特币，尽管授权该提款的私钥并未被盗；据 TRM Labs 还原，攻击者利用软件缺陷创建了没有比特币背书的 L-BTC，并将其兑换成真实比特币。加密货币保险可能承保损失，但不保证客户获得全额赔偿，且若以美元而非比特币计算赔付，即使成功还款也可能让客户仍遭受短缺。",
+      "entities": [
+        "why"
+      ],
+      "event_id": "evt_59f36c4891b9fd25",
+      "event_type": "other",
+      "first_seen_at": "2026-09-21T09:42:08.750910Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-21T09:42:08.750910Z",
+      "last_updated_at": "2026-09-21T09:42:08.750910Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Why keeping your private keys safe won’t always stop crypto theft",
+      "title_zh": "为什么保管好私钥并不总能阻止加密货币被盗",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "On Sept. 6, Liquid lost almost 4,000 Bitcoin through a withdrawal its software approved even though the private keys used to authorize it had not been stolen; according to TRM Labs' reconstruction, attackers exploited a software flaw to create L-BTC without backing Bitcoin and exchanged those tokens for real coins. Crypto insurance can cover losses without guaranteeing customers full reimbursement, and even successful repayment can leave customers short if compensation is calculated in dollars instead of Bitcoin.",
+          "current_state_zh": "9月6日，Liquid 因软件批准了一笔本不应合格的提款而流失近 4,000 枚比特币，尽管授权该提款的私钥并未被盗；据 TRM Labs 还原，攻击者利用软件缺陷创建了没有比特币背书的 L-BTC，并将其兑换成真实比特币。加密货币保险可能承保损失，但不保证客户获得全额赔偿，且若以美元而非比特币计算赔付，即使成功还款也可能让客户仍遭受短缺。",
+          "detailed_summary_en": "On Sept. 6, Liquid lost almost 4,000 Bitcoin through a withdrawal its software approved even though the private keys used to authorize it had not been stolen; according to TRM Labs' reconstruction, attackers exploited a software flaw to create L-BTC without backing Bitcoin and exchanged those tokens for real coins. Crypto insurance can cover losses without guaranteeing customers full reimbursement, and even successful repayment can leave customers short if compensation is calculated in dollars instead of Bitcoin.",
+          "detailed_summary_zh": "9月6日，Liquid 因软件批准了一笔本不应合格的提款而流失近 4,000 枚比特币，尽管授权该提款的私钥并未被盗；据 TRM Labs 还原，攻击者利用软件缺陷创建了没有比特币背书的 L-BTC，并将其兑换成真实比特币。加密货币保险可能承保损失，但不保证客户获得全额赔偿，且若以美元而非比特币计算赔付，即使成功还款也可能让客户仍遭受短缺。",
+          "event_id": "evt_59f36c4891b9fd25",
+          "first_seen_at": "2026-09-21T09:42:08.750910Z",
+          "importance_score": 7.7,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-20T20:30:43Z",
+          "published_at": "2026-09-20T20:30:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/who-pays-when-bitcoin-disappears-without-anyone-stealing-the-keys/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:a6ee589f9f69fe08"
+          ],
+          "time_precision": "published",
+          "title_en": "Why keeping your private keys safe won’t always stop crypto theft",
+          "title_zh": "为什么保管好私钥并不总能阻止加密货币被盗",
+          "update_id": "upd_e03b1df0045812fa",
+          "update_type": "initial",
+          "what_changed_en": "On Sept. 6, Liquid lost almost 4,000 Bitcoin through a withdrawal its software approved even though the private keys used to authorize it had not been stolen; according to TRM Labs' reconstruction, attackers exploited a software flaw to create L-BTC without backing Bitcoin and exchanged those tokens for real coins. Crypto insurance can cover losses without guaranteeing customers full reimbursement, and even successful repayment can leave customers short if compensation is calculated in dollars instead of Bitcoin.",
+          "what_changed_zh": "9月6日，Liquid 因软件批准了一笔本不应合格的提款而流失近 4,000 枚比特币，尽管授权该提款的私钥并未被盗；据 TRM Labs 还原，攻击者利用软件缺陷创建了没有比特币背书的 L-BTC，并将其兑换成真实比特币。加密货币保险可能承保损失，但不保证客户获得全额赔偿，且若以美元而非比特币计算赔付，即使成功还款也可能让客户仍遭受短缺。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Solana’s 250ms slot time became effective at epoch 1037 on Sept. 18, according to the Solana engineering changelog and a Solana Compass report that placed the transition at about 05:06 UTC; an early Sept. 20 sample covering 60 one-minute windows observed about 266ms per produced slot, and epoch 1037 skipped about 0.05% of scheduled slots. The source says the more important test is whether leader handoffs, transaction forwarding, repair and multiple validator clients remain reliable as Solana considers a conditional move to 200ms.",
+      "current_state_zh": "Solana 的 250ms slot time 已在 9 月 18 日 epoch 1037 生效；根据 Solana 工程 changelog 和 Solana Compass 报告，过渡时间约为 05:06 UTC。9 月 20 日一份覆盖 60 个一分钟窗口的早期样本观察到每个已产出 slot 约 266ms，epoch 1037 约跳过 0.05% 的计划 slot；报道称更重要的考验是 Solana 考虑有条件转向 200ms 时，leader 交接、交易转发、修复和多种验证者客户端能否保持可靠。",
+      "entities": [
+        "solana",
+        "why"
+      ],
+      "event_id": "evt_9967983a25fc9652",
+      "event_type": "other",
+      "first_seen_at": "2026-09-21T09:42:08.876765Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-21T09:42:08.876765Z",
+      "last_updated_at": "2026-09-21T09:42:08.876765Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Why Solana’s new 250ms speed boost could actually trigger network instability",
+      "title_zh": "为什么 Solana 新的 250ms 提速实际上可能引发网络不稳定",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Solana’s 250ms slot time became effective at epoch 1037 on Sept. 18, according to the Solana engineering changelog and a Solana Compass report that placed the transition at about 05:06 UTC; an early Sept. 20 sample covering 60 one-minute windows observed about 266ms per produced slot, and epoch 1037 skipped about 0.05% of scheduled slots. The source says the more important test is whether leader handoffs, transaction forwarding, repair and multiple validator clients remain reliable as Solana considers a conditional move to 200ms.",
+          "current_state_zh": "Solana 的 250ms slot time 已在 9 月 18 日 epoch 1037 生效；根据 Solana 工程 changelog 和 Solana Compass 报告，过渡时间约为 05:06 UTC。9 月 20 日一份覆盖 60 个一分钟窗口的早期样本观察到每个已产出 slot 约 266ms，epoch 1037 约跳过 0.05% 的计划 slot；报道称更重要的考验是 Solana 考虑有条件转向 200ms 时，leader 交接、交易转发、修复和多种验证者客户端能否保持可靠。",
+          "detailed_summary_en": "Solana’s 250ms slot time became effective at epoch 1037 on Sept. 18, according to the Solana engineering changelog and a Solana Compass report that placed the transition at about 05:06 UTC; an early Sept. 20 sample covering 60 one-minute windows observed about 266ms per produced slot, and epoch 1037 skipped about 0.05% of scheduled slots. The source says the more important test is whether leader handoffs, transaction forwarding, repair and multiple validator clients remain reliable as Solana considers a conditional move to 200ms.",
+          "detailed_summary_zh": "Solana 的 250ms slot time 已在 9 月 18 日 epoch 1037 生效；根据 Solana 工程 changelog 和 Solana Compass 报告，过渡时间约为 05:06 UTC。9 月 20 日一份覆盖 60 个一分钟窗口的早期样本观察到每个已产出 slot 约 266ms，epoch 1037 约跳过 0.05% 的计划 slot；报道称更重要的考验是 Solana 考虑有条件转向 200ms 时，leader 交接、交易转发、修复和多种验证者客户端能否保持可靠。",
+          "event_id": "evt_9967983a25fc9652",
+          "first_seen_at": "2026-09-21T09:42:08.876765Z",
+          "importance_score": 7.4,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-20T19:20:38Z",
+          "published_at": "2026-09-20T19:20:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/solanas-250ms-slots-turn-validator-coordination-into-the-networks-next-security-test/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:27612cff1d041773"
+          ],
+          "time_precision": "published",
+          "title_en": "Why Solana’s new 250ms speed boost could actually trigger network instability",
+          "title_zh": "为什么 Solana 新的 250ms 提速实际上可能引发网络不稳定",
+          "update_id": "upd_6cb0e68e41bcfe2f",
+          "update_type": "initial",
+          "what_changed_en": "Solana’s 250ms slot time became effective at epoch 1037 on Sept. 18, according to the Solana engineering changelog and a Solana Compass report that placed the transition at about 05:06 UTC; an early Sept. 20 sample covering 60 one-minute windows observed about 266ms per produced slot, and epoch 1037 skipped about 0.05% of scheduled slots. The source says the more important test is whether leader handoffs, transaction forwarding, repair and multiple validator clients remain reliable as Solana considers a conditional move to 200ms.",
+          "what_changed_zh": "Solana 的 250ms slot time 已在 9 月 18 日 epoch 1037 生效；根据 Solana 工程 changelog 和 Solana Compass 报告，过渡时间约为 05:06 UTC。9 月 20 日一份覆盖 60 个一分钟窗口的早期样本观察到每个已产出 slot 约 266ms，epoch 1037 约跳过 0.05% 的计划 slot；报道称更重要的考验是 Solana 考虑有条件转向 200ms 时，leader 交接、交易转发、修复和多种验证者客户端能否保持可靠。"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "According to Crypto In America, JP Morgan has scored a narrower victory in a separate fight over credit card rewards on crypto purchases; according to a source familiar with the matter, Visa is moving to close an apparent loophole in Crossmint-powered checkouts that allowed meme coin purchases made with credit cards to be processed under a merchant code intended for digital media. Earlier, Chase told The Block that one Visa transaction was misclassified and should not have earned rewards, and the New York attorney general's office also told The Block it was aware of and reviewing the matter; meme coin purchases will continue but must be processed as crypto transactions under Visa's rules, and processors have a grace period expected to end next week.",
+      "current_state_zh": "据 Crypto In America 获悉，JP Morgan 在一场围绕加密货币购买信用卡奖励的单独争议中取得较小胜利；据一位知情人士称，Visa 正着手关闭 Crossmint 支持的结账流程中的一个疑似漏洞，该漏洞允许信用卡购买的 meme 币按面向数字媒体的商户代码处理。此前 Chase 告诉 The Block，一笔 Visa 交易被错误分类、不应获得奖励，纽约州总检察长办公室也告诉 The Block 其知悉并正在审查此事；meme 币购买仍将继续，但必须按加密交易处理并受 Visa 规则约束，支付处理商有一个预计下周结束的宽限期。",
+      "entities": [
+        "card",
+        "close",
+        "coin",
+        "credit",
+        "loophole",
+        "meme",
+        "moves",
+        "rewards",
+        "visa"
+      ],
+      "event_id": "evt_fa4618f8fc917ce6",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-21T09:42:12.233549Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-21T09:42:12.233549Z",
+      "last_updated_at": "2026-09-21T09:42:12.233549Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Visa Moves to Close Meme Coin Credit Card Rewards Loophole",
+      "title_zh": "Visa 着手关闭 Meme 币信用卡奖励漏洞",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "According to Crypto In America, JP Morgan has scored a narrower victory in a separate fight over credit card rewards on crypto purchases; according to a source familiar with the matter, Visa is moving to close an apparent loophole in Crossmint-powered checkouts that allowed meme coin purchases made with credit cards to be processed under a merchant code intended for digital media. Earlier, Chase told The Block that one Visa transaction was misclassified and should not have earned rewards, and the New York attorney general's office also told The Block it was aware of and reviewing the matter; meme coin purchases will continue but must be processed as crypto transactions under Visa's rules, and processors have a grace period expected to end next week.",
+          "current_state_zh": "据 Crypto In America 获悉，JP Morgan 在一场围绕加密货币购买信用卡奖励的单独争议中取得较小胜利；据一位知情人士称，Visa 正着手关闭 Crossmint 支持的结账流程中的一个疑似漏洞，该漏洞允许信用卡购买的 meme 币按面向数字媒体的商户代码处理。此前 Chase 告诉 The Block，一笔 Visa 交易被错误分类、不应获得奖励，纽约州总检察长办公室也告诉 The Block 其知悉并正在审查此事；meme 币购买仍将继续，但必须按加密交易处理并受 Visa 规则约束，支付处理商有一个预计下周结束的宽限期。",
+          "detailed_summary_en": "According to Crypto In America, JP Morgan has scored a narrower victory in a separate fight over credit card rewards on crypto purchases; according to a source familiar with the matter, Visa is moving to close an apparent loophole in Crossmint-powered checkouts that allowed meme coin purchases made with credit cards to be processed under a merchant code intended for digital media. Earlier, Chase told The Block that one Visa transaction was misclassified and should not have earned rewards, and the New York attorney general's office also told The Block it was aware of and reviewing the matter; meme coin purchases will continue but must be processed as crypto transactions under Visa's rules, and processors have a grace period expected to end next week.",
+          "detailed_summary_zh": "据 Crypto In America 获悉，JP Morgan 在一场围绕加密货币购买信用卡奖励的单独争议中取得较小胜利；据一位知情人士称，Visa 正着手关闭 Crossmint 支持的结账流程中的一个疑似漏洞，该漏洞允许信用卡购买的 meme 币按面向数字媒体的商户代码处理。此前 Chase 告诉 The Block，一笔 Visa 交易被错误分类、不应获得奖励，纽约州总检察长办公室也告诉 The Block 其知悉并正在审查此事；meme 币购买仍将继续，但必须按加密交易处理并受 Visa 规则约束，支付处理商有一个预计下周结束的宽限期。",
+          "event_id": "evt_fa4618f8fc917ce6",
+          "first_seen_at": "2026-09-21T09:42:12.233549Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-20T16:01:03Z",
+          "published_at": "2026-09-20T16:01:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/378697/visa-close-meme-coin-credit-card-rewards-loophole"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:7cf95e600f4b5e80"
+          ],
+          "time_precision": "published",
+          "title_en": "Visa Moves to Close Meme Coin Credit Card Rewards Loophole",
+          "title_zh": "Visa 着手关闭 Meme 币信用卡奖励漏洞",
+          "update_id": "upd_5564b336708a8821",
+          "update_type": "initial",
+          "what_changed_en": "According to Crypto In America, JP Morgan has scored a narrower victory in a separate fight over credit card rewards on crypto purchases; according to a source familiar with the matter, Visa is moving to close an apparent loophole in Crossmint-powered checkouts that allowed meme coin purchases made with credit cards to be processed under a merchant code intended for digital media. Earlier, Chase told The Block that one Visa transaction was misclassified and should not have earned rewards, and the New York attorney general's office also told The Block it was aware of and reviewing the matter; meme coin purchases will continue but must be processed as crypto transactions under Visa's rules, and processors have a grace period expected to end next week.",
+          "what_changed_zh": "据 Crypto In America 获悉，JP Morgan 在一场围绕加密货币购买信用卡奖励的单独争议中取得较小胜利；据一位知情人士称，Visa 正着手关闭 Crossmint 支持的结账流程中的一个疑似漏洞，该漏洞允许信用卡购买的 meme 币按面向数字媒体的商户代码处理。此前 Chase 告诉 The Block，一笔 Visa 交易被错误分类、不应获得奖励，纽约州总检察长办公室也告诉 The Block 其知悉并正在审查此事；meme 币购买仍将继续，但必须按加密交易处理并受 Visa 规则约束，支付处理商有一个预计下周结束的宽限期。"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic said it has chosen Accenture as its first embedded evaluator to help slow the pace of AI development as proposed by CEO Dario Amodei on Sept. 12. The partnership is non-exclusive and details of how it will work are still being worked out; Anthropic and Accenture each expect to invest at least $1 billion in the project over the next five years.",
+      "current_state_zh": "Anthropic 表示，已选择埃森哲作为其首个嵌入式评估方，以协助放缓人工智能发展步伐——这是其 CEO 达里奥·阿莫代伊于 9 月 12 日提出的三步提案的内容。该合作是非排他性的，如何实施的细节仍在制定中；Anthropic 与埃森哲各自预计将在未来五年内向该项目投入至少 10 亿美元。",
+      "entities": [
+        "accenture",
+        "anthropic"
+      ],
+      "event_id": "evt_b0c4e015c38e95d8",
+      "event_type": "governance",
+      "first_seen_at": "2026-09-21T09:42:17.533961Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-21T09:42:17.533961Z",
+      "last_updated_at": "2026-09-21T09:42:17.533961Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Anthropic taps Accenture as embedded evaluator to help with AI slowdown proposal",
+      "title_zh": "Anthropic 聘请埃森哲作为嵌入式评估方，以协助其人工智能放缓提案",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic said it has chosen Accenture as its first embedded evaluator to help slow the pace of AI development as proposed by CEO Dario Amodei on Sept. 12. The partnership is non-exclusive and details of how it will work are still being worked out; Anthropic and Accenture each expect to invest at least $1 billion in the project over the next five years.",
+          "current_state_zh": "Anthropic 表示，已选择埃森哲作为其首个嵌入式评估方，以协助放缓人工智能发展步伐——这是其 CEO 达里奥·阿莫代伊于 9 月 12 日提出的三步提案的内容。该合作是非排他性的，如何实施的细节仍在制定中；Anthropic 与埃森哲各自预计将在未来五年内向该项目投入至少 10 亿美元。",
+          "detailed_summary_en": "Anthropic said it has chosen Accenture as its first embedded evaluator to help slow the pace of AI development as proposed by CEO Dario Amodei on Sept. 12. The partnership is non-exclusive and details of how it will work are still being worked out; Anthropic and Accenture each expect to invest at least $1 billion in the project over the next five years.",
+          "detailed_summary_zh": "Anthropic 表示，已选择埃森哲作为其首个嵌入式评估方，以协助放缓人工智能发展步伐——这是其 CEO 达里奥·阿莫代伊于 9 月 12 日提出的三步提案的内容。该合作是非排他性的，如何实施的细节仍在制定中；Anthropic 与埃森哲各自预计将在未来五年内向该项目投入至少 10 亿美元。",
+          "event_id": "evt_b0c4e015c38e95d8",
+          "first_seen_at": "2026-09-21T09:42:17.533961Z",
+          "importance_score": 7.2,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-20T07:51:24Z",
+          "published_at": "2026-09-20T07:51:24Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/anthropic-tabs-accenture-as-embedded-evaluator-to-help-with-ai-slowdown-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:2ca03a78026f6083"
+          ],
+          "time_precision": "published",
+          "title_en": "Anthropic taps Accenture as embedded evaluator to help with AI slowdown proposal",
+          "title_zh": "Anthropic 聘请埃森哲作为嵌入式评估方，以协助其人工智能放缓提案",
+          "update_id": "upd_d87f480d330493a5",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic said it has chosen Accenture as its first embedded evaluator to help slow the pace of AI development as proposed by CEO Dario Amodei on Sept. 12. The partnership is non-exclusive and details of how it will work are still being worked out; Anthropic and Accenture each expect to invest at least $1 billion in the project over the next five years.",
+          "what_changed_zh": "Anthropic 表示，已选择埃森哲作为其首个嵌入式评估方，以协助放缓人工智能发展步伐——这是其 CEO 达里奥·阿莫代伊于 9 月 12 日提出的三步提案的内容。该合作是非排他性的，如何实施的细节仍在制定中；Anthropic 与埃森哲各自预计将在未来五年内向该项目投入至少 10 亿美元。"
         }
       ]
     }
