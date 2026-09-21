@@ -10,7 +10,7 @@
   "owner": "Codex / grounding-item-isolation",
   "branch": "agent/grounding-item-isolation",
   "last_verified_commit": "0c88fbf0ddbc7dbba500497952d584c11590cd5f",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/111",
   "completed": [
     "生成与核验共用同一来源正文，简短翻译输出中英两种语言",
     "内容拒绝与接口不可用分别记录，单条失败不取消其他任务",
