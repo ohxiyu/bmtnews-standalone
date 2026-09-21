@@ -10,14 +10,14 @@
   "owner": "Codex / jev-production",
   "branch": "agent/jev-production",
   "last_verified_commit": "c0f37bef06f40b0a8d69a356bedc147d9374c669",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/101",
   "completed": [
     "Jev 正式流程接入完成，生产配置开启",
     "Actions Secret 已保存",
     "真实评分/去重/来源核验三项成功"
   ],
   "unfinished": [
-    "最终全量测试与 CI",
+    "CI 检查",
     "PR 合并、生产工作流及线上验收"
   ],
   "validation": [
