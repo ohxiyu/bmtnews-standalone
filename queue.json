@@ -912,10 +912,11 @@
     },
     "2026-09-21": {
       "f621bdb6dc20cbc1586fa1af6e6303d87444a5e42009da7dd776faadcc82d810": {
-        "status": "pending",
+        "status": "sent",
         "rank": 1,
         "text_hash": "fdc09ebf4e4976e635e04c5019595a89e7232a165b55cebcb5f7ab28f5942f3e",
-        "attempted_at": "2026-09-21T09:33:58.963375+08:00"
+        "attempted_at": "2026-09-21T09:33:58.963375+08:00",
+        "post_id": "368899035754947"
       }
     }
   },
@@ -984,12 +985,6 @@
     "2026-09-21": {
       "revision": "6c4544770e64217fccb6373dad94c4d42a8571b68c8da8c864a3f56d2b97f7d8",
       "jobs": [
-        {
-          "id": "f621bdb6dc20cbc1586fa1af6e6303d87444a5e42009da7dd776faadcc82d810",
-          "text": "SEC 发布“创新豁免”，为代币化股票交易和 Coinbase 铺路\n\n美国证券交易委员会（SEC）发布了一项临时性、附条件的“创新豁免”（Innovation Exemption），使被指定的“代币化证券交易场所”（TSV）不再被纳入《1934 年证券交易法》中“交易所”的定义范围，从而为相关平台撮合代币化 NMS 股票交易扫清障碍。该命令同时附带公开征求意见程序，媒体解读认为这为 Coinbase 已在 Base 网络上线的代币化股票产品打开了合规通道。\n\n这项豁免直接触及代币化股票最大的结构性障碍——撮合代币化股票交易的场所可能被要求注册为全国性证券交易所——并使股票市场向 7×24 小时交易更近一步。其影响覆盖交易所、经纪自营商、流动性提供商和各类代币化平台，同时让 Coinbase 在与其他合成型、债务型或衍生品包装型产品的竞争中，获得更清晰的近期产品落地空间。\n\n该豁免明确是临时性和附条件的，仅适用于满足特定要求、被认定为合格的 TSV，而并非对代币化股票交易的全面合法化。Coinbase 自 2026 年 8 月起在 Base 上线的代币化股票被设计为附带分红权和投票权，即对底层股票的直接优先求偿权，而非合成式的价格敞口。\n\n来源：https://news.google.com/rss/articles/CBMiekFVX3lxTFBGdjB5bEhTZDEtaU02aFJWMmxyM2dkYjVhWUIyWWM5UERkQXBWTHFoanJNUlpFZGlJcVZYU3FrZDVrdUY2VGw2YUhSUF8xTkloZE9lbklIdVotMF9aeDBidU1HMW5kWE1EY1g0R180cWUtc1RtSFR2ZHpR?oc=5\nBMTNews · 2026-09-21 · https://bmt.news",
-          "rank": 1,
-          "due_at": "2026-09-21T09:33:00+08:00"
-        },
         {
           "id": "d5b5a6965465a02e7fd13925ee5c52d8ad8bc2ecb447a6e527b1f5772b3b95c8",
           "text": "借助AI编排的2048块GPU集群，RSA-896被成功分解\n\nStephen A. Weis于2026年9月19日宣布，他已成功分解896位（270位十进制数字）的RSA挑战数RSA-896：他让Claude将数域筛法实现CADO-NFS移植到GPU上运行，随后由Claude编排一个最多达2048块GPU的集群，历时约十天完成。总计算量约为30个GPU年，而且使用的是被“捡漏”利用的闲置算力，而非专门预留的机器。\n\n用现有算法分解一个270位的RSA模数，显著推进了公开的因子分解记录，并表明AI智能体可以作为高性能计算任务中实用的代码移植与调度编排层。这一成果并不威胁实际部署的2048位RSA密钥，因此其意义更多在于所展示的AI辅助高性能计算工作流，以及背后所隐含的闲置GPU算力规模，而非对现实密码体系的攻破。\n\n这次计算使用的是已有的数域筛法算法，而非某种新的密码分析突破；Weis本人也首先把功劳归于几十年来构建数域筛法和CADO-NFS的人们，以及创造此前记录的团队。896位的规模仍远低于实际系统中仍在使用的2048位RSA密钥，而数域筛法在如此量级的算力下根本无法触及这一规模。\n\n来源：https://saweis.net/posts/rsa-896.html\nBMTNews · 2026-09-21 · https://bmt.news",
