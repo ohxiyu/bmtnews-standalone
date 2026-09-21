@@ -8,7 +8,7 @@
   "owner": "Codex / jev-rate-pacing",
   "branch": "agent/jev-rate-pacing",
   "last_verified_commit": "1b2a72d089677ce138993ea3be1fdb07f2749d32",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/107",
   "completed": [
     "PR105 已合并，858 项测试、CI 和 CodeQL 通过",
     "生产运行35574566736证明无DeepSeek评分回退；123候选HTTP429后保持未评分",
