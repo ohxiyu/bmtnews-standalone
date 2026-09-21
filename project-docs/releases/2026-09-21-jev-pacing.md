@@ -20,3 +20,25 @@ Owner Codex；branch agent/jev-rate-pacing，独立 worktree，用户要求的�
 
 41项Jev测试通过，包括并发实例共享等待、429重试时间、超长冷却、无效header。
 完整867项回归通过。代码complete；测试complete；合并pending；部署pending；生产验证pending。
+
+## 正式验收
+
+PR107合并305fe3122741641165dfb4f7bb9ec367b15e091f；CI35575078442及
+CodeQL35575078513全部成功。运行35575310373，job106255696092，
+报告artifact10627927320：123条新评分全部Jev成功，17条同规则缓存，
+evaluation_pending=0；Jev去重4次、来源核验15次、预筛选8次成功。
+预筛选有1批失败，按设计进入正式Jev评分，无替代模型评分。
+DeepSeek调用只出现concept_extraction、content_enrichment和translation。
+14条超过7分，去重后13条，最终待扩写12条；Crypto主轨7/9，未凑数。
+
+评分与去重不再被429阻塞；本次在unsupported_translation而非请求错误处
+停止发布。故代码/测试/合并/生产执行/统一评分验收完成，但日报新页面未发布。
+latest.json重跑前后完全一致，date2026-09-21，generated_at
+2026-09-20T23:28:51.024061Z。不能把统一评分验收写成整期发布成功。
+未调整来源核验门槛、未新增购买或额度。后续生成内容来源支持问题独立处理。
+
+Source commit: 305fe3122741641165dfb4f7bb9ec367b15e091f (PR107)
+Worker version: unchanged; independent dispatcher not modified.
+Deployment: production Actions35575310373 executed the merged code; no new Pages artifact was deployed because generation verification stopped publication.
+Verification: artifact10627927320 confirms123 successful Jev analysis calls,17 cached scores,0 pending,4 Jev dedup calls and no DeepSeek scoring; public edition unchanged.
+Rollback: revert focused PRs through a new reviewed PR; never edit gh-pages manually or silently restore mixed scoring.
