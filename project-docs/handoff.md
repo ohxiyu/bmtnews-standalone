@@ -10,7 +10,7 @@
   "owner": "Codex / jev-unified-release",
   "branch": "agent/jev-unified-release",
   "last_verified_commit": "305fe3122741641165dfb4f7bb9ec367b15e091f",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/109",
   "completed": [
     "PR105/107已合并；867项测试及CI/CodeQL通过",
     "运行35575310373：123次Jev新评分成功，17条同规则缓存，evaluation_pending=0",
