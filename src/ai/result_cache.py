@@ -14,6 +14,7 @@ from . import prompts
 
 
 CACHE_VERSION = 1
+ENRICHMENT_POLICY_VERSION = "shared-source-v2"
 ANALYSIS_FIELDS = ("ai_score", "ai_reason", "ai_summary", "ai_tags")
 ENRICHMENT_PREFIXES = (
     "title_",
@@ -74,6 +75,7 @@ class AnalysisResultCache:
         material = json.dumps(
             {
                 "stage": stage,
+                **({"enrichment_policy": ENRICHMENT_POLICY_VERSION} if stage == "enrichment" else {}),
                 "edition_window": self.analysis_context if stage == "analysis" else None,
                 "model": self.model,
                 "prompt": self.prompt_revision,
@@ -187,17 +189,23 @@ class AnalysisResultCache:
         return True
 
     def store_enrichment(self, item: ContentItem) -> None:
+        if item.metadata.get("enrichment_status") in {"rejected", "verification_unavailable"}:
+            return
         value = {
             key: val
             for key, val in item.metadata.items()
-            if key in {"sources", "evaluation_grounding", "enrichment_status"}
+            if key in {"sources", "evaluation_grounding", "enrichment_status", "grounding_checks"}
             or any(key.startswith(prefix) for prefix in ENRICHMENT_PREFIXES)
         }
         complete = any(
             key.startswith(("background_", "market_impact_")) and bool(val)
             for key, val in value.items()
         )
-        if value and complete:
+        verified_translation = (
+            value.get("evaluation_grounding") == "supported_translation"
+            and all(value.get(f"detailed_summary_{lang}") for lang in ("en", "zh"))
+        )
+        if value and (complete or verified_translation):
             self._put(item, "enrichment", value)
 
     def _put(self, item: ContentItem, stage: str, value: dict[str, Any]) -> None:
