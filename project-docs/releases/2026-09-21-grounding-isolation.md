@@ -27,4 +27,25 @@ unsupported_translation；承接已授权Jev正式接入与今日重跑，不改
 
 ## 五阶段
 
-代码complete；测试complete；合并pending；部署pending；生产验收pending。
+代码complete；测试complete；合并complete；部署complete；生产验收complete。
+
+
+## 正式发布验收
+
+Source commit: 1e171e06363368fa5b378718a05c6da234e84112（PR #111）
+Worker version: 独立调度Worker未变更，本次没有Worker部署。
+Deployment: gh-pages 88119b9e6d902e6a751ace6886c1c8e9239c6d6f；Cloudflare Pages 2d114c9a-802e-47cb-95a0-2878c0daaba6 success。
+Verification: 2026-09-21T09:48Z，https://bmt.news/api/latest.json 与该发布产物完全一致；generated_at=2026-09-21T09:45:45.531282Z。
+Rollback: 通过回退PR撤销#111后走既有发布工作流；不手动编辑gh-pages。前版产物f288eb943d8f9f525f580ea5cdb5c7ea88593794可作恢复参照。
+
+正式运行：https://github.com/ohxiyu/bmtnews-standalone/actions/runs/35584701102 ，daily-summary成功。
+报告artifact 10631049414，固定窗口2026-09-20 07:00至2026-09-21 07:00 Asia/Shanghai。
+182候选；156次评分缓存命中，26次新Jev评分，evaluation_pending=0；筛选前13条达7分。
+11条进入生成核验，4条剔除（translation_low_confidence 3、translation_insufficient 1）；7条通过并发布。
+22次Jev来源核验，未退回DeepSeek评分。DeepSeek保留文本生成、概念提取及事件关系等原有职责。
+7条全部使用核验通过的简短中英文译文（translation_only），不发布失败扩写；run report因此为warning而非全绿，error=null。
+部分采集源403/GDELT429仍按既有部分失败逻辑处理，不属于本次Jev调用失败。
+今日归档恰好7条，4条拒绝项ID均不存在；公开API全部具有中英文标题与摘要。
+没有降低90%核验门槛、评分阈值或以低分内容补数。
+
+文档证据跟踪Issue #112；878项全量测试、最终70项相关回归、治理检查，以及PR111 CI/CodeQL通过。
