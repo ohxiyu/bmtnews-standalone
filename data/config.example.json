@@ -1,6 +1,11 @@
 {
   "version": "1.0",
   "ai": {
+    "evaluator": {
+      "enabled": false,
+      "model": "typesafe-ai/jev",
+      "api_key_env": "AI_GATEWAY_API_KEY"
+    },
     "provider": "openai",
     "model": "gpt-4",
     "api_key_env": "OPENAI_API_KEY",

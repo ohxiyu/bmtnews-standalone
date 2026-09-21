@@ -16,6 +16,7 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCo
 from ddgs import DDGS
 
 from .client import AIClient
+from .evaluator import create_evaluator, EvaluationError
 from .prompts import (
     CONCEPT_EXTRACTION_SYSTEM, CONCEPT_EXTRACTION_USER,
     CONTENT_ENRICHMENT_SYSTEM, CONTENT_ENRICHMENT_USER,
@@ -29,6 +30,7 @@ class ContentEnricher:
 
     def __init__(self, ai_client: AIClient):
         self.client = ai_client
+        self.evaluator = create_evaluator(getattr(ai_client, "config", None))
         self._search_tasks: dict[str, asyncio.Task[list]] = {}
 
     def _get_concurrency(self) -> int:
@@ -50,7 +52,10 @@ class ContentEnricher:
             async with semaphore:
                 try:
                     await self._enrich_item(item)
-                    item.metadata["enrichment_status"] = "complete"
+                    item.metadata["enrichment_status"] = (
+                        "translation_only" if item.metadata.get("evaluation_grounding") == "supported_translation"
+                        else "complete"
+                    )
                 except Exception as e:
                     print(f"Error enriching item {item.id}: {e}, falling back to translation")
                     await self._translate_item(item)
@@ -213,6 +218,16 @@ class ContentEnricher:
             await self._translate_item(item)
             return
 
+        if self.evaluator is not None:
+            supported = await self.evaluator.verify({
+                "source": {"title": item.title, "text": content_text},
+                "search_excerpts": all_results,
+                "generated": result,
+            })
+            if not supported:
+                raise EvaluationError("unsupported_generation")
+            item.metadata["evaluation_grounding"] = "supported"
+
         # Combine structured sub-fields into per-language detailed_summary
         for lang in ("en", "zh"):
             if result.get(f"title_{lang}"):
@@ -272,9 +287,22 @@ class ContentEnricher:
             )
             result = self._parse_json_response(response)
             if result:
+                if self.evaluator is not None:
+                    supported = await self.evaluator.verify({
+                        "source": {"title": item.title, "text": (item.content or "")[:6000]},
+                        "generated": result,
+                    })
+                    if not supported:
+                        raise EvaluationError("unsupported_translation")
+                    item.metadata["evaluation_grounding"] = "supported_translation"
                 if result.get("title_zh"):
                     item.metadata["title_zh"] = result["title_zh"]
                 if result.get("summary_zh"):
                     item.metadata["detailed_summary_zh"] = result["summary_zh"]
+            elif self.evaluator is not None:
+                raise EvaluationError("invalid_translation")
         except Exception:
-            pass
+            if self.evaluator is not None:
+                # Never let the ordinary translation fallback silently publish
+                # text that failed the enabled production verification gate.
+                raise EvaluationError("generation_verification_failed") from None

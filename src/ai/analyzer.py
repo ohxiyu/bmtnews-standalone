@@ -10,6 +10,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 
 from .client import AIClient
+from .evaluator import create_evaluator, EvaluationError
 from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER
 from .utils import parse_json_response
 from ..models import ContentItem
@@ -39,6 +40,7 @@ class ContentAnalyzer:
         edition_window: Optional[EditionWindow] = None,
     ):
         self.client = ai_client
+        self.evaluator = create_evaluator(getattr(ai_client, "config", None))
         self.edition_window = edition_window
         self.allowed_categories = tuple(
             dict.fromkeys(
@@ -239,3 +241,12 @@ class ContentAnalyzer:
             if source_category != result.category:
                 item.metadata.setdefault("source_category", source_category)
                 item.metadata["category"] = result.category
+
+        if self.evaluator is not None:
+            try:
+                await self.evaluator.analyze(item, self.allowed_categories, window)
+            except EvaluationError:
+                # Retain the already validated text-model analysis on transient
+                # evaluator failure. Do not cache this as a successful Jev score.
+                item.metadata["evaluation_degraded"] = True
+                print(f"Jev scoring unavailable for {item.id}; using generation-model analysis")

@@ -289,6 +289,8 @@ class BMTNewsOrchestrator:
                     "languages": self.config.ai.languages,
                     "categories": self._analysis_categories(),
                     "base_url": self.config.ai.base_url,
+                    "evaluator": self.config.ai.evaluator.model_dump(),
+                    "evaluation_rubric": "jev-news-v1",
                 }, sort_keys=True).encode()).hexdigest(),
             )
         return self._analysis_cache
@@ -3236,6 +3238,11 @@ class BMTNewsOrchestrator:
         """Reuse valid results before paying for prefiltering unseen inputs."""
         started = time.perf_counter()
         cache = self._result_cache()
+        if cache is not None and self.config.ai.evaluator.enabled:
+            cache.analysis_context = (
+                [edition_window.start.isoformat(), edition_window.end.isoformat()]
+                if edition_window is not None else None
+            )
         cached, misses = split_cached(cache, items, stage="analysis") if cache else ([], list(items))
         limit = self.config.ai.prefilter_max_candidates
         # Reserve a quarter of the budget for new inputs even if old cache

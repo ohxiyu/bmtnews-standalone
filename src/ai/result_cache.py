@@ -50,6 +50,7 @@ class AnalysisResultCache:
         self.ttl = timedelta(days=max(1, ttl_days))
         self.max_entries = max(100, max_entries)
         self.prompt_revision = prompt_revision
+        self.analysis_context = None
         self.entries: dict[str, dict[str, Any]] = {}
         self.hits = 0
         self.misses = 0
@@ -73,6 +74,7 @@ class AnalysisResultCache:
         material = json.dumps(
             {
                 "stage": stage,
+                "edition_window": self.analysis_context if stage == "analysis" else None,
                 "model": self.model,
                 "prompt": self.prompt_revision,
                 "prompt_text": [
@@ -85,6 +87,7 @@ class AnalysisResultCache:
                 ],
                 "url": str(item.url),
                 "title": item.title,
+                "published_at": item.published_at.isoformat(),
                 "content": (item.content or "")[:8000],
                 "engagement": {key: item.metadata.get(key) for key in ("score", "descendants", "num_comments", "comments", "replies")},
                 "analysis_inputs": {
@@ -154,9 +157,13 @@ class AnalysisResultCache:
             item.metadata["category"] = value["category"]
         if "source_category" in value:
             item.metadata["source_category"] = value["source_category"]
+        if "evaluation" in value:
+            item.metadata["evaluation"] = value["evaluation"]
         return item.ai_score is not None
 
     def store_analysis(self, item: ContentItem) -> None:
+        if item.metadata.get("evaluation_degraded"):
+            return
         if item.ai_score is None or item.ai_reason in {
             "Analysis failed",
             "Analysis response parse failed",
@@ -164,6 +171,8 @@ class AnalysisResultCache:
             return
         value = {field: getattr(item, field) for field in ANALYSIS_FIELDS}
         value["category"] = item.metadata.get("category")
+        if "evaluation" in item.metadata:
+            value["evaluation"] = item.metadata["evaluation"]
         if "source_category" in item.metadata:
             value["source_category"] = item.metadata["source_category"]
         self._put(item, "analysis", value)
@@ -179,7 +188,7 @@ class AnalysisResultCache:
         value = {
             key: val
             for key, val in item.metadata.items()
-            if key == "sources"
+            if key in {"sources", "evaluation_grounding", "enrichment_status"}
             or any(key.startswith(prefix) for prefix in ENRICHMENT_PREFIXES)
         }
         complete = any(

@@ -1,20 +1,35 @@
 # 当前交接
 
-历史记录见 [发布记录](releases/0.2.0.md)。本次只执行 Issue97；其他 PR 不在范围。
+本次执行 Issue100；历史及其他任务分支保持独立。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "不增加 AI 调用，在现有评分中排除无本期进展的旧事复盘",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/97",
-  "owner": "Codex / freshness-score",
-  "branch": "agent/freshness-score",
-  "last_verified_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/98",
-  "completed": ["现有单次评分传入窗口和零分规则", "保留评分缓存，不新增 AI 请求或重试"],
-  "unfinished": ["PR 检查，授权合并后等待正常生产调度"],
-  "validation": ["uv sync --frozen --extra dev 成功", "826 项 pytest 全量通过；测试未调用真实 AI"],
-  "unverified": ["真实模型识别准确率未调用验证", "历史缓存与今日榜单不重算"],
+  "goal": "Jev 正式参与评分、初筛、去重与生成核验",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/100",
+  "owner": "Codex / jev-production",
+  "branch": "agent/jev-production",
+  "last_verified_commit": "c0f37bef06f40b0a8d69a356bedc147d9374c669",
+  "pr": "pending",
+  "completed": [
+    "Jev 正式流程接入完成，生产配置开启",
+    "Actions Secret 已保存",
+    "真实评分/去重/来源核验三项成功"
+  ],
+  "unfinished": [
+    "最终全量测试与 CI",
+    "PR 合并、生产工作流及线上验收"
+  ],
+  "validation": [
+    "uv sync --frozen --extra dev 成功",
+    "27 项新增 Jev 测试通过",
+    "57 项既有相关回归通过",
+    "853 项全量 pytest 通过；治理及 diff 检查通过",
+    "真实 Jev 三项接口检查通过"
+  ],
+  "unverified": [
+    "真实 Jev 调用与生产内容"
+  ],
   "production": {
     "source_commit": "55f21307ae41b134de2aa732523fde6f85474a22",
     "artifact_commit": "dc4913618fd67422970dbcd54e6192d1c165287b; unchanged",
@@ -24,11 +39,14 @@
     "verified_at": "2026-09-20; source inspection only for this change"
   },
   "blockers": [],
-  "next_action": "完成检查后按用户本次授权合并；不额外触发 AI，生产效果等待正常调度。",
-  "states": {"code": "complete", "tests": "complete", "pr_merged": "pending", "deployed": "pending", "production_verified": "pending"},
-  "evidence": "project-docs/releases/2026-09-20-freshness-score.md"
+  "next_action": "完成 CI 后按明确授权合并，运行正式采集并验证生产使用 Jev",
+  "states": {
+    "code": "complete",
+    "tests": "complete",
+    "pr_merged": "pending",
+    "deployed": "pending",
+    "production_verified": "pending"
+  },
+  "evidence": "project-docs/releases/2026-09-21-jev.md"
 }
 ```
-
-接手须重新核验 AGENTS.md、远端 main、登录、Issue/PR 和生产状态。不得覆盖其他
-任务分支。Quick Post 上线证据保留在 PR96，不能以本次指针覆盖其未合并分支。
