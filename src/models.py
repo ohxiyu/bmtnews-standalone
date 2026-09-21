@@ -133,9 +133,20 @@ AI_PROVIDER_DEFAULTS = {
 }
 
 
+class EvaluationConfig(BaseModel):
+    """Independent typed evaluator; text generation keeps its own provider."""
+
+    enabled: bool = False
+    model: str = "typesafe-ai/jev"
+    api_key_env: str = "AI_GATEWAY_API_KEY"
+    request_timeout_seconds: int = Field(default=60, ge=5, le=120)
+    decision_threshold: float = Field(default=0.9, ge=0.5, le=1, allow_inf_nan=False)
+
+
 class AIConfig(BaseModel):
     """AI client configuration."""
 
+    evaluator: EvaluationConfig = Field(default_factory=EvaluationConfig)
     provider: AIProvider
     provider_chain: Optional[str] = None
     model: str

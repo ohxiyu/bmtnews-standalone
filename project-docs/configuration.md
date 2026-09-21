@@ -911,3 +911,29 @@ uv run bmtnews-mcp
 Available tools include `bmt_validate_config`, `bmt_fetch_items`, `bmt_score_items`, `bmt_filter_items`, `bmt_enrich_items`, `bmt_generate_summary`, and `bmt_run_pipeline`.
 
 See [`src/mcp/README.md`](../src/mcp/README.md) for the full tool reference and [`src/mcp/integration.md`](../src/mcp/integration.md) for client setup.
+
+## Jev 新闻评估
+
+生产 `ai.evaluator.enabled=true`，使用 Vercel Evaluation API 的
+`typesafe-ai/jev`。在 GitHub Actions Secrets 配置 `AI_GATEWAY_API_KEY`；
+本地通过同名环境变量提供。密钥不进入配置文件或公开站点。
+生成模型仍由现有 `ai.provider/model` 控制。
+
+- 初筛由 Jev 给出结构化重要性分数，异常回到现有文本初筛。
+- 分析保留生成模型的摘要、标签和时效拒绝；Jev 以影响力 75%、信息增量
+  25% 计算 0–10 分，并高确定性选择分类。已有零分时效拒绝不被抬分。
+- 语义去重每次最多八篇输入、28 个新闻对问题，覆盖全部候选对。
+  同一期同事件新阶段合并；跨日真正新进展保留。
+  只有指定关系的概率达到 `decision_threshold`（默认 0.9）才合并。
+  该值是所选结果的概率，不冒充 TypeSafe confidence。
+- 扩写与翻译必须通过来源一致性核验。核验失败先使用现有重试/翻译路径；
+  翻译仍不能通过则停止发布，保留上一版。核验不等于互联网事实查证。
+- 评分服务失败可使用生成模型结果，但不缓存为 Jev 成功；去重服务失败回到
+  原有严格去重，原有去重也失败时停止发布。缺少密钥是配置错误。
+- 缓存包含评估配置、规则版本、来源发布时间与分析窗口；首次上线会按新键
+  重新分析当前候选，不修改历史归档。正常运行报告记录分阶段 token 和耗时。
+
+`uv run python -m scripts.check_jev` 使用真实密钥做三项接口检查，不发布内容。
+费用按提供方实际账单计算；不承诺永久免费或节省费用。
+回退可通过 PR 将 `ai.evaluator.enabled` 改为 false 后重新运行正式工作流；
+不清除已发布记录、不重放分发队列。Quick Post 不等待模型检查。
