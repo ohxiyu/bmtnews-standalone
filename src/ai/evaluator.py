@@ -71,7 +71,8 @@ class EvaluationError(RuntimeError):
     def __init__(self, code: str, status_code: int | None = None):
         self.code = code
         self.status_code = status_code
-        super().__init__(f"Jev evaluation failed ({code}; HTTP {status_code})")
+        detail = f"{code}; HTTP {status_code}" if status_code is not None else code
+        super().__init__(f"Jev evaluation failed ({detail})")
 
 
 def _number(value, low=0.0, high=1.0):
@@ -250,7 +251,7 @@ class JevEvaluator:
                     groups.append([a, b])
         return {"duplicates": groups}
 
-    async def verify(self, state):
+    async def assess_grounding(self, state):
         answers = await self.evaluate(state, {"grounding": {
             "type": "choice", "instructions": EVIDENCE_RULE +
                 "Check the generated news against the supplied source and search excerpts. "
@@ -262,7 +263,13 @@ class JevEvaluator:
                          "insufficient": "Not enough evidence to verify the core news claims."}}},
             stage="evaluation_grounding")
         answer = answers["grounding"]
-        return answer["choice"] == "supported" and answer["probabilities"]["supported"] >= self.config.decision_threshold
+        probability = answer["probabilities"]["supported"]
+        accepted = answer["choice"] == "supported" and probability >= self.config.decision_threshold
+        return {"accepted": accepted, "decision": answer["choice"],
+                "supported_probability": probability, "threshold": self.config.decision_threshold}
+
+    async def verify(self, state):
+        return (await self.assess_grounding(state))["accepted"]
 
 
 def create_evaluator(ai_config):

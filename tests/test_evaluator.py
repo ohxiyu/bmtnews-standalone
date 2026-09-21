@@ -208,13 +208,14 @@ def test_analyzer_uses_only_jev_and_clears_stale_scores(monkeypatch, tmp_path):
 def test_generation_cannot_bypass_check_through_translation(monkeypatch):
     from src.ai.enricher import ContentEnricher
     class Evaluator:
-        async def verify(self, state): return False
+        async def assess_grounding(self, state):
+            return {"accepted": False, "decision": "unsupported", "supported_probability": 0, "threshold": .9}
     monkeypatch.setattr("src.ai.enricher.create_evaluator", lambda _: Evaluator())
     class Client:
         async def complete(self, **kwargs):
-            return '{"title_zh":"标题","summary_zh":"未经证实的结论"}'
+            return '{"title_zh":"标题","summary_zh":"未经证实的结论","title_en":"Title","summary_en":"Unsupported claim"}'
     enricher = ContentEnricher(Client())
-    with pytest.raises(EvaluationError, match="unsupported_translation"):
+    with pytest.raises(EvaluationError, match="translation_unsupported"):
         asyncio.run(enricher._translate_item(item()))
 
 

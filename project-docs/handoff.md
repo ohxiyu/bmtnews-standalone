@@ -1,35 +1,29 @@
 # 当前交接
 
-五阶段指统一评分和请求调度代码；日报页面重刊仍未完成。
+本次修复来源核验阻塞，保持统一Jev评分及90%门槛。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "记录 Jev 统一评分与限流修复生产验收",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/108",
-  "owner": "Codex / jev-unified-release",
-  "branch": "agent/jev-unified-release",
-  "last_verified_commit": "305fe3122741641165dfb4f7bb9ec367b15e091f",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/109",
+  "goal": "修复翻译与核验来源不一致，隔离单条不合格内容",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/110",
+  "owner": "Codex / grounding-item-isolation",
+  "branch": "agent/grounding-item-isolation",
+  "last_verified_commit": "0c88fbf0ddbc7dbba500497952d584c11590cd5f",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/111",
   "completed": [
-    "PR105/107已合并；867项测试及CI/CodeQL通过",
-    "运行35575310373：123次Jev新评分成功，17条同规则缓存，evaluation_pending=0",
-    "4次Jev去重成功；没有DeepSeek评分或去重调用",
-    "线上早报内容保持不变"
+    "生成与核验共用同一来源正文，简短翻译输出中英两种语言",
+    "内容拒绝与接口不可用分别记录，单条失败不取消其他任务",
+    "发布前移除未通过核验条目；缓存保留合格结果，全部失败停止发布"
   ],
   "unfinished": [
-    "今天日报重刊仍受unsupported_translation阻塞"
+    "最终测试、PR检查、正式重跑验收"
   ],
   "validation": [
-    "CI35575078442、CodeQL35575078513成功",
-    "生产评分123、去重4、核验15、预筛选8次Jev成功调用",
-    "DeepSeek仅concept_extraction/content_enrichment/translation阶段",
-    "latest.json重跑前后完全一致"
+    "878项完整回归通过；70项相关测试通过"
   ],
   "unverified": [
-    "未完成新的日报页面发布",
-    "预筛选1批失败已按设计进入完整Jev评分，具体原因未记录",
-    "不证明全部生成内容真实性或准确率提升"
+    "未完成今天新版日报发布"
   ],
   "production": {
     "source_commit": "305fe3122741641165dfb4f7bb9ec367b15e091f",
@@ -39,17 +33,15 @@
     "worker_version": "not changed; Cloudflare Pages deployment 8cf521b9-ba10-40e6-984d-df56ce96e511, independent dispatcher not changed / unknown",
     "verified_at": "2026-09-21T08:05Z; Actions35575310373 and unchanged latest.json"
   },
-  "blockers": [
-    "来源核验返回unsupported_translation，停止当期发布；不绕过核验"
-  ],
-  "next_action": "统一评分需求完成；后续单独处理生成文本的来源支持不足，今日早报保持原样",
+  "blockers": [],
+  "next_action": "完成回归与CI，合并修复并重新生成今天日报",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "complete",
-    "deployed": "complete",
-    "production_verified": "complete"
+    "pr_merged": "pending",
+    "deployed": "pending",
+    "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-21-jev-pacing.md"
+  "evidence": "project-docs/releases/2026-09-21-grounding-isolation.md"
 }
 ```

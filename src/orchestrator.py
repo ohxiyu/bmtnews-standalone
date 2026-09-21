@@ -1335,6 +1335,16 @@ class BMTNewsOrchestrator:
                 ),
             ]
             run_report.set_breakdown("final_selected_groups", self._group_breakdown(important_items))
+            run_report.set_breakdown("final_selected_sources", self._source_breakdown(important_items))
+            final_primary = sum(
+                self._group_breakdown(important_items).get(group_labels.get(group, group), 0)
+                for group in primary_groups
+            )
+            run_report.set_metric("final_primary_selected", final_primary)
+            if minimum_display is not None and len(important_items) < minimum_display:
+                run_report.add_alert("warning", "verified_short_edition",
+                    f"来源核验后发布短版：{len(important_items)}/{minimum_display} 条；未降低质量标准补足。")
+
 
             # Link continuing coverage to its thread before anything renders.
             self._apply_threads(important_items, edition_date=window.date)
@@ -3228,8 +3238,23 @@ class BMTNewsOrchestrator:
             for item in misses:
                 cache.store_enrichment(item)
             cache.save()
+        if self.config.ai.evaluator.enabled:
+            rejected = [item for item in items if item.metadata.get("enrichment_status") in {"rejected", "verification_unavailable"}]
+            items[:] = [item for item in items if item not in rejected]
+            if self.last_run_report is not None:
+                report = self.last_run_report
+                report.set_metric("grounding_excluded", len(rejected))
+                reasons = defaultdict(int)
+                for item in rejected:
+                    reasons[item.metadata.get("grounding_error", {}).get("code", "unknown")] += 1
+                report.set_breakdown("grounding_exclusion_reasons", dict(reasons))
+                if rejected:
+                    report.add_alert("warning", "grounding_excluded",
+                        f"{len(rejected)} 条未通过来源核验或核验不可用，已剔除；保留 {len(items)} 条。")
+            if not items:
+                raise RuntimeError("No verified news remains; refusing to publish an empty edition")
         self.console.print(
-            f"   Enriched {len(misses)} items; reused {len(cached)}\n"
+            f"   Verified {len(items)} items; reused {len(cached)}\n"
         )
         self._set_timing("enrichment", started)
 
