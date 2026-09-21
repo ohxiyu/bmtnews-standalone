@@ -10,7 +10,7 @@
   "owner": "Codex / jev-unified-rules",
   "branch": "agent/jev-unified-rules",
   "last_verified_commit": "4ca3d37ed16d2452120de3e60d22d0d52a75809e",
-  "pr": "pending",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/105",
   "completed": [
     "Jev 独立评分，无生成模型评分、零分否决或异常回退",
     "未评分内容不参与排名；去重失败停止发布；错误原因保留",
@@ -20,7 +20,7 @@
     "提交 PR、CI 和正式发布验证"
   ],
   "validation": [
-    "完整回归 856 项通过；新增排名排除与全失败保护后 32 项 Jev 测试通过"
+    "最终完整回归 858 项通过；32 项 Jev 针对测试通过"
   ],
   "unverified": [
     "新逻辑尚未生产运行；不承诺 Jev 判断准确率",
