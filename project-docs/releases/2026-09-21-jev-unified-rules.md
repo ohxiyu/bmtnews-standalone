@@ -26,3 +26,11 @@ PR: https://github.com/ohxiyu/bmtnews-standalone/pull/105
 ## 五阶段
 
 代码 complete；测试 complete；PR 合并 pending；部署 pending；生产验证 pending。
+
+## 后续生产证据
+
+PR105 已合并为1b2a72d，CI35574352779 / CodeQL35574352632通过。
+正式运行35574566736执行新逻辑，123条评分HTTP429后未入榜、无DeepSeek补分；
+最终去重同样HTTP429而停止，公开日报未更新。请求调度后续见
+[限流修复](2026-09-21-jev-pacing.md)。统一评分代码/测试/合并完成；生产执行已验证，
+整期成功发布尚未完成，不能宣称日报已更新。

@@ -288,3 +288,39 @@ def test_unscored_items_cannot_enter_ranking(tmp_path, monkeypatch, all_failed):
     else:
         result = asyncio.run(orchestrator._analyze_content([item(0), item(1)]))
         assert [row.id for row in result] == ["test-1"]
+
+
+@pytest.mark.parametrize("header,expected", [(None,30), ("garbage",30), ("nan",30),
+    ("-1",30), ("0",3), ("10",10), ("120",120)])
+def test_retry_after_values(header, expected):
+    from src.ai.evaluator import retry_delay
+    assert retry_delay(header) == expected
+
+
+def test_shared_pacing_and_retry_after(evaluator, monkeypatch):
+    now = [100.0]
+    starts = []
+    async def sleep(seconds): now[0] += seconds
+    monkeypatch.setattr("src.ai.evaluator.time.monotonic", lambda: now[0])
+    monkeypatch.setattr("src.ai.evaluator.asyncio.sleep", sleep)
+    def handler(request):
+        starts.append(now[0])
+        if len(starts) == 1:
+            return httpx.Response(429, headers={"retry-after": "12"})
+        return httpx.Response(200, json={"answers": {"x": {"type": "boolean", "probability": 1}}})
+    evaluator.transport = httpx.MockTransport(handler)
+    other = JevEvaluator(evaluator.config, transport=evaluator.transport)
+    async def run():
+        await asyncio.gather(evaluator.evaluate({}, {"x": {"type": "boolean"}}, stage="test"),
+                             other.evaluate({}, {"x": {"type": "boolean"}}, stage="test"))
+    asyncio.run(run())
+    assert starts == [100,112,115]
+
+
+def test_long_cooldown_does_not_retry_early_or_block_forever(evaluator, monkeypatch):
+    calls = []
+    evaluator.transport = httpx.MockTransport(lambda request: (
+        calls.append(1) or httpx.Response(429, headers={"retry-after": "300"})))
+    with pytest.raises(EvaluationError, match="rate_limit_cooldown"):
+        asyncio.run(evaluator.evaluate({}, {"x": {"type": "boolean"}}, stage="test"))
+    assert calls == [1]

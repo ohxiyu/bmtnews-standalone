@@ -1,41 +1,40 @@
 # 当前交接
 
-本次仅处理 Jev 统一评分规则；不合并其他任务。
-
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "统一 Jev 评分与去重，移除 DeepSeek 运行时回退",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/104",
-  "owner": "Codex / jev-unified-rules",
-  "branch": "agent/jev-unified-rules",
-  "last_verified_commit": "4ca3d37ed16d2452120de3e60d22d0d52a75809e",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/105",
+  "goal": "Jev 统一规则生产限流修复",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/106",
+  "owner": "Codex / jev-rate-pacing",
+  "branch": "agent/jev-rate-pacing",
+  "last_verified_commit": "1b2a72d089677ce138993ea3be1fdb07f2749d32",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/107",
   "completed": [
-    "Jev 独立评分，无生成模型评分、零分否决或异常回退",
-    "未评分内容不参与排名；去重失败停止发布；错误原因保留",
-    "规则 v2 隔离旧评分缓存"
+    "PR105 已合并，858 项测试、CI 和 CodeQL 通过",
+    "生产运行35574566736证明无DeepSeek评分回退；123候选HTTP429后保持未评分",
+    "实现共享排队、3秒间隔和Retry-After冷却"
   ],
   "unfinished": [
-    "提交 PR、CI 和正式发布验证"
+    "最终回归、PR、CI与生产重跑"
   ],
   "validation": [
-    "最终完整回归 858 项通过；32 项 Jev 针对测试通过"
+    "867 项完整回归通过，包含 41 项 Jev 测试"
   ],
   "unverified": [
-    "新逻辑尚未生产运行；不承诺 Jev 判断准确率",
-    "现有内容核验可能仍拒绝来源不足的生成内容"
+    "限流修复尚未正式运行；今天重刊尚未完成"
   ],
   "production": {
-    "source_commit": "d487eafa0e526c21e1455c8466661514e8030e58",
+    "source_commit": "1b2a72d089677ce138993ea3be1fdb07f2749d32; Actions35574566736 executed, publication blocked by429",
     "artifact_commit": "f288eb943d8f9f525f580ea5cdb5c7ea88593794",
     "edition": "2026-09-21; existing morning edition retained",
     "generated_at": "2026-09-20T23:28:51.024061Z; PWA build 2026-09-21T07:15:33+00:00",
     "worker_version": "not changed; Cloudflare Pages deployment 8cf521b9-ba10-40e6-984d-df56ce96e511, independent dispatcher not changed / unknown",
     "verified_at": "2026-09-21T07:19:00Z; production event JSON matches generated artifact"
   },
-  "blockers": [],
-  "next_action": "提交 focused PR，检查通过后按本次 Jev 接入纠正范围发布",
+  "blockers": [
+    "生产Jev HTTP429；正在修复请求节奏"
+  ],
+  "next_action": "完成限流修复验证与发布，保留统一Jev标准",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -43,6 +42,6 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-21-jev-unified-rules.md"
+  "evidence": "project-docs/releases/2026-09-21-jev-pacing.md"
 }
 ```
