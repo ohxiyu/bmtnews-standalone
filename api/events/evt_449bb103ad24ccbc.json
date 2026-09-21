@@ -11,19 +11,23 @@
     "en": "ZetaChain votes to shut down Layer 1 network and move ZETA to Solana"
   },
   "current_state": {
-    "zh": "ZetaChain token holders voted to shut down the project's Layer 1 network and move the ZETA asset to Solana, with the team pivoting to its private AI app Anuma, though the migration requires one more vote.",
-    "en": "ZetaChain token holders voted to shut down the project's Layer 1 network and move the ZETA asset to Solana, with the team pivoting to its private AI app Anuma, though the migration requires one more vote."
+    "zh": "第68号提案以99.4%支持和58%参与率通过；交易所须先确认置换，第二次投票才会确定快照、申领和关停时间表，因此关停与迁移仍未执行，验证者继续运行，质押奖励继续发放。",
+    "en": "Proposal 68 passed with 99.4% support and 58% participation; exchanges must first confirm the swap before a second vote sets the snapshot, claims, and shutdown schedule, so shutdown and migration remain pending while validators continue operating and staking rewards continue."
   },
   "first_seen_at": "2026-09-20T22:36:14.638427+00:00",
-  "last_updated_at": "2026-09-20T22:36:14.638427+00:00",
-  "last_material_change_at": "2026-09-20T22:36:14.638427+00:00",
+  "last_updated_at": "2026-09-21T23:27:02.882651+00:00",
+  "last_material_change_at": "2026-09-21T23:27:02.882651+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
+    "down",
     "layer",
     "layer1",
+    "move",
     "solana",
+    "votes",
+    "wind",
     "zeta",
     "zetachain"
   ],
@@ -81,6 +85,82 @@
         {
           "url": "https://www.theblock.co/news/defi/2026-09-20-zetachain-votes-to-shut-down-layer-1-network-and-move-zeta-to-solana-415878",
           "label": "The Block",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_1756ba92370a8b49",
+      "event_id": "evt_449bb103ad24ccbc",
+      "occurred_at": "2026-09-21T07:31:47Z",
+      "published_at": "2026-09-21T07:31:47Z",
+      "first_seen_at": "2026-09-21T23:27:02.882651Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "ZetaChain 持有人批准逐步关停 L1、将 ZETA 迁移至 Solana 的计划",
+      "title_en": "ZetaChain holders approve plan to wind down L1, move ZETA to Solana",
+      "what_changed_zh": "新增细节：治理提案第68号以99.4%支持和58%参与率通过，超过40%法定人数；ZETA将以1:1兑换为Solana SPL代币并保留代码和总供应量；投票不会立即触发关停或迁移，核心贡献者将提交第二份提案说明提款窗口、快照区块高度、关停时间表、代币申领流程和交易所转换期。",
+      "what_changed_en": "Added details: governance proposal 68 passed with 99.4% support and 58% participation, exceeding the 40% quorum; ZETA will become a Solana SPL token via 1:1 conversion with same ticker and total supply; the vote does not immediately trigger shutdown or migration, and core contributors will submit a second proposal detailing the withdrawal window, snapshot block height, shutdown timetable, token claim process, and exchange conversion period.",
+      "current_state_zh": "ZetaChain 代币持有人已通过第68号治理提案，批准逐步关停基于Cosmos的Layer 1并将ZETA迁移至Solana，但不会立即执行；验证者继续运行，质押奖励继续发放，后续仍需第二份提案明确迁移与关停细节。",
+      "current_state_en": "ZetaChain tokenholders passed governance proposal 68 to wind down the Cosmos-based Layer 1 and migrate ZETA to Solana, but the shutdown and migration will not occur immediately; validators continue operating, staking rewards continue, and a second proposal is still needed to detail the migration and shutdown process.",
+      "detailed_summary_zh": "ZetaChain 代币持有人于周日通过了第 68 号治理提案，以 99.4% 的支持率和 58% 的参与率批准逐步关停其基于 Cosmos 的 layer 1，并按 1:1 兑换将原生 ZETA 迁移为 Solana 上的 SPL 代币，保留相同代币代码和总供应量。根据提案，该投票不会立即触发 ZetaChain 的关停或迁移；核心贡献者将提交第二份提案，详述与其他区块链相关资产的提款窗口、快照区块高度、关停时间表、代币申领流程和交易所转换期，验证者将继续运行，质押奖励在过渡期间继续发放。",
+      "detailed_summary_en": "ZetaChain tokenholders passed governance proposal 68 on Sunday with 99.4% support and 58% participation, exceeding the network’s 40% quorum, to wind down its Cosmos-based layer 1 and migrate native ZETA to Solana as an SPL token through a 1:1 conversion with the same ticker and total supply. According to the proposal, the vote does not immediately trigger ZetaChain’s shutdown or migration; core contributors will submit a second proposal detailing the withdrawal window for assets linked to other blockchains, snapshot block height, shutdown timetable, token claim process and exchange conversion period, while validators continue operating and staking rewards continue during the transition.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.7,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:4a2fc4c12c2cd7a5"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/zetachain-shutdown-zeta-solana-migration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_a33ca7eacc1dccaa",
+      "event_id": "evt_449bb103ad24ccbc",
+      "occurred_at": "2026-09-21T21:10:43Z",
+      "published_at": "2026-09-21T21:10:43Z",
+      "first_seen_at": "2026-09-21T23:26:50.633134Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "ZetaChain 投票决定逐步关停 Layer 1，并将 ZETA 迁移至 Solana",
+      "title_en": "ZetaChain Votes to Wind Down Layer 1 and Move ZETA to Solana",
+      "what_changed_zh": "交易所必须确认 ZETA 至 Solana 的置换后，第二次治理投票才会确定快照、代币申领和关停时间表。",
+      "what_changed_en": "Exchanges must confirm the ZETA-to-Solana swap before a second governance vote sets the snapshot, token claims, and shutdown schedule.",
+      "current_state_zh": "第68号提案以99.4%支持和58%参与率通过；交易所须先确认置换，第二次投票才会确定快照、申领和关停时间表，因此关停与迁移仍未执行，验证者继续运行，质押奖励继续发放。",
+      "current_state_en": "Proposal 68 passed with 99.4% support and 58% participation; exchanges must first confirm the swap before a second vote sets the snapshot, claims, and shutdown schedule, so shutdown and migration remain pending while validators continue operating and staking rewards continue.",
+      "detailed_summary_zh": "提案 68 以 99.4% 的支持率和 58% 的参与率通过，但交易所必须确认该置换后，第二次投票才会确定快照、申领和关停时间表。",
+      "detailed_summary_en": "Proposal 68 passed with 99.4% support and 58% participation, but exchanges must confirm the swap before a second vote sets the snapshot, claims and shutdown schedule.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.2,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:394a2220a5707765"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/blockchains/zetachain-votes-to-wind-down-layer-1-and-move-zeta-to-solana",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }
