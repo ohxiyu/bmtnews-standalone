@@ -159,10 +159,12 @@ class AnalysisResultCache:
             item.metadata["source_category"] = value["source_category"]
         if "evaluation" in value:
             item.metadata["evaluation"] = value["evaluation"]
+            item.metadata.pop("evaluation_error", None)
+            item.metadata.pop("evaluation_degraded", None)
         return item.ai_score is not None
 
     def store_analysis(self, item: ContentItem) -> None:
-        if item.metadata.get("evaluation_degraded"):
+        if item.metadata.get("evaluation_degraded") or item.metadata.get("evaluation_error"):
             return
         if item.ai_score is None or item.ai_reason in {
             "Analysis failed",

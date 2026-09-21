@@ -76,10 +76,9 @@ class ContentPrefilter:
             try:
                 async with semaphore:
                     if self.evaluator is not None:
-                        try:
-                            return await self.evaluator.prefilter(batch), batch_indices
-                        except EvaluationError:
-                            pass  # Existing complete-response path is the fallback.
+                        # Failure keeps candidates for full Jev analysis; it
+                        # never supplies a replacement generation-model score.
+                        return await self.evaluator.prefilter(batch), batch_indices
                     response = await self.client.complete(
                         system=PREFILTER_SYSTEM,
                         user=PREFILTER_USER.format(items="\n".join(lines)),

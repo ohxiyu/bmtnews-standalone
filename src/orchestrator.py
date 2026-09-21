@@ -35,6 +35,7 @@ from .scrapers.ossinsight import OSSInsightScraper
 from .scrapers.gdelt import GDELTScraper
 from .scrapers.google_news import GoogleNewsScraper
 from .ai.client import create_ai_client
+from .ai.evaluator import RUBRIC_VERSION
 from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer, generate_edition_overviews
 from .ai.enricher import ContentEnricher
@@ -290,7 +291,7 @@ class BMTNewsOrchestrator:
                     "categories": self._analysis_categories(),
                     "base_url": self.config.ai.base_url,
                     "evaluator": self.config.ai.evaluator.model_dump(),
-                    "evaluation_rubric": "jev-news-v1",
+                    "evaluation_rubric": RUBRIC_VERSION,
                 }, sort_keys=True).encode()).hexdigest(),
             )
         return self._analysis_cache
@@ -3274,6 +3275,13 @@ class BMTNewsOrchestrator:
                     cache.store_analysis(item)
                 cache.save()
         selected = [*cached, *misses]
+        if self.config.ai.evaluator.enabled:
+            pending = [item for item in selected if item.ai_score is None]
+            if self.last_run_report:
+                self.last_run_report.set_metric("evaluation_pending", len(pending))
+            selected = [item for item in selected if item.ai_score is not None]
+            if pending and not selected:
+                raise RuntimeError("No candidates have a valid Jev score; refusing to publish")
         if self.config.ai.prefilter_enabled:
             selected.sort(key=lambda item: (item.ai_score or 0, item.published_at, item.id), reverse=True)
             selected = selected[:limit]
