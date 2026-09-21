@@ -7,35 +7,30 @@ title: Scoring System
 
 After fetching content from all sources, BMTNews uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 
-## Pipeline
+## Production evaluation policy
 
-1. **Batch processing** — Items are scored in batches of 10 with a progress bar. Failed items receive a score of 0.
-2. **Content preparation** — For each item, the content is truncated (800 chars if comments are present, 1000 otherwise) and engagement metrics are assembled from metadata (HN score, Reddit upvote ratio, etc.).
-3. **AI analysis** — The prepared content is sent to the configured AI model (temperature 0.3) with a system prompt defining the scoring criteria.
-4. **Response parsing** — The AI response is parsed as JSON (with fallbacks for code-block-wrapped JSON). Each item gets: `ai_score` (float), `ai_reason` (string), `ai_summary` (string), and `ai_tags` (list).
-5. **Retry** — Failed AI calls are retried up to 3 times with exponential backoff (2-10 seconds).
+With `ai.evaluator.enabled`, Jev is the only scoring and classification authority.
+All candidates use rubric `jev-news-v2`: impact and novelty each range from 0 to 5,
+with final score `round(2 * (0.75 * impact + 0.25 * novelty), 1)`. A high-confidence
+old recap receives zero. DeepSeek scores, categories and freshness vetoes do not
+participate. DeepSeek generates selected content after ranking.
 
-## Scoring Scale
+Each evaluation request has at most two attempts. Account errors do not retry.
+Failed scoring has `ai_score=null` and a sanitized `evaluation_error`; it is not a
+zero-quality judgment, is not cached, and cannot enter ranking. If every attempted
+candidate fails, publication stops. Partial failures leave the remaining uniformly
+scored candidates eligible; existing quality thresholds and quotas still apply.
 
-| Score | Tier | Description |
-|-------|------|-------------|
-| 9-10 | Groundbreaking | Major breakthroughs, paradigm shifts, major version releases, significant research breakthroughs |
-| 7-8 | High Value | Important developments, technical deep-dives, novel approaches, insightful analysis, valuable tools |
-| 5-6 | Interesting | Incremental improvements, useful tutorials, moderate community interest |
-| 3-4 | Low Priority | Minor updates, common knowledge, overly promotional |
-| 0-2 | Noise | Spam, off-topic, trivial updates |
+Prefilter errors pass those candidates to full Jev scoring without assigning
+replacement scores. Dedup errors stop publication without calling DeepSeek.
+Successful caches are separated by rubric/configuration and edition window, so
+old mixed-policy results cannot enter the new ranking. Generation verification
+still requires source support; translation cannot bypass it. Diagnostic errors
+preserve HTTP/schema/unsupported distinctions without logging provider payloads.
 
-## Scoring Factors
-
-The AI evaluates each item based on:
-
-- **Technical depth and novelty** — original ideas, new techniques, research contributions
-- **Potential impact** — how broadly this affects software engineering, AI/ML, or systems research
-- **Quality of writing/presentation** — clarity, structure, thoroughness
-- **Community discussion** — insightful comments, diverse viewpoints, substantive debates
-- **Engagement signals** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
-
-Engagement metadata is source-specific: HN provides score and comment count, Reddit provides upvote ratio and comment count.
+When evaluation is explicitly disabled, the legacy standalone generation-model
+pipeline remains available for existing configurations; it is never an automatic
+fallback within an enabled Jev run.
 
 ## Filtering
 

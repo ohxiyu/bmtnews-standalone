@@ -72,6 +72,30 @@ class ContentAnalyzer:
         return max(concurrency, 1)
 
     async def analyze_batch(self, items: List[ContentItem]) -> List[ContentItem]:
+        # Enabled evaluation has one owner and its own bounded request retry.
+        if self.evaluator is not None:
+            semaphore = asyncio.Semaphore(self._get_concurrency())
+            async def evaluate(item):
+                async with semaphore:
+                    item.ai_score = None
+                    item.ai_reason = None
+                    item.ai_summary = item.title
+                    item.ai_tags = []
+                    item.metadata.pop("evaluation", None)
+                    item.metadata.pop("evaluation_degraded", None)
+                    item.metadata.pop("evaluation_error", None)
+                    window = self.edition_window or edition_window_for(
+                        item.published_at + timedelta(days=1), "Asia/Shanghai",
+                    )
+                    try:
+                        await self.evaluator.analyze(item, self.allowed_categories, window)
+                    except EvaluationError as exc:
+                        item.ai_score = None
+                        item.metadata["evaluation_error"] = {"code": exc.code, "status": exc.status_code}
+                        print(f"Jev score pending for {item.id}: {exc}")
+            await asyncio.gather(*(evaluate(item) for item in items))
+            return items
+
         throttle_sec = self._get_throttle_sec()
         concurrency = self._get_concurrency()
         semaphore = asyncio.Semaphore(concurrency)
@@ -241,12 +265,3 @@ class ContentAnalyzer:
             if source_category != result.category:
                 item.metadata.setdefault("source_category", source_category)
                 item.metadata["category"] = result.category
-
-        if self.evaluator is not None:
-            try:
-                await self.evaluator.analyze(item, self.allowed_categories, window)
-            except EvaluationError:
-                # Retain the already validated text-model analysis on transient
-                # evaluator failure. Do not cache this as a successful Jev score.
-                item.metadata["evaluation_degraded"] = True
-                print(f"Jev scoring unavailable for {item.id}; using generation-model analysis")

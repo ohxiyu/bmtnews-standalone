@@ -91,16 +91,20 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
         user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
         request_user = user
         cached = cache.get_comparison(cache_system, user) if cache is not None else None
-        if evaluator is not None and cached is None:
-            try:
+        if evaluator is not None:
+            # Invalid cache entries are recomputed by the same evaluator.
+            if cached is not None:
+                try:
+                    validated = validate_duplicates(cached, len(indices))
+                except ValueError:
+                    cached = None
+            if cached is None:
                 evaluated = await evaluator.duplicates([items[index] for index in indices], system)
                 validated = validate_duplicates(evaluated, len(indices))
-                groups.extend(sorted({indices[index] for index in group}) for group in validated)
                 if cache is not None:
                     cache.store_comparison(cache_system, user, evaluated)
-                return
-            except EvaluationError:
-                logger.warning("Jev dedup unavailable; using existing fail-closed dedup")
+            groups.extend(sorted({indices[index] for index in group}) for group in validated)
+            return
         for attempt in range(2):
             payload = None
             response = None

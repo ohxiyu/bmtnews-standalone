@@ -301,6 +301,8 @@ class ContentEnricher:
                     item.metadata["detailed_summary_zh"] = result["summary_zh"]
             elif self.evaluator is not None:
                 raise EvaluationError("invalid_translation")
+        except EvaluationError:
+            raise
         except Exception:
             if self.evaluator is not None:
                 # Never let the ordinary translation fallback silently publish

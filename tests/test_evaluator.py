@@ -110,14 +110,14 @@ def test_analysis_drives_score_category_and_preserves_generated_text(evaluator):
     assert article.metadata["evaluation"]["model"] == "typesafe-ai/jev"
 
 
-def test_existing_freshness_zero_is_not_overridden(evaluator):
+def test_legacy_zero_cannot_override_jev(evaluator):
     async def evaluate(state, questions, **kwargs):
         return {"impact": score(questions["impact"], 5), "novelty": score(questions["novelty"], 5),
                 "recap": choice(questions["recap"], "new_development")}
     evaluator.evaluate = evaluate
     article = item(); article.ai_score = 0
     asyncio.run(evaluator.analyze(article, [], edition_window_for(datetime(2026, 9, 22, tzinfo=timezone.utc), "Asia/Shanghai")))
-    assert article.ai_score == 0
+    assert article.ai_score == 10
 
 
 def test_updates_merge_only_within_same_daily_edition(evaluator):
@@ -147,13 +147,13 @@ def test_every_pair_is_checked_with_bounded_questions(evaluator):
     assert len(seen) == len(set(seen)) == 276
 
 
-def test_dedup_failure_uses_existing_fail_closed_path(monkeypatch):
+def test_dedup_failure_never_calls_generation_model(monkeypatch):
     class Evaluator:
         async def duplicates(self, *args): raise EvaluationError("test")
     class Client:
-        async def complete(self, **kwargs): return "not json"
+        async def complete(self, **kwargs): raise AssertionError("generation model called")
     monkeypatch.setattr("src.ai.topic_dedup.create_evaluator", lambda _: Evaluator())
-    with pytest.raises(RuntimeError, match="refusing to publish"):
+    with pytest.raises(EvaluationError, match="test"):
         asyncio.run(duplicate_groups(Client(), [item(0), item(1)], [[0, 1]]))
 
 
@@ -182,7 +182,7 @@ def test_grounding_rejects_unsupported_and_uncertain(evaluator):
         assert not asyncio.run(evaluator.verify({"source": "x", "generated": "y"}))
 
 
-def test_analyzer_applies_jev_and_marks_fallback(monkeypatch, tmp_path):
+def test_analyzer_uses_only_jev_and_clears_stale_scores(monkeypatch, tmp_path):
     class Evaluator:
         fail = False
         async def analyze(self, article, *args):
@@ -192,14 +192,17 @@ def test_analyzer_applies_jev_and_marks_fallback(monkeypatch, tmp_path):
     monkeypatch.setattr("src.ai.analyzer.create_evaluator", lambda _: evaluator)
     class Client:
         async def complete(self, **kwargs):
-            return json.dumps({"score": 7, "reason": "Source-based reason", "summary": "Summary", "tags": ["tag"]})
+            raise AssertionError("generation model called")
     analyzer = ContentAnalyzer(Client())
     article = item()
     asyncio.run(analyzer.analyze_batch([article]))
-    assert article.ai_score == 9 and article.ai_summary == "Summary" and article.ai_tags == ["tag"]
+    assert article.ai_score == 9 and article.ai_summary == article.title and article.ai_tags == []
     evaluator.fail = True
     asyncio.run(analyzer.analyze_batch([article]))
-    assert article.ai_score == 7 and article.metadata["evaluation_degraded"]
+    assert article.ai_score is None and article.metadata["evaluation_error"]["code"] == "temporary"
+    cache = AnalysisResultCache(tmp_path / "pending.json", model="jev")
+    cache.store_analysis(article)
+    assert not cache.restore_analysis(item())
 
 
 def test_generation_cannot_bypass_check_through_translation(monkeypatch):
@@ -211,7 +214,7 @@ def test_generation_cannot_bypass_check_through_translation(monkeypatch):
         async def complete(self, **kwargs):
             return '{"title_zh":"标题","summary_zh":"未经证实的结论"}'
     enricher = ContentEnricher(Client())
-    with pytest.raises(EvaluationError, match="generation_verification_failed"):
+    with pytest.raises(EvaluationError, match="unsupported_translation"):
         asyncio.run(enricher._translate_item(item()))
 
 
@@ -225,3 +228,63 @@ def test_cache_separates_edition_windows_and_persists_evaluation(tmp_path):
     assert restored.metadata["evaluation"]["model"] == "typesafe-ai/jev"
     cache.analysis_context = ["second-start", "second-end"]
     assert not cache.restore_analysis(item())
+
+
+def test_prefilter_failure_passes_to_full_analysis_without_replacement_scores(monkeypatch):
+    class Evaluator:
+        async def prefilter(self, batch): raise EvaluationError("timeout")
+    class Client:
+        async def complete(self, **kwargs): raise AssertionError("generation model called")
+    monkeypatch.setattr("src.ai.prefilter.create_evaluator", lambda _: Evaluator())
+    result = asyncio.run(ContentPrefilter(Client(), batch_size=5).select([item(i) for i in range(12)], maximum=6))
+    assert result.evaluated == 0 and result.failed_batches == 3
+    assert len(result.items) == 12
+
+
+def test_invalid_jev_cache_is_recomputed_without_generation_model(monkeypatch):
+    calls = []
+    class Evaluator:
+        async def duplicates(self, *args):
+            calls.append(1)
+            return {"duplicates": [[0, 1]]}
+    class Client:
+        async def complete(self, **kwargs): raise AssertionError("generation model called")
+    class Cache:
+        def get_comparison(self, *args): return {"duplicates": [[0, 100]]}
+        def store_comparison(self, *args): pass
+    monkeypatch.setattr("src.ai.topic_dedup.create_evaluator", lambda _: Evaluator())
+    assert asyncio.run(duplicate_groups(Client(), [item(0), item(1)], [[0, 1]], cache=Cache())) == [[0, 1]]
+    assert calls == [1]
+
+
+def test_schema_errors_keep_specific_reason_without_provider_text(evaluator, monkeypatch):
+    async def no_sleep(_): pass
+    monkeypatch.setattr("src.ai.evaluator.asyncio.sleep", no_sleep)
+    evaluator.transport = httpx.MockTransport(lambda _: httpx.Response(200, json={"secret": "do-not-log"}))
+    with pytest.raises(EvaluationError) as caught:
+        asyncio.run(evaluator.evaluate("state", {"x": {"type": "boolean"}}, stage="test"))
+    assert caught.value.code == "missing_answers"
+    assert "do-not-log" not in str(caught.value)
+
+
+@pytest.mark.parametrize("all_failed", [False, True])
+def test_unscored_items_cannot_enter_ranking(tmp_path, monkeypatch, all_failed):
+    from src.models import Config, FilteringConfig, SourcesConfig
+    from src.orchestrator import BMTNewsOrchestrator
+    from src.storage.manager import StorageManager
+    config = Config(ai=AIConfig(provider="deepseek", model="test", api_key_env="TEST",
+        evaluator=EvaluationConfig(enabled=True), result_cache_enabled=False),
+        sources=SourcesConfig(), filtering=FilteringConfig())
+    orchestrator = BMTNewsOrchestrator(config, StorageManager(data_dir=str(tmp_path / "data")))
+    monkeypatch.setattr("src.orchestrator.create_ai_client", lambda _: object())
+    class Evaluator:
+        async def analyze(self, article, *args):
+            if all_failed or article.id == "test-0": raise EvaluationError("timeout")
+            article.ai_score = 8.5
+    monkeypatch.setattr("src.ai.analyzer.create_evaluator", lambda _: Evaluator())
+    if all_failed:
+        with pytest.raises(RuntimeError, match="No candidates have a valid Jev score"):
+            asyncio.run(orchestrator._analyze_content([item(0), item(1)]))
+    else:
+        result = asyncio.run(orchestrator._analyze_content([item(0), item(1)]))
+        assert [row.id for row in result] == ["test-1"]
