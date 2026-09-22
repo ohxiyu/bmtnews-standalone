@@ -25243,22 +25243,23 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim.",
-      "current_state_zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
+      "current_state_en": "The Coldcard hack aftermath now includes whitehat recovery efforts: 52.37 BTC has been moved to a recovery trust address, and victims can check via a designated website; the attacker's laundering activity continues, but some funds have been intercepted by whitehats and entered a recovery process.",
+      "current_state_zh": "Coldcard黑客事件后续出现白帽恢复行动：52.37枚比特币已被转移至恢复信托地址，受害者可通过指定网站查询；攻击者的洗钱活动仍在进行，但部分资金已被白帽拦截并进入恢复流程。",
       "entities": [
         "coldcard",
         "galaxy",
-        "wave"
+        "wave",
+        "whitehats"
       ],
       "event_id": "evt_65f972f6d8c15c28",
       "event_type": "security_incident",
       "first_seen_at": "2026-09-07T09:34:03.581519Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-07T17:50:05.285366Z",
-      "last_updated_at": "2026-09-08T04:12:31.302204Z",
+      "last_material_change_at": "2026-09-22T09:25:24.409987Z",
+      "last_updated_at": "2026-09-22T09:25:32.635486Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "developing",
+      "status": "closed",
       "title_en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
       "title_zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
       "topics": [
@@ -25378,6 +25379,51 @@
           "update_type": "escalation",
           "what_changed_en": "Attacker moved funds via THORChain and CoinJoin; across all waves, 82% of stolen Bitcoin remains in original addresses; created 293 multisig vaults and moved funds from the 11 largest; identified a previously unknown vault likely holding another victim's funds.",
           "what_changed_zh": "攻击者通过THORChain和CoinJoin转移资金；所有波次中82%的被盗比特币仍留在原始地址；创建了293个多签金库，并已转移其中11个最大金库的资金；发现了一个可能属于另一受害者的未知金库。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The Coldcard hack aftermath now includes whitehat recovery efforts: 52.37 BTC has been moved to a recovery trust address, and victims can check via a designated website; the attacker's laundering activity continues, but some funds have been intercepted by whitehats and entered a recovery process.",
+          "current_state_zh": "Coldcard黑客事件后续出现白帽恢复行动：52.37枚比特币已被转移至恢复信托地址，受害者可通过指定网站查询；攻击者的洗钱活动仍在进行，但部分资金已被白帽拦截并进入恢复流程。",
+          "detailed_summary_en": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+          "detailed_summary_zh": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+          "event_id": "evt_65f972f6d8c15c28",
+          "first_seen_at": "2026-09-22T09:25:24.409987Z",
+          "importance_score": 7.7,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T06:27:28Z",
+          "published_at": "2026-09-22T06:27:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/22/whitehats-move-52-bitcoin-from-the-coldcard-hack-to-a-recovery-trust"
+            },
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/white-hats-coldcard-btc-exploit-galaxy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:991bc8d2b89a5074",
+            "rss:cointelegraph.com_rss:c97c57e67eb01357"
+          ],
+          "time_precision": "published",
+          "title_en": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+          "title_zh": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+          "update_id": "upd_c50b1057bf4ad1c5",
+          "update_type": "aftermath",
+          "what_changed_en": "Whitehats moved 52.37 BTC from the Coldcard hack to a newly formed recovery trust; roughly 40% of Wave 2 funds identified as whitehat activity; victims can check cryptorecoverytrust.com to see if funds were recovered; an additional 3.0134 BTC with no prior tracking history flowed to the same address.",
+          "what_changed_zh": "白帽黑客将52.37枚比特币从Coldcard黑客事件中转移至新成立的恢复信托地址；约40%的Wave 2资金被确认为白帽活动；受害者可在cryptorecoverytrust.com查询资金是否被追回；另有3.0134枚比特币无先前追踪记录流入该地址。"
         }
       ]
     },
@@ -74660,7 +74706,7 @@
       "first_seen_at": "2026-09-21T23:26:56.638666Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-21T23:26:56.638666Z",
-      "last_updated_at": "2026-09-21T23:40:18.323428Z",
+      "last_updated_at": "2026-09-22T01:47:39.289342Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -74699,11 +74745,18 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ29YOWxxNGZRTGs1TGxLLTlpSUVfUnJiakhPSi02M0JFd2ZlOXViM3plY2xfTjg2SWtramphTmNodW9qVXh2dnA0a3VfczFNZjlKcnpYWjZMMVpaRXJGTVBOUmdJTS1PZjhDUExLTnNIQnkzaXB4VFRldXNxS0lqWXBEd1NpUmxPbGxOZ3pndmNxWGZISTBYd3ZiN0xGbE5MMk9v?oc=5"
+            },
+            {
+              "label": "디지털투데이",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQVB5SmtQOERnOVdyQV9DVlZpRUlpME52YUM3NkMzdjFDT3pKQnJwMjNTb1dhYWlfXzdMRW55YlRXZGZmM1lYemVxcUJrTkd2bS05TTZjUE41RWpVR3R3b1RtdUZ0SVJ4WEtMOHVKNkdBZldIQVZQck1tdTFqS0MxQ2JMTkU2azhSZ044ZkpkQUFvZHA5cnFqdlp4dmMtYUJiNDIyNTF4VnE2dFNwazE2Tm9EV2xJN1JKN0ZWUHJBaFBvN1k?oc=5"
             }
           ],
           "story_ids": [
             "rss:decrypt.co_feed:c513414431f22dff",
-            "google_news:article:b5f897e6020c47b1"
+            "google_news:article:b5f897e6020c47b1",
+            "google_news:article:86218698a6567777"
           ],
           "time_precision": "published",
           "title_en": "Coinbase Brings IPO Shares to US Retail Traders, With Oura Up First",
@@ -74978,6 +75031,468 @@
           "update_type": "initial",
           "what_changed_en": "Pragma flags 6 price feeds as critical risk following $3.5M Starknet lending exploit",
           "what_changed_zh": "Pragma flags 6 price feeds as critical risk following $3.5M Starknet lending exploit"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+      "current_state_zh": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+      "entities": [
+        "allocations",
+        "coinbase",
+        "customers",
+        "ipo",
+        "maker",
+        "opens",
+        "oura",
+        "retail",
+        "ring",
+        "share",
+        "smart",
+        "starting",
+        "with"
+      ],
+      "event_id": "evt_8ef1d7700e1e6920",
+      "event_type": "other",
+      "first_seen_at": "2026-09-22T09:25:22.068300Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:22.068300Z",
+      "last_updated_at": "2026-09-22T09:25:22.068300Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+      "title_zh": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "current_state_zh": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "detailed_summary_en": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "detailed_summary_zh": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "event_id": "evt_8ef1d7700e1e6920",
+          "first_seen_at": "2026-09-22T09:25:22.068300Z",
+          "importance_score": 7.3,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T08:46:28Z",
+          "published_at": "2026-09-22T08:46:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "blockhead.co",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOOGtEeXh2V3JiYWN0Ykp3dld0YXJzZlBnSy1CUWRCUDNESVU3aHRfSmtOZWo0ODFIUlpkSG5nUXFQV1VSZVdNVFR3QXZXeE41SUxXbFF0SjNRaWRxbUszT3RERks0T3I1SFMtdlZDa1NoZFh1MktkZzRZOHpfUVUzTEdUTmVPVkE5WmRRb205ajVrSXpqaTdteGdJdDR0ZGxSaTdXNGZOOFNWY0o5ZS16QTVNblV3NVVzRTViMHdtdUU0ZkRLYTlCQjJiWjk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:5a523cbddbc2861f"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "title_zh": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "update_id": "upd_6c3c065691eb7a06",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co",
+          "what_changed_zh": "Coinbase Opens IPO Share Allocations to US Retail Customers, Starting With Smart-Ring Maker Oura - blockhead.co"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+      "current_state_zh": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+      "entities": [
+        "attorney",
+        "binance",
+        "bloomberg",
+        "iran",
+        "manhattan",
+        "tradingview"
+      ],
+      "event_id": "evt_41857707e32dd3fc",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-22T09:25:22.068469Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:22.068469Z",
+      "last_updated_at": "2026-09-22T09:25:22.068469Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+      "title_zh": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "current_state_zh": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "detailed_summary_en": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "detailed_summary_zh": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "event_id": "evt_41857707e32dd3fc",
+          "first_seen_at": "2026-09-22T09:25:22.068469Z",
+          "importance_score": 7.1,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T02:22:00Z",
+          "published_at": "2026-09-22T02:22:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "TradingView",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPMm5uSEItaUxmZ1U5b0UtVzhjUDlHYlo0UWtXMEQ5dzNiZFl2RjlnMVQwZW9wTGdua0NOSUZmZ2hSaHY4aUtMMGM1MG12X3hpM3phQ1JhVlRJTk5tQlJHTGF5N3gzVkxSNHExaVpPbENSOGRjZ2RzV2t0VGpROURuSkFFMUd1eXVUeHlnTllWa3NkSFZkQS1zbTRzWFdQOC11b1NoT2FtaUtidlYxZHpDUjFJZ09HSTJzeFRodWY3UGs0TEdKTG5aMnItVnlOSUxHTENMdVExZw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:7464c3519142d1b8"
+          ],
+          "time_precision": "published",
+          "title_en": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "title_zh": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "update_id": "upd_1b3d7bea2862e88f",
+          "update_type": "initial",
+          "what_changed_en": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView",
+          "what_changed_zh": "Manhattan US Attorney leading probe into Binance’s Iran compliance: Bloomberg - TradingView"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+      "current_state_zh": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+      "entities": [
+        "binance",
+        "pluang",
+        "sept",
+        "soph",
+        "sophon",
+        "upbit",
+        "usdc"
+      ],
+      "event_id": "evt_9e2393cc2802f803",
+      "event_type": "other",
+      "first_seen_at": "2026-09-22T09:25:22.068523Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:22.068523Z",
+      "last_updated_at": "2026-09-22T09:25:22.068523Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+      "title_zh": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "current_state_zh": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "detailed_summary_en": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "detailed_summary_zh": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "event_id": "evt_9e2393cc2802f803",
+          "first_seen_at": "2026-09-22T09:25:22.068523Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T09:03:25Z",
+          "published_at": "2026-09-22T09:03:25Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Pluang",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQkZlZm83Q1hjZG94eUtFSWZRWlZIeEhhRG5zVUtyVzFhdHJ4M0tKUnVkNmpiMlJ5V2VHLW15NE03Qzhfd3Z6Zlp6MExRTS1zRldIOWVxMXVUaXhnWDFERHZFT3dKSHZhUTZKSHZic2tJWS1vTVAtTjI1eEs3LTF2RGxEVjV2bmdQUUZDZA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:fff45fa92cd0acca"
+          ],
+          "time_precision": "published",
+          "title_en": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "title_zh": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "update_id": "upd_e6d278c33725bf69",
+          "update_type": "initial",
+          "what_changed_en": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang",
+          "what_changed_zh": "Upbit warns on Sophon (SOPH) trading, suspends deposits; Binance to remove seven USDC pairs on Sept 25. - Pluang"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+      "current_state_zh": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+      "entities": [
+        "binance",
+        "cryptopolitan",
+        "doj",
+        "iran"
+      ],
+      "event_id": "evt_15816ea402063eea",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-22T09:25:22.069175Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:22.069175Z",
+      "last_updated_at": "2026-09-22T09:25:22.069175Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+      "title_zh": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "current_state_zh": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "detailed_summary_en": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "detailed_summary_zh": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "event_id": "evt_15816ea402063eea",
+          "first_seen_at": "2026-09-22T09:25:22.069175Z",
+          "importance_score": 7.1,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T08:09:16Z",
+          "published_at": "2026-09-22T08:09:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cryptopolitan",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1kRVJlX0NaY1FNWmdFb2h5Z3hrQWJxRFBZVU1hYlhjZmYwYXluODFYWjZBNTJWWkItQ1RReHZHYUhvTFJMbkVYMU1vTU1jZU1JTmV6U3F0WEs3NmRVVERlRHBTYm1teC1id1JRZkJ2bTFPVnBOUkVJR01nTl9aZw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:c2c4539419a80bf4"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "title_zh": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "update_id": "upd_c6206a02f7f3acd4",
+          "update_type": "initial",
+          "what_changed_en": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan",
+          "what_changed_zh": "Binance faces DOJ probe as Iran sanctions crackdown widens - Cryptopolitan"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+      "current_state_zh": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+      "entities": [
+        "notice",
+        "pairs",
+        "removal",
+        "spot",
+        "trading"
+      ],
+      "event_id": "evt_9f6ff9fb075eadc5",
+      "event_type": "other",
+      "first_seen_at": "2026-09-22T09:25:23.301589Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:23.301589Z",
+      "last_updated_at": "2026-09-22T09:25:23.301589Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+      "title_zh": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "current_state_zh": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "detailed_summary_en": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "detailed_summary_zh": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "event_id": "evt_9f6ff9fb075eadc5",
+          "first_seen_at": "2026-09-22T09:25:23.301589Z",
+          "importance_score": 7.1,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T06:01:28Z",
+          "published_at": "2026-09-22T06:01:28Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/detail/545ca5ad28254999b793bcf1ddd51f93?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8977"
+          ],
+          "time_precision": "published",
+          "title_en": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "title_zh": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "update_id": "upd_bf68c162b6b563f2",
+          "update_type": "initial",
+          "what_changed_en": "Notice of Removal of Spot Trading Pairs - 2026-09-25",
+          "what_changed_zh": "Notice of Removal of Spot Trading Pairs - 2026-09-25"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+      "current_state_zh": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+      "entities": [
+        "margin",
+        "notice",
+        "pairs",
+        "removal",
+        "trading"
+      ],
+      "event_id": "evt_3892dfd62be0f13e",
+      "event_type": "other",
+      "first_seen_at": "2026-09-22T09:25:23.301968Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:23.301968Z",
+      "last_updated_at": "2026-09-22T09:25:23.301968Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+      "title_zh": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "current_state_zh": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "detailed_summary_en": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "detailed_summary_zh": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "event_id": "evt_3892dfd62be0f13e",
+          "first_seen_at": "2026-09-22T09:25:23.301968Z",
+          "importance_score": 7.1,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T08:01:11Z",
+          "published_at": "2026-09-22T08:01:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/detail/262bbb7dcdc243b09e854742e57e1e8e?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8978"
+          ],
+          "time_precision": "published",
+          "title_en": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "title_zh": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "update_id": "upd_f75df63d227d599d",
+          "update_type": "initial",
+          "what_changed_en": "Notice of Removal of Margin Trading Pairs - 2026-09-25",
+          "what_changed_zh": "Notice of Removal of Margin Trading Pairs - 2026-09-25"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Animoca Brands suspends merger deal that would have taken it public",
+      "current_state_zh": "Animoca Brands suspends merger deal that would have taken it public",
+      "entities": [
+        "animoca",
+        "brands"
+      ],
+      "event_id": "evt_a4724a346a4cd47c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-22T09:25:25.792742Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-22T09:25:25.792742Z",
+      "last_updated_at": "2026-09-22T09:25:25.792742Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Animoca Brands suspends merger deal that would have taken it public",
+      "title_zh": "Animoca Brands suspends merger deal that would have taken it public",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Animoca Brands suspends merger deal that would have taken it public",
+          "current_state_zh": "Animoca Brands suspends merger deal that would have taken it public",
+          "detailed_summary_en": "Animoca Brands suspends merger deal that would have taken it public",
+          "detailed_summary_zh": "Animoca Brands suspends merger deal that would have taken it public",
+          "event_id": "evt_a4724a346a4cd47c",
+          "first_seen_at": "2026-09-22T09:25:25.792742Z",
+          "importance_score": 7.1,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-22T02:46:02Z",
+          "published_at": "2026-09-22T02:46:02Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-21-animoca-brands-suspends-merger-deal-415991"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:236696d68ca4dbda"
+          ],
+          "time_precision": "published",
+          "title_en": "Animoca Brands suspends merger deal that would have taken it public",
+          "title_zh": "Animoca Brands suspends merger deal that would have taken it public",
+          "update_id": "upd_d63465c619cb63be",
+          "update_type": "initial",
+          "what_changed_en": "Animoca Brands suspends merger deal that would have taken it public",
+          "what_changed_zh": "Animoca Brands suspends merger deal that would have taken it public"
         }
       ]
     }
@@ -75932,89 +76447,6 @@
         "source_type": "google_news",
         "title": "CLARITY Act News: Coinbase, CFTC and Galaxy React to Senate Failure - coingabbar.com",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOM1pmaXV1cVFrcWRGQ3lxc3ZkaGZ3MnJnWFR6WVZab3BzWnF3MFRPdlpwX25yQlgxSjZYQ21IRV8tQU01SndWSXZkTTVwMXdCRURkOC1USTRucXpKbWpuSFhrc1otVmZHVzhUalFQdWQ5aDFscExEUVlFOW42dmtpLS14VVNad1g0Y01kSjg0RXJERURtZjNv?oc=5"
-      }
-    },
-    {
-      "attempts": 1,
-      "item": {
-        "ai_reason": "Jev: impact 3.67/5; novelty 3.66/5; freshness new_development. ",
-        "ai_score": 7.3,
-        "ai_summary": "Coinbase opens IPO share allocations to U.S. retail customers, first offering Oura - 디지털투데이",
-        "ai_tags": [],
-        "author": "디지털투데이",
-        "content": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQVB5SmtQOERnOVdyQV9DVlZpRUlpME52YUM3NkMzdjFDT3pKQnJwMjNTb1dhYWlfXzdMRW55YlRXZGZmM1lYemVxcUJrTkd2bS05TTZjUE41RWpVR3R3b1RtdUZ0SVJ4WEtMOHVKNkdBZldIQVZQck1tdTFqS0MxQ2JMTkU2azhSZ044ZkpkQUFvZHA5cnFqdlp4dmMtYUJiNDIyNTF4VnE2dFNwazE2Tm9EV2xJN1JKN0ZWUHJBaFBvN1k?oc=5\" target=\"_blank\">Coinbase opens IPO share allocations to U.S. retail customers, first offering Oura</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">디지털투데이</font>",
-        "fetched_at": "2026-09-22T01:47:39.289342Z",
-        "id": "google_news:article:86218698a6567777",
-        "metadata": {
-          "category": "exchange-announcements",
-          "evaluation": {
-            "answers": {
-              "category": {
-                "choice": "exchange-announcements",
-                "confidence": 0.67,
-                "probabilities": {
-                  "ai-devtools": 0,
-                  "ai-labs": 0,
-                  "ai-media": 0,
-                  "crypto-markets": 0.1,
-                  "crypto-protocols": 0,
-                  "crypto-regulation": 0,
-                  "exchange-announcements": 0.71,
-                  "exchange-operations": 0.13,
-                  "macro-regulation": 0,
-                  "tech-community": 0,
-                  "unknown": 0.06
-                },
-                "type": "choice"
-              },
-              "impact": {
-                "confidence": 0.63,
-                "probabilities": {
-                  "0": 0.01,
-                  "1": 0,
-                  "2": 0.02,
-                  "3": 0.37,
-                  "4": 0.49,
-                  "5": 0.11
-                },
-                "score": 3.67,
-                "type": "score"
-              },
-              "novelty": {
-                "confidence": 0.75,
-                "probabilities": {
-                  "0": 0.02,
-                  "1": 0.01,
-                  "2": 0.03,
-                  "3": 0.2,
-                  "4": 0.72,
-                  "5": 0.02
-                },
-                "score": 3.66,
-                "type": "score"
-              },
-              "recap": {
-                "choice": "new_development",
-                "confidence": 0.27,
-                "probabilities": {
-                  "new_development": 0.51,
-                  "old_recap": 0.01,
-                  "uncertain": 0.48
-                },
-                "type": "choice"
-              }
-            },
-            "model": "typesafe-ai/jev",
-            "rubric": "jev-news-v2"
-          },
-          "event_retry_pending": true,
-          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
-          "source_name": "디지털투데이"
-        },
-        "published_at": "2026-09-22T01:06:48Z",
-        "source_type": "google_news",
-        "title": "Coinbase opens IPO share allocations to U.S. retail customers, first offering Oura - 디지털투데이",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQVB5SmtQOERnOVdyQV9DVlZpRUlpME52YUM3NkMzdjFDT3pKQnJwMjNTb1dhYWlfXzdMRW55YlRXZGZmM1lYemVxcUJrTkd2bS05TTZjUE41RWpVR3R3b1RtdUZ0SVJ4WEtMOHVKNkdBZldIQVZQck1tdTFqS0MxQ2JMTkU2azhSZ044ZkpkQUFvZHA5cnFqdlp4dmMtYUJiNDIyNTF4VnE2dFNwazE2Tm9EV2xJN1JKN0ZWUHJBaFBvN1k?oc=5"
       }
     }
   ],

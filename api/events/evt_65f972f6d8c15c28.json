@@ -4,26 +4,27 @@
   "url": "https://bmt.news/events/evt_65f972f6d8c15c28/",
   "json": "https://bmt.news/api/events/evt_65f972f6d8c15c28.json",
   "type": "security_incident",
-  "status": "developing",
+  "status": "closed",
   "category": "crypto",
   "title": {
     "zh": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says",
     "en": "Coldcard exploiter moves 45% of funds stolen from ‘Wave 3’ attacks, Galaxy says"
   },
   "current_state": {
-    "zh": "Coldcard Wave 3攻击者已转移约45%的被盗比特币，采用THORChain和CoinJoin混币方式；所有波次中82%的被盗资金仍在原始地址，18%已转移用于洗钱；攻击操作仍在进行中，且可能发现新的受害者。",
-    "en": "The Coldcard Wave 3 exploiter has moved ~45% of stolen Bitcoin via THORChain and CoinJoin; across all waves, 82% of stolen funds remain in original addresses and 18% have been moved for laundering; the operation is ongoing and may have uncovered an additional victim."
+    "zh": "Coldcard黑客事件后续出现白帽恢复行动：52.37枚比特币已被转移至恢复信托地址，受害者可通过指定网站查询；攻击者的洗钱活动仍在进行，但部分资金已被白帽拦截并进入恢复流程。",
+    "en": "The Coldcard hack aftermath now includes whitehat recovery efforts: 52.37 BTC has been moved to a recovery trust address, and victims can check via a designated website; the attacker's laundering activity continues, but some funds have been intercepted by whitehats and entered a recovery process."
   },
   "first_seen_at": "2026-09-07T09:34:03.581519+00:00",
-  "last_updated_at": "2026-09-08T04:12:31.302204+00:00",
-  "last_material_change_at": "2026-09-07T17:50:05.285366+00:00",
+  "last_updated_at": "2026-09-22T09:25:32.635486+00:00",
+  "last_material_change_at": "2026-09-22T09:25:24.409987+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 3,
+  "updates_count": 3,
+  "sources_count": 5,
   "entities": [
     "coldcard",
     "galaxy",
-    "wave"
+    "wave",
+    "whitehats"
   ],
   "identifiers": [],
   "topics": [
@@ -138,6 +139,51 @@
       "sources": [
         {
           "url": "https://cointelegraph.com/news/coldcard-third-wave-attacker-moves-bitcoin-stolen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_c50b1057bf4ad1c5",
+      "event_id": "evt_65f972f6d8c15c28",
+      "occurred_at": "2026-09-22T06:27:28Z",
+      "published_at": "2026-09-22T06:27:28Z",
+      "first_seen_at": "2026-09-22T09:25:24.409987Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+      "title_en": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+      "what_changed_zh": "白帽黑客将52.37枚比特币从Coldcard黑客事件中转移至新成立的恢复信托地址；约40%的Wave 2资金被确认为白帽活动；受害者可在cryptorecoverytrust.com查询资金是否被追回；另有3.0134枚比特币无先前追踪记录流入该地址。",
+      "what_changed_en": "Whitehats moved 52.37 BTC from the Coldcard hack to a newly formed recovery trust; roughly 40% of Wave 2 funds identified as whitehat activity; victims can check cryptorecoverytrust.com to see if funds were recovered; an additional 3.0134 BTC with no prior tracking history flowed to the same address.",
+      "current_state_zh": "Coldcard黑客事件后续出现白帽恢复行动：52.37枚比特币已被转移至恢复信托地址，受害者可通过指定网站查询；攻击者的洗钱活动仍在进行，但部分资金已被白帽拦截并进入恢复流程。",
+      "current_state_en": "The Coldcard hack aftermath now includes whitehat recovery efforts: 52.37 BTC has been moved to a recovery trust address, and victims can check via a designated website; the attacker's laundering activity continues, but some funds have been intercepted by whitehats and entered a recovery process.",
+      "detailed_summary_zh": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+      "detailed_summary_en": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.7,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:991bc8d2b89a5074",
+        "rss:cointelegraph.com_rss:c97c57e67eb01357"
+      ],
+      "sources": [
+        {
+          "url": "https://www.coindesk.com/markets/2026/09/22/whitehats-move-52-bitcoin-from-the-coldcard-hack-to-a-recovery-trust",
+          "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://cointelegraph.com/news/white-hats-coldcard-btc-exploit-galaxy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
