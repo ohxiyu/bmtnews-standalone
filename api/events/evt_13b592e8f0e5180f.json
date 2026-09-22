@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "event_id": "evt_13b592e8f0e5180f",
+  "url": "https://bmt.news/events/evt_13b592e8f0e5180f/",
+  "json": "https://bmt.news/api/events/evt_13b592e8f0e5180f.json",
+  "type": "other",
+  "status": "monitoring",
+  "category": "technology",
+  "title": {
+    "zh": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+    "en": "WordPress: Unauthenticated path traversal leading to conditional RCE"
+  },
+  "current_state": {
+    "zh": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+    "en": "WordPress: Unauthenticated path traversal leading to conditional RCE"
+  },
+  "first_seen_at": "2026-09-22T23:08:16.662316+00:00",
+  "last_updated_at": "2026-09-22T23:08:16.662316+00:00",
+  "last_material_change_at": "2026-09-22T23:08:16.662316+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "rce",
+    "unauthenticated",
+    "wordpress"
+  ],
+  "identifiers": [],
+  "topics": [],
+  "updates": [
+    {
+      "update_id": "upd_eddca1d3281ea99f",
+      "event_id": "evt_13b592e8f0e5180f",
+      "occurred_at": "2026-09-22T16:33:45Z",
+      "published_at": "2026-09-22T16:33:45Z",
+      "first_seen_at": "2026-09-22T23:08:16.662316Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "title_en": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "what_changed_zh": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "what_changed_en": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "current_state_zh": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "current_state_en": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "detailed_summary_zh": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "detailed_summary_en": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.4,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49803959",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49803959"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
+          "label": "vntok",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

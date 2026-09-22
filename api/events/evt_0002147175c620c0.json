@@ -11,19 +11,23 @@
     "en": "Moving Bitcoin’s Post-Quantum Readiness Forward - Coinbase"
   },
   "current_state": {
-    "zh": "Coinbase outlines steps to advance Bitcoin's post-quantum readiness, addressing future security threats from quantum computing.",
-    "en": "Coinbase outlines steps to advance Bitcoin's post-quantum readiness, addressing future security threats from quantum computing."
+    "zh": "Coinbase 正在开发后量子托管保障，并探索针对非 MPC 友好签名方案的 HSM 备用架构。",
+    "en": "Coinbase is developing post-quantum custody safeguards and exploring an HSM fallback architecture for non-MPC-friendly signature schemes."
   },
   "first_seen_at": "2026-09-09T16:49:30.323045+00:00",
-  "last_updated_at": "2026-09-09T16:49:30.323045+00:00",
-  "last_material_change_at": "2026-09-09T16:49:30.323045+00:00",
+  "last_updated_at": "2026-09-22T23:08:27.000651+00:00",
+  "last_material_change_at": "2026-09-22T23:08:27.000651+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "billion",
     "coinbase",
+    "custody",
     "forward",
+    "inside",
     "moving",
+    "playbook",
     "post",
     "post-quantum",
     "quantum",
@@ -69,6 +73,44 @@
           "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMTBMaDAwNWZkalVENVU2ZVpBR2ctWWJhcDJPNkNCUXp6aWJyU2dPdVdESll1czZGNjFBRFJwbWU2X0djRXRreEloLW8wZUJIaXJpdmVjczhBcWxqSkhCZ29mZndKYnBEWkQzOUNzYkx5OXRTYTZ6N3dPNnZKbVFjVTdn?oc=5",
           "label": "Coinbase",
           "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_e3be37c60b4f7344",
+      "event_id": "evt_0002147175c620c0",
+      "occurred_at": "2026-09-22T20:01:03Z",
+      "published_at": "2026-09-22T20:01:03Z",
+      "first_seen_at": "2026-09-22T23:08:27.000651Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Inside Coinbase’s $250 Billion Playbook for Post-Quantum Bitcoin Custody",
+      "title_en": "Inside Coinbase’s $250 Billion Playbook for Post-Quantum Bitcoin Custody",
+      "what_changed_zh": "Coinbase 首席密码学家 Yehuda Lindell 披露了后量子托管保障的更多细节，包括探索结合后量子阈值解密与可编程 HSM 的备用架构，以应对部分后量子签名方案可能不兼容 MPC 的问题。",
+      "what_changed_en": "Coinbase's head of cryptography Yehuda Lindell disclosed more details on post-quantum custody safeguards, including exploring a fallback architecture combining post-quantum threshold decryption with programmable HSMs to address potential non-MPC-friendly post-quantum signature schemes.",
+      "current_state_zh": "Coinbase 正在开发后量子托管保障，并探索针对非 MPC 友好签名方案的 HSM 备用架构。",
+      "current_state_en": "Coinbase is developing post-quantum custody safeguards and exploring an HSM fallback architecture for non-MPC-friendly signature schemes.",
+      "detailed_summary_zh": "Inside Coinbase’s $250 Billion Playbook for Post-Quantum Bitcoin Custody",
+      "detailed_summary_en": "Inside Coinbase’s $250 Billion Playbook for Post-Quantum Bitcoin Custody",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.2,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:decrypt.co_feed:ca7d13993a064c18"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/379000/coinbase-playbook-post-quantum-bitcoin-custody",
+          "label": "Decrypt",
+          "source_type": "rss",
           "official": false
         }
       ]
