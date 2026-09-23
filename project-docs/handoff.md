@@ -1,32 +1,32 @@
 # 当前交接
 
-当前任务：在已上线的 [PR115](https://github.com/ohxiyu/bmtnews-standalone/pull/115) 恢复新闻正文后，继续恢复经独立核验的背景、讨论、市场影响和参考链接。PR115 的当期重建已上线，但 10 条均为降级稿；历史部署证据由待合并的 [PR113](https://github.com/ohxiyu/bmtnews-standalone/pull/113) 单独维护。
+当前任务：修复 2026-09-23 日报重建在 JEV 去重阶段的 HTTP 503。PR115 已上线但背景/参考链接仍缺失；PR117 已合并，但首次重建在去重阶段失败，尚未发布 PR117 的内容。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "对附加新闻内容分别执行 Jev 来源核验，保留合格背景、讨论、影响和参考链接",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/116",
-  "owner": "Codex / jev-context-salvage",
-  "branch": "agent/jev-context-salvage",
-  "last_verified_commit": "d62fe32b560f632e39ceca2297d27116536d9d43",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/117",
+  "goal": "对 JEV 去重 503 保守拆分重试，完成当期重建并核对线上背景与引用",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/118",
+  "owner": "Codex / jev-dedup-503",
+  "branch": "agent/jev-dedup-503",
+  "last_verified_commit": "9b2541951c29f4dc3b344f77edb8480a21fb2246",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/119",
   "completed": [
-    "PR115 已合并并重建 2026-09-23 日报；正文恢复分段，10 条中 7 条有标签，但背景与引用仍缺失",
-    "新增按段核验：正文事实、背景和参考链接、市场影响、讨论分别保留已通过 90% Jev 门槛的字段",
-    "单次多问题核验附加字段，避免逐段额外请求；扩写缓存版本更新"
+    "PR115 已合并并发布；PR117 的独立背景/影响/讨论/引用核验已合并",
+    "PR117 重建运行 35817128664 在 evaluation_dedup HTTP 503 中断，未替换线上日报",
+    "本任务实现大批次 503 后递归拆分原有新闻对；每一对仍需 JEV 判断"
   ],
   "unfinished": [
-    "等待本任务 PR 检查与合并",
-    "合并后按用户当前任务授权再次重建当期日报并核对公网页面字段"
+    "完成全量测试、PR 检查与合并",
+    "从 main 重建 2026-09-23 日报，核对运行报告、公网页面与 API",
+    "单独提交准确的部署与验收记录"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 通过",
-    "uv run pytest 全量 887 项通过"
+    "uv sync --frozen --extra dev 通过；定向 evaluator 测试通过；全量 pytest 及治理检查通过"
   ],
   "unverified": [
-    "本任务代码尚未合并或用于生产生成",
-    "独立段落核验的线上通过率未验证"
+    "本任务尚未合并或上线",
+    "PR117 的附加内容线上通过率尚未验证"
   ],
   "production": {
     "source_commit": "507a62d1febb1084a48663c423f0b1e45f89a4e0",
@@ -36,8 +36,8 @@
     "worker_version": "not changed; independent dispatcher version unknown",
     "verified_at": "2026-09-23T03:56Z; public API and Actions run 35815874196"
   },
-  "blockers": [],
-  "next_action": "审查本任务 PR，绿灯后合并并重建 2026-09-23 日报；验收背景/参考链接及 JEV 评分，随后单独提交上线证据 PR",
+  "blockers": ["JEV evaluation_dedup HTTP 503；拆分后仍需生产重跑验证"],
+  "next_action": "完成检查与 PR，绿灯后合并并重建日报；若小批次仍返回 503，停止重复重跑并诊断服务端",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -45,6 +45,6 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-23-jev-context-salvage.md"
+  "evidence": "project-docs/releases/2026-09-23-jev-dedup-503.md"
 }
 ```

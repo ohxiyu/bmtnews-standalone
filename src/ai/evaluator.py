@@ -243,7 +243,28 @@ class JevEvaluator:
                              "update": "Same concrete root incident, but adds a material new fact or stage.",
                              "distinct": "Different concrete events, even if related entities.",
                              "uncertain": "Insufficient evidence to establish the relationship."}} for a, b in chunk}
-            answers = await self.evaluate(state, questions, stage="evaluation_dedup")
+
+            async def evaluate_pairs(pairs):
+                # _evaluate retries a large 503 batch first. Split only after
+                # that failure, preserving every pair and its original rubric.
+                # A failed small request still aborts publication.
+                keys = [f"pair_{a}_{b}" for a, b in pairs]
+                relevant = sorted({i for pair in pairs for i in pair})
+                try:
+                    return await self.evaluate(
+                        {str(i): state[str(i)] for i in relevant},
+                        {key: questions[key] for key in keys},
+                        stage="evaluation_dedup",
+                    )
+                except EvaluationError as exc:
+                    if exc.status_code != 503 or len(pairs) <= 4:
+                        raise
+                    middle = len(pairs) // 2
+                    left = await evaluate_pairs(pairs[:middle])
+                    right = await evaluate_pairs(pairs[middle:])
+                    return {**left, **right}
+
+            answers = await evaluate_pairs(chunk)
             for a, b in chunk:
                 answer = answers[f"pair_{a}_{b}"]
                 choice = answer["choice"]
