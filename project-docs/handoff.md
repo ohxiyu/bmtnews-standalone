@@ -10,7 +10,7 @@
   "owner": "Codex / remove-jev rollout",
   "branch": "agent/remove-jev-rollout",
   "last_verified_commit": "b898d103d458d07d412d145db542262f304de49a",
-  "pr": "pending documentation PR",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/126",
   "completed": [
     "PR124 于 2026-09-24 00:36 Asia/Shanghai 合并，main 合并提交 b898d103d458d07d412d145db542262f304de49a",
     "移除独立评估模型并恢复 DeepSeek 直接评分、原有语义去重及可选内容；保留后续独立改进",
