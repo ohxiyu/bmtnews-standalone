@@ -43,5 +43,6 @@
 ## 验证与尚未验证
 
 - 已运行：`uv sync --frozen --extra dev`、`uv run pytest`（离线全量 833 项通过）、`uv run python scripts/check_governance.py`（通过）。
+- [PR124 检查](https://github.com/ohxiyu/bmtnews-standalone/pull/124/checks)：`test`、`analyze`、`governance`、CodeQL 与 Cloudflare Pages Preview 全部通过；Preview 不是生产部署。
 - 已覆盖：配置无旧密钥加载、旧评分缓存拒绝、生成模型直接评分/分类、实际 fallback 模型来源、扩写可选字段、归档来源；既有测试覆盖语义去重两次失败后停刊及脱敏日志。
 - 未运行：真实 AI、日报/重建、渠道发送、生产 Worker 部署。未验证新模型评分分布与线上渲染；代码、测试、PR、合并、部署及生产验收必须分开记录。

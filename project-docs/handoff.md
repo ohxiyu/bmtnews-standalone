@@ -17,11 +17,12 @@
     "保留后续独立的新闻式写作提示、原文标题、标签、报告来源统计及 Telegram 重建防重发"
   ],
   "unfinished": [
-    "核验 PR124 的 GitHub test/analyze 等必需检查",
+    "等待用户审核 PR124 并另行决定合并与生产切换",
     "等待用户另行决定是否合并及何时切换生产日报；未获部署授权"
   ],
   "validation": [
     "uv sync --frozen --extra dev 通过；本地全量 pytest 833 项通过；治理检查通过",
+    "PR124 的 test、analyze、governance、CodeQL 及 Cloudflare Pages Preview 检查通过",
     "所有新增测试使用 mock 客户端，没有真实 AI 或渠道调用"
   ],
   "unverified": [
