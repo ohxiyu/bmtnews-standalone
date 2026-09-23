@@ -81,6 +81,34 @@ def test_http_contract_and_bounded_retry(evaluator, monkeypatch):
     assert len(calls) == 2
 
 
+def test_dedup_splits_503_batches_without_skipping_any_pair(evaluator, monkeypatch):
+    requested = []
+
+    async def evaluate(state, questions, **kwargs):
+        requested.append(set(questions))
+        assert all(str(index) in state for key in questions for index in key.split("_")[1:])
+        if len(questions) > 4:
+            raise EvaluationError("http_error", 503)
+        return {key: choice(question, "distinct") for key, question in questions.items()}
+
+    monkeypatch.setattr(evaluator, "evaluate", evaluate)
+    result = asyncio.run(evaluator.duplicates([item(n) for n in range(8)], TOPIC_DEDUP_SYSTEM))
+    assert result == {"duplicates": []}
+    expected = {f"pair_{a}_{b}" for a in range(8) for b in range(a + 1, 8)}
+    answered = set().union(*(keys for keys in requested if len(keys) <= 4))
+    assert answered == expected
+    assert any(len(keys) > 4 for keys in requested)
+
+
+def test_dedup_still_fails_closed_on_persistent_small_503(evaluator, monkeypatch):
+    async def evaluate(state, questions, **kwargs):
+        raise EvaluationError("http_error", 503)
+
+    monkeypatch.setattr(evaluator, "evaluate", evaluate)
+    with pytest.raises(EvaluationError, match="HTTP 503"):
+        asyncio.run(evaluator.duplicates([item(n) for n in range(8)], TOPIC_DEDUP_SYSTEM))
+
+
 @pytest.mark.parametrize("status", [401, 402, 403])
 def test_account_errors_are_sanitized_and_not_retried(evaluator, status):
     calls = []
