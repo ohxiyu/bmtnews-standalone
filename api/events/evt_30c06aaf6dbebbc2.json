@@ -4,26 +4,34 @@
   "url": "https://bmt.news/events/evt_30c06aaf6dbebbc2/",
   "json": "https://bmt.news/api/events/evt_30c06aaf6dbebbc2.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "closed",
   "category": "crypto",
   "title": {
     "zh": "Cosmos hub halts for 24 hours after Neutron governance attack",
     "en": "Cosmos hub halts for 24 hours after Neutron governance attack"
   },
   "current_state": {
-    "zh": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
-    "en": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday."
+    "zh": "Cosmos Hub 已在停块24小时48分钟后恢复出块；与Neutron治理攻击相关的攻击者钱包转出1.23百万ATOM，该钱包曾用20,199 USDC购买投票权并在加速提案关闭前12分钟质押。",
+    "en": "Cosmos Hub has resumed producing blocks after a 24-hour-48-minute halt; 1.23 million ATOM moved from the Neutron attacker wallet tied to the governance attack, which had purchased voting power with 20,199 USDC and staked it 12 minutes before the expedited proposal closed."
   },
   "first_seen_at": "2026-09-23T17:21:31.878864+00:00",
-  "last_updated_at": "2026-09-23T17:21:31.878864+00:00",
-  "last_material_change_at": "2026-09-23T17:21:31.878864+00:00",
+  "last_updated_at": "2026-09-23T23:02:35.843748+00:00",
+  "last_material_change_at": "2026-09-23T23:02:35.843748+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
+    "atom",
+    "attacker",
     "cosmos",
+    "from",
     "governance-attack",
-    "neutron"
+    "hub",
+    "million",
+    "moved",
+    "neutron",
+    "restarts",
+    "wallet"
   ],
   "identifiers": [],
   "topics": [
@@ -31,7 +39,8 @@
     "cosmos",
     "defi-exploit",
     "governance-attack",
-    "neutron"
+    "neutron",
+    "protocol-security"
   ],
   "updates": [
     {
@@ -67,6 +76,44 @@
         {
           "url": "https://protos.com/cosmos-hub-halts-for-24-hours-after-neutron-governance-attack/",
           "label": "Protos",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_67714635bc88cb11",
+      "event_id": "evt_30c06aaf6dbebbc2",
+      "occurred_at": "2026-09-23T19:54:30Z",
+      "published_at": "2026-09-23T19:54:30Z",
+      "first_seen_at": "2026-09-23T23:02:35.843748Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Cosmos Hub Restarts; 1.23 Million ATOM Moved From Neutron Attacker Wallet",
+      "title_en": "Cosmos Hub Restarts; 1.23 Million ATOM Moved From Neutron Attacker Wallet",
+      "what_changed_zh": "Cosmos Hub 在停块24小时48分钟后恢复出块；1.23百万ATOM从Neutron攻击者钱包转出；该攻击者钱包用20,199 USDC购买投票权，并在加速提案关闭前12分钟完成质押。",
+      "what_changed_en": "Cosmos Hub resumed producing blocks after a 24-hour-48-minute halt; 1.23 million ATOM moved from the Neutron attacker wallet; the attacker wallet purchased voting power with 20,199 USDC and staked it 12 minutes before the expedited proposal closed.",
+      "current_state_zh": "Cosmos Hub 已在停块24小时48分钟后恢复出块；与Neutron治理攻击相关的攻击者钱包转出1.23百万ATOM，该钱包曾用20,199 USDC购买投票权并在加速提案关闭前12分钟质押。",
+      "current_state_en": "Cosmos Hub has resumed producing blocks after a 24-hour-48-minute halt; 1.23 million ATOM moved from the Neutron attacker wallet tied to the governance attack, which had purchased voting power with 20,199 USDC and staked it 12 minutes before the expedited proposal closed.",
+      "detailed_summary_zh": "Cosmos Hub resumed producing blocks after a 24-hour-48-minute halt, while 1.23 million ATOM moved from a Neutron attacker wallet that had purchased voting power with 20,199 USDC and staked it 12 minutes before an expedited proposal closed.",
+      "detailed_summary_en": "Cosmos Hub resumed producing blocks after a 24-hour-48-minute halt, while 1.23 million ATOM moved from a Neutron attacker wallet that had purchased voting power with 20,199 USDC and staked it 12 minutes before an expedited proposal closed.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.5,
+      "references": [],
+      "confidence": 0.96,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:9ff491bad7b25de9"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/hacks/cosmos-hub-restarts-1-23-million-atom-moved-from-neutron-attacker-wallet",
+          "label": "The Defiant",
           "source_type": "rss",
           "official": false
         }
