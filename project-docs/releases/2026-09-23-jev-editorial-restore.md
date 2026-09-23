@@ -2,7 +2,7 @@
 
 - Issue: [#114](https://github.com/ohxiyu/bmtnews-standalone/issues/114)
 - Branch: `agent/jev-editorial-restore`
-- PR: pending
+- PR: [#115](https://github.com/ohxiyu/bmtnews-standalone/pull/115)
 - Source base: `1e171e06363368fa5b378718a05c6da234e84112`
 - Authority: PR only; no merge, deploy or gh-pages edit in this task.
 

@@ -9,8 +9,8 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/114",
   "owner": "Codex / jev-editorial-restore",
   "branch": "agent/jev-editorial-restore",
-  "last_verified_commit": "1e171e06363368fa5b378718a05c6da234e84112",
-  "pr": "pending",
+  "last_verified_commit": "bf33324662745262b900e6fc262545a4adc60870",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/115",
   "completed": [
     "定位线上 2026-09-23 日报 11 条全为短版、标签为空",
     "区分完整稿、经核验新闻核心和短版回退；保留英文来源标题与正文分段",
@@ -18,7 +18,7 @@
     "更换扩写缓存版本并记录脱敏回退原因"
   ],
   "unfinished": [
-    "完成最终回归、提交 PR 和等待审查",
+    "等待 PR 审查及 GitHub 检查",
     "合并后经授权重新生成日报并完成线上验收"
   ],
   "validation": [
