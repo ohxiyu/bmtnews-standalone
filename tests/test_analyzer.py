@@ -174,7 +174,7 @@ def test_analyze_item_ignores_unconfigured_category() -> None:
         )._analyze_item(item)
     )
 
-    assert item.metadata == {"category": "crypto-markets"}
+    assert item.metadata == {"category": "crypto-markets", "score_model": "unknown"}
 
 
 @pytest.mark.parametrize(

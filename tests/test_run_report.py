@@ -125,6 +125,7 @@ def test_daily_report_renders_window_quotas_and_source_contribution() -> None:
         "selected_groups",
         {"Crypto Markets": 4, "Technology": 3},
     )
+    report.set_breakdown("score_models", {"deepseek:deepseek-flash": 51})
     report.set_breakdown(
         "candidate_groups",
         {"Crypto Markets": 12, "Technology": 4},
@@ -172,6 +173,7 @@ def test_daily_report_renders_window_quotas_and_source_contribution() -> None:
     assert payload["timings"] == {"fetch": 1.234, "analysis": 2.346}
     assert "## BMTNews 早间日报发布报告" in markdown
     assert "### 性能分段" in markdown
+    assert "`deepseek:deepseek-flash`：51 条" in markdown
     assert "| analysis | 2.346 |" in markdown
     assert "| 固定窗口候选 | 51 |" in markdown
     assert "| Crypto Markets | 12 | 3 | 6 | 4 | 4 |" in markdown

@@ -408,6 +408,13 @@ def render_markdown_report(payload: dict[str, Any]) -> str:
             )
 
     breakdowns = payload.get("breakdowns") or {}
+    score_models = breakdowns.get("score_models") or {}
+    if score_models:
+        lines += ["", "### 评分器", ""]
+        lines.extend(
+            f"- `{_markdown_cell(model)}`：{int(count)} 条"
+            for model, count in sorted(score_models.items())
+        )
     candidate_groups = breakdowns.get("candidate_groups") or {}
     fallback_groups = breakdowns.get("fallback_candidate_groups") or {}
     qualified_groups = breakdowns.get("qualified_groups") or {}

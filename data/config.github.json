@@ -21,14 +21,7 @@
     "result_cache_enabled": true,
     "result_cache_path": "data/analysis-cache.json",
     "result_cache_ttl_days": 30,
-    "result_cache_max_entries": 4000,
-    "evaluator": {
-      "enabled": true,
-      "model": "typesafe-ai/jev",
-      "api_key_env": "AI_GATEWAY_API_KEY",
-      "request_timeout_seconds": 60,
-      "decision_threshold": 0.9
-    }
+    "result_cache_max_entries": 4000
   },
   "sources": {
     "github": [

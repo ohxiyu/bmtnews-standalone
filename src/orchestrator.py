@@ -35,7 +35,6 @@ from .scrapers.ossinsight import OSSInsightScraper
 from .scrapers.gdelt import GDELTScraper
 from .scrapers.google_news import GoogleNewsScraper
 from .ai.client import create_ai_client
-from .ai.evaluator import RUBRIC_VERSION
 from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer, generate_edition_overviews
 from .ai.enricher import ContentEnricher
@@ -284,14 +283,13 @@ class BMTNewsOrchestrator:
                 ttl_days=self.config.ai.result_cache_ttl_days,
                 max_entries=self.config.ai.result_cache_max_entries,
                 prompt_revision=hashlib.sha256(json.dumps({
-                    "version": "input-aware-v2",
+                    "version": "generation-direct-scoring-v1",
                     "economy": self.config.ai.economy_mode,
                     "temperature": self.config.ai.temperature,
                     "languages": self.config.ai.languages,
                     "categories": self._analysis_categories(),
                     "base_url": self.config.ai.base_url,
-                    "evaluator": self.config.ai.evaluator.model_dump(),
-                    "evaluation_rubric": RUBRIC_VERSION,
+                    "scorer": f"{self.config.ai.provider.value}:{self.config.ai.model}",
                 }, sort_keys=True).encode()).hexdigest(),
             )
         return self._analysis_cache
@@ -1277,17 +1275,10 @@ class BMTNewsOrchestrator:
                 self._source_breakdown(qualified_items),
             )
             await self._enrich_important_items(important_items)
-            degraded = sum(item.metadata.get("enrichment_status") in {"translation_only", "partial"} for item in important_items)
+            degraded = sum(item.metadata.get("enrichment_status") == "translation_only" for item in important_items)
             run_report.set_metric("enrichment_degraded", degraded)
-            fallback_reasons = defaultdict(int)
-            for item in important_items:
-                reason = item.metadata.get("enrichment_fallback_reason")
-                if reason:
-                    fallback_reasons[reason] += 1
-            if fallback_reasons:
-                run_report.set_breakdown("enrichment_fallback_reasons", dict(fallback_reasons))
             if degraded:
-                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容未通过完整稿核验，仅保留已核实部分，需编辑复核。")
+                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容扩写失败，仅保留翻译，需编辑复核。")
 
             # Manual editor's picks are pinned ahead of the ranked stories.
             if editorial_plan.editorial:
@@ -1349,8 +1340,8 @@ class BMTNewsOrchestrator:
             )
             run_report.set_metric("final_primary_selected", final_primary)
             if minimum_display is not None and len(important_items) < minimum_display:
-                run_report.add_alert("warning", "verified_short_edition",
-                    f"来源核验后发布短版：{len(important_items)}/{minimum_display} 条；未降低质量标准补足。")
+                run_report.add_alert("warning", "short_edition",
+                    f"最终仅有 {len(important_items)}/{minimum_display} 条，未降低质量标准补足。")
 
 
             # Link continuing coverage to its thread before anything renders.
@@ -3253,23 +3244,8 @@ class BMTNewsOrchestrator:
             for item in misses:
                 cache.store_enrichment(item)
             cache.save()
-        if self.config.ai.evaluator.enabled:
-            rejected = [item for item in items if item.metadata.get("enrichment_status") in {"rejected", "verification_unavailable"}]
-            items[:] = [item for item in items if item not in rejected]
-            if self.last_run_report is not None:
-                report = self.last_run_report
-                report.set_metric("grounding_excluded", len(rejected))
-                reasons = defaultdict(int)
-                for item in rejected:
-                    reasons[item.metadata.get("grounding_error", {}).get("code", "unknown")] += 1
-                report.set_breakdown("grounding_exclusion_reasons", dict(reasons))
-                if rejected:
-                    report.add_alert("warning", "grounding_excluded",
-                        f"{len(rejected)} 条未通过来源核验或核验不可用，已剔除；保留 {len(items)} 条。")
-            if not items:
-                raise RuntimeError("No verified news remains; refusing to publish an empty edition")
         self.console.print(
-            f"   Verified {len(items)} items; reused {len(cached)}\n"
+            f"   Enriched {len(misses)} items; reused {len(cached)}\n"
         )
         self._set_timing("enrichment", started)
 
@@ -3279,11 +3255,6 @@ class BMTNewsOrchestrator:
         """Reuse valid results before paying for prefiltering unseen inputs."""
         started = time.perf_counter()
         cache = self._result_cache()
-        if cache is not None and self.config.ai.evaluator.enabled:
-            cache.analysis_context = (
-                [edition_window.start.isoformat(), edition_window.end.isoformat()]
-                if edition_window is not None else None
-            )
         cached, misses = split_cached(cache, items, stage="analysis") if cache else ([], list(items))
         limit = self.config.ai.prefilter_max_candidates
         # Reserve a quarter of the budget for new inputs even if old cache
@@ -3315,13 +3286,12 @@ class BMTNewsOrchestrator:
                     cache.store_analysis(item)
                 cache.save()
         selected = [*cached, *misses]
-        if self.config.ai.evaluator.enabled:
-            pending = [item for item in selected if item.ai_score is None]
-            if self.last_run_report:
-                self.last_run_report.set_metric("evaluation_pending", len(pending))
-            selected = [item for item in selected if item.ai_score is not None]
-            if pending and not selected:
-                raise RuntimeError("No candidates have a valid Jev score; refusing to publish")
+        if self.last_run_report is not None:
+            score_models = defaultdict(int)
+            for item in selected:
+                if item.ai_score is not None:
+                    score_models[str(item.metadata.get("score_model") or "unknown")] += 1
+            self.last_run_report.set_breakdown("score_models", dict(score_models))
         if self.config.ai.prefilter_enabled:
             selected.sort(key=lambda item: (item.ai_score or 0, item.published_at, item.id), reverse=True)
             selected = selected[:limit]

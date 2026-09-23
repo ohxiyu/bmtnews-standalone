@@ -51,7 +51,6 @@ class AnalysisResultCache:
         self.ttl = timedelta(days=max(1, ttl_days))
         self.max_entries = max(100, max_entries)
         self.prompt_revision = prompt_revision
-        self.analysis_context = None
         self.entries: dict[str, dict[str, Any]] = {}
         self.hits = 0
         self.misses = 0
@@ -76,7 +75,6 @@ class AnalysisResultCache:
             {
                 "stage": stage,
                 **({"enrichment_policy": ENRICHMENT_POLICY_VERSION} if stage == "enrichment" else {}),
-                "edition_window": self.analysis_context if stage == "analysis" else None,
                 "model": self.model,
                 "prompt": self.prompt_revision,
                 "prompt_text": [
@@ -95,7 +93,7 @@ class AnalysisResultCache:
                 "analysis_inputs": {
                     "summary": item.ai_summary, "score": item.ai_score,
                     "reason": item.ai_reason,
-                    "tags": ([] if item.metadata.get("evaluation") else item.ai_tags),
+                    "tags": item.ai_tags,
                 } if stage == "enrichment" else None,
             },
             ensure_ascii=False,
@@ -151,7 +149,7 @@ class AnalysisResultCache:
 
     def restore_analysis(self, item: ContentItem) -> bool:
         value = self._get(item, "analysis")
-        if value is None:
+        if value is None or "evaluation" in value:
             return False
         for field in ANALYSIS_FIELDS:
             if field in value:
@@ -160,15 +158,11 @@ class AnalysisResultCache:
             item.metadata["category"] = value["category"]
         if "source_category" in value:
             item.metadata["source_category"] = value["source_category"]
-        if "evaluation" in value:
-            item.metadata["evaluation"] = value["evaluation"]
-            item.metadata.pop("evaluation_error", None)
-            item.metadata.pop("evaluation_degraded", None)
+        if isinstance(value.get("score_model"), str):
+            item.metadata["score_model"] = value["score_model"]
         return item.ai_score is not None
 
     def store_analysis(self, item: ContentItem) -> None:
-        if item.metadata.get("evaluation_degraded") or item.metadata.get("evaluation_error"):
-            return
         if item.ai_score is None or item.ai_reason in {
             "Analysis failed",
             "Analysis response parse failed",
@@ -176,8 +170,8 @@ class AnalysisResultCache:
             return
         value = {field: getattr(item, field) for field in ANALYSIS_FIELDS}
         value["category"] = item.metadata.get("category")
-        if "evaluation" in item.metadata:
-            value["evaluation"] = item.metadata["evaluation"]
+        if isinstance(item.metadata.get("score_model"), str):
+            value["score_model"] = item.metadata["score_model"]
         if "source_category" in item.metadata:
             value["source_category"] = item.metadata["source_category"]
         self._put(item, "analysis", value)
@@ -192,23 +186,17 @@ class AnalysisResultCache:
         return True
 
     def store_enrichment(self, item: ContentItem) -> None:
-        if item.metadata.get("enrichment_status") in {"rejected", "verification_unavailable"}:
-            return
         value = {
             key: val
             for key, val in item.metadata.items()
-            if key in {"sources", "editorial_tags", "evaluation_grounding", "enrichment_status", "grounding_checks", "enrichment_fallback_reason"}
+            if key in {"sources", "editorial_tags", "enrichment_status"}
             or any(key.startswith(prefix) for prefix in ENRICHMENT_PREFIXES)
         }
         complete = any(
             key.startswith(("background_", "market_impact_")) and bool(val)
             for key, val in value.items()
         )
-        verified_short = (
-            value.get("evaluation_grounding") in {"supported_translation", "supported_core", "supported_sections"}
-            and all(value.get(f"detailed_summary_{lang}") for lang in ("en", "zh"))
-        )
-        if value and (complete or verified_short):
+        if value and complete:
             self._put(item, "enrichment", value)
 
     def _put(self, item: ContentItem, stage: str, value: dict[str, Any]) -> None:

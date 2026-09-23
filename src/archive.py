@@ -42,6 +42,7 @@ class ArchiveRecord(BaseModel):
     summary_zh: str = ""
     summary_en: str = ""
     score: Optional[float] = None
+    score_model: Optional[str] = None
     category: str = ""
     top_category: str = ""
     source_type: str = ""
@@ -154,6 +155,9 @@ def build_records(
             if isinstance(value, str) and value:
                 source_label = value
                 break
+        score_model = metadata.get("score_model")
+        if item.ai_score is not None and not score_model:
+            score_model = "manual" if metadata.get("editorial") else "unknown"
         records.append(
             ArchiveRecord(
                 date=date,
@@ -169,6 +173,7 @@ def build_records(
                     metadata.get("detailed_summary_en") or metadata.get("detailed_summary") or item.ai_summary or ""
                 ),
                 score=item.ai_score,
+                score_model=str(score_model) if item.ai_score is not None else None,
                 category=str(metadata.get("category") or ""),
                 top_category=top_category_of(item),
                 source_type=item.source_type.value,

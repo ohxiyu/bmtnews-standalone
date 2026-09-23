@@ -912,28 +912,21 @@ Available tools include `bmt_validate_config`, `bmt_fetch_items`, `bmt_score_ite
 
 See [`src/mcp/README.md`](../src/mcp/README.md) for the full tool reference and [`src/mcp/integration.md`](../src/mcp/integration.md) for client setup.
 
-## Jev 新闻评估
+## 生产新闻评分与去重
 
-生产 `ai.evaluator.enabled=true`，使用 Vercel Evaluation API 的
-`typesafe-ai/jev`。在 GitHub Actions Secrets 配置 `AI_GATEWAY_API_KEY`；
-本地通过同名环境变量提供。密钥不进入配置文件或公开站点。
-生成模型仍由现有 `ai.provider/model` 控制。
+生产 `ai.provider=deepseek`、`ai.model=deepseek-flash`。同一次分析调用
+直接返回 0–10 重要性分数、理由、摘要、标签和内容分类；提示词包含五档
+评分锚点及时效规则。`filtering.ai_score_threshold` 保持 7.0。粗筛失败
+进入完整分析；分析响应无法解析时记零分并且不缓存为有效分析。
 
-- 初筛由 Jev 给出结构化重要性分数，异常回到现有文本初筛。
-- 分析保留生成模型的摘要、标签和时效拒绝；Jev 以影响力 75%、信息增量
-  25% 计算 0–10 分，并高确定性选择分类。已有零分时效拒绝不被抬分。
-- 语义去重每次最多八篇输入、28 个新闻对问题，覆盖全部候选对。
-  同一期同事件新阶段合并；跨日真正新进展保留。
-  只有指定关系的概率达到 `decision_threshold`（默认 0.9）才合并。
-  该值是所选结果的概率，不冒充 TypeSafe confidence。
-- 扩写与翻译必须通过来源一致性核验。核验失败先使用现有重试/翻译路径；
-  翻译仍不能通过则停止发布，保留上一版。核验不等于互联网事实查证。
-- 评分服务失败可使用生成模型结果，但不缓存为 Jev 成功；去重服务失败回到
-  原有严格去重，原有去重也失败时停止发布。缺少密钥是配置错误。
-- 缓存包含评估配置、规则版本、来源发布时间与分析窗口；首次上线会按新键
-  重新分析当前候选，不修改历史归档。正常运行报告记录分阶段 token 和耗时。
+URL 规范化去重之后，事件目录匹配与 DeepSeek 语义比较分别处理跨日
+重报和当期相同事件。语义比较至多两次尝试，失败会留下脱敏诊断并
+停止发布，不会把未经比较的候选整批放行。扩写使用来源正文和搜索摘要；
+引用只能选自实际搜索结果。没有独立的扩写后事实核验。扩写失败时
+回退翻译，运行报告标记降级。
 
-`uv run python -m scripts.check_jev` 使用真实密钥做三项接口检查，不发布内容。
-费用按提供方实际账单计算；不承诺永久免费或节省费用。
-回退可通过 PR 将 `ai.evaluator.enabled` 改为 false 后重新运行正式工作流；
-不清除已发布记录、不重放分发队列。Quick Post 不等待模型检查。
+分析缓存键包括模型、评分策略版本、提示词及来源输入，旧策略的分数
+不会当作当前分数复用；生产缓存 30 天自然过期，不手改缓存分支。
+运行报告汇总 `score_models`，新归档行有 `score_model`。已有归档不
+重新评分；周报的历史分数仍按原值读取，切换初期须人工观察新旧
+分数分布与 7.0 门槛的命中数量。
