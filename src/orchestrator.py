@@ -1400,6 +1400,7 @@ class BMTNewsOrchestrator:
                 window_end=window.end,
                 sponsored=editorial_plan.sponsored,
                 x_posted_languages=daily_state.x_posted_languages,
+                skip_telegram=bool(already_published and force_publish),
             )
             newly_posted = published.get("x_posted") or []
             if newly_posted:
@@ -1788,6 +1789,7 @@ class BMTNewsOrchestrator:
         window_end: datetime | None = None,
         sponsored: List[EditorialEntry] | None = None,
         x_posted_languages: List[str] | None = None,
+        skip_telegram: bool = False,
     ) -> Dict[str, object]:
         """Render configured languages and publish static-site artifacts.
 
@@ -1955,12 +1957,18 @@ class BMTNewsOrchestrator:
                     summarizer=summarizer,
                 )
 
-        await self._deliver_telegram_editions(
-            items,
-            date=date,
-            total_candidates=total_candidates,
-            run_report=run_report,
-        )
+        if skip_telegram:
+            run_report.add_alert(
+                "info", "telegram_rebuild_skipped",
+                "本期已发布；重建页面时不重复发送 Telegram 日报。",
+            )
+        else:
+            await self._deliver_telegram_editions(
+                items,
+                date=date,
+                total_candidates=total_candidates,
+                run_report=run_report,
+            )
         newly_posted: List[str] = []
         await self._deliver_x_editions(
             items,
