@@ -48,6 +48,7 @@ def test_translation_generation_and_check_use_identical_source(monkeypatch):
     assert "stale unsupported" not in seen["prompt"]
     assert "all funds" not in seen["prompt"]
     assert row.metadata["detailed_summary_en"] == BRIEF["summary_en"]
+    assert row.metadata["title_en"] == row.title
     assert row.metadata["grounding_checks"]["translation"]["accepted"]
 
 
@@ -157,3 +158,113 @@ def test_new_grounding_policy_invalidates_only_generated_text(tmp_path, monkeypa
     monkeypatch.setattr("src.ai.result_cache.ENRICHMENT_POLICY_VERSION","new")
     assert cache.restore_analysis(story())
     assert not cache.restore_enrichment(story())
+
+
+RICH_REPORT = {
+    "title_en": "Rewritten headline", "title_zh": "协议暂停提现",
+    "whats_new_en": "The team paused withdrawals.",
+    "whats_new_zh": "团队暂停提现。",
+    "why_it_matters_en": "Users cannot withdraw during the pause.",
+    "why_it_matters_zh": "暂停期间用户无法提现。",
+    "key_details_en": "The cause is unconfirmed.",
+    "key_details_zh": "原因尚未确认。",
+    "background_en": "The protocol previously allowed withdrawals.",
+    "background_zh": "该协议此前允许提现。",
+    "community_discussion_en": "Commenters are concerned.",
+    "community_discussion_zh": "评论者表示担忧。",
+    "market_impact_en": "A pause could affect confidence.",
+    "market_impact_zh": "暂停可能影响信心。",
+    "sources": ["https://example.com/context", "https://evil.example/extra"],
+    "tags": ["Protocol", "Withdrawals"],
+}
+
+
+@pytest.mark.parametrize("reject_optional", [False, True])
+def test_rich_news_keeps_verified_core_and_only_supported_context(monkeypatch, reject_optional):
+    checked = []
+
+    class Evaluator:
+        async def assess_grounding(self, state):
+            checked.append(state)
+            return decision("unsupported" if reject_optional and len(checked) == 1 else "supported")
+
+    class Client:
+        async def complete(self, **kwargs): return json.dumps(RICH_REPORT)
+
+    monkeypatch.setattr("src.ai.enricher.create_evaluator", lambda _: Evaluator())
+    enricher = ContentEnricher(Client())
+
+    async def concepts(*_): return ["protocol"]
+    async def search(*_): return [{"title": "Context", "url": "https://example.com/context",
+                                  "body": "Previously allowed withdrawals"}]
+
+    monkeypatch.setattr(enricher, "_extract_concepts", concepts)
+    monkeypatch.setattr(enricher, "_cached_web_search", search)
+    row = story()
+    asyncio.run(enricher.enrich_batch([row]))
+    assert row.metadata["enrichment_status"] == ("partial" if reject_optional else "complete")
+    assert row.metadata["title_en"] == row.title
+    assert row.metadata["title_zh"] == "协议暂停提现"
+    assert row.metadata["detailed_summary_en"].startswith("The team paused withdrawals.")
+    assert row.ai_tags == ["Protocol", "Withdrawals"]
+    assert "all funds are lost" not in checked[0]["source"]["text"]
+    if reject_optional:
+        assert len(checked) == 2
+        assert row.metadata["evaluation_grounding"] == "supported_core"
+        assert "background_en" not in row.metadata
+        assert "sources" not in row.metadata
+        assert "why_it_matters_en" not in checked[1]["generated"]
+    else:
+        assert len(checked) == 1
+        assert row.metadata["background_en"]
+        assert row.metadata["community_discussion_zh"]
+        assert row.metadata["market_impact_en"]
+        assert row.metadata["sources"] == [{"url": "https://example.com/context", "title": "Context"}]
+
+
+def test_editorial_tags_survive_jev_enrichment_cache(tmp_path):
+    cache = AnalysisResultCache(tmp_path / "cache.json", model="jev")
+    row = story()
+    row.ai_tags = []
+    row.ai_summary = row.title
+    row.metadata["evaluation"] = {"model": "typesafe-ai/jev"}
+    row.metadata.update(enrichment_status="complete", evaluation_grounding="supported",
+                        background_en="Verified context", editorial_tags=["Protocol"])
+    row.ai_tags = ["Protocol"]
+    cache.store_enrichment(row)
+    next_run = story()
+    next_run.ai_tags = []
+    next_run.ai_summary = next_run.title
+    next_run.metadata["evaluation"] = {"model": "typesafe-ai/jev"}
+    assert cache.restore_enrichment(next_run)
+    assert next_run.ai_tags == ["Protocol"]
+
+
+def test_original_chinese_headline_is_not_rewritten():
+    row = story()
+    row.title = "协议暂停提现"
+    assert ContentEnricher._source_headline(row, "zh", "改写的标题") == row.title
+    assert ContentEnricher._source_headline(row, "en", "Protocol pauses withdrawals") == "Protocol pauses withdrawals"
+
+
+def test_failed_full_and_core_checks_still_require_verified_translation(monkeypatch):
+    class Evaluator:
+        async def assess_grounding(self, state):
+            return decision("unsupported" if "whats_new_en" in state["generated"] else "supported")
+
+    class Client:
+        async def complete(self, **kwargs):
+            return json.dumps(RICH_REPORT if "structured bilingual news report" in kwargs["user"] else BRIEF)
+
+    monkeypatch.setattr("src.ai.enricher.create_evaluator", lambda _: Evaluator())
+    enricher = ContentEnricher(Client())
+
+    async def no_concepts(*_): return []
+    monkeypatch.setattr(enricher, "_extract_concepts", no_concepts)
+    row = story()
+    asyncio.run(enricher.enrich_batch([row]))
+    assert row.metadata["enrichment_status"] == "translation_only"
+    assert row.metadata["enrichment_fallback_reason"] == "news_core_unsupported"
+    assert row.metadata["title_en"] == row.title
+    assert "background_en" not in row.metadata
+    assert row.ai_score == 8

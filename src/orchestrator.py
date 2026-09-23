@@ -1277,10 +1277,17 @@ class BMTNewsOrchestrator:
                 self._source_breakdown(qualified_items),
             )
             await self._enrich_important_items(important_items)
-            degraded = sum(item.metadata.get("enrichment_status") == "translation_only" for item in important_items)
+            degraded = sum(item.metadata.get("enrichment_status") in {"translation_only", "partial"} for item in important_items)
             run_report.set_metric("enrichment_degraded", degraded)
+            fallback_reasons = defaultdict(int)
+            for item in important_items:
+                reason = item.metadata.get("enrichment_fallback_reason")
+                if reason:
+                    fallback_reasons[reason] += 1
+            if fallback_reasons:
+                run_report.set_breakdown("enrichment_fallback_reasons", dict(fallback_reasons))
             if degraded:
-                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容扩写失败，仅保留翻译，需编辑复核。")
+                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容未通过完整稿核验，仅保留已核实部分，需编辑复核。")
 
             # Manual editor's picks are pinned ahead of the ranked stories.
             if editorial_plan.editorial:
