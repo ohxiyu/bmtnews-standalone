@@ -14,7 +14,7 @@ from . import prompts
 
 
 CACHE_VERSION = 1
-ENRICHMENT_POLICY_VERSION = "shared-source-v2"
+ENRICHMENT_POLICY_VERSION = "news-editorial-v3"
 ANALYSIS_FIELDS = ("ai_score", "ai_reason", "ai_summary", "ai_tags")
 ENRICHMENT_PREFIXES = (
     "title_",
@@ -94,7 +94,8 @@ class AnalysisResultCache:
                 "engagement": {key: item.metadata.get(key) for key in ("score", "descendants", "num_comments", "comments", "replies")},
                 "analysis_inputs": {
                     "summary": item.ai_summary, "score": item.ai_score,
-                    "reason": item.ai_reason, "tags": item.ai_tags,
+                    "reason": item.ai_reason,
+                    "tags": ([] if item.metadata.get("evaluation") else item.ai_tags),
                 } if stage == "enrichment" else None,
             },
             ensure_ascii=False,
@@ -186,6 +187,8 @@ class AnalysisResultCache:
         if value is None:
             return False
         item.metadata.update(value)
+        if isinstance(value.get("editorial_tags"), list):
+            item.ai_tags = list(value["editorial_tags"])
         return True
 
     def store_enrichment(self, item: ContentItem) -> None:
@@ -194,18 +197,18 @@ class AnalysisResultCache:
         value = {
             key: val
             for key, val in item.metadata.items()
-            if key in {"sources", "evaluation_grounding", "enrichment_status", "grounding_checks"}
+            if key in {"sources", "editorial_tags", "evaluation_grounding", "enrichment_status", "grounding_checks", "enrichment_fallback_reason"}
             or any(key.startswith(prefix) for prefix in ENRICHMENT_PREFIXES)
         }
         complete = any(
             key.startswith(("background_", "market_impact_")) and bool(val)
             for key, val in value.items()
         )
-        verified_translation = (
-            value.get("evaluation_grounding") == "supported_translation"
+        verified_short = (
+            value.get("evaluation_grounding") in {"supported_translation", "supported_core"}
             and all(value.get(f"detailed_summary_{lang}") for lang in ("en", "zh"))
         )
-        if value and (complete or verified_translation):
+        if value and (complete or verified_short):
             self._put(item, "enrichment", value)
 
     def _put(self, item: ContentItem, stage: str, value: dict[str, Any]) -> None:

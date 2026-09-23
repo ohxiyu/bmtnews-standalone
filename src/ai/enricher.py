@@ -58,21 +58,30 @@ class ContentEnricher:
                 self._clear_generated(item)
                 item.metadata.pop("grounding_checks", None)
                 item.metadata.pop("grounding_error", None)
+                item.metadata.pop("enrichment_fallback_reason", None)
                 try:
                     try:
                         await self._enrich_item(item)
                         item.metadata["enrichment_status"] = (
                             "translation_only" if item.metadata.get("evaluation_grounding") == "supported_translation"
+                            else "partial" if item.metadata.get("evaluation_grounding") == "supported_core"
                             else "complete"
                         )
                     except EvaluationError as exc:
                         # Provider/schema failures are not content judgments.
                         if not isinstance(exc, GroundingRejected):
                             raise
+                        item.metadata["enrichment_fallback_reason"] = exc.code
                         self._clear_generated(item)
                         await self._translate_item(item)
                         item.metadata["enrichment_status"] = "translation_only"
-                    except Exception:
+                    except Exception as exc:
+                        # Keep a bounded, non-sensitive diagnostic code; never
+                        # persist provider messages, prompts or response bodies.
+                        item.metadata["enrichment_fallback_reason"] = (
+                            "invalid_generation" if isinstance(exc, ValueError)
+                            else "generation_error"
+                        )
                         self._clear_generated(item)
                         await self._translate_item(item)
                         item.metadata["enrichment_status"] = "translation_only"
@@ -101,7 +110,7 @@ class ContentEnricher:
     @staticmethod
     def _clear_generated(item):
         for key in list(item.metadata):
-            if key in {"sources", "evaluation_grounding", "enrichment_status"} or key.startswith(ENRICHMENT_PREFIXES):
+            if key in {"sources", "editorial_tags", "evaluation_grounding", "enrichment_status"} or key.startswith(ENRICHMENT_PREFIXES):
                 item.metadata.pop(key, None)
 
     @staticmethod
@@ -110,6 +119,14 @@ class ContentEnricher:
         # verification receive this exact bounded source representation.
         text = (item.content or "").split("--- Top Comments ---", 1)[0].strip()[:4000]
         return {"title": item.title, "text": text}
+
+    @staticmethod
+    def _source_headline(item, language, proposed):
+        """Keep original editorial wording in its source language."""
+        is_chinese = bool(re.search(r"[\u3400-\u9fff]", item.title))
+        if (language == "zh" and is_chinese) or (language == "en" and not is_chinese):
+            return item.title
+        return proposed
 
     async def _check(self, item, state, stage):
         decision = await self.evaluator.assess_grounding(state)
@@ -194,7 +211,7 @@ class ContentEnricher:
     @retry(
         stop=stop_after_attempt(3),
         wait=wait_exponential(min=2, max=10),
-        retry=retry_if_not_exception_type(EvaluationError),
+        retry=retry_if_not_exception_type((EvaluationError, ValueError)),
     )
     async def _enrich_item(self, item: ContentItem) -> None:
         """Enrich a single item with background knowledge.
@@ -265,23 +282,47 @@ class ContentEnricher:
             # Gracefully degrade: fall back to a lightweight translation
             # instead of dropping the item untranslated.
             print(f"Warning: could not parse enrichment response for {item.id}, falling back to translation")
-            await self._translate_item(item)
-            return
+            raise ValueError("invalid_generation")
+        required = ("whats_new_en", "whats_new_zh")
+        translated_title = "title_en" if re.search(r"[\u3400-\u9fff]", item.title) else "title_zh"
+        if any(not isinstance(result.get(key), str) or not result[key].strip()
+               for key in (*required, translated_title)):
+            raise ValueError("invalid_generation")
 
         if self.evaluator is not None:
-            await self._check(item, {
-                "source": source,
-                "search_excerpts": all_results,
-                "community_comments": comments_text,
-                "generated": result,
-            }, "generation")
-            item.metadata["evaluation_grounding"] = "supported"
+            evidence = {"source": source, "search_excerpts": all_results,
+                        "community_comments": comments_text}
+            verified_draft = {**result}
+            for language in ("en", "zh"):
+                key = f"title_{language}"
+                verified_draft[key] = self._source_headline(item, language, result.get(key))
+            try:
+                await self._check(item, {**evidence, "generated": verified_draft}, "generation")
+            except GroundingRejected:
+                # Analysis/background is useful but must not veto an otherwise
+                # supported news report. Re-check only the news facts, then
+                # discard every optional claim and reference from this draft.
+                core = {key: result.get(key) for key in (
+                    "title_zh", "whats_new_en", "whats_new_zh",
+                    "key_details_en", "key_details_zh", "tags",
+                ) if result.get(key)}
+                for language in ("en", "zh"):
+                    key = f"title_{language}"
+                    core[key] = self._source_headline(item, language, result.get(key))
+                await self._check(item, {**evidence, "generated": core}, "news_core")
+                result = core
+                item.metadata["enrichment_fallback_reason"] = "optional_context_unverified"
+                item.metadata["evaluation_grounding"] = "supported_core"
+            else:
+                item.metadata["evaluation_grounding"] = "supported"
 
         # Combine structured sub-fields into per-language detailed_summary
         for lang in ("en", "zh"):
             if result.get(f"title_{lang}"):
                 val = result[f"title_{lang}"]
                 item.metadata[f"title_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+            item.metadata[f"title_{lang}"] = self._source_headline(
+                item, lang, item.metadata.get(f"title_{lang}"))
 
             parts = []
             for field in ("whats_new", "why_it_matters", "key_details"):
@@ -316,6 +357,12 @@ class ContentEnricher:
             if valid:
                 item.metadata["sources"] = valid
 
+        tags = result.get("tags")
+        if isinstance(tags, list):
+            item.metadata["editorial_tags"] = [tag.strip().lstrip("#") for tag in tags
+                                              if isinstance(tag, str) and tag.strip()][:6]
+            item.ai_tags = list(item.metadata["editorial_tags"])
+
         # Backward-compatible fallback fields (English as default)
         item.metadata["detailed_summary"] = item.metadata.get("detailed_summary_en", "")
         item.metadata["background"] = item.metadata.get("background_en", "")
@@ -347,6 +394,9 @@ class ContentEnricher:
             for lang in ("zh", "en"):
                 item.metadata[f"title_{lang}"] = result[f"title_{lang}"].strip()
                 item.metadata[f"detailed_summary_{lang}"] = result[f"summary_{lang}"].strip()
+            for lang in ("zh", "en"):
+                item.metadata[f"title_{lang}"] = self._source_headline(
+                    item, lang, item.metadata[f"title_{lang}"])
             item.metadata["detailed_summary"] = item.metadata["detailed_summary_en"]
         except EvaluationError:
             if self.evaluator is not None:

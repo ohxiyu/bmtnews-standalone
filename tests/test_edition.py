@@ -331,6 +331,19 @@ def test_daily_edition_combines_staging_and_final_fetch(
         for alert in retry_report["alerts"]
     )
 
+    asyncio.run(
+        orchestrator.run_daily_edition(
+            force_hours=24,
+            staging_path=staging_path,
+            now=datetime(2026, 7, 29, 9, 18, tzinfo=SHANGHAI),
+            force_publish=True,
+        )
+    )
+    rebuild_report = load_run_report(tmp_path / "data" / "run-report.json")
+    assert telegram_calls == [("2026-07-29", 2, "zh")]
+    assert any(alert["code"] == "telegram_rebuild_skipped"
+               for alert in rebuild_report["alerts"])
+
 
 def test_daily_edition_uses_unpublished_36_hour_fallback_when_short(
     tmp_path: Path,

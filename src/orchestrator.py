@@ -1277,10 +1277,17 @@ class BMTNewsOrchestrator:
                 self._source_breakdown(qualified_items),
             )
             await self._enrich_important_items(important_items)
-            degraded = sum(item.metadata.get("enrichment_status") == "translation_only" for item in important_items)
+            degraded = sum(item.metadata.get("enrichment_status") in {"translation_only", "partial"} for item in important_items)
             run_report.set_metric("enrichment_degraded", degraded)
+            fallback_reasons = defaultdict(int)
+            for item in important_items:
+                reason = item.metadata.get("enrichment_fallback_reason")
+                if reason:
+                    fallback_reasons[reason] += 1
+            if fallback_reasons:
+                run_report.set_breakdown("enrichment_fallback_reasons", dict(fallback_reasons))
             if degraded:
-                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容扩写失败，仅保留翻译，需编辑复核。")
+                run_report.add_alert("warning", "enrichment_degraded", f"{degraded} 条内容未通过完整稿核验，仅保留已核实部分，需编辑复核。")
 
             # Manual editor's picks are pinned ahead of the ranked stories.
             if editorial_plan.editorial:
@@ -1393,6 +1400,7 @@ class BMTNewsOrchestrator:
                 window_end=window.end,
                 sponsored=editorial_plan.sponsored,
                 x_posted_languages=daily_state.x_posted_languages,
+                skip_telegram=bool(already_published and force_publish),
             )
             newly_posted = published.get("x_posted") or []
             if newly_posted:
@@ -1781,6 +1789,7 @@ class BMTNewsOrchestrator:
         window_end: datetime | None = None,
         sponsored: List[EditorialEntry] | None = None,
         x_posted_languages: List[str] | None = None,
+        skip_telegram: bool = False,
     ) -> Dict[str, object]:
         """Render configured languages and publish static-site artifacts.
 
@@ -1948,12 +1957,18 @@ class BMTNewsOrchestrator:
                     summarizer=summarizer,
                 )
 
-        await self._deliver_telegram_editions(
-            items,
-            date=date,
-            total_candidates=total_candidates,
-            run_report=run_report,
-        )
+        if skip_telegram:
+            run_report.add_alert(
+                "info", "telegram_rebuild_skipped",
+                "本期已发布；重建页面时不重复发送 Telegram 日报。",
+            )
+        else:
+            await self._deliver_telegram_editions(
+                items,
+                date=date,
+                total_candidates=total_candidates,
+                run_report=run_report,
+            )
         newly_posted: List[str] = []
         await self._deliver_x_editions(
             items,
