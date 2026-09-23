@@ -75706,26 +75706,33 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
-      "current_state_zh": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
+      "current_state_en": "EvilTokens infrastructure has been dismantled, with related websites and domains seized/disabled; Coinbase traced about $1.1 million in platform revenue; two suspects were arrested and released on conditional bail; Microsoft warned the same authentication abuse and AI-assisted fraud model can still be reused.",
+      "current_state_zh": "EvilTokens 基础设施已被拆除，相关域名和网站被查获/关停；Coinbase 已追踪约 110 万美元平台收入；两名嫌疑人被捕后获有条件保释；微软警告同类认证滥用和 AI 辅助欺诈模式仍可能被复用。",
       "entities": [
         "coinbase",
         "diy",
         "eviltokens",
-        "microsoft"
+        "microsoft",
+        "phishing"
       ],
       "event_id": "evt_a97d02e01cdbe43d",
       "event_type": "other",
       "first_seen_at": "2026-09-22T17:08:19.915851Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-22T17:08:19.915851Z",
-      "last_updated_at": "2026-09-22T17:08:19.915851Z",
+      "last_material_change_at": "2026-09-23T17:21:31.375874Z",
+      "last_updated_at": "2026-09-23T17:21:31.375874Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
       "title_zh": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
-      "topics": [],
+      "topics": [
+        "ai-fraud",
+        "coinbase",
+        "cybersecurity",
+        "microsoft",
+        "phishing"
+      ],
       "updates": [
         {
           "background_en": "",
@@ -75764,6 +75771,44 @@
           "update_type": "initial",
           "what_changed_en": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
           "what_changed_zh": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "EvilTokens infrastructure has been dismantled, with related websites and domains seized/disabled; Coinbase traced about $1.1 million in platform revenue; two suspects were arrested and released on conditional bail; Microsoft warned the same authentication abuse and AI-assisted fraud model can still be reused.",
+          "current_state_zh": "EvilTokens 基础设施已被拆除，相关域名和网站被查获/关停；Coinbase 已追踪约 110 万美元平台收入；两名嫌疑人被捕后获有条件保释；微软警告同类认证滥用和 AI 辅助欺诈模式仍可能被复用。",
+          "detailed_summary_en": "Microsoft and Coinbase helped dismantle EvilTokens, an AI-assisted phishing service that abused Microsoft's device-code login flow to compromise more than 12,000 inboxes across 10,000 organizations, tracing a $1.1 million crypto trail and seizing 50 websites plus 150 related domains.",
+          "detailed_summary_zh": "Microsoft and Coinbase helped dismantle EvilTokens, an AI-assisted phishing service that abused Microsoft's device-code login flow to compromise more than 12,000 inboxes across 10,000 organizations, tracing a $1.1 million crypto trail and seizing 50 websites plus 150 related domains.",
+          "event_id": "evt_a97d02e01cdbe43d",
+          "first_seen_at": "2026-09-23T17:21:31.375874Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T10:20:37Z",
+          "published_at": "2026-09-23T10:20:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/coinbase-traced-1-1-million-crypto-trail-behind-ai-phishing-service-eviltokens/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:c4046ffc701821ee"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase traced $1.1 million crypto trail behind AI phishing service EvilTokens",
+          "title_zh": "Coinbase traced $1.1 million crypto trail behind AI phishing service EvilTokens",
+          "update_id": "upd_49f5bd44b3f06aad",
+          "update_type": "aftermath",
+          "what_changed_en": "New facts: Coinbase traced about $1.1 million in EvilTokens platform revenue across four Tron addresses from October 2025 to June 2026; the phishing service compromised over 12,000 inboxes across more than 10,000 organizations; authorities seized 50 websites and disabled over 150 related domains; UK police arrested two suspects on Sept. 11, later released on conditional bail.",
+          "what_changed_zh": "新增事实：Coinbase 追踪到 EvilTokens 约 110 万美元平台收入，流向四个 Tron 地址（2025 年 10 月至 2026 年 6 月）；该钓鱼服务入侵超过 12,000 个邮箱、涉及 10,000 多个组织；执法方查获 50 个网站并关停 150 多个相关域名；英国警方于 9 月 11 日逮捕两名嫌疑人，后获有条件保释。"
         }
       ]
     },
@@ -77577,7 +77622,7 @@
       "first_seen_at": "2026-09-22T23:08:17.923420Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-22T23:08:29.841301Z",
-      "last_updated_at": "2026-09-22T23:08:29.841301Z",
+      "last_updated_at": "2026-09-23T17:21:34.300159Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -77648,10 +77693,24 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cointelegraph.com/news/canada-six-largest-banks-explore-tokenized-canadian-dollar-deposits?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/six-canadian-banks-outline-first-phase-of-tokenized-deposit-project"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379081/canada-six-biggest-banks-shared-digital-dollar-network"
             }
           ],
           "story_ids": [
-            "rss:cointelegraph.com_rss:04fd3eb4ec61c980"
+            "rss:cointelegraph.com_rss:04fd3eb4ec61c980",
+            "rss:thedefiant.io_api_feed:d30b45af1d0a8dc2",
+            "rss:decrypt.co_feed:7f6dd378e83dfd44"
           ],
           "time_precision": "published",
           "title_en": "Canada’s six largest banks explore tokenized Canadian dollar deposits",
@@ -78828,6 +78887,1314 @@
           "what_changed_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says"
         }
       ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+      "current_state_zh": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+      "entities": [
+        "binance",
+        "cryptorank",
+        "usde",
+        "usdt"
+      ],
+      "event_id": "evt_eb3236420974e8d8",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-23T17:21:21.055890Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:21.055890Z",
+      "last_updated_at": "2026-09-23T17:21:21.055890Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "USDe/USDT on Binance briefly dropped to 0.92 and recovered to near-peg levels of $0.9996 - CryptoRank",
+      "title_zh": "USDe/USDT on Binance briefly dropped to 0.92 and recovered to near-peg levels of $0.9996 - CryptoRank",
+      "topics": [
+        "binance",
+        "ethena",
+        "market-volatility",
+        "stablecoin-depeg",
+        "usde"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+          "current_state_zh": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+          "detailed_summary_en": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+          "detailed_summary_zh": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+          "event_id": "evt_eb3236420974e8d8",
+          "first_seen_at": "2026-09-23T17:21:21.055890Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T10:58:58Z",
+          "published_at": "2026-09-23T10:58:58Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoRank",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeVpRdm1tQUpjTXozTGoxamxDSnV1RkxyUmd2VEo1MnlXekF5RlRaS2w4WHhwb0FyeGFINUY5ZEdVTUlUMDFpQXFvQ3FDZFVoblZsTUViNXVWTlQ1RmpMV0ZqRWVYdG9mcFlUX0twNXJTQ25OZEJZOGxTYWdxYnlGMzVFdzhzOWJlZTNiVGNRYnRaS1BoeGtOeXJMdGRqb3hDaWRzeFpOOUZCMGs4Mk9GWHBEU3ljbEx4eG14UzJVdjk5eFk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:6432b09321703c91"
+          ],
+          "time_precision": "published",
+          "title_en": "USDe/USDT on Binance briefly dropped to 0.92 and recovered to near-peg levels of $0.9996 - CryptoRank",
+          "title_zh": "USDe/USDT on Binance briefly dropped to 0.92 and recovered to near-peg levels of $0.9996 - CryptoRank",
+          "update_id": "upd_69197c120ffdcbc3",
+          "update_type": "initial",
+          "what_changed_en": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar.",
+          "what_changed_zh": "USDe briefly depegged to $0.92 against USDT on Binance before recovering to near-parity at $0.9996, highlighting liquidity and peg-stability risk for the synthetic dollar."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+      "current_state_zh": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+      "entities": [
+        "astra",
+        "gpt"
+      ],
+      "event_id": "evt_87cc9199791186a8",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T17:21:21.069373Z",
+      "identifiers": [
+        "gpt-6"
+      ],
+      "last_material_change_at": "2026-09-23T17:21:21.069373Z",
+      "last_updated_at": "2026-09-23T17:21:21.069373Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "GPT-6 Astra has gained the ability to drive a car",
+      "title_zh": "GPT-6 Astra has gained the ability to drive a car",
+      "topics": [
+        "ai-models",
+        "autonomous-driving",
+        "benchmarks",
+        "computer-vision",
+        "embodied-ai"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+          "current_state_zh": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+          "detailed_summary_en": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+          "detailed_summary_zh": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+          "event_id": "evt_87cc9199791186a8",
+          "first_seen_at": "2026-09-23T17:21:21.069373Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T15:14:22Z",
+          "published_at": "2026-09-23T15:14:22Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49817404"
+            }
+          ],
+          "sources": [
+            {
+              "label": "plurby",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://drivingbench.com/"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49817404"
+          ],
+          "time_precision": "published",
+          "title_en": "GPT-6 Astra has gained the ability to drive a car",
+          "title_zh": "GPT-6 Astra has gained the ability to drive a car",
+          "update_id": "upd_381134b7e9c0eaad",
+          "update_type": "initial",
+          "what_changed_en": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible.",
+          "what_changed_zh": "A driving benchmark demonstrates GPT-6 Astra completing an end-to-end driving route from visual input to steering control, prompting debate over whether LLM-based driving stacks will displace modular self-driving architectures and whether latency makes real-world deployment infeasible."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+      "current_state_zh": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+      "entities": [
+        "bitmex"
+      ],
+      "event_id": "evt_498021d276c74951",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-23T17:21:25.368987Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:25.368987Z",
+      "last_updated_at": "2026-09-23T17:21:25.368987Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "BitMEX shuts down: perpetuals pioneer officially closes it doors after 11 years",
+      "title_zh": "BitMEX shuts down: perpetuals pioneer officially closes it doors after 11 years",
+      "topics": [
+        "bitmex",
+        "derivatives",
+        "exchange-shutdown",
+        "perpetual-swaps"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+          "current_state_zh": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+          "detailed_summary_en": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+          "detailed_summary_zh": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+          "event_id": "evt_498021d276c74951",
+          "first_seen_at": "2026-09-23T17:21:25.368987Z",
+          "importance_score": 8.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T10:24:44Z",
+          "published_at": "2026-09-23T10:24:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/23/bitmex-shuts-down-trading-after-11-years-leaves-withdrawals-open"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:94989daa5bb4c549"
+          ],
+          "time_precision": "published",
+          "title_en": "BitMEX shuts down: perpetuals pioneer officially closes it doors after 11 years",
+          "title_zh": "BitMEX shuts down: perpetuals pioneer officially closes it doors after 11 years",
+          "update_id": "upd_ce093b1bb74d80e5",
+          "update_type": "initial",
+          "what_changed_en": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues.",
+          "what_changed_zh": "BitMEX, the perpetual-swap pioneer co-founded by Arthur Hayes, officially shut down trading and deposits after 11 years, keeping logins and withdrawals open as its wind-down continues."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+      "current_state_zh": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+      "entities": [
+        "galaxy",
+        "sky"
+      ],
+      "event_id": "evt_b9e1d5a8dbb576bd",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T17:21:27.797499Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:27.797499Z",
+      "last_updated_at": "2026-09-23T17:21:27.797499Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Galaxy adds $100 million in Sky’s sUSDS to treasury, buys SKY token as firms deepen lending ties",
+      "title_zh": "Galaxy adds $100 million in Sky’s sUSDS to treasury, buys SKY token as firms deepen lending ties",
+      "topics": [
+        "defi-lending",
+        "sky-ecosystem",
+        "stablecoins",
+        "treasury-management"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+          "current_state_zh": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+          "detailed_summary_en": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+          "detailed_summary_zh": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+          "event_id": "evt_b9e1d5a8dbb576bd",
+          "first_seen_at": "2026-09-23T17:21:27.797499Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T12:00:02Z",
+          "published_at": "2026-09-23T12:00:02Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-23-galaxy-adds-100-million-in-skys-susds-to-treasury-buys-sky-token-as-firms-deepen-lending-ties-416137"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:7893d51f7fbb6f05"
+          ],
+          "time_precision": "published",
+          "title_en": "Galaxy adds $100 million in Sky’s sUSDS to treasury, buys SKY token as firms deepen lending ties",
+          "title_zh": "Galaxy adds $100 million in Sky’s sUSDS to treasury, buys SKY token as firms deepen lending ties",
+          "update_id": "upd_ec65dc75924c46bc",
+          "update_type": "initial",
+          "what_changed_en": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky.",
+          "what_changed_zh": "Galaxy allocated $100 million in Sky's sUSDS to its corporate treasury, bought SKY tokens, and approved the savings token as collateral for institutional lending, deepening its partnership with Sky."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+      "current_state_zh": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+      "entities": [
+        "kind",
+        "minting",
+        "ondo",
+        "opens",
+        "stocks",
+        "tokenized"
+      ],
+      "event_id": "evt_34a5da8e60611291",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T17:21:29.579318Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:29.579318Z",
+      "last_updated_at": "2026-09-23T17:21:29.579318Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ondo Opens In-Kind Minting for Tokenized US Stocks",
+      "title_zh": "Ondo Opens In-Kind Minting for Tokenized US Stocks",
+      "topics": [
+        "alpaca",
+        "ondo",
+        "rwa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+          "current_state_zh": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+          "detailed_summary_en": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+          "detailed_summary_zh": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+          "event_id": "evt_34a5da8e60611291",
+          "first_seen_at": "2026-09-23T17:21:29.579318Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T14:00:55Z",
+          "published_at": "2026-09-23T14:00:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/ondo-opens-in-kind-minting-for-tokenized-us-stocks"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:8ccffa7b91c9160f"
+          ],
+          "time_precision": "published",
+          "title_en": "Ondo Opens In-Kind Minting for Tokenized US Stocks",
+          "title_zh": "Ondo Opens In-Kind Minting for Tokenized US Stocks",
+          "update_id": "upd_0743c7f4e882f642",
+          "update_type": "initial",
+          "what_changed_en": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding.",
+          "what_changed_zh": "Ondo has launched in-kind minting for tokenized US stocks, allowing approved institutions to swap existing share inventory for Ondo Stocks via Alpaca without separate cash funding."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+      "current_state_zh": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+      "entities": [
+        "adds",
+        "approves",
+        "collateral",
+        "galaxy",
+        "loan",
+        "million",
+        "susds",
+        "treasury"
+      ],
+      "event_id": "evt_44aa6d61c5ad9806",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-23T17:21:29.598375Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:29.598375Z",
+      "last_updated_at": "2026-09-23T17:21:29.598375Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Galaxy Adds $100 Million of sUSDS to Treasury, Approves It as Loan Collateral",
+      "title_zh": "Galaxy Adds $100 Million of sUSDS to Treasury, Approves It as Loan Collateral",
+      "topics": [
+        "galaxy-digital",
+        "institutional-lending",
+        "sky-protocol",
+        "stablecoins",
+        "susds"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+          "current_state_zh": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+          "detailed_summary_en": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+          "detailed_summary_zh": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+          "event_id": "evt_44aa6d61c5ad9806",
+          "first_seen_at": "2026-09-23T17:21:29.598375Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T13:58:43Z",
+          "published_at": "2026-09-23T13:58:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/galaxy-adds-100-million-of-susds-to-treasury-approves-it-as-loan-collateral"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:052e7d57f6627ee4"
+          ],
+          "time_precision": "published",
+          "title_en": "Galaxy Adds $100 Million of sUSDS to Treasury, Approves It as Loan Collateral",
+          "title_zh": "Galaxy Adds $100 Million of sUSDS to Treasury, Approves It as Loan Collateral",
+          "update_id": "upd_b525c40fb719988e",
+          "update_type": "initial",
+          "what_changed_en": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it.",
+          "what_changed_zh": "Galaxy Digital added $100 million of Sky's sUSDS to its treasury and approved the yield-bearing stablecoin as collateral for its institutional lending clients, who can still earn Sky's 3.6% savings rate while pledging it."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Blockchain.com and NYSE have signed a memorandum of understanding to give Blockchain.com users access to tokenized US stocks and ETFs through NYSE's planned digital alternative trading system, alongside a two-way market data distribution with ICE Data Services, subject to regulatory approval.",
+      "current_state_zh": "Blockchain.com 与 NYSE 已签署谅解备忘录，拟让 Blockchain.com 用户通过 NYSE 计划中的数字另类交易系统交易代币化美国股票和 ETF，并与 ICE Data Services 进行双向市场数据分发，尚待监管批准。",
+      "entities": [
+        "blockchaincom",
+        "explore",
+        "nyse",
+        "stock",
+        "tokenized",
+        "trading"
+      ],
+      "event_id": "evt_bb505059680778bf",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-23T17:21:29.619549Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:35.499817Z",
+      "last_updated_at": "2026-09-23T17:21:35.499817Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Blockchain.com and NYSE Explore 24/7 Tokenized Stock Trading",
+      "title_zh": "Blockchain.com and NYSE Explore 24/7 Tokenized Stock Trading",
+      "topics": [
+        "blockchaincom",
+        "nyse",
+        "tokenized-equities",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Blockchain.com and NYSE have agreed to explore connecting Blockchain.com to NYSE's planned digital venue for 24/7 tokenized stock trading and two-way distribution of stock and crypto market data.",
+          "current_state_zh": "Blockchain.com and NYSE have agreed to explore connecting Blockchain.com to NYSE's planned digital venue for 24/7 tokenized stock trading and two-way distribution of stock and crypto market data.",
+          "detailed_summary_en": "Blockchain.com and NYSE have agreed to explore connecting Blockchain.com to NYSE's planned digital venue for 24/7 tokenized stock trading and two-way distribution of stock and crypto market data.",
+          "detailed_summary_zh": "Blockchain.com and NYSE have agreed to explore connecting Blockchain.com to NYSE's planned digital venue for 24/7 tokenized stock trading and two-way distribution of stock and crypto market data.",
+          "event_id": "evt_bb505059680778bf",
+          "first_seen_at": "2026-09-23T17:21:29.619549Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T13:55:04Z",
+          "published_at": "2026-09-23T13:55:04Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/blockchain-com-and-nyse-explore-24-7-tokenized-stock-trading"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:6fb1bbb5402c4961"
+          ],
+          "time_precision": "published",
+          "title_en": "Blockchain.com and NYSE Explore 24/7 Tokenized Stock Trading",
+          "title_zh": "Blockchain.com and NYSE Explore 24/7 Tokenized Stock Trading",
+          "update_id": "upd_ae72794627fa4c57",
+          "update_type": "initial",
+          "what_changed_en": "Blockchain.com and NYSE have agreed to explore connecting Blockchain.com to NYSE's planned digital venue for 24/7 tokenized stock trading and two-way distribution of stock and crypto market data.",
+          "what_changed_zh": "Blockchain.com and NYSE have agreed to explore connecting Blockchain.com to NYSE's planned digital venue for 24/7 tokenized stock trading and two-way distribution of stock and crypto market data."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Blockchain.com and NYSE have signed a memorandum of understanding to give Blockchain.com users access to tokenized US stocks and ETFs through NYSE's planned digital alternative trading system, alongside a two-way market data distribution with ICE Data Services, subject to regulatory approval.",
+          "current_state_zh": "Blockchain.com 与 NYSE 已签署谅解备忘录，拟让 Blockchain.com 用户通过 NYSE 计划中的数字另类交易系统交易代币化美国股票和 ETF，并与 ICE Data Services 进行双向市场数据分发，尚待监管批准。",
+          "detailed_summary_en": "NYSE and Blockchain.com signed an MOU to give Blockchain.com's global users access to tokenized US stocks and ETFs traded on NYSE's planned digital alternative trading system, alongside a reciprocal exchange of crypto and market data with ICE Data Services.",
+          "detailed_summary_zh": "NYSE and Blockchain.com signed an MOU to give Blockchain.com's global users access to tokenized US stocks and ETFs traded on NYSE's planned digital alternative trading system, alongside a reciprocal exchange of crypto and market data with ICE Data Services.",
+          "event_id": "evt_bb505059680778bf",
+          "first_seen_at": "2026-09-23T17:21:35.499817Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T15:56:20Z",
+          "published_at": "2026-09-23T15:56:20Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/nyse-blockchaincom-team-up-to-bring-tokenized-us-stocks-to-crypto-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379080/nyse-taps-blockchain-com-to-reach-crypto-investors-with-tokenized-stocks-etfs"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:c1f9862656708f76",
+            "rss:decrypt.co_feed:d93d3c60c9f867b1"
+          ],
+          "time_precision": "published",
+          "title_en": "NYSE, Blockchain.com in tie-up to bring tokenized US stocks to crypto users",
+          "title_zh": "NYSE, Blockchain.com in tie-up to bring tokenized US stocks to crypto users",
+          "update_id": "upd_f0dd9b936ab1161a",
+          "update_type": "confirmation",
+          "what_changed_en": "Blockchain.com and NYSE signed a memorandum of understanding to give Blockchain.com users access to tokenized US stocks and ETFs through NYSE's planned digital alternative trading system, alongside a reciprocal market data exchange with ICE Data Services.",
+          "what_changed_zh": "Blockchain.com 与 NYSE 签署谅解备忘录，允许 Blockchain.com 用户通过 NYSE 计划中的数字另类交易系统获取代币化美国股票和 ETF，并与 ICE Data Services 进行市场数据互换。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+      "current_state_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+      "entities": [
+        "alpenglow",
+        "january",
+        "sol",
+        "solana",
+        "testnet"
+      ],
+      "event_id": "evt_d75668abfb43b4e7",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-23T17:21:30.707301Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:30.707301Z",
+      "last_updated_at": "2026-09-23T17:21:30.707301Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Solana moves Alpenglow into testnet as SOL nears January highs",
+      "title_zh": "Solana moves Alpenglow into testnet as SOL nears January highs",
+      "topics": [
+        "consensus",
+        "finality",
+        "protocol-upgrade",
+        "solana",
+        "testnet"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+          "current_state_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+          "detailed_summary_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+          "detailed_summary_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+          "event_id": "evt_d75668abfb43b4e7",
+          "first_seen_at": "2026-09-23T17:21:30.707301Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T14:40:54Z",
+          "published_at": "2026-09-23T14:40:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/solana-moves-alpenglow-into-testnet-as-sol-nears-january-highs/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:9a77b20c784ee587"
+          ],
+          "time_precision": "published",
+          "title_en": "Solana moves Alpenglow into testnet as SOL nears January highs",
+          "title_zh": "Solana moves Alpenglow into testnet as SOL nears January highs",
+          "update_id": "upd_d6cb1d552d63ee1c",
+          "update_type": "initial",
+          "what_changed_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+          "what_changed_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+      "current_state_zh": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+      "entities": [
+        "mastercard",
+        "why"
+      ],
+      "event_id": "evt_b9b285a963e86bca",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T17:21:31.046156Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:31.046156Z",
+      "last_updated_at": "2026-09-23T17:21:31.046156Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Why Mastercard’s $25 billion crypto expansion isn’t what it seems",
+      "title_zh": "Why Mastercard’s $25 billion crypto expansion isn’t what it seems",
+      "topics": [
+        "mastercard",
+        "sofi"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+          "current_state_zh": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+          "detailed_summary_en": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+          "detailed_summary_zh": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+          "event_id": "evt_b9b285a963e86bca",
+          "first_seen_at": "2026-09-23T17:21:31.046156Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T12:30:03Z",
+          "published_at": "2026-09-23T12:30:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/sofis-mastercard-stablecoin-settlement-is-live-but-its-25-billion-figure-is-still-a-projection/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:0163c2e0523946de"
+          ],
+          "time_precision": "published",
+          "title_en": "Why Mastercard’s $25 billion crypto expansion isn’t what it seems",
+          "title_zh": "Why Mastercard’s $25 billion crypto expansion isn’t what it seems",
+          "update_id": "upd_5e86995ac89ebb78",
+          "update_type": "initial",
+          "what_changed_en": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts.",
+          "what_changed_zh": "SoFi Bank and Mastercard have launched live SoFiUSD settlement for SoFi's debit and credit card program, letting participating merchants receive bank-account dollars without holding the token, backed by a projected $25B+ in annualized card volume that has not been matched with disclosed actual settled amounts."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+      "current_state_zh": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+      "entities": [
+        "central-banks",
+        "europe",
+        "reserves"
+      ],
+      "event_id": "evt_f7eaed76e23c8258",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-23T17:21:31.215218Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:31.215218Z",
+      "last_updated_at": "2026-09-23T17:21:31.215218Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Europe’s central banks want to scrap this stablecoin reserve safeguard",
+      "title_zh": "Europe’s central banks want to scrap this stablecoin reserve safeguard",
+      "topics": [
+        "central-banks",
+        "eu-regulation",
+        "mica",
+        "reserves",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+          "current_state_zh": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+          "detailed_summary_en": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+          "detailed_summary_zh": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+          "event_id": "evt_f7eaed76e23c8258",
+          "first_seen_at": "2026-09-23T17:21:31.215218Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T11:30:31Z",
+          "published_at": "2026-09-23T11:30:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/europes-central-banks-want-to-scrap-this-stablecoin-reserve-safeguard/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:32b94970d9d1c941"
+          ],
+          "time_precision": "published",
+          "title_en": "Europe’s central banks want to scrap this stablecoin reserve safeguard",
+          "title_zh": "Europe’s central banks want to scrap this stablecoin reserve safeguard",
+          "update_id": "upd_9308f16db2475a42",
+          "update_type": "initial",
+          "what_changed_en": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing.",
+          "what_changed_zh": "The European System of Central Banks has recommended scrapping MiCA's requirement that stablecoin issuers hold 30-60% of reserves in commercial bank deposits, instead favoring short-maturity reserve assets, aligning EU rules closer to Britain's systemic sterling stablecoin policy that excludes bank deposits from coin backing."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+      "current_state_zh": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+      "entities": [
+        "cosmos",
+        "governance-attack",
+        "neutron"
+      ],
+      "event_id": "evt_30c06aaf6dbebbc2",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-23T17:21:31.878864Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:31.878864Z",
+      "last_updated_at": "2026-09-23T17:21:31.878864Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Cosmos hub halts for 24 hours after Neutron governance attack",
+      "title_zh": "Cosmos hub halts for 24 hours after Neutron governance attack",
+      "topics": [
+        "chain-halt",
+        "cosmos",
+        "defi-exploit",
+        "governance-attack",
+        "neutron"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+          "current_state_zh": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+          "detailed_summary_en": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+          "detailed_summary_zh": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+          "event_id": "evt_30c06aaf6dbebbc2",
+          "first_seen_at": "2026-09-23T17:21:31.878864Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T14:31:02Z",
+          "published_at": "2026-09-23T14:31:02Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/cosmos-hub-halts-for-24-hours-after-neutron-governance-attack/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:01f1204459ebd508"
+          ],
+          "time_precision": "published",
+          "title_en": "Cosmos hub halts for 24 hours after Neutron governance attack",
+          "title_zh": "Cosmos hub halts for 24 hours after Neutron governance attack",
+          "update_id": "upd_6d5655698145634c",
+          "update_type": "initial",
+          "what_changed_en": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday.",
+          "what_changed_zh": "Cosmos Hub validators halted block production for more than 24 hours after a malicious 'AI Agent Takeover' governance proposal passed on Neutron, allowing an attacker to take control of the Astroport and Drop applications and drain contracts, with about 20% of the ~$9.5M in affected assets extracted before block production resumed on Wednesday."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+      "current_state_zh": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+      "entities": [
+        "fbi",
+        "hacking",
+        "shinyhunters"
+      ],
+      "event_id": "evt_a5fa3cb28a743bd6",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-23T17:21:31.929293Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:31.929293Z",
+      "last_updated_at": "2026-09-23T17:21:31.929293Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto hacking group ShinyHunters says it stole data of 5,000 FBI agents",
+      "title_zh": "Crypto hacking group ShinyHunters says it stole data of 5,000 FBI agents",
+      "topics": [
+        "cybersecurity",
+        "data-breach",
+        "fbi",
+        "hacking",
+        "shinyhunters"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+          "current_state_zh": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+          "detailed_summary_en": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+          "detailed_summary_zh": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+          "event_id": "evt_a5fa3cb28a743bd6",
+          "first_seen_at": "2026-09-23T17:21:31.929293Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T13:04:50Z",
+          "published_at": "2026-09-23T13:04:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/crypto-hacking-group-shinyhunters-says-it-stole-data-of-5000-fbi-agents/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:08b9d5372f71bab5"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto hacking group ShinyHunters says it stole data of 5,000 FBI agents",
+          "title_zh": "Crypto hacking group ShinyHunters says it stole data of 5,000 FBI agents",
+          "update_id": "upd_74d96e8b428c4ab6",
+          "update_type": "initial",
+          "what_changed_en": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group.",
+          "what_changed_zh": "Crypto hacking collective ShinyHunters claims it breached FBI databases and stole personal details of 5,000 agents, sharing samples that Reuters partially verified, and says the theft was retaliation for a May 2026 FBI report on the group."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+      "current_state_zh": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+      "entities": [
+        "openai",
+        "ukraine"
+      ],
+      "event_id": "evt_67174c285082e2ce",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-23T17:21:33.387770Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:33.387770Z",
+      "last_updated_at": "2026-09-23T17:21:33.387770Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "OpenAI extends cyber access to Ukraine for civilian defense",
+      "title_zh": "OpenAI extends cyber access to Ukraine for civilian defense",
+      "topics": [
+        "ai-safety",
+        "cybersecurity",
+        "government-deployment",
+        "openai",
+        "ukraine"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+          "current_state_zh": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+          "detailed_summary_en": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+          "detailed_summary_zh": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+          "event_id": "evt_67174c285082e2ce",
+          "first_seen_at": "2026-09-23T17:21:33.387770Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T13:00:00Z",
+          "published_at": "2026-09-23T13:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "OpenAI Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense"
+            }
+          ],
+          "story_ids": [
+            "rss:openai.com_blog_rss.xml:9328fa400dd37e6b"
+          ],
+          "time_precision": "published",
+          "title_en": "OpenAI extends cyber access to Ukraine for civilian defense",
+          "title_zh": "OpenAI extends cyber access to Ukraine for civilian defense",
+          "update_id": "upd_47d3c6ded4d70c78",
+          "update_type": "initial",
+          "what_changed_en": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks.",
+          "what_changed_zh": "OpenAI is expanding its Daybreak cybersecurity program to the Government of Ukraine, granting access intended to help defend civilian infrastructure against cyberattacks."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+      "current_state_zh": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+      "entities": [
+        "again",
+        "are",
+        "but",
+        "dips",
+        "flying",
+        "forks",
+        "its"
+      ],
+      "event_id": "evt_64455d891a36a8d0",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-23T17:21:34.702503Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:34.702503Z",
+      "last_updated_at": "2026-09-23T17:21:34.702503Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitcoin Dips, But Its Forks Are Flying Again",
+      "title_zh": "Bitcoin Dips, But Its Forks Are Flying Again",
+      "topics": [
+        "bitcoin-cash",
+        "bitcoin-sv",
+        "cme-futures",
+        "derivatives",
+        "market-rotation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+          "current_state_zh": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+          "detailed_summary_en": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+          "detailed_summary_zh": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+          "event_id": "evt_64455d891a36a8d0",
+          "first_seen_at": "2026-09-23T17:21:34.702503Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T15:56:03Z",
+          "published_at": "2026-09-23T15:56:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379048/bitcoin-dips-but-forks-are-flying-bch-bsv"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:427cf1b395bcffe1"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitcoin Dips, But Its Forks Are Flying Again",
+          "title_zh": "Bitcoin Dips, But Its Forks Are Flying Again",
+          "update_id": "upd_b3d4333ce008fb71",
+          "update_type": "initial",
+          "what_changed_en": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high.",
+          "what_changed_zh": "Bitcoin Cash and Bitcoin SV surged (roughly 30% and 20% respectively) as traders rotated into Bitcoin forks following CME Group's announcement that it will launch BCH and Uniswap futures on Oct. 19, while Bitcoin itself pulled back toward $84,000 after nearing a seven-month high."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+      "current_state_zh": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+      "entities": [
+        "advisory",
+        "cftc",
+        "contracts",
+        "invite",
+        "manipulation",
+        "market",
+        "mention",
+        "prediction",
+        "says",
+        "staff"
+      ],
+      "event_id": "evt_f37b927a4abfce95",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-23T17:21:35.185507Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:35.185507Z",
+      "last_updated_at": "2026-09-23T17:21:35.185507Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CFTC Staff Advisory Says Prediction Market 'Mention' Contracts Invite Manipulation",
+      "title_zh": "CFTC Staff Advisory Says Prediction Market 'Mention' Contracts Invite Manipulation",
+      "topics": [
+        "cftc",
+        "event-contracts",
+        "market-manipulation",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+          "current_state_zh": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+          "detailed_summary_en": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+          "detailed_summary_zh": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+          "event_id": "evt_f37b927a4abfce95",
+          "first_seen_at": "2026-09-23T17:21:35.185507Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T10:43:46Z",
+          "published_at": "2026-09-23T10:43:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379030/cftc-staff-advisory-says-prediction-market-mention-contracts-invite-manipulation"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:c65600aff3fd4372"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC Staff Advisory Says Prediction Market 'Mention' Contracts Invite Manipulation",
+          "title_zh": "CFTC Staff Advisory Says Prediction Market 'Mention' Contracts Invite Manipulation",
+          "update_id": "upd_bbfc323631603330",
+          "update_type": "initial",
+          "what_changed_en": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption.",
+          "what_changed_zh": "CFTC market oversight staff advised that prediction market contracts settling on whether a named person says certain words, appears somewhere, or interacts with others should be presumed readily susceptible to manipulation, with exchanges required to present heightened surveillance evidence to rebut the presumption."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+      "current_state_zh": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+      "entities": [
+        "esma"
+      ],
+      "event_id": "evt_ced6f424c20f5400",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-23T17:21:35.664316Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:35.664316Z",
+      "last_updated_at": "2026-09-23T17:21:35.664316Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "ESMA to prioritize EU-wide AI and tokenization supervision in 2027",
+      "title_zh": "ESMA to prioritize EU-wide AI and tokenization supervision in 2027",
+      "topics": [
+        "ai-supervision",
+        "esma",
+        "eu-regulation",
+        "securities-regulation"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+          "current_state_zh": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+          "detailed_summary_en": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+          "detailed_summary_zh": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+          "event_id": "evt_ced6f424c20f5400",
+          "first_seen_at": "2026-09-23T17:21:35.664316Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T13:40:00Z",
+          "published_at": "2026-09-23T13:40:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/esma-to-focus-eu-wide-supervision-on-ai-and-tokenization-from-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:33ddc0cce682a189"
+          ],
+          "time_precision": "published",
+          "title_en": "ESMA to prioritize EU-wide AI and tokenization supervision in 2027",
+          "title_zh": "ESMA to prioritize EU-wide AI and tokenization supervision in 2027",
+          "update_id": "upd_cfd83766dc1d02e1",
+          "update_type": "initial",
+          "what_changed_en": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches.",
+          "what_changed_zh": "The European Securities and Markets Authority will make AI and tokenization the first focus of a new EU-wide supervisory priority starting in 2027, with national regulators mapping client-facing uses, conducting spot checks on affected firms, and developing common oversight approaches."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+      "current_state_zh": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+      "entities": [
+        "capital",
+        "moonpay",
+        "north",
+        "north-capital"
+      ],
+      "event_id": "evt_ccfef88cbbcf37aa",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T17:21:36.041675Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:36.041675Z",
+      "last_updated_at": "2026-09-23T17:21:36.041675Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "MoonPay to buy North Capital in all-stock deal worth over $60M",
+      "title_zh": "MoonPay to buy North Capital in all-stock deal worth over $60M",
+      "topics": [
+        "broker-dealer",
+        "ma",
+        "moonpay",
+        "north-capital",
+        "rwa",
+        "tokenized-securities"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+          "current_state_zh": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+          "detailed_summary_en": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+          "detailed_summary_zh": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+          "event_id": "evt_ccfef88cbbcf37aa",
+          "first_seen_at": "2026-09-23T17:21:36.041675Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T13:00:00Z",
+          "published_at": "2026-09-23T13:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/moonpay-north-capital-acquisition?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/23/moonpay-to-acquire-sec-registered-north-capital-in-usd60-million-all-stock-deal"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:2bd6ad923f816570",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:9eae64238e30018d"
+          ],
+          "time_precision": "published",
+          "title_en": "MoonPay to buy North Capital in all-stock deal worth over $60M",
+          "title_zh": "MoonPay to buy North Capital in all-stock deal worth over $60M",
+          "update_id": "upd_78e397e227ecd07c",
+          "update_type": "initial",
+          "what_changed_en": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets.",
+          "what_changed_zh": "MoonPay agreed to acquire private-markets infrastructure provider North Capital in an all-stock deal worth over $60 million, adding a US broker-dealer and trading infrastructure to support expansion into tokenized securities and real-world assets."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+      "current_state_zh": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+      "entities": [
+        "cftc",
+        "sec"
+      ],
+      "event_id": "evt_5740230c654b6f78",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-23T17:21:36.199234Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T17:21:36.199234Z",
+      "last_updated_at": "2026-09-23T17:21:36.199234Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CFTC chair pushes tokenization as SEC opens door to onchain stocks",
+      "title_zh": "CFTC chair pushes tokenization as SEC opens door to onchain stocks",
+      "topics": [
+        "cftc",
+        "crypto-regulation",
+        "rwa",
+        "sec"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+          "current_state_zh": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+          "detailed_summary_en": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+          "detailed_summary_zh": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+          "event_id": "evt_5740230c654b6f78",
+          "first_seen_at": "2026-09-23T17:21:36.199234Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T10:06:55Z",
+          "published_at": "2026-09-23T10:06:55Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/cftc-selig-mass-tokenization-sec-onchain-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:1f69cbfeb0de159a"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC chair pushes tokenization as SEC opens door to onchain stocks",
+          "title_zh": "CFTC chair pushes tokenization as SEC opens door to onchain stocks",
+          "update_id": "upd_e1f294aed29a6363",
+          "update_type": "initial",
+          "what_changed_en": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback.",
+          "what_changed_zh": "CFTC Chair Michael Selig told the US Treasury Market Conference that financial markets should prepare for 'mass tokenization' of real-world assets with near-instant settlement, as the SEC simultaneously moves toward permitting onchain stocks despite the CLARITY Act setback."
+        }
+      ]
     }
   ],
   "pending_relations": [
@@ -79866,7 +81233,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "Jev: impact 4.05/5; novelty 2.44/5; freshness uncertain. ",
         "ai_score": 7.3,

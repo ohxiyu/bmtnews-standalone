@@ -4,30 +4,37 @@
   "url": "https://bmt.news/events/evt_a97d02e01cdbe43d/",
   "json": "https://bmt.news/api/events/evt_a97d02e01cdbe43d.json",
   "type": "other",
-  "status": "monitoring",
+  "status": "closed",
   "category": "crypto",
   "title": {
     "zh": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
     "en": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com"
   },
   "current_state": {
-    "zh": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com",
-    "en": "Microsoft and Coinbase probe leads to arrest of crooks behind 'EvilTokens', a DIY phishing network powered by AI - fortune.com"
+    "zh": "EvilTokens 基础设施已被拆除，相关域名和网站被查获/关停；Coinbase 已追踪约 110 万美元平台收入；两名嫌疑人被捕后获有条件保释；微软警告同类认证滥用和 AI 辅助欺诈模式仍可能被复用。",
+    "en": "EvilTokens infrastructure has been dismantled, with related websites and domains seized/disabled; Coinbase traced about $1.1 million in platform revenue; two suspects were arrested and released on conditional bail; Microsoft warned the same authentication abuse and AI-assisted fraud model can still be reused."
   },
   "first_seen_at": "2026-09-22T17:08:19.915851+00:00",
-  "last_updated_at": "2026-09-22T17:08:19.915851+00:00",
-  "last_material_change_at": "2026-09-22T17:08:19.915851+00:00",
+  "last_updated_at": "2026-09-23T17:21:31.375874+00:00",
+  "last_material_change_at": "2026-09-23T17:21:31.375874+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "coinbase",
     "diy",
     "eviltokens",
-    "microsoft"
+    "microsoft",
+    "phishing"
   ],
   "identifiers": [],
-  "topics": [],
+  "topics": [
+    "ai-fraud",
+    "coinbase",
+    "cybersecurity",
+    "microsoft",
+    "phishing"
+  ],
   "updates": [
     {
       "update_id": "upd_e89e47ae33f7f769",
@@ -63,6 +70,44 @@
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9xaWhBSmk5Y1RsQ0JJSERtcVNGMWhJbUdaRHBRUkFtdURZMDRaX0RpcTZrNlFzNVVReGxJa1pNNVpsMnNyaDNrTnllZkhTekdNbXFHOGhsQU1nY05yc0hlRVBOWENzby1sRlBV?oc=5",
           "label": "fortune.com",
           "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_49f5bd44b3f06aad",
+      "event_id": "evt_a97d02e01cdbe43d",
+      "occurred_at": "2026-09-23T10:20:37Z",
+      "published_at": "2026-09-23T10:20:37Z",
+      "first_seen_at": "2026-09-23T17:21:31.375874Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Coinbase traced $1.1 million crypto trail behind AI phishing service EvilTokens",
+      "title_en": "Coinbase traced $1.1 million crypto trail behind AI phishing service EvilTokens",
+      "what_changed_zh": "新增事实：Coinbase 追踪到 EvilTokens 约 110 万美元平台收入，流向四个 Tron 地址（2025 年 10 月至 2026 年 6 月）；该钓鱼服务入侵超过 12,000 个邮箱、涉及 10,000 多个组织；执法方查获 50 个网站并关停 150 多个相关域名；英国警方于 9 月 11 日逮捕两名嫌疑人，后获有条件保释。",
+      "what_changed_en": "New facts: Coinbase traced about $1.1 million in EvilTokens platform revenue across four Tron addresses from October 2025 to June 2026; the phishing service compromised over 12,000 inboxes across more than 10,000 organizations; authorities seized 50 websites and disabled over 150 related domains; UK police arrested two suspects on Sept. 11, later released on conditional bail.",
+      "current_state_zh": "EvilTokens 基础设施已被拆除，相关域名和网站被查获/关停；Coinbase 已追踪约 110 万美元平台收入；两名嫌疑人被捕后获有条件保释；微软警告同类认证滥用和 AI 辅助欺诈模式仍可能被复用。",
+      "current_state_en": "EvilTokens infrastructure has been dismantled, with related websites and domains seized/disabled; Coinbase traced about $1.1 million in platform revenue; two suspects were arrested and released on conditional bail; Microsoft warned the same authentication abuse and AI-assisted fraud model can still be reused.",
+      "detailed_summary_zh": "Microsoft and Coinbase helped dismantle EvilTokens, an AI-assisted phishing service that abused Microsoft's device-code login flow to compromise more than 12,000 inboxes across 10,000 organizations, tracing a $1.1 million crypto trail and seizing 50 websites plus 150 related domains.",
+      "detailed_summary_en": "Microsoft and Coinbase helped dismantle EvilTokens, an AI-assisted phishing service that abused Microsoft's device-code login flow to compromise more than 12,000 inboxes across 10,000 organizations, tracing a $1.1 million crypto trail and seizing 50 websites plus 150 related domains.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:c4046ffc701821ee"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/coinbase-traced-1-1-million-crypto-trail-behind-ai-phishing-service-eviltokens/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
           "official": false
         }
       ]
