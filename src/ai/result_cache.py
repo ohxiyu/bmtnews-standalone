@@ -14,7 +14,7 @@ from . import prompts
 
 
 CACHE_VERSION = 1
-ENRICHMENT_POLICY_VERSION = "news-editorial-v3"
+ENRICHMENT_POLICY_VERSION = "news-editorial-v4"
 ANALYSIS_FIELDS = ("ai_score", "ai_reason", "ai_summary", "ai_tags")
 ENRICHMENT_PREFIXES = (
     "title_",
@@ -205,7 +205,7 @@ class AnalysisResultCache:
             for key, val in value.items()
         )
         verified_short = (
-            value.get("evaluation_grounding") in {"supported_translation", "supported_core"}
+            value.get("evaluation_grounding") in {"supported_translation", "supported_core", "supported_sections"}
             and all(value.get(f"detailed_summary_{lang}") for lang in ("en", "zh"))
         )
         if value and (complete or verified_short):

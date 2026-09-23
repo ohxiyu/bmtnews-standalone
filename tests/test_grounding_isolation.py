@@ -187,6 +187,8 @@ def test_rich_news_keeps_verified_core_and_only_supported_context(monkeypatch, r
         async def assess_grounding(self, state):
             checked.append(state)
             return decision("unsupported" if reject_optional and len(checked) == 1 else "supported")
+        async def assess_grounding_sections(self, state):
+            return {name: decision("unsupported") for name in state["generated_sections"]}
 
     class Client:
         async def complete(self, **kwargs): return json.dumps(RICH_REPORT)
@@ -220,6 +222,83 @@ def test_rich_news_keeps_verified_core_and_only_supported_context(monkeypatch, r
         assert row.metadata["community_discussion_zh"]
         assert row.metadata["market_impact_en"]
         assert row.metadata["sources"] == [{"url": "https://example.com/context", "title": "Context"}]
+
+
+def test_supported_background_and_links_survive_unverified_market_analysis(monkeypatch):
+    section_state = {}
+
+    class Evaluator:
+        async def assess_grounding(self, state):
+            return decision("unsupported" if "background_en" in state["generated"] else "supported")
+        async def assess_grounding_sections(self, state):
+            section_state.update(state["generated_sections"])
+            return {name: decision("supported" if name == "background" else "unsupported")
+                    for name in state["generated_sections"]}
+
+    class Client:
+        async def complete(self, **kwargs): return json.dumps(RICH_REPORT)
+
+    monkeypatch.setattr("src.ai.enricher.create_evaluator", lambda _: Evaluator())
+    enricher = ContentEnricher(Client())
+    async def concepts(*_): return ["protocol"]
+    async def search(*_): return [{"title": "Context", "url": "https://example.com/context",
+                                  "body": "Previously allowed withdrawals"}]
+    monkeypatch.setattr(enricher, "_extract_concepts", concepts)
+    monkeypatch.setattr(enricher, "_cached_web_search", search)
+    row = story()
+    asyncio.run(enricher.enrich_batch([row]))
+
+    assert row.metadata["enrichment_status"] == "partial"
+    assert row.metadata["background_en"] == RICH_REPORT["background_en"]
+    assert row.metadata["sources"] == [{"url": "https://example.com/context", "title": "Context"}]
+    assert section_state["background"]["sources"] == ["https://example.com/context"]
+    assert "https://evil.example/extra" not in json.dumps(section_state)
+    assert "market_impact_en" not in row.metadata
+    assert "why_it_matters_en" not in row.metadata
+    assert row.metadata["grounding_checks"]["context_background"]["accepted"]
+
+
+def test_optional_section_evaluator_keeps_90_percent_gate(monkeypatch):
+    monkeypatch.setenv("AI_GATEWAY_API_KEY", "test")
+    evaluator = JevEvaluator(EvaluationConfig(enabled=True))
+    async def evaluate(state, questions, **kwargs):
+        assert set(questions) == {"background", "market_impact"}
+        return {
+            "background": {"choice": "supported", "probabilities":
+                           {"supported": .95, "unsupported": .03, "insufficient": .02}},
+            "market_impact": {"choice": "supported", "probabilities":
+                              {"supported": .85, "unsupported": .10, "insufficient": .05}},
+        }
+    monkeypatch.setattr(evaluator, "evaluate", evaluate)
+    result = asyncio.run(evaluator.assess_grounding_sections({"generated_sections": {
+        "background": {"background_en": "Context"},
+        "market_impact": {"market_impact_en": "Impact"},
+    }}))
+    assert result["background"]["accepted"]
+    assert not result["market_impact"]["accepted"]
+
+
+def test_optional_evaluator_outage_keeps_only_preverified_news_core(monkeypatch):
+    class Evaluator:
+        async def assess_grounding(self, state):
+            return decision("unsupported" if "background_en" in state["generated"] else "supported")
+        async def assess_grounding_sections(self, state):
+            raise EvaluationError("http_error", 503)
+
+    class Client:
+        async def complete(self, **kwargs): return json.dumps(RICH_REPORT)
+
+    monkeypatch.setattr("src.ai.enricher.create_evaluator", lambda _: Evaluator())
+    enricher = ContentEnricher(Client())
+    async def no_concepts(*_): return []
+    monkeypatch.setattr(enricher, "_extract_concepts", no_concepts)
+    row = story()
+    asyncio.run(enricher.enrich_batch([row]))
+    assert row.metadata["enrichment_status"] == "partial"
+    assert row.metadata["enrichment_fallback_reason"] == "optional_verification_unavailable"
+    assert row.metadata["detailed_summary_en"]
+    assert "background_en" not in row.metadata
+    assert "sources" not in row.metadata
 
 
 def test_editorial_tags_survive_jev_enrichment_cache(tmp_path):
