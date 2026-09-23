@@ -9,8 +9,8 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/116",
   "owner": "Codex / jev-context-salvage",
   "branch": "agent/jev-context-salvage",
-  "last_verified_commit": "507a62d1febb1084a48663c423f0b1e45f89a4e0",
-  "pr": "pending",
+  "last_verified_commit": "d62fe32b560f632e39ceca2297d27116536d9d43",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/117",
   "completed": [
     "PR115 已合并并重建 2026-09-23 日报；正文恢复分段，10 条中 7 条有标签，但背景与引用仍缺失",
     "新增按段核验：正文事实、背景和参考链接、市场影响、讨论分别保留已通过 90% Jev 门槛的字段",

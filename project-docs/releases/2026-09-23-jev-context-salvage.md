@@ -2,7 +2,7 @@
 
 - Issue: [#116](https://github.com/ohxiyu/bmtnews-standalone/issues/116)
 - Branch: `agent/jev-context-salvage`
-- PR: pending
+- PR: [#117](https://github.com/ohxiyu/bmtnews-standalone/pull/117)
 - Base source: `507a62d1febb1084a48663c423f0b1e45f89a4e0`
 - Authority: 用户本轮要求合并并部署；仍须绿灯 PR，禁止直接提交 main 或手改 gh-pages。
 
