@@ -46,3 +46,12 @@
 - [PR124 检查](https://github.com/ohxiyu/bmtnews-standalone/pull/124/checks)：`test`、`analyze`、`governance`、CodeQL 与 Cloudflare Pages Preview 全部通过；Preview 不是生产部署。
 - 已覆盖：配置无旧密钥加载、旧评分缓存拒绝、生成模型直接评分/分类、实际 fallback 模型来源、扩写可选字段、归档来源；既有测试覆盖语义去重两次失败后停刊及脱敏日志。
 - 未运行：真实 AI、日报/重建、渠道发送、生产 Worker 部署。未验证新模型评分分布与线上渲染；代码、测试、PR、合并、部署及生产验收必须分开记录。
+
+## 授权合并后的切换记录（2026-09-24 00:39 Asia/Shanghai）
+
+- 用户另行明确授权“合并部署上线”。[PR124](https://github.com/ohxiyu/bmtnews-standalone/pull/124) 已合并至 main，合并提交 `b898d103d458d07d412d145db542262f304de49a`；远端任务分支已删除，原任务提交已验证为 main 祖先。上线记录由 [Issue125](https://github.com/ohxiyu/bmtnews-standalone/issues/125) 的独立文档 PR 补充。
+- Source commit：下一期日报将从上述 main 提交取代码。当前仍在生产的 2026-09-23 日报来自 `8e4447ba5ade934b2bcbc5be58a0908729c8a120`，`gh-pages` 产物提交 `58bf9d1372a117b179c70154df886eec713585c5`。截至本次核验，[生产 API](https://bmt.news/api/latest.json) 为 2026-09-23、9 条、`generated_at=2026-09-23T10:17:32.934485Z`；[首页](https://bmt.news/) 返回 HTTP 200。旧刊期仍使用旧评分，历史分数不改写。
+- Deployment：本 PR 未改变 `docs/` 网站代码或 `ops/daily-dispatcher/` Worker；无需手动部署 Worker，也不调用 Pages Deploy Hook 来伪造一次新日报。生产产物由已有的 Daily Edition 工作流自动写入 `gh-pages`，并由 Pages 发布。下一期 `[2026-09-23 07:00, 2026-09-24 07:00)` 在北京时间 07:00 截止、07:26 开始调度；截至记录时尚未到窗口，因此**新评分器尚未在生产日报验证**。当前没有本次切换的生产部署 ID / 新工作流 URL。
+- Worker version：not changed；独立调度 Worker 的部署版本本次未核验。没有修改 Cron、Secret 或分发队列，也没有触发 force-publish、AI 或渠道调用。
+- 首期验收：查看 2026-09-24 自动日报运行提交是否为 `b898d103d458d07d412d145db542262f304de49a` 或其后继；检查 gh-pages 产物和公网 `/api/latest.json` 的刊期、非空条目、评分器标识、首页与中英文详情页；人工检查 7.0 门槛命中率、前三条同事件重复、背景/影响/引用覆盖率，再独立检查 Telegram、X、币安广场投递。未观察到这些证据前，`deployed` 和 `production_verified` 均保持 pending。
+- Rollback：如首期严重异常，先暂停或修复自动出刊，保留已有 `gh-pages` 产物及分发状态；获授权后在独立分支 revert PR124，经 CI、PR 和发布流程回退。不得直接推 main、覆盖历史刊期或清空队列。
