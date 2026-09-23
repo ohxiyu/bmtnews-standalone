@@ -54,14 +54,23 @@
       "current_state_en": "Coinbase is building a post-quantum cryptography plan to protect Bitcoin custody for approximately $250 billion in assets under management.",
       "detailed_summary_zh": "Coinbase is building a post-quantum cryptography plan to protect Bitcoin custody for approximately $250 billion in assets under management.",
       "detailed_summary_en": "Coinbase is building a post-quantum cryptography plan to protect Bitcoin custody for approximately $250 billion in assets under management.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "后量子密码学指的是设计上能够抵御经典计算机和未来大规模量子计算机攻击的公钥算法。目前的量子计算机尚不具备破解广泛使用密码算法的算力，但由于迁移到抗量子密码学需要数年时间，密码学家已在为「Q-Day」做准备。2024 年，美国国家标准与技术研究院（NIST）发布了其首批三项后量子密码标准的最终版本。围绕比特币量子风险的担忧，部分集中在其公钥以及大量长期未动的持仓上，例如据称属于中本聪的约 100 万枚比特币。",
+      "background_en": "Post-quantum cryptography refers to public-key algorithms designed to remain secure against attacks from both classical and future large-scale quantum computers. Quantum computers today lack the processing power to break widely used cryptographic algorithms, but cryptographers are preparing for \"Q-Day\" because migrating to quantum-safe cryptography takes years. In 2024, the U.S. National Institute of Standards and Technology released final versions of its first three post-quantum cryptography standards. Concerns about quantum exposure to Bitcoin have focused in part on public keys and on large dormant holdings such as the roughly 1 million BTC attributed to Satoshi Nakamoto.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径在于托管环节：存放在大型交易所的机构比特币理论上可以迁移到抗量子的密钥管理体系，这对那些将长期密钥安全要求纳入投资授权的客户尤为重要。该消息属于规划性举措，而非持仓或交易的即时变化，因此其市场影响更可能体现在围绕量子风险的情绪层面，而非资金流层面。",
+      "market_impact_en": "The transmission path runs through custody: institutional bitcoin held with a major exchange could in principle be migrated to quantum-resistant key management, which matters to clients whose mandates include long-horizon key-security requirements. The news is a planning initiative rather than a live change to holdings or trading, so any market effect would most likely show up in sentiment around quantum risk rather than in flows.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Post-quantum_cryptography",
+          "title": "Post-quantum cryptography"
+        },
+        {
+          "url": "https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lDaS12d0RCSGdDQ2dES1YtaVB5Z0FQAQ?hl=en-US&gl=US&ceid=US:en",
+          "title": "Google News - Quantum computing threat to Bitcoin - Overview"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:dff6d269c87bb5d8"

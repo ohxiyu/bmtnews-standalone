@@ -53,14 +53,27 @@
       "current_state_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
       "detailed_summary_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
       "detailed_summary_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Alpenglow 是 Solana 自 TowerBFT 以来首次重大共识层替换，由 Anza 于 2025 年 5 月提出。它延续了此前的性能升级：Solana 本月激活 Transaction V1，将最大交易大小从 1,232 字节提升至 4,096 字节，其 slot 时间路线图也逐步把目标从 400 毫秒压缩至 200 毫秒。",
+      "background_en": "Alpenglow is Solana's first major consensus replacement since TowerBFT and was presented by Anza in May 2025. It follows other performance work: Solana activated Transaction V1 this month, lifting maximum transaction size to 4,096 bytes from 1,232, and its slot-time roadmap has progressively cut the target from 400 milliseconds toward 200 milliseconds.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
-      "importance_score": 7.0,
-      "references": [],
+      "market_impact_zh": "Alpenglow 对市场的传导路径主要体现在结算延迟上：更快的最终确认可能影响 Solana 上 DEX 与代币化现实世界资产等场所的市场结构，以及验证者和基础设施服务商承担的运营要求。报道指出，SOL 在本周接近 120 美元后于发稿时报约 117 美元，过去一个月上涨约 25%，而网络上的现实世界资产规模在 9 月初达到约 46 亿美元。",
+      "market_impact_en": "Alpenglow's transmission path to markets runs mainly through settlement latency: faster finality could affect market structure for Solana-based venues such as DEXs and tokenized real-world assets, as well as the operational requirements placed on validators and infrastructure providers. The article notes SOL traded around $117 after nearing $120 this week, up roughly 25% over the past month, and that real-world assets on the network reached about $4.6 billion in early September.",
+      "importance_score": 7.5,
+      "references": [
+        {
+          "url": "https://solana.com/upgrades/alpenglow",
+          "title": "Alpenglow | Solana Media"
+        },
+        {
+          "url": "https://chainstack.com/solana-alpenglow-votor-towerbft/",
+          "title": "Solana Alpenglow: how Votor replaces TowerBFT | Chainstack Blog"
+        },
+        {
+          "url": "https://solanacompass.com/learn/accelerate-25/scale-or-die-at-accelerate-2025-introducing-alpenglow-solanas-new-consensus",
+          "title": "Solana Alpenglow: New Consensus Protocol with... | Solana Compass"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:9a77b20c784ee587"

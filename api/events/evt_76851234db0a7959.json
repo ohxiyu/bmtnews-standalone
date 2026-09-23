@@ -48,14 +48,27 @@
       "current_state_en": "Circle launched StableFX on its Arc blockchain, a 24/7 stablecoin foreign-exchange engine that lets vetted businesses request competing liquidity-provider quotes and settle both legs of a currency trade atomically, targeting the nearly $10 trillion-a-day FX market that still runs on banking-hour infrastructure.",
       "detailed_summary_zh": "Circle launched StableFX on its Arc blockchain, a 24/7 stablecoin foreign-exchange engine that lets vetted businesses request competing liquidity-provider quotes and settle both legs of a currency trade atomically, targeting the nearly $10 trillion-a-day FX market that still runs on banking-hour infrastructure.",
       "detailed_summary_en": "Circle launched StableFX on its Arc blockchain, a 24/7 stablecoin foreign-exchange engine that lets vetted businesses request competing liquidity-provider quotes and settle both legs of a currency trade atomically, targeting the nearly $10 trillion-a-day FX market that still runs on banking-hour infrastructure.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "全球外汇市场每日成交近 10 万亿美元，Circle 表示，尽管支付、加密交易和数字商业日益全年无休运转，该市场很大一部分仍依赖围绕银行作息设计的基础设施。Arc 是 Circle 推出的兼容 EVM、以稳定币为原生的 Layer 1 区块链，于 9 月 16 日上线主网，据称测试网阶段已有 100 多家合作伙伴参与。StableFX 将链下执行与链上结算分离，交易对手先在 Arc 上向智能合约托管资金，随后两条结算腿要么同时转移，要么都不转移。",
+      "background_en": "The global FX market moves nearly $10 trillion daily, and Circle said much of it still relies on infrastructure designed around banking schedules even as payments, crypto trading and digital commerce increasingly operate continuously. Arc is Circle's EVM-compatible, stablecoin-native Layer 1 blockchain, which reached mainnet on Sept. 16 and was reported to have drawn more than 100 partners during its testnet phase. StableFX separates off-chain execution from on-chain settlement, with counterparties funding a smart-contract escrow on Arc before both legs transfer together or neither does.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "传导路径在于稳定币的实用性与链上结算量：若机构外汇交易台将货币对交易转向 StableFX，作为结算资产的 USDC 和 EURC 需求以及 Arc 上的链上活动量都可能上升，同时提供机构稳定币外汇服务的竞争者，以及主导非营业时间外汇的传统银行结算通道，将面对一个新交易场所争夺这部分订单流。其采用程度取决于已上线货币对的覆盖范围、流动性提供商的参与，以及稳定币兑换本地法币的可靠通道。",
+      "market_impact_en": "The transmission path runs through stablecoin utility and on-chain settlement volume: if institutional FX desks route currency pairs through StableFX, demand for USDC and EURC as settlement assets and activity on Arc would rise, while competitors offering institutional stablecoin FX and the banking rails that dominate after-hours FX face a new venue competing for that order flow. Adoption depends on live currency-pair coverage, liquidity-provider participation and reliable stablecoin-to-local-fiat ramps.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.circle.com/stablefx",
+          "title": "Circle StableFX | Stablecoin FX Engine | Circle"
+        },
+        {
+          "url": "https://circle-167b8d39.mintlify.app/stablefx/concepts/technical-guide",
+          "title": "StableFX Technical Guide - Circle Docs"
+        },
+        {
+          "url": "https://web3.bitget.com/en/academy/what-is-arc-blockchain-mainnet",
+          "title": "What Is Arc Blockchain? Circle Arc Mainnet Launch on September 16"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:1845e6f41d30640c"

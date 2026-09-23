@@ -58,14 +58,27 @@
       "current_state_en": "Coinbase launched fixed-rate USDC loans against Bitcoin collateral powered by Morpho, the first enterprise-scale deployment of Morpho Midnight, adding to its existing Morpho-based variable-rate book of over $1.4 billion in active loans.",
       "detailed_summary_zh": "Coinbase launched fixed-rate USDC loans against Bitcoin collateral powered by Morpho, the first enterprise-scale deployment of Morpho Midnight, adding to its existing Morpho-based variable-rate book of over $1.4 billion in active loans.",
       "detailed_summary_en": "Coinbase launched fixed-rate USDC loans against Bitcoin collateral powered by Morpho, the first enterprise-scale deployment of Morpho Midnight, adding to its existing Morpho-based variable-rate book of over $1.4 billion in active loans.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Morpho 是 2021 年成立的开源 DeFi 借贷网络，运行于以太坊及其他兼容 EVM 的区块链上，允许企业和应用创建定制化借贷市场。Morpho Midnight 是面向 EVM 实现的非托管固定利率借贷协议，围绕隔离的、不可变的、可无许可创建的市场来组织。贷款以 USDC 计价，USDC 是由 Circle 发行的全额储备稳定币，设计目标是维持与美元等值。这一借贷业务的推进并非一帆风顺：今年 2 月比特币和以太坊价格大幅下跌，导致 Coinbase 贷款账簿出现创纪录的清算，凸显了以波动性资产作抵押借款的风险。",
+      "background_en": "Morpho is an open-source DeFi lending network established in 2021 that operates on Ethereum and other EVM-compatible blockchains, allowing businesses and applications to create customized lending markets. Morpho Midnight is a non-custodial fixed-rate lending protocol implemented for the EVM and organized around isolated, immutable, permissionlessly created markets. The loans are denominated in USDC, a fully reserved stablecoin issued by Circle and designed to maintain a value equivalent to the US dollar. The lending push has not been without turbulence: a sharp drop in Bitcoin and Ethereum prices in February drove record liquidations across Coinbase's loan book, underscoring the risk of borrowing against volatile collateral.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "此次推出扩展了一条以 USDC 计价的信贷渠道，使比特币持有者无需卖出持仓即可获得流动性，其定价与结算经由 Morpho 和 Base 运行，而非完全中心化的账簿。这也将更多与 Coinbase 相关的借贷活动集中到基于 Morpho 的市场中，而 2 月的事件已显示，波动的 BTC 与 ETH 抵押品可以多快地引发连锁清算。",
+      "market_impact_en": "The launch expands a USDC-denominated credit channel in which Bitcoin holders can obtain liquidity without selling their coins, with pricing and settlement running through Morpho and Base rather than a purely centralized book. It also concentrates more Coinbase-related lending activity into Morpho-based markets, where the February episode showed how quickly volatile BTC and ETH collateral can trigger cascading liquidations.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://morpho.org/midnight",
+          "title": "Midnight - Predictable Credit on the Morpho Network"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Morpho_Labs",
+          "title": "Morpho (DeFi lending protocol) - Wikipedia"
+        },
+        {
+          "url": "https://www.circle.com/usdc",
+          "title": "USDC | Powering global finance. Issued by Circle."
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:3afb837c6ebcf610"
