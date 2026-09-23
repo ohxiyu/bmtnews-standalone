@@ -7,30 +7,26 @@ title: Scoring System
 
 After fetching content from all sources, BMTNews uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 
-## Production evaluation policy
+## Production scoring policy
 
-With `ai.evaluator.enabled`, Jev is the only scoring and classification authority.
-All candidates use rubric `jev-news-v2`: impact and novelty each range from 0 to 5,
-with final score `round(2 * (0.75 * impact + 0.25 * novelty), 1)`. A high-confidence
-old recap receives zero. DeepSeek scores, categories and freshness vetoes do not
-participate. DeepSeek generates selected content after ranking.
+The configured generation model (DeepSeek `deepseek-flash` in production) scores
+each uncached candidate directly from 0 to 10 and selects its category in the
+same analysis call. The prompt's 0–2, 3–4, 5–6, 7–8 and 9–10 anchors define
+the scale. The fixed edition window makes old recaps score zero unless they
+contain a concrete new development. Invalid output or exhausted retries score
+zero and are not stored in the analysis cache. Prefilter failure keeps the
+candidate for full analysis.
 
-Each evaluation request has at most two attempts. Account errors do not retry.
-Failed scoring has `ai_score=null` and a sanitized `evaluation_error`; it is not a
-zero-quality judgment, is not cached, and cannot enter ranking. If every attempted
-candidate fails, publication stops. Partial failures leave the remaining uniformly
-scored candidates eligible; existing quality thresholds and quotas still apply.
+The run report counts scores by producing model; each new archive row includes
+`score_model`. Historical scores are not rewritten. Analysis cache fingerprints
+include the configured scorer and a new direct-scoring revision, so scores from
+the retired evaluation policy are not reused. Cache entries expire after 30
+days under the production configuration.
 
-Prefilter errors pass those candidates to full Jev scoring without assigning
-replacement scores. Dedup errors stop publication without calling DeepSeek.
-Successful caches are separated by rubric/configuration and edition window, so
-old mixed-policy results cannot enter the new ranking. Generation verification
-still requires source support; translation cannot bypass it. Diagnostic errors
-preserve HTTP/schema/unsupported distinctions without logging provider payloads.
-
-When evaluation is explicitly disabled, the legacy standalone generation-model
-pipeline remains available for existing configurations; it is never an automatic
-fallback within an enabled Jev run.
+URL deduplication, the event catalog and DeepSeek semantic comparison remain
+separate stages. The semantic comparator retries invalid or transient responses
+once, logs sanitized diagnostics, and stops publication if comparison remains
+unavailable; it does not publish an unchecked batch.
 
 ## Filtering
 
@@ -63,7 +59,7 @@ Items scoring 9.0 or above are featured in the "Today's Highlights" section of t
 Items that pass the score threshold and any balanced digest limits go through a second AI pass for enrichment (`src/ai/enricher.py`):
 
 1. **Concept extraction** — AI identifies 1-3 technical concepts in the item that may need explanation.
-2. **Web search** — Each concept is searched via DuckDuckGo to gather grounding context.
+2. **Web search** — Each concept is searched via DuckDuckGo to gather context.
 3. **Structured analysis** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact
@@ -71,3 +67,7 @@ Items that pass the score threshold and any balanced digest limits go through a 
    - `background` — background knowledge for readers without deep domain expertise
 
 These fields are combined into a `detailed_summary` stored in the item's metadata and used in the final daily summary.
+The writing prompt asks for source-supported claims and reference URLs are
+restricted to observed search results. There is no independent post-generation
+factual verifier; a failed expansion falls back to translation and is reported
+as degraded, rather than excluding the story.

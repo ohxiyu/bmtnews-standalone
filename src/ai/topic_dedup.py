@@ -7,7 +7,6 @@ import logging
 
 from .prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
 from .utils import parse_json_response
-from .evaluator import create_evaluator, EvaluationError, RUBRIC_VERSION
 
 logger = logging.getLogger(__name__)
 
@@ -74,8 +73,6 @@ def response_syntax(response):
 
 async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM, cache=None):
     groups = []
-    evaluator = create_evaluator(getattr(client, "config", None))
-    cache_system = system + ("\n" + RUBRIC_VERSION if evaluator is not None else "")
 
     async def compare(indices):
         lines = []
@@ -86,25 +83,10 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                 f"    Published: {item.published_at.isoformat()}\n"
                 f"    Tags: {', '.join(item.ai_tags or [])[:300]}\n"
                 f"    Summary: {(item.ai_summary or '')[:1200]}"
-                + (f"\n    Source: {(item.content or '')[:1200]}" if evaluator is not None else "")
             )
         user = TOPIC_DEDUP_USER.format(items="\n\n".join(lines))
         request_user = user
-        cached = cache.get_comparison(cache_system, user) if cache is not None else None
-        if evaluator is not None:
-            # Invalid cache entries are recomputed by the same evaluator.
-            if cached is not None:
-                try:
-                    validated = validate_duplicates(cached, len(indices))
-                except ValueError:
-                    cached = None
-            if cached is None:
-                evaluated = await evaluator.duplicates([items[index] for index in indices], system)
-                validated = validate_duplicates(evaluated, len(indices))
-                if cache is not None:
-                    cache.store_comparison(cache_system, user, evaluated)
-            groups.extend(sorted({indices[index] for index in group}) for group in validated)
-            return
+        cached = cache.get_comparison(system, user) if cache is not None else None
         for attempt in range(2):
             payload = None
             response = None
@@ -117,8 +99,8 @@ async def duplicate_groups(client, items, clusters, *, system=TOPIC_DEDUP_SYSTEM
                 for group in validate_duplicates(payload, len(indices)):
                     validated.append(sorted({indices[index] for index in group}))
                 groups.extend(validated)
-                if cache is not None and cached is None and evaluator is None:
-                    cache.store_comparison(cache_system, user, {"duplicates": payload["duplicates"]})
+                if cache is not None and cached is None:
+                    cache.store_comparison(system, user, {"duplicates": payload["duplicates"]})
                 return
             except Exception as exc:
                 cached = None

@@ -24,9 +24,9 @@ verification and handoff conventions.
 
 Crypto moves faster than anyone can read. BMTNews watches exchange announcement
 channels, protocol releases, regulators, and the crypto and AI press, then
-publishes **one ranked edition every morning at 08:30 Asia/Shanghai** — typically
-7 to 14 stories that actually mattered, each with background, market-impact
-analysis, and links to the coverage behind it.
+publishes **one ranked edition every morning, starting at 07:26 Asia/Shanghai** — typically
+7 to 14 stories that actually mattered. Background, market-impact analysis and
+reference links appear when the available source material supports them.
 
 It runs entirely on GitHub Actions and GitHub Pages. There is no server, no
 database, and no runtime service to keep alive: git is the storage layer, and
@@ -42,10 +42,12 @@ collect every ~4h ─► cached scoring ─► incremental event timeline
               events · entities · JSON API · feeds · weekly review
 ```
 
-- **Fixed publication window.** Every edition covers exactly 08:00→08:00 local
+- **Fixed publication window.** Every edition covers exactly 07:00→07:00 local
   time, so nothing is double-counted and nothing silently disappears.
-- **Scored, not just collected.** Each story gets a 0–10 importance score with
-  calibrated anchors; only what clears the bar is published.
+- **Scored, not just collected.** The configured generation model (DeepSeek in
+  production) assigns a direct 0–10 importance score and category in one
+  analysis call, using calibrated anchors. The run report and new archive rows
+  identify the scoring model.
 - **Deduplicated twice.** Identical URLs merge first, then AI topic
   deduplication collapses the same event reported by different outlets — and
   records how many outlets carried it.

@@ -3,6 +3,7 @@
 import os
 import re
 import time
+from contextvars import ContextVar
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Literal, Optional
 from openai import AsyncAzureOpenAI, AsyncOpenAI
@@ -15,6 +16,13 @@ from ..models import AIConfig, AIProvider, AI_PROVIDER_DEFAULTS
 from rich import print as rich_print
 from .tokens import record_usage
 from .policy import prompt_stage, SIMPLE_BUDGETS
+
+
+# A chained provider may serve a completion from a fallback model. Keep the
+# actual producer scoped to the current async task for score provenance.
+LAST_COMPLETION_SCORER: ContextVar[str | None] = ContextVar(
+    "last_completion_scorer", default=None,
+)
 
 
 _ENV_VAR_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
@@ -669,6 +677,9 @@ class ChainedAIClient(AIClient):
                 )
                 if not result or not result.strip():
                     raise ValueError("Empty response from provider")
+                used = self.configs[i]
+                if used is not None:
+                    LAST_COMPLETION_SCORER.set(f"{used.provider.value}:{used.model}")
                 return result
             except Exception as exc:
                 if not self._should_fallback(exc):

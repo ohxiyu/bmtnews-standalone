@@ -1,50 +1,53 @@
 # 当前交接
 
-当前任务：JEV 去重 503 修复已合并并完成 2026-09-23 日报重建。去重故障解除，正文已上线；背景、影响及参考链接的低覆盖率另见待认领的 [Issue121](https://github.com/ohxiyu/bmtnews-standalone/issues/121)，不能视为全部恢复。
+当前目标：按 [Issue123](https://github.com/ohxiyu/bmtnews-standalone/issues/123) 移除 JEV 接入，逐功能恢复其首次引入前的评分、去重及扩写行为；只交付目标为 main 的 PR，不合并、不部署、不运行生产工作流。历史线上状态仍是 2026-09-23 日报，不能把本分支的本地测试当作上线验收。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "对 JEV 去重 503 保守拆分重试，完成当期重建并核对线上背景与引用",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/118",
-  "owner": "Codex / jev-dedup-503",
-  "branch": "agent/jev-dedup-503",
-  "last_verified_commit": "8e4447ba5ade934b2bcbc5be58a0908729c8a120",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/119",
+  "goal": "移除 JEV，恢复基线 DeepSeek 评分和语义去重，保留后续独立改进",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/123",
+  "owner": "Codex / remove-jev",
+  "branch": "agent/remove-jev",
+  "last_verified_commit": "75052e895eec4df6a2b9dbf425048d985608a887",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/124",
   "completed": [
-    "PR115 已合并并发布；PR117 的独立背景/影响/讨论/引用核验已合并",
-    "PR117 重建运行 35817128664 在 evaluation_dedup HTTP 503 中断，未替换线上日报",
-    "PR119 已合并；大批次 503 后递归拆分原有新闻对，每一对仍需 JEV 判断",
-    "重建运行 35847329859 成功；gh-pages 产物 58bf9d1，公网 2026-09-23 API 与中文详情页验收通过"
+    "确认 JEV 首次引入提交 1e41ec1，其父提交 c0f37bef 为行为基线",
+    "按接入点移除独立评分、语义去重和扩写后核验；恢复生成模型直接评分及原有去重",
+    "保留后续独立的新闻式写作提示、原文标题、标签、报告来源统计及 Telegram 重建防重发"
   ],
   "unfinished": [
-    "Issue121 尚未认领：诊断 8 条降级稿、0 条参考链接的来源证据与 JEV 低通过率",
-    "本份部署证据经独立文档 PR 合并前仍需审核"
+    "等待用户审核 PR124 并另行决定合并与生产切换",
+    "等待用户另行决定是否合并及何时切换生产日报；未获部署授权"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 通过；PR119 全量 pytest 889 项及治理检查通过；test、analyze、CodeQL、Cloudflare Pages 均通过"
+    "uv sync --frozen --extra dev 通过；本地全量 pytest 833 项通过；治理检查通过",
+    "PR124 的 test、analyze、governance、CodeQL 及 Cloudflare Pages Preview 检查通过",
+    "所有新增测试使用 mock 客户端，没有真实 AI 或渠道调用"
   ],
   "unverified": [
-    "参考链接 0 条；无法声称所有背景与讨论字段均已恢复",
-    "Cloudflare 独立调度 Worker 的当前版本未在本任务重新核对，本次未改 Worker"
+    "真实 DeepSeek 首期分数分布、7.0 门槛命中率、去重质量及可选内容覆盖率未经生产验证",
+    "任何日报、X、币安广场、Telegram 生产工作流均未触发"
   ],
   "production": {
     "source_commit": "8e4447ba5ade934b2bcbc5be58a0908729c8a120",
     "artifact_commit": "58bf9d1372a117b179c70154df886eec713585c5",
-    "edition": "2026-09-23 latest.json and Chinese edition, 9 items",
+    "edition": "2026-09-23 latest.json, 9 items, still the old production policy",
     "generated_at": "2026-09-23T10:17:32.934485Z",
     "worker_version": "not changed; independent dispatcher version unverified",
-    "verified_at": "2026-09-23T10:40Z; run 35847329859, public API and Chinese detail HTML"
+    "verified_at": "2026-09-23; read-only public API check, current task not deployed"
   },
-  "blockers": ["去重 503 已解除；附加内容覆盖率低，见 Issue121"],
-  "next_action": "审核部署记录 PR；另行认领 Issue121，区分证据不足、JEV 拒绝和渲染丢失，不降低核验门槛",
+  "blockers": [
+    "PR 合并与生产切换未获本任务授权；本任务仅交付 PR"
+  ],
+  "next_action": "审核 PR 与 CI；决定合并窗口后另行授权生产切换，并观察首期评分及内容质量",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "complete",
-    "deployed": "complete",
-    "production_verified": "complete"
+    "pr_merged": "pending",
+    "deployed": "pending",
+    "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-23-jev-dedup-503.md"
+  "evidence": "project-docs/releases/2026-09-24-remove-jev.md"
 }
 ```

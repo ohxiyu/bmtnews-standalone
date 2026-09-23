@@ -7,7 +7,6 @@ from dataclasses import dataclass
 
 from ..models import ContentItem
 from .client import AIClient
-from .evaluator import create_evaluator, EvaluationError
 from .utils import parse_json_response
 
 
@@ -38,7 +37,6 @@ class ContentPrefilter:
 
     def __init__(self, client: AIClient, *, batch_size: int = 20) -> None:
         self.client = client
-        self.evaluator = create_evaluator(getattr(client, "config", None))
         self.batch_size = max(5, min(50, batch_size))
 
     def _concurrency(self) -> int:
@@ -75,10 +73,6 @@ class ContentPrefilter:
                 )
             try:
                 async with semaphore:
-                    if self.evaluator is not None:
-                        # Failure keeps candidates for full Jev analysis; it
-                        # never supplies a replacement generation-model score.
-                        return await self.evaluator.prefilter(batch), batch_indices
                     response = await self.client.complete(
                         system=PREFILTER_SYSTEM,
                         user=PREFILTER_USER.format(items="\n".join(lines)),

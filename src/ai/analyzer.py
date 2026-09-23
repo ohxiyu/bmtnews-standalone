@@ -9,8 +9,7 @@ from pydantic import BaseModel, Field, ValidationError
 from tenacity import retry, stop_after_attempt, wait_exponential
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 
-from .client import AIClient
-from .evaluator import create_evaluator, EvaluationError
+from .client import AIClient, LAST_COMPLETION_SCORER
 from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER
 from .utils import parse_json_response
 from ..models import ContentItem
@@ -40,7 +39,6 @@ class ContentAnalyzer:
         edition_window: Optional[EditionWindow] = None,
     ):
         self.client = ai_client
-        self.evaluator = create_evaluator(getattr(ai_client, "config", None))
         self.edition_window = edition_window
         self.allowed_categories = tuple(
             dict.fromkeys(
@@ -72,30 +70,6 @@ class ContentAnalyzer:
         return max(concurrency, 1)
 
     async def analyze_batch(self, items: List[ContentItem]) -> List[ContentItem]:
-        # Enabled evaluation has one owner and its own bounded request retry.
-        if self.evaluator is not None:
-            semaphore = asyncio.Semaphore(self._get_concurrency())
-            async def evaluate(item):
-                async with semaphore:
-                    item.ai_score = None
-                    item.ai_reason = None
-                    item.ai_summary = item.title
-                    item.ai_tags = []
-                    item.metadata.pop("evaluation", None)
-                    item.metadata.pop("evaluation_degraded", None)
-                    item.metadata.pop("evaluation_error", None)
-                    window = self.edition_window or edition_window_for(
-                        item.published_at + timedelta(days=1), "Asia/Shanghai",
-                    )
-                    try:
-                        await self.evaluator.analyze(item, self.allowed_categories, window)
-                    except EvaluationError as exc:
-                        item.ai_score = None
-                        item.metadata["evaluation_error"] = {"code": exc.code, "status": exc.status_code}
-                        print(f"Jev score pending for {item.id}: {exc}")
-            await asyncio.gather(*(evaluate(item) for item in items))
-            return items
-
         throttle_sec = self._get_throttle_sec()
         concurrency = self._get_concurrency()
         semaphore = asyncio.Semaphore(concurrency)
@@ -236,6 +210,7 @@ class ContentAnalyzer:
         )
 
         # Get AI completion
+        LAST_COMPLETION_SCORER.set(None)
         response = await self.client.complete(
             system=system_prompt,
             user=user_prompt,
@@ -260,6 +235,13 @@ class ContentAnalyzer:
         item.ai_reason = result.reason
         item.ai_summary = result.summary
         item.ai_tags = result.tags
+        config = getattr(self.client, "config", None)
+        provider = getattr(config, "provider", None)
+        configured_scorer = (
+            f"{getattr(provider, 'value', provider)}:{config.model}"
+            if provider is not None and getattr(config, "model", None) else "unknown"
+        )
+        item.metadata["score_model"] = LAST_COMPLETION_SCORER.get() or configured_scorer
         if result.category in self._allowed_category_set:
             source_category = item.metadata.get("category")
             if source_category != result.category:
