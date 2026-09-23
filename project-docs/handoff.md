@@ -9,7 +9,7 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/123",
   "owner": "Codex / remove-jev",
   "branch": "agent/remove-jev",
-  "last_verified_commit": "427bfa913893f844606336336061995140a60c3b",
+  "last_verified_commit": "75052e895eec4df6a2b9dbf425048d985608a887",
   "pr": "pending creation against main",
   "completed": [
     "确认 JEV 首次引入提交 1e41ec1，其父提交 c0f37bef 为行为基线",
@@ -21,7 +21,7 @@
     "等待用户另行决定是否合并及何时切换生产日报；未获部署授权"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 通过；本地全量 pytest 通过；治理检查待最终文档完成后复跑",
+    "uv sync --frozen --extra dev 通过；本地全量 pytest 833 项通过；治理检查通过",
     "所有新增测试使用 mock 客户端，没有真实 AI 或渠道调用"
   ],
   "unverified": [
