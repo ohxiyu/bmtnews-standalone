@@ -1,6 +1,6 @@
 # 当前交接
 
-当前任务：修复 2026-09-23 日报重建在 JEV 去重阶段的 HTTP 503。PR115 已上线但背景/参考链接仍缺失；PR117 已合并，但首次重建在去重阶段失败，尚未发布 PR117 的内容。
+当前任务：JEV 去重 503 修复已合并并完成 2026-09-23 日报重建。去重故障解除，正文已上线；背景、影响及参考链接的低覆盖率另见待认领的 [Issue121](https://github.com/ohxiyu/bmtnews-standalone/issues/121)，不能视为全部恢复。
 
 <!-- execution-pointer -->
 ```json
@@ -9,41 +9,41 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/118",
   "owner": "Codex / jev-dedup-503",
   "branch": "agent/jev-dedup-503",
-  "last_verified_commit": "9b2541951c29f4dc3b344f77edb8480a21fb2246",
+  "last_verified_commit": "8e4447ba5ade934b2bcbc5be58a0908729c8a120",
   "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/119",
   "completed": [
     "PR115 已合并并发布；PR117 的独立背景/影响/讨论/引用核验已合并",
     "PR117 重建运行 35817128664 在 evaluation_dedup HTTP 503 中断，未替换线上日报",
-    "本任务实现大批次 503 后递归拆分原有新闻对；每一对仍需 JEV 判断"
+    "PR119 已合并；大批次 503 后递归拆分原有新闻对，每一对仍需 JEV 判断",
+    "重建运行 35847329859 成功；gh-pages 产物 58bf9d1，公网 2026-09-23 API 与中文详情页验收通过"
   ],
   "unfinished": [
-    "完成全量测试、PR 检查与合并",
-    "从 main 重建 2026-09-23 日报，核对运行报告、公网页面与 API",
-    "单独提交准确的部署与验收记录"
+    "Issue121 尚未认领：诊断 8 条降级稿、0 条参考链接的来源证据与 JEV 低通过率",
+    "本份部署证据经独立文档 PR 合并前仍需审核"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 通过；定向 evaluator 测试通过；全量 pytest 及治理检查通过"
+    "uv sync --frozen --extra dev 通过；PR119 全量 pytest 889 项及治理检查通过；test、analyze、CodeQL、Cloudflare Pages 均通过"
   ],
   "unverified": [
-    "本任务尚未合并或上线",
-    "PR117 的附加内容线上通过率尚未验证"
+    "参考链接 0 条；无法声称所有背景与讨论字段均已恢复",
+    "Cloudflare 独立调度 Worker 的当前版本未在本任务重新核对，本次未改 Worker"
   ],
   "production": {
-    "source_commit": "507a62d1febb1084a48663c423f0b1e45f89a4e0",
-    "artifact_commit": "6649eae; gh-pages artifact after PR115 rebuild",
-    "edition": "2026-09-23 latest.json, PR115 content-core rebuild",
-    "generated_at": "2026-09-23T03:55:16.493312Z",
-    "worker_version": "not changed; independent dispatcher version unknown",
-    "verified_at": "2026-09-23T03:56Z; public API and Actions run 35815874196"
+    "source_commit": "8e4447ba5ade934b2bcbc5be58a0908729c8a120",
+    "artifact_commit": "58bf9d1372a117b179c70154df886eec713585c5",
+    "edition": "2026-09-23 latest.json and Chinese edition, 9 items",
+    "generated_at": "2026-09-23T10:17:32.934485Z",
+    "worker_version": "not changed; independent dispatcher version unverified",
+    "verified_at": "2026-09-23T10:40Z; run 35847329859, public API and Chinese detail HTML"
   },
-  "blockers": ["JEV evaluation_dedup HTTP 503；拆分后仍需生产重跑验证"],
-  "next_action": "完成检查与 PR，绿灯后合并并重建日报；若小批次仍返回 503，停止重复重跑并诊断服务端",
+  "blockers": ["去重 503 已解除；附加内容覆盖率低，见 Issue121"],
+  "next_action": "审核部署记录 PR；另行认领 Issue121，区分证据不足、JEV 拒绝和渲染丢失，不降低核验门槛",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "pending",
-    "deployed": "pending",
-    "production_verified": "pending"
+    "pr_merged": "complete",
+    "deployed": "complete",
+    "production_verified": "complete"
   },
   "evidence": "project-docs/releases/2026-09-23-jev-dedup-503.md"
 }
