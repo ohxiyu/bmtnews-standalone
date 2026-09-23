@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_4d4b10880ad0715c/",
   "json": "https://bmt.news/api/events/evt_4d4b10880ad0715c.json",
   "type": "protocol_change",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
     "en": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks"
   },
   "current_state": {
-    "zh": "Zcash 开发者一致同意在 11 月 5 日激活 NU7 主网升级，将出块时间从 75 秒缩短至 25 秒，同时通过 ZIP 218 保持每日发行量不变，并集成网络可持续机制（2026 年开始费用银行，2031 年 2 月发放补充奖励），减半计划保持不变。",
-    "en": "Zcash developers unanimously agreed to activate the NU7 mainnet upgrade on Nov. 5, cutting block times from 75 to 25 seconds while keeping daily issuance unchanged via ZIP 218, and integrating the Network Sustainability Mechanism (fee banking starting 2026, supplemental rewards in Feb. 2031), with halvings preserved."
+    "zh": "Zcash 计划于 11 月 5 日激活 NU7 主网升级，将出块时间缩短至 25 秒并保持每日发行量不变，同时升级将禁用版本 4 交易，使遗留 Sprout 屏蔽池中的 ZEC 可能无法花费；测试网计划于 10 月 6 日上线，主网激活决定预计在 10 月 20 日做出。",
+    "en": "Zcash plans to activate NU7 on Nov. 5, cutting block times to 25 seconds while keeping daily issuance unchanged; the upgrade will also disable version 4 transactions, potentially making ZEC in the legacy Sprout shielded pool unspendable; testnet is scheduled for Oct. 6 and a mainnet activation decision is expected on Oct. 20."
   },
   "first_seen_at": "2026-09-18T09:07:10.086276+00:00",
-  "last_updated_at": "2026-09-18T22:43:52.654525+00:00",
-  "last_material_change_at": "2026-09-18T22:43:52.654525+00:00",
+  "last_updated_at": "2026-09-23T09:26:09.956362+00:00",
+  "last_material_change_at": "2026-09-23T09:26:09.956362+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 2,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
     "devs",
     "faster",
@@ -28,6 +28,7 @@
     "november",
     "nu7",
     "running",
+    "sprout",
     "want",
     "zcash"
   ],
@@ -112,6 +113,44 @@
         {
           "url": "https://decrypt.co/378667/zcash-upgrade-make-private-payments-3x-faster",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_ee1663b5a1898cca",
+      "event_id": "evt_4d4b10880ad0715c",
+      "occurred_at": "2026-09-23T08:07:10Z",
+      "published_at": "2026-09-23T08:07:10Z",
+      "first_seen_at": "2026-09-23T09:26:09.956362Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+      "title_en": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+      "what_changed_zh": "NU7 升级将依据 ZIP-2003 禁用版本 4 交易，导致遗留 Sprout 屏蔽池中的 ZEC 在升级后无法花费；社区成员和 Zcash 联合创始人 Zooko Wilcox 警告持币者尽快迁移资金，但提案并未销毁这些资金，未来仍有可能恢复访问。",
+      "what_changed_en": "NU7 will disable version 4 transactions under ZIP-2003, making ZEC in the legacy Sprout shielded pool unspendable after the upgrade; community members and Zcash co-founder Zooko Wilcox warned holders to move funds, though the proposal does not burn the funds and leaves open the possibility of restoring access later.",
+      "current_state_zh": "Zcash 计划于 11 月 5 日激活 NU7 主网升级，将出块时间缩短至 25 秒并保持每日发行量不变，同时升级将禁用版本 4 交易，使遗留 Sprout 屏蔽池中的 ZEC 可能无法花费；测试网计划于 10 月 6 日上线，主网激活决定预计在 10 月 20 日做出。",
+      "current_state_en": "Zcash plans to activate NU7 on Nov. 5, cutting block times to 25 seconds while keeping daily issuance unchanged; the upgrade will also disable version 4 transactions, potentially making ZEC in the legacy Sprout shielded pool unspendable; testnet is scheduled for Oct. 6 and a mainnet activation decision is expected on Oct. 20.",
+      "detailed_summary_zh": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+      "detailed_summary_en": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.7,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:3f79a6897e7bbf02"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/zcash-nu7-upgrade-sprout-funds-unspendable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }

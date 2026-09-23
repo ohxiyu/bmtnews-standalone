@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_26c20c3ff003cb29/",
   "json": "https://bmt.news/api/events/evt_26c20c3ff003cb29.json",
   "type": "governance",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "XRP Ledger is one vote away from starting its next big payments upgrade",
     "en": "XRP Ledger is one vote away from starting its next big payments upgrade"
   },
   "current_state": {
-    "zh": "The XRP Ledger is one validator vote short of activating its next major payments-focused protocol upgrade.",
-    "en": "The XRP Ledger is one validator vote short of activating its next major payments-focused protocol upgrade."
+    "zh": "XRP Ledger 的修正版 PermissionDelegationV1_1 升级正处于14天激活倒计时中，若验证者支持维持在28/35以上，预计10月5日激活。",
+    "en": "The XRP Ledger's revised PermissionDelegationV1_1 upgrade is in a 14-day activation countdown, expected to activate Oct. 5 if validator support remains at or above 28/35."
   },
   "first_seen_at": "2026-09-15T09:31:52.491034+00:00",
-  "last_updated_at": "2026-09-15T09:31:52.491034+00:00",
-  "last_material_change_at": "2026-09-15T09:31:52.491034+00:00",
+  "last_updated_at": "2026-09-23T09:26:02.144227+00:00",
+  "last_material_change_at": "2026-09-23T09:26:02.144227+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "ledger",
     "xrp",
@@ -64,6 +64,44 @@
       "sources": [
         {
           "url": "https://www.coindesk.com/tech/2026/09/15/xrp-ledger-is-one-vote-away-from-starting-its-next-big-payments-upgrade",
+          "label": "CoinDesk",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_347bb8f0be62c62c",
+      "event_id": "evt_26c20c3ff003cb29",
+      "occurred_at": "2026-09-23T07:37:46Z",
+      "published_at": "2026-09-23T07:37:46Z",
+      "first_seen_at": "2026-09-23T09:26:02.144227Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+      "title_en": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+      "what_changed_zh": "PermissionDelegationV1_1 修正版于9月21日进入14天激活倒计时，29/35验证者支持，预计10月5日激活；该版本修复了原版可被利用耗尽XRP余额的缺陷。",
+      "what_changed_en": "PermissionDelegationV1_1 revised upgrade entered a 14-day activation countdown on Sept. 21 with 29/35 validators supporting; expected activation Oct. 5; fixes flaw in original version that could drain XRP balances.",
+      "current_state_zh": "XRP Ledger 的修正版 PermissionDelegationV1_1 升级正处于14天激活倒计时中，若验证者支持维持在28/35以上，预计10月5日激活。",
+      "current_state_en": "The XRP Ledger's revised PermissionDelegationV1_1 upgrade is in a 14-day activation countdown, expected to activate Oct. 5 if validator support remains at or above 28/35.",
+      "detailed_summary_zh": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+      "detailed_summary_en": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.8,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:89922f899695b402"
+      ],
+      "sources": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/23/xrp-ledger-retries-upgrade-that-lets-banks-split-payment-and-compliance-duties",
           "label": "CoinDesk",
           "source_type": "rss",
           "official": false

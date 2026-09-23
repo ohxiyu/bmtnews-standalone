@@ -52100,8 +52100,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "The XRP Ledger is one validator vote short of activating its next major payments-focused protocol upgrade.",
-      "current_state_zh": "The XRP Ledger is one validator vote short of activating its next major payments-focused protocol upgrade.",
+      "current_state_en": "The XRP Ledger's revised PermissionDelegationV1_1 upgrade is in a 14-day activation countdown, expected to activate Oct. 5 if validator support remains at or above 28/35.",
+      "current_state_zh": "XRP Ledger 的修正版 PermissionDelegationV1_1 升级正处于14天激活倒计时中，若验证者支持维持在28/35以上，预计10月5日激活。",
       "entities": [
         "ledger",
         "xrp",
@@ -52111,11 +52111,11 @@
       "event_type": "governance",
       "first_seen_at": "2026-09-15T09:31:52.491034Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-15T09:31:52.491034Z",
-      "last_updated_at": "2026-09-15T09:31:52.491034Z",
+      "last_material_change_at": "2026-09-23T09:26:02.144227Z",
+      "last_updated_at": "2026-09-23T09:26:02.144227Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "XRP Ledger is one vote away from starting its next big payments upgrade",
       "title_zh": "XRP Ledger is one vote away from starting its next big payments upgrade",
       "topics": [
@@ -52161,6 +52161,44 @@
           "update_type": "initial",
           "what_changed_en": "The XRP Ledger is one validator vote short of activating its next major payments-focused protocol upgrade.",
           "what_changed_zh": "The XRP Ledger is one validator vote short of activating its next major payments-focused protocol upgrade."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "The XRP Ledger's revised PermissionDelegationV1_1 upgrade is in a 14-day activation countdown, expected to activate Oct. 5 if validator support remains at or above 28/35.",
+          "current_state_zh": "XRP Ledger 的修正版 PermissionDelegationV1_1 升级正处于14天激活倒计时中，若验证者支持维持在28/35以上，预计10月5日激活。",
+          "detailed_summary_en": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+          "detailed_summary_zh": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+          "event_id": "evt_26c20c3ff003cb29",
+          "first_seen_at": "2026-09-23T09:26:02.144227Z",
+          "importance_score": 7.8,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T07:37:46Z",
+          "published_at": "2026-09-23T07:37:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/23/xrp-ledger-retries-upgrade-that-lets-banks-split-payment-and-compliance-duties"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:89922f899695b402"
+          ],
+          "time_precision": "published",
+          "title_en": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+          "title_zh": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
+          "update_id": "upd_347bb8f0be62c62c",
+          "update_type": "escalation",
+          "what_changed_en": "PermissionDelegationV1_1 revised upgrade entered a 14-day activation countdown on Sept. 21 with 29/35 validators supporting; expected activation Oct. 5; fixes flaw in original version that could drain XRP balances.",
+          "what_changed_zh": "PermissionDelegationV1_1 修正版于9月21日进入14天激活倒计时，29/35验证者支持，预计10月5日激活；该版本修复了原版可被利用耗尽XRP余额的缺陷。"
         }
       ]
     },
@@ -66708,8 +66746,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Zcash developers unanimously agreed to activate the NU7 mainnet upgrade on Nov. 5, cutting block times from 75 to 25 seconds while keeping daily issuance unchanged via ZIP 218, and integrating the Network Sustainability Mechanism (fee banking starting 2026, supplemental rewards in Feb. 2031), with halvings preserved.",
-      "current_state_zh": "Zcash 开发者一致同意在 11 月 5 日激活 NU7 主网升级，将出块时间从 75 秒缩短至 25 秒，同时通过 ZIP 218 保持每日发行量不变，并集成网络可持续机制（2026 年开始费用银行，2031 年 2 月发放补充奖励），减半计划保持不变。",
+      "current_state_en": "Zcash plans to activate NU7 on Nov. 5, cutting block times to 25 seconds while keeping daily issuance unchanged; the upgrade will also disable version 4 transactions, potentially making ZEC in the legacy Sprout shielded pool unspendable; testnet is scheduled for Oct. 6 and a mainnet activation decision is expected on Oct. 20.",
+      "current_state_zh": "Zcash 计划于 11 月 5 日激活 NU7 主网升级，将出块时间缩短至 25 秒并保持每日发行量不变，同时升级将禁用版本 4 交易，使遗留 Sprout 屏蔽池中的 ZEC 可能无法花费；测试网计划于 10 月 6 日上线，主网激活决定预计在 10 月 20 日做出。",
       "entities": [
         "devs",
         "faster",
@@ -66718,6 +66756,7 @@
         "november",
         "nu7",
         "running",
+        "sprout",
         "want",
         "zcash"
       ],
@@ -66725,11 +66764,11 @@
       "event_type": "protocol_change",
       "first_seen_at": "2026-09-18T09:07:10.086276Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-18T22:43:52.654525Z",
-      "last_updated_at": "2026-09-18T22:43:52.654525Z",
+      "last_material_change_at": "2026-09-23T09:26:09.956362Z",
+      "last_updated_at": "2026-09-23T09:26:09.956362Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
       "title_zh": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
       "topics": [
@@ -66816,6 +66855,44 @@
           "update_type": "confirmation",
           "what_changed_en": "Developers revealed NU7 testnet on Oct. 6, mainnet activation height set on Oct. 20, specs due by Sept. 30; ZIP 218 divides per-block reward by ~3 to keep daily issuance unchanged; 98.9% of coinholders voted to keep halvings; Network Sustainability Mechanism will bank ~60% of transaction fees starting 2026, flowing back as supplemental mining rewards in Feb. 2031.",
           "what_changed_zh": "开发者透露 NU7 测试网将于 10 月 6 日上线，主网激活高度将于 10 月 20 日确定，规范于 9 月 30 日前发布；ZIP 218 将每块奖励除以约三倍以保持每日发行量不变；98.9% 的持币者投票支持保留减半机制；网络可持续机制将从 2026 年开始将约 60% 的交易费用存入，并于 2031 年 2 月开始作为补充挖矿奖励发放。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Zcash plans to activate NU7 on Nov. 5, cutting block times to 25 seconds while keeping daily issuance unchanged; the upgrade will also disable version 4 transactions, potentially making ZEC in the legacy Sprout shielded pool unspendable; testnet is scheduled for Oct. 6 and a mainnet activation decision is expected on Oct. 20.",
+          "current_state_zh": "Zcash 计划于 11 月 5 日激活 NU7 主网升级，将出块时间缩短至 25 秒并保持每日发行量不变，同时升级将禁用版本 4 交易，使遗留 Sprout 屏蔽池中的 ZEC 可能无法花费；测试网计划于 10 月 6 日上线，主网激活决定预计在 10 月 20 日做出。",
+          "detailed_summary_en": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+          "detailed_summary_zh": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+          "event_id": "evt_4d4b10880ad0715c",
+          "first_seen_at": "2026-09-23T09:26:09.956362Z",
+          "importance_score": 7.7,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T08:07:10Z",
+          "published_at": "2026-09-23T08:07:10Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/zcash-nu7-upgrade-sprout-funds-unspendable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:3f79a6897e7bbf02"
+          ],
+          "time_precision": "published",
+          "title_en": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+          "title_zh": "Zcash’s November upgrade could freeze funds in legacy Sprout pool",
+          "update_id": "upd_ee1663b5a1898cca",
+          "update_type": "escalation",
+          "what_changed_en": "NU7 will disable version 4 transactions under ZIP-2003, making ZEC in the legacy Sprout shielded pool unspendable after the upgrade; community members and Zcash co-founder Zooko Wilcox warned holders to move funds, though the proposal does not burn the funds and leaves open the possibility of restoring access later.",
+          "what_changed_zh": "NU7 升级将依据 ZIP-2003 禁用版本 4 交易，导致遗留 Sprout 屏蔽池中的 ZEC 在升级后无法花费；社区成员和 Zcash 联合创始人 Zooko Wilcox 警告持币者尽快迁移资金，但提案并未销毁这些资金，未来仍有可能恢复访问。"
         }
       ]
     },
@@ -77600,7 +77677,7 @@
       "first_seen_at": "2026-09-22T23:08:22.096967Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-22T23:08:22.096967Z",
-      "last_updated_at": "2026-09-22T23:08:22.096967Z",
+      "last_updated_at": "2026-09-23T09:26:00.490648Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -77633,10 +77710,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cryptoslate.com/rogue-iphone-app-escapes-ios-sandbox-to-hijack-580000-in-usdt/"
+            },
+            {
+              "label": "cryptoslate.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZUlEcFBXRUFKNXJHSFUwU3FDaXR4MHVIS2FNZDZqYVEwdXFQS1M5ZGJwZFlReFc2S3B5dzVzYV9VS3VFcXR0U2M0NGFvN2lRVDZiZHJ4NWh3Y2RBNFF0UmVPcFlkWG5IWkVBXzRva08zSW0za1o2cHFjcWJ3Y1JNa1ZFUFprYlYwME1VSG1sTQ?oc=5"
             }
           ],
           "story_ids": [
-            "rss:cryptoslate.com_feed_:3c24170a31206149"
+            "rss:cryptoslate.com_feed_:3c24170a31206149",
+            "google_news:article:93efc797b8a5d634"
           ],
           "time_precision": "published",
           "title_en": "Rogue iPhone app escapes iOS sandbox to hijack $580,000 in USDT",
@@ -78161,6 +78245,587 @@
           "update_type": "initial",
           "what_changed_en": "CFTC issues warning over risky prediction market ‘mention’ contracts",
           "what_changed_zh": "CFTC issues warning over risky prediction market ‘mention’ contracts"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+      "current_state_zh": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+      "entities": [
+        "binance",
+        "bitke",
+        "faces",
+        "iran",
+        "over",
+        "potential",
+        "probe",
+        "regulation",
+        "sanctions",
+        "violations"
+      ],
+      "event_id": "evt_504f8d0cee3c030a",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-23T09:26:00.489727Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:00.489727Z",
+      "last_updated_at": "2026-09-23T09:26:00.489727Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+      "title_zh": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "current_state_zh": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "detailed_summary_en": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "detailed_summary_zh": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "event_id": "evt_504f8d0cee3c030a",
+          "first_seen_at": "2026-09-23T09:26:00.489727Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T05:00:32Z",
+          "published_at": "2026-09-23T05:00:32Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "BitKE",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTGdvMzNmTHJOd3RONlVPcE9STzZMWlZXNjVFRXBvdWIzMUc5aERrb2pCalZUZEFNX3V2U3VKQTN2OFFHNGM2S3hUdG1vLUt5MS1lR3hPZEVoUEZ6YjFrTGhBb2RxU2NYRGdCZzRyVzdLdXZEUnJILVVKbmk4QWhRRXFrdjdOdEN0RXZ3YV90Y1JxdGxsNjFKSw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:03ce5b2b55aa4e13"
+          ],
+          "time_precision": "published",
+          "title_en": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "title_zh": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "update_id": "upd_3bad8873cedde3ec",
+          "update_type": "initial",
+          "what_changed_en": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE",
+          "what_changed_zh": "REGULATION | Binance Faces U.S. Probe Over Potential Iran Sanctions Violations - BitKE"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+      "current_state_zh": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+      "entities": [
+        "binance",
+        "close",
+        "delist",
+        "deposits",
+        "fiat",
+        "trade",
+        "uah",
+        "will",
+        "withdrawals"
+      ],
+      "event_id": "evt_67b8ca4a86719741",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-23T09:26:00.904701Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:00.904701Z",
+      "last_updated_at": "2026-09-23T09:26:00.904701Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+      "title_zh": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "current_state_zh": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "detailed_summary_en": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "detailed_summary_zh": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "event_id": "evt_67b8ca4a86719741",
+          "first_seen_at": "2026-09-23T09:26:00.904701Z",
+          "importance_score": 7.4,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T07:14:16Z",
+          "published_at": "2026-09-23T07:14:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/detail/7d17add1ffe6416391f65a001734e1c7?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8987"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "title_zh": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "update_id": "upd_6cbeb84dac8912c3",
+          "update_type": "initial",
+          "what_changed_en": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US",
+          "what_changed_zh": "Binance Will Close UAH Deposits and Withdrawals via Fiat Trade UAH and Delist US"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+      "current_state_zh": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+      "entities": [
+        "binance",
+        "migration",
+        "support",
+        "will",
+        "zil",
+        "zilliqa"
+      ],
+      "event_id": "evt_87abfa49b04f5966",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T09:26:00.905423Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:00.905423Z",
+      "last_updated_at": "2026-09-23T09:26:00.905423Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+      "title_zh": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "current_state_zh": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "detailed_summary_en": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "detailed_summary_zh": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "event_id": "evt_87abfa49b04f5966",
+          "first_seen_at": "2026-09-23T09:26:00.905423Z",
+          "importance_score": 7.9,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T09:02:12Z",
+          "published_at": "2026-09-23T09:02:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/detail/343ad3d991c64b27842482f1fb1fe11c?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            },
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUzBCd2RVOVdjZjd6UGh6Y0trQTZLQm5jb2pjSjBtSWViNHF2cFhlV2Z4VWdjNDVMdVZWQlU1OU9DWFZla2lhb0h5OER2bWEtakt5U3Z5RTh4dVdfQV9wMDVsYXhKSmstNGFsRFZvWFc5amNDenlXQWRBMENmTjFjcDgyZWJYd0k?oc=5"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8989",
+            "google_news:article:7a7ece238ae595ea"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "title_zh": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "update_id": "upd_59c7bc1c3f7b401b",
+          "update_type": "initial",
+          "what_changed_en": "Binance Will Support the Zilliqa (ZIL) Network Migration",
+          "what_changed_zh": "Binance Will Support the Zilliqa (ZIL) Network Migration"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+      "current_state_zh": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+      "entities": [
+        "coinbase",
+        "usdc"
+      ],
+      "event_id": "evt_eb90499afde0bacd",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T09:26:01.755432Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:01.755432Z",
+      "last_updated_at": "2026-09-23T09:26:01.755432Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+      "title_zh": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "current_state_zh": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "detailed_summary_en": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "detailed_summary_zh": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "event_id": "evt_eb90499afde0bacd",
+          "first_seen_at": "2026-09-23T09:26:01.755432Z",
+          "importance_score": 7.1,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T07:49:23Z",
+          "published_at": "2026-09-23T07:49:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/23/coinbase-users-can-now-borrow-usdc-against-bitcoin-at-a-fixed-rate"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:072e2fb3b5853660"
+          ],
+          "time_precision": "published",
+          "title_en": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "title_zh": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "update_id": "upd_98429808c6fdad0d",
+          "update_type": "initial",
+          "what_changed_en": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
+          "what_changed_zh": "Coinbase users can now borrow USDC against bitcoin at a fixed rate"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+      "current_state_zh": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+      "entities": [
+        "solana"
+      ],
+      "event_id": "evt_0f4e6d9d0595d7bb",
+      "event_type": "protocol_change",
+      "first_seen_at": "2026-09-23T09:26:02.508980Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:02.508980Z",
+      "last_updated_at": "2026-09-23T09:26:02.508980Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+      "title_zh": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "current_state_zh": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "detailed_summary_en": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "detailed_summary_zh": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "event_id": "evt_0f4e6d9d0595d7bb",
+          "first_seen_at": "2026-09-23T09:26:02.508980Z",
+          "importance_score": 7.9,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T05:16:22Z",
+          "published_at": "2026-09-23T05:16:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/23/solana-starts-testing-upgrade-that-could-cut-finality-from-12-8-seconds-to-150-milliseconds"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:38219138cc1fa03f"
+          ],
+          "time_precision": "published",
+          "title_en": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "title_zh": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "update_id": "upd_668c57b9b3d6fcb9",
+          "update_type": "initial",
+          "what_changed_en": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
+          "what_changed_zh": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+      "current_state_zh": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+      "entities": [
+        "zcash"
+      ],
+      "event_id": "evt_c85f63832c8ce339",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T09:26:03.348458Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:03.348458Z",
+      "last_updated_at": "2026-09-23T09:26:03.348458Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+      "title_zh": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "current_state_zh": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "detailed_summary_en": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "detailed_summary_zh": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "event_id": "evt_c85f63832c8ce339",
+          "first_seen_at": "2026-09-23T09:26:03.348458Z",
+          "importance_score": 7.3,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T04:10:08Z",
+          "published_at": "2026-09-23T04:10:08Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/23/zcash-leads-crypto-majors-with-a-10-gain-as-bitcoin-holds-near-usd87-000"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:79029ecc60152c1e"
+          ],
+          "time_precision": "published",
+          "title_en": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "title_zh": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "update_id": "upd_a9de805a71362ea8",
+          "update_type": "initial",
+          "what_changed_en": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000",
+          "what_changed_zh": "Zcash leads crypto majors with a 10% gain as bitcoin holds near $87,000"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+      "current_state_zh": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+      "entities": [
+        "mica"
+      ],
+      "event_id": "evt_6d5cea5b27b463b2",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-23T09:26:06.051574Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:06.051574Z",
+      "last_updated_at": "2026-09-23T09:26:06.051574Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+      "title_zh": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "current_state_zh": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "detailed_summary_en": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "detailed_summary_zh": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "event_id": "evt_6d5cea5b27b463b2",
+          "first_seen_at": "2026-09-23T09:26:06.051574Z",
+          "importance_score": 7.3,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T08:10:31Z",
+          "published_at": "2026-09-23T08:10:31Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/eu-central-banks-attack-mica-rules-and-stablecoin-runs-are-blamed/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:cd92888d9b94acaa"
+          ],
+          "time_precision": "published",
+          "title_en": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "title_zh": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "update_id": "upd_c8dc68548cae1a42",
+          "update_type": "initial",
+          "what_changed_en": "EU central banks attack MiCA rules and stablecoin runs are blamed",
+          "what_changed_zh": "EU central banks attack MiCA rules and stablecoin runs are blamed"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+      "current_state_zh": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+      "entities": [
+        "bitmex"
+      ],
+      "event_id": "evt_c282e357f614a16c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T09:26:09.916700Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:09.916700Z",
+      "last_updated_at": "2026-09-23T09:26:09.916700Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+      "title_zh": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "current_state_zh": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "detailed_summary_en": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "detailed_summary_zh": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "event_id": "evt_c282e357f614a16c",
+          "first_seen_at": "2026-09-23T09:26:09.916700Z",
+          "importance_score": 8.3,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T08:18:38Z",
+          "published_at": "2026-09-23T08:18:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/bitmex-ends-crypto-trading-withdrawals-open?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:cac41ea018d65dad"
+          ],
+          "time_precision": "published",
+          "title_en": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "title_zh": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "update_id": "upd_c0b64462776b7fa3",
+          "update_type": "initial",
+          "what_changed_en": "BitMEX ends crypto trading, keeps withdrawals open after closure",
+          "what_changed_zh": "BitMEX ends crypto trading, keeps withdrawals open after closure"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+      "current_state_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+      "entities": [
+        "fomopeek",
+        "malicious",
+        "slowmist"
+      ],
+      "event_id": "evt_ae7d8e64f0aeda91",
+      "event_type": "other",
+      "first_seen_at": "2026-09-23T09:26:10.157997Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-23T09:26:10.157997Z",
+      "last_updated_at": "2026-09-23T09:26:10.157997Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+      "title_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+      "topics": [],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "current_state_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "detailed_summary_en": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "detailed_summary_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "event_id": "evt_ae7d8e64f0aeda91",
+          "first_seen_at": "2026-09-23T09:26:10.157997Z",
+          "importance_score": 7.7,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-23T05:22:21Z",
+          "published_at": "2026-09-23T05:22:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/fomopeek-ios-app-580k-crypto-theft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:7d7d791f622e1432"
+          ],
+          "time_precision": "published",
+          "title_en": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "title_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "update_id": "upd_c80b024292e4764a",
+          "update_type": "initial",
+          "what_changed_en": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
+          "what_changed_zh": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says"
         }
       ]
     }
@@ -79198,6 +79863,89 @@
         "source_type": "google_news",
         "title": "Coinbase targets stock futures but CFTC standstill blocks launch - CryptoSlate",
         "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPSnpLYXpFeGlNZGZNazRBVlBkTk1qUmU4ZVlYRWVGWl9ETHRBb0VuTU9ZcERLY09sWEJJOWxHUy1ScWZaN2NUMWtOU1VZbFUydjN0dTJMTmUyN2d5cEZyQUYyMEl5NlVPUXVpU3ZQZXpoYTdEM0k0TzFIM2JiWGk3OGRyZWVoQ0NFOFFqSTM1bjVOWjA?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Jev: impact 4.05/5; novelty 2.44/5; freshness uncertain. ",
+        "ai_score": 7.3,
+        "ai_summary": "SlowMist exposes FomoPeek, the iOS app that stole crypto keys through a kernel exploit - pasqualepillitteri.it",
+        "ai_tags": [],
+        "author": "pasqualepillitteri.it",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN3AtcE5jRGgzaFRBTExkOWQ5NmRTd0l5Qm5NdnZwNEpwZWVLTmg3NTVuc2hlSHlWMkEyVnZnSGhPc1JoSjRxTGRzc0VvR1FqZjdLZjVuQjZjSkE4X2p5aW44U1psZ0oya2t1Vzc0VVpVeS1xR1RRcklOeV9zR2Uxd1pvSVkyMF8x?oc=5\" target=\"_blank\">SlowMist exposes FomoPeek, the iOS app that stole crypto keys through a kernel exploit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">pasqualepillitteri.it</font>",
+        "fetched_at": "2026-09-23T09:26:00.490118Z",
+        "id": "google_news:article:4ac8886a632670c5",
+        "metadata": {
+          "category": "exchange-announcements",
+          "evaluation": {
+            "answers": {
+              "category": {
+                "choice": "unknown",
+                "confidence": 0.33,
+                "probabilities": {
+                  "ai-devtools": 0,
+                  "ai-labs": 0,
+                  "ai-media": 0,
+                  "crypto-markets": 0.05,
+                  "crypto-protocols": 0.37,
+                  "crypto-regulation": 0,
+                  "exchange-announcements": 0,
+                  "exchange-operations": 0,
+                  "macro-regulation": 0,
+                  "tech-community": 0.18,
+                  "unknown": 0.4
+                },
+                "type": "choice"
+              },
+              "impact": {
+                "confidence": 0.59,
+                "probabilities": {
+                  "0": 0.02,
+                  "1": 0.01,
+                  "2": 0,
+                  "3": 0.19,
+                  "4": 0.45,
+                  "5": 0.33
+                },
+                "score": 4.05,
+                "type": "score"
+              },
+              "novelty": {
+                "confidence": 0.25,
+                "probabilities": {
+                  "0": 0.19,
+                  "1": 0.04,
+                  "2": 0.17,
+                  "3": 0.34,
+                  "4": 0.24,
+                  "5": 0.02
+                },
+                "score": 2.44,
+                "type": "score"
+              },
+              "recap": {
+                "choice": "uncertain",
+                "confidence": 0.5,
+                "probabilities": {
+                  "new_development": 0.32,
+                  "old_recap": 0.01,
+                  "uncertain": 0.67
+                },
+                "type": "choice"
+              }
+            },
+            "model": "typesafe-ai/jev",
+            "rubric": "jev-news-v2"
+          },
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "source_name": "pasqualepillitteri.it"
+        },
+        "published_at": "2026-09-23T06:22:31Z",
+        "source_type": "google_news",
+        "title": "SlowMist exposes FomoPeek, the iOS app that stole crypto keys through a kernel exploit - pasqualepillitteri.it",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN3AtcE5jRGgzaFRBTExkOWQ5NmRTd0l5Qm5NdnZwNEpwZWVLTmg3NTVuc2hlSHlWMkEyVnZnSGhPc1JoSjRxTGRzc0VvR1FqZjdLZjVuQjZjSkE4X2p5aW44U1psZ0oya2t1Vzc0VVpVeS1xR1RRcklOeV9zR2Uxd1pvSVkyMF8x?oc=5"
       }
     }
   ],
