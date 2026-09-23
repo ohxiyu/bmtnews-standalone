@@ -9,8 +9,8 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/118",
   "owner": "Codex / jev-dedup-503",
   "branch": "agent/jev-dedup-503",
-  "last_verified_commit": "8a1545300a504097e086d3bdb9f55a5e180766b3",
-  "pr": "pending",
+  "last_verified_commit": "9b2541951c29f4dc3b344f77edb8480a21fb2246",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/119",
   "completed": [
     "PR115 已合并并发布；PR117 的独立背景/影响/讨论/引用核验已合并",
     "PR117 重建运行 35817128664 在 evaluation_dedup HTTP 503 中断，未替换线上日报",
