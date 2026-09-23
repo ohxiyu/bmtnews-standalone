@@ -1,45 +1,43 @@
 # 当前交接
 
-当前任务：恢复 JEV 接管后丢失的完整新闻稿及参考资料，保持唯一评分和 90% 核验门槛。上次部署证据由待合并的 [PR113](https://github.com/ohxiyu/bmtnews-standalone/pull/113) 单独维护；本任务不得覆盖它。
+当前任务：在已上线的 [PR115](https://github.com/ohxiyu/bmtnews-standalone/pull/115) 恢复新闻正文后，继续恢复经独立核验的背景、讨论、市场影响和参考链接。PR115 的当期重建已上线，但 10 条均为降级稿；历史部署证据由待合并的 [PR113](https://github.com/ohxiyu/bmtnews-standalone/pull/113) 单独维护。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "保留 Jev 评分，恢复有来源支持的完整新闻稿、参考资料和标签",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/114",
-  "owner": "Codex / jev-editorial-restore",
-  "branch": "agent/jev-editorial-restore",
-  "last_verified_commit": "bf33324662745262b900e6fc262545a4adc60870",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/115",
+  "goal": "对附加新闻内容分别执行 Jev 来源核验，保留合格背景、讨论、影响和参考链接",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/116",
+  "owner": "Codex / jev-context-salvage",
+  "branch": "agent/jev-context-salvage",
+  "last_verified_commit": "d62fe32b560f632e39ceca2297d27116536d9d43",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/117",
   "completed": [
-    "定位线上 2026-09-23 日报 11 条全为短版、标签为空",
-    "区分完整稿、经核验新闻核心和短版回退；保留英文来源标题与正文分段",
-    "有来源支持的背景、讨论、市场影响、引用和标签继续发布",
-    "更换扩写缓存版本并记录脱敏回退原因",
-    "已发布期号强制重建时跳过重复发送 Telegram，正常首发不变"
+    "PR115 已合并并重建 2026-09-23 日报；正文恢复分段，10 条中 7 条有标签，但背景与引用仍缺失",
+    "新增按段核验：正文事实、背景和参考链接、市场影响、讨论分别保留已通过 90% Jev 门槛的字段",
+    "单次多问题核验附加字段，避免逐段额外请求；扩写缓存版本更新"
   ],
   "unfinished": [
-    "等待最终回归及 PR 检查",
-    "按用户当前任务授权合并、重建当期日报并完成线上验收"
+    "等待本任务 PR 检查与合并",
+    "合并后按用户当前任务授权再次重建当期日报并核对公网页面字段"
   ],
   "validation": [
     "uv sync --frozen --extra dev 通过",
-    "uv run pytest -q 全量测试通过（提交前将重跑）"
+    "uv run pytest 全量 887 项通过"
   ],
   "unverified": [
-    "未调用生产模型验证新版完整稿通过率",
-    "未合并、未部署、未重新生成日报"
+    "本任务代码尚未合并或用于生产生成",
+    "独立段落核验的线上通过率未验证"
   ],
   "production": {
-    "source_commit": "1e171e06363368fa5b378718a05c6da234e84112",
-    "artifact_commit": "unknown; see PR113 for prior deployment evidence",
-    "edition": "2026-09-23 latest.json, verified before this code change",
-    "generated_at": "2026-09-23T00:07:39.217506Z",
+    "source_commit": "507a62d1febb1084a48663c423f0b1e45f89a4e0",
+    "artifact_commit": "6649eae; gh-pages artifact after PR115 rebuild",
+    "edition": "2026-09-23 latest.json, PR115 content-core rebuild",
+    "generated_at": "2026-09-23T03:55:16.493312Z",
     "worker_version": "not changed; independent dispatcher version unknown",
-    "verified_at": "2026-09-23 Asia/Shanghai; API and Actions run 35800042365"
+    "verified_at": "2026-09-23T03:56Z; public API and Actions run 35815874196"
   },
   "blockers": [],
-  "next_action": "审查并合并本任务 PR 后，经授权触发日报重建并核对内容；协调 PR113 的交接文档冲突",
+  "next_action": "审查本任务 PR，绿灯后合并并重建 2026-09-23 日报；验收背景/参考链接及 JEV 评分，随后单独提交上线证据 PR",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -47,6 +45,6 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-23-jev-editorial-restore.md"
+  "evidence": "project-docs/releases/2026-09-23-jev-context-salvage.md"
 }
 ```

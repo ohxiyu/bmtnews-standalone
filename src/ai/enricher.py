@@ -128,6 +128,29 @@ class ContentEnricher:
             return item.title
         return proposed
 
+    @staticmethod
+    def _optional_sections(result, available_urls, comments_text):
+        """Keep only nonempty claims and citations with observed search URLs."""
+        sections = {}
+        for name, fields in {
+            "explanation": ("why_it_matters_en", "why_it_matters_zh"),
+            "background": ("background_en", "background_zh"),
+            "market_impact": ("market_impact_en", "market_impact_zh"),
+            "discussion": ("community_discussion_en", "community_discussion_zh"),
+        }.items():
+            if name == "discussion" and not comments_text:
+                continue
+            section = {key: result[key] for key in fields
+                       if isinstance(result.get(key), str) and result[key].strip()}
+            if name == "background" and isinstance(result.get("sources"), list):
+                sources = [url for url in result["sources"]
+                           if isinstance(url, str) and url in available_urls]
+                if sources:
+                    section["sources"] = list(dict.fromkeys(sources))[:3]
+            if section:
+                sections[name] = section
+        return sections
+
     async def _check(self, item, state, stage):
         decision = await self.evaluator.assess_grounding(state)
         item.metadata.setdefault("grounding_checks", {})[stage] = decision
@@ -301,7 +324,8 @@ class ContentEnricher:
             except GroundingRejected:
                 # Analysis/background is useful but must not veto an otherwise
                 # supported news report. Re-check only the news facts, then
-                # discard every optional claim and reference from this draft.
+                # assess each optional section independently. One unsupported
+                # market claim must not erase grounded context and references.
                 core = {key: result.get(key) for key in (
                     "title_zh", "whats_new_en", "whats_new_zh",
                     "key_details_en", "key_details_zh", "tags",
@@ -310,11 +334,36 @@ class ContentEnricher:
                     key = f"title_{language}"
                     core[key] = self._source_headline(item, language, result.get(key))
                 await self._check(item, {**evidence, "generated": core}, "news_core")
+                sections = self._optional_sections(result, available_urls, comments_text)
+                decisions = {}
+                if sections:
+                    try:
+                        decisions = await self.evaluator.assess_grounding_sections(
+                            {**evidence, "generated_sections": sections})
+                    except EvaluationError:
+                        # The verified news core is still publishable; optional
+                        # claims fail closed if their evaluator is unavailable.
+                        item.metadata["enrichment_fallback_reason"] = "optional_verification_unavailable"
+                for name, section in sections.items():
+                    decision = decisions.get(name)
+                    if decision is not None:
+                        item.metadata.setdefault("grounding_checks", {})[f"context_{name}"] = decision
+                    if decision and decision["accepted"]:
+                        core.update(section)
                 result = core
-                item.metadata["enrichment_fallback_reason"] = "optional_context_unverified"
-                item.metadata["evaluation_grounding"] = "supported_core"
+                if sections and len(decisions) == len(sections) and all(
+                    decision["accepted"] for decision in decisions.values()
+                ):
+                    item.metadata["evaluation_grounding"] = "supported_sections"
+                else:
+                    item.metadata.setdefault("enrichment_fallback_reason", "optional_context_unverified")
+                    item.metadata["evaluation_grounding"] = "supported_core"
             else:
                 item.metadata["evaluation_grounding"] = "supported"
+
+        if not comments_text:
+            result.pop("community_discussion_en", None)
+            result.pop("community_discussion_zh", None)
 
         # Combine structured sub-fields into per-language detailed_summary
         for lang in ("en", "zh"):

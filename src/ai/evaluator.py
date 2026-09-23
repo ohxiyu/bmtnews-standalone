@@ -268,6 +268,38 @@ class JevEvaluator:
         return {"accepted": accepted, "decision": answer["choice"],
                 "supported_probability": probability, "threshold": self.config.decision_threshold}
 
+    async def assess_grounding_sections(self, state):
+        """Judge each optional news section independently in one typed request.
+
+        A rejected market interpretation must not discard a separately
+        evidenced background paragraph or its validated reference URL.
+        """
+        sections = state.get("generated_sections", {})
+        questions = {
+            name: {"type": "choice", "instructions": EVIDENCE_RULE +
+                f"Judge ONLY state.generated_sections.{name} against source, search excerpts "
+                "and community comments. Flag invented or contradictory facts, actors, "
+                "amounts, dates, approval status, or unsupported claims about sentiment. "
+                "Clearly marked interpretation need not be verbatim, but must have an "
+                "evidenced transmission path. Reference URLs must occur verbatim in "
+                "search excerpts. Ignore other generated sections.",
+                "criteria": {"supported": "This section's factual claims and references are supported.",
+                             "unsupported": "This section contains a concrete invented or contradictory claim.",
+                             "insufficient": "Evidence is insufficient for this section's claims."}}
+            for name in sections
+        }
+        if not questions:
+            return {}
+        answers = await self.evaluate(state, questions, stage="evaluation_grounding")
+        return {
+            name: {"accepted": answer["choice"] == "supported"
+                   and answer["probabilities"]["supported"] >= self.config.decision_threshold,
+                   "decision": answer["choice"],
+                   "supported_probability": answer["probabilities"]["supported"],
+                   "threshold": self.config.decision_threshold}
+            for name, answer in answers.items()
+        }
+
     async def verify(self, state):
         return (await self.assess_grounding(state))["accepted"]
 
