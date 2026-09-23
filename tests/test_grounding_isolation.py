@@ -268,3 +268,25 @@ def test_failed_full_and_core_checks_still_require_verified_translation(monkeypa
     assert row.metadata["title_en"] == row.title
     assert "background_en" not in row.metadata
     assert row.ai_score == 8
+
+
+def test_incomplete_full_response_is_not_published_as_rich_news(monkeypatch):
+    class Evaluator:
+        async def assess_grounding(self, state): return decision()
+
+    class Client:
+        async def complete(self, **kwargs):
+            if "structured bilingual news report" in kwargs["user"]:
+                return json.dumps({"title_zh": "标题", "whats_new_en": "English only."})
+            return json.dumps(BRIEF)
+
+    monkeypatch.setattr("src.ai.enricher.create_evaluator", lambda _: Evaluator())
+    enricher = ContentEnricher(Client())
+
+    async def no_concepts(*_): return []
+    monkeypatch.setattr(enricher, "_extract_concepts", no_concepts)
+    row = story()
+    asyncio.run(enricher.enrich_batch([row]))
+    assert row.metadata["enrichment_status"] == "translation_only"
+    assert row.metadata["enrichment_fallback_reason"] == "invalid_generation"
+    assert row.metadata["detailed_summary_zh"] == BRIEF["summary_zh"]

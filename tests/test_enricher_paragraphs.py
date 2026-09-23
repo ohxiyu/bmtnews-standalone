@@ -11,6 +11,7 @@ class _StubAIClient:
             [
                 '{"queries": []}',
                 """{
+                  "title_zh": "分段测试",
                   "whats_new_en": "What happened.",
                   "whats_new_zh": "发生了什么。",
                   "why_it_matters_en": "Why it matters.",

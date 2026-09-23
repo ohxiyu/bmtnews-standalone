@@ -211,7 +211,7 @@ class ContentEnricher:
     @retry(
         stop=stop_after_attempt(3),
         wait=wait_exponential(min=2, max=10),
-        retry=retry_if_not_exception_type(EvaluationError),
+        retry=retry_if_not_exception_type((EvaluationError, ValueError)),
     )
     async def _enrich_item(self, item: ContentItem) -> None:
         """Enrich a single item with background knowledge.
@@ -282,6 +282,11 @@ class ContentEnricher:
             # Gracefully degrade: fall back to a lightweight translation
             # instead of dropping the item untranslated.
             print(f"Warning: could not parse enrichment response for {item.id}, falling back to translation")
+            raise ValueError("invalid_generation")
+        required = ("whats_new_en", "whats_new_zh")
+        translated_title = "title_en" if re.search(r"[\u3400-\u9fff]", item.title) else "title_zh"
+        if any(not isinstance(result.get(key), str) or not result[key].strip()
+               for key in (*required, translated_title)):
             raise ValueError("invalid_generation")
 
         if self.evaluator is not None:
