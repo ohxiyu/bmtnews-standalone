@@ -10,14 +10,14 @@
   "owner": "Codex / remove-jev",
   "branch": "agent/remove-jev",
   "last_verified_commit": "75052e895eec4df6a2b9dbf425048d985608a887",
-  "pr": "pending creation against main",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/124",
   "completed": [
     "确认 JEV 首次引入提交 1e41ec1，其父提交 c0f37bef 为行为基线",
     "按接入点移除独立评分、语义去重和扩写后核验；恢复生成模型直接评分及原有去重",
     "保留后续独立的新闻式写作提示、原文标题、标签、报告来源统计及 Telegram 重建防重发"
   ],
   "unfinished": [
-    "创建 PR 并核验 GitHub test/analyze 等必需检查",
+    "核验 PR124 的 GitHub test/analyze 等必需检查",
     "等待用户另行决定是否合并及何时切换生产日报；未获部署授权"
   ],
   "validation": [

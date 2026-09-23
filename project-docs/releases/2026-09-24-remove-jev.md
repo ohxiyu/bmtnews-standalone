@@ -1,7 +1,7 @@
 # 移除 JEV 并恢复原有评分与去重
 
 - Issue: [#123](https://github.com/ohxiyu/bmtnews-standalone/issues/123)
-- Branch: `agent/remove-jev`; PR: pending
+- Branch: `agent/remove-jev`; PR: [#124](https://github.com/ohxiyu/bmtnews-standalone/pull/124)
 - Baseline: `c0f37bef06f40b0a8d69a356bedc147d9374c669`，即首次引入提交 `1e41ec1` 的父提交。
 - Scope: 只改本任务涉及的 AI 流水线、配置、测试及当前文档；没有修改 `gh-pages`、`staging-cache`、`x-queue`、`square-queue`，没有触发生产工作流。
 
