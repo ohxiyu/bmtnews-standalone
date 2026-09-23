@@ -10,32 +10,36 @@
     <link href="https://cryptoslate.com/rogue-iphone-app-escapes-ios-sandbox-to-hijack-580000-in-usdt/"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:cryptoslate.com_feed_:3c24170a31206149</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>SlowMist, working with security researchers at crypto exchange OKX, found two malicious modules embedded in FomoPeek versions 1.1 (released Sept. 9) and 1.2 (Sept. 12) that could break out of Apple&#x27;s application sandbox and reach other apps&#x27; data. Blockchain analysis firm Salus estimated proceeds from the incident at about 579,900 USDT.
+    <summary>SlowMist, working with OKX security researchers, found that versions 1.1 (released Sept. 9) and 1.2 (Sept. 12) of the App Store app FomoPeek contained two modules unrelated to its advertised transaction-tracking function: one communicating with command-and-control servers and one containing a kernel exploitation framework with eight attack methods. Blockchain analysis firm Salus attributed roughly 579,900 USDT in stolen funds to the incident and identified an attacker address, 0x6d37f2C5e8F8546b648D317295565dA95975f4BB.
 
-SlowMist said the malicious components were absent from FomoPeek&#x27;s original release and were removed in version 1.3 on Sept. 17; the embedded kernel exploitation framework contained eight attack methods that adapted to the victim&#x27;s iPhone model and OS version, and could receive remote instructions governing whether exploitation was enabled and how often it ran. Salus said its analysis indicated the group behind the FomoPeek incident was also involved in a separate private-key theft in June, but that investigators are still determining whether the same technique was used.</summary>
+According to SlowMist founder Yu Xian, a successful exploit could break through the iOS sandbox isolation mechanism, read and decrypt the system Keychain, and access data files from other apps — potentially exposing private keys, mnemonic phrases and login credentials stored on the device. Binance, OKX, Gate, Bitget Wallet and Rabby have issued user warnings.
+
+The malicious components were absent from FomoPeek&#x27;s original release and were removed again in version 1.3 on Sept. 17; the framework was also able to receive remote instructions governing whether exploitation was enabled and how often it ran. Salus traced 401,028 USDT through three intermediary addresses to FixedFloat, 20,000 USDT through deposit addresses into a KuCoin hot wallet, 111,458 USDT via an address it associated with an escrow platform, and 10,000 USDT through the CCE mixing service before reaching escrow-linked addresses.</summary>
   </entry>
   <entry>
     <title>Pragma flags 6 price feeds as critical risk following $3.5M Starknet lending exploit</title>
     <link href="https://cryptoslate.com/pragma-flags-6-price-feeds-as-critical-risk-following-3-5m-starknet-lending-exploit/"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:cryptoslate.com_feed_:234a9108ede57ce3</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>Oracle provider Pragma classified 6 of 22 mainnet market and rate feeds as critical risk in a Sept. 18 assessment, naming BROTHER, DAI, DOG, EKUBO, LORDS and NSTR, with nine other feeds rated high risk. The report followed a Sept. 17 borrowing exploit at Starknet lending protocol Nostra, where a manipulated NSTR oracle price let one account borrow roughly $3.5 million of other assets against NSTR collateral.
+    <summary>Oracle provider Pragma classified 6 of 22 mainnet market and rate feeds as critical risk in a Sept. 18 assessment, naming BROTHER, DAI, DOG, EKUBO, LORDS and NSTR, with nine other feeds rated high risk. The report followed a Sept. 17 borrowing exploit at Nostra, a Starknet lending protocol, where Nostra said a manipulated NSTR oracle price let one account borrow roughly $3.5 million of other assets against NSTR collateral.
 
-At token quantities the oracle valued at $10,000, sell-quote deterioration was about 15% for NSTR, 17% for EKUBO, 22% for LORDS and 20% for BROTHER, measured against quotes for $10 sales. Pragma said the deviating oracle response had two contributing sources and that an enforced three-source minimum would have rejected it; it attributed the input to a manipulated on-chain pool and said its reconstruction found no decimals or median-calculation error.</summary>
+Pragma warned lenders that an available token price does not establish that collateral can be sold to cover a loan, leaving them to decide which assets qualify as collateral and how much exposure to allow. In its Sept. 17 statement, Nostra said it paused lending, borrowing, withdrawals and liquidations while it reconciled the impact.
+
+At token quantities valued by the oracle at $10,000, sell-quote deterioration was about 15% for NSTR, 17% for EKUBO, 22% for LORDS and 20% for BROTHER, measured against quotes for $10 sales. Pragma said the DAI finding concerns source concentration and tested Starknet token routes, and that current and legacy deployments had different exit curves, so the critical rating should not be read as a finding that DAI is globally illiquid.</summary>
   </entry>
   <entry>
     <title>Crypto-draining FOMO app was available on Apple store for a week</title>
     <link href="https://protos.com/crypto-draining-fomo-app-was-available-on-apple-store-for-a-week/"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:protos.com_feed_:d1a95782df0fede7</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>Analysts have urged iPhone users to update iOS after crypto-stealing malware was discovered in malicious Safari links and the FOMO app, and SlowMist CISO Shān Zhang last Saturday encouraged followers to update following the spread of DarkSword malware, which he claims affects iOS 13 to iOS 26.5. SlowMist also warned that official FOMO app versions on the App Store contained crypto-draining malware active between September 9 and September 17, and said updating or deleting may not be enough, with users advised to treat seed phrases, private keys, and sensitive credentials as compromised.</summary>
+    <summary>SlowMist Chief Information Security Officer Shān Zhang urged followers last Saturday to update to the latest IOS after DarkSword malware spread, claiming IOS 13 to IOS 26.5 leave users vulnerable to malicious Safari links exploiting a memory-corruption flaw in WebKit and JavaScriptCore. SlowMist also warned that official versions of the FOMO app on the App Store contained crypto-draining malware capable of stealing seed phrases and private keys, were active between September 9 and September 17, and that updating or deleting the app may not be enough, with users advised to treat relevant seed phrases, private keys, and sensitive credentials as compromised.</summary>
   </entry>
   <entry>
     <title>OpenAI Launches GPT-6 Sol and Luna Minutes After Anthropic Drops Claude Opus 5.5</title>
     <link href="https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:decrypt.co_feed:5bcfcf0898d39c4d</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>OpenAI released GPT-6 Sol and GPT-6 Luna on Tuesday, minutes after Anthropic launched Claude Opus 5.5. OpenAI says the API prices for both models were reduced by 50% versus GPT-5.6&#x27;s promotional rates, and that its internal coding-deception rate fell to 1.3% for Sol and 2.8% for Luna.</summary>
+    <summary>OpenAI released GPT-6 Sol and GPT-6 Luna on Tuesday (an OpenAI tweet dated September 22, 2026), minutes after Anthropic launched Claude Opus 5.5, cutting their API prices in half versus GPT-5.6&#x27;s promotional rates; OpenAI says its internal coding-deception rate fell to 1.3% for Sol and 2.8% for Luna, both far below GPT-5.6 Sol&#x27;s 10.4%.</summary>
   </entry>
   <entry>
     <title>Bitcoin Cash Runs 27% on CME Futures Listing as Bitcoin Gives Up the Day</title>
@@ -45,31 +49,26 @@ At token quantities the oracle valued at $10,000, sell-quote deterioration was a
     <summary>Bitcoin Cash gained 14% in the hour CME Group said it would list futures on the token and kept climbing through the afternoon, finishing the session up 27% on more than twice Monday&#x27;s volume. Bitcoin SV rose 20% alongside it, while Uniswap, named in the same release, spiked 11% and gave the whole move back.</summary>
   </entry>
   <entry>
-    <title>Moscow Exchange launches 5 crypto perpetual futures as demand tops 600 billion rubles</title>
-    <link href="https://cryptoslate.com/moscow-exchange-launches-5-crypto-perpetual-futures-as-demand-tops-600-billion-rubles/"/>
-    <id>https://bmt.news/editions/2026-09-23/#rss:cryptoslate.com_feed_:298811b8adefa93c</id>
-    <updated>2026-09-23T00:00:00Z</updated>
-    <summary>Moscow Exchange (MOEX) will launch perpetual futures on five major cryptocurrencies on Sept. 22, giving qualified investors continuous price exposure to Bitcoin, Ethereum, Solana, XRP and Tron without owning the underlying assets. The contracts — BTCUSDF, ETHUSDF, SOLUSDF, XRPUSDF and TRXUSDF — track corresponding MOEX crypto indexes, quote against US dollar-denominated indexes and settle profits and losses in Russian rubles.
-
-MOEX set first-tier minimum margin rates at 22% for Bitcoin, 35% for Ether, 38% for Solana, 43% for XRP and 30% for Tron, with XRP carrying the highest initial margin requirement of the five. Concentration limits (LK1 and LK2) range from 961 and 4,807 contracts for XRPUSDF to 124,490 and 622,450 for ETHUSDF, and the funding parameters are set at K1 0% and K2 0.35%; brokers determine final trading conditions for individual qualified clients.</summary>
-  </entry>
-  <entry>
     <title>CME Expands Crypto Futures Lineup With Bitcoin Cash and Uniswap</title>
     <link href="https://decrypt.co/379004/cme-crypto-bitcoin-cash-uniswap-futures"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:decrypt.co_feed:1c6768b1e10a41d4</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>CME Group said Tuesday it plans to launch Bitcoin Cash (BCH) and Uniswap (UNI) futures on October 19, pending regulatory review. Both products will be offered in standard and Micro sizes: BCH contracts will represent 250 BCH (Micro: 25 BCH), and UNI contracts 10,000 UNI (Micro: 1,000 UNI).
+    <summary>CME Group said Tuesday it plans to launch Bitcoin Cash and Uniswap futures on October 19, pending regulatory review, in both standard and Micro contract sizes. Standard Bitcoin Cash futures will represent 250 BCH (Micro: 25 BCH), while Uniswap futures will cover 10,000 UNI (Micro: 1,000 UNI).
 
-CME said its crypto futures and options averaged 279,800 contracts per day in the first half of 2026, worth $8.3 billion in notional volume, with average open interest of 264,600 contracts, or $15.4 billion. The exchange also said its 2026 launches of Cardano, Chainlink, Stellar, Avalanche and Sui futures have generated more than $1 billion in total notional value year-to-date.</summary>
+If regulatory review clears on schedule, the two contracts would become CME&#x27;s tenth and eleventh single-asset crypto futures products. Volatility Shares CEO Justin Young called the addition &quot;another important step in the continued expansion of CME Group&#x27;s crypto futures offering,&quot; and Ripple Prime president Noel Kimmel said institutions managing crypto exposure &quot;need around-the-clock access to regulated derivatives.&quot;
+
+CME said its crypto futures and options averaged 279,800 contracts traded daily in the first half of 2026, worth $8.3 billion in notional volume, with average open interest of 264,600 contracts, or $15.4 billion. Its 2026 launches of Cardano, Chainlink, Stellar, Avalanche and Sui futures have generated more than $1 billion in total notional value year-to-date, the exchange said.</summary>
   </entry>
   <entry>
     <title>Site Performance - Coinbase Web/Mobile</title>
     <link href="https://status.coinbase.com/incidents/8kq321sj9nmf"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:status.coinbase.com_history.rss:1c598ce391238158</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>Coinbase reported a site performance incident on Sep 21 affecting its web and mobile services, with an initial notice at 16:21 PDT saying customers may be unable to buy, sell, trade, or view balances on multiple services. The exchange said a fix was implemented by 17:23 PDT and the incident was marked resolved at 17:31 PDT.
+    <summary>On Sep 21, Coinbase reported a site performance incident affecting its web and mobile services, warning that customers may be unable to buy, sell, trade, or view balances on multiple services. The exchange said a fix was implemented at 17:23 PDT and marked the incident resolved at 17:31 PDT.
 
-The status page timeline ran from Investigating (16:21 PDT) to Update (16:58), Monitoring after a fix was implemented (17:23), and Resolved (17:31). The final update did not include a stated root cause for the incident.</summary>
+While the incident was open, some customers were unable to place trades or view their balances, although Coinbase stated that customer funds were safe.
+
+The incident was first flagged at 16:21 PDT as under investigation, updated at 16:58 PDT that investigation was continuing, and moved to monitoring at 17:23 PDT before being resolved at 17:31 PDT.</summary>
   </entry>
   <entry>
     <title>One wallet links $1.55 million FetchAI theft to massive 408.5 million NTX mint</title>
@@ -374,5 +373,16 @@ Arc uses USDC as native gas and can also accept other stablecoins via a paymaste
 It marks one of the most prominent ransomware-style extortion attempts against a major digital bank, and the choice of Monero underscores how privacy coins remain the preferred settlement channel for extortion. The breach also highlights the growing social-engineering risk facing crypto-adjacent financial platforms, where a single spoofed government email can expose customer records.
 
 Attackers reportedly gained access by using a legitimate Italian government email domain to impersonate law enforcement and bypass Revolut&#x27;s security checks; Reuters cites a source saying roughly 680 customers were affected and that Revolut&#x27;s core infrastructure, databases and customer accounts were not impacted. Earlier reports from Coin Bureau claimed a 10,000 BTC demand (worth over $760 million at current prices), and it is unclear whether that claim involved the same group.</summary>
+  </entry>
+  <entry>
+    <title>Ethereum&#x27;s Glamsterdam Upgrade Clears Rehearsal Toward 200M Gas Blocks</title>
+    <link href="https://www.coindesk.com/tech/2026/09/17/ethereum-s-upcoming-glamsterdam-upgrade-clears-rehearsal-for-a-big-jump-in-capacity"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:www.coindesk.com_arc_outboundfeeds_rss_:679cdac0ef4fd208</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>Ethereum&#x27;s Glamsterdam upgrade continued confirming blocks on its Devnet-11 test network under new block-building rules, and Nethermind&#x27;s execution client passed all 2,302 performance tests, processing 570.7 billion gas in three minutes and 15 seconds (roughly 2.9 billion gas per second). About an hour after going live on the testnet, the block gas limit was raised from 60 million to 200 million, ahead of a proposed October 6 deployment on the Sepolia public test network.
+
+Glamsterdam introduces block-level access lists that let clients fetch data and check unrelated transactions in parallel instead of sequentially, which could let Ethereum fit far more payments, token swaps and other activity into each block and soften fee spikes when the chain is congested. It also moves the builder-validator handoff and its payments into Ethereum&#x27;s own protocol rules, reducing dependence on external relay services.
+
+The 200 million gas limit is a test setting only and is not yet a commitment for Ethereum&#x27;s main network, and Devnet-11 was designed as a controlled rehearsal without deliberate attacks; the October 6 Sepolia date still requires formal confirmation. Glamsterdam also extends the window for spreading block data across the network from about two seconds to nine seconds, giving validators more time to receive and check the larger blocks it is designed to support, while the Nethermind benchmark measured client execution speed rather than the performance of the full network.</summary>
   </entry>
 </feed>

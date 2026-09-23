@@ -6,70 +6,69 @@
   <id>https://bmt.news/feeds/crypto-zh.xml</id>
   <updated>2026-09-23T00:00:00Z</updated>
   <entry>
-    <title>恶意 iPhone 应用逃逸 iOS 沙盒，劫取 58 万美元 USDT</title>
+    <title>恶意 iPhone 应用突破 iOS 沙盒，劫取 58 万美元 USDT</title>
     <link href="https://cryptoslate.com/rogue-iphone-app-escapes-ios-sandbox-to-hijack-580000-in-usdt/"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:cryptoslate.com_feed_:3c24170a31206149</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>SlowMist 与加密交易所 OKX 的安全研究人员合作，在 FomoPeek 1.1 版本（9 月 9 日发布）和 1.2 版本（9 月 12 日发布）中发现两个恶意模块，可突破苹果的应用沙盒并访问其他应用的数据。区块链分析公司 Salus 估算，该事件涉案金额约为 57.99 万 USDT。
+    <summary>SlowMist 与 OKX 安全研究人员联合调查发现，App Store 应用 FomoPeek 的 1.1 版本（9 月 9 日发布）和 1.2 版本（9 月 12 日发布）中嵌入了两个与其宣称的交易追踪功能无关的模块：一个用于与命令控制服务器通信，另一个包含具备八种攻击手法的内核漏洞利用框架。区块链分析公司 Salus 将约 579,900 USDT 的失窃资金归因于该事件，并指认了攻击者地址 0x6d37f2C5e8F8546b648D317295565dA95975f4BB。
 
-SlowMist 表示，这些恶意组件并不存在于 FomoPeek 的最初版本中，并在 9 月 17 日的 1.3 版本中被移除；内嵌的内核利用框架包含八种攻击方法，可根据受害者的 iPhone 机型和操作系统版本进行调整，并能接收远程指令以控制是否启用利用及运行频率。Salus 表示，其分析显示 FomoPeek 事件背后的团伙还涉及 6 月的另一起私钥窃取事件，但调查人员仍在确认是否使用了相同手法。</summary>
+SlowMist 创始人余弦表示，一旦攻击成功，应用可突破 iOS 沙盒隔离机制，读取并解密系统钥匙串（Keychain），并访问设备上其他应用的数据文件，设备中存储的私钥、助记词和登录凭证都可能因此泄露。Binance、OKX、Gate、Bitget Wallet 和 Rabby 已向用户发出警告。
+
+这些恶意组件并不存在于 FomoPeek 的初始版本中，并在 9 月 17 日的 1.3 版本中被移除；该框架还能接收远程指令，控制是否启用漏洞利用以及运行频率。Salus 追踪到 401,028 USDT 经三个中转地址流入 FixedFloat，20,000 USDT 经充值地址汇入 KuCoin 热钱包，111,458 USDT 经由其关联的托管平台地址转移，另有 10,000 USDT 通过 CCE 混币服务转入与托管服务相关的地址。</summary>
   </entry>
   <entry>
-    <title>Starknet 借贷协议遭 350 万美元漏洞利用后，Pragma 将 6 个价格喂价列为关键风险</title>
+    <title>Pragma 在 350 万美元 Starknet 借贷攻击事件后将 6 个价格喂价列为关键风险</title>
     <link href="https://cryptoslate.com/pragma-flags-6-price-feeds-as-critical-risk-following-3-5m-starknet-lending-exploit/"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:cryptoslate.com_feed_:234a9108ede57ce3</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>预言机服务商 Pragma 在 9 月 18 日的评估中将 22 个主网市场与利率喂价中的 6 个列为关键风险，分别是 BROTHER、DAI、DOG、EKUBO、LORDS 和 NSTR，另有 9 个喂价被评为高风险。该报告发布前，Starknet 借贷协议 Nostra 于 9 月 17 日遭遇借贷漏洞利用，被操纵的 NSTR 预言机价格使一个账户得以用 NSTR 作为抵押借出约 350 万美元的其他资产。
+    <summary>预言机服务商 Pragma 在 9 月 18 日的评估中，将 22 个主网市场与利率喂价中的 6 个列为关键风险，点名 BROTHER、DAI、DOG、EKUBO、LORDS 和 NSTR，另有 9 个喂价被评为高风险。该报告紧随 9 月 17 日 Starknet 借贷协议 Nostra 的借贷攻击事件；Nostra 称一个被操纵的 NSTR 预言机价格使某个账户得以用 NSTR 抵押借出约 350 万美元的其他资产。
 
-在被预言机估值为 1 万美元的代币数量上，相对 10 美元卖单报价，NSTR 的卖出报价恶化约 15%、EKUBO 约 17%、LORDS 约 22%、BROTHER 约 20%。Pragma 表示，出问题的预言机响应由两个来源共同构成，若强制执行至少三个来源的最低要求，该响应将被拒绝；它将异常输入归因于一个被操纵的链上池，并称复算未发现小数位或中位数计算错误。</summary>
+Pragma 警告放贷方，能够获取代币价格并不代表抵押品可以卖出以偿还贷款，这使放贷方需要自行判断哪些资产可作为抵押品、以及允许多大敞口。Nostra 在 9 月 17 日的声明中表示，已暂停借贷、提款和清算，以核实影响。
+
+在预言机估值为 10,000 美元的代币数量上，按 10 美元卖出报价衡量，卖出报价恶化幅度约为：NSTR 15%、EKUBO 17%、LORDS 22%、BROTHER 20%。Pragma 表示，DAI 的发现涉及来源集中度以及所测试的 Starknet 代币兑换路径，且当前与旧版部署的退出曲线不同，因此该关键评级不应被理解为 DAI 在全球范围内缺乏流动性。</summary>
   </entry>
   <entry>
-    <title>加密盗取型FOMO应用在Apple商店上架了一周</title>
+    <title>窃取加密资产的 FOMO 应用在苹果商店上架一周</title>
     <link href="https://protos.com/crypto-draining-fomo-app-was-available-on-apple-store-for-a-week/"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:protos.com_feed_:d1a95782df0fede7</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>在恶意Safari链接和FOMO应用中发现加密窃取恶意软件后，分析师敦促iPhone用户更新iOS；SlowMist首席信息安全官Shān Zhang上周六也敦促关注者更新，以应对DarkSword恶意软件扩散，他声称iOS 13至iOS 26.5版本易受影响。SlowMist还警告，App Store上官方版FOMO应用含有加密盗取恶意软件，漏洞版本在9月9日至9月17日活跃；其称更新或删除应用可能不够，用户应视相关种子短语、私钥和敏感凭据为已泄露。</summary>
+    <summary>SlowMist 首席信息安全官 Shān Zhang 上周六敦促用户在 DarkSword 恶意软件扩散后更新到最新版本 IOS，并声称 IOS 13 至 IOS 26.5 容易受到利用 WebKit 和 JavaScriptCore 内存破坏漏洞的恶意 Safari 链接攻击。SlowMist 还警告称，App Store 上官方版本的 FOMO 应用含有可窃取助记词和私钥的加密资产窃取恶意软件，易受影响版本在 9 月 9 日至 9 月 17 日活跃，且更新或删除应用可能不够，用户应将相关助记词、私钥和敏感凭据视为已泄露。</summary>
   </entry>
   <entry>
-    <title>OpenAI在Anthropic发布Claude Opus 5.5数分钟后推出GPT-6 Sol和Luna</title>
+    <title>OpenAI 在 Anthropic 推出 Claude Opus 5.5 几分钟后发布 GPT-6 Sol 和 Luna</title>
     <link href="https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:decrypt.co_feed:5bcfcf0898d39c4d</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>OpenAI周二发布GPT-6 Sol和GPT-6 Luna，发布时间在Anthropic推出Claude Opus 5.5数分钟后；OpenAI称两款模型的API价格较GPT-5.6促销价下调50%，并称内部编程欺骗率分别降至1.3%和2.8%。</summary>
+    <summary>OpenAI 于周二（其推文日期为 2026 年 9 月 22 日）发布 GPT-6 Sol 和 GPT-6 Luna，就在 Anthropic 推出 Claude Opus 5.5 几分钟后；OpenAI 将其 API 价格较 GPT-5.6 的促销价下调 50%，并称内部编码欺骗率降至 Sol 1.3%、Luna 2.8%，均远低于 GPT-5.6 Sol 的 10.4%。</summary>
   </entry>
   <entry>
-    <title>比特币现金因CME期货上市上涨27%，比特币回吐当日涨幅</title>
+    <title>CME 期货上市之际，比特币现金上涨 27%，比特币当日回吐涨幅</title>
     <link href="https://thedefiant.io/news/markets/bitcoin-cash-cme-futures-listing-sep-22-2026"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:thedefiant.io_api_feed:106d1d6d8c2fef00</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>CME集团表示将上市该代币期货后，比特币现金在一小时内上涨14%，并在下午继续攀升，最终收涨27%，成交量超过周一的两倍。比特币SV随之上涨20%，同一新闻稿中提到的Uniswap一度飙升11%，随后回吐全部涨幅。</summary>
+    <summary>在 CME Group 表示将上市比特币现金期货后的一个小时内，比特币现金上涨 14%，并在下午继续攀升，最终收涨 27%，成交量为周一的两倍多。比特币 SV 随之上涨 20%；同一份公告中提到的 Uniswap 曾飙升 11%，但随后回吐全部涨幅。</summary>
   </entry>
   <entry>
-    <title>莫斯科交易所推出5种加密货币永续期货，需求突破6000亿卢布</title>
-    <link href="https://cryptoslate.com/moscow-exchange-launches-5-crypto-perpetual-futures-as-demand-tops-600-billion-rubles/"/>
-    <id>https://bmt.news/editions/2026-09-23/#rss:cryptoslate.com_feed_:298811b8adefa93c</id>
-    <updated>2026-09-23T00:00:00Z</updated>
-    <summary>莫斯科交易所（MOEX）将于9月22日推出挂钩五大加密货币的永续期货，使合格投资者无需持有标的资产即可获得比特币、以太坊、Solana、XRP和波场的持续价格敞口。这些合约为BTCUSDF、ETHUSDF、SOLUSDF、XRPUSDF和TRXUSDF，分别跟踪对应的MOEX加密指数，以美元计价指数报价，盈亏以俄罗斯卢布结算。
-
-莫斯科交易所设定的第一档最低保证金率为：比特币22%、以太坊35%、Solana 38%、XRP 43%、波场30%，其中XRP在五种合约中初始保证金要求最高。集中度限额（LK1与LK2）从XRPUSDF的961份和4807份合约，到ETHUSDF的124490份和622450份不等；资金费率参数K1为0%、K2为0.35%；最终交易条件由经纪商针对各合格客户确定。</summary>
-  </entry>
-  <entry>
-    <title>CME 扩展加密货币期货产品线，新增比特币现金与 Uniswap</title>
+    <title>CME 扩充加密货币期货阵容，新增比特币现金与 Uniswap</title>
     <link href="https://decrypt.co/379004/cme-crypto-bitcoin-cash-uniswap-futures"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:decrypt.co_feed:1c6768b1e10a41d4</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>CME 集团周二表示，计划在 10 月 19 日推出比特币现金（BCH）与 Uniswap（UNI）期货，目前仍待监管审查。两款产品均提供标准合约与微型合约：BCH 合约代表 250 BCH（微型为 25 BCH），UNI 合约代表 10,000 UNI（微型为 1,000 UNI）。
+    <summary>CME 集团周二表示，计划在 10 月 19 日推出比特币现金（BCH）与 Uniswap（UNI）期货，目前仍待监管审查，合约同时提供标准规模与微型（Micro）两种规格。标准比特币现金期货对应 250 BCH（微型合约 25 BCH），Uniswap 期货对应 10,000 UNI（微型合约 1,000 UNI）。
 
-CME 表示，2026 年上半年其加密期货与期权日均成交 27.98 万张合约，名义成交额达 83 亿美元，平均未平仓合约为 26.46 万张，名义价值 154 亿美元。该交易所还称，2026 年推出的 Cardano、Chainlink、Stellar、Avalanche 与 Sui 期货年内累计名义价值已超过 10 亿美元。</summary>
+若监管审查如期通过，这两款合约将成为 CME 第十和第十一个单一资产加密期货产品。Volatility Shares 首席执行官 Justin Young 称此举是&quot;CME 集团加密期货业务持续扩张的又一重要步骤&quot;；Ripple Prime 总裁 Noel Kimmel 则表示，管理加密资产敞口的机构&quot;需要全天候获得受监管衍生品&quot;。
+
+CME 表示，2026 年上半年其加密期货与期权日均成交 279,800 份合约，名义成交额 83 亿美元，平均未平仓合约为 264,600 份，名义规模 154 亿美元。该交易所还称，2026 年推出的 Cardano、Chainlink、Stellar、Avalanche 和 Sui 期货年内累计名义成交额已超过 10 亿美元。</summary>
   </entry>
   <entry>
-    <title>站点性能 - Coinbase 网页端/移动端</title>
+    <title>站点性能——Coinbase 网页端/移动端</title>
     <link href="https://status.coinbase.com/incidents/8kq321sj9nmf"/>
     <id>https://bmt.news/editions/2026-09-23/#rss:status.coinbase.com_history.rss:1c598ce391238158</id>
     <updated>2026-09-23T00:00:00Z</updated>
-    <summary>Coinbase 于 9 月 21 日报告了一起站点性能事故，涉及网页端与移动端服务。太平洋夏令时 16:21 的首次通报称，客户可能在多项服务中无法买入、卖出、交易或查看余额。该交易所表示，到 17:23 已实施修复，并在 17:31 将该事故标记为已解决。
+    <summary>9月21日，Coinbase 报告了一起影响其网页端与移动端的站点性能事故，并提示客户在多项服务上可能无法买入、卖出、交易或查看余额。该交易所称已于 17:23 PDT 实施修复，并在 17:31 PDT 将事件标记为已解决。
 
-状态页时间线依次为：调查中（16:21）、更新（16:58）、已实施修复并监控结果（17:23）、已解决（17:31）。最终更新未说明该事故的根本原因。</summary>
+在事故持续期间，部分客户无法下单交易或查看账户余额，不过 Coinbase 表示客户资金是安全的。
+
+该事故最初于 16:21 PDT 以“调查中”状态被标记，16:58 PDT 更新称仍在继续调查，17:23 PDT 转为“监控中”，最终于 17:31 PDT 标记为已解决。</summary>
   </entry>
   <entry>
     <title>一个钱包将155万美元FetchAI盗窃与4.085亿NTX巨额铸造联系起来</title>
@@ -374,5 +373,16 @@ Arc 以 USDC 作为原生 gas，并可通过 paymaster 系统接受其他稳定�
 这是针对大型数字银行最为引人注目的勒索式敲诈尝试之一，而选择门罗币也凸显出隐私币仍是勒索交易的首选结算渠道。该事件还表明，加密相关金融平台面临的社交工程风险正在上升——一封伪造的政府邮件就可能导致客户记录泄露。
 
 据报道，攻击者通过使用一个真实的意大利政府邮箱域名冒充执法部门，绕过了 Revolut 的安全检查；路透社援引消息人士称约有680名客户受影响，而 Revolut 的核心基础设施、数据库和客户账户未受波及。此前 Coin Bureau 曾报道有人索要1万枚BTC（按当前价格价值超过7.6亿美元），目前尚不清楚该说法是否涉及同一团体。</summary>
+  </entry>
+  <entry>
+    <title>以太坊 Glamsterdam 升级通过演练，迈向 2 亿 Gas 区块</title>
+    <link href="https://www.coindesk.com/tech/2026/09/17/ethereum-s-upcoming-glamsterdam-upgrade-clears-rehearsal-for-a-big-jump-in-capacity"/>
+    <id>https://bmt.news/editions/2026-09-18/#rss:www.coindesk.com_arc_outboundfeeds_rss_:679cdac0ef4fd208</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>以太坊 Glamsterdam 升级在新的区块构建规则下于 Devnet-11 测试网持续出块，Nethermind 执行客户端通过了全部 2,302 项性能测试，在 3 分 15 秒内处理了 5,707 亿 Gas（约每秒 29 亿 Gas）。测试网上线约一小时后，区块 Gas 上限从 6,000 万提高到 2 亿，为拟定的 10 月 6 日 Sepolia 公共测试网部署做准备。
+
+Glamsterdam 引入的区块级访问列表让客户端可以并行地预取数据、同时校验互不相关的交易，而不再按顺序处理，这有望让以太坊在每个区块中容纳更多支付、代币兑换等活动，并在网络拥堵时缓手续费尖峰。该升级还把构建者与验证者之间的交接及其支付纳入以太坊自身的协议规则，从而减少对外部中继服务的依赖。
+
+2 亿 Gas 上限目前仅是测试设置，尚未成为以太坊主网的承诺，而 Devnet-11 被设计为不包含故意攻击的受控演练；10 月 6 日的 Sepolia 部署日期仍需正式确认。Glamsterdam 还将区块数据在网络中传播的时间窗口从约 2 秒延长到 9 秒，使验证者有更充裕的时间接收并校验该升级所支持的大区块；此外，Nethermind 的基准测试衡量的是客户端执行速度，而非整个网络的性能。</summary>
   </entry>
 </feed>
