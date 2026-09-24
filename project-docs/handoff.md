@@ -9,15 +9,15 @@
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/127",
   "owner": "Codex / ai-token-efficiency",
   "branch": "agent/ai-token-efficiency",
-  "last_verified_commit": "f2a286594e910fad295f332816b90d07be909f3a",
-  "pr": "pending",
+  "last_verified_commit": "39a4c813ff7a193994d07a10425658a53948ed15",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/128",
   "completed": [
     "评分动态提示仅在用量报告中标记为 content_analysis，不改变其请求预算和思考模式",
     "预筛只复用完整验证且提示全文相同的批次；单独 1 天、256 批容量不挤占评分缓存",
     "新增模型/内容变化、部分响应、缓存持久化及报告显示测试；本地全量 838 项通过"
   ],
   "unfinished": [
-    "提交当前任务 PR，等待 CI 和用户决定是否合并；未获当前任务部署授权",
+    "等待 PR128 的 CI 和用户决定是否合并；未获当前任务部署授权",
     "上线后观察多个采集/日报周期的预筛缓存命中、调用数、token 和候选质量；再决定是否做输入压缩或推理强度 A/B"
   ],
   "validation": [
