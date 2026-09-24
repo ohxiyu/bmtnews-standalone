@@ -15,11 +15,11 @@
     "en": "A multinational advisory from Japan, Germany, Australia and the US attributes a North Korean fake-recruiter malware campaign to hacking group WaterPlum, which infected at least 30,000 devices in over 100 countries and stole at least $10.7 million in crypto from developers and Web3 workers."
   },
   "first_seen_at": "2026-09-21T07:13:55.177935+00:00",
-  "last_updated_at": "2026-09-21T07:13:55.177935+00:00",
+  "last_updated_at": "2026-09-24T09:26:28.100104+00:00",
   "last_material_change_at": "2026-09-21T07:13:55.177935+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "korean",
     "north",
@@ -61,13 +61,20 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:cointelegraph.com_rss:8bbf99dd423796d3"
+        "rss:cointelegraph.com_rss:8bbf99dd423796d3",
+        "gdelt:article:20260924T073000Z::https://www.thestar.com.my/tech/tech-news/2026/09/24/north-korean-hackers-posed-as-recruiters-they-infected-30000-devices-worldwide"
       ],
       "sources": [
         {
           "url": "https://cointelegraph.com/news/north-korean-fake-recruiters-infect-30k-devices-steal-107m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "label": "Cointelegraph",
           "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/09/24/north-korean-hackers-posed-as-recruiters-they-infected-30000-devices-worldwide",
+          "label": "thestar.com.my",
+          "source_type": "gdelt",
           "official": false
         }
       ]

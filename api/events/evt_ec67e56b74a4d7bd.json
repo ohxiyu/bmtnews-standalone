@@ -15,11 +15,11 @@
     "en": "CME plans to launch Bitcoin Cash and Uniswap futures on October 19, pending regulatory review."
   },
   "first_seen_at": "2026-09-22T17:08:26.762840+00:00",
-  "last_updated_at": "2026-09-22T23:08:26.823387+00:00",
+  "last_updated_at": "2026-09-24T09:26:28.099942+00:00",
   "last_material_change_at": "2026-09-22T23:08:26.823387+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 2,
+  "sources_count": 3,
   "entities": [
     "cash",
     "cme",
@@ -59,13 +59,20 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "rss:www.theblock.co_rss.xml:4514b6c00555eb64"
+        "rss:www.theblock.co_rss.xml:4514b6c00555eb64",
+        "gdelt:article:20260924T090000Z::https://finance.yahoo.com/markets/crypto/articles/cme-expands-crypto-futures-lineup-204603742.html"
       ],
       "sources": [
         {
           "url": "https://www.theblock.co/news/markets/2026-09-22-cme-adds-bitcoin-cash-and-uniswap-futures-as-crypto-derivatives-push-grows-416049",
           "label": "The Block",
           "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/cme-expands-crypto-futures-lineup-204603742.html",
+          "label": "finance.yahoo.com",
+          "source_type": "gdelt",
           "official": false
         }
       ]
