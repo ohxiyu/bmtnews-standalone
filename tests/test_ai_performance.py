@@ -130,6 +130,109 @@ def test_prefilter_batches_candidates_and_preserves_scarce_categories():
     assert result.failed_batches == 0
 
 
+def test_prefilter_reuses_only_an_identical_complete_batch(tmp_path):
+    path = tmp_path / "analysis-cache.json"
+    items = [_item(i) for i in range(8)]
+
+    class Client:
+        config = SimpleNamespace(analysis_concurrency=2)
+
+        def __init__(self):
+            self.calls = 0
+
+        async def complete(self, **kwargs):
+            self.calls += 1
+            indices = [
+                int(line.split("]", 1)[0][1:])
+                for line in kwargs["user"].splitlines() if line.startswith("[")
+            ]
+            return json.dumps({"items": [
+                {"index": index, "score": index} for index in indices
+            ]})
+
+    first_client = Client()
+    cache = AnalysisResultCache(path, model="test:model")
+    first = asyncio.run(ContentPrefilter(first_client, batch_size=5, cache=cache).select(
+        items, maximum=5, reserve_per_category=1,
+    ))
+    assert first_client.calls == 2
+    assert (first.cache_hits, first.cache_misses) == (0, 2)
+    assert cache.snapshot() == {"hits": 0, "misses": 0, "entries": 0}
+    cache.save()
+
+    second_client = Client()
+    cache = AnalysisResultCache(path, model="test:model")
+    second = asyncio.run(ContentPrefilter(second_client, batch_size=5, cache=cache).select(
+        [_item(i) for i in range(8)], maximum=5, reserve_per_category=1,
+    ))
+    assert second_client.calls == 0
+    assert (second.cache_hits, second.cache_misses) == (2, 0)
+    assert cache.snapshot() == {"hits": 0, "misses": 0, "entries": 0}
+    assert [item.id for item in second.items] == [item.id for item in first.items]
+
+    changed = [_item(i) for i in range(8)]
+    changed[0].content = "Updated lead with a material new fact"
+    third_client = Client()
+    third = asyncio.run(ContentPrefilter(third_client, batch_size=5, cache=cache).select(
+        changed, maximum=5, reserve_per_category=1,
+    ))
+    assert third_client.calls == 1
+    assert (third.cache_hits, third.cache_misses) == (1, 1)
+
+    new_model_client = Client()
+    new_model = AnalysisResultCache(path, model="test:new-model")
+    new_model_result = asyncio.run(ContentPrefilter(
+        new_model_client, batch_size=5, cache=new_model,
+    ).select([_item(i) for i in range(8)], maximum=5))
+    assert new_model_client.calls == 2
+    assert new_model_result.cache_misses == 2
+
+
+def test_prefilter_batches_have_a_separate_short_lived_capacity(tmp_path):
+    path = tmp_path / "cache.json"
+    cache = AnalysisResultCache(path, model="test:model", max_entries=100)
+    for index in range(100):
+        item = _item(index)
+        item.ai_score = 8.0
+        cache.store_analysis(item)
+    for index in range(260):
+        cache.store_prefilter_batch("prefilter policy", f"batch {index}", {index: 7.0})
+    cache.save()
+
+    reloaded = AnalysisResultCache(path, model="test:model", max_entries=100)
+    assert len(reloaded.entries) == 100
+    assert len(reloaded.prefilter_batches) == 256
+    assert all(reloaded.restore_analysis(_item(index)) for index in range(100))
+
+
+def test_incomplete_prefilter_response_is_never_cached(tmp_path):
+    class Client:
+        config = SimpleNamespace(analysis_concurrency=2)
+
+        def __init__(self):
+            self.calls = 0
+
+        async def complete(self, **kwargs):
+            self.calls += 1
+            indices = [
+                int(line.split("]", 1)[0][1:])
+                for line in kwargs["user"].splitlines() if line.startswith("[")
+            ]
+            return json.dumps({"items": [
+                {"index": index, "score": 7} for index in indices[:3]
+            ]})
+
+    cache = AnalysisResultCache(tmp_path / "cache.json", model="test:model")
+    client = Client()
+    for _ in range(2):
+        result = asyncio.run(ContentPrefilter(client, batch_size=5, cache=cache).select(
+            [_item(i) for i in range(10)], maximum=5,
+        ))
+        assert result.cache_hits == 0
+        assert result.cache_misses == 2
+    assert client.calls == 4
+
+
 def test_prefilter_failed_batch_is_kept_fail_open():
     class Client:
         config = SimpleNamespace(analysis_concurrency=2)

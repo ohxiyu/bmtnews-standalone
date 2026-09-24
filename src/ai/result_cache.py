@@ -15,6 +15,8 @@ from . import prompts
 
 CACHE_VERSION = 1
 ENRICHMENT_POLICY_VERSION = "news-editorial-v4"
+PREFILTER_TTL = timedelta(days=1)
+PREFILTER_MAX_BATCHES = 256
 ANALYSIS_FIELDS = ("ai_score", "ai_reason", "ai_summary", "ai_tags")
 ENRICHMENT_PREFIXES = (
     "title_",
@@ -52,6 +54,7 @@ class AnalysisResultCache:
         self.max_entries = max(100, max_entries)
         self.prompt_revision = prompt_revision
         self.entries: dict[str, dict[str, Any]] = {}
+        self.prefilter_batches: dict[str, dict[str, Any]] = {}
         self.hits = 0
         self.misses = 0
         self.comparison_hits = 0
@@ -66,6 +69,8 @@ class AnalysisResultCache:
                 payload.get("entries"), dict
             ):
                 self.entries = payload["entries"]
+                if isinstance(payload.get("prefilter_batches"), dict):
+                    self.prefilter_batches = payload["prefilter_batches"]
         except (OSError, ValueError, TypeError):
             self.entries = {}
         self._prune()
@@ -105,26 +110,34 @@ class AnalysisResultCache:
     def _get(self, item: ContentItem, stage: str) -> dict[str, Any] | None:
         return self._get_key(self._key(item, stage))
 
-    def _get_key(self, key: str) -> dict[str, Any] | None:
-        entry = self.entries.get(key)
+    def _get_key(
+        self, key: str, *, records: dict[str, dict[str, Any]] | None = None,
+        ttl: timedelta | None = None, track_stats: bool = True,
+    ) -> dict[str, Any] | None:
+        records = self.entries if records is None else records
+        entry = records.get(key)
         if not isinstance(entry, dict):
-            self.misses += 1
+            if track_stats:
+                self.misses += 1
             return None
         try:
             stored_at = datetime.fromisoformat(str(entry["stored_at"]))
             if stored_at.tzinfo is None:
                 stored_at = stored_at.replace(tzinfo=timezone.utc)
         except (KeyError, TypeError, ValueError):
-            self.misses += 1
+            if track_stats:
+                self.misses += 1
             return None
-        if _utc_now() - stored_at > self.ttl or not isinstance(
+        if _utc_now() - stored_at > (ttl or self.ttl) or not isinstance(
             entry.get("value"), dict
         ):
-            self.entries.pop(key, None)
+            records.pop(key, None)
             self._dirty = True
-            self.misses += 1
+            if track_stats:
+                self.misses += 1
             return None
-        self.hits += 1
+        if track_stats:
+            self.hits += 1
         return entry["value"]
 
     def _comparison_key(self, system: str, user: str) -> str:
@@ -144,6 +157,28 @@ class AnalysisResultCache:
         """Caller must validate indices before storing; hits are revalidated."""
         self.entries[self._comparison_key(system, user)] = {
             "stored_at": _utc_now().isoformat(), "value": value,
+        }
+        self._dirty = True
+
+    def _prefilter_key(self, system: str, user: str) -> str:
+        """Only an identical prompt may reuse a batch's relative scores."""
+        material = json.dumps(
+            ["prefilter-exact-batch-v1", self.model, self.prompt_revision, system, user],
+            ensure_ascii=False,
+        )
+        return hashlib.sha256(material.encode()).hexdigest()
+
+    def get_prefilter_batch(self, system: str, user: str) -> dict[str, Any] | None:
+        return self._get_key(
+            self._prefilter_key(system, user), records=self.prefilter_batches,
+            ttl=min(self.ttl, PREFILTER_TTL), track_stats=False,
+        )
+
+    def store_prefilter_batch(self, system: str, user: str, scores: dict[int, float]) -> None:
+        """Store only fully validated scores; the caller checks completeness."""
+        self.prefilter_batches[self._prefilter_key(system, user)] = {
+            "stored_at": _utc_now().isoformat(),
+            "value": {"scores": {str(index): score for index, score in scores.items()}},
         }
         self._dirty = True
 
@@ -207,24 +242,31 @@ class AnalysisResultCache:
         self._dirty = True
 
     def _prune(self) -> None:
-        cutoff = _utc_now() - self.ttl
-        retained: list[tuple[str, dict[str, Any], datetime]] = []
-        for key, entry in self.entries.items():
-            try:
-                stored_at = datetime.fromisoformat(str(entry["stored_at"]))
-                if stored_at.tzinfo is None:
-                    stored_at = stored_at.replace(tzinfo=timezone.utc)
-            except (KeyError, TypeError, ValueError):
-                continue
-            if stored_at >= cutoff:
-                retained.append((key, entry, stored_at))
-        retained.sort(key=lambda row: row[2], reverse=True)
-        pruned = {
-            key: entry for key, entry, _ in retained[: self.max_entries]
-        }
-        if len(pruned) != len(self.entries):
-            self._dirty = True
-        self.entries = pruned
+        def prune(
+            records: dict[str, dict[str, Any]], ttl: timedelta, limit: int,
+        ) -> dict[str, dict[str, Any]]:
+            cutoff = _utc_now() - ttl
+            retained: list[tuple[str, dict[str, Any], datetime]] = []
+            for key, entry in records.items():
+                try:
+                    stored_at = datetime.fromisoformat(str(entry["stored_at"]))
+                    if stored_at.tzinfo is None:
+                        stored_at = stored_at.replace(tzinfo=timezone.utc)
+                except (KeyError, TypeError, ValueError):
+                    continue
+                if stored_at >= cutoff:
+                    retained.append((key, entry, stored_at))
+            retained.sort(key=lambda row: row[2], reverse=True)
+            result = {key: entry for key, entry, _ in retained[:limit]}
+            if len(result) != len(records):
+                self._dirty = True
+            return result
+
+        self.entries = prune(self.entries, self.ttl, self.max_entries)
+        self.prefilter_batches = prune(
+            self.prefilter_batches, min(self.ttl, PREFILTER_TTL),
+            PREFILTER_MAX_BATCHES,
+        )
 
     def save(self) -> None:
         if not self._dirty:
@@ -234,7 +276,11 @@ class AnalysisResultCache:
         _atomic_write_text(
             self.path,
             json.dumps(
-                {"version": CACHE_VERSION, "entries": self.entries},
+                {
+                    "version": CACHE_VERSION,
+                    "entries": self.entries,
+                    "prefilter_batches": self.prefilter_batches,
+                },
                 ensure_ascii=False,
                 indent=2,
                 sort_keys=True,

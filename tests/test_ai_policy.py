@@ -37,6 +37,20 @@ def test_simple_tasks_use_explicit_non_thinking_budget(monkeypatch):
     assert usage["calls"] == 1
 
 
+def test_dynamic_scoring_prompt_is_labeled_without_changing_request(monkeypatch):
+    client, calls = client_fixture(monkeypatch)
+    before, rest = CONTENT_ANALYSIS_SYSTEM.split("Consider:\n", 1)
+    _, calibration = rest.split("Scoring granularity and calibration:", 1)
+    dynamic_system = (
+        before + "Publication is inside the fixed news window.\n"
+        + "Scoring granularity and calibration:" + calibration
+    )
+    asyncio.run(client.complete(dynamic_system, "test"))
+    assert calls[0]["max_tokens"] == client.max_tokens
+    assert "extra_body" not in calls[0]
+    assert task_usage_snapshot()[0]["stage"] == "content_analysis"
+
+
 def test_topic_dedup_disables_unbounded_implicit_reasoning(monkeypatch):
     client, calls = client_fixture(monkeypatch)
     asyncio.run(client.complete(TOPIC_DEDUP_SYSTEM, "Return duplicate indices as JSON"))

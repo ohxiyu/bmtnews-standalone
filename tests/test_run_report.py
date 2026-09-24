@@ -116,6 +116,8 @@ def test_daily_report_renders_window_quotas_and_source_contribution() -> None:
     report.set_metric("fetched_raw", 19)
     report.set_metric("edition_candidates", 51)
     report.set_metric("displayed_today", 7)
+    report.set_metric("prefilter_cache_hits", 2)
+    report.set_metric("prefilter_cache_misses", 3)
     report.set_metric("primary_selected", 4)
     report.set_metric("primary_required", 9)
     report.set_timing("fetch", 1.2344)
@@ -176,10 +178,21 @@ def test_daily_report_renders_window_quotas_and_source_contribution() -> None:
     assert "`deepseek:deepseek-flash`：51 条" in markdown
     assert "| analysis | 2.346 |" in markdown
     assert "| 固定窗口候选 | 51 |" in markdown
+    assert "| 粗筛批次缓存命中 | 2 |" in markdown
+    assert "| 粗筛批次缓存未命中 | 3 |" in markdown
     assert "| Crypto Markets | 12 | 3 | 6 | 4 | 4 |" in markdown
     assert "Crypto 主轨：**4 / 9**" in markdown
     assert "| rss/CoinDesk | 12 | 3 | 5 | 2 |" in markdown
     assert "| URL 去重后 | 0 |" not in markdown
+
+
+def test_staging_report_exposes_prefilter_batch_cache_counts() -> None:
+    markdown = render_markdown_report({
+        "kind": "staging_fetch",
+        "metrics": {"prefilter_cache_hits": 4, "prefilter_cache_misses": 1},
+    })
+    assert "| 粗筛批次缓存命中 | 4 |" in markdown
+    assert "| 粗筛批次缓存未命中 | 1 |" in markdown
 
 
 def test_sanitize_diagnostic_removes_url_credentials_and_query() -> None:
