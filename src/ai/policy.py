@@ -14,6 +14,17 @@ def prompt_stage(system: str) -> str:
     return "other"
 
 
+def usage_stage(system: str) -> str:
+    """Label dynamic scoring prompts without changing their request policy."""
+    stage = prompt_stage(system)
+    if stage != "other":
+        return stage
+    analysis_prefix = prompts.CONTENT_ANALYSIS_SYSTEM.split("Consider:\n", 1)[0]
+    if system.startswith(analysis_prefix) and "Scoring granularity and calibration:" in system:
+        return "content_analysis"
+    return stage
+
+
 SIMPLE_BUDGETS = {
     # Dedup returns indices for at most 24 stories, not a reasoning essay.
     # DeepSeek's implicit thinking can consume the entire output budget.

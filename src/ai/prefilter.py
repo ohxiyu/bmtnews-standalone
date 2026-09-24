@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass
+from math import isfinite
 
 from ..models import ContentItem
 from .client import AIClient
+from .result_cache import AnalysisResultCache
 from .utils import parse_json_response
 
 
@@ -30,14 +32,20 @@ class PrefilterResult:
     evaluated: int
     removed: int
     failed_batches: int
+    cache_hits: int = 0
+    cache_misses: int = 0
 
 
 class ContentPrefilter:
     """Score titles in batches, with fail-open behavior per failed batch."""
 
-    def __init__(self, client: AIClient, *, batch_size: int = 20) -> None:
+    def __init__(
+        self, client: AIClient, *, batch_size: int = 20,
+        cache: AnalysisResultCache | None = None,
+    ) -> None:
         self.client = client
         self.batch_size = max(5, min(50, batch_size))
+        self.cache = cache
 
     def _concurrency(self) -> int:
         config = getattr(self.client, "config", None)
@@ -59,6 +67,8 @@ class ContentPrefilter:
             for offset in range(0, len(indexed), self.batch_size)
         ]
         semaphore = asyncio.Semaphore(self._concurrency())
+        cache_hits = 0
+        cache_misses = 0
 
         async def score_batch(
             batch: list[tuple[int, ContentItem]],
@@ -71,11 +81,26 @@ class ContentPrefilter:
                     f"[{index}] category={item.metadata.get('category', 'other')} "
                     f"source={item.source_type.value} title={item.title} excerpt={excerpt}"
                 )
+            user_prompt = PREFILTER_USER.format(items="\n".join(lines))
+            nonlocal cache_hits, cache_misses
+            if self.cache is not None:
+                cached = self.cache.get_prefilter_batch(PREFILTER_SYSTEM, user_prompt)
+                raw_scores = cached.get("scores") if isinstance(cached, dict) else None
+                if isinstance(raw_scores, dict) and set(raw_scores) == {
+                    str(index) for index in batch_indices
+                } and all(
+                    isinstance(score, (int, float)) and not isinstance(score, bool)
+                    and 0 <= score <= 10 and isfinite(score)
+                    for score in raw_scores.values()
+                ):
+                    cache_hits += 1
+                    return {int(index): float(score) for index, score in raw_scores.items()}, batch_indices
+                cache_misses += 1
             try:
                 async with semaphore:
                     response = await self.client.complete(
                         system=PREFILTER_SYSTEM,
-                        user=PREFILTER_USER.format(items="\n".join(lines)),
+                        user=user_prompt,
                         response_format="json",
                     )
                 payload = parse_json_response(response)
@@ -93,10 +118,13 @@ class ContentPrefilter:
                         and index in batch_indices
                         and isinstance(score, (int, float))
                         and not isinstance(score, bool)
+                        and isfinite(score)
                     ):
                         scores[index] = max(0.0, min(10.0, float(score)))
                 if len(scores) < max(1, len(batch) // 2):
                     return None, batch_indices
+                if self.cache is not None and len(scores) == len(batch_indices):
+                    self.cache.store_prefilter_batch(PREFILTER_SYSTEM, user_prompt, scores)
                 return scores, batch_indices
             except Exception:
                 return None, batch_indices
@@ -137,4 +165,6 @@ class ContentPrefilter:
             evaluated=len(scores),
             removed=len(items) - len(chosen),
             failed_batches=failed_batches,
+            cache_hits=cache_hits,
+            cache_misses=cache_misses,
         )

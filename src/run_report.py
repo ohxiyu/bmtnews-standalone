@@ -50,6 +50,8 @@ _STAGING_METRIC_LABELS = (
     ("unique_after_url_dedup", "URL 去重后"),
     ("staged_added", "新增暂存"),
     ("staged_total", "暂存累计"),
+    ("prefilter_cache_hits", "粗筛批次缓存命中"),
+    ("prefilter_cache_misses", "粗筛批次缓存未命中"),
 )
 
 _DAILY_METRIC_LABELS = (
@@ -63,6 +65,8 @@ _DAILY_METRIC_LABELS = (
     ("skipped_published_history", "跳过历史发布"),
     ("prefilter_evaluated", "批量粗筛评估"),
     ("prefilter_removed", "批量粗筛移除"),
+    ("prefilter_cache_hits", "粗筛批次缓存命中"),
+    ("prefilter_cache_misses", "粗筛批次缓存未命中"),
     ("analyzed_this_run", "本次评估（含缓存）"),
     ("analysis_cache_misses", "新增 AI 分析"),
     ("analysis_cache_hits", "分析缓存命中"),

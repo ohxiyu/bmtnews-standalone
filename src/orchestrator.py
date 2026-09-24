@@ -3264,6 +3264,7 @@ class BMTNewsOrchestrator:
         if self.config.ai.prefilter_enabled and len(misses) > new_budget:
             result = await ContentPrefilter(
                 ai_client, batch_size=self.config.ai.prefilter_batch_size,
+                cache=cache,
             ).select(misses, maximum=new_budget)
             misses = result.items
             if self.last_run_report:
@@ -3271,6 +3272,8 @@ class BMTNewsOrchestrator:
                     "prefilter_evaluated": result.evaluated,
                     "prefilter_removed": result.removed,
                     "prefilter_failed_batches": result.failed_batches,
+                    "prefilter_cache_hits": result.cache_hits,
+                    "prefilter_cache_misses": result.cache_misses,
                 }.items():
                     self.last_run_report.set_metric(key, self.last_run_report.metrics.get(key, 0) + value)
         if self.last_run_report:

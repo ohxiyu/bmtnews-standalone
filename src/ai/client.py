@@ -15,7 +15,7 @@ from google.genai import types
 from ..models import AIConfig, AIProvider, AI_PROVIDER_DEFAULTS
 from rich import print as rich_print
 from .tokens import record_usage
-from .policy import prompt_stage, SIMPLE_BUDGETS
+from .policy import prompt_stage, usage_stage, SIMPLE_BUDGETS
 
 
 # A chained provider may serve a completion from a fallback model. Keep the
@@ -332,7 +332,7 @@ class OpenAIClient(AIClient):
                 input_tokens=getattr(usage, "prompt_tokens", 0),
                 output_tokens=getattr(usage, "completion_tokens", 0),
                 model=self.model,
-                stage=stage,
+                stage=usage_stage(system),
                 cached_input_tokens=getattr(usage, "prompt_cache_hit_tokens", 0),
                 reasoning_tokens=getattr(getattr(usage, "completion_tokens_details", None), "reasoning_tokens", 0) or 0,
                 elapsed_ms=int((time.perf_counter() - started) * 1000),

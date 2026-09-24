@@ -1,53 +1,53 @@
 # 当前交接
 
-当前目标：按 [Issue125](https://github.com/ohxiyu/bmtnews-standalone/issues/125) 记录 [PR124](https://github.com/ohxiyu/bmtnews-standalone/pull/124) 已获授权合并后的切换状态，并等待下一期自动日报验证。代码已进入 main；9 月 23 日旧刊期不重写，也不把合并或预览检查当作生产验收。
+当前目标：按 [Issue127](https://github.com/ohxiyu/bmtnews-standalone/issues/127) 在不改写作、评分或去重策略的前提下，准确归因 AI 用量，并缓存完全相同的预筛批次。当前任务只交付 PR，不合并或部署。先前的 JEV 移除已产生 2026-09-24 日报；旧交接中的待出刊状态已过时。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "记录移除 JEV 的合并与生产切换；在首期新日报发布后核验线上结果",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/125",
-  "owner": "Codex / remove-jev rollout",
-  "branch": "agent/remove-jev-rollout",
-  "last_verified_commit": "b898d103d458d07d412d145db542262f304de49a",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/126",
+  "goal": "降低重复预筛调用并准确归因评分用量，不改变模型请求和编辑质量门槛",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/127",
+  "owner": "Codex / ai-token-efficiency",
+  "branch": "agent/ai-token-efficiency",
+  "last_verified_commit": "39a4c813ff7a193994d07a10425658a53948ed15",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/128",
   "completed": [
-    "PR124 于 2026-09-24 00:36 Asia/Shanghai 合并，main 合并提交 b898d103d458d07d412d145db542262f304de49a",
-    "移除独立评估模型并恢复 DeepSeek 直接评分、原有语义去重及可选内容；保留后续独立改进",
-    "PR124 的必需 CI、CodeQL 与 Pages Preview 通过；未修改 Worker、旧归档、gh-pages 或分发队列"
+    "评分动态提示仅在用量报告中标记为 content_analysis，不改变其请求预算和思考模式",
+    "预筛只复用完整验证且提示全文相同的批次；单独 1 天、256 批容量不挤占评分缓存",
+    "新增模型/内容变化、部分响应、缓存持久化及报告显示测试；本地全量 838 项通过"
   ],
   "unfinished": [
-    "下一期 2026-09-24 日报窗口在 Asia/Shanghai 07:00 截止，07:26 自动调度后才可确认新评分器的生产输出",
-    "核对自动工作流、gh-pages 产物、Cloudflare 生产 /api/latest.json 与首页、分发状态；再以文档 PR 补证据"
+    "等待用户审核 PR128 并决定是否合并；未获当前任务部署授权",
+    "上线后观察多个采集/日报周期的预筛缓存命中、调用数、token 和候选质量；再决定是否做输入压缩或推理强度 A/B"
   ],
   "validation": [
-    "uv sync --frozen --extra dev 通过；本地全量 pytest 833 项通过；治理检查通过",
-    "PR124 的 test、analyze、governance、CodeQL 及 Cloudflare Pages Preview 检查通过",
-    "合并后只读核验 origin/main 为 b898d103d458d07d412d145db542262f304de49a，生产 /api/latest.json 仍为 2026-09-23 的 9 条旧刊期"
+    "uv sync --frozen --extra dev、uv run pytest（838 项）及治理检查通过；只用 mock 客户端，没有真实 AI 调用",
+    "PR128 的 test、analyze、governance、CodeQL 和 Cloudflare Pages Preview 检查通过",
+    "origin/main=f2a286594e910fad295f332816b90d07be909f3a；2026-09-24 自动日报 workflow 35933583563 成功"
   ],
   "unverified": [
-    "真实 DeepSeek 首期分数分布、7.0 门槛命中率、去重质量及可选内容覆盖率未经生产验证",
-    "合并后尚未触发下一期日报；Cloudflare Pages 新产物、渠道投递和生产 Worker 版本未作新验收"
+    "当前任务的真实预筛缓存命中率与 token 节省量未经生产验证；完全相同批次以外仍按原路径调用",
+    "未改模型或提示词，未进行需要真实 AI 消耗的推理强度 A/B；生产 Worker 版本与渠道投递未在本任务验收"
   ],
   "production": {
-    "source_commit": "8e4447ba5ade934b2bcbc5be58a0908729c8a120 (last published edition); next source b898d103d458d07d412d145db542262f304de49a pending",
-    "artifact_commit": "58bf9d1372a117b179c70154df886eec713585c5",
-    "edition": "2026-09-23 latest.json, 9 items, still the old production policy",
-    "generated_at": "2026-09-23T10:17:32.934485Z",
+    "source_commit": "f2a286594e910fad295f332816b90d07be909f3a (previous JEV-removal rollout; this task not deployed)",
+    "artifact_commit": "1c8624f3f2adba6170735f2636d85baf3650d328 (2026-09-24 Daily Edition); later event update 9bf706583503a5a4153cb381489e4418acf75283",
+    "edition": "2026-09-24 latest.json, 14 items",
+    "generated_at": "2026-09-23T23:28:50.209803Z",
     "worker_version": "not changed; independent dispatcher version unverified",
-    "verified_at": "2026-09-24 00:39 Asia/Shanghai; read-only public API check, cutover edition pending"
+    "verified_at": "2026-09-24 10:46 Asia/Shanghai; public API and GitHub run read-only check"
   },
   "blockers": [
-    "首期 2026-09-24 的 07:00 截止与 07:26 自动生成尚未到达；不得提前强制重刊历史日报"
+    "当前任务只授权开发与 PR；合并和生产验证须另行授权"
   ],
-  "next_action": "07:26 后核对 2026-09-24 自动日报运行和线上刊期，检查评分、排序、同事件去重及附加内容；失败则排障而不覆盖旧刊期",
+  "next_action": "审核预筛缓存及用量标签 PR；获授权合并后观察 3-7 天用量与内容质量，再评估后续压缩方案",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "complete",
+    "pr_merged": "pending",
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-24-remove-jev.md"
+  "evidence": "project-docs/releases/2026-09-24-ai-token-efficiency.md"
 }
 ```
