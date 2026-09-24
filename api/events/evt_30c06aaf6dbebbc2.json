@@ -11,15 +11,15 @@
     "en": "Cosmos hub halts for 24 hours after Neutron governance attack"
   },
   "current_state": {
-    "zh": "Cosmos Hub 已在停块24小时48分钟后恢复出块；与Neutron治理攻击相关的攻击者钱包转出1.23百万ATOM，该钱包曾用20,199 USDC购买投票权并在加速提案关闭前12分钟质押。",
-    "en": "Cosmos Hub has resumed producing blocks after a 24-hour-48-minute halt; 1.23 million ATOM moved from the Neutron attacker wallet tied to the governance attack, which had purchased voting power with 20,199 USDC and staked it 12 minutes before the expedited proposal closed."
+    "zh": "Cosmos Hub已在约25小时停块后重启，并从攻击者关联地址扫走1.23百万ATOM（约220万美元），转入社区验证者多签；但168,990.9 ATOM在扫款后经THORChain退款到达攻击者地址并逃逸，最终在Osmosis卖出约266,841 USDC；Neutron正筹备重启并归还恢复资金。",
+    "en": "Cosmos Hub restarted after a nearly 25-hour halt and swept 1.23M ATOM (~$2.2M) from an attacker-linked address into a community validator multisig; however, 168,990.9 ATOM arrived after the sweep via a THORChain refund, escaped recovery, and was sold on Osmosis for about 266,841 USDC; Neutron is preparing to restart and return recovered funds."
   },
   "first_seen_at": "2026-09-23T17:21:31.878864+00:00",
-  "last_updated_at": "2026-09-23T23:02:35.843748+00:00",
-  "last_material_change_at": "2026-09-23T23:02:35.843748+00:00",
+  "last_updated_at": "2026-09-24T17:26:43.553611+00:00",
+  "last_material_change_at": "2026-09-24T17:26:43.553611+00:00",
   "confidence": 0.75,
-  "updates_count": 2,
-  "sources_count": 2,
+  "updates_count": 3,
+  "sources_count": 3,
   "entities": [
     "atom",
     "attacker",
@@ -35,6 +35,7 @@
   ],
   "identifiers": [],
   "topics": [
+    "atom",
     "chain-halt",
     "cosmos",
     "defi-exploit",
@@ -127,6 +128,44 @@
         {
           "url": "https://thedefiant.io/news/hacks/cosmos-hub-restarts-1-23-million-atom-moved-from-neutron-attacker-wallet",
           "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_813e96553a9f1dc7",
+      "event_id": "evt_30c06aaf6dbebbc2",
+      "occurred_at": "2026-09-24T11:20:49Z",
+      "published_at": "2026-09-24T11:20:49Z",
+      "first_seen_at": "2026-09-24T17:26:43.553611Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Cosmos restarted to seize $2.2 million in stolen ATOM, but 169,000 tokens still escaped",
+      "title_en": "Cosmos restarted to seize $2.2 million in stolen ATOM, but 169,000 tokens still escaped",
+      "what_changed_zh": "新增关键事实：在Cosmos Hub重启并扫走1.23百万ATOM后，168,990.9 ATOM因THORChain退款在七个区块后到达攻击者关联地址，未在恢复交易中被拦截，随后被转入Osmosis分批卖出约266,841 USDC并部分换成ETH；此外，攻击初始损失估计约440万美元，Neutron正筹备重启并恢复受影响合约。",
+      "what_changed_en": "New material facts: after Cosmos Hub restarted and swept 1.23M ATOM, 168,990.9 ATOM arrived at the attacker-linked address seven blocks later via a THORChain refund, escaped the recovery transaction, and was moved to Osmosis and sold in batches for about 266,841 USDC, partly converted to ETH; the initial attack impact was estimated at roughly $4.4M, and Neutron is preparing to restart and restore affected contracts.",
+      "current_state_zh": "Cosmos Hub已在约25小时停块后重启，并从攻击者关联地址扫走1.23百万ATOM（约220万美元），转入社区验证者多签；但168,990.9 ATOM在扫款后经THORChain退款到达攻击者地址并逃逸，最终在Osmosis卖出约266,841 USDC；Neutron正筹备重启并归还恢复资金。",
+      "current_state_en": "Cosmos Hub restarted after a nearly 25-hour halt and swept 1.23M ATOM (~$2.2M) from an attacker-linked address into a community validator multisig; however, 168,990.9 ATOM arrived after the sweep via a THORChain refund, escaped recovery, and was sold on Osmosis for about 266,841 USDC; Neutron is preparing to restart and return recovered funds.",
+      "detailed_summary_zh": "Cosmos Hub restarted after a nearly 25-hour halt, sweeping 1.23 million ATOM worth about $2.2 million linked to the Neutron governance exploit, but 168,990 ATOM escaped the recovery.",
+      "detailed_summary_en": "Cosmos Hub restarted after a nearly 25-hour halt, sweeping 1.23 million ATOM worth about $2.2 million linked to the Neutron governance exploit, but 168,990 ATOM escaped the recovery.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:f96ea5c094e083fc"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/cosmos-restarted-to-seize-2-2-million-in-stolen-atom-but-169000-tokens-still-escaped/",
+          "label": "CryptoSlate",
           "source_type": "rss",
           "official": false
         }

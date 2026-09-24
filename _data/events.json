@@ -1214,16 +1214,21 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "Washington Goes All-In on Crypto: Trump, SEC, CFTC Advance New Rules",
-      "current_state_zh": "华盛顿全力拥抱加密：特朗普、SEC、CFTC齐推新规",
+      "current_state_en": "Washington's crypto policy push enters a new stage: after legislation stalled, the CFTC pivots to using existing authority to write market-structure rules for perpetuals, while the SEC advances exemptions and custody proposals.",
+      "current_state_zh": "华盛顿加密政策推进进入新阶段：CFTC在立法受阻后转向以现有权力制定永续合约等市场结构规则，SEC同步推进豁免与托管提案。",
       "entities": [
         "advance",
         "all",
         "cftc",
         "goes",
+        "minute",
+        "morning",
         "new",
         "rules",
+        "says",
         "sec",
+        "selig",
+        "time",
         "trump",
         "washington"
       ],
@@ -1231,19 +1236,21 @@
       "event_type": "other",
       "first_seen_at": "2026-08-22T08:00:00+08:00",
       "identifiers": [],
-      "last_material_change_at": "2026-08-22T08:00:00+08:00",
-      "last_updated_at": "2026-08-22T08:00:00+08:00",
+      "last_material_change_at": "2026-09-24T17:26:47.587938Z",
+      "last_updated_at": "2026-09-24T17:26:47.587938Z",
       "legacy_thread_ids": [
         "t55e85960c2"
       ],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Washington Goes All-In on Crypto: Trump, SEC, CFTC Advance New Rules",
       "title_zh": "华盛顿全力拥抱加密：特朗普、SEC、CFTC齐推新规",
       "topics": [
+        "btc-etf",
         "cftc",
         "clarity-act",
         "crypto-regulation",
+        "perpetuals",
         "sec",
         "white-house"
       ],
@@ -1285,6 +1292,44 @@
           "update_type": "initial",
           "what_changed_en": "Washington Goes All-In on Crypto: Trump, SEC, CFTC Advance New Rules",
           "what_changed_zh": "华盛顿全力拥抱加密：特朗普、SEC、CFTC齐推新规"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.9,
+          "current_state_en": "Washington's crypto policy push enters a new stage: after legislation stalled, the CFTC pivots to using existing authority to write market-structure rules for perpetuals, while the SEC advances exemptions and custody proposals.",
+          "current_state_zh": "华盛顿加密政策推进进入新阶段：CFTC在立法受阻后转向以现有权力制定永续合约等市场结构规则，SEC同步推进豁免与托管提案。",
+          "detailed_summary_en": "CFTC Chair Mike Selig said on CNBC it is 'go time' for the agency to write crypto market-structure rules, focused on perpetuals, using its existing statutory authority after the Senate blocked the Clarity Act.",
+          "detailed_summary_zh": "CFTC Chair Mike Selig said on CNBC it is 'go time' for the agency to write crypto market-structure rules, focused on perpetuals, using its existing statutory authority after the Senate blocked the Clarity Act.",
+          "event_id": "evt_583f52deb63823c7",
+          "first_seen_at": "2026-09-24T17:26:47.587938Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T11:56:11Z",
+          "published_at": "2026-09-24T11:56:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379169/morning-minute-selig-says-its-go-time-for-cftc-crypto-rules"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:a4a753b73aaf109d"
+          ],
+          "time_precision": "published",
+          "title_en": "Morning Minute: Selig Says ‘It’s Go Time’ for CFTC Crypto Rules",
+          "title_zh": "Morning Minute: Selig Says ‘It’s Go Time’ for CFTC Crypto Rules",
+          "update_id": "upd_4b9d6d4a44c8cabc",
+          "update_type": "escalation",
+          "what_changed_en": "CFTC Chair Mike Selig said on CNBC it is 'go time' for the agency to write crypto market-structure rules, focused on perpetuals, using existing statutory authority after the Senate blocked the Clarity Act; SEC also approved a five-year Innovation Exemption and CFTC issued a no-action letter and filed two prerules.",
+          "what_changed_zh": "CFTC主席Mike Selig在CNBC表示现在是制定加密市场结构规则的“时候”，将聚焦永续合约并动用现有法定权力；此前参议院否决了Clarity Act。同时SEC批准五年创新豁免、CFTC发布不行动函并提交两项预规则。"
         }
       ]
     },
@@ -79841,8 +79886,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Cosmos Hub has resumed producing blocks after a 24-hour-48-minute halt; 1.23 million ATOM moved from the Neutron attacker wallet tied to the governance attack, which had purchased voting power with 20,199 USDC and staked it 12 minutes before the expedited proposal closed.",
-      "current_state_zh": "Cosmos Hub 已在停块24小时48分钟后恢复出块；与Neutron治理攻击相关的攻击者钱包转出1.23百万ATOM，该钱包曾用20,199 USDC购买投票权并在加速提案关闭前12分钟质押。",
+      "current_state_en": "Cosmos Hub restarted after a nearly 25-hour halt and swept 1.23M ATOM (~$2.2M) from an attacker-linked address into a community validator multisig; however, 168,990.9 ATOM arrived after the sweep via a THORChain refund, escaped recovery, and was sold on Osmosis for about 266,841 USDC; Neutron is preparing to restart and return recovered funds.",
+      "current_state_zh": "Cosmos Hub已在约25小时停块后重启，并从攻击者关联地址扫走1.23百万ATOM（约220万美元），转入社区验证者多签；但168,990.9 ATOM在扫款后经THORChain退款到达攻击者地址并逃逸，最终在Osmosis卖出约266,841 USDC；Neutron正筹备重启并归还恢复资金。",
       "entities": [
         "atom",
         "attacker",
@@ -79860,14 +79905,15 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-23T17:21:31.878864Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-23T23:02:35.843748Z",
-      "last_updated_at": "2026-09-23T23:02:35.843748Z",
+      "last_material_change_at": "2026-09-24T17:26:43.553611Z",
+      "last_updated_at": "2026-09-24T17:26:43.553611Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "closed",
       "title_en": "Cosmos hub halts for 24 hours after Neutron governance attack",
       "title_zh": "Cosmos hub halts for 24 hours after Neutron governance attack",
       "topics": [
+        "atom",
         "chain-halt",
         "cosmos",
         "defi-exploit",
@@ -79964,6 +80010,44 @@
           "update_type": "aftermath",
           "what_changed_en": "Cosmos Hub resumed producing blocks after a 24-hour-48-minute halt; 1.23 million ATOM moved from the Neutron attacker wallet; the attacker wallet purchased voting power with 20,199 USDC and staked it 12 minutes before the expedited proposal closed.",
           "what_changed_zh": "Cosmos Hub 在停块24小时48分钟后恢复出块；1.23百万ATOM从Neutron攻击者钱包转出；该攻击者钱包用20,199 USDC购买投票权，并在加速提案关闭前12分钟完成质押。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Cosmos Hub restarted after a nearly 25-hour halt and swept 1.23M ATOM (~$2.2M) from an attacker-linked address into a community validator multisig; however, 168,990.9 ATOM arrived after the sweep via a THORChain refund, escaped recovery, and was sold on Osmosis for about 266,841 USDC; Neutron is preparing to restart and return recovered funds.",
+          "current_state_zh": "Cosmos Hub已在约25小时停块后重启，并从攻击者关联地址扫走1.23百万ATOM（约220万美元），转入社区验证者多签；但168,990.9 ATOM在扫款后经THORChain退款到达攻击者地址并逃逸，最终在Osmosis卖出约266,841 USDC；Neutron正筹备重启并归还恢复资金。",
+          "detailed_summary_en": "Cosmos Hub restarted after a nearly 25-hour halt, sweeping 1.23 million ATOM worth about $2.2 million linked to the Neutron governance exploit, but 168,990 ATOM escaped the recovery.",
+          "detailed_summary_zh": "Cosmos Hub restarted after a nearly 25-hour halt, sweeping 1.23 million ATOM worth about $2.2 million linked to the Neutron governance exploit, but 168,990 ATOM escaped the recovery.",
+          "event_id": "evt_30c06aaf6dbebbc2",
+          "first_seen_at": "2026-09-24T17:26:43.553611Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T11:20:49Z",
+          "published_at": "2026-09-24T11:20:49Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/cosmos-restarted-to-seize-2-2-million-in-stolen-atom-but-169000-tokens-still-escaped/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:f96ea5c094e083fc"
+          ],
+          "time_precision": "published",
+          "title_en": "Cosmos restarted to seize $2.2 million in stolen ATOM, but 169,000 tokens still escaped",
+          "title_zh": "Cosmos restarted to seize $2.2 million in stolen ATOM, but 169,000 tokens still escaped",
+          "update_id": "upd_813e96553a9f1dc7",
+          "update_type": "aftermath",
+          "what_changed_en": "New material facts: after Cosmos Hub restarted and swept 1.23M ATOM, 168,990.9 ATOM arrived at the attacker-linked address seven blocks later via a THORChain refund, escaped the recovery transaction, and was moved to Osmosis and sold in batches for about 266,841 USDC, partly converted to ETH; the initial attack impact was estimated at roughly $4.4M, and Neutron is preparing to restart and restore affected contracts.",
+          "what_changed_zh": "新增关键事实：在Cosmos Hub重启并扫走1.23百万ATOM后，168,990.9 ATOM因THORChain退款在七个区块后到达攻击者关联地址，未在恢复交易中被拦截，随后被转入Osmosis分批卖出约266,841 USDC并部分换成ETH；此外，攻击初始损失估计约440万美元，Neutron正筹备重启并恢复受影响合约。"
         }
       ]
     },
@@ -82710,7 +82794,7 @@
       "first_seen_at": "2026-09-24T09:26:12.385953Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-24T09:26:12.385953Z",
-      "last_updated_at": "2026-09-24T09:26:12.385953Z",
+      "last_updated_at": "2026-09-24T17:26:31.861780Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -82755,11 +82839,18 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1ub2NwSWdOcFZkTjk4eVpxUC1rYWIyRk1HbVJ3M19oczhrRTdCSUJ2OEpxRnpOSTZXa0dfZG85RWxES0NxY2F5LUM5SHRaSlJTUnFYakFSYkhBS3h0NmMyVUt6cWF0VnRqTExvTjBfZHV2bjNiT2U3WGZ3?oc=5"
+            },
+            {
+              "label": "المتداول العربي",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQay1EZU9RbXVGZGl0OTNTRi1JM0x1Tng3T3ZraWNGSWJFdTZzbTNUWEU4MmJiUG5BTDAtWWJ0ZWZHejRzOWR3aEhIU29xQzgwS09ScThXUFU3azIyd294NjlKaE1TWWNFV0R3eDBnVXpJUFlmTk1jRzl5bVgtZVVXbDZxM1I2T2lubzJUTHdRdnJrZlI4eWF2YzVETmFUejhTRnhOZ2VCRHNUckhvTDFHUlNzNHExV2ktLU5vZlFETHZabndqalJYb1l0US1KQlJucnozZHhXLW51Y2NQdmN2dG1R?oc=5"
             }
           ],
           "story_ids": [
             "google_news:article:cca1a5a0d193dd66",
-            "google_news:article:b1aa56ee8af01110"
+            "google_news:article:b1aa56ee8af01110",
+            "google_news:article:2d99f4001c957ef4"
           ],
           "time_precision": "published",
           "title_en": "Binance lists Hyperliquid's HYPE token for spot trading, expanding access to the high-value Layer-1 crypto asset. - Pluang",
@@ -83314,6 +83405,1866 @@
           "update_type": "initial",
           "what_changed_en": "Binance has taken a $100 million equity stake in Circle as part of a five-year agreement centered on USDC integration across its platform.",
           "what_changed_zh": "Binance has taken a $100 million equity stake in Circle as part of a five-year agreement centered on USDC integration across its platform."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+      "current_state_zh": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+      "entities": [
+        "binance",
+        "cryptonomist",
+        "date",
+        "hype",
+        "hyperliquid",
+        "listing",
+        "september",
+        "set"
+      ],
+      "event_id": "evt_79c7cf3bb72fe989",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:31.862017Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:31.862017Z",
+      "last_updated_at": "2026-09-24T17:26:31.862017Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hyperliquid Binance Listing Date Set for September 24 - The Cryptonomist",
+      "title_zh": "Hyperliquid Binance Listing Date Set for September 24 - The Cryptonomist",
+      "topics": [
+        "binance",
+        "exchange-listings",
+        "hype",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+          "current_state_zh": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+          "detailed_summary_en": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+          "detailed_summary_zh": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+          "event_id": "evt_79c7cf3bb72fe989",
+          "first_seen_at": "2026-09-24T17:26:31.862017Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T08:20:42Z",
+          "published_at": "2026-09-24T08:20:42Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Cryptonomist",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4xX3RSRTRoOE56YkVmWWc5SE15MkZ4dnZISkJFbTlLa21sdEZOdFE4YkhqZTZWamhQQUxyaF9HNUpET0dTaTZaX3o3QWRPZXhIaHBnTEc3Tl9fWlJaalh1MzlLUDliNmJMaEkwRmUwd2R4LS1DZG9DUS1YRQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:81e2fe06d53e40be"
+          ],
+          "time_precision": "published",
+          "title_en": "Hyperliquid Binance Listing Date Set for September 24 - The Cryptonomist",
+          "title_zh": "Hyperliquid Binance Listing Date Set for September 24 - The Cryptonomist",
+          "update_id": "upd_f999fed13c889191",
+          "update_type": "initial",
+          "what_changed_en": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange.",
+          "what_changed_zh": "Binance has scheduled September 24 as the listing date for Hyperliquid's HYPE token, opening the asset to trading on the largest centralized exchange."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+      "current_state_zh": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+      "entities": [
+        "access",
+        "add",
+        "binance",
+        "buying",
+        "earn",
+        "hype",
+        "leverage",
+        "spot",
+        "swaps"
+      ],
+      "event_id": "evt_c094c88db2049583",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:31.862609Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:31.862609Z",
+      "last_updated_at": "2026-09-24T17:26:31.862609Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance to Add HYPE Earn, Spot Buying, Swaps and Leverage Access - tokenpost.com",
+      "title_zh": "Binance to Add HYPE Earn, Spot Buying, Swaps and Leverage Access - tokenpost.com",
+      "topics": [
+        "binance",
+        "derivatives",
+        "exchange-listing",
+        "hype",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+          "current_state_zh": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+          "detailed_summary_en": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+          "detailed_summary_zh": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+          "event_id": "evt_c094c88db2049583",
+          "first_seen_at": "2026-09-24T17:26:31.862609Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T10:49:03Z",
+          "published_at": "2026-09-24T10:49:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "tokenpost.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4xNjA3YjVWYXp0RWg2VFQ1M29Za1FTNVZXOUE5MnZWOURDZTVCcFI5a1NuMW9qSlZpSXBGbmV3MDh4bFNTRVliSHNLUmZGd1lTcTFCUWRxSUk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:bfc257d598006b1f"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance to Add HYPE Earn, Spot Buying, Swaps and Leverage Access - tokenpost.com",
+          "title_zh": "Binance to Add HYPE Earn, Spot Buying, Swaps and Leverage Access - tokenpost.com",
+          "update_id": "upd_3ba90f9e850782ad",
+          "update_type": "initial",
+          "what_changed_en": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products.",
+          "what_changed_zh": "Binance is expanding access to Hyperliquid's HYPE token across Earn, spot buying, swaps and leveraged trading products."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+      "current_state_zh": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+      "entities": [
+        "arrives",
+        "binance",
+        "countdown",
+        "delisting",
+        "face",
+        "hype",
+        "hyperliquid",
+        "pairs",
+        "removal",
+        "today"
+      ],
+      "event_id": "evt_0145afefbc39deb7",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:31.862808Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:31.862808Z",
+      "last_updated_at": "2026-09-24T17:26:31.862808Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Delisting Countdown: 13 Pairs Face Removal as Hyperliquid (HYPE) Arrives - U.Today",
+      "title_zh": "Binance Delisting Countdown: 13 Pairs Face Removal as Hyperliquid (HYPE) Arrives - U.Today",
+      "topics": [
+        "binance",
+        "delistings",
+        "exchange-listings",
+        "hype",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+          "current_state_zh": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+          "detailed_summary_en": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+          "detailed_summary_zh": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+          "event_id": "evt_0145afefbc39deb7",
+          "first_seen_at": "2026-09-24T17:26:31.862808Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T13:55:49Z",
+          "published_at": "2026-09-24T13:55:49Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "U.Today",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkJPU3ZLNi1leVh6MGE4aWQ0eU5zTEtvM2RobEY3VFQwY1dIeXBCVG1WRW1iWkJsM1JqN0c2RVB4aFBSTVJuUW5oVU9jTlFNM1BTcEJKR2FBaEw0VWloNzhvTFhwaTgwdWFqYlQxUEFIQlZhU3otVHNhWmc1TWwyOUVzSlhNMEtaejZnYUZ6aFJoUlJQOWUxcdIBngFBVV95cUxNS0Z1TGRhUlNkdTFGNXAzUnVjWFJTMVlQdjY0ZktsVWRjTVFoUi1fay1sQ09wYWJnQmpCT3ltTkJFRXk4V2hYeWViX2pRcHlBWExjYTV3aExfaW5BeHphX1hjRGJLNExxNWxrWm5iakhhanlDS2xLNnVnWWNpSHFMaWhiRmhhZ2dnWGxFRFhERkpZaEczNzJrN1A4TWFHUQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:303aaaff7756dc0e"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Delisting Countdown: 13 Pairs Face Removal as Hyperliquid (HYPE) Arrives - U.Today",
+          "title_zh": "Binance Delisting Countdown: 13 Pairs Face Removal as Hyperliquid (HYPE) Arrives - U.Today",
+          "update_id": "upd_6a877508d1681c58",
+          "update_type": "initial",
+          "what_changed_en": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base.",
+          "what_changed_zh": "Binance is removing 13 trading pairs while adding Hyperliquid's HYPE token to its listings, giving the high-profile DEX-native asset direct access to the exchange's user base."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+      "current_state_zh": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+      "entities": [
+        "binance",
+        "coincodex",
+        "gains",
+        "grayscale",
+        "hype",
+        "hyperliquid",
+        "listing",
+        "opening",
+        "sees"
+      ],
+      "event_id": "evt_e3ef5eea30dd63a8",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:31.862882Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:31.862882Z",
+      "last_updated_at": "2026-09-24T17:26:31.862882Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Grayscale Sees U.S. Opening for Hyperliquid as HYPE Gains Binance Listing - CoinCodex",
+      "title_zh": "Grayscale Sees U.S. Opening for Hyperliquid as HYPE Gains Binance Listing - CoinCodex",
+      "topics": [
+        "binance",
+        "exchange-listings",
+        "grayscale",
+        "hype",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+          "current_state_zh": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+          "detailed_summary_en": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+          "detailed_summary_zh": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+          "event_id": "evt_e3ef5eea30dd63a8",
+          "first_seen_at": "2026-09-24T17:26:31.862882Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T14:50:00Z",
+          "published_at": "2026-09-24T14:50:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinCodex",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOR1h0WkUtNG9XRU11UkR5MENNS25kVXNvUGl2M0NHanpPeFZya3c1MEJfSlptOVhZSGNCUlMxTjV2RzNtaHdzUGhQSVlUemVUM0ZpNHRtc0Y3SDlKMDR3OHZKNmRtTHZURVFfTzNzY0xfVUNJWGFBcFROenYtblRBaHhPVFRJY3p2S1hicFpFa3pOaU1tQ3N6ZXk5RUpYV2pGNlpmYXcxeUpxa2V3?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:b6c55d6f9f3fac35"
+          ],
+          "time_precision": "published",
+          "title_en": "Grayscale Sees U.S. Opening for Hyperliquid as HYPE Gains Binance Listing - CoinCodex",
+          "title_zh": "Grayscale Sees U.S. Opening for Hyperliquid as HYPE Gains Binance Listing - CoinCodex",
+          "update_id": "upd_53938be05b999a91",
+          "update_type": "initial",
+          "what_changed_en": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem.",
+          "what_changed_zh": "Binance listed Hyperliquid's HYPE token while Grayscale publicly flagged a U.S. opening for Hyperliquid-related exposure, pointing to broader institutional access for the DeFi ecosystem."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+      "current_state_zh": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+      "entities": [
+        "financefeeds",
+        "force",
+        "holders",
+        "kraken",
+        "out",
+        "sells",
+        "september",
+        "uae",
+        "zcash",
+        "zec"
+      ],
+      "event_id": "evt_bc77f7a5b1bc32f7",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:31.863030Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:31.863030Z",
+      "last_updated_at": "2026-09-24T17:26:31.863030Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Zcash at $1,494: Kraken Force-Sells UAE Holders Out of ZEC on 25 September - FinanceFeeds",
+      "title_zh": "Zcash at $1,494: Kraken Force-Sells UAE Holders Out of ZEC on 25 September - FinanceFeeds",
+      "topics": [
+        "exchange-compliance",
+        "forced-liquidation",
+        "kraken",
+        "uae",
+        "zcash"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+          "current_state_zh": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+          "detailed_summary_en": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+          "detailed_summary_zh": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+          "event_id": "evt_bc77f7a5b1bc32f7",
+          "first_seen_at": "2026-09-24T17:26:31.863030Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T13:15:22Z",
+          "published_at": "2026-09-24T13:15:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "FinanceFeeds",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ09yS2JjQzhyTWNuMC1rbDNQRzhUbEdQRDBPX29kdFZMeG9vWlNGYVQxM0RkUmZRX1BEUmVQX3ZrSEc5S21jSVJEUE9HX2dwaUV0X0VBT1NHQTlPYjA4ZVktYzA5WG9pQWFLWnk1TThWU3FJZXI0ZEN6eVF0RDNIQWtDaHRJaUFOOVRjZkhpY0l0ZE1reE44WnRHWm83X2ZMaENRSzI3anpaWjBr?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:405637e02c54a1da"
+          ],
+          "time_precision": "published",
+          "title_en": "Zcash at $1,494: Kraken Force-Sells UAE Holders Out of ZEC on 25 September - FinanceFeeds",
+          "title_zh": "Zcash at $1,494: Kraken Force-Sells UAE Holders Out of ZEC on 25 September - FinanceFeeds",
+          "update_id": "upd_d5a5983be1ce2f60",
+          "update_type": "initial",
+          "what_changed_en": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494.",
+          "what_changed_zh": "Kraken will force-sell Zcash (ZEC) holdings of UAE-based users on 25 September, with ZEC trading at $1,494."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+      "current_state_zh": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+      "entities": [
+        "add",
+        "binance",
+        "buy",
+        "convert",
+        "earn",
+        "hype",
+        "hyperliquid",
+        "loan",
+        "mar",
+        "vip",
+        "will"
+      ],
+      "event_id": "evt_a088cda66d1c8f81",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:32.084010Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:32.084010Z",
+      "last_updated_at": "2026-09-24T17:26:32.084010Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Will Add Hyperliquid (HYPE) on Earn, Buy Crypto, Convert, VIP Loan & Mar",
+      "title_zh": "Binance Will Add Hyperliquid (HYPE) on Earn, Buy Crypto, Convert, VIP Loan & Mar",
+      "topics": [
+        "binance",
+        "derivatives",
+        "exchange-listing",
+        "hype",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+          "current_state_zh": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+          "detailed_summary_en": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+          "detailed_summary_zh": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+          "event_id": "evt_a088cda66d1c8f81",
+          "first_seen_at": "2026-09-24T17:26:32.084010Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T10:47:40Z",
+          "published_at": "2026-09-24T10:47:40Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "binance_announcements",
+              "official": false,
+              "source_type": "telegram",
+              "url": "https://www.binance.com/en/support/announcement/1718842b00ee41479c763ef27b6312f0?utm_source=EnglishTelegram&amp;utm_medium=GlobalCommunity&amp;utm_campaign=AnnouncementBot"
+            }
+          ],
+          "story_ids": [
+            "telegram:binance_announcements:8996"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Will Add Hyperliquid (HYPE) on Earn, Buy Crypto, Convert, VIP Loan & Mar",
+          "title_zh": "Binance Will Add Hyperliquid (HYPE) on Earn, Buy Crypto, Convert, VIP Loan & Mar",
+          "update_id": "upd_1d558b2e780e462b",
+          "update_type": "initial",
+          "what_changed_en": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange.",
+          "what_changed_zh": "Binance announced it will add Hyperliquid (HYPE) to Simple Earn, Buy Crypto, Convert, Margin and VIP Loan, broadening the asset's yield, conversion, leverage and collateral access on the exchange."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+      "current_state_zh": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+      "entities": [
+        "droid",
+        "f-droid"
+      ],
+      "event_id": "evt_b6fce0a8ff4596d2",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-24T17:26:32.134356Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:32.134356Z",
+      "last_updated_at": "2026-09-24T17:26:32.134356Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "F-Droid 2.0",
+      "title_zh": "F-Droid 2.0",
+      "topics": [
+        "android",
+        "app-store",
+        "f-droid",
+        "open-source",
+        "software-release"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+          "current_state_zh": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+          "detailed_summary_en": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+          "detailed_summary_zh": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+          "event_id": "evt_b6fce0a8ff4596d2",
+          "first_seen_at": "2026-09-24T17:26:32.134356Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:26:12Z",
+          "published_at": "2026-09-24T15:26:12Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49831968"
+            }
+          ],
+          "sources": [
+            {
+              "label": "daveoc64",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49831968"
+          ],
+          "time_precision": "published",
+          "title_en": "F-Droid 2.0",
+          "title_zh": "F-Droid 2.0",
+          "update_id": "upd_37a2b373e730659e",
+          "update_type": "initial",
+          "what_changed_en": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension.",
+          "what_changed_zh": "F-Droid released version 2.0, a major overhaul of its FOSS Android app store client featuring a redesigned interface and the retirement of the F-Droid Privileged Extension."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+      "current_state_zh": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+      "entities": [
+        "crypto-casino",
+        "duelbits",
+        "hot-wallet-hack"
+      ],
+      "event_id": "evt_9843f72eb1d9cc36",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-24T17:26:33.884626Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:33.884626Z",
+      "last_updated_at": "2026-09-24T17:26:33.884626Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto casino Duelbits goes offline after $7 million hot wallet hack",
+      "title_zh": "Crypto casino Duelbits goes offline after $7 million hot wallet hack",
+      "topics": [
+        "crypto-casino",
+        "hot-wallet-hack",
+        "on-chain-forensics",
+        "security-incident"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+          "current_state_zh": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+          "detailed_summary_en": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+          "detailed_summary_zh": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+          "event_id": "evt_9843f72eb1d9cc36",
+          "first_seen_at": "2026-09-24T17:26:33.884626Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:48:20Z",
+          "published_at": "2026-09-24T15:48:20Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/24/crypto-casino-duelbits-goes-offline-after-usd7m-hot-wallet-hack"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:cb7d90ce4beb13b4"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto casino Duelbits goes offline after $7 million hot wallet hack",
+          "title_zh": "Crypto casino Duelbits goes offline after $7 million hot wallet hack",
+          "update_id": "upd_b1bba27e2e364cdb",
+          "update_type": "initial",
+          "what_changed_en": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH.",
+          "what_changed_zh": "Crypto casino Duelbits took its site offline after attackers drained about $7 million from its hot wallets across Ethereum, BNB Chain, Tron and Bitcoin, with roughly $6 million in stolen funds consolidated into a single Ethereum address holding ~2,234 ETH."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+      "current_state_zh": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+      "entities": [
+        "tokenized-deposits"
+      ],
+      "event_id": "evt_6d432125095fa986",
+      "event_type": "other",
+      "first_seen_at": "2026-09-24T17:26:34.872028Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:34.872028Z",
+      "last_updated_at": "2026-09-24T17:26:34.872028Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "UK’s largest banks complete world’s first interbank transactions using tokenized deposits",
+      "title_zh": "UK’s largest banks complete world’s first interbank transactions using tokenized deposits",
+      "topics": [
+        "tokenized-deposits"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+          "current_state_zh": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+          "detailed_summary_en": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+          "detailed_summary_zh": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+          "event_id": "evt_6d432125095fa986",
+          "first_seen_at": "2026-09-24T17:26:34.872028Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:07:18Z",
+          "published_at": "2026-09-24T15:07:18Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/24/uk-s-largest-banks-complete-world-s-first-interbank-transactions-using-tokenized-deposits"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:8099c383b08a9b8e"
+          ],
+          "time_precision": "published",
+          "title_en": "UK’s largest banks complete world’s first interbank transactions using tokenized deposits",
+          "title_zh": "UK’s largest banks complete world’s first interbank transactions using tokenized deposits",
+          "update_id": "upd_b22448303ee4c1cf",
+          "update_type": "initial",
+          "what_changed_en": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test.",
+          "what_changed_zh": "Seven major UK banks completed the world's first interbank and customer transactions using tokenized British pound deposits on a shared Quant-built platform, covering remortgage payments and a retail purchase test."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+      "current_state_zh": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+      "entities": [
+        "anthropic",
+        "ark",
+        "cathie",
+        "openai",
+        "securitize",
+        "wood"
+      ],
+      "event_id": "evt_72c53f6e90b41afb",
+      "event_type": "other",
+      "first_seen_at": "2026-09-24T17:26:36.018692Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:36.018692Z",
+      "last_updated_at": "2026-09-24T17:26:36.018692Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Cathie Wood's ARK teams with Securitize to tokenize venture fund with OpenAI, Anthropic stakes",
+      "title_zh": "Cathie Wood's ARK teams with Securitize to tokenize venture fund with OpenAI, Anthropic stakes",
+      "topics": [
+        "ark-invest",
+        "rwa",
+        "securitize"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+          "current_state_zh": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+          "detailed_summary_en": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+          "detailed_summary_zh": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+          "event_id": "evt_72c53f6e90b41afb",
+          "first_seen_at": "2026-09-24T17:26:36.018692Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T13:00:00Z",
+          "published_at": "2026-09-24T13:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/24/cathie-wood-s-ark-teams-with-securitize-to-tokenize-venture-fund-with-openai-anthropic-stakes"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:012ef51a428ddea3"
+          ],
+          "time_precision": "published",
+          "title_en": "Cathie Wood's ARK teams with Securitize to tokenize venture fund with OpenAI, Anthropic stakes",
+          "title_zh": "Cathie Wood's ARK teams with Securitize to tokenize venture fund with OpenAI, Anthropic stakes",
+          "update_id": "upd_26ec273706beba34",
+          "update_type": "initial",
+          "what_changed_en": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains.",
+          "what_changed_zh": "Cathie Wood's ARK is partnering with Securitize to tokenize its Venture Fund — which holds stakes including OpenAI and Anthropic — initially on Ethereum, with plans to expand to other chains."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+      "current_state_zh": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+      "entities": [
+        "quantum-computing"
+      ],
+      "event_id": "evt_be788835cd041883",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-24T17:26:39.498885Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:39.498885Z",
+      "last_updated_at": "2026-09-24T17:26:39.498885Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "EU financial watchdogs warn quantum computing poses imminent threat to blockchain encryption",
+      "title_zh": "EU financial watchdogs warn quantum computing poses imminent threat to blockchain encryption",
+      "topics": [
+        "bitcoin-security",
+        "crypto-regulation",
+        "eu-supervision",
+        "post-quantum-cryptography",
+        "quantum-computing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+          "current_state_zh": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+          "detailed_summary_en": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+          "detailed_summary_zh": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+          "event_id": "evt_be788835cd041883",
+          "first_seen_at": "2026-09-24T17:26:39.498885Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T09:32:48Z",
+          "published_at": "2026-09-24T09:32:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/24/eu-financial-watchdogs-warn-quantum-computing-poses-imminent-threat-to-blockchain-encryption"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:72160beba176559e"
+          ],
+          "time_precision": "published",
+          "title_en": "EU financial watchdogs warn quantum computing poses imminent threat to blockchain encryption",
+          "title_zh": "EU financial watchdogs warn quantum computing poses imminent threat to blockchain encryption",
+          "update_id": "upd_1f41da8b20d8c6f9",
+          "update_type": "initial",
+          "what_changed_en": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain.",
+          "what_changed_zh": "EU financial regulators warned that quantum computing poses an imminent threat to blockchain encryption, intensifying pressure to address bitcoin legacy addresses whose public keys are already exposed on-chain."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+      "current_state_zh": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+      "entities": [
+        "blackrock",
+        "ondo"
+      ],
+      "event_id": "evt_c4ebb42a63db4cdb",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-24T17:26:40.039290Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:40.039290Z",
+      "last_updated_at": "2026-09-24T17:26:40.039290Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ondo launches onchain portfolio tokens based on BlackRock-developed strategies",
+      "title_zh": "Ondo launches onchain portfolio tokens based on BlackRock-developed strategies",
+      "topics": [
+        "blackrock",
+        "ondo",
+        "rwa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+          "current_state_zh": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+          "detailed_summary_en": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+          "detailed_summary_zh": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+          "event_id": "evt_c4ebb42a63db4cdb",
+          "first_seen_at": "2026-09-24T17:26:40.039290Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T14:27:45Z",
+          "published_at": "2026-09-24T14:27:45Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/markets/2026-09-24-ondo-launches-onchain-portfolio-tokens-based-blackrock-developed-strategies-416260"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:e70998b8ebc0a01c"
+          ],
+          "time_precision": "published",
+          "title_en": "Ondo launches onchain portfolio tokens based on BlackRock-developed strategies",
+          "title_zh": "Ondo launches onchain portfolio tokens based on BlackRock-developed strategies",
+          "update_id": "upd_ba5c3493742da7f5",
+          "update_type": "initial",
+          "what_changed_en": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies.",
+          "what_changed_zh": "Ondo launched three onchain portfolio tokens that track model portfolio strategies developed by BlackRock, deepening the link between tokenized onchain products and traditional asset-management strategies."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "IBM's Digital Asset Haven platform now has beta connectivity to Swift's blockchain ledger, allowing banks to instruct tokenized deposit transfers using ISO 20022 messaging and to run the platform on-premises.",
+      "current_state_zh": "IBM 的 Digital Asset Haven 平台现已通过 beta 连接接入 Swift 区块链账本，银行可使用 ISO 20022 报文指令代币化存款转账，并可在本地数据中心运行该平台。",
+      "entities": [
+        "asset",
+        "digital",
+        "haven",
+        "ibm",
+        "swift",
+        "tokenized-deposits"
+      ],
+      "event_id": "evt_4c0e928637670550",
+      "event_type": "other",
+      "first_seen_at": "2026-09-24T17:26:40.223129Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:49.272893Z",
+      "last_updated_at": "2026-09-24T17:26:49.272893Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
+      "title_zh": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
+      "topics": [
+        "blockchain-interoperability",
+        "ibm",
+        "iso-20022",
+        "swift",
+        "tokenized-deposits"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "IBM has connected its Digital Asset Haven platform to Swift's shared blockchain ledger, allowing clients to instruct tokenized deposit transactions.",
+          "current_state_zh": "IBM has connected its Digital Asset Haven platform to Swift's shared blockchain ledger, allowing clients to instruct tokenized deposit transactions.",
+          "detailed_summary_en": "IBM has connected its Digital Asset Haven platform to Swift's shared blockchain ledger, allowing clients to instruct tokenized deposit transactions.",
+          "detailed_summary_zh": "IBM has connected its Digital Asset Haven platform to Swift's shared blockchain ledger, allowing clients to instruct tokenized deposit transactions.",
+          "event_id": "evt_4c0e928637670550",
+          "first_seen_at": "2026-09-24T17:26:40.223129Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T10:00:00Z",
+          "published_at": "2026-09-24T10:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/business/2026-09-24-ibm-connects-digital-asset-haven-to-swift-blockchain-ledger-for-tokenized-deposit-transactions-416237"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:33587f5c1349a1f9"
+          ],
+          "time_precision": "published",
+          "title_en": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
+          "title_zh": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
+          "update_id": "upd_8bb0640fb83deea8",
+          "update_type": "initial",
+          "what_changed_en": "IBM has connected its Digital Asset Haven platform to Swift's shared blockchain ledger, allowing clients to instruct tokenized deposit transactions.",
+          "what_changed_zh": "IBM has connected its Digital Asset Haven platform to Swift's shared blockchain ledger, allowing clients to instruct tokenized deposit transactions."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "IBM's Digital Asset Haven platform now has beta connectivity to Swift's blockchain ledger, allowing banks to instruct tokenized deposit transfers using ISO 20022 messaging and to run the platform on-premises.",
+          "current_state_zh": "IBM 的 Digital Asset Haven 平台现已通过 beta 连接接入 Swift 区块链账本，银行可使用 ISO 20022 报文指令代币化存款转账，并可在本地数据中心运行该平台。",
+          "detailed_summary_en": "IBM added beta connectivity between its Digital Asset Haven platform and Swift's blockchain-based ledger for tokenized deposits, enabling banks to instruct tokenized deposit transfers via ISO 20022 messaging and to run the platform in their own data centers.",
+          "detailed_summary_zh": "IBM added beta connectivity between its Digital Asset Haven platform and Swift's blockchain-based ledger for tokenized deposits, enabling banks to instruct tokenized deposit transfers via ISO 20022 messaging and to run the platform in their own data centers.",
+          "event_id": "evt_4c0e928637670550",
+          "first_seen_at": "2026-09-24T17:26:49.272893Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T13:29:06Z",
+          "published_at": "2026-09-24T13:29:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/ibm-banks-swift-ledger-tokenized-deposit-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:174e5ff0a220b3db"
+          ],
+          "time_precision": "published",
+          "title_en": "IBM opens beta Swift ledger link for 24/7 tokenized deposits",
+          "title_zh": "IBM opens beta Swift ledger link for 24/7 tokenized deposits",
+          "update_id": "upd_ea0a5a47193abb4d",
+          "update_type": "escalation",
+          "what_changed_en": "IBM added beta connectivity between Digital Asset Haven and Swift's blockchain ledger for tokenized deposits, enabling banks to instruct tokenized deposit transfers via ISO 20022 messaging and a beta option to run the platform on-premises on IBM Z/LinuxONE.",
+          "what_changed_zh": "IBM 为其 Digital Asset Haven 平台增加了与 Swift 区块链账本的 beta 连接，支持银行通过 ISO 20022 报文指令代币化存款转账，并提供在 IBM Z/LinuxONE 本地数据中心运行该平台的 beta 选项。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+      "current_state_zh": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+      "entities": [
+        "after",
+        "drain",
+        "halts",
+        "million",
+        "payy",
+        "usdc"
+      ],
+      "event_id": "evt_fcc701c88723151d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-24T17:26:42.391263Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:42.391263Z",
+      "last_updated_at": "2026-09-24T17:26:42.391263Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Payy Halts Network After $1.92 Million USDC Drain",
+      "title_zh": "Payy Halts Network After $1.92 Million USDC Drain",
+      "topics": [
+        "hack",
+        "usdc"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+          "current_state_zh": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+          "detailed_summary_en": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+          "detailed_summary_zh": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+          "event_id": "evt_fcc701c88723151d",
+          "first_seen_at": "2026-09-24T17:26:42.391263Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T16:53:16Z",
+          "published_at": "2026-09-24T16:53:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/hacks/payy-halts-network-after-1-92-million-usdc-drain"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:9538414fc7010fa4"
+          ],
+          "time_precision": "published",
+          "title_en": "Payy Halts Network After $1.92 Million USDC Drain",
+          "title_zh": "Payy Halts Network After $1.92 Million USDC Drain",
+          "update_id": "upd_c55f1cd9fac5c7fa",
+          "update_type": "initial",
+          "what_changed_en": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets.",
+          "what_changed_zh": "Payy paused its network, halting deposits, withdrawals and card payments, after roughly $1.92 million in USDC was drained and largely converted to about 683 ETH spread across three wallets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+      "current_state_zh": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+      "entities": [
+        "blackrock",
+        "built",
+        "launches",
+        "ondo",
+        "portfolios",
+        "strategies",
+        "tokenized"
+      ],
+      "event_id": "evt_851baac76d30b689",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-24T17:26:42.577142Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:42.577142Z",
+      "last_updated_at": "2026-09-24T17:26:42.577142Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ondo Launches Tokenized Portfolios Built on BlackRock Strategies",
+      "title_zh": "Ondo Launches Tokenized Portfolios Built on BlackRock Strategies",
+      "topics": [
+        "blackrock",
+        "ondo-finance",
+        "rwa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+          "current_state_zh": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+          "detailed_summary_en": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+          "detailed_summary_zh": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+          "event_id": "evt_851baac76d30b689",
+          "first_seen_at": "2026-09-24T17:26:42.577142Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:23:43Z",
+          "published_at": "2026-09-24T15:23:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/tradfi-and-fintech/ondo-launches-tokenized-portfolios-built-on-blackrock-strategies"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:146bccfe41cc3873"
+          ],
+          "time_precision": "published",
+          "title_en": "Ondo Launches Tokenized Portfolios Built on BlackRock Strategies",
+          "title_zh": "Ondo Launches Tokenized Portfolios Built on BlackRock Strategies",
+          "update_id": "upd_c963a4571de0c954",
+          "update_type": "initial",
+          "what_changed_en": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors.",
+          "what_changed_zh": "Ondo launched three tokenized portfolio tokens on Ethereum and BNB Chain using BlackRock-supplied investment models for eligible non-US investors."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+      "current_state_zh": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+      "entities": [
+        "arbitrum",
+        "auctions",
+        "per",
+        "priority",
+        "replaces",
+        "timeboost",
+        "transaction",
+        "with"
+      ],
+      "event_id": "evt_1983cffafef32e0c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-24T17:26:42.607451Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:42.607451Z",
+      "last_updated_at": "2026-09-24T17:26:42.607451Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Arbitrum Replaces Timeboost With Per-Transaction Priority Auctions",
+      "title_zh": "Arbitrum Replaces Timeboost With Per-Transaction Priority Auctions",
+      "topics": [
+        "arbitrum",
+        "layer-2",
+        "mev",
+        "priority-fees",
+        "timeboost"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+          "current_state_zh": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+          "detailed_summary_en": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+          "detailed_summary_zh": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+          "event_id": "evt_1983cffafef32e0c",
+          "first_seen_at": "2026-09-24T17:26:42.607451Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:18:46Z",
+          "published_at": "2026-09-24T15:18:46Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/blockchains/arbitrum-replaces-timeboost-with-per-transaction-priority-auctions"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:93719bc4f31d2b8f"
+          ],
+          "time_precision": "published",
+          "title_en": "Arbitrum Replaces Timeboost With Per-Transaction Priority Auctions",
+          "title_zh": "Arbitrum Replaces Timeboost With Per-Transaction Priority Auctions",
+          "update_id": "upd_e0088beee2f98f3b",
+          "update_type": "initial",
+          "what_changed_en": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild.",
+          "what_changed_zh": "Arbitrum is replacing its Timeboost mechanism with per-transaction priority auctions, with priority fees and paid Fast Feed subscriptions directing 97% of proceeds to the DAO treasury and 3% to the Arbitrum Developer Guild."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+      "current_state_zh": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+      "entities": [
+        "bitmex"
+      ],
+      "event_id": "evt_f42774832057191d",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-24T17:26:43.383628Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:43.383628Z",
+      "last_updated_at": "2026-09-24T17:26:43.383628Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "BitMEX opens fund recovery to customers it previously barred from the platform",
+      "title_zh": "BitMEX opens fund recovery to customers it previously barred from the platform",
+      "topics": [
+        "bitmex",
+        "exchange-shutdown",
+        "kyc",
+        "restricted-jurisdictions",
+        "withdrawals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+          "current_state_zh": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+          "detailed_summary_en": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+          "detailed_summary_zh": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+          "event_id": "evt_f42774832057191d",
+          "first_seen_at": "2026-09-24T17:26:43.383628Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T13:30:14Z",
+          "published_at": "2026-09-24T13:30:14Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/bitmex-opens-fund-recovery-to-customers-it-previously-barred-from-the-platform/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:ae4fe77362e98e9a"
+          ],
+          "time_precision": "published",
+          "title_en": "BitMEX opens fund recovery to customers it previously barred from the platform",
+          "title_zh": "BitMEX opens fund recovery to customers it previously barred from the platform",
+          "update_id": "upd_71de0e58435d4465",
+          "update_type": "initial",
+          "what_changed_en": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply.",
+          "what_changed_zh": "BitMEX has reopened login, KYC and withdrawal access for customers in the US, Canada, Hong Kong, Bermuda, Seychelles and Myanmar — jurisdictions it had previously blocked — so they can recover balances after the platform ended trading operations, while sanctions restrictions and possible account fees for delayed withdrawals still apply."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+      "current_state_zh": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+      "entities": [
+        "etp",
+        "europe",
+        "why",
+        "zcash"
+      ],
+      "event_id": "evt_b478e994a5c2abd8",
+      "event_type": "other",
+      "first_seen_at": "2026-09-24T17:26:43.633641Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:43.633641Z",
+      "last_updated_at": "2026-09-24T17:26:43.633641Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Why Zcash soared to $1,600 as Europe unlocks new ETP access",
+      "title_zh": "Why Zcash soared to $1,600 as Europe unlocks new ETP access",
+      "topics": [
+        "21shares",
+        "etp",
+        "europe",
+        "privacy-coins",
+        "zcash"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+          "current_state_zh": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+          "detailed_summary_en": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+          "detailed_summary_zh": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+          "event_id": "evt_b478e994a5c2abd8",
+          "first_seen_at": "2026-09-24T17:26:43.633641Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T10:00:42Z",
+          "published_at": "2026-09-24T10:00:42Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/zcash-gains-european-etp-access-as-shielded-activity-reaches-a-four-year-high/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:e401e077442936b6"
+          ],
+          "time_precision": "published",
+          "title_en": "Why Zcash soared to $1,600 as Europe unlocks new ETP access",
+          "title_zh": "Why Zcash soared to $1,600 as Europe unlocks new ETP access",
+          "update_id": "upd_c23bdd58c54f0cdb",
+          "update_type": "initial",
+          "what_changed_en": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022.",
+          "what_changed_zh": "21Shares listed a physically backed Zcash ETP on Euronext Paris and Amsterdam, giving European brokerage investors direct ZEC exposure as the token briefly topped $1,600 and weekly shielded transactions reached their highest level since 2022."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+      "current_state_zh": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+      "entities": [
+        "anthropic",
+        "opus",
+        "work"
+      ],
+      "event_id": "evt_d58981ebc4ba3197",
+      "event_type": "product_release",
+      "first_seen_at": "2026-09-24T17:26:45.968718Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:45.968718Z",
+      "last_updated_at": "2026-09-24T17:26:45.968718Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Opus 5.5 for Work - Anthropic",
+      "title_zh": "Opus 5.5 for Work - Anthropic",
+      "topics": [
+        "ai-model-release",
+        "anthropic",
+        "claude-opus",
+        "enterprise-ai",
+        "frontier-models"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+          "current_state_zh": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+          "detailed_summary_en": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+          "detailed_summary_zh": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+          "event_id": "evt_d58981ebc4ba3197",
+          "first_seen_at": "2026-09-24T17:26:45.968718Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T16:57:53Z",
+          "published_at": "2026-09-24T16:57:53Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Anthropic News",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE00dWwwdEZIOXRVaHBSM09MYy1ZMk5TQ1RsUzFxem8wQTQwMGdvVmxHTFd4NTN5ODhTUVdLSi1ObUx1WjJ0aTA5ZU1lNHZEeWlBSkliTkoxTjY2czRzaFprVGpB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:news.google.com_rss_search?q=site:anthropic.com+when:7d&hl=en-US&gl=US&ceid=US:en:e6f8f41683775ea0"
+          ],
+          "time_precision": "published",
+          "title_en": "Opus 5.5 for Work - Anthropic",
+          "title_zh": "Opus 5.5 for Work - Anthropic",
+          "update_id": "upd_61a6e772c99ee9f1",
+          "update_type": "initial",
+          "what_changed_en": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases.",
+          "what_changed_zh": "Anthropic announced Opus 5.5 for Work, positioning its latest frontier model for workplace and enterprise use cases."
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "confidence": 0.75,
+      "current_state_en": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+      "current_state_zh": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+      "entities": [
+        "accelerating",
+        "dspark",
+        "lfm2",
+        "vision-language-models"
+      ],
+      "event_id": "evt_30549dd50df22df9",
+      "event_type": "other",
+      "first_seen_at": "2026-09-24T17:26:46.567469Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:46.567469Z",
+      "last_updated_at": "2026-09-24T17:26:46.567469Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+      "title_zh": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+      "topics": [
+        "inference-optimization",
+        "liquid-ai",
+        "model-efficiency",
+        "open-models",
+        "vision-language-models"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+          "current_state_zh": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+          "detailed_summary_en": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+          "detailed_summary_zh": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+          "event_id": "evt_30549dd50df22df9",
+          "first_seen_at": "2026-09-24T17:26:46.567469Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T14:08:57Z",
+          "published_at": "2026-09-24T14:08:57Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Hugging Face Blog",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark"
+            }
+          ],
+          "story_ids": [
+            "rss:huggingface.co_blog_feed.xml:280bf64dcca75cee"
+          ],
+          "time_precision": "published",
+          "title_en": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+          "title_zh": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+          "update_id": "upd_1d81e56d79ce5bdf",
+          "update_type": "initial",
+          "what_changed_en": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog.",
+          "what_changed_zh": "Liquid AI introduces LFM2.5-VL-DSpark, a vision-language model tuned for faster inference and deployment efficiency, released with details on the Hugging Face blog."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+      "current_state_zh": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+      "entities": [
+        "aims",
+        "dollar",
+        "dollar-dominance",
+        "dominance",
+        "into",
+        "stablecoins",
+        "turn",
+        "weapon"
+      ],
+      "event_id": "evt_2dc7cb8373dd1c0b",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-24T17:26:46.809878Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:46.809878Z",
+      "last_updated_at": "2026-09-24T17:26:46.809878Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US Aims to Turn Stablecoins Into a Weapon for Dollar Dominance",
+      "title_zh": "US Aims to Turn Stablecoins Into a Weapon for Dollar Dominance",
+      "topics": [
+        "dollar-dominance",
+        "stablecoins",
+        "treasury",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+          "current_state_zh": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+          "detailed_summary_en": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+          "detailed_summary_zh": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+          "event_id": "evt_2dc7cb8373dd1c0b",
+          "first_seen_at": "2026-09-24T17:26:46.809878Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T16:55:43Z",
+          "published_at": "2026-09-24T16:55:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379219/us-stablecoins-weapon-dollar-dominance"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:ba4240122b9560e8"
+          ],
+          "time_precision": "published",
+          "title_en": "US Aims to Turn Stablecoins Into a Weapon for Dollar Dominance",
+          "title_zh": "US Aims to Turn Stablecoins Into a Weapon for Dollar Dominance",
+          "update_id": "upd_cbed3c5fdc3b69f7",
+          "update_type": "initial",
+          "what_changed_en": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers.",
+          "what_changed_zh": "The Trump administration is reportedly considering joint ventures with private firms, backed by Treasury, the State Department and the US International Development Finance Corp., to promote dollar-pegged stablecoins in foreign markets and expand the roughly $200 billion in Treasury bills already held by issuers."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+      "current_state_zh": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+      "entities": [
+        "are",
+        "arrive",
+        "before",
+        "commercially",
+        "computers",
+        "could",
+        "day",
+        "quantum",
+        "useful",
+        "warns"
+      ],
+      "event_id": "evt_430b743211d66cb2",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-24T17:26:47.718105Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:47.718105Z",
+      "last_updated_at": "2026-09-24T17:26:47.718105Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Q-Day Could Arrive Before Quantum Computers Are Commercially Useful, EU Warns",
+      "title_zh": "Q-Day Could Arrive Before Quantum Computers Are Commercially Useful, EU Warns",
+      "topics": [
+        "blockchain-security",
+        "eu-regulation",
+        "financial-stability",
+        "post-quantum-cryptography",
+        "quantum-computing"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+          "current_state_zh": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+          "detailed_summary_en": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+          "detailed_summary_zh": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+          "event_id": "evt_430b743211d66cb2",
+          "first_seen_at": "2026-09-24T17:26:47.718105Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T11:05:19Z",
+          "published_at": "2026-09-24T11:05:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379167/q-day-could-arrive-before-quantum-computers-are-commercially-useful-eu-warns"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:60263fbd0d2016c6"
+          ],
+          "time_precision": "published",
+          "title_en": "Q-Day Could Arrive Before Quantum Computers Are Commercially Useful, EU Warns",
+          "title_zh": "Q-Day Could Arrive Before Quantum Computers Are Commercially Useful, EU Warns",
+          "update_id": "upd_56ee7f13e0511f1b",
+          "update_type": "initial",
+          "what_changed_en": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems.",
+          "what_changed_zh": "EU banking, insurance, and markets regulators warned that a cryptographically relevant quantum computer could arrive before commercial quantum utility, urging member states to adopt post-quantum cryptography migration strategies by the end of 2026 to counter 'harvest now, decrypt later' threats to blockchains and financial systems."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+      "current_state_zh": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+      "entities": [
+        "sofi",
+        "stablecoins"
+      ],
+      "event_id": "evt_a4797d8045cf7def",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-24T17:26:48.736851Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:48.736851Z",
+      "last_updated_at": "2026-09-24T17:26:48.736851Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SoFi tie-up shows stablecoins can provide alternative blockchain settlement rail",
+      "title_zh": "SoFi tie-up shows stablecoins can provide alternative blockchain settlement rail",
+      "topics": [
+        "mastercard",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+          "current_state_zh": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+          "detailed_summary_en": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+          "detailed_summary_zh": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+          "event_id": "evt_a4797d8045cf7def",
+          "first_seen_at": "2026-09-24T17:26:48.736851Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:57:00Z",
+          "published_at": "2026-09-24T15:57:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/sofi-moves-25b-card-program-to-stablecoin-settlement-with-mastercard?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:942b17515b4a4ce8"
+          ],
+          "time_precision": "published",
+          "title_en": "SoFi tie-up shows stablecoins can provide alternative blockchain settlement rail",
+          "title_zh": "SoFi tie-up shows stablecoins can provide alternative blockchain settlement rail",
+          "update_id": "upd_a7708789e92db9e1",
+          "update_type": "initial",
+          "what_changed_en": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails.",
+          "what_changed_zh": "SoFi began settling its debit and credit card transactions with Mastercard using its SoFiUSD stablecoin, migrating an entire card program expected to process more than $25 billion in annualized volume onto blockchain-based settlement rails."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "New York Attorney General Letitia James sued Polymarket in Manhattan court, alleging unlicensed gambling and seeking an injunction, treble damages, and $100,000 per sports contract.",
+      "current_state_zh": "纽约总检察长 Letitia James 在曼哈顿法院起诉 Polymarket，指控其无证赌博，寻求禁令、三倍收益赔偿及每份体育合约 10 万美元罚款。",
+      "entities": [
+        "gambling",
+        "new",
+        "new-york",
+        "over",
+        "polymarket",
+        "sues",
+        "unlicensed",
+        "york"
+      ],
+      "event_id": "evt_722c853a96c32398",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-24T17:26:48.798032Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:48.798032Z",
+      "last_updated_at": "2026-09-24T17:26:48.798032Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "New York sues Polymarket over alleged illegal gambling business",
+      "title_zh": "New York sues Polymarket over alleged illegal gambling business",
+      "topics": [
+        "crypto-regulation",
+        "enforcement",
+        "gambling-laws",
+        "new-york",
+        "polymarket",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "New York Attorney General Letitia James sued Polymarket, alleging its sports event contracts violate state gambling laws and seeking potentially to block the platform for New York residents.",
+          "current_state_zh": "New York Attorney General Letitia James sued Polymarket, alleging its sports event contracts violate state gambling laws and seeking potentially to block the platform for New York residents.",
+          "detailed_summary_en": "New York Attorney General Letitia James sued Polymarket, alleging its sports event contracts violate state gambling laws and seeking potentially to block the platform for New York residents.",
+          "detailed_summary_zh": "New York Attorney General Letitia James sued Polymarket, alleging its sports event contracts violate state gambling laws and seeking potentially to block the platform for New York residents.",
+          "event_id": "evt_722c853a96c32398",
+          "first_seen_at": "2026-09-24T17:26:48.798032Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T15:27:29Z",
+          "published_at": "2026-09-24T15:27:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/new-york-polymarket-illegal-gambling-operation-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:4081df84907da5e2"
+          ],
+          "time_precision": "published",
+          "title_en": "New York sues Polymarket over alleged illegal gambling business",
+          "title_zh": "New York sues Polymarket over alleged illegal gambling business",
+          "update_id": "upd_67fbf6a74697ae25",
+          "update_type": "initial",
+          "what_changed_en": "New York Attorney General Letitia James sued Polymarket, alleging its sports event contracts violate state gambling laws and seeking potentially to block the platform for New York residents.",
+          "what_changed_zh": "New York Attorney General Letitia James sued Polymarket, alleging its sports event contracts violate state gambling laws and seeking potentially to block the platform for New York residents."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "New York Attorney General Letitia James sued Polymarket in Manhattan court, alleging unlicensed gambling and seeking an injunction, treble damages, and $100,000 per sports contract.",
+          "current_state_zh": "纽约总检察长 Letitia James 在曼哈顿法院起诉 Polymarket，指控其无证赌博，寻求禁令、三倍收益赔偿及每份体育合约 10 万美元罚款。",
+          "detailed_summary_en": "New York Attorney General Letitia James sued Polymarket US in Manhattan court, seeking to bar the CFTC-designated exchange from operating in the state, triple its gains, and levy $100,000 per sports contract offered, on grounds of unlicensed gambling.",
+          "detailed_summary_zh": "New York Attorney General Letitia James sued Polymarket US in Manhattan court, seeking to bar the CFTC-designated exchange from operating in the state, triple its gains, and levy $100,000 per sports contract offered, on grounds of unlicensed gambling.",
+          "event_id": "evt_722c853a96c32398",
+          "first_seen_at": "2026-09-24T17:26:42.426959Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T16:19:07Z",
+          "published_at": "2026-09-24T16:19:07Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/regulation/new-york-sues-polymarket-us-unlicensed-gambling"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-24-new-york-block-polymarket-alleging-illegal-gambling-operation-416279"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:f0200d4a3f437229",
+            "rss:www.theblock.co_rss.xml:870f57daf0b7a100"
+          ],
+          "time_precision": "published",
+          "title_en": "New York Sues Polymarket US Over Unlicensed Gambling",
+          "title_zh": "New York Sues Polymarket US Over Unlicensed Gambling",
+          "update_id": "upd_d72ffb5e60aa9e6c",
+          "update_type": "escalation",
+          "what_changed_en": "The New York Attorney General sued Polymarket in Manhattan court, specifically seeking to bar the CFTC-designated exchange from operating in New York, triple its gains, and impose $100,000 per sports contract.",
+          "what_changed_zh": "纽约总检察长在曼哈顿法院起诉 Polymarket，具体寻求禁止该 CFTC 指定交易所在纽约运营、三倍收益赔偿，并按每份体育合约罚款 10 万美元。"
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+      "current_state_zh": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+      "entities": [
+        "crypto-lending",
+        "mica"
+      ],
+      "event_id": "evt_358388e6cfdbfd9b",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-24T17:26:50.408789Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-24T17:26:50.408789Z",
+      "last_updated_at": "2026-09-24T17:26:50.408789Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "EU banking watchdog calls for crypto lending rules under MiCA",
+      "title_zh": "EU banking watchdog calls for crypto lending rules under MiCA",
+      "topics": [
+        "crypto-lending",
+        "eba",
+        "eu-regulation",
+        "mica"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+          "current_state_zh": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+          "detailed_summary_en": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+          "detailed_summary_zh": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+          "event_id": "evt_358388e6cfdbfd9b",
+          "first_seen_at": "2026-09-24T17:26:50.408789Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T10:30:00Z",
+          "published_at": "2026-09-24T10:30:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/eu-eba-crypto-lending-defi-mica-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:89a2ba7006b510cc"
+          ],
+          "time_precision": "published",
+          "title_en": "EU banking watchdog calls for crypto lending rules under MiCA",
+          "title_zh": "EU banking watchdog calls for crypto lending rules under MiCA",
+          "update_id": "upd_d7094d67dc523aa1",
+          "update_type": "initial",
+          "what_changed_en": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements.",
+          "what_changed_zh": "The European Banking Authority recommended that the European Commission extend MiCA to cover crypto borrowing and lending, including crypto firms intermediating access to DeFi lending protocols, and conduct a cost-benefit analysis of adding such services to the regulated list with new compliance and oversight requirements."
         }
       ]
     }
@@ -84434,6 +86385,96 @@
         "source_type": "google_news",
         "title": "SlowMist exposes FomoPeek, the iOS app that stole crypto keys through a kernel exploit - pasqualepillitteri.it",
         "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN3AtcE5jRGgzaFRBTExkOWQ5NmRTd0l5Qm5NdnZwNEpwZWVLTmg3NTVuc2hlSHlWMkEyVnZnSGhPc1JoSjRxTGRzc0VvR1FqZjdLZjVuQjZjSkE4X2p5aW44U1psZ0oya2t1Vzc0VVpVeS1xR1RRcklOeV9zR2Uxd1pvSVkyMF8x?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Binance listing Hyperliquid's HYPE token is a material exchange listing for a large-cap, widely traded asset, and the accompanying Seed Tag designation signals elevated volatility-risk monitoring for the token. The 4.6% price drop reflects a concrete market reaction, giving the item clear immediate trading relevance, though the listing itself is a standard, if high-profile, exchange announcement rather than a structural or systemic development.",
+        "ai_score": 7.5,
+        "ai_summary": "Binance listed Hyperliquid's HYPE token with a Seed Tag, a designation for higher-volatility assets, as the token fell 4.6%.",
+        "ai_tags": [
+          "binance",
+          "hyperliquid",
+          "exchange-listing",
+          "HYPE",
+          "seed-tag"
+        ],
+        "author": "TradingView",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOa09mM2VlMnBFYzhKNFc2cjcwb3BrVEEyTTJwMzNsczdpRTdPZXBFWEpKRUotVzByQVFYVFBJZkNVazJUZ0ZPVW9DWmpmUjNFU0cwQlNqSm5SdFJSU29QX2h0Yk9mS3V0X3ZQYkpJMmIwTHNuVERqWk9DbUl1UGhDZkdHclQ1LWxwbWw2djY3LU0xckNvVlI1OE5sLU4zdmFXS2cyWi1IcFhCVUZOX0dCWlpZczYtQTIyY2MwRmVxOUk?oc=5\" target=\"_blank\">Binance Lists Hyperliquid HYPE With Seed Tag as Token Drops 4.6%</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradingView</font>",
+        "fetched_at": "2026-09-24T17:26:31.861689Z",
+        "id": "google_news:article:18c5ab10e14cc962",
+        "metadata": {
+          "category": "exchange-announcements",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_name": "TradingView"
+        },
+        "published_at": "2026-09-24T10:45:24Z",
+        "source_type": "google_news",
+        "title": "Binance Lists Hyperliquid HYPE With Seed Tag as Token Drops 4.6% - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOa09mM2VlMnBFYzhKNFc2cjcwb3BrVEEyTTJwMzNsczdpRTdPZXBFWEpKRUotVzByQVFYVFBJZkNVazJUZ0ZPVW9DWmpmUjNFU0cwQlNqSm5SdFJSU29QX2h0Yk9mS3V0X3ZQYkpJMmIwTHNuVERqWk9DbUl1UGhDZkdHclQ1LWxwbWw2djY3LU0xckNvVlI1OE5sLU4zdmFXS2cyWi1IcFhCVUZOX0dCWlpZczYtQTIyY2MwRmVxOUk?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A major exchange (Binance) listing HYPE, a large-cap perp DEX token, is a material market-access and liquidity event for one of the most actively traded assets in DeFi; the added 'Seed Tag' designation also signals elevated risk classification to users. This is a high-value, actionable listing announcement rather than a routine mid-cap addition, though it is not a paradigm-shifting or systemic event.",
+        "ai_score": 7.5,
+        "ai_summary": "Binance announced it will list Hyperliquid's HYPE token with a Seed Tag, flagging the asset under its higher-risk listing category.",
+        "ai_tags": [
+          "binance",
+          "hyperliquid",
+          "HYPE",
+          "exchange-listing",
+          "seed-tag"
+        ],
+        "author": "Binance",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FdGRSOEZzQUx0UjJyR0E5R0x6azdXa29SS1RLRHJyZU9WWEFQeDJJeHU1c2g2UXNQcW91WmFaXzdJMlhsaVoxenVkWGd6aFpHRnhwdWFkV1hpSUxRZUN3OGg2eE0?oc=5\" target=\"_blank\">Binance to List Hyperliquid (HYPE) With a Seed Tag</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Binance</font>",
+        "fetched_at": "2026-09-24T17:26:31.862385Z",
+        "id": "google_news:article:bb09db998c09f928",
+        "metadata": {
+          "category": "exchange-announcements",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_name": "Binance"
+        },
+        "published_at": "2026-09-24T08:19:37Z",
+        "source_type": "google_news",
+        "title": "Binance to List Hyperliquid (HYPE) With a Seed Tag - Binance",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FdGRSOEZzQUx0UjJyR0E5R0x6azdXa29SS1RLRHJyZU9WWEFQeDJJeHU1c2g2UXNQcW91WmFaXzdJMlhsaVoxenVkWGd6aFpHRnhwdWFkV1hpSUxRZUN3OGg2eE0?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "Binance enabling spot trading for Hyperliquid (HYPE) with a Seed Tag is a material exchange listing for a high-profile DEX-native asset, expanding access for a large user base. It is an important, immediately actionable listing rather than a platform-wide fee or market-structure change, so it sits at high-value rather than groundbreaking tier; the Seed Tag also signals elevated volatility/risk to traders.",
+        "ai_score": 7.0,
+        "ai_summary": "Binance went live with Hyperliquid (HYPE) spot trading today, attaching a Seed Tag that flags the asset as higher-risk and subject to stricter listing requirements.",
+        "ai_tags": [
+          "binance",
+          "hyperliquid",
+          "exchange-listing",
+          "seed-tag",
+          "hype"
+        ],
+        "author": "Coin Gabbar",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPOXhKczNfZTdPZkNMNlpmZ0NsQTUzXzVlNml0dEhvaGRRMWliN3NCWUxDNWJFMzJqRFQyVWhkTFJOSkdvMDlnS1BTWXNpMHMwZEFVUkRWaDBUU050eWxWbWpiRzNLTDdrQmJkOUwwM2laTkhySV9LVWdwUEtTZlN2UVBCeTFvM0tuZ3MyMEwtVUpZUldXVXFJ?oc=5\" target=\"_blank\">Binance Listing News: Hyperliquid Trading Go Live Today With Seed Tag</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Coin Gabbar</font>",
+        "fetched_at": "2026-09-24T17:26:31.862955Z",
+        "id": "google_news:article:ad36cb5e038d7928",
+        "metadata": {
+          "category": "exchange-announcements",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_name": "Coin Gabbar"
+        },
+        "published_at": "2026-09-24T09:30:00Z",
+        "source_type": "google_news",
+        "title": "Binance Listing News: Hyperliquid Trading Go Live Today With Seed Tag - Coin Gabbar",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOXhKczNfZTdPZkNMNlpmZ0NsQTUzXzVlNml0dEhvaGRRMWliN3NCWUxDNWJFMzJqRFQyVWhkTFJOSkdvMDlnS1BTWXNpMHMwZEFVUkRWaDBUU050eWxWbWpiRzNLTDdrQmJkOUwwM2laTkhySV9LVWdwUEtTZlN2UVBCeTFvM0tuZ3MyMEwtVUpZUldXVXFJ?oc=5"
       }
     }
   ],

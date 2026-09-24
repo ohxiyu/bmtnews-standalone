@@ -4,38 +4,45 @@
   "url": "https://bmt.news/events/evt_583f52deb63823c7/",
   "json": "https://bmt.news/api/events/evt_583f52deb63823c7.json",
   "type": "other",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "华盛顿全力拥抱加密：特朗普、SEC、CFTC齐推新规",
     "en": "Washington Goes All-In on Crypto: Trump, SEC, CFTC Advance New Rules"
   },
   "current_state": {
-    "zh": "华盛顿全力拥抱加密：特朗普、SEC、CFTC齐推新规",
-    "en": "Washington Goes All-In on Crypto: Trump, SEC, CFTC Advance New Rules"
+    "zh": "华盛顿加密政策推进进入新阶段：CFTC在立法受阻后转向以现有权力制定永续合约等市场结构规则，SEC同步推进豁免与托管提案。",
+    "en": "Washington's crypto policy push enters a new stage: after legislation stalled, the CFTC pivots to using existing authority to write market-structure rules for perpetuals, while the SEC advances exemptions and custody proposals."
   },
   "first_seen_at": "2026-08-22T08:00:00+08:00",
-  "last_updated_at": "2026-08-22T08:00:00+08:00",
-  "last_material_change_at": "2026-08-22T08:00:00+08:00",
+  "last_updated_at": "2026-09-24T17:26:47.587938+00:00",
+  "last_material_change_at": "2026-09-24T17:26:47.587938+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "advance",
     "all",
     "cftc",
     "goes",
+    "minute",
+    "morning",
     "new",
     "rules",
+    "says",
     "sec",
+    "selig",
+    "time",
     "trump",
     "washington"
   ],
   "identifiers": [],
   "topics": [
+    "btc-etf",
     "cftc",
     "clarity-act",
     "crypto-regulation",
+    "perpetuals",
     "sec",
     "white-house"
   ],
@@ -72,6 +79,44 @@
       "sources": [
         {
           "url": "https://decrypt.co/376204/washington-crypto-trump-clarity-sec-rules-cftc-warnings",
+          "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_4b9d6d4a44c8cabc",
+      "event_id": "evt_583f52deb63823c7",
+      "occurred_at": "2026-09-24T11:56:11Z",
+      "published_at": "2026-09-24T11:56:11Z",
+      "first_seen_at": "2026-09-24T17:26:47.587938Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Morning Minute: Selig Says ‘It’s Go Time’ for CFTC Crypto Rules",
+      "title_en": "Morning Minute: Selig Says ‘It’s Go Time’ for CFTC Crypto Rules",
+      "what_changed_zh": "CFTC主席Mike Selig在CNBC表示现在是制定加密市场结构规则的“时候”，将聚焦永续合约并动用现有法定权力；此前参议院否决了Clarity Act。同时SEC批准五年创新豁免、CFTC发布不行动函并提交两项预规则。",
+      "what_changed_en": "CFTC Chair Mike Selig said on CNBC it is 'go time' for the agency to write crypto market-structure rules, focused on perpetuals, using existing statutory authority after the Senate blocked the Clarity Act; SEC also approved a five-year Innovation Exemption and CFTC issued a no-action letter and filed two prerules.",
+      "current_state_zh": "华盛顿加密政策推进进入新阶段：CFTC在立法受阻后转向以现有权力制定永续合约等市场结构规则，SEC同步推进豁免与托管提案。",
+      "current_state_en": "Washington's crypto policy push enters a new stage: after legislation stalled, the CFTC pivots to using existing authority to write market-structure rules for perpetuals, while the SEC advances exemptions and custody proposals.",
+      "detailed_summary_zh": "CFTC Chair Mike Selig said on CNBC it is 'go time' for the agency to write crypto market-structure rules, focused on perpetuals, using its existing statutory authority after the Senate blocked the Clarity Act.",
+      "detailed_summary_en": "CFTC Chair Mike Selig said on CNBC it is 'go time' for the agency to write crypto market-structure rules, focused on perpetuals, using its existing statutory authority after the Senate blocked the Clarity Act.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.9,
+      "story_ids": [
+        "rss:decrypt.co_feed:a4a753b73aaf109d"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/379169/morning-minute-selig-says-its-go-time-for-cftc-crypto-rules",
           "label": "Decrypt",
           "source_type": "rss",
           "official": false
