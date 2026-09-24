@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "event_id": "evt_99d610db8955d8a2",
+  "url": "https://bmt.news/events/evt_99d610db8955d8a2/",
+  "json": "https://bmt.news/api/events/evt_99d610db8955d8a2.json",
+  "type": "security_incident",
+  "status": "monitoring",
+  "category": "crypto",
+  "title": {
+    "zh": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+    "en": "Radicle: Disclosure of Vulnerability in the Network Protocol"
+  },
+  "current_state": {
+    "zh": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+    "en": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released."
+  },
+  "first_seen_at": "2026-09-24T01:37:24.412361+00:00",
+  "last_updated_at": "2026-09-24T01:37:24.412361+00:00",
+  "last_material_change_at": "2026-09-24T01:37:24.412361+00:00",
+  "confidence": 0.75,
+  "updates_count": 1,
+  "sources_count": 1,
+  "entities": [
+    "disclosure",
+    "radicle",
+    "vulnerability"
+  ],
+  "identifiers": [],
+  "topics": [
+    "encryption",
+    "p2p",
+    "radicle",
+    "vulnerability-disclosure"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_1d44fa665076d3b4",
+      "event_id": "evt_99d610db8955d8a2",
+      "occurred_at": "2026-09-23T15:23:05Z",
+      "published_at": "2026-09-23T15:23:05Z",
+      "first_seen_at": "2026-09-24T01:37:24.412361Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+      "title_en": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+      "what_changed_zh": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+      "what_changed_en": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+      "current_state_zh": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+      "current_state_en": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+      "detailed_summary_zh": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+      "detailed_summary_en": "Radicle disclosed a vulnerability in its network protocol in which inter-node traffic is unencrypted and unauthenticated, urging users to halt use of private repositories over the network until a security update is released.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.0,
+      "references": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49817524",
+          "title": "Community discussion"
+        }
+      ],
+      "confidence": 0.75,
+      "story_ids": [
+        "hackernews:story:49817524"
+      ],
+      "sources": [
+        {
+          "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
+          "label": "lostmsu",
+          "source_type": "hackernews",
+          "official": false
+        }
+      ]
+    }
+  ]
+}
