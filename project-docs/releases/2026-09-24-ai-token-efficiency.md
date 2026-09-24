@@ -18,5 +18,6 @@
 - `uv sync --frozen --extra dev`：通过。
 - `uv run pytest`：838 项通过；新增测试使用 mock 模型，覆盖请求预算不变、完整批次持久化、输入/模型变化失效、部分响应不缓存、独立容量及报告显示。
 - `uv run python scripts/check_governance.py`、`git diff --check`：通过。
+- PR #128 的 `test`、`analyze`、`governance`、CodeQL 和 Cloudflare Pages Preview 检查：通过；Preview 成功不等于生产部署。
 - 当前生产仍使用前一版。2026-09-24 公网 `/api/latest.json` 为 14 条，源提交 `f2a286594e910fad295f332816b90d07be909f3a`，日报产物提交 `1c8624f3f2adba6170735f2636d85baf3650d328`；这不是本任务的生产验证。Worker 未变，版本本次未核验。
-- 状态：代码完成、测试通过、PR 已创建；CI、合并、部署和线上质量/节省验收均待后续证据。回退当前任务只需经授权 revert 本 PR；不要手改 `main`、`gh-pages`、`staging-cache` 或分发队列。
+- 状态：代码完成、测试与 CI 通过、PR 已创建；合并、部署和线上质量/节省验收均待后续证据。回退当前任务只需经授权 revert 本 PR；不要手改 `main`、`gh-pages`、`staging-cache` 或分发队列。

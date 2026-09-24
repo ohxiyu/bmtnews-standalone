@@ -17,11 +17,12 @@
     "新增模型/内容变化、部分响应、缓存持久化及报告显示测试；本地全量 838 项通过"
   ],
   "unfinished": [
-    "等待 PR128 的 CI 和用户决定是否合并；未获当前任务部署授权",
+    "等待用户审核 PR128 并决定是否合并；未获当前任务部署授权",
     "上线后观察多个采集/日报周期的预筛缓存命中、调用数、token 和候选质量；再决定是否做输入压缩或推理强度 A/B"
   ],
   "validation": [
     "uv sync --frozen --extra dev、uv run pytest（838 项）及治理检查通过；只用 mock 客户端，没有真实 AI 调用",
+    "PR128 的 test、analyze、governance、CodeQL 和 Cloudflare Pages Preview 检查通过",
     "origin/main=f2a286594e910fad295f332816b90d07be909f3a；2026-09-24 自动日报 workflow 35933583563 成功"
   ],
   "unverified": [
@@ -39,7 +40,7 @@
   "blockers": [
     "当前任务只授权开发与 PR；合并和生产验证须另行授权"
   ],
-  "next_action": "审核预筛缓存及用量标签 PR 和 CI；获授权合并后观察 3-7 天用量与内容质量，再评估后续压缩方案",
+  "next_action": "审核预筛缓存及用量标签 PR；获授权合并后观察 3-7 天用量与内容质量，再评估后续压缩方案",
   "states": {
     "code": "complete",
     "tests": "complete",
@@ -47,6 +48,6 @@
     "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-24-remove-jev.md"
+  "evidence": "project-docs/releases/2026-09-24-ai-token-efficiency.md"
 }
 ```
