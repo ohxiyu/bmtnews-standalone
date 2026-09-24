@@ -4,7 +4,7 @@
 - Branch: `agent/ai-token-efficiency`；PR: [#128](https://github.com/ohxiyu/bmtnews-standalone/pull/128)
 - Source baseline: `f2a286594e910fad295f332816b90d07be909f3a`
 - Deployment authority: 开发阶段仅 PR；用户随后明确要求“合并部署”，授权本次应用 PR 合并与生产接入。没有强制重刊已发布日报或部署未改动 Worker。
-- Rollout evidence: [Issue #129](https://github.com/ohxiyu/bmtnews-standalone/issues/129)；独立文档 PR 待提交。
+- Rollout evidence: [Issue #129](https://github.com/ohxiyu/bmtnews-standalone/issues/129) / [PR #130](https://github.com/ohxiyu/bmtnews-standalone/pull/130)。
 
 ## 为什么先做这两项
 
