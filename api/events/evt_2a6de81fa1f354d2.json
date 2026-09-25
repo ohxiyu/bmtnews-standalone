@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "event_id": "evt_2a6de81fa1f354d2",
+  "url": "https://bmt.news/events/evt_2a6de81fa1f354d2/",
+  "json": "https://bmt.news/api/events/evt_2a6de81fa1f354d2.json",
+  "type": "security_incident",
+  "status": "developing",
+  "category": "crypto",
+  "title": {
+    "zh": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+    "en": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody"
+  },
+  "current_state": {
+    "zh": "针对 Magic Eden 相关授权的安全事件中，Magic Eden 警告其已关闭的 EVM 市场（2024 年 2 月至 10 月）上架的 NFT 曾暴露于 Limit Break Payment Processor V2 漏洞；白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，但 660 WETH 未能追回；攻击者盗走指定 NFT；Limit Break 已暂停存在相同缺陷的 V3，而 V2 无法暂停；持有人仍被要求撤销以太坊、Polygon 和 Base 上的易受攻击授权。",
+    "en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base."
+  },
+  "first_seen_at": "2026-09-25T17:25:28.582355+00:00",
+  "last_updated_at": "2026-09-25T17:25:28.582355+00:00",
+  "last_material_change_at": "2026-09-25T17:25:28.582355+00:00",
+  "confidence": 0.75,
+  "updates_count": 3,
+  "sources_count": 3,
+  "entities": [
+    "approvals",
+    "are",
+    "eden",
+    "exploit",
+    "exploited",
+    "exposed",
+    "hats",
+    "legacy",
+    "listings",
+    "magic",
+    "magic-eden",
+    "nft",
+    "nfts",
+    "old",
+    "payment",
+    "processor",
+    "rescue",
+    "warns",
+    "white",
+    "white-hat",
+    "whitehat"
+  ],
+  "identifiers": [],
+  "topics": [
+    "limit-break",
+    "magic-eden",
+    "nft",
+    "security-exploit",
+    "vulnerability",
+    "white-hat",
+    "whitehat"
+  ],
+  "updates": [
+    {
+      "update_id": "upd_b30f50f7ce1e0bde",
+      "event_id": "evt_2a6de81fa1f354d2",
+      "occurred_at": "2026-09-25T09:48:53Z",
+      "published_at": "2026-09-25T09:48:53Z",
+      "first_seen_at": "2026-09-25T17:25:28.582355Z",
+      "time_precision": "published",
+      "update_type": "initial",
+      "material_change": true,
+      "title_zh": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+      "title_en": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+      "what_changed_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "what_changed_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "current_state_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "current_state_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "detailed_summary_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "detailed_summary_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.75,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:19750724d2a64b18"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/magic-eden-nft-whitehat-vulnerability?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_821968309060cede",
+      "event_id": "evt_2a6de81fa1f354d2",
+      "occurred_at": "2026-09-25T16:12:07Z",
+      "published_at": "2026-09-25T16:12:07Z",
+      "first_seen_at": "2026-09-25T17:25:20.190155Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Legacy Magic Eden Approvals Exploited as White Hats Rescue NFTs",
+      "title_en": "Legacy Magic Eden Approvals Exploited as White Hats Rescue NFTs",
+      "what_changed_zh": "白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，较此前报告的 3,832 枚大幅增加；事件被描述为遗留的 Magic Eden 授权被利用，持有人仍需撤销易受攻击的 NFT 和代币授权。",
+      "what_changed_en": "White hats secured 23,155 NFTs worth more than $5.7 million, up from the 3,832 previously reported; the incident is described as exploits of legacy Magic Eden approvals, and holders still need to revoke vulnerable NFT and token approvals.",
+      "current_state_zh": "针对 Magic Eden 相关授权的安全事件中，白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元；持有人仍被要求撤销易受攻击的 NFT 和代币授权。",
+      "current_state_en": "In the Magic Eden-related approvals security incident, a whitehat operation has secured 23,155 NFTs worth more than $5.7 million; holders are still required to revoke vulnerable NFT and token approvals.",
+      "detailed_summary_zh": "Exploits of legacy Magic Eden NFT/token approvals led white hats to secure 23,155 NFTs worth more than $5.7 million, with holders still required to revoke vulnerable approvals.",
+      "detailed_summary_en": "Exploits of legacy Magic Eden NFT/token approvals led white hats to secure 23,155 NFTs worth more than $5.7 million, with holders still required to revoke vulnerable approvals.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.92,
+      "story_ids": [
+        "rss:thedefiant.io_api_feed:2c726c79c7b5480b"
+      ],
+      "sources": [
+        {
+          "url": "https://thedefiant.io/news/hacks/legacy-magic-eden-approvals-exploited-as-white-hats-rescue-nfts",
+          "label": "The Defiant",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_0dbbafb99b0eb8b9",
+      "event_id": "evt_2a6de81fa1f354d2",
+      "occurred_at": "2026-09-25T16:17:19Z",
+      "published_at": "2026-09-25T16:17:19Z",
+      "first_seen_at": "2026-09-25T17:25:26.658957Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Magic Eden Warns Old Ethereum NFT Listings Are Exposed to Payment Processor Exploit",
+      "title_en": "Magic Eden Warns Old Ethereum NFT Listings Are Exposed to Payment Processor Exploit",
+      "what_changed_zh": "新报道披露漏洞源于 Limit Break 的 Payment Processor V2，Magic Eden 于 2024 年 2 月至 10 月关闭的 EVM 市场上架的 NFT 受影响；除已救援的 23,155 枚 NFT 外，另有 660 WETH 未能追回；攻击者盗走 10 枚 Meebits、50 枚 Otherdeeds、10 枚 World of Women 和 235 枚 Desperate ApeWives；Limit Break 已暂停存在相同缺陷的 V3，但 V2 无法暂停；用户被建议在以太坊、Polygon 和 Base 上撤销合约授权。",
+      "what_changed_en": "The new report reveals the exploit stemmed from Limit Break's Payment Processor V2 and affected NFTs listed on Magic Eden's EVM marketplace between roughly February and October 2024; beyond the 23,155 NFTs rescued, 660 WETH was not recovered; the attacker stole 10 Meebits, 50 Otherdeeds, 10 World of Women, and 235 Desperate ApeWives; Limit Break paused the similarly flawed V3, but V2 could not be paused; users are advised to revoke contract approvals on Ethereum, Polygon, and Base.",
+      "current_state_zh": "针对 Magic Eden 相关授权的安全事件中，Magic Eden 警告其已关闭的 EVM 市场（2024 年 2 月至 10 月）上架的 NFT 曾暴露于 Limit Break Payment Processor V2 漏洞；白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，但 660 WETH 未能追回；攻击者盗走指定 NFT；Limit Break 已暂停存在相同缺陷的 V3，而 V2 无法暂停；持有人仍被要求撤销以太坊、Polygon 和 Base 上的易受攻击授权。",
+      "current_state_en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base.",
+      "detailed_summary_zh": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
+      "detailed_summary_en": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.92,
+      "story_ids": [
+        "rss:decrypt.co_feed:4e5de8224eeeb3e7"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/379342/magic-eden-old-ethereum-nft-listings-exposed-exploit",
+          "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

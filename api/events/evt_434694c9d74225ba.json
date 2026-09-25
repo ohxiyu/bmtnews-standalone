@@ -4,29 +4,37 @@
   "url": "https://bmt.news/events/evt_434694c9d74225ba/",
   "json": "https://bmt.news/api/events/evt_434694c9d74225ba.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "developing",
   "category": "crypto",
   "title": {
     "zh": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
     "en": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView"
   },
   "current_state": {
-    "zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
-    "en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence."
+    "zh": "Bitget 确认损失 3.875 亿美元，攻击手法为伪造交易数据而非私钥盗窃；外流已停止，提款仍暂停，保护基金将覆盖全额损失；朝鲜关联指控仍属公开怀疑且未获独立确认，Mandiant 和 SlowMist 正在调查。",
+    "en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating."
   },
   "first_seen_at": "2026-09-25T09:43:54.637052+00:00",
-  "last_updated_at": "2026-09-25T09:43:54.637052+00:00",
-  "last_material_change_at": "2026-09-25T09:43:54.637052+00:00",
+  "last_updated_at": "2026-09-25T17:25:26.530694+00:00",
+  "last_material_change_at": "2026-09-25T17:25:26.530694+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 2,
+  "updates_count": 3,
+  "sources_count": 6,
   "entities": [
     "bitget",
     "ceo",
+    "climb",
+    "hack",
+    "happened",
+    "here",
     "korea",
+    "losses",
     "north",
     "north-korea",
-    "tradingview"
+    "suspect",
+    "tradingview",
+    "what",
+    "why"
   ],
   "identifiers": [],
   "topics": [
@@ -34,7 +42,9 @@
     "bitget",
     "exchange-hack",
     "north-korea",
-    "security-incident"
+    "security-breach",
+    "security-incident",
+    "xrp"
   ],
   "updates": [
     {
@@ -65,7 +75,9 @@
       "confidence": 0.75,
       "story_ids": [
         "google_news:article:9cc189a82433747e",
-        "google_news:article:a801527685cda78b"
+        "google_news:article:a801527685cda78b",
+        "google_news:article:82f1e804e3686b53",
+        "google_news:article:e5cb2b553f864f17"
       ],
       "sources": [
         {
@@ -78,6 +90,94 @@
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOGpVUU4ydnk1VHcyaGxURWEzWVVBNGwxYlhod0gxalJ4UjBtTUtjdUU3SnJJdWFmd3NOVDVKSmV4bVhXSnNwX2RfNjc0ZzNVbzRWSVFEUGdVMDdTNlRHSjhpN0FycldkMXYxWFlzSFFLd2dtZXJDblczTW02cXktanNIREIzSzFYTFpCZEtSSVFsaHlYNE1oZ1dXRDZWeldfRHfSAacBQVVfeXFMUFBiU1hCOTRwM0RGUGN2aU5wUlpSRlZqVFhRRTZGZmswWV9palZseW1ZZWZFTjhPN25WMUtvc3NSYk1kaDA1QldUdGVURzNwd0xZMnhMd1JnamxFMXpndkJXNlk5VHJ2aEM0b2lJQjVNUm5EcS13UzJtWXNpZmoxZmZDNGwtdVlxZnNQSjhYSDZnY2ZoeXBuUFB5RWxtMFZ0QVBodkJXNE0?oc=5",
           "label": "CNBC",
           "source_type": "google_news",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE55ZS10SS1SWTZRQUNYTXM0UFI1V0VjMnAtcHc2RUthLXowRnQyUHZiWURHQ0dleFpRQmJYQVJQZ25wRDljVHpBVW12eTRRcEs5eFFOTlozeWw1Y1hFb3dZYjdlaFdsSEpLMmNNaFRhalBuYVV5?oc=5",
+          "label": "Substack",
+          "source_type": "google_news",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUWp4WWhqS1FuZVc4RU5iU0RQYVp4dnBNNHNxRy1zOEVfZEdTRXF4d19WU0F2Wmh1WXhQSHVScXZabnFpNXNhRW9hdW9RYUpGeDF0RUpDLVNDaUtPa29ENEo4Y3VqN1plWC1QM0dQdTdSc2FfWFkzNExCWk5aY1ZLZjJnY3FYSHVva28wMUxkQQ?oc=5",
+          "label": "The Tech Buzz",
+          "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_b74557c355ab540f",
+      "event_id": "evt_434694c9d74225ba",
+      "occurred_at": "2026-09-25T09:50:42Z",
+      "published_at": "2026-09-25T09:50:42Z",
+      "first_seen_at": "2026-09-25T17:25:22.209288Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund",
+      "title_en": "Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund",
+      "what_changed_zh": "Bitget 的 3.516 亿美元钱包入侵事件出现新进展：该交易所称攻击模式与朝鲜黑客相符，XRP 为单链最大损失，全额损失可能消耗约 76% 的 4.64 亿美元保护基金，提款仍暂停，Mandiant 和 SlowMist 正在调查，链上分析师将部分被盗 XRP 与 7 月 AFX 黑客事件关联。",
+      "what_changed_en": "New developments in Bitget's $351.6M wallet breach: the exchange said attack patterns are consistent with North Korean hackers, XRP was the largest single-chain loss, a full loss could consume about 76% of its $464M protection fund, withdrawals remain suspended, Mandiant and SlowMist are investigating, and an onchain analyst linked some stolen XRP to the July AFX hack.",
+      "current_state_zh": "Bitget 正在调查其 3.516 亿美元黑客事件，公开将其与朝鲜相关攻击者关联但尚未独立确认；提款因安全审查暂停，保护基金可能面临重大消耗，部分被盗资产正被追踪和冻结。",
+      "current_state_en": "Bitget is investigating its $351.6M hack, publicly linking it to North Korea-linked actors but without independent confirmation; withdrawals are suspended during a security review, its protection fund faces potential major drawdown, and some stolen assets are being traced and frozen.",
+      "detailed_summary_zh": "Bitget says its $351.6M wallet breach shows patterns consistent with North Korean hackers, with the XRP loss the largest single-chain hit and a full loss potentially drawing down about 76% of its $464M protection fund as Mandiant and SlowMist investigate.",
+      "detailed_summary_en": "Bitget says its $351.6M wallet breach shows patterns consistent with North Korean hackers, with the XRP loss the largest single-chain hit and a full loss potentially drawing down about 76% of its $464M protection fund as Mandiant and SlowMist investigate.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 9.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:e00e17dcb1309d6a"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/bitgets-north-korea-linked-352-million-hack-could-drain-76-of-its-protection-fund/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_f4060ec0e9e19abc",
+      "event_id": "evt_434694c9d74225ba",
+      "occurred_at": "2026-09-25T17:08:57Z",
+      "published_at": "2026-09-25T17:08:57Z",
+      "first_seen_at": "2026-09-25T17:25:26.530694Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "Bitget Hack Losses Climb to $387M: Here’s What Happened, and Why North Korea Is a Suspect",
+      "title_en": "Bitget Hack Losses Climb to $387M: Here’s What Happened, and Why North Korea Is a Suspect",
+      "what_changed_zh": "Bitget 将黑客损失总额从 3.516 亿美元上修至 3.875 亿美元；确认攻击者未窃取私钥，而是入侵钱包基础设施后端并伪造交易数据以触发合法外观的转账审批；单笔最大损失为约 1.03 亿枚 XRP（约 1.57 亿美元）；资金外流已停止，用户保护基金将覆盖全额损失。",
+      "what_changed_en": "Bitget revised the hack loss total upward from $351.6M to $387.5M; confirmed attackers did not steal private keys but breached a backend system in its wallet infrastructure and spoofed transaction data to trigger legitimate-looking transfer approvals; the largest single haul was roughly 103M XRP (~$157M); the outflow has been stopped and the User Protection Fund will cover the full loss.",
+      "current_state_zh": "Bitget 确认损失 3.875 亿美元，攻击手法为伪造交易数据而非私钥盗窃；外流已停止，提款仍暂停，保护基金将覆盖全额损失；朝鲜关联指控仍属公开怀疑且未获独立确认，Mandiant 和 SlowMist 正在调查。",
+      "current_state_en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating.",
+      "detailed_summary_zh": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
+      "detailed_summary_en": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 9.0,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:decrypt.co_feed:cddc6f0758f62d7f"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
+          "label": "Decrypt",
+          "source_type": "rss",
           "official": false
         }
       ]

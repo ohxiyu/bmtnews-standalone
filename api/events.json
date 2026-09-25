@@ -2,6 +2,82 @@
   "version": 1,
   "events": [
     {
+      "event_id": "evt_2a6de81fa1f354d2",
+      "url": "https://bmt.news/events/evt_2a6de81fa1f354d2/",
+      "json": "https://bmt.news/api/events/evt_2a6de81fa1f354d2.json",
+      "status": "developing",
+      "type": "security_incident",
+      "title": {
+        "zh": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+        "en": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody"
+      },
+      "current_state": {
+        "zh": "针对 Magic Eden 相关授权的安全事件中，Magic Eden 警告其已关闭的 EVM 市场（2024 年 2 月至 10 月）上架的 NFT 曾暴露于 Limit Break Payment Processor V2 漏洞；白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，但 660 WETH 未能追回；攻击者盗走指定 NFT；Limit Break 已暂停存在相同缺陷的 V3，而 V2 无法暂停；持有人仍被要求撤销以太坊、Polygon 和 Base 上的易受攻击授权。",
+        "en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base."
+      },
+      "first_seen_at": "2026-09-25T17:25:28.582355+00:00",
+      "last_material_change_at": "2026-09-25T17:25:28.582355+00:00",
+      "updates_count": 3,
+      "sources_count": 3
+    },
+    {
+      "event_id": "evt_507f2db08c9a14c7",
+      "url": "https://bmt.news/events/evt_507f2db08c9a14c7/",
+      "json": "https://bmt.news/api/events/evt_507f2db08c9a14c7.json",
+      "status": "developing",
+      "type": "legal_case",
+      "title": {
+        "zh": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia",
+        "en": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia"
+      },
+      "current_state": {
+        "zh": "KelpDAO开发商Evercrest已在加拿大不列颠哥伦比亚省最高法院对LayerZero Labs Ltd.、LayerZero Labs Canada Inc.及Bryan Pellegrino个人提起民事诉讼，指控过失虚假陈述、过失和诽谤，涉及约2.92亿美元rsETH跨链桥漏洞；LayerZero CEO Pellegrino公开回应称诉讼毫无依据并将在温哥华应诉；目前尚无针对该诉状的正式答辩，案件处于公开争议阶段。",
+        "en": "KelpDAO developer Evercrest has filed a civil claim in the Supreme Court of British Columbia against LayerZero Labs Ltd., LayerZero Labs Canada Inc. and Bryan Pellegrino personally, alleging negligent misrepresentation, negligence and defamation over the approximately $292 million rsETH bridge exploit; LayerZero CEO Pellegrino has publicly dismissed the claim as meritless and said he will defend it in Vancouver; no formal response to the claim has been filed yet, leaving the matter in open dispute."
+      },
+      "first_seen_at": "2026-09-25T09:43:54.636695+00:00",
+      "last_material_change_at": "2026-09-25T17:25:27.569263+00:00",
+      "updates_count": 3,
+      "sources_count": 4
+    },
+    {
+      "event_id": "evt_434694c9d74225ba",
+      "url": "https://bmt.news/events/evt_434694c9d74225ba/",
+      "json": "https://bmt.news/api/events/evt_434694c9d74225ba.json",
+      "status": "developing",
+      "type": "security_incident",
+      "title": {
+        "zh": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
+        "en": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView"
+      },
+      "current_state": {
+        "zh": "Bitget 确认损失 3.875 亿美元，攻击手法为伪造交易数据而非私钥盗窃；外流已停止，提款仍暂停，保护基金将覆盖全额损失；朝鲜关联指控仍属公开怀疑且未获独立确认，Mandiant 和 SlowMist 正在调查。",
+        "en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating."
+      },
+      "first_seen_at": "2026-09-25T09:43:54.637052+00:00",
+      "last_material_change_at": "2026-09-25T17:25:26.530694+00:00",
+      "updates_count": 3,
+      "sources_count": 6
+    },
+    {
+      "event_id": "evt_068d879112855101",
+      "url": "https://bmt.news/events/evt_068d879112855101/",
+      "json": "https://bmt.news/api/events/evt_068d879112855101.json",
+      "status": "monitoring",
+      "type": "other",
+      "title": {
+        "zh": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans",
+        "en": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans"
+      },
+      "current_state": {
+        "zh": "Aave V4 在 Base 上接受七种 Coinbase 股票代币作为 USDC 贷款的抵押品，借款上限为 2100 万 USDC，且仅限符合条件的非美国投资者。",
+        "en": "Aave V4 on Base accepts seven Coinbase stock tokens as collateral for USDC loans, with a 21 million USDC borrowing cap and access limited to eligible non-US investors."
+      },
+      "first_seen_at": "2026-09-25T17:25:15.548757+00:00",
+      "last_material_change_at": "2026-09-25T17:25:20.358888+00:00",
+      "updates_count": 2,
+      "sources_count": 2
+    },
+    {
       "event_id": "evt_bbd9358770106500",
       "url": "https://bmt.news/events/evt_bbd9358770106500/",
       "json": "https://bmt.news/api/events/evt_bbd9358770106500.json",
@@ -19,25 +95,6 @@
       "last_material_change_at": "2026-09-25T09:44:03.495027+00:00",
       "updates_count": 2,
       "sources_count": 2
-    },
-    {
-      "event_id": "evt_507f2db08c9a14c7",
-      "url": "https://bmt.news/events/evt_507f2db08c9a14c7/",
-      "json": "https://bmt.news/api/events/evt_507f2db08c9a14c7.json",
-      "status": "developing",
-      "type": "legal_case",
-      "title": {
-        "zh": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia",
-        "en": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia"
-      },
-      "current_state": {
-        "zh": "KelpDAO已就约2.92亿美元rsETH跨链桥漏洞事件对LayerZero及其CEO Bryan Pellegrino提起民事诉讼，LayerZero CEO回应称诉讼毫无依据并将在温哥华应诉，案件进入公开争议阶段。",
-        "en": "KelpDAO has filed a civil lawsuit against LayerZero and its CEO Bryan Pellegrino over the roughly $292 million rsETH bridge exploit; LayerZero's CEO has publicly dismissed the claim as meritless and said he will defend the case in Vancouver, moving the matter into open dispute."
-      },
-      "first_seen_at": "2026-09-25T09:43:54.636695+00:00",
-      "last_material_change_at": "2026-09-25T09:44:03.320743+00:00",
-      "updates_count": 2,
-      "sources_count": 3
     },
     {
       "event_id": "evt_afc12eab9e921ccc",

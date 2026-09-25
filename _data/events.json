@@ -87996,29 +87996,34 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "KelpDAO has filed a civil lawsuit against LayerZero and its CEO Bryan Pellegrino over the roughly $292 million rsETH bridge exploit; LayerZero's CEO has publicly dismissed the claim as meritless and said he will defend the case in Vancouver, moving the matter into open dispute.",
-      "current_state_zh": "KelpDAO已就约2.92亿美元rsETH跨链桥漏洞事件对LayerZero及其CEO Bryan Pellegrino提起民事诉讼，LayerZero CEO回应称诉讼毫无依据并将在温哥华应诉，案件进入公开争议阶段。",
+      "current_state_en": "KelpDAO developer Evercrest has filed a civil claim in the Supreme Court of British Columbia against LayerZero Labs Ltd., LayerZero Labs Canada Inc. and Bryan Pellegrino personally, alleging negligent misrepresentation, negligence and defamation over the approximately $292 million rsETH bridge exploit; LayerZero CEO Pellegrino has publicly dismissed the claim as meritless and said he will defend it in Vancouver; no formal response to the claim has been filed yet, leaving the matter in open dispute.",
+      "current_state_zh": "KelpDAO开发商Evercrest已在加拿大不列颠哥伦比亚省最高法院对LayerZero Labs Ltd.、LayerZero Labs Canada Inc.及Bryan Pellegrino个人提起民事诉讼，指控过失虚假陈述、过失和诽谤，涉及约2.92亿美元rsETH跨链桥漏洞；LayerZero CEO Pellegrino公开回应称诉讼毫无依据并将在温哥华应诉；目前尚无针对该诉状的正式答辩，案件处于公开争议阶段。",
       "entities": [
         "against",
+        "bridge",
         "bridge-exploit",
         "bryan",
         "ceo",
         "civil",
         "claim",
         "coinpedia",
+        "developer",
         "evercrest",
+        "exploit",
         "files",
         "kelpdao",
         "layerzero",
+        "over",
         "pellegrino",
-        "rseth"
+        "rseth",
+        "sues"
       ],
       "event_id": "evt_507f2db08c9a14c7",
       "event_type": "legal_case",
       "first_seen_at": "2026-09-25T09:43:54.636695Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-25T09:44:03.320743Z",
-      "last_updated_at": "2026-09-25T09:44:03.320743Z",
+      "last_material_change_at": "2026-09-25T17:25:27.569263Z",
+      "last_updated_at": "2026-09-25T17:25:27.569263Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
@@ -88116,31 +88121,77 @@
           "update_type": "response",
           "what_changed_en": "Added specific allegations (LayerZero endorsed KelpDAO's bridge setup in writing but failed to disclose security risks), the approximately $292M / 116,500 rsETH loss figure, and LayerZero CEO Pellegrino's first public response calling the lawsuit meritless and vowing to defend in Vancouver.",
           "what_changed_zh": "新增诉讼具体指控（LayerZero曾书面认可KelpDAO桥配置但未披露安全风险）、涉案金额约2.92亿美元及被盗11.65万枚rsETH，并记录LayerZero CEO Pellegrino首次公开回应称诉讼“毫无依据”并将在温哥华应诉。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "KelpDAO developer Evercrest has filed a civil claim in the Supreme Court of British Columbia against LayerZero Labs Ltd., LayerZero Labs Canada Inc. and Bryan Pellegrino personally, alleging negligent misrepresentation, negligence and defamation over the approximately $292 million rsETH bridge exploit; LayerZero CEO Pellegrino has publicly dismissed the claim as meritless and said he will defend it in Vancouver; no formal response to the claim has been filed yet, leaving the matter in open dispute.",
+          "current_state_zh": "KelpDAO开发商Evercrest已在加拿大不列颠哥伦比亚省最高法院对LayerZero Labs Ltd.、LayerZero Labs Canada Inc.及Bryan Pellegrino个人提起民事诉讼，指控过失虚假陈述、过失和诽谤，涉及约2.92亿美元rsETH跨链桥漏洞；LayerZero CEO Pellegrino公开回应称诉讼毫无依据并将在温哥华应诉；目前尚无针对该诉状的正式答辩，案件处于公开争议阶段。",
+          "detailed_summary_en": "Evercrest Technologies, the company behind KelpDAO, filed a civil claim in the Supreme Court of British Columbia against LayerZero Labs, LayerZero Labs Canada and co-founder Bryan Pellegrino, alleging negligent misrepresentation, negligence and defamation over the $292 million bridge exploit that drained the restaking protocol in April.",
+          "detailed_summary_zh": "Evercrest Technologies, the company behind KelpDAO, filed a civil claim in the Supreme Court of British Columbia against LayerZero Labs, LayerZero Labs Canada and co-founder Bryan Pellegrino, alleging negligent misrepresentation, negligence and defamation over the $292 million bridge exploit that drained the restaking protocol in April.",
+          "event_id": "evt_507f2db08c9a14c7",
+          "first_seen_at": "2026-09-25T17:25:27.569263Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T11:09:52Z",
+          "published_at": "2026-09-25T11:09:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379288/kelpdao-developer-sues-layerzero-over-292m-bridge-exploit"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:cac64a517c5a772e"
+          ],
+          "time_precision": "published",
+          "title_en": "KelpDAO Developer Sues LayerZero Over $292M Bridge Exploit",
+          "title_zh": "KelpDAO Developer Sues LayerZero Over $292M Bridge Exploit",
+          "update_id": "upd_977c016cad0b8ff9",
+          "update_type": "escalation",
+          "what_changed_en": "Added lawsuit specifics: Evercrest Technologies filed a civil claim in the Supreme Court of British Columbia against LayerZero Labs Ltd., LayerZero Labs Canada Inc. and Bryan Pellegrino personally, alleging negligent misrepresentation, negligence and defamation; damages include a 2,000 ETH contribution to restore rsETH backing, over $650 million withdrawn after the exploit and losses from the KERNEL token decline; the claim also details the attack timeline (malware on a LayerZero developer's computer on March 6, node tampering by April 18) and alleges LayerZero failed to give Evercrest a risk warning comparable to one given to USDT0; no response to the claim has yet been filed.",
+          "what_changed_zh": "新增诉讼细节：Evercrest Technologies在加拿大不列颠哥伦比亚省最高法院对LayerZero Labs Ltd.、LayerZero Labs Canada Inc.及Bryan Pellegrino个人提起民事诉讼，指控过失虚假陈述、过失和诽谤；索赔包括2,000 ETH用于恢复rsETH背书、漏洞后逾6.5亿美元提款及KERNEL代币下跌造成的损失；诉状还详述了攻击时间线（3月6日恶意软件植入LayerZero开发者电脑、4月18日节点被篡改）及LayerZero未向Evercrest发出类似USDT0的风险警告；目前尚无对诉状的答辩。"
         }
       ]
     },
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
-      "current_state_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+      "current_state_en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating.",
+      "current_state_zh": "Bitget 确认损失 3.875 亿美元，攻击手法为伪造交易数据而非私钥盗窃；外流已停止，提款仍暂停，保护基金将覆盖全额损失；朝鲜关联指控仍属公开怀疑且未获独立确认，Mandiant 和 SlowMist 正在调查。",
       "entities": [
         "bitget",
         "ceo",
+        "climb",
+        "hack",
+        "happened",
+        "here",
         "korea",
+        "losses",
         "north",
         "north-korea",
-        "tradingview"
+        "suspect",
+        "tradingview",
+        "what",
+        "why"
       ],
       "event_id": "evt_434694c9d74225ba",
       "event_type": "security_incident",
       "first_seen_at": "2026-09-25T09:43:54.637052Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-25T09:43:54.637052Z",
-      "last_updated_at": "2026-09-25T09:43:54.637052Z",
+      "last_material_change_at": "2026-09-25T17:25:26.530694Z",
+      "last_updated_at": "2026-09-25T17:25:26.530694Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
       "title_zh": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
       "topics": [
@@ -88148,7 +88199,9 @@
         "bitget",
         "exchange-hack",
         "north-korea",
-        "security-incident"
+        "security-breach",
+        "security-incident",
+        "xrp"
       ],
       "updates": [
         {
@@ -88182,11 +88235,25 @@
               "official": false,
               "source_type": "google_news",
               "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOGpVUU4ydnk1VHcyaGxURWEzWVVBNGwxYlhod0gxalJ4UjBtTUtjdUU3SnJJdWFmd3NOVDVKSmV4bVhXSnNwX2RfNjc0ZzNVbzRWSVFEUGdVMDdTNlRHSjhpN0FycldkMXYxWFlzSFFLd2dtZXJDblczTW02cXktanNIREIzSzFYTFpCZEtSSVFsaHlYNE1oZ1dXRDZWeldfRHfSAacBQVVfeXFMUFBiU1hCOTRwM0RGUGN2aU5wUlpSRlZqVFhRRTZGZmswWV9palZseW1ZZWZFTjhPN25WMUtvc3NSYk1kaDA1QldUdGVURzNwd0xZMnhMd1JnamxFMXpndkJXNlk5VHJ2aEM0b2lJQjVNUm5EcS13UzJtWXNpZmoxZmZDNGwtdVlxZnNQSjhYSDZnY2ZoeXBuUFB5RWxtMFZ0QVBodkJXNE0?oc=5"
+            },
+            {
+              "label": "Substack",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE55ZS10SS1SWTZRQUNYTXM0UFI1V0VjMnAtcHc2RUthLXowRnQyUHZiWURHQ0dleFpRQmJYQVJQZ25wRDljVHpBVW12eTRRcEs5eFFOTlozeWw1Y1hFb3dZYjdlaFdsSEpLMmNNaFRhalBuYVV5?oc=5"
+            },
+            {
+              "label": "The Tech Buzz",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUWp4WWhqS1FuZVc4RU5iU0RQYVp4dnBNNHNxRy1zOEVfZEdTRXF4d19WU0F2Wmh1WXhQSHVScXZabnFpNXNhRW9hdW9RYUpGeDF0RUpDLVNDaUtPa29ENEo4Y3VqN1plWC1QM0dQdTdSc2FfWFkzNExCWk5aY1ZLZjJnY3FYSHVva28wMUxkQQ?oc=5"
             }
           ],
           "story_ids": [
             "google_news:article:9cc189a82433747e",
-            "google_news:article:a801527685cda78b"
+            "google_news:article:a801527685cda78b",
+            "google_news:article:82f1e804e3686b53",
+            "google_news:article:e5cb2b553f864f17"
           ],
           "time_precision": "published",
           "title_en": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
@@ -88195,6 +88262,82 @@
           "update_type": "initial",
           "what_changed_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
           "what_changed_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Bitget is investigating its $351.6M hack, publicly linking it to North Korea-linked actors but without independent confirmation; withdrawals are suspended during a security review, its protection fund faces potential major drawdown, and some stolen assets are being traced and frozen.",
+          "current_state_zh": "Bitget 正在调查其 3.516 亿美元黑客事件，公开将其与朝鲜相关攻击者关联但尚未独立确认；提款因安全审查暂停，保护基金可能面临重大消耗，部分被盗资产正被追踪和冻结。",
+          "detailed_summary_en": "Bitget says its $351.6M wallet breach shows patterns consistent with North Korean hackers, with the XRP loss the largest single-chain hit and a full loss potentially drawing down about 76% of its $464M protection fund as Mandiant and SlowMist investigate.",
+          "detailed_summary_zh": "Bitget says its $351.6M wallet breach shows patterns consistent with North Korean hackers, with the XRP loss the largest single-chain hit and a full loss potentially drawing down about 76% of its $464M protection fund as Mandiant and SlowMist investigate.",
+          "event_id": "evt_434694c9d74225ba",
+          "first_seen_at": "2026-09-25T17:25:22.209288Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T09:50:42Z",
+          "published_at": "2026-09-25T09:50:42Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/bitgets-north-korea-linked-352-million-hack-could-drain-76-of-its-protection-fund/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:e00e17dcb1309d6a"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund",
+          "title_zh": "Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund",
+          "update_id": "upd_b74557c355ab540f",
+          "update_type": "escalation",
+          "what_changed_en": "New developments in Bitget's $351.6M wallet breach: the exchange said attack patterns are consistent with North Korean hackers, XRP was the largest single-chain loss, a full loss could consume about 76% of its $464M protection fund, withdrawals remain suspended, Mandiant and SlowMist are investigating, and an onchain analyst linked some stolen XRP to the July AFX hack.",
+          "what_changed_zh": "Bitget 的 3.516 亿美元钱包入侵事件出现新进展：该交易所称攻击模式与朝鲜黑客相符，XRP 为单链最大损失，全额损失可能消耗约 76% 的 4.64 亿美元保护基金，提款仍暂停，Mandiant 和 SlowMist 正在调查，链上分析师将部分被盗 XRP 与 7 月 AFX 黑客事件关联。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating.",
+          "current_state_zh": "Bitget 确认损失 3.875 亿美元，攻击手法为伪造交易数据而非私钥盗窃；外流已停止，提款仍暂停，保护基金将覆盖全额损失；朝鲜关联指控仍属公开怀疑且未获独立确认，Mandiant 和 SlowMist 正在调查。",
+          "detailed_summary_en": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
+          "detailed_summary_zh": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
+          "event_id": "evt_434694c9d74225ba",
+          "first_seen_at": "2026-09-25T17:25:26.530694Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T17:08:57Z",
+          "published_at": "2026-09-25T17:08:57Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:cddc6f0758f62d7f"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget Hack Losses Climb to $387M: Here’s What Happened, and Why North Korea Is a Suspect",
+          "title_zh": "Bitget Hack Losses Climb to $387M: Here’s What Happened, and Why North Korea Is a Suspect",
+          "update_id": "upd_f4060ec0e9e19abc",
+          "update_type": "escalation",
+          "what_changed_en": "Bitget revised the hack loss total upward from $351.6M to $387.5M; confirmed attackers did not steal private keys but breached a backend system in its wallet infrastructure and spoofed transaction data to trigger legitimate-looking transfer approvals; the largest single haul was roughly 103M XRP (~$157M); the outflow has been stopped and the User Protection Fund will cover the full loss.",
+          "what_changed_zh": "Bitget 将黑客损失总额从 3.516 亿美元上修至 3.875 亿美元；确认攻击者未窃取私钥，而是入侵钱包基础设施后端并伪造交易数据以触发合法外观的转账审批；单笔最大损失为约 1.03 亿枚 XRP（约 1.57 亿美元）；资金外流已停止，用户保护基金将覆盖全额损失。"
         }
       ]
     },
@@ -88604,6 +88747,1513 @@
           "update_type": "initial",
           "what_changed_en": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
           "what_changed_zh": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+      "current_state_zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+      "entities": [
+        "cash",
+        "ceo",
+        "cftc",
+        "charges",
+        "fraud",
+        "group",
+        "million",
+        "others",
+        "scheme",
+        "three",
+        "with"
+      ],
+      "event_id": "evt_28746d908759a2d3",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-25T17:25:10.138127Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.138127Z",
+      "last_updated_at": "2026-09-25T17:25:10.138127Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
+      "title_zh": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
+      "topics": [
+        "cftc",
+        "crypto-regulation",
+        "enforcement",
+        "fraud",
+        "ponzi-scheme"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+          "current_state_zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+          "detailed_summary_en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+          "detailed_summary_zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+          "event_id": "evt_28746d908759a2d3",
+          "first_seen_at": "2026-09-25T17:25:10.138127Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T16:03:00Z",
+          "published_at": "2026-09-25T16:03:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CFTC Enforcement",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.cftc.gov/PressRoom/PressReleases/9304-26"
+            }
+          ],
+          "story_ids": [
+            "rss:www.cftc.gov_RSS_RSSENF_rssenf.xml:0b0f0295d35b75cd"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
+          "title_zh": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
+          "update_id": "upd_27b3fed1812be125",
+          "update_type": "initial",
+          "what_changed_en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+          "what_changed_zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+      "current_state_zh": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+      "entities": [
+        "anthropic"
+      ],
+      "event_id": "evt_44a3e93af976a068",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:10.181707Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.181707Z",
+      "last_updated_at": "2026-09-25T17:25:10.181707Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "title_zh": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "topics": [
+        "ai-policy",
+        "ai-regulation",
+        "anthropic",
+        "defense-procurement",
+        "national-security"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+          "current_state_zh": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+          "detailed_summary_en": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+          "detailed_summary_zh": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+          "event_id": "evt_44a3e93af976a068",
+          "first_seen_at": "2026-09-25T17:25:10.181707Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T15:29:25Z",
+          "published_at": "2026-09-25T15:29:25Z",
+          "references": [
+            {
+              "title": "Community discussion",
+              "url": "https://news.ycombinator.com/item?id=49845977"
+            }
+          ],
+          "sources": [
+            {
+              "label": "cramer4next",
+              "official": false,
+              "source_type": "hackernews",
+              "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html"
+            }
+          ],
+          "story_ids": [
+            "hackernews:story:49845977"
+          ],
+          "time_precision": "published",
+          "title_en": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+          "title_zh": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+          "update_id": "upd_ec11ee8a2455d7bf",
+          "update_type": "initial",
+          "what_changed_en": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails.",
+          "what_changed_zh": "A U.S. appeals court upheld the Pentagon's designation of Anthropic as a supply chain risk, a decision that stands to limit the AI lab's defense contracting over its usage guardrails."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+      "current_state_zh": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+      "entities": [
+        "ambcrypto",
+        "binance",
+        "hype",
+        "hyperliquid",
+        "what"
+      ],
+      "event_id": "evt_f70a86d2a8fec206",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-25T17:25:10.221820Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.221820Z",
+      "last_updated_at": "2026-09-25T17:25:10.221820Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "HYPE lands Binance listing after $18B OI record – What Hyperliquid traders should know - AMBCrypto",
+      "title_zh": "HYPE lands Binance listing after $18B OI record – What Hyperliquid traders should know - AMBCrypto",
+      "topics": [
+        "binance",
+        "derivatives",
+        "exchange-listings",
+        "hype-token",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+          "current_state_zh": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+          "detailed_summary_en": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+          "detailed_summary_zh": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+          "event_id": "evt_f70a86d2a8fec206",
+          "first_seen_at": "2026-09-25T17:25:10.221820Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T16:00:50Z",
+          "published_at": "2026-09-25T16:00:50Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "AMBCrypto",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR3EyZnZPR3pfY0pLUGtNY0tvUEd6bkk5TzU3UjY4VzhzMW53NnU5Y0ZlM3JRVnNlRkRocnF2Y2dJNVoyUmlEeWFzR0d2N2tXZmViOWRxLVcyRlYtRHdEaFJ1bHRDaWhhb0JBQjdNQU9FaGlFTVhqSzdGYVZLRlByUDZKUVJRTjVBekFadTRDbHY0Z2ZHdEoyUjMxank2eE4wZC1fTDJIaWpqUQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:caa13383b31cb921"
+          ],
+          "time_precision": "published",
+          "title_en": "HYPE lands Binance listing after $18B OI record – What Hyperliquid traders should know - AMBCrypto",
+          "title_zh": "HYPE lands Binance listing after $18B OI record – What Hyperliquid traders should know - AMBCrypto",
+          "update_id": "upd_0f0d109c602be8d9",
+          "update_type": "initial",
+          "what_changed_en": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact.",
+          "what_changed_zh": "Binance listed Hyperliquid's HYPE token following a record $18 billion in open interest on the Hyperliquid platform, a move traders are watching for liquidity and price impact."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+      "current_state_zh": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+      "entities": [
+        "binance",
+        "hype",
+        "market-access",
+        "pluang"
+      ],
+      "event_id": "evt_99e363a63e8afdcd",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-25T17:25:10.221950Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.221950Z",
+      "last_updated_at": "2026-09-25T17:25:10.221950Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "HYPE token gains market access via Binance listing amid strong whale accumulation and price support at $88.24. - Pluang",
+      "title_zh": "HYPE token gains market access via Binance listing amid strong whale accumulation and price support at $88.24. - Pluang",
+      "topics": [
+        "binance",
+        "exchange-listing",
+        "hype",
+        "hyperliquid",
+        "market-access"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+          "current_state_zh": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+          "detailed_summary_en": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+          "detailed_summary_zh": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+          "event_id": "evt_99e363a63e8afdcd",
+          "first_seen_at": "2026-09-25T17:25:10.221950Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T16:17:52Z",
+          "published_at": "2026-09-25T16:17:52Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Pluang",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWXNZOW84ZElBT2NBV3FZdWV5dkVQem9fSjlaUzZpdWlybE1YbkJBZ2RBMXQxLXlVSE53QXJSTjg2c1FfanNMb3RKa0paSkpUSWh2MmUxSU0yUHhPRW5yeTBmS0EzMTVnYVlGeWRXNGdEcWlxYlBVU3M4cm8tRm9nVlNjV2Z4dEl1SmtJd2xTU0ttNkxPZWNEWGVuVjM3NnQ3YzFUX3FWbWpNUGZqSGc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:cfd54bb3d79be4a0"
+          ],
+          "time_precision": "published",
+          "title_en": "HYPE token gains market access via Binance listing amid strong whale accumulation and price support at $88.24. - Pluang",
+          "title_zh": "HYPE token gains market access via Binance listing amid strong whale accumulation and price support at $88.24. - Pluang",
+          "update_id": "upd_b48eadbfc4fbf880",
+          "update_type": "initial",
+          "what_changed_en": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24.",
+          "what_changed_zh": "Binance listed the HYPE token, broadening market access for the asset amid reported whale accumulation and price support near $88.24."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+      "current_state_zh": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+      "entities": [
+        "already",
+        "and",
+        "binance",
+        "gone",
+        "hack",
+        "hacker",
+        "swapping"
+      ],
+      "event_id": "evt_cc29295b5b31b73d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:10.222324Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.222324Z",
+      "last_updated_at": "2026-09-25T17:25:10.222324Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "$351M GONE… AND THE HACKER IS ALREADY SWAPPING IT! - Binance",
+      "title_zh": "$351M GONE… AND THE HACKER IS ALREADY SWAPPING IT! - Binance",
+      "topics": [
+        "hack",
+        "on-chain",
+        "security-incident"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+          "current_state_zh": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+          "detailed_summary_en": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+          "detailed_summary_zh": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+          "event_id": "evt_cc29295b5b31b73d",
+          "first_seen_at": "2026-09-25T17:25:10.222324Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T11:28:43Z",
+          "published_at": "2026-09-25T11:28:43Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5wN1MxWnBQOUZwOU9IcDdZZS1mVGYyMUc5SzRCY0dqRDhkUnFxUjNYYWh0X2lMeGU2ZFVPRjhWcWhRUTVaZ2JxY1ZSLWdnRS1SamVwUUswMkRZa2tuc3B3ZWxMN00xTnpf?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:92a7ffb368c7b35f"
+          ],
+          "time_precision": "published",
+          "title_en": "$351M GONE… AND THE HACKER IS ALREADY SWAPPING IT! - Binance",
+          "title_zh": "$351M GONE… AND THE HACKER IS ALREADY SWAPPING IT! - Binance",
+          "update_id": "upd_ae4fb24936bbb9c7",
+          "update_type": "initial",
+          "what_changed_en": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds.",
+          "what_changed_zh": "$351M has reportedly been stolen in a hack, and the attacker is already swapping the stolen funds."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+      "current_state_zh": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+      "entities": [
+        "backing",
+        "equity",
+        "ethena",
+        "expands",
+        "into",
+        "perpetuals",
+        "usde",
+        "yahoo"
+      ],
+      "event_id": "evt_3de1a44c83c50786",
+      "event_type": "other",
+      "first_seen_at": "2026-09-25T17:25:10.222449Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.222449Z",
+      "last_updated_at": "2026-09-25T17:25:10.222449Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ethena Expands USDe Backing Into Equity Perpetuals - Yahoo Finance",
+      "title_zh": "Ethena Expands USDe Backing Into Equity Perpetuals - Yahoo Finance",
+      "topics": [
+        "collateral-risk",
+        "ethena",
+        "perpetuals",
+        "stablecoins",
+        "usde"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+          "current_state_zh": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+          "detailed_summary_en": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+          "detailed_summary_zh": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+          "event_id": "evt_3de1a44c83c50786",
+          "first_seen_at": "2026-09-25T17:25:10.222449Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T13:51:23Z",
+          "published_at": "2026-09-25T13:51:23Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Yahoo Finance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQLWNRT2R1dGdCTWZTZkpNNmtvajhrd3picGFVc1JDNUNRQzkxREx4am5lYkNmWFY4QmZaUi1Ha2FwOElURjE1Z0lkT1B5SUJGNHQxZllqM0ZnN0FiM1k2M3dBV0dvaEkzRVoyOXNxclhMYTZ5MWZvV3lWSTZJd1A3cU01S0hxdlA3cjJfNGhEVVUwczZpOTB6eGZFOXNKOHpk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:28b77ef70717ddca"
+          ],
+          "time_precision": "published",
+          "title_en": "Ethena Expands USDe Backing Into Equity Perpetuals - Yahoo Finance",
+          "title_zh": "Ethena Expands USDe Backing Into Equity Perpetuals - Yahoo Finance",
+          "update_id": "upd_444dce8e7d460e4d",
+          "update_type": "initial",
+          "what_changed_en": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin.",
+          "what_changed_zh": "Ethena is broadening the backing assets for its USDe synthetic dollar beyond crypto basis trades to include equity perpetuals, altering the collateral and risk composition of the stablecoin."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+      "current_state_zh": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+      "entities": [
+        "binance",
+        "block",
+        "ethena",
+        "usde"
+      ],
+      "event_id": "evt_65e7a7fca1e5fb76",
+      "event_type": "other",
+      "first_seen_at": "2026-09-25T17:25:10.222491Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.222491Z",
+      "last_updated_at": "2026-09-25T17:25:15.637495Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ethena expands USDe backing strategy into bStocks and equity perpetuals on Binance - The Block",
+      "title_zh": "Ethena expands USDe backing strategy into bStocks and equity perpetuals on Binance - The Block",
+      "topics": [
+        "binance",
+        "ethena",
+        "stablecoins",
+        "tokenized-stocks",
+        "usde"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+          "current_state_zh": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+          "detailed_summary_en": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+          "detailed_summary_zh": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+          "event_id": "evt_65e7a7fca1e5fb76",
+          "first_seen_at": "2026-09-25T17:25:10.222491Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T11:00:00Z",
+          "published_at": "2026-09-25T11:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTzNlY1JSWWZHdS1EbENKcmtPSHRRQlJtYnRDbFJ1VHZObDFJOGRrcU42WWNUS1VPcXF2SXZwQmVoY1Zka0Q1Rk5Dc0R2V0tXa3Z4b1NfRXQxQlBENS01RHdLeFdXUHNBeHR0VWNVR2JIWHVkVzI3QzllTVJMaXZpek1jMmpaSkplcmxYSjhQSnBQQ3NIUHd4aDFPSHdtNXUxdWlDXzBXYkdDbV8tMElhWGFuRzRtQkFQTVUzdmJMb0VSM0ozWkZqYVk5dThtdXlU?oc=5"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/deals/2026-09-25-ethena-expands-usde-backing-strategy-into-bstocks-and-equity-perpetuals-on-binance-416367"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:4a7b6aa367146d89",
+            "rss:www.theblock.co_rss.xml:68b2085cf98137a9"
+          ],
+          "time_precision": "published",
+          "title_en": "Ethena expands USDe backing strategy into bStocks and equity perpetuals on Binance - The Block",
+          "title_zh": "Ethena expands USDe backing strategy into bStocks and equity perpetuals on Binance - The Block",
+          "update_id": "upd_ffd76bf53c92404e",
+          "update_type": "initial",
+          "what_changed_en": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources.",
+          "what_changed_zh": "Ethena is expanding USDe's collateral and backing strategy to include Binance's bStocks tokenized equities and equity perpetuals, broadening the reserve base of the synthetic dollar beyond crypto-native yield sources."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+      "current_state_zh": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+      "entities": [
+        "binance",
+        "gets",
+        "hype",
+        "hyperliquid",
+        "its",
+        "listing",
+        "prediction",
+        "price",
+        "price-prediction"
+      ],
+      "event_id": "evt_e39061fe1e17607a",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-25T17:25:10.225229Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.225229Z",
+      "last_updated_at": "2026-09-25T17:25:10.225229Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hyperliquid Price Prediction: HYPE Gets Its Binance Listing as - openPR.com",
+      "title_zh": "Hyperliquid Price Prediction: HYPE Gets Its Binance Listing as - openPR.com",
+      "topics": [
+        "binance",
+        "exchange-listing",
+        "hype",
+        "hyperliquid",
+        "price-prediction"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+          "current_state_zh": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+          "detailed_summary_en": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+          "detailed_summary_zh": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+          "event_id": "evt_e39061fe1e17607a",
+          "first_seen_at": "2026-09-25T17:25:10.225229Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T12:45:24Z",
+          "published_at": "2026-09-25T12:45:24Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "openPR.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRmx4aEprc3Jrb2Y5NEhKRlY2ZTJvQ0FsS2JuSUhGS2JNX1NUaTJUQTRlYno4NWNvM20xUGM1dEpjRU5zU2ZFQmw2Q3dxUnRyc2hqR2NKNURTcklqOV9kOTVlMjlhTDZuNWJxcmhkX2cwdmJNa1BLN0k4d1BTeEt0c2w2Qm1ONlFIVldiQjNybmFXa2Y3NTM5NzNuR3hnUQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:277806a5bd19c943"
+          ],
+          "time_precision": "published",
+          "title_en": "Hyperliquid Price Prediction: HYPE Gets Its Binance Listing as - openPR.com",
+          "title_zh": "Hyperliquid Price Prediction: HYPE Gets Its Binance Listing as - openPR.com",
+          "update_id": "upd_4bb07fe357ba5679",
+          "update_type": "initial",
+          "what_changed_en": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token.",
+          "what_changed_zh": "Hyperliquid's HYPE token has secured a Binance listing, prompting a price-prediction piece on what the exchange debut could mean for the token."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+      "current_state_zh": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+      "entities": [
+        "alpe",
+        "alphapepe",
+        "ask",
+        "binance",
+        "buyers",
+        "could",
+        "hype",
+        "hyperliquid",
+        "lists",
+        "news",
+        "next",
+        "spot",
+        "spot-trading",
+        "trading"
+      ],
+      "event_id": "evt_3111b9a599c4a821",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-25T17:25:10.225311Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:10.225311Z",
+      "last_updated_at": "2026-09-25T17:25:10.225311Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hyperliquid News: Binance Lists HYPE for Spot Trading as AlphaPepe Buyers Ask if ALPE Could Be Next - openPR.com",
+      "title_zh": "Hyperliquid News: Binance Lists HYPE for Spot Trading as AlphaPepe Buyers Ask if ALPE Could Be Next - openPR.com",
+      "topics": [
+        "binance",
+        "exchange-listings",
+        "hype",
+        "hyperliquid",
+        "spot-trading"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+          "current_state_zh": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+          "detailed_summary_en": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+          "detailed_summary_zh": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+          "event_id": "evt_3111b9a599c4a821",
+          "first_seen_at": "2026-09-25T17:25:10.225311Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T07:44:29Z",
+          "published_at": "2026-09-25T07:44:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "openPR.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOS1M0Wk1uOUZaMGJSSUNVblA5V0VtTHVpRjBPTXhtNkI3eTFDQmVfSGdRRHZnYlg5SW5SYzNCUFJqTFhzdnFkRzN0ZW5zQmlRMk1PTWVMUW1pb2IyT0hTblpZSXQwdjlfLWlMNkVGLXNZVmhFU196dVUxdWxPVWRKTDEtYVNocEQ4QzJxN1lwZHlUMFpMOGc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:43eea4eacc1f357b"
+          ],
+          "time_precision": "published",
+          "title_en": "Hyperliquid News: Binance Lists HYPE for Spot Trading as AlphaPepe Buyers Ask if ALPE Could Be Next - openPR.com",
+          "title_zh": "Hyperliquid News: Binance Lists HYPE for Spot Trading as AlphaPepe Buyers Ask if ALPE Could Be Next - openPR.com",
+          "update_id": "upd_fc2058a266ca351c",
+          "update_type": "initial",
+          "what_changed_en": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next.",
+          "what_changed_zh": "Binance has listed Hyperliquid's HYPE token for spot trading, a listing that a promotional press release pairs with speculation over whether AlphaPepe (ALPE) might be next."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+      "current_state_zh": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+      "entities": [
+        "bitget",
+        "circle",
+        "tether"
+      ],
+      "event_id": "evt_ced14a9a87397c4b",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:11.811749Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:11.811749Z",
+      "last_updated_at": "2026-09-25T17:25:11.811749Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
+      "title_zh": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
+      "topics": [
+        "bitget",
+        "circle",
+        "exchange-hack",
+        "stablecoin-freeze",
+        "tether"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+          "current_state_zh": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+          "detailed_summary_en": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+          "detailed_summary_zh": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+          "event_id": "evt_ced14a9a87397c4b",
+          "first_seen_at": "2026-09-25T17:25:11.811749Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T14:41:53Z",
+          "published_at": "2026-09-25T14:41:53Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/25/circle-and-tether-step-in-to-freeze-hacker-wallet-after-massive-bitget-crypto-heist"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:fa1f60ca3aaecf67"
+          ],
+          "time_precision": "published",
+          "title_en": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
+          "title_zh": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
+          "update_id": "upd_83e1271037b93bdb",
+          "update_type": "initial",
+          "what_changed_en": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH.",
+          "what_changed_zh": "Circle blacklisted and Tether froze a Bitget exploiter wallet holding roughly $318,000 in USDT and USDC, a small fraction of the $351.6 million stolen in Thursday's exchange hack, with most of the funds sitting in unfreezable ETH."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Aave V4 on Base accepts seven Coinbase stock tokens as collateral for USDC loans, with a 21 million USDC borrowing cap and access limited to eligible non-US investors.",
+      "current_state_zh": "Aave V4 在 Base 上接受七种 Coinbase 股票代币作为 USDC 贷款的抵押品，借款上限为 2100 万 USDC，且仅限符合条件的非美国投资者。",
+      "entities": [
+        "aave",
+        "adds",
+        "base",
+        "coinbase",
+        "collateral",
+        "stock",
+        "tokenized-stocks",
+        "tokens",
+        "usdc"
+      ],
+      "event_id": "evt_068d879112855101",
+      "event_type": "other",
+      "first_seen_at": "2026-09-25T17:25:15.548757Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:20.358888Z",
+      "last_updated_at": "2026-09-25T17:25:20.358888Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans",
+      "title_zh": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans",
+      "topics": [
+        "aave",
+        "base",
+        "defi-lending",
+        "rwa",
+        "tokenized-stocks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+          "current_state_zh": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+          "detailed_summary_en": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+          "detailed_summary_zh": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+          "event_id": "evt_068d879112855101",
+          "first_seen_at": "2026-09-25T17:25:15.548757Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T14:00:00Z",
+          "published_at": "2026-09-25T14:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/defi/2026-09-25-aave-v4-on-base-adds-coinbase-tokenized-stocks-as-collateral-for-usdc-loans-416372"
+            }
+          ],
+          "story_ids": [
+            "rss:www.theblock.co_rss.xml:1618a38b33688856"
+          ],
+          "time_precision": "published",
+          "title_en": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans",
+          "title_zh": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans",
+          "update_id": "upd_8719abc892c69ada",
+          "update_type": "initial",
+          "what_changed_en": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+          "what_changed_zh": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Aave V4 on Base accepts seven Coinbase stock tokens as collateral for USDC loans, with a 21 million USDC borrowing cap and access limited to eligible non-US investors.",
+          "current_state_zh": "Aave V4 在 Base 上接受七种 Coinbase 股票代币作为 USDC 贷款的抵押品，借款上限为 2100 万 USDC，且仅限符合条件的非美国投资者。",
+          "detailed_summary_en": "Aave has enabled seven Coinbase-issued stock tokens as collateral for USDC loans in a dedicated V4 market on Base, with a 21 million USDC borrowing cap and access restricted to eligible non-US investors.",
+          "detailed_summary_zh": "Aave has enabled seven Coinbase-issued stock tokens as collateral for USDC loans in a dedicated V4 market on Base, with a 21 million USDC borrowing cap and access restricted to eligible non-US investors.",
+          "event_id": "evt_068d879112855101",
+          "first_seen_at": "2026-09-25T17:25:20.358888Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T14:44:07Z",
+          "published_at": "2026-09-25T14:44:07Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/defi/aave-adds-coinbase-stock-tokens-as-collateral-on-base"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:58bc2a7386745d38"
+          ],
+          "time_precision": "published",
+          "title_en": "Aave Adds Coinbase Stock Tokens as Collateral on Base",
+          "title_zh": "Aave Adds Coinbase Stock Tokens as Collateral on Base",
+          "update_id": "upd_9086d6fdc7fe8bfa",
+          "update_type": "confirmation",
+          "what_changed_en": "Added details: Aave V4 on Base enabled seven Coinbase-issued stock tokens as collateral, with a 21 million USDC borrowing cap, access limited to eligible non-US investors.",
+          "what_changed_zh": "新增细节：Aave V4 在 Base 上启用七种 Coinbase 发行的股票代币作为抵押品，USDC 借款上限为 2100 万，且访问仅限符合条件的非美国投资者。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+      "current_state_zh": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+      "entities": [
+        "accounting",
+        "bitget",
+        "estimate",
+        "hack",
+        "million",
+        "raises",
+        "token",
+        "widens"
+      ],
+      "event_id": "evt_155ed7083d7c3451",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:20.134407Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:20.134407Z",
+      "last_updated_at": "2026-09-25T17:25:20.134407Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget Raises Hack Estimate To $387.5 Million As Token Accounting Widens",
+      "title_zh": "Bitget Raises Hack Estimate To $387.5 Million As Token Accounting Widens",
+      "topics": [
+        "bitget",
+        "exchange-hack",
+        "security-incident",
+        "withdrawals-suspended",
+        "xrp"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+          "current_state_zh": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+          "detailed_summary_en": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+          "detailed_summary_zh": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+          "event_id": "evt_155ed7083d7c3451",
+          "first_seen_at": "2026-09-25T17:25:20.134407Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T16:55:57Z",
+          "published_at": "2026-09-25T16:55:57Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/hacks/bitget-raises-hack-estimate-to-387-5-million-as-token-accounting-widens"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:557e6ec8462c75a4"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget Raises Hack Estimate To $387.5 Million As Token Accounting Widens",
+          "title_zh": "Bitget Raises Hack Estimate To $387.5 Million As Token Accounting Widens",
+          "update_id": "upd_b1d8df9bb8185a9a",
+          "update_type": "initial",
+          "what_changed_en": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting.",
+          "what_changed_zh": "Bitget has raised its estimated hack losses to $387.5 million, with XRP and ether dominating identified outflows, as withdrawals stay paused and Zcash and TRON assets are added to the exchange's loss accounting."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+      "current_state_zh": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+      "entities": [
+        "approval",
+        "capital",
+        "charges",
+        "fed",
+        "proposes",
+        "rules",
+        "stablecoins"
+      ],
+      "event_id": "evt_89061e900f177b27",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-25T17:25:20.471693Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:20.471693Z",
+      "last_updated_at": "2026-09-25T17:25:20.471693Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Fed Proposes Capital Charges and Bank Approval Rules for Stablecoins",
+      "title_zh": "Fed Proposes Capital Charges and Bank Approval Rules for Stablecoins",
+      "topics": [
+        "banking-regulation",
+        "capital-requirements",
+        "federal-reserve",
+        "genius-act",
+        "stablecoins"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+          "current_state_zh": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+          "detailed_summary_en": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+          "detailed_summary_zh": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+          "event_id": "evt_89061e900f177b27",
+          "first_seen_at": "2026-09-25T17:25:20.471693Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T14:20:39Z",
+          "published_at": "2026-09-25T14:20:39Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/converge/regulation/fed-proposes-capital-charges-and-bank-approval-rules-for-stablecoins"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:db2ea123ad14a12c"
+          ],
+          "time_precision": "published",
+          "title_en": "Fed Proposes Capital Charges and Bank Approval Rules for Stablecoins",
+          "title_zh": "Fed Proposes Capital Charges and Bank Approval Rules for Stablecoins",
+          "update_id": "upd_725f7fafdf000dce",
+          "update_type": "initial",
+          "what_changed_en": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications.",
+          "what_changed_zh": "The Federal Reserve proposed capital charges and bank approval rules for stablecoin issuers, requiring covered issuers to generally redeem tokens within two business days and applying the GENIUS Act's 120-day decision clock to bank applications."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+      "current_state_zh": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+      "entities": [
+        "etf",
+        "etfs"
+      ],
+      "event_id": "evt_27b7d6a8ac622e29",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-25T17:25:21.487188Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:21.487188Z",
+      "last_updated_at": "2026-09-25T17:25:21.487188Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "US crypto ETFs draw over $3 billion this week, with nearly $800 million flowing beyond Bitcoin",
+      "title_zh": "US crypto ETFs draw over $3 billion this week, with nearly $800 million flowing beyond Bitcoin",
+      "topics": [
+        "altcoin-etfs",
+        "etf",
+        "institutional-flows"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+          "current_state_zh": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+          "detailed_summary_en": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+          "detailed_summary_zh": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+          "event_id": "evt_27b7d6a8ac622e29",
+          "first_seen_at": "2026-09-25T17:25:21.487188Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T15:00:30Z",
+          "published_at": "2026-09-25T15:00:30Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/us-crypto-etfs-draw-over-3-billion-this-week-with-nearly-800-million-flowing-beyond-bitcoin/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:71ec2cddcb5c8fb1"
+          ],
+          "time_precision": "published",
+          "title_en": "US crypto ETFs draw over $3 billion this week, with nearly $800 million flowing beyond Bitcoin",
+          "title_zh": "US crypto ETFs draw over $3 billion this week, with nearly $800 million flowing beyond Bitcoin",
+          "update_id": "upd_0507f0925b57778e",
+          "update_type": "initial",
+          "what_changed_en": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products.",
+          "what_changed_zh": "US spot crypto ETFs pulled in roughly $3.04 billion in net inflows from Monday through Thursday, with $2.25 billion into Bitcoin and nearly $793 million flowing into Ethereum, Solana, XRP and Zcash products."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+      "current_state_zh": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+      "entities": [
+        "egld",
+        "kraken",
+        "multiversx"
+      ],
+      "event_id": "evt_e8d89cf770f4806f",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:21.956315Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:21.956315Z",
+      "last_updated_at": "2026-09-25T17:25:21.956315Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "MultiversX restarts after exploit halt, but Kraken still bars new EGLD trades",
+      "title_zh": "MultiversX restarts after exploit halt, but Kraken still bars new EGLD trades",
+      "topics": [
+        "egld",
+        "exchange-operations",
+        "multiversx",
+        "network-halt"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+          "current_state_zh": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+          "detailed_summary_en": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+          "detailed_summary_zh": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+          "event_id": "evt_e8d89cf770f4806f",
+          "first_seen_at": "2026-09-25T17:25:21.956315Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T10:50:09Z",
+          "published_at": "2026-09-25T10:50:09Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/multiversx-restarts-after-exploit-halt-but-kraken-still-bars-new-egld-trades/"
+            },
+            {
+              "label": "CryptoRank",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQXzlXMkpEVGNOYmxjZHFaLXlFR3hCNFBMUUlzV043LXBSc3lTZXQ2WUszNEdnRWpldEQ1RnFXc3YxU0lhTWJ5MkZsZ0VGRmtxLUpnMmh2dTZObHNzYXl1R0Rja3VVSzNKaUxBSUJHQy1UV0NnX2duN1B2V1pVT2QzR0l0UFE3QV80TEVtQVhmeTJDOV9DM09ucGQyaW9zOTRlUnVheVVpTGhpQnhDemNxdVd6VWk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:fe9fe1b916271b7c",
+            "google_news:article:eede5bf4c54bdae0"
+          ],
+          "time_precision": "published",
+          "title_en": "MultiversX restarts after exploit halt, but Kraken still bars new EGLD trades",
+          "title_zh": "MultiversX restarts after exploit halt, but Kraken still bars new EGLD trades",
+          "update_id": "upd_48acb9a2be661182",
+          "update_type": "initial",
+          "what_changed_en": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused.",
+          "what_changed_zh": "MultiversX brought its mainnet back online after a roughly five-day exploit-related halt following a recovery upgrade, while Kraken continued to restrict EGLD to cancel-only trading with deposits and withdrawals paused."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+      "current_state_zh": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+      "entities": [
+        "bitget"
+      ],
+      "event_id": "evt_dbec56667e16670b",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:23.616257Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:23.616257Z",
+      "last_updated_at": "2026-09-25T17:25:23.616257Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget’s eighth birthday ends with a $352M hack",
+      "title_zh": "Bitget’s eighth birthday ends with a $352M hack",
+      "topics": [
+        "bitget",
+        "exchange-hack",
+        "lazarus-group",
+        "north-korea"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+          "current_state_zh": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+          "detailed_summary_en": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+          "detailed_summary_zh": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+          "event_id": "evt_dbec56667e16670b",
+          "first_seen_at": "2026-09-25T17:25:23.616257Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T13:19:01Z",
+          "published_at": "2026-09-25T13:19:01Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/bitgets-eighth-birthday-ends-with-a-352m-hack/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:5fd13745f96430af"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget’s eighth birthday ends with a $352M hack",
+          "title_zh": "Bitget’s eighth birthday ends with a $352M hack",
+          "update_id": "upd_a676f28178339b73",
+          "update_type": "initial",
+          "what_changed_en": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses.",
+          "what_changed_zh": "Bitget CEO Gracy Chen confirmed the exchange lost roughly $352 million in an attack bearing the hallmarks of North Korea's Lazarus Group, with the breach traced to its wallet services backend rather than a private key compromise and several chains freezing related addresses."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+      "current_state_zh": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+      "entities": [
+        "exploits",
+        "three"
+      ],
+      "event_id": "evt_952edc564a013483",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:23.728915Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:23.728915Z",
+      "last_updated_at": "2026-09-25T17:25:23.728915Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "DeFi hack attack: Three exploits snatch $11M in a single day",
+      "title_zh": "DeFi hack attack: Three exploits snatch $11M in a single day",
+      "topics": [
+        "bridges",
+        "defi-hacks",
+        "exploits"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+          "current_state_zh": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+          "detailed_summary_en": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+          "detailed_summary_zh": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+          "event_id": "evt_952edc564a013483",
+          "first_seen_at": "2026-09-25T17:25:23.728915Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T11:38:48Z",
+          "published_at": "2026-09-25T11:38:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Protos",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://protos.com/defi-hack-attack-three-exploits-snatch-11m-in-a-single-day/"
+            }
+          ],
+          "story_ids": [
+            "rss:protos.com_feed_:eeb3c836fd060bd5"
+          ],
+          "time_precision": "published",
+          "title_en": "DeFi hack attack: Three exploits snatch $11M in a single day",
+          "title_zh": "DeFi hack attack: Three exploits snatch $11M in a single day",
+          "update_id": "upd_34b259f23addc581",
+          "update_type": "initial",
+          "what_changed_en": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused.",
+          "what_changed_zh": "Three DeFi projects — Payy Network, Duelbits, and Meter — were exploited on the same day for a combined loss of more than $11 million, with Payy's Ethereum bridge completely drained and its operations paused."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+      "current_state_zh": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+      "entities": [
+        "blackrock",
+        "deeper",
+        "into",
+        "leans",
+        "minute",
+        "morning",
+        "ondo",
+        "tokenization"
+      ],
+      "event_id": "evt_b4c6107f938bdb8d",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:27.210652Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:27.210652Z",
+      "last_updated_at": "2026-09-25T17:25:27.210652Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Morning Minute: BlackRock Leans Deeper Into Tokenization with Ondo",
+      "title_zh": "Morning Minute: BlackRock Leans Deeper Into Tokenization with Ondo",
+      "topics": [
+        "bitget",
+        "blackrock",
+        "ondo",
+        "security-exploit"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+          "current_state_zh": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+          "detailed_summary_en": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+          "detailed_summary_zh": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+          "event_id": "evt_b4c6107f938bdb8d",
+          "first_seen_at": "2026-09-25T17:25:27.210652Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T13:04:06Z",
+          "published_at": "2026-09-25T13:04:06Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379292/morning-minute-blackrock-leans-deeper-into-tokenization-with-ondo"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:d58ffce4e7453fbc"
+          ],
+          "time_precision": "published",
+          "title_en": "Morning Minute: BlackRock Leans Deeper Into Tokenization with Ondo",
+          "title_zh": "Morning Minute: BlackRock Leans Deeper Into Tokenization with Ondo",
+          "update_id": "upd_ff1af9ae3dab2827",
+          "update_type": "initial",
+          "what_changed_en": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit.",
+          "what_changed_zh": "BlackRock deepened its tokenization push by building three portfolio strategies for Ondo that each trade as a single token, alongside a newsletter roundup noting a confirmed $350M BitGet drain and a Magic Eden contract exploit."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base.",
+      "current_state_zh": "针对 Magic Eden 相关授权的安全事件中，Magic Eden 警告其已关闭的 EVM 市场（2024 年 2 月至 10 月）上架的 NFT 曾暴露于 Limit Break Payment Processor V2 漏洞；白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，但 660 WETH 未能追回；攻击者盗走指定 NFT；Limit Break 已暂停存在相同缺陷的 V3，而 V2 无法暂停；持有人仍被要求撤销以太坊、Polygon 和 Base 上的易受攻击授权。",
+      "entities": [
+        "approvals",
+        "are",
+        "eden",
+        "exploit",
+        "exploited",
+        "exposed",
+        "hats",
+        "legacy",
+        "listings",
+        "magic",
+        "magic-eden",
+        "nft",
+        "nfts",
+        "old",
+        "payment",
+        "processor",
+        "rescue",
+        "warns",
+        "white",
+        "white-hat",
+        "whitehat"
+      ],
+      "event_id": "evt_2a6de81fa1f354d2",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T17:25:28.582355Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T17:25:28.582355Z",
+      "last_updated_at": "2026-09-25T17:25:28.582355Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+      "title_zh": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+      "topics": [
+        "limit-break",
+        "magic-eden",
+        "nft",
+        "security-exploit",
+        "vulnerability",
+        "white-hat",
+        "whitehat"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+          "current_state_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+          "detailed_summary_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+          "detailed_summary_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+          "event_id": "evt_2a6de81fa1f354d2",
+          "first_seen_at": "2026-09-25T17:25:28.582355Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T09:48:53Z",
+          "published_at": "2026-09-25T09:48:53Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/magic-eden-nft-whitehat-vulnerability?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:19750724d2a64b18"
+          ],
+          "time_precision": "published",
+          "title_en": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+          "title_zh": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+          "update_id": "upd_b30f50f7ce1e0bde",
+          "update_type": "initial",
+          "what_changed_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+          "what_changed_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "In the Magic Eden-related approvals security incident, a whitehat operation has secured 23,155 NFTs worth more than $5.7 million; holders are still required to revoke vulnerable NFT and token approvals.",
+          "current_state_zh": "针对 Magic Eden 相关授权的安全事件中，白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元；持有人仍被要求撤销易受攻击的 NFT 和代币授权。",
+          "detailed_summary_en": "Exploits of legacy Magic Eden NFT/token approvals led white hats to secure 23,155 NFTs worth more than $5.7 million, with holders still required to revoke vulnerable approvals.",
+          "detailed_summary_zh": "Exploits of legacy Magic Eden NFT/token approvals led white hats to secure 23,155 NFTs worth more than $5.7 million, with holders still required to revoke vulnerable approvals.",
+          "event_id": "evt_2a6de81fa1f354d2",
+          "first_seen_at": "2026-09-25T17:25:20.190155Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T16:12:07Z",
+          "published_at": "2026-09-25T16:12:07Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/hacks/legacy-magic-eden-approvals-exploited-as-white-hats-rescue-nfts"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:2c726c79c7b5480b"
+          ],
+          "time_precision": "published",
+          "title_en": "Legacy Magic Eden Approvals Exploited as White Hats Rescue NFTs",
+          "title_zh": "Legacy Magic Eden Approvals Exploited as White Hats Rescue NFTs",
+          "update_id": "upd_821968309060cede",
+          "update_type": "escalation",
+          "what_changed_en": "White hats secured 23,155 NFTs worth more than $5.7 million, up from the 3,832 previously reported; the incident is described as exploits of legacy Magic Eden approvals, and holders still need to revoke vulnerable NFT and token approvals.",
+          "what_changed_zh": "白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，较此前报告的 3,832 枚大幅增加；事件被描述为遗留的 Magic Eden 授权被利用，持有人仍需撤销易受攻击的 NFT 和代币授权。"
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base.",
+          "current_state_zh": "针对 Magic Eden 相关授权的安全事件中，Magic Eden 警告其已关闭的 EVM 市场（2024 年 2 月至 10 月）上架的 NFT 曾暴露于 Limit Break Payment Processor V2 漏洞；白帽行动已保护 23,155 枚 NFT，价值超过 570 万美元，但 660 WETH 未能追回；攻击者盗走指定 NFT；Limit Break 已暂停存在相同缺陷的 V3，而 V2 无法暂停；持有人仍被要求撤销以太坊、Polygon 和 Base 上的易受攻击授权。",
+          "detailed_summary_en": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
+          "detailed_summary_zh": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
+          "event_id": "evt_2a6de81fa1f354d2",
+          "first_seen_at": "2026-09-25T17:25:26.658957Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T16:17:19Z",
+          "published_at": "2026-09-25T16:17:19Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379342/magic-eden-old-ethereum-nft-listings-exposed-exploit"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:4e5de8224eeeb3e7"
+          ],
+          "time_precision": "published",
+          "title_en": "Magic Eden Warns Old Ethereum NFT Listings Are Exposed to Payment Processor Exploit",
+          "title_zh": "Magic Eden Warns Old Ethereum NFT Listings Are Exposed to Payment Processor Exploit",
+          "update_id": "upd_0dbbafb99b0eb8b9",
+          "update_type": "escalation",
+          "what_changed_en": "The new report reveals the exploit stemmed from Limit Break's Payment Processor V2 and affected NFTs listed on Magic Eden's EVM marketplace between roughly February and October 2024; beyond the 23,155 NFTs rescued, 660 WETH was not recovered; the attacker stole 10 Meebits, 50 Otherdeeds, 10 World of Women, and 235 Desperate ApeWives; Limit Break paused the similarly flawed V3, but V2 could not be paused; users are advised to revoke contract approvals on Ethereum, Polygon, and Base.",
+          "what_changed_zh": "新报道披露漏洞源于 Limit Break 的 Payment Processor V2，Magic Eden 于 2024 年 2 月至 10 月关闭的 EVM 市场上架的 NFT 受影响；除已救援的 23,155 枚 NFT 外，另有 660 WETH 未能追回；攻击者盗走 10 枚 Meebits、50 枚 Otherdeeds、10 枚 World of Women 和 235 枚 Desperate ApeWives；Limit Break 已暂停存在相同缺陷的 V3，但 V2 无法暂停；用户被建议在以太坊、Polygon 和 Base 上撤销合约授权。"
         }
       ]
     }
@@ -89914,7 +91564,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "Confirmed exchange security incident with approximately $352 million stolen from Bitget, squarely in the 'major exchange security incident with material user impact' tier and approaching the >$500M systemic threshold. The CEO attributing the attack to North Korea (Lazarus-style actor) adds significant escalation and regulatory implications. This is a fresh, high-impact development within the news window rather than a recap, warranting a score near the top of the 8.5-9.0 exploit band.",
         "ai_score": 9.0,
@@ -89945,7 +91595,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "A $351.6M loss tied to a major exchange is a large-scale security incident with direct user-fund impact, and the new in-window development is the forensic finding that the root cause was a backend breach rather than a smart-contract flaw, which materially shifts where accountability and remediation lie across exchange infrastructure. Falls in the 8.5-9.0 band for confirmed exploits above $50M; not elevated to 9.5-10 since it is below the >$500M systemic threshold.",
         "ai_score": 9.0,
@@ -89973,6 +91623,48 @@
         "source_type": "google_news",
         "title": "Bitget probe points to backend breach after $351.6M hack - Crypto News",
         "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9PMldvaG1nX3loLVBlR1Z3VkYwTWdFZTJNVlRmbjZ3NTd1VHVnal9YU1BsVUZqZkFLNUhWaXowVy1NeXdEcmVvZm9vZUJTdTdtekcwTXR6N2NkMmVtT1hNNlh3M0VjemlKRHc?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A confirmed security incident affecting a widely used NFT marketplace, with $5.7M in NFTs placed at risk through legacy token approvals. Impact was materially mitigated by whitehat intervention that rescued 23,155 tokens, so this is a significant but not systemic event — well below the >$50M loss threshold for a top-tier score. It matters because it exposes a real, exploitable approval-surface risk that likely affects other users who granted similar legacy permissions.",
+        "ai_score": 7.0,
+        "ai_summary": "Legacy token approvals on Magic Eden left roughly $5.7 million worth of NFTs vulnerable to exploitation until whitehats intervened and rescued 23,155 tokens.",
+        "ai_tags": [
+          "nft",
+          "security",
+          "exploit",
+          "approvals",
+          "magic-eden"
+        ],
+        "author": "Brian Danga",
+        "content": "Magic Eden legacy approvals exposed $5.7 million in NFTs to an exploit before whitehats rescued 23,155 tokens.",
+        "fetched_at": "2026-09-25T17:25:15.508205Z",
+        "id": "rss:www.theblock.co_rss.xml:1b9ba35ded464b50",
+        "metadata": {
+          "category": "crypto-protocols",
+          "event_retry_pending": true,
+          "feed_name": "The Block",
+          "score_model": "deepseek:deepseek-flash",
+          "source_category": "crypto-markets",
+          "tags": [
+            "Corporate NFTs",
+            "Crypto Ecosystems",
+            "Metaverse & NFT",
+            "NFT Marketplaces",
+            "Security",
+            "Web3",
+            "Exploits",
+            "Magic Eden",
+            "NFT Infrastructure",
+            "News"
+          ]
+        },
+        "published_at": "2026-09-25T14:09:15Z",
+        "source_type": "rss",
+        "title": "Magic Eden legacy approvals leave $5.7 million in NFTs exposed to exploit before rescue",
+        "url": "https://www.theblock.co/news/web3/2026-09-25-magic-eden-legacy-approvals-leave-5-7-million-in-nfts-exposed-to-exploit-before-rescue-416874"
       }
     }
   ],
