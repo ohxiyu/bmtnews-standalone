@@ -15,11 +15,11 @@
     "en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating."
   },
   "first_seen_at": "2026-09-25T09:43:54.637052+00:00",
-  "last_updated_at": "2026-09-25T17:25:26.530694+00:00",
+  "last_updated_at": "2026-09-25T23:24:27.994153+00:00",
   "last_material_change_at": "2026-09-25T17:25:26.530694+00:00",
   "confidence": 0.75,
   "updates_count": 3,
-  "sources_count": 6,
+  "sources_count": 7,
   "entities": [
     "bitget",
     "ceo",
@@ -171,12 +171,19 @@
       "references": [],
       "confidence": 0.95,
       "story_ids": [
-        "rss:decrypt.co_feed:cddc6f0758f62d7f"
+        "rss:decrypt.co_feed:cddc6f0758f62d7f",
+        "rss:bitcoinmagazine.com_.rss_full_:fbcd2f4d7ed70645"
       ],
       "sources": [
         {
           "url": "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
           "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://bitcoinmagazine.com/news/north-korea-linked-to-bitget-hack",
+          "label": "Bitcoin Magazine",
           "source_type": "rss",
           "official": false
         }
