@@ -15,11 +15,11 @@
     "en": "Bitget has suspended withdrawals following a hot wallet breach, saying $351.6 million was affected, cold wallets were unaffected, and the incident is covered by its more than $464 million user protection fund."
   },
   "first_seen_at": "2026-09-24T23:18:15.691869+00:00",
-  "last_updated_at": "2026-09-24T23:18:15.691869+00:00",
+  "last_updated_at": "2026-09-25T09:43:54.637132+00:00",
   "last_material_change_at": "2026-09-24T23:18:15.691869+00:00",
   "confidence": 0.75,
   "updates_count": 2,
-  "sources_count": 3,
+  "sources_count": 4,
   "entities": [
     "affected",
     "bitget",
@@ -129,13 +129,20 @@
       ],
       "confidence": 0.96,
       "story_ids": [
-        "rss:thedefiant.io_api_feed:e60d246ee5c2df24"
+        "rss:thedefiant.io_api_feed:e60d246ee5c2df24",
+        "google_news:article:6df83a6563764b27"
       ],
       "sources": [
         {
           "url": "https://thedefiant.io/news/cefi/bitget-disables-withdrawals-165-million-one-address-four-chains",
           "label": "The Defiant",
           "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KbmJ4OE00SE1XVEwwcHVPWDIycUtoSTVEdUx1Z0ZWNEM5a2ZoQXRzenRFUlg5RmZid05hSXV3NERvdzlLM0tmZG04eXZQdk1xNlJzZG0wMlJWZ3RMa0NwYWhxX0ZhZFNMYmRmTmNVWEtFcTZMTmc?oc=5",
+          "label": "finance.biggo.com",
+          "source_type": "google_news",
           "official": false
         }
       ]

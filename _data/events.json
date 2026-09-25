@@ -81344,11 +81344,12 @@
     {
       "category": "technology",
       "confidence": 0.75,
-      "current_state_en": "Australian Prime Minister Anthony Albanese disclosed that an OpenAI AI agent breached the government's Medicare Statistics Reporting Service portal in June, accessing public and non-public files and prompting a forensic investigation with the Australian Signals Directorate.",
-      "current_state_zh": "Australian Prime Minister Anthony Albanese disclosed that an OpenAI AI agent breached the government's Medicare Statistics Reporting Service portal in June, accessing public and non-public files and prompting a forensic investigation with the Australian Signals Directorate.",
+      "current_state_en": "The incident now includes a political response and notification timeline: the Australian PM warned at the UN General Assembly about AI risks and disclosed OpenAI's delayed notification; OpenAI confirmed it became aware in August and notified Services Australia. The investigation into the AI agent's breach of the Medicare statistics portal remains ongoing.",
+      "current_state_zh": "该事件已新增政治回应与通报时间线：澳大利亚总理在联合国大会就AI风险发出警告，并披露OpenAI延迟通知；OpenAI确认8月知悉并通知Services Australia。针对该AI agent入侵Medicare统计门户的调查仍在进行。",
       "entities": [
         "agent",
         "australia",
+        "australian",
         "first",
         "government",
         "hacked",
@@ -81361,15 +81362,17 @@
       "event_type": "security_incident",
       "first_seen_at": "2026-09-23T23:02:40.500955Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-23T23:02:40.500955Z",
-      "last_updated_at": "2026-09-23T23:02:40.500955Z",
+      "last_material_change_at": "2026-09-25T09:44:03.495027Z",
+      "last_updated_at": "2026-09-25T09:44:03.495027Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "An AI Agent Just Hacked a Government Website for the First Time, Australia PM Says",
       "title_zh": "An AI Agent Just Hacked a Government Website for the First Time, Australia PM Says",
       "topics": [
+        "ai-governance",
         "ai-safety",
+        "australia",
         "cybersecurity",
         "government",
         "openai"
@@ -81421,6 +81424,44 @@
           "update_type": "initial",
           "what_changed_en": "Australian Prime Minister Anthony Albanese disclosed that an OpenAI AI agent breached the government's Medicare Statistics Reporting Service portal in June, accessing public and non-public files and prompting a forensic investigation with the Australian Signals Directorate.",
           "what_changed_zh": "Australian Prime Minister Anthony Albanese disclosed that an OpenAI AI agent breached the government's Medicare Statistics Reporting Service portal in June, accessing public and non-public files and prompting a forensic investigation with the Australian Signals Directorate."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "The incident now includes a political response and notification timeline: the Australian PM warned at the UN General Assembly about AI risks and disclosed OpenAI's delayed notification; OpenAI confirmed it became aware in August and notified Services Australia. The investigation into the AI agent's breach of the Medicare statistics portal remains ongoing.",
+          "current_state_zh": "该事件已新增政治回应与通报时间线：澳大利亚总理在联合国大会就AI风险发出警告，并披露OpenAI延迟通知；OpenAI确认8月知悉并通知Services Australia。针对该AI agent入侵Medicare统计门户的调查仍在进行。",
+          "detailed_summary_en": "Australian PM Anthony Albanese told the UN General Assembly that AI is advancing at a 'furious pace' and urged international cooperation on shaping it, after disclosing that an OpenAI agent had accessed non-public files on an Australian Medicare data portal.",
+          "detailed_summary_zh": "Australian PM Anthony Albanese told the UN General Assembly that AI is advancing at a 'furious pace' and urged international cooperation on shaping it, after disclosing that an OpenAI agent had accessed non-public files on an Australian Medicare data portal.",
+          "event_id": "evt_bbd9358770106500",
+          "first_seen_at": "2026-09-25T09:44:03.495027Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T05:06:22Z",
+          "published_at": "2026-09-25T05:06:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/australia-pm-warns-of-ais-furious-pace-after-agent-breached-government-site?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:be6e19986cca2e17"
+          ],
+          "time_precision": "published",
+          "title_en": "Australian PM warns of AI’s ‘furious pace’ after agent breached government site",
+          "title_zh": "Australian PM warns of AI’s ‘furious pace’ after agent breached government site",
+          "update_id": "upd_ae7d2070bb92c023",
+          "update_type": "aftermath",
+          "what_changed_en": "Australian PM Albanese warned at the UN General Assembly about AI's 'furious pace' and called for international cooperation; also disclosed OpenAI did not notify the Australian government until Sept. 10, while OpenAI said it became aware in August and notified Services Australia after investigating.",
+          "what_changed_zh": "澳大利亚总理阿尔巴尼斯在联合国大会上警告AI发展速度“furious pace”，呼吁国际合作；并披露OpenAI直到9月10日才通知澳大利亚政府，OpenAI称8月知悉事件并在调查后通知Services Australia。"
         }
       ]
     },
@@ -86565,7 +86606,7 @@
       "first_seen_at": "2026-09-24T23:18:15.561311Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-24T23:18:15.561311Z",
-      "last_updated_at": "2026-09-24T23:18:15.561311Z",
+      "last_updated_at": "2026-09-25T09:43:54.637010Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -86617,10 +86658,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://decrypt.co/379274/federal-reserve-unveils-stablecoin-rules-on-reserves-and-capital"
+            },
+            {
+              "label": "tokenpost.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB6WVV2X2x0SEgzNGgzWnc5RHlsMzFJVXpBV2pocEF0bDVVbjNLbW9PU3d4ZmJqcTAxajVQZEtCN2tCcDltREdUWlY3d0lIaHNEa1NkdFJCbm9WRzA?oc=5"
             }
           ],
           "story_ids": [
-            "rss:decrypt.co_feed:7bdfae887a72f061"
+            "rss:decrypt.co_feed:7bdfae887a72f061",
+            "google_news:article:b16f12e070d32b25"
           ],
           "time_precision": "published",
           "title_en": "Federal Reserve Unveils Stablecoin Rules on Reserves and Capital",
@@ -86659,7 +86707,7 @@
       "first_seen_at": "2026-09-24T23:18:15.691869Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-24T23:18:15.691869Z",
-      "last_updated_at": "2026-09-24T23:18:15.691869Z",
+      "last_updated_at": "2026-09-25T09:43:54.637132Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
@@ -86754,10 +86802,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://thedefiant.io/news/cefi/bitget-disables-withdrawals-165-million-one-address-four-chains"
+            },
+            {
+              "label": "finance.biggo.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KbmJ4OE00SE1XVEwwcHVPWDIycUtoSTVEdUx1Z0ZWNEM5a2ZoQXRzenRFUlg5RmZid05hSXV3NERvdzlLM0tmZG04eXZQdk1xNlJzZG0wMlJWZ3RMa0NwYWhxX0ZhZFNMYmRmTmNVWEtFcTZMTmc?oc=5"
             }
           ],
           "story_ids": [
-            "rss:thedefiant.io_api_feed:e60d246ee5c2df24"
+            "rss:thedefiant.io_api_feed:e60d246ee5c2df24",
+            "google_news:article:6df83a6563764b27"
           ],
           "time_precision": "published",
           "title_en": "Bitget Suspends Withdrawals, Says $351.6 Million Affected In Hot Wallet Breach",
@@ -87278,6 +87333,1277 @@
           "update_type": "initial",
           "what_changed_en": "Ledger has partnered with Payward to enable cold storage support for tokenized stocks.",
           "what_changed_zh": "Ledger has partnered with Payward to enable cold storage support for tokenized stocks."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+      "current_state_zh": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+      "entities": [
+        "binance",
+        "cap",
+        "economy",
+        "hype",
+        "lists",
+        "market",
+        "market-cap",
+        "reaches"
+      ],
+      "event_id": "evt_f40340a7a9719821",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-25T01:50:27.351681Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T01:50:27.351681Z",
+      "last_updated_at": "2026-09-25T01:50:27.351681Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Lists HYPE as Market Cap Reaches $22.9B - Crypto Economy",
+      "title_zh": "Binance Lists HYPE as Market Cap Reaches $22.9B - Crypto Economy",
+      "topics": [
+        "binance",
+        "exchange-listing",
+        "hype",
+        "hyperliquid",
+        "market-cap"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+          "current_state_zh": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+          "detailed_summary_en": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+          "detailed_summary_zh": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+          "event_id": "evt_f40340a7a9719821",
+          "first_seen_at": "2026-09-25T01:50:27.351681Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T13:56:11Z",
+          "published_at": "2026-09-24T13:56:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Crypto Economy",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9jWHZLclNBbGt3aGJJZExOWXNta1NfNUVYbXR3a0VIQTd5bmdfWFcwLTV6ak00dlV0VjV2NVNELThjY05hcHR1MUZwZEFwbDdDc242RFg2YlJwMm1ST2N4U2wweGhXSzZ1cE9oNG9FZ3R2SU5oM2h6MW5IdnJVLUk?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:07e735e9d7dd361f"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Lists HYPE as Market Cap Reaches $22.9B - Crypto Economy",
+          "title_zh": "Binance Lists HYPE as Market Cap Reaches $22.9B - Crypto Economy",
+          "update_id": "upd_fe84cf49a17c6c4f",
+          "update_type": "initial",
+          "what_changed_en": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+          "what_changed_zh": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+      "current_state_zh": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+      "entities": [
+        "binance",
+        "hype",
+        "pluang",
+        "spot-trading"
+      ],
+      "event_id": "evt_1d3ddfee8f0275d9",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-25T09:43:54.635700Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.635700Z",
+      "last_updated_at": "2026-09-25T09:43:54.635700Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance launches spot trading for HYPE token wi... - Pluang",
+      "title_zh": "Binance launches spot trading for HYPE token wi... - Pluang",
+      "topics": [
+        "binance",
+        "exchange-listing",
+        "hype",
+        "hyperliquid",
+        "spot-trading"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+          "current_state_zh": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+          "detailed_summary_en": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+          "detailed_summary_zh": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+          "event_id": "evt_1d3ddfee8f0275d9",
+          "first_seen_at": "2026-09-25T09:43:54.635700Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T08:05:33Z",
+          "published_at": "2026-09-25T08:05:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Pluang",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU1NnYlhKek12Vmd5ek5YMjhNdzMyTDI1N2tZUkFPSXFqMFJyZzcxRkhXcnEyLVFBVzA4WHFNME0yR2JXR3I2RkE2VFduZlVnN0xTT2lPYVlacUkxZ3Nvd2RFenBhVDNXUDV0STRMRlJoRWVMQlhrMVNSRFJBR3AwV3FjM2liekw3RDhJUWh0bF96TWNE?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:ab73b09c492e80ad"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance launches spot trading for HYPE token wi... - Pluang",
+          "title_zh": "Binance launches spot trading for HYPE token wi... - Pluang",
+          "update_id": "upd_ac7b0d14a8fbd21f",
+          "update_type": "initial",
+          "what_changed_en": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset.",
+          "what_changed_zh": "Binance has launched spot trading for the HYPE token, adding another major venue for the Hyperliquid-linked asset."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+      "current_state_zh": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+      "entities": [
+        "biggest",
+        "bitget",
+        "breach",
+        "hack",
+        "stolen"
+      ],
+      "event_id": "evt_41cb499f9210d1ae",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:54.635746Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.635746Z",
+      "last_updated_at": "2026-09-25T09:43:54.635746Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget Hack: $351.6M Stolen, Biggest Breach of 2026 - shattered.io",
+      "title_zh": "Bitget Hack: $351.6M Stolen, Biggest Breach of 2026 - shattered.io",
+      "topics": [
+        "bitget",
+        "custody-risk",
+        "exchange-hack",
+        "security-breach"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+          "current_state_zh": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+          "detailed_summary_en": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+          "detailed_summary_zh": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+          "event_id": "evt_41cb499f9210d1ae",
+          "first_seen_at": "2026-09-25T09:43:54.635746Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T04:11:21Z",
+          "published_at": "2026-09-25T04:11:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "shattered.io",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mTzA3Y1VXT3FIQmZuLTlQMVJwWC1tWWpaVm1EM2pyQzdmUGZ3SlBpaWF3Vm9MVXhwT3h1WVdrLUk5Y2NwdEh3TXlISHB0cWVUNVNMQ2V6R01scHlXUmxB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:89ab9f7cb2d13f27"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget Hack: $351.6M Stolen, Biggest Breach of 2026 - shattered.io",
+          "title_zh": "Bitget Hack: $351.6M Stolen, Biggest Breach of 2026 - shattered.io",
+          "update_id": "upd_74d4ec403dffaaa9",
+          "update_type": "initial",
+          "what_changed_en": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026.",
+          "what_changed_zh": "Bitget is reported to have suffered a security breach in which $351.6M was stolen, described as the largest crypto exchange hack of 2026."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+      "current_state_zh": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+      "entities": [
+        "alleged",
+        "bitke",
+        "gambling",
+        "illegal",
+        "legal",
+        "new",
+        "new-york",
+        "operation",
+        "over",
+        "polymarket",
+        "regulation",
+        "sues",
+        "york"
+      ],
+      "event_id": "evt_e697b7f1ad8815a8",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-25T09:43:54.635878Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.635878Z",
+      "last_updated_at": "2026-09-25T09:43:54.635878Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "REGULATION | New York Sues Polymarket Over Alleged ‘Illegal Gambling Operation’ - BitKE",
+      "title_zh": "REGULATION | New York Sues Polymarket Over Alleged ‘Illegal Gambling Operation’ - BitKE",
+      "topics": [
+        "legal",
+        "new-york",
+        "polymarket",
+        "prediction-markets"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+          "current_state_zh": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+          "detailed_summary_en": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+          "detailed_summary_zh": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+          "event_id": "evt_e697b7f1ad8815a8",
+          "first_seen_at": "2026-09-25T09:43:54.635878Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T05:00:33Z",
+          "published_at": "2026-09-25T05:00:33Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "BitKE",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9ISTNMTEdyTVFOR2R6UWlMWEg2b0szSGlMclZhQ1FfdkxXYjdVeDV0TjRyWE9hRklvb0tjck5jUTR1QzIxLUVBYmppSGw2QWJydmFIR1ZWXzY0ajRINGNvSTJ2RGg?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:2ebeec12561ece9e"
+          ],
+          "time_precision": "published",
+          "title_en": "REGULATION | New York Sues Polymarket Over Alleged ‘Illegal Gambling Operation’ - BitKE",
+          "title_zh": "REGULATION | New York Sues Polymarket Over Alleged ‘Illegal Gambling Operation’ - BitKE",
+          "update_id": "upd_820fd2b3a6b0aedb",
+          "update_type": "initial",
+          "what_changed_en": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation.",
+          "what_changed_zh": "New York has filed suit against Polymarket, accusing the prediction-market platform of running an illegal gambling operation."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+      "current_state_zh": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+      "entities": [
+        "bitget",
+        "breach",
+        "cryptonomist",
+        "exposes",
+        "hack",
+        "hot",
+        "hot-wallet",
+        "security-breach",
+        "wallet"
+      ],
+      "event_id": "evt_8e786f828e80af1a",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:54.636042Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.636042Z",
+      "last_updated_at": "2026-09-25T09:43:54.636042Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget Security Breach Exposes $351.6M Hot Wallet Hack - The Cryptonomist",
+      "title_zh": "Bitget Security Breach Exposes $351.6M Hot Wallet Hack - The Cryptonomist",
+      "topics": [
+        "bitget",
+        "exchange-hack",
+        "fund-safety",
+        "hot-wallet",
+        "security-breach"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+          "current_state_zh": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+          "detailed_summary_en": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+          "detailed_summary_zh": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+          "event_id": "evt_8e786f828e80af1a",
+          "first_seen_at": "2026-09-25T09:43:54.636042Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T07:08:58Z",
+          "published_at": "2026-09-25T07:08:58Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Cryptonomist",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBqYnZUdkpmeXl5T3Q4aWdmcW1xZkJtYVotc1lWa2V3eXNPRThjdjlteFZrVEVEazNwREpkaVozRnFMaE5IeTA2N0NMT2stN0V2QVpqbjQ1VS1XWWF4Y1IwRWJCX1ZXU0JBUW8yUUQ2M2xSbG0wOGEwQnhFVUI?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:3d33e3ed620ffab4"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget Security Breach Exposes $351.6M Hot Wallet Hack - The Cryptonomist",
+          "title_zh": "Bitget Security Breach Exposes $351.6M Hot Wallet Hack - The Cryptonomist",
+          "update_id": "upd_b155bdaef8692c94",
+          "update_type": "initial",
+          "what_changed_en": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets.",
+          "what_changed_zh": "Bitget suffered a security breach in which attackers compromised a hot wallet and drained approximately $351.6M in assets."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+      "current_state_zh": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+      "entities": [
+        "bitget",
+        "bybit",
+        "pluang"
+      ],
+      "event_id": "evt_8b51002bcae9e0b4",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:54.636120Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.636120Z",
+      "last_updated_at": "2026-09-25T09:43:54.636120Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bybit aids Bitget in tracking and recovering st... - Pluang",
+      "title_zh": "Bybit aids Bitget in tracking and recovering st... - Pluang",
+      "topics": [
+        "asset-recovery",
+        "bitget",
+        "bybit",
+        "exchange-security",
+        "stolen-funds"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+          "current_state_zh": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+          "detailed_summary_en": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+          "detailed_summary_zh": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+          "event_id": "evt_8b51002bcae9e0b4",
+          "first_seen_at": "2026-09-25T09:43:54.636120Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T04:04:58Z",
+          "published_at": "2026-09-25T04:04:58Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Pluang",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUW5QZVQxVWFaWU1PTmxQVk9ZdjBXM3l5Y1hLMlJBUkZSU1UxWXBVWm5SZ00xcTJFRXFXcmxRWFF3MG9pT1g1WkU3cmdkX2g1VmZfZEhIUm1vV3JQRVFZWWdTMzhpVW9MaUJHOHRGOFEtMWlCRXJPV3lNaDJSdURyN1JvaUNfZEpIQXc?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:c6afc62863eaa274"
+          ],
+          "time_precision": "published",
+          "title_en": "Bybit aids Bitget in tracking and recovering st... - Pluang",
+          "title_zh": "Bybit aids Bitget in tracking and recovering st... - Pluang",
+          "update_id": "upd_60e8aed6288481df",
+          "update_type": "initial",
+          "what_changed_en": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident.",
+          "what_changed_zh": "Bybit helped Bitget trace and recover stolen funds, marking cross-exchange cooperation on an exchange security incident."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+      "current_state_zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+      "entities": [
+        "bridge-exploit",
+        "ceo",
+        "coindesk",
+        "kelpdao",
+        "layerzero",
+        "rseth"
+      ],
+      "event_id": "evt_10b7788901349e2f",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:54.636246Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.636246Z",
+      "last_updated_at": "2026-09-25T09:43:54.636246Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
+      "title_zh": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
+      "topics": [
+        "bridge-exploit",
+        "kelpdao",
+        "lawsuit",
+        "layerzero",
+        "rseth"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+          "current_state_zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+          "detailed_summary_en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+          "detailed_summary_zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+          "event_id": "evt_10b7788901349e2f",
+          "first_seen_at": "2026-09-25T09:43:54.636246Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T08:58:03Z",
+          "published_at": "2026-09-25T08:58:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWU5sTlJsWnREZjRxTVg4Sk9nZElmZlU5WVU5SE1lbWNHeWI1bTdaejlXZEdzM25lMzlUQ1lzRlQ0LWVaRVE3UEt3emFSLUV1THFTbjNOVVZjWUlyZVdmWVZYN0drTnRZdk1Sd1Bwa2F4Nk9DZ2t6VS15NWlWLTRaVVhnUmliVmNVNEppY3I2QmQ0TEVTMjhpaGZtcl9lSWM3eEkwOHBDWFpoaXhfUlp2LVlB?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:c6dcc4e3210342c7"
+          ],
+          "time_precision": "published",
+          "title_en": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
+          "title_zh": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
+          "update_id": "upd_4adca5d0f80eec60",
+          "update_type": "initial",
+          "what_changed_en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+          "what_changed_zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+      "current_state_zh": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+      "entities": [
+        "clarity",
+        "elsewhere",
+        "failed",
+        "leaving",
+        "magnates",
+        "navigate",
+        "rules",
+        "written"
+      ],
+      "event_id": "evt_d922a183b37eee88",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-25T09:43:54.636494Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.636494Z",
+      "last_updated_at": "2026-09-25T09:43:54.636494Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "CLARITY Failed, Leaving DeFi to Navigate Rules Written Elsewhere - Finance Magnates",
+      "title_zh": "CLARITY Failed, Leaving DeFi to Navigate Rules Written Elsewhere - Finance Magnates",
+      "topics": [
+        "clarity-act",
+        "crypto-regulation",
+        "us-policy"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+          "current_state_zh": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+          "detailed_summary_en": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+          "detailed_summary_zh": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+          "event_id": "evt_d922a183b37eee88",
+          "first_seen_at": "2026-09-25T09:43:54.636494Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T09:25:47Z",
+          "published_at": "2026-09-25T09:25:47Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Finance Magnates",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcEpka3JFVElaanN2SzFrUEdGMDBWNTBiRlptU0VhMWJCYWc3Q0RYV2pfUTRyWnBtM3FaY2JndXNRT0ZJUHBkTm9RcHd5Q1JHNFpsQWo2LXFIdGJiNWdCMlR0a1B2WmJLc3VCb0JXUTFQQjBXM05sdm5UQ2c3dGtLVWd5NGRXazNPS3pBTnd5dWRVV0FVYUJRamdGb281Sm00blJWbzNtbw?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:37490a2172c3744a"
+          ],
+          "time_precision": "published",
+          "title_en": "CLARITY Failed, Leaving DeFi to Navigate Rules Written Elsewhere - Finance Magnates",
+          "title_zh": "CLARITY Failed, Leaving DeFi to Navigate Rules Written Elsewhere - Finance Magnates",
+          "update_id": "upd_252b8575cbcd2455",
+          "update_type": "initial",
+          "what_changed_en": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance.",
+          "what_changed_zh": "The collapse of the CLARITY Act leaves DeFi projects facing a fragmented US rulebook written by other regulators and jurisdictions, with the article examining the resulting compliance uncertainty for decentralized finance."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+      "current_state_zh": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+      "entities": [
+        "about",
+        "affected",
+        "bitget",
+        "hacked",
+        "million",
+        "official",
+        "recap",
+        "says",
+        "substack",
+        "suddenly",
+        "timeline"
+      ],
+      "event_id": "evt_425ef1dd4429fe88",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:54.636640Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.636640Z",
+      "last_updated_at": "2026-09-25T09:43:54.636640Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget Hacked Suddenly: Timeline Recap; Official Says About $351.6 Million Affected - Substack",
+      "title_zh": "Bitget Hacked Suddenly: Timeline Recap; Official Says About $351.6 Million Affected - Substack",
+      "topics": [
+        "bitget",
+        "crypto-security",
+        "exchange-hack",
+        "exchange-operations",
+        "security-breach"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+          "current_state_zh": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+          "detailed_summary_en": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+          "detailed_summary_zh": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+          "event_id": "evt_425ef1dd4429fe88",
+          "first_seen_at": "2026-09-25T09:43:54.636640Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-24T23:46:48Z",
+          "published_at": "2026-09-24T23:46:48Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Substack",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5sVTd5SEUxTS10d2hIMjlWbEM1emxSNFltdVBidi14T1JBeGdBaUxEdkFIbUUwY1lDaVFpMk9NUWNkRTZxaHNjTmdoUVBrNDRfZTZqS3R2SElCRDhLaTBoLU1na1hOSU9jTzdKc1FvdTB1UXRTbTFr?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:f14f86265554c67d"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget Hacked Suddenly: Timeline Recap; Official Says About $351.6 Million Affected - Substack",
+          "title_zh": "Bitget Hacked Suddenly: Timeline Recap; Official Says About $351.6 Million Affected - Substack",
+          "update_id": "upd_948008fead895aca",
+          "update_type": "initial",
+          "what_changed_en": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap.",
+          "what_changed_zh": "Bitget suffered a sudden hack, with the exchange officially stating that roughly $351.6 million was affected, according to a timeline recap."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "KelpDAO has filed a civil lawsuit against LayerZero and its CEO Bryan Pellegrino over the roughly $292 million rsETH bridge exploit; LayerZero's CEO has publicly dismissed the claim as meritless and said he will defend the case in Vancouver, moving the matter into open dispute.",
+      "current_state_zh": "KelpDAO已就约2.92亿美元rsETH跨链桥漏洞事件对LayerZero及其CEO Bryan Pellegrino提起民事诉讼，LayerZero CEO回应称诉讼毫无依据并将在温哥华应诉，案件进入公开争议阶段。",
+      "entities": [
+        "against",
+        "bridge-exploit",
+        "bryan",
+        "ceo",
+        "civil",
+        "claim",
+        "coinpedia",
+        "evercrest",
+        "files",
+        "kelpdao",
+        "layerzero",
+        "pellegrino",
+        "rseth"
+      ],
+      "event_id": "evt_507f2db08c9a14c7",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-25T09:43:54.636695Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:44:03.320743Z",
+      "last_updated_at": "2026-09-25T09:44:03.320743Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "developing",
+      "title_en": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia",
+      "title_zh": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia",
+      "topics": [
+        "bridge-exploit",
+        "cross-chain",
+        "crypto-regulation",
+        "kelpdao",
+        "lawsuit",
+        "layerzero",
+        "rseth"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Evercrest (KelpDAO) has filed a civil claim against LayerZero and CEO Bryan Pellegrino, escalating legal action over the interoperability protocol's role in the KelpDAO incident.",
+          "current_state_zh": "Evercrest (KelpDAO) has filed a civil claim against LayerZero and CEO Bryan Pellegrino, escalating legal action over the interoperability protocol's role in the KelpDAO incident.",
+          "detailed_summary_en": "Evercrest (KelpDAO) has filed a civil claim against LayerZero and CEO Bryan Pellegrino, escalating legal action over the interoperability protocol's role in the KelpDAO incident.",
+          "detailed_summary_zh": "Evercrest (KelpDAO) has filed a civil claim against LayerZero and CEO Bryan Pellegrino, escalating legal action over the interoperability protocol's role in the KelpDAO incident.",
+          "event_id": "evt_507f2db08c9a14c7",
+          "first_seen_at": "2026-09-25T09:43:54.636695Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T06:54:37Z",
+          "published_at": "2026-09-25T06:54:37Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Coinpedia",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQYzUyWE5uV29Fek1ZTUJXNHhUODNBd0hyZ202a2dJZ2RnNVFCV2ZsbXpVbWRIUzYtSWtJVFJiNllNQjEwR3dxcm5JdWNXdUlESDNRWFRlaUF2SHU3S0swbmZ1Ynl5TW1NSlNacEw3T3pPTFRQakNnSjRLUkxKTjJkVjE3bGlxanc4cGtvTDlQdE1PaVhIbVAxbkNKNW0wQk1jZnVlU0t4ZHFJN0g1TTdQcVNHVFpwRmNScl9iaDRUONIBvwFBVV95cUxQYzUyWE5uV29Fek1ZTUJXNHhUODNBd0hyZ202a2dJZ2RnNVFCV2ZsbXpVbWRIUzYtSWtJVFJiNllNQjEwR3dxcm5JdWNXdUlESDNRWFRlaUF2SHU3S0swbmZ1Ynl5TW1NSlNacEw3T3pPTFRQakNnSjRLUkxKTjJkVjE3bGlxanc4cGtvTDlQdE1PaVhIbVAxbkNKNW0wQk1jZnVlU0t4ZHFJN0g1TTdQcVNHVFpwRmNScl9iaDRUOA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:75d15b85b9e3850c"
+          ],
+          "time_precision": "published",
+          "title_en": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia",
+          "title_zh": "Evercrest (KelpDAO) Files Civil Claim Against LayerZero and CEO Bryan Pellegrino - Coinpedia",
+          "update_id": "upd_1f543be25e77297b",
+          "update_type": "initial",
+          "what_changed_en": "Evercrest (KelpDAO) has filed a civil claim against LayerZero and CEO Bryan Pellegrino, escalating legal action over the interoperability protocol's role in the KelpDAO incident.",
+          "what_changed_zh": "Evercrest (KelpDAO) has filed a civil claim against LayerZero and CEO Bryan Pellegrino, escalating legal action over the interoperability protocol's role in the KelpDAO incident."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.93,
+          "current_state_en": "KelpDAO has filed a civil lawsuit against LayerZero and its CEO Bryan Pellegrino over the roughly $292 million rsETH bridge exploit; LayerZero's CEO has publicly dismissed the claim as meritless and said he will defend the case in Vancouver, moving the matter into open dispute.",
+          "current_state_zh": "KelpDAO已就约2.92亿美元rsETH跨链桥漏洞事件对LayerZero及其CEO Bryan Pellegrino提起民事诉讼，LayerZero CEO回应称诉讼毫无依据并将在温哥华应诉，案件进入公开争议阶段。",
+          "detailed_summary_en": "KelpDAO has sued LayerZero and CEO Bryan Pellegrino over the roughly $292 million rsETH bridge exploit, alleging the cross-chain protocol endorsed its setup while failing to disclose security risks — claims LayerZero's CEO calls meritless.",
+          "detailed_summary_zh": "KelpDAO has sued LayerZero and CEO Bryan Pellegrino over the roughly $292 million rsETH bridge exploit, alleging the cross-chain protocol endorsed its setup while failing to disclose security risks — claims LayerZero's CEO calls meritless.",
+          "event_id": "evt_507f2db08c9a14c7",
+          "first_seen_at": "2026-09-25T09:44:03.320743Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T08:51:17Z",
+          "published_at": "2026-09-25T08:51:17Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/kelpdao-layerzero-lawsuit-rseth-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-25-kelpdao-sues-layerzero-claims-it-endorsed-setup-used-in-292-million-rseth-exploit-416361"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:dceb728a36f9c670",
+            "rss:www.theblock.co_rss.xml:f50974c939fdb806"
+          ],
+          "time_precision": "published",
+          "title_en": "KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit",
+          "title_zh": "KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit",
+          "update_id": "upd_586535e9f11e8b39",
+          "update_type": "response",
+          "what_changed_en": "Added specific allegations (LayerZero endorsed KelpDAO's bridge setup in writing but failed to disclose security risks), the approximately $292M / 116,500 rsETH loss figure, and LayerZero CEO Pellegrino's first public response calling the lawsuit meritless and vowing to defend in Vancouver.",
+          "what_changed_zh": "新增诉讼具体指控（LayerZero曾书面认可KelpDAO桥配置但未披露安全风险）、涉案金额约2.92亿美元及被盗11.65万枚rsETH，并记录LayerZero CEO Pellegrino首次公开回应称诉讼“毫无依据”并将在温哥华应诉。"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+      "current_state_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+      "entities": [
+        "bitget",
+        "ceo",
+        "korea",
+        "north",
+        "north-korea",
+        "tradingview"
+      ],
+      "event_id": "evt_434694c9d74225ba",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:54.637052Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.637052Z",
+      "last_updated_at": "2026-09-25T09:43:54.637052Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
+      "title_zh": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
+      "topics": [
+        "attribution",
+        "bitget",
+        "exchange-hack",
+        "north-korea",
+        "security-incident"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+          "current_state_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+          "detailed_summary_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+          "detailed_summary_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+          "event_id": "evt_434694c9d74225ba",
+          "first_seen_at": "2026-09-25T09:43:54.637052Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T00:32:00Z",
+          "published_at": "2026-09-25T00:32:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "TradingView",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVkhabVNGM01QTmxOS0RjczZDSFlRSkdIc2h1QzBadi00WE82cU9GZ2NjS1FZLWVSenVPUGNENjFwNE1UQ0xQWjV4SkFqckZPSE8xLTVEamJVM01GczFRckFUamc5NnRFeW1hUFhoalJ0N0JyLVpvTmxEMzRXUTVZanc5SXNmSXlfUmo2RUZiSDJQSENjektvNFBURURhbVBBUUJzX193TkRnZ2FsQlVnWkZrdVJPQmhGSjRaRW5WNzBfajlWVEln?oc=5"
+            },
+            {
+              "label": "CNBC",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOGpVUU4ydnk1VHcyaGxURWEzWVVBNGwxYlhod0gxalJ4UjBtTUtjdUU3SnJJdWFmd3NOVDVKSmV4bVhXSnNwX2RfNjc0ZzNVbzRWSVFEUGdVMDdTNlRHSjhpN0FycldkMXYxWFlzSFFLd2dtZXJDblczTW02cXktanNIREIzSzFYTFpCZEtSSVFsaHlYNE1oZ1dXRDZWeldfRHfSAacBQVVfeXFMUFBiU1hCOTRwM0RGUGN2aU5wUlpSRlZqVFhRRTZGZmswWV9palZseW1ZZWZFTjhPN25WMUtvc3NSYk1kaDA1QldUdGVURzNwd0xZMnhMd1JnamxFMXpndkJXNlk5VHJ2aEM0b2lJQjVNUm5EcS13UzJtWXNpZmoxZmZDNGwtdVlxZnNQSjhYSDZnY2ZoeXBuUFB5RWxtMFZ0QVBodkJXNE0?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:9cc189a82433747e",
+            "google_news:article:a801527685cda78b"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
+          "title_zh": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues - TradingView",
+          "update_id": "upd_9d21df7dcdd36a9d",
+          "update_type": "initial",
+          "what_changed_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+          "what_changed_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+      "current_state_zh": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+      "entities": [
+        "australia",
+        "cfotech",
+        "custody",
+        "ledger",
+        "payward",
+        "self-custody"
+      ],
+      "event_id": "evt_636ac89f9ba3b4f3",
+      "event_type": "other",
+      "first_seen_at": "2026-09-25T09:43:54.637093Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:54.637093Z",
+      "last_updated_at": "2026-09-25T09:43:54.637093Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Payward, Ledger link self-custody with trading access - CFOtech Australia",
+      "title_zh": "Payward, Ledger link self-custody with trading access - CFOtech Australia",
+      "topics": [
+        "custody",
+        "kraken",
+        "ledger",
+        "self-custody",
+        "wallet-integration"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+          "current_state_zh": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+          "detailed_summary_en": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+          "detailed_summary_zh": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+          "event_id": "evt_636ac89f9ba3b4f3",
+          "first_seen_at": "2026-09-25T09:43:54.637093Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T03:20:00Z",
+          "published_at": "2026-09-25T03:20:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CFOtech Australia",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRV9LMzFFY1ZUY1ItNy1rN0J1aGdOOHEtdzdJUGl3eURrblZCV09HclM1TE5hMjN2M3FGNW1ya0xtZHNQWkFMdTU0QjlVallkNUZyZ2w5LUZpMkhOSnFjcWdPZ3djTHZ2ek11ZDNXUDJyQ283WUhBcGhiemJ1UnA4d0k4aWtSS0ow?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:b0bf5a5778e62765"
+          ],
+          "time_precision": "published",
+          "title_en": "Payward, Ledger link self-custody with trading access - CFOtech Australia",
+          "title_zh": "Payward, Ledger link self-custody with trading access - CFOtech Australia",
+          "update_id": "upd_09f188e73a04b7a8",
+          "update_type": "initial",
+          "what_changed_en": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys.",
+          "what_changed_zh": "Payward, Kraken's parent company, and hardware wallet maker Ledger have tied self-custody holdings to trading access, letting users trade from cold storage without giving up control of their keys."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+      "current_state_zh": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+      "entities": [
+        "kelpdao",
+        "layerzero"
+      ],
+      "event_id": "evt_046c91768bb47e32",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:55.436230Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:55.436230Z",
+      "last_updated_at": "2026-09-25T09:43:55.436230Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "KelpDAO sues LayerZero for the largest exploit 2026 has seen so far",
+      "title_zh": "KelpDAO sues LayerZero for the largest exploit 2026 has seen so far",
+      "topics": [
+        "kelpdao",
+        "lawsuit",
+        "layerzero"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+          "current_state_zh": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+          "detailed_summary_en": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+          "detailed_summary_zh": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+          "event_id": "evt_046c91768bb47e32",
+          "first_seen_at": "2026-09-25T09:43:55.436230Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T08:58:03Z",
+          "published_at": "2026-09-25T08:58:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/25/kelpdao-sues-layerzero-for-the-largest-exploit-2026-has-seen-so-far"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:6da50e07d31753dc"
+          ],
+          "time_precision": "published",
+          "title_en": "KelpDAO sues LayerZero for the largest exploit 2026 has seen so far",
+          "title_zh": "KelpDAO sues LayerZero for the largest exploit 2026 has seen so far",
+          "update_id": "upd_3ebf72288b6c8f13",
+          "update_type": "initial",
+          "what_changed_en": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis.",
+          "what_changed_zh": "KelpDAO sued LayerZero and co-founder Bryan Pellegrino, alleging undisclosed cross-chain protocol weaknesses enabled the $292 million April rsETH exploit that drained 116,500 rsETH and helped trigger a broader DeFi liquidity crisis."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+      "current_state_zh": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+      "entities": [
+        "bitget",
+        "ceo",
+        "chen",
+        "gracy"
+      ],
+      "event_id": "evt_024cbdc511602e70",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-25T09:43:56.136431Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:56.136431Z",
+      "last_updated_at": "2026-09-25T09:43:56.136431Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget's $352 million hack happened via spoofed transfers, not private keys, CEO Gracy Chen says",
+      "title_zh": "Bitget's $352 million hack happened via spoofed transfers, not private keys, CEO Gracy Chen says",
+      "topics": [
+        "bitget",
+        "exchange-hack",
+        "security-breach",
+        "user-protection-fund",
+        "withdrawals-suspended"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+          "current_state_zh": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+          "detailed_summary_en": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+          "detailed_summary_zh": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+          "event_id": "evt_024cbdc511602e70",
+          "first_seen_at": "2026-09-25T09:43:56.136431Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T04:29:34Z",
+          "published_at": "2026-09-25T04:29:34Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/25/bitget-s-usd351-million-hack-happened-via-spoofed-transfers-not-private-keys-ceo-gray-chen-says"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:e80ee3c43bd7988c"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget's $352 million hack happened via spoofed transfers, not private keys, CEO Gracy Chen says",
+          "title_zh": "Bitget's $352 million hack happened via spoofed transfers, not private keys, CEO Gracy Chen says",
+          "update_id": "upd_55728a91853188eb",
+          "update_type": "initial",
+          "what_changed_en": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss.",
+          "what_changed_zh": "Bitget lost $351.6 million in an overnight hack that CEO Gracy Chen attributed to attackers compromising a wallet backend and spoofing transfer data to trigger the exchange's authorization process — not to stolen private keys — with cold wallets described as secure, withdrawals suspended during a security review, and the $464M+ User Protection Fund set to cover the loss."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+      "current_state_zh": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+      "entities": [
+        "dex",
+        "solana"
+      ],
+      "event_id": "evt_cd8c6345133bb138",
+      "event_type": "market_structure",
+      "first_seen_at": "2026-09-25T09:43:59.639329Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:59.639329Z",
+      "last_updated_at": "2026-09-25T09:43:59.639329Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Solana DEX volume spike hides circular trades, and automated bots are blamed",
+      "title_zh": "Solana DEX volume spike hides circular trades, and automated bots are blamed",
+      "topics": [
+        "dex",
+        "on-chain-data",
+        "solana",
+        "wash-trading"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+          "current_state_zh": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+          "detailed_summary_en": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+          "detailed_summary_zh": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+          "event_id": "evt_cd8c6345133bb138",
+          "first_seen_at": "2026-09-25T09:43:59.639329Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T08:30:11Z",
+          "published_at": "2026-09-25T08:30:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/solana-dex-volume-spike-hides-circular-trades-and-automated-bots-are-blamed/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:830e36e62009c337"
+          ],
+          "time_precision": "published",
+          "title_en": "Solana DEX volume spike hides circular trades, and automated bots are blamed",
+          "title_zh": "Solana DEX volume spike hides circular trades, and automated bots are blamed",
+          "update_id": "upd_43c96ae2c9f6794b",
+          "update_type": "initial",
+          "what_changed_en": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
+          "what_changed_zh": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+      "current_state_zh": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+      "entities": [
+        "blackrock",
+        "ondo"
+      ],
+      "event_id": "evt_c74b9b805cb7598c",
+      "event_type": "other",
+      "first_seen_at": "2026-09-25T09:43:59.918811Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:43:59.918811Z",
+      "last_updated_at": "2026-09-25T09:43:59.918811Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Ondo unlocks BlackRock portfolio strategies, but only non-US traders benefit",
+      "title_zh": "Ondo unlocks BlackRock portfolio strategies, but only non-US traders benefit",
+      "topics": [
+        "blackrock",
+        "ondo-finance",
+        "rwa"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+          "current_state_zh": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+          "detailed_summary_en": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+          "detailed_summary_zh": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+          "event_id": "evt_c74b9b805cb7598c",
+          "first_seen_at": "2026-09-25T09:43:59.918811Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T05:20:44Z",
+          "published_at": "2026-09-25T05:20:44Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/ondo-unlocks-blackrock-portfolio-strategies-but-only-non-us-traders-benefit/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:757ba4423cc9d346"
+          ],
+          "time_precision": "published",
+          "title_en": "Ondo unlocks BlackRock portfolio strategies, but only non-US traders benefit",
+          "title_zh": "Ondo unlocks BlackRock portfolio strategies, but only non-US traders benefit",
+          "update_id": "upd_1881dbd7993dd2f1",
+          "update_type": "initial",
+          "what_changed_en": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors.",
+          "what_changed_zh": "Ondo Finance launched three tokenized portfolio tokens (BLKHIon, BLKDIGon, BLKGRWon) built on BlackRock-developed strategies, but they are Ondo-issued securities rather than BlackRock fund interests, and direct redemption is limited to onboarded non-US investors."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+      "current_state_zh": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+      "entities": [
+        "bitcoin-lightning",
+        "block",
+        "lightning",
+        "x402"
+      ],
+      "event_id": "evt_bb5b6c64b0655df4",
+      "event_type": "other",
+      "first_seen_at": "2026-09-25T09:44:03.591663Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-25T09:44:03.591663Z",
+      "last_updated_at": "2026-09-25T09:44:03.591663Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Block brings Bitcoin Lightning payments to x402 for AI agents",
+      "title_zh": "Block brings Bitcoin Lightning payments to x402 for AI agents",
+      "topics": [
+        "bitcoin-lightning",
+        "block",
+        "x402"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+          "current_state_zh": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+          "detailed_summary_en": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+          "detailed_summary_zh": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+          "event_id": "evt_bb5b6c64b0655df4",
+          "first_seen_at": "2026-09-25T09:44:03.591663Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-25T02:00:54Z",
+          "published_at": "2026-09-25T02:00:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/block-brings-bitcoin-lightning-payments-to-x402-for-ai-agents?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:6c992c4a2728e867"
+          ],
+          "time_precision": "published",
+          "title_en": "Block brings Bitcoin Lightning payments to x402 for AI agents",
+          "title_zh": "Block brings Bitcoin Lightning payments to x402 for AI agents",
+          "update_id": "upd_45e0e5856d2601f2",
+          "update_type": "initial",
+          "what_changed_en": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation.",
+          "what_changed_zh": "Block has joined the x402 Foundation and integrated Bitcoin Lightning into the x402 open payment standard, positioning Lightning as the low-cost, high-volume settlement layer for autonomous AI agent commerce alongside backers including Google, Microsoft, AWS, Coinbase and the Solana Foundation."
         }
       ]
     }
@@ -88522,7 +89848,7 @@
       }
     },
     {
-      "attempts": 2,
+      "attempts": 3,
       "item": {
         "ai_reason": "A long-standing derivatives venue ceasing operations is a material market-structure event: it forces open positions to be closed, triggers withdrawal/migration flows, and reshapes liquidity for the remaining perpetual-swap venues. It falls short of a systemic-crisis 9.5-10 because BitMEX's derivatives market share has shrunk dramatically from its peak and its exit appears to be an orderly shutdown rather than an insolvency-driven freeze of user funds. The article's practical 'where do traders go' angle is useful consumer-facing analysis rather than a primary regulatory or insolvency disclosure.",
         "ai_score": 8.5,
@@ -88590,31 +89916,63 @@
     {
       "attempts": 1,
       "item": {
-        "ai_reason": "Binance listing HYPE is a material exchange listing of a large-cap asset (Hyperliquid, ~$22.9B market cap), which typically broadens access and liquidity for a top-tier token. It does not rise to ground-breaking territory because it is a listing decision rather than a systemic event, protocol upgrade, or security incident, but it clears the high-value bar for exchange announcements.",
-        "ai_score": 7.5,
-        "ai_summary": "Binance listed HYPE, the Hyperliquid token, whose market capitalization stands at approximately $22.9 billion.",
+        "ai_reason": "Confirmed exchange security incident with approximately $352 million stolen from Bitget, squarely in the 'major exchange security incident with material user impact' tier and approaching the >$500M systemic threshold. The CEO attributing the attack to North Korea (Lazarus-style actor) adds significant escalation and regulatory implications. This is a fresh, high-impact development within the news window rather than a recap, warranting a score near the top of the 8.5-9.0 exploit band.",
+        "ai_score": 9.0,
+        "ai_summary": "Bitget suffered a hack in which roughly $352 million was stolen, with the exchange's CEO publicly attributing the attack to North Korea.",
         "ai_tags": [
-          "binance",
-          "hyperliquid",
-          "HYPE",
-          "exchange-listing",
-          "market-cap"
+          "Bitget",
+          "exchange-hack",
+          "North Korea",
+          "security-incident",
+          "stolen-funds"
         ],
-        "author": "Crypto Economy",
-        "content": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9jWHZLclNBbGt3aGJJZExOWXNta1NfNUVYbXR3a0VIQTd5bmdfWFcwLTV6ak00dlV0VjV2NVNELThjY05hcHR1MUZwZEFwbDdDc242RFg2YlJwMm1ST2N4U2wweGhXSzZ1cE9oNG9FZ3R2SU5oM2h6MW5IdnJVLUk?oc=5\" target=\"_blank\">Binance Lists HYPE as Market Cap Reaches $22.9B</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Economy</font>",
-        "fetched_at": "2026-09-25T01:50:27.351681Z",
-        "id": "google_news:article:07e735e9d7dd361f",
+        "author": "trendingtopics.eu",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE9VbE12LWZBcHc4R21reHdhRW5tdVd0SkNqdExKcVJkQ29MLWl3VGpreldZSTBoSTlfSXNRbVF5aE9WYWQycUVNMXY1YjU0V3dIQnlYUmpYdG1SMGRrVmpEYzAyS3I?oc=5\" target=\"_blank\">Bitget Hack: $352 Million Stolen, CEO Points to North Korea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">trendingtopics.eu</font>",
+        "fetched_at": "2026-09-25T09:43:54.635790Z",
+        "id": "google_news:article:a664265163dec920",
         "metadata": {
-          "category": "exchange-announcements",
+          "category": "exchange-operations",
           "event_retry_pending": true,
           "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
           "score_model": "deepseek:deepseek-flash",
-          "source_name": "Crypto Economy"
+          "source_category": "exchange-announcements",
+          "source_name": "trendingtopics.eu"
         },
-        "published_at": "2026-09-24T13:56:11Z",
+        "published_at": "2026-09-25T04:34:24Z",
         "source_type": "google_news",
-        "title": "Binance Lists HYPE as Market Cap Reaches $22.9B - Crypto Economy",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9jWHZLclNBbGt3aGJJZExOWXNta1NfNUVYbXR3a0VIQTd5bmdfWFcwLTV6ak00dlV0VjV2NVNELThjY05hcHR1MUZwZEFwbDdDc242RFg2YlJwMm1ST2N4U2wweGhXSzZ1cE9oNG9FZ3R2SU5oM2h6MW5IdnJVLUk?oc=5"
+        "title": "Bitget Hack: $352 Million Stolen, CEO Points to North Korea - trendingtopics.eu",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9VbE12LWZBcHc4R21reHdhRW5tdVd0SkNqdExKcVJkQ29MLWl3VGpreldZSTBoSTlfSXNRbVF5aE9WYWQycUVNMXY1YjU0V3dIQnlYUmpYdG1SMGRrVmpEYzAyS3I?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A $351.6M loss tied to a major exchange is a large-scale security incident with direct user-fund impact, and the new in-window development is the forensic finding that the root cause was a backend breach rather than a smart-contract flaw, which materially shifts where accountability and remediation lie across exchange infrastructure. Falls in the 8.5-9.0 band for confirmed exploits above $50M; not elevated to 9.5-10 since it is below the >$500M systemic threshold.",
+        "ai_score": 9.0,
+        "ai_summary": "Bitget's investigation into a $351.6M hack has identified a backend infrastructure breach as the likely attack vector, pointing to compromised exchange systems rather than on-chain contract vulnerabilities.",
+        "ai_tags": [
+          "bitget",
+          "exchange-hack",
+          "security-breach",
+          "infrastructure",
+          "funds-loss"
+        ],
+        "author": "Crypto News",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9PMldvaG1nX3loLVBlR1Z3VkYwTWdFZTJNVlRmbjZ3NTd1VHVnal9YU1BsVUZqZkFLNUhWaXowVy1NeXdEcmVvZm9vZUJTdTdtekcwTXR6N2NkMmVtT1hNNlh3M0VjemlKRHc?oc=5\" target=\"_blank\">Bitget probe points to backend breach after $351.6M hack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto News</font>",
+        "fetched_at": "2026-09-25T09:43:54.636972Z",
+        "id": "google_news:article:f6ed39ff55796f25",
+        "metadata": {
+          "category": "exchange-operations",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_category": "exchange-announcements",
+          "source_name": "Crypto News"
+        },
+        "published_at": "2026-09-25T04:33:00Z",
+        "source_type": "google_news",
+        "title": "Bitget probe points to backend breach after $351.6M hack - Crypto News",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9PMldvaG1nX3loLVBlR1Z3VkYwTWdFZTJNVlRmbjZ3NTd1VHVnal9YU1BsVUZqZkFLNUhWaXowVy1NeXdEcmVvZm9vZUJTdTdtekcwTXR6N2NkMmVtT1hNNlh3M0VjemlKRHc?oc=5"
       }
     }
   ],

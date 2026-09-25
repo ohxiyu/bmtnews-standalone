@@ -15,11 +15,11 @@
     "en": "The Federal Reserve opened two public-comment proposals requiring Fed-supervised stablecoin issuers to fully back tokens with safe liquid assets like short-term T-bills and meet standardized capital, risk-management and reserve-safekeeping standards, plus a tailored application process for banks seeking to issue stablecoins."
   },
   "first_seen_at": "2026-09-24T23:18:15.561311+00:00",
-  "last_updated_at": "2026-09-24T23:18:15.561311+00:00",
+  "last_updated_at": "2026-09-25T09:43:54.637010+00:00",
   "last_material_change_at": "2026-09-24T23:18:15.561311+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "capital",
     "federal",
@@ -79,13 +79,20 @@
       ],
       "confidence": 0.75,
       "story_ids": [
-        "rss:decrypt.co_feed:7bdfae887a72f061"
+        "rss:decrypt.co_feed:7bdfae887a72f061",
+        "google_news:article:b16f12e070d32b25"
       ],
       "sources": [
         {
           "url": "https://decrypt.co/379274/federal-reserve-unveils-stablecoin-rules-on-reserves-and-capital",
           "label": "Decrypt",
           "source_type": "rss",
+          "official": false
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB6WVV2X2x0SEgzNGgzWnc5RHlsMzFJVXpBV2pocEF0bDVVbjNLbW9PU3d4ZmJqcTAxajVQZEtCN2tCcDltREdUWlY3d0lIaHNEa1NkdFJCbm9WRzA?oc=5",
+          "label": "tokenpost.com",
+          "source_type": "google_news",
           "official": false
         }
       ]
