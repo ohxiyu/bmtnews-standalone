@@ -161,14 +161,27 @@
       "current_state_en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating.",
       "detailed_summary_zh": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
       "detailed_summary_en": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Bitget 是一家成立于 2018 年的中心化加密货币交易所。朝鲜 Lazarus 集团此前已被指与多起重大加密货币盗窃案有关，包括 2025 年 Bybit 被盗 15 亿美元的事件——Bitget 正是以此说明其目前获得的互助支持，Bybit 称将更新其 LazarusBounty 平台以追踪 Bitget 被盗资金。TRM Labs 报告称，朝鲜在 2026 年通过两起攻击窃取 5.77 亿美元，占当年截至 4 月全部黑客损失的 76%。",
+      "background_en": "Bitget is a centralized cryptocurrency exchange founded in 2018. North Korea's Lazarus Group has previously been linked to major crypto thefts, including the $1.5 billion Bybit breach in 2025 — the same event Bitget cites in describing the support it is now receiving, with Bybit updating its LazarusBounty platform to track Bitget's stolen funds. TRM Labs reported that North Korea stole $577 million across two attacks in 2026, accounting for 76% of all hack losses through April of that year.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该事件将交易所热钱包托管风险以及“冻结”渠道推到台前：中心化交易所和稳定币发行方可以冻结被盗资产，而转入自托管地址的原生代币更难拦截，这一区别与 Bitget 损失核算中新增的 Zcash 和 TRON 资产直接相关。Bitget 的提现仍然暂停，这是该事件影响该平台用户流动性的直接渠道。",
+      "market_impact_en": "The incident spotlights exchange hot-wallet custody risk and the freeze channel: centralized exchanges and stablecoin issuers can block stolen assets, while native coins moved to self-custodied addresses are harder to stop, a distinction relevant to the Zcash and TRON assets added to Bitget's loss accounting. Withdrawals at Bitget remain suspended, which is the direct channel through which the event touches user liquidity on that venue.",
       "importance_score": 9.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html",
+          "title": "Crypto platform Bitget suspects North Korea in $352 million hack"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Lazarus_Group",
+          "title": "Lazarus Group - Wikipedia"
+        },
+        {
+          "url": "https://www.trmlabs.com/resources/blog/north-korea-stole-76-of-all-crypto-hack-value-in-2026-with-just-two-attacks",
+          "title": "North Korea Stole 76% of All Crypto Hack Value in 2026 — With Just Two Attacks | TRM Labs"
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:decrypt.co_feed:cddc6f0758f62d7f",

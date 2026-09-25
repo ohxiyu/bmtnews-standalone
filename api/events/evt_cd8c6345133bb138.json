@@ -49,14 +49,27 @@
       "current_state_en": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
       "detailed_summary_zh": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
       "detailed_summary_en": "Bitquery's 30-day reconstruction of $201.4 billion in Solana DEX trades classified 58.4% ($117.7 billion) as circular or botlike activity, with roughly $111.6 billion coming from buying and selling the same token in the same pool within a single transaction, casting doubt on gross DEX volume as a measure of genuine independent trading demand.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Bitquery 是一家发布链上分析数据的区块链数据公司，DefiLlama 则是被广泛使用的跨链 DEX 交易量看板。9 月 24 日 DefiLlama Solana DEX 看板的快照显示其 30 日滚动交易量为 759 亿美元，而 Bitquery 做了同日对比：其索引的 Solana 交易中有 837 亿美元落在被标记类别之外，DefiLlama 对 8 月 24 日至 9 月 22 日统计的数字为 788 亿美元。Bitquery 称两组接近的数字部分属于巧合，因为 DefiLlama 包含 Bitquery 遗漏的交易场所，同时排除了 Bitquery 纳入的部分资金池。DefiLlama 公布的 PumpSwap 统计方法只计入具备指定报价代币、锁仓总值至少 5000 美元且有至少 50 个独立交易者的资金池，而 Bitquery 的做法是筛查交易与钱包行为。",
+      "background_en": "Bitquery is a blockchain data company that publishes on-chain analytics, and DefiLlama is a widely used dashboard that tracks DEX volume across chains. A Sept. 24 snapshot of DefiLlama's Solana DEX dashboard showed $75.9 billion in rolling 30-day volume, while Bitquery made a same-date comparison in which $83.7 billion of its indexed Solana trades fell outside the flagged category versus DefiLlama's $78.8 billion for Aug. 24 through Sept. 22. Bitquery described the close totals as partly coincidental, since DefiLlama includes venues Bitquery misses and excludes pools Bitquery keeps. DefiLlama's published PumpSwap method counts pools with specified quote tokens, at least $5,000 in total value locked and at least 50 unique traders, whereas Bitquery screens transactions and wallet behavior.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该发现影响市场参与者和数据使用者如何将 Solana DEX 交易量解读为需求信号，这可能波及依赖成交额指标的交易所、聚合器与激励计划；事件本身不涉及代币供应、托管或监管行动。由于该研究未量化可执行深度，它本身并不能说明独立交易者在相关资金池中实际可动用的流动性规模。",
+      "market_impact_en": "The finding bears on how market participants and data consumers interpret Solana DEX volume as a demand signal, which can affect venues, aggregators and incentive programs that lean on turnover-based metrics; it does not involve token supply, custody or regulatory action. Because the study did not quantify executable depth, it does not by itself establish how much liquidity independent traders can access in the affected pools.",
       "importance_score": 7.0,
-      "references": [],
+      "references": [
+        {
+          "url": "https://cryptoslate.com/solana-dex-volume-spike-hides-circular-trades-and-automated-bots-are-blamed/",
+          "title": "Solana DEX volume spike hides circular trades, and automated bots..."
+        },
+        {
+          "url": "https://solanacompass.com/news/bitquery-flags-1177b-or-58-of-solana-dex-volume-as-circular-or-bot-like",
+          "title": "Bitquery: 58% of Solana DEX Volume, $117.7B in... | Solana Compass"
+        },
+        {
+          "url": "https://www.altcoinbuzz.io/solana-dex-bitquery-flags-58-4-of-201b-sample-as-bot-or-circular",
+          "title": "Bitquery flags 58.4% of Solana DEX sample as circular... | Altcoin Buzz"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cryptoslate.com_feed_:830e36e62009c337"

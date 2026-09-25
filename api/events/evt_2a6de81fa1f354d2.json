@@ -147,14 +147,27 @@
       "current_state_en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base.",
       "detailed_summary_zh": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
       "detailed_summary_en": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "Payment Processor V2 是由 Limit Break 开发和维护的 NFT 交易协议，Magic Eden 于 2024 年采用其在 EVM 上结算交易，当年 10 月停止使用，并在 2026 年初彻底关闭其 EVM 市场。该公司于 2 月放弃对以太坊和比特币的支持，转而聚焦 Solana 及其加密赌场 Dicey，随后又关停了其多链钱包。此次披露的前一天，不明黑客从 Bitget 交易所盗走了超过 3.8 亿美元的以太坊及其他加密资产。",
+      "background_en": "Magic Eden adopted Payment Processor V2, an NFT trading protocol built and maintained by Limit Break, to settle trades on EVM in 2024, stopped using it that October and shut its EVM marketplace entirely in early 2026. The company dropped Ethereum and Bitcoin support in February to focus on Solana and its crypto casino Dicey, and later wound down its multichain wallet. The disclosure lands one day after unknown hackers took more than $380 million in Ethereum and other crypto assets from the Bitget exchange.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "风险通过链上残留授权传导：凡是在以太坊、Polygon 或 Base 上向 Payment Processor V2 授予过 setApprovalForAll 权限的钱包，在撤销前仍存在资产被转移的托管风险，而未追回的 660 枚 WETH 则构成已实现损失。此次事件也在 Bitget 被盗之后，进一步加重了市场对安全问题的情绪压力。",
+      "market_impact_en": "The exposure runs through lingering on-chain approvals: wallets that granted setApprovalForAll to Payment Processor V2 on Ethereum, Polygon or Base still carry custody risk until those permissions are revoked, and the 660 WETH that could not be recovered represents a realized loss. The incident also adds to near-term security sentiment pressure following the Bitget hack.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://x.com/MagicEden/status/2103435423389241569",
+          "title": "Magic Eden 🪄 on X: \"We are sharing an interim update regarding an exploit identified with @limitbreak Payment Processor V2, a NFT trading protocol maintained by the company Limit Break and which Magic Eden adopted to settle trades on EVM in 2024. Magic Eden stopped using Payment Processor V2 in O… / X"
+        },
+        {
+          "url": "https://github.com/limitbreakinc/payment-processor-v2",
+          "title": "GitHub - limitbreakinc/payment-processor-v2"
+        },
+        {
+          "url": "https://revoke.cash/",
+          "title": "Revoke Your Token Approvals on Over 100 Networks | Revoke.cash"
+        }
+      ],
       "confidence": 0.92,
       "story_ids": [
         "rss:decrypt.co_feed:4e5de8224eeeb3e7"

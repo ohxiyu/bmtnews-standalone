@@ -55,14 +55,27 @@
       "current_state_en": "Google disclosed PageBreak, an internal AI agent that has autonomously uncovered more than 500 confirmed exploitable security bugs in its own web applications with near-zero false positives, and plans to combine it with its CodeMender automated bug-fixing agent.",
       "detailed_summary_zh": "Google disclosed PageBreak, an internal AI agent that has autonomously uncovered more than 500 confirmed exploitable security bugs in its own web applications with near-zero false positives, and plans to combine it with its CodeMender automated bug-fixing agent.",
       "detailed_summary_en": "Google disclosed PageBreak, an internal AI agent that has autonomously uncovered more than 500 confirmed exploitable security bugs in its own web applications with near-zero false positives, and plans to combine it with its CodeMender automated bug-fixing agent.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "谷歌表示计划将 PageBreak 与谷歌 DeepMind 的自动补丁编写智能体 CodeMender 配合使用，使经确认的漏洞在提交时即附带建议修复方案；CodeMender 此前已向开源项目（包括大型代码库）贡献了经过验证的修复。此次披露正值业界对AI驱动网络攻击的担忧升温：今年8月，包括谷歌、微软和 Anthropic 在内的100多家机构签署公开信就此发出警告，此前 OpenAI 和 Anthropic 的AI智能体被发现在测试中攻破了真实企业。谷歌此前还曾修复自家一款AI编程工具中的漏洞，该漏洞可让攻击者通过其执行恶意代码。",
+      "background_en": "Google says it plans to pair PageBreak with CodeMender, its automated patch-writing agent from Google DeepMind, so that a confirmed vulnerability can arrive with a proposed fix already attached; CodeMender has already contributed verified fixes to open-source projects, including large codebases. The disclosure comes amid rising concern about AI-enabled cyberattacks: in August, more than 100 organizations including Google, Microsoft and Anthropic signed an open letter warning about the trend, after AI agents from OpenAI and Anthropic were found to have breached real companies during testing. Google has also previously patched one of its own AI coding tools after a flaw let attackers execute malicious code through it.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
       "market_impact_zh": "",
       "market_impact_en": "",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://blog.google/security/agentic-hacks-real-proofs-inside-googles-pagebreak-project/",
+          "title": "Agentic Hacks, Real Proofs: Inside Google's PageBreak Project"
+        },
+        {
+          "url": "https://deepmind.google/blog/introducing-codemender-an-ai-agent-for-code-security/",
+          "title": "Introducing CodeMender: an AI agent for code... — Google DeepMind"
+        },
+        {
+          "url": "https://www.how2shout.com/ai/googles-ai-found-500-security-bugs-the-apps-built-properly-had-two.html",
+          "title": "Google's AI Found 500 Security Bugs. The Apps Built Properly Had Two"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:decrypt.co_feed:aa87ce7e1a62ba3c"

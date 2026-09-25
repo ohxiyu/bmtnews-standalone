@@ -23,14 +23,14 @@
       "summary_en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base.",
       "latest_update_zh": "新报道披露漏洞源于 Limit Break 的 Payment Processor V2，Magic Eden 于 2024 年 2 月至 10 月关闭的 EVM 市场上架的 NFT 受影响；除已救援的 23,155 枚 NFT 外，另有 660 WETH 未能追回；攻击者盗走 10 枚 Meebits、50 枚 Otherdeeds、10 枚 World of Women 和 235 枚 Desperate ApeWives；Limit Break 已暂停存在相同缺陷的 V3，但 V2 无法暂停；用户被建议在以太坊、Polygon 和 Base 上撤销合约授权。",
       "latest_update_en": "The new report reveals the exploit stemmed from Limit Break's Payment Processor V2 and affected NFTs listed on Magic Eden's EVM marketplace between roughly February and October 2024; beyond the 23,155 NFTs rescued, 660 WETH was not recovered; the attacker stole 10 Meebits, 50 Otherdeeds, 10 World of Women, and 235 Desperate ApeWives; Limit Break paused the similarly flawed V3, but V2 could not be paused; users are advised to revoke contract approvals on Ethereum, Polygon, and Base.",
-      "background_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
-      "background_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "background_zh": "Payment Processor V2 是由 Limit Break 开发和维护的 NFT 交易协议，Magic Eden 于 2024 年采用其在 EVM 上结算交易，当年 10 月停止使用，并在 2026 年初彻底关闭其 EVM 市场。该公司于 2 月放弃对以太坊和比特币的支持，转而聚焦 Solana 及其加密赌场 Dicey，随后又关停了其多链钱包。此次披露的前一天，不明黑客从 Bitget 交易所盗走了超过 3.8 亿美元的以太坊及其他加密资产。",
+      "background_en": "Magic Eden adopted Payment Processor V2, an NFT trading protocol built and maintained by Limit Break, to settle trades on EVM in 2024, stopped using it that October and shut its EVM marketplace entirely in early 2026. The company dropped Ethereum and Bitcoin support in February to focus on Solana and its crypto casino Dicey, and later wound down its multichain wallet. The disclosure lands one day after unknown hackers took more than $380 million in Ethereum and other crypto assets from the Bitget exchange.",
       "latest_summary_zh": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
       "latest_summary_en": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "风险通过链上残留授权传导：凡是在以太坊、Polygon 或 Base 上向 Payment Processor V2 授予过 setApprovalForAll 权限的钱包，在撤销前仍存在资产被转移的托管风险，而未追回的 660 枚 WETH 则构成已实现损失。此次事件也在 Bitget 被盗之后，进一步加重了市场对安全问题的情绪压力。",
+      "discussion_en": "The exposure runs through lingering on-chain approvals: wallets that granted setApprovalForAll to Payment Processor V2 on Ethereum, Polygon or Base still carry custody risk until those permissions are revoked, and the 660 WETH that could not be recovered represents a realized loss. The incident also adds to near-term security sentiment pressure following the Bitget hack.",
+      "market_impact_zh": "风险通过链上残留授权传导：凡是在以太坊、Polygon 或 Base 上向 Payment Processor V2 授予过 setApprovalForAll 权限的钱包，在撤销前仍存在资产被转移的托管风险，而未追回的 660 枚 WETH 则构成已实现损失。此次事件也在 Bitget 被盗之后，进一步加重了市场对安全问题的情绪压力。",
+      "market_impact_en": "The exposure runs through lingering on-chain approvals: wallets that granted setApprovalForAll to Payment Processor V2 on Ethereum, Polygon or Base still carry custody risk until those permissions are revoked, and the 660 WETH that could not be recovered represents a realized loss. The incident also adds to near-term security sentiment pressure following the Bitget hack.",
       "score": 7.5,
       "source_links": [
         {
@@ -49,7 +49,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://x.com/MagicEden/status/2103435423389241569",
+          "title": "Magic Eden 🪄 on X: \"We are sharing an interim update regarding an exploit identified with @limitbreak Payment Processor V2, a NFT trading protocol maintained by the company Limit Break and which Magic Eden adopted to settle trades on EVM in 2024. Magic Eden stopped using Payment Processor V2 in O… / X"
+        },
+        {
+          "url": "https://github.com/limitbreakinc/payment-processor-v2",
+          "title": "GitHub - limitbreakinc/payment-processor-v2"
+        },
+        {
+          "url": "https://revoke.cash/",
+          "title": "Revoke Your Token Approvals on Over 100 Networks | Revoke.cash"
+        }
+      ]
     },
     {
       "thread_id": "evt_507f2db08c9a14c7",
@@ -130,14 +143,14 @@
       "summary_en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating.",
       "latest_update_zh": "Bitget 将黑客损失总额从 3.516 亿美元上修至 3.875 亿美元；确认攻击者未窃取私钥，而是入侵钱包基础设施后端并伪造交易数据以触发合法外观的转账审批；单笔最大损失为约 1.03 亿枚 XRP（约 1.57 亿美元）；资金外流已停止，用户保护基金将覆盖全额损失。",
       "latest_update_en": "Bitget revised the hack loss total upward from $351.6M to $387.5M; confirmed attackers did not steal private keys but breached a backend system in its wallet infrastructure and spoofed transaction data to trigger legitimate-looking transfer approvals; the largest single haul was roughly 103M XRP (~$157M); the outflow has been stopped and the User Protection Fund will cover the full loss.",
-      "background_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
-      "background_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+      "background_zh": "Bitget 是一家成立于 2018 年的中心化加密货币交易所。朝鲜 Lazarus 集团此前已被指与多起重大加密货币盗窃案有关，包括 2025 年 Bybit 被盗 15 亿美元的事件——Bitget 正是以此说明其目前获得的互助支持，Bybit 称将更新其 LazarusBounty 平台以追踪 Bitget 被盗资金。TRM Labs 报告称，朝鲜在 2026 年通过两起攻击窃取 5.77 亿美元，占当年截至 4 月全部黑客损失的 76%。",
+      "background_en": "Bitget is a centralized cryptocurrency exchange founded in 2018. North Korea's Lazarus Group has previously been linked to major crypto thefts, including the $1.5 billion Bybit breach in 2025 — the same event Bitget cites in describing the support it is now receiving, with Bybit updating its LazarusBounty platform to track Bitget's stolen funds. TRM Labs reported that North Korea stole $577 million across two attacks in 2026, accounting for 76% of all hack losses through April of that year.",
       "latest_summary_zh": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
       "latest_summary_en": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "该事件将交易所热钱包托管风险以及“冻结”渠道推到台前：中心化交易所和稳定币发行方可以冻结被盗资产，而转入自托管地址的原生代币更难拦截，这一区别与 Bitget 损失核算中新增的 Zcash 和 TRON 资产直接相关。Bitget 的提现仍然暂停，这是该事件影响该平台用户流动性的直接渠道。",
+      "discussion_en": "The incident spotlights exchange hot-wallet custody risk and the freeze channel: centralized exchanges and stablecoin issuers can block stolen assets, while native coins moved to self-custodied addresses are harder to stop, a distinction relevant to the Zcash and TRON assets added to Bitget's loss accounting. Withdrawals at Bitget remain suspended, which is the direct channel through which the event touches user liquidity on that venue.",
+      "market_impact_zh": "该事件将交易所热钱包托管风险以及“冻结”渠道推到台前：中心化交易所和稳定币发行方可以冻结被盗资产，而转入自托管地址的原生代币更难拦截，这一区别与 Bitget 损失核算中新增的 Zcash 和 TRON 资产直接相关。Bitget 的提现仍然暂停，这是该事件影响该平台用户流动性的直接渠道。",
+      "market_impact_en": "The incident spotlights exchange hot-wallet custody risk and the freeze channel: centralized exchanges and stablecoin issuers can block stolen assets, while native coins moved to self-custodied addresses are harder to stop, a distinction relevant to the Zcash and TRON assets added to Bitget's loss accounting. Withdrawals at Bitget remain suspended, which is the direct channel through which the event touches user liquidity on that venue.",
       "score": 9.0,
       "source_links": [
         {
@@ -176,7 +189,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html",
+          "title": "Crypto platform Bitget suspects North Korea in $352 million hack"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Lazarus_Group",
+          "title": "Lazarus Group - Wikipedia"
+        },
+        {
+          "url": "https://www.trmlabs.com/resources/blog/north-korea-stole-76-of-all-crypto-hack-value-in-2026-with-just-two-attacks",
+          "title": "North Korea Stole 76% of All Crypto Hack Value in 2026 — With Just Two Attacks | TRM Labs"
+        }
+      ]
     },
     {
       "thread_id": "evt_068d879112855101",
@@ -201,14 +227,14 @@
       "summary_en": "Aave V4 on Base accepts seven Coinbase stock tokens as collateral for USDC loans, with a 21 million USDC borrowing cap and access limited to eligible non-US investors.",
       "latest_update_zh": "新增细节：Aave V4 在 Base 上启用七种 Coinbase 发行的股票代币作为抵押品，USDC 借款上限为 2100 万，且访问仅限符合条件的非美国投资者。",
       "latest_update_en": "Added details: Aave V4 on Base enabled seven Coinbase-issued stock tokens as collateral, with a 21 million USDC borrowing cap, access limited to eligible non-US investors.",
-      "background_zh": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
-      "background_en": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+      "background_zh": "Aave 是规模最大的 DeFi 借贷协议之一，其 V4 版本自上线以来存款增长迅速：8 月初存款不足 3.4 亿美元，到 9 月初升至约 5.77 亿美元，随后突破 10 亿美元。Base 是由 Coinbase 构建的以太坊二层网络，采用 OP Stack，并结算于以太坊主网。代币化股票是旨在代表传统股票经济敞口的区块链数字资产。",
+      "background_en": "Aave is one of the largest DeFi lending protocols, and its V4 deployment has drawn deposits quickly since launch: deposits sat below $340 million at the start of August and climbed to roughly $577 million by early September before surpassing $1 billion. Base is a Coinbase-built Ethereum layer-2 that uses the OP Stack and settles on Ethereum. Tokenized stocks are blockchain-based digital assets designed to represent economic exposure to traditional shares.",
       "latest_summary_zh": "Aave has enabled seven Coinbase-issued stock tokens as collateral for USDC loans in a dedicated V4 market on Base, with a 21 million USDC borrowing cap and access restricted to eligible non-US investors.",
       "latest_summary_en": "Aave has enabled seven Coinbase-issued stock tokens as collateral for USDC loans in a dedicated V4 market on Base, with a 21 million USDC borrowing cap and access restricted to eligible non-US investors.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "这一变化在 Coinbase 的代币化股票产品与 Base 上的 DeFi 信贷之间建立了直接通道：代币化股票抵押品可支撑新的 USDC 借款需求，并改变 Aave V4 的 Base 市场中的资金利用率，同时也使该市场的风险状况与股票价格波动挂钩。由于借款上限为 2100 万 USDC 且仅限非美国投资者，其对 DeFi 流动性的即时影响范围有限。",
+      "discussion_en": "The change creates a direct channel between Coinbase's tokenized-equity product and DeFi credit on Base: tokenized stock collateral can support new USDC borrowing demand and shift utilization in Aave V4's Base market, while also tying that market's risk profile to equity price moves. Because borrowing is capped at 21 million USDC and limited to non-US investors, the immediate footprint on DeFi liquidity is bounded.",
+      "market_impact_zh": "这一变化在 Coinbase 的代币化股票产品与 Base 上的 DeFi 信贷之间建立了直接通道：代币化股票抵押品可支撑新的 USDC 借款需求，并改变 Aave V4 的 Base 市场中的资金利用率，同时也使该市场的风险状况与股票价格波动挂钩。由于借款上限为 2100 万 USDC 且仅限非美国投资者，其对 DeFi 流动性的即时影响范围有限。",
+      "market_impact_en": "The change creates a direct channel between Coinbase's tokenized-equity product and DeFi credit on Base: tokenized stock collateral can support new USDC borrowing demand and shift utilization in Aave V4's Base market, while also tying that market's risk profile to equity price moves. Because borrowing is capped at 21 million USDC and limited to non-US investors, the immediate footprint on DeFi liquidity is bounded.",
       "score": 7.5,
       "source_links": [
         {
@@ -222,7 +248,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://thecurrencyanalytics.com/defi/aave-v4-lets-non-u-s-users-borrow-usdc-against-apple-nvidia-and-tesla-shares-297153",
+          "title": "Aave V4 Lets Non-U.S. Users Borrow USDC... | The Currency analytics"
+        },
+        {
+          "url": "https://cryptobriefing.com/aave-v4-deposits-surpass-1b/",
+          "title": "AAVE v4 deposits surpass $1B, doubling in a month"
+        },
+        {
+          "url": "https://www.gemini.com/cryptopedia/what-are-tokenized-stocks-and-how-do-they-work",
+          "title": "What Are Tokenized Stocks and How Do They Work? | Gemini"
+        }
+      ]
     },
     {
       "thread_id": "evt_bbd9358770106500",
@@ -6208,14 +6247,14 @@
       "summary_en": "Bitget confirmed a $387.5M loss caused by spoofed transaction data rather than private key theft; the outflow has been stopped, withdrawals remain frozen, and its protection fund will cover the full loss; the North Korea attribution remains a public suspicion without independent confirmation, with Mandiant and SlowMist investigating.",
       "latest_update_zh": "Bitget 将黑客损失总额从 3.516 亿美元上修至 3.875 亿美元；确认攻击者未窃取私钥，而是入侵钱包基础设施后端并伪造交易数据以触发合法外观的转账审批；单笔最大损失为约 1.03 亿枚 XRP（约 1.57 亿美元）；资金外流已停止，用户保护基金将覆盖全额损失。",
       "latest_update_en": "Bitget revised the hack loss total upward from $351.6M to $387.5M; confirmed attackers did not steal private keys but breached a backend system in its wallet infrastructure and spoofed transaction data to trigger legitimate-looking transfer approvals; the largest single haul was roughly 103M XRP (~$157M); the outflow has been stopped and the User Protection Fund will cover the full loss.",
-      "background_zh": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
-      "background_en": "Bitget's CEO publicly attributed the exchange's $352M hack to North Korean actors, citing IP address clues as evidence.",
+      "background_zh": "Bitget 是一家成立于 2018 年的中心化加密货币交易所。朝鲜 Lazarus 集团此前已被指与多起重大加密货币盗窃案有关，包括 2025 年 Bybit 被盗 15 亿美元的事件——Bitget 正是以此说明其目前获得的互助支持，Bybit 称将更新其 LazarusBounty 平台以追踪 Bitget 被盗资金。TRM Labs 报告称，朝鲜在 2026 年通过两起攻击窃取 5.77 亿美元，占当年截至 4 月全部黑客损失的 76%。",
+      "background_en": "Bitget is a centralized cryptocurrency exchange founded in 2018. North Korea's Lazarus Group has previously been linked to major crypto thefts, including the $1.5 billion Bybit breach in 2025 — the same event Bitget cites in describing the support it is now receiving, with Bybit updating its LazarusBounty platform to track Bitget's stolen funds. TRM Labs reported that North Korea stole $577 million across two attacks in 2026, accounting for 76% of all hack losses through April of that year.",
       "latest_summary_zh": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
       "latest_summary_en": "Bitget confirmed a $387.5 million breach in which attackers spoofed transaction data to trigger legitimate-looking transfer approvals from hot and warm wallets — including roughly 103 million XRP worth $157 million — with CEO Gracy Chen citing IP and on-chain patterns matching North Korea-linked hacking techniques as law enforcement investigates.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "该事件将交易所热钱包托管风险以及“冻结”渠道推到台前：中心化交易所和稳定币发行方可以冻结被盗资产，而转入自托管地址的原生代币更难拦截，这一区别与 Bitget 损失核算中新增的 Zcash 和 TRON 资产直接相关。Bitget 的提现仍然暂停，这是该事件影响该平台用户流动性的直接渠道。",
+      "discussion_en": "The incident spotlights exchange hot-wallet custody risk and the freeze channel: centralized exchanges and stablecoin issuers can block stolen assets, while native coins moved to self-custodied addresses are harder to stop, a distinction relevant to the Zcash and TRON assets added to Bitget's loss accounting. Withdrawals at Bitget remain suspended, which is the direct channel through which the event touches user liquidity on that venue.",
+      "market_impact_zh": "该事件将交易所热钱包托管风险以及“冻结”渠道推到台前：中心化交易所和稳定币发行方可以冻结被盗资产，而转入自托管地址的原生代币更难拦截，这一区别与 Bitget 损失核算中新增的 Zcash 和 TRON 资产直接相关。Bitget 的提现仍然暂停，这是该事件影响该平台用户流动性的直接渠道。",
+      "market_impact_en": "The incident spotlights exchange hot-wallet custody risk and the freeze channel: centralized exchanges and stablecoin issuers can block stolen assets, while native coins moved to self-custodied addresses are harder to stop, a distinction relevant to the Zcash and TRON assets added to Bitget's loss accounting. Withdrawals at Bitget remain suspended, which is the direct channel through which the event touches user liquidity on that venue.",
       "score": 9.0,
       "source_links": [
         {
@@ -6254,7 +6293,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html",
+          "title": "Crypto platform Bitget suspects North Korea in $352 million hack"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Lazarus_Group",
+          "title": "Lazarus Group - Wikipedia"
+        },
+        {
+          "url": "https://www.trmlabs.com/resources/blog/north-korea-stole-76-of-all-crypto-hack-value-in-2026-with-just-two-attacks",
+          "title": "North Korea Stole 76% of All Crypto Hack Value in 2026 — With Just Two Attacks | TRM Labs"
+        }
+      ]
     },
     {
       "thread_id": "evt_583f52deb63823c7",
@@ -9368,14 +9420,14 @@
       "summary_en": "In the Magic Eden-related approvals security incident, Magic Eden warned that NFTs listed on its closed EVM marketplace (February–October 2024) were exposed to a Limit Break Payment Processor V2 exploit; a whitehat operation rescued 23,155 NFTs worth more than $5.7 million, but 660 WETH was not recovered; the attacker stole specified NFTs; Limit Break paused the similarly flawed V3 while V2 could not be paused; holders are still urged to revoke vulnerable approvals on Ethereum, Polygon, and Base.",
       "latest_update_zh": "新报道披露漏洞源于 Limit Break 的 Payment Processor V2，Magic Eden 于 2024 年 2 月至 10 月关闭的 EVM 市场上架的 NFT 受影响；除已救援的 23,155 枚 NFT 外，另有 660 WETH 未能追回；攻击者盗走 10 枚 Meebits、50 枚 Otherdeeds、10 枚 World of Women 和 235 枚 Desperate ApeWives；Limit Break 已暂停存在相同缺陷的 V3，但 V2 无法暂停；用户被建议在以太坊、Polygon 和 Base 上撤销合约授权。",
       "latest_update_en": "The new report reveals the exploit stemmed from Limit Break's Payment Processor V2 and affected NFTs listed on Magic Eden's EVM marketplace between roughly February and October 2024; beyond the 23,155 NFTs rescued, 660 WETH was not recovered; the attacker stole 10 Meebits, 50 Otherdeeds, 10 World of Women, and 235 Desperate ApeWives; Limit Break paused the similarly flawed V3, but V2 could not be paused; users are advised to revoke contract approvals on Ethereum, Polygon, and Base.",
-      "background_zh": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
-      "background_en": "A whitehat operation moved 3,832 NFTs from hundreds of wallets into protective custody amid concerns over a vulnerability tied to Magic Eden, with holders advised to revoke NFT permissions while the NFTs are held pending resolution.",
+      "background_zh": "Payment Processor V2 是由 Limit Break 开发和维护的 NFT 交易协议，Magic Eden 于 2024 年采用其在 EVM 上结算交易，当年 10 月停止使用，并在 2026 年初彻底关闭其 EVM 市场。该公司于 2 月放弃对以太坊和比特币的支持，转而聚焦 Solana 及其加密赌场 Dicey，随后又关停了其多链钱包。此次披露的前一天，不明黑客从 Bitget 交易所盗走了超过 3.8 亿美元的以太坊及其他加密资产。",
+      "background_en": "Magic Eden adopted Payment Processor V2, an NFT trading protocol built and maintained by Limit Break, to settle trades on EVM in 2024, stopped using it that October and shut its EVM marketplace entirely in early 2026. The company dropped Ethereum and Bitcoin support in February to focus on Solana and its crypto casino Dicey, and later wound down its multichain wallet. The disclosure lands one day after unknown hackers took more than $380 million in Ethereum and other crypto assets from the Bitget exchange.",
       "latest_summary_zh": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
       "latest_summary_en": "Magic Eden warned that NFTs listed on its closed EVM marketplace between roughly February and October 2024 are exposed to an exploit in Limit Break's Payment Processor V2, after a whitehat operation rescued 23,155 NFTs worth more than $5.7 million while 660 WETH could not be recovered, urging users to revoke contract approvals.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "风险通过链上残留授权传导：凡是在以太坊、Polygon 或 Base 上向 Payment Processor V2 授予过 setApprovalForAll 权限的钱包，在撤销前仍存在资产被转移的托管风险，而未追回的 660 枚 WETH 则构成已实现损失。此次事件也在 Bitget 被盗之后，进一步加重了市场对安全问题的情绪压力。",
+      "discussion_en": "The exposure runs through lingering on-chain approvals: wallets that granted setApprovalForAll to Payment Processor V2 on Ethereum, Polygon or Base still carry custody risk until those permissions are revoked, and the 660 WETH that could not be recovered represents a realized loss. The incident also adds to near-term security sentiment pressure following the Bitget hack.",
+      "market_impact_zh": "风险通过链上残留授权传导：凡是在以太坊、Polygon 或 Base 上向 Payment Processor V2 授予过 setApprovalForAll 权限的钱包，在撤销前仍存在资产被转移的托管风险，而未追回的 660 枚 WETH 则构成已实现损失。此次事件也在 Bitget 被盗之后，进一步加重了市场对安全问题的情绪压力。",
+      "market_impact_en": "The exposure runs through lingering on-chain approvals: wallets that granted setApprovalForAll to Payment Processor V2 on Ethereum, Polygon or Base still carry custody risk until those permissions are revoked, and the 660 WETH that could not be recovered represents a realized loss. The incident also adds to near-term security sentiment pressure following the Bitget hack.",
       "score": 7.5,
       "source_links": [
         {
@@ -9394,7 +9446,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://x.com/MagicEden/status/2103435423389241569",
+          "title": "Magic Eden 🪄 on X: \"We are sharing an interim update regarding an exploit identified with @limitbreak Payment Processor V2, a NFT trading protocol maintained by the company Limit Break and which Magic Eden adopted to settle trades on EVM in 2024. Magic Eden stopped using Payment Processor V2 in O… / X"
+        },
+        {
+          "url": "https://github.com/limitbreakinc/payment-processor-v2",
+          "title": "GitHub - limitbreakinc/payment-processor-v2"
+        },
+        {
+          "url": "https://revoke.cash/",
+          "title": "Revoke Your Token Approvals on Over 100 Networks | Revoke.cash"
+        }
+      ]
     },
     {
       "thread_id": "evt_068d879112855101",
@@ -9419,14 +9484,14 @@
       "summary_en": "Aave V4 on Base accepts seven Coinbase stock tokens as collateral for USDC loans, with a 21 million USDC borrowing cap and access limited to eligible non-US investors.",
       "latest_update_zh": "新增细节：Aave V4 在 Base 上启用七种 Coinbase 发行的股票代币作为抵押品，USDC 借款上限为 2100 万，且访问仅限符合条件的非美国投资者。",
       "latest_update_en": "Added details: Aave V4 on Base enabled seven Coinbase-issued stock tokens as collateral, with a 21 million USDC borrowing cap, access limited to eligible non-US investors.",
-      "background_zh": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
-      "background_en": "Aave V4 on Base now accepts Coinbase-issued tokenized stocks — including Apple, Nvidia and Tesla — as collateral for USDC loans for non-U.S. users.",
+      "background_zh": "Aave 是规模最大的 DeFi 借贷协议之一，其 V4 版本自上线以来存款增长迅速：8 月初存款不足 3.4 亿美元，到 9 月初升至约 5.77 亿美元，随后突破 10 亿美元。Base 是由 Coinbase 构建的以太坊二层网络，采用 OP Stack，并结算于以太坊主网。代币化股票是旨在代表传统股票经济敞口的区块链数字资产。",
+      "background_en": "Aave is one of the largest DeFi lending protocols, and its V4 deployment has drawn deposits quickly since launch: deposits sat below $340 million at the start of August and climbed to roughly $577 million by early September before surpassing $1 billion. Base is a Coinbase-built Ethereum layer-2 that uses the OP Stack and settles on Ethereum. Tokenized stocks are blockchain-based digital assets designed to represent economic exposure to traditional shares.",
       "latest_summary_zh": "Aave has enabled seven Coinbase-issued stock tokens as collateral for USDC loans in a dedicated V4 market on Base, with a 21 million USDC borrowing cap and access restricted to eligible non-US investors.",
       "latest_summary_en": "Aave has enabled seven Coinbase-issued stock tokens as collateral for USDC loans in a dedicated V4 market on Base, with a 21 million USDC borrowing cap and access restricted to eligible non-US investors.",
-      "discussion_zh": "",
-      "discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "discussion_zh": "这一变化在 Coinbase 的代币化股票产品与 Base 上的 DeFi 信贷之间建立了直接通道：代币化股票抵押品可支撑新的 USDC 借款需求，并改变 Aave V4 的 Base 市场中的资金利用率，同时也使该市场的风险状况与股票价格波动挂钩。由于借款上限为 2100 万 USDC 且仅限非美国投资者，其对 DeFi 流动性的即时影响范围有限。",
+      "discussion_en": "The change creates a direct channel between Coinbase's tokenized-equity product and DeFi credit on Base: tokenized stock collateral can support new USDC borrowing demand and shift utilization in Aave V4's Base market, while also tying that market's risk profile to equity price moves. Because borrowing is capped at 21 million USDC and limited to non-US investors, the immediate footprint on DeFi liquidity is bounded.",
+      "market_impact_zh": "这一变化在 Coinbase 的代币化股票产品与 Base 上的 DeFi 信贷之间建立了直接通道：代币化股票抵押品可支撑新的 USDC 借款需求，并改变 Aave V4 的 Base 市场中的资金利用率，同时也使该市场的风险状况与股票价格波动挂钩。由于借款上限为 2100 万 USDC 且仅限非美国投资者，其对 DeFi 流动性的即时影响范围有限。",
+      "market_impact_en": "The change creates a direct channel between Coinbase's tokenized-equity product and DeFi credit on Base: tokenized stock collateral can support new USDC borrowing demand and shift utilization in Aave V4's Base market, while also tying that market's risk profile to equity price moves. Because borrowing is capped at 21 million USDC and limited to non-US investors, the immediate footprint on DeFi liquidity is bounded.",
       "score": 7.5,
       "source_links": [
         {
@@ -9440,7 +9505,20 @@
           "official": false
         }
       ],
-      "reference_links": []
+      "reference_links": [
+        {
+          "url": "https://thecurrencyanalytics.com/defi/aave-v4-lets-non-u-s-users-borrow-usdc-against-apple-nvidia-and-tesla-shares-297153",
+          "title": "Aave V4 Lets Non-U.S. Users Borrow USDC... | The Currency analytics"
+        },
+        {
+          "url": "https://cryptobriefing.com/aave-v4-deposits-surpass-1b/",
+          "title": "AAVE v4 deposits surpass $1B, doubling in a month"
+        },
+        {
+          "url": "https://www.gemini.com/cryptopedia/what-are-tokenized-stocks-and-how-do-they-work",
+          "title": "What Are Tokenized Stocks and How Do They Work? | Gemini"
+        }
+      ]
     },
     {
       "thread_id": "evt_4c0e928637670550",
