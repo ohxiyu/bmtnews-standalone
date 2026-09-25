@@ -92,14 +92,27 @@
       "current_state_en": "IBM's Digital Asset Haven platform now has beta connectivity to Swift's blockchain ledger, allowing banks to instruct tokenized deposit transfers using ISO 20022 messaging and to run the platform on-premises.",
       "detailed_summary_zh": "IBM added beta connectivity between its Digital Asset Haven platform and Swift's blockchain-based ledger for tokenized deposits, enabling banks to instruct tokenized deposit transfers via ISO 20022 messaging and to run the platform in their own data centers.",
       "detailed_summary_en": "IBM added beta connectivity between its Digital Asset Haven platform and Swift's blockchain-based ledger for tokenized deposits, enabling banks to instruct tokenized deposit transfers via ISO 20022 messaging and to run the platform in their own data centers.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "代币化存款是由受监管银行发行的商业银行存款的数字表示，通过分布式账本技术转移，与稳定币不同。Swift 与 40 多家金融机构共同开发了该基于区块链的共享账本，并于 7 月启动，首批试点包含 17 家银行，包括汇丰、花旗、法国巴黎银行、瑞银和渣打银行。汇丰与渣打于 8 月在该账本上完成了首笔真实跨境交易。ISO 20022 是金融机构之间电子数据交换的 ISO 标准，描述了一个通用的金融报文平台。",
+      "background_en": "Tokenized deposits are digital representations of commercial bank deposits issued by regulated banks and transferred using distributed ledger technology, distinct from stablecoins. Swift developed its blockchain-based shared ledger with more than 40 financial institutions and launched it in July with 17 banks in an initial pilot group, including HSBC, Citi, BNP Paribas, UBS and Standard Chartered. HSBC and Standard Chartered completed the first live cross-border transaction on the ledger in August. ISO 20022 is the ISO standard for electronic data interchange between financial institutions, describing a common platform for financial messages.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "该连接面向银行发行的代币化货币领域，Swift 的账本与 IBM 的托管及平台层在此与稳定币并列，构成机构资金流的结算基础设施；与 ISO 20022 报文标准的对接降低了银行将现有支付与合规系统接入分布式账本轨道的操作摩擦。这仍属测试版连接，最终结算依旧发生在既有银行系统上。",
+      "market_impact_en": "The link targets the bank-issued tokenized money segment, where Swift's ledger and IBM's custody and platform layer sit alongside stablecoins as settlement infrastructure for institutional flows; aligning with ISO 20022 messaging reduces the operational friction banks face when connecting existing payment and compliance stacks to distributed-ledger rails. This is beta-stage connectivity, with final settlement still on established banking systems.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://crypto.news/swift-blockchain-ledger-tokenized-deposits-stablecoins/",
+          "title": "SWIFT built its answer to stablecoins: Bank money"
+        },
+        {
+          "url": "https://clear.bank/learn/insights/tokenised-deposits-explained-what-are-they-and-how-do-they-work",
+          "title": "ClearBank | Tokenised deposits explained: what are they, and ..."
+        },
+        {
+          "url": "https://www.swift.com/standards/iso-20022/iso-20022-financial-institutions-focus-payments-instructions",
+          "title": "ISO 20022 for Financial Institutions | Swift"
+        }
+      ],
       "confidence": 0.95,
       "story_ids": [
         "rss:cointelegraph.com_rss:174e5ff0a220b3db",

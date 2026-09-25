@@ -51,14 +51,27 @@
       "current_state_en": "A multinational advisory from Japan, Germany, Australia and the US attributes a North Korean fake-recruiter malware campaign to hacking group WaterPlum, which infected at least 30,000 devices in over 100 countries and stole at least $10.7 million in crypto from developers and Web3 workers.",
       "detailed_summary_zh": "A multinational advisory from Japan, Germany, Australia and the US attributes a North Korean fake-recruiter malware campaign to hacking group WaterPlum, which infected at least 30,000 devices in over 100 countries and stole at least $10.7 million in crypto from developers and Web3 workers.",
       "detailed_summary_en": "A multinational advisory from Japan, Germany, Australia and the US attributes a North Korean fake-recruiter malware campaign to hacking group WaterPlum, which infected at least 30,000 devices in over 100 countries and stole at least $10.7 million in crypto from developers and Web3 workers.",
-      "background_zh": "",
-      "background_en": "",
+      "background_zh": "被追踪为 Lazarus Group、APT38 和 TraderTraitor 的朝鲜相关团伙，已被美国联邦调查局公开认定与加密货币盗窃有关。Chainalysis 报告称，2025年加密货币被盗金额达到34亿美元，朝鲜相关活动仍是主要推动因素之一。WaterPlum（又称 Contagious Interview）和 Graphalgo 等其他行动，也通过假招聘对话和编程测试接触开发者。",
+      "background_en": "DPRK-linked groups tracked as Lazarus Group, APT38 and TraderTraitor have been publicly attributed by the FBI to cryptocurrency theft. Chainalysis reported that crypto theft reached $3.4 billion in 2025, with DPRK activity persisting as a major driver. Separate campaigns such as WaterPlum (also called Contagious Interview) and Graphalgo have used fake recruiter conversations and coding tests to reach developers.",
       "community_discussion_zh": "",
       "community_discussion_en": "",
-      "market_impact_zh": "",
-      "market_impact_en": "",
+      "market_impact_zh": "对加密企业而言，风险敞口来自人员端而非链上：开发者终端被攻陷可能使其获得钱包、私钥和内部系统的访问权限，而进入构建流程的第三方代码则可能把供应链风险扩散到项目及其用户。",
+      "market_impact_en": "For crypto firms, the exposure runs through the workforce rather than the chain: compromised developer endpoints can provide access to wallets, keys and internal systems, and third-party code pulled into build pipelines can propagate supply-chain risk to projects and their users.",
       "importance_score": 7.5,
-      "references": [],
+      "references": [
+        {
+          "url": "https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2026/",
+          "title": "2025 Crypto Theft Reaches $3.4 Billion"
+        },
+        {
+          "url": "https://www.reversinglabs.com/blog/graphalgo-campaign-respawned",
+          "title": "Graphalgo fake recruiter malware campaign respawned | RL Blog"
+        },
+        {
+          "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-cryptocurrency-funds-stolen-by-dprk",
+          "title": "FBI Identifies Cryptocurrency Funds Stolen by DPRK — FBI"
+        }
+      ],
       "confidence": 0.75,
       "story_ids": [
         "rss:cointelegraph.com_rss:8bbf99dd423796d3",
