@@ -8,9 +8,9 @@
   "goal": "X 分发改为先计划后发送：每天 2 条（top1 发布即发，top2 隔 3-6 小时），unknown 永不自动重试，迟到超 6 小时不外发，文案只用已发布字段",
   "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/131",
   "owner": "Claude Code / x-plan-send",
-  "branch": "agent/x-drip-trigger",
-  "last_verified_commit": "7e8498414bc536d7503bd7c34d493e2c46f3f146",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/132",
+  "branch": "agent/x-plan-send-evidence",
+  "last_verified_commit": "495c08052de5fd8ee06a4bdcde3d53f253060fc0",
+  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/133",
   "completed": [
     "src/x_queue.py 重写为 v2 计划队列：story_key、pending 检查点、状态机、v1 迁移、标准库门控",
     "run_x_slot 改为计划 + 单条发送；XEditionPublisher.publish_post 分类结果且不记录响应体",
@@ -18,38 +18,40 @@
     "x-distribution.yml fail-closed 恢复、20 分钟门控轮询、删除 force push；日报 kickoff 失败改为 warning",
     "本地全量 858 项测试通过；用生产 x-queue 与刊期状态离线模拟迁移结果正确",
     "PR132 检查全部通过，2026-09-26 03:08 UTC 合并为 7e84984；远端任务分支已删除",
-    "发现 GitHub cron 在本仓库基本不触发；X 改由调度 Worker 驱动的广场 workflow 完成事件触发（agent/x-drip-trigger）"
+    "PR133（X 由广场完成事件驱动）检查通过，04:04 UTC 合并为 495c080",
+    "首次生产运行 36216790529 把 x-queue 迁移为 v2（提交 1ba3a50）：rank 1 sent/migrated_v1 未重发；rank 2 AI 文案通过数字校验，计划 17:52 发出、23:30 截止",
+    "下一次运行 36217041418 门控 work=false，11 秒结束"
   ],
   "unfinished": [
-    "触发修复 PR 待合并；合并后首次生产 X 运行（v1→v2 迁移、top2 实发）待核验"
+    "top2 预计 2026-09-26 17:52 Asia/Shanghai 实发，需核验 sent 与 tweet_id 回写；再观察数日 unknown/回落比例"
   ],
   "validation": [
     "uv run pytest（858 项，离线，无真实 AI / X 调用）与 scripts/check_governance.py 通过",
     "系统 Python 对生产数据运行门控：work=true attention=0",
-    "PR132：test、analyze、governance、CodeQL、Cloudflare Pages 全部通过"
+    "PR132：test、analyze、governance、CodeQL、Cloudflare Pages 全部通过",
+    "生产：x-queue 1ba3a50 为 v2，内容与离线模拟一致（347 分钟间隔）"
   ],
   "unverified": [
-    "合并后尚无新 X 运行：本仓库 schedule 基本不触发，会话集成派发 workflow 返回 403",
-    "生产首次运行的迁移、pending 检查点 push 权限、真实 X 返回的 data.id 解析",
-    "AI 文案数字校验在真实生成上的回落率"
+    "top2 实发、真实 X 返回 data.id 解析与 tweet_id 回写",
+    "AI 文案数字校验在多日真实生成上的回落率"
   ],
   "production": {
-    "source_commit": "7e8498414bc536d7503bd7c34d493e2c46f3f146 (PR132 merged; no X run on it yet)",
-    "artifact_commit": "not applicable: X delivery writes only the x-queue branch; current x-queue 6743d64 is v1",
-    "edition": "2026-09-26, rank 1 posted to X by the v1 flow",
+    "source_commit": "495c08052de5fd8ee06a4bdcde3d53f253060fc0",
+    "artifact_commit": "x-queue 1ba3a50 (v2 plan checkpoint by run 36216790529)",
+    "edition": "2026-09-26; rank 1 sent (migrated_v1), rank 2 planned for 17:52 Asia/Shanghai",
     "generated_at": "2026-09-25T23:31:34.824110Z",
-    "worker_version": "not changed; dispatcher Worker not edited",
-    "verified_at": "2026-09-26 11:55 Asia/Shanghai; x-queue still v1 6743d64, no X run since merge"
+    "worker_version": "not changed; dispatcher Worker not edited or redeployed",
+    "verified_at": "2026-09-26 12:15 Asia/Shanghai; Actions runs 36216790529 / 36217041418 and x-queue contents"
   },
   "blockers": [
-    "GitHub schedule 不可靠；在触发修复合并前，新 X 流程只会被日报 kickoff 触发"
+    "无；top2 需等到计划时间"
   ],
-  "next_action": "合并 agent/x-drip-trigger；随后核对首次由广场完成事件触发的 X 运行与 x-queue v2 内容，再补记生产验收",
+  "next_action": "2026-09-26 17:52 Asia/Shanghai 后核对 x-queue slot 2 为 sent 且有 tweet_id，并确认账号上只有一条对应推文；然后把 production_verified 记为 complete",
   "states": {
     "code": "complete",
     "tests": "complete",
     "pr_merged": "complete",
-    "deployed": "pending",
+    "deployed": "complete",
     "production_verified": "pending"
   },
   "evidence": "project-docs/releases/2026-09-26-x-plan-send.md"

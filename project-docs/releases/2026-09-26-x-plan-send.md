@@ -46,8 +46,19 @@
 - 后续修复（分支 `agent/x-drip-trigger`）：X 改由广场 workflow 的完成事件驱动（Worker 每 5 分钟派发广场），并从广场的触发列表里移除 X 以免循环；cron 保留作兜底。Worker 本身不改、不需要重新部署。
 - 会话里的 GitHub 集成没有 `actions:write` 权限（手动派发返回 403），所以首次生产运行只能等修复合并后由广场完成事件触发。
 
-Source commit: `7e8498414bc536d7503bd7c34d493e2c46f3f146` (PR132)；触发修复的合并提交另行记录
+- [PR133](https://github.com/ohxiyu/bmtnews-standalone/pull/133) 检查全部通过后于 04:04 UTC 合并，合并提交 `495c08052de5fd8ee06a4bdcde3d53f253060fc0`。
+
+## 生产核验（2026-09-26 12:15 Asia/Shanghai）
+
+- [X 运行 36216790529](https://github.com/ohxiyu/bmtnews-standalone/actions/runs/36216790529)（`workflow_run`，由广场完成触发，main `495c080`）成功：门控 `work=true`，计划步骤约 14 秒，未发帖，`attention` 步骤跳过。
+- `x-queue` 由 `6743d64`（v1）前进到 `1ba3a50`（"chore: checkpoint X delivery"，普通 push）。内容为 v2：
+  - 2026-09-26 edition `active`，`published_at` 为迁移时刻 12:05:50（v1 无发布时间）
+  - slot 1：rank 1，`sent`，`migrated_v1`，没有重发
+  - slot 2：rank 2（SEC 流动性质押 FAQ），`planned`，`compose=ai`、无回落（数字校验通过），`gap_minutes=347`，`due_at=17:52:50`（东八区），`deadline=23:30`
+- [X 运行 36217041418](https://github.com/ohxiyu/bmtnews-standalone/actions/runs/36217041418)（下一次广场完成触发）11 秒结束：门控 `work=false`，未安装依赖。
+
+Source commit: `495c08052de5fd8ee06a4bdcde3d53f253060fc0`（含 PR132 `7e84984` 与 PR133）
 Worker version: not changed（调度 Worker 代码与部署均未改动）
-Deployment: GitHub Actions 从 main 读取 workflow，合并即生效；无额外部署步骤
-Verification: pending — 首次 X 运行后核对 `x-queue` 为 v2（rank 1 `sent`/`migrated_v1`，slot 2 `planned` 且有 due_at/deadline）及 top2 实发结果
-Rollback: revert PR132 与触发修复 PR；回滚前先把 `x-queue` 的 `data/x-queue.json` 改回记录当天已发序号的 v1 内容（v1 代码读到 v2 会拒绝执行，不会重发）
+Deployment: GitHub Actions 从 main 读取 workflow，合并即生效；首次生产运行 36216790529，x-queue 提交 1ba3a50
+Verification: 迁移与计划已在生产核验；top2 实发（预计 17:52 Asia/Shanghai）及 `tweet_id` 回写待核验
+Rollback: revert PR133 与 PR132；回滚前先把 `x-queue` 的 `data/x-queue.json` 改回记录当天已发序号的 v1 内容（v1 代码读到 v2 会拒绝执行，不会重发）
