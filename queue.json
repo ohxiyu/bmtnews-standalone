@@ -1412,10 +1412,11 @@
         "post_id": "370775789589486"
       },
       "94813ecfefdbcb67ad3927296ea3f19d8f7ee75c35c7c2af46dd620169706791": {
-        "status": "pending",
+        "status": "sent",
         "rank": 9,
         "text_hash": "bb2f4162b8dad3bbed7d84ad0d4ec24bcb2a052d799368e126ddd99b269fdc00",
-        "attempted_at": "2026-09-26T18:15:33.004120+08:00"
+        "attempted_at": "2026-09-26T18:15:33.004120+08:00",
+        "post_id": "370796688640276"
       }
     }
   },
@@ -1521,12 +1522,6 @@
     "2026-09-26": {
       "revision": "a212fe4478fd947396a67030e1aba0fa48314760a3d2dfe37a716571bd4fa16a",
       "jobs": [
-        {
-          "id": "94813ecfefdbcb67ad3927296ea3f19d8f7ee75c35c7c2af46dd620169706791",
-          "text": "谷歌打造了一款猎捕自身安全漏洞的AI\n\n谷歌产品安全团队披露了内部AI智能体 PageBreak，它基于谷歌的 Gemini 模型构建，可自主挖掘谷歌自有第一方 Web 应用中的可利用漏洞。该智能体已发现500多个经确认的跨站脚本（XSS）漏洞，每个漏洞都通过在应用实时运行副本中执行的真实攻击加以验证；项目于2025年11月启动试点，2026年1月转为正式项目。\n\n谷歌表示，通过实际利用来验证的环节使 PageBreak 的误报率接近于零，从而应对安全团队如今不得不筛选的大量看似合理、实则虚假的AI生成漏洞报告——谷歌称之为\"AI 垃圾\"。在针对谷歌更新的\"高保障\"Web框架构建的应用运行时，PageBreak 只发现两个漏洞，谷歌以此作为证据说明：从一开始就构建更安全的软件，比事后打补丁更有效。\n\nPageBreak 由信息安全工程师 Michał Bentkowski 在博客文章中介绍，其架构将负责提出漏洞假设的智能体与一套专门编写、非AI生成的验证器相结合，由验证器尝试发动真实攻击。谷歌称，这一方法依赖大多数组织并不具备的条件，包括横跨数十亿行代码的单一统一代码仓库以及多年的内部扫描基础设施，因此小型初创公司无法简单复制。\n\n来源：https://decrypt.co/379364/google-built-ai-hunts-security-bugs\nBMTNews · 2026-09-26 · https://bmt.news",
-          "rank": 9,
-          "due_at": "2026-09-26T18:13:00+08:00"
-        },
         {
           "id": "4084018d5a70992caf575820ca302c0396e8b576b8940c70d17b5f80b287aa13",
           "text": "Opus 5.5 面向工作场景\n\nAnthropic 发布了 Opus 5.5 for Work，这是其 Claude Opus 模型系列面向工作场景与企业用例的一次发布。OpenRouter 将该模型列为 Claude Opus 5.5，接替 Claude Opus 5。\n\n此次发布将 Anthropic 的旗舰 Opus 系列进一步推向工作场景与企业部署，而这一领域正是该公司已提供 Team 与 Enterprise 订阅方案的板块。\n\nOpenRouter 将 Claude Opus 5.5 描述为 Anthropic 面向高难度推理、编程与长周期智能体任务的旗舰模型，尤其擅长大型代码库中的多步骤修改、代码审查与缺陷定位，以及金融与科学分析。\n\n来源：https://news.google.com/rss/articles/CBMiYkFVX3lxTE00dWwwdEZIOXRVaHBSM09MYy1ZMk5TQ1RsUzFxem8wQTQwMGdvVmxHTFd4NTN5ODhTUVdLSi1ObUx1WjJ0aTA5ZU1lNHZEeWlBSkliTkoxTjY2czRzaFprVGpB?oc=5\nBMTNews · 2026-09-26 · https://bmt.news",
