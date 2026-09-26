@@ -5,14 +5,22 @@ name: BMTNews X Distribution
 # credentials are configured; otherwise every run exits without posting.
 #
 # The daily edition dispatches this workflow as soon as it publishes, which
-# sends the first story. The cron below only polls: a cheap stdlib gate reads
+# sends the first story. Later runs only poll: a cheap stdlib gate reads
 # the queue and the published edition state and exits in seconds unless a
 # post is due, the edition changed, or a deadline passed. Each run sends at
 # most one post, and an outcome that cannot be proven is never retried.
 
 on:
-  # Every 20 minutes from 07:07 to 23:47 Asia/Shanghai (crons are UTC). The
-  # minutes avoid the top of the hour, where GitHub delays or drops runs.
+  # GitHub's own schedules are unreliable on this repository (runs arrive
+  # hours late or not at all). The Cloudflare dispatcher starts the Square
+  # workflow every 5 minutes from 09:00 to 23:30 Asia/Shanghai, so each of
+  # its completions doubles as this workflow's clock. Square must not list
+  # this workflow among its own triggers, or the two would wake each other.
+  workflow_run:
+    workflows: ['BMTNews Binance Square Distribution']
+    types: [completed]
+    branches: [main]
+  # Backup clock: every 20 minutes from 07:07 to 23:47 Asia/Shanghai (UTC).
   schedule:
     - cron: '7-59/20 23,0-15 * * *'
   workflow_dispatch:
@@ -37,6 +45,9 @@ permissions:
 
 jobs:
   post:
+    if: >-
+      ${{ github.event_name != 'workflow_run' ||
+          github.event.workflow_run.head_repository.full_name == github.repository }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:

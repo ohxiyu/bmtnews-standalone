@@ -38,3 +38,16 @@
 
 - 合并、生产部署、第一次生产运行（迁移、top2 实发）均待记录；五个交付状态分开跟踪，见 handoff。
 - 真实 X API 的 2xx 响应体结构只按官方文档 `data.id` 实现，首条实发后核对 `tweet_id`。
+
+## 合并与上线（2026-09-26）
+
+- [PR132](https://github.com/ohxiyu/bmtnews-standalone/pull/132) 在 test、analyze、governance、CodeQL、Cloudflare Pages 全部通过后于 03:08 UTC 合并，合并提交 `7e8498414bc536d7503bd7c34d493e2c46f3f146`；远端任务分支已删除。
+- 合并后 40 分钟内新 X workflow 一次都没运行：本仓库 GitHub 自带 cron 基本不触发（广场的 5 分钟 cron 累计只有 62 次 schedule 运行，实际靠调度 Worker 每 5 分钟派发）。只靠日报 kickoff 的话 top2 几乎永远发不出去。
+- 后续修复（分支 `agent/x-drip-trigger`）：X 改由广场 workflow 的完成事件驱动（Worker 每 5 分钟派发广场），并从广场的触发列表里移除 X 以免循环；cron 保留作兜底。Worker 本身不改、不需要重新部署。
+- 会话里的 GitHub 集成没有 `actions:write` 权限（手动派发返回 403），所以首次生产运行只能等修复合并后由广场完成事件触发。
+
+Source commit: `7e8498414bc536d7503bd7c34d493e2c46f3f146` (PR132)；触发修复的合并提交另行记录
+Worker version: not changed（调度 Worker 代码与部署均未改动）
+Deployment: GitHub Actions 从 main 读取 workflow，合并即生效；无额外部署步骤
+Verification: pending — 首次 X 运行后核对 `x-queue` 为 v2（rank 1 `sent`/`migrated_v1`，slot 2 `planned` 且有 due_at/deadline）及 top2 实发结果
+Rollback: revert PR132 与触发修复 PR；回滚前先把 `x-queue` 的 `data/x-queue.json` 改回记录当天已发序号的 v1 内容（v1 代码读到 v2 会拒绝执行，不会重发）

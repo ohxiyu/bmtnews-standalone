@@ -3,7 +3,8 @@ name: BMTNews Binance Square Distribution
 on:
   # Existing production flows provide an independent trigger if this cron is dropped.
   workflow_run:
-    workflows: ['BMTNews Daily Edition', 'BMTNews Feed Collection', 'Deploy Docs', 'BMTNews X Distribution']
+    # Not 'BMTNews X Distribution': X is triggered by this workflow's completion.
+    workflows: ['BMTNews Daily Edition', 'BMTNews Feed Collection', 'Deploy Docs']
     types: [completed]
     branches: [main]
   schedule:
