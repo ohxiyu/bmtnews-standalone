@@ -4,22 +4,22 @@
   "url": "https://bmt.news/events/evt_28746d908759a2d3/",
   "json": "https://bmt.news/api/events/evt_28746d908759a2d3.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "developing",
   "category": "policy",
   "title": {
     "zh": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
     "en": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme"
   },
   "current_state": {
-    "zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
-    "en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading."
+    "zh": "CFTC已在佛罗里达联邦法院对Cash FX及其CEO、The Conversion Pros及其CEO Ronald Pope和Justin Halladay提起诉讼，指控其运营涉及加密货币相关外汇投资的9.5亿美元多层营销庞氏骗局。",
+    "en": "The CFTC has filed a lawsuit in Florida federal court against Cash FX, its CEO, The Conversion Pros and its CEO Ronald Pope, and Justin Halladay, alleging a $950 million multilevel-marketing Ponzi scheme tied to crypto-linked forex investments."
   },
   "first_seen_at": "2026-09-25T17:25:10.138127+00:00",
-  "last_updated_at": "2026-09-25T17:25:10.138127+00:00",
-  "last_material_change_at": "2026-09-25T17:25:10.138127+00:00",
+  "last_updated_at": "2026-09-26T09:27:55.435336+00:00",
+  "last_material_change_at": "2026-09-26T09:27:55.435336+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "cash",
     "ceo",
@@ -38,6 +38,7 @@
     "cftc",
     "crypto-regulation",
     "enforcement",
+    "forex-fraud",
     "fraud",
     "ponzi-scheme"
   ],
@@ -88,6 +89,44 @@
         {
           "url": "https://www.cftc.gov/PressRoom/PressReleases/9304-26",
           "label": "CFTC Enforcement",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_04fa8ac9f910bb6c",
+      "event_id": "evt_28746d908759a2d3",
+      "occurred_at": "2026-09-26T06:59:29Z",
+      "published_at": "2026-09-26T06:59:29Z",
+      "first_seen_at": "2026-09-26T09:27:55.435336Z",
+      "time_precision": "published",
+      "update_type": "escalation",
+      "material_change": true,
+      "title_zh": "CFTC sues Cash FX, alleges $950M crypto-linked forex scheme",
+      "title_en": "CFTC sues Cash FX, alleges $950M crypto-linked forex scheme",
+      "what_changed_zh": "CFTC在佛罗里达州联邦法院正式提起诉讼，指控Cash FX及其CEO、The Conversion Pros及其CEO Ronald Pope、Justin Halladay等人运营多层营销庞氏骗局，并称投资者损失至少4.06亿美元。",
+      "what_changed_en": "The CFTC filed a complaint in Florida federal court against Cash FX, its CEO, The Conversion Pros and its CEO Ronald Pope, and Justin Halladay, alleging a multilevel-marketing Ponzi scheme and at least $406 million in investor losses.",
+      "current_state_zh": "CFTC已在佛罗里达联邦法院对Cash FX及其CEO、The Conversion Pros及其CEO Ronald Pope和Justin Halladay提起诉讼，指控其运营涉及加密货币相关外汇投资的9.5亿美元多层营销庞氏骗局。",
+      "current_state_en": "The CFTC has filed a lawsuit in Florida federal court against Cash FX, its CEO, The Conversion Pros and its CEO Ronald Pope, and Justin Halladay, alleging a $950 million multilevel-marketing Ponzi scheme tied to crypto-linked forex investments.",
+      "detailed_summary_zh": "The CFTC filed a complaint in Florida federal court accusing Cash FX Group, its CEO and two other individuals of running a $950M multilevel-marketing Ponzi scheme that falsely claimed pool funds were traded by expert traders and AI-driven algorithms while most money was misappropriated.",
+      "detailed_summary_en": "The CFTC filed a complaint in Florida federal court accusing Cash FX Group, its CEO and two other individuals of running a $950M multilevel-marketing Ponzi scheme that falsely claimed pool funds were traded by expert traders and AI-driven algorithms while most money was misappropriated.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:cointelegraph.com_rss:c66a32287e0f7e5e"
+      ],
+      "sources": [
+        {
+          "url": "https://cointelegraph.com/news/cftc-sues-cash-fx-alleges-950m-crypto-linked-forex-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "label": "Cointelegraph",
           "source_type": "rss",
           "official": false
         }

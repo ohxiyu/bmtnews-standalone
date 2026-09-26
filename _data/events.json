@@ -79726,8 +79726,8 @@
     {
       "category": "crypto",
       "confidence": 0.75,
-      "current_state_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
-      "current_state_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
+      "current_state_en": "Solana's Alpenglow consensus upgrade is running on both public test networks, devnet and testnet, for developer testing, with mainnet launch not yet scheduled.",
+      "current_state_zh": "Solana 的 Alpenglow 共识升级已在 devnet 和 testnet 两个公共测试网络上运行，供开发者测试，主网启动尚未排期。",
       "entities": [
         "alpenglow",
         "january",
@@ -79739,14 +79739,15 @@
       "event_type": "protocol_change",
       "first_seen_at": "2026-09-23T17:21:30.707301Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-23T17:21:30.707301Z",
-      "last_updated_at": "2026-09-23T17:21:30.707301Z",
+      "last_material_change_at": "2026-09-26T09:27:48.982228Z",
+      "last_updated_at": "2026-09-26T09:27:48.982228Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
       "title_en": "Solana moves Alpenglow into testnet as SOL nears January highs",
       "title_zh": "Solana moves Alpenglow into testnet as SOL nears January highs",
       "topics": [
+        "alpenglow",
         "consensus",
         "finality",
         "protocol-upgrade",
@@ -79804,6 +79805,44 @@
           "update_type": "initial",
           "what_changed_en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
           "what_changed_zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "Solana's Alpenglow consensus upgrade is running on both public test networks, devnet and testnet, for developer testing, with mainnet launch not yet scheduled.",
+          "current_state_zh": "Solana 的 Alpenglow 共识升级已在 devnet 和 testnet 两个公共测试网络上运行，供开发者测试，主网启动尚未排期。",
+          "detailed_summary_en": "Solana's Alpenglow upgrade, targeting roughly 150-millisecond transaction finality, is now running on both devnet and testnet, allowing developers to test ahead of an unscheduled mainnet launch.",
+          "detailed_summary_zh": "Solana's Alpenglow upgrade, targeting roughly 150-millisecond transaction finality, is now running on both devnet and testnet, allowing developers to test ahead of an unscheduled mainnet launch.",
+          "event_id": "evt_d75668abfb43b4e7",
+          "first_seen_at": "2026-09-26T09:27:48.982228Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T05:00:00Z",
+          "published_at": "2026-09-26T05:00:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/tech/2026/09/26/solana-s-150-millisecond-settlement-upgrade-reaches-second-public-test-network"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:f69f7a6c27eb72c6"
+          ],
+          "time_precision": "published",
+          "title_en": "Solana’s 150-millisecond settlement upgrade reaches second public test network",
+          "title_zh": "Solana’s 150-millisecond settlement upgrade reaches second public test network",
+          "update_id": "upd_7881ac881d2b9160",
+          "update_type": "confirmation",
+          "what_changed_en": "Alpenglow is now running on both devnet and testnet; the devnet switch was announced Sept. 25, and the testnet transition completed the day before, with mainnet launch still unscheduled.",
+          "what_changed_zh": "Alpenglow 现已同时在 devnet 和 testnet 上运行；devnet 切换于 9 月 25 日宣布，testnet 在前一日完成过渡，主网启动尚未排期。"
         }
       ]
     },
@@ -88246,7 +88285,7 @@
       "first_seen_at": "2026-09-25T09:43:54.637052Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-25T17:25:26.530694Z",
-      "last_updated_at": "2026-09-25T23:24:27.994153Z",
+      "last_updated_at": "2026-09-26T09:27:47.372347Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "developing",
@@ -88346,10 +88385,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://cryptoslate.com/bitgets-north-korea-linked-352-million-hack-could-drain-76-of-its-protection-fund/"
+            },
+            {
+              "label": "tech-insider.org",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1EV3FrOF93aHlJWi1BVGlCdG5McmJNNVBSd08waEJmcVNjZ2RDOVd0LTBCa2M1VktsQnl6YTNzcDBKSGRSYk1hOVFUZzA2Rm1YdXdqSEU0cjIxZFdDZTlkZkVWTXBRWEd5S1hGb3l2Q19pdk15?oc=5"
             }
           ],
           "story_ids": [
-            "rss:cryptoslate.com_feed_:e00e17dcb1309d6a"
+            "rss:cryptoslate.com_feed_:e00e17dcb1309d6a",
+            "google_news:article:9cbb8bc3bc1d8e74"
           ],
           "time_precision": "published",
           "title_en": "Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund",
@@ -88857,8 +88903,8 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
-      "current_state_zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
+      "current_state_en": "The CFTC has filed a lawsuit in Florida federal court against Cash FX, its CEO, The Conversion Pros and its CEO Ronald Pope, and Justin Halladay, alleging a $950 million multilevel-marketing Ponzi scheme tied to crypto-linked forex investments.",
+      "current_state_zh": "CFTC已在佛罗里达联邦法院对Cash FX及其CEO、The Conversion Pros及其CEO Ronald Pope和Justin Halladay提起诉讼，指控其运营涉及加密货币相关外汇投资的9.5亿美元多层营销庞氏骗局。",
       "entities": [
         "cash",
         "ceo",
@@ -88876,17 +88922,18 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-25T17:25:10.138127Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-25T17:25:10.138127Z",
-      "last_updated_at": "2026-09-25T17:25:10.138127Z",
+      "last_material_change_at": "2026-09-26T09:27:55.435336Z",
+      "last_updated_at": "2026-09-26T09:27:55.435336Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "developing",
       "title_en": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
       "title_zh": "CFTC Charges Cash FX Group S.A., and CEO; Three Others With $950 Million Fraud Scheme",
       "topics": [
         "cftc",
         "crypto-regulation",
         "enforcement",
+        "forex-fraud",
         "fraud",
         "ponzi-scheme"
       ],
@@ -88941,6 +88988,44 @@
           "update_type": "initial",
           "what_changed_en": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading.",
           "what_changed_zh": "The CFTC charged Cash FX Group S.A., its CEO, and three other individuals with running a $950 million fraudulent investment scheme that solicited funds for purported forex and crypto trading."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.95,
+          "current_state_en": "The CFTC has filed a lawsuit in Florida federal court against Cash FX, its CEO, The Conversion Pros and its CEO Ronald Pope, and Justin Halladay, alleging a $950 million multilevel-marketing Ponzi scheme tied to crypto-linked forex investments.",
+          "current_state_zh": "CFTC已在佛罗里达联邦法院对Cash FX及其CEO、The Conversion Pros及其CEO Ronald Pope和Justin Halladay提起诉讼，指控其运营涉及加密货币相关外汇投资的9.5亿美元多层营销庞氏骗局。",
+          "detailed_summary_en": "The CFTC filed a complaint in Florida federal court accusing Cash FX Group, its CEO and two other individuals of running a $950M multilevel-marketing Ponzi scheme that falsely claimed pool funds were traded by expert traders and AI-driven algorithms while most money was misappropriated.",
+          "detailed_summary_zh": "The CFTC filed a complaint in Florida federal court accusing Cash FX Group, its CEO and two other individuals of running a $950M multilevel-marketing Ponzi scheme that falsely claimed pool funds were traded by expert traders and AI-driven algorithms while most money was misappropriated.",
+          "event_id": "evt_28746d908759a2d3",
+          "first_seen_at": "2026-09-26T09:27:55.435336Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T06:59:29Z",
+          "published_at": "2026-09-26T06:59:29Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/cftc-sues-cash-fx-alleges-950m-crypto-linked-forex-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:c66a32287e0f7e5e"
+          ],
+          "time_precision": "published",
+          "title_en": "CFTC sues Cash FX, alleges $950M crypto-linked forex scheme",
+          "title_zh": "CFTC sues Cash FX, alleges $950M crypto-linked forex scheme",
+          "update_id": "upd_04fa8ac9f910bb6c",
+          "update_type": "escalation",
+          "what_changed_en": "The CFTC filed a complaint in Florida federal court against Cash FX, its CEO, The Conversion Pros and its CEO Ronald Pope, and Justin Halladay, alleging a multilevel-marketing Ponzi scheme and at least $406 million in investor losses.",
+          "what_changed_zh": "CFTC在佛罗里达州联邦法院正式提起诉讼，指控Cash FX及其CEO、The Conversion Pros及其CEO Ronald Pope、Justin Halladay等人运营多层营销庞氏骗局，并称投资者损失至少4.06亿美元。"
         }
       ]
     },
@@ -90741,11 +90826,13 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "SEC Commissioner Hester Peirce, the agency's most prominent crypto advocate known as 'Crypto Mom,' announced she will leave the commission on Oct. 2, a departure disclosed as the SEC issued further crypto policy guidance.",
-      "current_state_zh": "SEC Commissioner Hester Peirce, the agency's most prominent crypto advocate known as 'Crypto Mom,' announced she will leave the commission on Oct. 2, a departure disclosed as the SEC issued further crypto policy guidance.",
+      "current_state_en": "SEC Commissioner Hester Peirce has formally submitted her resignation effective Oct. 2; her seat may not be filled immediately.",
+      "current_state_zh": "SEC委员Hester Peirce已正式提交辞呈，将于10月2日离职；其席位可能不会立即填补。",
       "entities": [
+        "commissioner",
         "hester",
         "hester-peirce",
+        "oct",
         "peirce",
         "sec"
       ],
@@ -90753,8 +90840,8 @@
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-25T23:24:10.510329Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-25T23:24:10.510329Z",
-      "last_updated_at": "2026-09-25T23:24:10.510329Z",
+      "last_material_change_at": "2026-09-26T09:27:55.394421Z",
+      "last_updated_at": "2026-09-26T09:27:55.394421Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -90762,6 +90849,7 @@
       "title_zh": "U.S. SEC's steadiest crypto advocate, Hester Peirce, to depart next week",
       "topics": [
         "crypto-regulation",
+        "crypto-task-force",
         "hester-peirce",
         "regulatory-personnel",
         "sec",
@@ -90793,10 +90881,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.coindesk.com/policy/2026/09/25/u-s-sec-s-steadiest-crypto-advocate-hester-peirce-to-depart-next-week"
+            },
+            {
+              "label": "Binance",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKTVh5ejl1OVlldnZ1cTNWc3QwQjA3SC0tS0lWNkI4Q1Nob3FGUlhBU2V5a1pVRG9UdmlRU0FNRERsSmVaRnhjTzhRTEpIZHlTOGQza09SZXZ4X00yRVpqNmNzRmI?oc=5"
             }
           ],
           "story_ids": [
-            "rss:www.coindesk.com_arc_outboundfeeds_rss_:95ad408a35d261f8"
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:95ad408a35d261f8",
+            "google_news:article:4860d409766135a5"
           ],
           "time_precision": "published",
           "title_en": "U.S. SEC's steadiest crypto advocate, Hester Peirce, to depart next week",
@@ -90805,6 +90900,44 @@
           "update_type": "initial",
           "what_changed_en": "SEC Commissioner Hester Peirce, the agency's most prominent crypto advocate known as 'Crypto Mom,' announced she will leave the commission on Oct. 2, a departure disclosed as the SEC issued further crypto policy guidance.",
           "what_changed_zh": "SEC Commissioner Hester Peirce, the agency's most prominent crypto advocate known as 'Crypto Mom,' announced she will leave the commission on Oct. 2, a departure disclosed as the SEC issued further crypto policy guidance."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.96,
+          "current_state_en": "SEC Commissioner Hester Peirce has formally submitted her resignation effective Oct. 2; her seat may not be filled immediately.",
+          "current_state_zh": "SEC委员Hester Peirce已正式提交辞呈，将于10月2日离职；其席位可能不会立即填补。",
+          "detailed_summary_en": "SEC Commissioner Hester Peirce, known as 'Crypto Mom' and head of the agency's Crypto Task Force, submitted her resignation effective Oct. 2, ending roughly eight years at the commission.",
+          "detailed_summary_zh": "SEC Commissioner Hester Peirce, known as 'Crypto Mom' and head of the agency's Crypto Task Force, submitted her resignation effective Oct. 2, ending roughly eight years at the commission.",
+          "event_id": "evt_947018f12a504291",
+          "first_seen_at": "2026-09-26T09:27:55.394421Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T09:02:22Z",
+          "published_at": "2026-09-26T09:02:22Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/sec-commissioner-hester-peirce-to-leave-post-on-oct-2?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:3ca2eae828753846"
+          ],
+          "time_precision": "published",
+          "title_en": "SEC Commissioner Hester Peirce to leave post on Oct. 2",
+          "title_zh": "SEC Commissioner Hester Peirce to leave post on Oct. 2",
+          "update_id": "upd_11206b516cbabda8",
+          "update_type": "confirmation",
+          "what_changed_en": "Hester Peirce submitted a formal resignation letter effective Oct. 2, confirming her departure; she also served as director of the SEC's Crypto Task Force, with her term having expired in June 2025.",
+          "what_changed_zh": "Hester Peirce已提交正式辞职信，10月2日生效，确认离职；她还曾担任SEC加密工作组主任，任期已于2025年6月到期。"
         }
       ]
     },
@@ -90967,7 +91100,7 @@
       "first_seen_at": "2026-09-25T23:24:19.113596Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-25T23:24:19.113596Z",
-      "last_updated_at": "2026-09-25T23:24:19.113596Z",
+      "last_updated_at": "2026-09-26T09:27:47.371806Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -91019,10 +91152,17 @@
               "official": false,
               "source_type": "rss",
               "url": "https://thedefiant.io/news/regulation/sec-staff-clarifies-token-buybacks-and-liquid-staking-in-new-faqs"
+            },
+            {
+              "label": "BeInCrypto",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ndDFIOS1nYkhCQnFtRkVRSDZmQWFyRDg4SlVBRGZhdk5yWTc5R2Y2ZlM1Qi02cVJLWFVvT1k3eHgzRGxaZF9RMXBhWi1EcC1GSXhXVUlDaGhOUlRLNjYtRmdLaEpDTEtSdlE?oc=5"
             }
           ],
           "story_ids": [
-            "rss:thedefiant.io_api_feed:58078f54a561bb20"
+            "rss:thedefiant.io_api_feed:58078f54a561bb20",
+            "google_news:article:a26d1647232fe2b8"
           ],
           "time_precision": "published",
           "title_en": "SEC Staff Clarifies Token Buybacks and Liquid Staking in New FAQs",
@@ -91554,6 +91694,303 @@
           "update_type": "initial",
           "what_changed_en": "IBM opened a beta connection between its Digital Asset Haven platform and SWIFT's shared ledger, letting 17 participating banks instruct tokenized-deposit transactions through an ISO 20022 messaging adapter, alongside a separate on-premises Haven beta for institutions keeping the platform and key management in their own IBM Z or LinuxONE data centers.",
           "what_changed_zh": "IBM opened a beta connection between its Digital Asset Haven platform and SWIFT's shared ledger, letting 17 participating banks instruct tokenized-deposit transactions through an ISO 20022 messaging adapter, alongside a separate on-premises Haven beta for institutions keeping the platform and key management in their own IBM Z or LinuxONE data centers."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+      "current_state_zh": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+      "entities": [
+        "banking",
+        "banking-license",
+        "coinmarketcap",
+        "eyes",
+        "full",
+        "kraken",
+        "license",
+        "lithuania",
+        "parent",
+        "payward"
+      ],
+      "event_id": "evt_5be906a11201616b",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-26T09:27:47.371896Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T09:27:47.371896Z",
+      "last_updated_at": "2026-09-26T09:27:47.371896Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kraken Parent Payward Eyes Full Banking License in Lithuania - CoinMarketCap",
+      "title_zh": "Kraken Parent Payward Eyes Full Banking License in Lithuania - CoinMarketCap",
+      "topics": [
+        "banking-license",
+        "eu-regulation",
+        "kraken",
+        "lithuania",
+        "payward"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+          "current_state_zh": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+          "detailed_summary_en": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+          "detailed_summary_zh": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+          "event_id": "evt_5be906a11201616b",
+          "first_seen_at": "2026-09-26T09:27:47.371896Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T02:12:41Z",
+          "published_at": "2026-09-26T02:12:41Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinMarketCap",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONmV3WlF3dUs5WWtSQ1RGeWJmRHFhWGdVR0lkTWdLbjFNVHIyLVlFMzFybEtieHhTWUtqUmpSZW5oQTZ4QkVWeF9ObEJzRG5KNDlEbHFUczRVSTVGcFY0UWhOZm9QWERKT0JBQmI0SDdFdVNrb05tc2FZLTZzazFHYk9abHRDUlk2NHk4RzVrR1BMS0E?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:00dfa1592431fc95"
+          ],
+          "time_precision": "published",
+          "title_en": "Kraken Parent Payward Eyes Full Banking License in Lithuania - CoinMarketCap",
+          "title_zh": "Kraken Parent Payward Eyes Full Banking License in Lithuania - CoinMarketCap",
+          "update_id": "upd_67293535e8657c63",
+          "update_type": "initial",
+          "what_changed_en": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU.",
+          "what_changed_zh": "Payward, the parent company of Kraken, is seeking a full banking license in Lithuania as part of its push to offer regulated banking services within the EU."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+      "current_state_zh": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+      "entities": [
+        "buybacks",
+        "defiant",
+        "draws",
+        "faqs",
+        "line",
+        "liquid",
+        "liquid-staking",
+        "new",
+        "sec",
+        "staff",
+        "staking",
+        "token",
+        "token-buybacks"
+      ],
+      "event_id": "evt_07f16f79a4cc290d",
+      "event_type": "regulatory_action",
+      "first_seen_at": "2026-09-26T09:27:47.372318Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T09:27:47.372318Z",
+      "last_updated_at": "2026-09-26T09:27:47.372318Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "SEC Staff Draws A Line On Token Buybacks and Liquid Staking in New FAQs - The Defiant",
+      "title_zh": "SEC Staff Draws A Line On Token Buybacks and Liquid Staking in New FAQs - The Defiant",
+      "topics": [
+        "crypto-regulation",
+        "liquid-staking",
+        "sec",
+        "securities-law",
+        "token-buybacks"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+          "current_state_zh": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+          "detailed_summary_en": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+          "detailed_summary_zh": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+          "event_id": "evt_07f16f79a4cc290d",
+          "first_seen_at": "2026-09-26T09:27:47.372318Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T05:49:21Z",
+          "published_at": "2026-09-26T05:49:21Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSW1ZQ0hLWDFWbVBudnJsZmRqSzRHa1pnaFNNNzR3a1M3dHVWNjE2VU1EQ2ZiNnl1Q0dJYko1WnZfOXBiSWpKM0VZdUk0UHhvYmtvaUZGcnpkT2VKRXN4bmtQZGRHbjVXWGlCekZ2dkRjaWEtLTFUdFU4Q3NuZDd4dE9JdTRxc1cxVXN5Tnd1SFJJS3RORGNCT0trSlA0dTRsNjhadUwwblFoQ085aHBNeGtVUFdGQQ?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:dc718fd43c41efa3"
+          ],
+          "time_precision": "published",
+          "title_en": "SEC Staff Draws A Line On Token Buybacks and Liquid Staking in New FAQs - The Defiant",
+          "title_zh": "SEC Staff Draws A Line On Token Buybacks and Liquid Staking in New FAQs - The Defiant",
+          "update_id": "upd_855889a378736194",
+          "update_type": "initial",
+          "what_changed_en": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities.",
+          "what_changed_zh": "SEC staff issued new FAQs delineating its position on token buybacks and liquid staking, clarifying how existing securities frameworks apply to those activities."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+      "current_state_zh": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+      "entities": [
+        "binance",
+        "for",
+        "hype",
+        "hyperliquid",
+        "lists",
+        "spot",
+        "spot-trading",
+        "trading"
+      ],
+      "event_id": "evt_a982f37d76947429",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-26T09:27:47.372846Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T09:27:47.372846Z",
+      "last_updated_at": "2026-09-26T09:27:47.372846Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Binance Lists Hyperliquid Hype For Spot Trading - bitcoinist.com",
+      "title_zh": "Binance Lists Hyperliquid Hype For Spot Trading - bitcoinist.com",
+      "topics": [
+        "binance",
+        "exchange-listings",
+        "hype",
+        "hyperliquid",
+        "spot-trading"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+          "current_state_zh": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+          "detailed_summary_en": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+          "detailed_summary_zh": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+          "event_id": "evt_a982f37d76947429",
+          "first_seen_at": "2026-09-26T09:27:47.372846Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T06:30:00Z",
+          "published_at": "2026-09-26T06:30:00Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "bitcoinist.com",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQQm00ZDFfWkJwaTJ1OG45cThDdERybEJJWXptZ2xfVmVScDN4UUR0REFuS0JpYm90SERfOEdXOWF5V0xTWDA2bkxvX0RtY2dEVTlLcU1ubTQ0OHg5Y0FmS0t2SEdGemJUSzV3bUhIb3UwV1lwNGtncDZFREZOV1VZWNIBgAFBVV95cUxQQm00ZDFfWkJwaTJ1OG45cThDdERybEJJWXptZ2xfVmVScDN4UUR0REFuS0JpYm90SERfOEdXOWF5V0xTWDA2bkxvX0RtY2dEVTlLcU1ubTQ0OHg5Y0FmS0t2SEdGemJUSzV3bUhIb3UwV1lwNGtncDZFREZOV1VZWA?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:fa4534c7224e6324"
+          ],
+          "time_precision": "published",
+          "title_en": "Binance Lists Hyperliquid Hype For Spot Trading - bitcoinist.com",
+          "title_zh": "Binance Lists Hyperliquid Hype For Spot Trading - bitcoinist.com",
+          "update_id": "upd_5c26495b2540269f",
+          "update_type": "initial",
+          "what_changed_en": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange.",
+          "what_changed_zh": "Binance has added Hyperliquid's HYPE token to its spot trading lineup, widening access to the token on the largest centralized exchange."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+      "current_state_zh": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+      "entities": [
+        "bitget",
+        "swiss"
+      ],
+      "event_id": "evt_ab5efa06464bfbed",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-26T09:27:52.579231Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T09:27:52.579231Z",
+      "last_updated_at": "2026-09-26T09:27:52.579231Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Swiss bank shields Bitget institutions while retail funds freeze",
+      "title_zh": "Swiss bank shields Bitget institutions while retail funds freeze",
+      "topics": [
+        "bitget",
+        "exchange-breach",
+        "institutional-custody",
+        "sygnum",
+        "withdrawals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+          "current_state_zh": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+          "detailed_summary_en": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+          "detailed_summary_zh": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+          "event_id": "evt_ab5efa06464bfbed",
+          "first_seen_at": "2026-09-26T09:27:52.579231Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T02:30:16Z",
+          "published_at": "2026-09-26T02:30:16Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/swiss-bank-shields-bitget-institutions-while-retail-funds-freeze/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:6f3398d1e55dae5a"
+          ],
+          "time_precision": "published",
+          "title_en": "Swiss bank shields Bitget institutions while retail funds freeze",
+          "title_zh": "Swiss bank shields Bitget institutions while retail funds freeze",
+          "update_id": "upd_06e6ce66b41cd4af",
+          "update_type": "initial",
+          "what_changed_en": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
+          "what_changed_zh": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients."
         }
       ]
     }
@@ -93060,6 +93497,37 @@
         "source_type": "rss",
         "title": "Old Magic Eden NFT approvals put users at risk after whitehat moves 3,832 NFTs",
         "url": "https://cryptoslate.com/magic-eden-nft-approvals-risk-3832-whitehat-rescue/"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The headline bundles three consequential in-window developments, the most material being a reported $351M breach at Bitget that forced a halt on withdrawals — a high-severity exchange security incident with direct user-fund impact, alongside a Fed stablecoin rule proposal and Bitcoin at $87K on ETF inflows. Although the item is a thin multi-topic recap with no body detail, the scale of the breach and the withdrawal freeze place it at the high end of the confirmed-exploit band; the Fed stablecoin proposal and ETF-driven price move add regulatory and market-structure weight.",
+        "ai_score": 9.0,
+        "ai_summary": "Bitcoin climbed to $87K on ETF inflows while the Fed proposed stablecoin rules and Bitget halted withdrawals following a $351M breach.",
+        "ai_tags": [
+          "bitget",
+          "exchange-security",
+          "stablecoin-regulation",
+          "bitcoin",
+          "etf-inflows"
+        ],
+        "author": "Pluang",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxObjZlUzRua2tjVXczTHVlNU9FUXNiaXRRRmJTN0ZTdjJqdmMtYlp4Nlo4c2o4TDVHVUpONUVqUXFLZzlVMTBXS29DNElZU251bk5ySDQ5dE0tV0t0UmFLblMzUm1KR1NpYy1pTmRIWkJyR2EwdW1mXzJEZllVallFa0JNZ25tWWdXREJzZkFIdE5wWVlGU0RHWmpSaWY3d2t0b0ZEVw?oc=5\" target=\"_blank\">Bitcoin hits $87K amid ETF inflows; Fed proposes stablecoin rules; Bitget halts withdrawals after $351M breach</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pluang</font>",
+        "fetched_at": "2026-09-26T09:27:47.372380Z",
+        "id": "google_news:article:fad9284487081e04",
+        "metadata": {
+          "category": "exchange-operations",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_category": "exchange-announcements",
+          "source_name": "Pluang"
+        },
+        "published_at": "2026-09-26T06:05:35Z",
+        "source_type": "google_news",
+        "title": "Bitcoin hits $87K amid ETF inflows; Fed proposes stablecoin rules; Bitget halts withdrawals after $351M breach - Pluang",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObjZlUzRua2tjVXczTHVlNU9FUXNiaXRRRmJTN0ZTdjJqdmMtYlp4Nlo4c2o4TDVHVUpONUVqUXFLZzlVMTBXS29DNElZU251bk5ySDQ5dE0tV0t0UmFLblMzUm1KR1NpYy1pTmRIWkJyR2EwdW1mXzJEZllVallFa0JNZ25tWWdXREJzZkFIdE5wWVlGU0RHWmpSaWY3d2t0b0ZEVw?oc=5"
       }
     }
   ],

@@ -11,15 +11,15 @@
     "en": "Solana moves Alpenglow into testnet as SOL nears January highs"
   },
   "current_state": {
-    "zh": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged.",
-    "en": "Solana began rolling its Alpenglow consensus upgrade onto testnet, the first public deployment of the TowerBFT replacement targeting roughly 150-millisecond finality while leaving the SVM, transactions, programs and fees unchanged."
+    "zh": "Solana 的 Alpenglow 共识升级已在 devnet 和 testnet 两个公共测试网络上运行，供开发者测试，主网启动尚未排期。",
+    "en": "Solana's Alpenglow consensus upgrade is running on both public test networks, devnet and testnet, for developer testing, with mainnet launch not yet scheduled."
   },
   "first_seen_at": "2026-09-23T17:21:30.707301+00:00",
-  "last_updated_at": "2026-09-23T17:21:30.707301+00:00",
-  "last_material_change_at": "2026-09-23T17:21:30.707301+00:00",
+  "last_updated_at": "2026-09-26T09:27:48.982228+00:00",
+  "last_material_change_at": "2026-09-26T09:27:48.982228+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "alpenglow",
     "january",
@@ -29,6 +29,7 @@
   ],
   "identifiers": [],
   "topics": [
+    "alpenglow",
     "consensus",
     "finality",
     "protocol-upgrade",
@@ -82,6 +83,44 @@
         {
           "url": "https://cryptoslate.com/solana-moves-alpenglow-into-testnet-as-sol-nears-january-highs/",
           "label": "CryptoSlate",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_7881ac881d2b9160",
+      "event_id": "evt_d75668abfb43b4e7",
+      "occurred_at": "2026-09-26T05:00:00Z",
+      "published_at": "2026-09-26T05:00:00Z",
+      "first_seen_at": "2026-09-26T09:27:48.982228Z",
+      "time_precision": "published",
+      "update_type": "confirmation",
+      "material_change": true,
+      "title_zh": "Solana’s 150-millisecond settlement upgrade reaches second public test network",
+      "title_en": "Solana’s 150-millisecond settlement upgrade reaches second public test network",
+      "what_changed_zh": "Alpenglow 现已同时在 devnet 和 testnet 上运行；devnet 切换于 9 月 25 日宣布，testnet 在前一日完成过渡，主网启动尚未排期。",
+      "what_changed_en": "Alpenglow is now running on both devnet and testnet; the devnet switch was announced Sept. 25, and the testnet transition completed the day before, with mainnet launch still unscheduled.",
+      "current_state_zh": "Solana 的 Alpenglow 共识升级已在 devnet 和 testnet 两个公共测试网络上运行，供开发者测试，主网启动尚未排期。",
+      "current_state_en": "Solana's Alpenglow consensus upgrade is running on both public test networks, devnet and testnet, for developer testing, with mainnet launch not yet scheduled.",
+      "detailed_summary_zh": "Solana's Alpenglow upgrade, targeting roughly 150-millisecond transaction finality, is now running on both devnet and testnet, allowing developers to test ahead of an unscheduled mainnet launch.",
+      "detailed_summary_en": "Solana's Alpenglow upgrade, targeting roughly 150-millisecond transaction finality, is now running on both devnet and testnet, allowing developers to test ahead of an unscheduled mainnet launch.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.95,
+      "story_ids": [
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:f69f7a6c27eb72c6"
+      ],
+      "sources": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/09/26/solana-s-150-millisecond-settlement-upgrade-reaches-second-public-test-network",
+          "label": "CoinDesk",
           "source_type": "rss",
           "official": false
         }
