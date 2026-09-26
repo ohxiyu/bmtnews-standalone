@@ -1405,10 +1405,11 @@
         "post_id": "370753692179035"
       },
       "48b5f08e0c45c1d6f560743ae8befd2d1ab871a98329f0412b25ea75b8710018": {
-        "status": "pending",
+        "status": "sent",
         "rank": 8,
         "text_hash": "ce823d2db1c265e20dcfaa7a625e1327352b92788151766e06c1b9bf11feb9ee",
-        "attempted_at": "2026-09-26T16:50:30.716786+08:00"
+        "attempted_at": "2026-09-26T16:50:30.716786+08:00",
+        "post_id": "370775789589486"
       }
     }
   },
@@ -1514,12 +1515,6 @@
     "2026-09-26": {
       "revision": "a212fe4478fd947396a67030e1aba0fa48314760a3d2dfe37a716571bd4fa16a",
       "jobs": [
-        {
-          "id": "48b5f08e0c45c1d6f560743ae8befd2d1ab871a98329f0412b25ea75b8710018",
-          "text": "MultiversX在漏洞事件停链后重启，但Kraken仍禁止EGLD新交易\n\nMultiversX表示其主网已于9月24日（周四）恢复出块，距离因漏洞事件而停止网络进展约五天，其技术账号@CodeMultiversX称恢复升级已部署完成。截至同日（9月24日）核查时，Kraken的事件页面仍将EGLD标记为仅可撤单交易，充值与提现暂停，并且没有给出恢复时间。\n\n链的重启本身并未恢复EGLD的交易或将资产通过Kraken转出的能力：@CodeMultiversX警告称，在部分交易所完成自身重启流程期间，交易、充值和提现可能还会暂停数日，并建议用户查看交易所的官方更新。\n\nKraken的事件时间线早于此次网络停摆——该交易所最早于9月16日报告EGLD资金网关可能出现延迟，并于9月19日将EGLD交易对转为仅可撤单，因此仅凭日期无法确定该交易所最初问题及其升级的原因。仅可撤单允许客户撤销已有订单，但禁止下新单和成交；此外，MultiversX的声明并未明确具体的停止与重启时间。\n\n来源：https://news.google.com/rss/articles/CBMitAFBVV95cUxQXzlXMkpEVGNOYmxjZHFaLXlFR3hCNFBMUUlzV043LXBSc3lTZXQ2WUszNEdnRWpldEQ1RnFXc3YxU0lhTWJ5MkZsZ0VGRmtxLUpnMmh2dTZObHNzYXl1R0Rja3VVSzNKaUxBSUJHQy1UV0NnX2duN1B2V1pVT2QzR0l0UFE3QV80TEVtQVhmeTJDOV9DM09ucGQyaW9zOTRlUnVheVVpTGhpQnhDemNxdVd6VWk?oc=5\nBMTNews · 2026-09-26 · https://bmt.news",
-          "rank": 8,
-          "due_at": "2026-09-26T16:46:00+08:00"
-        },
         {
           "id": "94813ecfefdbcb67ad3927296ea3f19d8f7ee75c35c7c2af46dd620169706791",
           "text": "谷歌打造了一款猎捕自身安全漏洞的AI\n\n谷歌产品安全团队披露了内部AI智能体 PageBreak，它基于谷歌的 Gemini 模型构建，可自主挖掘谷歌自有第一方 Web 应用中的可利用漏洞。该智能体已发现500多个经确认的跨站脚本（XSS）漏洞，每个漏洞都通过在应用实时运行副本中执行的真实攻击加以验证；项目于2025年11月启动试点，2026年1月转为正式项目。\n\n谷歌表示，通过实际利用来验证的环节使 PageBreak 的误报率接近于零，从而应对安全团队如今不得不筛选的大量看似合理、实则虚假的AI生成漏洞报告——谷歌称之为\"AI 垃圾\"。在针对谷歌更新的\"高保障\"Web框架构建的应用运行时，PageBreak 只发现两个漏洞，谷歌以此作为证据说明：从一开始就构建更安全的软件，比事后打补丁更有效。\n\nPageBreak 由信息安全工程师 Michał Bentkowski 在博客文章中介绍，其架构将负责提出漏洞假设的智能体与一套专门编写、非AI生成的验证器相结合，由验证器尝试发动真实攻击。谷歌称，这一方法依赖大多数组织并不具备的条件，包括横跨数十亿行代码的单一统一代码仓库以及多年的内部扫描基础设施，因此小型初创公司无法简单复制。\n\n来源：https://decrypt.co/379364/google-built-ai-hunts-security-bugs\nBMTNews · 2026-09-26 · https://bmt.news",
