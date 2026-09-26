@@ -38,9 +38,6 @@ X_TWEETS_ENDPOINT = "https://api.x.com/2/tweets"
 TWEET_LIMIT = 280
 # X counts every URL as a fixed-width t.co link regardless of real length.
 TCO_LENGTH = 23
-# How much of the source article the composer is shown. Long enough to carry
-# a timeline and the concrete numbers, short enough to stay cheap per post.
-ARTICLE_EXCERPT_CHARS = 6000
 # Below this the model plainly did not explain the event. The compact brief
 # targets 90-150 Chinese characters; this floor leaves some tolerance for
 # concise posts while still rejecting headline-only generations.
@@ -389,6 +386,92 @@ def sanitize_composed_post(text: str, *, limit: int) -> Optional[str]:
     return cleaned
 
 
+def post_source_fields(item: ContentItem, language: str) -> dict[str, str]:
+    """The published fields a post may draw on, and nothing else.
+
+    These are exactly what the reader sees on the edition page. The raw
+    article body is deliberately excluded: it is unedited source text, and a
+    post built from it can carry claims the page itself left out.
+    """
+    metadata = item.metadata or {}
+
+    def field(name: str) -> str:
+        return str(metadata.get(f"{name}_{language}") or "").strip()
+
+    return {
+        "title": str(metadata.get(f"title_{language}") or item.title or "").strip(),
+        "summary": field("detailed_summary") or str(item.ai_summary or "").strip(),
+        "background": field("background"),
+        "market_impact": field("market_impact"),
+        "discussion": field("community_discussion"),
+    }
+
+
+# Figures a post might state. Group 1 is the number, group 2 an optional
+# magnitude or percent. Dates are removed first: they are not amounts, and
+# "9月26日" vs "September 26" would otherwise fail a check they should pass.
+_DATE_PATTERNS = (
+    re.compile(r"\d{4}\s*年(?:\s*\d{1,2}\s*月)?(?:\s*\d{1,2}\s*日)?"),
+    re.compile(r"\d{1,2}\s*月\s*\d{1,2}\s*日"),
+    re.compile(r"\d{1,2}\s*月"),
+    re.compile(r"\d{1,2}\s*日"),
+    re.compile(r"\d{4}-\d{2}-\d{2}"),
+    re.compile(
+        r"(?i)\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\.?\s+\d{1,2}(?:,\s*\d{4})?"
+    ),
+)
+_NUMBER = re.compile(
+    r"(?<![\w.])(\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)\s*"
+    r"(万亿|亿|万|千|trillion|billion|million|thousand|bn|tn|[kKmMbBtT](?![a-zA-Z])|%|％)?"
+)
+_MAGNITUDE = {
+    "万亿": 1e12, "亿": 1e8, "万": 1e4, "千": 1e3,
+    "trillion": 1e12, "tn": 1e12, "t": 1e12,
+    "billion": 1e9, "bn": 1e9, "b": 1e9,
+    "million": 1e6, "m": 1e6,
+    "thousand": 1e3, "k": 1e3,
+}
+
+
+def _figures(text: str) -> list[tuple[float, float, bool, str]]:
+    """(value, rounding tolerance, is_percent, original) for each figure."""
+    cleaned = str(text or "")
+    for pattern in _DATE_PATTERNS:
+        cleaned = pattern.sub(" ", cleaned)
+    found = []
+    for match in _NUMBER.finditer(cleaned):
+        digits, unit = match.group(1), (match.group(2) or "")
+        percent = unit in {"%", "％"}
+        scale = 1.0 if percent else _MAGNITUDE.get(unit.lower(), 1.0)
+        number = float(digits.replace(",", ""))
+        decimals = len(digits.split(".", 1)[1]) if "." in digits else 0
+        # A figure written with d decimals may be a rounding of anything within
+        # half a unit of its last digit.
+        tolerance = 0.5 * (10 ** -decimals) * scale
+        found.append((number * scale, tolerance, percent, match.group(0).strip()))
+    return found
+
+
+def unsupported_figures(post: str, sources: Iterable[str]) -> list[str]:
+    """Figures in the post that no published field supports.
+
+    A post figure is supported when some source figure of the same kind
+    (percent or not) rounds to it. Single-digit plain numbers are ignored:
+    they are usually counts written as words elsewhere ("两家", "3 家").
+    """
+    source_figures = [figure for text in sources for figure in _figures(text)]
+    missing = []
+    for value, tolerance, percent, original in _figures(post):
+        if not percent and tolerance == 0.5 and value < 10:
+            continue
+        if not any(
+            percent == source_percent and abs(value - source_value) <= tolerance
+            for source_value, _, source_percent, _ in source_figures
+        ):
+            missing.append(original)
+    return missing
+
+
 async def compose_story_post(
     ai_client,
     item: ContentItem,
@@ -403,25 +486,16 @@ async def compose_story_post(
     """
     from ..ai.prompts import X_POST_SYSTEM, X_POST_USER
 
-    metadata = item.metadata or {}
-
-    def field(name: str) -> str:
-        return str(metadata.get(f"{name}_{language}") or "").strip()
-
-    # A narrative post needs more raw material than the summaries carry: the
-    # timeline and the concrete numbers usually only exist in the article body.
-    article = " ".join(str(item.content or "").split())[:ARTICLE_EXCERPT_CHARS]
-
+    fields = post_source_fields(item, language)
     try:
         response = await ai_client.complete(
             system=X_POST_SYSTEM,
             user=X_POST_USER.format(
-                title=metadata.get(f"title_{language}") or item.title,
-                summary=field("detailed_summary") or (item.ai_summary or ""),
-                background=field("background") or "（无）",
-                market_impact=field("market_impact") or "（无）",
-                discussion=field("community_discussion") or "（无）",
-                article=article or "（无）",
+                title=fields["title"],
+                summary=fields["summary"],
+                background=fields["background"] or "（无）",
+                market_impact=fields["market_impact"] or "（无）",
+                discussion=fields["discussion"] or "（无）",
             ),
             response_format="text",
         )
@@ -429,6 +503,29 @@ async def compose_story_post(
         logger.warning("X post composition failed for %s: %s", item.id, exc)
         return None
     return sanitize_composed_post(response, limit=limit)
+
+
+@dataclass(frozen=True)
+class PostOutcome:
+    """What one planned-post attempt proved about the post.
+
+    ``kind`` is one of:
+
+    - ``sent``: X accepted the post and returned its id.
+    - ``not_sent``: the request provably never reached X (no connection), so
+      trying again cannot produce a duplicate.
+    - ``rate_limited``: X refused with HTTP 429 and created nothing.
+    - ``failed``: X refused definitively (401, 403, other 4xx). Retrying the
+      same request will not help; a person has to look.
+    - ``unknown``: the request may have been accepted (timeout after sending,
+      5xx, unreadable success body). Never retried automatically.
+
+    ``detail`` is safe for public logs: it never contains a response body.
+    """
+
+    kind: str
+    detail: str = ""
+    tweet_id: str = ""
 
 
 class XEditionPublisher:
@@ -480,6 +577,70 @@ class XEditionPublisher:
             access_token=access_token,
             access_secret=access_secret,
         )
+
+    def not_ready_reason(self) -> str:
+        """Why a planned post cannot be attempted now, or "" when it can.
+
+        Checked before a job is marked pending, so a missing credential leaves
+        the plan untouched instead of producing an attempt that never ran.
+        """
+        if not self.config.enabled:
+            return "X delivery is disabled in the configuration."
+        if not all(self._credentials()):
+            return "X credentials are not fully configured; nothing posted."
+        return ""
+
+    async def publish_post(self, text: str) -> PostOutcome:
+        """Attempt one planned post and classify what the attempt proved."""
+        reason = self.not_ready_reason()
+        if reason:
+            return PostOutcome("not_sent", reason)
+        if not text.strip():
+            return PostOutcome("not_sent", "Nothing to post.")
+        consumer_key, consumer_secret, access_token, access_secret = (
+            self._credentials()
+        )
+        authorization = _oauth_header(
+            "POST",
+            X_TWEETS_ENDPOINT,
+            consumer_key=consumer_key,
+            consumer_secret=consumer_secret,
+            access_token=access_token,
+            access_secret=access_secret,
+        )
+        try:
+            async with httpx.AsyncClient(
+                timeout=20.0, transport=self.transport
+            ) as client:
+                response = await client.post(
+                    X_TWEETS_ENDPOINT,
+                    headers={
+                        "Authorization": authorization,
+                        "Content-Type": "application/json",
+                    },
+                    json={"text": text},
+                )
+        except (httpx.ConnectError, httpx.ConnectTimeout) as exc:
+            # No connection was established, so X never saw the request.
+            return PostOutcome("not_sent", f"X request not sent: {type(exc).__name__}")
+        except httpx.HTTPError as exc:
+            return PostOutcome("unknown", f"X request outcome unknown: {type(exc).__name__}")
+        code = response.status_code
+        if code == 429:
+            return PostOutcome("rate_limited", "X API returned HTTP 429.")
+        if code >= 500:
+            return PostOutcome("unknown", f"X API returned HTTP {code}.")
+        if code >= 400:
+            return PostOutcome("failed", f"X API returned HTTP {code}.")
+        try:
+            tweet_id = str((response.json().get("data") or {}).get("id") or "")
+        except (ValueError, AttributeError):
+            tweet_id = ""
+        if not tweet_id.isdigit():
+            return PostOutcome(
+                "unknown", f"X API returned HTTP {code} without a post id."
+            )
+        return PostOutcome("sent", f"X API returned HTTP {code}.", tweet_id)
 
     async def _post(
         self,

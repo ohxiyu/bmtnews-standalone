@@ -87,8 +87,17 @@ def main():
         "--x-kickoff-only",
         action="store_true",
         help=(
-            "Post the first X story only when the edition queue has not started; "
-            "requires --mode x-post"
+            "Kept for compatibility: a post-publication kickoff runs the same "
+            "plan-and-send step as a scheduled run; requires --mode x-post"
+        ),
+    )
+    parser.add_argument(
+        "--x-queue-dir",
+        type=Path,
+        default=None,
+        help=(
+            "Checkout of the x-queue branch; each X queue change is committed "
+            "and pushed there before any post; requires --mode x-post"
         ),
     )
     args = parser.parse_args()
@@ -100,6 +109,8 @@ def main():
         parser.error("--force-publish requires --mode publish")
     if args.x_kickoff_only and args.mode != "x-post":
         parser.error("--x-kickoff-only requires --mode x-post")
+    if args.x_queue_dir is not None and args.mode != "x-post":
+        parser.error("--x-queue-dir requires --mode x-post")
     if args.edition_date is not None and args.mode not in {
         "publish",
         "weekly",
@@ -156,6 +167,7 @@ def main():
                 orchestrator.run_x_slot(
                     edition_date=args.edition_date,
                     kickoff_only=args.x_kickoff_only,
+                    queue_dir=args.x_queue_dir,
                 )
             )
         elif args.mode == "weekly":

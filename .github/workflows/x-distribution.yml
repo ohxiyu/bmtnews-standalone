@@ -1,35 +1,29 @@
 name: BMTNews X Distribution
 
-# Drip-posts the day's top stories one at a time across peak Asian reading
-# hours. Only runs when x_delivery.mode is "drip" and the credentials are
-# configured; otherwise every slot exits without posting.
+# Posts today's top stories to X from a plan that is written before anything
+# is sent (src/x_queue.py). Only runs when x_delivery.mode is "drip" and the
+# credentials are configured; otherwise every run exits without posting.
 #
-# Crons are UTC (GitHub does not honour a timezone key on schedules), with
-# the Asia/Shanghai equivalent noted. Each run posts the lowest-ranked
-# story not yet posted for today's edition, so a delayed or skipped slot
-# shifts a story later instead of dropping or duplicating it.
+# The daily edition dispatches this workflow as soon as it publishes, which
+# sends the first story. The cron below only polls: a cheap stdlib gate reads
+# the queue and the published edition state and exits in seconds unless a
+# post is due, the edition changed, or a deadline passed. Each run sends at
+# most one post, and an outcome that cannot be proven is never retried.
 
 on:
-  # Minutes are deliberately off the hour and off the half hour: GitHub
-  # delays scheduled runs under load and the top of the hour is the worst
-  # slot — a 0 1 * * * trigger was dropped outright rather than delayed.
-  # The last entry is a catch-up: because slots post the lowest rank not
-  # yet sent, it finishes the day's quota if an earlier slot is dropped.
+  # Every 20 minutes from 07:07 to 23:47 Asia/Shanghai (crons are UTC). The
+  # minutes avoid the top of the hour, where GitHub delays or drops runs.
   schedule:
-    - cron: '7 1 * * *'    # 09:07 Asia/Shanghai — start of day
-    - cron: '37 4 * * *'   # 12:37 Asia/Shanghai — lunch break
-    - cron: '37 10 * * *'  # 18:37 Asia/Shanghai — evening commute
-    - cron: '37 13 * * *'  # 21:37 Asia/Shanghai — evening peak
-    - cron: '17 15 * * *'  # 23:17 Asia/Shanghai — catch-up for dropped slots
+    - cron: '7-59/20 23,0-15 * * *'
   workflow_dispatch:
     inputs:
       edition_date:
-        description: Edition date to post from (YYYY-MM-DD)
+        description: Only today's edition is posted; another date is reported and ignored
         type: string
         required: false
         default: ''
       kickoff_only:
-        description: Post rank 1 only when this edition has not started on X
+        description: Kept for compatibility; a kickoff is an ordinary run
         type: boolean
         required: false
         default: false
@@ -39,7 +33,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write  # Persists the drip queue on the x-queue branch
+  contents: write  # Checkpoints the plan on the x-queue branch
 
 jobs:
   post:
@@ -51,43 +45,76 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          ref: main # Never run another branch's code against the live account.
 
       - name: Restore published edition state
         shell: bash
         run: |
+          set -euo pipefail
           git fetch --depth=1 origin gh-pages:refs/remotes/origin/gh-pages
           if git cat-file -e "origin/gh-pages:_data/bmtnews_state.json" 2>/dev/null; then
             mkdir -p docs/_data
             git show "origin/gh-pages:_data/bmtnews_state.json" > docs/_data/bmtnews_state.json
           fi
 
-      - name: Restore drip queue
+      - name: Restore isolated delivery queue
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          mkdir -p data
-          if git fetch --depth=1 origin x-queue 2>/dev/null; then
-            git show FETCH_HEAD:data/x-queue.json > data/x-queue.json 2>/dev/null || true
+          set -euo pipefail
+          gh auth setup-git
+          git init "$RUNNER_TEMP/x-state"
+          git -C "$RUNNER_TEMP/x-state" remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
+          git -C "$RUNNER_TEMP/x-state" config user.name 'github-actions[bot]'
+          git -C "$RUNNER_TEMP/x-state" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Network/auth errors must not be read as an empty queue: that
+          # would forget what was already sent and post it again.
+          refs=$(git ls-remote --heads origin refs/heads/x-queue)
+          if [ -n "$refs" ]; then
+            git -C "$RUNNER_TEMP/x-state" fetch --depth=1 origin x-queue
+            git -C "$RUNNER_TEMP/x-state" checkout -b x-queue FETCH_HEAD
+            test -f "$RUNNER_TEMP/x-state/data/x-queue.json"
+          else
+            git -C "$RUNNER_TEMP/x-state" checkout --orphan x-queue
           fi
 
+      - name: Queue gate (no dependencies)
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m src.x_queue \
+            --queue "$RUNNER_TEMP/x-state/data/x-queue.json" \
+            --feed-state docs/_data/bmtnews_state.json \
+            --config data/config.github.json | tee -a "$GITHUB_OUTPUT" "$GITHUB_STEP_SUMMARY"
+
       - name: Set up Python
+        if: steps.gate.outputs.work == 'true'
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Install uv
+        if: steps.gate.outputs.work == 'true'
         uses: astral-sh/setup-uv@v7
         with:
           version: "0.11.32"
 
       - name: Install dependencies
+        if: steps.gate.outputs.work == 'true'
         run: uv sync --frozen
 
       - name: Prepare GitHub Actions config
+        if: steps.gate.outputs.work == 'true'
         run: cp data/config.github.json data/config.json
 
-      - name: Post the next story
+      - name: Plan and send with remote checkpoints
+        if: steps.gate.outputs.work == 'true'
         env:
-          # Needed when x_delivery.compose is "ai"; without them the step
+          GH_TOKEN: ${{ github.token }}
+          # Needed when x_delivery.compose is "ai"; without them planning
           # falls back to the template post rather than failing.
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -97,23 +124,26 @@ jobs:
           X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          EDITION_DATE: ${{ inputs.edition_date }}
         shell: bash
         run: |
-          args=(--mode x-post)
-          if [ -n "${{ inputs.edition_date }}" ]; then
-            args+=(--edition-date "${{ inputs.edition_date }}")
-          fi
-          if [ "${{ inputs.kickoff_only }}" = "true" ]; then
-            args+=(--x-kickoff-only)
+          set -euo pipefail
+          args=(--mode x-post --x-queue-dir "$RUNNER_TEMP/x-state")
+          if [ -n "$EDITION_DATE" ]; then
+            args+=(--edition-date "$EDITION_DATE")
           fi
           uv run bmtnews "${args[@]}"
 
       - name: Publish run report
-        if: ${{ always() }}
-        run: python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+        if: ${{ always() && steps.gate.outputs.work == 'true' }}
+        shell: bash
+        run: |
+          if [ -f data/run-report.json ]; then
+            python -m src.run_report --input data/run-report.json --output "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Keep machine-readable cost and health report
-        if: ${{ always() }}
+        if: ${{ always() && steps.gate.outputs.work == 'true' }}
         uses: actions/upload-artifact@v6
         with:
           name: run-report-${{ github.run_id }}-${{ github.run_attempt }}
@@ -121,20 +151,8 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
-      - name: Persist drip queue
-        if: ${{ always() }}
-        shell: bash
+      - name: Flag posts that need a person
+        if: steps.gate.outputs.attention != '0'
         run: |
-          if [ ! -f data/x-queue.json ]; then
-            echo "No queue state to persist"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B x-queue
-          git add -f data/x-queue.json
-          if git commit -m "chore: update X drip queue"; then
-            git push -f origin x-queue
-          else
-            echo "Queue unchanged"
-          fi
+          echo "::error::The X queue has unknown, pending or failed posts. Check the account, then resolve them on the x-queue branch (project-docs/x-distribution.md)."
+          exit 1

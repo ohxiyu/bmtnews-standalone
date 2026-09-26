@@ -1,55 +1,53 @@
 # 当前交接
 
-当前目标：记录 [Issue127](https://github.com/ohxiyu/bmtnews-standalone/issues/127) / [PR128](https://github.com/ohxiyu/bmtnews-standalone/pull/128) 已获授权合并后的生产接入，并等待下一期自动日报验证预筛缓存效果。2026-09-24 日报在合并前生成，不强制重刊；应用合并、生产采集成功和新预筛路径的实际验收不能混为一谈。发布证据补记由 [Issue129](https://github.com/ohxiyu/bmtnews-standalone/issues/129) 负责。
+当前目标：[Issue131](https://github.com/ohxiyu/bmtnews-standalone/issues/131) 将 X 分发改为「先计划、后发送」：每天 2 条，结果不明永不自动重试，迟到超过 6 小时不外发，文案只用已发布字段并做数字校验。维护者已明确授权本任务修改、提交 PR、合并并上线。上一任务（Issue127 AI 用量优化）的记录见 [2026-09-24-ai-token-efficiency.md](releases/2026-09-24-ai-token-efficiency.md)。
 
 <!-- execution-pointer -->
 ```json
 {
-  "goal": "记录 AI 用量优化的合并与生产接入；在下一期自动日报验证预筛缓存命中和质量",
-  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/127",
-  "owner": "Codex / ai-token-efficiency",
-  "branch": "agent/ai-token-efficiency",
-  "last_verified_commit": "d236333b4e0ac5a3a74c75e01c173b4a5561b5cb",
-  "pr": "https://github.com/ohxiyu/bmtnews-standalone/pull/128",
+  "goal": "X 分发改为先计划后发送：每天 2 条（top1 发布即发，top2 隔 3-6 小时），unknown 永不自动重试，迟到超 6 小时不外发，文案只用已发布字段",
+  "issue": "https://github.com/ohxiyu/bmtnews-standalone/issues/131",
+  "owner": "Claude Code / x-plan-send",
+  "branch": "agent/x-plan-send",
+  "last_verified_commit": "879ec3e2e66071d48ba0b28ece54f983a5c6c9ce",
+  "pr": "pending: PR for agent/x-plan-send",
   "completed": [
-    "评分动态提示仅在用量报告中标记为 content_analysis，不改变其请求预算和思考模式",
-    "预筛只复用完整验证且提示全文相同的批次；单独 1 天、256 批容量不挤占评分缓存",
-    "新增模型/内容变化、部分响应、缓存持久化及报告显示测试；本地全量 838 项通过",
-    "PR128 于 2026-09-24 11:20 Asia/Shanghai 合并；生产 Feed Collection 运行 35951132730 成功，使用合并提交 d236333"
+    "src/x_queue.py 重写为 v2 计划队列：story_key、pending 检查点、状态机、v1 迁移、标准库门控",
+    "run_x_slot 改为计划 + 单条发送；XEditionPublisher.publish_post 分类结果且不记录响应体",
+    "X 文案去掉原文正文，新增数字一致性校验，不符回落模板",
+    "x-distribution.yml fail-closed 恢复、20 分钟门控轮询、删除 force push；日报 kickoff 失败改为 warning",
+    "本地全量 858 项测试通过；用生产 x-queue 与刊期状态离线模拟迁移结果正确"
   ],
   "unfinished": [
-    "下一期自动日报（预计 2026-09-25 07:26 Asia/Shanghai）尚未运行；本次采集没有触发预筛，不能宣称缓存已在生产命中或节省 token",
-    "发布证据见 Issue129 / PR130；仍需观察 3-7 天用量和内容质量，再决定是否做输入压缩或推理强度 A/B"
+    "PR 检查、合并、合并后第一次生产运行（v1 迁移与 top2 实发）尚未发生"
   ],
   "validation": [
-    "uv sync --frozen --extra dev、uv run pytest（838 项）及治理检查通过；只用 mock 客户端，没有真实 AI 调用",
-    "PR128 的 test、analyze、governance、CodeQL 和 Cloudflare Pages Preview 检查通过",
-    "origin/main=d236333b4e0ac5a3a74c75e01c173b4a5561b5cb；生产采集 workflow 35951132730 成功，报告 11 次正文分析均标为 content_analysis",
-    "Actions 将事件页写入 gh-pages 提交 48342b4974bed6169f3f19de155260a8185af2f7；公网首页和 /api/latest.json 均返回 HTTP 200"
+    "uv run pytest（858 项，离线，无真实 AI / X 调用）与 scripts/check_governance.py 通过",
+    "系统 Python 对生产数据运行门控：work=true attention=0"
   ],
   "unverified": [
-    "预筛缓存实际命中率、token 节省、排序及内容质量待下一期日报验证；当前 latest.json 仍是合并前生成的 14 条",
-    "Cloudflare Pages 对 gh-pages 产物的精确部署 ID、独立 Worker 版本与渠道投递未在本任务核验；Worker 代码未改"
+    "生产首次运行的迁移、pending 检查点 push 权限、真实 X 返回的 data.id 解析",
+    "AI 文案数字校验在真实生成上的回落率"
   ],
   "production": {
-    "source_commit": "d236333b4e0ac5a3a74c75e01c173b4a5561b5cb (production Feed Collection source)",
-    "artifact_commit": "48342b4974bed6169f3f19de155260a8185af2f7 (event timeline by Actions); current daily edition remains pre-merge",
-    "edition": "2026-09-24 latest.json, 14 items, generated before PR128 merge",
-    "generated_at": "2026-09-23T23:28:50.209803Z",
-    "worker_version": "not changed; independent dispatcher version unverified because PR128 did not edit ops/",
-    "verified_at": "2026-09-24 11:27 Asia/Shanghai; Actions artifact, report and public HTTP checks"
+    "source_commit": "879ec3e2e66071d48ba0b28ece54f983a5c6c9ce (current main; change not merged)",
+    "artifact_commit": "not applicable: X delivery writes only the x-queue branch; current x-queue 6743d64 is v1",
+    "edition": "2026-09-26, rank 1 posted to X by the v1 flow",
+    "generated_at": "2026-09-25T23:31:34.824110Z",
+    "worker_version": "not changed; dispatcher Worker not edited",
+    "verified_at": "2026-09-26 11:00 Asia/Shanghai; offline simulation only"
   },
   "blockers": [
-    "下一期自动日报尚未运行；不要强制重刊已发布的 2026-09-24 日报来制造验收数据"
+    "无；合并后需等待下一次 X 定时运行完成迁移并核验"
   ],
-  "next_action": "2026-09-25 07:26 后核对自动日报运行报告的预筛缓存命中/未命中、各阶段 token、候选数量、排行和附加内容；保留异常证据再修复",
+  "next_action": "开 PR 并等待 test/analyze/governance/CodeQL 通过后合并；随后核对第一次 X Distribution 运行的 x-queue v2 内容与 top2 发送结果并补记部署证据",
   "states": {
     "code": "complete",
     "tests": "complete",
-    "pr_merged": "complete",
-    "deployed": "complete",
+    "pr_merged": "pending",
+    "deployed": "pending",
     "production_verified": "pending"
   },
-  "evidence": "project-docs/releases/2026-09-24-ai-token-efficiency.md"
+  "evidence": "project-docs/releases/2026-09-26-x-plan-send.md"
 }
 ```

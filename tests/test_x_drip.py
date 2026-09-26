@@ -1,31 +1,23 @@
 """Tests for drip-mode X distribution."""
 
 import asyncio
-import pytest
 from datetime import datetime, timezone
-from pathlib import Path
-from types import SimpleNamespace
-
-from rich.console import Console
 
 from src.models import ContentItem, SourceType, XDeliveryConfig
 from src.services.x_delivery import (
     TWEET_LIMIT,
-    XDeliveryResult,
-    XDeliveryStatus,
     _weighted_length,
     build_story_post,
 )
-from src.x_queue import (
-    XQueueState,
-    load_queue_state,
-    next_pending_rank,
-    save_queue_state,
-    state_for_edition,
-)
 
 
-def make_item(title: str, *, summary: str = "", impact: str = "") -> ContentItem:
+def make_item(
+    title: str,
+    *,
+    summary: str = "",
+    impact: str = "",
+    url: str = "https://example.com/story",
+) -> ContentItem:
     metadata = {"title_zh": title}
     if summary:
         metadata["detailed_summary_zh"] = summary
@@ -35,7 +27,7 @@ def make_item(title: str, *, summary: str = "", impact: str = "") -> ContentItem
         id=title,
         source_type=SourceType.RSS,
         title=title,
-        url="https://example.com/story",
+        url=url,
         published_at=datetime(2026, 8, 9, tzinfo=timezone.utc),
         ai_score=9.0,
         metadata=metadata,
@@ -86,169 +78,6 @@ def test_story_post_truncates_a_very_long_headline() -> None:
         limit=TWEET_LIMIT,
     )
     assert _weighted_length(text_with_link) <= TWEET_LIMIT
-
-
-def test_queue_state_round_trip_and_reset(tmp_path: Path) -> None:
-    path = tmp_path / "x-queue.json"
-    state = XQueueState(date="2026-08-09")
-    state.mark_posted("zh", 1)
-    save_queue_state(state, path)
-
-    reloaded = load_queue_state(path)
-    assert reloaded.posted_ranks("zh") == [1]
-
-    # A new edition resets the queue.
-    fresh = state_for_edition(reloaded, "2026-08-10")
-    assert fresh.date == "2026-08-10"
-    assert fresh.posted_ranks("zh") == []
-
-
-@pytest.mark.parametrize("payload", ["{oops", "{}", '{"version": 999, "date": "2026-09-16", "posted": {}}'])
-def test_queue_state_corruption_does_not_reset_sent_history(tmp_path: Path, payload) -> None:
-    broken = tmp_path / "broken.json"
-    broken.write_text(payload, encoding="utf-8")
-    with pytest.raises(ValueError, match="refusing to reset"):
-        load_queue_state(broken)
-    assert load_queue_state(tmp_path / "missing.json").date == ""
-
-
-def test_next_pending_rank_orders_and_stops() -> None:
-    state = XQueueState(date="2026-08-09")
-    assert next_pending_rank(state, language="zh", total_items=10, limit=4) == 1
-    state.mark_posted("zh", 1)
-    state.mark_posted("zh", 2)
-    assert next_pending_rank(state, language="zh", total_items=10, limit=4) == 3
-    state.mark_posted("zh", 3)
-    state.mark_posted("zh", 4)
-    assert next_pending_rank(state, language="zh", total_items=10, limit=4) is None
-    # A short edition never promises more ranks than it has.
-    assert next_pending_rank(
-        XQueueState(), language="zh", total_items=2, limit=4
-    ) == 1
-    assert next_pending_rank(
-        XQueueState(posted={"zh": [1, 2]}), language="zh", total_items=2, limit=4
-    ) is None
-
-
-class RecordingPublisher:
-    def __init__(self, status=XDeliveryStatus.SUCCESS) -> None:
-        self.posts: list[str] = []
-        self.status = status
-
-    async def send_text(self, text: str) -> XDeliveryResult:
-        self.posts.append(text)
-        return XDeliveryResult(status=self.status, posted=1)
-
-
-def make_orchestrator(publisher, items, *, mode="drip"):
-    from src.orchestrator import BMTNewsOrchestrator
-
-    orchestrator = BMTNewsOrchestrator.__new__(BMTNewsOrchestrator)
-    orchestrator.console = Console(record=True)
-    orchestrator.config = SimpleNamespace(
-        x_delivery=XDeliveryConfig(
-            enabled=True, mode=mode, drip_items=4, languages=["zh"]
-        ),
-        filtering=SimpleNamespace(daily_timezone="Asia/Shanghai"),
-    )
-    orchestrator.x_publisher = publisher
-    return orchestrator
-
-
-def run_slot(
-    monkeypatch,
-    orchestrator,
-    items,
-    path,
-    date="2026-08-09",
-    *,
-    kickoff_only=False,
-):
-    import src.orchestrator as module
-    from src.daily_feed import DailyFeedState
-
-    state = DailyFeedState(
-        date=date,
-        timezone="Asia/Shanghai",
-        updated_at=datetime(2026, 8, 9, tzinfo=timezone.utc),
-        items=items,
-    )
-    monkeypatch.setattr(module, "load_daily_feed_state", lambda *a, **k: state)
-    monkeypatch.setattr(module, "save_run_report", lambda report: None)
-    asyncio.run(
-        orchestrator.run_x_slot(
-            edition_date=datetime.fromisoformat(f"{date}T00:00").date(),
-            kickoff_only=kickoff_only,
-            state_path=path,
-        )
-    )
-
-
-def test_slots_post_one_story_each_in_rank_order(monkeypatch, tmp_path) -> None:
-    items = [make_item(f"第{i}条", summary=f"摘要{i}。") for i in range(1, 6)]
-    publisher = RecordingPublisher()
-    orchestrator = make_orchestrator(publisher, items)
-    path = tmp_path / "x-queue.json"
-
-    for _ in range(5):  # five slots, only four stories configured
-        run_slot(monkeypatch, orchestrator, items, path)
-
-    assert len(publisher.posts) == 4
-    assert "第1条" in publisher.posts[0]
-    assert "第4条" in publisher.posts[3]
-    assert load_queue_state(path).posted_ranks("zh") == [1, 2, 3, 4]
-
-
-def test_digest_mode_slot_posts_nothing(monkeypatch, tmp_path) -> None:
-    items = [make_item("第1条")]
-    publisher = RecordingPublisher()
-    orchestrator = make_orchestrator(publisher, items, mode="digest")
-    run_slot(monkeypatch, orchestrator, items, tmp_path / "q.json")
-    assert publisher.posts == []
-
-
-def test_failed_post_is_retried_by_the_next_slot(monkeypatch, tmp_path) -> None:
-    items = [make_item("第1条"), make_item("第2条")]
-    failing = RecordingPublisher(status=XDeliveryStatus.FAILURE)
-    orchestrator = make_orchestrator(failing, items)
-    path = tmp_path / "x-queue.json"
-    run_slot(monkeypatch, orchestrator, items, path)
-    assert load_queue_state(path).posted_ranks("zh") == []
-
-    working = RecordingPublisher()
-    orchestrator.x_publisher = working
-    run_slot(monkeypatch, orchestrator, items, path)
-    assert "第1条" in working.posts[0]
-
-
-def test_publication_kickoff_is_idempotent(monkeypatch, tmp_path) -> None:
-    items = [make_item("第1条"), make_item("第2条")]
-    publisher = RecordingPublisher()
-    orchestrator = make_orchestrator(publisher, items)
-    path = tmp_path / "x-queue.json"
-
-    run_slot(
-        monkeypatch,
-        orchestrator,
-        items,
-        path,
-        kickoff_only=True,
-    )
-    run_slot(
-        monkeypatch,
-        orchestrator,
-        items,
-        path,
-        kickoff_only=True,
-    )
-
-    assert len(publisher.posts) == 1
-    assert "第1条" in publisher.posts[0]
-    assert load_queue_state(path).posted_ranks("zh") == [1]
-
-    run_slot(monkeypatch, orchestrator, items, path)
-    assert len(publisher.posts) == 2
-    assert "第2条" in publisher.posts[1]
 
 
 def test_story_post_does_not_break_on_abbreviations() -> None:
@@ -419,36 +248,8 @@ def test_template_post_omits_the_link_by_default() -> None:
     assert "标题" in text and "一句摘要内容。" in text
 
 
-def test_slot_falls_back_to_template_when_composer_fails(
-    monkeypatch, tmp_path
-) -> None:
-    import src.orchestrator as module
-    from src.services.x_delivery import XDeliveryResult
-
-    items = [make_item("重要新闻", summary="一句摘要内容。")]
-    posts: list[str] = []
-
-    class Publisher:
-        async def send_text(self, text: str) -> XDeliveryResult:
-            posts.append(text)
-            return XDeliveryResult(status=XDeliveryStatus.SUCCESS, posted=1)
-
-    orchestrator = make_orchestrator(Publisher(), items)
-    monkeypatch.setattr(
-        module, "create_ai_client", lambda config: ComposingClient(RuntimeError("no key"))
-    )
-    run_slot(monkeypatch, orchestrator, items, tmp_path / "q.json")
-
-    assert len(posts) == 1
-    assert "重要新闻" in posts[0]
-    assert "http" not in posts[0]
-
-
-
-
-
-async def _test_compose_shows_the_article_body() -> None:
-    """A narrative post needs the timeline, which only the body carries."""
+async def _test_compose_never_shows_the_article_body() -> None:
+    """Posts draw only on published fields; raw article text stays out."""
     from src.services.x_delivery import compose_story_post
 
     item = make_item("标题")
@@ -457,38 +258,18 @@ async def _test_compose_shows_the_article_body() -> None:
     client = ComposingClient(GOOD)
     await compose_story_post(client, item, language="zh", limit=400)
     sent = client.calls[0]["user"]
-    assert "区块 961,632" in sent
-    assert "90-150" in client.calls[0]["system"]
-    assert "第一段只能有一句话" in client.calls[0]["system"]
-    assert "时间、地点或场合、人物或机构" in client.calls[0]["system"]
+    assert "区块 961,632" not in sent
+    assert "原文" not in sent
+    assert "摘要内容" in sent
+    system = client.calls[0]["system"]
+    assert "90-150" in system
+    assert "第一段只能有一句话" in system
+    assert "时间、地点或场合、人物或机构" in system
+    assert "不能推算、合计或改动数值" in system
 
 
-def test_compose_shows_the_article_body() -> None:
-    asyncio.run(_test_compose_shows_the_article_body())
-
-
-async def _test_compose_survives_a_missing_article_body() -> None:
-    from src.services.x_delivery import compose_story_post
-
-    item = make_item("标题")
-    item.content = None
-    client = ComposingClient(GOOD)
-    assert await compose_story_post(client, item, language="zh", limit=400) == GOOD
-
-
-def test_compose_survives_a_missing_article_body() -> None:
-    asyncio.run(_test_compose_survives_a_missing_article_body())
-
-
-def test_compose_caps_the_article_excerpt() -> None:
-    """Whole articles would make every post expensive for no extra signal."""
-    from src.services.x_delivery import ARTICLE_EXCERPT_CHARS, compose_story_post
-
-    item = make_item("标题")
-    item.content = "囧" * (ARTICLE_EXCERPT_CHARS * 3)
-    client = ComposingClient(GOOD)
-    asyncio.run(compose_story_post(client, item, language="zh", limit=400))
-    assert client.calls[0]["user"].count("囧") == ARTICLE_EXCERPT_CHARS
+def test_compose_never_shows_the_article_body() -> None:
+    asyncio.run(_test_compose_never_shows_the_article_body())
 
 
 def test_sanitize_rejects_a_headline_only_post() -> None:
@@ -502,58 +283,3 @@ def test_sanitize_rejects_a_headline_only_post() -> None:
 
 def test_x_delivery_defaults_to_the_compact_limit() -> None:
     assert XDeliveryConfig().max_post_chars == 400
-
-
-def test_production_drip_posts_only_daily_top_three(monkeypatch, tmp_path):
-    import json
-    config = XDeliveryConfig.model_validate(json.loads(
-        (Path(__file__).resolve().parents[1] / "data/config.github.json").read_text()
-    )["x_delivery"])
-    assert config.mode == "drip"
-    assert config.drip_items == XDeliveryConfig().drip_items == 3
-    items = [make_item(f"第{i}条", summary=f"摘要{i}。") for i in range(1, 7)]
-    publisher = RecordingPublisher()
-    orchestrator = make_orchestrator(publisher, items)
-    orchestrator.config.x_delivery = config.model_copy(update={"compose": "template"})
-    path = tmp_path / "queue.json"
-    for _ in range(8):
-        run_slot(monkeypatch, orchestrator, items, path)
-    assert len(publisher.posts) == 3
-    for rank, post in enumerate(publisher.posts, 1):
-        assert f"第{rank}条" in post
-    assert load_queue_state(path).posted_ranks("zh") == [1, 2, 3]
-
-
-def test_reducing_limit_preserves_existing_sent_ranks(monkeypatch, tmp_path):
-    items = [make_item(f"第{i}条") for i in range(1, 7)]
-    publisher = RecordingPublisher()
-    orchestrator = make_orchestrator(publisher, items)
-    orchestrator.config.x_delivery.drip_items = 3
-    path = tmp_path / "queue.json"
-    save_queue_state(XQueueState(date="2026-08-09", posted={"zh": [1, 2, 3, 4]}), path)
-    run_slot(monkeypatch, orchestrator, items, path)
-    assert publisher.posts == []
-    assert load_queue_state(path).posted_ranks("zh") == [1, 2, 3, 4]
-
-
-def test_reordered_ranking_pauses_x_without_erasing_receipts(monkeypatch, tmp_path):
-    items = [make_item(f"story-{i}") for i in range(4)]
-    for i, story in enumerate(items):
-        story.url = f"https://example.com/{i}"
-    publisher = RecordingPublisher()
-    orchestrator = make_orchestrator(publisher, items)
-    path = tmp_path / "queue.json"
-    run_slot(monkeypatch, orchestrator, items, path)
-    before = path.read_text()
-    run_slot(monkeypatch, orchestrator, list(reversed(items)), path)
-    assert len(publisher.posts) == 1
-    assert path.read_text() == before
-    assert any(a.code == "x_selection_changed" for a in orchestrator.last_run_report.alerts)
-
-
-def test_legacy_rank_only_partial_day_pauses_but_new_day_can_start():
-    state = XQueueState(date="2026-09-16", posted={"zh": [1]})
-    assert not state.bind_selection(["a", "b", "c"])
-    assert state.posted_ranks("zh") == [1]
-    fresh = state_for_edition(state, "2026-09-17")
-    assert fresh.bind_selection(["b", "c", "d"])
