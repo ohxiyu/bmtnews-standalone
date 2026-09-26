@@ -540,7 +540,20 @@ class XDeliveryConfig(BaseModel):
     # "drip" posts the top stories one at a time across the day, driven by
     # the x-distribution workflow; the publish step then posts nothing.
     mode: Literal["digest", "drip"] = "digest"
-    drip_items: int = Field(default=3, ge=1, le=8)
+    # Drip plan: the first story goes out when the edition publishes, each
+    # later one a seeded random gap after the previous post's actual send.
+    drip_items: int = Field(default=2, ge=1, le=8)
+    drip_gap_min_minutes: int = Field(default=180, ge=30, le=720)
+    drip_gap_max_minutes: int = Field(default=360, ge=30, le=720)
+    # An edition published later than expected_publish_time plus this delay
+    # is not posted to X at all; its news is stale there by then.
+    expected_publish_time: str = "07:26"
+    max_publish_delay_minutes: int = Field(default=360, ge=0, le=1440)
+    # A planned post that has not gone out this long after it was due, or by
+    # window_end in the edition's timezone, expires instead of going out late.
+    expire_after_minutes: int = Field(default=360, ge=30, le=1440)
+    window_end: str = "23:30"
+    history_days: int = Field(default=7, ge=1, le=30)
     # Where a drip post sends the reader. "none" posts no link at all, which
     # is what X's ranking favours; "site" keeps readers in the briefing and
     # "source" credits the outlet directly.
@@ -554,6 +567,22 @@ class XDeliveryConfig(BaseModel):
     # The compact brief targets 90-150 Chinese characters. The configured
     # ceiling leaves headroom for Latin names and numbers within that range.
     max_post_chars: int = Field(default=400, ge=280, le=25000)
+
+    @field_validator("expected_publish_time", "window_end")
+    @classmethod
+    def validate_clock(cls, value: str) -> str:
+        match = re.fullmatch(r"(\d{2}):(\d{2})", value.strip())
+        if not match or int(match.group(1)) > 23 or int(match.group(2)) > 59:
+            raise ValueError("x_delivery times must be HH:MM")
+        return value.strip()
+
+    @model_validator(mode="after")
+    def validate_drip_gap(self) -> "XDeliveryConfig":
+        if self.drip_gap_min_minutes > self.drip_gap_max_minutes:
+            raise ValueError(
+                "x_delivery.drip_gap_min_minutes must not exceed drip_gap_max_minutes"
+            )
+        return self
 
     @field_validator("site_url")
     @classmethod

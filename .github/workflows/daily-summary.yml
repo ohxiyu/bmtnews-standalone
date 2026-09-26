@@ -244,5 +244,6 @@ jobs:
               sleep $((attempt * 5))
             fi
           done
-          echo "::error::Published the daily edition but could not start X distribution"
-          exit 1
+          # The edition is live; the X cron picks it up within 20 minutes.
+          echo "::warning::Published the daily edition but could not start X distribution; the scheduled X run will pick it up"
+          exit 0

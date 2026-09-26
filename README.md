@@ -75,7 +75,7 @@ collect every ~4h ─► cached scoring ─► incremental event timeline
 - **🔌 Machine-readable** — edition and event JSON endpoints plus per-category
   Atom feeds
 - **📬 Multi-channel delivery** — the site, Telegram, email, webhooks, and
-  optional X distribution spread across peak reading hours
+  optional X distribution (the top two stories, hours apart)
 
 ## Quick start
 
@@ -99,7 +99,7 @@ Other modes:
 | `uv run bmtnews --mode fetch` | Collect new items, reuse cached scoring, and increment the restored event catalog |
 | `uv run bmtnews --mode publish` | Build and publish one fixed-window edition |
 | `uv run bmtnews --mode weekly` | Build the weekly review from the archive |
-| `uv run bmtnews --mode x-post` | Post the next scheduled story to X |
+| `uv run bmtnews --mode x-post` | Plan today's X posts and send the one that is due |
 | `uv run bmtnews-mcp` | Serve the pipeline and archive over MCP |
 
 Full configuration reference: [project-docs/configuration.md](project-docs/configuration.md).
