@@ -513,3 +513,13 @@ def test_workflow_restores_the_queue_fail_closed_and_never_force_pushes():
     assert "python3 -m src.x_queue" in workflow
     assert "--x-queue-dir" in workflow
     assert "steps.gate.outputs.attention != '0'" in workflow
+
+
+def test_x_is_clocked_by_square_without_a_trigger_loop():
+    """GitHub cron is unreliable here; the dispatcher-driven Square run is the clock."""
+    root = Path(__file__).resolve().parents[1] / ".github/workflows"
+    x_workflow = (root / "x-distribution.yml").read_text()
+    square_workflow = (root / "square-distribution.yml").read_text()
+    assert "workflows: ['BMTNews Binance Square Distribution']" in x_workflow
+    square_triggers = square_workflow.split("workflows:", 1)[1].split("\n", 1)[0]
+    assert "BMTNews X Distribution" not in square_triggers
