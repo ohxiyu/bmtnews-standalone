@@ -15,11 +15,11 @@
     "en": "Binance has taken a $100 million equity stake in Circle as part of a five-year agreement centered on USDC integration across its platform."
   },
   "first_seen_at": "2026-09-24T09:26:28.100216+00:00",
-  "last_updated_at": "2026-09-24T09:26:28.100216+00:00",
+  "last_updated_at": "2026-09-26T16:34:44.590308+00:00",
   "last_material_change_at": "2026-09-24T09:26:28.100216+00:00",
   "confidence": 0.75,
   "updates_count": 1,
-  "sources_count": 1,
+  "sources_count": 2,
   "entities": [
     "binance",
     "circle",
@@ -60,13 +60,20 @@
       "references": [],
       "confidence": 0.75,
       "story_ids": [
-        "gdelt:article:20260924T053000Z::https://www.forexcrunch.com/blog/2026/09/24/binance-buys-100-million-circle-stake-usdc-deal/"
+        "gdelt:article:20260924T053000Z::https://www.forexcrunch.com/blog/2026/09/24/binance-buys-100-million-circle-stake-usdc-deal/",
+        "rss:www.coindesk.com_arc_outboundfeeds_rss_:2b6dec6b10b3d076"
       ],
       "sources": [
         {
           "url": "https://www.forexcrunch.com/blog/2026/09/24/binance-buys-100-million-circle-stake-usdc-deal/",
           "label": "forexcrunch.com",
           "source_type": "gdelt",
+          "official": false
+        },
+        {
+          "url": "https://www.coindesk.com/business/2026/09/26/binance-deal-gives-circle-a-boost-in-stablecoin-race-with-tether-analysts-say",
+          "label": "CoinDesk",
+          "source_type": "rss",
           "official": false
         }
       ]

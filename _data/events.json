@@ -71154,26 +71154,32 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "The Senate's rejection of the Clarity Act has prompted the SEC and CFTC to take unilateral regulatory actions on crypto, marking a shift in policy momentum from Congress to federal agencies.",
-      "current_state_zh": "The Senate's rejection of the Clarity Act has prompted the SEC and CFTC to take unilateral regulatory actions on crypto, marking a shift in policy momentum from Congress to federal agencies.",
+      "current_state_en": "The Clarity Act's failure has shifted crypto policy momentum from Congress to federal agencies; the SEC, CFTC, and Fed are advancing crypto regulation through specific exemptions, relief, and proposed rules.",
+      "current_state_zh": "Clarity Act 的失败已将加密政策重心从国会转向联邦机构；SEC、CFTC 和美联储正通过具体豁免、救济和规则提案推进加密监管。",
       "entities": [
         "cftc",
         "clarity",
+        "congress",
         "defeat",
         "handed",
         "how",
+        "learned",
+        "love",
+        "regulators",
         "sec",
+        "stopped",
+        "waiting",
         "wheel"
       ],
       "event_id": "evt_275020fc7ac088fd",
       "event_type": "regulatory_action",
       "first_seen_at": "2026-09-19T18:42:24.717667Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-19T18:42:24.717667Z",
-      "last_updated_at": "2026-09-19T18:42:24.717667Z",
+      "last_material_change_at": "2026-09-26T16:34:50.022856Z",
+      "last_updated_at": "2026-09-26T16:34:50.022856Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "How the Clarity Act's Defeat Handed the SEC and CFTC the Wheel on Crypto",
       "title_zh": "How the Clarity Act's Defeat Handed the SEC and CFTC the Wheel on Crypto",
       "topics": [
@@ -71233,6 +71239,44 @@
           "update_type": "initial",
           "what_changed_en": "The Senate's rejection of the Clarity Act has prompted the SEC and CFTC to take unilateral regulatory actions on crypto, marking a shift in policy momentum from Congress to federal agencies.",
           "what_changed_zh": "The Senate's rejection of the Clarity Act has prompted the SEC and CFTC to take unilateral regulatory actions on crypto, marking a shift in policy momentum from Congress to federal agencies."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.93,
+          "current_state_en": "The Clarity Act's failure has shifted crypto policy momentum from Congress to federal agencies; the SEC, CFTC, and Fed are advancing crypto regulation through specific exemptions, relief, and proposed rules.",
+          "current_state_zh": "Clarity Act 的失败已将加密政策重心从国会转向联邦机构；SEC、CFTC 和美联储正通过具体豁免、救济和规则提案推进加密监管。",
+          "detailed_summary_en": "After the Senate failed to advance the Clarity Act, U.S. federal regulators swiftly issued a series of crypto-related actions, including an SEC tokenized-stock innovation exemption, CFTC no-action relief and rulemaking, and Fed stablecoin reserve and capital proposals under the GENIUS Act, signaling a shift from legislative to regulatory rulemaking.",
+          "detailed_summary_zh": "After the Senate failed to advance the Clarity Act, U.S. federal regulators swiftly issued a series of crypto-related actions, including an SEC tokenized-stock innovation exemption, CFTC no-action relief and rulemaking, and Fed stablecoin reserve and capital proposals under the GENIUS Act, signaling a shift from legislative to regulatory rulemaking.",
+          "event_id": "evt_275020fc7ac088fd",
+          "first_seen_at": "2026-09-26T16:34:50.022856Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T16:06:03Z",
+          "published_at": "2026-09-26T16:06:03Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Decrypt",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://decrypt.co/379383/how-crypto-stopped-waiting-congress-learned-love-regulators"
+            }
+          ],
+          "story_ids": [
+            "rss:decrypt.co_feed:195480fcce7639ce"
+          ],
+          "time_precision": "published",
+          "title_en": "How Crypto Stopped Waiting for Congress and Learned to Love the Regulators",
+          "title_zh": "How Crypto Stopped Waiting for Congress and Learned to Love the Regulators",
+          "update_id": "upd_9dedfe840bfe4f77",
+          "update_type": "aftermath",
+          "what_changed_en": "After the Clarity Act failed to advance, the SEC introduced a tokenized-stock innovation exemption, the CFTC issued no-action relief and sent a crypto-markets rulemaking to the White House, and the Fed proposed stablecoin reserve and capital rules under the GENIUS Act.",
+          "what_changed_zh": "在 Clarity Act 未推进后，SEC 推出代币化股票创新豁免，CFTC 发布不采取行动救济并将加密市场规则制定送交白宫审查，美联储则提出 GENIUS Act 下的稳定币储备与资本规则提案。"
         }
       ]
     },
@@ -83539,7 +83583,7 @@
       "first_seen_at": "2026-09-24T09:26:28.100216Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-24T09:26:28.100216Z",
-      "last_updated_at": "2026-09-24T09:26:28.100216Z",
+      "last_updated_at": "2026-09-26T16:34:44.590308Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -83577,10 +83621,17 @@
               "official": false,
               "source_type": "gdelt",
               "url": "https://www.forexcrunch.com/blog/2026/09/24/binance-buys-100-million-circle-stake-usdc-deal/"
+            },
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/business/2026/09/26/binance-deal-gives-circle-a-boost-in-stablecoin-race-with-tether-analysts-say"
             }
           ],
           "story_ids": [
-            "gdelt:article:20260924T053000Z::https://www.forexcrunch.com/blog/2026/09/24/binance-buys-100-million-circle-stake-usdc-deal/"
+            "gdelt:article:20260924T053000Z::https://www.forexcrunch.com/blog/2026/09/24/binance-buys-100-million-circle-stake-usdc-deal/",
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:2b6dec6b10b3d076"
           ],
           "time_precision": "published",
           "title_en": "Binance buys $100m Circle stake in five - year USDC deal",
@@ -87872,33 +87923,37 @@
     {
       "category": "policy",
       "confidence": 0.75,
-      "current_state_en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
-      "current_state_zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
+      "current_state_en": "Evercrest Technologies, KelpDAO's parent, is suing LayerZero Labs and its CEO, with LayerZero denying the claims; roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP, and the case is testing cross-chain security responsibility.",
+      "current_state_zh": "KelpDAO母公司Evercrest Technologies对LayerZero Labs及其CEO的诉讼仍在进行，LayerZero否认指控；约145亿美元资产已宣布从LayerZero迁移至Chainlink CCIP，案件正检验跨链安全责任划分。",
       "entities": [
         "bridge-exploit",
         "ceo",
         "coindesk",
         "kelpdao",
+        "lawsuit",
         "layerzero",
+        "nearly",
         "rseth"
       ],
       "event_id": "evt_10b7788901349e2f",
       "event_type": "security_incident",
       "first_seen_at": "2026-09-25T09:43:54.636246Z",
       "identifiers": [],
-      "last_material_change_at": "2026-09-25T09:43:54.636246Z",
-      "last_updated_at": "2026-09-25T09:43:54.636246Z",
+      "last_material_change_at": "2026-09-26T16:34:47.489495Z",
+      "last_updated_at": "2026-09-26T16:34:47.489495Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
-      "status": "monitoring",
+      "status": "closed",
       "title_en": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
       "title_zh": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
       "topics": [
         "bridge-exploit",
+        "cross-chain-security",
         "kelpdao",
         "lawsuit",
         "layerzero",
-        "rseth"
+        "rseth",
+        "rseth-exploit"
       ],
       "updates": [
         {
@@ -87938,6 +87993,44 @@
           "update_type": "initial",
           "what_changed_en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
           "what_changed_zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses."
+        },
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.92,
+          "current_state_en": "Evercrest Technologies, KelpDAO's parent, is suing LayerZero Labs and its CEO, with LayerZero denying the claims; roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP, and the case is testing cross-chain security responsibility.",
+          "current_state_zh": "KelpDAO母公司Evercrest Technologies对LayerZero Labs及其CEO的诉讼仍在进行，LayerZero否认指控；约145亿美元资产已宣布从LayerZero迁移至Chainlink CCIP，案件正检验跨链安全责任划分。",
+          "detailed_summary_en": "KelpDAO parent Evercrest Technologies sued LayerZero Labs and CEO Bryan Pellegrino in British Columbia over April's $292M rsETH exploit, alleging negligence, misrepresentation, and defamation, as roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP.",
+          "detailed_summary_zh": "KelpDAO parent Evercrest Technologies sued LayerZero Labs and CEO Bryan Pellegrino in British Columbia over April's $292M rsETH exploit, alleging negligence, misrepresentation, and defamation, as roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP.",
+          "event_id": "evt_10b7788901349e2f",
+          "first_seen_at": "2026-09-26T16:34:47.489495Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T13:30:11Z",
+          "published_at": "2026-09-26T13:30:11Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/nearly-15-billion-is-moving-off-layerzero-now-a-292-million-lawsuit-puts-its-security-model-on-trial/"
+            }
+          ],
+          "story_ids": [
+            "rss:cryptoslate.com_feed_:0dc64a06501468de"
+          ],
+          "time_precision": "published",
+          "title_en": "Nearly $15B is moving off LayerZero, now a $292M lawsuit puts its security model on trial",
+          "title_zh": "Nearly $15B is moving off LayerZero, now a $292M lawsuit puts its security model on trial",
+          "update_id": "upd_201f2c55557d7bd4",
+          "update_type": "aftermath",
+          "what_changed_en": "New coverage discloses that plaintiff is Evercrest Technologies, KelpDAO's parent, suing LayerZero Labs and CEO Bryan Pellegrino in British Columbia on claims of negligence, misrepresentation and defamation; Kelp users have withdrawn over $650M since the attack; roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP; and LayerZero's CEO called the suit meritless.",
+          "what_changed_zh": "新报道披露：原告为KelpDAO母公司Evercrest Technologies，在加拿大不列颠哥伦比亚省起诉LayerZero Labs及CEO Bryan Pellegrino，指控过失、虚假陈述和诽谤，并称攻击后Kelp用户已提取超6.5亿美元；约145亿美元资产宣布从LayerZero迁移至Chainlink CCIP；LayerZero CEO称诉讼无依据。"
         }
       ]
     },
@@ -90955,7 +91048,7 @@
       "first_seen_at": "2026-09-25T23:24:10.942680Z",
       "identifiers": [],
       "last_material_change_at": "2026-09-25T23:24:10.942680Z",
-      "last_updated_at": "2026-09-25T23:24:10.942680Z",
+      "last_updated_at": "2026-09-26T16:34:47.628631Z",
       "legacy_thread_ids": [],
       "schema_version": 1,
       "status": "monitoring",
@@ -90981,7 +91074,7 @@
           "detailed_summary_zh": "The Sixth Circuit Court of Appeals ruled against Kalshi, holding that its sports-related event contracts are not swaps and are therefore subject to state gaming regulations instead of CFTC oversight, adding to a growing circuit split that may push the issue to the Supreme Court.",
           "event_id": "evt_0418bdca6a4f49bb",
           "first_seen_at": "2026-09-25T23:24:10.942680Z",
-          "importance_score": 7.5,
+          "importance_score": 8.5,
           "market_impact_en": "",
           "market_impact_zh": "",
           "material_change": true,
@@ -90994,10 +91087,24 @@
               "official": false,
               "source_type": "rss",
               "url": "https://www.coindesk.com/policy/2026/09/25/another-appeals-court-rules-against-prediction-market-provider-kalshi-says-sports-contracts-are-subject-to-state-regulations"
+            },
+            {
+              "label": "CryptoSlate",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cryptoslate.com/kalshi-must-lock-out-state-users-after-major-court-loss/"
+            },
+            {
+              "label": "The Block",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.theblock.co/news/regulation/2026-09-26-kalshi-loses-appeal-over-ohio-and-tennessee-sports-betting-laws-widening-circuit-split-416937"
             }
           ],
           "story_ids": [
-            "rss:www.coindesk.com_arc_outboundfeeds_rss_:c7bd922479a142e2"
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:c7bd922479a142e2",
+            "rss:cryptoslate.com_feed_:f8939679c1cd0157",
+            "rss:www.theblock.co_rss.xml:03168ebfa3616014"
           ],
           "time_precision": "published",
           "title_en": "Another appeals court rules against prediction market provider Kalshi, says sports contracts are subject to state regulations",
@@ -91991,6 +92098,360 @@
           "update_type": "initial",
           "what_changed_en": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients.",
           "what_changed_zh": "Bitget disclosed approximately $387.5 million in assets stolen in a Sept. 24 wallet breach while withdrawals remained suspended, even as Sygnum announced it would hold institutional collateral off-exchange for Bitget clients."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+      "current_state_zh": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+      "entities": [
+        "binance",
+        "coin",
+        "falls",
+        "hype",
+        "hyperliquid",
+        "lists",
+        "pairs",
+        "republic",
+        "spot"
+      ],
+      "event_id": "evt_da57fb5f24b3d01b",
+      "event_type": "exchange_operation",
+      "first_seen_at": "2026-09-26T16:34:42.364499Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T16:34:42.364499Z",
+      "last_updated_at": "2026-09-26T16:34:42.364499Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Hyperliquid Crypto Falls 6% as Binance Lists HYPE Spot Pairs - The Coin Republic",
+      "title_zh": "Hyperliquid Crypto Falls 6% as Binance Lists HYPE Spot Pairs - The Coin Republic",
+      "topics": [
+        "binance",
+        "exchange-listing",
+        "hype",
+        "hyperliquid"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+          "current_state_zh": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+          "detailed_summary_en": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+          "detailed_summary_zh": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+          "event_id": "evt_da57fb5f24b3d01b",
+          "first_seen_at": "2026-09-26T16:34:42.364499Z",
+          "importance_score": 7.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T07:20:54Z",
+          "published_at": "2026-09-26T07:20:54Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Coin Republic",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRmpZTzh6bmFnbm45ZjdQWGZ0eG1Yc1kteURLX3E5VWNCbWxWQmgyVC1sdzZHNHZhMVhUMkduLWhGcDI3cVl3THhsLTl4Z0dRdURYX0Q2N25tNmJBWGZYZ2ItVzZ3NTlSdDFlN1d1YjRvZHlET1pWeVVYTDZ6ZHYzNzZXN2VGQlVNampKYW5vNlVQdTFhbGU4TVcyUW5XeEFyRUxhZHNwdm52SHPSAasBQVVfeXFMTUZqWU84em5hZ25uOWY3UFhmdHhtWHNZLXlES19xOVVjQm1sVkJoMlQtbHc2RzR2YTFYVDJHbi1oRnAyN3FZd0x4bC05eGdHUXVEWF9ENjdubTZiQVhmWGdiLVc2dzU5UnQxZTdXdWI0b2R5RE9aVnlVWEw2emR2Mzc2VzdlRkJVTWpqSmFubzZVUHUxYWxlOE1XMlFuV3hBckVMYWRzcHZudkhz?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:abbc43db226cb151"
+          ],
+          "time_precision": "published",
+          "title_en": "Hyperliquid Crypto Falls 6% as Binance Lists HYPE Spot Pairs - The Coin Republic",
+          "title_zh": "Hyperliquid Crypto Falls 6% as Binance Lists HYPE Spot Pairs - The Coin Republic",
+          "update_id": "upd_ea099567b7c7e0d7",
+          "update_type": "initial",
+          "what_changed_en": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news.",
+          "what_changed_zh": "Binance listed spot trading pairs for Hyperliquid's HYPE token, with the asset falling about 6% as traders reacted to the listing news."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+      "current_state_zh": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+      "entities": [
+        "american",
+        "bazaar",
+        "bitget",
+        "withdrawals"
+      ],
+      "event_id": "evt_c53c81078c747306",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-26T16:34:42.364870Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T16:34:42.364870Z",
+      "last_updated_at": "2026-09-26T16:34:42.364870Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Crypto exchange Bitget pauses withdrawals after $350 million hack - The American Bazaar",
+      "title_zh": "Crypto exchange Bitget pauses withdrawals after $350 million hack - The American Bazaar",
+      "topics": [
+        "bitget",
+        "exchange-hack",
+        "security-incident",
+        "withdrawals"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+          "current_state_zh": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+          "detailed_summary_en": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+          "detailed_summary_zh": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+          "event_id": "evt_c53c81078c747306",
+          "first_seen_at": "2026-09-26T16:34:42.364870Z",
+          "importance_score": 9.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T11:27:36Z",
+          "published_at": "2026-09-26T11:27:36Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The American Bazaar",
+              "official": false,
+              "source_type": "google_news",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdWlDYmVHOEJ5NTMtT1ZldlZRUElXdXl0Y0JadkVXVG5LNk1iYnE2OTBaNW1rNHRxSkFpa3RUelRsNnJHdHFwWkxUeU4yaWVnallHM21OR2tobWYtS2hoZmczTWtzUENTSnQzeGRWNExlUnNiQ3VDX1piS0IwWDZ0Y21VTU1RM3NwaUJVM0J6RVFubmd2N0xzWHlCSXUtZzNSMV9kMmJPTm1JaElHZzdnRlliMlVQTUU?oc=5"
+            }
+          ],
+          "story_ids": [
+            "google_news:article:4316c124812c81b7"
+          ],
+          "time_precision": "published",
+          "title_en": "Crypto exchange Bitget pauses withdrawals after $350 million hack - The American Bazaar",
+          "title_zh": "Crypto exchange Bitget pauses withdrawals after $350 million hack - The American Bazaar",
+          "update_id": "upd_2325c60356506288",
+          "update_type": "initial",
+          "what_changed_en": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained.",
+          "what_changed_zh": "Bitget halted withdrawals after suffering a $350 million hack, leaving users unable to move funds off the exchange while the incident is contained."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+      "current_state_zh": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+      "entities": [
+        "bitget",
+        "ripple",
+        "xrp"
+      ],
+      "event_id": "evt_489c11b139dceb50",
+      "event_type": "security_incident",
+      "first_seen_at": "2026-09-26T16:34:44.876459Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T16:34:44.876459Z",
+      "last_updated_at": "2026-09-26T16:34:44.876459Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Bitget hacker moves $83 million in stolen XRP that Ripple cannot freeze",
+      "title_zh": "Bitget hacker moves $83 million in stolen XRP that Ripple cannot freeze",
+      "topics": [
+        "bitget",
+        "exchange-hack",
+        "stolen-funds",
+        "xrp",
+        "xrp-ledger"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+          "current_state_zh": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+          "detailed_summary_en": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+          "detailed_summary_zh": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+          "event_id": "evt_489c11b139dceb50",
+          "first_seen_at": "2026-09-26T16:34:44.876459Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T12:56:41Z",
+          "published_at": "2026-09-26T12:56:41Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "CoinDesk",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://www.coindesk.com/markets/2026/09/26/bitget-hacker-moves-usd83-million-in-stolen-xrp-that-ripple-cannot-freeze"
+            }
+          ],
+          "story_ids": [
+            "rss:www.coindesk.com_arc_outboundfeeds_rss_:43235257dbaa4f57"
+          ],
+          "time_precision": "published",
+          "title_en": "Bitget hacker moves $83 million in stolen XRP that Ripple cannot freeze",
+          "title_zh": "Bitget hacker moves $83 million in stolen XRP that Ripple cannot freeze",
+          "update_id": "upd_62c36e9024283ea2",
+          "update_type": "initial",
+          "what_changed_en": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2.",
+          "what_changed_zh": "The attacker behind Bitget's $387.5M breach drained about $83M of stolen XRP from three holding wallets, leaving roughly $75M in accounts that cannot be frozen under the XRP Ledger's rules, while Bitget said its protection fund covers losses and staged withdrawals resume Sept. 28 through Oct. 2."
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "confidence": 0.75,
+      "current_state_en": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+      "current_state_zh": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+      "entities": [
+        "ahead",
+        "alpenglow",
+        "devnet",
+        "goes",
+        "live",
+        "migration",
+        "solana"
+      ],
+      "event_id": "evt_248d603a601b94c7",
+      "event_type": "other",
+      "first_seen_at": "2026-09-26T16:34:46.702009Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T16:34:46.702009Z",
+      "last_updated_at": "2026-09-26T16:34:46.702009Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Solana’s Alpenglow Goes Live on Devnet Ahead of Mainnet Migration",
+      "title_zh": "Solana’s Alpenglow Goes Live on Devnet Ahead of Mainnet Migration",
+      "topics": [
+        "alpenglow",
+        "anza",
+        "consensus",
+        "devnet",
+        "solana"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+          "current_state_zh": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+          "detailed_summary_en": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+          "detailed_summary_zh": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+          "event_id": "evt_248d603a601b94c7",
+          "first_seen_at": "2026-09-26T16:34:46.702009Z",
+          "importance_score": 7.5,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T14:37:38Z",
+          "published_at": "2026-09-26T14:37:38Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "The Defiant",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://thedefiant.io/news/blockchains/solana-s-alpenglow-goes-live-on-devnet-ahead-of-mainnet-migration"
+            }
+          ],
+          "story_ids": [
+            "rss:thedefiant.io_api_feed:ed5208d84523c298"
+          ],
+          "time_precision": "published",
+          "title_en": "Solana’s Alpenglow Goes Live on Devnet Ahead of Mainnet Migration",
+          "title_zh": "Solana’s Alpenglow Goes Live on Devnet Ahead of Mainnet Migration",
+          "update_id": "upd_76d3a5de5d4e3708",
+          "update_type": "initial",
+          "what_changed_en": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending.",
+          "what_changed_zh": "Anza's Alpenglow consensus upgrade for Solana is now live on devnet, with developers asked to test programs and integrations while mainnet activation remains pending."
+        }
+      ]
+    },
+    {
+      "category": "policy",
+      "confidence": 0.75,
+      "current_state_en": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+      "current_state_zh": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+      "entities": [
+        "court",
+        "kalshi",
+        "supreme"
+      ],
+      "event_id": "evt_890307352ef640fa",
+      "event_type": "legal_case",
+      "first_seen_at": "2026-09-26T16:34:50.832605Z",
+      "identifiers": [],
+      "last_material_change_at": "2026-09-26T16:34:50.832605Z",
+      "last_updated_at": "2026-09-26T16:34:50.832605Z",
+      "legacy_thread_ids": [],
+      "schema_version": 1,
+      "status": "monitoring",
+      "title_en": "Kalshi loses appeal, setting up potential Supreme Court case",
+      "title_zh": "Kalshi loses appeal, setting up potential Supreme Court case",
+      "topics": [
+        "cftc",
+        "court-ruling",
+        "kalshi",
+        "prediction-markets",
+        "state-gambling-law"
+      ],
+      "updates": [
+        {
+          "background_en": "",
+          "background_zh": "",
+          "community_discussion_en": "",
+          "community_discussion_zh": "",
+          "confidence": 0.75,
+          "current_state_en": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+          "current_state_zh": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+          "detailed_summary_en": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+          "detailed_summary_zh": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+          "event_id": "evt_890307352ef640fa",
+          "first_seen_at": "2026-09-26T16:34:50.832605Z",
+          "importance_score": 8.0,
+          "market_impact_en": "",
+          "market_impact_zh": "",
+          "material_change": true,
+          "occurred_at": "2026-09-26T13:21:12Z",
+          "published_at": "2026-09-26T13:21:12Z",
+          "references": [],
+          "sources": [
+            {
+              "label": "Cointelegraph",
+              "official": false,
+              "source_type": "rss",
+              "url": "https://cointelegraph.com/news/kalshi-loses-appeal-setting-up-potential-supreme-court-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            }
+          ],
+          "story_ids": [
+            "rss:cointelegraph.com_rss:0acbcb485812b7dc"
+          ],
+          "time_precision": "published",
+          "title_en": "Kalshi loses appeal, setting up potential Supreme Court case",
+          "title_zh": "Kalshi loses appeal, setting up potential Supreme Court case",
+          "update_id": "upd_b706af09b21dabdd",
+          "update_type": "initial",
+          "what_changed_en": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review.",
+          "what_changed_zh": "The 6th US Circuit Court of Appeals ruled against Kalshi, siding with Ohio and Tennessee that the prediction market's sports-event contracts fall under state gambling law rather than CFTC swap jurisdiction, deepening a circuit split and raising the likelihood of Supreme Court review."
         }
       ]
     }
@@ -93500,7 +93961,7 @@
       }
     },
     {
-      "attempts": 1,
+      "attempts": 2,
       "item": {
         "ai_reason": "The headline bundles three consequential in-window developments, the most material being a reported $351M breach at Bitget that forced a halt on withdrawals — a high-severity exchange security incident with direct user-fund impact, alongside a Fed stablecoin rule proposal and Bitcoin at $87K on ETF inflows. Although the item is a thin multi-topic recap with no body detail, the scale of the breach and the withdrawal freeze place it at the high end of the confirmed-exploit band; the Fed stablecoin proposal and ETF-driven price move add regulatory and market-structure weight.",
         "ai_score": 9.0,
@@ -93528,6 +93989,98 @@
         "source_type": "google_news",
         "title": "Bitcoin hits $87K amid ETF inflows; Fed proposes stablecoin rules; Bitget halts withdrawals after $351M breach - Pluang",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObjZlUzRua2tjVXczTHVlNU9FUXNiaXRRRmJTN0ZTdjJqdmMtYlp4Nlo4c2o4TDVHVUpONUVqUXFLZzlVMTBXS29DNElZU251bk5ySDQ5dE0tV0t0UmFLblMzUm1KR1NpYy1pTmRIWkJyR2EwdW1mXzJEZllVallFa0JNZ25tWWdXREJzZkFIdE5wWVlGU0RHWmpSaWY3d2t0b0ZEVw?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "A $387.5 million security incident at Bitget is a major exchange breach with material user impact, well above the >$50M threshold that anchors 8.5-9.0, and high-profile industry reaction (CZ offering support) underscores its significance. It falls short of the 9.5-10 systemic band, which is reserved for events exceeding $500M or involving outright insolvency. The item is a fresh, in-window development rather than a recap.",
+        "ai_score": 9.0,
+        "ai_summary": "CZ publicly offered support to Bitget following a $387.5 million security incident at the exchange.",
+        "ai_tags": [
+          "bitget",
+          "exchange-security",
+          "hack",
+          "crypto-exchange",
+          "cz"
+        ],
+        "author": "Hokanews",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPSGpMNWdMWUFzVUUwZmFad0JqMFRhdERZcy1KdzR1WkZLb0NVM3RxazdpeTlaenlKaVhGYUY0VHdsSkg0dllBRE5EUzVnLTl5OXhRSFVXcUpTZHBySmdyNE9sMGs4QTgxNElkZlZzWkhFMzl1ckhYbklaeF9WU3ByeWt3?oc=5\" target=\"_blank\">CZ Offers Support to Bitget After $387.5 Million Security Incident</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Hokanews</font>",
+        "fetched_at": "2026-09-26T16:34:42.365560Z",
+        "id": "google_news:article:0d75dc8ccd650796",
+        "metadata": {
+          "category": "exchange-operations",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_category": "exchange-announcements",
+          "source_name": "Hokanews"
+        },
+        "published_at": "2026-09-26T10:27:00Z",
+        "source_type": "google_news",
+        "title": "CZ Offers Support to Bitget After $387.5 Million Security Incident - Hokanews",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSGpMNWdMWUFzVUUwZmFad0JqMFRhdERZcy1KdzR1WkZLb0NVM3RxazdpeTlaenlKaVhGYUY0VHdsSkg0dllBRE5EUzVnLTl5OXhRSFVXcUpTZHBySmdyNE9sMGs4QTgxNElkZlZzWkhFMzl1ckhYbklaeF9WU3ByeWt3?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The underlying development is a confirmed $388 million security breach at Bitget, a major exchange with direct material user impact, which places it in the high-severity exploit band (8.5-9.0) rather than the systemic >$500M threshold. The article's framing is the secondary angle — Changpeng Zhao publicly offering support to a rival exchange — which is notable industry-color but not itself market-moving; no community discussion is provided to weigh. Scored on the magnitude of the hack rather than the gesture.",
+        "ai_score": 8.5,
+        "ai_summary": "Bitget suffered a $388 million hack, prompting an unusual public show of support from rival exchange figure Changpeng Zhao.",
+        "ai_tags": [
+          "Bitget",
+          "exchange-hack",
+          "security-breach",
+          "Changpeng Zhao",
+          "exchange-operations"
+        ],
+        "author": "24/7 Wall St.",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxQN0hkdEZsSHd5QUg2UlYwbERYdWNVc1ZwVk5iUnBfYjY4Y3lzR0ozY2ZKNlhSTm5BTXRCYVo5UFZHX3hZbWpxWVFhRkFWVVVjYWE0bTNKYjBRdEtOMEFnajFRbUNxNktTTm05S21KQzUzajdMdUlDTjNpTFpySlVxNTFHMGN2ODd1dElSX0x3WklJaDVFZjFhNjd5VWJPaElVZTgxVnhCRzZWb210a3ZXc3NkbWY0TlJLZ3N4MTYzU3V3TjdhU0syRkxkeWxxSlh5SFNDUmx2WjhEWDJDUUNUN19xbw?oc=5\" target=\"_blank\">Changpeng Zhao Offers Support to Bitget After $388 Million Hack: A Rival's Unexpected Gesture</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">24/7 Wall St.</font>",
+        "fetched_at": "2026-09-26T16:34:42.364950Z",
+        "id": "google_news:article:f705ea62de42a519",
+        "metadata": {
+          "category": "exchange-operations",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_category": "exchange-announcements",
+          "source_name": "24/7 Wall St."
+        },
+        "published_at": "2026-09-26T16:28:00Z",
+        "source_type": "google_news",
+        "title": "Changpeng Zhao Offers Support to Bitget After $388 Million Hack: A Rival's Unexpected Gesture - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQN0hkdEZsSHd5QUg2UlYwbERYdWNVc1ZwVk5iUnBfYjY4Y3lzR0ozY2ZKNlhSTm5BTXRCYVo5UFZHX3hZbWpxWVFhRkFWVVVjYWE0bTNKYjBRdEtOMEFnajFRbUNxNktTTm05S21KQzUzajdMdUlDTjNpTFpySlVxNTFHMGN2ODd1dElSX0x3WklJaDVFZjFhNjd5VWJPaElVZTgxVnhCRzZWb210a3ZXc3NkbWY0TlJLZ3N4MTYzU3V3TjdhU0syRkxkeWxxSlh5SFNDUmx2WjhEWDJDUUNUN19xbw?oc=5"
+      }
+    },
+    {
+      "attempts": 1,
+      "item": {
+        "ai_reason": "The substantive in-window development is Binance listing Hyperliquid's HYPE token — a top-exchange listing of a widely followed large-cap asset, which per calibration sits at the high-value tier (~7.5). The 4.5% price drop is secondary market reaction rather than a systemic event, and the item is otherwise a short market-recap piece with limited analytical depth, so it does not reach the 8+ range.",
+        "ai_score": 7.5,
+        "ai_summary": "Binance listed Hyperliquid's HYPE token, with the asset falling about 4.5% as traders reacted to the listing news.",
+        "ai_tags": [
+          "HYPE",
+          "Binance",
+          "Hyperliquid",
+          "exchange-listing",
+          "price-reaction"
+        ],
+        "author": "24/7 Wall St.",
+        "content": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPaHBhRmZMT3o4d3NLZ3Q5LVNZUi1PZXpZNjQ3c3BidjhjWGY1d0NZTWhDeWQ0UDg1bTV1Z2FESjg0bVlpejU2TTEzWXZaZ3dXbFBhMDVSRGg4ZUpscUlFVm0zRkh4bU1VX2plb2RQMFBndExDN2F4VkNHWTIyZktNV3pacHBzNWJpWFI3RnVTS0RGcS1lbTVoU1JmYjZ3cXZBd3ZoaG8zQW5jZy1JZ3ZnRzJfMlA?oc=5\" target=\"_blank\">HYPE Drops 4.5% Following Binance Listing of Hyperliquid</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">24/7 Wall St.</font>",
+        "fetched_at": "2026-09-26T16:34:42.364264Z",
+        "id": "google_news:article:fe6fc90480716f87",
+        "metadata": {
+          "category": "exchange-announcements",
+          "event_retry_pending": true,
+          "gn_query": "(Binance OR OKX OR Bybit OR Coinbase OR Kraken) (listing OR delisting OR maintenance OR security OR regulation)",
+          "score_model": "deepseek:deepseek-flash",
+          "source_name": "24/7 Wall St."
+        },
+        "published_at": "2026-09-26T10:30:00Z",
+        "source_type": "google_news",
+        "title": "HYPE Drops 4.5% Following Binance Listing of Hyperliquid - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaHBhRmZMT3o4d3NLZ3Q5LVNZUi1PZXpZNjQ3c3BidjhjWGY1d0NZTWhDeWQ0UDg1bTV1Z2FESjg0bVlpejU2TTEzWXZaZ3dXbFBhMDVSRGg4ZUpscUlFVm0zRkh4bU1VX2plb2RQMFBndExDN2F4VkNHWTIyZktNV3pacHBzNWJpWFI3RnVTS0RGcS1lbTVoU1JmYjZ3cXZBd3ZoaG8zQW5jZy1JZ3ZnRzJfMlA?oc=5"
       }
     }
   ],

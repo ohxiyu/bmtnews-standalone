@@ -4,37 +4,41 @@
   "url": "https://bmt.news/events/evt_10b7788901349e2f/",
   "json": "https://bmt.news/api/events/evt_10b7788901349e2f.json",
   "type": "security_incident",
-  "status": "monitoring",
+  "status": "closed",
   "category": "policy",
   "title": {
     "zh": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk",
     "en": "KelpDAO sues LayerZero and CEO over $292M rsETH bridge exploit - CoinDesk"
   },
   "current_state": {
-    "zh": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses.",
-    "en": "KelpDAO has sued LayerZero and its CEO over the $292M rsETH bridge exploit, escalating the dispute over responsibility for the cross-chain losses."
+    "zh": "KelpDAO母公司Evercrest Technologies对LayerZero Labs及其CEO的诉讼仍在进行，LayerZero否认指控；约145亿美元资产已宣布从LayerZero迁移至Chainlink CCIP，案件正检验跨链安全责任划分。",
+    "en": "Evercrest Technologies, KelpDAO's parent, is suing LayerZero Labs and its CEO, with LayerZero denying the claims; roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP, and the case is testing cross-chain security responsibility."
   },
   "first_seen_at": "2026-09-25T09:43:54.636246+00:00",
-  "last_updated_at": "2026-09-25T09:43:54.636246+00:00",
-  "last_material_change_at": "2026-09-25T09:43:54.636246+00:00",
+  "last_updated_at": "2026-09-26T16:34:47.489495+00:00",
+  "last_material_change_at": "2026-09-26T16:34:47.489495+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "bridge-exploit",
     "ceo",
     "coindesk",
     "kelpdao",
+    "lawsuit",
     "layerzero",
+    "nearly",
     "rseth"
   ],
   "identifiers": [],
   "topics": [
     "bridge-exploit",
+    "cross-chain-security",
     "kelpdao",
     "lawsuit",
     "layerzero",
-    "rseth"
+    "rseth",
+    "rseth-exploit"
   ],
   "updates": [
     {
@@ -71,6 +75,44 @@
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWU5sTlJsWnREZjRxTVg4Sk9nZElmZlU5WVU5SE1lbWNHeWI1bTdaejlXZEdzM25lMzlUQ1lzRlQ0LWVaRVE3UEt3emFSLUV1THFTbjNOVVZjWUlyZVdmWVZYN0drTnRZdk1Sd1Bwa2F4Nk9DZ2t6VS15NWlWLTRaVVhnUmliVmNVNEppY3I2QmQ0TEVTMjhpaGZtcl9lSWM3eEkwOHBDWFpoaXhfUlp2LVlB?oc=5",
           "label": "CoinDesk",
           "source_type": "google_news",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_201f2c55557d7bd4",
+      "event_id": "evt_10b7788901349e2f",
+      "occurred_at": "2026-09-26T13:30:11Z",
+      "published_at": "2026-09-26T13:30:11Z",
+      "first_seen_at": "2026-09-26T16:34:47.489495Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "Nearly $15B is moving off LayerZero, now a $292M lawsuit puts its security model on trial",
+      "title_en": "Nearly $15B is moving off LayerZero, now a $292M lawsuit puts its security model on trial",
+      "what_changed_zh": "新报道披露：原告为KelpDAO母公司Evercrest Technologies，在加拿大不列颠哥伦比亚省起诉LayerZero Labs及CEO Bryan Pellegrino，指控过失、虚假陈述和诽谤，并称攻击后Kelp用户已提取超6.5亿美元；约145亿美元资产宣布从LayerZero迁移至Chainlink CCIP；LayerZero CEO称诉讼无依据。",
+      "what_changed_en": "New coverage discloses that plaintiff is Evercrest Technologies, KelpDAO's parent, suing LayerZero Labs and CEO Bryan Pellegrino in British Columbia on claims of negligence, misrepresentation and defamation; Kelp users have withdrawn over $650M since the attack; roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP; and LayerZero's CEO called the suit meritless.",
+      "current_state_zh": "KelpDAO母公司Evercrest Technologies对LayerZero Labs及其CEO的诉讼仍在进行，LayerZero否认指控；约145亿美元资产已宣布从LayerZero迁移至Chainlink CCIP，案件正检验跨链安全责任划分。",
+      "current_state_en": "Evercrest Technologies, KelpDAO's parent, is suing LayerZero Labs and its CEO, with LayerZero denying the claims; roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP, and the case is testing cross-chain security responsibility.",
+      "detailed_summary_zh": "KelpDAO parent Evercrest Technologies sued LayerZero Labs and CEO Bryan Pellegrino in British Columbia over April's $292M rsETH exploit, alleging negligence, misrepresentation, and defamation, as roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP.",
+      "detailed_summary_en": "KelpDAO parent Evercrest Technologies sued LayerZero Labs and CEO Bryan Pellegrino in British Columbia over April's $292M rsETH exploit, alleging negligence, misrepresentation, and defamation, as roughly $14.5B in assets have announced migrations from LayerZero to Chainlink CCIP.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 7.5,
+      "references": [],
+      "confidence": 0.92,
+      "story_ids": [
+        "rss:cryptoslate.com_feed_:0dc64a06501468de"
+      ],
+      "sources": [
+        {
+          "url": "https://cryptoslate.com/nearly-15-billion-is-moving-off-layerzero-now-a-292-million-lawsuit-puts-its-security-model-on-trial/",
+          "label": "CryptoSlate",
+          "source_type": "rss",
           "official": false
         }
       ]

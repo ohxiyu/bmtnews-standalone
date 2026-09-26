@@ -4,29 +4,35 @@
   "url": "https://bmt.news/events/evt_275020fc7ac088fd/",
   "json": "https://bmt.news/api/events/evt_275020fc7ac088fd.json",
   "type": "regulatory_action",
-  "status": "monitoring",
+  "status": "closed",
   "category": "policy",
   "title": {
     "zh": "How the Clarity Act's Defeat Handed the SEC and CFTC the Wheel on Crypto",
     "en": "How the Clarity Act's Defeat Handed the SEC and CFTC the Wheel on Crypto"
   },
   "current_state": {
-    "zh": "The Senate's rejection of the Clarity Act has prompted the SEC and CFTC to take unilateral regulatory actions on crypto, marking a shift in policy momentum from Congress to federal agencies.",
-    "en": "The Senate's rejection of the Clarity Act has prompted the SEC and CFTC to take unilateral regulatory actions on crypto, marking a shift in policy momentum from Congress to federal agencies."
+    "zh": "Clarity Act 的失败已将加密政策重心从国会转向联邦机构；SEC、CFTC 和美联储正通过具体豁免、救济和规则提案推进加密监管。",
+    "en": "The Clarity Act's failure has shifted crypto policy momentum from Congress to federal agencies; the SEC, CFTC, and Fed are advancing crypto regulation through specific exemptions, relief, and proposed rules."
   },
   "first_seen_at": "2026-09-19T18:42:24.717667+00:00",
-  "last_updated_at": "2026-09-19T18:42:24.717667+00:00",
-  "last_material_change_at": "2026-09-19T18:42:24.717667+00:00",
+  "last_updated_at": "2026-09-26T16:34:50.022856+00:00",
+  "last_material_change_at": "2026-09-26T16:34:50.022856+00:00",
   "confidence": 0.75,
-  "updates_count": 1,
-  "sources_count": 1,
+  "updates_count": 2,
+  "sources_count": 2,
   "entities": [
     "cftc",
     "clarity",
+    "congress",
     "defeat",
     "handed",
     "how",
+    "learned",
+    "love",
+    "regulators",
     "sec",
+    "stopped",
+    "waiting",
     "wheel"
   ],
   "identifiers": [],
@@ -82,6 +88,44 @@
       "sources": [
         {
           "url": "https://decrypt.co/378688/how-clarity-act-defeat-sec-cftc-wheel-crypto",
+          "label": "Decrypt",
+          "source_type": "rss",
+          "official": false
+        }
+      ]
+    },
+    {
+      "update_id": "upd_9dedfe840bfe4f77",
+      "event_id": "evt_275020fc7ac088fd",
+      "occurred_at": "2026-09-26T16:06:03Z",
+      "published_at": "2026-09-26T16:06:03Z",
+      "first_seen_at": "2026-09-26T16:34:50.022856Z",
+      "time_precision": "published",
+      "update_type": "aftermath",
+      "material_change": true,
+      "title_zh": "How Crypto Stopped Waiting for Congress and Learned to Love the Regulators",
+      "title_en": "How Crypto Stopped Waiting for Congress and Learned to Love the Regulators",
+      "what_changed_zh": "在 Clarity Act 未推进后，SEC 推出代币化股票创新豁免，CFTC 发布不采取行动救济并将加密市场规则制定送交白宫审查，美联储则提出 GENIUS Act 下的稳定币储备与资本规则提案。",
+      "what_changed_en": "After the Clarity Act failed to advance, the SEC introduced a tokenized-stock innovation exemption, the CFTC issued no-action relief and sent a crypto-markets rulemaking to the White House, and the Fed proposed stablecoin reserve and capital rules under the GENIUS Act.",
+      "current_state_zh": "Clarity Act 的失败已将加密政策重心从国会转向联邦机构；SEC、CFTC 和美联储正通过具体豁免、救济和规则提案推进加密监管。",
+      "current_state_en": "The Clarity Act's failure has shifted crypto policy momentum from Congress to federal agencies; the SEC, CFTC, and Fed are advancing crypto regulation through specific exemptions, relief, and proposed rules.",
+      "detailed_summary_zh": "After the Senate failed to advance the Clarity Act, U.S. federal regulators swiftly issued a series of crypto-related actions, including an SEC tokenized-stock innovation exemption, CFTC no-action relief and rulemaking, and Fed stablecoin reserve and capital proposals under the GENIUS Act, signaling a shift from legislative to regulatory rulemaking.",
+      "detailed_summary_en": "After the Senate failed to advance the Clarity Act, U.S. federal regulators swiftly issued a series of crypto-related actions, including an SEC tokenized-stock innovation exemption, CFTC no-action relief and rulemaking, and Fed stablecoin reserve and capital proposals under the GENIUS Act, signaling a shift from legislative to regulatory rulemaking.",
+      "background_zh": "",
+      "background_en": "",
+      "community_discussion_zh": "",
+      "community_discussion_en": "",
+      "market_impact_zh": "",
+      "market_impact_en": "",
+      "importance_score": 8.0,
+      "references": [],
+      "confidence": 0.93,
+      "story_ids": [
+        "rss:decrypt.co_feed:195480fcce7639ce"
+      ],
+      "sources": [
+        {
+          "url": "https://decrypt.co/379383/how-crypto-stopped-waiting-congress-learned-love-regulators",
           "label": "Decrypt",
           "source_type": "rss",
           "official": false
